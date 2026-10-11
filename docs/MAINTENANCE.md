@@ -1,8 +1,10 @@
 # Component maintenance guidance
 
-`server/maintenance.mjs` exports `createMaintenanceCatalog(db, {contentDir}).forDocument(documentId, {engine, year})`. The default year is 2015 and default engine is `all`. An article without a supported matching rule returns null; it does not receive a made-up service interval or generic maintenance checklist.
+`server/maintenance.mjs` exports `createMaintenanceCatalog(db, {contentDir, guideResolver?}).forDocument(documentId, {engine, year})`. The default year is 2015 and default engine is `all`. An article without a supported matching rule returns null; it does not receive a made-up service interval or generic maintenance checklist.
 
 `content/maintenance.json` centralizes 29 authored rules. Each item supplies what to do, when, why, notes, applicability and official Ford links. The public result is `{documentId,title,scope,items}`. Item fields are `{id,title,kind,what,when,why,steps,notes,applicability,sources}`. `kind` distinguishes scheduled replacement, routine inspection and condition-based care. Provenance hashes and mechanical evidence document IDs are private.
+
+Items now also include `guideHref` when a valid, compatible detailed guide maps to the rule. All public references to the normal schedule resolve to `#/maintenance/schedule` with the label “Normal maintenance schedule”; clicking them stays in the site. Exact evidence URLs remain in the private seed for verification. See [the maintenance library](MAINTENANCE-GUIDES.md) for full guide and schedule authoring.
 
 ## Applicability and source checks
 

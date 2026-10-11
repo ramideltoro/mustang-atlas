@@ -1,3 +1,10 @@
 export function hasPartsContent(data) {
- return ['parts', 'identifiers', 'diagrams'].some(key => Array.isArray(data?.[key]) && data[key].length > 0);
+ return confirmedParts(data).length > 0;
+}
+
+export function confirmedParts(data) {
+ return (Array.isArray(data?.parts) ? data.parts : []).filter(part =>
+  typeof part?.name === 'string' && part.name.trim() &&
+  typeof part?.number === 'string' && part.number.trim()
+ );
 }

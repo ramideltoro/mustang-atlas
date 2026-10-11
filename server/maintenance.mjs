@@ -2,6 +2,24 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { documentApplicability, engineFilter, isPublicDocument } from './catalog.mjs';
 
+export const NORMAL_MAINTENANCE_HREF = '#/maintenance/schedule';
+export function isNormalMaintenanceUrl(value) {
+  try { const url = new URL(String(value).replaceAll('&amp;', '&')); return url.protocol === 'https:' && url.hostname === 'www.fordservicecontent.com' && url.searchParams.get('ProcUid') === 'G1649139'; } catch { return false; }
+}
+export function internalizeMaintenanceReferences(value) {
+  if (typeof value === 'string') {
+    if (isNormalMaintenanceUrl(value)) return NORMAL_MAINTENANCE_HREF;
+    return value.replace(/\[([^\]]+)\]\((https:\/\/www\.fordservicecontent\.com\/[^\s)]+)\)/gi, (whole, label, url) => isNormalMaintenanceUrl(url) ? '[Normal maintenance schedule](' + NORMAL_MAINTENANCE_HREF + ')' : whole);
+  }
+  if (Array.isArray(value)) return value.map(internalizeMaintenanceReferences);
+  if (value && typeof value === 'object') {
+    const result = Object.fromEntries(Object.entries(value).map(([key, child]) => [key, internalizeMaintenanceReferences(child)]));
+    if (isNormalMaintenanceUrl(value.url) || isNormalMaintenanceUrl(value.href)) { if ('title' in result) result.title = 'Normal maintenance schedule'; if ('label' in result) result.label = 'Normal maintenance schedule'; }
+    return result;
+  }
+  return value;
+}
+
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 function patternMatches(pattern, value) { return !pattern || new RegExp(pattern, 'i').test(value); }
 
@@ -17,7 +35,7 @@ export function matchesMaintenanceRule(rule, doc) {
   return Boolean(match.documentIds?.length || (match.titlePattern && (match.sectionCodes?.length || match.sectionPattern)));
 }
 
-export function createMaintenanceCatalog(db, { contentDir = path.resolve('content') } = {}) {
+export function createMaintenanceCatalog(db, { contentDir = path.resolve('content'), guideResolver = () => null } = {}) {
   const docs = new Map(db.prepare('SELECT id,title,kind,section_code,section_title,engines,source_hash FROM documents').all().map(doc => [doc.id, doc]));
   let seed = { rules: [], evidence: {} };
   try { seed = JSON.parse(fs.readFileSync(path.join(contentDir, 'maintenance.json'), 'utf8')); }
@@ -50,9 +68,10 @@ export function createMaintenanceCatalog(db, { contentDir = path.resolve('conten
       // A mixed-scope article can show the explicitly labeled base-car schedule,
       // but no numeric interval is silently extended to an uncovered engine.
       const sources = [...new Set(rule.evidence)].map(id => ({ title: seed.evidence[id].title, url: seed.evidence[id].url }));
+      const guide = guideResolver(rule.id, { engine: selected, year: selectedYear });
       items.push({ id: rule.id, title: rule.title, kind: rule.kind, what: rule.what, when: rule.when, why: rule.why,
         steps: rule.steps || [], notes: rule.notes || [],
-        applicability: { ...fit, engines: selected === 'all' ? applicableEngines : [selected] }, sources });
+        applicability: { ...fit, engines: selected === 'all' ? applicableEngines : [selected] }, sources: internalizeMaintenanceReferences(sources), ...(guide?.href ? { guideHref: guide.href } : {}) });
     }
     if (!items.length) return null;
     const scheduled = items.some(item => item.kind !== 'condition-based');

@@ -9,6 +9,9 @@ Read-only JSON at `/api/v1`. Lists return `{items,total,limit,offset}`. Document
 - `GET /documents/:id/circuit-context?engine=`: the same wiring explanation returned as `document.circuitContext`, with applicability; non-wiring/unknown documents return 404.
 - `GET /documents/:id/parts?engine=&year=`: the same parts information available in detail. See [PARTS.md](PARTS.md).
 - `GET /documents/:id/maintenance?engine=&year=`: `{documentId,maintenance}` using the same guidance as article detail. Maintenance is `null` when no verified component rule applies. Unknown articles return 404; incompatible engine selections return no guidance. See [MAINTENANCE.md](MAINTENANCE.md).
+- `GET /maintenance?q=&category=&engine=&year=&limit=60&offset=0`: searchable maintenance guide cards, categories and normal schedule entry. Cards include `href`, `thumbnail`, `interval` and explicit engine/year applicability.
+- `GET /maintenance/schedule?engine=&year=`: oil-life explanation, interval groups and internal guide links. An incompatible engine/year receives no schedule intervals.
+- `GET /maintenance/:id?engine=&year=`: original explanations, timing, preparation, checks, warning signs, related guides and matching repair articles. Article references and thumbnails are verified against their stored source revision. Unknown guides return 404. See [MAINTENANCE-GUIDES.md](MAINTENANCE-GUIDES.md).
 - `GET /glossary?q=&engine=&limit=100&offset=0`: shared term index; `GET /glossary/:id?engine=` returns explanations and relevant article references/illustrations.
 - `GET /media/:filename`: original raster illustration or sanitized vector drawing.
 - `GET /healthz`: service and visible catalog readiness.

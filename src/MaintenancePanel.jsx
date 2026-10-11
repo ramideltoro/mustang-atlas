@@ -1,5 +1,5 @@
 import React from 'react';
-import {CalendarClock,HeartPulse,ShieldCheck,Wrench} from 'lucide-react';
+import {ArrowRight,CalendarClock,HeartPulse,ShieldCheck,Wrench} from 'lucide-react';
 import {TermText} from './Glossary.jsx';
 import {safeHref} from './content-model.mjs';
 import './maintenance.css';
@@ -15,7 +15,8 @@ export default function MaintenancePanel({data}) {
    <div className="maintenance-interval"><CalendarClock size={19} aria-hidden="true"/><div><h4>When to do it</h4><p><TermText text={item.when}/></p></div></div>
    <div className="maintenance-guidance"><div><h4><Wrench size={16} aria-hidden="true"/> What to do</h4><p><TermText text={item.what}/></p>{item.steps?.length>0&&<ol>{item.steps.filter(step=>typeof step==='string'&&/[\p{L}\p{N}]/u.test(step)).map((step,i)=><li key={i}><TermText text={step}/></li>)}</ol>}</div><div><h4><ShieldCheck size={16} aria-hidden="true"/> Why it helps</h4><p><TermText text={item.why}/></p></div></div>
    {item.notes?.length>0&&<div className="maintenance-notes">{item.notes.filter(Boolean).map((note,i)=><p key={i}><TermText text={note}/></p>)}</div>}
-   {item.sources?.some(source=>safeHref(source.url))&&<details className="maintenance-evidence"><summary>Schedule details</summary>{item.sources.filter(source=>safeHref(source.url)).map((source,i)=><a href={source.url} key={i} target="_blank" rel="noreferrer">{source.title}</a>)}</details>}
+   {safeHref(item.guideHref)&&<a className="maintenance-guide-link" href={item.guideHref}>Read the maintenance guide <ArrowRight size={17} aria-hidden="true"/></a>}
+   {item.sources?.some(source=>safeHref(source.url))&&<details className="maintenance-evidence"><summary>Schedule details</summary>{item.sources.filter(source=>safeHref(source.url)).map((source,i)=><a href={source.url} key={i} target={source.url.startsWith('#/')?undefined:'_blank'} rel={source.url.startsWith('#/')?undefined:'noreferrer'}>{source.title}</a>)}</details>}
   </section>)}</div>
  </section>;
 }

@@ -129,3 +129,15 @@ test('missing guidance stays absent and public reporting excludes the hidden int
     assert.throws(() => f.catalog.forDocument('ecu', { engine: 'V12' }), /engine/);
   } finally { f.close(); }
 });
+
+test('normal schedule references stay internal without rewriting unrelated Ford evidence', async () => {
+  const { internalizeMaintenanceReferences } = await import('../server/maintenance.mjs');
+  const normal = productionSeed.evidence.normal.url, special = productionSeed.evidence.special.url;
+  const source = { sources: [{ title: 'Ford — normal schedule', url: normal }, { title: 'Special conditions', url: special }], body: `Read [Ford normal schedule](${normal}) and inspect the oil level.` };
+  const result = internalizeMaintenanceReferences(source);
+  assert.deepEqual(result.sources[0], { title: 'Normal maintenance schedule', url: '#/maintenance/schedule' });
+  assert.equal(result.sources[1].url, special);
+  assert.equal(result.body, 'Read [Normal maintenance schedule](#/maintenance/schedule) and inspect the oil level.');
+  assert.equal(source.sources[0].url, normal);
+  assert.equal(internalizeMaintenanceReferences('https://evil.example/?ProcUid=G1649139'), 'https://evil.example/?ProcUid=G1649139');
+});

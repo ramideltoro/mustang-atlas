@@ -94,7 +94,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
   ...(data?.requirements?.length?[{id:'requirements',title:'What you’ll need',level:2,tone:'green'}]:[]),
   ...headings,
   ...(remainingMedia.length?[{id:'additional-figures',title:'See the details',level:2,tone:'blue'}]:[]),
-  ...(hasPartsContent(data?.parts)?[{id:'parts-and-diagrams',title:'Parts & diagrams',level:2,tone:'green'}]:[]),
+  ...(hasPartsContent(data?.parts)?[{id:'parts',title:'Parts',level:2,tone:'green'}]:[]),
   ...(data?.maintenance?.items?.length?[{id:'care-and-maintenance',title:'Care and maintenance',level:2,tone:'green'}]:[])
  ].filter((entry,index,all)=>entry.title&&all.findIndex(item=>item.id===entry.id)===index);
  async function copy(){try{await navigator.clipboard.writeText(window.location.href);setCopied(true);setTimeout(()=>setCopied(false),1800);}catch{}}
@@ -124,7 +124,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
     {calculatorType&&<TorqueCalculator calculatorType={calculatorType}/>}
     <div className="document-blocks"><BlockList blocks={blocks} media={media} onZoom={onZoom}/></div>
     {remainingMedia.length>0&&<section id="additional-figures" className="additional-figures"><div className="section-title"><span className="eyebrow">A CLOSER LOOK</span><h2>See the details.</h2></div><FigureGrid figures={remainingMedia} onZoom={onZoom}/></section>}
-    <PartsPanel data={data.parts} onZoom={onZoom}/>
+    <PartsPanel data={data.parts}/>
     <MaintenancePanel data={data.maintenance}/>
     {data.related?.length>0&&<section className="related-references"><div className="section-title"><span className="eyebrow">KEEP GOING</span><h2>Connected articles.</h2></div>{data.related.map(doc=><a href={'#/document/'+encodeURIComponent(doc.id)} key={doc.id}>{doc.thumbnail&&<img className="related-thumbnail" src={doc.thumbnail.url} alt="" loading="lazy"/>}<span><small>{categoryName(doc.kind)}</small><strong>{readableTitle(doc.title)}</strong></span><ArrowRight size={17}/></a>)}</section>}
    </article>

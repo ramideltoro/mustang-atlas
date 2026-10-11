@@ -62,6 +62,12 @@ Create `work/topic-context-jobs/stop-after-current` to drain active batches befo
 
 See [deployment and operations](docs/DEPLOYMENT.md).
 
+## Maintenance library
+
+The Maintenance area combines an internal normal schedule with detailed, searchable care guides. Each guide explains timing, purpose, preparation and warning signs, and links to relevant existing repair articles. Engine selection scopes both the guide list and procedure links. Verified base-car intervals are not applied to the 5.2L Shelby. Public normal-schedule references lead to `#/maintenance/schedule`; the original evidence stays available in private authoring records.
+
+Content is in `content/maintenance-guides.json`; run `node scripts/audit-maintenance-guides.mjs` to validate all guide, schedule, article and thumbnail references. See [maintenance authoring](docs/MAINTENANCE-GUIDES.md) and [API documentation](docs/API.md). The article Parts panel shows confirmed part numbers only and is omitted when no such parts are available.
+
 ## Original image quality
 
 The reader uses verified, unresized Ford illustrations when available, with a shared image mapping for documents and glossary entries. Small tool previews remain compact; the image viewer offers Fit, true 100% size, and scrollable zoom. Vector diagrams remain scalable. See the image recovery workflow in [deployment and operations](docs/DEPLOYMENT.md).

@@ -13,7 +13,8 @@ import { createLearningContextCatalog } from './learning-context.mjs';
 import {createPartsCatalog} from './parts.mjs';
 import {createCircuitContextCatalog} from './circuit-context.mjs';
 import {createIllustratedStepCatalog} from './illustrated-steps.mjs';
-import {createMaintenanceCatalog} from './maintenance.mjs';
+import {createMaintenanceCatalog,internalizeMaintenanceReferences} from './maintenance.mjs';
+import {createMaintenanceGuideCatalog} from './maintenance-guides.mjs';
 import {createProcedureMediaCatalog} from './procedure-media.mjs';
 const projectDir=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=(file,fallback)=>{try{return JSON.parse(fs.readFileSync(file,'utf8'));}catch{return fallback;}};
@@ -26,10 +27,11 @@ export function createApp({dataDir=DEFAULT_DATA_DIR,contentDir=path.join(project
  const allCatalogRows=db.prepare('SELECT id,title,system_id,section_code,section_title,kind,engines,summary,source,source_hash,source_path,related FROM documents').all();
  const catalogRows=allCatalogRows.filter(isPublicDocument);const hiddenRows=allCatalogRows.filter(r=>!isPublicDocument(r));const publicIds=JSON.stringify(catalogRows.map(r=>r.id));
  const metadata=new Map(catalogRows.map(r=>[r.id,r]));const references=createReferenceResolver(catalogRows);
- const maintenance=createMaintenanceCatalog(db,{contentDir});
+ const maintenanceGuides=createMaintenanceGuideCatalog(db,{contentDir,assetResolver:media=>assetQuality.resolve(media)});
+ const maintenance=createMaintenanceCatalog(db,{contentDir,guideResolver:(id,options)=>maintenanceGuides.forRule(id,options)});
  const procedureMedia=createProcedureMediaCatalog({contentDir,dataDir});
  const visible=(row,engine)=>documentApplicability(row,engine).matchesSelectedEngine;
- const publicValue=(value,engine='all')=>stripPrivateMetadata(references.cleanObject(value,engine));
+ const publicValue=(value,engine='all')=>stripPrivateMetadata(internalizeMaintenanceReferences(references.cleanObject(value,engine)));
  const sourceRefs=(refs,engine='all')=>(refs||[]).flatMap(ref=>{const row=ref.documentId?metadata.get(ref.documentId):ref.documentPath?catalogRows.find(d=>d.source_path===ref.documentPath):null;return row&&visible(row,engine)?[{documentId:row.id,title:references.labelFor(row),kind:row.kind,section:row.section_title,engines:documentApplicability(row).engines,href:'#/document/'+row.id}]:[];});
  const glossaryData=()=>readJson(path.join(contentDir,'glossary.json'),{terms:[],abbreviations:[]});
  const abbreviations=()=>glossaryData().abbreviations||[];
@@ -44,6 +46,19 @@ export function createApp({dataDir=DEFAULT_DATA_DIR,contentDir=path.join(project
   next();
  });
  app.get('/healthz',(req,res)=>res.json({status:'ok',documents:catalogRows.length}));
+ app.get('/api/v1/maintenance',(req,res)=>{
+  const engine=engineFilter(req.query.engine);
+  const result=maintenanceGuides.list({q:typeof req.query.q==='string'?req.query.q.slice(0,500):'',category:typeof req.query.category==='string'?req.query.category:'',engine,year:req.query.year,limit:integer(req.query.limit,60,100),offset:integer(req.query.offset,0,100000)});
+  res.json(publicValue(result,engine));
+ });
+ app.get('/api/v1/maintenance/schedule',(req,res)=>{
+  const engine=engineFilter(req.query.engine);const schedule=maintenanceGuides.schedule({engine,year:req.query.year});
+  if(!schedule)return res.status(404).json({error:'Maintenance schedule not available.'});res.json(publicValue(schedule,engine));
+ });
+ app.get('/api/v1/maintenance/:id',(req,res)=>{
+  const engine=engineFilter(req.query.engine);const guide=maintenanceGuides.detail(req.params.id,{engine,year:req.query.year});
+  if(!guide)return res.status(404).json({error:'Maintenance guide not found.'});res.json(publicValue(guide,engine));
+ });
  let statsCache=null;
  app.get('/api/v1/stats',(req,res)=>{const contextStats=learning.stats();contextStats.contextualizedDocuments-=hiddenRows.filter(r=>learning.get(r.id)).length;contextStats.contextualizationStatus=contextStats.contextualizedDocuments===catalogRows.length&&catalogRows.length>0?'complete':'in_progress';if(statsCache&&Date.now()-statsCache.at<15000)return res.json({...statsCache.value,...contextStats});const counts=getMeta(db,'ingestion',{});const kinds=Object.entries(Object.groupBy(catalogRows,r=>r.kind)).map(([kind,rows])=>({kind,n:rows.length}));let rewritten=0;for(const id of editorial.ids()){const doc=document(id);if(doc&&editorial.get(doc))rewritten++;}const documents=kinds.reduce((n,r)=>n+Number(r.n),0);const media=db.prepare('SELECT count(*) n,count(DISTINCT json_extract(j.value,\'$.url\')) uniqueN FROM documents,json_each(documents.media) j WHERE documents.id IN (SELECT value FROM json_each(?))').get(publicIds);const value={documents,workshop:documents-(kinds.find(r=>r.kind==='wiring')?.n||0)-(kinds.find(r=>r.kind==='connector')?.n||0),wiring:kinds.find(r=>r.kind==='wiring')?.n||0,connectors:kinds.find(r=>r.kind==='connector')?.n||0,media:Number(media.n),uniqueMedia:Number(media.uniqueN),systems:new Set(catalogRows.map(r=>r.system_id)).size,rewrittenDocuments:rewritten,partiallyRewrittenDocuments:0,...contextStats,status:counts.status||'processing',expectedDocuments:counts.expected?counts.expected-hiddenRows.length:documents,teachingStatus:rewritten===documents&&documents>0?'complete':'in_progress'};statsCache={at:Date.now(),value};res.json(value);});
  app.get('/api/v1/systems',(req,res)=>{

@@ -2,7 +2,7 @@
 
 `server/parts.mjs` exports `createPartsCatalog(db, {contentDir}).forDocument(documentId, {year?, engine?})`. It reads the existing parsed article data and the curated `content/parts-catalog.json`; it never changes articles, generated explanations, source hashes, or media. Unknown document IDs return `null`.
 
-The public result contains `availability`, `parts`, `identifiers`, `diagrams`, `catalogLinks`, and `fitmentNote`. Availability distinguishes verified parts, reference identifiers/diagrams, and unavailable content. There is no generic VIN lookup link or missing-part message. The reader omits the entire section and its navigation entry when there are no parts, identifiers, or diagrams. Product-specific application notes remain alongside confirmed numbers. The API integration applies the existing media-quality resolver to diagram URLs.
+The API result retains `availability`, `parts`, `identifiers`, `diagrams`, `catalogLinks`, and `fitmentNote` for compatibility. The reader's **Parts** panel displays only verified entries with a part name and ordering number. It omits the entire panel and its navigation entry when that list is empty. Identifiers and diagrams are no longer rendered in this panel; instructional illustrations remain in the article body. There is no generic VIN lookup link or missing-part message. Product-specific application notes remain alongside confirmed numbers.
 
 ## Verified numbers
 
@@ -33,7 +33,7 @@ Numbered diagram callouts are retained separately. Blank/em-dash/N/A fields are 
 
 ## Diagram selection
 
-The panel returns at most three original images. Visually reviewed exploded illustrations are preferred, followed by the article's own useful illustrations or a component-matched assembly in the exact same engine section. A related diagram must match all meaningful component-name tokens; a nearby article is insufficient. Curated cross-article links bind both target and diagram-owner hashes.
+The compatibility API returns at most three original images; these are not displayed in the Parts panel. Visually reviewed exploded illustrations are preferred, followed by the article's own useful illustrations or a component-matched assembly in the exact same engine section. A related diagram must match all meaningful component-name tokens; a nearby article is insufficient. Curated cross-article links bind both target and diagram-owner hashes.
 
 Only four visually inspected illustrations currently receive `explodedVerified:true`: the 2.3L front/upper engine, 3.7L upper engine, 5.0L lower/front engine, and steering-column/shaft assembly views. Other illustrations retain accurate component, procedure, connector, or wiring labels. Tool thumbnails, tiny non-connector graphics, and symbol-guide images are excluded. A selected engine excludes known conflicting diagram variants. All original article media remain available in the article itself.
 
