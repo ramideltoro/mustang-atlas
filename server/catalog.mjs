@@ -26,13 +26,22 @@ export function documentApplicability(row,selected='all'){
 }
 export function operationFor(row){const folder=String(row.source_path||'').split('/').at(-2)||'';return /^(?:Description and Operation|Diagnosis and Testing|Removal(?: and Installation)?|Installation|Disassembly(?: and Assembly(?: of Subassemblies)?)?|Assembly|Overhaul|General Procedures|Specifications)$/i.test(folder)?folder:null;}
 export function sectionFor(row){return {id:row.section_code||row.section_title,code:row.section_code||'',title:row.section_title||'General information'};}
+// Visually reviewed navigation/expand controls have no captions and can be
+// larger than real diagrams. Their content-addressed identity is unambiguous;
+// exclude these assets from thumbnails without discarding article content.
+const thumbnailControls=new Set([
+ '/media/def045efce6444a5bdabc8d05f4bacd4c065e95f1c9689333ee22d0b84aaf155.jpg',
+ '/media/b75299658b432c802908906852dea8bb45642fc86980631066ebb0ea8c6ec7f7.jpg',
+ '/media/17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a.png',
+ '/media/570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61.png',
+]);
 export function selectThumbnail(document,resolve=m=>m){
  const assets=array(document.media),candidates=[];const positions=new Map();let n=0;
  function walk(blocks,table=false){for(const b of blocks||[]){if(b.mediaId&&!positions.has(b.mediaId))positions.set(b.mediaId,{index:n++,table});walk(b.children,table);walk(b.items,table);for(const r of b.rows||[])for(const c of r.cells||[])walk(c.blocks,true);}}
  walk(array(document.blocks));
  for(const original of assets){const width=Number(original.width),height=Number(original.height);const caption=String(original.caption||'');const pos=positions.get(original.id);if(!pos)continue;
   const vectorReference=original.mime==='image/svg+xml'&&['connector','wiring'].includes(document.kind)&&width>=24&&height>=24;
-  if((!vectorReference&&(width<180||height<120||width*height<45000))||width/height>7||height/width>7||/\b(?:icon|logo|bullet|arrow|special tool)\b/i.test(caption))continue;
+  if(thumbnailControls.has(original.url)||(!vectorReference&&(width<180||height<120||width*height<45000))||width/height>7||height/width>7||/\b(?:icon|logo|bullet|arrow|special tool)\b/i.test(caption))continue;
   let score=Math.log(width*height)+(!pos.table?4:0)-pos.index*0.012;
   if(/\b(?:component|exploded|assembly|overview|location)\b/i.test(caption))score+=3;
   candidates.push({original,score});

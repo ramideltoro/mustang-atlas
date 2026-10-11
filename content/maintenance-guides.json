@@ -10,6 +10,12 @@
       "icon": "calendar"
     },
     {
+      "id": "advanced",
+      "title": "Advanced maintenance",
+      "description": "Go beyond routine checks with measurements, targeted service and repair follow-up. Each guide explains what makes the task worthwhile, which equipment it needs and where to find the full procedure. These are condition-based jobs, not extra items to do at every oil change.",
+      "icon": "wrench"
+    },
+    {
       "id": "engine",
       "title": "Engine and cooling",
       "description": "Oil, air, ignition, belts and the cooling circuit.",
@@ -406,7 +412,9 @@
       ],
       "relatedGuideIds": [
         "wheel-hubs",
-        "suspension"
+        "suspension",
+        "wheel-tire-runout-matching",
+        "wheel-alignment"
       ],
       "id": "tires",
       "title": "Tires: pressure, tread and the right rotation",
@@ -613,7 +621,9 @@
       ],
       "relatedGuideIds": [
         "brake-fluid",
-        "parking-brake"
+        "parking-brake",
+        "brake-pressure-bleeding",
+        "brake-pulsation-runout"
       ],
       "id": "brakes",
       "title": "Brake inspection: pads, discs and hoses",
@@ -835,7 +845,8 @@
       ],
       "relatedGuideIds": [
         "coolant-change",
-        "accessory-belts"
+        "accessory-belts",
+        "cooling-pressure-leak-test"
       ],
       "id": "cooling-check",
       "title": "Cooling-system checks between coolant changes",
@@ -1162,7 +1173,8 @@
       ],
       "relatedGuideIds": [
         "halfshaft-boots",
-        "axle-inspection"
+        "axle-inspection",
+        "driveline-vibration-runout"
       ],
       "id": "driveshaft",
       "title": "Driveshaft and U-joints: check movement, noise and mounting",
@@ -1376,7 +1388,8 @@
       ],
       "relatedGuideIds": [
         "suspension",
-        "tires"
+        "tires",
+        "wheel-alignment"
       ],
       "id": "steering",
       "title": "Steering linkage: inspect the mechanical connection",
@@ -1489,7 +1502,8 @@
       "relatedGuideIds": [
         "stabilizer-bushings",
         "tires",
-        "steering"
+        "steering",
+        "wheel-alignment"
       ],
       "id": "suspension",
       "title": "Suspension checks: follow wear, leaks and ride changes",
@@ -1700,7 +1714,8 @@
       ],
       "relatedGuideIds": [
         "automatic-fluid",
-        "service-inspection"
+        "service-inspection",
+        "transmission-cooler-backflush"
       ],
       "id": "automatic-level",
       "title": "6R80 fluid level: this is a measured workshop check",
@@ -1796,7 +1811,9 @@
       ],
       "relatedGuideIds": [
         "engine-air-filter",
-        "service-inspection"
+        "service-inspection",
+        "ac-odor-treatment",
+        "ac-performance-leak-testing"
       ],
       "id": "cabin-filter",
       "title": "Cabin air filter: restore a clean airflow path",
@@ -1884,7 +1901,8 @@
       ],
       "relatedGuideIds": [
         "cabin-filter",
-        "oil-service"
+        "oil-service",
+        "ecoboost-charge-air-cooler-cleaning"
       ],
       "id": "engine-air-filter",
       "title": "Engine air filter: change the element, protect the intake",
@@ -1986,7 +2004,8 @@
         "These time and mileage intervals are for the stated 2015 base engines. They do not establish a 5.2L schedule."
       ],
       "relatedGuideIds": [
-        "cooling-check"
+        "cooling-check",
+        "cooling-pressure-leak-test"
       ],
       "id": "coolant-change",
       "title": "Coolant replacement: fluid choice and trapped air matter",
@@ -2305,7 +2324,8 @@
       ],
       "relatedGuideIds": [
         "automatic-level",
-        "manual-fluid"
+        "manual-fluid",
+        "transmission-cooler-backflush"
       ],
       "id": "automatic-fluid",
       "title": "6R80 automatic fluid and filter service",
@@ -2409,7 +2429,8 @@
       ],
       "relatedGuideIds": [
         "automatic-fluid",
-        "axle-fluid"
+        "axle-fluid",
+        "clutch-hydraulic-bleeding"
       ],
       "id": "manual-fluid",
       "title": "MT82 manual transmission fluid: use the gearbox specification",
@@ -2616,7 +2637,9 @@
       ],
       "relatedGuideIds": [
         "service-inspection",
-        "warning-lamps"
+        "warning-lamps",
+        "battery-testing-charging",
+        "battery-drain-diagnosis"
       ],
       "id": "battery",
       "title": "Battery connections: check the path before replacing the battery",
@@ -2941,7 +2964,9 @@
         "The door-removal link is for structural context or a confirmed repair, not a routine drain-cleaning step. Convertible roof seals have their own procedures."
       ],
       "relatedGuideIds": [
-        "latches-locks"
+        "latches-locks",
+        "corrosion-protection",
+        "ac-odor-treatment"
       ],
       "id": "body-drains-seals",
       "title": "Body drains and weather seals: give water a way out",
@@ -3264,7 +3289,8 @@
       "relatedGuideIds": [
         "brake-fluid",
         "oil-level",
-        "seatbelts-latches"
+        "seatbelts-latches",
+        "battery-testing-charging"
       ],
       "id": "warning-lamps",
       "title": "Warning lamps: know a check from an active warning",
@@ -3367,7 +3393,9 @@
       ],
       "relatedGuideIds": [
         "brakes",
-        "warning-lamps"
+        "warning-lamps",
+        "brake-pressure-bleeding",
+        "clutch-hydraulic-bleeding"
       ],
       "id": "brake-fluid",
       "title": "Brake and clutch fluid: check the level without masking the problem",
@@ -3445,6 +3473,1976 @@
         {
           "documentId": "G2361881",
           "sourceHash": "6caefdfcf40a04bf00a284f1f6fcde50d9579096fca81b19d2badfe70e3a8b57"
+        }
+      ]
+    },
+    {
+      "id": "brake-pressure-bleeding",
+      "title": "Pressure-bleed the brake hydraulic system",
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "summary": "Remove air after hydraulic repairs, with the correct fluid, pressure equipment and wheel sequence. Includes the extra steps for a new ABS hydraulic unit.",
+      "hero": {
+        "documentId": "G2361881",
+        "mediaId": "G2361881-m0007"
+      },
+      "introduction": "The brake pedal sends force through fluid to the calipers. Air compresses much more readily than brake fluid, so trapped air can use up pedal travel before the pads clamp firmly. Pressure bleeding feeds clean fluid into the reservoir and carries air out through the caliper bleeders. It belongs after the reason for air entry has been repaired.",
+      "why": "A low or spongy pedal can come from a leak or trapped air, but it can also have other causes. Bleeding cannot repair a leaking connection, a faulty master cylinder or a damaged hose. The brake diagnostic chart separates these faults; starting there avoids treating a temporarily improved pedal as proof that the car is repaired.",
+      "when": {
+        "summary": "After a brake hydraulic component is disconnected, or when diagnosis identifies air after the leak or fault is repaired.",
+        "notes": [
+          "Pressure bleeding is required after disconnecting a caliper, hose, tube or other brake hydraulic component. A newly installed master cylinder also needs the priming operation in Component Bleeding.",
+          "This is condition-based repair work. These procedures do not establish a calendar or mileage interval for flushing brake fluid."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Confirm the repair and brake configuration",
+          "detail": "Identify the installed front caliper type, the rear parking-brake arrangement, and whether the car is left- or right-hand drive. Have the pressure-bleeding illustrations and the correct bleeder torque information available before opening a bleeder."
+        },
+        {
+          "title": "Use the specified fluid and clean equipment",
+          "detail": "Use clean Motorcraft DOT 4 LV High Performance brake fluid, PM-20, meeting WSS-M6C65-A2. Prepare a brake/clutch pressure bleeder with a correctly fitting reservoir adapter, a clear bleed hose and a clean fluid container. Follow the equipment maker’s setup instructions."
+        },
+        {
+          "title": "Plan access and any ABS service operation",
+          "detail": "Use the proper lifting and wheel-removal procedure. If a new hydraulic control unit has been installed, arrange a diagnostic scan tool capable of the ABS Service Bleed function before starting."
+        },
+        {
+          "title": "Protect nearby surfaces",
+          "detail": "Clean around the reservoir cap before removal. If fluid spills, wash the affected component immediately with cold water; keep dirt and foreign material out of the fluid supply."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Repair the cause and prime a new master cylinder",
+          "body": "Inspect for leaks and complete the hydraulic repair first. When the master cylinder is new, follow Component Bleeding to prime it with a master-cylinder bleeding set before bleeding the rest of the system. Do not use repeated bleeding to work around an unresolved leak."
+        },
+        {
+          "title": "Set up a clean, pressurized fluid supply",
+          "body": "Fill the reservoir with the specified fluid and attach the correct pressure-bleeder adapter. Make sure the tank holds enough clean fluid for the operation, then connect it as its manufacturer directs. The pressure-bleeding procedure specifies 207–345 kPa (30–50 psi)."
+        },
+        {
+          "title": "Use the wheel sequence for the car’s steering layout",
+          "body": "Remove the wheels as directed and use the left-hand-drive or right-hand-drive sequence illustration in Brake System Pressure Bleeding. The two sequences differ. Keep that diagram open rather than substituting a remembered “furthest wheel first” order."
+        },
+        {
+          "title": "Clear each caliper, including its additional bleeders",
+          "body": "Remove a bleeder cap if fitted. Partly fill a clean container with specified fluid, connect the hose and keep its outlet submerged. Open the bleeder 180 degrees and allow fluid to flow until it is clear and bubble-free, then close it to the confirmed specification. Four- and six-piston front calipers require the inner bleeder before the outer one. At rear calipers with an integral parking brake, apply and release the parking brake five times, then reopen the bleeder 180 degrees until clear fluid flows; repeat as necessary. Complete the remaining wheel ends in the prescribed order."
+        },
+        {
+          "title": "Complete the extra cycle when the hydraulic unit is new",
+          "body": "For a newly installed ABS hydraulic control unit, perform the diagnostic tool’s ABS Service Bleed operation and then repeat the complete pressure-bleeding procedure. The first pressure bleed alone does not finish this repair."
+        },
+        {
+          "title": "Release pressure, restore the level and verify operation",
+          "body": "Reinstall bleeder caps where fitted, lower the vehicle as directed, close the pressure-tank valve and release its pressure before removing the equipment. Fill the reservoir to the correct level and install its cap. Refit the wheels using their full installation instructions, inspect for leaks and confirm normal brake operation before the controlled road test required by the procedure."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "The pedal still sinks or feels spongy",
+          "body": "Return to the brake diagnostic chart. It distinguishes leaks and air from master-cylinder, hose, caliper and hydraulic-control-unit faults; an unresolved pedal concern is not a completed bleed."
+        },
+        {
+          "title": "A six-piston torque discrepancy",
+          "body": "The available six-piston front-bleeder torque entry contains an inconsistent unit pair. Confirm the correct specification for the fitted caliper before tightening; do not choose one of the conflicting values by assumption."
+        },
+        {
+          "title": "Air introduced during setup",
+          "body": "An unprimed replacement master cylinder, a dirty connection or an inadequate fluid supply can undermine the work. Finish the required preparation before moving through the wheel sequence."
+        }
+      ],
+      "notes": [
+        "The rear parking-brake cycling instruction applies to calipers with the integral parking-brake arrangement described in the procedure."
+      ],
+      "procedures": [
+        {
+          "documentId": "G2361881",
+          "purpose": "Complete pressure-bleeding sequence, illustrated wheel order and new-HCU finishing steps."
+        },
+        {
+          "documentId": "G1694693",
+          "purpose": "Prime a new master cylinder and identify when disconnected hydraulic components require pressure bleeding."
+        },
+        {
+          "documentId": "G1721936",
+          "purpose": "Diagnose low, spongy or sinking brake-pedal symptoms before choosing bleeding as the repair."
+        },
+        {
+          "documentId": "G1694687",
+          "purpose": "Check the required fluid and fitted-brake specifications; note the six-piston torque discrepancy explained above."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Remove and reinstall wheels with the correct seating, tightening and recheck instructions."
+        }
+      ],
+      "relatedGuideIds": [
+        "brake-fluid",
+        "brakes",
+        "brake-pulsation-runout"
+      ],
+      "evidence": [
+        "brake-fluid"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G2361881",
+          "sourceHash": "6caefdfcf40a04bf00a284f1f6fcde50d9579096fca81b19d2badfe70e3a8b57"
+        },
+        {
+          "documentId": "G1694693",
+          "sourceHash": "538ba1bb4981c6bb06c1a6fa49f4f74e9e49ddf1c57a00aad25430fe153e2d2a"
+        },
+        {
+          "documentId": "G1721936",
+          "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
+        },
+        {
+          "documentId": "G1694687",
+          "sourceHash": "c1909f2c4ff8ca77cb33862bb9d20b51fa06642cb1c6c22c7b1c36f1148188e6"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "id": "cooling-pressure-leak-test",
+      "title": "Cooling-system pressure testing: follow the leak evidence",
+      "summary": "Use a cold inspection, a separate cap check and a controlled pressure test to narrow down coolant loss before choosing a repair.",
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "Factory cooling system; select the engine-specific diagnostic article."
+      },
+      "hero": {
+        "documentId": "G1694576",
+        "mediaId": "G1694576-m0009"
+      },
+      "introduction": "The cooling system holds coolant while allowing its pressure and volume to change as the engine warms and cools. Hoses, seals, joints and the expansion bottle must contain that fluid. A pressure tester gives the system a controlled load with the engine stopped, making a leak easier to investigate. The cap is tested separately because a poor cap seal and a leak elsewhere need different attention. On these engines the pressure cap is on the expansion, or degas, bottle; there is no radiator cap to remove.",
+      "why": "Finding the escaping fluid or the failed pressure check gives a repair a useful starting point. Coolant loss, overheating and slow warm-up have separate diagnostic paths. A successful pressure test alone does not establish that a fan, thermostat or coolant pump is working correctly.",
+      "when": {
+        "summary": "When coolant loss or an engine-specific diagnostic path calls for a cooling-system pressure test.",
+        "notes": [
+          "This is a diagnostic check, with no mileage-based pressure-testing interval in these procedures.",
+          "Start with the relevant 2.3L, 3.7L or 5.0L article below. Their pressure-test values agree, but their component layouts and diagnostic branches must stay with the fitted engine."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Let the system become cold",
+          "detail": "> **WARNING:** Stop the engine and allow it to cool before opening the cooling system. A hot or running engine can release pressurized steam and coolant when the cap is loosened, causing serious injury."
+        },
+        {
+          "title": "Have both tester adapters",
+          "detail": "The cap and the bottle use different adapter arrangements. The procedures list a cap adapter equivalent to Snap-On TA53 and a bottle adapter equivalent to TA52, AST ASSFZ-47 or Redline RDL95-0750. Use a suitable pressure tester and the full equipment instructions."
+        },
+        {
+          "title": "Keep the observations together",
+          "detail": "Record the cold level, the circumstances of any loss, visible wetness or residue, coolant odor, and retrieved cooling-related fault codes. Correct an obvious identified fault before extending the diagnosis."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Begin with the cold visual check",
+          "body": "With the engine off and cold, inspect the level in the degas bottle and adjust it with the specified coolant as needed. Look for leaks or damage at hoses, tubes, clamps, housings, the radiator, bottle and coolant pump. A wet cabin floor or coolant odor inside also belongs in the inspection record because the heater core is part of the circuit."
+        },
+        {
+          "title": "Inspect the sealing surfaces and test the cap separately",
+          "body": "Inspect the cap and bottle neck for damaged seals, cross-threading, burrs or other sealing defects. Use the cap adapter to test the cap. Its specified holding pressure is **145 kPa ± 21 kPa (21 psi ± 3 psi)**. Follow the engine-specific directions for a defective cap or bottle; the cap test value is a separate specification from the system test below."
+        },
+        {
+          "title": "Pressurize the system slowly",
+          "body": "Attach the correct bottle adapter. Increase pressure gradually to **124–138 kPa (18–20 psi)**; pressing the pump too quickly can produce a misleading reading.\n\n> **NOTICE:** Do not exceed the cooling-system maximum in the engine-specific specifications. The cap rating is not permission to apply a higher system-test pressure."
+        },
+        {
+          "title": "Observe the gauge and look for an external leak",
+          "body": "Watch the gauge for approximately **two minutes**. The procedure expects no pressure drop during that period. If pressure falls, inspect for escaping coolant and repair the identified leak. Record what actually became wet rather than replacing the nearest major component by assumption."
+        },
+        {
+          "title": "Follow the internal-leak branch when needed",
+          "body": "If pressure drops without a visible external leak, inspect the coolant for engine oil and the engine oil for coolant. The loss-of-coolant diagnostic path also checks for combustion gases using the specified type of leak tester and its instructions. Contamination or a positive combustion-gas result leads into engine diagnosis; a pressure loss by itself does not identify a particular gasket."
+        },
+        {
+          "title": "Close the test and verify the repair",
+          "body": "Use the tester instructions to release pressure safely before removing its adapter. Refit the bottle cap to its hard stop. After a cause is corrected, follow the engine-specific procedure to confirm normal operation and any required refill or bleeding work. Keep the initial and final results with the repair record."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Falling pressure with no visible wet area",
+          "body": "Continue through the internal-leak checks instead of treating the absence of a puddle as proof that the system is sealed."
+        },
+        {
+          "title": "Oil and coolant appearing to mix",
+          "body": "Oil in the coolant, coolant in the engine oil, or a positive combustion-gas test calls for the relevant engine diagnosis."
+        },
+        {
+          "title": "A coolant color change without contamination",
+          "body": "The specified orange coolant can become pink or light red in normal use. Clear, uncontaminated fluid with that change alone is not a reason to flush the system."
+        }
+      ],
+      "notes": [
+        "Keep cap testing, system pressure testing and combustion-gas testing as separate checks. Each answers a different diagnostic question.",
+        "Pressure testing does not replace the engine-specific coolant filling and bleeding procedure when the system has been opened for repair."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1673122",
+          "purpose": "Use the 2.3L loss-of-coolant path and Cooling System Pressure Test."
+        },
+        {
+          "documentId": "G1694576",
+          "purpose": "Use the 3.7L loss-of-coolant path and Cooling System Pressure Test."
+        },
+        {
+          "documentId": "G1694609",
+          "purpose": "Use the 5.0L loss-of-coolant path and Cooling System Pressure Test."
+        },
+        {
+          "documentId": "G1693187",
+          "purpose": "Review the cooling-system pressure and hot-coolant precautions before opening it."
+        }
+      ],
+      "relatedGuideIds": [
+        "cooling-check",
+        "coolant-change"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1673122",
+          "sourceHash": "a42a999d6a999c22b1d16e2189b1ce1f3851041cb2ca0bf6103ca43b29a145f7"
+        },
+        {
+          "documentId": "G1694576",
+          "sourceHash": "83539de9f716ea02eb1c20e53b0949cc0556db74ad3badab268db80a6d426147"
+        },
+        {
+          "documentId": "G1694609",
+          "sourceHash": "0ddd854bcbc3c576eb897ca7bc4cbcbe56bd54aadef646a06020fa8aa98f40dc"
+        },
+        {
+          "documentId": "G1693187",
+          "sourceHash": "c675bde516ef3f5ad9dba9e05e848d4ad72f20ff944749c7d1f73350fea5ab5f"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "evidence": [
+        "checks"
+      ],
+      "id": "battery-testing-charging",
+      "title": "Battery testing, charging and replacement: follow the evidence",
+      "summary": "Separate a low charge from a failed battery, choose the right next step, and plan the reset required for a replacement.",
+      "hero": {
+        "documentId": "G1692362",
+        "mediaId": "G1692362-m0001"
+      },
+      "introduction": "A flat battery describes what happened, not why it happened. The battery may be discharged after storage, unable to hold up under load, or connected through a poor terminal or ground. Testing separates those possibilities. The job is finished when the battery, its connections and any underlying drain have been addressed—not merely when the engine starts once.",
+      "why": "A partly charged battery can give a misleading test result. Charging it properly before the required retest helps avoid replacing a serviceable battery. Equally, fitting a new battery without investigating an excessive key-off drain can leave the next one with the same problem.",
+      "when": {
+        "summary": "When starting becomes weak, a battery is discharged, or a test result calls for charging or replacement.",
+        "notes": [
+          "Use the battery’s condition and diagnostic result; there is no fixed replacement interval in this guide.",
+          "Extended storage and repeated short moves with heavy electrical loads can discharge a battery. Fifteen minutes of idling is not an adequate recovery plan for a deeply discharged battery."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Use suitable diagnostic equipment",
+          "detail": "Arrange an approved diagnostic battery charger/tester and follow its instructions. For a new battery, plan access to a scan tool that can perform the Battery Monitoring System reset."
+        },
+        {
+          "title": "Protect yourself and the work area",
+          "detail": "Wear eye protection, provide ventilation, and keep sparks and flames away from the battery. Read the linked battery precautions before handling its acid-containing case or terminals."
+        },
+        {
+          "title": "Plan disconnection and reconnection",
+          "detail": "The disconnect article distinguishes interrupting vehicle power at the negative cable from removing both cables for battery testing or replacement. Use the sequence required by the actual operation."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Inspect the connections before condemning the battery",
+          "body": "With the ignition off, inspect the battery, its mounting, terminals, wiring and chassis grounds. Correct dirty or loose connections and retest; a poor electrical path can resemble a battery failure."
+        },
+        {
+          "title": "Test the battery with the correct equipment",
+          "body": "Follow the battery-condition test and the charger/analyzer’s decision. The test evaluates how the battery behaves under the specified load; a voltage reading without the required test conditions does not give the same answer."
+        },
+        {
+          "title": "Charge a discharged battery properly",
+          "body": "Follow Battery Charging: disconnect the battery, connect the charger to the battery posts with correct polarity, and follow the charger instructions. A cold battery needs to reach approximately 5°C (41°F) before charging; the procedure notes that warming at room temperature may take four to eight hours."
+        },
+        {
+          "title": "Retest and follow the result",
+          "body": "Complete charging before the required retest. A REPLACE BATTERY or REPLACE-BAD CELL result calls for replacement through the linked procedure. If the battery passes but repeatedly goes flat, continue with drain diagnosis instead of assuming another battery will fix it."
+        },
+        {
+          "title": "Install only when replacement is justified",
+          "body": "Use the exact battery removal/installation and cable procedures. They cover the hold-down, connection sequence and tightening requirements. Support the battery with a carrier or at opposite corners rather than squeezing its end walls."
+        },
+        {
+          "title": "Complete the reset and check the original concern",
+          "body": "After a new battery is connected, use the scan tool to perform the Battery Monitoring System (BMS) reset. A recharge alone is not the new-battery replacement step. Disconnection can temporarily affect adaptive driving behavior; follow applicable relearn or window-initialization instructions and verify the original starting concern."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "It goes flat again after a full charge",
+          "body": "Move to the parasitic-drain guide and confirm the cause before spending money on another battery."
+        },
+        {
+          "title": "The test changes after charging or terminal repair",
+          "body": "Keep the sequence and results in the service record. The initial low-charge result is not interchangeable with the final condition result."
+        },
+        {
+          "title": "A damaged or leaking case",
+          "body": "Stop handling it as a routine charging job and follow the battery safety precautions."
+        }
+      ],
+      "notes": [
+        "Battery Monitoring System reset requires the specified scan-tool function. Clearing a warning message is not the same operation.",
+        "The linked procedures contain the complete safety precautions and fastener requirements; this guide helps choose and plan the correct work."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1931208",
+          "purpose": "Perform the battery-condition test and follow its charging, replacement or drain-test branches."
+        },
+        {
+          "documentId": "G1692355",
+          "purpose": "Charge a discharged battery with the correct preparation and charger procedure."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Disconnect and reconnect the battery cables in the correct sequence."
+        },
+        {
+          "documentId": "G1692362",
+          "purpose": "Replace a confirmed faulty battery and complete the BMS reset."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Review battery handling, acid and explosive-gas precautions."
+        },
+        {
+          "documentId": "G1957566",
+          "purpose": "Initialize one-touch windows when the applicable procedure calls for it."
+        }
+      ],
+      "relatedGuideIds": [
+        "battery",
+        "battery-drain-diagnosis",
+        "warning-lamps"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1692362",
+          "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0"
+        },
+        {
+          "documentId": "G1931208",
+          "sourceHash": "16ffdf4436eb6d2a649b798ae4b3439f788393d5f2ae1472276f758af55be523"
+        },
+        {
+          "documentId": "G1692355",
+          "sourceHash": "5658dc12c1a41a38a09888dcd3595b7c6cb6b87194b692cf145e3a2fd22ab9d1"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1957566",
+          "sourceHash": "592cddfd800fabd75ef9bbd517bceba85a9a6713ed1e7e2bb72bb083f122fb63"
+        }
+      ]
+    },
+    {
+      "id": "wheel-alignment",
+      "title": "Wheel alignment: turn tire wear into a useful measurement",
+      "categoryId": "advanced",
+      "summary": "Understand toe and camber, check what can upset the readings, and plan an alignment that fixes the cause of uneven wear.",
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "Factory suspension geometry; modified suspension needs its own applicable specifications."
+      },
+      "hero": {
+        "documentId": "G2361401",
+        "mediaId": "G2361401-m0002"
+      },
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "introduction": "Alignment describes where the wheels point and how they lean. Toe is the direction a wheel points when viewed from above; camber is its inward or outward lean when viewed from the front or rear. A small error can make a tire scrub across the road instead of rolling cleanly. Getting the angles right starts with healthy tires and suspension, not immediately turning an adjustment bolt.",
+      "why": "An alignment check can help explain a crooked steering wheel, uneven tire wear or a pull. Those symptoms can also come from tire pressure, tire forces, brake drag or loose suspension parts. Measuring after those basic checks prevents an adjustment from hiding another problem.",
+      "when": {
+        "summary": "Check when tire wear, pulling or an off-center steering wheel points to an alignment concern.",
+        "notes": [
+          "This is a condition-based check, with no fixed alignment mileage added here.",
+          "Use the final alignment checks required by the relevant suspension or steering repair. Lowered or otherwise modified cars need specifications appropriate to that configuration."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Collect the clues",
+          "detail": "Note where the tires are wearing, when the car pulls, and whether steering or suspension work has recently been done. Keep any previous alignment readings."
+        },
+        {
+          "title": "Start with a sound car",
+          "detail": "Use the correct cold tire pressures and tire sizes. Check for damage, uneven loading and worn or loose steering and suspension components before measuring."
+        },
+        {
+          "title": "Arrange an alignment system",
+          "detail": "This job uses a level alignment platform and calibrated equipment. An alignment shop can supply measured before-and-after values and carry out any necessary adjustments."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Separate the symptom from the diagnosis",
+          "body": "A car that pulls is giving you a clue, not an automatic alignment verdict. Use the suspension diagnosis article to work through loading, tires, brake drag and steering condition before deciding which angle is wrong."
+        },
+        {
+          "title": "Measure all relevant angles before adjusting",
+          "body": "With the car set up according to the equipment instructions, record front and rear readings against the specification for its fitted suspension. Keep the steering wheel centered. Looking at all four wheels helps avoid correcting the front while overlooking the rear."
+        },
+        {
+          "title": "Make only the adjustment the readings support",
+          "body": "Front toe is adjusted at the tie rods; rear toe uses the toe-link adjustment. The steering bellows must not twist as the front tie rods turn. The rear adjustment area must be clean so the hardware clamps correctly. Use the linked procedure for the actual movement and tightening steps."
+        },
+        {
+          "title": "Treat camber correction as its own job",
+          "body": "Changing camber can also alter toe, so toe needs another check afterward. Rear camber has a control-arm adjustment. The linked front-camber correction involves special service fasteners and modification at the strut mounting hole; it is an advanced repair decision for a suitably equipped shop, not a bolt to loosen experimentally."
+        },
+        {
+          "title": "Verify after final tightening",
+          "body": "Recheck the readings after the fasteners are tightened to their procedure-specific values. The wheels can move as the joints clamp. Save the final readings, then confirm straight-ahead steering and the original complaint on a controlled road test."
+        },
+        {
+          "title": "Follow up on the tire wear",
+          "body": "Record the present wear pattern so the next inspection can show whether it is progressing. Existing damage will not disappear after adjustment. If the car still pulls with correct readings, continue the tire, brake and steering diagnosis instead of pushing the alignment outside specification."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Alignment will not hold",
+          "body": "Loose joints, damaged components or a clamping problem need correction before another adjustment is likely to last."
+        },
+        {
+          "title": "An angle outside the available adjustment",
+          "body": "Check ride height and component condition. Do not substitute arbitrary settings or modify suspension parts simply to make a display turn green."
+        },
+        {
+          "title": "A changed suspension setup",
+          "body": "Factory alignment specifications are not automatically suitable for aftermarket suspension and wheel changes."
+        }
+      ],
+      "notes": [
+        "This guide explains the inspection and planning sequence. The linked adjustment articles carry the fastener requirements and exact work steps.",
+        "Do not confuse wheel balancing with alignment: balancing addresses rotating mass; alignment addresses wheel direction and lean."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1686610",
+          "purpose": "Work through pulling, tire wear, ride height and suspension condition before an adjustment."
+        },
+        {
+          "documentId": "G2361399",
+          "purpose": "Adjust front toe and protect the steering bellows while turning the tie rods."
+        },
+        {
+          "documentId": "G2361401",
+          "purpose": "Adjust rear toe, keep the clamping surfaces clean and verify the final readings."
+        },
+        {
+          "documentId": "G2361400",
+          "purpose": "Correct rear camber and recheck rear toe afterward."
+        },
+        {
+          "documentId": "G2361398",
+          "purpose": "Review the specialist front-camber correction and its required service fasteners."
+        }
+      ],
+      "relatedGuideIds": [
+        "tires",
+        "suspension",
+        "steering"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G2361401",
+          "sourceHash": "b8304ac832c589310e08e51f6a14be69850503e5d6ea5fb3a609d9fe48e6c7b4"
+        },
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        },
+        {
+          "documentId": "G2361399",
+          "sourceHash": "de9bb40c44010377b4a939b594ec352b94ade0920c9c542774062f9be21fcb27"
+        },
+        {
+          "documentId": "G2361400",
+          "sourceHash": "986bc6e6d154a43d37ccf33ae13254ca54ef48fb205cc58c7648f17fe376316c"
+        },
+        {
+          "documentId": "G2361398",
+          "sourceHash": "1b97e0cbf898544b74919943872f685477d300677603566fc36393cd556806c0"
+        }
+      ]
+    },
+    {
+      "id": "clutch-hydraulic-bleeding",
+      "title": "Bleed the MT82 clutch hydraulic circuit",
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "MT82 six-speed manual transmission only; not the automatic transmission or the 5.2L/TR-3160 clutch system."
+      },
+      "summary": "Restore a consistent clutch pedal after hydraulic repair or a confirmed air problem using the MT82 reservoir-vacuum procedure.",
+      "hero": {
+        "documentId": "G1704357",
+        "mediaId": "G1704357-m0001"
+      },
+      "introduction": "The clutch pedal operates a master cylinder, which moves fluid through a tube to the slave cylinder at the transmission. That movement releases the clutch so the transmission can shift. Trapped air can absorb part of the pedal stroke, leaving less movement available to release the clutch even when the pedal is pressed.",
+      "why": "A soft pedal, clutch drag or difficult shifting can involve air, low fluid or a leak, but the same symptoms can also involve the master cylinder, slave cylinder or clutch parts. The MT82 diagnostic chart checks these possibilities. Bleeding is useful when air is the problem; it does not fix worn friction parts or a leaking cylinder.",
+      "when": {
+        "summary": "After MT82 clutch hydraulic repair, or when diagnosis identifies trapped air causing poor release or a soft pedal.",
+        "notes": [
+          "The clutch-master-cylinder installation procedure explicitly calls for hydraulic bleeding. The MT82 diagnostic chart also calls for it when air is involved in clutch drag, difficult shifting or an unusually soft pedal.",
+          "There is no fixed clutch-fluid flush interval established by these repair instructions. This guide does not apply to the 5.2L/TR-3160 system."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Verify the transmission and fluid circuit",
+          "detail": "Confirm that the car has the MT82 transmission. Inspect fluid level and hydraulic connections, and repair leaks before bleeding. The brake and clutch circuits share the reservoir, so a low level also calls for inspection of the brake system."
+        },
+        {
+          "title": "Have the specified fluid ready",
+          "detail": "Use Motorcraft DOT 4 LV High Performance brake fluid, PM-20, meeting WSS-M6C65-A2. The reservoir must be filled to MAX during the procedure. Read the fluid product’s handling precautions and protect painted and plastic surfaces."
+        },
+        {
+          "title": "Prepare a sealed vacuum connection",
+          "detail": "Use the specified vacuum pump kit with an airtight reservoir stopper. The procedure permits a 50 mm (1.96 in) rubber stopper with an 8 mm (0.31 in) pipe as the alternative connection. This is a reservoir-vacuum operation, not an instruction to apply brake-bleeder pressure."
+        },
+        {
+          "title": "Keep the correct references open",
+          "detail": "Use Clutch System Bleeding for the complete illustrated sequence and Manual Transmission diagnosis for the clutch-pedal reserve check after bleeding."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Check the connections and start with the pedal fully up",
+          "body": "Make sure all hydraulic tubes are correctly seated, the repaired circuit is leak-free and the clutch pedal is in its fully raised position. Fill the brake/clutch reservoir to MAX with the specified fluid."
+        },
+        {
+          "title": "Apply and release the reservoir vacuum",
+          "body": "Fit the airtight stopper and connect the vacuum pump. Hold the stopper in place, draw 15–20 inches of vacuum and hold it for one minute. Release the vacuum quickly, then remove the stopper and equipment."
+        },
+        {
+          "title": "Restore the fluid level and work the pedal",
+          "body": "Refill the reservoir to MAX and fit the cap. Press and release the clutch pedal 10–12 times, or until the effort is consistent and positive at the top of travel. This checks whether the initial portion of the pedal stroke now produces a dependable hydraulic response."
+        },
+        {
+          "title": "Repeat the specified vacuum and pedal cycle",
+          "body": "Repeat the vacuum-hold/release, refill/cap and pedal-cycling sequence two additional times, or until there is consistent, positive pedal effort at the top, as directed in the bleeding procedure. Do not continue indefinitely if the fluid level drops or the result remains inconsistent; investigate the fault."
+        },
+        {
+          "title": "Confirm reserve and normal clutch operation",
+          "body": "Install the reservoir cap and check clutch-pedal reserve using the complete MT82 diagnostic method. That method uses 1 in (25 mm) as the minimum acceptable reserve; it is not a pedal-adjustment instruction. Check normal clutch operation and return to the symptom chart if release or shifting remains poor."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "The fluid level falls again",
+          "body": "Inspect the clutch and brake hydraulic systems for leaks. Topping up or bleeding repeatedly does not resolve fluid loss."
+        },
+        {
+          "title": "A soft pedal remains after the prescribed cycles",
+          "body": "Check the master cylinder for external leakage and the slave cylinder for leakage or binding, following the MT82 symptom chart."
+        },
+        {
+          "title": "A hard pedal or clutch slip",
+          "body": "These symptoms have separate diagnostic paths. Binding parts, worn friction components and a clutch that will not retract are not automatically an air problem."
+        },
+        {
+          "title": "Spilled fluid",
+          "body": "Immediately wash fluid off painted or plastic surfaces with water to avoid damage."
+        }
+      ],
+      "notes": [
+        "The guide’s engine filter identifies the 2015 2.3L, 3.7L and 5.0L range; the MT82 equipment requirement still has to match the actual car.",
+        "The clutch-pedal reserve test involves vehicle operation. Follow its complete setup and method rather than interpreting the reserve number as a static ruler measurement."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1704358",
+          "purpose": "Complete MT82 reservoir-vacuum bleeding sequence, equipment and fluid requirements."
+        },
+        {
+          "documentId": "G1687369",
+          "purpose": "Diagnose clutch symptoms and perform the clutch-pedal reserve test."
+        },
+        {
+          "documentId": "G1704357",
+          "purpose": "Locate the clutch pedal, master cylinder, slave cylinder and hydraulic tubes."
+        },
+        {
+          "documentId": "G1687295",
+          "purpose": "Left-hand-drive master-cylinder replacement, including its required bleeding step."
+        }
+      ],
+      "relatedGuideIds": [
+        "brake-fluid",
+        "manual-fluid",
+        "brake-pressure-bleeding"
+      ],
+      "evidence": [
+        "brake-fluid"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1704358",
+          "sourceHash": "16a1240a076f11ff389a6ac9a1b97dcfb1ce4716f6244c23bf8d2360edc1b75e"
+        },
+        {
+          "documentId": "G1687369",
+          "sourceHash": "3171bff99bbf82ff474be188e9e5a4fadf80540d44b3af30de28d6e4a96a9127"
+        },
+        {
+          "documentId": "G1704357",
+          "sourceHash": "e05327efcf01f49e98e8d3483b9769bf2ce7587f03ef3ebf2333f7ca1a0acaa4"
+        },
+        {
+          "documentId": "G1687295",
+          "sourceHash": "a43ee409abd5971a50f63622a7479cc7ccc831280261df7d1cc0e2d9c68651b8"
+        }
+      ]
+    },
+    {
+      "id": "brake-pulsation-runout",
+      "title": "Diagnose brake pulsation and disc runout",
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "summary": "Separate normal ABS feedback from brake roughness, inspect disc and hub seating, and use the correct runout and thickness limits before choosing a repair.",
+      "hero": {
+        "documentId": "G1693784",
+        "mediaId": "G1693784-m0004"
+      },
+      "introduction": "Runout is the side-to-side movement of an installed brake disc as it rotates. A disc, its mating surfaces and the way the wheel is tightened all contribute to the assembled result. Pulsation is a symptom rather than proof that a disc needs replacing: normal ABS operation, brake condition and suspension faults must be distinguished first.",
+      "why": "Replacing or machining a disc without checking how it seats can leave the underlying problem in place. The wheel-installation instructions specifically warn that incorrect tightening order can produce high disc runout and accelerate brake roughness. Measuring the installed assembly and checking its mounting surfaces makes the repair decision more useful than judging the disc by appearance alone.",
+      "when": {
+        "summary": "When braking repeatedly causes speed-related pedal pulsation, steering-wheel nibble or shudder outside normal ABS operation.",
+        "notes": [
+          "The brake diagnostic chart distinguishes pulsation with ABS activity on loose, wet or snowy surfaces from a repeatable brake or suspension concern.",
+          "This is a condition-based diagnostic task, not a scheduled rotor-machining service. Noise alone is not a reason to machine a disc."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Record the symptom before disassembly",
+          "detail": "Note whether vibration appears under braking or continues with the pedal released, and whether it is felt in the pedal, steering wheel or seat. Use the brake diagnostic chart to select the correct path and safe test conditions."
+        },
+        {
+          "title": "Identify the fitted brake package",
+          "detail": "Select the actual front caliper and rear disc type before using thickness limits or removing parts. The specification table has different minimum disc thicknesses for the two-, four- and six-piston front systems and for solid versus vented rear discs."
+        },
+        {
+          "title": "Prepare measuring and support equipment",
+          "detail": "Arrange a reliable installed-disc runout measurement with appropriate dial-indicator equipment and a disc-thickness measurement. Have proper lifting equipment, a torque wrench and a way to support a removed caliper without loading its hose."
+        },
+        {
+          "title": "Plan the measurement boundary",
+          "detail": "The linked specifications give an installed-disc runout limit. They do not provide a separate hub-flange runout setup or tolerance, so do not condemn a hub by applying the disc limit to the bare hub."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Confirm that the symptom needs brake diagnosis",
+          "body": "Follow the Brake System vibration pinpoint test. Normal ABS operation can cause hydraulic-unit noise and pedal pulsation during heavy braking or on low-grip surfaces. A repeatable speed-related nibble or shudder can involve brake or suspension components and needs the corresponding inspection."
+        },
+        {
+          "title": "Inspect the mountings before blaming the disc",
+          "body": "Check the relevant suspension components and wheel installation. If a disc is removed, clean its mating surfaces with the specified brake-cleaning material and a wire brush as directed. Keep the caliper supported; never let it hang by its hose. Corrosion, dirt and incorrect seating must be addressed before relying on an assembled measurement."
+        },
+        {
+          "title": "Record installed-disc runout against its own limit",
+          "body": "Have the installed disc measured with a repeatable, correctly secured gauge setup and record the indicated lateral movement. The listed maximum installed brake-disc runout is 0.05 mm (0.002 in). Treat that as an assembled-disc criterion, not a separate hub-flange tolerance. If the result is excessive, investigate seating and component condition rather than automatically replacing the hub."
+        },
+        {
+          "title": "Check thickness and whether machining is permitted",
+          "body": "Measure disc thickness and compare it with the exact fitted-brake specification. Machining is not allowed for discs with cross-drilled friction surfaces. A disc must not be machined when its thickness is less than the minimum thickness plus 0.6 mm (0.0236 in). This machining allowance is separate from the final minimum-thickness limit."
+        },
+        {
+          "title": "Choose a repair that addresses the measured condition",
+          "body": "Use the brake diagnosis and disc condition to decide whether cleaning and correct installation, disc replacement or permitted machining is appropriate. Where machining is selected, the procedure requires an on-vehicle lathe rather than a bench lathe; follow its complete setup, runout adjustment and post-cut thickness checks. Do not machine simply to treat squeal or other brake noise."
+        },
+        {
+          "title": "Reassemble correctly and verify the original complaint",
+          "body": "Use the correct front or rear disc procedure, including fasteners that must be replaced. Clean the wheel and hub mating surfaces and tighten wheel nuts in the prescribed star pattern with clean, dry threads. Apply the brake pedal several times after disc work to verify operation, then complete the appropriate controlled road test. Recheck wheel-nut tightness within 100 mi (160 km) after wheel installation."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Runout and thickness are different measurements",
+          "body": "A disc can meet one requirement and fail another. Keep the installed runout result, measured thickness and correct package-specific minimum together in the job record."
+        },
+        {
+          "title": "Loose or damaged suspension parts",
+          "body": "The brake vibration pinpoint test checks suspension condition as well as discs. Correct the identified fault instead of repeatedly machining rotors."
+        },
+        {
+          "title": "The wrong brake-package limit is used",
+          "body": "Match the front caliper and rear disc configuration before using thickness limits or choosing parts. Two-, four- and six-piston front brakes and solid versus vented rear discs do not all share the same minimum thickness."
+        },
+        {
+          "title": "A hub is blamed without an applicable test",
+          "body": "No separate hub-flange runout limit is established by the linked material. Investigate seating and use an appropriate hub-specific diagnostic reference before condemning the hub."
+        }
+      ],
+      "notes": [
+        "The 0.05 mm (0.002 in) value is the installed-disc limit; it must not be reused as a bare-hub tolerance. The machining article separately specifies the lathe’s adjustment conditions.",
+        "Use a suitably equipped brake shop for a reliable installed-disc measurement, and follow the complete linked procedure when carrying out the repair."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1721936",
+          "purpose": "Separate normal ABS feedback from brake vibration and follow the suspension/disc diagnostic path."
+        },
+        {
+          "documentId": "G1694687",
+          "purpose": "Installed-disc runout and fitted-brake minimum-thickness specifications."
+        },
+        {
+          "documentId": "G1693784",
+          "purpose": "Front-disc access, caliper support, mating-surface cleaning and reassembly."
+        },
+        {
+          "documentId": "G1693754",
+          "purpose": "Rear-disc access, mating-surface cleaning and reassembly."
+        },
+        {
+          "documentId": "G1694691",
+          "purpose": "Machining eligibility, on-vehicle lathe requirements and final thickness checks."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Correct wheel/hub seating, star-pattern tightening and wheel-nut recheck."
+        }
+      ],
+      "relatedGuideIds": [
+        "brakes",
+        "wheel-hubs",
+        "wheel-tire-runout-matching"
+      ],
+      "evidence": [
+        "checks"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1721936",
+          "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
+        },
+        {
+          "documentId": "G1694687",
+          "sourceHash": "c1909f2c4ff8ca77cb33862bb9d20b51fa06642cb1c6c22c7b1c36f1148188e6"
+        },
+        {
+          "documentId": "G1693784",
+          "sourceHash": "9249ad74482b718dd4a5dd6df7a2f5883b829920530621d8e4bd2f1c1b39a375"
+        },
+        {
+          "documentId": "G1693754",
+          "sourceHash": "591c9c4b082fb959fc9b3a5cec8f1ec1b5c45ed8923b05283e3f6810198ee350"
+        },
+        {
+          "documentId": "G1694691",
+          "sourceHash": "54da7f001d5bffa75be2454c161deb10475d3fe232c642efdd3f64f44ca21db5"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        }
+      ]
+    },
+    {
+      "id": "wheel-tire-runout-matching",
+      "title": "Measure wheel vibration and match the tire to the rim",
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "summary": "Use loaded road-force or radial-runout measurements to identify the high spot, reposition a tire when appropriate and finish with correct wheel-to-hub seating.",
+      "hero": {
+        "documentId": "G1686504",
+        "mediaId": "G1686504-m0001"
+      },
+      "introduction": "A wheel-and-tire assembly can be balanced yet still feel rough because it is not perfectly round or does not deflect evenly under load. Balancing corrects uneven mass; runout and road-force testing investigate a different source of vibration. Match mounting changes the tire’s position on the rim so their combined variation can be reduced before parts are replaced.",
+      "why": "A loaded road-force test measures how the tire behaves against a roller, while an unloaded dial indicator measures its shape. The diagnostic procedure prefers loaded testing for judging tire serviceability. Careful marking and repeat measurements help distinguish a tire contribution from a wheel contribution, and proper hub seating prevents the final installation from introducing another offset.",
+      "when": {
+        "summary": "When diagnosis points to a wheel/tire vibration that persists after basic tire, pressure and wheel-condition checks.",
+        "notes": [
+          "Do not perform this tire/wheel vibration diagnosis on tires with fewer than 200 mi (322 km) in service; initial flat spotting can change during that period. This does not postpone correcting obvious damage or unsafe tire condition.",
+          "Before runout matching, remove temporary flat spotting by driving 20 or more miles immediately before measurement, as directed in the matching procedure.",
+          "This is diagnostic correction when a concern is present, not a mileage-based tire-matching service."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Start with sound, correctly inflated tires",
+          "detail": "Inspect for damage, bent wheels and loose fasteners, and use the recommended tire size and wheel specification. Set the specified pressure from the vehicle’s tire label using an accurate digital gauge. Keep each assembly’s vehicle position marked."
+        },
+        {
+          "title": "Use equipment that centers and protects the wheel",
+          "detail": "Use the correct balancer adapters and clean assemblies. Incorrect centering can create an apparent runout problem. The wheel procedure requires suitable center-clamp tire-changing equipment and balancing equipment that does not contact the wheel face."
+        },
+        {
+          "title": "Choose the approved measurement and matching method",
+          "detail": "Loaded Hunter Road Force measurement is preferred. A securely mounted dial indicator can measure radial runout at the center tread rib, but an unloaded reading alone cannot decide whether a tire should be removed from service."
+        },
+        {
+          "title": "Have TPMS-safe tire service and marking materials ready",
+          "detail": "Prepare tire chalk or crayon, the tire-changing procedure, fast-drying, corrosion-inhibiting bead lubricant and wheel-installation instructions. Tire rotation on the rim must protect the pressure sensor and reseat the beads correctly."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Measure and mark the baseline",
+          "body": "After the condition checks and flat-spot warm-up, mark the assembly’s vehicle position and measure using the correct adapters. Loaded road force above 20 lb (9 kg) calls for match mounting; a value at or below that limit leads to balancing and wheel-to-hub optimization. With the dial-indicator method, measure the center tread rib from its zeroed low spot through a complete revolution; assembly runout above 1.14 mm (0.045 in) calls for matching. Record the high spot and reading."
+        },
+        {
+          "title": "Select the right matching path for the machine",
+          "body": "Use only the Ford-approved Hunter method described in Wheel to Tire Runout Minimization, or its manual matching sequence. Generation I/II machines supply readings only. Generation III uses “Match Without Rim Runout” when available; otherwise use the manual sequence. Generation IV/V uses “180 Matching.” Do not assume another automatic matching prompt is equivalent."
+        },
+        {
+          "title": "Reposition the tire and take the second measurement",
+          "body": "For the manual method, place a reference mark on the tire at the valve stem, break the beads using the TPMS precautions, lubricate them as directed and rotate the tire 180 degrees on the wheel. The reference mark is now opposite the valve stem. Reinflate correctly and remeasure, marking the new high spot and reading. If the result is within the applicable limit, proceed to balancing and hub optimization."
+        },
+        {
+          "title": "Use the high spots to choose the next branch",
+          "body": "If two above-limit measurements keep the high spots within 4 in (101.6 mm) of each other on the tire, the tire is the likely contributor; the procedure requires both measurements before that conclusion. If the second high spot is within 4 in (101.6 mm) of the opposite position of the first high spot on the wheel, inspect the bare wheel and measure its runout; the matching procedure specifies replacement above 1.14 mm (0.0449 in). If neither pattern fits and the result remains high, follow the illustrated 90-degree tire repositioning branch. Do not replace a tire merely because one unloaded reading was high."
+        },
+        {
+          "title": "Balance the corrected assembly and optimize hub seating",
+          "body": "Permanently mark the final high spot and reading on the inner sidewall and balance the assembly. For wheel-to-hub optimization, place its high spot at 6 o’clock and hand-snug the nuts. Lower the tire until it just contacts the ground and slightly loads the suspension, then tighten as directed. During this specific optimization operation, do not let the full vehicle weight rest on the tire while tightening."
+        },
+        {
+          "title": "Finish the installation and confirm the result",
+          "body": "Use the wheel procedure for clean mating surfaces, the specified torque and star pattern. Keep lubricant away from wheel-stud and wheel-nut threads and from brake friction surfaces. Verify whether the original vibration has improved and continue the diagnostic path if it has not. Recheck wheel-nut tightness within 100 mi (160 km) after installation."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "A false reading caused by setup",
+          "body": "Dirt, the wrong balancer adapter or movement of the dial-indicator stand can imitate an assembly fault. Confirm repeatable setup before making a parts decision."
+        },
+        {
+          "title": "A tire condemned from unloaded runout alone",
+          "body": "The diagnostic instructions say unloaded runout cannot accurately determine tire serviceability. Loaded testing and the complete diagnostic branch matter."
+        },
+        {
+          "title": "A wheel-to-hub exception is missed",
+          "body": "The runout-optimization procedure deliberately uses only slight tire loading while tightening. Keep that special instruction with this operation rather than blindly applying the general installation wording about the vehicle resting on its tires."
+        },
+        {
+          "title": "Damage during tire service",
+          "body": "Use the TPMS precautions, approved wheel-clamping approach and appropriate lubricant. Correcting vibration is not a reason to risk a pressure sensor or wheel finish."
+        }
+      ],
+      "notes": [
+        "Road-force and geometric runout use different units and answer different questions; 20 lb is a force threshold, not a tire-pressure setting.",
+        "The matching article rounds the bare-wheel limit to 0.0449 in while the diagnostic article gives 0.045 in for the assembly criterion; both metric values are 1.14 mm. Keep the wheel and assembly decisions in their respective branches."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1686502",
+          "purpose": "Tire/wheel diagnosis, loaded road-force and dial-indicator measurement methods and limits."
+        },
+        {
+          "documentId": "G1686505",
+          "purpose": "Complete equipment-specific and manual tire-to-wheel matching branches."
+        },
+        {
+          "documentId": "G1686504",
+          "purpose": "High-spot positioning and the special wheel-to-hub loading instruction."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel-care equipment precautions, correct installation and wheel-nut recheck."
+        }
+      ],
+      "relatedGuideIds": [
+        "tires",
+        "wheel-hubs",
+        "brake-pulsation-runout"
+      ],
+      "evidence": [
+        "checks"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1686502",
+          "sourceHash": "9a2e3e3b1876c54adcc5feff9e34e68a4a455e002ffbdb3a6e037d233465f333"
+        },
+        {
+          "documentId": "G1686505",
+          "sourceHash": "4cd5a8de4741869e51da28efa2a12dbd7d01d9eebf58467b658d285a01039e87"
+        },
+        {
+          "documentId": "G1686504",
+          "sourceHash": "608958f28a71291472f4beeb26be0bd515b6987f93dcf419d422928342cf1fa2"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "evidence": [
+        "checks"
+      ],
+      "id": "battery-drain-diagnosis",
+      "title": "Parasitic battery drain: find what stays awake",
+      "summary": "Measure current after the car has settled, then isolate the circuit that is drawing too much instead of guessing at a module.",
+      "hero": {
+        "documentId": "G1692356",
+        "mediaId": "G1692356-m0002"
+      },
+      "introduction": "Some electrical use continues after the ignition is switched off. The diagnostic question is whether the car settles to the expected resting draw, or whether a lamp, circuit or module keeps consuming too much. The tricky part is preserving the car’s state while measuring it: opening a circuit or waking a module can change the very behavior you are trying to observe.",
+      "why": "A current reading taken too soon can mistake normal module activity for a fault. A power interruption can also reset a troublesome module and temporarily hide the drain. A deliberate setup makes the final number meaningful.",
+      "when": {
+        "summary": "When a charged, tested battery repeatedly loses charge while the vehicle is parked.",
+        "notes": [
+          "This is condition-based diagnosis, not a periodic maintenance service.",
+          "Do not begin with a discharged battery or an active low-battery message. Charge and test the battery first."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Prepare the correct measuring equipment",
+          "detail": "The procedure specifies an inline ammeter capable of reading milliamps with a 10-amp capability, plus a 30-amp fused jumper used to preserve continuity during setup. A test lamp or voltage reading does not substitute for this current measurement."
+        },
+        {
+          "title": "Allow enough uninterrupted time",
+          "detail": "Plan for at least 90 minutes of key-off settling, subject to equipment and regional differences, and for another settling period when the isolation procedure requires it."
+        },
+        {
+          "title": "Use the circuit information",
+          "detail": "Have the fuse locations and relevant wiring information ready before beginning. A thermal camera can help identify activity, but the current measurement confirms the draw."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Establish a sound starting point",
+          "body": "Fully charge and test the battery. Record the parking duration and conditions that lead to discharge. Follow the procedure’s activation drive—at least five minutes above 48 km/h (30 mph)—before setting up the resting test."
+        },
+        {
+          "title": "Arrange access without keeping the car awake",
+          "body": "With ignition off, prepare hood, door-latch and fuse-box access exactly as the test describes so lamps do not remain on. Disable applicable approach or alarm features. On an automatic, verify that Park indication works; an incorrect indication can prevent modules from sleeping."
+        },
+        {
+          "title": "Connect the meter without interrupting power",
+          "body": "Use the fused jumper and inline-meter connection sequence in Battery Drain Check. Lock the vehicle as directed and move all keys/fobs at least 50 feet away. If continuity is broken, or meter connections need changing, follow the jumper and power-down instructions rather than treating the earlier settling time as valid."
+        },
+        {
+          "title": "Wait, then interpret the resting draw",
+          "body": "Keep the ignition off and allow at least 90 minutes for the modules to settle. Record the current. The procedure describes a 25–50 mA range depending on equipment and recommends comparison with a similar vehicle; one universal cutoff should not replace that context."
+        },
+        {
+          "title": "Isolate the circuit, then the actual cause",
+          "body": "If draw is excessive, follow the staged fuse and component isolation sequence and note the current change. The first fuse that reduces the draw identifies a circuit, not automatically a failed component. Check whether a module is being kept awake by an input, and include aftermarket electrical connections when fitted."
+        },
+        {
+          "title": "Finish the diagnosis and restore the vehicle",
+          "body": "If fused circuits do not explain the draw, follow the checks for other battery-fed circuits and the generator. Restore the test connections and equipment, carry out required window initialization, and verify that the excessive draw is gone after the prescribed settling period."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "The reading changes when you touch the setup",
+          "body": "A door event, key proximity or interrupted battery connection can change module activity. Restore the required test conditions before deciding a repair worked."
+        },
+        {
+          "title": "A module appears to be the drain",
+          "body": "Investigate its inputs before replacing it. An input can keep an otherwise functioning module awake."
+        },
+        {
+          "title": "Only a voltage reading is available",
+          "body": "Battery voltage alone does not locate a parasitic-current path; use the specified current test."
+        }
+      ],
+      "notes": [
+        "This guide is an overview of an equipment-based electrical test. Keep the ignition off during the inline-current measurement. Never crank or start the engine, or switch on heavy electrical loads, with the inline ammeter connected. Follow the meter and fused-jumper sequence in the full procedure."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1692357",
+          "purpose": "Perform the complete drain test, sleep preparation and circuit-isolation sequence."
+        },
+        {
+          "documentId": "G1931208",
+          "purpose": "Confirm battery condition before diagnosing an external drain."
+        },
+        {
+          "documentId": "G1692355",
+          "purpose": "Fully charge the battery before the drain test."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Identify the negative cable and use the proper disconnect/reconnect procedure."
+        },
+        {
+          "documentId": "G1957566",
+          "purpose": "Carry out the required one-touch window initialization after reconnection."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Review battery precautions before connecting test equipment."
+        }
+      ],
+      "relatedGuideIds": [
+        "battery-testing-charging",
+        "battery",
+        "warning-lamps"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1692357",
+          "sourceHash": "e78769a2087a9eb11dace99442357b7cbc4ec964308aad039166b6fc03c7ec62"
+        },
+        {
+          "documentId": "G1931208",
+          "sourceHash": "16ffdf4436eb6d2a649b798ae4b3439f788393d5f2ae1472276f758af55be523"
+        },
+        {
+          "documentId": "G1692355",
+          "sourceHash": "5658dc12c1a41a38a09888dcd3595b7c6cb6b87194b692cf145e3a2fd22ab9d1"
+        },
+        {
+          "documentId": "G1957566",
+          "sourceHash": "592cddfd800fabd75ef9bbd517bceba85a9a6713ed1e7e2bb72bb083f122fb63"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "evidence": [
+        "checks"
+      ],
+      "id": "ac-odor-treatment",
+      "title": "A/C odor: find the moisture source before treating the evaporator",
+      "summary": "Distinguish a brief musty start-up smell from a cabin water leak or another odor, then use the correct treatment when indicated.",
+      "hero": {
+        "documentId": "G1676757",
+        "mediaId": "G1676757-m0002"
+      },
+      "introduction": "The timing of a smell is useful evidence. A musty burst when the A/C first starts is a different clue from a smell that remains all the time, wet carpeting, or an odor that appears only while passing through an outside source. Evaporator treatment is one possible repair. It is not a substitute for finding a fluid leak, drying a wet interior or clearing a drainage problem.",
+      "why": "Warmth and moisture can support growth in the A/C housing or in other wet parts of the cabin. Treating the wrong area may leave the cause untouched. The repair starts by locating the source, then dries and treats the evaporator only when the checks support that choice.",
+      "when": {
+        "summary": "When a recurring odor has been traced to the A/C system; treatment is based on the finding, not a fixed interval.",
+        "notes": [
+          "A musty odor lasting about 30 seconds after A/C start-up is a useful clue in the procedure, not proof by itself.",
+          "An odor outside the A/C system calls for repair or cleaning of its actual source."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Describe when it happens",
+          "detail": "Compare start-up versus continuous odor and fresh-air versus recirculation operation. Note moisture in the cabin and any relationship to weather."
+        },
+        {
+          "title": "Have the specified treatment equipment",
+          "detail": "The treatment uses Motorcraft A/C Cooling Coil Coating YN-29 and the flexible applicator. The procedure approves that coating specifically; a different spray may damage the existing coating or worsen odor."
+        },
+        {
+          "title": "Plan access and drying",
+          "detail": "The work includes blower removal, protection of nearby electronics and interior surfaces, and two specified drying/curing runs. Plan an outdoor or safely ventilated engine-running space; never run this drying cycle in a closed garage. Apply the parking brake and select Park or Neutral as appropriate. Follow the product precautions."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Classify the odor before applying anything",
+          "body": "Separate chemical, outside-air, interior-generated and microbiological smells. Persistent chemical or fluid-like odors need their source investigated. Do not proceed with evaporator treatment when the source lies elsewhere."
+        },
+        {
+          "title": "Check drainage and unwanted water",
+          "body": "Inspect the evaporator drain, both front carpets, blower area and cowl air inlet. Moisture in the carpets or blower area redirects the job toward water-leak diagnosis. Remove standing water or foreign material from the inlet as directed."
+        },
+        {
+          "title": "Dry the A/C housing",
+          "body": "For a confirmed treatment, open the doors and windows. With A/C off, select register airflow, full warm and high blower speed; run the engine for 25 minutes, then switch the ignition off. Drying is a separate preparation step, not the coating application itself."
+        },
+        {
+          "title": "Open the required access and protect the controls",
+          "body": "Remove the blower using its exact procedure. Remove an exposed blower speed control or resistor as directed; a control outside the housing and airflow does not need removal for that reason. Keep coating off the speed control and interior surfaces."
+        },
+        {
+          "title": "Apply the specified coating to the evaporator face",
+          "body": "Fill the flexible applicator with one full bottle of YN-29. Insert its nozzle into the evaporator housing and direct the spray across the entire core face until the bottle is empty, following the treatment procedure."
+        },
+        {
+          "title": "Reassemble and complete the cure",
+          "body": "Reinstall the removed blower and applicable control. Repeat the specified register/full-warm/high-blower, A/C-off run for 25 minutes, then switch the ignition off to complete the curing sequence. Reassess the original odor conditions rather than judging success only by a new fragrance."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Wet carpet or moisture around the blower",
+          "body": "Investigate the water entry; the treatment procedure specifically redirects these findings away from an unnecessary evaporator coating."
+        },
+        {
+          "title": "Odor returns after treatment",
+          "body": "Revisit drain restrictions, standing water and the original source classification instead of automatically adding another product."
+        },
+        {
+          "title": "A smell that tracks an external location",
+          "body": "Recirculation may reduce outside odor, but treating the evaporator will not remove an external source."
+        }
+      ],
+      "notes": [
+        "Blower removal provides treatment access; it does not mean the blower has failed.",
+        "No routine refrigerant recharge or annual chemical treatment is implied by this odor procedure."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1912355",
+          "purpose": "Classify the odor and perform the complete inspection, coating and curing sequence."
+        },
+        {
+          "documentId": "G1676757",
+          "purpose": "Remove and install the blower motor for treatment access."
+        },
+        {
+          "documentId": "G1676758",
+          "purpose": "Remove and install the blower speed control when its exposure requires it."
+        }
+      ],
+      "relatedGuideIds": [
+        "cabin-filter",
+        "body-drains-seals",
+        "ac-performance-leak-testing"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1676757",
+          "sourceHash": "3b56efeb2de8153c984fad7b3455f8345b387608e6f3727b9b528d9525591944"
+        },
+        {
+          "documentId": "G1912355",
+          "sourceHash": "e41e64e6ae65c92e4b50c837517ab50a6c7c5e536250dda15a6520fe059f094f"
+        },
+        {
+          "documentId": "G1676758",
+          "sourceHash": "0d0f4f3a865a462f3cc87eb71afe4e172a48180a8e75e4172f86a764dd9debd0"
+        },
+        {
+          "documentId": "wiring-003-005",
+          "sourceHash": "37c835706b9d60d4ff5ac73b9d3354a6eb27eef42852e34f86ba62d4c61269af"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "evidence": [
+        "checks"
+      ],
+      "id": "ac-performance-leak-testing",
+      "title": "A/C performance and leak testing: measure before adding refrigerant",
+      "summary": "Use ambient conditions, both pressure readings and targeted leak tests to find why cooling is weak.",
+      "hero": {
+        "documentId": "G1676873",
+        "mediaId": "G1676873-m0001"
+      },
+      "introduction": "Weak cooling has several possible paths: insufficient airflow through the condenser, a control or compressor problem, a restriction, or the wrong amount of refrigerant. Adding refrigerant before identifying the cause can create an overcharge without repairing anything. A useful test records how the system behaves under defined conditions, then follows the evidence to the appropriate repair.",
+      "why": "Pressure changes with outdoor temperature and operating conditions. A number from a single gauge means little without that context. The linked engine-specific tests use high- and low-side pressure charts together, so the result can guide diagnosis rather than guesswork.",
+      "when": {
+        "summary": "When cooling is weak, compressor operation is abnormal, or evidence suggests a refrigerant leak.",
+        "notes": [
+          "This is condition-based testing and repair; there is no routine blind-recharge interval.",
+          "The performance test requires ambient temperature of at least 21°C (70°F). Use the procedure’s appropriate temperature and humidity chart."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Choose the engine-specific test",
+          "detail": "Use the 2.3L, 3.7L or 5.0L refrigerant-system article that matches the vehicle. Record ambient temperature and the actual symptom."
+        },
+        {
+          "title": "Use appropriate service equipment",
+          "detail": "The tests require an A/C service unit. Refrigerant identification, approved recovery/charging equipment and suitable leak-detection equipment are needed for the applicable follow-on work."
+        },
+        {
+          "title": "Protect eyes, skin and the work area",
+          "detail": "Liquid refrigerant can injure eyes or freeze skin. Wear the specified eye protection and follow the refrigerant/equipment precautions. Run the engine only in a well-ventilated area with the parking brake applied and Park or Neutral selected as appropriate; keep clear of moving fans and belts."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Establish the required operating conditions",
+          "body": "Bring the engine to normal operating temperature. Connect the service unit as directed, select the lowest temperature, disable dual operation if fitted, set high blower and fresh air, and request A/C operation. Use the prescribed open-window and hood setup for this vehicle."
+        },
+        {
+          "title": "Confirm the system can be tested",
+          "body": "Check that the compressor and cooling fans operate as directed. Allow high- and low-side readings to settle or repeat in a stable cycle. Record ambient temperature and both pressures; use the average where the procedure calls for it."
+        },
+        {
+          "title": "Read the correct pressure charts together",
+          "body": "Use the 21–38°C (70–100°F) chart set or the hotter-condition chart set as appropriate, including its humidity range. Compare high and low readings as a pair. The listed possibilities are diagnostic leads, not automatic orders for a compressor or a refrigerant top-up."
+        },
+        {
+          "title": "Follow the indicated cause",
+          "body": "Investigate airflow, engine overheating, control connections, restrictions or leakage as the test results require. Low charge and overcharge are different possible faults. A sensor, wiring or control problem can also interrupt compressor operation."
+        },
+        {
+          "title": "Use a targeted leak test when justified",
+          "body": "If compressor-shaft leakage is suspected, use the dedicated compressor test. It requires recovery, disconnection and adapters before an isolated test charge, followed by electronic leak detection and recovery again. Its isolated test charge is a dedicated leak-test setup, not a recipe for recharging the whole vehicle."
+        },
+        {
+          "title": "Repair, service and verify the complete system",
+          "body": "For work that opens the circuit, follow refrigerant identification, recovery, evacuation, oil-accounting and charging instructions with the correct equipment. Use the actual vehicle charge specification, then repeat the applicable performance check to confirm the original concern is resolved."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "A low-side gauge alone is being used to decide the charge",
+          "body": "The performance procedure evaluates both sides under specified conditions. A single reading does not establish a correct refrigerant quantity."
+        },
+        {
+          "title": "Pressure suggests more than one possible cause",
+          "body": "Use the follow-on tests to distinguish the possibilities instead of replacing the first component named in the table."
+        },
+        {
+          "title": "Refrigerant purity is uncertain",
+          "body": "Identify it before recovery. Contamination requires the designated handling equipment and procedure rather than mixing it into ordinary recovery supplies."
+        }
+      ],
+      "notes": [
+        "The hotter-condition charts cover 38–49°C (100–120°F); do not extrapolate a plotted limit beyond its stated range.",
+        "The compressor leak test specifies an R-134a electronic detector certified to SAE J2791. Its test charge and adapter setup must not be used as a general recharge recipe.",
+        "Recovery/evacuation uses both service ports. The linked procedure specifically rules out recovering only through the low-side port."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1676871",
+          "purpose": "Run the 2.3L performance test and use its pressure charts."
+        },
+        {
+          "documentId": "G1676873",
+          "purpose": "Run the 3.7L performance test and use its pressure charts."
+        },
+        {
+          "documentId": "G1676875",
+          "purpose": "Run the 5.0L performance test and use its pressure charts."
+        },
+        {
+          "documentId": "G1912321",
+          "purpose": "Test a suspected external compressor-shaft leak with the specified isolated setup."
+        },
+        {
+          "documentId": "G1912323",
+          "purpose": "Identify, recover, evacuate and charge the system using the required service process."
+        },
+        {
+          "documentId": "G1693184",
+          "purpose": "Review refrigerant and climate-system safety precautions."
+        }
+      ],
+      "relatedGuideIds": [
+        "ac-odor-treatment",
+        "cabin-filter",
+        "accessory-belts"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1676873",
+          "sourceHash": "c931cb2b0f00700fa8d1dc754b56771b4513b008b38c1822f533e2eb95fe1849"
+        },
+        {
+          "documentId": "G1676871",
+          "sourceHash": "92fb96b56cebfebd86955f3bcfb1209c1efd848f99c2380ebce3528d576f8801"
+        },
+        {
+          "documentId": "G1676875",
+          "sourceHash": "46be1600c2955c66c8afd817d66da37f4767d004efaebe3ef696197eb2330213"
+        },
+        {
+          "documentId": "G1912321",
+          "sourceHash": "20b6418f87912a20b278cb0f74433703be256a6228ca4a00d81207b8988a47a1"
+        },
+        {
+          "documentId": "G1912323",
+          "sourceHash": "07dba0707a3bca214f3c4175d27ef2979125ab6a8d7ceaef64eb8ac1d9e1421d"
+        },
+        {
+          "documentId": "G1693184",
+          "sourceHash": "d7e46b64aa52ae84ab86a5758064469bc4d590e9469cd2078e1219dbd0f66b50"
+        },
+        {
+          "documentId": "wiring-003-005",
+          "sourceHash": "37c835706b9d60d4ff5ac73b9d3354a6eb27eef42852e34f86ba62d4c61269af"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "id": "ecoboost-charge-air-cooler-cleaning",
+      "title": "EcoBoost charge-air cooler: clean only when it needs it",
+      "summary": "Understand the off-car cleaning process, protect the intake from debris, and complete the required leak test before the cooler goes back in.",
+      "applicability": {
+        "engines": [
+          "2.3L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "2.3L EcoBoost charge-air cooler; requires removal and controlled pressure-test equipment."
+      },
+      "hero": {
+        "documentId": "G1675707",
+        "mediaId": "G1675707-m0005"
+      },
+      "introduction": "The charge-air cooler, often called the CAC, is part of the pressurized air path between the turbocharger and the engine. This cleaning procedure deals with contamination inside the removed cooler. It involves draining contaminants, washing and rinsing, drying, and then checking that the cooler still holds pressure. The removal-and-installation procedure directs inspection and cleaning when needed; it does not give this job a recurring service interval.",
+      "why": "Cleaning and sealing are both important to the completed job. Contamination has to leave the cooler, and the cleaned assembly has to pass its leak test before installation. Debris introduced while working on the intake can damage the turbocharger compressor, so a careful removal and clean connections matter as much as the wash itself.",
+      "when": {
+        "summary": "When inspection confirms that the removed 2.3L charge-air cooler needs cleaning, or the repair procedure requires it.",
+        "notes": [
+          "This is condition-based work. The procedure does not prescribe periodic CAC washing or automatic cleaning for a low-boost complaint.",
+          "Arrange removal, drying, pressure testing and reinstallation as one complete job. Cleaning without the required leak test leaves the procedure unfinished."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Plan safe access and intake protection",
+          "detail": "Removal uses a hoist and includes the active grille shutter and lower radiator support bracket. Follow the linked removal procedure. Keep dirt and loose particles out of all opened turbocharger and intake connections."
+        },
+        {
+          "title": "Have the right cleaning materials",
+          "detail": "The procedure names a commercially available detergent such as Simple Green Pro HD or equivalent, used to its manufacturer’s instructions. Metal brake-parts cleaner is specified for the joint clamp areas and connections; keep that task distinct from the detergent wash inside the cooler."
+        },
+        {
+          "title": "Arrange a suitable leak-test kit",
+          "detail": "A commercial charge-air cooler tester, such as the listed 351-CAS type or equivalent, is needed after cleaning. The operator must be able to apply the specified pressure slowly and measure loss accurately. A shop with this equipment is the appropriate next step if it is not available."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Remove the assembly using its own procedure",
+          "body": "Follow [Charge Air Cooler removal and installation](#/document/G1675707), including the sensor connector, inlet and outlet tubes, support and mounting sequence. Once removed, take the boost-pressure sensor and its screw out of the cooler as directed by the cleaning procedure. Protect the opened intake throughout the work."
+        },
+        {
+          "title": "Drain contamination and prepare the connections",
+          "body": "Drain coolant, fuel, oil or other contaminants before washing. Clean the specified joint clamp areas and turbocharger, engine and CAC connections. Lay the cooler flat with its inlet and outlet pointing upward.\n\n> **NOTE:** Do not use a high-pressure power washer; it can damage the cooler."
+        },
+        {
+          "title": "Wash, agitate and rinse until the discharge is clear",
+          "body": "Add the specified type of detergent according to its instructions, then fill with water to **40% of the cooler’s volume**. Cap or plug the openings before agitation. Raise one end and agitate by hand for at least **five minutes**, then raise the other end and repeat for at least **five minutes**. Drain and rinse thoroughly with clean water. Repeat the cleaning cycle until the rinse contains no contaminants."
+        },
+        {
+          "title": "Let it air-dry and prepare the pressure test",
+          "body": "Allow the cooler to air-dry. Reinstall the boost-pressure sensor and its screw at **44 lb.in (5 Nm)**. Install the commercial tester according to its instructions and tighten the tester clamps to **44 lb.in (5 Nm)**. These values belong to the named sensor and test connections; the vehicle’s inlet and outlet tube clamps have their own installation specification."
+        },
+        {
+          "title": "Verify pressure loss before deciding to reuse it",
+          "body": "> **WARNING:** Never exceed the specified pressure. Too much pressure can eject the test adapter or damage the cooler and cause serious injury.\n\nApply air slowly to **21.8 psi (150 kPa)**. Let the cooler stand for a few minutes and note the pressure loss, then release the pressure. Repeat until **three consecutive tests** show approximately the same drop. If loss exceeds **1.5 psi (10 kPa) per minute**, the procedure calls for a new cooler."
+        },
+        {
+          "title": "Reinstall the assembly only after the required checks",
+          "body": "Complete the linked removal-and-installation procedure after cleaning, drying and the leak test. Its connection-cleaning instructions, illustrated mounting order and individual fastener torques remain part of the job. Record what contamination was found and the verified pressure-loss result so the next repair decision has useful evidence."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Contaminants continuing to appear in rinse water",
+          "body": "The cleaning procedure calls for another wash-and-rinse cycle until the discharge is free of contaminants."
+        },
+        {
+          "title": "Pressure loss beyond the stated limit",
+          "body": "A cleaned cooler that exceeds the verified leak limit is a replacement case in this procedure."
+        },
+        {
+          "title": "Particles near open intake connections",
+          "body": "Even small particles can damage turbocharger compressor vanes. Protect the intake while parts are detached and inspect components before assembly."
+        }
+      ],
+      "notes": [
+        "The cleaning pressure test must be completed before installation; washing alone is not the complete service.",
+        "This guide describes the 2.3L EcoBoost CAC only. It does not apply its test pressure or cleaning method to an engine coolant radiator or transmission cooler.",
+        "The illustration is from CAC removal and installation. Its numbered arrows describe mounting movements, not the detergent-cleaning sequence."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1675715",
+          "purpose": "Follow the complete detergent cleaning, drying and mandatory pressure-loss test."
+        },
+        {
+          "documentId": "G1675707",
+          "purpose": "Remove and reinstall the 2.3L cooler with its illustrations and connection-specific torques."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Use the correct lifting points and supports for the removal work."
+        }
+      ],
+      "relatedGuideIds": [
+        "engine-air-filter",
+        "cooling-pressure-leak-test"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1675715",
+          "sourceHash": "a2e844615c100eec28744779165f7c971c2df34cf91154a01fff24090dfffd8a"
+        },
+        {
+          "documentId": "G1675707",
+          "sourceHash": "865d49cbea0e4ab21e09ba1456ba008b2b63bb8e63be3918a5103b1ab652b85a"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "id": "driveline-vibration-runout",
+      "title": "Driveline vibration: measure before changing parts",
+      "summary": "Separate a repeatable road-speed vibration from a guess, inspect the shaft and joints, then use runout measurements to choose the next check.",
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "Use the specifications for the fitted transmission, driveshaft and flange arrangement."
+      },
+      "hero": {
+        "documentId": "G2214730",
+        "mediaId": "G2214730-m0002"
+      },
+      "introduction": "The driveshaft carries rotation from the transmission to the rear axle. Its joints and center support have to allow that rotation without binding, excessive movement or a distorted path. Runout is the amount the shaft wanders as it turns, measured with a dial indicator. Balance is a different check involving how mass is distributed around the rotating assembly. Keeping those ideas separate makes a vibration investigation much more useful.",
+      "why": "The diagnostic chart lists several possible causes of a cruising-speed vibration: joints, the center support, flange fasteners, runout, balance and driveline angles. Adding a weight or replacing the shaft before checking that list can leave the actual problem in place. A repeatable symptom and recorded measurements give each decision a reason.",
+      "when": {
+        "summary": "When a repeatable driveline vibration, rumble or shudder remains after an initial inspection, or diagnosis calls for runout checks.",
+        "notes": [
+          "This is symptom-led diagnosis, not a balancing or shaft-replacement mileage interval.",
+          "Static inspection and hand-rotated measurements come before the specialized balancing branches. Use the full procedure and a suitably equipped workshop for balancing work."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Preserve a useful starting point",
+          "detail": "Before making adjustments, document the road speed and conditions that reproduce the concern. The runout procedure says not to alter tire pressure or vehicle load before its initial road test; record the starting condition rather than changing several variables at once."
+        },
+        {
+          "title": "Set up support and measuring equipment",
+          "detail": "Use the specified type of holding fixture and dial indicator, such as tool 100-002. The procedure requires the shaft to stay close to its curb-weight position while supported.\n\n> **WARNING:** Never work underneath a vehicle supported only by a jack. Use the correct lifting points and the prescribed stands or hoist arrangement."
+        },
+        {
+          "title": "Identify the actual shaft configuration",
+          "detail": "Know whether the shaft has one or multiple sections and identify its flange type. If angle checks are needed, use the engine/transmission-specific values in [Driveshaft specifications](#/document/G2214897), rather than substituting an angle from another variant."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Reproduce and describe the concern",
+          "body": "Start with a visual check, then have the symptom verified during an appropriate road test. Note whether it follows road speed and whether it appears at cruise, acceleration or coast. Use the [Driveshaft diagnostic chart](#/document/G2214728) to select the matching branch instead of calling every tremor a balance problem."
+        },
+        {
+          "title": "Inspect the shaft, joints and support",
+          "body": "Look for shaft damage, unwanted undercoating, missing balance weights and poorly seated joints. With the vehicle correctly supported, the inspection procedure rotates the shaft slowly by hand to check for binding and end play. The diagnostic chart also checks the center support for damage, wear or rough operation and the axle flange fasteners for looseness."
+        },
+        {
+          "title": "Correct an identified fault and recheck",
+          "body": "Follow the relevant repair procedure for the specific defect. Removal, joint or shaft replacement and flange fastener work each have their own requirements. After a correction, recheck at the road-test speed that reproduced the vibration. This preserves the link between the observed fault and the result of the repair."
+        },
+        {
+          "title": "Measure runout at each required position",
+          "body": "If the vibration remains, fit the dial indicator and rotate the driveshaft by turning the axle as directed. Measure at the **front, center and rear**; on a multi-piece shaft, measure those positions on each section. The linked specifications list **0.6 mm (0.024 in)** for driveshaft runout. Record each position separately so a rear-only result is not confused with a shaft-wide problem."
+        },
+        {
+          "title": "Use the pattern of measurements",
+          "body": "The procedure calls for shaft replacement when front or center runout exceeds the specification. A rear-only excess leads to its index-marked flange recheck, which helps distinguish shaft eccentricity from a flange or pinion problem. Follow that complete branch, preserving the index marks and correct reassembly details. If all runout points meet the specification but vibration remains, continue to the balance or angle checks indicated by the diagnosis."
+        },
+        {
+          "title": "Keep balancing and angle work controlled",
+          "body": "The electronic balancing branch uses an accelerometer, a photo-tachometer and the specified vehicle measurement equipment to select and verify corrections. Arrange that work with a shop that can perform the full procedure. For an angle concern, use [Driveshaft Angle Measurement](#/document/G2214729) and the correct variant specifications. Recheck the original symptom after the final correction."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "A damaged shaft, rough joint or worn support",
+          "body": "These are inspection findings to address through the matching repair branch, rather than reasons to add a balance weight."
+        },
+        {
+          "title": "Only the rear measurement is out of range",
+          "body": "The index-marked recheck is there to separate possible sources. Preserve the measurements and marks before components are moved."
+        },
+        {
+          "title": "Shudder associated with acceleration",
+          "body": "The symptom chart includes driveline angles and binding or damaged joints. That pattern deserves its own branch rather than an automatic balancing operation."
+        }
+      ],
+      "notes": [
+        "Have balancing performed by a workshop with the equipment and experience required for the fitted shaft and flange arrangement.",
+        "The illustration is the inspection view of a multi-piece driveshaft. Confirm the fitted shaft before following any assembly-specific direction."
+      ],
+      "procedures": [
+        {
+          "documentId": "G2214728",
+          "purpose": "Choose the correct clunk, shudder, cruise-vibration or noise diagnostic branch."
+        },
+        {
+          "documentId": "G2214730",
+          "purpose": "Follow the complete inspection, runout, indexed recheck and specialist balancing instructions."
+        },
+        {
+          "documentId": "G2214897",
+          "purpose": "Check the runout limit, engine/transmission angle values and fastener specifications."
+        },
+        {
+          "documentId": "G2214729",
+          "purpose": "Measure driveline angles with the specified setup and fitted-joint branch."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Review the designated lifting points and support precautions."
+        }
+      ],
+      "relatedGuideIds": [
+        "driveshaft",
+        "wheel-hubs",
+        "tires"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G2214728",
+          "sourceHash": "b23ad17538dcea5bef5534f17633f4c90d5ef7cf1f0157787a526ad74a0ba3c2"
+        },
+        {
+          "documentId": "G2214730",
+          "sourceHash": "9bf483a34b1e9fb7323a5d2739e4a40d63c31c29d58e000b5e44355549706b54"
+        },
+        {
+          "documentId": "G2214897",
+          "sourceHash": "638279bd3d322e8f31d074d22c5f592859b69cedc7ee7ce816d38a946d1a642e"
+        },
+        {
+          "documentId": "G2214729",
+          "sourceHash": "83001d517050818d71115b2ede89b860daffec6a7c7b16146967c44e96284106"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        }
+      ]
+    },
+    {
+      "categoryId": "advanced",
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "id": "transmission-cooler-backflush",
+      "title": "6R80 cooler backflushing: protect a repaired transmission",
+      "summary": "Understand when the cooler and lines need cleaning, why a heated flusher is required, and how contamination checks fit into the complete repair.",
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ],
+        "equipment": "6R80 automatic transmission only; specialized transmission-cooling-system service."
+      },
+      "hero": {
+        "documentId": "G1694316",
+        "mediaId": "G1694316-m0006"
+      },
+      "introduction": "The automatic transmission sends fluid through an external cooler in front of the radiator and then receives it back through the cooler tubes. The cooler releases heat to the passing air. When transmission contamination has been confirmed, the cooler and tubes are part of the repair because material left in that path can return to the repaired unit. The workshop procedure also requires this cleaning whenever the transmission is overhauled or replaced.",
+      "why": "A rebuilt or replacement transmission still shares its fluid circuit with the existing cooler and tubes. The specified process uses heated, pulsed fluid, filtration and air purging to clean that circuit. A basic fluid exchange or an additive does not satisfy those equipment and process requirements.",
+      "when": {
+        "summary": "After transmission overhaul or replacement, or when confirmed contamination requires cooler-and-line cleaning as part of repair.",
+        "notes": [
+          "This is repair-triggered work for the 6R80 automatic, not a routine mileage-based transmission flush.",
+          "The diagnostic article calls for repair and cooler/tube cleaning when contamination or transmission failure is confirmed by sediment in the pan. An overheating complaint alone first requires diagnosis of leaks, damage, restriction and fluid level."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Confirm why the work is needed",
+          "detail": "Use [Transmission Cooling diagnosis](#/document/G1694304) to establish the concern and the required repair. Confirm the fitted transmission is the 6R80; this process is not an MT82 manual-gearbox service."
+        },
+        {
+          "title": "Choose a shop with the specified equipment",
+          "detail": "The flusher must maintain fluid at **140°F (60°C) or above**, pulsate the fluid, have a GPM flow meter and twin magnetic filters, and be able to air-purge before and after flushing. If equipment meeting those requirements is unavailable, the procedure calls for replacement of the cooler or coolers and hand-cleaning of the lines."
+        },
+        {
+          "title": "Use the specified fluid and no extra cleaner",
+          "detail": "The procedure specifies **Motorcraft MERCON LV Automatic Transmission Fluid, XT-10-QLVC, WSS-M2C938-A**. It prohibits supplemental transmission additives and cleaning agents because they can cause internal component failure."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Make the cooler part of the confirmed repair plan",
+          "body": "Before connecting equipment, establish whether this is an overhaul, a replacement or a contamination repair. Inspect the cooler and tubes for leaks, crushed sections or plugging as directed by the diagnostic chart. Repair or replace defective components through the appropriate repair procedure; do not assume that flushing repairs physical damage."
+        },
+        {
+          "title": "Prepare the heated flusher",
+          "body": "Check and top off its supply with the specified transmission fluid. Switch on the heater and allow **15–30 minutes** for the fluid to reach **60°C (140°F)** before use. Confirm that the equipment provides every required feature, including the filters and pre/post-flush air purge."
+        },
+        {
+          "title": "Identify inlet and outlet before connecting lines",
+          "body": "Use the [Transmission Cooling component-location article](#/document/G1694297) and choose its diagram for the fitted engine. Install the line adapters. The cleaning procedure connects the flusher’s **red line to the cooler inlet tube** and its **blue line to the outlet tube**. Use the equipment instructions for the initial air purge before starting the flush."
+        },
+        {
+          "title": "Complete both flushing directions",
+          "body": "Backflush for **10–15 minutes**, then flush in the normal flow direction for another **10–15 minutes**. These are two specified stages of the cooler-cleaning procedure. Keep the work within the heated flusher manufacturer’s operating instructions."
+        },
+        {
+          "title": "Use the inspection-filter branch when fitted",
+          "body": "If the flusher has the inspection micron filter described in the procedure, remove and clean its **Oberg 28-micron filter**, reinstall it, then backflush for **five minutes**. Remove and inspect it again. If debris or contamination is present, repeat that cleaning, five-minute backflush and inspection cycle. This branch depends on the actual equipment fitted."
+        },
+        {
+          "title": "Purge, complete assembly and check the vehicle fluid level",
+          "body": "Perform the final air purge according to the equipment instructions. Complete the cooler and line repair or reassembly, then use the [6R80 Transmission Fluid Level Check](#/document/G1692053) as part of returning the vehicle to service. It uses scan-tool fluid temperature and the indicator’s specified area. The flusher’s heating temperature is not the vehicle’s fluid-level checking temperature."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Debris returning at the inspection filter",
+          "body": "The specified inspection-filter branch repeats while contamination remains. Keep that result with the repair record rather than ending the process after a single timed pass."
+        },
+        {
+          "title": "Leaking, crushed or restricted cooler tubes",
+          "body": "The diagnostic chart treats these as causes that require component service or replacement as appropriate; cleaning does not establish that a damaged part is serviceable."
+        },
+        {
+          "title": "A fluid level that has not been verified",
+          "body": "The 6R80 level check has a specified temperature and reading method. Low fluid can cause internal failure, and the procedure says not to drive the vehicle with a low transmission-fluid level."
+        }
+      ],
+      "notes": [
+        "A normal fluid-and-filter service and this post-repair cooler cleaning have different triggers and equipment requirements. Do not add this procedure to every oil-change or transmission-service visit.",
+        "Use the tube-access article for the fitted engine when the repair requires disconnection or tube replacement. The routing and access work vary by engine; the illustration is not a flushing connection diagram.",
+        "The prescribed connection colors describe the flusher hoses. Identify the vehicle inlet and outlet from the correct component diagram rather than assuming the drawing colors are physical hose colors."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1694304",
+          "purpose": "Confirm cooling-system symptoms and the contamination or overhaul trigger for cleaning."
+        },
+        {
+          "documentId": "G1694306",
+          "purpose": "Follow the required heated backflush, forward-flush, inspection and purge sequence."
+        },
+        {
+          "documentId": "G1694309",
+          "purpose": "Follow 2.3L tube access, seals and reassembly details if the repair requires tube removal or replacement."
+        },
+        {
+          "documentId": "G1694316",
+          "purpose": "Follow 3.7L tube access, seals and reassembly details if the repair requires tube removal or replacement."
+        },
+        {
+          "documentId": "G1694318",
+          "purpose": "Follow 5.0L tube access, seals and reassembly details if the repair requires tube removal or replacement."
+        },
+        {
+          "documentId": "G1694297",
+          "purpose": "Identify inlet and outlet tubes using the diagram for the fitted engine."
+        },
+        {
+          "documentId": "G1694302",
+          "purpose": "Understand the external cooler and its fluid path."
+        },
+        {
+          "documentId": "G1692053",
+          "purpose": "Complete the temperature-controlled 6R80 fluid-level check with the specified indicator area."
+        }
+      ],
+      "relatedGuideIds": [
+        "automatic-level",
+        "automatic-fluid"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1694304",
+          "sourceHash": "71836262622fa0109723346dcc4b37ae165612dfde08a8d87c2b76749ce0fcb4"
+        },
+        {
+          "documentId": "G1694306",
+          "sourceHash": "9eee80623c8d8af7e8d30a6841fe429934c0efd57e4fe53bcfc1342118d3bea0"
+        },
+        {
+          "documentId": "G1694297",
+          "sourceHash": "330ed01e28d81b54853068f7b97b83bca1e89d0a57777c9a99263a7c253d3551"
+        },
+        {
+          "documentId": "G1694302",
+          "sourceHash": "bd3a85bf069a40509e372d631599ebe5fce2e3e32b77df487376b868ae469192"
+        },
+        {
+          "documentId": "G1692053",
+          "sourceHash": "17687d8e9678394afc786f4940fc1431b85bfffe682d8b8d075be4a43be5fdb3"
+        },
+        {
+          "documentId": "G1694309",
+          "sourceHash": "c30e7ece483abe9ea812903f6185b84b2ae3e1fc14ffb8748a2843184e64d20d"
+        },
+        {
+          "documentId": "G1694316",
+          "sourceHash": "da54e1f18813d422f908f5ee6818dc89a4c60d6fe32d7fede10ca4e6df56b289"
+        },
+        {
+          "documentId": "G1694318",
+          "sourceHash": "88fdc0daabd771fd6e9c38c376f81609f14ae5628b8366341f65ec2af7d1b9f9"
+        }
+      ]
+    },
+    {
+      "id": "corrosion-protection",
+      "title": "Corrosion protection: restore the barriers that keep water out",
+      "categoryId": "advanced",
+      "summary": "Inspect damaged seam sealer, underbody protection and repaired cavities, then choose the right restoration process.",
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "years": [
+          2015
+        ]
+      },
+      "hero": {
+        "documentId": "G1687506",
+        "mediaId": "G1687506-m0010"
+      },
+      "ruleIds": [],
+      "evidence": [
+        "checks"
+      ],
+      "introduction": "The body has several layers of protection doing different jobs. Seam sealer closes joints between panels. Underbody coating protects exposed surfaces. Cavity treatment reaches enclosed areas that a brush cannot. Keeping these barriers intact matters just as much as keeping the outside paint looking good, especially where a repair or scrape has disturbed them.",
+      "why": "Water and dirt can enter an open seam or remain against unprotected metal. Restoring the correct barrier helps limit corrosion and can also prevent water, dust, noise or fumes finding a route into the cabin. A fresh coating is only useful when the surface underneath has been properly inspected and prepared.",
+      "when": {
+        "summary": "Inspect exposed metal, damaged coatings or open seams; restore protection as part of the affected repair.",
+        "notes": [
+          "This is condition-based care and repair follow-up, not an instruction to recoat the whole car at a fixed mileage.",
+          "Door drainage is part of the regular body check. Additional coating must not close those drains."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Make the surface visible",
+          "detail": "Clean away dirt and inspect underbody areas using appropriate vehicle support. Record damaged seams, exposed edges and previous repair areas before deciding what needs treatment."
+        },
+        {
+          "title": "Identify the protection layer",
+          "detail": "Seam sealer, exterior undercoating and internal cavity wax have different jobs. Choose the procedure and material for the location rather than using one aerosol for everything."
+        },
+        {
+          "title": "Plan repair and application together",
+          "detail": "Welding, metal repair and refinishing come before the specified protective treatments. Spraying enclosed areas needs the correct coating gun or cavity wand, ventilation and product-specific protective equipment."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Inspect before covering anything",
+          "body": "Look for broken or missing sealer, bare metal and damaged coating around panel joints and exposed edges. Have corrosion and the underlying metal assessed before applying a new layer. Covering a damaged area does not establish that the metal is sound."
+        },
+        {
+          "title": "Restore the joint or metal first",
+          "body": "Deal with the damaged panel or joint as required. The sealing guide calls for damaged originally sealed joints to be resealed. Select a compatible, flexible, paintable sealer and follow its application and curing instructions."
+        },
+        {
+          "title": "Prepare a clean surface",
+          "body": "The corrosion-protection procedure requires removal of dirt, oil, wax and grease before coating. Use the specified preparation process and compatible materials; the coating is not a substitute for surface cleaning."
+        },
+        {
+          "title": "Protect exposed and enclosed areas differently",
+          "body": "Apply the specified exterior protection after the relevant welding and refinishing work. Treat internal cavities with the appropriate rust inhibitor and wand so the material reaches hidden surfaces. The linked article explains the separate equipment and application settings; these products are not weld-through coatings."
+        },
+        {
+          "title": "Keep drainage paths open",
+          "body": "Check the bottom of doors and other intended water outlets after treatment. The goal is to protect the metal while still letting water escape. Remove unintended overspray using the compatible cleanup method specified for the product and surface."
+        },
+        {
+          "title": "Document the repair and check it again",
+          "body": "Keep photos of the treated area and record the product and repair performed. During later body checks, look for lifted coating, reopened seams, trapped dirt or recurring moisture so an application problem can be caught early."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Swollen seams or metal that appears weakened",
+          "body": "A coating alone cannot repair a structurally damaged panel. Have the extent of corrosion assessed before deciding on cosmetic treatment."
+        },
+        {
+          "title": "Water that remains inside a door",
+          "body": "Check the intended drain openings and the water path. Adding more sealant can make the problem worse if it closes an outlet."
+        },
+        {
+          "title": "Repeated rust at the same repaired edge",
+          "body": "Review surface preparation, the underlying repair and coverage of hidden faces rather than continually coating over the visible spot."
+        }
+      ],
+      "notes": [
+        "The hero shows underbody seam locations. Some drawings in the corrosion-treatment article are generic application examples; they are not exact access-point maps for every Mustang panel.",
+        "Do not use this coating procedure to lubricate suspension bushings or treat friction surfaces. The material and location must match the job."
+      ],
+      "procedures": [
+        {
+          "documentId": "G1687506",
+          "purpose": "Identify the roles and typical locations of seam sealers, adhesives and underbody protection."
+        },
+        {
+          "documentId": "G1687508",
+          "purpose": "Restore exterior corrosion protection and internal cavity treatment with the correct preparation and application process."
+        }
+      ],
+      "relatedGuideIds": [
+        "body-drains-seals",
+        "service-inspection"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1687506",
+          "sourceHash": "0c29bea3a70fbdf218378fa6d8a08daeaff256163bfa7f0f4d359c841f96d132"
+        },
+        {
+          "documentId": "G1687508",
+          "sourceHash": "1c40ff5cbdc7db5eb4428bff2670e2864986cb0445e68ee38ef56abf0f10ea74"
         }
       ]
     }

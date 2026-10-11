@@ -69,6 +69,14 @@ test('public copy removes provenance interfaces while preserving manual-transmis
  const result=stripPrivateMetadata({source:{pdfUrl:'/source/G.pdf'},sourceHash:'x',sourceBlocks:[],editorial:{kind:'source-expansion',humanReviewed:false},sourceRefs:[{documentId:'G',pdfUrl:'/source/G.pdf'}]});
  assert.deepEqual(result,{editorial:{kind:'source-expansion'},sourceRefs:[{documentId:'G'}]});
 });
+test('uncaptioned navigation controls cannot outrank component illustrations as thumbnails',()=>{
+ const urls=['def045efce6444a5bdabc8d05f4bacd4c065e95f1c9689333ee22d0b84aaf155.jpg','b75299658b432c802908906852dea8bb45642fc86980631066ebb0ea8c6ec7f7.jpg','17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a.png','570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61.png'];
+ const media=urls.map((url,i)=>({id:'control'+i,url:'/media/'+url,width:i<2?225:1600,height:i<2?225:1600}));
+ const doc={id:'battery',kind:'diagnosis',media,blocks:media.map(m=>({type:'media',mediaId:m.id}))};
+ assert.equal(selectThumbnail(doc),null);
+ doc.media.push({id:'battery-diagram',url:'/media/component.jpg',width:580,height:381});doc.blocks.push({type:'media',mediaId:'battery-diagram'});
+ assert.equal(selectThumbnail(doc).id,'battery-diagram');assert.equal(doc.media.length,5);
+});
 test('engine selection stays consistent across search, subsections, related links and glossary references',async()=>{
  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'atlas-catalog-')),contentDir=path.join(dir,'content');await fs.mkdir(contentDir);const db=openDb({dataDir:dir});
  for(const[id,engine]of[['G1','3.7L'],['G2','5.2L'],['G3',null]]){
