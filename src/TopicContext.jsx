@@ -21,7 +21,7 @@ export default function TopicContext({context}){
   <div className={'topic-context-sections'+(contextReadingLayout(context.sections)?' reading-layout':'')}>
    {context.sections.map((section,index)=>{
     const {tone,Icon}=sectionStyles[index%sectionStyles.length];
-    return <section key={section.id||index} className={'topic-context-card context-'+tone}>
+    return <section id={'topic-section-'+(section.id||index)} key={section.id||index} className={'topic-context-card context-'+tone}>
      <h3><span className="topic-context-icon"><Icon size={17} aria-hidden="true"/></span>{section.title}</h3>
      <Markdown body={section.body}/>
     </section>;

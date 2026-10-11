@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const CATALOG_URL = 'https://www.ford.com/parts/';
 const parse = (value, fallback = []) => { try { return typeof value === 'string' ? JSON.parse(value) : value ?? fallback; } catch { return fallback; } };
 const clean = value => String(value ?? '').replace(/\s+/g, ' ').trim();
 const norm = value => clean(value).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -160,10 +159,10 @@ export function createPartsCatalog(db, { contentDir = path.resolve('content') } 
     const publicIdentifiers = identifiers.filter(identifier => identifier.kind !== 'engineering-or-service-unverified' || !verifiedNumbers.has(identifier.number.replace(/[^A-Z0-9]/gi, '').toUpperCase()));
     const selectedDiagrams = diagrams.sort((a, b) => Number(b.explodedVerified) - Number(a.explodedVerified)).slice(0, 3);
     return {
-      documentId, availability: applicableParts.length ? 'verified-parts' : identifiers.length || selectedDiagrams.length ? 'references-only' : 'catalog-lookup',
+      documentId, availability: applicableParts.length ? 'verified-parts' : identifiers.length || selectedDiagrams.length ? 'references-only' : 'unavailable',
       parts: applicableParts, identifiers: publicIdentifiers, diagrams: selectedDiagrams,
-      catalogLinks: [...(seed.documentCatalogLinks?.[documentId] || []).filter(link => /^https:\/\/(?:shop\.ford\.co\.uk|www\.ford\.com)\//.test(link.url)), { label: 'Find parts by VIN at Ford', url: CATALOG_URL }],
-      fitmentNote: applicableParts.length ? 'Match the listed year, engine and equipment. Confirm the current replacement number with Ford using your VIN before ordering.' : 'Use your VIN and fitted equipment to find the current Ford replacement. Base numbers and connector markings identify components; they are not verified ordering numbers.'
+      catalogLinks: (seed.documentCatalogLinks?.[documentId] || []).filter(link => /^https:\/\/(?:shop\.ford\.co\.uk|www\.ford\.com)\//.test(link.url)),
+      fitmentNote: applicableParts.length ? 'Match the listed year, engine and equipment before ordering.' : null
     };
   }
   return { forDocument, report: () => ({ catalogEntries: parts.length, reviewedDiagrams: reviews.size, errors }) };

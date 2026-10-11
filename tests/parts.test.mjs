@@ -93,11 +93,13 @@ test('a connector marking remains unverified and its face is never an exploded a
   } finally { f.close(); }
 });
 
-test('unproven service catalog entries fail closed while lookup stays available', () => {
+test('unproven service catalog entries fail closed without empty-part or generic lookup prompts', () => {
   const f = fixture([{ id: 'G1', title: 'Oil Filter' }], { parts: [part('FAKE', ['3.7L'], [2015])] });
   try {
     assert.equal(f.catalog.forDocument('G1').parts.length, 0);
-    assert.equal(f.catalog.forDocument('G1').catalogLinks[0].url, 'https://www.ford.com/parts/');
+    assert.deepEqual(f.catalog.forDocument('G1').catalogLinks, []);
+    assert.equal(f.catalog.forDocument('G1').availability, 'unavailable');
+    assert.equal(f.catalog.forDocument('G1').fitmentNote, null);
     assert.equal(f.catalog.report().errors.length, 1);
   } finally { f.close(); }
 });

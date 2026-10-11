@@ -121,3 +121,66 @@ test('part-number prefixes do not become unrelated glossary abbreviations',()=>{
  assert.equal(parts.filter(part=>part.term?.id==='can').length,1);
  assert.equal(parts.map(part=>part.text).join(''),'Use VC-3-B coolant. Inspect the CAN bus.');
 });
+
+test('image-led steps absorb their adjacent drawings while genuinely empty markers disappear',async()=>{
+ const {readerBlocks}=await import('./content-model.mjs');
+ const original=[{id:'empty',type:'step',number:2,text:' \n',children:[]},{id:'step3',type:'step',number:3,text:'',children:[]},{id:'drawing3',type:'media',mediaId:'m3'},{id:'step4',type:'step',number:4,text:'',children:[]},{id:'drawing4',type:'media',mediaId:'m4'},{id:'tail',type:'paragraph',text:'Inspect the seal.'}];
+ const snapshot=structuredClone(original),shown=readerBlocks(original,{teachingStatus:'source'});
+ assert.deepEqual(shown.map(block=>block.id),['step3','step4','tail']);
+ assert.deepEqual(shown.slice(0,2).map(block=>[block.number,block.children[0].mediaId]),[[3,'m3'],[4,'m4']]);
+ assert.equal(shown[0].text,'');assert.deepEqual(original,snapshot);
+ assert.equal(readerBlocks(original,{teachingStatus:'source'},'source'),original);
+});
+test('empty-text parents keep warning paragraphs and nested actions; filtered lists keep original numbering',async()=>{
+ const {normalizeReadingBlocks}=await import('./content-model.mjs');
+ const result=normalizeReadingBlocks([{id:'parent',type:'step',number:4,text:'',children:[{id:'hazard',type:'safety',severity:'warning',text:'WARNING: Keep away from fuel.'},{id:'instruction',type:'paragraph',text:'Attach the fuel tanker.'},{id:'child',type:'step',number:1,text:'Release the latch.'}]},{id:'list',type:'list',ordered:true,start:3,items:[{id:'a',text:'Inspect the part.'},{id:'b',text:' '},{id:'c',text:'',children:[{type:'media',mediaId:'m'}]}]}]);
+ assert.deepEqual(result[0].children.map(block=>block.id),['hazard','instruction','child']);
+ assert.deepEqual(result[1].items.map(item=>[item.id,item.number]),[['a',3],['c',5]]);
+});
+test('repeated connect headings use explicit type notes and all subtitle levels appear in the outline',async()=>{
+ const {normalizeReadingBlocks,readingOutline}=await import('./content-model.mjs');
+ const headings=normalizeReadingBlocks([{id:'d1',type:'heading',level:2,text:'Disconnect'},{type:'safety',text:'NOTE: Type 1'},{type:'step',number:1,text:'Release the clip.'},{id:'c1',type:'heading',level:2,text:'Connect'},{type:'step',number:1,text:'Fit the clip.'},{id:'d2',type:'heading',level:2,text:'Disconnect'},{type:'safety',text:'NOTE: Type 2'},{type:'step',number:1,text:'Release the clip.'},{id:'sub',type:'heading',level:4,text:'Inspection'}]);
+ assert.deepEqual(readingOutline(headings).map(({title,tone,level})=>[title,tone,level]),[['Disconnect · Type 1','amber',2],['Connect · Type 1','green',2],['Disconnect · Type 2','amber',2],['Inspection','violet',4]]);
+ assert.equal(headings[0].text,'Disconnect');assert.equal(headings[1].text,'NOTE: Type 1');
+});
+test('material statements retain exact product names, numbers and specifications without capturing following instructions',async()=>{
+ const {materialSegments,annotateSourceTerms}=await import('./content-model.mjs');
+ const text='Lubricate for no less than 15 minutes.\nMaterial: Motorcraft® Additive Friction Modifier\n/ XL-3\n(EST-M2C118-A)\nTorque: 129 lb.ft (175 Nm).';
+ const segments=materialSegments(text);
+ assert.equal(segments.map(segment=>segment.text).join(''),text);
+ assert.equal(segments.filter(segment=>segment.material).length,1);
+ assert.equal(segments.find(segment=>segment.material).text,'Material: Motorcraft® Additive Friction Modifier\n/ XL-3\n(EST-M2C118-A)\n');
+ assert.equal(segments.at(-1).material,false);
+ assert.deepEqual(materialSegments('Inspect the part.'),[{text:'Inspect the part.',material:false}]);
+ const annotated=annotateSourceTerms([{type:'step',text},{type:'table',rows:[{cells:[{text:'Motorcraft® Premium Long-Life Grease\nXG-1-E1'},{text:'ESA-M1C75-B'}]}]}]);
+ assert.equal(annotated[0].materialSegments.map(segment=>segment.termParts.map(part=>part.text).join('')).join(''),text);
+ assert(annotated[1].rows[0].cells[0].materialSegments[0].material);assert.equal(annotated[1].rows[0].cells[1].materialSegments,undefined);
+});
+test('authored headings, material prose and tables remain structured with safe procedure links',async()=>{
+ const {marked}=await import('marked');const {readerBlocks,readingOutline,annotateSourceTerms,annotateMarkdownTerms}=await import('./content-model.mjs');
+ const body='## Preparation\n\nUse [Rear Halfshaft](#/document/G2214772).\n\n| Material | Specification |\n| --- | --- |\n| Motorcraft® Premium Long-Life Grease XG-1-E1 | ESA-M1C75-B |';
+ const blocks=readerBlocks([{id:'guide',type:'paragraph',text:body}],{teachingStatus:'complete'});
+ assert.equal(readingOutline(blocks)[0].title,'Preparation');
+ const annotated=annotateSourceTerms(blocks);
+ assert.equal(annotated[0].textBlocks[1].termParts.find(part=>part.href).href,'#/document/G2214772');
+ assert(annotated[0].textBlocks[2].rows[1].cells[0].materialSegments[0].material);
+ const markdown=annotateMarkdownTerms(marked.lexer('Use Motorcraft® XL-3.\n\nKeep the tube clean.'),null,body=>marked.lexer(body));
+ assert.equal(markdown[0].atlasMaterial,true);assert.equal(markdown.at(-1).atlasMaterial,undefined);
+});
+test('a loading or empty glossary never drops instructions surrounding procedure links',async()=>{
+ const {annotateSourceTerms,annotateInlineSource}=await import('./content-model.mjs');
+ const matcher=createTermMatcher([]),text='Release the fuel system pressure.\nSee [Fuel System Pressure Release — 3.7L](#/document/G1702143).';
+ const parts=annotateInlineSource(text,matcher);
+ assert.equal(parts.map(part=>part.text).join(''),'Release the fuel system pressure.\nSee Fuel System Pressure Release — 3.7L.');
+ assert.equal(parts.filter(part=>part.href).length,1);
+ assert.equal(annotateInlineSource(text,()=>[]).map(part=>part.text).join(''),parts.map(part=>part.text).join(''));
+ const source=annotateSourceTerms([{type:'step',number:1,text}],matcher);
+ assert.equal(source[0].termParts[0].text,'Release the fuel system pressure.\nSee ');
+ assert.equal(matcher('No glossary match needed.')[0].text,'No glossary match needed.');
+});
+test('Markdown empty list items disappear without renumbering later actions or dropping nested content',async()=>{
+ const {marked}=await import('marked');const {annotateMarkdownTerms}=await import('./content-model.mjs');
+ const list={type:'list',ordered:true,start:3,items:[{raw:'3. Inspect the latch.',text:'Inspect the latch.',tokens:[{type:'text',text:'Inspect the latch.'}]},{raw:'4. ',text:' ',tokens:[{type:'text',text:' '}]},{raw:'5. ',text:'',tokens:[{type:'list',ordered:false,items:[{text:'',tokens:[{type:'text',text:' '}]},{text:'Keep the seal clean.',tokens:[{type:'text',text:'Keep the seal clean.'}]}]}]}]};
+ const [result]=annotateMarkdownTerms([list],createTermMatcher([]),body=>marked.lexer(body));
+ assert.deepEqual(result.items.map(item=>item.atlasNumber),[3,5]);assert.equal(result.items[1].tokens[0].items.length,1);assert.equal(result.items[1].tokens[0].items[0].text,'Keep the seal clean.');assert.equal(list.items.length,3);
+});

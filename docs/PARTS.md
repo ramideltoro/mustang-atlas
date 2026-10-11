@@ -2,7 +2,7 @@
 
 `server/parts.mjs` exports `createPartsCatalog(db, {contentDir}).forDocument(documentId, {year?, engine?})`. It reads the existing parsed article data and the curated `content/parts-catalog.json`; it never changes articles, generated explanations, source hashes, or media. Unknown document IDs return `null`.
 
-The public result contains `availability`, `parts`, `identifiers`, `diagrams`, `catalogLinks`, and `fitmentNote`. Availability distinguishes verified parts, reference identifiers/diagrams, and catalog lookup. The API integration applies the existing media-quality resolver to diagram URLs.
+The public result contains `availability`, `parts`, `identifiers`, `diagrams`, `catalogLinks`, and `fitmentNote`. Availability distinguishes verified parts, reference identifiers/diagrams, and unavailable content. There is no generic VIN lookup link or missing-part message. The reader omits the entire section and its navigation entry when there are no parts, identifiers, or diagrams. Product-specific application notes remain alongside confirmed numbers. The API integration applies the existing media-quality resolver to diagram URLs.
 
 ## Verified numbers
 

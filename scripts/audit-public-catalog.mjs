@@ -3,7 +3,7 @@ import {openDb,decodeDocument} from '../server/db.mjs';
 import {createApp} from '../server/index.mjs';
 import {createReferenceResolver} from '../server/article-references.mjs';
 import {documentApplicability,isPublicDocument,ENGINE_OPTIONS} from '../server/catalog.mjs';
-const db=openDb({readOnly:true});const rows=db.prepare('SELECT * FROM documents').all().filter(isPublicDocument);const ids=new Set(rows.map(r=>r.id));const resolver=createReferenceResolver(rows);const issues=[];let textNodes=0,links=0,mediaPlacements=0,tables=0,thumbnails=0;
+const db=openDb({readOnly:true});const rows=db.prepare('SELECT * FROM documents').all().filter(isPublicDocument);const ids=new Set(rows.map(r=>r.id)),byId=new Map(rows.map(r=>[r.id,r]));const resolver=createReferenceResolver(rows);const issues=[];let textNodes=0,links=0,mediaPlacements=0,tables=0,thumbnails=0,variantReferralChecks=0;
 function texts(blocks){const out=[];for(const b of blocks||[]){if(b.text)out.push(b.text);out.push(...texts(b.children),...texts(b.items));for(const r of b.rows||[])for(const c of r.cells||[]){if(c.text)out.push(c.text);out.push(...texts(c.blocks));}}return out;}
 function structure(blocks){const out=[];for(const b of blocks||[]){if(b.type==='media'){out.push('media:'+b.id+':'+b.mediaId);mediaPlacements++;}if(b.type==='step')out.push('step:'+b.id+':'+b.number);if(b.type==='safety')out.push('safety:'+b.id+':'+b.severity);if(b.type==='table'){tables++;out.push('table:'+b.id+':'+JSON.stringify(b.rows.map(r=>r.cells.map(c=>[c.colSpan,c.rowSpan,c.header]))));}out.push(...structure(b.children),...structure(b.items));for(const r of b.rows||[])for(const c of r.cells||[])out.push(...structure(c.blocks));}return out;}
 function outsideReferrals(text){
@@ -17,6 +17,7 @@ for(const row of rows){const doc=decodeDocument(row);const cleaned=resolver.bloc
   const protectedText=outsideReferrals(text);
   const remaining=numeric(result);for(const n of new Set(numeric(protectedText)))if(!remaining.includes(n))issues.push({id:row.id,reason:'technical-number-missing',number:n,excerpt:text.slice(0,180)});
   for(const match of result.matchAll(/\]\(#\/document\/([A-Za-z0-9_-]+)\)/g)){links++;if(!ids.has(match[1]))issues.push({id:row.id,reason:'broken-article-link',target:match[1]});}
+  if(/REFER\s+to\s*:|#\/document\//i.test(text))for(const engine of ['all',...ENGINE_OPTIONS]){variantReferralChecks++;const scoped=resolver.cleanText(text,row,engine);const seen=new Set();for(const m of scoped.text.matchAll(/\[([^\]]+)\]\(#\/document\/([A-Za-z0-9_-]+)\)/g)){const target=byId.get(m[2]);if(!target||!documentApplicability(target,engine).matchesSelectedEngine)issues.push({id:row.id,reason:'incompatible-referral',engine,target:m[2]});if(seen.has(m[2]))issues.push({id:row.id,reason:'duplicate-referral',engine,target:m[2]});seen.add(m[2]);for(const e of target?documentApplicability(target).engines:[])if(!m[1].includes(e))issues.push({id:row.id,reason:'unlabeled-referral-engine',engine:e,target:m[2]});}for(const n of new Set(numeric(protectedText)))if(!numeric(scoped.text).includes(n))issues.push({id:row.id,reason:'scoped-technical-number-missing',engine,number:n});}
  }
 }
 const app=createApp({db});const server=await new Promise(resolve=>{const s=app.listen(0,'127.0.0.1',()=>resolve(s));});const base='http://127.0.0.1:'+server.address().port;
@@ -26,4 +27,4 @@ try{
  for(const endpoint of ['systems','glossary?limit=5000']){const json=await(await fetch(base+'/api/v1/'+endpoint)).text();if(/service manual|workshop manual|original source|source PDF|\/source\//i.test(json))issues.push({endpoint,reason:'public-copy-leak'});}
 }finally{await new Promise(resolve=>server.close(resolve));db.close();}
 function docMedia(row){return JSON.parse(row.media).map(m=>m.id);}
-const report={documents:rows.length,textNodes,resolvedLinks:links,mediaPlacements:mediaPlacements/2,tables:tables/2,ownArticleThumbnails:thumbnails,issues};fs.mkdirSync('work',{recursive:true});fs.writeFileSync('work/public-catalog-audit.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,issues:issues.slice(0,12)},null,2));if(issues.length)process.exitCode=1;
+const report={documents:rows.length,textNodes,resolvedLinks:links,variantReferralChecks,mediaPlacements:mediaPlacements/2,tables:tables/2,ownArticleThumbnails:thumbnails,issues};fs.mkdirSync('work',{recursive:true});fs.writeFileSync('work/public-catalog-audit.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,issues:issues.slice(0,12)},null,2));if(issues.length)process.exitCode=1;

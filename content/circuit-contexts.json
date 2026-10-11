@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "circuits": [
+    {
+      "documentId": "wiring-033-002",
+      "sourceHash": "7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864",
+      "svgHash": "9fb7ffdc22f20fc5fd4144ad6bf1ea823463fff686dc25c9690043376718323e",
+      "sourceRefs": [
+        {
+          "documentId": "wiring-033-001",
+          "sourceHash": "dcc10e53102a37251f6cb53ed57aa236e29e441c1a709bcf0445c42a2971b2a5"
+        },
+        {
+          "documentId": "wiring-023-016",
+          "sourceHash": "532927e6131906bb7bc26f106c426de2d283680862a6c2913bdc11a738edd1c4"
+        },
+        {
+          "documentId": "wiring-010-003",
+          "sourceHash": "5da128a75c1466d446c2cecceabe41ca8a690aceb10c3113daa83debcf06a125"
+        },
+        {
+          "documentId": "wiring-151-001",
+          "sourceHash": "f4f26bc28467ae462519506f358742e21ded5cbb0f8ae8f398e4432e3cc30bfc"
+        },
+        {
+          "documentId": "connector-C1651",
+          "sourceHash": "c53f8129abe98ca35d1547aa0757f1f8ed3aeb4e5e08ca63a14613492bf7bc33"
+        },
+        {
+          "documentId": "connector-C1551B",
+          "sourceHash": "6ecde35af28858a8194f7e797e59e126a86f6c3119c50184ccc3c6e860ccf2b5"
+        },
+        {
+          "documentId": "G1693241",
+          "sourceHash": "9c00726e0d16db504b25d4943532366ee1a2596059568ab0ddedea4d2664ad6e"
+        },
+        {
+          "documentId": "G1693242",
+          "sourceHash": "dafdc35d4ca2122a6e41660603aeba88874c832585b196d2aa7b3b98082b99fa"
+        }
+      ],
+      "title": "Three connections that operate the active grille shutters",
+      "mode": "curated",
+      "engines": [
+        "2.3L"
+      ],
+      "scope": "2.3L engine, with active grille shutters fitted.",
+      "summary": "The active grille shutters are movable blades behind the front grille. Their motor opens or closes the blades to balance cooling airflow, warm-up and aerodynamic drag. This drawing shows the three electrical paths that make that happen: operating power, a ground return, and a two-way communication wire to the engine controller.",
+      "components": [
+        {
+          "id": "AGS",
+          "label": "Active grille shutter actuator",
+          "connectorIds": [
+            "C1651"
+          ],
+          "documentIds": [
+            "connector-C1651"
+          ],
+          "role": "A small control unit and motor are built into the actuator. The control unit receives a requested position and drives the motor; the linked shutter blades move together. C1651 joins this assembly to the vehicle wiring."
+        },
+        {
+          "id": "PCM",
+          "label": "Powertrain control module (PCM)",
+          "connectorIds": [
+            "C1551B"
+          ],
+          "documentIds": [
+            "connector-C1551B"
+          ],
+          "role": "The engine controller decides how far to open the shutters using operating information such as vehicle speed, coolant temperature and air-conditioning pressure. Its LIN connection also receives position and fault information from the actuator."
+        },
+        {
+          "id": "F42",
+          "label": "Fuse F42 and the power feed",
+          "connectorIds": [],
+          "documentIds": [],
+          "role": "The supply originates at the 15 A F42 fuse in the battery junction box on drawing 33-1. Splice S112 branches that supply to continuation A and this shutter circuit. The feed is labeled hot in Start or Run."
+        },
+        {
+          "id": "G104",
+          "label": "Ground G104 through splice S128",
+          "connectorIds": [],
+          "documentIds": [],
+          "role": "The actuator ground joins the GD120 circuit at splice S128 and reaches ground point G104. The black/green conductor provides the actuator ground path; it is separate from the LIN communication circuit."
+        }
+      ],
+      "circuits": [
+        {
+          "id": "CBK03",
+          "label": "Operating power",
+          "category": "power",
+          "wireColors": [
+            {
+              "code": "GY",
+              "name": "gray"
+            }
+          ],
+          "terminals": [
+            {
+              "connectorId": "C1651",
+              "documentId": "connector-C1651",
+              "pin": "3",
+              "function": "VPWR — supply from fuse F42",
+              "qualifier": "2.3L"
+            }
+          ],
+          "explanation": "The gray CBK03 wire brings the Start/Run supply from continuation A to the actuator. It supplies operating energy; it does not carry the requested shutter position."
+        },
+        {
+          "id": "VDN06",
+          "label": "LIN command and feedback",
+          "category": "communication",
+          "wireColors": [
+            {
+              "code": "WH-GN",
+              "name": "white / green"
+            }
+          ],
+          "terminals": [
+            {
+              "connectorId": "C1551B",
+              "documentId": "connector-C1551B",
+              "pin": "50",
+              "function": "PCM LIN communication",
+              "qualifier": "2.3L"
+            },
+            {
+              "connectorId": "C1651",
+              "documentId": "connector-C1651",
+              "pin": "2",
+              "function": "Actuator LIN communication",
+              "qualifier": "2.3L"
+            }
+          ],
+          "explanation": "LIN means Local Interconnect Network. This single communication conductor links the PCM to the actuator: the PCM sends position requests, and the actuator returns position and fault information. It is not a simple on/off motor power wire."
+        },
+        {
+          "id": "GD120",
+          "label": "Actuator ground",
+          "category": "ground",
+          "wireColors": [
+            {
+              "code": "BK-GN",
+              "name": "black / green"
+            }
+          ],
+          "terminals": [
+            {
+              "connectorId": "C1651",
+              "documentId": "connector-C1651",
+              "pin": "1",
+              "function": "Actuator ground through S128 to G104",
+              "qualifier": "2.3L"
+            }
+          ],
+          "explanation": "The black/green GD120 wire connects the actuator ground terminal to the grounded network shown at G104. The dot labeled S128 marks the splice joining these conductors."
+        }
+      ],
+      "connections": [
+        {
+          "from": "F42 (15 A), Start/Run supply on 33-1",
+          "to": "C1651 cavity 3 — actuator VPWR",
+          "circuit": "CBK03 · GY",
+          "description": "Power reaches the actuator through the matching continuation A on this page. F42 protects this supply circuit; the gray wire carries its operating power to the actuator.",
+          "via": [
+            "S112 on 33-1",
+            "Continuation A: 33-1 → 33-2"
+          ]
+        },
+        {
+          "from": "C1551B cavity 50 — PCM",
+          "to": "C1651 cavity 2 — actuator",
+          "circuit": "VDN06 · WH-GN",
+          "description": "A two-way LIN communication link carries the requested position and the returned position/fault information.",
+          "via": []
+        },
+        {
+          "from": "C1651 cavity 1 — actuator ground",
+          "to": "G104 — body ground",
+          "circuit": "GD120 · BK-GN",
+          "description": "The drawing connects the actuator ground through the labeled splice to the ground point.",
+          "via": [
+            "S128"
+          ]
+        }
+      ],
+      "continuations": [
+        {
+          "reference": "33-1",
+          "documentId": "wiring-033-001",
+          "title": "Cooling Fan — diagram 1",
+          "kind": "circuit-continuation",
+          "description": "Follow continuation A to the F42 15 A supply and splice S112. The fan-motor circuits on that sheet are separate from this shutter motor."
+        },
+        {
+          "reference": "23-16",
+          "documentId": "wiring-023-016",
+          "title": "Electronic Engine Controls — 2.3L",
+          "kind": "component-reference",
+          "description": "Find the PCM connection at C1551B cavity 50. The reference identifies the related controller drawing."
+        },
+        {
+          "reference": "10-3",
+          "documentId": "wiring-010-003",
+          "title": "Grounds — diagram 3",
+          "kind": "ground-reference",
+          "description": "See the wider GD120 ground network, splice S128 and ground G104."
+        },
+        {
+          "reference": "151-1",
+          "documentId": "wiring-151-001",
+          "title": "Front component locations",
+          "kind": "component-reference",
+          "description": "Locate the active grille shutter connector C1651 and the relevant ground/splice area. This is a location map, not another electrical connection."
+        }
+      ],
+      "readingGuide": [
+        "The three cavity numbers belong to C1651: 3 is power, 2 is LIN, and 1 is ground. C1651 has a fourth cavity in its connector view, but that cavity is unassigned here.",
+        "Follow the circuit ID as well as the color. CBK03, VDN06 and GD120 identify different electrical jobs even though they enter the same actuator.",
+        "The letter A is a continuation marker, not a terminal number. Match it to A on 33-1 to follow the power feed across the page boundary.",
+        "After an engine start, the shutters can open and close to learn their end positions. That calibration movement is described as normal operation; a momentary movement alone does not establish a fault.",
+        "This is the 2.3L active-grille-shutter circuit. It does not show the fan motor being powered through the shutter actuator."
+      ]
+    }
+  ]
+}

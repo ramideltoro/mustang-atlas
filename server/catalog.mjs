@@ -3,6 +3,9 @@ export const ENGINE_OPTIONS=['2.3L','3.7L','5.0L','5.2L'];
 export function isPublicDocument(row){return !/^\s*(?:overview\s*[-–—:]?\s*)?about\s+(?:this|the)\s+(?:(?:service|workshop)\s+)?manual\s*$/i.test(row?.title||'');}
 export function engineFilter(value){if(value===undefined||value===''||String(value).toLowerCase()==='all')return 'all';const engine=String(value).toUpperCase();if(!ENGINE_OPTIONS.includes(engine))throw Object.assign(new Error('Unsupported engine filter.'),{status:400});return engine;}
 const array=value=>{if(Array.isArray(value))return value;try{return JSON.parse(value||'[]');}catch{return [];}};
+// The 2.3L label is a full-sheet header outside the component/branch boxes on
+// wiring 033-002. Bind the visual finding to the exact reviewed drawing.
+const reviewedApplications={'wiring-033-002':{hash:'7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864',engines:['2.3L']}};
 export function documentApplicability(row,selected='all'){
  // Titles and section metadata are application evidence. Body text and related
  // article titles contain cross-variant references, so never use them as tags.
@@ -17,7 +20,8 @@ export function documentApplicability(row,selected='all'){
  if((code==='307-01'||code==='30')&&/\b6R80\b/i.test(section))sectionEngines=['2.3L','3.7L','5.0L'];
  if(['308-03A','308-06A'].includes(code)&&/\bMT82\b/i.test(section))sectionEngines=['2.3L','3.7L','5.0L'];
  if(['308-03B','308-06B'].includes(code)&&/\b(?:TR[- ]?)?3160\b/i.test(section))sectionEngines=['5.2L'];
- const engines=ENGINE_OPTIONS.filter(e=>(headingEngines.length?headingEngines:sectionEngines.length?sectionEngines:array(row.engines)).includes(e));
+ const reviewed=reviewedApplications[row.id];const reviewedEngines=reviewed&&reviewed.hash===(row.source_hash??row.sourceHash)?reviewed.engines:[];
+ const engines=ENGINE_OPTIONS.filter(e=>(headingEngines.length?headingEngines:reviewedEngines.length?reviewedEngines:sectionEngines.length?sectionEngines:array(row.engines)).includes(e));
  return {engines,scope:engines.length?'specific':'shared-or-unspecified',selectedEngine:selected,matchesSelectedEngine:selected==='all'||!engines.length||engines.includes(selected)};
 }
 export function operationFor(row){const folder=String(row.source_path||'').split('/').at(-2)||'';return /^(?:Description and Operation|Diagnosis and Testing|Removal(?: and Installation)?|Installation|Disassembly(?: and Assembly(?: of Subassemblies)?)?|Assembly|Overhaul|General Procedures|Specifications)$/i.test(folder)?folder:null;}
