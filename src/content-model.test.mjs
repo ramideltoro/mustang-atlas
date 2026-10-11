@@ -106,6 +106,11 @@ test('connector presentation hides export layout only and gives recognized pin c
  const rendered=readerBlocks(blocks,document);
  assert.deepEqual(rendered[0].rows.map(row=>row.cells[0].text),['CNumber','Gender','Color','Pin Count','Kit List']);
  assert(rendered[1].rows[0].cells.every(cell=>cell.header));assert(rendered[1].rows[1].cells.every(cell=>!cell.header));
+ assert.equal(rendered[1].connectorPins,true);assert.equal(rendered[0].connectorPins,undefined);
+ assert.deepEqual(rendered[1].rows[1].cells.map(cell=>cell.columnKey),['cavity','circuit-number','color','gauge','function','qualifier','used','terminal-part-number']);
+ assert.deepEqual(rendered[1].rows.map(row=>row.cells.map(cell=>cell.text)),pins.rows.map(row=>row.cells.map(cell=>cell.text)));
  assert.equal(readerBlocks(blocks,document,'source'),blocks);assert.equal(pins.rows[0].cells[0].header,false);
+ assert.equal(pins.connectorPins,undefined);assert.equal(pins.rows[1].cells[1].columnKey,undefined);
+ assert.equal(readerBlocks([pins],{kind:'specifications'})[0].connectorPins,undefined);
  assert.equal(documentTitle(document),'C100 — Air Conditioning (A/C) Clutch And Field Coil');
 });

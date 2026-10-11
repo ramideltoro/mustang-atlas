@@ -105,7 +105,11 @@ export function readerBlocks(blocks,document={},view='guide'){
   const keys=rows.map(row=>row.cells?.length===2&&row.cells[0].header?row.cells[0].text:null);
   if(keys.includes('Box')&&keys.includes('CNumber'))rows=rows.filter(row=>!connectorLayoutFields.has(row.cells?.[0]?.text));
   const first=rows[0]?.cells||[];
-  if(first.length>=5&&first[0].text==='Cavity'&&first.some(cell=>cell.text==='Circuit Number')&&first.every(cell=>connectorPinHeaders.has(cell.text)))rows=[{...rows[0],cells:first.map(cell=>({...cell,header:true}))},...rows.slice(1)];
+  if(first.length>=5&&first[0].text==='Cavity'&&first.some(cell=>cell.text==='Circuit Number')&&first.every(cell=>connectorPinHeaders.has(cell.text))){
+   const columns=first.map(cell=>cell.text.toLowerCase().replace(/\s+/g,'-'));
+   rows=rows.map((row,index)=>({...row,cells:row.cells.map((cell,column)=>({...cell,header:index===0?true:cell.header,columnKey:columns[column]}))}));
+   return {...block,rows,connectorPins:true};
+  }
   return {...block,rows};
  });
 }
