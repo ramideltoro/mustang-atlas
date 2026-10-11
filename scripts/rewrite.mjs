@@ -4,10 +4,12 @@ import {spawn} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
 import {setTimeout as delay} from 'node:timers/promises';
 import sharp from 'sharp';
+import {createAssetQualityStore} from '../server/asset-quality.mjs';
 import {documentEvents,selectChunk,validPublishedGuide,resumeCheckpoint} from './rewrite-planning.mjs';
 import {editableLeaves,validateEdits,documentEvidence,selectTeachingContext,VALIDATION_VERSION,outputSchema,instructions,EDITORIAL_VERSION} from './rewrite-lib.mjs';
 const args=process.argv.slice(2),option=(key,fallback)=>args.includes(key)?args[args.indexOf(key)+1]:fallback;
 const dataDir=path.resolve(process.env.DATA_DIR||'data'),root=path.join(dataDir,'rewrite'),guideDir=path.join(dataDir,'guides');
+const assetQuality=createAssetQualityStore({dataDir});
 const workers=Math.max(1,Math.min(4,Number(option('--concurrency','3')))),chunkChars=Number(option('--chunk-chars','22000')),batchSize=Number(option('--batch-size','6'));
 const limit=Number(option('--limit','0')),maxAttempts=Number(option('--max-attempts','3'));
 const firstDocuments=new Set(option('--first','').split(',').filter(Boolean));
@@ -69,10 +71,11 @@ async function run(batch){
   const firstIndex=leaves.length?doc.leaves.findIndex(x=>x.id===leaves[0].id):0;
   inputs.push({documentId:doc.id,title:doc.title,section:doc.section_title,kind:doc.kind,engines:doc.engines,firstChunk:Object.keys(previous.edits).length===0,blocks:leaves,contextBefore:doc.leaves.slice(Math.max(0,firstIndex-2),firstIndex),tableEvidence,referenceLabels:doc.kind==='wiring'||doc.kind==='connector'?doc.text.slice(0,12000):undefined,teachingContext:doc.teachingContext,relatedReferences:relatedReferences(doc),illustrationFiles:[],...(previous.error?{previousValidationFeedback:previous.error}: {})});
   for(const media of chunkImages){
-   if(!/^\/media\/[a-f0-9]+\.(?:png|jpg|gif|webp|svg)$/.test(media.url||''))throw Error('Invalid illustration path for '+doc.id);
+   const resolved=assetQuality.resolve(media);
+   if(!/^\/media\/[a-f0-9]+\.(?:png|jpe?g|gif|webp|svg)$/.test(resolved.url||''))throw Error('Invalid illustration path for '+doc.id);
    const file=path.join(jobDir,media.id+'-source.png');
-   await sharp(path.join(dataDir,media.url.slice(1)),{limitInputPixels:150000000}).resize({width:1800,height:1800,fit:'inside',withoutEnlargement:true}).png().toFile(file);
-   imageArgs.push('--image',file);inputs.at(-1).illustrationFiles.push({file:path.basename(file),mediaId:media.id,caption:media.caption,sourceOrder:doc.media.findIndex(m=>m.id===media.id)+1});
+   await sharp(path.join(dataDir,resolved.url.slice(1)),{limitInputPixels:150000000}).resize({width:1800,height:1800,fit:'inside',withoutEnlargement:true}).png().toFile(file);
+   imageArgs.push('--image',file);inputs.at(-1).illustrationFiles.push({file:path.basename(file),mediaId:media.id,caption:media.caption,sourceOrder:doc.media.findIndex(m=>m.id===media.id)+1,width:resolved.width,height:resolved.height,quality:resolved.quality||'original'});
   }
  }
  const input={documents:inputs};fs.writeFileSync(path.join(jobDir,'input.json'),JSON.stringify(input));

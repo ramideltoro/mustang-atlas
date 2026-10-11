@@ -24,3 +24,24 @@ For a new full corpus, stage and audit it before replacing the database and rest
 `GET /healthz` reports service availability and catalog size. `GET /api/v1/stats` reports exact catalog, media and accepted teaching-guide counts; teaching coverage is reported separately from extraction coverage. Docker performs an HTTP health check. CI runs unit/integration checks and builds the frontend on pushes.
 
 Credential values remain in the operator's central credential store and must never appear in this repository, deployment logs, browser bundle or generated content.
+
+## Image quality recovery
+
+The offline Ford export contains reduced-size workshop illustrations. Recover the unresized originals with an existing authorized Ford publication session:
+
+```sh
+node scripts/upgrade-media.mjs --session-config /private/path/params.json --session-cookies /private/path/cookieString.txt
+node scripts/sync-media.mjs
+```
+
+The local recovery worker matches the resized source bytes against the catalog's SHA-256 image identity before requesting the same illustration without width/height parameters. It accepts a larger image only when its proportions agree. It never sharpens, redraws, or invents technical detail. SVG illustrations remain vectors. Session cookies are read from the supplied private path and sent only to Ford's publication endpoint; they are not written to generated content, logs or the repository.
+
+Progress and resumable state are kept in `data/media-quality-progress.json` and `data/media-upgrade/`. Use `--first G2214748` to prioritize a reference, `--limit 1` for a small verification run, or `--concurrency 4` to bound source requests. A normal interrupt checkpoints completed images. On resume, missing recovered files or map entries are fetched again. Unmatched images retain the existing source asset for review.
+
+`data/media-quality.json` maps original catalog URLs to verified larger image assets. This presentation layer preserves document hashes, figure IDs, captions, callouts and teaching-guide coverage. The API and Codex writing worker resolve the map dynamically; restart an older writing worker after its current batches to load this capability. The original PDFs remain unchanged for source verification.
+
+`sync-media.mjs` snapshots the map, transfers every referenced media file first, and then atomically publishes the map. It supports the same `ATLAS_DEPLOY_HOST` and `ATLAS_DEPLOY_DATA` overrides as guide publication. It never copies the Ford session or local recovery state. The API reads map changes without a container restart. Publish image improvements independently of guide updates.
+
+The two Metrics reference pages can be rendered directly from their vector PDF with `node scripts/upgrade-pdf-media.mjs`. It creates a separate proposal at `work/media-quality-metrics.json` and refuses to overwrite the live map. Merge its `assets` into the quality map only after the recovery worker stops, then publish with `sync-media.mjs`. The source PDF is kept intact. The torque-adapter calculator JPEGs already use their upstream original files.
+
+Run `node scripts/audit-media-quality.mjs` after recovery. It verifies file hashes, decoded dimensions and source proportions across the quality map, reports catalog coverage, and ranks pixel differences for visual inspection in `work/media-quality-audit.json`. Pixel differences from JPEG resizing are not treated as proof of changed content. Source identity is established by matching the resized Ford asset bytes before retrieving its unresized counterpart.

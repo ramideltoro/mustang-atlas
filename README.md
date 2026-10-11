@@ -44,3 +44,7 @@ Large procedures are processed in chunks but become visible only after complete 
 Create `data/rewrite/stop-after-current` to stop after current batches. Remove it before resuming. A normal stop preserves accepted chunks. The publisher copies only generated guide JSON and progress, and exits when the worker exits.
 
 See [deployment and operations](docs/DEPLOYMENT.md).
+
+## Original image quality
+
+The reader uses verified, unresized Ford illustrations when available, with a shared image mapping for documents and glossary entries. Small tool previews remain compact; the image viewer offers Fit, true 100% size, and scrollable zoom. Vector diagrams remain scalable. See the image recovery workflow in [deployment and operations](docs/DEPLOYMENT.md).
