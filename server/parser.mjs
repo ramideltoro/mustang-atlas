@@ -11,16 +11,46 @@ export function tocCatalog(toc) {
  function walk(obj,parts=[]){for(const [name,value] of Object.entries(obj)){const next=[...parts,name];if(typeof value==='string')out.push({id:/^[A-Za-z0-9_-]+$/.test(value)?value:`reference-${hash(value).slice(0,12)}`,reference:value,path:next.map(clean).join('/'),title:name});else walk(value,next);}}
  walk(toc);return out;
 }
-export function sanitizeSvg(raw) {
- const $=load(raw,{xml:true});$('script,foreignObject,iframe,object,embed').remove();
- $('style').each((_,el)=>{$(el).text($(el).text().replace(/@import[^;]+;?/gi,'').replace(/url\(\s*(['"]?)(?!#|data:image\/)[^)]+\)/gi,'none'));});
- $('*').each((_,el)=>{for(const [key,value] of Object.entries(el.attribs||{})){if(/^on/i.test(key)||/^(?:href|xlink:href)$/i.test(key)&&!/^#|^data:image\/(?:png|jpeg|gif|webp|svg\+xml);base64,/i.test(value)||/expression|@import|url\(\s*['"]?(?:https?:|\/\/)/i.test(value))$(el).removeAttr(key);}});
+async function rasterDataUri(value) {
+ const match=value.match(/^data:(image\/(?:png|jpeg|gif|webp))?;base64,([\s\S]+)$/i);
+ if(!match)return null;
+ const encoded=match[2].replace(/\s/g,'');
+ // Buffer's decoder tolerates invalid characters; reject those before decoding.
+ if(encoded.length>90_000_000||!/^[A-Za-z0-9+/]+={0,2}$/.test(encoded))return null;
+ const bytes=Buffer.from(encoded,'base64');
+ const canonical=bytes.toString('base64');
+ if(canonical.replace(/=+$/,'')!==encoded.replace(/=+$/,'')||(encoded.includes('=')&&canonical!==encoded))return null;
+ let mime=null;
+ if(bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))mime='image/png';
+ else if(bytes[0]===0xff&&bytes[1]===0xd8&&bytes[2]===0xff)mime='image/jpeg';
+ else if(['GIF87a','GIF89a'].includes(bytes.subarray(0,6).toString('ascii')))mime='image/gif';
+ else if(bytes.subarray(0,4).toString('ascii')==='RIFF'&&bytes.subarray(8,12).toString('ascii')==='WEBP')mime='image/webp';
+ if(!mime||(match[1]&&match[1].toLowerCase()!==mime))return null;
+ try{
+  // Validate the complete raster, not just its header. Keep the original bytes.
+  await sharp(bytes,{limitInputPixels:150000000,failOn:'warning'}).raw().toBuffer();
+  return `data:${mime};base64,${bytes.toString('base64')}`;
+ }catch{return null;}
+}
+const localSvgUrls=value=>value.replace(/url\(\s*(['"]?)(.*?)\1\s*\)/gis,(full,quote,reference)=>/^#[\w.:-]+$/.test(reference.trim())?full:'none');
+const svgLocalName=element=>element.name?.split(':').at(-1).toLowerCase();
+const activeSvgElements=new Set(['script','foreignobject','iframe','object','embed','animate','set','animatemotion','animatetransform']);
+export async function sanitizeSvg(raw) {
+ const $=load(raw,{xml:true});$('*').filter((_,el)=>activeSvgElements.has(svgLocalName(el))).remove();
+ $('*').filter((_,el)=>svgLocalName(el)==='style').each((_,el)=>{$(el).text(localSvgUrls($(el).text().replace(/@import[^;]+;?/gi,'')));});
+ for(const el of $('*').toArray())for(const [key,value] of Object.entries(el.attribs||{})){
+  if(/^on/i.test(key)||/expression|@import/i.test(value)){$(el).removeAttr(key);continue;}
+  if(/^(?:href|xlink:href)$/i.test(key)&&!value.startsWith('#')){
+   const normalized=await rasterDataUri(value);
+   if(normalized&&svgLocalName(el)==='image')$(el).attr(key,normalized);else $(el).removeAttr(key);
+  }else $(el).attr(key,localSvgUrls(value));
+ }
  return $.xml();
 }
 export async function saveAsset(bytes,mime,dataDir) {
  let ext = {'image/png':'png','image/jpeg':'jpg','image/gif':'gif','image/webp':'webp','image/svg+xml':'svg'}[mime];
  if(!ext)throw new Error(`Unsupported image media type ${mime}`);
- if(ext==='svg')bytes=Buffer.from(sanitizeSvg(bytes.toString()));
+ if(ext==='svg')bytes=Buffer.from(await sanitizeSvg(bytes.toString()));
  const filename=`${hash(bytes)}.${ext}`;const dir=path.join(dataDir,'media');await fs.mkdir(dir,{recursive:true});
  try{await fs.writeFile(path.join(dir,filename),bytes,{flag:'wx'});}catch(e){if(e.code!=='EEXIST')throw e;}
  let width=null,height=null;try{const info=await sharp(bytes,{limitInputPixels:150000000}).metadata();width=info.width;height=info.height;}catch{}

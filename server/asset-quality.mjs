@@ -8,15 +8,21 @@ const dimension = value => Number.isSafeInteger(value) && value > 0 && value <= 
 function validAsset(originalUrl, asset) {
   const original = mediaPath.exec(originalUrl);
   const target = mediaPath.exec(asset?.url || '');
+  const restoresEmbeddedRaster = asset?.sourceKind === 'svg-embedded-raster-repair'
+    && original?.[1] === 'svg' && target?.[1] === 'svg'
+    && asset.width === asset.sourceWidth && asset.height === asset.sourceHeight;
   return original && target && asset.url !== originalUrl && asset.mime === mimeByExtension[target[1]]
     && ['width', 'height', 'sourceWidth', 'sourceHeight'].every(key => dimension(asset[key]))
     && asset.width * asset.height <= 150000000
     && asset.width >= asset.sourceWidth && asset.height >= asset.sourceHeight
-    && (asset.width > asset.sourceWidth || asset.height > asset.sourceHeight);
+    && (asset.sourceKind === 'svg-embedded-raster-repair'
+      ? restoresEmbeddedRaster
+      : asset.width > asset.sourceWidth || asset.height > asset.sourceHeight);
 }
 
 // Catalog source identity stays immutable. This map only selects a verified,
-// larger copy of the same original illustration at the point of use.
+// larger copy of the same original illustration, or a same-geometry SVG whose
+// original embedded raster has been recovered by the trusted repair process.
 export function createAssetQualityStore({ dataDir }) {
   const filename = path.join(dataDir, 'media-quality.json');
   let signature = null;
@@ -47,6 +53,7 @@ export function createAssetQualityStore({ dataDir }) {
   function apply(media, map) {
     const asset = map.get(media.url);
     if (!asset || asset.sourceWidth !== media.width || asset.sourceHeight !== media.height) return media;
+    if (asset.sourceKind === 'svg-embedded-raster-repair' && media.mime !== 'image/svg+xml') return media;
     try {
       if (!fs.statSync(path.join(dataDir, asset.url.slice(1))).isFile()) return media;
     } catch { return media; }
@@ -59,7 +66,7 @@ export function createAssetQualityStore({ dataDir }) {
       height: asset.height,
       sourceWidth: media.width,
       sourceHeight: media.height,
-      quality: 'native-source',
+      quality: asset.sourceKind === 'svg-embedded-raster-repair' ? 'restored-source' : 'native-source',
     };
   }
 

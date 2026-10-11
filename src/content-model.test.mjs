@@ -78,14 +78,25 @@ test('authored lists preserve explicit numbering, nested lists and literal techn
  assert.equal(rich.at(-1).text,'After.');
  assert.equal(guideTextBlocks('Use 24 lb*ft (32 N*m), **source asterisks**, and <tool>.'),null);
 });
-test('wiring PDF text runs collapse only in Atlas reader, never real pin tables',async()=>{
+test('parser-generated SVG label tables collapse with or without ECAD titles while original source remains exact',async()=>{
  const {readerBlocks}=await import('./content-model.mjs');
- const labels={id:'labels',type:'table',rows:['BN-VT','RMP19','12','C2123'].map(text=>({cells:[{text,header:false,colSpan:1,rowSpan:1,blocks:[]}]}))};
- const wiring={kind:'wiring',source:{reference:'ECAD EFB132001'}};
- const shown=readerBlocks([labels],wiring)[0];assert.equal(shown.diagramLabels,true);assert.deepEqual(shown.rows,labels.rows);
- assert.equal(readerBlocks([labels],wiring,'source')[0].diagramLabels,undefined);
- assert.equal(readerBlocks([labels],{kind:'connector'})[0].diagramLabels,undefined);
- assert.equal(readerBlocks([{...labels,rows:[{cells:[{text:'Cavity'},{text:'Circuit Number'}]}]}],wiring)[0].diagramLabels,undefined);
+ for(const [id,reference,texts] of [['wiring-151-006','',['front of vehicle','C110','Fuel','injector 4','A','1']],['wiring-132-001','ECAD EFB132001',['BN-VT','RMP19','12','C2123']]]){
+  const media={id:`${id}-m0001`,mime:'image/svg+xml'},image={id:`${id}-b00001`,type:'media',mediaId:media.id};
+  const labels={id:`${id}-b00002`,type:'table',rows:texts.map(text=>({cells:[{text,header:false,colSpan:1,rowSpan:1,blocks:[]}]}))};
+  const blocks=[image,labels],wiring={id,kind:'wiring',source:{reference},media:[media]};
+  const shown=readerBlocks(blocks,wiring);
+  assert.equal(shown[1].diagramLabels,true);assert.deepEqual(shown[1].rows,labels.rows);assert.deepEqual(shown[0],image);
+  assert.equal(readerBlocks(blocks,wiring,'source'),blocks);assert.equal(labels.diagramLabels,undefined);
+  for(const changed of [
+   {...labels,id:`${id}-b00003`},
+   {...labels,caption:'Connector pin assignments'},
+   {...labels,rows:[{cells:[{text:'Cavity',header:true}]}]},
+   {...labels,rows:[{cells:[{text:'Cavity'},{text:'Circuit Number'}]}]},
+   {...labels,rows:[{cells:[{text:'',blocks:[{type:'paragraph',text:'Technical instructions.'}]}]}]},
+  ])assert.equal(readerBlocks([image,changed],wiring)[1].diagramLabels,undefined);
+  for(const changed of [{...wiring,kind:'connector'},{...wiring,media:[{...media,mime:'image/png'}]},{...wiring,media:[]}])assert.equal(readerBlocks(blocks,changed)[1].diagramLabels,undefined);
+  assert.equal(readerBlocks([...blocks,{id:'specs',type:'paragraph',text:'Additional specifications.'}],wiring)[1].diagramLabels,undefined);
+ }
 });
 test('connector presentation hides export layout only and gives recognized pin columns headers',async()=>{
  const {readerBlocks,documentTitle}=await import('./content-model.mjs');

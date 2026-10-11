@@ -73,10 +73,22 @@ export function guideTextBlocks(value,id='guide-text'){
 
 const connectorLayoutFields=new Set(['Box','Cols','Title Mnemonic']);
 const connectorPinHeaders=new Set(['Cavity','Circuit Number','Color','Gauge','Function','Qualifier','Used','Terminal Part Number']);
+function wiringLabelTableId(blocks,document){
+ // parseWiring emits exactly one SVG followed by its searchable text runs.
+ // Match that explicit parser structure rather than interpreting cell content
+ // or an optional ECAD title, which component-location sheets do not have.
+ if(document.kind!=='wiring'||!/^wiring-\d+-\d+$/.test(document.id||'')||blocks?.length!==2||document.media?.length!==1)return null;
+ const [image,labels]=blocks,media=document.media[0],id=document.id;
+ if(image.type!=='media'||image.id!==`${id}-b00001`||image.mediaId!==`${id}-m0001`||media.id!==image.mediaId||media.mime!=='image/svg+xml')return null;
+ if(labels.type!=='table'||labels.id!==`${id}-b00002`||labels.caption||!labels.rows?.length)return null;
+ const plainRows=labels.rows.every(row=>row.cells?.length===1&&typeof row.cells[0].text==='string'&&!row.cells[0].header&&!row.cells[0].blocks?.length&&(row.cells[0].colSpan||1)===1&&(row.cells[0].rowSpan||1)===1);
+ return plainRows?labels.id:null;
+}
 export function readerBlocks(blocks,document={},view='guide'){
  if(!document)return blocks||[];
  if(view==='source')return blocks;
  const authored=document.teachingStatus==='complete';
+ const labelsId=wiringLabelTableId(blocks,document);
  function field(item,id){const next={...item};if(authored&&item.text&&item.type!=='heading'){const text=item.type==='safety'?(callout(item.text)?.body||item.text):item.text;const rich=guideTextBlocks(text,item.id||id);if(rich)next.textBlocks=rich;}return next;}
  function visit(items){return (items||[]).map((block,index)=>{
   const next=field(block,`block-${index}`);
@@ -87,9 +99,7 @@ export function readerBlocks(blocks,document={},view='guide'){
  });}
  return visit(blocks).map(block=>{
   if(block.type!=='table')return block;
-  // These one-column, unheaded tables are text runs extracted from ECAD PDFs,
-  // never connector pin-assignment tables or workshop specifications.
-  if(document.kind==='wiring'&&/^ECAD\s/i.test(document.source?.reference||'')&&block.rows?.length&&block.rows.every(row=>row.cells?.length===1&&!row.cells[0].header&&!row.cells[0].blocks?.length&&(row.cells[0].colSpan||1)===1&&(row.cells[0].rowSpan||1)===1))return {...block,diagramLabels:true};
+  if(block.id===labelsId)return {...block,diagramLabels:true};
   if(document.kind!=='connector')return block;
   let rows=block.rows||[];
   const keys=rows.map(row=>row.cells?.length===2&&row.cells[0].header?row.cells[0].text:null);

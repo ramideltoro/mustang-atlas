@@ -42,6 +42,38 @@ test('asset overrides preserve source identity, reload on file changes, and fail
   }finally{await fs.rm(dir,{recursive:true,force:true});}
 });
 
+test('same-size restoration is limited to explicitly marked local SVG repairs with exact source geometry',async()=>{
+  const dir=await fs.mkdtemp(path.join(os.tmpdir(),'atlas-svg-repair-'));
+  const originalSvg='/media/'+'c'.repeat(64)+'.svg', repairedSvg='/media/'+'d'.repeat(64)+'.svg';
+  const svg={...media,url:originalSvg,mime:'image/svg+xml',width:1100,height:850};
+  const repair={url:repairedSvg,mime:'image/svg+xml',width:1100,height:850,sourceWidth:1100,sourceHeight:850,sourceKind:'svg-embedded-raster-repair'};
+  const write=async(asset,key=originalSvg)=>fs.writeFile(path.join(dir,'media-quality.json'),JSON.stringify({version:1,assets:{[key]:asset}}));
+  try{
+    await fs.mkdir(path.join(dir,'media'));
+    const store=createAssetQualityStore({dataDir:dir});
+    await write(repair);
+    assert.equal(store.resolve(svg),svg,'missing repaired SVG retains the original');
+    await fs.writeFile(path.join(dir,repairedSvg.slice(1)),'<svg xmlns="http://www.w3.org/2000/svg"/>');
+    const result=store.resolve(svg);
+    assert.equal(result.url,repairedSvg);assert.equal(result.quality,'restored-source');
+    assert.equal(result.id,svg.id);assert.equal(result.width,svg.width);assert.equal(result.height,svg.height);
+    assert.equal(result.originalUrl,originalSvg);assert.deepEqual(result.legend,svg.legend);
+    assert.equal(svg.url,originalSvg,'catalog metadata is immutable');
+    for(const change of [{sourceKind:undefined},{sourceKind:'other'},{width:1101},{height:849},{sourceWidth:1000},{mime:'text/html'},{url:'/media/'+ 'd'.repeat(64)+'.png'},{url:'https://outside.invalid/repair.svg'}]){
+      await write({...repair,...change});
+      assert.equal(store.resolve(svg),svg,JSON.stringify(change));
+    }
+    await write(repair);
+    const wrongMime={...svg,mime:'image/png'};
+    assert.equal(store.resolve(wrongMime),wrongMime);
+    await write({...upgrade,width:580,height:381,sourceKind:'svg-embedded-raster-repair'},originalUrl);
+    await fs.writeFile(path.join(dir,nativeUrl.slice(1)),'raster fixture');
+    assert.equal(store.resolve(media),media,'the marker cannot permit same-size raster replacements');
+    await write({...upgrade,sourceKind:'svg-embedded-raster-repair'},originalUrl);
+    assert.equal(store.resolve(media),media,'the repair marker cannot describe a raster upgrade');
+  }finally{await fs.rm(dir,{recursive:true,force:true});}
+});
+
 test('document and glossary APIs resolve the same native image without changing blocks, accepted guide hash or contextual metadata',async()=>{
   const dir=await fs.mkdtemp(path.join(os.tmpdir(),'atlas-quality-api-'));
   const content=path.join(dir,'content');

@@ -467,6 +467,571 @@
         "G1686648",
         "G1686641"
       ]
+    },
+    {
+      "id": "topic-06dfb28df0d5b9ca",
+      "title": "Convertible passenger upper side-airbag connection",
+      "summary": "On convertible Mustangs, the passenger upper side airbag provides supplemental head protection during certain side impacts. Connector C3465 carries the paired electrical deployment connections for this seat-mounted restraint.",
+      "sections": [
+        {
+          "id": "upper-side-airbag-operation",
+          "title": "An electrical command activates the restraint",
+          "body": "An airbag inflator responds to a controlled electrical deployment command by generating the gas that fills the cushion. The paired wires form part of that deployment circuit. Their positive and negative labels describe the dedicated connection to the restraint controller, rather than a general accessory supply and body ground."
+        },
+        {
+          "id": "upper-side-airbag-purpose",
+          "title": "Distinguishing the head and torso restraints",
+          "body": "The upper side airbag mounts on the outboard side of the front passenger seat and protects the occupant’s head. It is distinct from the side airbag that protects the torso. The coupe uses a side curtain for head protection instead. The connector chart’s generic seat-mounted side-airbag wording makes the component name and circuit identity especially important when matching this connection."
+        },
+        {
+          "id": "upper-side-airbag-reading",
+          "title": "Using the view as an identification reference",
+          "body": "The connector face, circuit identifiers, and wire colors associate each cavity with its deployment path. The pigtail listings identify service connection options, not a diagnostic method. This page contains no restraint depowering or testing sequence, so any circuit diagnosis depends on the applicable supplemental restraint system (SRS) procedure."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3465",
+        "G1696291"
+      ]
+    },
+    {
+      "id": "topic-e5ccac5729d0e133",
+      "title": "Convertible driver upper side-airbag connection",
+      "summary": "On convertible Mustangs, the driver upper side airbag provides supplemental head protection during certain side impacts. Connector C3464 connects this seat-mounted restraint to its dedicated electrical deployment circuit.",
+      "sections": [
+        {
+          "id": "driver-upper-airbag-purpose",
+          "title": "Head protection at the seat",
+          "body": "The upper side airbag attaches to the outboard side of the driver’s front seat. It protects the head, while a separate side airbag protects the torso. The coupe uses a side curtain for head protection instead. These are different restraint assemblies, even though abbreviated connector descriptions can use similar side-airbag wording."
+        },
+        {
+          "id": "driver-upper-airbag-circuit",
+          "title": "A paired deployment connection",
+          "body": "An electrical deployment command activates the inflator, generating the gas that fills the cushion. The two listed connections form the driver upper side-airbag deployment circuit. Their positive and negative labels identify the dedicated restraint-controller paths; they do not describe an ordinary accessory supply and chassis ground."
+        },
+        {
+          "id": "driver-upper-airbag-reading",
+          "title": "Match the component as well as the connector",
+          "body": "C3464 identifies the driver upper side-airbag connection, while the face view and circuit table identify its individual cavities. The harness and service-part entries help identify the connection hardware. Similar connector shells do not make different restraint devices interchangeable. This view provides identification information; depowering, connector handling and electrical diagnosis follow the applicable supplemental restraint system (SRS) procedure."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3464",
+        "G1696291"
+      ]
+    },
+    {
+      "id": "topic-1812d2758a17b1c0",
+      "title": "The downstream heated oxygen-sensor connection",
+      "summary": "The heated oxygen sensor labeled HO2S #12 monitors exhaust after the catalyst in the listed first-bank or single-bank position. Connector C1570 carries both its heater circuit and its exhaust-sensing signal paths.",
+      "sections": [
+        {
+          "id": "c1570-operation",
+          "title": "Sensing and heating perform different jobs",
+          "body": "The sensing element responds to oxygen remaining in the exhaust, providing information used to assess catalyst operation. Its electric heater brings the element toward its useful operating temperature. Heater current supplies thermal energy, while the sensor signal carries measurement information, so the two functions share a connector without being the same circuit."
+        },
+        {
+          "id": "c1570-purpose",
+          "title": "The controller needs a dependable signal reference",
+          "body": "The table lists protected heater power, a Powertrain Control Module (PCM) heater-control path, a sensor signal and return-related entries. A heater concern can delay useful sensing, while a signal-path concern can distort or interrupt the reported measurement. Identifying the affected path matters before drawing conclusions about the sensor or catalyst."
+        },
+        {
+          "id": "c1570-reading",
+          "title": "Match the return entry to the wiring variant",
+          "body": "Alternative return-circuit descriptions and supply-wire sizes appear in this connector reference. They need to be matched to the applicable wiring configuration rather than assumed to operate simultaneously. The post-catalyst description identifies the sensor's functional position, while the male-face orientation and harness identifiers establish how to interpret the connection drawing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C1570"
+      ]
+    },
+    {
+      "id": "topic-1492e26b113250aa",
+      "title": "Passenger-window control on memory-equipped vehicles",
+      "summary": "The passenger-window regulator motor raises and lowers the door glass. This sheet shows how power, door-module commands and shared window inputs reach it on vehicles with memory equipment.",
+      "sections": [
+        {
+          "id": "passenger-window-operation",
+          "title": "Motor power and direction commands are separate",
+          "body": "The motor assembly has battery supply, ground and delayed-accessory connections, together with up and down inputs from the Passenger Door Module (PDM). Power provides the energy to move the glass; direction inputs request the movement. Keeping those roles distinct makes the circuit easier to understand than treating every wire as a motor feed."
+        },
+        {
+          "id": "passenger-window-purpose",
+          "title": "The window also receives shared information",
+          "body": "A global input connects the motor to Body Control Module B, and an ajar input provides door-state information. These paths explain why the local window is part of wider vehicle operation. The Body Control Module (BCM) also contains the delayed-accessory relay shown here, linking window electrical availability to accessory-power control."
+        },
+        {
+          "id": "passenger-window-reading",
+          "title": "Keep the equipment qualification in view",
+          "body": "MEMORY is the sheet’s equipment qualification. The convertible note applies specifically to the continuation through C314 toward the rear-window sheet, rather than restricting the entire passenger-door circuit to convertibles. The accessory-delay relay is identified as non-serviceable, so its symbol does not imply a removable plug-in part. Supply labels, ground references and continuation markers connect this sheet to the supporting diagrams."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-009"
+      ]
+    },
+    {
+      "id": "topic-0f93ba97bce909e0",
+      "title": "Understanding a Battery Drain Check",
+      "summary": "A battery drain check measures electrical current leaving the battery while the parked vehicle should be resting. Its purpose is to separate expected standby use from a load that continues consuming excessive energy.",
+      "sections": [
+        {
+          "id": "standby-current",
+          "title": "An ignition-off vehicle still uses some power",
+          "body": "Electronic modules can remain active briefly after shutdown and then enter lower-power states. Some functions continue drawing standby current even afterward. A module that stays awake, or a lamp that remains on, removes stored battery energy over time, so a discharged battery does not by itself prove the battery is defective."
+        },
+        {
+          "id": "drain-test-conditions",
+          "title": "Why the resting state must be preserved",
+          "body": "The reference requires a charged battery and time for the vehicle to settle before evaluating current. Opening circuits or triggering vehicle activity can restart module wake-up behavior and change the reading. Equipment-dependent activity, including software updates where supported, must be understood rather than mistaken for an unexplained parked-vehicle load."
+        },
+        {
+          "id": "drain-results",
+          "title": "Reading current changes as circuit clues",
+          "body": "Current measures the rate of electrical charge flow from the battery; battery voltage alone does not identify the drain. A decrease when a circuit is isolated identifies a contributing branch, not automatically a failed module. The reference specifically recognizes that an external input can keep a healthy module awake, and restoration requirements vary with fitted equipment."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "G1692357",
+        "G1814511"
+      ]
+    },
+    {
+      "id": "topic-2021f427c1c4259a",
+      "title": "Left Rear Noise-Control Microphone",
+      "summary": "Connector C4828 serves the left rear active noise-control microphone. The microphone converts cabin sound into an electrical signal so the noise-control system can observe the sound it is intended to reduce.",
+      "sections": [
+        {
+          "id": "noise-microphone-operation",
+          "title": "Sound becomes a feedback signal",
+          "body": "A microphone responds to changing air pressure and produces a corresponding electrical waveform. In active noise control, that measurement helps the system account for unwanted sound within the cabin. Carefully timed sound from the audio system can then reduce selected noise through the interaction of sound waves."
+        },
+        {
+          "id": "noise-microphone-paths",
+          "title": "Why the microphone uses a paired connection",
+          "body": "The connector lists positive and negative ambient-noise microphone paths. These carry the microphone’s electrical information as a pair, rather than identifying a conventional power feed and body ground. An interruption or unwanted electrical disturbance can change the information reaching the noise-control system without changing the actual noise source."
+        },
+        {
+          "id": "noise-microphone-reference",
+          "title": "Matching the correct microphone",
+          "body": "The left-rear component name distinguishes this microphone from other microphones in the vehicle. The circuit wording identifies its ambient-noise role, while an additional housing position is unassigned. This reference establishes the connection and signal pair; it does not supply microphone sensitivity values or prove that a cabin-noise concern originates in the microphone."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C4828"
+      ]
+    },
+    {
+      "id": "topic-152affd0adf7d6a7",
+      "title": "Convertible rear-window and mirror heating circuits",
+      "summary": "The rear-window heater and heated mirrors use electrical resistance to warm their surfaces and improve visibility. This convertible wiring sheet shows the defrost relay, control connection, protected supplies and ground paths, with additional equipment qualifications on the mirror branches.",
+      "sections": [
+        {
+          "id": "heated-window-operation",
+          "title": "Electrical resistance produces useful heat",
+          "body": "Current flowing through the rear-window element produces heat in the glass, helping clear condensation and frost. Mirror heating works on the same basic principle. Because heating requires appreciable electrical energy, the drawing includes protected supply paths and a relay rather than depicting the dashboard control as carrying every heater's operating current."
+        },
+        {
+          "id": "heated-window-purpose",
+          "title": "The relay separates request from load",
+          "body": "The Front Controls Interface Module (FCIM) connects to the rear-window defrost relay circuit in the Battery Junction Box (BJB). The sheet also shows the mirror branches and their grounds. Displaying these paths together helps explain how a control request, a supply problem and a local heater connection represent different possible circuit concerns."
+        },
+        {
+          "id": "heated-window-reading",
+          "title": "Read the variant and supply labels carefully",
+          "body": "The CONVERTIBLE heading applies to this sheet. Within it, the dashed mirror-branch outlines identify the without-memory arrangement and the right-hand-drive alternative. Those local labels must stay with their respective branches. Hot at all times and hot in start or run describe different supply conditions. Connector and ground references connect the schematic to identification pages; the repeated mirror symbols show labeled alternatives rather than extra mirrors."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-056-002"
+      ]
+    },
+    {
+      "id": "topic-2535600f9e042f56",
+      "title": "Door and B-pillar side-impact sensor circuits",
+      "summary": "Side-impact sensors provide crash information to the restraints control module (RCM). This sheet identifies separate driver-door and passenger-door sensor circuits, plus left-hand and right-hand B-pillar sensor circuits within a coupe-only branch.",
+      "sections": [
+        {
+          "id": "srs3-operation",
+          "title": "Sensors inform the restraint decision",
+          "body": "The supplemental restraint system (SRS) uses sensor information to assess a crash and determine whether appropriate restraints should deploy. A side-impact sensor supplies an input to that decision; it is not itself an airbag. Separate sensor identities allow the controller to distinguish information arriving from different parts of the vehicle."
+        },
+        {
+          "id": "srs3-purpose",
+          "title": "Dedicated feed and return pairs matter",
+          "body": "The sheet labels a feed and return for each sensor connection at the RCM. Door-sensor circuits also pass through identified inline connections. Those distinctions help locate the electrical path named in a diagnostic reference without confusing the driver-side, passenger-side, door or pillar sensor with another component."
+        },
+        {
+          "id": "srs3-reading",
+          "title": "Use the schematic within the restraint procedure",
+          "body": "The dashed coupe outline surrounds only the B-pillar sensor circuits; the door-sensor circuits appear outside that outline. Keep this qualification with those B-pillar branches rather than applying it to the entire sheet. Connector references support identification, not an invitation to test them independently. The page requires consultation of the workshop manual because improper restraint-circuit troubleshooting can cause unintended deployment and injury."
+        }
+      ],
+      "relatedTermIds": [
+        "supplemental-restraint-system"
+      ],
+      "sourceDocumentIds": [
+        "wiring-046-003",
+        "G1696291"
+      ]
+    },
+    {
+      "id": "topic-1152628f9fd6f82b",
+      "title": "Mirror turn-signal circuit connections",
+      "summary": "The exterior-mirror turn lamps repeat the vehicle’s direction indication where other road users can see it. This without-memory wiring sheet connects their branches to body-control outputs and grounds, with China-specific continuations to the rear-lamp circuits.",
+      "sections": [
+        {
+          "id": "mirror-turn-operation",
+          "title": "Electronic outputs control the indication",
+          "body": "The Body Control Module (BCM) has outputs labeled for the left and right rear turn lamps, with field-effect transistor (FET) switching identified on the drawing. The sheet traces related turn-signal branches to the exterior mirrors. These electronic outputs switch lamp circuits in response to the vehicle's signaling commands."
+        },
+        {
+          "id": "mirror-turn-purpose",
+          "title": "The mirror branch belongs to a larger circuit",
+          "body": "The continuation references connect this page to the wider turn-signal, stoplamp and hazard-lamp diagram. Splices show where conductors join, and the mirror grounds complete their electrical paths. This context helps distinguish a concern limited to a mirror branch from one involving a connection shared with other lamps."
+        },
+        {
+          "id": "mirror-turn-reading",
+          "title": "Observe the market and equipment labels",
+          "body": "WITHOUT MEMORY is the heading for the whole sheet. The smaller dashed China outlines qualify the branches continuing to sheet 90-6; they do not make the entire mirror circuit China-only. Hot at all times describes supply availability, not continuous illumination. Left-hand and right-hand mirror identifiers separate the sides, while connector and ground references lead to their supporting views."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-090-007"
+      ]
+    },
+    {
+      "id": "topic-3037e75a32017695",
+      "title": "Passenger Seatback Climate Harness Junction",
+      "summary": "C316 joins the passenger seatback climate-control harnesses. It carries the electrical paths for the blower, temperature sensing and the device that heats or cools the air delivered through the seatback.",
+      "sections": [
+        {
+          "id": "seatback-climate-functions",
+          "title": "The seatback conditions air, then moves it",
+          "body": "The climate-controlled seat uses a blower assembly containing a fan and a Thermo-Electric Device (TED). The TED heats or cools incoming cabin air, and the blower sends that conditioned air through passages in the seat foam. The connector table calls the TED connections heater circuits, but this assembly supports both heating and cooling. Its separate blower-speed and temperature-sensor paths carry control and feedback information."
+        },
+        {
+          "id": "seatback-junction-purpose",
+          "title": "Several circuit types cross one junction",
+          "body": "The connector brings these related functions together without acting as a control module itself. An interruption here can affect a power path, a control path or temperature feedback depending on the circuit involved. That is why identifying the actual circuit matters more than treating every connection as a heater feed."
+        },
+        {
+          "id": "seatback-junction-reading",
+          "title": "Compare the two harness faces",
+          "body": "The male and female tables show the mating sides of harnesses 14D233 and 14D230, with many housing positions unused. Circuit identifiers connect the climate-control device, blower and temperature-sensor paths across the junction. The two faces use different wire-detail entries in places, so keep each face associated with its listed harness. This connector reference does not establish its precise physical position within the seat."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C316",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-28c90e1f3e6fd5bf",
+      "title": "Coupe B-Pillar Side Impact Sensor",
+      "summary": "The coupe’s B-pillar side impact sensors supply crash information to the Supplemental Restraint System (SRS). Secure mounting couples each sensor to the vehicle structure, while its electrical connection carries information to the restraints controller.",
+      "sections": [
+        {
+          "id": "side-impact-sensing",
+          "title": "How crash information is used",
+          "body": "The Restraints Control Module (RCM) evaluates inputs from multiple sensors to decide whether a crash requires restraint deployment. The side impact sensor contributes information about vehicle motion. Deployment depends on the combined inputs and crash severity, so this sensor is one part of a wider decision-making system."
+        },
+        {
+          "id": "side-impact-mounting",
+          "title": "Why attachment matters",
+          "body": "The repair calls for smooth mating surfaces that allow the sensor to sit flush against its mounting surface. That attachment couples the sensor to the vehicle structure whose motion it measures. The connector and mounting bolt therefore serve different purposes: one carries information, while the other establishes the physical mounting."
+        },
+        {
+          "id": "side-impact-procedure",
+          "title": "Understanding the service sequence",
+          "body": "The procedure brackets sensor removal with the specified SRS depowering and repowering procedures because the restraint controller has stored backup energy. The repair text lists both coupe and convertible trim-removal references, but the wiring diagram identifies the B-pillar sensor pair within its coupe-only branch. Those cross-references do not establish that the pair is fitted to the convertible. Match the actual sensor and body style before choosing the access reference, and retain all restraint-system handling and mounting instructions."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "G1696322",
+        "G1696291",
+        "wiring-046-003"
+      ]
+    },
+    {
+      "id": "topic-961610cf0348c197",
+      "title": "Left Seatback Climate Blower Connection",
+      "summary": "C3034 connects the left front seatback blower assembly on vehicles with climate-controlled seats. This assembly does more than move air: its thermoelectric device heats or cools cabin air before the blower delivers it through the backrest.",
+      "sections": [
+        {
+          "id": "conditioning",
+          "title": "Heating and cooling happen in the assembly",
+          "body": "The blower assembly contains a fan, a Thermo-Electric Device (TED) and a temperature sensor. The TED changes the air temperature, while the fan moves the conditioned air through passages in the seat foam. This explains why a connector titled blower motor also includes circuits labeled heater: the assembly combines airflow and temperature control."
+        },
+        {
+          "id": "paths",
+          "title": "Different circuits serve different jobs",
+          "body": "The primary assignments identify driver backrest heater and fan pairs. The front-seat operating description explains that the seat climate controller regulates the TED and blower, using temperature feedback. Electrical power for conditioning air and the information used to control it serve distinct purposes, even though their connections meet at the same assembly."
+        },
+        {
+          "id": "labels",
+          "title": "Keep the conflicting catalog labels visible",
+          "body": "Some remaining entries use passenger-indicator and driver-heater-switch wording even though this is the left backrest blower connection. Those labels do not establish extra indicator lamps inside the blower. Keep the original circuit identities and use the applicable schematic to resolve their precise functions; do not silently substitute a pin assignment from another seat connector."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3034",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-8a252bb5d3a8746f",
+      "title": "Right Seatback Climate Blower Connection",
+      "summary": "C3039 connects the right front seatback blower assembly. On climate-controlled seats, this assembly conditions cabin air and distributes it through the backrest so the occupant can receive heating or cooling.",
+      "sections": [
+        {
+          "id": "conditioning",
+          "title": "A blower and a temperature-changing device work together",
+          "body": "The assembly contains a fan and a Thermo-Electric Device (TED), with a temperature sensor providing feedback. The TED heats or cools the incoming air. The blower then sends it through the foam passages toward the seat surface. Airflow and temperature change are separate functions within one service assembly."
+        },
+        {
+          "id": "paths",
+          "title": "Why the connector has more than motor wires",
+          "body": "The assignments include passenger backrest heater connections, fan connections, a blower-speed control and temperature-sensor paths. The heater wording refers to the conditioning side of the climate-seat assembly; it should not imply that the complete assembly only heats. The speed-control path carries a command, while the temperature paths report the condition being controlled."
+        },
+        {
+          "id": "reading",
+          "title": "Identify the backrest separately from the cushion",
+          "body": "The backrest and seat cushion have separate blower assemblies. This page identifies the right backrest connection in harness 14D233, so a similar-looking cushion connector is not interchangeable identification evidence. Keep the sensor-return and fan-return labels distinct, and use the original face view when matching the listed circuits."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3039",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-c643718b1e546806",
+      "title": "Left Seat Cushion Climate Blower Connection",
+      "summary": "C3035 connects the left front seat cushion blower assembly. Its thermoelectric device changes the temperature of incoming cabin air, and its fan distributes that heated or cooled air through the cushion.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Conditioned air reaches the seating surface",
+          "body": "The climate-controlled cushion uses an integrated blower assembly containing a fan, a Thermo-Electric Device (TED) and a temperature sensor. The seat controller manages temperature and airflow together. The cushion therefore has both a thermal function and an air-moving function, rather than relying only on a heating wire beneath the upholstery."
+        },
+        {
+          "id": "circuits",
+          "title": "Power, speed control and feedback are distinct",
+          "body": "The table identifies driver cushion heater connections, fan connections, a blower-speed control and cushion-temperature paths. The heater label is the circuit catalog wording for the assembly that supports heating and cooling. The temperature signal tells the controller about the assembly’s condition; it does not supply the energy used to move air."
+        },
+        {
+          "id": "variants",
+          "title": "Repeated rows do not add another heater",
+          "body": "Some heater circuit entries repeat with different wire-size details. Preserve those alternatives instead of reading them as additional independent heating devices. Match the left cushion component and harness 14D231 to the face view, then use the applicable wiring configuration for the listed wire details. The right cushion and both backrests have their own connections."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3035",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-fe6e7ca19db7806c",
+      "title": "Right Seat Cushion Climate Blower Connection",
+      "summary": "C3040 connects the right front seat cushion blower assembly. The assembly heats or cools cabin air and moves it through the cushion, giving the seat’s temperature controls a physical effect at the seating surface.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Heating, cooling and airflow share an assembly",
+          "body": "A Thermo-Electric Device (TED) changes the temperature of air entering the blower assembly. The fan carries that air through passages in the cushion foam, while a temperature sensor reports the assembly’s condition to the seat climate controller. The seat system operates independently of the cabin climate-control system."
+        },
+        {
+          "id": "circuits",
+          "title": "Read the heater label in its system context",
+          "body": "The connector lists passenger cushion heater and fan pairs, a blower-speed control and temperature-sensor paths. The heater wording does not limit the assembly to heating: the system description includes both heating and cooling operation. Power paths, the blower command and temperature feedback have separate roles even though they occupy one connector."
+        },
+        {
+          "id": "reading",
+          "title": "Keep cushion and backrest identities separate",
+          "body": "This connection belongs to the right cushion in harness 14D230. The right backrest uses a separate blower assembly and connector. The unused entry and the sensor-return label should be retained as shown; the latter is a measurement path, not a reason to substitute an arbitrary body ground."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3040",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-b686170d20614eba",
+      "title": "Seat Climate Module Power and Thermal Outputs",
+      "summary": "C3265A connects the power and temperature-conditioning circuits of the front Seat Climate Control Module (SCME). The module controls heated or cooled airflow for the front seat cushions and backrests on vehicles equipped with climate-controlled seats.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "The controller manages air temperature",
+          "body": "Each cushion and backrest blower assembly includes a Thermo-Electric Device (TED), a fan and a temperature sensor. The SCME coordinates their operation to produce the selected heating or cooling effect. The device changes air temperature, and the blower delivers that air through the seat foam; this is more than an ordinary seat-heater circuit."
+        },
+        {
+          "id": "outputs",
+          "title": "This connector groups the thermal power paths",
+          "body": "The lettered assignments identify separate driver and passenger cushion and backrest heater pairs, along with run/start power and ground. Heater is the catalog label for the conditioning-device paths in this heated/cooled seat system. Keeping the seat and cushion/backrest designations intact matters because each path serves a particular part of the system."
+        },
+        {
+          "id": "reading",
+          "title": "One module has several electrical interfaces",
+          "body": "C3265A is a connector on the controller, not a blower or an inline harness junction. Other SCME connectors carry temperature feedback, blower control and network communication. The ground and supply entries here support module operation; they should not be confused with each individually controlled output pair."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3265A",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-954df717714545ee",
+      "title": "Seat Climate Module Temperature Feedback",
+      "summary": "C3265B is a signal connector on the front Seat Climate Control Module (SCME). Its assignments include seat-temperature feedback, which helps the controller manage the assemblies delivering heated or cooled air through the front seats.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Feedback tells the controller what is happening",
+          "body": "The cushion and backrest blower assemblies contain temperature sensors along with fans and Thermo-Electric Devices (TEDs). The SCME uses feedback while controlling heating, cooling and airflow. A requested temperature setting and an actual temperature reading are different pieces of information: the controller needs both a desired result and information about the system’s response."
+        },
+        {
+          "id": "signals",
+          "title": "These are measurement paths, not heater feeds",
+          "body": "The clearly named entries include passenger cushion temperature, passenger backrest temperature and driver cushion temperature, each with an associated return. Those circuits report conditions rather than providing the power that changes air temperature. Treat each sensor and return as its own measurement relationship when reading the table."
+        },
+        {
+          "id": "labels",
+          "title": "Do not guess functions from an inconsistent label",
+          "body": "The remaining populated descriptions include passenger-indicator and driver-heater-switch wording. This page alone does not establish how those entries relate to the missing driver-backrest temperature labels. Preserve the listed circuit identities and resolve them with the applicable schematic. C3265B is only one connector on the SCME, so it does not show all module supplies or outputs."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3265B",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-aee99a2fb07f8405",
+      "title": "Seat Climate Module Blower and Network Connections",
+      "summary": "C3265C connects the front Seat Climate Control Module (SCME) to blower-related circuits and the vehicle’s medium-speed communication network. These paths let the controller receive seat-climate requests and manage airflow through the front seats.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Airflow carries the heating or cooling effect",
+          "body": "The seat’s Thermo-Electric Devices (TEDs) condition cabin air, while the blower fans move that air through the cushion and backrest foam. Blower control is therefore a separate job from changing air temperature. The SCME manages both functions, using commands from the seat controls and feedback from the blower assemblies."
+        },
+        {
+          "id": "interfaces",
+          "title": "Network messages and fan circuits do different work",
+          "body": "The table lists a Medium-Speed Controller Area Network (MS-CAN) high/low pair, passenger cushion and backrest blower-speed controls, a driver cushion speed control, and fan pairs. The network pair carries messages; the fan paths provide electrical operation, and speed-control paths carry commands. Sharing the connector does not make those functions interchangeable."
+        },
+        {
+          "id": "reading",
+          "title": "Retain the unresolved catalog description",
+          "body": "One populated entry is labeled passenger indicator low rather than a blower-control function. Keep that wording and its circuit identifier visible until the matching schematic resolves it. Unused positions do not imply missing wires, and this connector does not include every thermal-output or temperature-feedback path on the SCME."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3265C",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-77c470c5d7aab8e2",
+      "title": "Driver Seatback Climate and Lumbar Harness Junction",
+      "summary": "C3050 joins harnesses 14D232 and 14D231. Its assignments combine driver seatback climate-control circuits with lumbar-adjustment circuits, bringing different seat functions through one separable harness connection.",
+      "sections": [
+        {
+          "id": "climate",
+          "title": "The climate assembly changes and moves air",
+          "body": "The climate-controlled backrest uses a blower assembly containing a Thermo-Electric Device (TED), fan and temperature sensor. It delivers heated or cooled air through the backrest foam. The driver backrest heater and fan pairs listed here belong to that system; the heater wording should not reduce its purpose to heating alone."
+        },
+        {
+          "id": "lumbar",
+          "title": "Lumbar adjustment has a different mechanical job",
+          "body": "The table also names a driver lumbar pump circuit and an upper-cell deflate-solenoid circuit. Those functions concern the seat’s support adjustment, rather than conditioning airflow. The inline connector carries their existing circuits across the harness boundary; it does not decide how much lumbar support or seat heating the occupant receives."
+        },
+        {
+          "id": "reading",
+          "title": "Follow each face’s actual assignments",
+          "body": "The male and female faces share the principal function labels, with alternative wire-size entries in places. Other populated descriptions use passenger-indicator and driver-heater-switch wording. Keep those original labels rather than inferring extra lamps or substituting another connector’s pinout. Circuit identity, harness identity and the applicable schematic establish which path is being followed."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3050",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-9f4b062e363ea167",
+      "title": "Driver Seat Climate Harness Junction",
+      "summary": "C315 joins harnesses 14D231 and 14A005 across driver-seat climate-control circuits. It carries paths associated with cushion and backrest temperature conditioning, fan operation and temperature feedback.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "The seat delivers heated or cooled air",
+          "body": "Climate-controlled seat blower assemblies combine a Thermo-Electric Device (TED), fan and temperature sensor. The TED conditions cabin air, and the fan sends it through the seat foam. The circuits labeled heater in this connector therefore belong to an air-temperature control function that can heat or cool, rather than proving the seat only has resistance-heating elements."
+        },
+        {
+          "id": "junction",
+          "title": "The junction passes several kinds of circuits",
+          "body": "The assignments distinguish cushion and backrest thermal-device pairs, fan paths, blower-speed control and temperature-sensing paths. An inline connection simply carries these circuits between harness sections. A disrupted path can affect power, a command or feedback, so a seat-comfort concern does not automatically identify a failed blower assembly."
+        },
+        {
+          "id": "reading",
+          "title": "The two face descriptions differ",
+          "body": "Some male-face entries use passenger-indicator or driver-heater-switch labels where the female face names driver-backrest temperature and blower control. Wire-size alternatives also appear. Preserve those face-specific descriptions and resolve them through the wiring reference rather than treating the male and female text as identical. The housing and unused positions do not establish additional functions."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C315",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-6f8faaa1b4fa68b3",
+      "title": "Seat Climate Harness Junction with Network Paths",
+      "summary": "C3808 joins harnesses 14D230 and 14A005. Its tables include driver-seat climate-control paths and medium-speed network connections, combining operating circuits and communication in one inline housing.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Temperature conditioning and airflow work together",
+          "body": "The front seat climate system uses a Thermo-Electric Device (TED), fan and temperature sensor in each cushion and backrest blower assembly. The TED heats or cools cabin air, and the blower distributes it through the seat foam. Heater labels in the connector table refer to these conditioning paths and do not describe the whole system’s cooling capability."
+        },
+        {
+          "id": "paths",
+          "title": "Separate network traffic from operating power",
+          "body": "The table includes cushion and backrest thermal-device pairs, fan paths, temperature feedback, blower-speed control and a Medium-Speed Controller Area Network (MS-CAN) high/low pair. Network wires carry messages; they do not supply blower-motor power. C3808 is the separable connection carrying those paths, not the controller that interprets messages or regulates the seat."
+        },
+        {
+          "id": "reading",
+          "title": "Compare the mating faces without inventing agreement",
+          "body": "The male table contains passenger-indicator and driver-heater-switch labels where the female table identifies driver-backrest temperature and speed-control paths. Those differences, along with wire-detail differences, must remain visible. Match the listed circuit and harness identities to the applicable schematic instead of inferring that every label describes the same function on both halves."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3808",
+        "G1695508"
+      ]
     }
   ],
   "documents": {
@@ -623,6 +1188,90 @@
     "G1686654": {
       "topicId": "topic-6874686af93fdfd4",
       "sourceHash": "15893f90dc6c6a8914e4df2e1ba61e052d1fa10b66d31d4099856c41e65f6818"
+    },
+    "connector-C3465": {
+      "topicId": "topic-06dfb28df0d5b9ca",
+      "sourceHash": "edc474302e36dc0e6098938b9f1ab6680670cd6afc76dc576530cdd1a090a833"
+    },
+    "connector-C3464": {
+      "topicId": "topic-e5ccac5729d0e133",
+      "sourceHash": "5f76eb263675aa61fb5266a0f2318b88ccc8fc8074ad61226416aa7ec2a269c5"
+    },
+    "connector-C1570": {
+      "topicId": "topic-1812d2758a17b1c0",
+      "sourceHash": "2e5c31a533a8ba7b70a94883f15014ad11d59fbd3ca4130df57da582d96b8822"
+    },
+    "wiring-100-009": {
+      "topicId": "topic-1492e26b113250aa",
+      "sourceHash": "4b0a2aabb74419900b6f002c27ae7e485d0ea117464b40166343fc01f8b09e9f"
+    },
+    "G1692357": {
+      "topicId": "topic-0f93ba97bce909e0",
+      "sourceHash": "e78769a2087a9eb11dace99442357b7cbc4ec964308aad039166b6fc03c7ec62"
+    },
+    "connector-C4828": {
+      "topicId": "topic-2021f427c1c4259a",
+      "sourceHash": "fea71f33e2379eee839210b2ef3dc517497c232c8617b004abbf5113d1ba1de9"
+    },
+    "wiring-056-002": {
+      "topicId": "topic-152affd0adf7d6a7",
+      "sourceHash": "ff4e720c781068cbca67cb89d09c91595ca2e616dceb0763f15526ae0cb87dcf"
+    },
+    "wiring-046-003": {
+      "topicId": "topic-2535600f9e042f56",
+      "sourceHash": "5158f544580f16083f13a6f7c241551cc67d916cf51a124bf146b69b9de28184"
+    },
+    "wiring-090-007": {
+      "topicId": "topic-1152628f9fd6f82b",
+      "sourceHash": "771ff8b2ff32c75b02fe6300f7cd024127dff1dc43bc16aac2e07ed5eb25d8b9"
+    },
+    "connector-C316": {
+      "topicId": "topic-3037e75a32017695",
+      "sourceHash": "0ff519933c851d2fe1c150fb9cfbdb652f3ef61cceeebac8aa9fff34f5b4fed7"
+    },
+    "G1696322": {
+      "topicId": "topic-28c90e1f3e6fd5bf",
+      "sourceHash": "3ffb41bf13eb116961dc275df68fc339953d381d5823fb07348d7f6476145664"
+    },
+    "connector-C3034": {
+      "topicId": "topic-961610cf0348c197",
+      "sourceHash": "86ab13652af2bdb777be84c039e440362fccdf3578509727ae6c44bc12bb74d8"
+    },
+    "connector-C3039": {
+      "topicId": "topic-8a252bb5d3a8746f",
+      "sourceHash": "81ee9d667278c0e3ab18ae1590d365d9aff65a9308c77a74494e4655023f9e31"
+    },
+    "connector-C3035": {
+      "topicId": "topic-c643718b1e546806",
+      "sourceHash": "1c6b118fe180f601c45086b8bdfcb366c90a3f8b67213c54eaf608be15f4a2bb"
+    },
+    "connector-C3040": {
+      "topicId": "topic-fe6e7ca19db7806c",
+      "sourceHash": "8a1dc85ed5737eca8dc7eddedaf10c6d42a1e5e51366908b2e506af532cc56ec"
+    },
+    "connector-C3265A": {
+      "topicId": "topic-b686170d20614eba",
+      "sourceHash": "4f59ecd2128c4c6b50008acb9bd88026b275196623fa860065b5443ae8b69aa3"
+    },
+    "connector-C3265B": {
+      "topicId": "topic-954df717714545ee",
+      "sourceHash": "126fe1a2144f4ac2dde76053b73c4ceea076b9b4ec6fbb664021814ef1fb5c23"
+    },
+    "connector-C3265C": {
+      "topicId": "topic-aee99a2fb07f8405",
+      "sourceHash": "cb8b4ea8b0a16507a78debbef3ad312bdee1cfe015195c7dcdc4df847bb7d070"
+    },
+    "connector-C3050": {
+      "topicId": "topic-77c470c5d7aab8e2",
+      "sourceHash": "7a42e561f04816e083501e56bee72b7da7b13f465b0b82c301d8140fcaf36c8a"
+    },
+    "connector-C315": {
+      "topicId": "topic-9f4b062e363ea167",
+      "sourceHash": "09b754f0213c9dfa6ce77661af2de048f072c0dfc93bb9d1e5b43bbce63a4207"
+    },
+    "connector-C3808": {
+      "topicId": "topic-6f8faaa1b4fa68b3",
+      "sourceHash": "6945ad35a3b22b0a73f052f77a808ee058b732c1de2bcf0ce27a8a79ff10836d"
     }
   }
 }
