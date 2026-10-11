@@ -2,7 +2,7 @@ import React,{useEffect,useRef,useState,useId} from 'react';
 import {createPortal} from 'react-dom';
 import {AlertCircle,ArrowUpRight,BookOpen,Check,ChevronDown,LoaderCircle,Maximize2,Minus,Plus,RotateCcw,X} from 'lucide-react';
 import {mediaItems,safeHref,sourceHref,uniqueSources} from './content-model.mjs';
-import {imageGeometry,fitImageScale,imageZoomLevels,nextImageZoom} from './image-model.mjs';
+import {imageGeometry,fitImageScale,imageZoomLevels,nextImageZoom,isDecorativeSourceControl} from './image-model.mjs';
 export function Loading({label='Opening the library…'}){return <div className="loading-state" role="status"><LoaderCircle size={23}/><p>{label}</p></div>;}
 export function ErrorState({message,retry}){return <div className="error-state" role="alert"><AlertCircle size={27}/><h2>Let’s try that again.</h2><p>{message}</p>{retry&&<button className="button secondary" onClick={retry}>Reload <RotateCcw size={15}/></button>}</div>;}
 export function Empty({title='Nothing here yet.',children,icon:Icon=BookOpen}){return <div className="empty-state"><Icon size={31}/><h2>{title}</h2><p>{children}</p></div>;}
@@ -18,12 +18,12 @@ export function Modal({title,eyebrow,children,onClose,className='',focusKey}){
 export function Figure({figure,onZoom,compact=false}){
  const [natural,setNatural]=useState(null);
  const geometry=imageGeometry(figure,natural,{compact});
- const url=safeHref(figure.url||figure.src);if(!url)return null;
+ const url=safeHref(figure.url||figure.src);if(!url||isDecorativeSourceControl(figure))return null;
  const caption=figure.caption||figure.alt||figure.title||'Original manual illustration';
  const source=figure.sourceUrl===null?null:safeHref(figure.sourceUrl||(figure.documentId?'/source/'+encodeURIComponent(figure.documentId)+'.pdf':null));
  return <figure className={'manual-figure'+(geometry.thumbnail?' compact':'')} style={{maxWidth:geometry.maxPreviewWidth?`min(100%, ${geometry.maxPreviewWidth}px)`:'100%'}}><button className="figure-canvas" style={{aspectRatio:geometry.aspectRatio}} onClick={()=>onZoom({...figure,url,width:geometry.width,height:geometry.height})} aria-label={'Enlarge '+caption}><img src={url} width={geometry.width||undefined} height={geometry.height||undefined} style={{maxWidth:!geometry.vector&&geometry.width?geometry.width:undefined,maxHeight:!geometry.vector&&geometry.height?geometry.height:undefined}} alt={caption} loading="lazy" onLoad={event=>setNatural({width:event.currentTarget.naturalWidth,height:event.currentTarget.naturalHeight})}/><span><Maximize2 size={13}/><span>Enlarge</span></span></button>{figure.legend?.length>0&&<ul className="figure-legend" aria-label="Diagram color legend">{figure.legend.map((item,index)=><li key={index}><span style={{background:/^#[0-9a-f]{3,8}$/i.test(item.color||'')?item.color:undefined}}/>{item.label}</li>)}</ul>}<figcaption><span className="figure-tag">SOURCE ILLUSTRATION</span><p>{caption}{figure.contextLabel&&<small>{figure.contextLabel}</small>}{figure.engines?.length>0&&<small>{figure.engines.join(' · ')}</small>}{figure.applicability&&typeof figure.applicability==='string'&&<small>{figure.applicability}</small>}</p>{source&&<a href={source} target="_blank" rel="noreferrer">Original <ArrowUpRight size={11}/></a>}</figcaption></figure>;
 }
-export function FigureGrid({figures,onZoom}){const items=mediaItems(figures);return items.length?<div className={'figure-grid '+(items.length===1?'single':'')}>{items.map((figure,index)=><Figure key={figure.id||index} figure={figure} onZoom={onZoom}/>)}</div>:null;}
+export function FigureGrid({figures,onZoom}){const items=mediaItems(figures).filter(figure=>!isDecorativeSourceControl(figure));return items.length?<div className={'figure-grid '+(items.length===1?'single':'')}>{items.map((figure,index)=><Figure key={figure.id||index} figure={figure} onZoom={onZoom}/>)}</div>:null;}
 export function ImageDialog({figure,onClose}){
  const [mode,setMode]=useState('fit'),[zoom,setZoom]=useState(1),[natural,setNatural]=useState(null),[viewport,setViewport]=useState({width:0,height:0});
  const canvas=useRef(null),geometry=imageGeometry(figure,natural),fit=fitImageScale(geometry,viewport),scale=mode==='fit'?fit:zoom,levels=imageZoomLevels(fit,geometry.vector);

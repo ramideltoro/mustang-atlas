@@ -1,5 +1,20 @@
 const dimension=value=>Number.isFinite(Number(value))&&Number(value)>0?Number(value):0;
 
+// Verified source-DOM controls (show all/single steps and expand/collapse).
+// Match these exact content-addressed PNGs, never image size or symbol shape.
+const decorativeControls=new Set([
+ '24c8da4629336cf4632149678d6363b7f09cac559005c483612e48ab0f13dcb5',
+ '6702649b75160a0f2132efe9ad304734cf7cf42a6aec505148e6b3ddcabcdfc2',
+ '17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a',
+ '570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61',
+]);
+export function isDecorativeSourceControl(figure={}){
+ return [figure.url,figure.src,figure.originalUrl].some(value=>{
+  const hash=String(value||'').match(/^\/media\/([a-f0-9]{64})\.png(?:[?#]|$)/i)?.[1];
+  return !!hash&&decorativeControls.has(hash.toLowerCase());
+ });
+}
+
 export function imageGeometry(figure={},natural=null,{compact=false}={}){
  const vector=/^image\/svg\+xml(?:;|$)/i.test(figure.mime||'')||/\.svg(?:[?#]|$)/i.test(figure.url||figure.src||'');
  // Percentage-sized SVGs report a browser fallback such as 300×150, which is
