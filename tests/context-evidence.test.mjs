@@ -51,3 +51,37 @@ test('glossary selection honors category and section restrictions and full curat
   assert.deepEqual(selectContextTerms([doc('AUTO','Clutch Disc','transmission','Automatic Transmission - 6R80','repair')],terms),[]);
   assert.deepEqual(selectContextTerms([doc('MANUAL','Clutch Disc','transmission','Manual Transmission - MT82','repair')],terms).map(t=>t.id),['clutch-disc']);
 });
+test('wiring cruise labels override broad chapter titles without confusing WITHOUT with adaptive',()=>{
+  const conventional=doc('NORMAL','Cruise Control - System Operation and Component Description','electrical','419-03A','overview',{section_title:'Cruise Control'});
+  const adaptive=doc('ADAPTIVE','Cruise Control - System Operation and Component Description','electrical','419-03B','overview',{section_title:'Cruise Control - Vehicles With: Adaptive Cruise Control'});
+  const wiring=text=>doc('wiring-031-006','Cruise Control — diagram 6','electrical','031','wiring',{section_title:'Cruise Control',text});
+  assert.deepEqual(selectContextOverviews([wiring('C1582\nPROXIMITY WARNING RADAR UNIT\nADAPTIVE CRUISE')],[conventional,adaptive]),[adaptive]);
+  assert.deepEqual(selectContextOverviews([wiring('STEERING WHEEL SWITCH\nWITHOUT ADAPTIVE CRUISE')],[conventional,adaptive]),[conventional]);
+  assert.deepEqual(selectContextOverviews([wiring('BRAKE SWITCH\nPOWERTRAIN CONTROL MODULE')],[conventional,adaptive]),[],'a common chapter does not establish conventional-only applicability');
+  assert.deepEqual(selectContextOverviews([wiring('WITHOUT ADAPTIVE CRUISE\nADAPTIVE CRUISE')],[conventional,adaptive]),[],'a mixed sheet must not be assigned one equipment variant');
+});
+test('connector radar uses its exact workshop component alias without matching generic proximity sensors',()=>{
+  const radar=doc('connector-C1582','C1582 — PROXIMITY WARNING RADAR UNIT','electrical','Connector views','connector');
+  const workshopRadar=doc('RADAR','Cruise Control Module (CCM)','electrical','419-03B','repair');
+  const adaptive=doc('ADAPTIVE','Cruise Control - System Operation and Component Description','electrical','419-03B','overview',{section_title:'Cruise Control - Vehicles With: Adaptive Cruise Control'});
+  const conventional=doc('NORMAL','Cruise Control - Overview','electrical','419-03A','overview',{section_title:'Cruise Control'});
+  assert.deepEqual(selectContextOverviews([radar],[conventional,adaptive,workshopRadar]),[adaptive]);
+  assert.deepEqual(selectContextOverviews([doc('OTHER','C123 — PROXIMITY SENSOR','electrical','Connector views','connector')],[conventional,adaptive,workshopRadar]),[]);
+});
+test('an adaptive label does not pull cruise evidence into another system chapter',()=>{
+  const network=doc('wiring-014-006','Module Communications Network — diagram 6','electrical','014','wiring',{section_title:'Module Communications Network',text:'HS2 CAN\nADAPTIVE CRUISE'});
+  const networkOverview=doc('NETWORK','Module Communications Network - Overview','electrical','418-00','overview',{section_title:'Module Communications Network'});
+  const adaptive=doc('ADAPTIVE','Cruise Control - System Operation and Component Description','electrical','419-03B','overview',{section_title:'Cruise Control - Vehicles With: Adaptive Cruise Control'});
+  assert.deepEqual(selectContextOverviews([network],[adaptive,networkOverview]),[networkOverview]);
+});
+test('workshop cruise overviews never fill a spare evidence slot with the opposite variant',()=>{
+  const normal=doc('NORMAL','Cruise Control - Overview','electrical','419-03A','overview',{section_title:'Cruise Control'});
+  const normalOperation=doc('NORMAL_OP','Cruise Control - System Operation and Component Description','electrical','419-03A','overview',{section_title:'Cruise Control'});
+  const adaptive=doc('ADAPTIVE','Cruise Control - Overview','electrical','419-03B','overview',{section_title:'Cruise Control - Vehicles With: Adaptive Cruise Control'});
+  const adaptiveOperation=doc('ADAPTIVE_OP','Cruise Control - System Operation and Component Description','electrical','419-03B','overview',{section_title:'Cruise Control - Vehicles With: Adaptive Cruise Control'});
+  const all=[normal,normalOperation,adaptive,adaptiveOperation];
+  assert.deepEqual(selectContextOverviews([normal],all),[normalOperation]);
+  assert.deepEqual(selectContextOverviews([adaptive],all),[adaptiveOperation]);
+  const switches=['419-03A','419-03B'].map(section=>doc(section,'Cruise Control Deactivator Switch','electrical',section,'repair'));
+  assert.deepEqual(selectContextOverviews(switches,all),[],'a common physical part must not inherit one system variant as universal');
+});

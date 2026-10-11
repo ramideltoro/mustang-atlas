@@ -43,6 +43,20 @@ Large procedures are processed in chunks but become visible only after complete 
 
 Create `data/rewrite/stop-after-current` to stop after current batches. Remove it before resuming. A normal stop preserves accepted chunks. The publisher copies only generated guide JSON and progress, and exits when the worker exits.
 
+### Topic introductions
+
+The separate topic-context pass teaches what each subject is, how it works, and why its reference matters. It does not replace the full procedure rewrite. Connector records and wiring sheets receive individual explanations; shared part introductions retain engine applicability, and broad system jobs keep distinct variants and operation phases.
+
+```sh
+node scripts/author-topic-contexts.mjs --concurrency 3 --batch-size 48
+node scripts/sync-contexts.mjs --watch
+node scripts/audit-contexts.mjs
+```
+
+Authoring uses the signed-in Codex CLI and supplied source excerpts. Accepted explanations are tracked in `content/topic-contexts.json`; reviewed corrections in `content/context-overrides.json` take precedence on every publication. Checkpoints under `work/topic-context-jobs/accepted/` are bound to the exact evidence and full source hashes. Progress, job evidence and logs stay under `work/` and are not deployed. The publisher validates a snapshot before atomically replacing the live content file.
+
+Create `work/topic-context-jobs/stop-after-current` to drain active batches before restarting. Remove it to resume. If a controller exits after Codex writes its result but before checkpointing it, stop the worker and run `node scripts/recover-context-jobs.mjs` to preview recovery, then add `--apply` to restore eligible missing checkpoints. Run recovery before starting a new plan; changed evidence, source hashes, group IDs, or unsupported references are rejected. Structural acceptance is not a human technical review. The coverage audit must report every document before the introduction pass is considered complete.
+
 See [deployment and operations](docs/DEPLOYMENT.md).
 
 ## Original image quality

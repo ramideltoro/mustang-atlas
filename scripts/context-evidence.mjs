@@ -23,13 +23,36 @@ function transmission(doc) {
   const value=sectionTitle(doc);
   return {type:/automatic transmission/i.test(value)?'automatic':/manual transmission/i.test(value)?'manual':null,family:value.match(/\b(?:MT82|6R80|3160)\b/i)?.[0]?.toUpperCase() || null};
 }
+function cruiseMode(doc) {
+  // Workshop sections identify conventional/adaptive cruise unambiguously.
+  // Wiring chapter 031 contains both, so its chapter title alone cannot do so.
+  if(sectionCode(doc)==='419-03A')return 'conventional';
+  if(sectionCode(doc)==='419-03B')return 'adaptive';
+  const value=sectionTitle(doc)+'\n'+doc.title+(doc.kind==='wiring'?'\n'+(doc.text||''):'');
+  const without=/\bwithout\s+adaptive cruise(?: control)?\b/gi;
+  const conventional=without.test(value);
+  const adaptive=/\badaptive cruise(?: control)?\b/i.test(value.replace(without,''));
+  if(conventional&&adaptive)return null;
+  return conventional?'conventional':adaptive?'adaptive':null;
+}
+function workshopNames(doc) {
+  const name=componentName(doc);
+  // C1582 is labelled Proximity Warning Radar Unit in connector/031 wiring
+  // evidence; workshop 419-03B calls that same radar the Cruise Control Module.
+  return doc.kind==='connector'&&name==='proximity warning radar unit'?[name,'cruise control module']:[name];
+}
 function compatible(candidate,documents) {
-  const candidateEngines=engines(candidate),candidateTransmission=transmission(candidate);
+  const candidateEngines=engines(candidate),candidateTransmission=transmission(candidate),candidateCruise=cruiseMode(candidate);
   return documents.every(doc=>{
     const docEngines=engines(doc),docTransmission=transmission(doc);
     if(candidateEngines.length&&(!docEngines.length||docEngines.some(e=>!candidateEngines.includes(e))))return false;
     if(candidateTransmission.type&&docTransmission.type&&candidateTransmission.type!==docTransmission.type)return false;
     if(candidateTransmission.family&&docTransmission.family&&candidateTransmission.family!==docTransmission.family)return false;
+    if(candidateCruise){
+      const mode=cruiseMode(doc);
+      if(mode&&mode!==candidateCruise)return false;
+      if(doc.kind==='wiring'&&!mode)return false;
+    }
     return true;
   });
 }
@@ -59,7 +82,7 @@ function sharedWords(a,b) {
 export function selectContextOverviews(documents,allDocuments) {
   if(!Array.isArray(documents)||!documents.length)return [];
   const ownIds=new Set(documents.map(d=>d.id));
-  const names=[...new Set(documents.map(componentName))];
+  const names=[...new Set(documents.flatMap(workshopNames))];
   // A connector's catalog category can be electrical even when it belongs to
   // another system. An exact component-title match establishes its real source
   // section; incidental mentions in unrelated overview prose do not.
@@ -68,13 +91,15 @@ export function selectContextOverviews(documents,allDocuments) {
   return allDocuments.filter(candidate=>candidate.kind==='overview'&&!ownIds.has(candidate.id)&&compatible(candidate,documents))
     .map(candidate=>{
       const same=documents.some(doc=>sameSection(doc,candidate));
+      const scopedCruise=documents.some(doc=>doc.kind==='wiring'&&normalize(sectionTitle(doc))==='cruise control'
+        &&cruiseMode(doc)&&cruiseMode(doc)===cruiseMode(candidate));
       const anchored=anchors.some(anchor=>sameSection(anchor,candidate));
       const full=Math.max(0,...names.map(name=>fullComponentMatch(name,candidate)));
-      if(!same&&!anchored&&!full)return null;
+      if(!same&&!scopedCruise&&!anchored&&!full)return null;
       // Source section identity is stronger than a cross-section name match.
       const descriptive=/System Operation|Component Description/i.test(candidate.title)?3:/Overview/i.test(candidate.title)?2:0;
       const overlap=Math.max(0,...names.map(name=>sharedWords(name,componentName(candidate))));
-      return {candidate,score:(same?100:anchored?80:0)+full+Math.min(overlap,8)+descriptive};
+      return {candidate,score:(same||scopedCruise?100:anchored?80:0)+full+Math.min(overlap,8)+descriptive};
     }).filter(Boolean).sort((a,b)=>b.score-a.score||a.candidate.id.localeCompare(b.candidate.id)).slice(0,2).map(x=>x.candidate);
 }
 
