@@ -1,0 +1,101 @@
+{
+  "documentId": "G1694573",
+  "sourceHash": "d204319d33e42b0d56a395f17aa455b1648caa3d173a4df0e2994cf988bbf518",
+  "title": "Understand the 3.7L cooling system",
+  "introduction": "Think of coolant as the engine’s heat courier. The pump keeps it moving, the thermostat chooses whether the radiator is in the loop, and the radiator passes collected heat into the air. The heater circuit borrows some of that heat for the cabin.\n\nThis description is specific to the 3.7L engine. It explains the cold-side thermostat, the degas bottle and the engine’s staged response to overheating. Those protective stages are warnings and damage-control measures, not permission to continue driving with an overheating engine.\n\nKeep the [3.7L cooling-flow diagram](#/document/G1694572) alongside this explanation to follow the pump, radiator, heater and degas-bottle connections.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1694573-b00001",
+      "text": "How coolant circulates",
+      "why": ""
+    },
+    {
+      "blockId": "G1694573-b00002",
+      "text": "The accessory drive belt turns the coolant pump, which sends coolant through the engine block and cylinder heads. From the engine, coolant normally travels through the radiator circuit and back to the pump. A separate branch also supplies the heater core.\n\nCoolant temperature operates the thermostat valve. With the thermostat closed, coolant takes the bypass route back to the pump instead of going through the radiator. When the thermostat opens, coolant flows through the radiator so engine heat can pass into the outside air.",
+      "why": "Follow both sides of the process: coolant carries heat to the radiator, and airflow carries that heat away."
+    },
+    {
+      "blockId": "G1694573-b00003",
+      "text": "Behind the front cover of the 3.7L engine is a channel cover plate. It carries a timing-chain idler and press-in-place gaskets that separate coolant from engine oil. A weep hole sits on the engine’s front left side, behind the generator.\n\nOil or coolant leaking from that hole indicates a failed gasket; the channel cover plate must then be replaced. Use engine section 303-01 for that repair.",
+      "why": "The location of the leak matters here. This statement concerns the identified weep hole, not every fluid trace near the front of the engine."
+    },
+    {
+      "blockId": "G1694573-b00004",
+      "text": "This engine uses a cold-side thermostat at the lower radiator-hose connection, where radiator-cooled coolant re-enters the engine. During early warm-up, warm coolant in the engine starts opening the thermostat, but the cooler returning coolant soon closes it again.\n\nThat opening-and-closing cycle repeats until the radiator’s returning coolant becomes warm enough to keep the thermostat open. As a result, this engine runs considerably longer before the thermostat stays fully open than an engine with a hot-side thermostat.",
+      "why": "An opening thermostat does not immediately mean a steady, fully open thermostat on this layout."
+    },
+    {
+      "blockId": "G1694573-b00005",
+      "text": "The degas bottle stores extra coolant, separates air from the system and makes room for expansion. It also allows system pressurization, replenishes the cooling circuit and provides the service-fill location.",
+      "why": "It is an active part of the cooling system, not simply an overflow catch container."
+    },
+    {
+      "blockId": "G1694573-b00006",
+      "text": "The powertrain control module (PCM) checks thermostat operation once during each drive cycle. The check runs for 300-800 seconds. A detected malfunction sets diagnostic trouble code (DTC) P0125 or P0128 and turns on the malfunction indicator lamp (MIL).",
+      "why": "The code identifies the detected temperature-control concern; use its diagnosis to establish the cause."
+    },
+    {
+      "blockId": "G1694573-b00007",
+      "text": "Fail-safe cooling — what each stage means",
+      "why": ""
+    },
+    {
+      "blockId": "G1694573-b00008",
+      "text": "If overheating begins, the PCM uses its Fail Safe Cooling strategy to manage engine operation.",
+      "why": "The strategy responds to excessive heat; it does not fix the underlying cooling fault."
+    },
+    {
+      "blockId": "G1694573-b00009",
+      "text": "Stage 1 starts as the engine overheats. The cylinder head temperature (CHT) sensor reports the temperature to the PCM, which moves the gauge pointer into the red zone.",
+      "why": "The gauge change is the first part of the described warning progression."
+    },
+    {
+      "blockId": "G1694573-b00010",
+      "text": "If the engine remains running and its temperature keeps climbing, the Powertrain Check Lamp comes on. The engine is nearing critical temperature limits and should be stopped. The PCM stores DTC P1285, which a scan tool can retrieve.",
+      "why": "Act on the overheating condition rather than waiting for the next protective stage."
+    },
+    {
+      "blockId": "G1694573-b00011",
+      "text": "Stage 2 begins if the lamp and temperature gauge are ignored. The PCM deactivates 3 cylinders and limits engine speed to below 3,000 RPM. At the same time, the MIL illuminates, indicating that prolonged engine damage is possible and emissions will be affected. The PCM stores DTC P1299 for retrieval with a scan tool.",
+      "why": "Reduced power is part of this protection response. It is not normal operation to be worked around."
+    },
+    {
+      "blockId": "G1694573-b00012",
+      "text": "Air passes through the deactivated cylinders to help control internal engine temperature. The PCM alternates which cylinders are deactivated so cooling is distributed across them.",
+      "why": "The inactive cylinders are being used to move cooling air through the engine."
+    },
+    {
+      "blockId": "G1694573-b00013",
+      "text": "NOTE: If the driver is using a large amount of throttle—for example, while overtaking—when the PCM initiates Stage 2, cylinder deactivation is delayed by 10 seconds.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694573-b00014",
+      "text": "NOTE: Once 3-cylinder operation starts, falling temperature alone will not restore 6-cylinder operation. Restoration requires the ignition to be switched off and then on again.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694573-b00015",
+      "text": "NOTE: To switch off the MIL, first repair the fault, then use a scan tool to clear the DTC. The lamp is not cleared merely by the temperature falling.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694573-b00016",
+      "text": "Stage 3 starts if engine temperature continues rising. To prevent major damage or seizure, the strategy disables the engine. The Powertrain Check Lamp flashes to warn that shutdown will occur after 30 seconds, giving the driver time to select a suitable place to park.",
+      "why": "The flashing warning means engine shutdown is approaching."
+    }
+  ],
+  "status": "complete",
+  "checkedAt": "2026-10-11T16:32:13.487Z",
+  "model": "Codex authored in active session",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 16,
+    "receivedBlocks": 16,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "sourceMediaInspected": true
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "systems": [
+    {
+      "id": "general",
+      "title": "Start with the question, then follow the evidence",
+      "description": "Identification, safe setup and the habits that make diagnosis useful.",
+      "introduction": "A good repair starts before the first bolt comes out. Identify the car’s engine and equipment, describe exactly what happens, and choose the procedure that answers that question. Treat diagnosis as detective work: each check should narrow the possibilities, not create a new shopping list.",
+      "howItWorks": [
+        {
+          "title": "Make the symptom repeatable",
+          "body": "Note when the concern happens: starting, idling, accelerating, braking or turning. Ford’s diagnostic methods normally assume the concern is present during the test, unless that test says otherwise. An intermittent problem needs its conditions understood before a replacement decision is justified."
+        },
+        {
+          "title": "Check the basics first",
+          "body": "Previous repairs, a weak electrical supply, damaged wiring, loose connections and leaks can affect several systems. Preliminary checks give later measurements a trustworthy starting point. Record trouble codes before following the appropriate circuit or system test."
+        },
+        {
+          "title": "Use the tool the test requires",
+          "body": "Reading a code, watching live data and commanding a module output are different capabilities. A scan tool, multimeter and correctly sized terminal probes each answer different questions. Use the specified setup so the measurement does not damage the thing you are checking."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "1: General Information/00: Service Information/100-00 General Information/Description and Operation/Diagnostic Methods.html",
+          "reference": "G1517410",
+          "documentId": "G1693185"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-02 Jacking and Lifting/Description and Operation/Jacking and Lifting - Overview.html",
+          "reference": "G1663632",
+          "documentId": "G1663631"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-01 Identification Codes/Description and Operation/Identification Codes.html",
+          "reference": "G1663652",
+          "documentId": "G1663651"
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "title": "Follow the engine’s flow of air, fuel, movement and oil",
+      "description": "The moving parts, lubrication and timing that turn combustion into useful rotation.",
+      "introduction": "An engine is easier to understand as a few connected jobs. Air and fuel enter, combustion pushes the pistons, and the crankshaft turns that movement into rotation. Valve timing keeps the breathing in step; oil and coolant let the machinery survive the heat and load.",
+      "howItWorks": [
+        {
+          "title": "Keep the engine identity in view",
+          "body": "This library includes several engines with different layouts. The 3.7L V6, 2.3L EcoBoost and V8 procedures are not interchangeable. Engine labels and identification information help match parts, diagrams and specifications to the actual vehicle."
+        },
+        {
+          "title": "Breathing has a schedule",
+          "body": "Camshafts open the intake and exhaust valves in time with the crankshaft. Variable camshaft timing can change those events as conditions change. The timing chains inside the engine do a different job from the accessory belts outside it."
+        },
+        {
+          "title": "Oil has more than one job",
+          "body": "Pressurized oil supplies loaded bearings and, on the described engines, oil-controlled timing components. Cleanliness matters during engine work: contamination can damage small passages and precision surfaces. An oil-level check, a pressure test and a bearing-clearance measurement answer different questions."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-00 Engine System - General Information/Description and Operation/Engine - Overview.html",
+          "reference": "G1661739",
+          "documentId": "G1661736"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-01B Engine - 3.7L Duratec (227kW-301PS)/Description and Operation/Engine - Overview.html",
+          "reference": "G1681508",
+          "documentId": "G1681495"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-01A Engine - 2.3L EcoBoost (231kW-314PS)/Description and Operation/Engine - Overview.html",
+          "reference": "G1660486",
+          "documentId": "G1660454"
+        }
+      ]
+    },
+    {
+      "id": "cooling",
+      "title": "Move heat out without keeping the engine too cold",
+      "description": "Coolant circulation, temperature control and the difference between a symptom and its cause.",
+      "introduction": "The cooling system is a heat-transport loop. Coolant collects heat inside the engine, carries it to the radiator and releases it to the outside air. The thermostat controls the radiator path so the engine can warm up as well as stay cool.",
+      "howItWorks": [
+        {
+          "title": "Trace the loop",
+          "body": "In the 3.7L description, the accessory-belt-driven pump sends coolant through the block and cylinder heads. A separate branch supplies the heater core. When the thermostat allows radiator flow, heat moves from the coolant into the passing air."
+        },
+        {
+          "title": "Know what the bottle does",
+          "body": "The degas bottle provides expansion space, removes air, supplies reserve coolant and serves as the service fill point on that system. Coolant level, circulation and airflow are separate checks; seeing coolant in the bottle does not establish that all three are working."
+        },
+        {
+          "title": "Warm-up behavior depends on the design",
+          "body": "The 3.7L uses a cold-side thermostat at the lower radiator hose connection. During warm-up it can open and close repeatedly as cooler returning coolant reaches it. Use the exact engine’s operating description and tests instead of assuming every thermostat behaves the same way."
+        },
+        {
+          "title": "Treat overheat messages as information to act on",
+          "body": "Fail-safe cooling is a protective response to excessive temperature, not a repair. The engine-specific description explains the warning stages and operating limits. Stop and address the cause according to that procedure rather than using the protection strategy as a way to keep driving."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-03B Engine Cooling - 3.7L Duratec (227kW-301PS)/Description and Operation/Engine Cooling - System Operation and Component Description.html",
+          "reference": "G1694575",
+          "documentId": "G1694573"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-03B Engine Cooling - 3.7L Duratec (227kW-301PS)/Description and Operation/Engine Cooling - Component Location.html",
+          "reference": "G1694574",
+          "documentId": "G1694572"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-00 General Information/Description and Operation/Engine Cooling System Health and Safety Precautions.html",
+          "reference": "G1517364",
+          "documentId": "G1693187"
+        }
+      ]
+    },
+    {
+      "id": "fuel",
+      "title": "Separate the liquid-fuel path from the vapor path",
+      "description": "Fuel delivery, metering, air control and evaporative emissions.",
+      "introduction": "The fuel system must deliver the right amount of fuel while keeping it contained. It helps to picture two paths: liquid fuel travels toward the engine, while fuel vapor is managed by the evaporative-emissions system. A problem in one path does not automatically identify a failed part in the other.",
+      "howItWorks": [
+        {
+          "title": "Tank, pump, rail, injectors",
+          "body": "The tank pump supplies the delivery system, the rail distributes fuel and the injectors meter it. The 3.7L description includes a tank module with a filter and pressure-control features. Its fuel-level sender measures quantity; it does not measure the pump’s delivery performance."
+        },
+        {
+          "title": "Air and fuel must agree",
+          "body": "The throttle and engine controller manage incoming air and fuel delivery together. Port-injected and direct-injected engines use different arrangements, so pressures, components and release procedures must come from the correct engine section."
+        },
+        {
+          "title": "Containment remains part of the job",
+          "body": "Fuel and vapor tubes, couplings and the filler assembly all belong to the system. The described capless filler is not intended to be modified. Before opening fuel plumbing, use the matching safety and pressure-release instructions; switching off the engine alone does not establish that pressure is gone."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "3: Powertrain/10: Fuel System - General Information/310-01B Fuel Tank and Lines - 3.7L Duratec (227kW-301PS)/Description and Operation/Fuel Tank and Lines - Overview.html",
+          "reference": "G1671617",
+          "documentId": "G1671595"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-04B Fuel Charging and Controls - 3.7L Duratec (227kW-301PS)/Description and Operation/Fuel Charging and Controls - System Operation and Component Description.html",
+          "reference": "G1617062",
+          "documentId": "G1691850"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-13B Evaporative Emissions - 3.7L Duratec (227kW-301PS)/Description and Operation/Evaporative Emissions - Overview.html",
+          "reference": "G1688034",
+          "documentId": "G1688022"
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "title": "Match engine speed and torque to the job",
+      "description": "Manual and automatic gearboxes, clutch operation and transmission-specific service.",
+      "introduction": "The transmission changes the relationship between engine rotation and road speed. Lower gears provide more turning force at the wheels; higher gears let the car travel faster for a given engine speed. The way a manual car connects the engine to its gearbox differs from the way an automatic does it.",
+      "howItWorks": [
+        {
+          "title": "A manual clutch controls the connection",
+          "body": "The friction disc connects engine rotation to the transmission when clamped. Releasing it allows their speeds to differ while you stop or change gear. The pedal hydraulics and release mechanism operate that connection; they are separate from the gears inside the transmission."
+        },
+        {
+          "title": "Synchronizers help a manual shift",
+          "body": "Synchronizers bring rotating parts to compatible speeds before engagement. The MT82 description identifies a fully synchronized six-speed gearbox and different synchronizer arrangements by gear. A difficult shift can involve release, linkage or internal operation, so follow the symptom’s diagnostic path."
+        },
+        {
+          "title": "Identify the unit before choosing instructions",
+          "body": "The library includes MT82, 3160 and 6R80 material. A fluid, fastener or procedure for one is not automatically appropriate for another. Use the transmission identification information and the exact section before comparing specifications."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "3: Powertrain/08: Manual Transmission, Clutch, Transfer Case and Power Transfer Unit/308-03A Manual Transmission - 6-Speed Manual Transmission - MT82/Description and Operation/Manual Transmission - Overview.html",
+          "reference": "G1703001",
+          "documentId": "G1703000"
+        },
+        {
+          "documentPath": "3: Powertrain/08: Manual Transmission, Clutch, Transfer Case and Power Transfer Unit/308-03B Manual Transmission - 6-Speed Manual Transmission - 3160/Description and Operation/Manual Transmission - Overview.html",
+          "reference": "G1791197",
+          "documentId": "G1794228"
+        },
+        {
+          "documentPath": "3: Powertrain/07: Automatic Transmission/307-01 Automatic Transmission - 6-Speed Automatic Transmission - 6R80/Description and Operation/Transmission Description - Overview.html",
+          "reference": "G1703004",
+          "documentId": "G1686444"
+        },
+        {
+          "documentPath": "3: Powertrain/08: Manual Transmission, Clutch, Transfer Case and Power Transfer Unit/308-02 Clutch Controls - 6-Speed Manual Transmission - MT82/Description and Operation/Clutch Controls - Component Location.html",
+          "reference": "G1704359",
+          "documentId": "G1704357"
+        }
+      ]
+    },
+    {
+      "id": "driveline",
+      "title": "Follow rotation from the gearbox to both rear wheels",
+      "description": "Driveshafts, the differential, halfshafts and their joints.",
+      "introduction": "Once the transmission has selected the ratio, the driveline carries its output to the rear wheels. The driveshaft turns the differential; the differential drives a halfshaft on each side. Each connection has to transmit torque while allowing the vehicle’s mounts and suspension to move.",
+      "howItWorks": [
+        {
+          "title": "The differential makes corners possible",
+          "body": "The drive pinion turns the ring gear and differential case. Inside, the gear arrangement allows the two halfshafts to rotate at different speeds when a corner requires it. Limited-slip designs influence how torque is shared, and the manual distinguishes the fitted differential types."
+        },
+        {
+          "title": "Precision setup matters",
+          "body": "Backlash describes clearance between meshing gears; bearing preload describes how the bearings are loaded. They are different adjustments. New gears or bearings need the specified setup rather than a “tight enough” judgment."
+        },
+        {
+          "title": "Separate noise, vibration and leakage",
+          "body": "A rotating vibration, a load-dependent whine and a leaking seal point toward different checks. The driveshaft, joints, differential and wheel ends are connected, so where you hear a noise is only the start of the investigation."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "2: Chassis/05: Driveline/205-02 Rear Drive Axle-Differential/Description and Operation/Rear Drive Axle and Differential - Overview.html",
+          "reference": "G2214950",
+          "documentId": "G2214944"
+        }
+      ]
+    },
+    {
+      "id": "suspension",
+      "title": "Let the wheels move while keeping them controlled",
+      "description": "Springs, dampers, arms, wheel bearings and alignment.",
+      "introduction": "Suspension does more than soften bumps. It supports the vehicle, guides each wheel’s movement and helps keep the tire usefully connected to the road. Springs carry load; dampers control motion; arms and links decide the path the wheel can take.",
+      "howItWorks": [
+        {
+          "title": "Spring and damper are a team",
+          "body": "A spring compresses and stores energy when a wheel meets a bump. The shock absorber resists the resulting movement so the car does not keep bouncing. On the described rear suspension the shock mounts to the lower arm and works alongside the spring."
+        },
+        {
+          "title": "Independent does not mean disconnected",
+          "body": "The rear wheels can react to road imperfections independently, guided by upper and lower arms. The stabilizer bar links the sides to help resist body roll. Toe links and other locating parts maintain the wheel’s intended orientation through movement."
+        },
+        {
+          "title": "Alignment describes angles",
+          "body": "Toe is the wheel’s direction from above; camber is its tilt from the front or rear. These are measured relationships, not just appearances. Repairing a mounting part and checking the resulting alignment are related steps when the procedure requires them."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "2: Chassis/04: Suspension/204-02 Rear Suspension/Description and Operation/Rear Suspension - Overview.html",
+          "reference": "G1686643",
+          "documentId": "G1686641"
+        },
+        {
+          "documentPath": "2: Chassis/04: Suspension/204-02 Rear Suspension/Description and Operation/Rear Suspension - Component Location.html",
+          "reference": "G1697534",
+          "documentId": "G1697533"
+        }
+      ]
+    },
+    {
+      "id": "steering",
+      "title": "Your input sets the direction; electric assistance supplies the help",
+      "description": "How EPAS senses steering effort and turns it into controlled assistance.",
+      "introduction": "The steering wheel gives the car its direction, but you do not have to supply all the turning effort yourself. Electronic power assist steering—EPAS—uses an electric motor to help move the steering rack. Its controller continually adjusts that help to the driver’s input and the vehicle’s operating conditions.",
+      "howItWorks": [
+        {
+          "title": "It measures effort as well as motion",
+          "body": "A torque sensor measures the driver’s twisting effort through the relative movement across a torsion bar. The power steering control module, or PSCM, uses that signal as its main assistance input. Steering angle and steering torque are different measurements: where the wheel points is not the same as how hard you are turning it."
+        },
+        {
+          "title": "The motor helps move the rack",
+          "body": "A reversible motor drives the rack through a toothed belt and pulley-bearing arrangement. Tie rods carry the rack’s movement to the front wheels. The motor, controller and torque sensor are serviced as the steering-gear assembly in this description; the tie rods and bellows boots are separately serviceable."
+        },
+        {
+          "title": "Assistance changes with conditions",
+          "body": "At lower speeds the system provides more help for maneuvering; at higher speeds it reduces assistance for road feel. The controller also uses network information and compensates for effects such as road camber—the road’s side-to-side slope—within the system’s designed limits."
+        },
+        {
+          "title": "A heavier wheel needs context",
+          "body": "The system can reduce assistance for conditions such as voltage or temperature concerns, or remove electrical assistance for a critical fault. Mechanical steering remains in that described failure mode, but the effort becomes heavy. A warning or sudden change in effort calls for the relevant diagnostic path, not an assumption that the entire gear has failed."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "2: Chassis/11: Steering System/211-02 Power Steering/Description and Operation/Power Steering - Overview.html",
+          "reference": "G1553894",
+          "documentId": "G1686673"
+        },
+        {
+          "documentPath": "2: Chassis/11: Steering System/211-02 Power Steering/Description and Operation/Power Steering - System Operation and Component Description.html",
+          "reference": "G1686677",
+          "documentId": "G1686674"
+        }
+      ]
+    },
+    {
+      "id": "brakes",
+      "title": "Turn motion into heat, with control at each wheel",
+      "description": "Friction brakes, hydraulic assistance, ABS and stability control.",
+      "introduction": "Pressing the brake pedal creates hydraulic pressure that makes the calipers press pads against the rotating discs. Friction slows the wheels and produces heat. Electronic control adds another layer: it can adjust pressure at individual wheels to help preserve steering and stability.",
+      "howItWorks": [
+        {
+          "title": "Separate the mechanical and hydraulic jobs",
+          "body": "Pads and discs provide the friction surfaces. Caliper pistons apply them using brake-fluid pressure. The master cylinder creates pressure from pedal input, while the booster helps reduce driver effort. Each part contributes, so a pedal or stopping concern needs the matching test rather than a guess."
+        },
+        {
+          "title": "ABS and stability control share hardware",
+          "body": "ABS helps prevent wheel lock during braking. Stability control can adjust braking and engine torque to help control a skid; traction control addresses wheel spin during acceleration. The hydraulic control unit and sensor information support these different functions."
+        },
+        {
+          "title": "Match the brake package",
+          "body": "This library includes different caliper and pad arrangements. Choose the installed piston count or performance package before using a pad procedure. Noise and pedal pulsation can be normal during active ABS intervention, but that does not explain every brake noise or every change in pedal feel."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "2: Chassis/06: Brake System/206-09 Anti-Lock Brake System (ABS) and Stability Control/Description and Operation/Anti-Lock Brake System (ABS) and Stability Control - Overview.html",
+          "reference": "G1686532",
+          "documentId": "G1686528"
+        },
+        {
+          "documentPath": "2: Chassis/06: Brake System/206-03 Front Disc Brake/Removal and Installation/Brake Pads - Vehicles With: 2-Piston Brake Caliper.html",
+          "reference": "G1693789",
+          "documentId": "G1693786"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-00 General Information/Description and Operation/Brake and Clutch Systems Health and Safety Precautions.html",
+          "reference": "G1517363",
+          "documentId": "G1693183"
+        }
+      ]
+    },
+    {
+      "id": "electrical",
+      "title": "Track both electrical power and the information riding beside it",
+      "description": "Charging, batteries, circuits, connectors and module communication.",
+      "introduction": "Electrical diagnosis becomes less mysterious when you separate two questions: does the device have the power and ground it needs, and is it receiving the right command? Modern modules share information, so one sensor reading can support several different vehicle systems.",
+      "howItWorks": [
+        {
+          "title": "The battery and generator work together",
+          "body": "The battery stores energy; the belt-driven generator supplies electrical power when the engine runs. The generator converts its internal AC output to DC, and its regulator follows the control strategy. The charging system also monitors battery and generator information to manage loads."
+        },
+        {
+          "title": "A connection must work under load",
+          "body": "A wire can appear connected or pass a simple continuity check while excessive resistance prevents it carrying enough current. Voltage-drop testing examines a working circuit. Correct probes preserve terminal fit so the test itself does not introduce a new fault."
+        },
+        {
+          "title": "Messages have their own paths",
+          "body": "Vehicle modules exchange information across communication networks, sometimes through a gateway. A missing message is different from a missing power supply. Network tests and module fault codes help identify which path needs attention before a controller is condemned."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "4: Electrical/14: Battery and Charging System/414-00 Charging System - General Information/Description and Operation/Charging System - Overview.html",
+          "reference": "G1692952",
+          "documentId": "G1692950"
+        },
+        {
+          "documentPath": "4: Electrical/18: Electrical Distribution/418-00 Module Communications Network/Description and Operation/Communications Network - Overview.html",
+          "reference": "G1560735",
+          "documentId": "G1693125"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-00 General Information/Description and Operation/Diagnostic Methods.html",
+          "reference": "G1517410",
+          "documentId": "G1693185"
+        }
+      ]
+    },
+    {
+      "id": "climate",
+      "title": "Control temperature, humidity and where the air goes",
+      "description": "Heating, air conditioning, blower airflow and air-door control.",
+      "introduction": "Cabin comfort comes from several separate jobs. The blower moves air, the heater core can warm it, the evaporator can cool and dry it, and internal doors choose its path. Thinking in those stages helps separate weak airflow from air at the wrong temperature.",
+      "howItWorks": [
+        {
+          "title": "Heating uses engine heat",
+          "body": "Hot coolant flows through the heater core while cabin air passes across it. A heating concern can therefore involve the cooling circuit as well as the cabin air-control parts."
+        },
+        {
+          "title": "Air conditioning also removes moisture",
+          "body": "During A/C operation, the evaporator cools the passing air and reduces its humidity. The compressor and condenser belong to the refrigerant loop that moves this heat outside. Refrigerant work uses dedicated recovery and charging procedures."
+        },
+        {
+          "title": "Know which controls are fitted",
+          "body": "The dual automatic temperature-control system can maintain separate driver and passenger settings and adjust its operation automatically. Electronic manual temperature control has its own description and tests. The buttons may look familiar, but the control strategies and components must match the fitted system."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "4: Electrical/12: Climate Control System/412-00 Climate Control System - General Information/Description and Operation/Climate Control System - Vehicles With: Dual Automatic Temperature Control (DATC) - Overview.html",
+          "reference": "G1676854",
+          "documentId": "G1676851"
+        },
+        {
+          "documentPath": "4: Electrical/12: Climate Control System/412-00 Climate Control System - General Information/Description and Operation/Climate Control System - Vehicles With: Electronic Manual Temperature Control (EMTC) - Overview.html",
+          "reference": "G1681092",
+          "documentId": "G1681091"
+        },
+        {
+          "documentPath": "3: Powertrain/03: Engine/303-03B Engine Cooling - 3.7L Duratec (227kW-301PS)/Description and Operation/Engine Cooling - System Operation and Component Description.html",
+          "reference": "G1694575",
+          "documentId": "G1694573"
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "title": "Structure, sealing and the everyday moving parts",
+      "description": "Body panels, mounts, weatherstrips, glass, trim and noise control.",
+      "introduction": "The body is both the structure that locates major assemblies and the enclosure that keeps the cabin usable. Alignment, seals and insulation work together. A wind noise, a water leak and a door that closes poorly can share a fitting problem without having the same repair.",
+      "howItWorks": [
+        {
+          "title": "Mounting points set relationships",
+          "body": "The subframes provide attachment points for suspension and other major parts. Body or underbody misalignment can affect wheel alignment, drivetrain operation and opening fit. Structural dimensions matter beyond the appearance of a panel gap."
+        },
+        {
+          "title": "Choose the material for its job",
+          "body": "Weatherstrip seals a moving opening, seam sealer closes panel joints and insulation reduces transmitted noise. Adhesives, sealants and lubricants are not interchangeable merely because they all come in a tube or can."
+        },
+        {
+          "title": "Find the path before treating the symptom",
+          "body": "Water and noise can travel before they become noticeable inside. Follow the appropriate body diagnostic method to locate the entry or contact point. Correct fit and attachment are as important as the visible condition of a seal."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "5: Body and Paint/01: Body and Paint/501-00 Body System - General Information/Description and Operation/Body - Overview.html",
+          "reference": "G1564210",
+          "documentId": "G1696472"
+        },
+        {
+          "documentPath": "5: Body and Paint/02: Frame and Mounting/502-00 Uni-Body, Subframe and Mounting System/Description and Operation/Frame Assembly - Overview.html",
+          "reference": "G1686630",
+          "documentId": "G1686627"
+        }
+      ]
+    },
+    {
+      "id": "restraints",
+      "title": "A coordinated safety system with dedicated service rules",
+      "description": "Seat belts, airbags, pretensioners, sensors and restraint-system control.",
+      "introduction": "Seat belts and the supplemental restraint system work together to manage occupant movement in a collision. The restraints control module watches sensor and occupant information and decides whether particular deployable components are needed. Service procedures preserve that carefully controlled behavior.",
+      "howItWorks": [
+        {
+          "title": "The controller makes a coordinated decision",
+          "body": "The restraints control module receives information from occupant-classification equipment and other sensors. When the event meets its criteria, it supplies the current needed to deploy the appropriate components. Not every impact produces the same response."
+        },
+        {
+          "title": "Connector details are functional",
+          "body": "Deployable-component connectors use connector-position-assurance tabs and shorting-bar arrangements. A plug can appear attached while an incompletely seated assurance tab still causes a diagnostic fault. Correct locking is part of the circuit’s intended operation."
+        },
+        {
+          "title": "Use the restraint-specific procedure",
+          "body": "Airbags and pretensioners are deployable devices, not ordinary electrical loads. Follow the exact depowering, handling, testing and restoration steps for the selected repair. General-purpose jumper or resistance tests must not replace the prescribed restraint-system method."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentPath": "5: Body and Paint/01: Body and Paint/501-20B Supplemental Restraint System/Description and Operation/Airbag and Seatbelt Pretensioner Supplemental Restraint System (SRS) - Overview.html",
+          "reference": "G1595173",
+          "documentId": "G1696290"
+        },
+        {
+          "documentPath": "1: General Information/00: Service Information/100-00 General Information/Description and Operation/Pyrotechnic Device Health and Safety Precautions.html",
+          "reference": "G1517365",
+          "documentId": "G1693191"
+        }
+      ]
+    }
+  ]
+}

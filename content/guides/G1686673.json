@@ -1,0 +1,31 @@
+{
+  "documentId": "G1686673",
+  "sourceHash": "d68a64d2085edf9f6148c5b09611049f2970aada76a281ca7b1340897e523e4f",
+  "title": "How electric power steering helps you turn",
+  "introduction": "Picture the steering system as a conversation: you turn the wheel, a sensor measures your effort, and an electric motor supplies the appropriate help. EPAS means electronic power assist steering. Its purpose is to reduce the effort you need without taking away your steering input.\n\nThe power steering control module, or PSCM, uses steering torque as its main input and considers vehicle speed. Parking calls for more assistance; faster travel calls for less, giving you more road feel. The detailed system description explains how a reversible motor moves the rack through a toothed belt and pulley-bearing arrangement, and how tie rods pass that movement to the front wheels.\n\nTorque and angle are different ideas. Steering angle describes where you have turned the wheel. Steering torque describes how hard you are trying to turn it. The torque sensor measures relative movement across a torsion bar, giving the controller a useful picture of your effort.\n\nThe controller also watches its own operation. Certain voltage or temperature concerns can cause reduced assistance; a critical fault can remove electrical assistance. In the described manual-steering failure mode, the mechanical connection remains but turning effort becomes much heavier. A warning message or sudden change in feel is a reason to follow the steering diagnosis, not proof that a particular part needs replacement.\n\nFor the complete network inputs, failure modes and selectable steering modes, open [Power Steering — System Operation and Component Description](#/document/G1686674). Standard, Sport and Comfort alter steering feel; they do not change the basic jobs of the rack, tie rods and motor.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686673-b00001",
+      "text": "Assistance follows your input",
+      "why": ""
+    },
+    {
+      "blockId": "G1686673-b00002",
+      "text": "EPAS responds to your steering-wheel input and uses an electric motor to help you turn. Your input sets the request; the motor provides the power assistance.",
+      "why": "That is the key idea to keep in mind when reading the system diagram: sensing the driver’s input and producing assistance are separate jobs."
+    }
+  ],
+  "status": "complete",
+  "checkedAt": "2026-10-11T16:32:13.477Z",
+  "model": "Codex authored in active session",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "sourceMediaInspected": true
+  }
+}

@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    image: mustang-atlas-web
+    container_name: mustang-atlas
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3185:3185"
+    environment:
+      NODE_ENV: production
+      PORT: "3185"
+      HOST: 0.0.0.0
+      DATA_DIR: /data
+    volumes:
+      - ./data:/data:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1536m
+    cpus: 2
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
