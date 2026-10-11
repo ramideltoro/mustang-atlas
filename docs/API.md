@@ -8,6 +8,7 @@ Read-only JSON at `/api/v1`. Lists return `{items,total,limit,offset}`. Document
 - `GET /documents/:id?engine=&year=`: structured article, original illustrations, optional accepted teaching content, learning context, calculator metadata and parts information. `?source=1` no longer exposes a separate source representation.
 - `GET /documents/:id/circuit-context?engine=`: the same wiring explanation returned as `document.circuitContext`, with applicability; non-wiring/unknown documents return 404.
 - `GET /documents/:id/parts?engine=&year=`: the same parts information available in detail. See [PARTS.md](PARTS.md).
+- `GET /documents/:id/maintenance?engine=&year=`: `{documentId,maintenance}` using the same guidance as article detail. Maintenance is `null` when no verified component rule applies. Unknown articles return 404; incompatible engine selections return no guidance. See [MAINTENANCE.md](MAINTENANCE.md).
 - `GET /glossary?q=&engine=&limit=100&offset=0`: shared term index; `GET /glossary/:id?engine=` returns explanations and relevant article references/illustrations.
 - `GET /media/:filename`: original raster illustration or sanitized vector drawing.
 - `GET /healthz`: service and visible catalog readiness.
@@ -29,6 +30,8 @@ Every block has a stable `id` and `type`. Recursive block types:
 - `list`: `ordered`, `start`, `items`; each item is `{id,type:"list-item",text,children}`.
 - `table`: `rows:[{cells:[{text,colSpan,rowSpan,header,blocks:[]}]}]`; nested cell blocks retain figures, lists and sub-tables. Source cell text and technical values remain unchanged by editorial overlays.
 - `media`: `mediaId` referencing the document's media array.
+- `video`: `videoId`, `url`, `title`, `mime`; an available local MP4 with native playback controls.
+- `video-link`: the same fields for a verified external Ford video player, opened explicitly by the user.
 - `missing-media`: `text` describing a missing source image reference.
 
 Media entries: `{id,url,mime,width,height,caption?,legend?:[{color,label}]}`. All source illustrations retain their original order and associations. Empty style-only layout tables are unwrapped. Diagrams render as images rather than executable inline SVG. Source URLs, local paths, raw HTML, CSS, scripts and JavaScript links are never returned.
@@ -66,3 +69,9 @@ Run `node scripts/audit-public-catalog.mjs` to verify every visible article for 
 Wiring context uses `{documentId,title,summary,mode,scope,components,circuits,connections,continuations,readingGuide,coverage}`. `mode:"terminal-map"` matches explicitly printed vector circuit/cavity IDs to connector assignments; it does not infer routing, junctions or current flow from text proximity. `reference-map` covers drawings without circuit data. Reviewed curated records may supply verified connections, guarded by exact document, SVG and supporting-reference hashes. `coverage.topologyVerified` distinguishes those cases. Known full-sheet applicability can be added only from reviewed, hash-bound evidence; for example, the 2.3L header of wiring-033-002 applies to that whole sheet. Branch-local qualifiers remain local.
 
 Reviewed image-only actions may receive captions from `content/illustrated-steps.json`. Application requires the exact private article hash, an actually blank numbered step, the immediately following original media ID and URL, and an empty current text field. Existing authored action text wins. This adds readable guidance without changing immutable source blocks or moving an illustration to another action.
+
+Article detail also includes `maintenance:{documentId,title,scope,items}` or `null`. Each item separates `what`, `when` and `why`, with optional steps/notes, a `kind` of `scheduled`, `inspection` or `condition-based`, and explicit year/engine/equipment applicability. No replacement interval is inferred from a repair procedure. Private supporting article hashes remain in the curated catalog; public schedule links identify the applicable Ford owner guidance. The reader places relevant care after the repair/parts content and adds it to the article contents. No empty maintenance panel is rendered.
+
+Recovered procedure videos are bound to the exact article hash and original play-control asset in `content/procedure-videos.json`. Ten MP4s are stored as content-addressed `/media/*.mp4` files; three external Ford players cover four additional placements. Detail exposes only public playback metadata in `videos` and replaces the original control at its exact block position. Decorative play controls are excluded from article images, parts diagrams and thumbnails. Missing or stale video evidence never creates a nonfunctional player. `scripts/recover-procedure-videos.mjs --source <export-directory>` verifies public source responses, file lengths and MP4 headers before storing hashed files; media files remain outside Git.
+
+Torque highlighting is presentation-only. It preserves all values, units, bolt/nut labels and stage/angle order; it does not calculate conversions or invent tightening instructions. Punctuation-only list and step text is omitted while attached instructions, diagrams, videos and meaningful table symbols remain available.

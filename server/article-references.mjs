@@ -1,9 +1,23 @@
 import {documentApplicability,operationFor,isPublicDocument} from './catalog.mjs';
 const normal=text=>String(text||'').toLowerCase().replace(/[–—]/g,'-').replace(/\s+/g,' ').trim();
-export function neutralCopy(text){return String(text||'').replace(/(?:The original table is retained below so you can compare it with the )?\[(?:Compare [^\]]+|source PDF|reference)\]\(\/source\/[^)]+\)\.?/gi,'').replace(/\[([^\]]+)\]\(\/source\/[^)]+\)/gi,(_,label)=>/^Compare /i.test(label)?'Compare the illustrations below':'illustrations in this article').replace(/\bSource wording clarification\b/gi,'Wording clarification').replace(/\b(?:Ford(?:'s)?\s+)?(?:workshop|service)\s+manual(?:s)?\b/gi,'repair instructions').replace(/\boriginal\s+(?:source|PDF|manual)\b/gi,'reference').replace(/\bsource\s+PDF\b/gi,'reference').replace(/\bthe manual(?:'s)?\b(?!\s+(?:transmission|climate|control|clutch|shift|mode|lever|operation|procedure|adjustment|release|steering|brake|handling|test|seat|window|gearbox)\b)/gi,m=>m.endsWith("'s")?'the reference’s':'the reference').replace(/\bthis manual\b(?!\s+(?:transmission|climate|control|clutch|shift|mode|lever|operation|procedure|adjustment|release|steering|brake|handling|test|seat|window|gearbox)\b)/gi,'this reference').replace(/\bsupplied (?:source|manual)(?:['’]s)?\b/gi,'reference').replace(/\bmanual (says|shows|describes|explains|lists|specifies)\b/gi,'reference $1').replace(/\bsource view\b/gi,'reference view').replace(/\boriginal electrical wiring diagram\b/gi,'Electrical wiring diagram');}
+export function neutralCopy(text){return String(text||'').replace(/(?:The original table is retained below so you can compare it with the )?\[(?:Compare [^\]]+|source PDF|reference)\]\(\/source\/[^)]+\)\.?/gi,'').replace(/\[([^\]]+)\]\(\/source\/[^)]+\)/gi,(_,label)=>/^Compare /i.test(label)?'Compare the illustrations below':'illustrations in this article').replace(/\bSource wording clarification\b/gi,'Wording clarification').replace(/\b(?:Ford(?:'s)?\s+)?(?:workshop|service)\s+manual(?:s)?\b/gi,'repair instructions').replace(/\boriginal\s+(?:source|PDF|manual)\b/gi,'reference').replace(/\bsource\s+PDF\b/gi,'reference').replace(/\bthe manual(?:'s)?\b(?![\s-]+(?:transmission|climate|control|clutch|shift|mode|lever|operation|procedure|adjustment|release|steering|brake|handling|test|seat|window|gearbox)\b)/gi,m=>m.endsWith("'s")?'the reference’s':'the reference').replace(/\bthis manual\b(?![\s-]+(?:transmission|climate|control|clutch|shift|mode|lever|operation|procedure|adjustment|release|steering|brake|handling|test|seat|window|gearbox)\b)/gi,'this reference').replace(/\bsupplied (?:source|manual)(?:['’]s)?\b/gi,'reference').replace(/\bmanual (says|shows|describes|explains|lists|specifies)\b/gi,'reference $1').replace(/\bsource view\b/gi,'reference view').replace(/\boriginal electrical wiring diagram\b/gi,'Electrical wiring diagram');}
 export function createReferenceResolver(rows){
  rows=rows.filter(isPublicDocument);
  const ids=new Map(rows.map(r=>[r.id,r]));const refs=new Map(),titles=new Map();for(const r of rows){let source={};try{source=JSON.parse(r.source||'{}');}catch{}for(const[key,map]of[[source.reference,refs],[normal(r.title),titles]])if(key){if(!map.has(key))map.set(key,[]);map.get(key).push(r);}}
+ const sections=new Map();for(const row of rows){for(const code of [row.section_code,String(row.section_code||'').replace(/[A-Z]$/,'')]){if(!code)continue;if(!sections.has(code))sections.set(code,new Set());sections.get(code).add(normal(row.section_title));}}
+ function stripSectionCitations(value){
+  const text=String(value);let out='',cursor=0;const start=/\(\s*(\d{3}-\d{2}[A-Z]?)\b/g;let match;
+  while((match=start.exec(text))){if(!sections.has(match[1]))continue;let depth=0,end=match.index;for(;end<text.length;end++){if(text[end]==='(')depth++;if(text[end]===')'&&--depth===0){end++;break;}}if(depth||end-match.index>700)continue;
+   const body=text.slice(match.index+1,end-1).trim().replace(/^\d{3}-\d{2}[A-Z]?\s*/,''),sectionTitle=body.replace(/,\s*(?:Description and Operation|Diagnosis and Testing|Removal(?: and Installation)?|Installation|Disassembly(?: and Assembly(?: of Subassemblies)?)?|Assembly|Overhaul|General Procedures|Specifications)\s*$/i,'').trim();
+   const before=text.slice(0,match.index),after=text.slice(end),inLink=/\[[^\]\n]*$/.test(before)&&/^\]\(#\/document\//.test(after),afterLink=/\]\(#\/document\/[A-Za-z0-9_-]+\)\s*$/.test(before),standalone=!before.trim()&&/^[\s.;]*$/.test(after);
+   const knownTitle=sectionTitle&&sections.get(match[1]).has(normal(sectionTitle.replace(/^,\s*/,'')));
+   if(afterLink&&body.startsWith(',')&&!knownTitle){out+=text.slice(cursor,match.index).replace(/[ \t]+$/,'')+' ('+body.replace(/^,\s*/,'')+')';cursor=end;start.lastIndex=end;continue;}
+   const namedReference=!body&&[...titles.keys(),...[...sections.get(match[1])].flatMap(title=>[title,...[title.split(' - ').slice(1).join(' - ')].filter(t=>t.length>15)])].some(title=>title&&normal(before).replace(/\s+procedure$/,'').endsWith(title));
+   if(!knownTitle&&!(body===''&&(inLink||afterLink||standalone||namedReference||/^\s*(?:[-*]\s+)?[A-Za-z][^.;!?]*$/.test(before.split('\n').at(-1)))))continue;
+   out+=text.slice(cursor,match.index).replace(/[ \t]+$/,'');cursor=end;start.lastIndex=end;
+  }
+  return (out+text.slice(cursor)).replace(/^[\s.;]+$/,'').replace(/[ \t]+\n/g,'\n').trim();
+ }
  function compatible(candidate,doc){const a=documentApplicability(candidate).engines,b=documentApplicability(doc).engines;return !a.length||!b.length||a.some(e=>b.includes(e));}
  function byId(id,doc){const exact=ids.get(id);if(exact&&exact.id!==doc.id&&compatible(exact,doc))return exact;const options=(refs.get(id)||[]).filter(r=>r.id!==doc.id&&compatible(r,doc));const same=options.filter(r=>r.section_code===(doc.section_code??doc.section?.code));return same.length===1?same[0]:options.length===1?options[0]:null;}
  function resolve(title,metadata,doc){const key=normal(title);let options=(titles.get(key)||[]).filter(r=>r.id!==doc.id&&compatible(r,doc));const code=metadata.match(/\b\d{3}-\d{2}[A-Z]?\b/)?.[0];if(code)options=options.filter(r=>r.section_code===code);const phase=metadata.split(',').at(-1)?.trim();if(phase&&options.some(r=>normal(operationFor(r))===normal(phase)))options=options.filter(r=>normal(operationFor(r))===normal(phase));
@@ -14,7 +28,7 @@ export function createReferenceResolver(rows){
   const seen=new Set(),references=[];
   // Removing a referral sentence is safe; removing the visible label from an
   // action such as "Remove [the cover]" would destroy the instruction.
-  const original=String(input);const text=original.replace(/(\bSee\s+)?\[([^\]]+)\]\(#\/document\/([A-Za-z0-9_-]+)\)(\.)?/gi,(whole,prefix,label,id,period,offset)=>{
+  const original=String(input).replace(/^\s*[.;:]+\s*$/gm,'');const text=original.replace(/(\bSee\s+)?\[([^\]]+)\]\(#\/document\/([A-Za-z0-9_-]+)\)(\.)?/gi,(whole,prefix,label,id,period,offset)=>{
    const row=ids.get(id),allowed=row&&documentApplicability(row,engine).matchesSelectedEngine;
    const before=original.slice(0,offset);const referralSentence=prefix&&(!before.trim()||/[.!?\n]\s*$/.test(before));
    if(!allowed||seen.has(id))return referralSentence?'':(prefix||'')+neutralCopy(label)+(period||'');
@@ -30,7 +44,7 @@ export function createReferenceResolver(rows){
    const target=resolve(title,metadata,doc);if(target)out+=`See [${labelFor(target)}](#/document/${target.id}).`;
    cursor=end;pattern.lastIndex=end;
   }
-  out+=text.slice(cursor);const linked=articleLinks(out,engine);out=linked.text.replace(/\bFor ([^\n]+),\s*See /g,'For $1, see ');const references=linked.references;
+  out+=text.slice(cursor);const linked=articleLinks(stripSectionCitations(out),engine);out=linked.text.replace(/\bFor ([^\n]+),\s*See /g,'For $1, see ');const references=linked.references;
   // A pure introductory referral has no independent action when its destination
   // is unavailable. Preserve imperative and diagnostic content in mixed blocks.
   if(!references.length&&/^For (?:further|additional|more) information,\s*$/i.test(out))out='';
@@ -46,6 +60,6 @@ export function createReferenceResolver(rows){
    // of referral paragraphs. A standalone technical heading is still content.
    const sourceIndex=(input||[]).findIndex(v=>v.id===b.id);const tail=(input||[]).slice(sourceIndex+1);const boundary=tail.findIndex(v=>v.type==='heading'&&(v.level||2)<=(b.level||2));const section=boundary<0?tail:tail.slice(0,boundary);const referralsOnly=section.length>0&&section.every(v=>v.type==='paragraph'&&/^(?:For [^.!?]+,\s*)?REFER\s+to\s*:/i.test(v.text||''));if(referralsOnly&&(!next||next.type==='heading')&&j===i+1)return false;return true;});
  }
- function cleanObject(value,engine='all'){if(typeof value==='string')return articleLinks(neutralCopy(value),engine).text;if(Array.isArray(value))return value.map(v=>cleanObject(v,engine));if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,/^(url|href|id|documentId|sourceHash)$/.test(k)?v:cleanObject(v,engine)]));return value;}
- return {byId,resolve,labelFor,cleanText,blocks,cleanObject};
+ function cleanObject(value,engine='all'){if(typeof value==='string')return articleLinks(stripSectionCitations(neutralCopy(value)),engine).text;if(Array.isArray(value))return value.map(v=>cleanObject(v,engine));if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,/^(url|href|id|documentId|sourceHash)$/.test(k)?v:cleanObject(v,engine)]));return value;}
+ return {byId,resolve,labelFor,stripSectionCitations,cleanText,blocks,cleanObject};
 }

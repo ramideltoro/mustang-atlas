@@ -14,7 +14,7 @@ for(const row of rows){const doc=decodeDocument(row);const cleaned=resolver.bloc
  for(const text of texts(doc.blocks)){textNodes++;const result=resolver.cleanText(text,row).text;
   // Independent line-based protection: source cross-reference titles/codes are
   // navigation metadata; numbers in surrounding instructions must survive.
-  const protectedText=outsideReferrals(text);
+  const protectedText=resolver.stripSectionCitations(outsideReferrals(text));
   const remaining=numeric(result);for(const n of new Set(numeric(protectedText)))if(!remaining.includes(n))issues.push({id:row.id,reason:'technical-number-missing',number:n,excerpt:text.slice(0,180)});
   for(const match of result.matchAll(/\]\(#\/document\/([A-Za-z0-9_-]+)\)/g)){links++;if(!ids.has(match[1]))issues.push({id:row.id,reason:'broken-article-link',target:match[1]});}
   if(/REFER\s+to\s*:|#\/document\//i.test(text))for(const engine of ['all',...ENGINE_OPTIONS]){variantReferralChecks++;const scoped=resolver.cleanText(text,row,engine);const seen=new Set();for(const m of scoped.text.matchAll(/\[([^\]]+)\]\(#\/document\/([A-Za-z0-9_-]+)\)/g)){const target=byId.get(m[2]);if(!target||!documentApplicability(target,engine).matchesSelectedEngine)issues.push({id:row.id,reason:'incompatible-referral',engine,target:m[2]});if(seen.has(m[2]))issues.push({id:row.id,reason:'duplicate-referral',engine,target:m[2]});seen.add(m[2]);for(const e of target?documentApplicability(target).engines:[])if(!m[1].includes(e))issues.push({id:row.id,reason:'unlabeled-referral-engine',engine:e,target:m[2]});}for(const n of new Set(numeric(protectedText)))if(!numeric(scoped.text).includes(n))issues.push({id:row.id,reason:'scoped-technical-number-missing',engine,number:n});}

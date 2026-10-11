@@ -1,4 +1,5 @@
 import {marked} from 'marked';
+import {torqueSegments,torqueTable} from './torque-spec.mjs';
 export function listItems(data){return Array.isArray(data)?data:data?.items||[];}
 export function readableTitle(value){
   const parts=String(value||'').split(/\s*>\s*/).filter(Boolean),last=parts.at(-1)||'';
@@ -49,29 +50,33 @@ export function callout(value){
 export function mediaItems(value){return (value||[]).filter(item=>safeHref(item.url||item.src)&&Number(item.width||1)>0&&Number(item.height||1)>0);}
 export function uniqueSources(values=[]){const seen=new Set();return values.filter(source=>{const key=sourceHref(source);if(!key||seen.has(key))return false;seen.add(key);return true;});}
 
+export function hasReadableText(value){return Boolean(String(value??'').replace(/[\s\p{P}\u200b\ufeff]/gu,''));}
 export function hasBlockContent(block){
  if(!block)return false;
- if(String(block.text??'').replace(/[\s\u200b\ufeff]/g,'')||String(block.why??'').trim())return true;
+ if(hasReadableText(block.text)||hasReadableText(block.why))return true;
  if(block.type==='media'&&block.mediaId||block.type==='missing-media')return true;
+ if(['video','video-link'].includes(block.type)&&safeHref(block.url))return true;
+ if(block.type==='table'&&(block.rows||[]).some(row=>(row.cells||[]).some(cell=>String(cell.text||'').trim()||(cell.blocks||[]).some(item=>String(item.text||'').trim()||hasBlockContent(item)))))return true;
  return (block.children||[]).some(hasBlockContent)||(block.textBlocks||[]).some(hasBlockContent)||(block.items||[]).some(hasBlockContent)||(block.blocks||[]).some(hasBlockContent)||(block.rows||[]).some(row=>(row.cells||[]).some(hasBlockContent));
 }
 // The exporter emits a numbered marker and its drawing as adjacent blocks.
 // Keep their original order and IDs, but present the drawing inside that step.
-export function normalizeReadingBlocks(blocks=[]){
+export function normalizeReadingBlocks(blocks=[],insideAction=false){
  const result=[];
  for(let index=0;index<blocks.length;index++){
   const block=blocks[index],next={...block};
-  if(block.children)next.children=normalizeReadingBlocks(block.children);
-  if(block.textBlocks)next.textBlocks=normalizeReadingBlocks(block.textBlocks);
-  if(block.items)next.items=block.items.map((item,n)=>({...item,number:block.ordered?(item.number??((Number(block.start)||1)+n)):item.number,children:normalizeReadingBlocks(item.children||[])})).filter(hasBlockContent);
+  if(block.children)next.children=normalizeReadingBlocks(block.children,insideAction||['step','list-item'].includes(block.type));
+  if(block.textBlocks)next.textBlocks=normalizeReadingBlocks(block.textBlocks,insideAction||['step','list-item'].includes(block.type));
+  if(block.items)next.items=block.items.map((item,n)=>({...item,number:block.ordered?(item.number??((Number(block.start)||1)+n)):item.number,children:normalizeReadingBlocks(item.children||[],true)})).filter(hasBlockContent);
   if(block.rows)next.rows=block.rows.map(row=>({...row,cells:row.cells.map(cell=>({...cell,blocks:normalizeReadingBlocks(cell.blocks||[])}))}));
   if(block.type==='step'){
    const figures=[];
-   while(['media','missing-media'].includes(blocks[index+1]?.type))figures.push({...blocks[++index]});
+   while(['media','missing-media','video','video-link'].includes(blocks[index+1]?.type))figures.push({...blocks[++index]});
    if(figures.length)next.children=[...(next.children||[]),...figures];
    if(!hasBlockContent(next))continue;
   }
   if(block.type==='list'&&!hasBlockContent(next))continue;
+  if(block.type==='paragraph'&&insideAction&&!hasBlockContent(next))continue;
   result.push(next);
  }
  let currentType='';
@@ -206,10 +211,11 @@ export function annotateSourceTerms(blocks,matcher){
  function field(item){
   if(item.textBlocks)return {...item,textBlocks:visit(item.textBlocks)};
   if(item.text==null)return {...item};
-  const text=item.type==='safety'?(callout(item.text)?.body||item.text):item.text,segments=materialSegments(text);
-  if(segments.some(segment=>segment.material)){
+  const text=item.type==='safety'?(callout(item.text)?.body||item.text):item.text;
+  const segments=torqueSegments(text).flatMap(segment=>segment.torque?[segment]:materialSegments(segment.text));
+  if(segments.some(segment=>segment.material||segment.torque)){
    const highlighted=segments.map(segment=>({...segment,termParts:parts(segment.text)}));
-   return {...item,materialSegments:highlighted,termParts:highlighted.flatMap(segment=>segment.termParts)};
+   return {...item,readingSegments:highlighted,...(segments.some(segment=>segment.material)?{materialSegments:highlighted}:{}),termParts:highlighted.flatMap(segment=>segment.termParts)};
   }
   return {...item,termParts:parts(text)};
  }
@@ -218,17 +224,18 @@ export function annotateSourceTerms(blocks,matcher){
   const next=field(block);
   if(block.children)next.children=visit(block.children);
   if(block.items)next.items=block.items.map(item=>({...field(item),children:visit(item.children)}));
-  if(block.rows)next.rows=block.rows.map(row=>({...row,cells:row.cells.map(cell=>({...field(cell),blocks:visit(cell.blocks)}))}));
+  if(block.rows){next.torqueTable=torqueTable(block.rows);next.rows=block.rows.map(row=>({...row,cells:row.cells.map(cell=>({...field(cell),blocks:visit(cell.blocks)}))}));}
   return next;
  });}
  return visit(blocks);
 }
 export function annotateMarkdownTerms(tokens,matcher,lexer){
  let seen=new Set();
- const hasContent=token=>Boolean(String(token.text||'').replace(/[\s\u200b\ufeff]/g,'')||token.type==='image'&&token.href||(token.tokens||[]).some(hasContent)||(token.items||[]).some(hasContent)||(token.header||[]).some(hasContent)||(token.rows||[]).some(row=>row.some(hasContent)));
+ const hasContent=token=>Boolean(hasReadableText(token.text)||token.type==='image'&&token.href||(token.tokens||[]).some(hasContent)||(token.items||[]).some(hasContent)||(token.header||[]).some(hasContent)||(token.rows||[]).some(row=>row.some(hasContent)));
  function visit(items,linked=false){return (items||[]).map(token=>{
   const next={...token};
   if(['paragraph','text'].includes(token.type)&&/\bMotorcraft(?:®)?/i.test(token.text||''))next.atlasMaterial=true;
+  if(['paragraph','text'].includes(token.type)&&torqueSegments(token.text).some(segment=>segment.torque))next.atlasTorque=true;
   if(token.type==='heading')seen=new Set();
   if(token.type==='code'||token.type==='codespan'||token.type==='image')return next;
   if(token.type==='blockquote'){
@@ -240,7 +247,7 @@ export function annotateMarkdownTerms(tokens,matcher,lexer){
   else if(token.type==='text'&&!withinLink)next.termParts=matcher?matcher(String(token.text||''),seen):[{text:token.text||''}];
   if(token.items)next.items=token.items.map((item,index)=>({...item,atlasNumber:token.ordered?Number(item.raw?.match(/^\s*(\d+)[.)]/)?.[1]??(Number(token.start)||1)+index):undefined,tokens:visit(item.tokens,withinLink)})).filter(hasContent);
   if(token.header)next.header=token.header.map(cell=>({...cell,tokens:visit(cell.tokens,withinLink)}));
-  if(token.rows)next.rows=token.rows.map(row=>row.map(cell=>({...cell,tokens:visit(cell.tokens,withinLink)})));
+  if(token.rows){next.atlasTorqueTable=torqueTable([token.header||[],...token.rows]);next.rows=token.rows.map(row=>row.map(cell=>({...cell,tokens:visit(cell.tokens,withinLink)})));}
   return next;
  });}
  return visit(tokens);

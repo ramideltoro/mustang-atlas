@@ -3,7 +3,7 @@ import {ArrowUpRight,Box,CheckCircle2} from 'lucide-react';
 import {Figure} from './ui.jsx';
 import {safeHref} from './content-model.mjs';
 import {hasPartsContent} from './parts-model.mjs';
-const diagramNames={'exploded-view':'Exploded assembly','component-view':'Component layout','procedure-illustration':'Assembly detail','connector-view':'Connector view','wiring-diagram':'Circuit diagram'};
+const diagramNames={'exploded-view':'Exploded assembly','component-view':'Component layout','connector-view':'Connector view','wiring-diagram':'Circuit diagram'};
 const identifierNames={base:'Ford base number','engineering-or-service-unverified':'Component identifier',material:'Material specification','special-tool':'Tool identifier'};
 export default function PartsPanel({data,onZoom}){
  if(!hasPartsContent(data))return null;
@@ -17,6 +17,6 @@ export default function PartsPanel({data,onZoom}){
    {safeHref(part.officialUrl)&&<a href={part.officialUrl} target="_blank" rel="noreferrer" className="text-link">Check Ford application <ArrowUpRight size={14}/></a>}
   </section>)}</div>}
   {data.identifiers?.length>0&&<details className="part-identifiers"><summary>Component and tool identifiers <span>{data.identifiers.length}</span></summary><p>These help identify a component, material, or tool. They are not confirmed replacement ordering numbers.</p><div className="table-scroll" tabIndex={0} role="region" aria-label="Component identifiers"><table><thead><tr><th>Identifier</th><th>Type</th><th>Component / use</th></tr></thead><tbody>{data.identifiers.map((item,index)=><tr key={item.number+'-'+index}><td className="part-number-cell">{item.number}</td><td>{identifierNames[item.kind]||'Identifier'}</td><td>{item.label}</td></tr>)}</tbody></table></div></details>}
-  {data.diagrams?.length>0&&<div className="parts-diagrams">{data.diagrams.map(figure=><div key={figure.id}><div className="parts-diagram-heading"><span>{diagramNames[figure.kind]||'Component detail'}</span>{figure.documentId!==data.documentId&&<a href={'#/document/'+encodeURIComponent(figure.documentId)}>View related assembly <ArrowUpRight size={13}/></a>}</div><Figure figure={{...figure,caption:figure.title||'Component detail'}} onZoom={onZoom}/></div>)}</div>}
+  {data.diagrams?.length>0&&<div className="parts-diagrams">{data.diagrams.map(figure=><div key={figure.id}>{(diagramNames[figure.kind]||figure.documentId!==data.documentId)&&<div className="parts-diagram-heading">{diagramNames[figure.kind]&&<span>{diagramNames[figure.kind]}</span>}{figure.documentId!==data.documentId&&<a href={'#/document/'+encodeURIComponent(figure.documentId)}>View related assembly <ArrowUpRight size={13}/></a>}</div>}<Figure figure={{...figure,caption:figure.title||'Component detail'}} onZoom={onZoom}/></div>)}</div>}
  </section>;
 }

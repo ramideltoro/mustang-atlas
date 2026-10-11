@@ -184,3 +184,27 @@ test('Markdown empty list items disappear without renumbering later actions or d
  const [result]=annotateMarkdownTerms([list],createTermMatcher([]),body=>marked.lexer(body));
  assert.deepEqual(result.items.map(item=>item.atlasNumber),[3,5]);assert.equal(result.items[1].tokens[0].items.length,1);assert.equal(result.items[1].tokens[0].items[0].text,'Keep the seal clean.');assert.equal(list.items.length,3);
 });
+test('torque highlighting preserves materials, technical prose and table values without source mutations',async()=>{
+ const {readerBlocks,annotateSourceTerms,annotateMarkdownTerms}=await import('./content-model.mjs');const {marked}=await import('marked');
+ const text='Install the bolt.\nMaterial: Motorcraft® Thread Sealant\n/ TA-24-B\nTorque: 20 lb.ft (27.5 Nm)\nInspect the joint.';
+ const blocks=[{id:'a',type:'step',number:1,text,children:[]},{id:'table',type:'table',rows:[{cells:[{text:'Item',header:true},{text:'Nm',header:true},{text:'lb-ft',header:true}]},{cells:[{text:'Bolt'},{text:'35'},{text:'26'}]},{cells:[{text:'Nut'},{text:'—'},{text:'—'}]}]}],snapshot=structuredClone(blocks);
+ const prepared=annotateSourceTerms(readerBlocks(blocks,{teachingStatus:'source'}));
+ assert.equal(prepared[0].readingSegments.map(segment=>segment.text).join(''),text);
+ assert(prepared[0].readingSegments.some(segment=>segment.material));assert(prepared[0].readingSegments.some(segment=>segment.torque));
+ assert(prepared[1].torqueTable.active);assert.equal(prepared[1].rows[2].cells[1].text,'—');assert.deepEqual(blocks,snapshot);
+ const markdown=annotateMarkdownTerms(marked.lexer('Tighten to **20 lb.ft (27.5 Nm)**.\n\n| Stage | Action |\n| --- | --- |\n| 1 | Tighten to 20 lb.ft (27.5 Nm) |\n| 2 | Loosen 90° |'),null,body=>marked.lexer(body));
+ assert(markdown[0].atlasTorque);assert(markdown.find(token=>token.type==='table').atlasTorqueTable.active);
+});
+test('punctuation-only actions disappear but symbol cells, drawings, video and nested actions survive',async()=>{
+ const {readerBlocks,hasReadableText}=await import('./content-model.mjs');
+ const blocks=[{id:'dot',type:'step',number:1,text:'.',children:[]},{id:'image-step',type:'step',number:2,text:'…',children:[]},{id:'image',type:'media',mediaId:'m1'},{id:'nested',type:'step',number:3,text:'.',children:[{id:'instruction',type:'paragraph',text:'Install the pin.'}]},{id:'video-step',type:'step',number:4,text:'.',children:[]},{id:'video',type:'video',url:'/media/verified.mp4',title:'Installation demonstration'},{id:'list',type:'list',ordered:true,start:5,items:[{id:'empty',text:'.'},{id:'action',text:'Connect the cable.'}]},{id:'table',type:'table',rows:[{cells:[{text:'—'},{text:'+'},{text:'Ω'},{text:'',blocks:[{type:'paragraph',text:'—'}]}]}]}];
+ const snapshot=structuredClone(blocks),result=readerBlocks(blocks,{teachingStatus:'source'});
+ assert.deepEqual(result.map(block=>block.id),['image-step','nested','video-step','list','table']);
+ assert.equal(result[0].children[0].mediaId,'m1');assert.equal(result[1].children[0].text,'Install the pin.');assert.equal(result[2].children[0].type,'video');assert.equal(result[3].items[0].number,6);
+ assert.deepEqual(result[4].rows[0].cells.map(cell=>cell.text),['—','+','Ω','']);assert.equal(result[4].rows[0].cells[3].blocks[0].text,'—');assert.equal(hasReadableText(' . … '),false);assert.equal(hasReadableText('90°'),true);assert.equal(hasReadableText('0'),true);assert.deepEqual(blocks,snapshot);
+});
+test('Markdown punctuation-only list items keep following action numbers intact',async()=>{
+ const {marked}=await import('marked');const {annotateMarkdownTerms}=await import('./content-model.mjs');
+ const result=annotateMarkdownTerms(marked.lexer('3. .\n4. Install the pin.\n5. —'),null,body=>marked.lexer(body));
+ assert.deepEqual(result[0].items.map(item=>item.atlasNumber),[4]);assert.equal(result[0].items[0].text,'Install the pin.');
+});

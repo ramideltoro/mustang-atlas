@@ -1,0 +1,1150 @@
+{
+  "version": 1,
+  "evidence": {
+    "normal": {
+      "title": "Ford — 2015 Mustang normal maintenance schedule",
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649139&Uid=G1634876&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259"
+    },
+    "special": {
+      "title": "Ford — 2015 Mustang special operating conditions",
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649140&Uid=G1634877&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259"
+    },
+    "checks": {
+      "title": "Ford — 2015 Mustang owner checks",
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259"
+    },
+    "epas": {
+      "title": "Ford — electric power steering care",
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1448667&Uid=G1642990&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259"
+    }
+  },
+  "rules": [
+    {
+      "id": "front-stabilizer-bushing-care",
+      "title": "Front stabilizer bushing care",
+      "kind": "condition-based",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "documentIds": [
+          "G1692534"
+        ]
+      },
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L",
+          "5.2L"
+        ],
+        "equipment": "Original front stabilizer-bar design; confirm whether the car has the performance package."
+      },
+      "what": "Check the bushing and its mounting when suspension wear or a knock is investigated. Replace a worn or damaged part after the cause is confirmed.",
+      "when": "Inspect when a new clunk, loose handling or visible bushing damage appears; replace only when inspection confirms wear or damage.",
+      "why": "The bushing supports the stabilizer bar while allowing its movement. A knock can also come from links, fasteners or other suspension joints, so the sound alone does not identify this bushing.",
+      "steps": [],
+      "notes": [
+        "Do not apply lubricant to the stabilizer bar or its bushings: it can damage these bushings.",
+        "On performance-package vehicles, the front bushings are not replaced separately; the front stabilizer bar is replaced as an assembly.",
+        "When separate bushings are fitted, follow the installation orientation and use new bracket bolts. This is repair work, not a periodic greasing task."
+      ],
+      "evidence": [
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1692534",
+          "sourceHash": "5bd7566fb30dfe4763c86d41121201610ff60e60a5947293a3f56f27773d5c96"
+        },
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        }
+      ]
+    },
+    {
+      "id": "rear-stabilizer-bushing-care",
+      "title": "Rear stabilizer bushing care",
+      "kind": "condition-based",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "documentIds": [
+          "G1686652"
+        ]
+      },
+      "applicability": {
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L",
+          "5.2L"
+        ]
+      },
+      "what": "Inspect the bushing and bracket when rear suspension wear or noise is being investigated. Replace only after the inspection identifies a defect.",
+      "when": "Inspect when a new rear suspension knock or visible bushing damage appears; replace only when inspection confirms a defect.",
+      "why": "The bushings locate the bar and isolate its contact with the mounting brackets. Lubrication is not routine care for this design.",
+      "steps": [],
+      "notes": [
+        "Do not lubricate the bar or bushings. Water is permitted on the bracket to help installation; that is not permission to grease the bushing.",
+        "Replacement uses new bracket bolts. Rear bushing slits face forward; the front bushing orientation is different."
+      ],
+      "evidence": [
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1686652",
+          "sourceHash": "4f232fdd7ff25849303c990b1eef903e7b64e5a7c7d9cff35e2e8b5148d55f5a"
+        },
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        }
+      ]
+    },
+    {
+      "id": "suspension-inspection",
+      "title": "Inspect the suspension rather than replacing it on a timer",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "204-00",
+          "204-01",
+          "204-02"
+        ],
+        "titlePattern": "^(?:Suspension System|Front Suspension|Rear Suspension|(?:Front |Rear )?(?:Stabilizer Bar(?: Bushing| Link)?|Lower Arm|Upper Arm|Toe Link|Lower Arm Vertical Link|Shock Absorber|Strut and Spring Assembly|Spring))(?: - .*|)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect suspension parts and fasteners for wear, damage or looseness; investigate a new knock, pull or ride-height change rather than assuming one part is responsible.",
+      "when": "At each oil-change service; investigate a new symptom sooner.",
+      "why": "Suspension parts hold the wheel in position as loads change. Wear can affect tire contact and alignment before a part completely fails.",
+      "steps": [],
+      "notes": [
+        "This inspection interval does not create a scheduled replacement age for bushings, arms, springs or dampers.",
+        "Lubricate only actual grease fittings where fitted; do not apply that instruction to rubber bushings."
+      ],
+      "evidence": [
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        }
+      ]
+    },
+    {
+      "id": "wheel-bearing-inspection",
+      "title": "Wheel and hub condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "204-01",
+          "204-02",
+          "204-04A"
+        ],
+        "titlePattern": "^(?:(?:Front )?Wheel Bearing and Wheel Hub|Wheel and Tire|Wheels and Tires)(?: - .*|)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check for wheel-related noise, wear, looseness or drag. A confirmed fault needs diagnosis of the bearing, tire, brake and mounting as appropriate.",
+      "when": "At each oil-change service; check an unusual noise or looseness sooner.",
+      "why": "A sound that follows road speed is a clue, not proof that the wheel bearing needs replacement.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        }
+      ]
+    },
+    {
+      "id": "tire-check",
+      "title": "Tire pressure and tread",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "204-04A",
+          "204-04B"
+        ],
+        "titlePattern": "^(?:Wheel and Tire|Wheels and Tires|Tire Pressure Monitoring System \\(TPMS\\)(?: - Overview| - System Operation and Component Description)?|Tire Pressure Monitoring System \\(TPMS\\) Sensor)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check tire pressure and inspect wear, including the spare if fitted. Use the vehicle label for the correct cold pressure.",
+      "when": "Monthly; also inspect tread at each oil-change service.",
+      "why": "Pressure supports the load and affects the tire’s contact with the road. A pressure-monitoring system does not replace a physical tire inspection.",
+      "steps": [],
+      "notes": [
+        "Follow the rotation pattern for the actual tire sizes and directional markings; do not assume front and rear wheels are interchangeable."
+      ],
+      "evidence": [
+        "checks",
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        }
+      ]
+    },
+    {
+      "id": "brake-friction-inspection",
+      "title": "Brake wear and hose condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "206-00",
+          "206-03",
+          "206-04"
+        ],
+        "titlePattern": "^(?:Brake System|Front Disc Brake|Rear Disc Brake|Brake Pads|Brake Disc|Brake Caliper|(?:Front|Rear) Brake Flexible Hose)(?: - .*|)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect pads, discs and brake hoses. Replacement depends on measured wear or a diagnosed defect, not a universal mileage.",
+      "when": "At every oil-change service. A change in braking performance needs attention before the next service.",
+      "why": "Pads wear as they turn motion into heat. Hose damage, uneven wear and disc condition need separate checks; new pads alone do not address every braking concern.",
+      "steps": [],
+      "notes": [
+        "Use the limits and procedure for the fitted brake package; 2-, 4- and 6-piston front systems are not interchangeable specifications."
+      ],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "parking-brake-check",
+      "title": "Parking-brake operation",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "206-05"
+        ],
+        "titlePattern": "^(?:Parking Brake|Parking Brake Cable Adjustment|Parking Brake Cable (?:LH|RH)|Parking Brake Control)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check that the parking brake applies and releases correctly. Adjustment or replacement follows an identified problem.",
+      "when": "Every six months, and during oil-change brake inspections.",
+      "why": "The parking brake must both hold when applied and release so the rear brakes do not drag.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "checks",
+        "normal"
+      ]
+    },
+    {
+      "id": "steering-linkage-check",
+      "title": "Steering linkage and joint condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "211-02"
+        ],
+        "titlePattern": "^(?:Tie Rod|Tie Rod End|Steering Gear|Power Steering(?: - Overview| - System Operation and Component Description)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect steering linkage and joints for wear, damage or looseness.",
+      "when": "At each oil-change service; investigate a change in steering feel or noise sooner.",
+      "why": "The tie rods carry steering movement from the rack to the wheels. Joint wear can let wheel direction change without the intended steering input.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "electric-steering-fluid",
+      "title": "Electric steering needs no fluid top-up",
+      "kind": "condition-based",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "211-02"
+        ],
+        "titlePattern": "^(?:Steering Gear|Power Steering(?: - Overview| - System Operation and Component Description)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "There is no hydraulic power-steering reservoir to top up or power-steering fluid to flush.",
+      "when": "No power-steering fluid service interval.",
+      "why": "Electric assistance comes from a motor, so a hydraulic-fluid maintenance routine does not apply.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "epas"
+      ]
+    },
+    {
+      "id": "engine-oil-service",
+      "title": "Engine oil and filter",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-(?:00|01[ABC])$",
+        "titlePattern": "^(?:Engine(?: - Overview| Component View)?|Oil Pan|Oil Pump|Oil Filter Inspection|Engine Oil Draining and Filling)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Change the engine oil and filter, then reset the oil-life monitor. Check the oil level between services.",
+      "when": "Follow the oil-life message; never exceed 1 year or 10,000 mi (16,000 km). Check the level monthly.",
+      "why": "Oil lubricates moving parts and carries contaminants to the filter. Oil life and oil quantity are different checks: the monitor does not replace checking the level.",
+      "steps": [],
+      "notes": [
+        "Complete a requested oil change within 2 weeks or 500 mi (800 km). If the monitor is inoperative or reset too soon, use 6 months or 5,000 mi (8,000 km) from the last change.",
+        "For predominantly dusty or sandy driving, use 5,000 mi (8,000 km) or 6 months. Other severe-use and hot-climate rules can differ; use the linked operating-conditions schedule.",
+        "Use the oil grade and specification for the selected engine. Track-use and 5.2L schedules are not supplied by this item."
+      ],
+      "evidence": [
+        "normal",
+        "checks",
+        "special"
+      ]
+    },
+    {
+      "id": "engine-air-filter",
+      "title": "Engine air-filter element",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-12[ABC]$",
+        "titlePattern": "^(?:Air Cleaner|Intake Air Distribution and Filtering)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Replace the engine air-filter element. Keep the element seated correctly in its housing.",
+      "when": "Every 30,000 mi (48,000 km) in normal use.",
+      "why": "The element traps airborne dirt before it reaches the engine. Replacing the filter element does not mean replacing the entire air-cleaner housing.",
+      "steps": [],
+      "notes": [
+        "Predominantly dusty or sandy use calls for inspection at 15,000 mi (24,000 km) and replacement as needed. Dirty conditions can shorten filter life."
+      ],
+      "evidence": [
+        "normal",
+        "special"
+      ]
+    },
+    {
+      "id": "cabin-filter",
+      "title": "Cabin air filter",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "documentIds": [
+          "G1676759"
+        ]
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Replace the cabin filter; it cleans air entering the heating and air-conditioning system.",
+      "when": "Every 20,000 mi (32,000 km) in normal use.",
+      "why": "A loaded filter restricts cabin airflow. It is a different service item from the engine air filter.",
+      "steps": [],
+      "notes": [
+        "Inspect more often and replace as needed with sustained dusty conditions or extensive low-speed commercial use."
+      ],
+      "evidence": [
+        "normal",
+        "special"
+      ]
+    },
+    {
+      "id": "spark-plug-service",
+      "title": "Spark plugs",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-07[ABC]$",
+        "titlePattern": "^Spark Plugs$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Replace the spark plugs with the specified type for this engine.",
+      "when": "Every 100,000 mi (160,000 km) in normal use.",
+      "why": "The electrodes wear as sparks repeatedly jump the gap. A scheduled plug change is distinct from diagnosing a misfire.",
+      "steps": [],
+      "notes": [
+        "Ford specifies 60,000 mi (96,000 km) for predominantly towing/car-top-carrier use or extensive idling/low-speed commercial use.",
+        "A misfire can have ignition, fuel or mechanical causes; it does not automatically mean the plug or coil has failed."
+      ],
+      "evidence": [
+        "normal",
+        "special"
+      ]
+    },
+    {
+      "id": "coolant-replacement",
+      "title": "Engine coolant service",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-03[ABC]$",
+        "titlePattern": "^Engine Cooling(?: - Component Location| - System Operation and Component Description| System Draining, Vacuum Filling and Bleeding| System Flushing)?$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Replace the coolant using the specified fluid and the correct filling and bleeding procedure.",
+      "when": "First at 6 years or 100,000 mi (160,000 km); then every 3 years or 50,000 mi (80,000 km), whichever comes first.",
+      "why": "Coolant carries heat and protects internal surfaces. Correct concentration and removal of trapped air matter as well as the amount added.",
+      "steps": [],
+      "notes": [
+        "This is a coolant interval, not a scheduled replacement interval for the radiator, thermostat or coolant pump."
+      ],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "cooling-condition",
+      "title": "Cooling-system condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-03[ABC]$",
+        "titlePattern": "^(?:Engine Cooling(?: - Component Location| - System Operation and Component Description)?|Coolant Pump|Radiator|Degas Bottle|Thermostat(?: Housing)?|Cooling Fan Motor and Shroud)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect coolant strength and hoses during service; check coolant level and strength between services. Investigate leakage or overheating rather than repeatedly topping up.",
+      "when": "At oil-change service; check level and strength every six months.",
+      "why": "A leak or deteriorated hose can reduce cooling even when the pump and radiator still work. The check is for the system’s condition, not an automatic shopping list.",
+      "steps": [],
+      "notes": [
+        "Let the cooling system cool before opening its pressure cap. Use the engine-specific procedure for filling or repairs."
+      ],
+      "evidence": [
+        "normal",
+        "checks"
+      ]
+    },
+    {
+      "id": "belt-schedule",
+      "title": "Accessory belts",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^303-05[ABC]$",
+        "titlePattern": "^(?:Accessory Drive(?: - Component Location)?|Accessory Drive Belt|Air Conditioning \\(A/C\\) Compressor Belt)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect the accessory belts and replace them at the scheduled interval or earlier if their condition requires it.",
+      "when": "Inspect at 100,000 mi (160,000 km), then every other oil change until replacement. Replace at 150,000 mi (240,000 km).",
+      "why": "The belt carries mechanical power to its driven accessories. Age and wear affect the belt even when its pulleys are still serviceable.",
+      "steps": [],
+      "notes": [
+        "The replacement interval belongs to the belts; it does not automatically require new tensioners or pulleys."
+      ],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "belt-condition",
+      "title": "Belt and pulley condition",
+      "kind": "condition-based",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "documentIds": [
+          "G1673162",
+          "G1688219",
+          "G2086104",
+          "G1688220",
+          "G1687301"
+        ]
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L"
+        ]
+      },
+      "what": "Check for belt contamination, missing rib material, misalignment and pulley damage when noise or visible deterioration appears.",
+      "when": "When a concern appears, and during belt service; no separate timed tensioner or pulley replacement is assigned.",
+      "why": "A noise may come from incorrect belt seating, a contaminated belt, a pulley or an accessory. Identifying the cause prevents replacing a good tensioner while the real problem remains.",
+      "steps": [],
+      "notes": [
+        "Do not lubricate the belt. Small cracks alone are not a failure: exposed cord or missing chunks are unacceptable conditions."
+      ],
+      "evidence": [
+        "normal"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1673162",
+          "sourceHash": "1db5ffa270407479b94aa4b70a9bc448799b6167b95c9a896505d11471f9f7a2"
+        }
+      ]
+    },
+    {
+      "id": "automatic-fluid",
+      "title": "6R80 automatic transmission fluid and filter",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "307-01"
+        ],
+        "titlePattern": "^(?:Transmission(?: - .*| Description(?: - Overview| - System Operation and Component Description)?)?|Transmission Fluid (?:Drain and Refill|Exchange|Level Check|Pan, Gasket and Filter))$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Change the automatic-transmission fluid and filter using the 6R80 procedure and specified fluid.",
+      "when": "Every 150,000 mi (240,000 km) in normal use.",
+      "why": "The fluid is both a lubricant and a hydraulic working fluid. Correct level and temperature-controlled checking matter; the amount drained is not a universal refill capacity.",
+      "steps": [],
+      "notes": [
+        "Do not apply this automatic-transmission interval or fluid specification to an MT82 or 3160 manual gearbox."
+      ],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "manual-fluid",
+      "title": "MT82 manual transmission fluid",
+      "kind": "scheduled",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "308-03A"
+        ],
+        "titlePattern": "^(?:Manual Transmission(?: - Component Location| - Overview| - System Operation and Component Description)?|Transmission(?: - .*| Draining and Filling| Fluid Level Check)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Change the manual-transmission fluid using the MT82 procedure and its specified lubricant.",
+      "when": "Every 150,000 mi (240,000 km) in normal use.",
+      "why": "The lubricant protects gears and bearings and must suit the transmission’s synchronizers. Manual and automatic transmission fluids are not interchangeable choices.",
+      "steps": [],
+      "notes": [
+        "For predominantly towing/car-top-carrier use: 60,000 mi (96,000 km). For predominantly dusty or sandy driving: 50,000 mi (80,000 km).",
+        "This MT82 guidance does not establish a 5.2L/3160 service interval."
+      ],
+      "evidence": [
+        "normal",
+        "special"
+      ]
+    },
+    {
+      "id": "driveshaft-check",
+      "title": "Driveshaft and joint inspection",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "205-01"
+        ],
+        "titlePattern": "^Driveshaft(?: Universal Joint| Angle Measurement| Runout and Balancing)?$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect the driveshaft and joints. Investigate vibration, wear or looseness; lubricate only if the fitted joint has a grease fitting.",
+      "when": "At each oil-change service; inspect more frequently with predominantly towing/car-top-carrier use.",
+      "why": "The shaft carries torque while the joints accommodate movement. A vibration does not by itself identify which joint or shaft part is responsible.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "normal",
+        "special"
+      ]
+    },
+    {
+      "id": "halfshaft-boots",
+      "title": "Halfshaft dust boots",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "205-05"
+        ],
+        "titlePattern": "^Rear (?:Drive Halfshafts|Halfshaft)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect the halfshaft boots for damage and escaping grease. A split boot needs assessment before contamination harms the joint.",
+      "when": "At each oil-change service; check a visible grease leak sooner.",
+      "why": "The flexible boot keeps joint grease in and road contamination out. Boot damage and complete joint failure are different findings.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "rear-axle-condition",
+      "title": "Rear axle leakage or water exposure",
+      "kind": "condition-based",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "205-02"
+        ],
+        "titlePattern": "^(?:Rear Drive Axle and Differential(?: - Overview)?|Axle Assembly|Axle and Differential Draining and Filling|Differential Fluid Level Check|Differential Housing Cover|Drive Pinion Seal|Rear Halfshaft Seal)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Have a suspected axle leak or an axle that has been submerged in water checked promptly.",
+      "when": "As soon as leakage or submersion is suspected.",
+      "why": "A low level or water contamination can compromise lubrication. A wet seal, flood exposure and a routine time-based service are different reasons to inspect the axle.",
+      "steps": [],
+      "notes": [
+        "The linked Ford normal schedule lists a 150,000 mi axle-fluid change, while its axle exception says checks or changes are not required unless leakage or submersion is suspected. Confirm the applicable instruction for the vehicle before assigning a routine fluid-change date."
+      ],
+      "evidence": [
+        "special"
+      ]
+    },
+    {
+      "id": "battery-connections",
+      "title": "Battery terminal connections",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "414-01"
+        ],
+        "titlePattern": "^(?:Battery|Battery Cables(?: - .*)?|Battery and Cables - (?:Overview|System Operation and Component Description)|Battery Disconnect and Connect|Battery Charging)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check battery connections and clean them if needed. Use the battery disconnect/connect procedure when work requires disconnection.",
+      "when": "Every six months.",
+      "why": "A poor connection can interrupt the high current needed for starting even when the battery itself is serviceable.",
+      "steps": [],
+      "notes": [
+        "A weak-start concern needs a battery and connection assessment."
+      ],
+      "evidence": [
+        "checks"
+      ]
+    },
+    {
+      "id": "washer-fluid-check",
+      "title": "Washer fluid and spray",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "501-16"
+        ],
+        "titlePattern": "^(?:Windshield Washer (?:Pump|Reservoir)|Washer Hose (?:Repair|Coupling)|Wipers and Washers(?: - Overview| - System Operation and Component Description)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check washer-fluid level and confirm that the spray reaches the glass.",
+      "when": "Fluid level monthly; spray and wiper operation every six months.",
+      "why": "A working pump is useful only if fluid can reach the windshield. Low fluid and a spray problem are different checks.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "checks"
+      ]
+    },
+    {
+      "id": "wiper-condition",
+      "title": "Wiper operation and blade condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "501-16"
+        ],
+        "titlePattern": "^(?:Windshield Wiper (?:Motor|Pivot Arm)|Wiper Linkage Assembly|Wipers and Washers(?: - Overview| - System Operation and Component Description)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check wiping performance; clean or replace the blades as their condition requires.",
+      "when": "Every six months and when wiping becomes ineffective.",
+      "why": "Blades are wear items. Streaking can be a blade or glass-cleanliness issue; it does not automatically call for a new motor or linkage.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "checks"
+      ]
+    },
+    {
+      "id": "exhaust-inspection",
+      "title": "Exhaust and heat-shield condition",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionPattern": "^309-00[ABC]$",
+        "titlePattern": "^(?:Exhaust System|Catalytic Converter(?: - .*)?|Muffler and Tailpipe|Muffler|Exhaust Intermediate Pipe)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect the exhaust system and heat shields for condition and secure mounting.",
+      "when": "At each oil-change service.",
+      "why": "The exhaust carries hot gases away, while its shields protect nearby areas from heat. A loose shield and an exhaust leak need different repairs.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "normal"
+      ]
+    },
+    {
+      "id": "exterior-lights",
+      "title": "Exterior light operation",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "417-01"
+        ],
+        "titlePattern": "^(?:Exterior Lighting - (?:Overview|System Operation and Component Description)|Headlamp (?:Assembly|Bulb)|Headlamps|Rear Lamp Assembly|Fog Lamp(?: Bulb| Assembly)?|License Plate Lamp)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check that the exterior lamps operate correctly. Diagnose an inoperative lamp before assuming its bulb is the only cause.",
+      "when": "Monthly.",
+      "why": "The checks cover both seeing the road and being visible to other drivers; an electrical fault can affect a good lamp.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "checks"
+      ]
+    },
+    {
+      "id": "latch-operation",
+      "title": "Hinges, latches and external locks",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "501-14"
+        ],
+        "titlePattern": "^(?:Door Latch Lubrication|Front Door Latch|Hood Latch|Luggage Compartment Lid Latch - (?:Coupe|Convertible)|Handles, Locks, Latches and Entry Systems - (?:Overview|System Operation and Component Description)|Locks, Latches and Entry Systems)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Check operation and lubricate only where the relevant component procedure calls for it.",
+      "when": "Every six months; address sticking or failure to latch sooner.",
+      "why": "A latch must engage and release reliably. The correct lubricant and application point depend on the mechanism.",
+      "steps": [],
+      "notes": [],
+      "evidence": [
+        "checks"
+      ]
+    },
+    {
+      "id": "seatbelt-condition",
+      "title": "Seatbelt wear and function",
+      "kind": "inspection",
+      "matches": {
+        "kinds": [
+          "repair",
+          "overview",
+          "diagnosis"
+        ],
+        "excludeTitlePattern": "\\b(?:SVT|Shelby|GT350)\\b",
+        "sectionCodes": [
+          "501-20A"
+        ],
+        "titlePattern": "^(?:(?:Front|Rear) Seatbelt (?:Buckle|Retractor(?: and Pretensioner)?)(?: - Coupe| - Convertible)?|Seatbelt Maintenance|Seatbelt Cleaning|Seatbelt Systems(?: - System Operation and Component Description)?)$"
+      },
+      "applicability": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada"
+      },
+      "what": "Inspect the belt’s condition and check that its buckle and retractor work correctly.",
+      "when": "Every six months; collision-related inspection is a separate requirement.",
+      "why": "The webbing, latch and retractor must work together to restrain an occupant. A normal visual check does not establish that a collision-loaded assembly is reusable.",
+      "steps": [],
+      "notes": [
+        "Use the dedicated restraint procedure for any repair; this check is not an instruction to probe a pretensioner circuit."
+      ],
+      "evidence": [
+        "checks"
+      ]
+    }
+  ]
+}
