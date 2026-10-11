@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {topicContextForView,readerEditorialText,contextRelatedTerms,contextReadingLayout} from './topic-context-model.mjs';
+import {topicContextForView,readerEditorialText,contextRelatedTerms,contextReadingLayout,documentRowSummary,documentExplanationLabel} from './topic-context-model.mjs';
 
 test('complete topic context appears only in Atlas reader and leaves document content intact',()=>{
  const context={version:1,title:'A connection to understand',summary:'What this connector does.',sections:[{id:'how',title:'How it works',body:'Signal context.'}],status:'complete'};
@@ -26,4 +26,13 @@ test('substantial context and tables use the full reading width while concise se
  assert.equal(contextReadingLayout([{body:'| Cavity | Circuit | Role |\n| --- | --- | --- |\n| 1 | RRH02 | Horn-switch circuit |'}]),true);
  assert.equal(contextReadingLayout([{body:'Context '.repeat(101)}]),true);
  assert.equal(contextReadingLayout([{body:'A | B is ordinary inline notation.'}]),false);
+});
+test('explained topic search rows favor clear context and distinguish complete guide rewrites',()=>{
+ const document={learningStatus:'complete',teachingStatus:'source',summary:'A connector at the steering column.',snippet:'Box s1 Cols2 Title Mnemonic Connector:'};
+ assert.equal(documentRowSummary(document),document.summary);assert.equal(documentExplanationLabel(document),'Topic explained');
+ assert.equal(documentRowSummary({...document,learningContext:{summary:'Topic-specific context.'}}),'Topic-specific context.');
+ assert.equal(documentExplanationLabel({...document,teachingStatus:'complete'}),'Explained');
+ assert.equal(documentExplanationLabel({teachingStatus:'source',learningStatus:'pending'}),null);
+ assert.equal(documentRowSummary({...document,learningStatus:'pending'}),document.snippet);
+ assert.equal(documentRowSummary({...document,summary:null,section:{title:'Connector views'}}),'Connector views');
 });

@@ -26,3 +26,11 @@ export function contextReadingLayout(sections=[]){
   return body.trim().split(/\s+/).length>100||hasTable(marked.lexer(body));
  });
 }
+
+export function documentRowSummary(document={}){
+ const fallback=document.section?.title||'Open the complete manual reference.';
+ return document.learningStatus==='complete'?(document.learningContext?.summary||document.summary||fallback):(document.snippet||document.summary||fallback);
+}
+export function documentExplanationLabel(document={}){
+ return document.teachingStatus==='complete'?'Explained':document.learningStatus==='complete'?'Topic explained':null;
+}

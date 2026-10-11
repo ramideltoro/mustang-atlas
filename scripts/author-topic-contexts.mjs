@@ -4,6 +4,8 @@ import crypto from 'node:crypto';
 import {spawn} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
 import {selectContextOverviews,selectContextTerms} from './context-evidence.mjs';
+import {groupContextDocuments} from './context-planning.mjs';
+import {validateAuthoredContext as validate} from './context-validation.mjs';
 
 // Offline editorial workflow: the signed-in Codex CLI authors finite batches.
 // No model API, credentials, or generation service is included in the website.
@@ -16,19 +18,7 @@ process.on('exit',()=>{try{if(Number(fs.readFileSync(lock,'utf8'))===process.pid
 const db=new DatabaseSync(path.resolve(process.env.DATA_DIR||'data','atlas.sqlite'),{readOnly:true});
 const docs=db.prepare('SELECT * FROM documents ORDER BY id').all();
 const glossary=JSON.parse(fs.readFileSync('content/glossary.json','utf8')).terms;
-const norm=title=>title.replace(/^C[\dA-Z]+\s+—\s+/,'').replace(/\s+-\s+(Overview|Component Location|System Operation)$/i,'').toLowerCase().trim();
-const groups=new Map();
-for(const doc of docs){
- const name=norm(doc.title),subject=name.replace(/\s*-\s*system operation and component description$/,'');
- const broad=/^(?:engine|(?:manual )?transmission(?:\s*-.*)?|transmission fluid level check|external controls|electronic engine controls|parking aid|cruise control|specifications|safety precautions|general information)$/.test(subject);
- const distinctJob=/^(?:front strut and spring assembly|wheel and tire|cylinder head|gearshift lever|(?:front|rear) bumper cover(?: - vehicles with: svt performance package)?)$/.test(name);
- const phase=doc.source_path?.split('/').at(-2)||doc.kind;
- // Connector circuits and wiring sheets each need their own explanation.
- // Broad system titles also retain the exact variant and operation phase.
- const key=['wiring','connector'].includes(doc.kind)?doc.id:broad||distinctJob?`${doc.system_id}|${doc.section_code}|${phase}|${name}`:['overview','repair'].includes(doc.kind)?`${doc.system_id}|${name}`:`${doc.system_id}|${doc.section_title}|${name}`;
- if(!groups.has(key))groups.set(key,{id:'topic-'+crypto.createHash('sha256').update(key).digest('hex').slice(0,16),key,documents:[]});
- groups.get(key).documents.push(doc);
-}
+const groups=groupContextDocuments(docs);
 function excerpt(doc,max){
  const value=doc.text.replace(/\n{3,}/g,'\n\n');
  if(value.length<=max)return value;
@@ -64,7 +54,10 @@ Use only supplied evidence and your general mechanical knowledge. Do not call to
 const codex=option('--codex','/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex');
 const env=Object.fromEntries(Object.entries(process.env).filter(([key])=>!/^(?:OPENAI|AZURE_OPENAI|ANTHROPIC|GOOGLE|GEMINI|OPENROUTER|DEEPSEEK|XAI).*API_KEY$/.test(key)));
 const batchSize=Number(option('--batch-size','16')),concurrency=Number(option('--concurrency','3')),limit=Number(option('--limit','0'));
-const queue=plan.filter(g=>!accepted.has(g.id));if(limit)queue.splice(limit);
+const curated=JSON.parse(fs.readFileSync('content/context-overrides.json','utf8'));
+const curatedIds=new Set(curated.topics.map(t=>t.id));
+const curatedGroups=new Set(plan.filter(g=>g.documents.every(d=>curated.documents[d.id]?.sourceHash===d.source_hash&&curatedIds.has(curated.documents[d.id]?.topicId))).map(g=>g.id));
+const queue=plan.filter(g=>!accepted.has(g.id)&&!curatedGroups.has(g.id));if(limit)queue.splice(limit);
 let completed=0,active=0,stopped=false;
 const atomic=(file,value)=>{fs.writeFileSync(file+'.tmp',JSON.stringify(value,null,2));fs.renameSync(file+'.tmp',file);};
 function publish(){
@@ -79,25 +72,13 @@ function publish(){
  atomic(path.resolve('content/topic-contexts.json'),{version:1,topics,documents});
  atomic(path.join(root,'progress.json'),{updatedAt:new Date().toISOString(),state:stopped?'stopped':active?'running':'idle',totalTopics:plan.length,acceptedTopics:accepted.size,documents:docs.length,contextualizedDocuments:Object.keys(documents).length,active,remaining:queue.length,failures:[...failures.entries()].map(([id,error])=>({id,error})),method:'Offline Codex CLI; no model API; authored explanations are not human-reviewed.'});
 }
-function validate(topic,group){
- if(!topic||topic.id!==group.id)throw Error('Missing topic');
- const safeId=id=>typeof id==='string'&&/^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/.test(id);
- if(topic.title.length>240||topic.summary.length>2000||topic.sections.some(s=>!safeId(s.id)||s.title.length>240||s.body.length>24000))throw Error('Context exceeds API bounds');
- for(const value of [topic.title,topic.summary,...(topic.sections||[]).flatMap(s=>[s.title,s.body])])if(typeof value!=='string'||!value.trim()||/<\/?[a-z][^>]*>|(?:javascript|data|file):|https?:\/\//i.test(value))throw Error('Empty text or unsafe markup');
- if(topic.sections.length!==3||new Set(topic.sections.map(s=>s.id)).size!==3||topic.sections.some(s=>!/^[a-z][a-z0-9-]*$/.test(s.id)))throw Error('Expected three uniquely named teaching sections');
- const words=[topic.summary,...topic.sections.map(s=>s.body)].join(' ').split(/\s+/).length;
- if(words<110||words>450)throw Error('Expected substantial, concise topic explanation; got '+words+' words');
- if(!topic.sourceDocumentIds.length||topic.sourceDocumentIds.length>256||new Set(topic.sourceDocumentIds).size!==topic.sourceDocumentIds.length||topic.sourceDocumentIds.some(id=>!group.evidenceIds.has(id))||!group.documents.some(d=>topic.sourceDocumentIds.includes(d.id)))throw Error('Unsupported source reference');
- if(topic.relatedTermIds.length>64||new Set(topic.relatedTermIds).size!==topic.relatedTermIds.length||topic.relatedTermIds.some(id=>!group.termIds.has(id)))throw Error('Unsupported glossary reference');
- if(/\b(?:as an AI|lorem ipsum|placeholder|consult (?:a |your )?professional)\b/i.test(topic.summary))throw Error('Boilerplate summary');
- return topic;
-}
 async function run(batch){
  const jobDir=path.join(root,'batch-'+Date.now()+'-'+batch[0].id);fs.mkdirSync(jobDir,{recursive:true});
  fs.writeFileSync(path.join(jobDir,'AGENTS.md'),'This is a bounded writing job. Use only supplied evidence. Do not use tools, execute commands, browse, read files, or delegate. Return the requested structured prose.');
  const overviewEvidence=new Map();
  const input={topics:batch.map(g=>{for(const doc of g.input.relatedOverviews)overviewEvidence.set(doc.documentId,doc);return {...g.input,relatedOverviews:g.input.relatedOverviews.map(d=>d.documentId)};}),relatedOverviewEvidence:[...overviewEvidence.values()]};
  fs.writeFileSync(path.join(jobDir,'input.json'),JSON.stringify(input));
+ fs.writeFileSync(path.join(jobDir,'job-manifest.json'),JSON.stringify({version:1,createdAt:new Date().toISOString(),groups:batch.map(g=>({id:g.id,fingerprint:g.fingerprint,inputHash:crypto.createHash('sha256').update(JSON.stringify(g.input)).digest('hex'),sourceHashes:[...g.evidenceIds].map(id=>[id,docs.find(d=>d.id===id).source_hash])}))},null,2));
  const out=path.join(jobDir,'output.json'),log=fs.openSync(path.join(jobDir,'codex.log'),'a');
  active++;publish();
  const proc=spawn(codex,['exec','--skip-git-repo-check','--ephemeral','--sandbox','read-only','--color','never','--output-schema',schema,'--output-last-message',out,'-'],{cwd:jobDir,env,stdio:['pipe',log,log]});
