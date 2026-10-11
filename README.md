@@ -55,6 +55,8 @@ node scripts/audit-contexts.mjs
 
 Authoring uses the signed-in Codex CLI and supplied source excerpts. Accepted explanations are tracked in `content/topic-contexts.json`; reviewed corrections in `content/context-overrides.json` take precedence on every publication. Checkpoints under `work/topic-context-jobs/accepted/` are bound to the exact evidence and full source hashes. Progress, job evidence and logs stay under `work/` and are not deployed. The publisher validates a snapshot before atomically replacing the live content file.
 
+Check wiring applicability against the original diagram: flattened text loses the difference between a page heading and a label inside one branch. Connector circuit names can also be generic across Ford applications. Use the Mustang's matching component-operation and diagnostic references to explain the actual mechanism, while preserving the connector's literal labels in its technical table.
+
 Create `work/topic-context-jobs/stop-after-current` to drain active batches before restarting. Remove it to resume. If a controller exits after Codex writes its result but before checkpointing it, stop the worker and run `node scripts/recover-context-jobs.mjs` to preview recovery, then add `--apply` to restore eligible missing checkpoints. Run recovery before starting a new plan; changed evidence, source hashes, group IDs, or unsupported references are rejected. Structural acceptance is not a human technical review. The coverage audit must report every document before the introduction pass is considered complete.
 
 See [deployment and operations](docs/DEPLOYMENT.md).

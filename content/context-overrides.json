@@ -1032,6 +1032,1900 @@
         "connector-C3808",
         "G1695508"
       ]
+    },
+    {
+      "id": "topic-3fdeff6e14a626e5",
+      "title": "Body and Infotainment Network Connections",
+      "summary": "This sheet shows medium-speed Controller Area Network (CAN) connections for the convertible with memory equipment. The shared data network lets body and infotainment modules exchange commands and status without requiring a dedicated wire for every message.",
+      "sections": [
+        {
+          "id": "body-network-operation",
+          "title": "How a shared pair carries information",
+          "body": "CAN messages travel over a paired data circuit, with receiving modules interpreting the information relevant to their functions. The high and low sides work together as a communication pair. They provide a message path rather than the operating-power supply needed by a motor or electronic module."
+        },
+        {
+          "id": "body-network-purpose",
+          "title": "The equipment represented on this sheet",
+          "body": "The drawing names the radio transceiver, passenger-door, front-seat climate, SYNC, global-positioning and front-controls modules, along with a convertible-top motor. These devices perform different jobs but share communication infrastructure. The network reference explains how such modules participate in information exchange and how a gateway transfers selected messages between networks."
+        },
+        {
+          "id": "body-network-reference",
+          "title": "Following equipment-qualified branches",
+          "body": "CONVERTIBLE WITH MEMORY is the heading for the whole sheet. Inside that arrangement, the SYNC 2 outline qualifies the APIM branch, while the SYNC 1 / SYNC 2 outline qualifies the global-positioning module branch. These local outlines distinguish equipment within the stated vehicle configuration. Connector, splice and continuation identifiers guide electrical tracing through the drawn lines; the diagram does not depict physical cable routing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-012",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-392cfb569d9bbace",
+      "title": "Driver power-window control circuits",
+      "summary": "This power-window sheet shows the driver’s master switch, door-window regulator motor, and related supply and command circuits for vehicles without memory equipment. It explains how a request to move the glass reaches a motor with several control inputs.",
+      "sections": [
+        {
+          "id": "driver-window-operation",
+          "title": "Motor power and movement requests",
+          "body": "The motor drives the regulator mechanism that moves the glass. Its listed connections include battery supply, ground, upward and downward commands, door-ajar information, and a global command. These functions distinguish the energy needed to move the window from the information that determines when movement is requested."
+        },
+        {
+          "id": "driver-window-control-purpose",
+          "title": "Why accessory and body controls appear",
+          "body": "The body control module (BCM), battery junction box (BJB), and accessory-delay relay appear alongside the switch and motor. The sheet also labels Body Control Module B and a remote-entry continuation. These references place window operation within broader power-management and shared-command functions rather than an isolated switch-and-motor circuit."
+        },
+        {
+          "id": "driver-window-reference",
+          "title": "Interpreting equipment labels carefully",
+          "body": "WITHOUT MEMORY is the heading for the whole sheet. The smaller dashed convertible outline applies to the continuation through C312 toward the rear-window sheet, not to the complete driver-window circuit. The AUTO markings identify switch positions. The accessory-delay relay is specifically marked non-serviceable, and continuation references carry the relevant paths to other sheets."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-001"
+      ]
+    },
+    {
+      "id": "topic-36af0c9dd5ff0e38",
+      "title": "Driver-door lock and memory commands",
+      "summary": "This remote-entry and alarm sheet shows driver-door controls and their relationship to the driver door module (DDM) in the memory-equipped arrangement. It includes lock, unlock, memory-setting, illumination, power, ground, and communication circuits.",
+      "sections": [
+        {
+          "id": "door-control-operation",
+          "title": "Switches request actions",
+          "body": "A door switch provides an electrical input indicating the occupant’s chosen action. The DDM interprets the relevant inputs as part of coordinating door functions. The labeled memory-setting inputs are requests associated with stored settings; their presence does not mean the switch itself drives a seat or mirror motor."
+        },
+        {
+          "id": "door-control-paths",
+          "title": "Why the module has several circuit types",
+          "body": "The battery junction box (BJB) supplies a protected feed, while the ground supports the return path. Medium-speed controller area network (MS-CAN) connections allow message exchange with other electronics. Illumination and switch-return labels describe additional circuit roles that should be distinguished from motor power or network data."
+        },
+        {
+          "id": "door-control-reference",
+          "title": "Keeping equipment branches in context",
+          "body": "MEMORY is the heading for this sheet. The small dashed coupe outline marks the C535 connection on the return path to the master window control switch; it does not restrict the entire sheet to coupes. The illustrated lines and continuation markers connect the door controls to their supporting diagrams. Keep this connector qualification separate from the overall memory-equipment configuration."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-005"
+      ]
+    },
+    {
+      "id": "topic-3a02f242fc9657f0",
+      "title": "Finding front electrical components on the 3.7L Mustang",
+      "summary": "This 3.7L location view identifies electrical components and connection points around the front of the Mustang. It helps match a component named in a service procedure to the correct physical item in the illustrated engine and harness arrangement.",
+      "sections": [
+        {
+          "id": "front-locations-components",
+          "title": "Recognizing the main components",
+          "body": "The battery stores electrical energy, the starter turns the engine, and the generator replenishes the battery while the engine runs. Cooling-fan motors move air through the cooling package. The battery junction box distributes protected electrical power, while the named control modules manage engine, body, steering and braking functions."
+        },
+        {
+          "id": "front-locations-purpose",
+          "title": "Why accurate identification matters",
+          "body": "Several components have more than one connector, and nearby devices can serve very different purposes. The brake vacuum switch reports a condition related to brake assistance, whereas the low brake-fluid switch monitors fluid level. Finding the correct device prevents a circuit description from being applied to an unrelated component."
+        },
+        {
+          "id": "front-locations-reading",
+          "title": "Reading the location view",
+          "body": "Use the front-of-vehicle marker and grid to orient the illustration. The 3.7L label identifies the engine application of this location view, so its harness layout and connector positions should not be assumed to represent other engines. Connector, ground and splice identifiers connect this view to other references; proximity on the page does not establish an electrical connection."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-151-003"
+      ]
+    },
+    {
+      "id": "topic-37476c2b635f8761",
+      "title": "Audio and display communication network",
+      "summary": "This sheet shows the high-speed controller area network three (HS3 CAN) paths associated with audio, SYNC, and the instrument display in the touchscreen arrangement. The network carries shared commands and status information between modules.",
+      "sections": [
+        {
+          "id": "audio-network-operation",
+          "title": "Sharing information over a wire pair",
+          "body": "Controller area network messages use a paired electrical path so multiple modules can exchange information without a separate wire for every command. The sheet names the accessory protocol interface module (APIM), audio control module (ACM), audio digital signal processing (DSP) module, and instrument panel cluster (IPC)."
+        },
+        {
+          "id": "audio-network-purpose",
+          "title": "Why shared communication matters",
+          "body": "A display or audio feature may need information originating in a different controller. An interruption in shared communication can therefore affect more than one function. The network reference also identifies termination within the system, which stabilizes signaling; that is a communication property rather than an audio-speaker connection."
+        },
+        {
+          "id": "audio-network-reference",
+          "title": "Reading branches and continuation markers",
+          "body": "TOUCHSCREEN is the heading for this sheet. The Not used label belongs to the specific C192 connection shown near the network continuation; it does not describe the active module connections below it. Continuation markers connect this view with the broader network. The related overview explains that diagnostic access to this network is mediated by the gateway module rather than occurring directly."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-008",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-937f744d0da473a9",
+      "title": "Coupe left side curtain airbag connection",
+      "summary": "The left-hand side air curtain is part of the coupe’s supplemental restraint system. It is a single-stage airbag designed to help protect occupants in certain side impacts. This connector carries the dedicated electrical deployment circuit for that curtain.",
+      "sections": [
+        {
+          "id": "body-style",
+          "title": "A curtain and a seat airbag do different jobs",
+          "body": "The manual identifies the side air curtains as coupe-only equipment. It separately identifies torso-protecting side airbags on the front seats and upper side airbags on convertible front seats. The convertible upper airbag provides head protection; it is a different component from the coupe’s curtain, even though both belong to the side-impact restraint system."
+        },
+        {
+          "id": "deployment",
+          "title": "How the curtain fits into the restraint system",
+          "body": "The restraints control module monitors crash-related inputs and decides which restraint devices to activate according to the impact and sensor information. Each restraint serves a particular purpose, so an impact does not necessarily activate every airbag. The curtain is one controlled device in that system, rather than a stand-alone impact sensor."
+        },
+        {
+          "id": "connector",
+          "title": "What this connector table tells you",
+          "body": "The table identifies cavity 1 as the driver-side curtain’s positive deployment path, circuit CR109, and cavity 2 as its negative path, circuit RR109. Both belong to harness 14A005. Read them as a dedicated pair: the negative label does not by itself designate a general body-ground terminal. The connector face and circuit labels identify the connection; restraint-system diagnosis and service still require the applicable SRS procedure."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C9031",
+        "G1696291",
+        "G1696288"
+      ]
+    },
+    {
+      "id": "topic-4404277a3fb0e36b",
+      "title": "Coupe right side curtain airbag connection",
+      "summary": "The right-hand side air curtain is part of the coupe’s supplemental restraint system. It is a single-stage airbag designed to help protect occupants in certain side impacts. This connector carries the dedicated electrical deployment circuit for that curtain.",
+      "sections": [
+        {
+          "id": "body-style",
+          "title": "A curtain and a seat airbag do different jobs",
+          "body": "The manual identifies the side air curtains as coupe-only equipment. It separately identifies torso-protecting side airbags on the front seats and upper side airbags on convertible front seats. The convertible upper airbag provides head protection; it is a different component from the coupe’s curtain, even though both belong to the side-impact restraint system."
+        },
+        {
+          "id": "deployment",
+          "title": "How the curtain fits into the restraint system",
+          "body": "The restraints control module monitors crash-related inputs and decides which restraint devices to activate according to the impact and sensor information. Each restraint serves a particular purpose, so an impact does not necessarily activate every airbag. The curtain is one controlled device in that system, rather than a stand-alone impact sensor."
+        },
+        {
+          "id": "connector",
+          "title": "What this connector table tells you",
+          "body": "The table identifies cavity 1 as the passenger-side curtain’s positive deployment path, circuit CR111, and cavity 2 as its negative path, circuit RR111. Both belong to harness 14A005. Read them as a dedicated pair: the negative label does not by itself designate a general body-ground terminal. The connector face and circuit labels identify the connection; restraint-system diagnosis and service still require the applicable SRS procedure."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C9032",
+        "G1696291",
+        "G1696288"
+      ]
+    },
+    {
+      "id": "topic-4d219ed771ab36f9",
+      "title": "The Reversing-Lamp Circuit Without Rear Fog Lamps",
+      "summary": "This sheet covers the reversing-lamp arrangement without rear fog lamps. It shows the controlled lamp circuit and a reverse input at the interior auto-dimming mirror, separating the lamp’s lighting role from the mirror’s use of reverse information.",
+      "sections": [
+        {
+          "id": "reverse-lamp-control",
+          "title": "The body controller switches lamp power",
+          "body": "The body control module (BCM) has a reversing-lamp output labeled with a field-effect transistor (FET), an electronic switching device. The lamp needs both an energized supply path and a return path to produce light. The diagram’s ground and splice references help describe those electrical relationships."
+        },
+        {
+          "id": "reverse-lamp-mirror",
+          "title": "Why the mirror appears on this sheet",
+          "body": "The interior mirror has a reverse-labeled connection, showing that reverse information is relevant beyond the lamp itself. An auto-dimming mirror changes reflectivity to reduce glare. The illustrated circuit establishes how its reverse input relates to the lamp wiring; text placement alone cannot establish the exact junction."
+        },
+        {
+          "id": "reverse-lamp-reference",
+          "title": "Following equipment labels and continuations",
+          "body": "“Without rear fog lamps” is the heading for the whole sheet, rather than a label for one local branch. Connector, splice and ground identifiers support tracing this arrangement. The hot-at-all-times label describes supply availability at the marked point, not continuous illumination of the reversing lamp."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-093-001"
+      ]
+    },
+    {
+      "id": "topic-53a1e832daed9a26",
+      "title": "Adaptive-cruise collision-warning display wiring",
+      "summary": "This sheet covers the head-up display (HUD) wiring under the Adaptive Cruise heading. In the associated collision-warning system, this module flashes red warning LEDs when commanded by the cruise control module (CCM). The drawing shows its power, ground and communication paths.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "A display needs energy and information",
+          "body": "The HUD module is shown with vehicle power (VPWR), ground (GND) and a high-speed controller area network (CAN) pair. Power runs its electronics, ground completes the electrical reference, and the network carries messages. The network’s positive and negative labels identify communication conductors rather than separate operating-power feeds."
+        },
+        {
+          "id": "purpose",
+          "title": "How this sheet fits the larger system",
+          "body": "“Adaptive Cruise” is the heading for this sheet, not an additional module drawn on it. The connected components shown here are the HUD and its battery junction box supply, with the network pair continuing to another sheet. The workshop system description explains that the CCM sends the HUD a flash command for a possible collision warning; that message relationship does not mean a separate direct wire is drawn here."
+        },
+        {
+          "id": "reading",
+          "title": "Follow the supply state and continuations",
+          "body": "“Hot in Start or Run” identifies when the illustrated supply is energized. Fuse, ground, splice and connector references help continue the trace through other sheets. This is an electrical relationship drawing, so component positions on the page should not be read as their physical locations or harness routing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-146-003",
+        "G1693169"
+      ]
+    },
+    {
+      "id": "topic-5e06489eae76fb84",
+      "title": "Coupe left B-pillar side-impact sensor",
+      "summary": "The left B-pillar side-impact sensor supplies crash information to the restraints control module (RCM). The wiring diagram places this sensor in the coupe-only branch. It is an electronic sensing device, separate from the airbags that the controller may deploy.",
+      "sections": [
+        {
+          "id": "sensing",
+          "title": "A sensor helps the controller understand the impact",
+          "body": "The pillar-mounted side-impact sensors measure vehicle acceleration, meaning how quickly its motion changes. The door-mounted side-impact sensors use a different input: pressure changes inside the door. The RCM evaluates crash inputs to decide which restraints to activate; a sensor is not a mechanical trigger for one nearby airbag."
+        },
+        {
+          "id": "applicability",
+          "title": "Keep the coupe and door-sensor branches separate",
+          "body": "The connector title identifies the left-hand B-pillar sensor, while its circuit descriptions use driver-side row-two wording. The matching wiring diagram shows both B-pillar sensors inside a coupe-only boundary. The door sensors sit outside that boundary, so the coupe label should not be extended to every sensor on the sheet. These names identify the component and circuit; they do not establish a rear-seat airbag."
+        },
+        {
+          "id": "circuits",
+          "title": "What the two wires do",
+          "body": "Cavity 1 carries circuit VR219, the sensor feed shown in the wiring diagram. Cavity 2 carries RR133, its dedicated sensor return. Both are listed in harness 14A005. This is a monitored sensing connection, not an airbag deployment loop or a general accessory power connection. Use the face view to identify it, and follow the SRS diagnostic sequence for testing; the manual explicitly says not to probe impact sensors with a multimeter."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3210",
+        "wiring-046-003",
+        "G1696291",
+        "G1696386"
+      ]
+    },
+    {
+      "id": "topic-5969af92b8d014da",
+      "title": "Coupe right B-pillar side-impact sensor",
+      "summary": "The right B-pillar side-impact sensor supplies crash information to the restraints control module (RCM). The wiring diagram places this sensor in the coupe-only branch. It is an electronic sensing device, separate from the airbags that the controller may deploy.",
+      "sections": [
+        {
+          "id": "sensing",
+          "title": "A sensor helps the controller understand the impact",
+          "body": "The pillar-mounted side-impact sensors measure vehicle acceleration, meaning how quickly its motion changes. The door-mounted side-impact sensors use a different input: pressure changes inside the door. The RCM evaluates crash inputs to decide which restraints to activate; a sensor is not a mechanical trigger for one nearby airbag."
+        },
+        {
+          "id": "applicability",
+          "title": "Keep the coupe and door-sensor branches separate",
+          "body": "The connector title identifies the right-hand B-pillar sensor, while its circuit descriptions use passenger-side row-two wording. The matching wiring diagram shows both B-pillar sensors inside a coupe-only boundary. The door sensors sit outside that boundary, so the coupe label should not be extended to every sensor on the sheet. These names identify the component and circuit; they do not establish a rear-seat airbag."
+        },
+        {
+          "id": "circuits",
+          "title": "What the two wires do",
+          "body": "Cavity 1 carries circuit VR220, the sensor feed shown in the wiring diagram. Cavity 2 carries RR134, its dedicated sensor return. Both are listed in harness 14A005. This is a monitored sensing connection, not an airbag deployment loop or a general accessory power connection. Use the face view to identify it, and follow the SRS diagnostic sequence for testing; the manual explicitly says not to probe impact sensors with a multimeter."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3212",
+        "wiring-046-003",
+        "G1696291",
+        "G1696386"
+      ]
+    },
+    {
+      "id": "topic-5c8adc56c3729c75",
+      "title": "Window master and mirror controls without memory",
+      "summary": "This sheet covers the window master control switch and associated mirror-control references on vehicles without memory. It follows the driver’s switch selections into the window and mirror circuits, with a separate convertible-only rear-window branch.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Switch positions express a request",
+          "body": "The window controls have labels for up, down and automatic operation, together with front, rear and right-side references. Those labels distinguish driver commands within the switch arrangement. Power and ground support the electrical circuit, but the complete schematic is needed to determine which paths carry motor current or control information."
+        },
+        {
+          "id": "purpose",
+          "title": "Equipment labels distinguish branches",
+          "body": "“Without Memory” is the heading for the whole sheet. The convertible label has a narrower scope: it encloses the rear-window paths through C311 that continue to sheet 100-11. The front-window and mirror-control paths shown outside that box should not be classified as convertible-only. These distinct scopes help match the drawing to the vehicle’s equipment."
+        },
+        {
+          "id": "reference",
+          "title": "Reading beyond the switch face",
+          "body": "Connector identifiers, wire colors and continuation letters connect individual switch functions to the rest of the system. The ground and splice references identify additional circuit landmarks. This sheet explains electrical relationships, so it should not be read as a physical map of the wiring inside the door."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-002"
+      ]
+    },
+    {
+      "id": "topic-5d7dae0126da3cf8",
+      "title": "Finding the 5.0L engine-control components",
+      "summary": "This 5.0L engine location view identifies sensors, ignition coils, fuel injectors and related harness connections. It also labels oxygen-sensor connections and the transmission connection to help match a service reference with the illustrated item.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Inputs and actuators have different jobs",
+          "body": "Crankshaft and camshaft sensors report rotation, knock sensors detect engine vibration, and the cylinder-head temperature sensor reports heat. Injectors meter fuel and coil-on-plug units create ignition voltage. Intake manifold runner-control sensors and a solenoid relate to managing intake airflow, while oxygen sensors report exhaust oxygen information."
+        },
+        {
+          "id": "purpose",
+          "title": "Similar names need exact identification",
+          "body": "The 5.0L label identifies the engine shown in this location view, rather than qualifying only a nearby sensor callout. Repeated coils, injectors and bank-specific sensors still need their exact identifiers. The powertrain control module (PCM) and 6R80 transmission connection also appear, but this view is not a universal component map for other engine variants."
+        },
+        {
+          "id": "reference",
+          "title": "Using the grid and connector labels",
+          "body": "The front-of-vehicle marker and grid establish orientation. Connector identifiers distinguish similar components, while splice and harness labels provide additional landmarks. This view helps find physical items; it does not establish which adjacent labels are electrically connected or replace the wiring diagram for tracing power and signal paths."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-151-010"
+      ]
+    },
+    {
+      "id": "topic-be58557601af62b8",
+      "title": "Push-button starting and authorization",
+      "summary": "Push-button starting coordinates driver inputs, key authorization, module messages, and starter operation. These descriptions cover the 2.3L, 3.7L, 5.0L, and 5.2L engine sections and explain why a button press must satisfy several conditions before cranking begins.",
+      "sections": [
+        {
+          "id": "push-button-start-sequence",
+          "title": "How an accepted request starts the motor",
+          "body": "Starting combines the button request with brake input for an automatic transmission or clutch input for a manual transmission. The body control module (BCM) sends starting information to the powertrain control module (PCM). Once accepted, the PCM energizes the starter relay, whose contacts supply the starter solenoid. Cranking ends according to engine speed, elapsed time, or a shutdown request."
+        },
+        {
+          "id": "push-button-start-authorization",
+          "title": "Why key recognition is involved",
+          "body": "The passive anti-theft system (PATS), controlled by the BCM, can prevent cranking when key or module identification is invalid. The remote function actuator (RFA) module participates in intelligent-access information and ignition-mode control. This explains why an authorization problem can prevent starter operation even when the motor itself is mechanically sound."
+        },
+        {
+          "id": "push-button-start-diagram-reading",
+          "title": "Separating messages from power paths",
+          "body": "The network chart identifies the originating module and purpose of each message, such as crank request or ignition status. Those messages convey information; relay contacts carry the switched electrical supply. The diagram also identifies the front controls interface module (FCIM), which contains the start button. It shows system relationships rather than physical wire routing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "G1673172",
+        "G1692830",
+        "G1692941",
+        "G1804807"
+      ]
+    },
+    {
+      "id": "topic-8afc97b506c0ee2e",
+      "title": "Body and infotainment networking for a coupe with memory",
+      "summary": "This sheet shows the medium-speed controller area network (MS-CAN) arrangement for a coupe with memory. It connects body and infotainment modules, with separate SYNC-generation qualifiers identifying the applicable infotainment branches.",
+      "sections": [
+        {
+          "id": "network15-operation",
+          "title": "Different modules share an information path",
+          "body": "The named participants include the passenger door module, front-seat climate controller, SYNC electronics, global positioning system module and front controls interface module. Their physical jobs differ, but they can exchange information over the same type of network. The paired communication wires carry encoded messages rather than ordinary component operating power."
+        },
+        {
+          "id": "network15-purpose",
+          "title": "Why a network sheet groups unrelated features",
+          "body": "A communication interruption can matter to several functions because information travels through shared wiring. This sheet helps identify the participating modules and relevant connector paths. The broader network description explains that the gateway transfers information between networks, allowing modules on different networks to share selected vehicle information."
+        },
+        {
+          "id": "network15-reading",
+          "title": "Following equipment-specific branches",
+          "body": "“Coupe With Memory” is the heading for the whole sheet. Within that arrangement, the SYNC 2 dashed box encloses the APIM and the SYNC 1 / SYNC 2 box encloses the GPSM. Follow those narrower equipment qualifiers along with the paired lines, splices and continuations; they distinguish optional module branches within the stated vehicle arrangement."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-015",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-6a6366291131167d",
+      "title": "5.0L manual-transmission speed and clutch inputs",
+      "summary": "This 5.0L manual-transmission sheet shows output-shaft speed sensing alongside clutch-pedal switch information. These inputs describe driveline movement and pedal state so control modules can distinguish different operating conditions.",
+      "sections": [
+        {
+          "id": "clutch-inputs-function",
+          "title": "Rotation and pedal travel tell different stories",
+          "body": "The output shaft speed (OSS) sensor reports transmission output rotation. Clutch pedal position (CPP) switches identify defined parts of pedal travel rather than continuously measuring clutch engagement. The top-of-travel and bottom-of-travel labels therefore describe separate observations, even though both respond to movement of the same pedal."
+        },
+        {
+          "id": "clutch-inputs-purpose",
+          "title": "Why separate clutch states matter",
+          "body": "Knowing that a pedal has left its rest position is different from knowing it has reached the far end of its travel. This manual-transmission sheet names both the powertrain control module (PCM) and body control module (BCM). Their illustrated connections show where the relevant information is used."
+        },
+        {
+          "id": "clutch-inputs-reference",
+          "title": "Read each switch’s own state notes",
+          "body": "“Manual Transmission” is the heading for the whole sheet, including the speed-sensor and clutch-switch circuits. Each clutch switch has its own released and depressed legend, so their depicted states should not be assumed identical. Supply, ground, connector and continuation labels support tracing this manual-transmission arrangement."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-024-011"
+      ]
+    },
+    {
+      "id": "topic-897fe96a3c0116b8",
+      "title": "Memory mirror switch communication",
+      "summary": "This sheet covers the mirror-switch communication arrangement for vehicles with memory. It shows how the driver’s mirror-position requests relate to the driver door module and master-window controls, with coupe-specific switch connections marked separately.",
+      "sections": [
+        {
+          "id": "mirror-switch-operation",
+          "title": "A position request becomes information",
+          "body": "The mirror switch has a local interconnect network (LIN) connection, indicating that information is exchanged over a communication circuit. Its supply and return support that electronic function. The driver door module (DDM) is also named on the sheet, linking the switch reference to the door’s control electronics."
+        },
+        {
+          "id": "mirror-sheet-purpose",
+          "title": "Why accessory power appears here",
+          "body": "The body control module (BCM), a protected feed and the accessory-delay relay are included in this reference. These labels help distinguish the availability of electrical power from a request to move the mirror. A switch can depend on both a valid supply path and successful communication for its request to be recognized."
+        },
+        {
+          "id": "mirror-diagram-reading",
+          "title": "Reading the equipment branches",
+          "body": "“Memory” is the heading for the whole sheet. The coupe labels are narrower: they mark the C535 connections at the mirror switch, rather than defining every connection on the page. Follow those local markers and the continuation to the adjoining mirror sheet to trace the appropriate switch, master-window and door-module arrangement."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-124-005"
+      ]
+    },
+    {
+      "id": "topic-6e48546f95a8da96",
+      "title": "2.3L active noise-control microphone circuits",
+      "summary": "This 2.3L audio-system sheet shows the microphones used to observe cabin sound for active noise control. It distinguishes coupe and convertible rear-microphone arrangements while identifying the front microphone and their audio control module connections.",
+      "sections": [
+        {
+          "id": "noise-microphones-function",
+          "title": "Cabin sound becomes a control signal",
+          "body": "A microphone converts changing air pressure into an electrical waveform. Active noise-control electronics use those observations to shape sound intended to reduce selected unwanted noise. The microphones on this sheet therefore observe the cabin sound field; their purpose differs from sending a driver’s voice to a phone call."
+        },
+        {
+          "id": "noise-microphones-purpose",
+          "title": "Microphone arrangements vary by configuration",
+          "body": "“2.3L” is the heading for the whole sheet. The convertible dashed box contains left-rear and right-rear microphones; the separate coupe box contains the rear microphone. The front microphone is drawn outside those body-style boxes. These alternatives should not be combined into a claim that every listed rear microphone is installed together."
+        },
+        {
+          "id": "noise-microphones-reference",
+          "title": "Follow each paired signal to its reference",
+          "body": "The audio control module (ACM) entries identify ambient-noise channels with positive and negative signal paths. Inline connector references show harness interfaces along the illustrated routes. Trace the matching configuration through those lines; wire-color changes and adjacent labels in extracted text do not establish channel identity or an electrical junction."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-133-006"
+      ]
+    },
+    {
+      "id": "topic-8b2968a1f00ba92d",
+      "title": "Left front seat control switch",
+      "summary": "The left front seat control switch turns the occupant’s adjustments into electrical commands for seat movement and lumbar support. Moving the seat along its track, changing cushion height and adjusting support behind the lower back are separate functions.",
+      "sections": [
+        {
+          "id": "movement",
+          "title": "Different controls change different parts of the seat",
+          "body": "Forward and rearward controls move the seat along its track. Front-height and rear-height controls change the cushion’s position and tilt. Lumbar adjustment changes support in the backrest. The workshop manual identifies the Mustang’s power lumbar assembly as motor-operated; the driver’s diagnostic procedure checks that its motor supply reverses polarity when the lumbar switch is moved in opposite directions."
+        },
+        {
+          "id": "lumbar-labels",
+          "title": "Why the lumbar circuit names can be misleading",
+          "body": "The connector table labels CPS19 as an upper-cell deflate-solenoid circuit and CPS18 as a lumbar-pump circuit. Those labels are retained in the table, but the matching Mustang test traces C352 cavity 3 to lumbar motor connector C3215 terminal A, and cavity 4 to terminal B. These are the two motor-control paths in that test; the labels do not establish a separate air pump and deflation valve on this seat."
+        },
+        {
+          "id": "reference",
+          "title": "Read the switch alongside the installed seat system",
+          "body": "The switch also has a power feed, a ground and separate track-adjustment circuits. The manual distinguishes direct motor control on seats without memory from driver-seat-module control on memory seats. Match the wiring arrangement to the actual seat before following a diagnostic branch. A loss of movement can involve the switch, wiring or the supported mechanism, so the symptom alone does not identify the failed part."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C352",
+        "connector-C3215",
+        "G1695507",
+        "G1695508",
+        "G1695509",
+        "G1695516"
+      ]
+    },
+    {
+      "id": "topic-c4808b1ace1923c2",
+      "title": "Left power lumbar motor connection",
+      "summary": "The power lumbar assembly adjusts the support behind the occupant’s lower back. Connector C3215 joins its motor to the left-seat wiring. The Mustang’s diagnostic procedure identifies this as a motor connection whose polarity changes with the requested direction of adjustment.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Electrical direction changes the support adjustment",
+          "body": "The motor operates the support mechanism within the backrest, rather than moving the entire seat along its floor track. The manual lists the lumbar motor as part of the power lumbar assembly, which is serviced as a unit. Reversing the electrical polarity lets the motor operate in the opposite direction when the seat control switch requests the opposite adjustment."
+        },
+        {
+          "id": "labels",
+          "title": "Keep the circuit labels separate from the actual hardware",
+          "body": "Terminal A carries CPS19 and terminal B carries CPS18. The connector table calls these a deflate-solenoid circuit and a lumbar-pump circuit, but the Mustang pinpoint test explicitly names C3215 as the driver seat lumbar motor. It traces terminal A to C352 cavity 3 and terminal B to C352 cavity 4. Those source labels should not be used to invent a separate pneumatic pump or air-cell valve."
+        },
+        {
+          "id": "service",
+          "title": "What this reference helps identify",
+          "body": "The connector face and wire descriptions distinguish the two motor paths in harness 14D232. Because their polarity changes with direction, neither should be treated as a permanently fixed body-ground lead. The seat also contains side-airbag wiring, so the dedicated seat diagnostic procedure’s SRS handling sequence remains important when working in this area. The connection table identifies the interface; it does not establish that a nonmoving lumbar support needs a new motor."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C3215",
+        "connector-C352",
+        "G1695507",
+        "G1695508",
+        "G1695509",
+        "G1695516"
+      ]
+    },
+    {
+      "id": "topic-84626b5abd12d858",
+      "title": "The front damper harness junction",
+      "summary": "Inline connector C1824 joins harness 14290 to harness 13A840 at circuits associated with the left front controlled damper. It is a wiring junction that carries electrical paths between harness sections, rather than a controller that decides suspension behavior.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Damper control changes resistance to suspension movement",
+          "body": "On vehicles with the described dynamic suspension, electromagnetic coils in the damper piston change a magnetic field acting on magneto-rheological fluid. That changes resistance to fluid movement and therefore how firmly the damper resists suspension motion. The table calls these damper-valve control circuits; the system description explains the actual magnetic-fluid mechanism. C1824 carries the command circuit across a harness junction rather than creating damping itself."
+        },
+        {
+          "id": "purpose",
+          "title": "The two connector faces contain different information",
+          "body": "The harness 14290 face also lists left and right front brake-pad sensor circuits. The harness 13A840 face shows corresponding positions as unused, so those labels do not establish populated pad-sensor paths through both halves. This distinction prevents treating every housing position as a complete through-circuit."
+        },
+        {
+          "id": "reference",
+          "title": "Match circuit identity across the junction",
+          "body": "The damper circuit codes continue across the two faces even though wire colors and sizes differ. Circuit identity and the illustrated mating arrangement therefore matter more than color alone. The separate male and female views establish orientation and identify which harness side each assignment describes."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "connector-C1824",
+        "G1694671",
+        "G1694672"
+      ]
+    },
+    {
+      "id": "topic-708f0c9aa0aac6cc",
+      "title": "Coupe memory-equipment communication network",
+      "summary": "This network sheet covers the coupe with memory equipment. Its medium-speed data connections let door, seat, obstacle-detection, radio-transceiver and body-control functions share information through the vehicle’s wiring.",
+      "sections": [
+        {
+          "id": "topic-708f0c9aa0aac6cc-operation",
+          "title": "Messages travel on a paired circuit",
+          "body": "The medium-speed controller area network (MS-CAN) carries digital messages over a paired set of wires. Modules share commands and status information on that network, reducing the need for a separate wire for every message. The high and low labels identify the complementary data paths, rather than ordinary supply and ground."
+        },
+        {
+          "id": "topic-708f0c9aa0aac6cc-purpose",
+          "title": "Why several systems share the sheet",
+          "body": "The named driver-door and driver-seat modules support their respective equipment, while the side-obstacle detection modules monitor areas beside the vehicle. Body control module B and the radio transceiver module also appear as network participants. A shared communication problem can therefore affect information used by more than one feature."
+        },
+        {
+          "id": "topic-708f0c9aa0aac6cc-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The COUPE WITH MEMORY heading applies to this whole network sheet. Connector names, splice identifiers and continuation references show how to follow the paired network paths within that configuration. The local Not used label marks the C192 branch; it does not change the scope of the page. The related network overview explains gateway communication, while the drawn lines establish the actual connections."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-014",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-6284fad31c9145f3",
+      "title": "5.0L automatic-transmission oxygen sensor circuits",
+      "summary": "Heated oxygen sensors report exhaust oxygen while built-in heaters bring their sensing elements toward operating temperature. This 5.0L automatic-transmission sheet identifies the downstream sensors for both cylinder banks and their engine-control connections.",
+      "sections": [
+        {
+          "id": "oxygen-sensor-wiring-operation",
+          "title": "Sensing and heating perform separate jobs",
+          "body": "The heated oxygen sensor (HO2S) produces information about exhaust oxygen, while its heater supplies heat independently of the exhaust warming process. Downstream sensor information helps the powertrain control module (PCM) assess exhaust-treatment behavior. A heater circuit concern and a sensor-signal concern therefore describe different functions within one component."
+        },
+        {
+          "id": "oxygen-sensor-wiring-purpose",
+          "title": "Two banks require distinct signal paths",
+          "body": "The sensor identifiers distinguish the two downstream sensing positions so their information remains associated with the appropriate cylinder bank. The drawing separates heater-related labels from signal and signal-return labels. That separation helps interpret an electrical fault without assuming every circuit attached to an oxygen sensor performs the same task."
+        },
+        {
+          "id": "oxygen-sensor-wiring-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The AUTOMATIC TRANSMISSION heading applies to the whole sheet, within the established 5.0L engine section. Follow the illustrated lines to match each sensor with its heater and signal paths. The if-equipped and unused markings are local to the C1046 stubs shown in dashed boxes; they do not turn the page into a manual-transmission reference. Start-or-run feed labels describe supply availability."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-024-009"
+      ]
+    },
+    {
+      "id": "topic-612ce98de955c921",
+      "title": "Coupe rear-window and mirror heating circuits",
+      "summary": "Heated glass clears moisture or frost by passing current through resistive elements. This coupe sheet identifies the rear-window heater, exterior-mirror heating connections and the supply and control components associated with them.",
+      "sections": [
+        {
+          "id": "heated-window-operation",
+          "title": "Electrical resistance warms the glass",
+          "body": "A heater element converts electrical energy into heat as current flows through it. The rear-window grid spreads that warmth across the glass, while heated mirrors use elements associated with the mirror glass. The drawing also names the rear-window defrost relay and front controls interface module (FCIM) in the system's electrical arrangement."
+        },
+        {
+          "id": "heated-window-purpose",
+          "title": "Separate the command from the heating load",
+          "body": "Heating elements need a current-carrying supply and return path, while the control side determines when heating is requested. Fuses, relay contacts and grounds therefore have different roles. This sheet helps relate a control request to the relevant heating circuits without assuming that a non-clearing surface proves its element has failed."
+        },
+        {
+          "id": "heated-window-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The COUPE heading applies to the whole sheet. Within it, the without-memory box identifies the illustrated mirror-heating arrangement, and the right-hand-drive label marks its local connector alternative. Supply labels distinguish continuously available power from power available during starting or running. Connector, splice and ground references explain electrical relationships, while the mirror cross-references continue the associated circuits."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-056-001"
+      ]
+    },
+    {
+      "id": "topic-792542fcd7ca0c71",
+      "title": "Memory-equipped window-switch power and communication",
+      "summary": "This power-window sheet shows the memory-equipped arrangement around the master window control and driver door module. Its supply, switch-return, directional-control and communication labels explain how a window request enters the system.",
+      "sections": [
+        {
+          "id": "window-request-paths",
+          "title": "From a switch movement to a request",
+          "body": "A window switch provides information that the control system uses to move the glass. The sheet includes UP, DOWN, RETURN, and Local Interconnect Network (LIN) bus labels. These identify different kinds of interface, so a directional switch circuit should not automatically be interpreted as a motor-power wire."
+        },
+        {
+          "id": "window-accessory-supply",
+          "title": "Why accessory delay is included",
+          "body": "The body control module (BCM) and its accessory-delay relay appear with a protected supply. Accessory delay allows electrical availability to be managed according to vehicle state instead of relying only on the switch itself. The relay is identified as non-serviceable, which matters when interpreting component boundaries in the reference."
+        },
+        {
+          "id": "window-branch-reading",
+          "title": "Read the page scope and local branches",
+          "body": "The MEMORY heading applies to the entire sheet. Within that arrangement, the coupe boxes mark C535 connections, while the convertible box encloses the UP and DOWN paths through C311 that continue to sheet 100-11. The driver door module, master switch and other continuation references connect this drawing to the remaining window circuits. Those local body-style alternatives should stay distinct."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-005"
+      ]
+    },
+    {
+      "id": "topic-65d82085a38d8e1d",
+      "title": "Memory-equipped passenger window controls",
+      "summary": "In the memory-equipped arrangement shown here, the passenger window switch sends movement requests to the passenger door module. This sheet shows those request circuits together with module power, ground, illumination and network connections.",
+      "sections": [
+        {
+          "id": "passenger-window-operation",
+          "title": "The switch requests a window action",
+          "body": "Up, down and automatic-position labels distinguish the switch requests shown. The passenger door module (PDM) receives the relevant inputs and participates in the door's electrical control system. The medium-speed controller area network (MS-CAN) pair carries communication with other modules, while separate supply and ground paths support operation."
+        },
+        {
+          "id": "passenger-window-purpose",
+          "title": "Several door functions share the interface",
+          "body": "The drawing includes switch illumination and a right-front door-lock switch return reference alongside the window controls. These functions explain why a door harness can carry both movement requests and unrelated user-interface circuits. A working illuminated switch does not, by itself, establish that the window request or module communication is functioning."
+        },
+        {
+          "id": "passenger-window-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The MEMORY heading applies to the whole sheet. Body control module, fuse and ground references identify supporting circuits, while battery-voltage and network labels distinguish power from data. Remote-entry and network references continue related paths elsewhere. This page shows the passenger switch interface and module support circuits; it does not by itself show the complete window-motor drive circuit."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-008"
+      ]
+    },
+    {
+      "id": "topic-75dd6919037925e8",
+      "title": "Memory-equipped passenger-door lock controls",
+      "summary": "This sheet shows passenger-door controls for the memory-equipped arrangement in the remote-entry and alarm wiring reference. It brings together the passenger door module, lock switch, window-control references and their supporting electrical paths.",
+      "sections": [
+        {
+          "id": "passenger-lock-module",
+          "title": "The door module’s role",
+          "body": "The passenger door module (PDM) provides local electronics for door functions. Lock and unlock switch inputs communicate the occupant’s request, while illumination makes the controls visible. Power and ground allow the module to operate; network connections let door electronics exchange information with the rest of the vehicle."
+        },
+        {
+          "id": "passenger-lock-related-functions",
+          "title": "Why window wiring appears here",
+          "body": "The passenger window control and door-lock controls occupy the same door and appear together with their return circuits. This sheet helps distinguish a switch request from the supply that supports the electronics. It also identifies the body control module (BCM) and a protected supply labeled hot at all times."
+        },
+        {
+          "id": "passenger-lock-reading",
+          "title": "Read the page scope and local branches",
+          "body": "The MEMORY heading specifies the arrangement for this whole sheet. The medium-speed Controller Area Network pair carries messages rather than directly powering a lock motor. Follow the drawn wires and continuation references to distinguish lock and unlock inputs, illumination, switch returns and the module ground. Window references connect these shared door interfaces to their companion circuits."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-006"
+      ]
+    },
+    {
+      "id": "topic-65b37195699baa2e",
+      "title": "Memory-equipped driver-door latch wiring",
+      "summary": "The remote-entry and alarm system needs both lock actuation and information about whether doors are closed. This memory-equipped sheet shows left-front latch circuits alongside body-control, door-control and center-console-lock references.",
+      "sections": [
+        {
+          "id": "entry-latch-wiring-operation",
+          "title": "Lock commands and door status serve different jobs",
+          "body": "The latch motor performs electrical locking work, while the door-ajar switch reports latch-related door status. The body control module (BCM) includes labeled driver-unlock and auxiliary-lock relay functions. The page explicitly states that its door-ajar switches are electrically closed when the corresponding door is closed."
+        },
+        {
+          "id": "entry-latch-wiring-purpose",
+          "title": "Related door functions meet on this sheet",
+          "body": "The MEMORY heading applies to the whole sheet. Within that configuration, a separate dashed locking-bin box identifies the center-console lock assembly and its connections. The driver door module and window-regulator motor also appear through related door circuits. These references help follow signals between functions; the local locking-bin box does not establish that every memory-equipped car has that optional assembly."
+        },
+        {
+          "id": "entry-latch-wiring-reference",
+          "title": "Read relay and switch labels literally",
+          "body": "The relays labeled non-serviceable are identified as part of the module arrangement shown. Door-ajar switch state must be interpreted using the page's explicit closed-door note, not an assumption based on the word “ajar.” Continuation letters, connector identifiers and ground references carry the circuits onward without describing their physical wiring route."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-007"
+      ]
+    },
+    {
+      "id": "topic-7295afcc381b3d9f",
+      "title": "Memory-equipped passenger-door latch wiring",
+      "summary": "This memory-equipped entry-system sheet covers electrical functions associated with the right front door latch and passenger-door equipment. It distinguishes lock actuation, door-ajar information, power supply and related module connections.",
+      "sections": [
+        {
+          "id": "topic-7295afcc381b3d9f-operation",
+          "title": "Moving the latch and reporting door state",
+          "body": "The latch motor performs an electrical actuation function, while the door-ajar switch reports whether the door is closed. Those are separate jobs even when associated with the same latch assembly. The sheet explicitly states that the door-ajar switches are electrically closed when the doors are physically closed."
+        },
+        {
+          "id": "topic-7295afcc381b3d9f-purpose",
+          "title": "Why modules and the window motor appear",
+          "body": "The body control module (BCM) contains the labeled central lock and unlock relays, and the passenger door module (PDM) and window-regulator motor also appear on the sheet. Their presence provides context for door-related circuits. The relays are marked non-serviceable, which describes their service status within the module."
+        },
+        {
+          "id": "topic-7295afcc381b3d9f-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The MEMORY heading applies to the complete sheet. Continuations, connector names and ground references establish where each circuit proceeds within this arrangement. The continuously powered labels describe supply availability; they do not mean a motor runs continuously. Use the actual drawn connections and splice dots to follow the latch, passenger door module and window-related paths."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-008"
+      ]
+    },
+    {
+      "id": "topic-785b04abf178631a",
+      "title": "Memory-seat selection wiring",
+      "summary": "Memory-seat controls let the driver select stored seating positions through electrical requests. This sheet focuses on the memory switch, driver door module, and the power and communication paths supporting those requests.",
+      "sections": [
+        {
+          "id": "memory-switch-inputs",
+          "title": "A button sends a request",
+          "body": "The memory switch has separate selection circuits and a return path associated with the driver door module (DDM). These inputs identify the requested memory selection. They are different from the higher-current circuits that physically drive a seat motor, which are not established by this sheet’s switch labels."
+        },
+        {
+          "id": "memory-module-support",
+          "title": "Why door controls share the reference",
+          "body": "The drawing also identifies the front-door lock switch and master window control, along with a protected battery junction box (BJB) supply and ground references. Showing these interfaces together helps explain the driver-door electronics involved. Loss of module power can affect more than one local control function."
+        },
+        {
+          "id": "memory-network-reading",
+          "title": "Read the page scope and local branches",
+          "body": "The MEMORY heading applies to the whole sheet. The medium-speed Controller Area Network pair carries module messages, and continuation references lead to window, lock and network information. The smaller coupe box is local to C535 on the master-window-switch return path. Keeping that local connector alternative separate from the page heading avoids treating the entire memory-seat switch arrangement as coupe-only."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-123-001"
+      ]
+    },
+    {
+      "id": "topic-616526c739bc871d",
+      "title": "Heated power mirrors without memory",
+      "summary": "This sheet covers heated exterior mirrors without memory equipment. Small motors adjust the viewing angle of the glass, while separate connections support heating, turn signals, puddle lamps and the illustrated folding interface.",
+      "sections": [
+        {
+          "id": "power-mirrors-operation",
+          "title": "Motor direction changes the view",
+          "body": "The mirror's adjustment motors move the glass along horizontal and vertical axes. Reversing the electrical drive changes the direction of movement. The exterior mirror switch selects the requested side and direction, while heating and lamp functions use their own circuits rather than performing the glass-adjustment work."
+        },
+        {
+          "id": "power-mirrors-purpose",
+          "title": "One assembly contains several electrical functions",
+          "body": "A mirror can adjust normally while a lamp or heater has a separate concern. This drawing brings those functions together so their individual feeds, returns and cross-references can be understood. It also identifies the body control module (BCM) and accessory-delay relay within the illustrated power arrangement."
+        },
+        {
+          "id": "power-mirrors-reference",
+          "title": "Read the page scope and local branches",
+          "body": "The HEATED MIRRORS / WITHOUT MEMORY heading applies to the whole sheet. Left/right and up/down labels identify the adjustment-motor paths, while return and fold identify other control functions. The local power-folding continuation leads to sheet 124-3; it does not make folding universal across this arrangement. Heating, interior-lighting and turn-signal references continue their respective circuits elsewhere."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-124-002"
+      ]
+    },
+    {
+      "id": "topic-92fc1f74bcbea424",
+      "title": "Rear lamp circuits outside China and Europe",
+      "summary": "This sheet shows the rear-lamp arrangement identified for markets other than China and Europe. It separates position lighting, stop and turn indications, monitoring paths and the body-control hardware associated with those tasks.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "One assembly performs several lighting jobs",
+          "body": "Parking illumination makes the vehicle visible, while stop and turn functions communicate braking and direction changes. The drawing names inner, middle and outer stop/turn sections separately. Those labels matter because a shared housing can contain several controlled lighting paths rather than one undivided electrical load."
+        },
+        {
+          "id": "purpose",
+          "title": "Trace control, indication and return paths",
+          "body": "The sheet names the body control module (BCM), Body Control Module B, rear lamp grounds and outage-related circuits. It also labels field-effect transistor (FET) outputs, identifying electronic switching. Together these references help separate lamp operation from monitoring and electrical return, without assuming that nearby text labels are directly connected."
+        },
+        {
+          "id": "reference",
+          "title": "Read the scope and reference labels",
+          "body": "The WITHOUT CHINA / WITHOUT EUROPE heading applies to the whole sheet. Follow the drawn lines and cross-references to see how the left and right lamp sections relate to the controllers in that market arrangement. The inner, middle and outer stop/turn paths are individually labeled. Hot at all times describes a supply condition, not continuous lamp illumination."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-092-005"
+      ]
+    },
+    {
+      "id": "topic-902bbc0723d3170b",
+      "title": "Finding 2.3L front-area electrical components",
+      "summary": "This 2.3L location view identifies electrical components, connectors and ground points around the front of the car. It helps match a component named in a procedure to the corresponding item in this engine-specific layout.",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Recognize the jobs behind the labels",
+          "body": "The cooling fan motors move air through the heat exchangers, the starter cranks the engine and the generator replenishes electrical energy. The anti-lock brake system (ABS) module manages brake-control functions. Battery connections, distribution hardware and ground points support these systems through their electrical supply and return paths."
+        },
+        {
+          "id": "purpose",
+          "title": "Similar-looking connections serve different systems",
+          "body": "The view also names the wiper motor, brake vacuum switch, low brake-fluid warning switch and battery monitoring sensor. Finding the right one prevents confusing a fluid-level warning input with a vacuum-related input. Multiple labeled connections at a module or junction box likewise need individual identification."
+        },
+        {
+          "id": "reference",
+          "title": "Read the scope and reference labels",
+          "body": "The 2.3L label applies to the complete location view, including its engine mount control solenoid and other callouts. The front-of-vehicle marker and drawing grid establish orientation; connector, ground and splice identifiers link to other references. Unlike a circuit schematic, this drawing locates hardware. Do not transfer its engine-specific positions to another engine layout without checking the matching reference."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-151-002"
+      ]
+    },
+    {
+      "id": "topic-949151612012c630",
+      "title": "Steering-wheel adaptive cruise switches",
+      "summary": "The lower left steering-wheel switch group lets the driver request cruise-control settings. This sheet includes adaptive-cruise gap controls and the circuits carrying switch inputs through the clockspring to the steering column control module (SCCM).",
+      "sections": [
+        {
+          "id": "operation",
+          "title": "Buttons request speed and following-gap changes",
+          "body": "Set, resume, cancel and on/off commands describe cruise operation, while gap commands belong to adaptive cruise control. The SCCM reads these momentary switch inputs and supplies control requests to the wider system. The switches request behavior; they do not themselves measure the distance to a vehicle ahead."
+        },
+        {
+          "id": "purpose",
+          "title": "The rotating wheel needs a flexible electrical path",
+          "body": "The clockspring maintains connections between steering-wheel controls and stationary wiring as the wheel turns. This sheet brings that rotating interface together with the switch group and SCCM input labels. It helps identify where a requested button action enters the control system before other modules act on it."
+        },
+        {
+          "id": "reference",
+          "title": "Read the scope and reference labels",
+          "body": "The ADAPTIVE CRUISE heading applies to this whole switch-wiring sheet. Analog-to-digital channel and return labels identify input-sensing paths, while illumination and audio/navigation references show related circuits and continuations within that arrangement. Follow the drawn connections to distinguish each switch group. The gap buttons request a change in following-gap setting; they do not perform distance sensing themselves."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-031-005",
+        "G1693152",
+        "G1693151"
+      ]
+    },
+    {
+      "id": "topic-a6b7e0228fdd6378",
+      "title": "5.0L ignition and fuel-control power feeds",
+      "summary": "This 5.0L power-distribution sheet brings together supply information for ignition coils, airflow sensing and fuel-pump control. It explains where electrical energy reaches those functions and distinguishes protected and switched feeds.",
+      "sections": [
+        {
+          "id": "engine-supply-loads",
+          "title": "Several functions depend on electrical supply",
+          "body": "Coil-on-plug ignition units create the spark energy needed for combustion. The mass airflow/intake air temperature sensor provides information about incoming air, while the fuel pump control module participates in fuel delivery. The sheet also names an ignition capacitor, which is associated with suppressing electrical interference from ignition activity."
+        },
+        {
+          "id": "engine-supply-controls",
+          "title": "Protection and switching govern availability",
+          "body": "The battery junction box, fuel pump relay and body control module appear with fuse and power-state labels. Fuses interrupt excessive current, while relays and field-effect transistor outputs provide controlled switching. An always-live feed and a feed active during starting or running have different expected availability when the ignition is off."
+        },
+        {
+          "id": "engine-supply-reading",
+          "title": "Read the scope and circuit branches",
+          "body": "The 5.0L heading applies to the whole sheet. Circuit identifiers, splice dots and continuation references show how the protected feeds reach individual components within that arrangement. The engine heading does not mean that all listed loads share one fuse or relay: follow each drawn branch to identify its actual supply and switching path."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-013-012"
+      ]
+    },
+    {
+      "id": "topic-a5b01fc7bf9dcad7",
+      "title": "Convertible network without memory or touchscreen",
+      "summary": "This sheet shows the medium-speed controller area network for a convertible without memory equipment or a touchscreen. Body controls, roof motors, positioning, front controls and radio-related equipment exchange messages over the shared pair.",
+      "sections": [
+        {
+          "id": "network-message-sharing",
+          "title": "Messages travel over a shared pair",
+          "body": "Modules exchange commands and status information by changing electrical signals on the paired network wires. Reading the difference between those signals helps receivers distinguish messages from electrical interference. Sharing information this way reduces the need for a separate wire for every request between components."
+        },
+        {
+          "id": "network-components",
+          "title": "Different jobs depend on communication",
+          "body": "The global positioning system module supplies positioning information, the front controls interface module handles control inputs, and the radio transceiver module handles radio-related information. Body Control Module B and the convertible top motors also appear. Their network connections let these different functions exchange information with the wider vehicle."
+        },
+        {
+          "id": "network-sheet-reading",
+          "title": "Read the scope and circuit branches",
+          "body": "The CONVERTIBLE WITHOUT MEMORY and WITHOUT TOUCHSCREEN headings both apply to the whole network sheet. The plus and minus labels identify the data pair rather than ordinary power and ground. Connector, splice and continuation identifiers help follow it across pages. The local Not used label marks the C192 branch; it does not change the equipment scope of the remaining network."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-009",
+        "G1693125",
+        "G1813069"
+      ]
+    },
+    {
+      "id": "topic-a4a8a43eec0dd724",
+      "title": "Driver-door latch wiring without memory",
+      "summary": "This entry-system sheet shows the arrangement without memory equipment. Driver-door latch and lock-control circuits connect with body-control functions, while a separate branch identifies the center-console locking-bin equipment.",
+      "sections": [
+        {
+          "id": "latch-status-actuation",
+          "title": "Movement and status are separate functions",
+          "body": "The latch motor moves the locking mechanism, while the door-ajar switch reports whether the door is closed. The sheet explicitly states that the ajar-switch contacts are closed when the door is closed. That electrical contact state must be understood separately from whether the door is locked."
+        },
+        {
+          "id": "entry-connected-components",
+          "title": "Why several assemblies appear together",
+          "body": "The drawing includes the driver-door window regulator motor, center-console lock assembly, and module relay labels. These identify related reference points within the entry wiring, without making each component part of one simple circuit. The internal lock-relay labels also identify those relays as non-serviceable individual components."
+        },
+        {
+          "id": "entry-branch-reading",
+          "title": "Read the scope and circuit branches",
+          "body": "The WITHOUT MEMORY heading applies to the entire sheet. The smaller dashed locking-bin box is local to the center-console lock assembly and its connections. Connector, splice, ground and continuation references help follow the chosen path within this configuration. Hot at all times describes supply availability, rather than continuous operation of a lock motor."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-002"
+      ]
+    },
+    {
+      "id": "topic-99bd0d346bc18794",
+      "title": "2.3L manual-transmission clutch and speed signals",
+      "summary": "This 2.3L manual-transmission sheet identifies clutch-pedal switches, a reversing-lamp switch and output-shaft speed sensing. These circuits report driver actions and transmission operation to the vehicle’s controllers.",
+      "sections": [
+        {
+          "id": "two-three-switch-functions",
+          "title": "Switches describe distinct mechanical states",
+          "body": "The clutch top-of-travel and bottom-of-travel switches describe different parts of pedal movement. The reverse switch distinguishes transmission-in-Reverse from transmission-out-of-Reverse states. These discrete signals let control electronics recognize mechanical conditions without measuring the clutch’s hydraulic pressure or assuming that every pedal position represents the same operating state."
+        },
+        {
+          "id": "two-three-speed-and-support",
+          "title": "Speed sensing adds movement information",
+          "body": "The output shaft speed sensor reports transmission output rotation, complementing the switches’ position information. The sheet also names buffered sensor power, signal return, ground, the powertrain control module and the body control module. Each label has a separate role; the drawing’s lines establish the actual relationships among them."
+        },
+        {
+          "id": "two-three-diagram-scope",
+          "title": "Read the configuration and connections",
+          "body": "The MANUAL TRANSMISSION heading applies to this whole 2.3L sheet. Its switch-state notes explain how the symbols relate to pedal and gear positions. Connector and continuation references support electrical tracing across pages, while the location references identify the physical components. Keep this manual-transmission arrangement distinct from the automatic-transmission circuits elsewhere in the section."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-023-009"
+      ]
+    },
+    {
+      "id": "topic-b2facbb5a2646300",
+      "title": "Memory-equipped mirror turn-signal circuits",
+      "summary": "Turn lamps in the exterior mirrors make a direction signal visible from additional viewing angles. This memory-equipped sheet identifies the mirror lamps, door-module turn functions and ground references for the illustrated arrangement.",
+      "sections": [
+        {
+          "id": "mirror-turn-light",
+          "title": "How a mirror signals a turn",
+          "body": "A turn lamp produces light when its operating circuit supplies current, and repeated switching creates the familiar flashing indication. The mirror houses the lamp, but the electrical command comes from elsewhere in the vehicle. This distinction separates the light-producing component from the circuitry that controls its timing."
+        },
+        {
+          "id": "mirror-turn-modules",
+          "title": "Read the configuration and connections",
+          "body": "The MEMORY heading applies to the whole sheet. The driver door module and passenger door module provide the labeled driver and passenger turn functions for the left and right exterior mirrors in this arrangement. These are the outputs to follow through the drawing. The configuration should not be substituted for the separate mirror circuits shown without memory equipment."
+        },
+        {
+          "id": "mirror-turn-tracing",
+          "title": "Following each side independently",
+          "body": "Connector, splice and ground identifiers help distinguish the two sides even when their components look alike. Circuit names and colors provide continuity between references. The actual drawn lines establish which module output reaches which lamp; the extracted label order cannot establish that path or show where the harness physically runs."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-090-008"
+      ]
+    },
+    {
+      "id": "topic-b435141a9ed01286",
+      "title": "Memory-equipped driver-window power and controls",
+      "summary": "The driver window regulator motor supplies the movement that raises and lowers the glass. This memory-equipped sheet shows its power, ground and command interfaces alongside body and door control references.",
+      "sections": [
+        {
+          "id": "window-movement",
+          "title": "Moving the glass requires power and direction",
+          "body": "The regulator converts motor rotation into controlled glass movement. Electrical power supplies the energy, while up and down inputs communicate the requested direction. Door-ajar and global-function labels identify additional information associated with the window system; they should be understood separately from the conductors that deliver operating power."
+        },
+        {
+          "id": "window-supply",
+          "title": "Why accessory-delay circuitry appears",
+          "body": "The battery junction box and body control module provide supply context, including a labeled accessory-delay relay function. A delayed-accessory path allows operation to depend on control logic rather than simply following battery availability. The sheet distinguishes this path from the battery feed and ground associated with the regulator motor."
+        },
+        {
+          "id": "window-branch-reading",
+          "title": "Read the configuration and connections",
+          "body": "The MEMORY heading applies to the whole sheet. Within that arrangement, the small convertible box marks the C312 continuation to the rear-window circuit on sheet 100-11. The driver door module, Body Control Module B and remote-entry references connect this page with related functions. Connector and splice references establish the electrical trace; the location drawings establish physical harness routing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-006"
+      ]
+    },
+    {
+      "id": "topic-b85aaa66221e1c55",
+      "title": "Memory-equipped driver-door module interfaces",
+      "summary": "The driver door module coordinates several electrical functions in the memory-equipped arrangement shown here. This sheet identifies mirror movement, position feedback, lighting and locking interfaces at that module.",
+      "sections": [
+        {
+          "id": "ddm-functions",
+          "title": "A door module serves several systems",
+          "body": "The driver door module, abbreviated DDM, is shown with mirror-motor direction, mirror-heating and mirror-turn-lamp labels. Lock, unlock, illumination and status references appear as well. These functions share a control location, but they use different circuits and purposes; a section titled power windows can therefore include important non-window interfaces."
+        },
+        {
+          "id": "ddm-feedback",
+          "title": "Why mirror position needs feedback",
+          "body": "Vertical and horizontal mirror-position labels describe measurements of where the mirror is, while motor labels describe commands that move it. The potentiometer feed and return support those position measurements. Keeping feedback separate from motor drive helps explain how a controller can relate requested movement to the resulting mirror position."
+        },
+        {
+          "id": "ddm-reading",
+          "title": "Read the configuration and connections",
+          "body": "The MEMORY heading specifies the complete arrangement on this sheet. Continuation references lead to its power-mirror and remote-entry circuits. Connector and circuit identities distinguish motor drive, mirror-position feedback, illumination and lock-related signals. These different functions remain separate even though they share a controller; neither the heading nor the extracted label order establishes a connection between adjacent terminals."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-007"
+      ]
+    },
+    {
+      "id": "topic-b21ce34e933c8a5a",
+      "title": "Front-door lock switches without memory",
+      "summary": "This remote-entry and alarm sheet shows the front-door lock and unlock switch arrangement without memory equipment. It includes body control module inputs, illumination supply, grounds and connector references for both doors.",
+      "sections": [
+        {
+          "id": "door-lock-wiring-operation",
+          "title": "Switches request a locking action",
+          "body": "The left- and right-hand front door switches provide the occupant's lock or unlock request. The BCM interprets relevant electrical inputs as part of the locking system. A switch request and the electrical operation that moves a lock are different functions, so this input sheet does not describe the entire actuator circuit."
+        },
+        {
+          "id": "door-lock-wiring-purpose",
+          "title": "Why the door and body connections matter",
+          "body": "The named switch circuits pass through illustrated connectors and harness junctions between the door areas and the vehicle's control wiring. Those junctions carry circuits; they are not additional control modules. The sheet also identifies a fused supply and an accessory-delay relay, whose exact relationships must be followed through the drawn branches."
+        },
+        {
+          "id": "door-lock-wiring-reference",
+          "title": "Read the configuration and connections",
+          "body": "The WITHOUT MEMORY heading applies to the whole switch-wiring sheet. The accessory-delay relay is marked non-serviceable, distinguishing it from a separately replaceable relay. Follow the drawn lines to separate the switches’ lock and unlock requests from their illumination and ground paths. Circuit identifiers, splices and connector references establish electrical relationships without describing the harness’s physical route."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-001"
+      ]
+    },
+    {
+      "id": "topic-b38a63a24a7359be",
+      "title": "Passenger-door latch circuits without memory",
+      "summary": "This sheet covers passenger-door locking and door-status circuits in the arrangement without memory equipment. The latch needs electrical drive to lock or unlock, while separate switch paths report door-related conditions.",
+      "sections": [
+        {
+          "id": "entry-latch-operation",
+          "title": "Commands move the lock",
+          "body": "The body control module contains the central lock and unlock relay functions named on this page. Their switched circuits operate the right-hand front door latch motor. Mechanical movement changes the latch's locking condition, while separate switch paths let other electronics receive information about the door rather than infer it from a command."
+        },
+        {
+          "id": "entry-ajar-purpose",
+          "title": "Why door status matters",
+          "body": "An alarm system needs to distinguish a closed door from an open one. This sheet explicitly states that the door-ajar switches are electrically closed when the doors are closed. The passenger window regulator motor also appears, showing that door-related information extends beyond locking; the illustrated paths establish its precise involvement."
+        },
+        {
+          "id": "entry-diagram-reading",
+          "title": "Read the configuration and connections",
+          "body": "The WITHOUT MEMORY heading applies to the whole sheet. Its relay notes identify functions that are not separately serviceable, and the door-ajar note defines the switch state when the door is closed. Constant-power labels explain supply availability rather than continuous motor operation. Splice, connector and continuation references connect this arrangement to the remaining entry and alarm sheets."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-117-003"
+      ]
+    },
+    {
+      "id": "topic-98f05f86c20d4445",
+      "title": "Finding coupe right-rear electrical components",
+      "summary": "This coupe location view identifies electrical, restraint and suspension components around the right rear body area. It links component names and connector identifiers with the physical items shown in that body-style layout.",
+      "sections": [
+        {
+          "id": "rear-location-component-roles",
+          "title": "Several systems occupy the same area",
+          "body": "The heated rear window element clears the glass, while the audio antenna, noise-control microphone and subwoofer amplifier serve different sound-system functions. The keyless-entry rear antenna supports passive-key communication. Their proximity in a location view explains shared access areas without implying that their circuits are electrically connected."
+        },
+        {
+          "id": "rear-location-safety-suspension",
+          "title": "Why the exact component matters",
+          "body": "The view also names a belt pretensioner, side air curtain, side-impact sensor, rear shock absorber, height sensor and Vehicle Dynamics Module. These components perform very different jobs, from crash protection to suspension monitoring and control. Matching the full description prevents a nearby connector from being mistaken for the intended service target."
+        },
+        {
+          "id": "rear-location-map-reading",
+          "title": "Read the configuration and connections",
+          "body": "The Coupe label applies to the complete location view. Its front-of-vehicle arrow and grid establish orientation, while connector, ground and splice identifiers support cross-referencing. Body Control Module B and the right-hand obstacle-detection module are separately labeled. Use the matching equipment and component references when identifying a particular car; the coupe view does not establish that every optional item is fitted."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-151-025"
+      ]
+    },
+    {
+      "id": "topic-b6c4d86f35a41b5e",
+      "title": "Front seat-cushion blower replacement",
+      "summary": "A climate-controlled seat uses a blower assembly to move conditioned air through its cushion. This procedure replaces the cushion blower assembly and addresses the passenger-seat sensing components encountered during access.",
+      "sections": [
+        {
+          "id": "seat-blower-air",
+          "title": "Airflow within the seat",
+          "body": "The cushion blower assembly combines a fan, a thermoelectric device and temperature feedback. Air movement carries the heating or cooling effect through the seat's distribution structure. This assembly serves the seat itself; the dashboard ventilation blower moves cabin air through a different system and follows a different service procedure."
+        },
+        {
+          "id": "seat-blower-access",
+          "title": "Why cushion construction affects access",
+          "body": "Access involves the seat trim, cushion cover and foam because those pieces surround the blower assembly. On the passenger side, the Occupant Classification System, or OCS, may be attached to the foam as part of a service assembly. Keeping those calibrated parts together preserves the relationship used to interpret seat loading."
+        },
+        {
+          "id": "seat-blower-reset",
+          "title": "Understanding the passenger-seat follow-through",
+          "body": "The passenger-seat instructions require completed assembly before the OCS reset establishes the unloaded reference. Specified environmental and electrical conditions make that reset meaningful. The subsequent Supplemental Restraint System verification checks the safety system affected by the seat work, explaining why this comfort-component repair includes restraint-related completion requirements."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "G1695514",
+        "G1695508"
+      ]
+    },
+    {
+      "id": "topic-bfd7465b052a1f33",
+      "title": "Audio and display network without touchscreen",
+      "summary": "This sheet shows the high-speed Controller Area Network 3 connections for the arrangement without a touchscreen. Audio, display and instrument-cluster modules share commands and status messages so their separate functions can coordinate.",
+      "sections": [
+        {
+          "id": "audio-network-members",
+          "title": "The modules perform different jobs",
+          "body": "The audio control module (ACM) handles audio functions, while the instrument panel cluster (IPC) presents driving information and warnings. The sheet also names the front control/display interface module (FCDIM) and the SYNC accessory protocol interface module (APIM). Their presence identifies communication participants without making them interchangeable components."
+        },
+        {
+          "id": "audio-network-purpose",
+          "title": "Why a shared data pair matters",
+          "body": "The positive and negative CAN wires form a message-carrying pair. They allow controllers to exchange information without a separate dedicated wire for each command. The related network overview explains that a gateway translates this network's information for diagnostic communication, so the connection diagram is only one part of understanding a missing-message concern."
+        },
+        {
+          "id": "reading-audio-network",
+          "title": "Read the page configuration and branches",
+          "body": "The WITHOUT TOUCHSCREEN heading applies to the whole sheet. The small Not used label identifies the C192 branch, while splice dots and continuation references show how the network pair connects to the illustrated modules. Keep this equipment arrangement distinct from the touchscreen network sheet. The schematic establishes electrical connections; module locations and physical harness routing are separate references."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-007",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-bbdf35a6023d0181",
+      "title": "Memory-equipped convertible body network",
+      "summary": "This sheet shows medium-speed Controller Area Network connections for a convertible with memory equipment. The paired data wires let body and convenience controllers exchange commands and status information while performing their different physical jobs.",
+      "sections": [
+        {
+          "id": "network-participants",
+          "title": "Different systems share a message network",
+          "body": "The named participants include side-obstacle detection modules, the driver seat module, driver door module, Body Control Module B and a convertible-top motor assembly. Their jobs include detecting nearby vehicles, controlling seat or door functions, and operating roof-related equipment. Sharing a network allows information to travel between controllers without a separate wire for every message."
+        },
+        {
+          "id": "network-sheet-purpose",
+          "title": "Why the paired circuits matter",
+          "body": "The positive and negative network labels identify the two sides of a data pair, not battery power and chassis ground. Messages are represented by electrical changes across that pair. A communication concern can therefore affect several functions that depend on shared information, even when their motors or other loads have separate power circuits."
+        },
+        {
+          "id": "reading-network-branches",
+          "title": "Read the page configuration and branches",
+          "body": "The CONVERTIBLE WITH MEMORY heading applies to the whole sheet. Splice identifiers and continuation references trace the network to the illustrated door, seat, obstacle-detection, body-control and roof components and onward to other pages. The local Not used label marks the C192 branch. The diagram establishes electrical relationships within this configuration; component locations and physical harness routing need their separate references."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-011",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-e5ae84a29ab36953",
+      "title": "2.3L ignition-coil power distribution",
+      "summary": "This 2.3L power-distribution sheet shows the fused feed for the four ignition coils, alongside the battery junction box fuel-pump relay reference. It separates the power that supplies the coils from the control circuits shown on the engine-control sheets.",
+      "sections": [
+        {
+          "id": "ignition-power-operation",
+          "title": "Protection and switching serve separate purposes",
+          "body": "A fuse protects wiring against excessive current, while a relay allows a control circuit to switch a larger electrical load. Ignition coils need a supply before their controlled switching can produce spark. The sheet places these power-distribution elements in context, but the drawn lines establish which protective and switching devices feed each load."
+        },
+        {
+          "id": "ignition-power-purpose",
+          "title": "Supply availability depends on operating state",
+          "body": "The notes distinguish circuits powered at all times from those powered during Start or Run. Those descriptions explain when voltage is available, not whether a connected component is being commanded to operate. A missing common supply can affect several loads, so this sheet supports understanding concerns that appear at more than one component."
+        },
+        {
+          "id": "ignition-power-reading",
+          "title": "Keep branch labels with their connections",
+          "body": "The 2.3L heading applies to this complete sheet. Fuse F44 supplies the illustrated coil branches during Start or Run; the always-live annotation belongs to the separately shown fuel-pump relay supply. Follow the drawn lines and continuation references to keep those supply conditions distinct."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-013-010"
+      ]
+    },
+    {
+      "id": "topic-ca83d76704053051",
+      "title": "SVT fuel-pump and ignition power distribution",
+      "summary": "This SVT power-distribution sheet shows fuel-pump relay and controller supplies, ignition-coil feeds and an airflow-sensor supply. Its heading identifies the equipment configuration for the whole drawing.",
+      "sections": [
+        {
+          "id": "ca83d767-operation",
+          "title": "Different loads need electrical power",
+          "body": "Ignition coils use supplied energy to create spark, while fuel-pump equipment supports fuel delivery. The mass airflow/intake air temperature sensor supplies information about incoming air, and the ignition capacitor helps suppress electrical interference. These components have different jobs even when the drawing repeats a power-circuit identifier near several loads."
+        },
+        {
+          "id": "ca83d767-purpose",
+          "title": "Understanding the switching equipment",
+          "body": "The sheet names the battery junction box, fuel-pump relays, fuel-pump control modules and a body control module output marked as a field-effect transistor. A relay or electronic output switches a circuit; a fuse protects against excessive current. The illustrated paths establish how these elements relate to particular loads."
+        },
+        {
+          "id": "ca83d767-reading",
+          "title": "Respecting feed states and equipment branches",
+          "body": "The SVT heading applies to this entire sheet. It includes two fuel-pump relays and two fuel-pump control modules, alongside the ignition and airflow-sensor branches. Follow each fuse, relay and continuation path separately; the drawing should not be applied to another configuration merely because some component names are shared."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-013-040"
+      ]
+    },
+    {
+      "id": "topic-c23779e0cd61ef83",
+      "title": "Body-network messages: convertible without memory, touchscreen",
+      "summary": "This medium-speed communication-network sheet covers the convertible without memory and with touchscreen equipment. It connects cabin and body-control electronics through paired data conductors, including the convertible top motors.",
+      "sections": [
+        {
+          "id": "c237-operation",
+          "title": "A shared path for information",
+          "body": "The network carries changing electrical signals that represent messages. Its positive and negative conductors work as a pair, allowing several modules to share information without a separate wire for every request. Network termination stabilizes those signals, while the gateway translates messages between the vehicle's different networks."
+        },
+        {
+          "id": "c237-purpose",
+          "title": "Which features appear here",
+          "body": "The sheet includes the SYNC module, global positioning system module, front controls interface module and front seat climate control module. It also names Body Control Module B, the radio transceiver module and convertible top motors. These devices have different jobs but need communication paths to coordinate their functions."
+        },
+        {
+          "id": "c237-reading",
+          "title": "Following equipment-specific branches",
+          "body": "The headings “Convertible without memory” and “Touchscreen” identify this whole network arrangement. The SYNC 2 labels qualify the APIM and GPSM branches, while the climate-controlled-seat label surrounds the seat-climate module branch. Follow the drawn junctions and continuation references to keep those local equipment qualifications separate from the page-wide configuration."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-010",
+        "G1813069"
+      ]
+    },
+    {
+      "id": "topic-c98e23590df749d1",
+      "title": "2.3L oxygen-sensor circuits: automatic transmission",
+      "summary": "This 2.3L automatic-transmission sheet shows heated oxygen sensors and their controller circuits. The sensors report exhaust conditions, while separate heater paths bring the sensing elements into their operating range.",
+      "sections": [
+        {
+          "id": "c98e2359-operation",
+          "title": "Why sensing and heating are separate",
+          "body": "An oxygen sensor needs a hot sensing element to report exhaust conditions reliably. Its heater uses electrical power to warm that element, while separate circuits carry measurement information. A heater circuit problem and a signal circuit problem therefore affect different parts of the sensor’s operation."
+        },
+        {
+          "id": "c98e2359-purpose",
+          "title": "Two sensor arrangements on one sheet",
+          "body": "The universal heated oxygen sensor identified as number 11 has labels for pumping current, reference and sensing functions. Sensor number 12 has its own signal and heater labels. These distinctions help explain why the sensors cannot be understood simply as identical electrical loads connected to the powertrain control module."
+        },
+        {
+          "id": "c98e2359-reading",
+          "title": "Tracing the illustrated paths",
+          "body": "The “Automatic transmission” heading applies to this complete sheet. The “if equipped” box instead qualifies the unused connector branches within it. Connector, splice and continuation identifiers trace the actual sensor and heater circuits, and the Start-or-Run annotations identify when their depicted supplies are available."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-023-007"
+      ]
+    },
+    {
+      "id": "topic-dd0445fed9660812",
+      "title": "5.0L downstream oxygen sensors: manual transmission",
+      "summary": "This 5.0L manual-transmission sheet identifies the downstream heated oxygen sensors for both cylinder banks. Their measurement and heater circuits perform separate jobs in exhaust monitoring.",
+      "sections": [
+        {
+          "id": "w024010-operation",
+          "title": "Sensing exhaust while managing temperature",
+          "body": "The downstream sensors provide information used to assess exhaust treatment. Their sensing elements and heaters have different electrical jobs: the element produces exhaust-related information, while the heater consumes power to establish operating temperature. A heater-circuit concern therefore describes something different from an unexpected oxygen-signal reading."
+        },
+        {
+          "id": "w024010-purpose",
+          "title": "Keeping the bank and circuit identities clear",
+          "body": "The heated oxygen sensor (HO2S) labels distinguish the bank-specific downstream units. At the powertrain control module (PCM), separate heater and signal-return labels help identify each circuit’s role. This separation makes the sheet useful for understanding which part of a sensor’s electrical interface a diagnostic reference addresses."
+        },
+        {
+          "id": "w024010-reading",
+          "title": "Reading the qualified branches",
+          "body": "The “Manual transmission” heading identifies this entire wiring arrangement. The smaller “if equipped” boxes qualify unused connector branches, not the page-wide transmission application. Follow the sensor, heater and return paths through the numbered connectors and splices; the Start-or-Run note identifies the illustrated supply condition."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-024-010"
+      ]
+    },
+    {
+      "id": "topic-cfa260b5a6100721",
+      "title": "3.7L rear oxygen sensors: automatic transmission",
+      "summary": "This 3.7L automatic-transmission sheet identifies heated oxygen sensors 12 and 22 and their controller connections. Their exhaust signals and separate heaters support monitoring downstream of the catalytic converters.",
+      "sections": [
+        {
+          "id": "cfa260b5-operation",
+          "title": "Why the rear sensors are heated",
+          "body": "Oxygen sensors depend on a hot sensing element to produce useful exhaust information. Their electrical heaters support that temperature, while separate signal and return circuits carry the measurement. The sensors identified as the second sensors on their respective banks provide downstream information used in monitoring catalytic-converter behavior."
+        },
+        {
+          "id": "cfa260b5-purpose",
+          "title": "Separating the two sensor channels",
+          "body": "The powertrain control module has distinct signal and heater labels for each sensor. This distinction matters because a concern affecting one bank or one heater path need not involve the other. Signal returns also have their own identities and should not automatically be interpreted as ordinary chassis grounds."
+        },
+        {
+          "id": "cfa260b5-reading",
+          "title": "Following branches through the illustration",
+          "body": "The “Automatic transmission” heading applies to the complete sheet. The unused connector terminals are separate local details. Connector, splice and continuation labels trace the sensor, heater and return paths, while Start-or-Run labels describe the availability of the illustrated supplies."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-026-008"
+      ]
+    },
+    {
+      "id": "topic-c54b3d54b0f40d84",
+      "title": "3.7L rear oxygen sensors: manual transmission",
+      "summary": "This 3.7L manual-transmission diagram separates the downstream oxygen sensors’ measurement circuits from the heater circuits that bring their sensing elements into a useful operating range.",
+      "sections": [
+        {
+          "id": "c54b-operation",
+          "title": "Heat makes the measurement useful",
+          "body": "An oxygen-sensing element needs sufficient heat to produce a useful response to exhaust conditions. Its built-in heater brings it toward that temperature more quickly than exhaust heat alone. The powertrain control module (PCM) therefore handles heater operation and oxygen-signal interpretation as related but distinct electrical functions."
+        },
+        {
+          "id": "c54b-purpose",
+          "title": "Why similar sensors need separate identities",
+          "body": "The sheet distinguishes the labeled oxygen sensors and their individual heater and signal paths. Their numbering identifies particular sensor positions within the engine's exhaust system. Keeping those identities clear matters because a heater-circuit concern and an oxygen-signal concern require different interpretation, even when they involve the same sensor assembly."
+        },
+        {
+          "id": "c54b-reading",
+          "title": "Following signals, heaters and returns",
+          "body": "The “Manual transmission” heading applies to this entire sheet. Signal return, heater labels and the Start-or-Run supply annotation distinguish circuit roles within that arrangement. Splices, inline connectors and continuation references establish the actual paths; unused terminals remain identified as such in the original drawing."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-026-009"
+      ]
+    },
+    {
+      "id": "topic-ea5a72830c94bf72",
+      "title": "2.3L active grille-shutter wiring",
+      "summary": "The 2.3L active grille shutter changes the opening available for air entering the front cooling area. This sheet shows its motorized assembly, supply, ground and communication connection to the powertrain control module.",
+      "sections": [
+        {
+          "id": "grille-shutter-operation",
+          "title": "Shutters regulate the airflow opening",
+          "body": "Moving shutter blades changes how much of the grille opening is available for airflow. Opening supports airflow through the heat exchangers, while closing can reduce aerodynamic drag when conditions allow. The cooling fan moves air and the shutter changes its available entrance; both affect cooling airflow through different physical actions."
+        },
+        {
+          "id": "grille-shutter-purpose",
+          "title": "The actuator needs power and communication",
+          "body": "The assembly includes a motor and electronic control, with separate supply, ground and local interconnect network (LIN) labels. The supply provides operating energy, while the network carries control information. A communication connection cannot substitute for motor power, and an available supply alone does not establish the commanded shutter position."
+        },
+        {
+          "id": "grille-shutter-reading",
+          "title": "Keep applicability with the illustrated branch",
+          "body": "The 2.3L heading identifies the application of the whole sheet. Its Start-or-Run note describes supply availability, and its continuation reference leads to the cooling-fan sheet. The separate supply, ground and LIN connections establish the actuator’s electrical relationships; the drawing does not provide physical harness routing or shutter operating thresholds."
+        }
+      ],
+      "relatedTermIds": [
+        "cooling-fan"
+      ],
+      "sourceDocumentIds": [
+        "wiring-033-002"
+      ]
+    },
+    {
+      "id": "topic-c4110a3c151e34bc",
+      "title": "Left HID headlamp without leveling",
+      "summary": "This sheet covers the left high-intensity discharge (HID) headlamp arrangement without headlamp leveling. It identifies the assembly’s separate lighting functions, controller outputs, protected supplies and ground paths.",
+      "sections": [
+        {
+          "id": "c411-operation",
+          "title": "Power and commands serve different roles",
+          "body": "HID lighting produces light through an electrical discharge, requiring supporting lamp electronics. The body control module (BCM) has separately labeled low- and high-beam outputs. Field-effect transistor (FET) labels identify electronic switching, while ground connections complete current paths needed by the assembly's electrical functions."
+        },
+        {
+          "id": "c411-purpose",
+          "title": "Why several lighting labels appear",
+          "body": "The assembly labels include low beam, high beam, parking, signal and remote start. Battery junction box (BJB) references identify protected supply branches, and a continuation leads toward parking, rear and license lamps. These details help trace the relevant function without assuming the whole assembly uses one feed."
+        },
+        {
+          "id": "c411-reading",
+          "title": "Match labels to the drawn paths",
+          "body": "The HID and “Without headlamp leveling” headings qualify this complete sheet. Always-live and Start-or-Run annotations instead describe particular supplies within that arrangement. Follow the drawn paths through the headlamp connector and continuation references to distinguish the individual lighting functions."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-085-004"
+      ]
+    },
+    {
+      "id": "topic-c92c8dcfbc58796a",
+      "title": "Right HID headlamp without leveling",
+      "summary": "This sheet covers the right high-intensity discharge (HID) headlamp arrangement without headlamp leveling. It distinguishes the assembly’s lighting functions from their controller outputs, protected feeds and ground paths.",
+      "sections": [
+        {
+          "id": "c92c8dcf-operation",
+          "title": "Several lighting functions share an assembly",
+          "body": "The right-hand headlamp assembly has labels for high beam, low beam, parking and signaling functions. The body control module has separate right-front beam outputs marked as field-effect transistor outputs, meaning electronic switches control those circuits. Separate functions can therefore require separate electrical paths even within one lamp housing."
+        },
+        {
+          "id": "c92c8dcf-purpose",
+          "title": "Following supply and control information",
+          "body": "The battery junction box, fuse and ground references help trace where electrical energy enters and returns from the lighting circuits. The sheet distinguishes feeds available continuously from those available during starting or running. That distinction matters because voltage availability depends on the operating state identified beside the illustrated circuit."
+        },
+        {
+          "id": "c92c8dcf-reading",
+          "title": "Keeping equipment labels in context",
+          "body": "The HID and “Without headlamp leveling” headings identify this whole wiring arrangement. They are not optional labels on a single local branch. The remote-start and other lighting labels identify functions within the assembly; connector and continuation references show where their electrical paths lead."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-085-005"
+      ]
+    },
+    {
+      "id": "topic-c3fe0b5e3bfadc87",
+      "title": "Power-folding mirrors without memory",
+      "summary": "This sheet covers power-folding mirrors without memory equipment. Electric motors move the mirror housings inward or outward, while a folding relay switches their drive circuits.",
+      "sections": [
+        {
+          "id": "c3fe-operation",
+          "title": "Electrical drive creates folding movement",
+          "body": "A folding motor converts electrical energy into movement at the mirror hinge. Reversing its electrical drive changes the direction of movement. The relay's inward and outward labels help explain that switching function, while the illustrated circuit establishes how the left-hand and right-hand mirror motors are served."
+        },
+        {
+          "id": "c3fe-purpose",
+          "title": "Separating motor drive from its supply",
+          "body": "The body control module (BCM), fused supply and ground reference provide context for the folding circuit. A motor requires a complete current path to move, so the sheet helps separate the source of power, the switching arrangement and the conductors carrying that power to the mirror."
+        },
+        {
+          "id": "c3fe-reading",
+          "title": "Following the applicable mirror branch",
+          "body": "The “Power folding mirrors” and “Without memory” headings apply to this entire sheet. Use its connector identifiers and continuation to follow that arrangement into the related mirror circuit. The always-live annotation describes supply availability rather than a continuous folding command; memory-equipped arrangements require their own references."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-124-003"
+      ]
+    },
+    {
+      "id": "topic-cfc46013de49db7f",
+      "title": "Memory Mirror Switch and Module Circuits",
+      "summary": "This power-mirror sheet shows the driver door module (DDM), its electrical support and the memory-set switch circuits. It helps explain how a driver’s preset selection reaches the electronics that coordinate memory-equipped mirror functions.",
+      "sections": [
+        {
+          "id": "cfc46013-operation",
+          "title": "A memory button supplies a request",
+          "body": "The memory-set switch provides separate preset-selection inputs and a return path. These circuits communicate the driver’s choice to the module rather than carrying mirror-motor operating current. The DDM also has a medium-speed controller area network connection, allowing information to be exchanged with other participating vehicle electronics."
+        },
+        {
+          "id": "cfc46013-purpose",
+          "title": "Why supply and ground appear with switch inputs",
+          "body": "The module needs its battery supply and ground to interpret switch activity and participate in network communication. The battery junction box and ground references identify those supporting paths. A supply concern can affect the module broadly, while an individual switch-input concern can affect only a particular request."
+        },
+        {
+          "id": "cfc46013-reading",
+          "title": "Recognizing the memory-related portion",
+          "body": "The “Memory” heading applies to this whole module-and-switch arrangement. It does not make memory equipment universal across power mirrors. Follow the connector and continuation references to relate these preset inputs and module supplies to mirror operation on the other sheets, keeping switch requests distinct from motor-drive circuits."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-124-004"
+      ]
+    },
+    {
+      "id": "topic-c5d0459af03b90a4",
+      "title": "2.3L active noise-control microphones",
+      "summary": "This 2.3L sheet shows microphones that measure cabin sound for active noise control and their paired connections to the audio control module. The drawing separates coupe and convertible rear-microphone arrangements.",
+      "sections": [
+        {
+          "id": "c5d0-operation",
+          "title": "Using sound to reduce sound",
+          "body": "Microphones convert pressure changes in the air into electrical signals. An active noise-control system uses those signals to generate sound that opposes selected unwanted noise. The timing matters: properly opposed sound reduces the resulting pressure variation, while the microphones provide feedback about what is happening inside the cabin."
+        },
+        {
+          "id": "c5d0-purpose",
+          "title": "Why several microphone identities appear",
+          "body": "The sheet names front, rear, left-rear and right-rear active noise-control microphones. Multiple sensing positions let the system receive information from different cabin areas. Their ambient-noise channel labels keep those inputs distinct, helping the reader follow the correct microphone circuit into the audio control module."
+        },
+        {
+          "id": "c5d0-reading",
+          "title": "Recognizing signal pairs and variants",
+          "body": "The 2.3L heading applies to the complete sheet. A convertible box contains the left-rear and right-rear microphones, while the coupe box contains the single rear microphone; the front microphone is outside those boxes. Positive and negative ambient-noise labels identify paired microphone signals, not speaker outputs."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-132-004"
+      ]
+    },
+    {
+      "id": "topic-e6ac56bfdcf0a4c9",
+      "title": "Finding 3.7L engine sensors and actuators",
+      "summary": "This 3.7L engine location view identifies ignition coils, fuel injectors, sensors and camshaft-timing solenoids. It distinguishes components that may look similar but report different conditions or perform different jobs.",
+      "sections": [
+        {
+          "id": "engine-location-operation",
+          "title": "Separate information from action",
+          "body": "Coils generate spark energy and injectors meter fuel, while sensors report conditions to the powertrain control module (PCM). The view names throttle position, oil pressure, cylinder-head temperature, intake pressure and temperature, and camshaft position. Each measurement describes a different aspect of engine operation, so the component name matters as much as its appearance."
+        },
+        {
+          "id": "engine-location-purpose",
+          "title": "Numbered components are not interchangeable labels",
+          "body": "Several coils and injectors appear together, along with bank-specific camshaft components. The camshaft-position sensor reports shaft position, while variable camshaft timing solenoids control oil flow used to change timing. Finding the correct numbered component prevents information for one cylinder or timing function from being applied to another."
+        },
+        {
+          "id": "engine-location-reading",
+          "title": "Match the illustrated arrangement",
+          "body": "The 3.7L caption identifies the engine arrangement shown in this complete location view. Use the front-of-vehicle arrow, grid and connector identifiers to orient it. Connector and splice callouts locate reference points; their proximity in the picture does not establish the electrical paths between them."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-151-007"
+      ]
+    },
+    {
+      "id": "topic-fd1bd35c1c1da96c",
+      "title": "Convertible A-pillar trim",
+      "summary": "The A-pillar trim covers the interior face of the pillar beside the windshield. This convertible-specific procedure explains how the panel and neighboring sun visor attachments are released, including electrical connections where fitted.",
+      "sections": [
+        {
+          "id": "a-pillar-cover",
+          "title": "Trim finishes the windshield-side structure",
+          "body": "The trim panel gives the pillar a finished interior surface and covers the area behind it. Clips and retainers hold the panel against its mounting points. Those attachments locate the trim; the decorative panel itself should not be confused with the structural pillar beneath it."
+        },
+        {
+          "id": "a-pillar-visor-access",
+          "title": "The sun visor is part of the access sequence",
+          "body": "The procedure begins with the sun visor and its cap and clip before releasing the pillar panel. This sequence accounts for the adjoining trim and mounting arrangement. An electrical connector may also be present at the visor, so mechanical release does not always leave that component completely detached."
+        },
+        {
+          "id": "a-pillar-equipment-notes",
+          "title": "Illustration and equipment notes define the variation",
+          "body": "The source shows one steering layout and one side, stating that the opposite arrangements are similar. A speaker connector is disconnected only where fitted. These notes explain how to interpret the illustrated example without assuming every convertible has identical electrical equipment behind its A-pillar trim."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "G1692609"
+      ]
+    },
+    {
+      "id": "topic-fbad67efdb97c046",
+      "title": "3.7L ignition and fuel-pump power distribution",
+      "summary": "This 3.7L power-distribution sheet shows feeds and switching associated with the six ignition coils and the fuel-pump system. It relates the battery junction box supplies to the fuel-pump relay, body control module and pump controller.",
+      "sections": [
+        {
+          "id": "power11-loads",
+          "title": "Ignition and fuel delivery need electrical energy",
+          "body": "Coil-on-plug ignition units use electrical energy to produce the spark voltage needed for combustion. The fuel pump system supplies fuel, with a control module participating in pump operation. These are different loads, so a power distribution sheet helps distinguish their supply paths from their detailed operating controls."
+        },
+        {
+          "id": "power11-switching",
+          "title": "Supply availability and switching are separate",
+          "body": "The diagram includes fuses, a fuel pump relay, and a field-effect transistor label at the body control module. It also distinguishes always-live power from power available in start or run. Those annotations describe different supply and switching roles; the illustrated lines establish their actual relationships."
+        },
+        {
+          "id": "power11-tracing",
+          "title": "Use branch labels and continuation points",
+          "body": "The 3.7L heading identifies this complete wiring arrangement. Splice and off-page references show where the supplies continue, while component-system references lead to the detailed ignition and fuel-control circuits. Follow each illustrated path separately so the always-live feed and Start-or-Run coil supply retain their different operating conditions."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-013-011"
+      ]
+    },
+    {
+      "id": "topic-ee73aacc521d7946",
+      "title": "Steering network without adaptive cruise",
+      "summary": "This sheet shows the high-speed controller area network 2 arrangement without adaptive cruise. It identifies steering-related modules and the head-up display connection within that specific network drawing.",
+      "sections": [
+        {
+          "id": "steering-network-operation",
+          "title": "Paired wires carry messages",
+          "body": "Controller area network communication uses a paired data circuit rather than a separate wire for every command. The power steering control module (PSCM), steering column control module (SCCM) and head-up display (HUD) module are named here. Their network connections carry information; they are distinct from the power needed to operate each component."
+        },
+        {
+          "id": "steering-network-reference-purpose",
+          "title": "Communication joins otherwise separate functions",
+          "body": "Power steering uses vehicle information when determining assistance, while steering-column electronics exchange driver-control information. A display also depends on information supplied by other systems. The sheet therefore helps trace a communication concern that may involve several functions, rather than treating each affected feature as an independent failed component."
+        },
+        {
+          "id": "steering-network-reading",
+          "title": "Use the illustrated branch and continuation points",
+          "body": "The “Without adaptive cruise” heading applies to this complete sheet. Follow both data conductors through its connectors, splices and continuations to understand the illustrated arrangement; the unused connector is a separate local detail. The related network description identifies termination modules whose resistors stabilize signaling, a different function from a power-circuit ground."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-005",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-f459c00aee7852b3",
+      "title": "Adaptive-cruise radar and steering network",
+      "summary": "This adaptive-cruise network sheet includes the proximity-warning radar, steering controllers and head-up display module on high-speed controller area network 2. It shows the data paths that support communication among those devices.",
+      "sections": [
+        {
+          "id": "radar-network-operation",
+          "title": "A shared data pair connects controllers",
+          "body": "The power steering control module (PSCM), steering column control module (SCCM), head-up display (HUD) module and radar unit are named on the sheet. Controller area network communication carries messages over paired conductors. Those conductors transmit information rather than serving as the main power supply for steering assistance or radar operation."
+        },
+        {
+          "id": "radar-network-purpose",
+          "title": "Driver assistance depends on shared information",
+          "body": "Radar supplies information about objects ahead, while the network distributes vehicle information used by participating controllers. A communication concern can affect a function even when its local hardware still has power. The “Adaptive cruise” heading identifies this entire illustrated network configuration, not merely the radar branch."
+        },
+        {
+          "id": "radar-network-reading",
+          "title": "Trace both conductors through the references",
+          "body": "The positive and negative data labels identify a pair, not ordinary battery-positive and ground connections. Follow both conductors through the drawn splices, connectors and continuation points. The related network chart identifies termination modules, whose resistors stabilize communication; it provides context that cannot be established from neighboring labels alone."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-014-006",
+        "G1813069",
+        "G1693125"
+      ]
+    },
+    {
+      "id": "topic-fb1239c1b88d62a9",
+      "title": "3.7L manual-transmission clutch and speed inputs",
+      "summary": "This 3.7L manual-transmission sheet shows output-shaft speed sensing and clutch-pedal switches. It distinguishes transmission rotation from the driver’s pedal movement and identifies the controller inputs associated with each.",
+      "sections": [
+        {
+          "id": "clutch-speed-inputs",
+          "title": "Two different kinds of movement are reported",
+          "body": "The output shaft speed sensor reports how quickly the transmission's output rotates. Clutch pedal switches report pedal position at particular points in its travel. These are complementary inputs: output rotation describes driveline motion, while pedal state describes the driver's operation of the clutch."
+        },
+        {
+          "id": "clutch-switch-distinctions",
+          "title": "Top and bottom switches answer different questions",
+          "body": "The sheet names top-of-travel and bottom-of-travel clutch pedal position switches, as well as a clutch deactivation label. A pedal can leave its released position long before reaching full depression, so these states should not be treated as interchangeable. The powertrain and body control modules appear as related controllers."
+        },
+        {
+          "id": "clutch-schematic-reading",
+          "title": "Read switch state from its legend",
+          "body": "The “Manual transmission” heading applies to this complete sheet. Its depressed and released pedal legends establish how to interpret the switch contacts, while connector, ground and off-page references support tracing. The top- and bottom-of-travel switches remain distinct inputs; the sheet does not define every feature that uses them."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-026-010"
+      ]
+    },
+    {
+      "id": "topic-f831729c8ba35e8d",
+      "title": "Door-ajar inputs without memory",
+      "summary": "This interior-lighting sheet covers the door-ajar arrangement without memory equipment. It relates the front latch switches to the body control module, window regulator motors and their illustrated ground returns.",
+      "sections": [
+        {
+          "id": "interior4-latch-state",
+          "title": "A latch reports door condition",
+          "body": "A door-ajar switch converts a mechanical door condition into an electrical state. The body control module uses door information when coordinating body functions such as interior lighting. The source explicitly states that these switches are electrically closed when the door is closed, an important distinction from everyday uses of 'open.'"
+        },
+        {
+          "id": "interior4-related-systems",
+          "title": "Door information crosses system boundaries",
+          "body": "The sheet names both front latch assemblies and both front window regulator motors, with references into their system diagrams. Door-status information therefore matters beyond a lamp alone. The “Without memory” heading applies to this complete arrangement; its illustrated ground returns should not be substituted for the module-return arrangement on the memory sheet."
+        },
+        {
+          "id": "interior4-reading",
+          "title": "Trace the illustrated return paths",
+          "body": "Ground references, splice identifiers, and body controller door-ajar labels help organize the circuit. Their exact relationships come from the drawn lines, not the order of extracted text. The latch's release motor and its door-status switch are different functions even when they appear within the same named assembly."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-089-004"
+      ]
+    },
+    {
+      "id": "topic-fb527d0d213ec3e2",
+      "title": "Door-ajar inputs with memory",
+      "summary": "This memory-equipment sheet shows how the front door-ajar switches report door condition. It includes return connections at the driver and passenger door modules rather than the ground-return arrangement shown on the without-memory sheet.",
+      "sections": [
+        {
+          "id": "interior5-door-state",
+          "title": "A mechanical latch creates an electrical state",
+          "body": "The door-ajar switches change electrical state with door condition, providing information used by the body control module. The source explicitly says the switches are closed when the doors are closed. Here, an electrically closed switch means a conducting contact, which is distinct from whether a lamp is illuminated."
+        },
+        {
+          "id": "interior5-module-returns",
+          "title": "Return labels distinguish this arrangement",
+          "body": "The diagram names return connections at the driver and passenger door modules alongside the latch switches and window regulator circuits. Those returns provide the intended electrical references for the status signals. The “Memory” heading applies to this whole arrangement; its connections should be matched to the vehicle’s equipment."
+        },
+        {
+          "id": "interior5-reference-reading",
+          "title": "Follow status information across the references",
+          "body": "The body controller's left-front and right-front door-ajar labels identify the information being reported. References to latch and window diagrams provide further context for the named assemblies. Use the illustrated wiring to establish how the returns and signals connect; proximity in the extracted text does not establish a shared path."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-089-005"
+      ]
+    },
+    {
+      "id": "topic-f236499fc450df6f",
+      "title": "Rear lamp power and monitoring: China and Europe",
+      "summary": "This China-and-Europe rear-lamp sheet separates position, stop and turn functions in the lamp assemblies. It also shows lamp-outage information and related body-control connections for that market arrangement.",
+      "sections": [
+        {
+          "id": "rear-lamp-functions",
+          "title": "One assembly performs several visible jobs",
+          "body": "Position lamps make the vehicle visible, stop lamps communicate braking, and turn lamps indicate a change of direction. The assignments distinguish these functions and their ground connections. Because the assembly contains separate electrical functions, seeing one light operate does not establish that every other path into the housing is working."
+        },
+        {
+          "id": "rear-lamp-control-purpose",
+          "title": "Switching and monitoring appear together",
+          "body": "The body control module (BCM) outputs include field-effect transistor (FET) labels, identifying electronic switching devices. Body Control Module B and outage labels also appear. Outage-related circuits concern lamp monitoring, so their purpose differs from the current paths that illuminate the lamps; the drawn schematic establishes their exact relationship."
+        },
+        {
+          "id": "rear-lamp-sheet-reading",
+          "title": "Use the market labels at their branches",
+          "body": "The “China, Europe” heading applies to this entire rear-lamp arrangement. Follow its left and right assembly references, grounds and turn/stop/hazard continuations without substituting another market’s layout. Always-live supply annotations describe availability; the control electronics determine whether each connected lamp function illuminates."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-092-006"
+      ]
+    },
+    {
+      "id": "topic-f9dfd3f691731b21",
+      "title": "Convertible rear power-window control",
+      "summary": "This convertible rear-window sheet shows the left and right motor assemblies, their operating supplies and their control inputs. It also identifies the accessory-delay circuit and body-control connections that support window operation.",
+      "sections": [
+        {
+          "id": "rear-window-power-control",
+          "title": "Motor energy and movement requests are distinct",
+          "body": "The motor assemblies have battery supply and ground labels alongside up, down, ajar, and global-down labels. Power provides the energy to move the glass, while control inputs determine requested behavior. The presence of battery voltage alone therefore does not establish that a movement request has reached a motor."
+        },
+        {
+          "id": "rear-window-accessory-delay",
+          "title": "The sheet includes permission to operate",
+          "body": "The body control module and a non-serviceable accessory delay relay appear with delayed-accessory connections. This identifies an operating-power or enable context beyond the direction commands. Body Control Module B also appears with down-related labels; the illustrated lines establish its exact relationship to the rear-window control paths."
+        },
+        {
+          "id": "rear-window-reading",
+          "title": "Follow the matching equipment branch",
+          "body": "The “Convertible” heading applies to the complete rear-window drawing. Off-page power-window references continue the control paths, while fuse and ground references identify the supplies and returns. The schematic describes electrical connections rather than the physical wire route through the rear body, and it should not be applied as a coupe window arrangement."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-100-011"
+      ]
+    },
+    {
+      "id": "topic-f734f3e0bb98dd74",
+      "title": "Memory-equipped driver mirror motors and feedback",
+      "summary": "This memory-equipped driver-mirror sheet identifies adjustment motors, position feedback, heating and lighting around the driver door module and left exterior mirror. The whole drawing applies to that memory arrangement.",
+      "sections": [
+        {
+          "id": "mirror-motion-feedback",
+          "title": "Movement and position are separate signals",
+          "body": "Small motors tilt the mirror horizontally and vertically, changing the rearward view. Position potentiometers are variable electrical elements that report mirror position. Their feed, return, and signal paths let a controller distinguish where the mirror is from the command that tells a motor to move."
+        },
+        {
+          "id": "mirror-feature-branches",
+          "title": "Several features share the mirror assembly",
+          "body": "The driver door module connects to heating, a turn indicator and puddle lighting as well as the adjustment circuits. Heating clears moisture through electrical heat, while the lamps provide signaling or nearby illumination. The “Memory” heading qualifies this complete arrangement, including the position-feedback circuits that distinguish it from simpler mirror systems."
+        },
+        {
+          "id": "mirror-diagram-reading",
+          "title": "Use the function labels to follow each path",
+          "body": "Motor direction labels describe movement commands, while potentiometer labels describe position feedback. Ground and interior-lamp references provide additional tracing points. Treat these as separate functions within a shared assembly, and use the drawn connections to establish relationships instead of assuming that adjacent extracted labels share a circuit."
+        }
+      ],
+      "relatedTermIds": [],
+      "sourceDocumentIds": [
+        "wiring-124-006"
+      ]
     }
   ],
   "documents": {
@@ -1272,6 +3166,302 @@
     "connector-C3808": {
       "topicId": "topic-6f8faaa1b4fa68b3",
       "sourceHash": "6945ad35a3b22b0a73f052f77a808ee058b732c1de2bcf0ce27a8a79ff10836d"
+    },
+    "wiring-014-012": {
+      "topicId": "topic-3fdeff6e14a626e5",
+      "sourceHash": "54af61ac616a65dcd8b3af07d3e725f6e8aee4664cc407481cb08636d3229467"
+    },
+    "wiring-100-001": {
+      "topicId": "topic-392cfb569d9bbace",
+      "sourceHash": "337b3cde49496de50f13b4d80dc172537f912cc064b426c060ea2a75ebbbedfd"
+    },
+    "wiring-117-005": {
+      "topicId": "topic-36af0c9dd5ff0e38",
+      "sourceHash": "be75eff92230d742c07bd49bb166a56c1c7759f6f998e921a88c1ba77c1e7575"
+    },
+    "wiring-151-003": {
+      "topicId": "topic-3a02f242fc9657f0",
+      "sourceHash": "1bdc1c4327313c4ea0513b0d45e63a1b9ef45d1c0fc4818a09151f2d75aadd1b"
+    },
+    "wiring-014-008": {
+      "topicId": "topic-37476c2b635f8761",
+      "sourceHash": "4d127ff2f74349df8487336e0dadaf95d4c7de0c82721713c5a705cc49048a6a"
+    },
+    "connector-C9031": {
+      "topicId": "topic-937f744d0da473a9",
+      "sourceHash": "3a033f6c765e6923d7889763a2ae3d170658d6e80edd1b12267b9849b76c317a"
+    },
+    "connector-C9032": {
+      "topicId": "topic-4404277a3fb0e36b",
+      "sourceHash": "49060fcc77619c5f848833a52f4eb4fa8c659a00001efde2f82034aafe1fe915"
+    },
+    "wiring-093-001": {
+      "topicId": "topic-4d219ed771ab36f9",
+      "sourceHash": "c052a2d9d133b051fd6eb85918f359fe33a38a5cb1a001ed1f4d7bae168d8064"
+    },
+    "wiring-146-003": {
+      "topicId": "topic-53a1e832daed9a26",
+      "sourceHash": "3cde04681176625970044b50dd59604c63c05d04eade06f95d4078a2fc7a79d2"
+    },
+    "connector-C3210": {
+      "topicId": "topic-5e06489eae76fb84",
+      "sourceHash": "933176955caa5e77021ce0605552de5bd54269945967e5c45d0bfc34845ae045"
+    },
+    "connector-C3212": {
+      "topicId": "topic-5969af92b8d014da",
+      "sourceHash": "e5d5b3240501b8c4aecfa281e2c5db795675e87113f4dc04d837d6df05fd3f7d"
+    },
+    "wiring-100-002": {
+      "topicId": "topic-5c8adc56c3729c75",
+      "sourceHash": "ef59b5fbc28548c42d95b73c25e2056db4081c6d0be27117fb194a33ddb37f3e"
+    },
+    "wiring-151-010": {
+      "topicId": "topic-5d7dae0126da3cf8",
+      "sourceHash": "33ac5c14d8d83110a14c5b91c056f21b47c9910a5e1cd4499cc4100e89fd1b6b"
+    },
+    "G1673172": {
+      "topicId": "topic-be58557601af62b8",
+      "sourceHash": "65fff876b4a9e53e943b27a972522078d676a8c139eb34f64052336e9d2d470a"
+    },
+    "G1692830": {
+      "topicId": "topic-be58557601af62b8",
+      "sourceHash": "42342e8720e6b32663309b3bc7e9ea77bf4f3da775f53fe7d530f1c469c87d13"
+    },
+    "G1692941": {
+      "topicId": "topic-be58557601af62b8",
+      "sourceHash": "8a4b9e2dd524f582fc6ef76b129b6f6db50e3160b13733b9506c95d86c82c5bd"
+    },
+    "G1804807": {
+      "topicId": "topic-be58557601af62b8",
+      "sourceHash": "b972771c9b52ade84dfc5382acdf269e249049a7ae0b51c1693d0527a6d547fe"
+    },
+    "wiring-014-015": {
+      "topicId": "topic-8afc97b506c0ee2e",
+      "sourceHash": "681d4e683afb5c3d3fb604cce636f1bbd963cf2319a2788cbd11fe529cd9464a"
+    },
+    "wiring-024-011": {
+      "topicId": "topic-6a6366291131167d",
+      "sourceHash": "463e4ee8ed0b9e682cc668b58c4e8b432a686ccee6abaea7a676306d42acfe59"
+    },
+    "wiring-124-005": {
+      "topicId": "topic-897fe96a3c0116b8",
+      "sourceHash": "ad974aeb245dcff7039e9a9ab526761cb4a48d4b9ed9bbae39de437de0c7ecad"
+    },
+    "wiring-133-006": {
+      "topicId": "topic-6e48546f95a8da96",
+      "sourceHash": "999dc4e4c2b24f59c96192e20dcc5937b2f7a49723fe2ab28576406b87d9d471"
+    },
+    "connector-C352": {
+      "topicId": "topic-8b2968a1f00ba92d",
+      "sourceHash": "8fff871c57a91c60c5df5475bd138788869d44d39bdbccf3642d98daf982380a"
+    },
+    "connector-C3215": {
+      "topicId": "topic-c4808b1ace1923c2",
+      "sourceHash": "89993aeea933f54c8e8dca9c31270871b5e95ad9c18f8d2f73edf8558fbd87ff"
+    },
+    "connector-C1824": {
+      "topicId": "topic-84626b5abd12d858",
+      "sourceHash": "1f277058a8ace6db079c2d59a7583c29100fd966a9cf757ee725a8cab67848ed"
+    },
+    "wiring-014-014": {
+      "topicId": "topic-708f0c9aa0aac6cc",
+      "sourceHash": "285acda818b3ecff98a7b236c5a460e2ea9ca5e12541f2a33fda59d04b770382"
+    },
+    "wiring-024-009": {
+      "topicId": "topic-6284fad31c9145f3",
+      "sourceHash": "40f58b41b791eab6b2e23f2e622f3ee3b40256c3939ecc9e5bf77bb6408c5cd1"
+    },
+    "wiring-056-001": {
+      "topicId": "topic-612ce98de955c921",
+      "sourceHash": "8c5a1abbd755a6656a237c1a352e6a4e9f373bc5971cc42fdd7f221f6aa89098"
+    },
+    "wiring-100-005": {
+      "topicId": "topic-792542fcd7ca0c71",
+      "sourceHash": "c996de44b075cd25becc8d0110d297a7e61a4fd40253663c09627f2d1d3c4432"
+    },
+    "wiring-100-008": {
+      "topicId": "topic-65d82085a38d8e1d",
+      "sourceHash": "25b605e0bc03fcae783a4078a1704322c6b18711f0c247efec262e43a6805b07"
+    },
+    "wiring-117-006": {
+      "topicId": "topic-75dd6919037925e8",
+      "sourceHash": "f15b1f0113301356dce582323aca61b598f5074590d0176b968f83e5f03776f9"
+    },
+    "wiring-117-007": {
+      "topicId": "topic-65b37195699baa2e",
+      "sourceHash": "525b81424491f260a53263f0f00d02e52297dc45bbe00e298866b55b572039d1"
+    },
+    "wiring-117-008": {
+      "topicId": "topic-7295afcc381b3d9f",
+      "sourceHash": "3990271107a715e4ac91970c9fab908b5c606e9d7901bab320847397e85b77ac"
+    },
+    "wiring-123-001": {
+      "topicId": "topic-785b04abf178631a",
+      "sourceHash": "1d77cf699d55278fde57718e6ec30bf2699affad39d073273ad2d874facb43d8"
+    },
+    "wiring-124-002": {
+      "topicId": "topic-616526c739bc871d",
+      "sourceHash": "9be1d6e38a77fc46a865ab48beaef8e87f3ea7c0129804976c86e68d9fe16d26"
+    },
+    "wiring-092-005": {
+      "topicId": "topic-92fc1f74bcbea424",
+      "sourceHash": "1703149f71cc51c3cb84a301e10fff4925f6f08992012c6dbd929f3706e1b859"
+    },
+    "wiring-151-002": {
+      "topicId": "topic-902bbc0723d3170b",
+      "sourceHash": "ca6afa693f8935c9a5be01f3fe23b6c1f62380d7c617294f74dc7a829e2d6673"
+    },
+    "wiring-031-005": {
+      "topicId": "topic-949151612012c630",
+      "sourceHash": "b585f8e1c43e7d94f05791342cc547d7278a193b2bdf49c7ce7ffc9342e77a99"
+    },
+    "wiring-013-012": {
+      "topicId": "topic-a6b7e0228fdd6378",
+      "sourceHash": "cc295c473f1ccda64526d8c454276bb1f1c0939212332809c18f01db6c07e4b6"
+    },
+    "wiring-014-009": {
+      "topicId": "topic-a5b01fc7bf9dcad7",
+      "sourceHash": "3be3ae248d2461ff23b088c4c7d9af8adeef133097e7d3ea649f8be071cf240a"
+    },
+    "wiring-117-002": {
+      "topicId": "topic-a4a8a43eec0dd724",
+      "sourceHash": "f742417d7f7d2370d97f3afb5e5559b19a6146050d64a2c9ac789c5736edd4b6"
+    },
+    "wiring-023-009": {
+      "topicId": "topic-99bd0d346bc18794",
+      "sourceHash": "b3a2ca9c9723577be98a2f82f418d7e290b3f443c674a171081e22ed978aa4a2"
+    },
+    "wiring-090-008": {
+      "topicId": "topic-b2facbb5a2646300",
+      "sourceHash": "cf42c29d130ffac4ee902c83b560ac5ef674bf28cc9df567d2bf8ea054c61ca2"
+    },
+    "wiring-100-006": {
+      "topicId": "topic-b435141a9ed01286",
+      "sourceHash": "0675af768200ab460ac25adcf1a276ed4fd7c28cd14abc74dd9e47d53fe56e86"
+    },
+    "wiring-100-007": {
+      "topicId": "topic-b85aaa66221e1c55",
+      "sourceHash": "cc83b636faa1cfcf13fb8b536bf9a7ffd8a03ec6862645c4cbe81c30b5ddcaa5"
+    },
+    "wiring-117-001": {
+      "topicId": "topic-b21ce34e933c8a5a",
+      "sourceHash": "aaa8873eca1467653dcaf61073cd19d76d811ec3208ad08ce7fa935ef0192439"
+    },
+    "wiring-117-003": {
+      "topicId": "topic-b38a63a24a7359be",
+      "sourceHash": "fb02148a8eeb8c297afac7607ceec09ec8dcc07cc39f5f282421a6b43e23cc34"
+    },
+    "wiring-151-025": {
+      "topicId": "topic-98f05f86c20d4445",
+      "sourceHash": "d3a837626bebc139e147aa960f5f84697270a3a316dc4024bcfac75029bcfeae"
+    },
+    "G1695514": {
+      "topicId": "topic-b6c4d86f35a41b5e",
+      "sourceHash": "f27b4a9ccfbc1eb023dffb699148016cac428913349d8960b44da1f905c9c63f"
+    },
+    "wiring-014-007": {
+      "topicId": "topic-bfd7465b052a1f33",
+      "sourceHash": "7decb4cca79d4115af3726e330d44947327c04b60f459f3171b8d7e6817c5e80"
+    },
+    "wiring-014-011": {
+      "topicId": "topic-bbdf35a6023d0181",
+      "sourceHash": "92abba113fef9c5122cd6e7e2ae861968dd307214767600548dbe762f3dbe24e"
+    },
+    "wiring-013-010": {
+      "topicId": "topic-e5ae84a29ab36953",
+      "sourceHash": "85b8a0adbd2bdd1b225944020ad2a2bc154be37bad871c2e8b354b0b3f8099a2"
+    },
+    "wiring-013-040": {
+      "topicId": "topic-ca83d76704053051",
+      "sourceHash": "4c516ebadc7ce46954da7d3e20672b6589e6c74a750ac40b6c1471568d78d3b6"
+    },
+    "wiring-014-010": {
+      "topicId": "topic-c23779e0cd61ef83",
+      "sourceHash": "40117b2908845708ff085d1ba33869b7ccfd8683096a79a0c3308bb9adbe4d27"
+    },
+    "wiring-023-007": {
+      "topicId": "topic-c98e23590df749d1",
+      "sourceHash": "384c2b27a64aba738814b745d5bc10b1b49f99938fd21c84c222c7cdce084ed9"
+    },
+    "wiring-024-010": {
+      "topicId": "topic-dd0445fed9660812",
+      "sourceHash": "e1f1af62105dc28096568fe23259124d0d2077b8a9687551a27460d7c3ccfa8d"
+    },
+    "wiring-026-008": {
+      "topicId": "topic-cfa260b5a6100721",
+      "sourceHash": "7e58ba9b312be415ba63e3f5d6dd37f41266cb91e3727aa5698861a65423fa87"
+    },
+    "wiring-026-009": {
+      "topicId": "topic-c54b3d54b0f40d84",
+      "sourceHash": "e61c2a5a293dc4f7eb8671c0efb9158096bc056512ecc705f0062c75231790e6"
+    },
+    "wiring-033-002": {
+      "topicId": "topic-ea5a72830c94bf72",
+      "sourceHash": "7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864"
+    },
+    "wiring-085-004": {
+      "topicId": "topic-c4110a3c151e34bc",
+      "sourceHash": "2683e0812b9b024d1cb2f7690082073ec67dd356b19f16d1e8ee9f9cda611bc2"
+    },
+    "wiring-085-005": {
+      "topicId": "topic-c92c8dcfbc58796a",
+      "sourceHash": "bfcc3f55772ee153dc81bd7649238db20f0a232ea7304a7d5f8cd64d9699deba"
+    },
+    "wiring-124-003": {
+      "topicId": "topic-c3fe0b5e3bfadc87",
+      "sourceHash": "65fee5bba01390f15a0f1b9bce2816314f419eb6d1115a9664790321420eaf6b"
+    },
+    "wiring-124-004": {
+      "topicId": "topic-cfc46013de49db7f",
+      "sourceHash": "45ccadf3228e21c3b25eff51406405aa2d9a30e25a79d202b0d34b9580cb4f3c"
+    },
+    "wiring-132-004": {
+      "topicId": "topic-c5d0459af03b90a4",
+      "sourceHash": "f7fa0ee37fbcd8a34a026b533b339d688b92a8bf0f640d2ef9ae5cccbf18f0bc"
+    },
+    "wiring-151-007": {
+      "topicId": "topic-e6ac56bfdcf0a4c9",
+      "sourceHash": "c8bbfcf77cedc2d234bc693ae2b26156cab8cd8a12c63a9c0699bf3a0d8ebcb5"
+    },
+    "G1692609": {
+      "topicId": "topic-fd1bd35c1c1da96c",
+      "sourceHash": "67805217ff0c663eefb147afc17d06db41d8ba08e7c639cdbcd4d5e8173a4641"
+    },
+    "wiring-013-011": {
+      "topicId": "topic-fbad67efdb97c046",
+      "sourceHash": "ecce1872c657ff16c00c0a901e0e34ae0790e05bf84187a270d39a590993c742"
+    },
+    "wiring-014-005": {
+      "topicId": "topic-ee73aacc521d7946",
+      "sourceHash": "6d740c7cee059e9432b63041d78d630df455dfa2591a1dc03ae25d055bcc02f4"
+    },
+    "wiring-014-006": {
+      "topicId": "topic-f459c00aee7852b3",
+      "sourceHash": "a749825b955b96e1f861cb27eb70eab5e2194098419145a697453c062edc41c8"
+    },
+    "wiring-026-010": {
+      "topicId": "topic-fb1239c1b88d62a9",
+      "sourceHash": "d651e5add347d89f914c8932d28ccc0b718528f3da43e3d3cd68ec86456e9752"
+    },
+    "wiring-089-004": {
+      "topicId": "topic-f831729c8ba35e8d",
+      "sourceHash": "59fbcc4d5345ca967aa1e40641e46f5197e09d175d6cbbde29d70c50f1650b27"
+    },
+    "wiring-089-005": {
+      "topicId": "topic-fb527d0d213ec3e2",
+      "sourceHash": "771b4cf2c94cbd5b11ac0c1af8e419ae44c0464533443ddfcf0874ae3ff715c8"
+    },
+    "wiring-092-006": {
+      "topicId": "topic-f236499fc450df6f",
+      "sourceHash": "d67d775ab41c1de33486a8e37fb401d3790a462469894a31576a5872a2742e9e"
+    },
+    "wiring-100-011": {
+      "topicId": "topic-f9dfd3f691731b21",
+      "sourceHash": "10009b9633e6f38fcc843171aecb4f6ff385419298ad87c0e9d3e11cbc952184"
+    },
+    "wiring-124-006": {
+      "topicId": "topic-f734f3e0bb98dd74",
+      "sourceHash": "0d4abaa403cc86650534f17f11108b9e01613b670a52fa6cfeeb2550db6c286c"
     }
   }
 }
