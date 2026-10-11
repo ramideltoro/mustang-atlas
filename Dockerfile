@@ -4,6 +4,7 @@ COPY package*.json ./
 RUN npm ci --no-audit --no-fund
 COPY index.html vite.config.* ./
 COPY src ./src
+COPY shared ./shared
 COPY public ./public
 RUN npm run build
 
@@ -13,6 +14,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev --no-audit --no-fund && npm cache clean --force
 COPY server ./server
+COPY shared ./shared
 COPY content ./content
 COPY --from=build /app/dist ./dist
 USER node

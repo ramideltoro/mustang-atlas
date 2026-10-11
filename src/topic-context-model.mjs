@@ -1,3 +1,4 @@
+import {articleSummary} from '../shared/summary.mjs';
 export function topicContextForView(document,view='guide'){
  const context=document?.learningContext;
  return view==='guide'&&context?.status==='complete'&&typeof context.summary==='string'&&context.summary.trim()&&Array.isArray(context.sections)&&context.sections.length?context:null;
@@ -23,7 +24,7 @@ export function contextReadingLayout(sections=[]){
 
 export function documentRowSummary(document={}){
  const fallback=document.section?.title||'Open the complete article.';
- return document.learningStatus==='complete'?(document.learningContext?.summary||document.summary||fallback):(document.snippet||document.summary||fallback);
+ return articleSummary(document.learningStatus==='complete'?(document.learningContext?.summary||document.summary||fallback):(document.snippet||document.summary||fallback));
 }
 export function documentExplanationLabel(document={}){
  return document.teachingStatus==='complete'?'Explained':document.learningStatus==='complete'?'Topic explained':null;
