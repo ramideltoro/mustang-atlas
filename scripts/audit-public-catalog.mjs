@@ -1,0 +1,29 @@
+import fs from 'node:fs';
+import {openDb,decodeDocument} from '../server/db.mjs';
+import {createApp} from '../server/index.mjs';
+import {createReferenceResolver} from '../server/article-references.mjs';
+import {documentApplicability,isPublicDocument,ENGINE_OPTIONS} from '../server/catalog.mjs';
+const db=openDb({readOnly:true});const rows=db.prepare('SELECT * FROM documents').all().filter(isPublicDocument);const ids=new Set(rows.map(r=>r.id));const resolver=createReferenceResolver(rows);const issues=[];let textNodes=0,links=0,mediaPlacements=0,tables=0,thumbnails=0;
+function texts(blocks){const out=[];for(const b of blocks||[]){if(b.text)out.push(b.text);out.push(...texts(b.children),...texts(b.items));for(const r of b.rows||[])for(const c of r.cells||[]){if(c.text)out.push(c.text);out.push(...texts(c.blocks));}}return out;}
+function structure(blocks){const out=[];for(const b of blocks||[]){if(b.type==='media'){out.push('media:'+b.id+':'+b.mediaId);mediaPlacements++;}if(b.type==='step')out.push('step:'+b.id+':'+b.number);if(b.type==='safety')out.push('safety:'+b.id+':'+b.severity);if(b.type==='table'){tables++;out.push('table:'+b.id+':'+JSON.stringify(b.rows.map(r=>r.cells.map(c=>[c.colSpan,c.rowSpan,c.header]))));}out.push(...structure(b.children),...structure(b.items));for(const r of b.rows||[])for(const c of r.cells||[])out.push(...structure(c.blocks));}return out;}
+function outsideReferrals(text){
+ return text.replace(/(?:\b|(?<=or))REFER\s+to\s*:\s*/gi,'\u0001').split('\u0001').map((part,i)=>{if(!i)return part;const metadata=/\(\s*\d{3}-\d{2}[A-Z]?\b/.exec(part);if(metadata&&metadata.index<400){let depth=0;for(let n=metadata.index;n<part.length;n++){if(part[n]==='(')depth++;if(part[n]===')'&&--depth===0)return part.slice(n+1).replace(/^\s*\./,'');}}const match=/[.;](?=\s|$)|\n/.exec(part);return match?part.slice(match.index+1):'';}).join(' ');
+}
+const numeric=s=>s.replace(/\]\([^)]*\)/g,']').match(/(?<![A-Za-z])\d+(?:[.,]\d+)*/g)||[];
+for(const row of rows){const doc=decodeDocument(row);const cleaned=resolver.blocks(doc.blocks,row);const before=structure(doc.blocks),after=structure(cleaned);if(JSON.stringify(before)!==JSON.stringify(after))issues.push({id:row.id,reason:'technical-structure-changed'});
+ for(const text of texts(doc.blocks)){textNodes++;const result=resolver.cleanText(text,row).text;
+  // Independent line-based protection: source cross-reference titles/codes are
+  // navigation metadata; numbers in surrounding instructions must survive.
+  const protectedText=outsideReferrals(text);
+  const remaining=numeric(result);for(const n of new Set(numeric(protectedText)))if(!remaining.includes(n))issues.push({id:row.id,reason:'technical-number-missing',number:n,excerpt:text.slice(0,180)});
+  for(const match of result.matchAll(/\]\(#\/document\/([A-Za-z0-9_-]+)\)/g)){links++;if(!ids.has(match[1]))issues.push({id:row.id,reason:'broken-article-link',target:match[1]});}
+ }
+}
+const app=createApp({db});const server=await new Promise(resolve=>{const s=app.listen(0,'127.0.0.1',()=>resolve(s));});const base='http://127.0.0.1:'+server.address().port;
+try{
+ for(const row of rows){const d=await(await fetch(base+'/api/v1/documents/'+row.id)).json();const json=JSON.stringify(d);for(const m of json.matchAll(/#\/document\/([A-Za-z0-9_-]+)/g))if(!ids.has(m[1]))issues.push({id:row.id,reason:'broken-public-article-link',target:m[1]});if(/\b(?:service|workshop) manual\b|original source|source PDF|REFER\s+to\s*:|\/source\//i.test(json))issues.push({id:row.id,reason:'public-provenance-or-dangling-reference',matches:json.match(/.{0,50}(?:service manual|workshop manual|original source|source PDF|REFER\s+to\s*:|\/source\/).{0,100}/gi)?.slice(0,3)});if(d.source||d.sourceHash||d.sourceBlocks)issues.push({id:row.id,reason:'private-field-exposed'});if(d.thumbnail){thumbnails++;if(d.thumbnail.documentId!==row.id||!docMedia(row).includes(d.thumbnail.id))issues.push({id:row.id,reason:'foreign-thumbnail'});}}
+ for(const engine of ['all',...ENGINE_OPTIONS]){let total=0;for(let offset=0;;offset+=100){const list=await(await fetch(base+`/api/v1/documents?engine=${engine}&limit=100&offset=${offset}`)).json();total=list.total;for(const item of list.items)if(!documentApplicability(item,engine).matchesSelectedEngine)issues.push({id:item.id,reason:'incompatible-list-engine',engine});if(offset+100>=total)break;}const systems=await(await fetch(base+'/api/v1/systems?engine='+engine)).json();if(systems.items.reduce((n,s)=>n+s.documentCount,0)!==total)issues.push({engine,reason:'system-count-mismatch'});for(const system of systems.items)if(system.sections.reduce((n,s)=>n+s.count,0)!==system.documentCount)issues.push({engine,system:system.id,reason:'section-count-mismatch'});}
+ for(const endpoint of ['systems','glossary?limit=5000']){const json=await(await fetch(base+'/api/v1/'+endpoint)).text();if(/service manual|workshop manual|original source|source PDF|\/source\//i.test(json))issues.push({endpoint,reason:'public-copy-leak'});}
+}finally{await new Promise(resolve=>server.close(resolve));db.close();}
+function docMedia(row){return JSON.parse(row.media).map(m=>m.id);}
+const report={documents:rows.length,textNodes,resolvedLinks:links,mediaPlacements:mediaPlacements/2,tables:tables/2,ownArticleThumbnails:thumbnails,issues};fs.mkdirSync('work',{recursive:true});fs.writeFileSync('work/public-catalog-audit.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,issues:issues.slice(0,12)},null,2));if(issues.length)process.exitCode=1;

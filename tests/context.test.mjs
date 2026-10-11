@@ -69,14 +69,14 @@ test('context rejects stale hashes, unknown evidence, ambiguous IDs and unsafe o
   }finally{await f.cleanup();}
 });
 
-test('API separates context coverage from rewrites, preserves source mode and prefers an accepted guide introduction in lists',async()=>{
+test('API separates context coverage from rewrites, keeps provenance private and prefers an accepted guide introduction in lists',async()=>{
   const f=await fixture();const app=createApp({dataDir:f.dir,contentDir:f.contentDir,db:f.db});
   const server=await new Promise(resolve=>{const s=app.listen(0,'127.0.0.1',()=>resolve(s));});const base=`http://127.0.0.1:${server.address().port}`;
   try{
     let stats=await(await fetch(base+'/api/v1/stats')).json();assert.equal(stats.contextualizedDocuments,0);
     await f.save(content());
     stats=await(await fetch(base+'/api/v1/stats')).json();assert.equal(stats.contextualizedDocuments,2);assert.equal(stats.contextualizationStatus,'complete');assert.equal(stats.rewrittenDocuments,0);assert.equal(stats.teachingStatus,'in_progress');
-    const doc=await(await fetch(base+'/api/v1/documents/connector-C226A?source=1')).json();assert.equal(doc.learningStatus,'complete');assert.equal(doc.learningContext.status,'complete');assert.equal(doc.teachingStatus,'source');assert.deepEqual(doc.blocks,doc.sourceBlocks);
+    const doc=await(await fetch(base+'/api/v1/documents/connector-C226A?source=1')).json();assert.equal(doc.learningStatus,'complete');assert.equal(doc.learningContext.status,'complete');assert.equal(doc.teachingStatus,'source');assert.equal(doc.sourceBlocks,undefined);assert.equal(doc.source,undefined);assert.equal(doc.blocks[0].text,'Inspect the connector.');
     let list=await(await fetch(base+'/api/v1/documents')).json();assert.match(list.items.find(d=>d.id==='connector-C226A').summary,/C226A connects/);
     await fs.mkdir(path.join(f.dir,'guides'));await fs.writeFile(path.join(f.dir,'guides','connector-C226A.json'),JSON.stringify({documentId:'connector-C226A',sourceHash:hash,status:'complete',checks:{passed:true},introduction:'Inspect the connector.',edits:[{blockId:'connector-C226A-b1',text:'Inspect the connector.',why:''}]}));
     list=await(await fetch(base+'/api/v1/documents')).json();assert.equal(list.items.find(d=>d.id==='connector-C226A').summary,'Inspect the connector.');assert.equal(list.items.find(d=>d.id==='connector-C226A').teachingStatus,'complete');

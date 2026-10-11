@@ -3,12 +3,6 @@ export function topicContextForView(document,view='guide'){
  return view==='guide'&&context?.status==='complete'&&typeof context.summary==='string'&&context.summary.trim()&&Array.isArray(context.sections)&&context.sections.length?context:null;
 }
 
-export function readerEditorialText(status,view,hasContext=false){
- if(view==='source')return 'Original manual content, arranged for on-screen reading.';
- if(status==='complete')return 'A plain-language Atlas guide, grounded in the source manual.';
- if(status==='partial')return hasContext?'A plain-language introduction, followed by explained passages and original source instructions.':'This reference combines explained passages with original source instructions.';
- return hasContext?'Plain-language context comes first. Technical details below retain the original manual wording.':'Original source instructions, organized for easier reading. A plain-language guide has not yet been added.';
-}
 
 export function contextRelatedTerms(terms=[]){
  const seen=new Set();
@@ -28,7 +22,7 @@ export function contextReadingLayout(sections=[]){
 }
 
 export function documentRowSummary(document={}){
- const fallback=document.section?.title||'Open the complete manual reference.';
+ const fallback=document.section?.title||'Open the complete article.';
  return document.learningStatus==='complete'?(document.learningContext?.summary||document.summary||fallback):(document.snippet||document.summary||fallback);
 }
 export function documentExplanationLabel(document={}){

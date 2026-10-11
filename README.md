@@ -20,13 +20,14 @@ The supplied manual folder is a structured offline export containing workshop HT
 npm test
 npm run build
 node scripts/audit-catalog.mjs
+node scripts/audit-public-catalog.mjs
 ```
 
 ## Content model
 
-The catalog preserves the source hierarchy, engine context, step order, diagnostic branches, safety notices, tables and illustration positions. All diagrams remain source assets; the site does not import the manual's page styling or execute its scripts. Search uses SQLite FTS5 and glossary aliases. See [API documentation](docs/API.md) for the versioned, read-only API used by the web interface and future mobile clients.
+The catalog preserves the source hierarchy, engine context, step order, diagnostic branches, safety notices, tables and illustration positions. All diagrams remain source assets; the site does not import the manual's page styling or execute its scripts. Search uses SQLite FTS5 and glossary aliases. A shared engine selector filters search, system/subsection counts and related articles while retaining references whose application is unspecified. Article cards select a substantive illustration from the same document, including scalable connector faces. Internal repair references link directly to matching articles; unresolved reference boilerplate and exporter-only manual overview pages are omitted. See [API documentation](docs/API.md) for the versioned, read-only API used by the web interface and future mobile clients.
 
-Teaching guides are authored separately, linked to a hash of their exact source content. A guide is accepted only when every editable source block is covered. Part numbers, pin assignments, numerical specifications and original media stay traceable to the reference. The Atlas reader clearly identifies references whose prose is still original; it does not imply the entire manual has already been rewritten.
+Teaching guides are authored separately, linked to a hash of their exact source content. A guide is accepted only when every editable source block is covered. Part numbers, pin assignments, numerical specifications and original media stay traceable to the reference. The single Atlas reader combines available teaching context with the complete technical article. Complete introductory coverage does not imply every procedure has been rewritten. Private source hashes, archival PDFs and authoring audits remain available to the local validation pipeline; no public PDF/source route or comparison interface is exposed.
 
 `content/glossary.json`, `content/systems.json` and curated `content/guides/` are tracked editorial content. Generated guides are in `data/guides/`; curated guides take precedence. Definitions are shared rather than duplicated in articles.
 

@@ -28,6 +28,6 @@ export default function TopicContext({context}){
    })}
   </div>
   {terms.length>0&&<div className="topic-context-terms"><span className="topic-context-label">GET TO KNOW THE TERMS</span><div>{terms.map(term=>glossary?.open?<button type="button" key={term.id} onClick={()=>glossary.open(term.id)} aria-haspopup="dialog" aria-label={'Explain '+term.name}>{term.name}<Info size={12} aria-hidden="true"/></button>:<a key={term.id} href={'#/glossary?q='+encodeURIComponent(term.name)}>{term.name}<BookOpen size={12} aria-hidden="true"/></a>)}</div></div>}
-  <Sources items={context.sourceRefs||[]} label="References behind this explanation"/>
+  <Sources items={context.sourceRefs||[]} label="Explore connected topics"/>
  </section>;
 }

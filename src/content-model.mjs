@@ -30,6 +30,9 @@ export function createTermMatcher(terms=[],context={}){
       const start=match.index,finish=start+match[0].length;
       if(/[\p{L}\p{N}_]/u.test(text[start-1]||'')||/[\p{L}\p{N}_]/u.test(text[finish]||''))continue;
       const key=normalized(match[0]),term=aliases.get(key);
+      // A product prefix such as VC in VC-3-B is part of one identifier,
+      // not an occurrence of an unrelated glossary abbreviation.
+      if(/^[A-Z0-9]{1,12}$/.test(match[0])&&/^(?:-[A-Z0-9]+)+\b/.test(text.slice(finish)))continue;
       if(caseSensitiveAliases.has(key)&&!caseSensitiveAliases.get(key).has(match[0]))continue;
       if(!term||term.ambiguous||(term.editorial?.kind==='source-expansion'&&match[0]!==match[0].toUpperCase())||term.hasExplanation===false||!contextMatches(term,context)||seen.has(term.id))continue;
       if(start>end)parts.push({text:text.slice(end,start)});

@@ -1,0 +1,43 @@
+/* A consistent reading scale for explanations, procedures, and technical data. */
+.document-header h1{font-size:clamp(2rem,3.3vw,3.15rem);line-height:1.18;letter-spacing:-.035em;max-width:980px}
+.document-header>p{font-size:15px;line-height:1.6;color:#b7b2a3;margin-top:16px}
+.document-kicker{font-size:12px;line-height:1.6;flex-wrap:wrap;gap:12px}
+.document-toolbar{justify-content:space-between;padding:18px 0;margin-top:22px;border-bottom:1px solid #403d33}
+.article-toolbar-label{display:flex;align-items:center;gap:9px;font-size:12px;color:#b8ad92}
+.article-body{min-width:0;font-size:16px;line-height:1.8}
+.article-body .prose,.article-body .source-paragraph,.article-body .step-instruction,.article-body .source-list,.article-body .callout-body{font-size:16px;line-height:1.8;overflow-wrap:break-word}
+.article-body .document-heading{font-size:24px;line-height:1.3;letter-spacing:-.02em;margin:38px 0 18px}
+.article-body h3.document-heading{font-size:20px}.article-body h4.document-heading{font-size:18px}
+.article-body p{margin:0 0 18px}.article-body .prose p:last-child{margin-bottom:0}
+.article-body .topic-context-header h2{font-size:clamp(24px,2.4vw,31px);line-height:1.28}
+.article-body .topic-context-card h3{font-size:18px;line-height:1.5}
+.article-body .topic-context-summary>.prose{font-size:17px;line-height:1.8}
+.article-body .topic-context-card>.prose,.article-body .why-note .prose{font-size:15px;line-height:1.8}
+.article-body .topic-context-card .prose h2,.article-body .topic-context-card .prose h3,.article-body .topic-context-card .prose h4{font-size:17px;line-height:1.5}
+.article-body .topic-context-header>.eyebrow,.article-body .eyebrow{font-size:10px;line-height:1.6}
+.article-body .topic-context-label{font-size:10px}.article-body .topic-context-terms button,.article-body .topic-context-terms a{font-size:12px;min-height:38px}
+.article-body .table-scroll table{font-size:14px;line-height:1.65}.article-body .table-scroll th{font-size:12px;text-transform:none;letter-spacing:.01em}
+.article-body .table-scroll th,.article-body .table-scroll td{padding:12px 14px}
+.article-body .connector-pin-table table{min-width:1080px}.article-body .connector-pin-table td[data-column="function"],.article-body .connector-pin-table td[data-column="qualifier"]{min-width:220px;max-width:300px}
+.article-body .table-scroll-hint{font-size:12px}.article-body .topic-context .table-scroll table{min-width:440px}
+.article-body .step-rail>span{font-size:16px}.article-body .repair-step{gap:20px}.article-body .nested-step{gap:12px}
+.article-body .why-note>div>span,.article-body .figure-tag{font-size:10px}.article-body .manual-figure figcaption{font-size:12px;line-height:1.7}
+.article-body .requirements h2,.parts-panel h2,.article-body .related-references h2{font-size:27px}.article-body .requirements h3{font-size:16px}
+.article-body .check-item strong{font-size:14px}.article-body .check-item small,.article-body .local-note{font-size:12px;line-height:1.6}
+.article-body .source-details summary,.article-body .source-details a{font-size:13px;line-height:1.6}.article-body .source-details a small{font-size:12px}
+.reader-aside nav button{font-size:13px;line-height:1.6;padding:9px 0}.reference-facts dl{font-size:12px;line-height:1.7}.reader-hint p{font-size:13px;line-height:1.7}
+.related-thumbnail{width:90px;height:72px;object-fit:contain;border-radius:5px;background:#f4f3ed;flex-shrink:0;padding:7px}
+.engine-mismatch{padding:32px;border:1px solid #735b33;background:#282219;border-radius:8px;max-width:760px;margin:32px 0}.engine-mismatch>svg{color:#dcba76}.engine-mismatch h2{font-size:24px;line-height:1.4}.engine-mismatch p{font-size:16px;line-height:1.8;color:#c5bdab}
+.parts-panel{padding-top:34px;margin-top:40px;border-top:1px solid #494233;scroll-margin-top:90px}.parts-panel .eyebrow{display:flex;align-items:center;gap:8px}.parts-panel .section-title>p{font-size:15px;line-height:1.8}
+.parts-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:24px 0}
+.part-card{padding:22px;border:1px solid #485740;background:#22291f;border-radius:8px;min-width:0}.part-card-heading{display:flex;align-items:center;gap:8px;color:#b3c69d;font-size:11px}.part-card h3{font-size:19px;line-height:1.4;margin:14px 0 18px;color:#e5e8d6}.part-card p{font-size:13px;line-height:1.7;color:#bcc4b0}.part-card .part-fitment{font-size:12px;color:#b0bf9d}
+.part-numbers{margin:0 0 18px;display:grid;gap:10px}.part-numbers>div{display:flex;align-items:baseline;gap:16px;justify-content:space-between}.part-numbers dt{font-size:12px;color:#b8bfaa}.part-numbers dd{font:600 16px var(--mono);color:#e4e9d5;margin:0;overflow-wrap:anywhere}
+.parts-fitment-note{display:flex;gap:14px;align-items:flex-start;padding:20px;background:#29261e;border:1px solid #575039;border-radius:7px;margin:20px 0}.parts-fitment-note>svg{flex-shrink:0;color:#d4b87d;margin-top:3px}.parts-fitment-note p{font-size:14px;line-height:1.8;margin:0;color:#c6bea9}
+.part-identifiers{border:1px solid #454438;border-radius:7px;padding:0 18px;margin:20px 0}.part-identifiers summary{padding:16px 0;cursor:pointer;font-size:14px;color:#d4c7a8}.part-identifiers summary>span{font-size:11px;border:1px solid #63593f;padding:2px 7px;border-radius:4px;margin-left:8px}.part-identifiers>p{font-size:13px;color:#b7b09e}.part-number-cell{white-space:nowrap;font-family:var(--mono)}
+.parts-diagrams{display:grid;gap:22px;margin:24px 0}.parts-diagram-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;color:#cbb88f}.parts-diagram-heading>a{display:flex;align-items:center;gap:6px;color:#c5bdab}.parts-diagrams .manual-figure{margin-top:10px}
+.parts-fitment-footer{display:flex;gap:10px;font-size:12px;line-height:1.8;color:#b5ad99}.parts-fitment-footer>svg{flex-shrink:0;margin-top:3px}.parts-catalog-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.parts-catalog-links .button{font-size:13px;min-height:44px}
+.term-modal .term-lead>p{font-size:18px;line-height:1.75}.term-modal .term-section>p{font-size:15px;line-height:1.8}.term-modal .term-section h3{font-size:18px}.term-modal .source-details summary{font-size:13px}
+@media(max-width:760px){.document-header h1{font-size:32px}.document-header>p{font-size:14px}.document-kicker{font-size:11px}.article-body .prose,.article-body .source-paragraph,.article-body .step-instruction,.article-body .source-list,.article-body .callout-body{font-size:16px}.article-body .topic-context-card>.prose{font-size:15px}.article-body .topic-context-summary>.prose{font-size:16px}.article-body .topic-context-card h3{font-size:17px}.article-body .document-heading{font-size:23px}.article-body .table-scroll table{font-size:13px}.article-body .table-scroll th{font-size:12px}.article-body .repair-step{gap:13px}.article-toolbar-label{font-size:11px}.parts-cards{grid-template-columns:1fr}.part-card{padding:18px}.parts-diagram-heading{flex-wrap:wrap}.related-thumbnail{width:68px;height:58px}}
+@media(prefers-reduced-motion:reduce){.document-page *{scroll-behavior:auto!important}}
+.article-body .topic-context-sections.reading-layout .topic-context-card>.prose{font-size:15px;line-height:1.8}.article-body .topic-context-sections.reading-layout .topic-context-card h3{font-size:18px;line-height:1.5}.article-body .topic-context-sections.reading-layout .table-scroll table{font-size:14px;line-height:1.65}
+@media(max-width:760px){.article-body .topic-context-sections.reading-layout .topic-context-card>.prose{font-size:15px}.article-body .topic-context-sections.reading-layout .topic-context-card h3{font-size:17px}.article-body .topic-context-sections.reading-layout .table-scroll table{font-size:13px}}

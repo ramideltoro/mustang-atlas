@@ -1,0 +1,722 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-11",
+  "evidence": {
+    "ford-2015": {
+      "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642992&Uid=G1634835&buildtype=web&countryCode=USA&div=f&languageCode=en&moidRef=G1517147&userMarket=USA&vFilteringEnabled=False&variantid=3259",
+      "title": "Ford 2015 Mustang published Motorcraft parts table",
+      "verifiedAt": "2026-10-11",
+      "scope": "US/Canada; 2.3L, 3.7L, 5.0L. Historical service applications, not current supersessions. Cabin filter and wiper entries withheld because other Ford publications differ."
+    },
+    "ford-2016": {
+      "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2016-Mustang-Owners-Manual-version-1_om_EN-US_07_2015.pdf",
+      "title": "Ford 2016 Mustang, printed pages 270–272",
+      "verifiedAt": "2026-10-11",
+      "scope": "US/Canada; 2.3L, 3.7L, 5.0L. Wiper side assignments not used: 2016 and 2017 publications conflict."
+    },
+    "ford-2017": {
+      "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2017-Mustang-Owner-Manual-version-1_om_EN-US_04_2016.pdf",
+      "title": "Ford 2017 Mustang, printed pages 274–276",
+      "verifiedAt": "2026-10-11",
+      "scope": "US/Canada; 2.3L, 3.7L, 5.0L. Published service applications. Transmission filter restricted to 6R80 article."
+    },
+    "ford-gt350-2015-2016": {
+      "url": "https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-2016-Mustang-Shelby-GT350-Supplement-version-1_su_FR-CA_07_2015.pdf",
+      "title": "Ford 2015–2016 Shelby GT350 supplement, printed page 47",
+      "verifiedAt": "2026-10-11",
+      "scope": "Canadian GT350 5.2L; oil filter is spin-on arrangement. Does not establish cartridge-housing application."
+    },
+    "ford-fl500s": {
+      "url": "https://www.ford.com/product/engine-oil-filter-p4000147027",
+      "title": "Ford product FL500S / AA5Z6714A",
+      "verifiedAt": "2026-10-11",
+      "scope": "Product number equivalence only; engine/year applicability comes from the year-specific Ford table."
+    },
+    "ford-fl910s": {
+      "url": "https://www.ford.com/product/engine-oil-filter-p4000059732",
+      "title": "Ford product FL910S / BE8Z6731AB",
+      "verifiedAt": "2026-10-11",
+      "scope": "Product number equivalence only; engine/year applicability comes from the year-specific Ford table."
+    },
+    "ford-wpt930": {
+      "url": "https://www.ford.com/product/speaker-connector-p4000110567",
+      "title": "Ford WPT930 / 9U2Z14S411DA product",
+      "verifiedAt": "2026-10-11",
+      "scope": "Confirms official product identity. The C226A pigtail application comes from its exact local connector service-parts table; the generic product title is not an SCCM component name."
+    },
+    "c226a-pigtail": {
+      "url": "atlas-private:connector-C226A",
+      "title": "Connector service-parts row",
+      "sourceHash": "aa4d2f002b7d3eadfc1bc9d685ff8b47ab66f152bacac42d7d84e87a28bd9236",
+      "scope": "Kit930,18gauge,silver,12cavities,9U2Z-14S411-DA,shell9U5T-14489-JA. No universal engine/year fitment claim."
+    },
+    "ford-uk-clutch-slave": {
+      "url": "https://shop.ford.co.uk/products/mustang-2-3-4v-ti-vct-clutch-slave-cylinder-2015",
+      "title": "Ford UK Mustang 2.3L clutch slave cylinder, product1926512",
+      "verifiedAt": "2026-10-11",
+      "scope": "UK retail catalog title lists2.3L Mustang from2015. Explicit2015 application only seeded; no North American number equivalence inferred."
+    },
+    "ford-uk-halfshaft-bearing": {
+      "url": "https://shop.ford.co.uk/products/mustang-rear-axle-half-shaft-inner-bearing-03-2015",
+      "title": "Ford UK rear halfshaft inner bearing product5198969",
+      "verifiedAt": "2026-10-11",
+      "scope": "Title says Mustang from03/2015 but engine/equipment qualifiers are not exposed. Link-only; no verified local application claimed."
+    }
+  },
+  "parts": [
+    {
+      "id": "oil-filter-fl910s",
+      "name": "Engine oil filter",
+      "brand": "Motorcraft",
+      "number": "FL-910-S",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "2.3L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "titles": [
+          "Oil Filter Inspection"
+        ],
+        "componentLabels": [
+          "Oil filter",
+          "Engine oil filter"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/product/engine-oil-filter-p4000059732",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017",
+        "ford-fl910s"
+      ],
+      "additionalNumbers": [
+        {
+          "brand": "Ford",
+          "number": "BE8Z-6731-AB"
+        }
+      ]
+    },
+    {
+      "id": "oil-filter-fl500s",
+      "name": "Engine oil filter",
+      "brand": "Motorcraft",
+      "number": "FL-500-S",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "titles": [
+          "Oil Filter Inspection"
+        ],
+        "componentLabels": [
+          "Oil filter",
+          "Engine oil filter"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/product/engine-oil-filter-p4000147027",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017",
+        "ford-fl500s"
+      ],
+      "additionalNumbers": [
+        {
+          "brand": "Ford",
+          "number": "AA5Z-6714-A"
+        }
+      ]
+    },
+    {
+      "id": "air-filter-fa1918",
+      "name": "Engine air filter element",
+      "brand": "Motorcraft",
+      "number": "FA-1918",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1675705",
+          "G1675694",
+          "G1675683",
+          "G1675712",
+          "G1675698",
+          "G1675687"
+        ],
+        "componentLabels": [
+          "Air filter element",
+          "Air cleaner element"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "battery-bxt96r590",
+      "name": "Battery",
+      "brand": "Motorcraft",
+      "number": "BXT-96R-590",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1692362",
+          "G1931208"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "spark-plug-sp537",
+      "name": "Spark plug — 2.3L",
+      "brand": "Motorcraft",
+      "number": "SP-537",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "2.3L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1673189"
+        ],
+        "componentLabels": [
+          "Spark plug",
+          "Spark plugs"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "spark-plug-sp520",
+      "name": "Spark plug — 3.7L",
+      "brand": "Motorcraft",
+      "number": "SP-520",
+      "fitment": {
+        "years": [
+          2015,
+          2016,
+          2017
+        ],
+        "engines": [
+          "3.7L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1675559"
+        ],
+        "componentLabels": [
+          "Spark plug",
+          "Spark plugs"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2015",
+        "ford-2016",
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "spark-plug-sp519-50",
+      "name": "Spark plug — 5.0L, 2015–2016",
+      "brand": "Motorcraft",
+      "number": "SP-519",
+      "fitment": {
+        "years": [
+          2015,
+          2016
+        ],
+        "engines": [
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1675575"
+        ],
+        "componentLabels": [
+          "Spark plug",
+          "Spark plugs"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2015",
+        "ford-2016"
+      ]
+    },
+    {
+      "id": "spark-plug-sp548-50",
+      "name": "Spark plug — 5.0L, 2017",
+      "brand": "Motorcraft",
+      "number": "SP-548",
+      "fitment": {
+        "years": [
+          2017
+        ],
+        "engines": [
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1675575"
+        ],
+        "componentLabels": [
+          "Spark plug",
+          "Spark plugs"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "cabin-filter-fp78",
+      "name": "Cabin air filter",
+      "brand": "Motorcraft",
+      "number": "FP-78",
+      "fitment": {
+        "years": [
+          2016,
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1676759"
+        ],
+        "componentLabels": [
+          "Cabin air filter"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2016",
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "transmission-filter-ft188",
+      "name": "Automatic transmission filter — 6R80",
+      "brand": "Motorcraft",
+      "number": "FT-188",
+      "fitment": {
+        "years": [
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "6-speed 6R80 automatic transmission only; confirm the fitted transmission and current replacement by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1692033"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "wiper-driver-ww2160",
+      "name": "Driver-side windshield wiper blade",
+      "brand": "Motorcraft",
+      "number": "WW-2160",
+      "fitment": {
+        "years": [
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1694632",
+          "G1694644"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "wiper-passenger-ww1964",
+      "name": "Passenger-side windshield wiper blade",
+      "brand": "Motorcraft",
+      "number": "WW-1964",
+      "fitment": {
+        "years": [
+          2017
+        ],
+        "engines": [
+          "2.3L",
+          "3.7L",
+          "5.0L"
+        ],
+        "market": "US/Canada",
+        "notes": "Published replacement application; confirm current number and fitted equipment by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1694632",
+          "G1694644"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-2017"
+      ]
+    },
+    {
+      "id": "gt350-air-filter-fa1922",
+      "name": "Engine air filter element — GT350",
+      "brand": "Motorcraft",
+      "number": "FA-1922",
+      "fitment": {
+        "years": [
+          2015,
+          2016
+        ],
+        "engines": [
+          "5.2L"
+        ],
+        "market": "Canada",
+        "notes": "Shelby GT350 application; confirm current replacement by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1801052",
+          "G1801048"
+        ],
+        "componentLabels": [
+          "Air filter element",
+          "Air cleaner element"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-gt350-2015-2016"
+      ]
+    },
+    {
+      "id": "gt350-fuel-filter-fg1083",
+      "name": "Fuel filter — GT350",
+      "brand": "Motorcraft",
+      "number": "FG-1083",
+      "fitment": {
+        "years": [
+          2015,
+          2016
+        ],
+        "engines": [
+          "5.2L"
+        ],
+        "market": "Canada",
+        "notes": "Shelby GT350 application; confirm current replacement by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1794944"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-gt350-2015-2016"
+      ]
+    },
+    {
+      "id": "gt350-oil-filter-fl2069st",
+      "name": "Spin-on engine oil filter — GT350",
+      "brand": "Motorcraft",
+      "number": "FL-2069-ST",
+      "fitment": {
+        "years": [
+          2015,
+          2016
+        ],
+        "engines": [
+          "5.2L"
+        ],
+        "market": "Canada",
+        "notes": "Shelby GT350 with a spin-on filter. Does not fit the cartridge filter arrangement. Confirm housing type and current replacement by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1929382"
+        ],
+        "componentLabels": [
+          "Oil filter",
+          "Engine oil filter"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-gt350-2015-2016"
+      ]
+    },
+    {
+      "id": "gt350-spark-plug-sp519",
+      "name": "Spark plug — GT350",
+      "brand": "Motorcraft",
+      "number": "SP-519",
+      "fitment": {
+        "years": [
+          2015,
+          2016
+        ],
+        "engines": [
+          "5.2L"
+        ],
+        "market": "Canada",
+        "notes": "Shelby GT350 application; confirm current replacement by VIN."
+      },
+      "matches": {
+        "documentIds": [
+          "G1805374"
+        ],
+        "componentLabels": [
+          "Spark plug",
+          "Spark plugs"
+        ]
+      },
+      "officialUrl": "https://www.ford.com/parts/",
+      "evidence": [
+        "ford-gt350-2015-2016"
+      ]
+    },
+    {
+      "id": "sccm-connector-wpt930",
+      "name": "C226A connector repair pigtail",
+      "brand": "Motorcraft",
+      "number": "WPT930",
+      "additionalNumbers": [
+        {
+          "brand": "Ford",
+          "number": "9U2Z-14S411-DA"
+        }
+      ],
+      "fitment": {
+        "years": [],
+        "engines": [],
+        "market": "Connector application",
+        "application": "connector",
+        "notes": "Repair pigtail for the documented C226A housing 9U5T-14489-JA: 12 cavities, silver terminals. Confirm housing, terminal material and vehicle by VIN. This replaces the connector wiring, not the SCCM."
+      },
+      "fitmentStatus": "vehicle-confirmation-required",
+      "matches": {
+        "documentIds": [
+          "connector-C226A"
+        ]
+      },
+      "documentBindings": [
+        {
+          "documentId": "connector-C226A",
+          "sourceHash": "aa4d2f002b7d3eadfc1bc9d685ff8b47ab66f152bacac42d7d84e87a28bd9236"
+        }
+      ],
+      "evidence": [
+        "ford-wpt930",
+        "c226a-pigtail"
+      ],
+      "officialUrl": "https://www.ford.com/product/speaker-connector-p4000110567"
+    },
+    {
+      "id": "uk-clutch-slave-1926512",
+      "name": "Clutch slave cylinder — 2.3L, UK catalog",
+      "brand": "Ford",
+      "number": "1926512",
+      "additionalNumbers": [],
+      "fitment": {
+        "years": [
+          2015
+        ],
+        "engines": [
+          "2.3L"
+        ],
+        "market": "UK",
+        "notes": "Ford UK catalog number for the 2.3L Mustang. Confirm the MT82 application and current number by VIN; no US-number interchange is asserted."
+      },
+      "fitmentStatus": "vehicle-confirmation-required",
+      "matches": {
+        "documentIds": [
+          "G1701833"
+        ]
+      },
+      "evidence": [
+        "ford-uk-clutch-slave"
+      ],
+      "officialUrl": "https://shop.ford.co.uk/products/mustang-2-3-4v-ti-vct-clutch-slave-cylinder-2015"
+    }
+  ],
+  "diagramReviews": [
+    {
+      "documentId": "G1660455",
+      "mediaId": "G1660455-m0002",
+      "title": "2.3L engine — front and upper components",
+      "kind": "exploded-view",
+      "sourceHash": "ca827a39e3b12cd3aa150ffa07a92bdbca484f1bc320a09b6141eeda5ba1fdd6",
+      "reviewedAt": "2026-10-11",
+      "evidence": "Original image visually inspected; separated components and callout leaders are visible."
+    },
+    {
+      "documentId": "G1681496",
+      "mediaId": "G1681496-m0001",
+      "title": "3.7L engine — upper components",
+      "kind": "exploded-view",
+      "sourceHash": "42d3e4e67f12b3ca463d9dc24575ee086086396167c5f0887868668072a3357b",
+      "reviewedAt": "2026-10-11",
+      "evidence": "Original image visually inspected; separated components and callout leaders are visible."
+    },
+    {
+      "documentId": "G1685309",
+      "mediaId": "G1685309-m0002",
+      "title": "5.0L engine — lower and front components",
+      "kind": "exploded-view",
+      "sourceHash": "4cfd3e2b10b65752c987ebadd0e8a591b8730f8e6ddf68629aa4da827fb93969",
+      "reviewedAt": "2026-10-11",
+      "evidence": "Original image visually inspected; separated components and callout leaders are visible."
+    },
+    {
+      "documentId": "G1726383",
+      "mediaId": "G1726383-m0001",
+      "title": "Steering column and connecting shafts",
+      "kind": "exploded-view",
+      "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+      "reviewedAt": "2026-10-11",
+      "evidence": "Original image visually inspected; separated components and callout leaders are visible."
+    }
+  ],
+  "documentDiagrams": {
+    "G1693270": [
+      {
+        "documentId": "G1726383",
+        "mediaId": "G1726383-m0001",
+        "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+        "targetSourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+      }
+    ],
+    "connector-C226A": [
+      {
+        "documentId": "G1726383",
+        "mediaId": "G1726383-m0001",
+        "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+        "targetSourceHash": "aa4d2f002b7d3eadfc1bc9d685ff8b47ab66f152bacac42d7d84e87a28bd9236"
+      }
+    ],
+    "G1702174": [
+      {
+        "documentId": "G1726383",
+        "mediaId": "G1726383-m0001",
+        "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+        "targetSourceHash": "3171987075d63bb99f7bd0fa20783b4f2fa32b97b82ee82b79055c2628dfe0b8"
+      }
+    ],
+    "connector-C2434": [
+      {
+        "documentId": "G1726383",
+        "mediaId": "G1726383-m0001",
+        "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+        "targetSourceHash": "547f3ac7b6950fcf7a6c8695888de1649d233805855537a8b921accb17b81d7a"
+      }
+    ]
+  },
+  "documentCatalogLinks": {
+    "G2274512": [
+      {
+        "label": "Check Ford UK halfshaft bearing application",
+        "url": "https://shop.ford.co.uk/products/mustang-rear-axle-half-shaft-inner-bearing-03-2015"
+      }
+    ]
+  }
+}

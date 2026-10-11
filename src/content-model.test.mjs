@@ -114,3 +114,10 @@ test('connector presentation hides export layout only and gives recognized pin c
  assert.equal(readerBlocks([pins],{kind:'specifications'})[0].connectorPins,undefined);
  assert.equal(documentTitle(document),'C100 — Air Conditioning (A/C) Clutch And Field Coil');
 });
+test('part-number prefixes do not become unrelated glossary abbreviations',()=>{
+ const matcher=createTermMatcher([{id:'vc',name:'VC',definition:'An unrelated abbreviation'},{id:'can',name:'Controller area network',aliases:['CAN']}]);
+ const parts=matcher('Use VC-3-B coolant. Inspect the CAN bus.');
+ assert.equal(parts.filter(part=>part.term?.id==='vc').length,0);
+ assert.equal(parts.filter(part=>part.term?.id==='can').length,1);
+ assert.equal(parts.map(part=>part.text).join(''),'Use VC-3-B coolant. Inspect the CAN bus.');
+});

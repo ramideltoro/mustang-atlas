@@ -95,8 +95,8 @@ test('document and glossary APIs resolve the same native image without changing 
     const term=await(await fetch(base+'/api/v1/glossary/pinion')).json();
     assert.equal(doc.media[0].url,nativeUrl);assert.equal(term.media[0].url,nativeUrl);
     assert.equal(doc.media[0].width,1902);assert.equal(term.media[0].width,1902);
-    assert.equal(doc.teachingStatus,'complete');assert.equal(doc.sourceHash,'stable-hash');
-    assert.deepEqual(doc.sourceBlocks,blocks);assert.equal(doc.blocks[1].mediaId,media.id);
+    assert.equal(doc.teachingStatus,'complete');assert.equal(doc.sourceHash,undefined);assert.equal(db.prepare('SELECT source_hash FROM documents WHERE id=?').get('G1').source_hash,'stable-hash');
+    assert.equal(doc.sourceBlocks,undefined);assert.deepEqual(JSON.parse(db.prepare('SELECT blocks FROM documents WHERE id=?').get('G1').blocks),blocks);assert.equal(doc.blocks[1].mediaId,media.id);
     assert.equal(doc.media[0].caption,'Original drawing');assert.equal(term.media[0].caption,'Glossary context');
     assert.equal(term.media[0].documentId,'G1');assert.deepEqual(term.media[0].engines,['5.0L']);
     assert.ok(!JSON.stringify(doc).includes('private-source'));assert.ok(!JSON.stringify(term).includes('private-source'));

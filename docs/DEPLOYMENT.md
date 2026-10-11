@@ -9,9 +9,11 @@ Production runs at `https://mustangatlas.ramideltoro.com` on the backend VPS in 
 3. Copy `data/atlas.sqlite`, `data/catalog-manifest.json`, `data/media`, `data/source` and accepted `data/guides`. Do not copy a database during ingestion. The catalog uses a completed SQLite file, not a live ingestion connection.
 4. Run `docker compose up -d --build` from `/srv/mustang-atlas`.
 5. Verify `/healthz` and `/api/v1/stats` through loopback before changing Caddy to `reverse_proxy 127.0.0.1:3185`.
-6. Validate Caddy configuration, reload it, and verify the public site, search, a guide, glossary media, a source PDF and an original wiring diagram.
+6. Validate Caddy configuration, reload it, and verify the public site, search, a guide, glossary media, engine-filtered subsections and an original wiring diagram. Confirm `/source/<id>.pdf` returns 404.
 
 The container runs as an unprivileged user, with a read-only root filesystem and data mount, all Linux capabilities dropped, and bounded CPU/memory/logs. No manual conversion, external model calls or credentials are needed on the server.
+
+Public catalog counts exclude exporter-only “About this Manual” entries. Keep the archive outside static directories: the application serves only scoped `/media` assets, public JSON and the client build. Private source files and hashes must not appear in article responses.
 
 ## Updating content
 
@@ -38,7 +40,7 @@ The local recovery worker matches the resized source bytes against the catalog's
 
 Progress and resumable state are kept in `data/media-quality-progress.json` and `data/media-upgrade/`. Use `--first G2214748` to prioritize a reference, `--limit 1` for a small verification run, or `--concurrency 4` to bound source requests. A normal interrupt checkpoints completed images. On resume, missing recovered files or map entries are fetched again. Unmatched images retain the existing source asset for review.
 
-`data/media-quality.json` maps original catalog URLs to verified larger image assets. This presentation layer preserves document hashes, figure IDs, captions, callouts and teaching-guide coverage. The API and Codex writing worker resolve the map dynamically; restart an older writing worker after its current batches to load this capability. The original PDFs remain unchanged for source verification.
+`data/media-quality.json` maps original catalog URLs to verified larger image assets. This presentation layer preserves document hashes, figure IDs, captions, callouts and teaching-guide coverage. The API and Codex writing worker resolve the map dynamically; restart an older writing worker after its current batches to load this capability. Original PDFs remain unchanged as private archival and validation inputs; the application does not expose PDF/source routes.
 
 `sync-media.mjs` snapshots the map, transfers every referenced media file first, and then atomically publishes the map. It supports the same `ATLAS_DEPLOY_HOST` and `ATLAS_DEPLOY_DATA` overrides as guide publication. It never copies the Ford session or local recovery state. The API reads map changes without a container restart. Publish image improvements independently of guide updates.
 
