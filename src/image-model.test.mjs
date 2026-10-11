@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {imageGeometry,fitImageScale,nextImageZoom,isDecorativeSourceControl} from './image-model.mjs';
 
-test('only four verified source UI controls are hidden; small diagnostic symbols remain',()=>{
+test('only verified source UI controls are hidden; small diagnostic symbols remain',()=>{
  const controls=['24c8da4629336cf4632149678d6363b7f09cac559005c483612e48ab0f13dcb5','6702649b75160a0f2132efe9ad304734cf7cf42a6aec505148e6b3ddcabcdfc2','17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a','570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61'];
  for(const hash of controls)assert.equal(isDecorativeSourceControl({url:'/media/'+hash+'.png'}),true);
+ for(const hash of ['def045efce6444a5bdabc8d05f4bacd4c065e95f1c9689333ee22d0b84aaf155','b75299658b432c802908906852dea8bb45642fc86980631066ebb0ea8c6ec7f7'])assert.equal(isDecorativeSourceControl({url:'/media/'+hash+'.jpg'}),true,'verified source pinpoint disclosure arrows are decorative');
  assert.equal(isDecorativeSourceControl({url:'/media/replacement.png',originalUrl:'/media/'+controls[0]+'.png'}),true);
  assert.equal(isDecorativeSourceControl({url:'/media/7dcfb9c0c69c83bc123c1c7a8f56964c21f14d19d471e12032f974d1f0db691c.jpg',width:99,height:16}),false,'the real ohm symbol remains visible');
  assert.equal(isDecorativeSourceControl({url:'/media/'+('a'.repeat(64))+'.png',width:14,height:14}),false,'size alone never suppresses an image');

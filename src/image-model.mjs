@@ -1,16 +1,18 @@
 const dimension=value=>Number.isFinite(Number(value))&&Number(value)>0?Number(value):0;
 
 // Verified source-DOM controls (show all/single steps and expand/collapse).
-// Match these exact content-addressed PNGs, never image size or symbol shape.
+// Match these exact content-addressed assets, never image size or symbol shape.
 const decorativeControls=new Set([
- '24c8da4629336cf4632149678d6363b7f09cac559005c483612e48ab0f13dcb5',
- '6702649b75160a0f2132efe9ad304734cf7cf42a6aec505148e6b3ddcabcdfc2',
- '17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a',
- '570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61',
+ '24c8da4629336cf4632149678d6363b7f09cac559005c483612e48ab0f13dcb5.png',
+ '6702649b75160a0f2132efe9ad304734cf7cf42a6aec505148e6b3ddcabcdfc2.png',
+ '17632de4e36fb220d3bf60da7c535be7173023579166aab3aa832824c4f2b64a.png',
+ '570caa6027721fb284dc63467b824d3ed4802f1b8f3e8ddd41a532d9e104fc61.png',
+ 'def045efce6444a5bdabc8d05f4bacd4c065e95f1c9689333ee22d0b84aaf155.jpg',
+ 'b75299658b432c802908906852dea8bb45642fc86980631066ebb0ea8c6ec7f7.jpg',
 ]);
 export function isDecorativeSourceControl(figure={}){
  return [figure.url,figure.src,figure.originalUrl].some(value=>{
-  const hash=String(value||'').match(/^\/media\/([a-f0-9]{64})\.png(?:[?#]|$)/i)?.[1];
+  const hash=String(value||'').match(/^\/media\/([a-f0-9]{64}\.(?:png|jpg))(?:[?#]|$)/i)?.[1];
   return !!hash&&decorativeControls.has(hash.toLowerCase());
  });
 }
