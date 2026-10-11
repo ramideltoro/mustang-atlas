@@ -4794,6 +4794,154 @@
       "matchCategories": [
         "body"
       ]
+    },
+    {
+      "id": "steering-column",
+      "name": "Steering column",
+      "aliases": [
+        "steering columns"
+      ],
+      "category": "steering",
+      "definition": "The mechanical connection that carries your steering-wheel rotation toward the steering gear.",
+      "details": "The steering wheel turns a shaft supported by bearings inside the column. Upper and lower shaft sections and a coupling continue that connection to the gear. This is the physical steering path; the switches and electronic modules mounted nearby have separate jobs. The manual identifies the lower shaft as collapsible and requires a measurement whenever it is disconnected from the upper shaft or coupling.",
+      "sourceRefs": [
+        {
+          "documentId": "G1726383",
+          "documentPath": "2: Chassis/11: Steering System/211-04 Steering Column/Description and Operation/Steering Column - Overview.html",
+          "reference": "G1726384"
+        },
+        {
+          "documentId": "G1721912",
+          "documentPath": "2: Chassis/11: Steering System/211-04 Steering Column/General Procedures/Steering Column Collapsed Check.html",
+          "reference": "G1721914"
+        }
+      ],
+      "mediaRefs": [
+        {
+          "documentId": "G1726383",
+          "mediaId": "G1726383-m0001",
+          "caption": "Steering-column component map: 1 is the column, 2 the upper shaft, 3 the lower shaft and 4 the coupling. The exploded spacing shows how the mechanical pieces connect."
+        }
+      ],
+      "relatedTermIds": [
+        "steering-gear",
+        "steering-column-control-module",
+        "steering-column-lock-module",
+        "electronic-power-assist-steering"
+      ],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
+    },
+    {
+      "id": "steering-column-control-module",
+      "name": "Steering column control module",
+      "aliases": [
+        "SCCM"
+      ],
+      "category": "steering",
+      "definition": "The electronic interface that connects switches on and around the steering wheel with the vehicle functions they operate.",
+      "details": "The column stalks and steering-wheel switches connect through this assembly. The manual describes network communication as well as separate circuits for particular functions, so every wire at its connector does not do the same job. The SCCM is distinct from the mechanical steering column, the theft-deterrent lock module and the system providing steering assistance. Installing a new SCCM also involves scan-tool configuration that begins with the old module still fitted.",
+      "sourceRefs": [
+        {
+          "documentId": "G1693265",
+          "documentPath": "2: Chassis/11: Steering System/211-05 Steering Wheel and Column Electrical Components/Description and Operation/Steering Wheel and Column Electrical Components - Overview.html",
+          "reference": "G1693275"
+        },
+        {
+          "documentId": "G1693270",
+          "documentPath": "2: Chassis/11: Steering System/211-05 Steering Wheel and Column Electrical Components/Removal and Installation/Steering Column Control Module (SCCM).html",
+          "reference": "G1693278"
+        },
+        {
+          "documentId": "connector-C226A",
+          "documentPath": "Wiring/Connector Views/STEERING COLUMN CONTROL MODULE (SCCM) - C226A.html",
+          "reference": "connector-C226A"
+        },
+        {
+          "documentId": "G1694645",
+          "documentPath": "5: Body and Paint/01: Body and Paint/501-16 Wipers and Washers/Description and Operation/Wipers and Washers - System Operation and Component Description.html",
+          "reference": "G1694650"
+        }
+      ],
+      "mediaRefs": [
+        {
+          "documentId": "G1693270",
+          "mediaId": "G1693270-m0003",
+          "caption": "SCCM removal illustration: the blue assembly sits around the upper column and includes the stalk-switch area. The arrows show the source removal sequence; use the complete procedure for configuration and access requirements."
+        }
+      ],
+      "relatedTermIds": [
+        "steering-column",
+        "steering-column-lock-module",
+        "controller-area-network",
+        "local-interconnect-network",
+        "diagnostic-scan-tool"
+      ],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
+    },
+    {
+      "id": "steering-column-lock-module",
+      "name": "Steering column lock module",
+      "aliases": [
+        "SCLM"
+      ],
+      "category": "steering",
+      "definition": "The module that locks or unlocks the steering column as part of the vehicle’s theft-deterrent system, where fitted.",
+      "details": "The body control module commands the lock over a LIN communication link and controls its power through a relay. The lock module monitors the lock’s position and reports detected faults. It secures the mechanical column; it does not provide power-steering assistance or replace the SCCM’s switch-interface function. A replacement lock also needs the specified BCM configuration and training process, so plugging it in is only part of the job.",
+      "applicability": "For vehicles equipped with the electronic steering column lock. The referenced wiring diagram is labeled Security Pack.",
+      "sourceRefs": [
+        {
+          "documentId": "G1693265",
+          "documentPath": "2: Chassis/11: Steering System/211-05 Steering Wheel and Column Electrical Components/Description and Operation/Steering Wheel and Column Electrical Components - Overview.html",
+          "reference": "G1693275"
+        },
+        {
+          "documentId": "G1693266",
+          "documentPath": "2: Chassis/11: Steering System/211-05 Steering Wheel and Column Electrical Components/Description and Operation/Steering Wheel and Column Electrical Components - System Operation and Component Description.html",
+          "reference": "G1693276"
+        },
+        {
+          "documentId": "G1702174",
+          "documentPath": "2: Chassis/11: Steering System/211-05 Steering Wheel and Column Electrical Components/Removal and Installation/Steering Column Lock Module (SCLM).html",
+          "reference": "G1702175"
+        },
+        {
+          "documentId": "connector-C2434",
+          "documentPath": "Wiring/Connector Views/STEERING COLUMN LOCK MODULE - C2434.html",
+          "reference": "connector-C2434"
+        },
+        {
+          "documentId": "wiring-112-003",
+          "documentPath": "Wiring/Passive Anti-Theft System/003 SECURITY PACK.svg",
+          "reference": "ECAD EFB112003"
+        }
+      ],
+      "mediaRefs": [
+        {
+          "documentId": "G1702174",
+          "mediaId": "G1702174-m0002",
+          "caption": "Column-lock removal illustration: the blue component is the steering column lock module. This is a service illustration with the surrounding structure shown transparently, not a guide to the SCCM connector."
+        }
+      ],
+      "relatedTermIds": [
+        "steering-column",
+        "steering-column-control-module",
+        "body-control-module",
+        "local-interconnect-network",
+        "electrical-relay"
+      ],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
     }
   ],
   "abbreviations": [

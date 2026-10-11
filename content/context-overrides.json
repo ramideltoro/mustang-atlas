@@ -1,0 +1,203 @@
+{
+  "topics": [
+    {
+      "id": "steering-column-mechanics",
+      "title": "How the steering column carries your input",
+      "summary": "The steering column is the mechanical connection from the steering wheel to the steering gear. Its supported shaft, upper and lower shaft sections, and coupling carry your turning motion toward the road wheels; the nearby control modules have different jobs.",
+      "sections": [
+        {
+          "id": "column-motion",
+          "title": "Follow the movement from your hands",
+          "body": "When you turn the steering wheel, you rotate the shaft running through the center of the steering column. Bearings keep that shaft centered. The upper and lower steering-column shafts continue the connection to the steering gear through the coupling. Thinking of it as a chain of connected shafts makes the exploded drawing easier to read: it shows how the pieces join, rather than a set of unrelated parts."
+        },
+        {
+          "id": "column-map",
+          "title": "What the component map is showing",
+          "body": "In the [steering-column overview](#/document/G1726383), callout **1** is the column, **2** is the upper shaft, **3** is the lower shaft and **4** is the coupling. The spaces between the pieces in the drawing help you see their connections. The callout numbers identify parts; they are not a removal sequence."
+        },
+        {
+          "id": "column-distinctions",
+          "title": "Column, controls, lock and assistance",
+          "body": "The **column** carries mechanical rotation. The **steering column control module (SCCM)** is part of the electrical interface for switches on and around the wheel. The **steering column lock module (SCLM)**, where fitted, locks the column as a theft deterrent. **Electric power-assisted steering (EPAS)** supplies steering assistance with an electric motor. Those names all contain “steering,” but they describe different jobs. Follow the [electrical-component overview](#/document/G1693265) for switches and the [power-steering overview](#/document/G1686673) for assistance."
+        },
+        {
+          "id": "column-service-context",
+          "title": "Why the lower shaft gets a separate check",
+          "body": "The manual identifies the lower steering-column shaft as collapsible and requires it to be measured whenever it has been disconnected from the upper shaft or coupling. That is a specific service requirement, not something to judge from its appearance in the drawing. Keep the [column check](#/document/G1721912) with the relevant removal and installation procedure when working on that connection."
+        }
+      ],
+      "relatedTermIds": [
+        "steering-gear",
+        "electronic-power-assist-steering",
+        "power-steering-control-module"
+      ],
+      "sourceDocumentIds": [
+        "G1726383",
+        "G1721912",
+        "G1693265",
+        "G1686673"
+      ]
+    },
+    {
+      "id": "steering-column-controls",
+      "title": "Steering-wheel controls and the SCCM connection",
+      "summary": "The steering column is the mechanical link between the steering wheel and the steering gear. The SCCM is the nearby electronic interface for wheel and column switches; C226A identifies its power, ground, communication and individual control connections.",
+      "sections": [
+        {
+          "id": "column-before-controls",
+          "title": "Start with the steering column itself",
+          "body": "The **steering column** is the mechanical link between the steering wheel and the steering gear. The wheel turns a shaft supported by bearings inside the column; upper and lower shaft sections and a coupling carry that rotation onward to the gear. The [column overview](#/document/G1726383) shows how those pieces connect.\n\nSeveral electrical parts live around this mechanical assembly, which makes their names easy to mix up. The **SCCM** handles the electrical interface for switches around the wheel. The separate **SCLM**, where fitted, operates the theft-deterrent column lock. **EPAS** provides steering assistance with an electric motor. C226A belongs to the SCCM’s connections—it identifies neither the mechanical shaft nor the motor that supplies steering assistance."
+        },
+        {
+          "id": "sccm-role",
+          "title": "What the SCCM does",
+          "body": "The steering column control module—**SCCM** for short—sits with the switches around the column. The left stalk operates the turn signals and beam-selection functions; the right stalk operates the wipers and washer. Buttons on the wheel provide access to functions such as the message center, cruise control, audio and SYNC. Paddle switches provide transmission-shift requests on the applicable automatic-transmission setup. Equipment varies, so use the reference that matches the switches fitted to the car.\n\nThe SCCM communicates on **HS2-CAN**, the high-speed Controller Area Network identified in the manual. The assembly also has separate control circuits. That distinction matters: a connector can carry network messages and individual switch signals at the same time. It does not mean every wire has the same electrical behavior."
+        },
+        {
+          "id": "c226a-identity",
+          "title": "What C226A tells you",
+          "body": "**C226A is the 12-cavity SCCM connector identified on harness 14401.** A cavity is a numbered position in the connector shell; a terminal is the metal contact fitted into a used position. The face illustration shows where those positions are, while the table tells you which circuit belongs to each one.\n\nWith the drawing oriented as shown, cavities **1–6** run down the left column and **7–12** run down the right. Cavities **6 and 12** are shaded and marked unused in this source view. Match the keyed outline and cavity numbers to the illustration instead of guessing a position from wire color alone. The connector, circuit and terminal identifiers each answer a different question: which plug, which electrical path and which contact."
+        },
+        {
+          "id": "c226a-circuit-groups",
+          "title": "Read the pin list by its job",
+          "body": "| Cavity | Circuit | What it belongs to |\n| --- | --- | --- |\n| 1 | RRH02 | Horn-switch circuit |\n| 2 | CRW15 | Separate front-wiper high-speed control circuit |\n| 3 | VDB25 | HS2-CAN high communication line |\n| 4 | VDB26 | HS2-CAN low communication line |\n| 5 | GD214 | Ground at the instrument-panel structure |\n| 6 | — | Unused in this connector view |\n| 7 | SBP13 | Power feed identified with fuse 13 in the source |\n| 8 | VDN05 | LIN communication circuit |\n| 9 | CET42 | SelectShift downshift-switch circuit, where fitted |\n| 10 | CET43 | SelectShift upshift-switch circuit, where fitted |\n| 11 | RE406 | Transmission signal return for the shift-switch circuits |\n| 12 | — | Unused in this connector view |\n\n**High and low at cavities 3 and 4 name the paired CAN communication lines. They are not fuse ratings or instructions to apply a test voltage.** Likewise, the signal return at cavity 11 has its own circuit identity; do not read it as another label for the structure ground at cavity 5. The original table retains the exact wire colors, gauges, terminal numbers and qualifiers."
+        },
+        {
+          "id": "sccm-circuits-in-context",
+          "title": "Follow a wire beyond the connector",
+          "body": "A connector view is a close-up; a wiring diagram shows where the circuit goes. In the [wiper wiring diagram](#/document/wiring-081-003), C226A cavity **8** connects through the LIN circuit to the windshield-wiper motor. Cavity **2** follows a separate path to that motor’s high-speed input. The [wiper operation reference](#/document/G1694645) explains that the separate high-speed circuit provides a fail-safe path if LIN communication fails. This is why a wiper function cannot be understood from the word “wiper” beside one pin alone.\n\nThe [6R80 paddle-shift diagram](#/document/wiring-030-003) traces cavities **9, 10 and 11** through the clockspring to the downshift and upshift switches. That diagram describes the automatic-transmission paddle arrangement; it does not establish that those switches are present on a manual-transmission car. For a horn concern, follow the [horn operation reference](#/document/G1688197) rather than treating the switch circuit as the horn’s power supply."
+        },
+        {
+          "id": "connector-reading-purpose",
+          "title": "What to take from this page",
+          "body": "Use the cavity number to locate the position, the circuit number to follow the same electrical path in a diagram, and the function and qualifier columns to understand its role and applicability. The “Used” field distinguishes a populated position from one marked unused in this source. The repair-pigtail and terminal part listings identify service wiring parts; they are separate from the SCCM itself.\n\nThis table identifies connections. The applicable diagnostic procedure supplies the required test conditions and expected readings. A useful next step is to open the diagram for the feature you are investigating, rather than assuming that a connector label alone tells you how that circuit should be tested."
+        },
+        {
+          "id": "sccm-replacement-context",
+          "title": "Why replacement includes a scan-tool step",
+          "body": "The [SCCM replacement procedure](#/document/G1693270) includes **Programmable Module Installation (PMI)** when a new module is being fitted. In everyday terms, the scan tool handles the configuration work that goes with changing the electronic module. The manual says to begin PMI with the current SCCM still installed and finish it after installation. If the existing module does not respond, the tool may request As-Built Data.\n\nThat preparation comes before taking the assembly apart. The procedure then refers to steering-wheel and column-shroud removal and distinguishes the clockspring connector from the SCCM connector. Follow those linked procedures and their safety instructions; this overview is here to explain why the configuration step and the separate connectors matter."
+        }
+      ],
+      "relatedTermIds": [
+        "controller-area-network",
+        "local-interconnect-network",
+        "connector-terminal",
+        "wiring-harness",
+        "ground-circuit",
+        "diagnostic-scan-tool",
+        "body-control-module"
+      ],
+      "sourceDocumentIds": [
+        "connector-C226A",
+        "G1693265",
+        "G1693270",
+        "G1694645",
+        "G1688197",
+        "G1694284",
+        "wiring-081-001",
+        "wiring-081-003",
+        "wiring-030-003",
+        "G1726383",
+        "G1686673"
+      ]
+    },
+    {
+      "id": "steering-column-lock",
+      "title": "The column lock and its separate connection",
+      "summary": "The steering column lock module is the theft-deterrent device that locks or unlocks the column under the body control module’s command. Its C2434 connector belongs to that lock system, separate from the SCCM switch connections and the electric motor that provides steering assistance.",
+      "sections": [
+        {
+          "id": "column-lock-role",
+          "title": "What the lock is there for",
+          "body": "Where fitted, the steering column lock prevents the steering wheel from being used to turn the front wheels while the column is locked. The **steering column lock module (SCLM)** operates that mechanism and reports its position or a detected fault to the **body control module (BCM)**. The BCM decides when to command locking or unlocking using information from other systems.\n\nThis is different from power steering: the lock secures the column, while EPAS helps you steer. It is also different from the SCCM, which interfaces with the switches around the wheel. Similar names do not make the modules or their connectors interchangeable."
+        },
+        {
+          "id": "column-lock-command",
+          "title": "Power and messages have different jobs",
+          "body": "The [system-operation reference](#/document/G1693266) describes the BCM supplying lock-module power through a relay and exchanging commands over **LIN**, a local communication link. Power lets the device operate; the communication link carries instructions and status. The BCM does not provide power to the lock module while the vehicle is moving or the engine is running.\n\nA lock-system fault can therefore involve the lock module, its supply or its communication—not just a mechanical lock that feels stuck. The source says a detected lock-module or LIN fault can prevent starting. Use its diagnostic path to establish the cause; the symptom alone does not identify a failed part."
+        },
+        {
+          "id": "c2434-connections",
+          "title": "Read C2434 as the lock connector",
+          "body": "**C2434 has four cavities** in this source view. Cavity **1** is marked unused. Cavity **2**, circuit **CDC45**, is the electrical steering-column-lock positive supply. Cavity **3**, **GD214**, is the instrument-panel-structure ground. Cavity **4**, **VDN02**, is the LIN circuit.\n\nThe face drawing and original table give the position, wire and terminal details. The [matching security-system diagram](#/document/wiring-112-003) traces those same connections between the lock module, relay, BCM and ground; it is explicitly labeled **Security Pack**, so check the vehicle’s equipment before applying that layout. C2434 is a different shell and circuit arrangement from the 12-cavity SCCM connector [C226A](#/document/connector-C226A)."
+        },
+        {
+          "id": "column-lock-programming",
+          "title": "Why a new lock module needs configuration",
+          "body": "The [lock-module replacement procedure](#/document/G1702174) requires configuration work when installing a new component. Before removal, the BCM configuration is uploaded to the scan tool; after the new lock is installed, that information is downloaded back into the **same BCM** so it can establish the correct configuration with the new lock module. The procedure also calls for completing PMI, carrying out BCM-to-Electronic-Steering-Column-Lock configuration/training, and checking the BCM for diagnostic trouble codes.\n\nThe physical replacement and electronic setup are therefore parts of the same job. The source procedure also includes airbag access and special fasteners, so use the complete sequence and its referenced instructions rather than treating the connector view as a removal guide."
+        }
+      ],
+      "relatedTermIds": [
+        "body-control-module",
+        "local-interconnect-network",
+        "electrical-relay",
+        "connector-terminal",
+        "diagnostic-scan-tool",
+        "diagnostic-trouble-code",
+        "electronic-power-assist-steering"
+      ],
+      "sourceDocumentIds": [
+        "connector-C2434",
+        "connector-C226A",
+        "G1693265",
+        "G1693266",
+        "G1702174",
+        "G1686673",
+        "wiring-112-003"
+      ]
+    }
+  ],
+  "documents": {
+    "connector-C226A": {
+      "topicId": "steering-column-controls",
+      "sourceHash": "aa4d2f002b7d3eadfc1bc9d685ff8b47ab66f152bacac42d7d84e87a28bd9236",
+      "summary": "The steering column mechanically connects the steering wheel to the steering gear; C226A belongs to the nearby steering column control module, which interfaces with the wheel and column switches. This 12-cavity view maps its supply, ground, communication and feature-specific circuits, including the applicable SelectShift paddle connections."
+    },
+    "G1726383": {
+      "topicId": "steering-column-mechanics",
+      "sourceHash": "26d5d6916331236f23167ef056bffd5e54d161dcd96bb4aabe703a58a8284848",
+      "summary": "See how the steering column, upper shaft, lower shaft and coupling form the mechanical connection from the steering wheel to the steering gear. The lower shaft is collapsible, and the source requires a measurement whenever it is disconnected from the upper shaft or coupling."
+    },
+    "G1693270": {
+      "topicId": "steering-column-controls",
+      "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151",
+      "summary": "This procedure removes and refits the SCCM assembly and its electrical connections. If a new module is being installed, its scan-tool configuration process begins with the old SCCM still connected and is completed after the replacement is fitted."
+    },
+    "G1702174": {
+      "topicId": "steering-column-lock",
+      "sourceHash": "3171987075d63bb99f7bd0fa20783b4f2fa32b97b82ee82b79055c2628dfe0b8",
+      "summary": "This procedure replaces the electronic column lock, including access, its special retaining fasteners and the configuration work required for a new module. The BCM configuration and training steps are part of making the replacement lock operate correctly."
+    },
+    "connector-C2434": {
+      "topicId": "steering-column-lock",
+      "sourceHash": "547f3ac7b6950fcf7a6c8695888de1649d233805855537a8b921accb17b81d7a",
+      "summary": "C2434 is the steering column lock module’s four-cavity connector. Its view identifies an unused position and separate supply, ground and LIN circuits, helping you distinguish the lock wiring from the SCCM connector beside the steering wheel."
+    },
+    "G1693265": {
+      "topicId": "steering-column-controls",
+      "sourceHash": "aa13f26690eda6ab0cfeb9db26e7558c8530928cef1a442de5306de2ec9b1863",
+      "summary": "This overview connects the steering-column stalks, steering-wheel buttons and applicable paddle switches with the functions they control. It also introduces the push-button ignition and column-lock systems, whose modules and connectors have different roles."
+    },
+    "G1693266": {
+      "topicId": "steering-column-lock",
+      "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535",
+      "summary": "This reference explains how push-button ignition and the electronic column lock interact with the BCM, vehicle networks and start authorization. Use its system diagrams and operating conditions to understand the lock’s power, communication and configuration requirements."
+    },
+    "wiring-081-003": {
+      "topicId": "steering-column-controls",
+      "sourceHash": "f22030b70dd8143ff9d41db718ac4f156704d6a2c861e2925e56aef25c42b103",
+      "summary": "This diagram traces the SCCM’s LIN and separate high-speed-wiper circuits to the windshield-wiper motor, then shows the motor’s related washer and ground connections. Its rain-sensitive branch is identified separately, so follow the equipment-specific path."
+    },
+    "wiring-030-003": {
+      "topicId": "steering-column-controls",
+      "sourceHash": "d1fe6f932ec905a34cc1bb18334788c676f5ff36954f50faddb6b80686919871",
+      "summary": "This 6R80 diagram follows the upshift, downshift and signal-return circuits through the SCCM connection and clockspring to the steering-wheel paddle switches. It describes the automatic-transmission paddle arrangement rather than every Mustang steering wheel."
+    },
+    "wiring-112-003": {
+      "topicId": "steering-column-lock",
+      "sourceHash": "22a8efff0b3a8955021c0428c48897a29dd6561a590343c2c3dd1130dd8ef3a8",
+      "summary": "This Security Pack wiring diagram shows the column lock’s supply relay, BCM control and monitoring, LIN communication and ground path. Match it to the vehicle’s equipment before using its connector and circuit references."
+    }
+  }
+}
