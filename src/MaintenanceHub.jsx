@@ -4,7 +4,7 @@ import {useApi,navigate} from './hooks.js';
 import {useEngine} from './engine-context.jsx';
 import {engineLabel} from './navigation-model.mjs';
 import {safeHref,readableTitle,categoryName} from './content-model.mjs';
-import {TermText} from './Glossary.jsx';
+import {TermText,useGlossary,GlossaryProvider} from './Glossary.jsx';
 import {Markdown,Callout} from './Reader.jsx';
 import {Empty,ErrorState,Figure,Loading,Sources} from './ui.jsx';
 import {WORKSHOP_TASKS,WORKSHOP_DIFFICULTIES,WORKSHOP_SYSTEMS,distanceLabel,guideOutline,guideWhenTitle,guideClassifications,maintenanceFilters,maintenanceFacetOptions,maintenanceHref,maintenanceLink,maintenanceMismatch,maintenanceQuery,maintenancePagination,relatedWorkshopGuides} from './maintenance-hub-model.mjs';
@@ -54,12 +54,13 @@ function GuideSection({id,title,icon:Icon=Wrench,tone='',children}){return <sect
 function jumpTo(id){const target=document.getElementById(id);target?.focus({preventScroll:true});target?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
 function GuideContents({items,schedule=false,filters}){return <aside className="maintenance-article-aside"><div className="maintenance-aside-inner"><span className="eyebrow">{schedule?'IN THIS SCHEDULE':'IN THIS GUIDE'}</span><nav className="maintenance-guide-toc" aria-label={schedule?'In this maintenance schedule':'In this maintenance guide'}>{items.map(item=><button type="button" key={item.id} onClick={()=>jumpTo(item.id)}>{item.title}<ArrowRight size={13} aria-hidden="true"/></button>)}</nav><a href={maintenanceHref({...filters,id:schedule?'':'schedule'})} className="maintenance-aside-schedule"><CalendarClock size={16} aria-hidden="true"/>{schedule?'Explore maintenance guides':'See the maintenance schedule'}</a></div></aside>;}
 function Guide({id,engine,year,onZoom,filters}){
+ const glossary=useGlossary();
  const state=useApi('/maintenance/'+encodeURIComponent(id)+'?'+new URLSearchParams({engine:engine||'all',year})),guide=state.data?.guide||state.data;
  if(state.loading)return <div className="maintenance-hub"><Breadcrumbs/><Loading label="Opening your guide…"/></div>;
  if(state.error)return <div className="maintenance-hub"><Breadcrumbs/><ErrorState message={state.error} retry={state.retry}/></div>;
  if(!guide)return null;
  const mismatch=maintenanceMismatch(guide.applicability),outline=guideOutline(guide);
- return <div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={filters}/><header className={'maintenance-article-header'+(!guide.thumbnail||mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> CARE & WORKSHOP</span><h1>{guide.title}</h1><GuideBadges guide={guide}/><Markdown body={guide.summary}/><EngineNote engine={engine} applicability={guide.applicability}/></div>{guide.thumbnail&&!mismatch&&<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>}</header>
+ return <GlossaryProvider terms={glossary?.terms||[]} open={glossary?.open} context={{system:guide.systemId,title:guide.title}}><div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={filters}/><header className={'maintenance-article-header'+(!guide.thumbnail||mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> CARE & WORKSHOP</span><h1>{guide.title}</h1><GuideBadges guide={guide}/><Markdown body={guide.summary}/><EngineNote engine={engine} applicability={guide.applicability}/></div>{guide.thumbnail&&!mismatch&&<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>}</header>
   {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className="maintenance-article-layout"><article className="maintenance-article-body">
    {guide.when?.summary&&<section id="when" tabIndex={-1} className="maintenance-when"><CalendarClock size={25} aria-hidden="true"/><div><h2>{guideWhenTitle(guide)}</h2><Markdown body={guide.when.summary}/>{guide.when.notes?.map((note,index)=><div className="maintenance-application" key={index}><Markdown body={note}/></div>)}</div></section>}
    {guide.introduction&&<GuideSection id="understand" title="Understand the task" icon={BookOpen} tone="blue"><Markdown body={guide.introduction}/></GuideSection>}
@@ -73,7 +74,7 @@ function Guide({id,engine,year,onZoom,filters}){
    {guide.procedures?.length>0&&<GuideSection id="repair-guides" title="Related workshop articles" icon={Wrench} tone="blue"><div className="maintenance-procedure-links">{guide.procedures.map(procedure=>{const href=maintenanceLink(procedure);return href?<a key={procedure.documentId} href={href}>{procedure.thumbnail&&<img src={safeHref(procedure.thumbnail.url)||undefined} width={84} height={66} loading="lazy" alt=""/>}<span><strong>{readableTitle(procedure.title)}</strong>{procedure.engines?.length>0&&<span className="maintenance-procedure-engine">{procedure.engines.map(engineLabel).join(' · ')}</span>}{procedure.applicability?.equipment&&procedure.applicability.equipment!==guide.applicability?.equipment&&<span className="maintenance-procedure-fitment">{procedure.applicability.equipment}</span>}{procedure.purpose&&<small>{procedure.purpose}</small>}</span><ArrowUpRight size={19} aria-hidden="true"/></a>:null;})}</div></GuideSection>}
    <Sources items={guide.sources||[]} label="Supporting guidance"/>
   </article><GuideContents items={outline} filters={filters}/></div>{guide.relatedGuides?.length>0&&<section className="maintenance-related-guides"><h2>Keep exploring.</h2><div className="maintenance-guide-grid">{relatedWorkshopGuides(guide.relatedGuides).map(item=><MaintenanceCard key={item.id} guide={item} filters={filters} heading="h3"/>)}</div></section>}</>}
- </div>;
+ </div></GlossaryProvider>;
 }
 function Schedule({engine,year,filters}){
  const state=useApi('/maintenance/schedule?'+new URLSearchParams({engine:engine||'all',year})),data=state.data?.schedule||state.data;

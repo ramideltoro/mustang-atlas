@@ -33,4 +33,6 @@ Reviewed curation is preserved in tracked `content/workshop-curated.json`. Local
 
 The publisher replaces each catalog/coverage file atomically, and the release validator reads and checks them as a stable pair. Related guides come from actual chosen supporting procedure links and exact related article references, with engine intersection; sharing a large diagnostic chapter alone does not justify a recommendation.
 
-Only accepted guides count as covered. Pending jobs and external dependencies remain visible in operational audits. Coverage counts refer to source-document scope, not a claim that every linked article has been manually reviewed or that a beginner can execute specialist work without its required equipment.
+Only accepted guides count as covered. Pending jobs and external dependencies remain visible in operational audits. Verified source conflicts can be partitioned into supported and unsupported spans through the private `data/workshop-source-exceptions.json` file. Those exclusions bind the exact source hash and require complete, non-overlapping span accounting; a document with an excluded portion is reported as partial, never fully covered. The published guide must name the supported task and stop before the unsupported operation. Do not publish speculative completion instructions or placeholder articles.
+
+Coverage counts refer to source-document scope, not a claim that every linked article has been manually reviewed or that a beginner can execute specialist work without its required equipment.

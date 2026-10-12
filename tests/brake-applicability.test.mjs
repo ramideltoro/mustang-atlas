@@ -22,3 +22,11 @@ test('reviewed base brake procedures require their exact source identity and ret
  assert.deepEqual(documentApplicability({...d,source_hash:'changed'}).engines,[]);assert.deepEqual(documentApplicability({...d,id:'unreviewed'}).engines,[]);
  assert.deepEqual(factoryBrakeEngines(row('Brake Caliper Anchor Plate','206-03',{id:'G1693782',sourceHash:'a2e2d71958c3640f11598ec511b30d29824af074f530461d556296db137525f8'})),['2.3L','3.7L']);
 });
+test('caliper-lever parking cable work excludes the separate SVT shoe mechanism',()=>{
+ for(const[id,hash]of [['G1693766','410254a1c802fdd37039dcd58279738294ca4addc027f71d57605deb3901cfc6'],['G1694515','433cf243530c97af0172233162e999c7dad493c911f2bb9aeef66e79e7bd5c7a'],['G1694516','c040cbee9cf70d59aab23e55556d86e108cb3a742053a5864eb7fec7ff6ee2c0']]){
+  const d=row('Parking Brake Cable','206-05',{id,source_hash:hash});
+  assert.deepEqual(scopeEngines(d),['2.3L','3.7L','5.0L']);assert.equal(documentApplicability(d,'5.2L').matchesSelectedEngine,false);assert.deepEqual(factoryBrakeEngines({...d,source_hash:'changed'}),[]);
+ }
+ const svt=row('Parking Brake Cable Adjustment - Vehicles With: SVT Performance Package','206-05');assert.deepEqual(scopeEngines(svt),['5.2L']);
+ assert.deepEqual(factoryBrakeEngines(row('Parking Brake Control','206-05')),[]);
+});

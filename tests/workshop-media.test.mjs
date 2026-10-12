@@ -44,3 +44,13 @@ test('a component beats its noise cover and preserves omitted direction or varia
  const lamp=doc('Front Fog Lamp',[{type:'step',text:'Disconnect the front fog lamp electrical connector.',children:[{type:'media',mediaId:'connector'}]},{type:'step',text:'Remove the screws and the fog lamp assembly.',children:[{type:'media',mediaId:'lamp'}]}],[m('connector'),m('lamp')]);assert.equal(rankWorkshopMedia(lamp)[0].id,'lamp');
  const knuckle=doc('Wheel Knuckle - Vehicles With: SVT Performance Package',[{type:'step',text:'Disconnect the tie rod end from the wheel knuckle.',children:[{type:'media',mediaId:'tie'}]},{type:'step',text:'Remove the wheel knuckle.',children:[{type:'media',mediaId:'knuckle'}]}],[m('tie'),m('knuckle')]);assert.equal(rankWorkshopMedia(knuckle)[0].id,'knuckle');
 });
+test('generic location overlap cannot select a sensor or module access image',()=>{
+ const sensor=doc('Transmission Fluid Temperature (TFT) Sensor',[{type:'step',text:'Remove the drain plug and drain the transmission fluid.',children:[{type:'media',mediaId:'drain'}]}],[m('drain')]);
+ assert.equal(selectWorkshopThumbnail(sensor),null);
+ const module=doc('Front Seat Climate Control Module [SCME]',[{type:'step',text:'Position the front passenger seat to the full upward and full rearward positions.',children:[{type:'media',mediaId:'seat'}]},{type:'step',text:'Remove the SCME.',children:[{type:'media',mediaId:'module'}]}],[m('seat'),m('module')]);
+ assert.equal(selectWorkshopThumbnail(module).id,'module');assert.ok(rankWorkshopMedia(module).find(x=>x.id==='seat').score<0);
+ const pump=doc('Fuel Pump',[{type:'step',text:'Remove the fuel tube.',children:[{type:'media',mediaId:'tube'}]},{type:'step',text:'Remove the pump.',children:[{type:'media',mediaId:'pump'}]}],[m('tube'),m('pump')]);assert.equal(selectWorkshopThumbnail(pump).id,'pump');
+});
+test('a defined abbreviated component outranks its electrical connector',()=>{
+ const d=doc('Heated Oxygen Sensor (HO2S)',[{type:'step',text:'Disconnect the HO2S electrical connector.',children:[{type:'media',mediaId:'connector'}]},{type:'step',text:'Remove the HO2S.',children:[{type:'media',mediaId:'sensor'}]}],[m('connector'),m('sensor')]);assert.equal(selectWorkshopThumbnail(d).id,'sensor');
+});

@@ -59,7 +59,7 @@ export function validateWorkshopSnapshot(db,{snapshot,dataDir,assetResolver=m=>m
   for(const r of coverage.documents){
    const d=docs.get(r.documentId);if(records.has(r.documentId))fail('duplicate-coverage-document',{documentId:r.documentId});records.set(r.documentId,r);
    if(!d||r.sourceHash!==d.source_hash){fail('stale-coverage-source',{documentId:r.documentId});continue;}
-   if(!['covered','pending','pointer','unsupported','reserved'].includes(r.status))fail('invalid-coverage-status',{documentId:d.id});
+   if(!['covered','partial','pending','pointer','unsupported','reserved'].includes(r.status))fail('invalid-coverage-status',{documentId:d.id});
    if(!Array.isArray(r.guideIds)||!r.guideIds.every(safeId)||new Set(r.guideIds).size!==r.guideIds.length||!Array.isArray(r.sections)){fail('invalid-coverage-bindings',{documentId:d.id});continue;}
    if(r.status==='covered'&&!r.guideIds.length)fail('covered-without-guide',{documentId:d.id});
    if(['unsupported','reserved'].includes(r.status)&&(r.guideIds.length||!r.reason?.trim()))fail('unavailable-coverage-claims-guide',{documentId:d.id});
@@ -73,10 +73,16 @@ export function validateWorkshopSnapshot(db,{snapshot,dataDir,assetResolver=m=>m
    const seen=new Set();for(const s of r.sections){
     if(!safeId(s.id)||seen.has(s.id))fail('duplicate-or-invalid-section',{documentId:d.id});seen.add(s.id);
     if(!Number.isInteger(s.start)||!Number.isInteger(s.end)||s.start<0||s.end<=s.start||s.end>d.text_length)fail('invalid-section-range',{documentId:d.id,sectionId:s.id});
-    if(!['covered','pending'].includes(s.status))fail('invalid-section-status',{documentId:d.id,sectionId:s.id});
+    if(!['covered','pending','unsupported'].includes(s.status))fail('invalid-section-status',{documentId:d.id,sectionId:s.id});
     if(s.status==='covered'&&(!r.guideIds.includes(s.guideId)||!bound(s.guideId,d.id)))fail('covered-section-unbound',{documentId:d.id,sectionId:s.id});
+    if(s.status==='unsupported'&&(s.guideId||!s.reason?.trim()))fail('unsupported-section-needs-reason-and-no-guide',{documentId:d.id,sectionId:s.id});
+    if(r.status==='unsupported'&&s.status!=='unsupported')fail('unsupported-document-has-supported-section',{documentId:d.id});
     if(r.status==='covered'&&s.status!=='covered')fail('covered-document-has-pending-section',{documentId:d.id});
    }
+   const exclusions=r.sections.filter(s=>s.status==='unsupported');
+   if(r.status==='partial'&&(!exclusions.length||!r.sections.some(s=>s.status==='covered'||s.status==='pending')))fail('partial-document-needs-supported-and-unsupported-spans',{documentId:d.id});
+   if(exclusions.length&&!['partial','unsupported'].includes(r.status))fail('unsupported-sections-need-partial-or-unsupported-status',{documentId:d.id});
+   for(const excluded of exclusions)for(const s of r.sections)if(s!==excluded&&s.start<excluded.end&&s.end>excluded.start)fail('unsupported-section-overlaps-other-scope',{documentId:d.id,sectionId:excluded.id,otherSectionId:s.id});
    if(r.status==='covered'&&!r.sections.length&&!r.reason?.trim())fail('curated-coverage-needs-scope-reason',{documentId:d.id});
   }
   for(const d of docs.values())if(['repair','diagnosis'].includes(d.kind)&&!records.has(d.id))fail('technical-document-missing-from-coverage',{documentId:d.id});
@@ -114,7 +120,7 @@ export function validateWorkshopSnapshot(db,{snapshot,dataDir,assetResolver=m=>m
     checkAsset(detail.thumbnail,g.id);for(const p of detail.procedures)checkAsset(p.thumbnail,g.id);for(const r of detail.relatedGuides)checkAsset(r.thumbnail,g.id);
    }
   }
-  return{ok:issues.length===0,issues,guides:report.guides,workshopGuides:report.workshopGuides,coverageDocuments:records.size,coveredDocuments:[...records.values()].filter(r=>r.status==='covered').length,assets:[...assets].sort(),hashes:Object.fromEntries(Object.entries(snapshot).map(([name,bytes])=>[name,digest(bytes)]))};
+  return{ok:issues.length===0,issues,guides:report.guides,workshopGuides:report.workshopGuides,coverageDocuments:records.size,coveredDocuments:[...records.values()].filter(r=>r.status==='covered').length,partialDocuments:[...records.values()].filter(r=>r.status==='partial').length,assets:[...assets].sort(),hashes:Object.fromEntries(Object.entries(snapshot).map(([name,bytes])=>[name,digest(bytes)]))};
  }catch(error){return{ok:false,issues:[...issues,{reason:'snapshot-validation-failed',message:error.message}]};}
  finally{fs.rmSync(temp,{recursive:true,force:true});}
 }

@@ -1,3 +1,4 @@
+import {readWorkshopExceptions,applyWorkshopExceptions} from './workshop-author-exceptions.mjs';
 import {reusableCoverage} from './workshop-author-reuse.mjs';
 import crypto from 'node:crypto';
 import {readWorkshopEvidence,verifiedWorkshopEvidence} from './workshop-author-evidence.mjs';
@@ -26,7 +27,7 @@ export function diagnosticSpans(d,{maxChars=35000}={}){
  for(const s of units){const size=packet.length?s.end-packet[0].start:0;if(packet.length&&(size>maxChars||packet.length>=4)){packets.push(packet);packet=[];}packet.push(s);}if(packet.length)packets.push(packet);
  return packets.map(p=>({id:p.map(s=>s.id).join('_'),title:p.map(s=>s.title).join(' · '),start:p[0].start,end:p.at(-1).end,subsections:p}));
 }
-export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements=readWorkshopEvidence()}={}){
+export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements=readWorkshopEvidence(),sourceExceptions=readWorkshopExceptions()}={}){
  const publicDocs=allDocs.filter(isPublicDocument).map(d=>({...d,engines:parse(d.engines),related:parse(d.related),blocks:parse(d.blocks),media:parse(d.media),source:parse(d.source,{})}));
  const byId=new Map(publicDocs.map(d=>[d.id,d]));
  const supplements=verifiedWorkshopEvidence(evidenceSupplements,byId);
@@ -44,6 +45,7 @@ export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements
   if(ds[0].kind==='diagnosis'&&size>60000){for(const d of ds)for(const span of diagnosticSpans(d))add(key+'|'+d.id+'|'+span.id,[d],[{documentId:d.id,...span}]);}
   else add(key,ds,ds.map(d=>({documentId:d.id,id:'complete',title:d.title,start:0,end:d.text.length})));
  }
+ const excludedSpans=applyWorkshopExceptions(jobs,sourceExceptions,byId);
  for(const j of jobs){
   j.evidenceSupplements=j.documents.map(d=>supplements.get(d.id)).filter(Boolean);
   const reviewedAdditionalIds=[...new Set(j.evidenceSupplements.flatMap(s=>(s.additionalSources||[]).map(r=>r.documentId)))];
@@ -55,7 +57,7 @@ export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements
   const required=reviewedAdditionalIds.map(id=>byId.get(id));
   j.contextDocs=[...required,...[...new Map([...delegated,...overviews,...related.filter(d=>d.kind==='overview')].map(d=>[d.id,d])).values()].filter(d=>!reviewedAdditionalIds.includes(d.id)&&(d.text.length<15000||delegated.includes(d))).slice(0,Math.max(0,3-required.length))];
   j.related=related.map(d=>({documentId:d.id,title:d.title,phase:phase(d),engines:scopeEngines(d),section:d.section_title}));
-  j.fingerprint=hash(JSON.stringify({version:VERSION,key:j.key,engines:j.engines,sources:[...j.documents,...j.contextDocs].map(d=>[d.id,d.source_hash]),spans:j.spans,...(j.evidenceSupplements.length?{evidenceSupplements:j.evidenceSupplements}:{})}));
+  j.fingerprint=hash(JSON.stringify({version:VERSION,key:j.key,engines:j.engines,sources:[...j.documents,...j.contextDocs].map(d=>[d.id,d.source_hash]),spans:j.spans,...(j.scopeConstraints?.length?{scopeConstraints:j.scopeConstraints}:{}),...(j.evidenceSupplements.length?{evidenceSupplements:j.evidenceSupplements}:{})}));
  }
- return{jobs,documents:docs,pointers,reused,reserved:[...reserved],publicDocs,byId};
+ return{jobs,excludedSpans,documents:docs,pointers,reused,reserved:[...reserved],publicDocs,byId};
 }

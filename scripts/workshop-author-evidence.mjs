@@ -37,5 +37,5 @@ export function validCuratedJob(guide,job){
   const expected=job.spans.map(s=>({documentId:s.documentId,sourceHash:job.documents.find(d=>d.id===s.documentId).source_hash,id:s.id,start:s.start,end:s.end}));
   return JSON.stringify(coverage.sections)===JSON.stringify(expected)
     &&job.documents.every(d=>guide.sourceRefs?.some(r=>r.documentId===d.id&&r.sourceHash===d.source_hash))
-    &&guide.applicability?.engines?.every(e=>job.engines.includes(e));
+    &&JSON.stringify([...(guide.applicability?.engines||[])].sort())===JSON.stringify([...job.engines].sort());
 }

@@ -18,6 +18,11 @@ const reviewedBase = {
  G1693755:{hash:'29549eb95aecb616a1dc5a21463da0f3aa667505e6e929ab32e6c7e299930328'},
  G1693756:{hash:'338c06c1e57ba55ac08a0034acd4309c801570ed4f16e8018e452a7da638f752'},
  G1693757:{hash:'1e867e789ba609a259cf041280ea63cfbb742e11ddb21bae2d79e5b0fc714912'},
+ // These operate levers on the base rear calipers. SVT uses separate parking
+ // shoes (G1717972) and wheel-drag cable adjustment (G1820640).
+ G1693766:{hash:'410254a1c802fdd37039dcd58279738294ca4addc027f71d57605deb3901cfc6'},
+ G1694515:{hash:'433cf243530c97af0172233162e999c7dad493c911f2bb9aeef66e79e7bd5c7a'},
+ G1694516:{hash:'c040cbee9cf70d59aab23e55556d86e108cb3a742053a5864eb7fec7ff6ee2c0'},
 };
 export function factoryBrakeEngines(row) {
  const code=row.section_code??row.section?.code,title=row.title||'';

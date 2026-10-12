@@ -37,13 +37,13 @@ for(const engine of ['all',...ENGINE_OPTIONS]){
 for(const d of docs.values()){const value=care.forDocument(d.id);if(!value)continue;publicCheck(value,d.id);for(const item of value.items){if(item.guideHref){careLinks++;if(!catalog.detail(item.guideHref.split('/').at(-1)))issues.push({id:d.id,reason:'broken-care-guide'});}}}
 const manifest=readOptional('workshop-coverage.json');let coverage={available:false};
 if(manifest){
- coverage={available:true,documents:0,covered:0,pending:0,pointer:0,unsupported:0,reserved:0,coveredSections:0,pendingSections:0,missingDocuments:[]};
+ coverage={available:true,documents:0,covered:0,partial:0,pending:0,pointer:0,unsupported:0,reserved:0,coveredSections:0,pendingSections:0,unsupportedSections:0,missingDocuments:[]};
  if(manifest.version!==1||!Array.isArray(manifest.documents))issues.push({reason:'invalid-coverage-manifest'});
  else{const seen=new Set();for(const record of manifest.documents){
   const d=docs.get(record.documentId);coverage.documents++;
   if(seen.has(record.documentId))issues.push({documentId:record.documentId,reason:'duplicate-coverage-document'});seen.add(record.documentId);
   if(!d||d.source_hash!==record.sourceHash){issues.push({documentId:record.documentId,reason:'stale-coverage-source'});continue;}
-  if(!['covered','pending','pointer','unsupported','reserved'].includes(record.status)){issues.push({documentId:d.id,reason:'invalid-coverage-status'});continue;}coverage[record.status]++;
+  if(!['covered','partial','pending','pointer','unsupported','reserved'].includes(record.status)){issues.push({documentId:d.id,reason:'invalid-coverage-status'});continue;}coverage[record.status]++;
   const ids=record.guideIds||[];if(record.status==='covered'&&!ids.length)issues.push({documentId:d.id,reason:'covered-without-guide'});
   if(record.status==='unsupported'&&(!record.reason?.trim()||ids.length))issues.push({documentId:d.id,reason:'unsupported-coverage-needs-reason-and-no-guide'});
   const destinations=record.status==='pointer'?(record.destinationIds||[]):[d.id];
@@ -56,8 +56,14 @@ if(manifest){
   const sectionIds=new Set();for(const section of record.sections||[]){
    if(!section.id||sectionIds.has(section.id))issues.push({documentId:d.id,reason:'duplicate-or-missing-section-id'});sectionIds.add(section.id);
    if(!Number.isInteger(section.start)||!Number.isInteger(section.end)||section.start<0||section.end<=section.start||section.end>d.text_length)issues.push({documentId:d.id,sectionId:section.id,reason:'invalid-section-text-range'});
-   if(section.status==='covered'){coverage.coveredSections++;if(!ids.includes(section.guideId)||!catalog.detail(section.guideId))issues.push({documentId:d.id,sectionId:section.id,reason:'covered-section-without-guide'});}else coverage.pendingSections++;
+   if(section.status==='covered'){coverage.coveredSections++;if(!ids.includes(section.guideId)||!catalog.detail(section.guideId))issues.push({documentId:d.id,sectionId:section.id,reason:'covered-section-without-guide'});}else if(section.status==='pending')coverage.pendingSections++;else if(section.status==='unsupported'){coverage.unsupportedSections++;if(section.guideId||!section.reason?.trim())issues.push({documentId:d.id,sectionId:section.id,reason:'unsupported-section-needs-reason-and-no-guide'});}else issues.push({documentId:d.id,sectionId:section.id,reason:'invalid-section-status'});
+   if(record.status==='covered'&&section.status!=='covered')issues.push({documentId:d.id,reason:'covered-document-has-uncovered-section'});
+   if(record.status==='unsupported'&&section.status!=='unsupported')issues.push({documentId:d.id,reason:'unsupported-document-has-supported-section'});
   }
+  const exclusions=(record.sections||[]).filter(s=>s.status==='unsupported');
+  if(record.status==='partial'&&(!exclusions.length||!(record.sections||[]).some(s=>s.status==='covered'||s.status==='pending')))issues.push({documentId:d.id,reason:'partial-document-needs-supported-and-unsupported-spans'});
+  if(exclusions.length&&!['partial','unsupported'].includes(record.status))issues.push({documentId:d.id,reason:'unsupported-sections-need-partial-or-unsupported-status'});
+  for(const excluded of exclusions)for(const section of record.sections||[])if(section!==excluded&&section.start<excluded.end&&section.end>excluded.start)issues.push({documentId:d.id,sectionId:excluded.id,otherSectionId:section.id,reason:'unsupported-section-overlaps-other-scope'});
  }
  coverage.missingDocuments=[...docs.values()].filter(d=>['repair','diagnosis'].includes(d.kind)&&!seen.has(d.id)).map(d=>d.id);
  if(coverage.missingDocuments.length)issues.push({reason:'technical-documents-missing-from-coverage',count:coverage.missingDocuments.length});

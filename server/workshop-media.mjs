@@ -43,9 +43,12 @@ export function workshopMediaContexts(blocks) {
 
 export function rankWorkshopMedia(document, { title = document.title, limit = Infinity } = {}) {
   const media = array(document.media), blocks = array(document.blocks), contexts = workshopMediaContexts(blocks);
-  const component = normalize(String(title || '').replace(/\([^)]*\)/g, '').split(/\s[-–—]\s/)[0]).replace(/\s+(?:lh|rh|lhd|rhd)$/, '');
+  const aliases = [...String(title || '').matchAll(/[\[(]([A-Z][A-Z0-9]{1,7})[\])]/g)].map(match => match[1]);
+  const component = normalize(String(title || '').replace(/\([^)]*\)|\[[^\]]*\]/g, '').split(/\s[-–—]\s/)[0]).replace(/\s+(?:lh|rh|lhd|rhd)$/, '');
   const terms = [...new Set(component.split(' ').filter(word => word.length > 1 && !stop.has(word)).map(stem))];
   const topic = component, ranked = [];
+  const head = component.split(' ').at(-1);
+  const requireHead = ['sensor', 'module', 'pump', 'actuator', 'switch', 'valve', 'radiator', 'cooler'].includes(head);
   for (const original of media) {
     // Reuse the established size/control safeguards, without allowing their
     // first-image/area heuristic to determine the workshop's semantic choice.
@@ -74,6 +77,13 @@ export function rankWorkshopMedia(document, { title = document.title, limit = In
     if (weakRole.test(position.context) && !weakRole.test(title)) score -= 55;
     if (!matched.length && terms.length) score -= 25;
     if (!context) score -= 25;
+    const aliasMatch = aliases.some(alias => new RegExp(`\\b${escapeRegex(alias)}\\b`).test(position.context));
+    if (aliasMatch) score += 100;
+    if (aliasMatch && aliases.some(alias => position.context.split(/[.·\n]|\b(?:then|and then)\b/i).some(sentence => new RegExp(`^(?:remove|install|replace|inspect) (?:and discard )?(?:(?:the|a|new|old|bolts?|nuts?|screws?|retainers?|and) )*${escapeRegex(alias.toLowerCase())}(?: (?:sensor|module|valve|switch))?(?:$| and\\b)`).test(normalize(sentence))))) score += 45;
+    // Shared location words cannot establish the pictured component: a seat
+    // adjustment is not a seat module, nor a gearbox drain a temperature sensor.
+    // Preserve source abbreviations such as SCME when the title defines them.
+    if (requireHead && !words.has(head) && !aliasMatch) score = Math.min(score, -1);
     score -= position.index * 0.001;
     ranked.push({ ...original, documentId: document.id, mediaId: original.id, score, selectionContext: position.context, matchedTerms: matched });
   }
