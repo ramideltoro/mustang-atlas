@@ -7,7 +7,12 @@ export function engineFilter(value){if(value===undefined||value===''||String(val
 const array=value=>{if(Array.isArray(value))return value;try{return JSON.parse(value||'[]');}catch{return [];}};
 // The 2.3L label is a full-sheet header outside the component/branch boxes on
 // wiring 033-002. Bind the visual finding to the exact reviewed drawing.
-const reviewedApplications={'wiring-033-002':{hash:'7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864',engines:['2.3L']}};
+const reviewedApplications={
+ 'wiring-033-002':{hash:'7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864',engines:['2.3L']},
+ // This hydraulic-brake chapter contains separate automatic and manual pedal
+ // assemblies. G1692563 is only the 6R80 sequence; G1692562 covers MT82/3160.
+ 'G1692563':{hash:'2ebf43612f9afa2df6b03f44180dd2fa068c85a65509652a89f6d8153de4e032',engines:['2.3L','3.7L','5.0L']},
+};
 export function documentApplicability(row,selected='all'){
  // Titles and section metadata are application evidence. Body text and related
  // article titles contain cross-variant references, so never use them as tags.

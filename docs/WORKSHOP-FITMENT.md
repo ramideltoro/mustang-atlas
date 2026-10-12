@@ -33,6 +33,7 @@ Examples checked against the local procedure evidence:
 - `G1687288` treats the 5.2L pilot bearing as nonserviceable, with flywheel replacement; a separate bearing replacement guide covers the base engines.
 - `G1701833` supplies base-engine MT82 access links, so its slave-cylinder replacement scope is not extended to the 5.2L.
 - Automatic transmission cooling and external controls belong to the 6R80 base-engine applications. Paddle-shift articles must not become GT350 procedures merely because their imported engine field is empty.
+- `G1692563`, the 6R80 brake-pedal/bracket replacement in hydraulic-brake section 206-06, is bound to its reviewed source hash and the three base engines. Its two-bolt assembly procedure is separate from `G1692562`, whose explicit MT82/3160 procedure includes clutch hydraulics, four bolts and clutch bleeding. The manual procedure remains available for 5.2L. A review of all published guide equipment labels found this single genuine automatic-transmission/5.2L mismatch; labels referring to automatic climate control remain shared.
 
 ## Convertible body applications
 

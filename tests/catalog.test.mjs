@@ -25,6 +25,16 @@ test('visually confirmed wiring applicability is bound to the reviewed drawing h
  assert.deepEqual(documentApplicability(row).engines,['2.3L']);assert.equal(documentApplicability(row,'5.0L').matchesSelectedEngine,false);
  assert.deepEqual(documentApplicability({...row,source_hash:'changed'}).engines,[]);assert.deepEqual(documentApplicability({...row,id:'wiring-033-001'}).engines,[]);
 });
+test('reviewed automatic brake-pedal assembly excludes 5.2L without narrowing the separate manual assembly',()=>{
+ const automatic={id:'G1692563',title:'Brake Pedal and Bracket - 6-Speed Automatic Transmission – 6R80',section_code:'206-06',section_title:'Hydraulic Brake Actuation',source_hash:'2ebf43612f9afa2df6b03f44180dd2fa068c85a65509652a89f6d8153de4e032'};
+ assert.deepEqual(documentApplicability(automatic).engines,['2.3L','3.7L','5.0L']);
+ assert.equal(documentApplicability(automatic,'5.2L').matchesSelectedEngine,false);
+ assert.equal(documentApplicability(automatic,'3.7L').matchesSelectedEngine,true);
+ assert.deepEqual(documentApplicability({...automatic,source_hash:'changed'}).engines,[]);
+ const manual={...automatic,id:'G1692562',title:'Brake Pedal and Bracket - 6-Speed Manual Transmission – 3160/6-Speed Manual Transmission – MT82',source_hash:'030cc0cbeca93364db5e1343405c2c47b4cda4c4114d203eb33a8fe729571612'};
+ assert.equal(documentApplicability(manual,'5.2L').matchesSelectedEngine,true);
+ assert.equal(documentApplicability({...manual,title:'Dual Automatic Temperature Control'},'5.2L').matchesSelectedEngine,true);
+});
 test('exporter-only manual overviews cannot become public reference destinations',()=>{
  assert.equal(isPublicDocument({title:'About this Manual'}),false);assert.equal(isPublicDocument({title:'Manual Transmission - Overview'}),true);
  const origin=row('G0','Seal','Removal');const hidden=row('G1693180','About this Manual','Description and Operation');const r=createReferenceResolver([origin,hidden]);assert.equal(r.byId(hidden.id,origin),null);assert.equal(r.resolve(hidden.title,'',origin),null);assert.equal(r.cleanObject('[About this Manual](#/document/G1693180)'),'About this reference');
