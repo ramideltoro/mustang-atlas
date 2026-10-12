@@ -33,8 +33,9 @@ export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements
  const supplements=verifiedWorkshopEvidence(evidenceSupplements,byId);
  function resolve(ref,from){if(byId.has(ref))return byId.get(ref);const all=publicDocs.filter(d=>d.source.reference===ref),same=all.filter(d=>d.section_code===from.section_code);return same.length===1?same[0]:all.length===1?all[0]:null;}
  const appendices=publicDocs.filter(d=>/^wiring-(?:005-00[1-9]|149-0(?:0[1-9]|1[0-2]))$/.test(d.id));
- const docs=publicDocs.filter(d=>['repair','diagnosis'].includes(d.kind)||phase(d)==='Overhaul'||appendices.includes(d));
- const reserved=new Set(['G1804267','G2394879',...appendices.map(d=>d.id)]);
+ const calculators=publicDocs.filter(d=>d.id.startsWith('reference-')&&d.source_path?.startsWith('Quick Links/Torque Wrench Calculators/'));
+ const docs=publicDocs.filter(d=>['repair','diagnosis'].includes(d.kind)||phase(d)==='Overhaul'||appendices.includes(d)||calculators.includes(d));
+ const reserved=new Set(['G1804267','G2394879',...appendices.map(d=>d.id),...calculators.map(d=>d.id)]);
  const pointers=docs.filter(isPointer).map(d=>({document:d,destinations:d.related.map(id=>resolve(id,d)).filter(d=>d&&['repair','diagnosis'].includes(d.kind)&&!isPointer(d)).map(d=>d.id),reason:/Interactive Diagnostics|VIN required/.test(d.text)?'The source requires an external VIN-specific interactive diagnostic routine.':/PC\/ED/.test(d.text)?'The page directs diagnosis to linked local engine diagnostics and/or external PC/ED tests; no local test sequence is provided on this page.':'This page is a referral to a substantive local diagnostic article.'}));
  const reused=docs.map(d=>reusableCoverage(d,existingGuides,scopeEngines(d))).filter(Boolean),reuseByDoc=new Map(reused.map(r=>[r.documentId,r]));
  const grouped=new Map();for(const original of docs.filter(d=>!reserved.has(d.id)&&!isPointer(d))){const reuse=reuseByDoc.get(original.id),remaining=scopeEngines(original).filter(e=>!reuse?.engines.includes(e));if(!remaining.length)continue;const d=reuse?{...original,authoringEngines:remaining}:original;const key=jobKey(d);if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push(d);}
@@ -59,5 +60,5 @@ export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements
   j.related=related.map(d=>({documentId:d.id,title:d.title,phase:phase(d),engines:scopeEngines(d),section:d.section_title}));
   j.fingerprint=hash(JSON.stringify({version:VERSION,key:j.key,engines:j.engines,sources:[...j.documents,...j.contextDocs].map(d=>[d.id,d.source_hash]),spans:j.spans,...(j.scopeConstraints?.length?{scopeConstraints:j.scopeConstraints}:{}),...(j.evidenceSupplements.length?{evidenceSupplements:j.evidenceSupplements}:{})}));
  }
- return{jobs,excludedSpans,documents:docs,pointers,reused,reserved:[...reserved],publicDocs,byId};
+ return{jobs,excludedSpans,sourceExceptions,documents:docs,pointers,reused,reserved:[...reserved],publicDocs,byId};
 }
