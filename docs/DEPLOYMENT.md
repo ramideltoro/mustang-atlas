@@ -5,7 +5,7 @@ Production runs at `https://mustangatlas.ramideltoro.com` on the backend VPS in 
 ## Release
 
 1. Run tests, build the client, and finish the catalog audit locally.
-2. Copy the project source (excluding `.git`, `node_modules`, local logs, `work`, `.env` and `data/rewrite`) into the deployment directory.
+2. Copy the project source (excluding `.git`, `node_modules`, local logs, `work`, `.env`, `data/rewrite`, and the private `content/workshop-coverage.json` inventory) into the deployment directory. Offline authoring-only `workshop-curated.json`, `workshop-evidence.json`, and `workshop-media-overrides.json` also stay local; their accepted results are already projected into `workshop-guides.json`.
 3. Copy `data/atlas.sqlite`, `data/catalog-manifest.json`, `data/media`, `data/source` and accepted `data/guides`. Do not copy a database during ingestion. The catalog uses a completed SQLite file, not a live ingestion connection.
 4. Run `docker compose up -d --build` from `/srv/mustang-atlas`.
 5. Verify `/healthz` and `/api/v1/stats` through loopback before changing Caddy to `reverse_proxy 127.0.0.1:3185`.
@@ -53,3 +53,18 @@ Run `node scripts/audit-media-quality.mjs --source /absolute/path/export` after 
 ## Publishing topic explanations
 
 The container mounts `content/` read-only in addition to `data/`. Authored topic contexts are static JSON; the API reloads them by file identity and rejects stale source hashes, invalid links, and unsupported references. `node scripts/sync-contexts.mjs` validates a stable local snapshot, transfers it to a temporary file on the VPS, then renames it atomically. `--watch` follows the finite local topic-authoring worker and exits after its last publication. Glossary and application changes still belong in the normal GitHub/deployment release. No authoring credentials or jobs are deployed.
+
+## Publishing workshop guides
+
+Deploy the workshop API and client once with the normal release workflow. Subsequent accepted content batches can be published independently:
+
+```sh
+node scripts/sync-workshop-guides.mjs --dry-run
+node scripts/sync-workshop-guides.mjs --publish
+# Follow the finite local authoring worker until its final publication:
+node scripts/sync-workshop-guides.mjs --publish --watch
+```
+
+The default is dry-run validation. The publisher reads a stable snapshot of the maintenance seed, workshop catalog, private coverage inventory and video-control exclusions. It rejects invalid or stale source bindings, broken internal links, missing media and inconsistent coverage claims. Pending jobs are allowed during intermediate releases; they never create public placeholders. Completion still requires reconciling the full coverage inventory.
+
+Before replacing the live workshop file, remote checks must confirm the exact catalog database, maintenance seed, video-control manifest, referenced image hashes and uploaded content bytes. Only `workshop-guides.json` is transferred; private coverage, drafts, logs and credentials stay local. The replacement is atomic and the API reloads it without a rebuild. A failed check keeps the last published catalog intact. Publication progress stays in `work/workshop-author/publication-state.json`, and eight consecutive failures stop a watch run with a nonzero status. Commit validated editorial batches to GitHub as part of each release.

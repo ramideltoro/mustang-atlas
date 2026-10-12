@@ -2,6 +2,8 @@
 
 `content/maintenance-guides.json` contains 46 original guides in eight categories and an eight-group schedule. The library explains what a service accomplishes, why it matters, when to perform it, how to prepare, the broad work sequence, signs that need attention, and the purpose of each linked repair article. It complements the component-specific care items in `content/maintenance.json`; all 29 existing care rules map uniquely to a detailed guide.
 
+The separate [workshop expansion](WORKSHOP-AUTHORING.md) adds diagnosis, component replacement and specialist overhaul guides through `content/workshop-guides.json`. This document records the original care/schedule seed and its release evidence. New workshop work does not alter the verified schedule or the existing 46 URLs. The combined API adds system, job-type and difficulty filters, diagnostic decision tables, outcome checks and links from repair articles back to their explanatory guides.
+
 ## Coverage
 
 The categories cover service planning, engine/cooling, tires/brakes/handling, transmission/rear axle, electrical systems, cabin/visibility, body hardware, and advanced maintenance. The schedule includes every task in Ford's 2015 normal-maintenance table, with separate groups for oil-change service, 20,000 miles, 30,000 miles, 100,000 miles, 150,000 miles, recurring coolant replacement, monthly checks, and six-month checks.

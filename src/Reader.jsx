@@ -12,6 +12,8 @@ import {topicContextForView} from './topic-context-model.mjs';
 import TorqueCalculator from './TorqueCalculator.jsx';
 import PartsPanel from './PartsPanel.jsx';
 import MaintenancePanel from './MaintenancePanel.jsx';
+import {WorkshopGuidePanel} from './WorkshopGuideCards.jsx';
+import {relatedWorkshopGuides} from './maintenance-hub-model.mjs';
 import {hasPartsContent} from './parts-model.mjs';
 import './reader-refresh.css';
 import {Badge,Loading,ErrorState,Figure,FigureGrid,Sources,CheckItem} from './ui.jsx';
@@ -95,7 +97,8 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
   ...headings,
   ...(remainingMedia.length?[{id:'additional-figures',title:'See the details',level:2,tone:'blue'}]:[]),
   ...(hasPartsContent(data?.parts)?[{id:'parts',title:'Parts',level:2,tone:'green'}]:[]),
-  ...(data?.maintenance?.items?.length?[{id:'care-and-maintenance',title:'Care and maintenance',level:2,tone:'green'}]:[])
+  ...(data?.maintenance?.items?.length?[{id:'care-and-maintenance',title:'Care and maintenance',level:2,tone:'green'}]:[]),
+  ...(relatedWorkshopGuides(data?.workshopGuides).length?[{id:'workshop-guides',title:'Care and repair guides',level:2,tone:'blue'}]:[])
  ].filter((entry,index,all)=>entry.title&&all.findIndex(item=>item.id===entry.id)===index);
  async function copy(){try{await navigator.clipboard.writeText(window.location.href);setCopied(true);setTimeout(()=>setCopied(false),1800);}catch{}}
  function jump(blockId){const target=document.getElementById(blockId);if(!target)return;if(!target.hasAttribute('tabindex'))target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
@@ -126,6 +129,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
     {remainingMedia.length>0&&<section id="additional-figures" className="additional-figures"><div className="section-title"><span className="eyebrow">A CLOSER LOOK</span><h2>See the details.</h2></div><FigureGrid figures={remainingMedia} onZoom={onZoom}/></section>}
     <PartsPanel data={data.parts}/>
     <MaintenancePanel data={data.maintenance}/>
+    <WorkshopGuidePanel items={data.workshopGuides}/>
     {data.related?.length>0&&<section className="related-references"><div className="section-title"><span className="eyebrow">KEEP GOING</span><h2>Connected articles.</h2></div>{data.related.map(doc=><a href={'#/document/'+encodeURIComponent(doc.id)} key={doc.id}>{doc.thumbnail&&<img className="related-thumbnail" src={doc.thumbnail.url} alt="" loading="lazy"/>}<span><small>{categoryName(doc.kind)}</small><strong>{readableTitle(doc.title)}</strong></span><ArrowRight size={17}/></a>)}</section>}
    </article>
    <aside className="reader-aside"><div className="reader-aside-inner"><div className="reference-facts"><span className="eyebrow">AT A GLANCE</span><dl><div><dt>System</dt><dd>{system?.title||categoryName(data.systemId)}</dd></div><div><dt>Article type</dt><dd>{categoryName(data.kind)}</dd></div><div><dt>Illustrations</dt><dd>{data.media?.length||0}</dd></div><div><dt>Engine</dt><dd>{engineLabel}</dd></div></dl></div></div></aside>

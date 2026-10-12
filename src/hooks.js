@@ -1,17 +1,20 @@
 import {useEffect,useState,useCallback} from 'react';
-const cache=new Map();
+import {createApiCache,apiCacheLifetime} from './api-cache.mjs';
+const cache=createApiCache();
 export async function api(path,{signal,refresh=false}={}){
-  if(!refresh&&cache.has(path))return cache.get(path);
+  const cached=!refresh?cache.get(path):undefined;
+  if(cached!==undefined)return cached;
   const response=await fetch('/api/v1'+path,{signal});
   if(!response.ok)throw new Error(response.status===404?'This reference could not be found.':'The library could not be reached. Please try again.');
-  const value=await response.json();cache.set(path,value);return value;
+  const value=await response.json();cache.set(path,value,apiCacheLifetime(path));return value;
 }
 export function useApi(path){
   const [attempt,setAttempt]=useState(0),[state,setState]=useState({path:null,data:null,loading:!!path,error:null});
   useEffect(()=>{
     if(!path){setState({path,data:null,loading:false,error:null});return;}
     const controller=new AbortController();
-    if(!attempt&&cache.has(path)){setState({path,data:cache.get(path),loading:false,error:null});return;}
+    const cached=!attempt?cache.get(path):undefined;
+    if(cached!==undefined){setState({path,data:cached,loading:false,error:null});return;}
     setState({path,data:null,loading:true,error:null});
     api(path,{signal:controller.signal,refresh:attempt>0}).then(data=>{if(!controller.signal.aborted)setState({path,data,loading:false,error:null});}).catch(error=>{if(error.name!=='AbortError')setState({path,data:null,loading:false,error:error.message});});
     return()=>controller.abort();

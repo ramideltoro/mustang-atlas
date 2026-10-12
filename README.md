@@ -62,11 +62,13 @@ Create `work/topic-context-jobs/stop-after-current` to drain active batches befo
 
 See [deployment and operations](docs/DEPLOYMENT.md).
 
-## Maintenance library
+## Maintenance and workshop library
 
-The Maintenance area combines an internal normal schedule with detailed, searchable care guides. Each guide explains timing, purpose, preparation and warning signs, and links to relevant existing repair articles. Engine selection scopes both the guide list and procedure links. Verified base-car intervals are not applied to the 5.2L Shelby. Public normal-schedule references lead to `#/maintenance/schedule`; the original evidence stays available in private authoring records.
+The Maintenance area combines an internal normal schedule with searchable maintenance, diagnostic, repair and overhaul guides. Browse by vehicle system, job type and difficulty, or search using everyday symptoms. Each guide explains the component, why the job matters, preparation, the sequence of work and the checks afterward. Diagnostic decision tables connect observations to the next check. Direct procedure links preserve engine, gearbox, equipment and operation-phase differences. Repair articles also link back to relevant teaching guides.
 
-Content is in `content/maintenance-guides.json`; run `node scripts/audit-maintenance-guides.mjs` to validate all guide, schedule, article and thumbnail references. See [maintenance authoring](docs/MAINTENANCE-GUIDES.md) and [API documentation](docs/API.md). The article Parts panel shows confirmed part numbers only and is omitted when no such parts are available.
+Engine selection scopes both the guide list and procedure links. The existing 46 guide URLs remain available. Verified base-car intervals are not applied to the 5.2L Shelby, and diagnostic tests or repairs use condition-based triggers without invented replacement intervals. Public normal-schedule references lead to `#/maintenance/schedule`; the original evidence stays available in private authoring records.
+
+Scheduled care is in `content/maintenance-guides.json`; the workshop expansion is in `content/workshop-guides.json`. The locally generated `content/workshop-coverage.json` inventory binds source documents and exact diagnostic sections to accepted guides. Its unresolved-scope notes stay private: the file is excluded from Git history, deployment and public responses. Run `node scripts/audit-maintenance-guides.mjs` to validate guide, schedule, article, thumbnail and coverage references. See [maintenance authoring](docs/MAINTENANCE-GUIDES.md), [workshop authoring](docs/WORKSHOP-AUTHORING.md) and [API documentation](docs/API.md). The article Parts panel shows confirmed part numbers only and is omitted when no such parts are available.
 
 ## Original image quality
 
