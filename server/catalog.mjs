@@ -1,5 +1,6 @@
 import {detectEngines} from './taxonomy.mjs';
 import {factoryBrakeEngines} from './brake-applicability.mjs';
+import {factoryBodyEngines} from './body-applicability.mjs';
 export const ENGINE_OPTIONS=['2.3L','3.7L','5.0L','5.2L'];
 export function isPublicDocument(row){return !/^\s*(?:overview\s*[-–—:]?\s*)?about\s+(?:this|the)\s+(?:(?:service|workshop)\s+)?manual\s*$/i.test(row?.title||'');}
 export function engineFilter(value){if(value===undefined||value===''||String(value).toLowerCase()==='all')return 'all';const engine=String(value).toUpperCase();if(!ENGINE_OPTIONS.includes(engine))throw Object.assign(new Error('Unsupported engine filter.'),{status:400});return engine;}
@@ -23,8 +24,10 @@ export function documentApplicability(row,selected='all'){
  if(['308-03B','308-06B'].includes(code)&&/\b(?:TR[- ]?)?3160\b/i.test(section))sectionEngines=['5.2L'];
  const reviewed=reviewedApplications[row.id];const reviewedEngines=reviewed&&reviewed.hash===(row.source_hash??row.sourceHash)?reviewed.engines:[];
  const brakeEngines=factoryBrakeEngines(row);
- const engines=ENGINE_OPTIONS.filter(e=>(headingEngines.length?headingEngines:reviewedEngines.length?reviewedEngines:brakeEngines.length?brakeEngines:sectionEngines.length?sectionEngines:array(row.engines)).includes(e));
- return {engines,scope:engines.length?'specific':'shared-or-unspecified',selectedEngine:selected,matchesSelectedEngine:selected==='all'||!engines.length||engines.includes(selected)};
+ let engines=ENGINE_OPTIONS.filter(e=>(headingEngines.length?headingEngines:reviewedEngines.length?reviewedEngines:brakeEngines.length?brakeEngines:sectionEngines.length?sectionEngines:array(row.engines)).includes(e));
+ const bodyEngines=factoryBodyEngines(row);
+ if(bodyEngines.length)engines=engines.length?engines.filter(e=>bodyEngines.includes(e)):bodyEngines;
+ return {engines,scope:engines.length||bodyEngines.length?'specific':'shared-or-unspecified',selectedEngine:selected,matchesSelectedEngine:selected==='all'||(!engines.length&&!bodyEngines.length)||engines.includes(selected)};
 }
 export function operationFor(row){const folder=String(row.source_path||'').split('/').at(-2)||'';return /^(?:Description and Operation|Diagnosis and Testing|Removal(?: and Installation)?|Installation|Disassembly(?: and Assembly(?: of Subassemblies)?)?|Assembly|Overhaul|General Procedures|Specifications)$/i.test(folder)?folder:null;}
 export function sectionFor(row){return {id:row.section_code||row.section_title,code:row.section_code||'',title:row.section_title||'General information'};}

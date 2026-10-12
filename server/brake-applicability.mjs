@@ -20,6 +20,7 @@ const reviewedBase = {
  G1693757:{hash:'1e867e789ba609a259cf041280ea63cfbb742e11ddb21bae2d79e5b0fc714912'},
  // These operate levers on the base rear calipers. SVT uses separate parking
  // shoes (G1717972) and wheel-drag cable adjustment (G1820640).
+ G1693765:{hash:'958e1ebda4857414c237e995250ecf14dd25fa34646d796c034850f8b1f3552c'},
  G1693766:{hash:'410254a1c802fdd37039dcd58279738294ca4addc027f71d57605deb3901cfc6'},
  G1694515:{hash:'433cf243530c97af0172233162e999c7dad493c911f2bb9aeef66e79e7bd5c7a'},
  G1694516:{hash:'c040cbee9cf70d59aab23e55556d86e108cb3a742053a5864eb7fec7ff6ee2c0'},

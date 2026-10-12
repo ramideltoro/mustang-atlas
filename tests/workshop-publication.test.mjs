@@ -45,3 +45,25 @@ test('remote baseline/image checks occur before atomic replacement and leave old
  fs.writeFileSync(path.join(f.contentDir,tempName),candidate);const good=remotePublicationScript({target,hashes:report.hashes,databaseHash,assets:report.assets,tempName});const result=spawnSync('sh',['-s'],{input:good,env,encoding:'utf8'});assert.equal(result.status,0,result.stderr);assert.deepEqual(fs.readFileSync(path.join(f.contentDir,'workshop-guides.json')),candidate);assert.equal(fs.existsSync(path.join(f.contentDir,tempName)),false);
  fs.writeFileSync(path.join(f.contentDir,'workshop-guides.json'),'previous release');fs.writeFileSync(path.join(f.contentDir,tempName),candidate);fs.writeFileSync(path.join(f.dataDir,f.url.slice(1)),'corrupt asset');assert.notEqual(spawnSync('sh',['-s'],{input:good,env}).status,0);assert.equal(fs.readFileSync(path.join(f.contentDir,'workshop-guides.json'),'utf8'),'previous release');
 });
+
+test('application-specific partial coverage stays partial without inventing an excluded text span',t=>{
+ const f=fixture(t),r=f.coverage.documents[0];
+ r.status='partial';r.supportedEngines=['3.7L'];r.supportedApplications=[{engines:['3.7L'],guideIds:[f.guide.id]}];r.unsupportedApplications=[{engines:['5.2L'],scope:'Complete removal',reason:'The available procedure omits the application-specific removal steps.'}];f.coverage.documents[2].destinationCoverage='partial';
+ const result=f.validate();assert.equal(result.ok,true,JSON.stringify(result.issues));assert.equal(result.partialDocuments,1);assert.equal(result.coveredDocuments,0);assert.equal(result.unsupportedApplications,1);
+ for(const mutate of[r=>r.status='covered',r=>r.unsupportedApplications[0].reason='',r=>r.unsupportedApplications[0].engines=['3.7L'],r=>r.unsupportedApplications[0].guideIds=[f.guide.id],r=>r.supportedApplications[0].guideIds=[],r=>r.supportedEngines=['5.0L'],r=>r.sourceHash='stale']){
+  const saved=structuredClone(r);mutate(r);assert.equal(f.validate().ok,false);Object.keys(r).forEach(k=>delete r[k]);Object.assign(r,saved);
+ }
+ f.guide.applicability.engines.push('5.2L');f.db.prepare('UPDATE documents SET engines=?,section_title=? WHERE id=?').run('["3.7L","5.2L"]','Engine','G1');
+ assert.ok(f.validate().issues.some(e=>e.reason==='guide-claims-unsupported-application'));
+});
+
+test('application partial coverage allows pending supported work without claiming an available guide',t=>{
+ const f=fixture(t),r=f.coverage.documents[1];r.status='partial';r.supportedApplications=[{engines:['3.7L'],guideIds:[]}];r.unsupportedApplications=[{engines:['5.2L'],scope:'Complete removal',reason:'No supported removal sequence for this application.'}];
+ const result=f.validate();assert.equal(result.ok,true,JSON.stringify(result.issues));assert.equal(result.pendingSections,1);assert.equal(result.unsupportedApplications,1);
+ r.status='pending';assert.ok(f.validate().issues.some(e=>e.reason==='application-exclusion-needs-partial-status'));
+});
+
+test('partial source spans may remain pending alongside an explicit excluded branch',t=>{
+ const f=fixture(t),r=f.coverage.documents[1];r.status='partial';r.sections[0].end=20;r.sections.push({id:'excluded',start:20,end:46,status:'unsupported',reason:'Conflicting result branch; no supported execution.'});
+ const result=f.validate();assert.equal(result.ok,true,JSON.stringify(result.issues));assert.equal(result.pendingSections,1);
+});

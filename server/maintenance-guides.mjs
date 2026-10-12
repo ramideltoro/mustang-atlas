@@ -39,6 +39,22 @@ const procedureFitValid = v => v === undefined || (object(v) && (!('engines' in 
 const localHref = id => '#/maintenance/' + id;
 const normalizeSearch = value => String(value).normalize('NFKC').replace(/[\u2018\u2019\u02bc]/g,"'").replace(/[\u2010-\u2015\u2212]/g,'-').toLowerCase();
 const searchable = g => normalizeSearch([g.title,g.summary,g.introduction,g.why,g.when.summary,...(g.searchTerms||[]),...(g.when.notes||[]),...(g.notes||[]),...(g.prepare||[]).flatMap(s=>[s.title,s.detail]),...(g.steps||[]).flatMap(s=>[s.title,s.body]),...(g.watchFor||[]).flatMap(s=>[s.title,s.body]),...(g.verification||[]).flatMap(s=>[s.title,s.body]),...(g.diagnostics||[]).flatMap(s=>[s.finding,s.meaning,s.next])].join(' '));
+function searchRank(g, query) {
+  const normalized = text => normalizeSearch(text).replace(/\s+/g, ' ').trim();
+  const q = normalized(query), words = q.split(' '), title = normalized(g.title);
+  const aliases = (g.searchTerms || []).map(normalized), summary = normalized(g.summary);
+  // Author-selected titles and aliases outrank incidental workshop prose.
+  // Repetition and document length never increase relevance.
+  if (title === q) return 1000;
+  if (aliases.includes(q)) return 900;
+  if (title.includes(q)) return 800;
+  if (aliases.some(text => text.includes(q))) return 700;
+  if (words.every(word => title.includes(word))) return 500;
+  if (aliases.some(text => words.every(word => text.includes(word)))) return 400;
+  if (summary.includes(q)) return 300;
+  if (words.every(word => summary.includes(word))) return 200;
+  return normalized(searchable(g)).includes(q) ? 100 : 0;
+}
 function procedureSection(d) {
   const section=sectionFor(d);
   // These two inherited MT82 chapter labels contain both gearbox variants.
@@ -207,7 +223,8 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
     const queryMatches = available.filter(g => (!category || g.categoryId === category) && (!q || q.split(/\s+/).every(word => searchable(g).includes(word))));
     const dimensions = {systemId:system,taskType,difficulty};
     const matchesDimensions = (g,except) => Object.entries(dimensions).every(([k,value])=>k===except||!value||g[k]===value);
-    const results = queryMatches.filter(g=>matchesDimensions(g));
+    const filtered = queryMatches.filter(g=>matchesDimensions(g));
+    const results = q ? filtered.map((g,index)=>({g,index,rank:searchRank(g,q)})).sort((a,b)=>b.rank-a.rank||a.index-b.index).map(({g})=>g) : filtered;
     const facet=(key,values)=>values.map(({id,title})=>({id,title,count:queryMatches.filter(g=>g[key]===id&&matchesDimensions(g,key)).length}));
     const title=id=>id[0].toUpperCase()+id.slice(1);
     const facets={systems:facet('systemId',SYSTEMS),taskTypes:facet('taskType',TASK_TYPES.map(id=>({id,title:title(id)}))),difficulties:facet('difficulty',DIFFICULTIES.map(id=>({id,title:title(id)})))};

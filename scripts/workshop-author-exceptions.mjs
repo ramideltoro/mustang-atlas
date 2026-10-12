@@ -13,6 +13,11 @@ export function applyWorkshopExceptions(jobs,records,byId){
   for(const record of records){
     const doc=byId.get(record.documentId),job=jobs.find(j=>j.id===record.jobId);
     if(!doc||doc.source_hash!==record.sourceHash||!job)throw Error('Stale workshop source exception '+record.documentId);
+    if(record.kind==='engine-scope'){
+      if(!record.supportedEngines?.length||!record.unsupportedApplications?.length||!record.publicationConstraint)throw Error('Incomplete engine scope exception '+doc.id);
+      job.scopeConstraints=[...(job.scopeConstraints||[]),{documentId:doc.id,task:job.title,completionBoundary:record.publicationConstraint}];
+      continue;
+    }
     const supported=record.supported||[],unsupported=record.unsupported||[],all=[...supported,...unsupported].sort((a,b)=>a.start-b.start);
     if(!supported.length||!unsupported.length||!record.publicationConstraint||!record.proposedTitle||all.some(s=>!Number.isInteger(s.start)||!Number.isInteger(s.end)||s.start<0||s.end<=s.start||s.end>doc.text.length||!s.scope)||unsupported.some(s=>!s.reason))throw Error('Incomplete workshop source exception '+doc.id);
     for(let i=1;i<all.length;i++)if(all[i].start!==all[i-1].end)throw Error('Overlapping or missing exception ranges '+doc.id);

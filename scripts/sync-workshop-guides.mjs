@@ -1,3 +1,4 @@
+import {validateCoverageApplications} from './workshop-coverage-applications.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
@@ -79,8 +80,9 @@ export function validateWorkshopSnapshot(db,{snapshot,dataDir,assetResolver=m=>m
     if(r.status==='unsupported'&&s.status!=='unsupported')fail('unsupported-document-has-supported-section',{documentId:d.id});
     if(r.status==='covered'&&s.status!=='covered')fail('covered-document-has-pending-section',{documentId:d.id});
    }
+   const applications=validateCoverageApplications(r,{guides,bound});issues.push(...applications.issues);
    const exclusions=r.sections.filter(s=>s.status==='unsupported');
-   if(r.status==='partial'&&(!exclusions.length||!r.sections.some(s=>s.status==='covered'||s.status==='pending')))fail('partial-document-needs-supported-and-unsupported-spans',{documentId:d.id});
+   if(r.status==='partial'&&(!(exclusions.length||applications.hasExclusions)||!(r.sections.some(s=>s.status==='covered'||s.status==='pending')||applications.hasSupport)))fail('partial-document-needs-supported-and-unsupported-spans',{documentId:d.id});
    if(exclusions.length&&!['partial','unsupported'].includes(r.status))fail('unsupported-sections-need-partial-or-unsupported-status',{documentId:d.id});
    for(const excluded of exclusions)for(const s of r.sections)if(s!==excluded&&s.start<excluded.end&&s.end>excluded.start)fail('unsupported-section-overlaps-other-scope',{documentId:d.id,sectionId:excluded.id,otherSectionId:s.id});
    if(r.status==='covered'&&!r.sections.length&&!r.reason?.trim())fail('curated-coverage-needs-scope-reason',{documentId:d.id});
@@ -120,7 +122,7 @@ export function validateWorkshopSnapshot(db,{snapshot,dataDir,assetResolver=m=>m
     checkAsset(detail.thumbnail,g.id);for(const p of detail.procedures)checkAsset(p.thumbnail,g.id);for(const r of detail.relatedGuides)checkAsset(r.thumbnail,g.id);
    }
   }
-  return{ok:issues.length===0,issues,guides:report.guides,workshopGuides:report.workshopGuides,coverageDocuments:records.size,coveredDocuments:[...records.values()].filter(r=>r.status==='covered').length,partialDocuments:[...records.values()].filter(r=>r.status==='partial').length,assets:[...assets].sort(),hashes:Object.fromEntries(Object.entries(snapshot).map(([name,bytes])=>[name,digest(bytes)]))};
+  return{ok:issues.length===0,issues,guides:report.guides,workshopGuides:report.workshopGuides,coverageDocuments:records.size,coveredDocuments:[...records.values()].filter(r=>r.status==='covered').length,partialDocuments:[...records.values()].filter(r=>r.status==='partial').length,pendingSections:[...records.values()].reduce((n,r)=>n+r.sections.filter(s=>s.status==='pending').length,0),unsupportedApplications:[...records.values()].reduce((n,r)=>n+(r.unsupportedApplications||[]).reduce((n,a)=>n+(a.engines?.length||0),0),0),assets:[...assets].sort(),hashes:Object.fromEntries(Object.entries(snapshot).map(([name,bytes])=>[name,digest(bytes)]))};
  }catch(error){return{ok:false,issues:[...issues,{reason:'snapshot-validation-failed',message:error.message}]};}
  finally{fs.rmSync(temp,{recursive:true,force:true});}
 }

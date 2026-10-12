@@ -1,3 +1,4 @@
+import {validateCoverageApplications} from './workshop-coverage-applications.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {openDb} from '../server/db.mjs';
@@ -37,7 +38,7 @@ for(const engine of ['all',...ENGINE_OPTIONS]){
 for(const d of docs.values()){const value=care.forDocument(d.id);if(!value)continue;publicCheck(value,d.id);for(const item of value.items){if(item.guideHref){careLinks++;if(!catalog.detail(item.guideHref.split('/').at(-1)))issues.push({id:d.id,reason:'broken-care-guide'});}}}
 const manifest=readOptional('workshop-coverage.json');let coverage={available:false};
 if(manifest){
- coverage={available:true,documents:0,covered:0,partial:0,pending:0,pointer:0,unsupported:0,reserved:0,coveredSections:0,pendingSections:0,unsupportedSections:0,missingDocuments:[]};
+ coverage={available:true,documents:0,covered:0,partial:0,pending:0,pointer:0,unsupported:0,reserved:0,coveredSections:0,pendingSections:0,unsupportedSections:0,supportedApplications:0,coveredApplications:0,pendingApplications:0,unsupportedApplications:0,missingDocuments:[]};
  if(manifest.version!==1||!Array.isArray(manifest.documents))issues.push({reason:'invalid-coverage-manifest'});
  else{const seen=new Set();for(const record of manifest.documents){
   const d=docs.get(record.documentId);coverage.documents++;
@@ -60,8 +61,9 @@ if(manifest){
    if(record.status==='covered'&&section.status!=='covered')issues.push({documentId:d.id,reason:'covered-document-has-uncovered-section'});
    if(record.status==='unsupported'&&section.status!=='unsupported')issues.push({documentId:d.id,reason:'unsupported-document-has-supported-section'});
   }
+  const applications=validateCoverageApplications(record,{guides:originals,bound:(id,docId)=>Boolean(catalog.detail(id)&&originals.get(id)?.sourceRefs?.some(ref=>ref.documentId===docId&&ref.sourceHash===docs.get(docId)?.source_hash))});issues.push(...applications.issues);for(const [key,value]of Object.entries(applications.counts))coverage[key]+=value;
   const exclusions=(record.sections||[]).filter(s=>s.status==='unsupported');
-  if(record.status==='partial'&&(!exclusions.length||!(record.sections||[]).some(s=>s.status==='covered'||s.status==='pending')))issues.push({documentId:d.id,reason:'partial-document-needs-supported-and-unsupported-spans'});
+  if(record.status==='partial'&&(!(exclusions.length||applications.hasExclusions)||!((record.sections||[]).some(s=>s.status==='covered'||s.status==='pending')||applications.hasSupport)))issues.push({documentId:d.id,reason:'partial-document-needs-supported-and-unsupported-spans'});
   if(exclusions.length&&!['partial','unsupported'].includes(record.status))issues.push({documentId:d.id,reason:'unsupported-sections-need-partial-or-unsupported-status'});
   for(const excluded of exclusions)for(const section of record.sections||[])if(section!==excluded&&section.start<excluded.end&&section.end>excluded.start)issues.push({documentId:d.id,sectionId:excluded.id,otherSectionId:section.id,reason:'unsupported-section-overlaps-other-scope'});
  }

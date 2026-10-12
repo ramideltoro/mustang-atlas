@@ -76,6 +76,20 @@ test('search treats typographic apostrophes and dashes consistently without chan
  for(const q of["window won't close",'window won’t close','cold-start','cold—start'])assert.equal(catalog.list({q}).items[0]?.id,g.id,q);
  assert.equal(catalog.detail(g.id).summary,g.summary);assert.equal(catalog.list({q:'hard to shift'}).total,0);
 });
+test('search ranks explicit symptom aliases and titles ahead of incidental prose with stable ties',t=>{
+ const{catalog,dir}=fixture(t);
+ const incidental={...workshopGuide('incidental'),title:'Replace a display',searchTerms:[],steps:[{title:'Observe',body:'A transmission that is hard to shift needs its own diagnosis.'}]};
+ const titleMatch={...workshopGuide('title-match'),title:'Diagnose a manual gearbox that is hard to shift',searchTerms:[]};
+ const alias={...workshopGuide('alias-match'),title:'Diagnose MT82 shift concerns',searchTerms:['hard to shift']};
+ const tied={...alias,id:'alias-tie',title:'Diagnose the other supported gearbox'};
+ workshopFile(dir,[incidental,titleMatch,alias,tied]);
+ const found=catalog.list({q:'hard to shift',engine:'3.7L'});
+ assert.deepEqual(found.items.map(g=>g.id),['alias-match','alias-tie','title-match','incidental']);
+ assert.equal(found.total,4);
+ assert.deepEqual(catalog.list({q:'hard to shift',engine:'3.7L',limit:2,offset:1}).items.map(g=>g.id),['alias-tie','title-match']);
+ assert.deepEqual(catalog.list().items.slice(-4).map(g=>g.id),['incidental','title-match','alias-match','alias-tie']);
+ assert.equal(catalog.list({q:'hard to shift',engine:'5.2L'}).total,0);
+});
 test('shared clutch chapter headings do not label a 5.2L clutch or shared control as MT82 only',t=>{
  const{db,dir}=fixture(t);for(const[id,title,code,engines]of[['GClutch52','Clutch Disc and Pressure Plate - 5.2L 32V Ti-VCT','308-01',['5.2L']],['GShared','Clutch System Bleeding','308-02',[]],['GClutch37','Clutch Disc and Pressure Plate - 3.7L','308-01',['3.7L']]])db.prepare('INSERT INTO documents VALUES(?,?,?,?,?,?,?,?,?,?)').run(id,title,'repair','transmission',code,'Clutch Controls - 6-Speed Manual Transmission – MT82',JSON.stringify(engines),'hash-'+id,'[]','[]');
  const g={...workshopGuide('clutch-service'),primaryDocumentIds:['GClutch52','GShared','GClutch37'],applicability:{engines:['3.7L','5.2L'],years:[2015]},hero:null,procedures:['GClutch52','GShared','GClutch37'].map(documentId=>({documentId,purpose:'Use the fitted-engine procedure.'})),sourceRefs:['GClutch52','GShared','GClutch37'].map(documentId=>({documentId,sourceHash:'hash-'+documentId}))};workshopFile(dir,[g]);const catalog=createMaintenanceGuideCatalog(db,{contentDir:dir});

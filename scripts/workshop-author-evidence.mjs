@@ -20,7 +20,9 @@ export function verifiedWorkshopEvidence(records,byId,{dataDir='data'}={}) {
     if((record.additionalSources||[]).some(ref=>byId.get(ref.documentId)?.source_hash!==ref.sourceHash))continue;
     let valid=true;
     for(const item of record.imageEvidence||[]){
-      const media=doc.media.find(m=>m.id===item.mediaId);
+      const owner=item.documentId&&item.documentId!==doc.id?byId.get(item.documentId):doc;
+      if(!owner||(owner!==doc&&!(record.additionalSources||[]).some(ref=>ref.documentId===owner.id&&ref.sourceHash===owner.source_hash))){valid=false;break;}
+      const media=owner.media.find(m=>m.id===item.mediaId);
       if(!media||!/^\/media\/[a-f0-9]+\.(?:png|jpe?g|gif|webp|svg)$/.test(media.url)||!item.transcription){valid=false;break;}
       const file=path.join(dataDir,media.url.slice(1));
       if(!fs.existsSync(file)||digest(fs.readFileSync(file))!==item.fileHash){valid=false;break;}

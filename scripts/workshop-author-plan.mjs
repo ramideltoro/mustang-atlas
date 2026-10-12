@@ -30,6 +30,11 @@ export function diagnosticSpans(d,{maxChars=35000}={}){
 export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements=readWorkshopEvidence(),sourceExceptions=readWorkshopExceptions()}={}){
  const publicDocs=allDocs.filter(isPublicDocument).map(d=>({...d,engines:parse(d.engines),related:parse(d.related),blocks:parse(d.blocks),media:parse(d.media),source:parse(d.source,{})}));
  const byId=new Map(publicDocs.map(d=>[d.id,d]));
+ for(const r of sourceExceptions.filter(r=>r.kind==='engine-scope')){
+  const d=byId.get(r.documentId),allowed=d?scopeEngines(d):[],excluded=r.unsupportedApplications?.flatMap(a=>a.engines)||[];
+  if(!d||d.source_hash!==r.sourceHash||!r.supportedEngines?.length||!excluded.length||[...r.supportedEngines,...excluded].some(e=>!allowed.includes(e))||r.supportedEngines.some(e=>excluded.includes(e))||new Set([...r.supportedEngines,...excluded]).size!==allowed.length||r.unsupportedApplications.some(a=>!a.scope||!a.reason))throw Error('Invalid engine scope exception '+r.documentId);
+  d.authoringEngines=[...r.supportedEngines];
+ }
  const supplements=verifiedWorkshopEvidence(evidenceSupplements,byId);
  function resolve(ref,from){if(byId.has(ref))return byId.get(ref);const all=publicDocs.filter(d=>d.source.reference===ref),same=all.filter(d=>d.section_code===from.section_code);return same.length===1?same[0]:all.length===1?all[0]:null;}
  const appendices=publicDocs.filter(d=>/^wiring-(?:005-00[1-9]|149-0(?:0[1-9]|1[0-2]))$/.test(d.id));
@@ -48,7 +53,7 @@ export function buildWorkshopPlan(allDocs,{existingGuides=[],evidenceSupplements
  }
  const excludedSpans=applyWorkshopExceptions(jobs,sourceExceptions,byId);
  for(const j of jobs){
-  j.evidenceSupplements=j.documents.map(d=>supplements.get(d.id)).filter(Boolean);
+  j.evidenceSupplements=j.documents.map(d=>supplements.get(d.id)).filter(r=>r&&(!r.jobIds||r.jobIds.includes(j.id)));
   const reviewedAdditionalIds=[...new Set(j.evidenceSupplements.flatMap(s=>(s.additionalSources||[]).map(r=>r.documentId)))];
   const related=[...new Set([...j.documents.flatMap(d=>d.related.map(id=>resolve(id,d)?.id)).filter(Boolean),...reviewedAdditionalIds])].map(id=>byId.get(id)).filter(d=>scopeEngines(d).some(e=>j.engines.includes(e)));
   // Local operation evidence for the actual section helps explain components,

@@ -3338,6 +3338,10 @@
           "documentId": "G2214744",
           "documentPath": "2: Chassis/05: Driveline/205-02 Rear Drive Axle-Differential/General Procedures/Ring Gear Backlash Adjustment.html",
           "reference": "G2214759"
+        },
+        {
+          "documentId": "G1660459",
+          "documentPath": "3: Powertrain/03: Engine/303-01A Engine - 2.3L EcoBoost (231kW-314PS)/General Procedures/Balance Shaft Backlash.html"
         }
       ],
       "mediaRefs": [],
@@ -3352,7 +3356,8 @@
         "humanReviewed": false
       },
       "matchCategories": [
-        "driveline"
+        "driveline",
+        "engine"
       ]
     },
     {
@@ -4937,6 +4942,127 @@
         "local-interconnect-network",
         "electrical-relay"
       ],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
+    },
+    {
+      "id": "cylinder-leak-down-test",
+      "name": "Cylinder leak-down test",
+      "aliases": [
+        "leak-down",
+        "leakdown",
+        "leak down",
+        "cylinder leakage test",
+        "cylinder leakage detection"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine",
+        "general"
+      ],
+      "definition": "A test that feeds regulated compressed air into a cylinder and measures how much escapes while its valves should be closed.",
+      "details": "It helps locate a sealing problem after a low compression reading. The path of escaping air can point toward an intake valve, exhaust valve, piston rings, or a leak between cylinders or into the cooling system. The piston position, tester setup, and result limits must follow the engine test procedure; this is different from measuring compression while the starter turns the engine.",
+      "sourceRefs": [
+        {
+          "documentId": "G1804267",
+          "documentPath": "3: Powertrain/03: Engine/303-00 Engine System - General Information/Diagnosis and Testing/Engine.html"
+        }
+      ],
+      "relatedTermIds": [
+        "piston",
+        "cylinder-head"
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
+    },
+    {
+      "id": "fuel-trim",
+      "name": "Fuel trim",
+      "aliases": [
+        "fuel trims",
+        "short-term fuel trim",
+        "long-term fuel trim",
+        "short term fuel trim",
+        "long term fuel trim",
+        "STFT",
+        "LTFT"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine",
+        "fuel",
+        "electrical",
+        "general"
+      ],
+      "definition": "The engine computer’s adjustment to fuel delivery to correct the air–fuel mixture using sensor feedback.",
+      "details": "Short-term trim is the ongoing correction during closed-loop operation. Long-term trim stores corrections learned over time. Read the values under the operating conditions specified by the diagnostic procedure; a correction is a clue to investigate, not proof that a particular sensor or part has failed.",
+      "sourceRefs": [
+        {
+          "documentId": "G1692127",
+          "documentPath": "3: Powertrain/03: Engine/303-14A Electronic Engine Controls - 2.3L EcoBoost (231kW-314PS)/Description and Operation/Electronic Engine Controls - Overview.html"
+        },
+        {
+          "documentId": "G1692270",
+          "documentPath": "3: Powertrain/03: Engine/303-14B Electronic Engine Controls - 3.7L Duratec (227kW-301PS)/Description and Operation/Electronic Engine Controls - Overview.html"
+        },
+        {
+          "documentId": "G1692300",
+          "documentPath": "3: Powertrain/03: Engine/303-14C Electronic Engine Controls - 5.0L 32V Ti-VCT/Description and Operation/Electronic Engine Controls - Overview.html"
+        },
+        {
+          "documentId": "G1802176",
+          "documentPath": "3: Powertrain/03: Engine/303-14D Electronic Engine Controls - 5.2L 32V Ti-VCT/Description and Operation/Electronic Engine Controls - Overview.html"
+        },
+        {
+          "title": "Ford OBD-II fuel-system operation",
+          "url": "https://www.fordservicecontent.dealerconnection.com/pubs/content/~WVX2/~MUS~LEN/15/VX21016.HTM"
+        }
+      ],
+      "relatedTermIds": [
+        "powertrain-control-module"
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      }
+    },
+    {
+      "id": "adaptive-learning",
+      "name": "Adaptive learning",
+      "aliases": [
+        "adaptive learning drive cycle",
+        "adaptive drive cycle"
+      ],
+      "category": "electrical",
+      "definition": "A control module’s process of learning operating corrections or reference values for the system it controls.",
+      "details": "The required learning process depends on the module and repair. For example, the 6R80 has a specified drive cycle to restore shift adaptation, while other modules can require a different calibration or learning routine. Follow the matching procedure: learning, programming software, and replacing a failed mechanical part are different jobs.",
+      "sourceRefs": [
+        {
+          "documentId": "G1692050",
+          "documentPath": "3: Powertrain/07: Automatic Transmission/307-01 Automatic Transmission - 6-Speed Automatic Transmission - 6R80/General Procedures/Adaptive Learning Drive Cycle.html"
+        },
+        {
+          "documentId": "G1692055",
+          "documentPath": "3: Powertrain/07: Automatic Transmission/307-01 Automatic Transmission - 6-Speed Automatic Transmission - 6R80/General Procedures/Transmission Strategy Download.html"
+        },
+        {
+          "documentId": "G1813073",
+          "documentPath": "4: Electrical/18: Electrical Distribution/418-01 Module Configuration/Description and Operation/Module Configuration - System Operation and Component Description.html"
+        }
+      ],
+      "relatedTermIds": [
+        "powertrain-control-module"
+      ],
+      "mediaRefs": [],
       "editorial": {
         "author": "Codex",
         "kind": "beginner-explanation",
