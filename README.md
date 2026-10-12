@@ -68,6 +68,8 @@ The Maintenance area combines an internal normal schedule with searchable mainte
 
 Engine selection scopes both the guide list and procedure links. The existing 46 guide URLs remain available. Verified base-car intervals are not applied to the 5.2L Shelby, and diagnostic tests or repairs use condition-based triggers without invented replacement intervals. Public normal-schedule references lead to `#/maintenance/schedule`; the original evidence stays available in private authoring records.
 
+The completed workshop expansion adds 902 guides, for 948 in the combined library. The source inventory has no pending supported jobs or reserved chapters. Missing or conflicting operations are recorded privately and excluded from coverage claims; an accepted guide teaches its supported scope without inventing the unavailable continuation. Counts describe editorial coverage, not a claim of independent human technical review.
+
 Scheduled care is in `content/maintenance-guides.json`; the workshop expansion is in `content/workshop-guides.json`. The locally generated `content/workshop-coverage.json` inventory binds source documents and exact diagnostic sections to accepted guides. Its unresolved-scope notes stay private: the file is excluded from Git history, deployment and public responses. Run `node scripts/audit-maintenance-guides.mjs` to validate guide, schedule, article, thumbnail and coverage references. See [maintenance authoring](docs/MAINTENANCE-GUIDES.md), [workshop authoring](docs/WORKSHOP-AUTHORING.md) and [API documentation](docs/API.md). The article Parts panel shows confirmed part numbers only and is omitted when no such parts are available.
 
 ## Original image quality

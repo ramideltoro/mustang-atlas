@@ -8,6 +8,13 @@ export function readWorkshopExceptions(file='data/workshop-source-exceptions.jso
   if(data.version!==1||!Array.isArray(data.records))throw Error('Invalid private workshop source exceptions');
   return data.records;
 }
+
+// Several diagnostic packets can belong to one source chapter. Preserve every
+// reviewed missing operation, rather than only the first packet's limitation.
+export function missingWorkshopOperations(records, documentId) {
+  const operations=records.filter(r=>r.documentId===documentId).flatMap(r=>r.missingOperations||[]);
+  return [...new Map(operations.map(operation=>[JSON.stringify(operation),operation])).values()];
+}
 export function applyWorkshopExceptions(jobs,records,byId){
   const excluded=[];
   for(const record of records){

@@ -220,8 +220,15 @@
     {
       "documentId": "G1693757",
       "sourceHash": "1e867e789ba609a259cf041280ea63cfbb742e11ddb21bae2d79e5b0fc714912",
-      "additionalSources": [],
-      "notes": [],
+      "additionalSources": [
+        {
+          "documentId": "G2361881",
+          "sourceHash": "6caefdfcf40a04bf00a284f1f6fcde50d9579096fca81b19d2badfe70e3a8b57"
+        }
+      ],
+      "notes": [
+        "After rear hose replacement the explicitly required brake pressure bleeding is the full G2361881 procedure; use the applicable equipment branch and original wheel-order diagram."
+      ],
       "imageEvidence": [
         {
           "mediaId": "G1693757-m0002",
@@ -840,8 +847,15 @@
     {
       "documentId": "G1721912",
       "sourceHash": "81e29ecd352616724912e389481316d9c14835ca0cc82fe11f105eaa4d860c35",
-      "additionalSources": [],
-      "notes": [],
+      "additionalSources": [
+        {
+          "documentId": "G1721916",
+          "sourceHash": "91faaa42e994b5b56c7834a035664387df271d62f18684b65b5beef6b756bd61"
+        }
+      ],
+      "notes": [
+        "When either inspected lower-shaft dimension fails, G1721916 is the exact Steering Column Shaft removal and installation procedure. Replacement is a complete steering service operation; the failed shaft is not repaired."
+      ],
       "imageEvidence": [
         {
           "mediaId": "G1721912-m0001",
@@ -1530,7 +1544,8 @@
         }
       ],
       "notes": [
-        "The matching Mustang external-control article identifies P/R/N/D/S selector positions and steering-wheel SelectShift paddles. The excluded selector-2/1 sequence has no verified Mustang equivalent; never translate it into paddle commands. Retain supported warm normal-D observations and symptom-chart follow-up."
+        "The matching Mustang external-control article identifies P/R/N/D/S selector positions and steering-wheel SelectShift paddles. The excluded selector-2/1 sequence has no verified Mustang equivalent; never translate it into paddle commands. Retain supported warm normal-D observations and symptom-chart follow-up.",
+        "Verified original structured table G1686459-b00015 has explicit Shift, Km/h, MPH columns. Light throttle at TP sensor1.25volts: shift1–2 is13–21km/h(8–13mph);2–3 is26–34km/h(16–21mph);3–4 is35–43km/h(22–27mph);4–5 is56–64km/h(35–40mph);5–6 is71–79km/h(44–49mph). These are direct row/column associations, not derived conversions. Keep the unsupported selector2/1 execution excluded. Normal safe driving and all traffic laws remain required."
       ]
     },
     {
@@ -1875,6 +1890,319 @@
           "fileHash": "2999df36393f03048e6187d245e030b12069e5aece6e950b5aa899e99596e377",
           "transcription": "Exact 2.3L branch: transmission C168 pin1 TSS circuit VET33 terminates at PCM C1551E pin27. LE111 connects C168 pin12 to C1551E pin22; no S137 branch exists on this 2.3L link. Keep both connector ends disconnected for its isolated resistance check."
         }
+      ]
+    },
+    {
+      "documentId": "G1694270",
+      "sourceHash": "d94e39ad001db14c16a06dee68bca2d2cc6d2fae991d774cb17b4d9bdacaa7ff",
+      "additionalSources": [
+        {
+          "documentId": "wiring-030-003",
+          "sourceHash": "d1fe6f932ec905a34cc1bb18334788c676f5ff36954f50faddb6b80686919871"
+        }
+      ],
+      "imageEvidence": [
+        {
+          "documentId": "wiring-030-003",
+          "mediaId": "wiring-030-003-m0001",
+          "fileHash": "44bf8acc78f9935e9bf762e339a3b912b56bc91481e00014ee219cf3f4231218",
+          "transcription": "Visually reviewed native paddle-shift circuit: C2428 is upshift and its switching contacts are pins1 and2. C2429 is downshift and its switching contacts are pins4 and3. Their separate illumination contacts do not form the switch-test pair. Thus B7 refers to the downshift switch when pressing/testing C2429 pins3/4; its copied upshift wording and upshift replacement noun conflict with the actual diagram and the linked Downshift Paddle Switch repair."
+        }
+      ],
+      "jobIds": [
+        "job-c5926196863a064a"
+      ],
+      "notes": [
+        "The native paddle circuit establishes B7 as the downshift switch C2429 pins3/4. Correct the copied upshift noun without altering its actual switch-test pair. The separate unresolved diagnostic routing and electrical isolation steps remain excluded."
+      ]
+    },
+    {
+      "documentId": "G1693940",
+      "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596",
+      "jobIds": [
+        "job-0e70e0bbe8fb5107"
+      ],
+      "additionalSources": [],
+      "notes": [
+        "Correct CC1 IPC self-test to ICM self-test: this same document BO4, BS4 and BV5 explicitly perform the ICM self-test for ICM U3003:16/U3003:17 and refer to its DTC chart. CC itself identifies ICM low-voltage monitoring, C2114 supply/ground, ICM recheck and the conditional CC6 ICM endpoint. Preserve the stated clear-codes, wait10seconds, then self-test sequence and all original thresholds, TSB check and conditional confirmation before replacement. Do not change other IPC tests."
+      ],
+      "imageEvidence": []
+    },
+    {
+      "documentId": "G1692891",
+      "sourceHash": "f5b9e20f3a9a60341d86da10afe753087196009eadda45374b8d4e4b36bb79b2",
+      "jobIds": [
+        "job-322fafc06bbbbf65",
+        "job-1716f7ba1979e9bf",
+        "job-4198ecfe70925780"
+      ],
+      "additionalSources": [
+        {
+          "documentId": "G1694054",
+          "sourceHash": "c74e574413caa3b72909faefff0f7ee278e67de9b31129f570d2176158df6daf"
+        },
+        {
+          "documentId": "G1694055",
+          "sourceHash": "7dca6aa392209b0dad45f1a69e14d2d7b28e90ce7fdfc7b24b45bacfbf9211e5"
+        },
+        {
+          "documentId": "connector-C396",
+          "sourceHash": "9a51b57d5fedd037ec6b92f203dd53ca3f8ad1ed3d7bb79dee2bd1394817bb3e"
+        },
+        {
+          "documentId": "connector-C485",
+          "sourceHash": "c7447269fcba2dc6d1dd36be389810ba7d738b897847540c06d8329704f37496"
+        },
+        {
+          "documentId": "G1702418",
+          "sourceHash": "d90384a664422f90becaae232d31b8f3766f002997ff467f17953173db28abb9"
+        },
+        {
+          "documentId": "G1696297",
+          "sourceHash": "6e416e21370f0862dbf680b7203bb7510ac7eb581d83edb37c7b5fb308032906"
+        },
+        {
+          "documentId": "G1696298",
+          "sourceHash": "0cc937c86116e2b9b3f5961c54a454abfbf64a44e70c29947d6b439a81f7533d"
+        }
+      ],
+      "notes": [
+        "The B1A03 chart reverses body-style labels. Actual complete Test L identifies right rear quarter-panel speaker C396 on a convertible; complete Test M identifies right parcel-shelf speaker C485 on a coupe. Independent same-equipment replacement G1694055 removes convertible loadspace trim for the quarter-panel speaker; G1694054 removes the coupe parcel shelf for the parcel-shelf speaker. These exact component locations corroborate the test headings and symptom chart, not the swapped DTC-chart parentheses. Use Test L for the fitted convertible quarter speaker and Test M for the fitted coupe shelf speaker; retain their own terminals, thresholds and repair procedures.",
+        "Test Q6 negative outcome is excluded by the private scope record: the APIM-to-ACM stereo wire short does not establish a steering-wheel fault. Preserve the measurement and supported positive route, but do not invent a replacement or circuit-repair endpoint for that unresolved negative result.",
+        "AG2/AG5: The missing BCMB DTC is U0142:00, as established by both ACM and DACMC DTC charts and AG preamble in this exact SYNC chapter. SYNC2/3 Test AQ corroborates the same six-step BCMB test; AQ2 U0142 recurrence goes to AQ3 and AQ5 checks U0142 in multiple modules. Apply code U0142 and AG2 YES to AG3 only; do not import SYNC2/3 module fitment.",
+        "AG2 reporting modules: Only ACM and DACMC have U0142 in this SYNC source DTC charts and trigger conditions. Do not claim APIM/FCIM/GPSM record that code from the copied AG2 list. Retain other-module voltage checks as separate checks.",
+        "AH6 RCM connectors: Use the linked SRS depower and repower procedures before RCM connector handling; ignition OFF alone is not a replacement for the SRS isolation procedure.",
+        "AJ4 heading: Use FCDIM, matching the action and question. The APIM heading is inconsistent with both and the preceding AJ U0159 FCDIM fault definition."
+      ],
+      "imageEvidence": []
+    },
+    {
+      "documentId": "G1692965",
+      "sourceHash": "cff90b0c2c849fa0101771bbb732d7f7bb2948be70895d50acaa83f251a3b9e0",
+      "jobIds": [
+        "job-3d21257df631bc27"
+      ],
+      "additionalSources": [
+        {
+          "documentId": "G1944758",
+          "sourceHash": "b9990906c956cec121698a27b5603d849127dcd25c51a0a2983b72143537f1bd"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1813071",
+          "sourceHash": "45f3b53dd28e766d92924e944c68e0a740c843efced2d8bf704c99548fa32e46"
+        }
+      ],
+      "notes": [
+        "Correct copied network module labels only: B2 tests communication with BCMB, so a failed BCMB response directs BCMB network diagnosis, not TCM. Exact same network question and failure in G1944758 G1 independently confirm BCMB. C2 already says diagnose ABS communication and then adds a stray PCM sentence; retain ABS, omit that conflicting PCM sentence. G1693940 BQ2 and G1692929 A2 independently route failed ABS communication to network diagnosis. D2 should ask about PSCM communication, not TBM: its U0131 definition, failure route, D4 self-test and D7 endpoint all identify PSCM; independent G1693940 CA2 tests PSCM and directs failed communication to network diagnosis. G1813071 has exact BCMB J, ABS B and PSCM R no-response tests. Preserve all thresholds, connection states and other decision gates.",
+        "The VIN-specific guided routines at A7/B8/C8/D7/D8 remain diagnostic handoffs; do not invent their module replacement or calibration actions."
+      ],
+      "imageEvidence": []
+    },
+    {
+      "documentId": "G1692957",
+      "sourceHash": "5ea56f10545190c1d93c6c84ed9a24996088b7681f98fd3844f7dc316a380d89",
+      "additionalSources": [
+        {
+          "documentId": "wiring-012-002",
+          "sourceHash": "58b2ca842bbab3109118bbb6a46b50ef1de0e8c6d5c45e7f4f37609a4b76fe25"
+        },
+        {
+          "documentId": "connector-C102B",
+          "sourceHash": "2f6915d0ca335bcd0c7f314c7bda0531faf47498fcf766718a77e226b5e0e61e"
+        },
+        {
+          "documentId": "connector-C102D",
+          "sourceHash": "331119883a36a2ecc86a682f0e5912757d9d6e30e9244469da1e2a03b6e8c812"
+        }
+      ],
+      "notes": [
+        "Exact 3.7L B3/B4 portion of the SAME original chapter supplies complete generator supply/voltage-drop checks, outside the later F/G packet. B3 checks C102D pin1 to ground against previously recorded battery voltage (within0.5V); B4 uses positive C102D pin1 and negative meter lead at battery POSITIVE, engine idling/headlampsON/blowerHIGH, less-than0.5V drop, with wiring wiggle test. This is a documented identical named B+ check, not a terminal inferred from a different engine.",
+        "F2/G2 incorrectly label their supply check C102B1. The same chapterB3 and independent original charging diagram+connector tables establish C102D1 as3.7L B+ and C102B1 asGENLI/GENMON. Use the complete verifiedB3/B4 main-cable checks rather than instructing a battery-supply measurement on the monitor circuit. PreserveF/G circuit tests on C102B1 as monitor; do not conflate the terminals.",
+        "The exact F3/G3 sourceHTML has no second-endpoint text or image. The author can explicitly base this segment on the fully documented same-engine B4 measurement. Do not claim an image was recovered fromF3/G3 themselves.",
+        "Verbatim same-engine B3/B4 corroborating text (B4 negative endpoint is supplied by the inspected original cell image):\nB3 CHECK THE GENERATOR CONNECTIONS\nIgnition OFF.\nDisconnect all of the generator connectors and inspect for:\ncorrosion (install new connector or terminals – clean module pins)\ndamaged or bent pins – install new terminals/pins\npushed-out pins – install new pins as necessary\nReconnect the generator connectors. Make sure they seat and latch correctly.\nMeasure and record:\nPositive Lead\nMeasurement / Action\nNegative Lead\nMeasure:\n\nClick to display connectors\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102D Pin 1\nGround\nIs the voltage within 0.5 volt of the recorded battery voltage?\nYes\nGO to B4\nNo\nTIGHTEN or INSTALL a new generator B+ nut as needed.\nREFER to: Generator - 3.7L Duratec (227kW/301PS) (414-02 Generator and Regulator, Removal and Installation).\nVERIFY high current BJB MEGA fuse (275A) is OK. If OK, REPAIR the circuit. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short.\nB4 CHECK THE VOLTAGE DROP IN THE GENERATOR B+ CIRCUIT\nStart the engine.\nWith the engine running at idle, headlamps on and blower on high, measure:\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102D Pin 1\nPerform a wiggle test of the generator wiring and connections while measuring voltage drop.\nIs the voltage drop less than 0.5 volt?\nYes\nGO to B5\nNo\nINSPECT and REPAIR any corrosion in the generator B+ circuit or positive battery cable connections.\n"
+      ],
+      "imageEvidence": [
+        {
+          "documentId": "G1692957",
+          "mediaId": "G1692957-m0041",
+          "fileHash": "e6fe3c643cc770beee6b8d5381651d048cde9f67fe53fc806048b32e03fc51c7",
+          "transcription": "3.7L original B4 table negative-lead cell contains the battery-positive pictogram: black probe tip touches the terminal marked red+. Positive-lead text isC102D pin1. The middle cell is the voltage measurement icon. This identifies the negative meter lead destination as battery POSITIVE, not chassisground or batterynegative."
+        },
+        {
+          "documentId": "wiring-012-002",
+          "mediaId": "wiring-012-002-m0001",
+          "fileHash": "0fda609573fc3ea66fea2004e1f620e270f2994b86f7061a89d09421bfad3415",
+          "transcription": "Original charging diagram:275A MEGA supplies SBF01RD to generatorB+. Engine-specific main-stud connector isC102D1 for3.7L, C102A1 for2.3L, C102C1 for5.0/5.2. Separate regulatorC102B1 CDC15VT goes toPCMGENLI (C1381B26 for3.7L,C1551B26 for2.3L); C102B2 CDC10BU-OG isGENRC (C1381B13,C1551B59); C102B3 SBB36GN-RD comes fromF3610A. Pin1 ofC102B is not the B+ feed."
+        }
+      ],
+      "reviewedJobId": "job-3693af7dcfa91113",
+      "jobIds": [
+        "job-3693af7dcfa91113"
+      ]
+    },
+    {
+      "documentId": "G2560182",
+      "sourceHash": "b50533812090e1187f8a6eaaf1249e2712957c276438546a1fc85163e9d8bfa2",
+      "additionalSources": [
+        {
+          "documentId": "wiring-012-002",
+          "sourceHash": "58b2ca842bbab3109118bbb6a46b50ef1de0e8c6d5c45e7f4f37609a4b76fe25"
+        },
+        {
+          "documentId": "connector-C102B",
+          "sourceHash": "2f6915d0ca335bcd0c7f314c7bda0531faf47498fcf766718a77e226b5e0e61e"
+        },
+        {
+          "documentId": "connector-C102A",
+          "sourceHash": "92049103b4d25b52587e9861c31e524ca822238869b88411c9e4b1124c4db149"
+        }
+      ],
+      "notes": [
+        "Exact 2.3L B3/B4 portion of the SAME original chapter supplies complete generator supply/voltage-drop checks, outside the later F/G packet. B3 checks C102A pin1 to ground against previously recorded battery voltage (within0.5V); B4 uses positive C102A pin1 and negative meter lead at battery POSITIVE, engine idling/headlampsON/blowerHIGH, less-than0.5V drop, with wiring wiggle test. This is a documented identical named B+ check, not a terminal inferred from a different engine.",
+        "F2/G2 already correctly label C102A1 toGround. Their F3/G3 negative cells are empty in the originalHTML; the same chapterB4 contains the battery-positive pictogram and identical loading/limit.",
+        "The exact F3/G3 sourceHTML has no second-endpoint text or image. The author can explicitly base this segment on the fully documented same-engine B4 measurement. Do not claim an image was recovered fromF3/G3 themselves.",
+        "Verbatim same-engine B3/B4 corroborating text (B4 negative endpoint is supplied by the inspected original cell image):\nB3 CHECK THE GENERATOR CONNECTIONS\nIgnition OFF.\nDisconnect all of the generator connectors and inspect for:\ncorrosion (install new connector or terminals – clean module pins)\ndamaged or bent pins – install new terminals/pins\npushed-out pins – install new pins as necessary\nReconnect the generator connectors. Make sure they seat and latch correctly.\nMeasure and record:\nPositive Lead\nMeasurement / Action\nNegative Lead\nMeasure:\n\nClick to display connectors\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102A Pin 1\nGround\nIs the voltage within 0.5 volt of the recorded battery voltage?\nYes\nGO to B4\nNo\nTIGHTEN or INSTALL a new generator B+ nut as needed.\nREFER to: Generator\n(414-02)\n.\nVERIFY BJB MEGA fuse (275A) is OK. If OK, REPAIR the circuit. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short.\nB4 CHECK THE VOLTAGE DROP IN THE GENERATOR B+ CIRCUIT\nStart the engine.\nWith the engine running at idle, headlamps on and blower on high, measure:\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102A Pin 1\nPerform a wiggle test of the generator wiring and connections while measuring voltage drop.\nIs the voltage drop less than 0.5 volt?\nYes\nGO to B5\nNo\nINSPECT and REPAIR any corrosion in the generator B+ circuit or positive battery cable connections.\n"
+      ],
+      "imageEvidence": [
+        {
+          "documentId": "G2560182",
+          "mediaId": "G2560182-m0042",
+          "fileHash": "e6fe3c643cc770beee6b8d5381651d048cde9f67fe53fc806048b32e03fc51c7",
+          "transcription": "2.3L original B4 table negative-lead cell contains the battery-positive pictogram: black probe tip touches the terminal marked red+. Positive-lead text isC102A pin1. The middle cell is the voltage measurement icon. This identifies the negative meter lead destination as battery POSITIVE, not chassisground or batterynegative."
+        },
+        {
+          "documentId": "wiring-012-002",
+          "mediaId": "wiring-012-002-m0001",
+          "fileHash": "0fda609573fc3ea66fea2004e1f620e270f2994b86f7061a89d09421bfad3415",
+          "transcription": "Original charging diagram:275A MEGA supplies SBF01RD to generatorB+. Engine-specific main-stud connector isC102D1 for3.7L, C102A1 for2.3L, C102C1 for5.0/5.2. Separate regulatorC102B1 CDC15VT goes toPCMGENLI (C1381B26 for3.7L,C1551B26 for2.3L); C102B2 CDC10BU-OG isGENRC (C1381B13,C1551B59); C102B3 SBB36GN-RD comes fromF3610A. Pin1 ofC102B is not the B+ feed."
+        }
+      ],
+      "reviewedJobId": "job-1833e64cddc58592",
+      "jobIds": [
+        "job-1833e64cddc58592"
+      ]
+    },
+    {
+      "documentId": "G1693946",
+      "sourceHash": "25b8f34bb13abf6819abdb618203e33b49eadb0da5d4b549660a0411d36563cd",
+      "jobIds": [
+        "job-258508dc0b3303cc"
+      ],
+      "additionalSources": [
+        {
+          "documentId": "G1960951",
+          "sourceHash": "6129ec46ec90e3721bd5938532fd9d5bf1e2ac82d0cdeb1f8436df0c3331b387"
+        },
+        {
+          "documentId": "G1692891",
+          "sourceHash": "f5b9e20f3a9a60341d86da10afe753087196009eadda45374b8d4e4b36bb79b2"
+        }
+      ],
+      "notes": [
+        "O3 targets the FCDIM self-test. The body FCIM noun is inconsistent with O2 communications target, O3 heading, U0257 definition and O7 replacement/component identity.",
+        "Only the self-test module noun is corrected to FCDIM. No code, circuit, measurement, threshold or replacement condition is changed. Preserve exact display equipment selection for linked entertainment diagnosis; G1692891 covers SYNC/FCDIM. Select touchscreen links by verified catalog evidence.",
+        "Independent exact same-module self-test: A7 CHECK FOR DIAGNOSTIC TROUBLE CODES (DTCS) FROM THE FCDIM (FRONT CONTROL/DISPLAY INTERFACE MODULE)\nSELF-TEST\nUsing a diagnostic scan tool, perform the FCDIM self-test.\nAre any Diagnostic Trouble Codes (DTCs) retrieved?\nYes\nFor DTC C1001:01, GO to A9\nFor all other Diagnostic Trouble Codes (DTCs),\nREFER to: Information and Entertainment System (415-00A Information and Entertainment System - General Information - Vehicles With: SYNC, Diagnosis and Testing).\nNo\nGO to A8\n",
+        "G1692891 is the actual SYNC non-touchscreen diagnostic chapter for the FCDIM; G1702418 is the separate SYNC2/3 chapter. Retain the fitted-display-specific choice."
+      ],
+      "imageEvidence": []
+    },
+    {
+      "documentId": "G1695509",
+      "sourceHash": "eb2e69d681bac3c4ce5370cd451b575d20aeca15a189c4fdb311afc550da8b04",
+      "jobIds": [
+        "job-60754fb0a183da8f",
+        "job-722da20560080b79"
+      ],
+      "additionalSources": [
+        {
+          "documentId": "wiring-119-003",
+          "sourceHash": "52deb058d720de53081b0f8e7060892f4e1a664a2d0c52ad8661eb3e00f20a49"
+        },
+        {
+          "documentId": "wiring-119-002",
+          "sourceHash": "a4f793c4e2004da9914a494ec3027dd079cf8878271a1ade636e9c614450d321"
+        },
+        {
+          "documentId": "connector-C3039",
+          "sourceHash": "81ee9d667278c0e3ab18ae1590d365d9aff65a9308c77a74494e4655023f9e31"
+        },
+        {
+          "documentId": "connector-C3265A",
+          "sourceHash": "4f59ecd2128c4c6b50008acb9bd88026b275196623fa860065b5443ae8b69aa3"
+        },
+        {
+          "documentId": "connector-C3265B",
+          "sourceHash": "126fe1a2144f4ac2dde76053b73c4ceea076b9b4ec6fbb664021814ef1fb5c23"
+        }
+      ],
+      "notes": [
+        "AA17 thermistor positive result: VHS36 (YE/BU) or RHS20 (GN/BU). Exact same component/pins5&8 in own AA4 and connector C3039, confirmed visually on119-003 to SCME C3265B pins4&5.119-002 places original names on driver backrest, not passenger.",
+        "AA20 motor positive result: CHS06 (BU/BN) or RHS06 (WH). C3039 pins1&2 and SCME C3265A C&D agree in both connector tables and visually verified119-003; ownAA18 namesCHS06.",
+        "Only repair-circuit identities change. Preserve component-side pins, temperature/resistance table, current threshold, powered/depowered states, branch sequence, and full SRS prove-out.",
+        "TestO DTC trigger prose: affected passenger seat shutdown / passenger seat outputs. BothDTC names explicitlyPassenger; allTestO terminal/end-component references matchpassenger119-003. Own generalSCMEoperationat70436statesseat-specificDTCdisablesonlyaffectedseat.",
+        "P4 no-TSB persistent-concern endpoint: If no applicable TSB addresses the concern, install a new SCME using the linked replacement procedure; then perform P5 SRS completion.. SameSCME driver-open-load M4 and samepassenger-circuit O10 supply the full otherwiseidentical connectorinspection/retest/TSB/replacement endpoint. P4 already linksSCME removal&installation and routesP5.",
+        "Keep ignitionOFF connectorinspection, C219remainisolatedduringfunctionalretest, approvedSRSdepower/reconnect/repowerandprove-out atP5; no newpinsequence or replacementbeforeexistingcompletedchecks."
+      ],
+      "imageEvidence": [
+        {
+          "documentId": "wiring-119-003",
+          "mediaId": "wiring-119-003-m0001",
+          "fileHash": "48121fd2fe88dfaf7086851c8737bc87eab25de37b4a4744556feb5946718756",
+          "transcription": "Passenger backrest C3039 pin5 VHS36 YE/BU connects SCME C3265B4; pin8 RHS20 GN/BU connects C3265B5. Motor pins1/2 CHS06 BU/BN and RHS06 WH connect SCME C3265A C/D. Preserve own test endpoints, thresholds and state transitions."
+        },
+        {
+          "documentId": "wiring-119-002",
+          "mediaId": "wiring-119-002-m0001",
+          "fileHash": "d62ccb318054ddc5aa08d7847698c5fb274c2db4f2342367797a15658850ebdc",
+          "transcription": "Driver backrest has VHS35/RHS15 thermistor circuits and CHS01/RHS01 motor circuits. These driver labels do not identify the passenger backrest circuits."
+        }
+      ]
+    },
+    {
+      "documentId": "G2560183",
+      "sourceHash": "58db950e7dfe470549dd2c243af26fb3fa8df651fb6777e3d0dc5f044fcf9da6",
+      "additionalSources": [
+        {
+          "documentId": "wiring-012-002",
+          "sourceHash": "58b2ca842bbab3109118bbb6a46b50ef1de0e8c6d5c45e7f4f37609a4b76fe25"
+        },
+        {
+          "documentId": "connector-C1645",
+          "sourceHash": "079ec850183bf4446c466ed0661adf90a5420e1637e08b6cc30f58de6f6a3247"
+        },
+        {
+          "documentId": "connector-C175B",
+          "sourceHash": "59bf3e21bc0c6f65831888191ceada5154bb7b5be43b450a98a2835d2a626e80"
+        },
+        {
+          "documentId": "connector-C1046",
+          "sourceHash": "51201f1175bbb257b7d421f67f65b13acfe19bdca0e980e98771677ed9616b0c"
+        },
+        {
+          "documentId": "connector-C102B",
+          "sourceHash": "2f6915d0ca335bcd0c7f314c7bda0531faf47498fcf766718a77e226b5e0e61e"
+        },
+        {
+          "documentId": "connector-C102C",
+          "sourceHash": "b2cec7731036abc8378c981dcd551e96adb87348a37940149213a9e46c92be2a"
+        }
+      ],
+      "notes": [
+        "Original012002 inspected visually:5.0L/5.2L PCMcolumnC175B gives sensorVREF52,SIGRTN51,feedback53. C1645 is3-pin sensor1/2/3. C175B55unused inexactconnectortable. C1046/24,29,31 are other supply/oxygen-sensor circuits, not thissensor scheme. Do not apply2.3L11/18/94 mappings to5.0L.",
+        "F2 incorrectlynamesregulatorC102B1 asbatteryfeed, whilethe SAME5.0L chapterB3/G2 explicitlyidentifyC102C1. Originalchargingdrawing andconnectorC102Cagree. F3 secondlead isemptybutG3hasfulltext identifyingnegativevoltmeterlead tobatterypositive, otherwiseidenticalnamedcablecheck/conditions/limit. Use completeG2/G3 forF2/F3 ratherthan silently guessing missingcells.",
+        "Verbatim SAME5.0L completeG2/G3 source:\nG2 CHECK THE GENERATOR CONNECTIONS\nIgnition OFF.\nDisconnect all of the generator connectors and inspect for:\ncorrosion (install new connector or terminals – clean module pins)\ndamaged or bent pins – install new terminals/pins\npushed-out pins – install new pins as necessary\nReconnect the generator connectors. Make sure they seat and latch correctly.\nMeasure and record:\nPositive Lead\nMeasurement / Action\nNegative Lead\nMeasure:\n\nClick to display connectors\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102C Pin 1 (Connect the Positive voltmeter Lead to the alternator output B+)\nGround\nIs the voltage within 0.5 volt of the recorded battery voltage?\nYes\nGO to G3\nNo\nTIGHTEN or INSTALL a new generator B+ nut as needed.\nREFER to: Generator - 5.0L 32V Ti-VCT (414-02 Generator and Regulator, Removal and Installation).\nVERIFY high current BJB MEGA fuse (275A) is OK. If OK, REPAIR the circuit. If not OK, REFER to the Wiring Diagrams manual to identify the possible causes of the circuit short.\nG3 CHECK THE VOLTAGE DROP IN THE GENERATOR B+ CIRCUIT\nStart the engine.\nWith the engine running at idle, headlamps on and blower on high, measure:\n\nClick to display connectors\nPositive Lead\nMeasurement / Action\nNegative Lead\nC102C Pin 1 (Connect the Positive voltmeter Lead to the alternator output B+)\n(Connect the Negative voltmeter lead to the positive battery post)\nPerform a wiggle test of the generator wiring and connections while measuring voltage drop.\nIs the voltage drop less than 0.5 volt?\nYes\nFor DTC P0625, GO to G4\nFor DTC P0626, GO to G5\nNo\nINSPECT and REPAIR any corrosion in the generator B+ circuit or positive battery cable connections.\n"
+      ],
+      "imageEvidence": [],
+      "jobIds": [
+        "job-b7cd9f34f33242f5"
       ]
     }
   ]

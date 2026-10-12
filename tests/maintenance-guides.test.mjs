@@ -154,3 +154,48 @@ test('implicit workshop heroes stay within primary procedures, while a bound aut
  g.hero={documentId:'G52',mediaId:'G52-m1'};workshopFile(dir,[g]);
  assert.equal(catalog.detail(g.id,{engine:'3.7L'}).thumbnail.id,'G52-m1');
 });
+
+test('explicit-only guides keep unillustrated tests as icons without hiding related article links or pinned figures',t=>{
+ const {catalog,dir}=fixture(t);
+ const g={...workshopGuide(),thumbnailMode:'explicit-only',hero:null};workshopFile(dir,[g]);
+ const detail=catalog.detail(g.id);
+ assert.equal(detail.thumbnailMode,'explicit-only');assert.equal(detail.thumbnail,null);
+ assert.equal(detail.procedures[0].href,'#/document/G37');assert.equal(detail.procedures[0].thumbnail,null);
+ assert.equal(catalog.list({q:g.title}).items[0].thumbnail,null);
+ assert.equal(catalog.forDocument('G37').find(x=>x.id===g.id).thumbnail,null);
+ g.procedures[0].mediaId='G37-m1';workshopFile(dir,[g]);
+ const pinned=catalog.detail(g.id);assert.equal(pinned.thumbnail,null);
+ assert.equal(pinned.procedures[0].thumbnail.url,'/media/G37-native.jpg');
+ assert.equal(pinned.procedures[0].mediaId,'G37-m1');
+ assert.equal(catalog.detail('oil').thumbnail.id,'G37-m1');
+ assert.equal(catalog.detail('oil').procedures[0].thumbnail.id,'G37-m1');
+ assert.doesNotMatch(JSON.stringify(pinned),/primaryDocumentIds|sourceHash|sourceRefs|hash-G/);
+});
+
+test('explicit-only heroes stay on the authored engine variant and never fall back to a different primary illustration',t=>{
+ const {catalog,dir}=fixture(t);
+ const g={...workshopGuide(),thumbnailMode:'explicit-only',primaryDocumentIds:['G37','G52'],applicability:{engines:['3.7L','5.2L'],years:[2015]},sourceRefs:['G37','G52'].map(documentId=>({documentId,sourceHash:'hash-'+documentId})),procedures:['G37','G52'].map(documentId=>({documentId,purpose:'Follow the fitted-engine procedure.'}))};
+ workshopFile(dir,[g]);
+ assert.equal(catalog.detail(g.id).thumbnail.id,'G37-m1');
+ assert.equal(catalog.detail(g.id,{engine:'3.7L'}).thumbnail.id,'G37-m1');
+ assert.equal(catalog.detail(g.id,{engine:'5.2L'}).thumbnail,null);
+ assert.equal(catalog.detail(g.id,{engine:'5.2L'}).procedures[0].thumbnail,null);
+ assert.equal(catalog.detail(g.id).thumbnail.id,'G37-m1');
+});
+
+test('explicit-only mode rejects malformed selections and cannot replace a tiny or video-control selection with unrelated art',t=>{
+ const {db,dir}=fixture(t);
+ const tiny={id:'G37-tiny',url:'/media/tiny.jpg',width:99,height:99,mime:'image/jpeg'};
+ const control={id:'G37-play',url:'/media/play.png',width:580,height:400,mime:'image/png'};
+ const original=JSON.parse(db.prepare('SELECT media FROM documents WHERE id=?').get('G37').media);
+ db.prepare('UPDATE documents SET media=? WHERE id=?').run(JSON.stringify([...original,tiny,control]),'G37');
+ fs.writeFileSync(path.join(dir,'procedure-videos.json'),JSON.stringify({version:1,documents:[{documentId:'G37',sourceHash:'hash-G37',entries:[{controlMediaId:control.id,controlUrl:control.url}]}]}));
+ const catalog=createMaintenanceGuideCatalog(db,{contentDir:dir});
+ for(const selected of[tiny,control]){
+  const g={...workshopGuide(),thumbnailMode:'explicit-only',hero:{documentId:'G37',mediaId:selected.id}};g.procedures[0].mediaId=selected.id;workshopFile(dir,[g]);
+  const detail=catalog.detail(g.id);assert.ok(detail);assert.equal(detail.thumbnail,null);assert.equal(detail.procedures[0].thumbnail,null);assert.equal(detail.procedures[0].mediaId,undefined);
+ }
+ for(const mutate of[g=>g.thumbnailMode='icon',g=>g.thumbnailMode=null,g=>delete g.hero.mediaId,g=>g.hero.mediaId='G52-m1']){
+  const g={...workshopGuide(),thumbnailMode:'explicit-only'};mutate(g);workshopFile(dir,[g]);assert.equal(catalog.detail(g.id),null);
+ }
+});

@@ -147,7 +147,9 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
       else if (!safeText(g.introduction) || !safeText(g.why) || !object(g.when) || !safeText(g.when.summary) || (g.when.kind !== undefined && !['scheduled','condition-based','inspection'].includes(g.when.kind)) || !textArray(g.when.notes) || !proseRows(g.prepare, 'detail') || !proseRows(g.steps) || !proseRows(g.watchFor) || !proseRows(g.verification) || !diagnosticRows(g.diagnostics) || !textArray(g.notes) || !idArray(g.relatedGuideIds)) reason = 'invalid-prose';
       else if (!Array.isArray(g.sourceRefs) || !g.sourceRefs.length || g.sourceRefs.length > 150 || !g.sourceRefs.every(validRef) || new Set(g.sourceRefs.map(r => r.documentId)).size !== g.sourceRefs.length || !Array.isArray(g.evidence) || !evidenceValid(g.evidence,requiresScheduleEvidence(g,scheduledIds))) reason = 'invalid-or-stale-evidence';
       else if (!Array.isArray(g.procedures) || g.procedures.length > 100 || g.procedures.some(p => !object(p) || !safeId(p.documentId) || !safeText(p.purpose, 2000) || !procedureFitValid(p.applicability) || (p.mediaId !== undefined && !safeId(p.mediaId)) || !g.sourceRefs.some(r => r.documentId === p.documentId)) || new Set(g.procedures.map(p => p.documentId)).size !== g.procedures.length) reason = 'invalid-procedure';
+      else if (g.thumbnailMode !== undefined && g.thumbnailMode !== 'explicit-only') reason = 'invalid-thumbnail-mode';
       else if (g.hero && (!object(g.hero) || !g.sourceRefs.some(r => r.documentId === g.hero.documentId) || (g.hero.mediaId && !safeId(g.hero.mediaId)))) reason = 'invalid-hero';
+      else if (g.thumbnailMode === 'explicit-only' && g.hero && !safeId(g.hero.mediaId)) reason = 'invalid-hero';
       if (!reason && workshop && (!idArray(g.primaryDocumentIds) || !g.primaryDocumentIds?.length || g.primaryDocumentIds.some(id => !g.procedures.some(p => p.documentId === id)))) reason = 'invalid-primary-procedures';
       if (!reason && workshop) {
         // Supporting references such as lifting or surface cleaning do not
@@ -175,7 +177,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
     }
   }
   function sourceList(ids) { return internalizeMaintenanceReferences(ids.map(id => ({ title: seed.evidence[id].title, url: seed.evidence[id].url }))); }
-  function relatedDocument(ref, opts, fit) {
+  function relatedDocument(ref, opts, fit, thumbnailMode) {
     const d = documents.get(ref.documentId); if (!d) return null;
     const a = documentApplicability(d, opts.engine);
     const narrowed = ref.applicability || {};
@@ -190,7 +192,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
     const procedureApplicability = applicability({engines,years,...(equipment?{equipment}:{}),...(narrowed.market||fit.market?{market:narrowed.market||fit.market}:{})},opts);
     const parsed = { ...d, ...assetsFor(d.id) }; parsed.media = videoControls.filterControls(d, parsed.media);
     const preferred = ref.mediaId ? selectThumbnail({...parsed,media:parsed.media.filter(m=>m.id===ref.mediaId)},assetResolver) : null;
-    const thumbnail = preferred || selectWorkshopThumbnail(parsed,assetResolver);
+    const thumbnail = preferred || (thumbnailMode === 'explicit-only' ? null : selectWorkshopThumbnail(parsed,assetResolver));
     return { documentId: d.id, title: d.title, purpose: ref.purpose, kind: d.kind, href: '#/document/' + d.id, section, engines, applicability: procedureApplicability, ...(preferred?{mediaId:ref.mediaId}:{}), thumbnail };
   }
   function thumbnail(g, opts) {
@@ -198,14 +200,14 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
     // Supporting access/reference procedures can illustrate a different job.
     // They are eligible as a hero only when the author explicitly selects one.
     const primary = g.primaryDocumentIds ? g.procedures.filter(p => g.primaryDocumentIds.includes(p.documentId)) : g.procedures;
-    const candidates = [...(g.hero ? [g.hero] : []), ...primary];
+    const candidates = [...(g.hero ? [g.hero] : []), ...(g.thumbnailMode === 'explicit-only' ? [] : primary)];
     for (const ref of candidates) {
-      const d = relatedDocument(ref, opts, g.applicability); if (!d) continue;
+      const d = relatedDocument(ref, opts, g.applicability, g.thumbnailMode); if (!d) continue;
       if (d.thumbnail) return { ...d.thumbnail, documentTitle: d.title, engines: d.engines };
     }
     return null;
   }
-  function card(g, opts) { return { id: g.id, title: g.title, summary: g.summary, categoryId: g.categoryId, systemId:g.systemId,taskType:g.taskType,difficulty:g.difficulty, interval: g.when.summary, ruleIds: g.ruleIds || [], href: localHref(g.id), applicability: applicability(g.applicability, opts), thumbnail: thumbnail(g, opts) }; }
+  function card(g, opts) { return { id: g.id, title: g.title, summary: g.summary, categoryId: g.categoryId, systemId:g.systemId,taskType:g.taskType,difficulty:g.difficulty, interval: g.when.summary, ruleIds: g.ruleIds || [], href: localHref(g.id), applicability: applicability(g.applicability, opts), ...(g.thumbnailMode ? {thumbnailMode:g.thumbnailMode} : {}), thumbnail: thumbnail(g, opts) }; }
   function publicCopy(value) {
     const clean=v=>Array.isArray(v)?v.map(clean):object(v)?Object.fromEntries(Object.entries(v).filter(([k])=>!['sourceRefs','evidence','source_hash','primaryDocumentIds'].includes(k)).map(([k,v])=>[k,clean(v)])):v;
     return stripPrivateMetadata(internalizeMaintenanceReferences(clean(structuredClone(value))));
@@ -213,7 +215,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
   function detail(id, input = {}) {
     refresh(); const g = guides.get(id); if (!g) return null; const opts = options(input);
     return publicCopy({ ...card(g, opts), introduction: g.introduction, why: g.why, when: g.when, prepare: g.prepare || [], steps: g.steps || [], watchFor: g.watchFor || [], notes: g.notes || [], diagnostics:g.diagnostics||[],verification:g.verification||[],
-      procedures: fits(g.applicability, opts) ? g.procedures.map(p => relatedDocument(p, opts, g.applicability)).filter(Boolean) : [],
+      procedures: fits(g.applicability, opts) ? g.procedures.map(p => relatedDocument(p, opts, g.applicability, g.thumbnailMode)).filter(Boolean) : [],
       relatedGuides: (g.relatedGuideIds || []).filter(id => id !== g.id && guides.has(id) && fits(guides.get(id).applicability, opts)).map(id => card(guides.get(id), opts)), sources: sourceList(g.evidence) });
   }
   function list(input = {}) {

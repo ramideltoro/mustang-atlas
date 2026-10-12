@@ -41,3 +41,15 @@ export function validCuratedJob(guide,job){
     &&job.documents.every(d=>guide.sourceRefs?.some(r=>r.documentId===d.id&&r.sourceHash===d.source_hash))
     &&JSON.stringify([...(guide.applicability?.engines||[])].sort())===JSON.stringify([...job.engines].sort());
 }
+
+// A shared diagnostic chapter can illustrate several different jobs. Preserve
+// the reviewed per-guide choice after applying the chapter's general image.
+export function applyGuideMediaSelections(guide,byId){
+  for(const selected of guide.authoring?.mediaSelections||[]){
+    const doc=byId.get(selected.documentId);
+    if(!doc||doc.source_hash!==selected.sourceHash||!guide.sourceRefs?.some(r=>r.documentId===doc.id&&r.sourceHash===selected.sourceHash)||!doc.media.some(m=>m.id===selected.mediaId)||!guide.procedures?.some(p=>p.documentId===doc.id))throw Error('Invalid reviewed guide image '+guide.id);
+    for(const ref of guide.procedures)if(ref.documentId===doc.id)ref.mediaId=selected.mediaId;
+    if(guide.hero?.documentId===doc.id)guide.hero={...guide.hero,mediaId:selected.mediaId};
+  }
+  return guide;
+}
