@@ -26,7 +26,35 @@
 .special-maintenance-teaser{display:flex;align-items:center;gap:20px;padding:24px;margin-top:24px;border:1px solid var(--line);border-radius:12px;background:var(--surface-1)}
 .special-maintenance-teaser>svg{color:var(--accent-text);flex-shrink:0}.special-maintenance-teaser h2{font-size:22px;margin-bottom:9px}.special-maintenance-teaser p{font-size:14px;color:var(--muted);line-height:1.8}.special-maintenance-teaser .text-link{margin-top:12px;font-size:13px}
 .workshop-online-references{display:flex;flex-direction:column;gap:14px;list-style:none;padding:0}.workshop-online-references li{padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--surface-1)}.workshop-online-references a{display:inline-flex;align-items:center;gap:8px;color:var(--accent-text);font-size:15px;line-height:1.6}.workshop-online-references p{font-size:13px;line-height:1.8;color:var(--muted);margin-top:8px}
-.special-job-jumps{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 25px}.special-job-jumps button{padding:10px 14px;border:1px solid var(--line);border-radius:24px;color:var(--accent-text);font-size:12px;min-height:44px;background:var(--surface-1)}
+
 @media(max-width:560px){.head-bolt-map{padding:16px 10px}.head-stage-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.head-stage-picker strong{font-size:17px}.head-bank-picker button{padding:12px 10px;font-size:12px;gap:6px}.head-bolt-controls button{font-size:12px;padding:9px}.head-bolt-explainer{padding:14px;gap:10px}.special-maintenance-teaser{align-items:flex-start;padding:20px;gap:14px}.special-maintenance-teaser h2{font-size:20px}.head-diagram-reference{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.head-bolt-row button{transition:none}}
-@media print{.head-bolt-controls,.head-bank-picker,.special-job-jumps{display:none}.head-bolt-map{break-inside:avoid}}
+@media print{.head-bolt-controls,.head-bank-picker{display:none}.head-bolt-map{break-inside:avoid}}
+
+/* The head-gasket walkthrough begins with anatomy and named work phases. */
+
+.repair-phase-summary{margin:0 0 22px;color:var(--muted);font-size:14px;line-height:1.8}
+.head-access-lede{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:24px}
+.head-access-layout{display:grid;grid-template-columns:minmax(160px,.75fr) minmax(0,1.25fr);gap:22px;align-items:center}
+.head-layer-figure{margin:0;padding:16px 8px;border:1px solid var(--line);border-radius:14px;background:var(--surface-1)}
+.head-layer-figure svg{display:block;width:100%;height:auto}
+.head-layer-figure figcaption{padding:0 12px;color:var(--muted);font-size:11px;line-height:1.7}
+.layer-guide{stroke:var(--line);stroke-dasharray:4 6;fill:none}
+.layer-part{fill:var(--surface-3);stroke:var(--accent-text);stroke-width:1.5}
+.layer-detail{fill:none;stroke:var(--accent-text);stroke-width:1.5}
+.layer-oil-seal{fill:var(--info);opacity:.8}.layer-head-seal{fill:var(--accent);stroke:var(--accent-text);stroke-width:2}
+.layer-number circle{fill:var(--surface-2);stroke:var(--line-strong)}.layer-number text{font:12px var(--mono);fill:var(--text);text-anchor:middle}.layer-number.is-gasket circle{fill:var(--accent);stroke:var(--accent-text)}.layer-number.is-gasket text{fill:var(--on-accent);font-weight:700}
+.head-layer-list{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.head-layer-list>li{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.head-layer-list>li>span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;font:12px var(--mono);color:var(--accent-text)}
+.head-layer-list h3{font-size:15px;line-height:1.5;margin:0 0 6px;color:var(--heading)}
+.head-layer-list p{font-size:13px;line-height:1.75;color:var(--muted);margin:0}
+.head-layer-list>li.is-gasket{padding:14px 12px;border:1px solid var(--accent);border-radius:10px;background:var(--accent-wash)}
+.head-layer-list .is-gasket>span{background:var(--accent);color:var(--on-accent)}
+.head-access-side-note{padding:18px;margin-top:24px;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;font-size:14px;line-height:1.8}.head-access-side-note p{margin:9px 0 0;color:var(--muted)}
+.head-access-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}.head-access-actions button{display:flex;align-items:center;gap:12px;padding:12px 15px;border:1px solid var(--line-strong);border-radius:9px;color:var(--accent-text);font-size:13px;background:var(--surface-1);min-height:44px}
+.inline-head-bolts{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}.inline-head-bolts>h4{font-size:17px;line-height:1.7;margin:0 0 18px;color:var(--accent-text)}
+@media(max-width:560px){.head-access-layout{grid-template-columns:1fr}.head-layer-figure svg{max-height:400px}.head-layer-list h3{font-size:16px}.head-layer-list p{font-size:14px}.maintenance-article-body:has(.head-access) .maintenance-step-list>li{grid-template-columns:minmax(0,1fr)}.inline-head-bolts .head-bolt-row{gap:5px}.inline-head-bolts .head-bolt-row button{width:44px;height:44px}.head-bolt-controls{flex-wrap:wrap}}
+@media print{.head-access-layout{grid-template-columns:1fr 1fr}.head-layer-figure,.head-layer-list>li{break-inside:avoid}}
+.repair-mobile-contents>summary{display:flex;align-items:center;justify-content:space-between;min-height:32px;color:var(--accent-text);font-size:14px;cursor:pointer}.repair-mobile-contents[open]>summary>svg{transform:rotate(90deg)}
+@media(min-width:961px){.maintenance-article-layout:has(.head-access) .maintenance-aside-inner{top:100px;max-height:calc(100dvh - 120px - var(--atlas-footer-height,84px));overflow:auto;padding-right:5px;scrollbar-width:thin}}

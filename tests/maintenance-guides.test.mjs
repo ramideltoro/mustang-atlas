@@ -222,3 +222,9 @@ test('head-bolt visual is bound to both current source heads and the documented 
  assert.equal(catalog.detail('oil',{year:2016}).visualGuide,undefined);
  for(const change of [g=>g.applicability.engines=['5.0L'],g=>g.applicability.years=[2016],g=>g.sourceRefs.pop(),g=>g.sourceRefs.at(-1).sourceHash='stale',g=>g.visualGuide='unverified'])assert.equal(make(change).detail('oil'),null);
 });
+
+test('repair phases preserve every step exactly once and reject gaps, overlap and ambiguous navigation',t=>{
+ const data=seed(),g=data.guides[0];g.steps=[{title:'First',body:'Do the first operation.'},{title:'Second',body:'Do the second operation.'},{title:'Third',body:'Do the final check.'}];g.stepGroups=[{id:'access',title:'Access',summary:'Open the assembly.',start:1,end:2},{id:'rebuild',title:'Rebuild',summary:'Close and check.',start:3,end:3}];
+ assert.deepEqual(fixture(t,data).catalog.detail('oil').stepGroups,g.stepGroups);
+ for(const mutate of [g=>g.stepGroups[0].start=2,g=>g.stepGroups[1].start=2,g=>g.stepGroups[0].end=1,g=>g.stepGroups[1].end=4,g=>g.stepGroups[1].id='access',g=>g.stepGroups[0].id='prepare']){const invalid=structuredClone(data);mutate(invalid.guides[0]);assert.equal(fixture(t,invalid).catalog.detail('oil'),null);}
+});

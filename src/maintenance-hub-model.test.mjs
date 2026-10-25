@@ -86,5 +86,10 @@ test('large catalogs keep pages bounded and recover obsolete or unaligned offset
 
 test('special repairs expose their visual and online reading in the guide navigation',()=>{
  const guide={prepare:[{}],visualGuide:'v6-37-head-gasket',steps:[{}],procedures:[{}],references:[{url:'https://example.com'}]};
- assert.deepEqual(guideOutline(guide).map(x=>x.id),['prepare','visual-guide','steps','repair-guides','online-references']);
+ assert.deepEqual(guideOutline(guide).map(x=>x.id),['gasket-location','prepare','visual-guide','steps','repair-guides','online-references']);
+});
+
+test('grouped walkthrough navigation points to the access and replacement sections without a detached bolt lesson',()=>{
+ const guide={visualGuide:'v6-37-head-gasket',visualGuideStep:23,steps:[{}],stepGroups:[{id:'access-head-gasket',title:'How to get to the head gasket'},{id:'replace-head-gasket',title:'Remove the cylinder head and replace the head gasket'}]};
+ assert.deepEqual(guideOutline(guide).map(x=>x.id),['gasket-location','access-head-gasket','replace-head-gasket']);
 });

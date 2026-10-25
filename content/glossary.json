@@ -129,7 +129,7 @@
         "engine block"
       ],
       "definition": "The main engine casting that contains the cylinders and supports the crankshaft.",
-      "details": "Oil and coolant passages are built into the block. The cylinder heads bolt onto it; the block and heads are separate components.",
+      "details": "Oil and coolant passages are built into the block. The cylinder heads bolt onto it; the block and heads are separate components. The cylinder heads bolt to its upper deck surfaces, with head gaskets sealing those joints. In the described 3.7L head-removal procedure, the block stays in place; separating a head from the block does not mean dismantling the block or removing the crankshaft.",
       "category": "engine",
       "sourceRefs": [
         {
@@ -141,6 +141,12 @@
           "documentId": "G1681495",
           "documentPath": "3: Powertrain/03: Engine/303-01B Engine - 3.7L Duratec (227kW-301PS)/Description and Operation/Engine - Overview.html",
           "reference": "G1681508"
+        },
+        {
+          "documentId": "G1681515"
+        },
+        {
+          "documentId": "G1681516"
         }
       ],
       "mediaRefs": [
@@ -152,7 +158,11 @@
           "applicability": "3.7L; Engine - 3.7L Duratec (227kW/301PS)"
         }
       ],
-      "relatedTermIds": [],
+      "relatedTermIds": [
+        "head-gasket",
+        "cylinder-head",
+        "block-deck"
+      ],
       "editorial": {
         "author": "Codex",
         "kind": "beginner-explanation",
@@ -5212,6 +5222,137 @@
         "kind": "beginner-explanation",
         "humanReviewed": false
       }
+    },
+    {
+      "id": "valve-cover",
+      "aliases": [
+        "valve cover",
+        "valve-cover"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681530"
+        },
+        {
+          "documentId": "G1681531"
+        }
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      },
+      "name": "Valve cover",
+      "definition": "The removable lid over a cylinder head’s camshafts and valve gear.",
+      "details": "Removing it exposes the top of the cylinder head. The head itself remains bolted to the engine block, with the head gasket underneath. For this 3.7L head-gasket job, both covers are removed to allow front-cover access.",
+      "relatedTermIds": [
+        "valve-cover-gasket",
+        "cylinder-head",
+        "head-gasket"
+      ]
+    },
+    {
+      "id": "valve-cover-gasket",
+      "aliases": [
+        "valve-cover gasket",
+        "valve cover gasket"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681530"
+        },
+        {
+          "documentId": "G1681531"
+        }
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      },
+      "name": "Valve-cover gasket",
+      "definition": "The oil seal between a valve cover and the top of the cylinder head.",
+      "details": "This gasket seals the lid; it is a different part from the combustion-sealing head gasket beneath the cylinder head. The supplied 3.7L cover procedures require a new cover gasket when refitting each removed cover.",
+      "relatedTermIds": [
+        "valve-cover",
+        "head-gasket",
+        "cylinder-head"
+      ]
+    },
+    {
+      "id": "upper-intake-manifold",
+      "aliases": [
+        "upper intake manifold",
+        "upper manifold",
+        "upper-intake manifold"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681529"
+        },
+        {
+          "documentId": "G1675558"
+        }
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      },
+      "name": "Upper intake manifold",
+      "definition": "The upper part of the intake-air distribution assembly.",
+      "details": "It feeds air into the lower manifold and is separate from the cylinder heads. On the 3.7L Mustang it must be removed to reach the right-bank ignition coils. Its gaskets seal air passages; they are not head gaskets.",
+      "relatedTermIds": [
+        "lower-intake-manifold",
+        "intake-manifold",
+        "throttle-body"
+      ]
+    },
+    {
+      "id": "lower-intake-manifold",
+      "aliases": [
+        "lower intake manifold",
+        "lower manifold",
+        "lower-intake manifold"
+      ],
+      "category": "engine",
+      "matchCategories": [
+        "engine"
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681524"
+        }
+      ],
+      "mediaRefs": [],
+      "editorial": {
+        "author": "Codex",
+        "kind": "beginner-explanation",
+        "humanReviewed": false
+      },
+      "name": "Lower intake manifold",
+      "definition": "The lower intake-air assembly connecting the upper manifold to the engine’s intake ports.",
+      "details": "The 3.7L head-removal procedure removes this assembly and renews its gaskets. Ford says the fuel rail need not be removed from the lower-manifold assembly for that operation. It is not an upper engine block.",
+      "relatedTermIds": [
+        "upper-intake-manifold",
+        "cylinder-head",
+        "intake-manifold"
+      ]
     }
   ],
   "abbreviations": [

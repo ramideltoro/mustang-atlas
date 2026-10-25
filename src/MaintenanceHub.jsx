@@ -1,6 +1,6 @@
 import React,{useEffect,useRef} from 'react';
 import {ArrowRight,ArrowUpRight,AlertTriangle,BatteryCharging,BookOpen,CalendarClock,CarFront,Check,ChevronLeft,ChevronRight,ClipboardCheck,Droplets,Fan,Gauge,HeartPulse,Info,Search,ShieldCheck,Wind,Wrench,X} from 'lucide-react';
-import {useApi,navigate} from './hooks.js';
+import {useApi,useMediaQuery,navigate} from './hooks.js';
 import {useEngine} from './engine-context.jsx';
 import {engineLabel} from './navigation-model.mjs';
 import {safeHref,readableTitle,categoryName} from './content-model.mjs';
@@ -13,6 +13,7 @@ export {MaintenanceCard} from './WorkshopGuideCards.jsx';
 import './maintenance-hub.css';
 import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 import HeadGasketWorkshop from './HeadGasketWorkshop.jsx';
+import HeadGasketAccess from './HeadGasketAccess.jsx';
 export function SpecialMaintenanceTeaser(){return <section className="special-maintenance-teaser"><Wrench size={30} aria-hidden="true"/><div><h2>Special maintenance</h2><p>Bigger jobs, explained carefully. Plan the diagnosis, understand the repair, and work through the checks with the workshop references beside you.</p><a className="text-link" href="#/maintenance?category=special">Explore special maintenance <ArrowRight size={16}/></a></div></section>;}
 
 
@@ -57,22 +58,34 @@ function Hub({route,engine}){
 }
 function GuideSection({id,title,icon:Icon=Wrench,tone='',children}){return <section id={id} tabIndex={-1} className={'maintenance-guide-section '+(tone?'tone-'+tone:'')}><h2><Icon size={22} aria-hidden="true"/>{title}</h2>{children}</section>;}
 function jumpTo(id){const target=document.getElementById(id);target?.focus({preventScroll:true});target?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
-function GuideContents({items,schedule=false,filters}){return <aside className="maintenance-article-aside"><div className="maintenance-aside-inner"><span className="eyebrow">{schedule?'IN THIS SCHEDULE':'IN THIS GUIDE'}</span><nav className="maintenance-guide-toc" aria-label={schedule?'In this maintenance schedule':'In this maintenance guide'}>{items.map(item=><button type="button" key={item.id} onClick={()=>jumpTo(item.id)}>{item.title}<ArrowRight size={13} aria-hidden="true"/></button>)}</nav><a href={maintenanceHref({...filters,id:schedule?'':'schedule'})} className="maintenance-aside-schedule"><CalendarClock size={16} aria-hidden="true"/>{schedule?'Explore maintenance guides':'See the maintenance schedule'}</a></div></aside>;}
-function Guide({id,engine,year,onZoom,filters}){
+function GuideContents({items,schedule=false,filters,collapsible=false}){
+ const mobile=useMediaQuery('(max-width:960px)');
+ const contents=<><nav className="maintenance-guide-toc" aria-label={schedule?'In this maintenance schedule':'In this maintenance guide'}>{items.map(item=><button type="button" key={item.id} onClick={()=>jumpTo(item.id)}>{item.title}<ArrowRight size={13} aria-hidden="true"/></button>)}</nav><a href={maintenanceHref({...filters,id:schedule?'':'schedule'})} className="maintenance-aside-schedule"><CalendarClock size={16} aria-hidden="true"/>{schedule?'Explore maintenance guides':'See the maintenance schedule'}</a></>;
+ return <aside className="maintenance-article-aside"><div className="maintenance-aside-inner">{mobile&&collapsible?<details className="repair-mobile-contents"><summary>Jump to a section<ChevronRight size={16} aria-hidden="true"/></summary>{contents}</details>:<><span className="eyebrow">{schedule?'IN THIS SCHEDULE':'IN THIS GUIDE'}</span>{contents}</>}</div></aside>;
+}
+function RepairSteps({steps,start=1,visualGuide,visualGuideStep}){
+ return <ol className="maintenance-step-list" start={start}>{steps.map((step,index)=>{const number=start+index;return <li key={number} id={'job-step-'+number} tabIndex={-1}><span className="maintenance-step-number" aria-hidden="true">{number}</span><div className="maintenance-step-content"><h3>{step.title}</h3><Markdown body={step.body}/>{visualGuide==='v6-37-head-gasket'&&visualGuideStep===number&&<section className="inline-head-bolts" id="visual-guide" tabIndex={-1} aria-label="Head-bolt order and tightening passes"><h4>Choose your bank and explore each tightening pass</h4><HeadGasketWorkshop/></section>}</div></li>;})}</ol>;
+}
+function Guide({id,engine,year,onZoom,filters,section}){
  const glossary=useGlossary();
  const state=useApi('/maintenance/'+encodeURIComponent(id)+'?'+new URLSearchParams({engine:engine||'all',year})),guide=state.data?.guide||state.data;
+ useEffect(()=>{
+  if(state.loading||!guide||!section||maintenanceMismatch(guide.applicability)||!guideOutline(guide).some(item=>item.id===section))return;
+  const frame=requestAnimationFrame(()=>jumpTo(section));return()=>cancelAnimationFrame(frame);
+ },[state.loading,guide,section]);
  if(state.loading)return <div className="maintenance-hub"><Breadcrumbs/><Loading label="Opening your guide…"/></div>;
  if(state.error)return <div className="maintenance-hub"><Breadcrumbs/><ErrorState message={state.error} retry={state.retry}/></div>;
  if(!guide)return null;
  const mismatch=maintenanceMismatch(guide.applicability),outline=guideOutline(guide);
  return <GlossaryProvider terms={glossary?.terms||[]} open={glossary?.open} context={{system:guide.systemId,title:guide.title}}><div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={guide.categoryId==='special'?{...filters,category:'special'}:filters}/><header className={'maintenance-article-header'+(mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> {guide.categoryId==='special'?'Special maintenance':'Care & workshop'}</span><h1>{guide.title}</h1><GuideBadges guide={guide}/><Markdown body={guide.summary}/><EngineNote engine={engine} applicability={guide.applicability}/></div>{!mismatch&&(guide.thumbnail?<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>:<ArticleThumbnail item={guide} className="maintenance-card-art"/>)}</header>
   {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className="maintenance-article-layout"><article className="maintenance-article-body">
+   {guide.visualGuide==='v6-37-head-gasket'&&<GuideSection id="gasket-location" title="Where the head gasket lives" icon={BookOpen}><HeadGasketAccess onJump={jumpTo}/></GuideSection>}
    {guide.when?.summary&&<section id="when" tabIndex={-1} className="maintenance-when"><CalendarClock size={25} aria-hidden="true"/><div><h2>{guideWhenTitle(guide)}</h2><Markdown body={guide.when.summary}/>{guide.when.notes?.map((note,index)=><div className="maintenance-application" key={index}><Markdown body={note}/></div>)}</div></section>}
    {guide.introduction&&<GuideSection id="understand" title="Understand the task" icon={BookOpen} tone="blue"><Markdown body={guide.introduction}/></GuideSection>}
    {guide.why&&<GuideSection id="why" title="Why it matters" icon={HeartPulse}><Markdown body={guide.why}/></GuideSection>}
    {guide.prepare?.length>0&&<GuideSection id="prepare" title="Before you start" icon={ClipboardCheck} tone="blue">{guide.visualGuide&&<p className="workshop-table-hint"><ArrowRight size={14} aria-hidden="true"/> On smaller screens, swipe tables sideways to see both columns.</p>}<div className="maintenance-preparation">{guide.prepare.map((item,index)=><div key={index}><Check size={18} aria-hidden="true"/><div>{item.title&&<h3>{item.title}</h3>}<Markdown body={item.detail}/></div></div>)}</div></GuideSection>}
-   {guide.visualGuide==='v6-37-head-gasket'&&<GuideSection id="visual-guide" title="Head bolts: order & stages" icon={Wrench}><HeadGasketWorkshop/></GuideSection>}
-   {guide.steps?.length>0&&<GuideSection id="steps" title="What to do" icon={Wrench}>{guide.visualGuide==='v6-37-head-gasket'&&<nav className="special-job-jumps" aria-label="Repair phases">{[[1,'Diagnose'],[4,'Open up'],[10,'Inspect'],[12,'Reassemble'],[15,'Set timing'],[21,'Verify']].map(([n,label])=><button type="button" key={n} onClick={()=>jumpTo('job-step-'+n)}>{label}<span aria-hidden="true"> ↗</span></button>)}</nav>}<ol className="maintenance-step-list">{guide.steps.map((step,index)=><li key={index} id={'job-step-'+(index+1)} tabIndex={-1}><span className="maintenance-step-number" aria-hidden="true">{index+1}</span><div className="maintenance-step-content">{step.title&&<h3>{step.title}</h3>}<Markdown body={step.body}/></div></li>)}</ol></GuideSection>}
+   {guide.visualGuide==='v6-37-head-gasket'&&!guide.visualGuideStep&&<GuideSection id="visual-guide" title="Head bolts: order & stages" icon={Wrench}><HeadGasketWorkshop/></GuideSection>}
+   {guide.stepGroups?.length>0?guide.stepGroups.map(group=><GuideSection key={group.id} id={group.id} title={group.title} icon={Wrench}><p className="repair-phase-summary">{group.summary}</p><RepairSteps steps={guide.steps.slice(group.start-1,group.end)} start={group.start} visualGuide={guide.visualGuide} visualGuideStep={guide.visualGuideStep}/></GuideSection>):guide.steps?.length>0&&<GuideSection id="steps" title="What to do" icon={Wrench}><RepairSteps steps={guide.steps} visualGuide={guide.visualGuide} visualGuideStep={guide.visualGuideStep}/></GuideSection>}
    {guide.diagnostics?.length>0&&<GuideSection id="diagnostic-decisions" title="Make sense of the findings" icon={Gauge} tone="blue"><p className="workshop-section-note">Use the finding to choose the next check. A symptom can have more than one cause.</p><p className="workshop-table-hint"><ArrowRight size={14} aria-hidden="true"/> Scroll to see all three columns.</p><div className="workshop-decision-table" role="region" tabIndex={0} aria-label="Diagnostic findings, meanings and next checks; scroll horizontally if needed"><table><thead><tr><th scope="col">What you find</th><th scope="col">What it can mean</th><th scope="col">What to check next</th></tr></thead><tbody>{guide.diagnostics.map((item,index)=><tr key={index}><th scope="row"><Markdown body={item.finding}/></th><td><Markdown body={item.meaning}/></td><td><Markdown body={item.next}/></td></tr>)}</tbody></table></div></GuideSection>}
    {guide.verification?.length>0&&<GuideSection id="verify-results" title="Check the result" icon={ShieldCheck}><ul className="workshop-verification">{guide.verification.map((item,index)=><li key={index}><ShieldCheck size={20} aria-hidden="true"/><div><h3>{item.title}</h3><Markdown body={item.body}/></div></li>)}</ul></GuideSection>}
    {guide.watchFor?.length>0&&<GuideSection id="watch-for" title="Signs to investigate" icon={Gauge} tone="amber"><ul className="maintenance-signs">{guide.watchFor.map((item,index)=><li key={index}><AlertTriangle size={18} aria-hidden="true"/><div>{item.title&&<h3>{item.title}</h3>}<Markdown body={item.body}/></div></li>)}</ul></GuideSection>}
@@ -80,7 +93,7 @@ function Guide({id,engine,year,onZoom,filters}){
    {guide.procedures?.length>0&&<GuideSection id="repair-guides" title="Related workshop articles" icon={Wrench} tone="blue"><div className="maintenance-procedure-links">{guide.procedures.map(procedure=>{const href=maintenanceLink(procedure);return href?<a key={procedure.documentId} href={href}>{procedure.thumbnail&&<img src={safeHref(procedure.thumbnail.url)||undefined} width={84} height={66} loading="lazy" alt=""/>}<span><strong>{readableTitle(procedure.title)}</strong>{procedure.engines?.length>0&&<span className="maintenance-procedure-engine">{procedure.engines.map(engineLabel).join(' · ')}</span>}{procedure.applicability?.equipment&&procedure.applicability.equipment!==guide.applicability?.equipment&&<span className="maintenance-procedure-fitment">{procedure.applicability.equipment}</span>}{procedure.purpose&&<small>{procedure.purpose}</small>}</span><ArrowUpRight size={19} aria-hidden="true"/></a>:null;})}</div></GuideSection>}
    {guide.references?.length>0&&<GuideSection id="online-references" title="Online references" icon={BookOpen} tone="blue"><p className="workshop-section-note">Ford’s vehicle-specific procedure controls the repair. Supplier references explain the principles; they do not replace Ford’s sequences or specifications.</p><ul className="workshop-online-references">{guide.references.map(reference=><li key={reference.url}><a href={safeHref(reference.url)} target="_blank" rel="noreferrer">{reference.title}<ArrowUpRight size={17} aria-hidden="true"/></a><p>{reference.description}</p></li>)}</ul></GuideSection>}
    <Sources items={guide.sources||[]} label="Supporting guidance"/>
-  </article><GuideContents items={outline} filters={filters}/></div>{guide.relatedGuides?.length>0&&<section className="maintenance-related-guides"><h2>Keep exploring.</h2><div className="maintenance-guide-grid">{relatedWorkshopGuides(guide.relatedGuides).map(item=><MaintenanceCard key={item.id} guide={item} filters={filters} heading="h3"/>)}</div></section>}</>}
+  </article><GuideContents items={outline} filters={filters} collapsible={guide.stepGroups?.length>0}/></div>{guide.relatedGuides?.length>0&&<section className="maintenance-related-guides"><h2>Keep exploring.</h2><div className="maintenance-guide-grid">{relatedWorkshopGuides(guide.relatedGuides).map(item=><MaintenanceCard key={item.id} guide={item} filters={filters} heading="h3"/>)}</div></section>}</>}
  </div></GlossaryProvider>;
 }
 function Schedule({engine,year,filters}){
@@ -106,6 +119,6 @@ export function MaintenanceSearchResults({q,engine}){
 export default function MaintenanceHub({route,engine,onZoom}){
  const year=route.params.get('year')||'2015';
  if(route.path==='/maintenance/schedule')return <Schedule engine={engine} year={year} filters={maintenanceFilters(route.params)}/>;
- if(route.path.startsWith('/maintenance/'))return <Guide key={route.path} id={decodeURIComponent(route.path.slice('/maintenance/'.length))} engine={engine} year={year} onZoom={onZoom} filters={maintenanceFilters(route.params)}/>;
+ if(route.path.startsWith('/maintenance/'))return <Guide key={route.path} id={decodeURIComponent(route.path.slice('/maintenance/'.length))} engine={engine} year={year} onZoom={onZoom} filters={maintenanceFilters(route.params)} section={route.params.get('section')||''}/>;
  return <Hub route={route} engine={engine}/>;
 }
