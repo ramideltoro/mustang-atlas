@@ -93,3 +93,7 @@ Optional `thumbnailMode:"explicit-only"` disables automatic image fallback for a
 Factory brake fitment is shared by article discovery and workshop authoring. Explicit front-caliper types and reviewed base/SVT procedure pairs have distinct application rules; generic diagnostic chapters remain shared. See [configuration evidence](WORKSHOP-FITMENT.md) for the original-equipment scope and the distinction between engine choice and an optional brake package.
 
 Run `node scripts/audit-maintenance-guides.mjs` to audit both guide files, every pagination page, classifications, vehicle scope, local media, care/schedule links and private-field suppression. When `content/workshop-coverage.json` exists, the audit also checks document hashes, accepted guide bindings and section ranges (character offsets in `documents.text`, start inclusive/end exclusive). Coverage counts distinguish covered, pending, pointer-only and reserved documents; referenced articles alone do not count as fully explained workshop coverage.
+
+### Editorial cover illustrations
+
+Article `thumbnail` can now have `kind: "editorial-illustration"` and `generated: true` when no suitable image exists in that article. These original conceptual covers use `/thumbnails/*.svg`; they are not technical assembly diagrams. Existing article illustrations keep their previous metadata. Workshop guides add `cardThumbnail` for consistent listing artwork; `thumbnail` retains its existing technical-hero semantics and can remain null. Both are null for an incompatible guide configuration.

@@ -1,3 +1,4 @@
+import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 import React,{useMemo,useState} from 'react';
 import {marked} from 'marked';
 import {AlertTriangle,ArrowRight,BookOpen,Bookmark,Check,ChevronDown,ClipboardList,FileText,FlaskConical,Info,Lightbulb,Link,ListTree,PlayCircle,Printer,RotateCw,Wrench} from 'lucide-react';
@@ -116,6 +117,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
    {data.section?.title&&<p>{data.section.title}</p>}
    <div className="document-toolbar"><span className="article-toolbar-label"><BookOpen size={17}/> Your workshop companion</span><div><button className={'icon-button '+(saved?'active':'')} onClick={()=>onBookmark(data)} aria-label={saved?'Remove saved article':'Save article'} title={saved?'Saved':'Save article'}><Bookmark size={17} fill={saved?'currentColor':'none'}/></button><button className="icon-button" onClick={copy} aria-label="Copy link" title="Copy link">{copied?<Check size={17}/>:<Link size={17}/>}</button><button className="icon-button" onClick={()=>window.print()} aria-label="Print article" title="Print"><Printer size={17}/></button></div></div>
   </header>
+  {!mismatch&&data.thumbnail?.generated&&<ArticleThumbnail item={data} className="document-cover"/>}
   {mismatch?<section className="engine-mismatch"><Info size={24}/><h2>This article belongs to a different engine.</h2><p>It covers {data.engines.join(', ')}. Your filter is set to {engine}. Choose All or a matching engine in the top-right selector to read it.</p><a className="text-link" href={'#/library?system='+encodeURIComponent(data.systemId)}>Find articles for your engine <ArrowRight size={16}/></a></section>:<div className="document-layout">
    <article className="article-body" aria-label="Workshop article">
     <ArticleContents entries={outline} onJump={jump}/>

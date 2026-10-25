@@ -75,3 +75,7 @@ Scheduled care is in `content/maintenance-guides.json`; the workshop expansion i
 ## Original image quality
 
 The reader uses verified, unresized Ford illustrations when available, with a shared image mapping for documents and glossary entries. Small tool previews remain compact; the image viewer offers Fit, true 100% size, and scrollable zoom. Vector diagrams remain scalable. See the image recovery workflow in [deployment and operations](docs/DEPLOYMENT.md).
+
+## Appearance and navigation
+
+Search is available in the header across all pages. Vehicle systems and subsections stay in the sidebar, including on phones. The header palette button offers six persistent themes matching NutsNews. Every article and guide card has a relevant thumbnail, with independently drawn topic illustrations filling missing images. See [appearance and thumbnail coverage](docs/APPEARANCE.md).

@@ -1,3 +1,4 @@
+import {editorialThumbnail} from '../shared/article-thumbnail.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { ENGINE_OPTIONS, documentApplicability, engineFilter, isPublicDocument, selectThumbnail, sectionFor, stripPrivateMetadata } from './catalog.mjs';
@@ -207,7 +208,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
     }
     return null;
   }
-  function card(g, opts) { return { id: g.id, title: g.title, summary: g.summary, categoryId: g.categoryId, systemId:g.systemId,taskType:g.taskType,difficulty:g.difficulty, interval: g.when.summary, ruleIds: g.ruleIds || [], href: localHref(g.id), applicability: applicability(g.applicability, opts), ...(g.thumbnailMode ? {thumbnailMode:g.thumbnailMode} : {}), thumbnail: thumbnail(g, opts) }; }
+  function card(g, opts) { const image=thumbnail(g,opts); return { id: g.id, title: g.title, summary: g.summary, categoryId: g.categoryId, systemId:g.systemId,taskType:g.taskType,difficulty:g.difficulty, interval: g.when.summary, ruleIds: g.ruleIds || [], href: localHref(g.id), applicability: applicability(g.applicability, opts), ...(g.thumbnailMode ? {thumbnailMode:g.thumbnailMode} : {}), thumbnail: image, cardThumbnail: fits(g.applicability,opts) ? (image||editorialThumbnail(g)) : null }; }
   function publicCopy(value) {
     const clean=v=>Array.isArray(v)?v.map(clean):object(v)?Object.fromEntries(Object.entries(v).filter(([k])=>!['sourceRefs','evidence','source_hash','primaryDocumentIds'].includes(k)).map(([k,v])=>[k,clean(v)])):v;
     return stripPrivateMetadata(internalizeMaintenanceReferences(clean(structuredClone(value))));
