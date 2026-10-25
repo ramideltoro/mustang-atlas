@@ -41,12 +41,14 @@ export function guideOutline(guide){
   [guide.introduction,'understand','Understand the task'],
   [guide.why,'why','Why it matters'],
   [guide.prepare?.length,'prepare','Before you start'],
+  [guide.visualGuide,'visual-guide','Head bolts: order & stages'],
   [guide.steps?.length,'steps','What to do'],
   [guide.diagnostics?.length,'diagnostic-decisions','Make sense of the findings'],
   [guide.verification?.length,'verify-results','Check the result'],
   [guide.watchFor?.length,'watch-for','Signs to investigate'],
   [guide.notes?.length,'keep-in-mind','Keep in mind'],
   [guide.procedures?.length,'repair-guides','Related workshop articles'],
+  [guide.references?.length,'online-references','Online references'],
  ].filter(([visible])=>visible).map(([,id,title])=>({id,title}));
 }
 export function maintenanceLink(item){

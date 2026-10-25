@@ -36,6 +36,10 @@ const idArray = (v = []) => Array.isArray(v) && v.length <= 150 && v.every(safeI
 const fitValid = v => object(v) && Array.isArray(v.engines) && v.engines.length > 0 && v.engines.every(e => ENGINE_OPTIONS.includes(e)) && new Set(v.engines).size === v.engines.length && Array.isArray(v.years) && v.years.length > 0 && v.years.every(y => Number.isInteger(y) && y >= 1900 && y <= 2100) && (!v.equipment || safeText(v.equipment, 1000)) && (!v.market || safeText(v.market, 240));
 const proseRows = (v = [], field = 'body') => Array.isArray(v) && v.length <= 60 && v.every(s => object(s) && safeText(s.title, 240) && safeText(s[field]));
 const diagnosticRows = (v = []) => Array.isArray(v) && v.length <= 60 && v.every(s => object(s) && ['finding','meaning','next'].every(k => safeText(s[k], 4000)));
+const referenceRows = (v = []) => Array.isArray(v) && v.length <= 30 && v.every(r => {
+  if (!object(r) || !safeText(r.title,300) || !safeText(r.description,2000) || !safeText(r.url,2000)) return false;
+  try { const u=new URL(r.url); return u.protocol==='https:' && !u.username && !u.password; } catch { return false; }
+});
 const procedureFitValid = v => v === undefined || (object(v) && (!('engines' in v) || (Array.isArray(v.engines) && v.engines.length > 0 && v.engines.every(e => ENGINE_OPTIONS.includes(e)) && new Set(v.engines).size === v.engines.length)) && (!('years' in v) || (Array.isArray(v.years) && v.years.length > 0 && v.years.every(y => Number.isInteger(y) && y >= 1900 && y <= 2100))) && (!('equipment' in v) || safeText(v.equipment,1000)) && (!('market' in v) || safeText(v.market,240)));
 const localHref = id => '#/maintenance/' + id;
 const normalizeSearch = value => String(value).normalize('NFKC').replace(/[\u2018\u2019\u02bc]/g,"'").replace(/[\u2010-\u2015\u2212]/g,'-').toLowerCase();
@@ -151,6 +155,8 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
       else if (g.thumbnailMode !== undefined && g.thumbnailMode !== 'explicit-only') reason = 'invalid-thumbnail-mode';
       else if (g.hero && (!object(g.hero) || !g.sourceRefs.some(r => r.documentId === g.hero.documentId) || (g.hero.mediaId && !safeId(g.hero.mediaId)))) reason = 'invalid-hero';
       else if (g.thumbnailMode === 'explicit-only' && g.hero && !safeId(g.hero.mediaId)) reason = 'invalid-hero';
+      if (!reason && !referenceRows(g.references)) reason = 'invalid-public-references';
+      if (!reason && g.visualGuide !== undefined && (g.visualGuide !== 'v6-37-head-gasket' || g.applicability.engines.length !== 1 || g.applicability.engines[0] !== '3.7L' || g.applicability.years.length !== 1 || g.applicability.years[0] !== 2015 || !['G1681515','G1681516'].every(id=>g.sourceRefs.some(r=>r.documentId===id)))) reason = 'invalid-visual-guide';
       if (!reason && workshop && (!idArray(g.primaryDocumentIds) || !g.primaryDocumentIds?.length || g.primaryDocumentIds.some(id => !g.procedures.some(p => p.documentId === id)))) reason = 'invalid-primary-procedures';
       if (!reason && workshop) {
         // Supporting references such as lifting or surface cleaning do not
@@ -215,7 +221,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
   }
   function detail(id, input = {}) {
     refresh(); const g = guides.get(id); if (!g) return null; const opts = options(input);
-    return publicCopy({ ...card(g, opts), introduction: g.introduction, why: g.why, when: g.when, prepare: g.prepare || [], steps: g.steps || [], watchFor: g.watchFor || [], notes: g.notes || [], diagnostics:g.diagnostics||[],verification:g.verification||[],
+    return publicCopy({ ...card(g, opts), introduction: g.introduction, why: g.why, when: g.when, prepare: g.prepare || [], steps: g.steps || [], watchFor: g.watchFor || [], notes: g.notes || [], diagnostics:g.diagnostics||[],verification:g.verification||[],references:g.references||[],visualGuide:fits(g.applicability,opts)?g.visualGuide:undefined,
       procedures: fits(g.applicability, opts) ? g.procedures.map(p => relatedDocument(p, opts, g.applicability, g.thumbnailMode)).filter(Boolean) : [],
       relatedGuides: (g.relatedGuideIds || []).filter(id => id !== g.id && guides.has(id) && fits(guides.get(id).applicability, opts)).map(id => card(guides.get(id), opts)), sources: sourceList(g.evidence) });
   }

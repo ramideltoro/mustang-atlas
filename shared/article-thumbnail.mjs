@@ -1,5 +1,6 @@
 // Topic illustrations are conceptual covers, never substitutes for repair diagrams.
 const rules=[
+ ['head-gasket',/head gasket|head-gasket/i,'Cylinder head gasket'],
  ['compression',/compression|leak.?down|cylinder pressure/i,'Cylinder pressure testing'],
  ['oil',/oil|lubricat|dipstick/i,'Engine lubrication'],
  ['filter',/air cleaner|airbox|air filter|cabin filter/i,'Air filtration'],

@@ -83,3 +83,8 @@ test('large catalogs keep pages bounded and recover obsolete or unaligned offset
  assert.equal(maintenancePagination(900,25).offset,24);
  assert.equal(maintenancePagination(900,-1).offset,0);
 });
+
+test('special repairs expose their visual and online reading in the guide navigation',()=>{
+ const guide={prepare:[{}],visualGuide:'v6-37-head-gasket',steps:[{}],procedures:[{}],references:[{url:'https://example.com'}]};
+ assert.deepEqual(guideOutline(guide).map(x=>x.id),['prepare','visual-guide','steps','repair-guides','online-references']);
+});

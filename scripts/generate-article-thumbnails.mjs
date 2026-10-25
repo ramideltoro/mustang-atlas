@@ -6,6 +6,7 @@ const path=d=>`<path d="${d}"/>`;
 const gauge=ring(250,130,70)+ring(250,130,54)+path('M250 130l31-35M213 99l8 8m29-30v12m38 10-8 8M180 130h15m110 0h15M250 200v30q0 30-30 30h-35q-25 0-25 25v35')+rect(135,318,50,22,3);
 const gear=ring(250,190,78)+ring(250,190,28)+Array.from({length:12},(_,i)=>`<path transform="rotate(${i*30} 250 190)" d="M238 111v-21h24v21"/>`).join('');
 const drawings={
+ 'head-gasket':path('M100 105h300v65H100zM100 245h300v70H100zM100 207h300M120 207v-15h260v15')+[165,250,335].map(x=>ring(x,140,24)+ring(x,280,24)+`<ellipse cx="${x}" cy="207" rx="26" ry="9"/>`).join('')+path('M125 100V76m250 24V76M125 325v24m250-24v24M80 190l-30 17 30 17M420 190l30 17-30 17'),
  compression:gauge+path('M130 340h60m-50 9h40'),
  oil:path('M120 155h155l18 120-24 30H116l-16-25 12-95h-30v-30h38m30 0v-40h65v40m77 35 45-40 36 16-62 65')+path('M380 220q-29 38-29 52a29 29 0 0 0 58 0q0-14-29-52Z')+path('M145 230h83m-41-20v40'),
  filter:rect(95,210,310,110,13)+path('m95 210 55-70h200l55 70M95 250h310')+Array.from({length:11},(_,i)=>path(`M${140+i*22} 158l-20 45`)).join('')+path('M200 90v32m50-32v32m50-32v32'),

@@ -10,6 +10,12 @@
       "icon": "calendar"
     },
     {
+      "id": "special",
+      "title": "Special maintenance",
+      "description": "Major, condition-based repairs explained as complete projects: diagnosis, preparation, precise assembly and checks. Start with the 3.7L V6 head-gasket guide. These are repairs when needed, not extra routine service intervals.",
+      "icon": "wrench"
+    },
+    {
       "id": "advanced",
       "title": "Advanced maintenance",
       "description": "Go beyond routine checks with measurements, targeted service and repair follow-up. Each guide explains what makes the task worthwhile, which equipment it needs and where to find the full procedure. These are condition-based jobs, not extra items to do at every oil change.",
@@ -5445,6 +5451,432 @@
           "sourceHash": "1c40ff5cbdc7db5eb4428bff2670e2864986cb0445e68ee38ef56abf0f10ea74"
         }
       ]
+    },
+    {
+      "id": "3-7l-v6-head-gasket",
+      "title": "How to replace a head gasket on the 3.7L V6",
+      "summary": "A complete job plan for the 2015 Mustang: prove the fault, work through the left or right head, protect the timing, install the gasket with new bolts, and check the repair. Includes a bolt-order explorer, Ford procedure links and supplier reading.",
+      "categoryId": "special",
+      "systemId": "engine",
+      "taskType": "repair",
+      "difficulty": "specialist",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "3.7L"
+        ],
+        "years": [
+          2015
+        ],
+        "market": "U.S. Mustang",
+        "equipment": "Factory 3.7L Duratec V6 with original-style cylinder-head fasteners. Confirm VIN and current Ford instructions; later model years and aftermarket stud kits are not covered."
+      },
+      "thumbnailMode": "explicit-only",
+      "visualGuide": "v6-37-head-gasket",
+      "searchTerms": [
+        "head gasket",
+        "headgasket",
+        "blown head gasket",
+        "3.7 V6 cylinder head gasket replacement",
+        "Cyclone V6",
+        "overheating coolant in cylinders",
+        "special maintenance"
+      ],
+      "introduction": "I think of the head gasket as the engine’s very busy border control: combustion pressure, coolant and oil all need to stay in their own lanes. Replacing it means separating a cylinder head from the block, then rebuilding that seal without losing valve timing. The gasket is thin. The job around it is not.\n\nThis guide joins Ford’s **left-head and right-head procedures** into one readable plan. LH and RH are the vehicle’s left and right when facing forward from the driver’s seat; on a U.S. left-hand-drive Mustang, LH is the driver’s side. The bank-specific workshop drawings remain the location reference.\n\n**Scope:** the catalog’s 2015 3.7L Mustang procedures in **303-01B**. Their head instructions carry a 09/16/2022 revision in the supplied collection. I have not assumed that a 2016/2017 car or a transverse 3.7L application uses every same instruction. This is an enthusiast explanation checked against those references, not a claim of a hands-on repair or independent professional certification.\n\nRead this page and its linked access procedures before opening the engine. It gives the overall sequence and the head-gasket-specific details; the linked illustrated subprocedures supply the complete pulley, timing, cover and connector operations. Keep them open as a work pack. No one wins a prize for remembering twenty disassembly branches from memory.",
+      "why": "A new gasket needs flat, undamaged mating surfaces, the correct clamp load and an engine whose cooling fault has been addressed. Replacing the seal while ignoring a warped head or the original overheating problem can leave the cause in place.\n\nI separate this job into four decisions: **Is the gasket really leaking? Are the head and block reusable? Is the valve timing correct? Does the repaired engine pass its checks?** A clean answer at each stage is more useful than a heroic pile of removed parts.",
+      "when": {
+        "kind": "condition-based",
+        "summary": "Do this repair after diagnosis identifies a failed head-to-block seal or after related head work requires a new gasket. It is not scheduled maintenance and has no routine mileage interval.",
+        "notes": [
+          "An overheating event, persistent coolant loss or a misfire is a reason to diagnose—not proof that the gasket is the cause. Identify the affected bank and the failure path before buying parts.",
+          "This is specialist engine work involving valve timing, precision measurement and a large number of dependent procedures. Arrange a machine shop for casting assessment and a capable technician for any timing or measurement work outside your equipment or experience.",
+          "Do not start or crank an engine suspected of containing liquid in a cylinder. Do not run an overheating engine just to complete the normal fuel-pressure-release routine; obtain the correct non-running isolation method first."
+        ]
+      },
+      "prepare": [
+        {
+          "title": "Choose the bank and collect the complete work pack",
+          "detail": "Open [LH cylinder head](#/document/G1681515) or [RH cylinder head](#/document/G1681516), then the [camshafts](#/document/G1681512), [VCT units](#/document/G1681532), [timing chain](#/document/G1681528), [front cover](#/document/G1681517) and [lower manifold](#/document/G1681524). Each contains prerequisites. Work on the diagnosed bank; replacing both gaskets is a separate scope decision, not an automatic instruction here."
+        },
+        {
+          "title": "Have the measurement and timing equipment ready",
+          "detail": "| Equipment | Why it belongs on the bench |\n| --- | --- |\n| Suitable hoist, approved support points and protected lifting help for the head | Access and safe handling; follow [100-02](#/document/G1663631). |\n| Calibrated torque wrenches covering the low and higher ranges, plus a torque-angle gauge | Small bolts use Nm/lb-in values; head bolts also require angle stages. |\n| Ford 303-1248 camshaft holding tools and 303-1530 chain-tensioner hold-down tool, or verified application equivalents | Control camshaft position and the secondary tensioner. |\n| Calibrated straightedge and feeler gauges | Head/block flatness and valve-clearance work. A workshop ruler is not a calibrated straightedge. |\n| Pulley puller, strap wrench and the specified seal/pulley installers | The [front-seal route](#/document/G1681513) lists 303-102, 303-1251, 303-335 and 303-409. |\n| Front-cover alignment pins and coolant-pipe seal tooling | [Front cover](#/document/G1681517): 307-399, 205-150 and 205-153. |\n| Cooling vacuum filler, suitable coolant collection equipment and refractometer | Refill without leaving air pockets; verify concentration. |\n| Capable diagnostic scan tool | Record faults, monitor temperature and perform the required Misfire Monitor Neutral Profile Correction. |\n| Plastic scraper, lint-free towels, labeled trays, bags and a clean protected bench | Keep debris out and each tappet/cap in its original position. |\n\nThese are planning requirements, not a claim that every generic tool kit fits. Check the full linked subprocedures for conditional seal tools before ordering."
+        },
+        {
+          "title": "Build the replacement-parts pile before disassembly",
+          "detail": "| Part or material | Replacement rule |\n| --- | --- |\n| Correct bank-specific head gasket and cylinder-head bolts | New gasket and new main bolts; Ford prohibits reusing the head bolts. |\n| Small M6 cylinder-head bolt | Discard and replace. It is separate from the eight main bolts. |\n| VCT-unit bolts and crankshaft-pulley bolt | New where removed by the required timing/front-seal work. |\n| Catalytic-converter flange nuts on the disturbed bank | Discard the old nuts; install new ones. |\n| Lower-intake and valve-cover gaskets | Replace the gaskets removed by those procedures. |\n| Crankshaft front seal; coolant-pump gasket and O-ring; front-cover coolant-pipe seal | Include the seals disturbed by the access route. Follow each component’s replacement instructions. |\n| Secondary timing-chain tensioner | New if the cylinder head is replaced; also do not reuse a secondary tensioner that has itself been removed. |\n| Oil filter, specified engine oil and coolant | Renew the oil/filter after the repair; refill and bleed the cooling system correctly. |\n| Motorcraft TA-357 RTV, WSE-M4G323-A6, or a currently approved exact replacement | For the front-cover joint specified by Ford, not an extra coating for the head gasket. |\n\nMatch parts to VIN and bank. Check the other seals and the A/C belt against their own removal instructions. A gasket set’s contents are a packing list, not permission to reuse something missing from the box."
+        },
+        {
+          "title": "Set up a cold, clean, organized workspace",
+          "detail": "Let the engine cool fully before opening the cooling system. Use eye protection, keep ignition sources away from fuel, collect fluids safely and follow the hoist instructions. Photograph connections; label fasteners by component and length. Make a tappet/cam-cap tray for the original positions. I like paperwork here: “this bolt probably went somewhere important” is not a filing system."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Confirm the fault and identify the affected bank",
+          "body": "Record the symptoms, trouble codes, temperature history and fluid condition. Inspect for external coolant leaks and cooling-system faults. Use the [cooling pressure-test guide](#/maintenance/cooling-pressure-leak-test) and the [cylinder leak-down guide](#/maintenance/engine-cylinder-leakdown) as applicable. Ford’s [engine diagnosis](#/document/G1804267) distinguishes leakage past valves/rings, between cylinders and into the cooling circuit. Bubbles during a correctly set up leak-down test can also indicate a casting crack. Confirm the path rather than declaring the gasket guilty from a single symptom. The catalog’s separate cranking-compression guide does not cover a 3.7L test branch, so do not borrow its other-engine setup."
+        },
+        {
+          "title": "Release fuel pressure, then isolate the battery",
+          "body": "Support the vehicle as directed by [Jacking and lifting](#/document/G1663631); the head procedure specifies Neutral on the hoist. For an engine safe to run, [fuel-pressure release](#/document/G1702143) disconnects the fuel-pump driver module beneath the left side of the rear seat cushion, idles the engine until it stops, and switches the ignition off. Then follow [battery disconnect/connect](#/document/G1692356) to disconnect the ground. Do not loosen a fuel connection as an improvised pressure-release method. If running is unsafe, stop this branch and obtain an approved non-running method."
+        },
+        {
+          "title": "Separate the affected exhaust connection",
+          "body": "Disconnect that bank’s heated oxygen-sensor and catalyst-monitor-sensor connectors. Support the exhaust as needed rather than hanging it from the wiring. Remove and discard the catalytic-converter flange nuts and clean the converter-to-manifold mating surfaces. Keep LH and RH harness labels distinct. References: [LH removal steps 4–5](#/document/G1681515), [RH removal steps 4–5](#/document/G1681516)."
+        },
+        {
+          "title": "Work through the access chain, starting with the front cover",
+          "body": "The head procedure calls for camshaft removal. Camshafts require VCT-unit removal; the VCT units require the primary timing chain; the chain requires the [front cover](#/document/G1681517). Read that chain of dependencies before turning a bolt. The front-cover route includes draining coolant, removing both valve covers, working through the crankshaft front seal/pulley and coolant pump, removing the accessory-belt tensioner, moving the generator aside and removing the intake support bracket. Use the specified cover pry pads, not the sealing face. Follow the correct underbody-shield/subframe-bracket branch for the vehicle. Catch coolant and protect the A/C belt from contamination."
+        },
+        {
+          "title": "Drain coolant and open the intake connections correctly",
+          "body": "Follow the cold-engine draining portion of [303-03B](#/document/G1694549). The [lower-intake procedure](#/document/G1681524) also requires upper-intake removal, fuel quick-release disconnection, the fuel-rail sound insulators, thermostat housing, injector connectors and rear coolant tube. It specifically says the fuel rail need not be removed from the lower-manifold assembly. Use the [coupling procedure](#/document/G1671536), cap open connections and protect intake ports. Discard the removed lower-intake gaskets. Some access operations overlap the front-cover route; perform them once and keep a job checklist."
+        },
+        {
+          "title": "Establish the timing reference before removing the primary chain",
+          "body": "Use the [3.7L timing-chain procedure](#/document/G1681528) and its actual illustrations. During its initial alignment step, rotate the crankshaft **clockwise only** and align the intake VCT marks. Remove the oil tubes and install 303-1248 holding tools as directed. If the chain’s colored links are no longer visible, mark the links at the illustrated LH/RH intake marks and the two links bracketing the crankshaft-sprocket mark before removal. Remove the tensioner, arm and lower LH guide in the given order. Keep removed VCT oil-control solenoids clean. Do not improvise timing from paint marks alone."
+        },
+        {
+          "title": "Remove that bank’s VCT units and camshafts",
+          "body": "Follow [VCT units](#/document/G1681532): compress the secondary tensioner with 303-1530, discard the VCT-unit bolts and remove the units. The separate tensioner-removal branch applies only when that tensioner must be replaced; a removed secondary tensioner cannot go back in service. Then follow [camshafts](#/document/G1681512), removing the holding tools and bearing-cap bolts in the bank-specific illustrated sequence. Mark intake/exhaust cams and retain every numbered cap in its original position. A cap from the other bank is not a spare."
+        },
+        {
+          "title": "Finish the LH or RH head-specific disconnections",
+          "body": "| LH head | RH head |\n| --- | --- |\n| Remove the ground-strap nut and strap. Disconnect CMP connectors and release the harness retainer. | Disconnect the RH CMP connectors. Disconnect the cylinder-head-temperature (CHT) sensor connector at its specified step. |\n| Remove the CMP sensors and the upper LH guide. | Remove the CMP sensors and the upper RH guide. |\n\nUse hand tools on the upper timing-chain-guide bolt. Ford warns that power tools can damage the guide. Label and remove the valve tappets, inspect them, then remove and discard the small M6 head bolt. Keep reusable tappets in their exact original positions. References: [LH steps 8–14](#/document/G1681515), [RH steps 8–14](#/document/G1681516)."
+        },
+        {
+          "title": "Lift the head and preserve the evidence",
+          "body": "Protect exposed engine cavities with clean lint-free towels. Remove and discard the main head bolts following the selected bank’s removal procedure and lift the head with controlled help. Do not lever against the gasket face or place that unprotected face on the bench. Record where the old gasket appears damaged before discarding it; that evidence helps explain the failure. Remove the old gasket. The numbered diagram later in this guide is an installation aid, not a substitute removal sequence. See [LH removal steps 15–18](#/document/G1681515) or [RH removal steps 15–18](#/document/G1681516)."
+        },
+        {
+          "title": "Clean without turning the deck into a sanding project",
+          "body": "For the **head-gasket faces**, Ford explicitly prohibits metal scrapers, wire brushes, powered abrasive discs and other abrasive cleaning. Use a plastic scraper and controlled cleanup; keep debris away from oil passages, coolant passages and cylinders. Remove the protective towels without dropping their contents into the engine. The separate [RTV cleaning article](#/document/G1692003) concerns RTV joints: do not use it to override these head-face restrictions. Flat does not mean shiny, and shiny does not mean flat."
+        },
+        {
+          "title": "Measure the head and block before buying confidence in a box",
+          "body": "Support the head with the gasket face upward. Check it with the calibrated straightedge and feeler-gauge pattern in [head distortion](#/document/G1661748); check the block using [block distortion](#/document/G1661746). The [3.7L specification table](#/document/G1681493) gives head-face flatness as 0.08 mm (0.003 in) end to end, with a 150 × 150 mm area—or full width—less than 0.05 mm (0.002 in). A machine shop should assess cracks, surface finish and repairability after an overheating failure; do not assume milling is automatically permissible. **The catalog’s block-flatness row contains inconsistent metric/imperial pairs. I have not turned those into an acceptance limit here. Verify the current Ford block specification before approving the deck.** Fel-Pro’s [surface-finish explanation](https://www.felpro.com/technical/tecblogs/surface-finish.html) is useful background; its generic examples are not substitute Mustang tolerances."
+        },
+        {
+          "title": "Place the correct new gasket and head",
+          "body": "Verify the replacement gasket’s bank and orientation against the locating dowels, fluid passages, part instructions and [LH installation step 1](#/document/G1681515) or [RH installation step 1](#/document/G1681516). Lower the head without dragging it across the gasket. Install new correct main bolts. Do not add RTV, copper spray or a homemade lubricant rule: the head procedure does not specify an extra gasket coating or an added head-bolt-thread lubricant. Resolve any replacement-part instruction conflict before tightening. If the cylinder head itself is new, include its required new secondary tensioner."
+        },
+        {
+          "title": "Tighten the eight main bolts in five separate passes",
+          "body": "Use the bank-specific bolt map in the visual guide. Work through **bolts 1 → 8 for each stage**, then return to bolt 1 for the next stage. Do not finish all five stages on one bolt before moving to the next.\n\n| Pass | Specification | What to do |\n| --- | --- | --- |\n| 1 | 20 Nm / 177 lb-in | Seat all eight in the illustrated order. |\n| 2 | 35 Nm / 26 lb-ft | Complete the second torque pass on all eight. |\n| 3 | Additional 90° | Measure a quarter-turn on each bolt in order. |\n| 4 | Additional 90° | Make another separate quarter-turn pass. |\n| 5 | Additional 45° | Finish with a separate eighth-turn pass. |\n\nUse a proper angle gauge. **lb-in and lb-ft are different units.** The angle stages are not substitute torque values and the 90° passes must not be merged. These values are for the original-style new bolts in [LH](#/document/G1681515)/[RH](#/document/G1681516) installation step 2; an aftermarket stud kit needs its own approved installation method. Do not loosen or retorque the completed head just to double-check it."
+        },
+        {
+          "title": "Refit the small bolt, tappets, guide and sensors",
+          "body": "Install the **new M6 bolt at 10 Nm / 89 lb-in** after the main bolts. Return oil-lubricated tappets to their original locations. Reconnect the RH CHT sensor where applicable. Refit the upper timing-chain guide with hand tools and tighten its bolt to **10 Nm / 89 lb-in**. Lubricate CMP sensor O-rings with clean specified engine oil; install the sensors at **10 Nm / 89 lb-in** and reconnect them. Restore the LH harness retainer and ground strap; the LH strap nut is **9 Nm / 80 lb-in**. References: the installation branches in [LH](#/document/G1681515) and [RH](#/document/G1681516)."
+        },
+        {
+          "title": "Restore the lower manifold and camshafts",
+          "body": "Use new lower-intake gaskets and its illustrated sequence at **10 Nm / 89 lb-in**. Inspect the intake for metal debris if valve/piston damage accompanied the failure; Ford specifies replacement if that debris is found. Restore the fuel, coolant and electrical connections through the [lower-intake procedure](#/document/G1681524). Keep the battery isolated and defer engine-start/road-test endpoints until the whole engine is assembled. For [camshaft installation](#/document/G1681512), establish the specified freewheeling position: crankshaft dowel at **9 o’clock**, using the instructed counterclockwise move. Keep it there through cam installation and valve-clearance checks. Set camshaft seal gaps at **12 o’clock**. Follow the bank’s cap sequence, initial 8 Nm + 45° tightening, loosening and final 8 Nm + 45° sequence exactly; do not collapse it into one pass. Check/adjust valve clearance when required, especially with new components, using [Valve clearance adjustment](#/document/G1681500)."
+        },
+        {
+          "title": "Rebuild the secondary timing assembly without skipping its branch",
+          "body": "After the specified camshaft/clearance work, move the cams to TDC and fit 303-1248 and 303-1530 as directed. The [camshaft procedure](#/document/G1681512) then instructs a **60° clockwise** crankshaft move to the dowel-at-**11 o’clock** TDC position. This is a specific step, not permission to spin an untimed engine. In [VCT installation](#/document/G1681532), align the secondary-chain colored links and the cam dowels/holes. New VCT bolts use **40 Nm (30 lb-ft), loosen one turn, 25 Nm (18 lb-ft), then 180°**. If replacing a secondary tensioner, follow its separate O-ring lubrication, seating, shipping-clip and activation steps. Center the secondary chain on its guides and release the hold-down at the prescribed point."
+        },
+        {
+          "title": "Install the primary chain and verify the marks",
+          "body": "Follow [Timing chain installation](#/document/G1681528): align the colored links with both intake VCT marks and the crankshaft-sprocket mark; refit the lower LH guide and tensioner arm. Reset the tensioner using the ratchet-detent, soft-jawed-vise and lockpin method shown, install it, then remove the lockpin. Guide and tensioner bolts are **10 Nm / 89 lb-in**. Ford’s installed-chain check specifies **48 links between the RH and LH intake marked links**, and **35 links between the LH intake marked link and the two crankshaft links**; use the drawing’s counting convention. Refit clean VCT solenoids without forcing them: **8 Nm / 71 lb-in + 20°**. Remove the cam holding tools and refit the RH/LH oil tubes as directed: **8 Nm / 71 lb-in + 45°**. Resolve any mismatch before closing the cover. A starter motor is not a timing-check tool."
+        },
+        {
+          "title": "Reseal the front cover and finish the access components",
+          "body": "Follow the [front-cover illustrations](#/document/G1681517) for the coolant-pipe seal, alignment pins, two seated block dowels and the complete bolt map. Ford specifies TA-357 RTV: a **3.0 mm** bead on the cover sealing surfaces including inner bolt bosses, plus **5.5 mm** beads at the illustrated head/block and pan/block joints. Fit the cover and initial bolts within **4 minutes** of applying sealant; finish the remaining bolts within **35 minutes**. If either window is missed, remove the sealant, clean and start again. The 22-position cover bolt pattern has different torque/angle groups—use the linked sequence, not one value for all bolts. Restore the pump, front seal/pulley, valve covers, generator, belt tensioner, brackets and shields via their own procedures. For the new crankshaft-pulley bolt, [front-seal installation](#/document/G1681513) gives **120 Nm / 89 lb-ft, loosen one turn, 50 Nm / 37 lb-ft, then 90°**. Do not substitute the head-bolt stages."
+        },
+        {
+          "title": "Reconnect the exhaust and renew the oil/filter",
+          "body": "Install new catalytic-converter flange nuts on the disturbed bank at **40 Nm / 30 lb-ft** and reconnect the exhaust-sensor connectors. Drain the engine oil and tighten the drain plug to **27 Nm / 20 lb-ft**. Install a new oil filter. The supplied head procedure explicitly says **do not lubricate its seal**, and specifies **5 Nm / 44 lb-in, then 180°** for that filter installation; do not silently substitute a general oil-change habit. If your replacement filter has conflicting fitting instructions, verify the correct part and current procedure before proceeding. Refill with specified SAE 5W-20 oil; the 3.7L service-fill reference is **6.0 U.S. qt / 5.7 L including filter**, with final level confirmed correctly on the dipstick. References: [head procedure](#/document/G1681515), [3.7L specifications](#/document/G1681493)."
+        },
+        {
+          "title": "Refill, bleed and check every disturbed system",
+          "body": "Close the drain and complete one full branch of [cooling-system filling and bleeding](#/document/G1694549). I would plan the job around the vacuum-filling equipment that procedure supports; it also contains a separate non-vacuum branch with specific speed/time cycles and repeated hot-coolant warnings. Do not combine half of each method. Use coolant meeting the current Ford requirement for the vehicle; the historical owner reference lists **12.4 U.S. qt / 11.7 L** as system capacity, not a command to force that volume into a partly drained system. Never open a hot pressure cap. Reconnect the FPDM and battery through their procedures, cycle the ignition and perform the fuel leak check **before starting**. The fuel-pressure-release page specifies a **3-second** wait during repressurization. Verify fuel/coolant hoses, ground strap, sensors, wiring retainers, belts and the removal of all tools/towels."
+        },
+        {
+          "title": "Start, monitor, correct the profile and verify the repair",
+          "body": "Start only after the engine is fully reassembled, properly filled, correctly timed and free of fuel leaks. Check for exhaust, coolant and oil leaks; monitor temperature and investigate unexpected mechanical noise or an oil-pressure warning immediately rather than continuing the test. Perform the **Misfire Monitor Neutral Profile Correction** with a suitable scan tool as required after the front-cover/front-seal work. Complete a controlled road test only after the stationary checks are satisfactory. After cooling fully, check coolant and oil levels again, inspect the disturbed joints and review fault codes. Revisit the original symptom and the reason the gasket failed—the job ends when the cause and the result both make sense."
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Coolant loss or overheating, but no confirmed head-to-block leak",
+          "meaning": "External leaks, cooling-control faults or other causes may explain the symptom.",
+          "next": "Complete cooling diagnosis before removing the head. Avoid running an engine that is overheating."
+        },
+        {
+          "finding": "Leak-down air reaches a neighboring cylinder or produces bubbles in the cooling circuit",
+          "meaning": "A gasket leak is possible; a damaged casting can also create a leak path.",
+          "next": "Use the Ford leakage interpretation and inspect the head/block before deciding which components to replace."
+        },
+        {
+          "finding": "Surface measurement fails, cracks are suspected, or the block limit is unresolved",
+          "meaning": "A new gasket alone cannot establish a sound joint.",
+          "next": "Have the casting assessed and verify the current Ford acceptance/repair specification before assembly."
+        },
+        {
+          "finding": "Timing marks, chain links or holding tools do not agree",
+          "meaning": "Valve timing has not been established reliably.",
+          "next": "Stop before cover installation or cranking. Recheck the exact 3.7L chain, VCT and camshaft branches."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Before the first start",
+          "body": "Correct bank/gasket and new fasteners recorded; all five head-bolt passes completed in order; M6 tightened separately; timing marks and link counts checked; all holding tools/towels removed; cam clearances addressed; oil and coolant filled; fuel system pressurized and leak-free."
+        },
+        {
+          "title": "During the stationary check",
+          "body": "No fuel, coolant, oil or exhaust leaks. Normal temperature behavior, no unexpected mechanical noise and no unresolved oil-pressure warning. Complete the required cooling bleed and diagnostic correction using their full procedures."
+        },
+        {
+          "title": "After the road test and full cool-down",
+          "body": "Recheck fluid levels and joints. Confirm the original symptom has gone and the original cooling or mechanical cause has been addressed. Document the parts, measurements and diagnosis for the next service."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "One number applied to every fastener",
+          "body": "The eight main head bolts, small M6 bolt, VCT bolts, cam caps, front cover and crank pulley have different instructions. Keep the component name attached to every value."
+        },
+        {
+          "title": "A generic coolant or filter instruction replacing the vehicle-specific one",
+          "body": "The supplied workshop and owner publications have different oil-specification revisions, and the head procedure’s filter-seal instruction is explicit. Use the current correct part/instructions; verify discrepancies instead of guessing."
+        },
+        {
+          "title": "A “helpful” extra gasket coating",
+          "body": "The front cover requires precisely placed RTV. That does not mean the head gasket does. Follow the gasket instructions and the Ford joint-specific procedure."
+        }
+      ],
+      "notes": [
+        "Reference hierarchy: the VIN-correct current Ford workshop procedure controls repair order, bank details and fastener values. Owner guidance covers fluids and capacities. Supplier articles explain concepts; they do not provide an alternative Mustang bolt pattern, machining allowance or torque specification.",
+        "Numerical values above were checked against the supplied 303-01B collection. The independent bolt diagrams simplify layout; verify the bank and orientation against Ford’s installation-step-2 illustration before using them. They are not to scale.",
+        "The owner reference lists oil specification WSS-M2C945-A; the later-revised head procedure lists WSS-M2C945-B1. Confirm the currently approved oil for the VIN. The block-flatness row’s inconsistent unit pairs are deliberately not republished as an acceptance limit.",
+        "Online references were checked October 25, 2026. This article is original Atlas explanatory writing; no supplier article or workshop prose is reproduced wholesale."
+      ],
+      "references": [
+        {
+          "title": "Ford · 2015 Mustang 3.7L capacities and specifications",
+          "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1660537&Uid=G1660535&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259",
+          "description": "Primary owner guidance for the 6.0-qt oil service fill, historical coolant capacity and original fluid specifications. Does not supply head-bolt or valve-timing instructions."
+        },
+        {
+          "title": "Fel-Pro · Torque-to-yield head bolts",
+          "url": "https://www.felpro.com/en-ca/parts/engine-repair/head-bolt-sets.html",
+          "description": "Explains why new torque-to-yield bolts and the correct torque/angle process matter. General background; Ford’s 3.7L values govern this guide."
+        },
+        {
+          "title": "Fel-Pro · Preparing a head-gasket surface",
+          "url": "https://www.felpro.com/technical/tecblogs/surface-finish.html",
+          "description": "Explains surface finish, flatness and why the gasket and casting requirements must match. Do not substitute its generic examples for the Mustang specifications."
+        },
+        {
+          "title": "Fel-Pro · Use and misuse of sealers",
+          "url": "https://www.felpro.com/technical/field-test-garage/use-and-misuse-of-sealers.html",
+          "description": "Supplier video page explaining that sealant belongs only where the particular gasket/joint requires it. Applies as background, not as a new RTV instruction for this head gasket."
+        }
+      ],
+      "procedures": [
+        {
+          "documentId": "G1681515",
+          "purpose": "303-01B · Left cylinder head. Removal, gasket replacement, new fasteners, five-stage tightening and final checks. Installation step 2 contains the LH bolt-order illustration."
+        },
+        {
+          "documentId": "G1681516",
+          "purpose": "303-01B · Right cylinder head. The RH sensor branch, gasket, fasteners and tightening. Installation step 2 contains the RH bolt-order illustration."
+        },
+        {
+          "documentId": "G1681512",
+          "purpose": "303-01B · Camshafts. Bearing-cap sequences, crankshaft freewheeling position, oil tubes, camshaft seals and clearance checks."
+        },
+        {
+          "documentId": "G1681532",
+          "purpose": "303-01B · Variable camshaft timing units. Secondary-chain alignment, new VCT bolts and the separate replacement-tensioner branch."
+        },
+        {
+          "documentId": "G1681528",
+          "purpose": "303-01B · Primary timing chain. Initial alignment, holding tools, tensioner resetting, colored links and final link-count check."
+        },
+        {
+          "documentId": "G1681517",
+          "purpose": "303-01B · Front cover. Access route, RTV bead locations, assembly time limits, numbered bolt groups and scan-tool correction."
+        },
+        {
+          "documentId": "G1681513",
+          "purpose": "303-01B · Crankshaft front seal and pulley. Puller/installer tools, new seal and bolt, staged pulley tightening."
+        },
+        {
+          "documentId": "G1681524",
+          "purpose": "303-01B · Lower intake manifold. Fuel/coolant connections, new gaskets, inspection and the 10 Nm bolt specification."
+        },
+        {
+          "documentId": "G1681529",
+          "purpose": "303-01B · Upper intake manifold. Access to the lower manifold and attached connections."
+        },
+        {
+          "documentId": "G1681530",
+          "purpose": "303-01B · LH valve cover. New gasket, conditional seal replacement and its installation illustration."
+        },
+        {
+          "documentId": "G1681531",
+          "purpose": "303-01B · RH valve cover. RH-specific attachments, new gasket and installation illustration."
+        },
+        {
+          "documentId": "G1681500",
+          "purpose": "303-01B · Valve clearance adjustment. Measure and select the correct tappet when required."
+        },
+        {
+          "documentId": "G1681493",
+          "purpose": "303-01B · 3.7L specifications. Head flatness, valve clearances and service oil fill. The block-flatness unit discrepancy is flagged in this guide."
+        },
+        {
+          "documentId": "G1661748",
+          "purpose": "303-00 · Cylinder head distortion. Calibrated straightedge, feeler gauges and measurement pattern."
+        },
+        {
+          "documentId": "G1661746",
+          "purpose": "303-00 · Cylinder block distortion. Deck inspection before deciding whether the joint can be resealed."
+        },
+        {
+          "documentId": "G1692003",
+          "purpose": "303-00 · RTV surface preparation. Applies to the front-cover/RTV joints; it does not override the head-gasket ban on abrasives."
+        },
+        {
+          "documentId": "G1694549",
+          "purpose": "303-03B · Cooling-system draining, vacuum filling and bleeding. Follow one complete filling branch, with its hot-coolant precautions."
+        },
+        {
+          "documentId": "G1694559",
+          "purpose": "303-03B · Coolant pump. New gasket/O-ring and belt-protection details during front-cover access."
+        },
+        {
+          "documentId": "G1694563",
+          "purpose": "303-03B · Thermostat housing. Required connection work in the lower-manifold and pump procedures."
+        },
+        {
+          "documentId": "G1702143",
+          "purpose": "310-00B · Fuel pressure release. FPDM disconnection, isolation and the final repressurization/leak check."
+        },
+        {
+          "documentId": "G1671536",
+          "purpose": "310-00B · Fuel quick-release coupling. Correct disconnect/reconnect and connection check."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "414-01 · Battery disconnect/connect. Isolation and restoration requirements."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "100-02 · Jacking and lifting. Approved vehicle support and lifting points."
+        },
+        {
+          "documentId": "G1804267",
+          "purpose": "303-00 · Engine diagnosis. Cylinder leakage interpretation and investigation of overheating, contamination and mechanical faults."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681515",
+          "sourceHash": "cd6820fea735473903d1f24628fad8ce7db41048c43c654e7db98c3f1e272c22"
+        },
+        {
+          "documentId": "G1681516",
+          "sourceHash": "7308c9c82cc7dc8db3590c88e448c091a9571bbd93079e73e9450a33cb90a255"
+        },
+        {
+          "documentId": "G1681512",
+          "sourceHash": "651831d4ce24ff21177e39db3266239ef4cd9ca273247d096ca2f82bb1c6d64c"
+        },
+        {
+          "documentId": "G1681532",
+          "sourceHash": "159995cfdc3952b641f93e661e606558ab882ba140bd73dee519b028aeed4c72"
+        },
+        {
+          "documentId": "G1681528",
+          "sourceHash": "3293cb15b95aa03309ed82875cf0595c837719b4a1e920ef917aebfc792aa1a1"
+        },
+        {
+          "documentId": "G1681517",
+          "sourceHash": "61a306a2773351d1dae57497236e3558236c409620ac918684b7de26b0f07d68"
+        },
+        {
+          "documentId": "G1681513",
+          "sourceHash": "900491496a8a4feea78e3d1f49bcfb63c8d0a5538f6b92bb971a431449fdb022"
+        },
+        {
+          "documentId": "G1681524",
+          "sourceHash": "8db5a6ce08e65b775087020e9aa73591ebbed855629ebd17935543cf915a9981"
+        },
+        {
+          "documentId": "G1681529",
+          "sourceHash": "81ac09a43deb0a82d504fa56878d037ac20b176d388222247ec0d8af81a4f2c6"
+        },
+        {
+          "documentId": "G1681530",
+          "sourceHash": "3f463879683bbaf9812d4341330d459675dc71e9887b7b6cd9640ff034ec9fed"
+        },
+        {
+          "documentId": "G1681531",
+          "sourceHash": "36e469ea712b9cb2352fe17191f2ba6326338a1927dba71690bcd342b6e06c29"
+        },
+        {
+          "documentId": "G1681500",
+          "sourceHash": "9219a6c65aaff554bb8c8f358b4f4054e99deeb03d66d8dab0bde66e4a006847"
+        },
+        {
+          "documentId": "G1681493",
+          "sourceHash": "7c832e9c9589d2ef062519157b826c3a139d53887874a67736973388d1214b67"
+        },
+        {
+          "documentId": "G1661748",
+          "sourceHash": "244ef7491ab2e2f7691543e4a3cb1c8ba82959a8156ed1c1ef8778c073f34031"
+        },
+        {
+          "documentId": "G1661746",
+          "sourceHash": "1f278b02c0504b860fd2239e18d294e6ac499efa183f895d760e1c6cfef6cd5b"
+        },
+        {
+          "documentId": "G1692003",
+          "sourceHash": "246a69b58a97a2f688f2a1ab4eed89624d38214cd36133c31c10a1714ffa616d"
+        },
+        {
+          "documentId": "G1694549",
+          "sourceHash": "19af5f7761488665bceba63cc8abbf170be49ef78f877a5c35db743cf5f3c027"
+        },
+        {
+          "documentId": "G1694559",
+          "sourceHash": "ca423ed7cd87a7fd3ab1af420b880c1d66573e9bd95d09bc8f0af22c21874ca5"
+        },
+        {
+          "documentId": "G1694563",
+          "sourceHash": "afbdd6ab09b65d15253a44c94f89b14bcc7b981004516606200778b0794e8e13"
+        },
+        {
+          "documentId": "G1702143",
+          "sourceHash": "7df5cd4d49fcc8f5c7ca5d457da162b088598b38f87401c74abc7c3ebe0b6bbd"
+        },
+        {
+          "documentId": "G1671536",
+          "sourceHash": "f8ba01bf67763359ac6725e5816ad3e39283e6d81849c554e2ee679893b75a3b"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1804267",
+          "sourceHash": "73c4e15b76b2f0246afe067e2f8b32c725a37d43f077f3d1872d523dab5c9c4e"
+        }
+      ],
+      "relatedGuideIds": [
+        "engine-cylinder-leakdown",
+        "cooling-pressure-leak-test",
+        "coolant-change"
+      ],
+      "evidence": []
     }
   ],
   "schedule": {

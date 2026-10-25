@@ -199,3 +199,26 @@ test('explicit-only mode rejects malformed selections and cannot replace a tiny 
   const g={...workshopGuide(),thumbnailMode:'explicit-only'};mutate(g);workshopFile(dir,[g]);assert.equal(catalog.detail(g.id),null);
  }
 });
+
+test('public reading references preserve primary-source URLs and reject unsafe destinations',t=>{
+ const data=seed();data.guides[0].references=[{title:'Ford owner reference',url:'https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1660537&variantid=3259',description:'Vehicle capacities.'}];
+ const {catalog}=fixture(t,data);assert.deepEqual(catalog.detail('oil').references,data.guides[0].references);
+ for(const url of ['javascript:alert(1)','http://example.com','https://user:secret@example.com','not a URL']){
+  const invalid=seed();invalid.guides[0].references=[{title:'Reference',url,description:'Background.'}];
+  assert.equal(fixture(t,invalid).catalog.detail('oil'),null,url);
+ }
+});
+test('head-bolt visual is bound to both current source heads and the documented engine/year',t=>{
+ function make(change=()=>{}){
+  const data=seed(),g=data.guides[0];g.applicability={engines:['3.7L'],years:[2015]};g.visualGuide='v6-37-head-gasket';
+  g.sourceRefs.push(...['G1681515','G1681516'].map(documentId=>({documentId,sourceHash:'hash-'+documentId})));change(g);
+  const f=fixture(t,data);
+  for(const id of ['G1681515','G1681516'])f.db.prepare('INSERT INTO documents SELECT ?,title,kind,system_id,section_code,section_title,engines,?,media,blocks FROM documents WHERE id=?').run(id,'hash-'+id,'G37');
+  // The catalog snapshots document identities at creation.
+  return createMaintenanceGuideCatalog(f.db,{contentDir:f.dir});
+ }
+ const catalog=make();assert.equal(catalog.detail('oil',{engine:'3.7L',year:2015}).visualGuide,'v6-37-head-gasket');
+ assert.equal(catalog.detail('oil',{engine:'5.0L'}).visualGuide,undefined);
+ assert.equal(catalog.detail('oil',{year:2016}).visualGuide,undefined);
+ for(const change of [g=>g.applicability.engines=['5.0L'],g=>g.applicability.years=[2016],g=>g.sourceRefs.pop(),g=>g.sourceRefs.at(-1).sourceHash='stale',g=>g.visualGuide='unverified'])assert.equal(make(change).detail('oil'),null);
+});
