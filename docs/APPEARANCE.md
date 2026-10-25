@@ -37,3 +37,9 @@ node scripts/audit-article-thumbnails.mjs http://127.0.0.1:3186
 ```
 
 The audit paginates the full public article and guide catalogs and checks every distinct cover URL's HTTP status and image content type. Initial release: 2,264 articles, 948 guides, 1,877 unique thumbnail URLs; 372 article and 286 guide gaps filled with original illustrations. No technical procedure or source illustration was replaced.
+
+## Release verification — October 25, 2026
+
+Deployed application commit `eccd91a5f03e7d4ee6675e30e81d35733b7b6770` through the existing VPS Docker service. The build, all 263 automated tests, GitHub CI, and the complete public catalog audit passed. The live thumbnail audit checked all 3,212 article/guide cards and 1,877 distinct image URLs with no errors. Production browser checks confirmed header search, sidebar subsection navigation, removal of duplicate page controls, and theme persistence after reload; no browser console warnings or errors were recorded.
+
+The previous Docker image is retained as `mustang-atlas-web:before-20261025-appearance`. Changed-source backups are in `/srv/mustang-atlas-rollback-20261025-appearance/source.tar.gz`. To roll back, restore that archive into `/srv/mustang-atlas`, retag the retained image as `mustang-atlas-web:latest`, and run `docker compose up -d --no-build web` there. This release did not change the database, Caddy or DNS.
