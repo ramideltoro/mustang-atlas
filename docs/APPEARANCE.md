@@ -8,6 +8,8 @@ Search lives in the header and opens a keyboard-accessible dialog (`Cmd/Ctrl+K`)
 
 The home, library, workshop hub and glossary no longer render duplicate search bars. Library system/subsection navigation stays in the sidebar and its mobile drawer. The duplicate “Explore [system]” subsection panel has been removed. Article outlines and technical tables are retained.
 
+The footer follows NutsNews's compact fixed-bottom layout: round home, search and theme controls, a pill-shaped navigation menu, and a small copyright line. The former “Know your Mustang. Enjoy the drive.” promotional block and multi-column footer links have been removed. Library, Maintenance, Glossary and Saved remain accessible in the footer; system navigation stays in the sidebar. `src/Footer.jsx` and `src/footer.css` implement the dock. A resize observer reserves its actual height so wrapped links, text zoom and device safe areas do not obscure the end of a page. Phone controls have 44-pixel touch targets; the dock is hidden when printing.
+
 ## Theme preferences
 
 The palette selector in the header offers the six themes used on NutsNews: Amber, Sakura, SaaS, Foxy, Butterfly and Bambi. Sakura and Foxy use light surfaces; the others use dark surfaces. Theme names, palette families and swatch selection follow NutsNews; Atlas controls and technical reading layouts remain its own.
@@ -15,6 +17,8 @@ The palette selector in the header offers the six themes used on NutsNews: Amber
 `src/theme-model.mjs` defines the options and validates the preference. `public/theme-init.js` restores it before paint without an inline script or relaxing CSP. The key is `mustang-atlas:theme:v1`. Unknown values fall back to Amber; storage failures still allow changing the theme for the current visit. Changes synchronize between tabs. No account, cookie or network service is needed.
 
 The shared semantic tokens in `src/themes.css` cover navigation, cards, reader text, callouts, tables, forms, glossary dialogs and the workshop pages. Source illustrations keep their original pixels and a light canvas. Semantic diagnostic and warning colors remain distinct from decorative accents. Print styles remain paper-friendly.
+
+Header and footer theme buttons use one shared `ThemeProvider`, so they open the same dialog and immediately reflect the same choice.
 
 ## Thumbnail coverage
 
@@ -43,3 +47,5 @@ The audit paginates the full public article and guide catalogs and checks every 
 Deployed application commit `eccd91a5f03e7d4ee6675e30e81d35733b7b6770` through the existing VPS Docker service. The build, all 263 automated tests, GitHub CI, and the complete public catalog audit passed. The live thumbnail audit checked all 3,212 article/guide cards and 1,877 distinct image URLs with no errors. Production browser checks confirmed header search, sidebar subsection navigation, removal of duplicate page controls, and theme persistence after reload; no browser console warnings or errors were recorded.
 
 The previous Docker image is retained as `mustang-atlas-web:before-20261025-appearance`. Changed-source backups are in `/srv/mustang-atlas-rollback-20261025-appearance/source.tar.gz`. To roll back, restore that archive into `/srv/mustang-atlas`, retag the retained image as `mustang-atlas-web:latest`, and run `docker compose up -d --no-build web` there. This release did not change the database, Caddy or DNS.
+
+Footer refresh rollback: restore `/srv/mustang-atlas-rollback-20261025-footer/source.tar.gz`, retag `mustang-atlas-web:before-20261025-footer` as `mustang-atlas-web:latest`, and recreate the web service with `docker compose up -d --no-build web`. The database and reverse proxy are unchanged.

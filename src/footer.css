@@ -1,0 +1,36 @@
+/* A compact NutsNews-style dock. Its measured height keeps page content accessible. */
+:root{--atlas-footer-height:84px;scroll-padding-bottom:calc(var(--atlas-footer-height) + 20px)}
+.main-shell{padding-bottom:var(--atlas-footer-height)}
+.atlas-footer{
+ position:fixed;inset:auto 0 0 var(--sidebar);z-index:25;
+ padding:10px 20px calc(9px + env(safe-area-inset-bottom,0px));
+ border-top:1px solid var(--line);
+ background:color-mix(in srgb,var(--surface-0) 91%,transparent);
+ backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+ box-shadow:0 -12px 36px color-mix(in srgb,var(--surface-0) 30%,transparent),0 0 28px color-mix(in srgb,var(--accent) 7%,transparent);
+}
+.footer-inner{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;align-items:center;gap:7px}
+.footer-toolbar{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 14px;max-width:100%}
+.footer-shortcuts{display:flex;align-items:center;gap:7px}
+.footer-icon-button{
+ display:grid;place-items:center;width:40px;height:40px;flex-shrink:0;padding:0;
+ color:var(--accent-text);background:var(--surface-1);border:1px solid var(--line);border-radius:50%;
+ box-shadow:inset 0 1px 0 color-mix(in srgb,var(--heading) 6%,transparent);
+ transition:background .18s,border-color .18s,transform .18s;
+}
+.footer-icon-button:hover{background:var(--accent-wash);border-color:var(--line-strong);transform:translateY(-2px)}
+.footer-nav{display:flex;justify-content:center;flex-wrap:wrap;max-width:100%;padding:3px;border:1px solid var(--line);border-radius:28px;background:var(--surface-1)}
+.footer-nav a{display:flex;align-items:center;justify-content:center;min-height:34px;padding:5px 13px;border-radius:24px;color:var(--accent-text);font-size:12px;font-weight:500;line-height:1.4;transition:background .18s}
+.footer-nav a:hover{background:var(--accent-wash);color:var(--heading)}
+.footer-copyright{font-size:10px;line-height:1.5;color:var(--muted);text-align:center}
+.footer-copyright a{font-weight:600;color:var(--accent-text)}
+.footer-copyright a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){
+ :root{--atlas-footer-height:132px}
+ .atlas-footer{left:0;padding:8px max(12px,env(safe-area-inset-left,0px)) calc(8px + env(safe-area-inset-bottom,0px))}
+ .footer-toolbar{gap:6px 10px}
+ .footer-icon-button{width:44px;height:44px}
+ .footer-nav a{min-height:44px;padding:5px 8px}
+}
+@media(prefers-reduced-motion:reduce){.footer-icon-button,.footer-nav a{transition:none}.footer-icon-button:hover{transform:none}}
+@media print{.atlas-footer{display:none!important}.main-shell{padding-bottom:0}}
