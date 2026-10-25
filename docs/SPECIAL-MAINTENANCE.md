@@ -32,3 +32,11 @@ Codex authorship and reference checks do not claim hands-on execution or profess
 Run `npm test`, `npm run build`, and `node scripts/audit-maintenance-guides.mjs`. Check the special category, header search, configuration mismatch, glossary popup, LH/RH orientation, all five passes and bolt controls, online references, original thumbnail, mobile tables and section jumps. The catalog's public projection must preserve the article and links without exposing private source hashes.
 
 Deploy application files plus the two changed content files (`maintenance-guides.json`, `glossary.json`). Preserve the prior source/content archive and Docker image. Rollback must restore **both content files and the prior image**, because content is mounted separately. No database, media archive, Caddy or DNS change is needed.
+
+### Release verification, October 25, 2026
+
+Released application/content commit `a60b001e0b83e40149d50b12032953747657771d` to the backend VPS. All 266 tests and the production build passed; GitHub CI run 40228219818 succeeded. The unmodified full maintenance audit completed with **949 guides, 4,930 workshop article links, 4,121 engine checks and zero issues**. The coverage inventory had no pending or missing documents; its documented unsupported/partial branches remain unchanged.
+
+Production checks confirmed 21 steps, 24 workshop links, four online references, the original thumbnail, the functioning bank/pass/bolt controls, and suppression for an incompatible engine. Local browser checks covered 320px and 390px widths, glossary popups, header search, section jumps and Amber/Sakura themes. The container reported healthy after activation.
+
+Rollback source/content: `/srv/mustang-atlas-rollback-20261025-head-gasket/source.tar.gz`. Previous image: `mustang-atlas-web:before-20261025-head-gasket`. Preserve these together when rolling back.
