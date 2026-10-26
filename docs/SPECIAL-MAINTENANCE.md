@@ -71,3 +71,11 @@ Six new glossary entries explain primary/secondary chains and tensioners, camsha
 Validation: all 270 automated tests and the production build pass. Catalog validation reports 950 guides, two Special maintenance guides and zero errors. Targeted checks cover 42 consecutive steps, seven complete phases, all 23 bound inline source links, search discovery, private-field suppression, three incompatible engines, an incompatible year, and preservation of the head-gasket article. The full first-release corpus audit above was not rerun for this addition.
 
 Browser validation covered desktop, 390px access steps, a 320px stacked relationship diagram, the collapsed mobile contents menu, source/section links, glossary popups, Special maintenance thumbnails, header search and incompatible-engine withholding. The head-gasket guide now links to this walkthrough from its related guides.
+
+### Timing-chain release verification, October 26, 2026
+
+Released application/content commit `bd90bdf1e3a2fb27dd12c482b74a43b970921973`; GitHub CI run [40407177816](https://github.com/ramideltoro/mustang-atlas/actions/runs/40407177816) passed. Before activation, the new container validated the complete catalog against the production database with the staged content. Final editorial cleanup made six reference descriptions specific to the timing-chain job; the catalog and targeted checks passed again afterward.
+
+Production checks confirmed the new JavaScript/CSS bundles, 42 steps, seven phases, 23 workshop references, the timing thumbnail, successful health response and incompatible-engine withholding. The published article's access-step jump and primary/secondary interaction work, with no browser console errors. The Docker container is healthy. The new article is linked from Special maintenance and the head-gasket article, and is discoverable through header search. No database, media archive, Caddy or DNS changes were needed.
+
+Rollback source/content: `/srv/mustang-atlas-rollback-20261026-timing-chain/source.tar.gz`. Previous image: `mustang-atlas-web:before-20261026-timing-chain`. Restore the prior content and image together. The previous head-gasket walkthrough release remains the rollback baseline.
