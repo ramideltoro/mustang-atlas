@@ -38,11 +38,12 @@ export function guideOutline(guide){
  if(!guide)return [];
  return [
   [guide.visualGuide==='v6-37-head-gasket','gasket-location','Where the head gasket lives'],
+  [guide.visualGuide==='v6-37-timing-chain','timing-drive','Meet the timing drive'],
   [guide.when?.summary,'when',guideWhenTitle(guide)],
   [guide.introduction,'understand','Understand the task'],
   [guide.why,'why','Why it matters'],
   [guide.prepare?.length,'prepare','Before you start'],
-  [guide.visualGuide&&!guide.visualGuideStep,'visual-guide','Head bolts: order & stages'],
+  [guide.visualGuide==='v6-37-head-gasket'&&!guide.visualGuideStep,'visual-guide','Head bolts: order & stages'],
   ...(guide.stepGroups?.length?guide.stepGroups.map(group=>[true,group.id,group.title]):[[guide.steps?.length,'steps','What to do']]),
   [guide.diagnostics?.length,'diagnostic-decisions','Make sense of the findings'],
   [guide.verification?.length,'verify-results','Check the result'],

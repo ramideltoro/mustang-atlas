@@ -16,7 +16,7 @@ import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 const number=value=>Number(value||0).toLocaleString('en-US');
 function Logo({onNavigate}){return <a className="brand" href="#/" onClick={onNavigate} aria-label="Mustang Atlas home"><span className="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 24 10 7h6l2 10L24 7h6l-6 17h-6l3-9-6 9h-4l-2-9-3 9z"/></svg></span><span>MUSTANG<span>ATLAS <i> / </i> YOUR WORKSHOP</span></span></a>;}
 function Sidebar({route,systems,bookmarks,open,onClose,mobile,triggerRef}){
- const system=route.params.get('system'),special=route.path.startsWith('/maintenance')&&(route.params.get('category')==='special'||route.path==='/maintenance/3-7l-v6-head-gasket'),panel=useRef(null),opener=useRef(null);
+ const system=route.params.get('system'),special=route.path.startsWith('/maintenance')&&(route.params.get('category')==='special'||['/maintenance/3-7l-v6-head-gasket','/maintenance/3-7l-v6-timing-chain'].includes(route.path)),panel=useRef(null),opener=useRef(null);
  useEffect(()=>{
   if(!mobile||!open)return;
   opener.current=triggerRef.current||document.activeElement;

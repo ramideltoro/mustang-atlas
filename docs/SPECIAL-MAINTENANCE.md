@@ -53,3 +53,21 @@ The revised catalog validates all 949 records with zero errors. Targeted checks 
 Published walkthrough commit `2ac47c8d12bb6f8fe787fb36d05fe2bb481399b8`; GitHub CI run 40230480875 passed. The staged container validated the complete catalog against the production database before activation. Production health, the new bundle, all 39 steps/six phases/29 workshop references, glossary content and the direct replacement-section link were checked after activation; the container is healthy.
 
 Walkthrough rollback source/content: `/srv/mustang-atlas-rollback-20261025-head-gasket-walkthrough/source.tar.gz`. Image: `mustang-atlas-web:before-20261025-head-gasket-walkthrough`. Restore them together to return to the 21-step release. The original first-release rollback above remains separate.
+
+## 3.7L V6 timing-chain project
+
+Added October 26, 2026 at `/#/maintenance/3-7l-v6-timing-chain`. The original 42-step walkthrough has seven named phases and 23 source-bound workshop references. It writes out access through the air duct, upper intake, coils, both valve covers, degas bottle, belts, crank pulley/seal, thermostat housing, coolant pump, generator/tensioner/bracket and front cover before chain removal. Heads, camshafts and the lower intake remain installed. Applicability is limited to the documented 2015 U.S. 3.7L configuration.
+
+The main operation replaces the primary chain; steps 20–23 form an explicitly optional branch for secondary-chain/VCT and secondary-tensioner work. The guide preserves the different primary-reset and secondary-replace-if-removed rules. A jumped/broken chain or a binding engine requires a recovery/damage-assessment procedure before the normal intact-drive alignment route.
+
+Direct section links include `?section=access-timing-chain`, `?section=secondary-chain-branch` and `?section=fit-primary-chain`. The original interactive relationship map in `src/TimingChainWorkshop.jsx` distinguishes primary and secondary connections. It deliberately does not depict actual chain routing, tooth positions or timing-mark angles. Physical location/sequence and tool-seating drawings remain required linked references. The existing original `timing.svg` cover supplies its thumbnail.
+
+Primary installation references were checked against G1681528 removal step 2 (E178152), installation step 1 (E154042) and installation step 6 (E154120): intake marks align with their marked links; the crank mark sits between its marked-link pair; the source specifies 48 links between RH/LH intake references and 35 between LH intake and the crank reference. Guide and primary-tensioner bolts are 10 Nm; solenoid bolts 8 Nm + 20°; oil-tube bolts 8 Nm + 45°. Front-cover, pulley, pump/housing, coil, intake and valve-cover values remain attached to their specific operations.
+
+The source's A/C-routing wording, thermostat O-ring inconsistency and omitted LH secondary-solenoid value are identified in context. The normal rotation sequence does not import the separate camshaft-removal freewheeling position. The manual does not name a pulley-removed crank-turning adapter in the chain step, so the guide requires the correct engagement instead of inventing a tool or gripping a seal surface.
+
+Six new glossary entries explain primary/secondary chains and tensioners, camshaft holding tools and the mega cap. Ford owner fluid data and Fel-Pro sealer background links were checked October 26, 2026. No paid AI API calls or copied manual artwork were used.
+
+Validation: all 270 automated tests and the production build pass. Catalog validation reports 950 guides, two Special maintenance guides and zero errors. Targeted checks cover 42 consecutive steps, seven complete phases, all 23 bound inline source links, search discovery, private-field suppression, three incompatible engines, an incompatible year, and preservation of the head-gasket article. The full first-release corpus audit above was not rerun for this addition.
+
+Browser validation covered desktop, 390px access steps, a 320px stacked relationship diagram, the collapsed mobile contents menu, source/section links, glossary popups, Special maintenance thumbnails, header search and incompatible-engine withholding. The head-gasket guide now links to this walkthrough from its related guides.

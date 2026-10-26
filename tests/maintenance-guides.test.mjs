@@ -228,3 +228,12 @@ test('repair phases preserve every step exactly once and reject gaps, overlap an
  assert.deepEqual(fixture(t,data).catalog.detail('oil').stepGroups,g.stepGroups);
  for(const mutate of [g=>g.stepGroups[0].start=2,g=>g.stepGroups[1].start=2,g=>g.stepGroups[0].end=1,g=>g.stepGroups[1].end=4,g=>g.stepGroups[1].id='access',g=>g.stepGroups[0].id='prepare']){const invalid=structuredClone(data);mutate(invalid.guides[0]);assert.equal(fixture(t,invalid).catalog.detail('oil'),null);}
 });
+
+test('timing-chain visual requires current chain, cover and secondary references and matching fitment',t=>{
+ function make(change=()=>{}){
+  const data=seed(),g=data.guides[0],ids=['G1681528','G1681517','G1681532'];g.applicability={engines:['3.7L'],years:[2015]};g.visualGuide='v6-37-timing-chain';g.sourceRefs.push(...ids.map(documentId=>({documentId,sourceHash:'hash-'+documentId})));change(g);
+  const f=fixture(t,data);for(const id of ids)f.db.prepare('INSERT INTO documents SELECT ?,title,kind,system_id,section_code,section_title,engines,?,media,blocks FROM documents WHERE id=?').run(id,'hash-'+id,'G37');return createMaintenanceGuideCatalog(f.db,{contentDir:f.dir});
+ }
+ const c=make();assert.equal(c.detail('oil',{engine:'3.7L',year:2015}).visualGuide,'v6-37-timing-chain');assert.equal(c.detail('oil',{engine:'5.0L'}).visualGuide,undefined);assert.equal(c.detail('oil',{year:2016}).visualGuide,undefined);
+ for(const change of[g=>g.sourceRefs.pop(),g=>g.sourceRefs.at(-1).sourceHash='stale',g=>g.applicability.engines.push('5.0L'),g=>g.applicability.years.push(2016),g=>g.visualGuide='toString',g=>g.visualGuide=['v6-37-timing-chain'],g=>g.visualGuideStep=1])assert.equal(make(change).detail('oil'),null);
+});

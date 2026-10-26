@@ -93,3 +93,8 @@ test('grouped walkthrough navigation points to the access and replacement sectio
  const guide={visualGuide:'v6-37-head-gasket',visualGuideStep:23,steps:[{}],stepGroups:[{id:'access-head-gasket',title:'How to get to the head gasket'},{id:'replace-head-gasket',title:'Remove the cylinder head and replace the head gasket'}]};
  assert.deepEqual(guideOutline(guide).map(x=>x.id),['gasket-location','access-head-gasket','replace-head-gasket']);
 });
+
+test('timing repair navigation exposes its own visual and access phases without head-bolt links',()=>{
+ const outline=guideOutline({visualGuide:'v6-37-timing-chain',steps:[{},{}],stepGroups:[{id:'access-timing-chain',title:'How to get to the timing chain',start:1,end:1},{id:'fit-primary-chain',title:'Fit the primary chain',start:2,end:2}]});
+ assert.deepEqual(outline.map(x=>x.id),['timing-drive','access-timing-chain','fit-primary-chain']);assert.equal(outline.some(x=>/head|bolt/i.test(x.title)),false);
+});

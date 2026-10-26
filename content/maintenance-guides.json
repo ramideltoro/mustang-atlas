@@ -5984,6 +5984,7 @@
         }
       ],
       "relatedGuideIds": [
+        "3-7l-v6-timing-chain",
         "engine-cylinder-leakdown",
         "cooling-pressure-leak-test",
         "coolant-change"
@@ -6034,6 +6035,546 @@
         }
       ],
       "visualGuideStep": 23
+    },
+    {
+      "id": "3-7l-v6-timing-chain",
+      "title": "How to replace the timing chain on the 3.7L V6",
+      "summary": "Get all the way to the chain: upper intake, valve covers, belts, pulley, coolant pump and front cover. Then replace the primary chain, check the timing and rebuild the engine, with a separate branch for secondary-chain work.",
+      "categoryId": "special",
+      "systemId": "engine",
+      "taskType": "repair",
+      "difficulty": "specialist",
+      "ruleIds": [],
+      "applicability": {
+        "engines": [
+          "3.7L"
+        ],
+        "years": [
+          2015
+        ],
+        "market": "U.S. Mustang",
+        "equipment": "Factory 3.7L Duratec V6 timing drive. Based on the supplied 2015 workshop collection; verify VIN, current procedure and replacement-part compatibility. Does not establish applicability to other model years or engine installations."
+      },
+      "thumbnailMode": "explicit-only",
+      "visualGuide": "v6-37-timing-chain",
+      "searchTerms": [
+        "timing chain",
+        "3.7 V6 timing chain replacement",
+        "primary timing chain",
+        "secondary timing chains",
+        "Cyclone V6 timing",
+        "camshaft phaser VCT",
+        "303-1248",
+        "48 links 35 links",
+        "special maintenance"
+      ],
+      "when": {
+        "kind": "condition-based",
+        "summary": "Replace timing-drive components when diagnosis or related engine repair establishes the need. No routine mileage replacement interval is claimed here.",
+        "notes": [
+          "This is specialist engine work. The timing tools, a clean workspace, precise torque/angle control and a scan tool are part of the job, not optional conveniences.",
+          "A jumped or broken chain changes the starting condition. The normal intact-drive alignment sequence below is not a recovery procedure for an already mistimed or damaged engine."
+        ]
+      },
+      "introduction": "I think of this job as three jobs sharing one parking space: get the covers off, restore the timing, and seal everything back up. The long primary chain links the crankshaft to the intake VCT units. A short secondary chain on each cylinder head links that bank’s intake and exhaust camshafts. VCT means variable camshaft timing: the units can adjust valve timing, but their basic mechanical installation still has to be correct.\n\nThe chain is behind the **engine front cover**, at the belt/pulley end of the engine. It is not reached by removing a valve cover alone. Ford’s route removes **both valve covers**, the crank pulley/front seal and coolant pump, with upper-intake and accessory work needed to reach those parts. This page writes those access operations out instead of treating “remove the cover” as one magical sentence.\n\nThe primary-chain operation leaves the **cylinder heads, camshafts and lower intake manifold installed**. The optional secondary-chain branch removes the affected VCT units; it does not turn this into a head-gasket job. LH/RH mean the vehicle’s left/right viewed facing forward from the driver’s seat; on this U.S. car, LH is the driver’s side.\n\nScope is the supplied **2015 Mustang 3.7L** collection, section 303-01B. Written instructions, tools and numerical values are here; keep the linked Ford location/sequence drawings beside them for real fastener positions, holding-tool seating, belt routing and timing marks. The original diagrams on this page explain relationships and are not physical alignment templates.",
+      "why": "Valve opening and piston movement must stay coordinated. The chain, sprockets, guides, tensioners and oil-fed VCT system work together. Correct timing with a dirty oil passage is still a problem; perfect RTV with an incorrectly aligned chain is a beautifully sealed problem. I check the mechanical setup before closing it, and the complete repair before calling it finished.",
+      "prepare": [
+        {
+          "title": "Gather the holding, turning and measurement tools",
+          "detail": "| Equipment | Why you need it |\n| --- | --- |\n| 303-1248 camshaft holding tools | Locate both banks at the specified timing position. |\n| 303-1530 secondary-tensioner hold-down | Required if doing the optional VCT/secondary-chain branch. |\n| Proper manual crank-turning arrangement; calibrated torque wrenches and angle gauge | Controlled clockwise positioning; low-torque and torque-plus-angle fasteners. Verify tool engagement with the pulley removed. |\n| Soft-jawed vise and suitable tensioner lockpin | Reset/retain the serviceable primary tensioner. |\n| 303-1419 stretch-belt tool; cable tie at least 3 mm wide | A/C belt removal and specified installation method. |\n| Three-leg pulley puller, strap wrench; 303-409, 303-102, 303-1251 and 303-335 | Remove the pulley/seal and install the new seal and pulley. |\n| 205-150/205-153 and 307-399 | Front-cover coolant-pipe seal and cover alignment. |\n| Hose-clamp tools, fluid suction gun, approved hose-isolation tool, drain containers and hoist | Coolant bottle, hoses and safe underneath access. |\n| Cooling vacuum filler and refractometer; capable scan tool | Correct refill/concentration and Misfire Monitor Neutral Profile Correction. |\n| Plastic scraper/razor, lint-free towels, labeled trays and clean compressed air | Clean sealing faces and coil wells without putting debris into the engine. |\n\nFor damaged valve-cover tube/VCT seals, also prepare **303-1247, 205-142 and 205-153**. Check application-specific tool fit before starting."
+        },
+        {
+          "title": "Buy the disturbed seals and fasteners as well as the chain",
+          "detail": "| Part/material | Replacement or preparation rule |\n| --- | --- |\n| Correct primary timing chain | VIN/application-correct part with identifiable timing links. |\n| Primary tensioner, arm and guides | Replace as diagnosis/condition requires. Do not assume every item in a kit shares one installation specification. |\n| Secondary chains/VCT parts | Only the selected branch; keep banks identified. |\n| VCT-unit bolts | **New** if VCT units are removed. |\n| Secondary tensioner | **New if removed**; retained undisturbed tensioners have a separate hold/release branch. |\n| Crankshaft front seal and pulley bolt | Discard the old seal and bolt; install new. Retain the specified washer. |\n| Both valve-cover gaskets and upper-intake gaskets | New after removal. Tube/VCT cover seals are replaced if damaged. |\n| Coolant-pump gasket/O-ring; thermostat-housing O-ring; cover-to-coolant-pipe seal | New seals for the disturbed joints. |\n| TA-357 RTV / WSE-M4G323-A6 and specified surface-preparation materials | Correct bead paths and clean metal surfaces; see the resealing phase. |\n| Correct engine oil, filter and approved coolant | Oil/filter replacement and coolant refill are part of front-cover completion. |\n\nI lay this out before loosening anything. Finding a missing single-use bolt after the parts counter closes is a very preventable plot twist."
+        },
+        {
+          "title": "Prepare the drawings and keep the engine clean",
+          "detail": "Open the [primary-chain alignment/post-check figures](#/document/G1681528), [front-cover pry pads, RTV path and numbered bolts](#/document/G1681517), [VCT bank-specific drawings](#/document/G1681532), [pump bolt order](#/document/G1694559) and [A/C belt routing](#/document/G1688123). Label fasteners by component, position and length; photograph every hose/harness before removal. Protect open intake, oil and coolant passages and count every temporary cover/towel back out.\n\nRead the seven phases once before starting. The optional secondary phase is a branch, not a mandatory extra repair. Never follow a linked component article’s “road test” endpoint while the larger engine job is still apart."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Confirm the fault and choose the chain work",
+          "body": "Record the noise, fault codes, oil level/condition and repair history before disconnecting power. A rattle or cam/crank correlation code is a reason to diagnose; it does not identify a worn chain on its own. Oil supply, a tensioner, a guide, a VCT unit or another fault can need attention. Use [engine diagnosis](#/document/G1804267) to establish the repair.\n\nThis walkthrough replaces the **primary timing chain** and includes a separate branch for the **LH/RH secondary chains and their tensioners**. Confirm the correct parts by VIN. A box labeled “timing kit” is not a guarantee that it contains every seal, bolt or component this job needs.\n\nIf timing has already jumped, a chain is broken, or the engine binds, stop before the normal rotation steps. Establish cam/crank position and check for internal damage using the correct recovery procedure. Forcing a damaged engine into alignment is not part of this guide."
+        },
+        {
+          "title": "Let it cool and disconnect battery power",
+          "body": "Work on a completely cool engine. Record diagnostic information first, switch the ignition off and keep the key away from the vehicle. Remove the battery-cover retainers and cover, loosen the **negative cable clamp**, and isolate the negative cable so it cannot spring back onto the terminal. Ford says the positive cable need not be disconnected just to interrupt power. The negative-clamp nut is **5 Nm / 44 lb-in** on reconnection.\n\nThe generator will be moved aside later, so isolate power before working around it. This timing-chain route does not open the fuel supply line or remove the lower intake/fuel-rail assembly. Detaching the LH cover’s fuel-tube **retainer** is different from disconnecting a fuel pipe. Reference: [battery disconnect/connect](#/document/G1692356)."
+        },
+        {
+          "title": "Support the car, remove the correct shield and drain coolant",
+          "body": "1. Follow [100-02 lifting](#/document/G1663631), select Neutral as the workshop procedure requires, and support the vehicle with the specified hoist/lifting points.\n2. Remove the fitted underbody shield **or** the subframe-bracket/shield assembly. Photograph the arrangement and label the fasteners; these are alternative equipment branches.\n3. With the engine cold, cover the coolant-bottle cap with a thick cloth and release it carefully. Never open a hot pressurized system.\n4. Fit a drain hose to the radiator drain, collect coolant in a suitable clean container, and open the drain. Keep contaminated coolant separate for disposal. Coolant remains in the engine even after draining.\n\nI drain once for this combined repair. The drain/refill instructions repeated in the component articles are their standalone starting points, not a request to refill between disassembly steps. References: [front-cover access](#/document/G1681517), [cooling drain](#/document/G1694549)."
+        },
+        {
+          "title": "Remove the air-cleaner outlet pipe",
+          "body": "This is the large air duct between the air-cleaner assembly and throttle body.\n\n1. Disconnect and move aside the brake-booster tube and crankcase-ventilation tube attached to this area.\n2. Loosen the duct’s two clamps and lift the outlet pipe away.\n3. Label the disconnected tubes and protect open air passages from debris.\n\nThe two clamp screws use **5.4 Nm / 48 lb-in** when the duct goes back. Reference: [air-cleaner outlet pipe](#/document/G1675695)."
+        },
+        {
+          "title": "Remove the upper intake manifold",
+          "body": "The upper manifold sits above the engine and distributes intake air. It must come off to reach the RH ignition coils and remove the RH valve cover.\n\n1. Release the vacuum hose from the upper manifold with the appropriate clamp tool. Detach its retainers from the throttle body and manifold.\n2. Unplug the EVAP purge valve, free the harness retainers, and disconnect the purge quick-release coupling using its correct release method.\n3. Disconnect the PCV tube and move it aside. Unplug the throttle-body and MAP-sensor connectors and release their wiring retainers.\n4. Remove the upper-manifold support bolt, then its mounting bolts. Lift the manifold off without trapping a hose or wiring underneath it.\n5. Remove and discard the upper-manifold gaskets. Protect the now-open lower-manifold passages. If the failure involved valve/piston damage, inspect for metal debris; Ford requires a replacement manifold if that debris is found.\n\nBefore separating the EVAP coupling, clean foreign material from the retaining-clip area with compressed air, protect open vapor passages with suitable caps, and identify the connector style in the quick-release reference. Do not pry its clips with tools. The reference contains several connector designs; use the release/locking movement for the actual type, not whichever tab looks convenient. Keep the battery disconnected through this combined job.\n\n**What is exposed now:** the lower intake assembly and access to the RH coils. The timing chain is still behind the engine front cover. References: [upper manifold](#/document/G1681529), [fuel/EVAP coupling method](#/document/G1671536), [coil access](#/document/G1675558)."
+        },
+        {
+          "title": "Remove the ignition coils on both banks",
+          "body": "Before pulling a coil, clear loose dirt from the coil and surrounding well with compressed air, using eye protection and controlling where debris goes. Unplug each coil connector, remove its mounting bolt, and gently twist the coil to release the boot before lifting it out. Label the coils and inspect their boots for cracks, tears or rips.\n\nBoth sets come out because both valve covers must come off for front-cover access. The RH coils are accessible after the upper manifold has been removed. This step removes the coils; it is not an instruction to remove the spark plugs. Reference: [3.7L ignition coils](#/document/G1675558)."
+        },
+        {
+          "title": "Remove the left valve cover and its gasket",
+          "body": "1. Remove the crankcase vent tube and oil-level indicator/dipstick. Detach the fuel-supply/EVAP tube retainer from the cover.\n2. With the coils already out, unplug the oil-pressure switch and free the associated harness retainers.\n3. Unplug the VCT oil-control solenoids and release the harness retainers attached to the cover.\n4. Loosen the cover bolts and lift the cover carefully. If a VCT seal grips a solenoid, wiggle the cover gently until it releases. Do not lever or pull hard against a solenoid.\n5. Remove and discard the **valve-cover gasket** from the cover. Inspect the VCT seals and spark-plug-tube seals; remove them with the specified tools only if damaged and being replaced.\n\n**What you see now:** camshafts and valve gear inside the cylinder head. The front timing cover still encloses the chain drive. Reference: [LH valve cover](#/document/G1681530)."
+        },
+        {
+          "title": "Remove the right valve cover and its gasket",
+          "body": "1. With the RH coils already out, disconnect the PCV tube from this side.\n2. Unplug the VCT oil-control solenoids and release the wiring-harness retainers.\n3. Remove the heater-tube bolt and release the heater-tube retainer from the valve-cover stud bolt.\n4. Loosen the valve-cover bolts and lift the cover without loading the VCT solenoids. Gently free any sticking seal rather than forcing it.\n5. Discard the RH valve-cover gasket. Inspect its VCT and spark-plug-tube seals; replace damaged seals using the specified tools.\n\nBoth covers must be off for front-cover access. Keep the covers, bolts and bank-specific attachments identified. Reference: [RH valve cover](#/document/G1681531)."
+        },
+        {
+          "title": "Remove the degas bottle for pulley access",
+          "body": "The degas bottle is the coolant expansion tank. With the system cold and depressurized, use the specified hose-isolation tool on the lower hose and a fluid suction gun to remove remaining coolant from the bottle. Release the upper hose clamps/connections, remove the mounting bolts, then move the bottle enough to release the lower hose. Collect spills and protect the open connections.\n\nLabel the temporary hose clamp so it cannot be forgotten at refill. The bottle’s mounting bolts use **9 Nm / 80 lb-in** on installation. Reference: [degas bottle](#/document/G1694561)."
+        },
+        {
+          "title": "Loosen the pump pulley and remove the accessory belt",
+          "body": "Before removing the accessory belt, loosen the coolant-pump pulley bolts while the belt can restrain the pulley. Leave the pulley in place for now.\n\nPhotograph the belt routing. Turn the accessory-belt tensioner **counterclockwise**, slip the belt off, and ease the tensioner back under control. Keep the belt, tensioner and pulleys free of oil, coolant and belt dressing. No lubricant belongs on these belt surfaces.\n\nReferences: [coolant-pump access](#/document/G1694559), [accessory belt](#/document/G1688121)."
+        },
+        {
+          "title": "Remove the separate stretch-fit A/C belt",
+          "body": "This belt has its own removal method. Use **303-1419**, the 3.5L/3.7L stretchy-belt removal tool.\n\n1. Turn the crankshaft pulley bolt **clockwise by hand** and feed the tool onto the A/C compressor pulley for approximately **180°**, following the tool-placement illustration.\n2. Fold the tool underneath the inside of the belt as illustrated.\n3. Pull the tool firmly in the specified quick motion to release the belt.\n\nDo not pry the belt off with a screwdriver or lubricate it. This rotation happens while the original timing drive is still intact. If the engine cannot safely rotate, return to the fault/recovery decision in step 1. Reference: [A/C compressor belt removal](#/document/G1688123)."
+        },
+        {
+          "title": "Remove the crankshaft pulley and front seal",
+          "body": "Remove the crankshaft-pulley bolt and washer; discard the bolt. Use the specified three-leg puller to remove the pulley. Use **303-409** to remove the crankshaft front seal, and discard the seal. Keep the sealing surfaces and exposed crankshaft area protected and clean.\n\nThis is the front-of-engine oil seal disturbed for pulley/front-cover access. The new seal and pulley will be installed after the front cover is back in place. Reference: [crankshaft front seal/pulley](#/document/G1681513)."
+        },
+        {
+          "title": "Remove the thermostat housing and coolant pump",
+          "body": "1. Keep remaining belts protected with waterproof plastic against coolant spills. Release the thermostat-housing hose clamps and disconnect the hoses.\n2. Remove the housing bolts and the housing. Remove its O-ring. The source has an inconsistent inspection note, but its installation branch explicitly calls for a **new O-ring**; plan on replacing it.\n3. Remove the previously loosened coolant-pump pulley bolts and pulley.\n4. Remove the pump bolts and lift the pump out. Discard its gasket and O-ring. Keep residual coolant out of other exposed openings.\n\nYou only drain the system once for this combined job; repeated drain instructions in the linked standalone procedures do not mean refilling between parts. References: [thermostat housing](#/document/G1694563), [coolant pump](#/document/G1694559)."
+        },
+        {
+          "title": "Move the belt tensioner, generator and support bracket",
+          "body": "Remove the accessory-drive-belt tensioner mounting bolts and tensioner. Remove the specified generator nut and bolt, then position the generator aside. Avoid loading its wiring; the front-cover procedure calls for positioning it aside, not inventing extra electrical disconnections. Remove the stud bolt and the upper-intake-manifold support-bracket bolt, then remove the bracket.\n\nBag these fasteners by component and position. **The front cover is now accessible after both valve covers, the pulley, pump and these obstructions are cleared.** Reference: [front cover removal, accessory/bracket steps](#/document/G1681517)."
+        },
+        {
+          "title": "Remove the engine front cover",
+          "body": "Remove the front-cover bolts, recording their positions and lengths. Use only the designated pry pads in Ford’s illustration to release the cover; do not drive a tool between sealing faces. Lift the cover away and remove its coolant-pipe seal with **205-150 and 205-153**.\n\nClean the cover’s RTV joints using the specified preparation method and wash away all remaining contamination. Keep debris out of the open engine. The detailed metal-surface preparation sequence is in step 28.\n\n**What you see now:** the timing-chain drive at the front of the engine. Both heads and the camshafts stay installed. References: [front cover, pry pads and coolant-pipe seal](#/document/G1681517), [RTV preparation](#/document/G1692003)."
+        },
+        {
+          "title": "Establish the timing position while the original chain is still fitted",
+          "body": "**The timing drive is now exposed. This is the start of the chain work.** Keep the open engine scrupulously clean.\n\nRotate the crankshaft **clockwise only**, using the approved manual turning arrangement, until the timing marks on both intake VCT units match the alignment shown in the [timing-chain removal illustration, step 2](#/document/G1681528). Identify the actual stamped marks; do not substitute a bolt head or an arbitrary paint spot. The two larger intake units are inboard, toward the valley; the exhaust units are farther outboard.\n\nThe published procedure shows the required position but does not specify a special crank-turning adapter here. Verify the correct turning-tool engagement for the pulley-removed engine before proceeding; do not grip a sealing surface or use the starter. The camshaft-removal procedure’s separate crank “freewheeling” position is **not** the setup for this chain-only operation."
+        },
+        {
+          "title": "Remove both oil tubes and hold the camshafts at TDC",
+          "body": "1. Remove the LH valve-train oil-feed tube and its bolts. Keep the tube clean and identify its bank.\n2. Seat the **303-1248 camshaft holding tools** in the locations shown for the LH bank.\n3. Remove the RH oil-feed tube and fit the holding tools to the RH bank as illustrated.\n4. Verify both banks are held in the specified **TDC** position before releasing chain tension.\n\nA holding tool locates the camshafts; it does not turn an approximately aligned engine into a correctly timed one. Do not force a tool into position. Keep the cams, their bearing caps and both cylinder heads installed for this chain procedure. Reference: [timing-chain removal steps 3–6](#/document/G1681528)."
+        },
+        {
+          "title": "Record the marks and remove the primary chain",
+          "body": "If the old chain’s colored links are no longer visible, mark the link aligned with each intake-VCT timing mark **before** removing the chain. At the crankshaft, mark the pair of links that bracket its sprocket mark. Record the positions with clear photographs. These records help preserve the known setup; they are not a substitute for the correct new chain’s timing references.\n\n1. Remove the primary-chain tensioner bolts and tensioner.\n2. Remove the tensioner arm.\n3. Remove the lower LH chain-guide bolts and guide.\n4. Remove the VCT oil-control solenoid bolts and withdraw the solenoids as illustrated to gain chain clearance. A slight twist can help; protect them and their bores from dirt.\n5. Lift the primary chain off the sprockets while preserving the established cam/crank position.\n\nDo not rotate the crankshaft and camshafts independently with the chain removed. Reference: [timing-chain removal steps 7–14](#/document/G1681528)."
+        },
+        {
+          "title": "Inspect the open timing drive before fitting new parts",
+          "body": "Check the removed chain, primary tensioner, tensioner arm, guide faces and sprockets for wear, damage or debris. Identify why the old parts failed. The tensioners and VCT system depend on clean, correct engine oil; a new chain does not repair an unresolved oil-supply problem. See [3.7L lubrication and timing overview](#/document/G1681495).\n\nUse serviceable, correct components. Replace damaged parts, and confirm the contents/instructions of a matched replacement kit. The primary-chain procedure removes the **lower LH guide** and tensioner arm. It does not give this article a blanket removal/torque instruction for every other guide or sprocket visible in the engine. If those are being replaced, obtain their exact component instructions instead of applying the lower guide’s torque to all of them.\n\n**Primary chain only?** Leave the secondary chains/VCT assemblies undisturbed and continue at [Fit the primary chain](#/maintenance/3-7l-v6-timing-chain?section=fit-primary-chain). If secondary-chain work is required, complete the next phase first."
+        },
+        {
+          "title": "Optional secondary-chain work: release one bank’s VCT assembly",
+          "body": "**Use steps 20–23 only for the bank(s) requiring secondary-chain or tensioner work.** The primary chain is already off and the camshafts remain held in the specified position. Keep LH and RH parts separate.\n\nCompress that bank’s secondary tensioner and place **303-1530** through the hole at the rear of the secondary tensioner guide, bearing against the mega cap as Ford illustrates. This retains the tensioner in its collapsed position. Remove and discard that bank’s VCT-unit bolts, then remove the intake/exhaust VCT units and secondary chain as the bank-specific assembly.\n\nThe mega cap is the substantial front camshaft support carrying these components. It is not something to bend against with an improvised screwdriver. References: [LH and RH VCT removal branches](#/document/G1681532), [component identification](#/document/G1681496)."
+        },
+        {
+          "title": "Optional: replace a secondary tensioner only when required",
+          "body": "If retaining an undisturbed, serviceable secondary tensioner, keep it controlled with the specified tool and continue to step 22. If replacing the tensioner:\n\n1. Remove the hold-down tool at the point specified in that bank’s branch.\n2. Remove the exhaust VCT oil-control solenoid if still fitted; keep it clean.\n3. Remove the secondary tensioner shoe, then push the tensioner **up from below** to remove it.\n4. **Do not reuse a secondary tensioner once it has been removed.** This differs from the primary tensioner’s reset procedure.\n5. Oil the new tensioner’s O-ring seals and mega-cap bore with clean specified engine oil. Leave its shipping clip installed.\n6. Push the new tensioner fully down into the bore until it snaps into place and is fully seated. Install the shoe, then remove and discard the shipping clip at the source’s specified stage.\n\nDo not activate the new tensioner until the chain/VCT assembly is installed as described next. Reference: [bank-specific secondary-tensioner replacement](#/document/G1681532)."
+        },
+        {
+          "title": "Optional: fit the secondary chain and VCT units with new bolts",
+          "body": "Assemble the correct bank’s intake and exhaust VCT units with the replacement secondary chain, aligning its colored links with the units’ timing marks. Check the **selected bank’s** illustration; a mirror-image guess is not an alignment method.\n\nLocate the VCT units on their camshaft dowel pins and fit the assembly. The source permits slight camshaft movement where necessary for alignment; it does not authorize free rotation of a camshaft with the drive disconnected. If the parts will not locate correctly, stop and resolve the position/tooling mismatch.\n\nUse **new VCT-unit bolts** and apply the four stages in order:\n\n| Stage | VCT-unit bolt instruction |\n| --- | --- |\n| 1 | 40 Nm / 30 lb-ft |\n| 2 | Loosen one full turn |\n| 3 | 25 Nm / 18 lb-ft |\n| 4 | Additional 180° |\n\nThese are VCT-unit bolt values, not solenoid or guide-bolt values. Reference: [VCT installation, selected-bank branch](#/document/G1681532)."
+        },
+        {
+          "title": "Optional: activate or release the secondary tensioner and check the chain",
+          "body": "For a **new secondary tensioner**, press down on the installed chain and top shoe until the tensioner bottoms, then release it so it springs up and tensions the chain. For an **undisturbed retained tensioner**, confirm the secondary chain is centered on the guides and remove the hold-down tool at the specified point to release it.\n\nRestore any exhaust VCT oil-control solenoid removed for this branch. Keep its bore clean; do not force it into the mega cap. The primary-chain installation procedure specifies **8 Nm / 71 lb-in + 20°** for the VCT oil-control solenoids. The RH secondary-tensioner branch repeats that value; the LH paragraph omits a value, so I identify the primary-chain reference rather than inventing a separate LH specification.\n\nCheck colored-link alignment, dowel engagement, centered chain and tensioner operation for each worked bank. The manual presents replacement-tensioner and normal VCT installation as adjacent branches; do not install and tighten the same new bolts twice because their text repeats. Account for all secondary hold-down tools before returning to primary-chain installation. Reference: [secondary branches](#/document/G1681532), [solenoid fastening](#/document/G1681528)."
+        },
+        {
+          "title": "Fit the new primary timing chain to the three references",
+          "body": "Make sure the correct replacement chain’s timing links are identifiable and the preserved cam/crank positions agree with Ford’s setup. Install the chain along the illustrated route:\n\n- Align the **RH intake** marked link with the RH intake-VCT mark.\n- Align the **LH intake** marked link with the LH intake-VCT mark.\n- At the crankshaft sprocket, the timing mark belongs **between the pair of marked links**—not underneath one arbitrarily selected link.\n\nUse [timing-chain installation step 1](#/document/G1681528) for the actual chain path and mark positions. Only the slight alignment movement permitted by the procedure is allowed. If the new chain’s marking scheme or supplied parts do not agree with this application, resolve it with the correct vehicle/part instructions before proceeding. Do not transfer a guessed mark pattern from an unsuitable kit."
+        },
+        {
+          "title": "Install the guide, arm and primary tensioner",
+          "body": "1. Install the lower LH timing-chain guide and its bolts at **10 Nm / 89 lb-in**.\n2. Refit the primary tensioner arm.\n3. To reset a serviceable primary tensioner, release its ratchet detent, compress the ratchet plunger using a **soft-jawed vise**, align the holes in the plunger and housing, and insert a suitable lockpin. Do not simply crush an engaged ratchet. A new tensioner must be the correct unit and in the specified retained installation state; follow its applicable preparation instructions.\n4. Install the tensioner and tighten its bolts to **10 Nm / 89 lb-in**. Ford allows slight camshaft movement where needed to remove slack for installation; preserve every timing reference.\n5. Remove the lockpin to release the tensioner.\n\nThe reset method here is for the **primary** tensioner. It does not override the secondary-tensioner “replace if removed” rule. Reference: [primary tensioner installation steps 2–5](#/document/G1681528)."
+        },
+        {
+          "title": "Check the timing marks and both link counts before closing anything",
+          "body": "With the tensioner released, verify **all** the timing marks and marked links against [Ford’s post-check illustration, installation step 6](#/document/G1681528).\n\n| Check | Required relationship |\n| --- | --- |\n| RH intake to LH intake | **48 links in between** the RH marked link (callout 1) and LH marked link (callout 2) |\n| LH intake to crankshaft | **35 links in between** the LH marked link (callout 2) and the crankshaft marked-link pair (callout 3) |\n| Crankshaft mark | Between the **two** marked links |\n| Secondary assemblies, if serviced | Correct bank marks, dowel engagement, centered chains and tensioners released/activated |\n\nUse the source’s counting endpoints and convention; “between” is not permission to casually count both marked endpoints. Count each span again, independently, before covering it. Resolve any mismatch now. The counts are checks alongside the timing marks—not a way to ignore an incorrectly positioned mark.\n\nDo not use the starter to test an uncertain setup. Keep the timing position until this post-check is complete; later crank rotations for belt installation happen only after timing is rebuilt and all holding tools are removed."
+        },
+        {
+          "title": "Refit the VCT solenoids and oil tubes; remove the holding tools",
+          "body": "Inspect the solenoids and their mating bores for contamination, burrs or sharp edges. Clean only the external surfaces as needed. A gentle twisting motion may help installation. **Do not force a solenoid into the mega cap**; damage here can make the cylinder head unusable.\n\nInstall each removed VCT oil-control solenoid and bolt at **8 Nm / 71 lb-in, then 20°**. If an exhaust solenoid was already restored in the optional branch, do not repeat its tightening stages.\n\nRemove the RH camshaft holding tools and install the RH oil tube; tighten its bolts **8 Nm / 71 lb-in, then 45°**. Repeat for the LH tools and oil tube. Count every camshaft holding tool, secondary hold-down tool and tensioner lockpin back into the tray. Reference: [timing-chain installation steps 7–11](#/document/G1681528)."
+        },
+        {
+          "title": "Prepare the front-cover sealing surfaces properly",
+          "body": "Keep clean lint-free towels over exposed engine cavities while cleaning, then remove them without dropping debris. On the **metal RTV sealing faces**, use the source’s preparation sequence:\n\n1. Remove loose sealant with a plastic scraper or plastic razor. Apply the specified gasket remover (ZC-30-A), allow it to work, then remove residue with a lint-free towel and plastic tool.\n2. Clean residual sealant/oil with the specified brake-parts cleaner (PM-4-A/PM-4-B) and wipe dry. Inspect for remaining oil.\n3. Use the specified Engine Shampoo and Degreaser (ZC-20) to remove remaining contamination/cleaner residue; dry with a clean lint-free towel. The source warns against substituting an arbitrary engine cleaner.\n4. On the dry metal surfaces, apply ZC-31-B metal-surface-prep wipe fluid across the entire RTV sealing area. Let it **air dry, approximately two minutes**. Do not towel-dry the final coating or rinse it off.\n5. If the prepared area becomes contaminated or the wipe fluid beads, clean the affected area with a lint-free towel and **at least 90% isopropyl alcohol**, then repeat the surface-prep-wipe stage.\n\nNo metal scrapers, wire brushes or power sanding/grinding. The source’s limited nylon-bristle-disc option applies only to a removed part that can be thoroughly washed without exposing the engine to debris; the plastic-tool route avoids introducing that debris here. Wash the removed front cover thoroughly and keep the engine’s oil/coolant passages clean. This metal-surface process is not for the composite intake manifold.\n\nReferences: [RTV preparation](#/document/G1692003), [front cover cleaning](#/document/G1681517)."
+        },
+        {
+          "title": "Fit the coolant-pipe seal and reseal the front cover",
+          "body": "Fit the new cover-to-coolant-pipe seal with **205-150/205-153**. Install **307-399 alignment pins** in the illustrated positions and confirm both block locating dowels are seated correctly. Arrange the labeled bolts and torque tools before opening the RTV. This is the one part of the job where hunting for a socket becomes a timed sport.\n\nUse **Motorcraft TA-357 RTV, specification WSE-M4G323-A6**, or the verified current approved replacement. Ford warns that the wrong sealant can cause oil foaming and engine damage.\n\n- Apply a **3.0 mm** bead along the illustrated front-cover sealing faces, including the inner bolt bosses.\n- Apply **5.5 mm** beads at the illustrated head/block and oil-pan/block joint areas.\n- Locate the cover and install the initial bolts at **3 Nm / 27 lb-in**. Remove the alignment pins and install the remaining bolts.\n\nThe cover and initial bolts must be installed within **4 minutes** of initial application, and the remaining bolts installed/tightened within **35 minutes** of that same initial application. If a limit is missed, remove the sealant, clean and reapply. These are assembly windows, not a general RTV curing-time instruction. Use the exact bead path and alignment-pin drawing in [front-cover installation steps 1–5](#/document/G1681517)."
+        },
+        {
+          "title": "Tighten the front cover using its numbered bolt map",
+          "body": "Identify each fastener using [the 22-position map, front-cover installation step 6](#/document/G1681517). This number is a map position, not a bolt-size label.\n\n| Stage | Bolts | Specification |\n| --- | --- | --- |\n| 1 | 1–21 | 10 Nm / 89 lb-in |\n| 2 | 1–20 | 24 Nm / 18 lb-ft |\n| 3 | 21 | 20 Nm / 177 lb-in |\n| 4 | 21 | Additional 90° |\n| 5 | 22 | 10 Nm / 89 lb-in |\n| 6 | 22 | Additional 45° |\n\nComplete the stages and the sealant time limits. Do not apply the final angle stages to every cover bolt. Match each saved fastener to its correct location/length; stop if the inventory or drawing does not agree."
+        },
+        {
+          "title": "Restore the support bracket, generator and belt tensioner",
+          "body": "Fit the upper-intake support bracket and leave its bolt **finger-tight** at this stage. Install the stud bolt at **8 Nm / 71 lb-in**. Reposition the generator without trapping its wiring; tighten its mounting bolt and nut to **47 Nm / 35 lb-ft**. Refit the accessory-belt tensioner and tighten its bolts to **11 Nm / 97 lb-in**.\n\nThe support-bracket bolt is finalized after the remaining components are restored. Reference: [front-cover installation steps 7–11](#/document/G1681517)."
+        },
+        {
+          "title": "Refit the coolant pump and thermostat housing",
+          "body": "Fit a **new pump gasket and O-ring**, lubricating the O-ring with clean specified coolant. Install the pump and its seven bolts in the illustrated order: **10 Nm / 89 lb-in, then 45°**. Fit the pump pulley with its bolts finger-tight for now.\n\nInstall a **new thermostat-housing O-ring**, lubricated with clean specified coolant. Refit the housing and tighten its four bolts in the illustrated sequence: **8 Nm / 71 lb-in, then 45°**. Reconnect the coolant hoses and clamps. Remove any belt-protection plastic after the spill risk is over. The pump-pulley bolts are tightened later, after the accessory belt is back on.\n\nReferences: [pump, seven-bolt order](#/document/G1694559), [thermostat housing, four-bolt order](#/document/G1694563)."
+        },
+        {
+          "title": "Install the new crankshaft seal and the pulley",
+          "body": "1. Lubricate the front-seal bore with clean specified engine oil. Fit the **new seal** with **303-102 and 303-1251**.\n2. Lubricate the seal and crankshaft pulley as specified. Install the pulley with **303-335 and 303-102**, using the proper installer rather than hammering it on.\n3. Hold the pulley with a strap wrench. Fit the washer and **new pulley bolt**.\n4. Tighten in four distinct stages: **120 Nm / 89 lb-ft → loosen one full turn → 50 Nm / 37 lb-ft → additional 90°**.\n\nThe camshaft holding tools are already removed after the timing checks. Do not use them as a substitute for the specified pulley-holding method. Reference: [crankshaft seal/pulley installation](#/document/G1681513)."
+        },
+        {
+          "title": "Fit the A/C belt, then the accessory belt",
+          "body": "Only do the following hand rotations after the timing drive is correctly rebuilt and all holding tools/lockpins are removed.\n\n1. Follow the A/C-belt routing drawing: feed it between the crank pulley and accessory tensioner, then behind the crank pulley, and onto the compressor pulley. Keep its lower section **above the oil-pan flange**. The source mistakenly says “accessory drive belt ribs” inside two A/C-routing sentences; use that A/C procedure’s drawing to confirm the belt face/routing rather than guessing from the typo.\n2. Seat the A/C belt on the compressor pulley, place it onto the top of the crank pulley, and secure it through the crank-pulley spokes with a cable tie **at least 3 mm wide** as illustrated.\n3. With the belt above the pan flange, rotate the crank **clockwise by hand 180°**.\n4. Remove the cable tie. Rotate **clockwise by hand another 360°** and check that the A/C belt is seated in all pulley grooves. Stop at unexpected hard resistance; never force a questionable timing setup through it.\n5. Refit the accessory belt along its correct routing, using the tensioner to allow installation and releasing it under control. Check every groove and remove all temporary protective plastic.\n6. Tighten the coolant-pump pulley bolts to **24 Nm / 18 lb-ft**, now that the accessory belt is installed.\n\nNo fluids or belt dressing. References: [A/C belt routing and installation](#/document/G1688123), [accessory belt](#/document/G1688121), [pump pulley tightening](#/document/G1694559)."
+        },
+        {
+          "title": "Fit new valve-cover gaskets and reinstall both covers",
+          "body": "The timing drive is enclosed by the front cover. Now seal the **top of each cylinder head** with its valve cover and a new gasket.\n\n1. Clean the cover mating faces and the specified RTV junctions. Replace damaged spark-plug-tube/VCT seals with the tools listed in the cover procedures; undamaged seals do not automatically require replacement.\n2. For each cover, apply an **8 mm / 0.31 in bead of TA-357 RTV only at the front-cover-to-cylinder-head junctions shown**. Fit a **new valve-cover gasket**, then place the cover without dislodging it or stressing the VCT solenoids.\n3. Tighten the valve-cover bolts to **10 Nm / 89 lb-in** using that cover’s illustration. Install the cover and finish tightening within **4 minutes** of its sealant application. If you miss that window, remove the sealant, clean and reapply.\n4. Confirm the VCT seals sit below the top of the solenoid electrical connectors; an incorrectly seated seal can leak oil.\n5. **LH:** restore its harness retainers, VCT connectors and oil-pressure-switch connector. Reattach the fuel/EVAP tube retainer, dipstick and crankcase vent tube.\n6. **RH:** refit the heater-tube retainer to the cover stud and tighten its bolt to **23 Nm / 17 lb-ft**. Restore its harness retainers, VCT connectors and PCV tube.\n\nFinish tightening the upper-intake support-bracket bolt to **10 Nm / 89 lb-in** at the point specified by the front-cover procedure. References: [LH cover](#/document/G1681530), [RH cover](#/document/G1681531), [front-cover final bracket fastening](#/document/G1681517)."
+        },
+        {
+          "title": "Refit the coils, upper intake and air duct",
+          "body": "1. Replace damaged coil boots, then seat the coils in their correct locations. Install each coil bolt at **7 Nm / 62 lb-in, then 50°**, and reconnect the coil plugs.\n2. With the RH coils now installed, fit **new upper-intake gaskets**. Refit the upper manifold and tighten its bolts using its illustrated sequence: **10 Nm / 89 lb-in, then 45°**. Tighten the upper-manifold support bolt to **10 Nm / 89 lb-in**.\n3. Reconnect the throttle-body and MAP plugs, harness retainers, PCV tube, EVAP quick coupling and purge-valve plug. Restore the vacuum hose and both retainers. Inspect and clean the EVAP coupling ends, fully engage the correct retainer/secondary lock, and pull gently on the connection to confirm it is secured. Confirm every connection from the removal checklist is restored.\n4. Fit the air-cleaner outlet pipe, reconnect the brake-booster and crankcase-ventilation tubes and tighten its two clamps to **5.4 Nm / 48 lb-in**.\n\nReferences: [coils](#/document/G1675558), [upper manifold](#/document/G1681529), [air duct](#/document/G1675695), [coupling reconnection](#/document/G1671536)."
+        },
+        {
+          "title": "Reinstall the coolant bottle and check every hose",
+          "body": "Reconnect the lower bottle hose, refit the bottle and tighten its bolts to **9 Nm / 80 lb-in**. Reconnect the upper hoses and place every clamp correctly. Remove the temporary lower-hose isolation clamp used during removal. Check the thermostat-housing hoses and every connection disturbed for access.\n\nNo coolant refill should begin with a forgotten hose clamp or an uncapped opening. Reference: [degas bottle installation](#/document/G1694561)."
+        },
+        {
+          "title": "Renew the oil and filter before any start",
+          "body": "Place oil-drain equipment beneath the sump. Remove the drain plug, drain the oil and reinstall the plug at **27 Nm / 20 lb-ft**. Remove and discard the old filter.\n\nThe supplied front-cover procedure explicitly says **do not lubricate the new oil-filter seal**, then specifies **5 Nm / 44 lb-in + 180°**. That differs from common generic filter advice: verify the current correct Ford/filter instructions for the part being fitted rather than silently substituting a generic rule.\n\nFill with the specified **SAE 5W-20** oil; the 3.7L service fill with filter is **6.0 U.S. qt / 5.7 L**. Check the actual level. The later workshop revision lists WSS-M2C945-B1, while the original owner reference lists WSS-M2C945-A; confirm the current approved oil for the VIN. References: [front-cover oil/filter completion](#/document/G1681517), [3.7L specifications](#/document/G1681493)."
+        },
+        {
+          "title": "Refill coolant with the engine still off",
+          "body": "Close the radiator drain and confirm every disturbed hose, housing, pump and bottle connection is complete. Choose coolant meeting the vehicle’s current Ford requirement. The supplied manual names historical Orange coolant specifications WSS-M97B44-D/D2; color alone is not a compatibility specification.\n\nUse a refractometer to check concentration. For normal climates, the source specifies **48/52 to 50/50 coolant/distilled water**. Its extreme-climate boundaries are no more than **60% coolant** in severe cold and no less than **40% coolant** in severe heat. Do not dilute premixed coolant indiscriminately. The historical **12.4 U.S. qt / 11.7 L** system capacity is not a command to force that quantity into a partly drained engine.\n\nFor vacuum filling, install an appropriate vacuum cooling-system filler and follow its manufacturer’s complete evacuation, integrity-check, fill and bleed instructions, as Ford directs. For the non-vacuum branch, fill the bottle to MAX FILL and install the cap fully. **Keep the engine off until the next checklist is complete.** Reference: [cooling-system fill/bleed](#/document/G1694549)."
+        },
+        {
+          "title": "Complete the pre-start inventory, restore power and fit the shield",
+          "body": "Check the following deliberately, before starting:\n\n- Primary marks and both link counts were verified before the cover went on; any serviced secondary assemblies are correctly aligned and tensioned.\n- Every holding tool, tensioner lockpin, shipping clip and belt-installation cable tie is removed and accounted for.\n- Oil-feed tubes, solenoids, valve covers, coils, wiring retainers, oil-pressure switch, throttle/MAP, PCV, EVAP and vacuum connections are restored.\n- Towels, protective caps/plastic and temporary hose clamps are removed; no intake or fluid passage is blocked.\n- Front-cover stages, pulley stages, pump/housing bolts and belt routing/seating are checked. The upper-intake support-bracket bolt is finalized at **10 Nm / 89 lb-in**.\n- Oil/filter and the initial coolant fill are complete; visible joints are dry.\n\nRefit the correct underbody equipment using the front-cover drawing: shield **A 11 Nm / 97 lb-in; B 2 Nm / 18 lb-in**; bracket/shield assembly **C 63 Nm / 46 lb-ft; D 2 Nm / 18 lb-in**. Identify A–D from the figure.\n\nReconnect the negative battery cable, tightening its clamp nut to **5 Nm / 44 lb-in**, and refit the battery cover/retainers. References: [front-cover final assembly](#/document/G1681517), [battery restoration](#/document/G1692356)."
+        },
+        {
+          "title": "Complete coolant bleeding with the chosen method",
+          "body": "For a vacuum fill, complete that tool’s full instructions and the Ford checks. If using the non-vacuum method, follow the source’s running sequence **only after the engine is fully assembled and the pre-start checklist is complete**:\n\n1. Fill to MAX FILL, tighten the bottle cap to its hard stop and switch climate control off.\n2. Start and hold **3,500 rpm for 30 seconds**, switch off, then wait **one minute** for large air pockets to purge.\n3. **Allow the engine to cool before opening the cap.** The one-minute purge pause is not permission to open a hot system. Check the level; this source’s intermediate check specifies MAX when warm and MIN when cold.\n4. Restart and idle until normal operating temperature and thermostat opening; the source uses at least one cooling-fan cycle as its confirmation.\n5. Carry out the cycle **3,500 rpm for 30 seconds → idle 30 seconds → off one minute**. Ford instructs repeating its steps 25–27 a total of **five times**. Follow the linked branch’s counting convention.\n6. Allow it to cool safely before the final level check; top up as directed and refit the cap.\n\nMonitor temperature, oil-pressure warnings, leaks and mechanical noise from the first start. Stop for an abnormal condition; do not continue a bleed cycle through overheating or a timing-related noise. Reference: [complete coolant-bleeding branches](#/document/G1694549)."
+        },
+        {
+          "title": "Run the scan-tool correction and verify the finished repair",
+          "body": "After the stationary checks and coolant bleeding are satisfactory, perform the **Misfire Monitor Neutral Profile Correction** with a capable scan tool, as required by both the front-cover and crank-seal procedures. This correction does not fix a mechanical timing error.\n\nCheck for oil, coolant, vacuum and exhaust-related symptoms, read diagnostic codes, and carry out the specified road test only when the engine runs normally. After a full cool-down, recheck oil/coolant levels and every disturbed joint. Some adaptive behavior can change after battery disconnection; persistent faults or abnormal noise still need diagnosis.\n\nRecord which chains, guides, tensioners and fasteners were replaced, the timing checks, fluid specifications and the final scan results. I want the next person opening the service history to find useful facts, not “changed some chain-shaped things.” References: [front-cover completion](#/document/G1681517), [front-seal completion](#/document/G1681513), [battery adaptive note](#/document/G1692356)."
+        }
+      ],
+      "stepGroups": [
+        {
+          "id": "plan-timing-job",
+          "title": "Plan the repair and make the car safe",
+          "start": 1,
+          "end": 3,
+          "summary": "Steps 1–3 · Diagnose the fault, isolate electrical power and drain the cooling system."
+        },
+        {
+          "id": "access-timing-chain",
+          "title": "How to get to the timing chain",
+          "start": 4,
+          "end": 15,
+          "summary": "Steps 4–15 · Clear the upper intake, both valve covers, belts, pulley, pump and front accessories, then remove the front cover."
+        },
+        {
+          "id": "remove-primary-chain",
+          "title": "Set the timing position and remove the primary chain",
+          "start": 16,
+          "end": 19,
+          "summary": "Steps 16–19 · Establish the reference position, hold both banks, record the links and release the old chain."
+        },
+        {
+          "id": "secondary-chain-branch",
+          "title": "If needed: replace the secondary chains",
+          "start": 20,
+          "end": 23,
+          "summary": "Steps 20–23 · A conditional branch for one or both banks. Skip this phase for primary-chain-only work."
+        },
+        {
+          "id": "fit-primary-chain",
+          "title": "Fit the primary chain and verify the timing",
+          "start": 24,
+          "end": 27,
+          "summary": "Steps 24–27 · Install the chain, guide and tensioner; check all marks and link counts before removing the holding tools."
+        },
+        {
+          "id": "reassemble-timing-job",
+          "title": "Reseal and reassemble the engine",
+          "start": 28,
+          "end": 38,
+          "summary": "Steps 28–38 · Prepare the RTV joints, close the engine, restore accessories and intake, then renew oil and filter."
+        },
+        {
+          "id": "verify-timing-job",
+          "title": "Refill, start and check the repair",
+          "start": 39,
+          "end": 42,
+          "summary": "Steps 39–42 · Fill coolant, complete the pre-start inventory, bleed the system and run the scan-tool correction."
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Rattle or correlation fault without a confirmed chain defect",
+          "meaning": "Oil supply, VCT, tensioners or other faults may be involved.",
+          "next": "Diagnose before selecting a chain kit; preserve the fault data."
+        },
+        {
+          "finding": "Broken/jumped chain or hard resistance during rotation",
+          "meaning": "The normal known-position starting condition is absent; internal contact/damage may exist.",
+          "next": "Stop the normal rotation sequence and use the correct recovery and damage-assessment procedure."
+        },
+        {
+          "finding": "Marks or the 48/35 link checks disagree",
+          "meaning": "Mechanical timing has not passed the installation check.",
+          "next": "Resolve the discrepancy before closing the cover or using the starter."
+        },
+        {
+          "finding": "Debris, damaged guides or a tensioner that does not operate correctly",
+          "meaning": "Replacing the chain alone may leave the original cause in place.",
+          "next": "Identify the affected parts and oil-system condition; replace/repair using their exact application instructions."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Before the cover",
+          "body": "Both intake marks and the crank marked-link pair agree; the 48/35 link counts are checked; guides and tensioners are correct; serviced secondary assemblies are aligned and tensioned; solenoids/oil tubes restored; all holding tools and lockpins accounted for."
+        },
+        {
+          "title": "Before any start",
+          "body": "Cover RTV sequence/time windows and fasteners complete; pulley and both belts correct; all intake, coolant and electrical connections restored; oil/filter and initial coolant fill complete; all towels, temporary clamps and the belt cable tie removed."
+        },
+        {
+          "title": "After the repair",
+          "body": "Complete bleeding and scan-tool correction; no abnormal mechanical noise, fluid leaks or unresolved warning; road test satisfactory; cold oil/coolant levels and disturbed joints rechecked."
+        }
+      ],
+      "watchFor": [
+        {
+          "title": "Confusing the two tensioner rules",
+          "body": "The primary tensioner has a ratchet-reset procedure. A secondary tensioner that has been removed must be replaced. Those rules are not interchangeable."
+        },
+        {
+          "title": "Treating every bolt as a 10 Nm bolt",
+          "body": "Guides, VCT units, solenoids, oil tubes, front cover and pulley use different instructions. Keep the component name attached to the value, including lb-in versus lb-ft and angle stages."
+        },
+        {
+          "title": "Closing the cover before verifying the timing",
+          "body": "The marks and link counts are checked with the chain installed and tensioned, before sealant and reassembly. Belt installation rotates the crank later; it does not replace that check."
+        }
+      ],
+      "notes": [
+        "This is an original combined walkthrough of the supplied 3.7L procedures. Bank-specific location, sequence and tool-seating drawings remain required references. It does not establish coverage for transverse engines, other years or modified timing systems.",
+        "The source has a thermostat O-ring inspection/replacement inconsistency; the installation requirement for a new O-ring is retained. Its A/C-routing wording and the LH secondary-solenoid torque omission are identified beside the affected steps.",
+        "The diagram is a relationship map, not a timing-mark template or exact chain-routing drawing. Inspect the actual vehicle and Ford illustrations before using a tool or identifying a fastener.",
+        "Online background references checked October 26, 2026. Ford vehicle-specific repair instructions govern this job; supplier background does not replace its torque values or timing marks."
+      ],
+      "references": [
+        {
+          "title": "Ford · 2015 Mustang 3.7L capacities and specifications",
+          "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1660537&Uid=G1660535&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259",
+          "description": "Primary owner guidance for the 6.0-qt oil service fill, historical coolant capacity and original fluid specifications. Does not supply head-bolt or valve-timing instructions."
+        },
+        {
+          "title": "Fel-Pro · Use and misuse of sealers",
+          "url": "https://www.felpro.com/technical/field-test-garage/use-and-misuse-of-sealers.html",
+          "description": "Supplier background on where sealant is appropriate. The 3.7L Ford procedure supplies the actual RTV material, bead path and assembly windows for this repair."
+        }
+      ],
+      "procedures": [
+        {
+          "documentId": "G1681528",
+          "purpose": "Primary timing-chain removal, holding tools, tensioner reset, installation marks and 48/35-link post-check."
+        },
+        {
+          "documentId": "G1681517",
+          "purpose": "Full access route, cover preparation/RTV, numbered fasteners, oil/filter renewal and scan-tool completion."
+        },
+        {
+          "documentId": "G1681532",
+          "purpose": "LH/RH secondary-chain/VCT assemblies and the conditional new-tensioner branches."
+        },
+        {
+          "documentId": "G1681495",
+          "purpose": "Engine layout, oil-fed timing components and lubrication-system context."
+        },
+        {
+          "documentId": "G1681496",
+          "purpose": "Identification of primary/secondary chains, guides, VCT units and front-cover components."
+        },
+        {
+          "documentId": "G1681513",
+          "purpose": "303-01B · Crankshaft front seal and pulley. Puller/installer tools, new seal and bolt, staged pulley tightening."
+        },
+        {
+          "documentId": "G1681529",
+          "purpose": "303-01B · Upper intake manifold. Access to the lower manifold and attached connections."
+        },
+        {
+          "documentId": "G1681530",
+          "purpose": "303-01B · LH valve cover. New gasket, conditional seal replacement and its installation illustration."
+        },
+        {
+          "documentId": "G1681531",
+          "purpose": "303-01B · RH valve cover. RH-specific attachments, new gasket and installation illustration."
+        },
+        {
+          "documentId": "G1675558",
+          "purpose": "303-07B · Ignition coils. RH upper-manifold access, coil removal, boot inspection and 7 Nm + 50° refit."
+        },
+        {
+          "documentId": "G1675695",
+          "purpose": "303-12B · Air-cleaner outlet pipe. Disconnecting the booster/vent tubes and the two 5.4 Nm clamps."
+        },
+        {
+          "documentId": "G1688121",
+          "purpose": "303-05B · Accessory drive belt. Counterclockwise tensioner release and seating check."
+        },
+        {
+          "documentId": "G1688123",
+          "purpose": "303-05B · A/C stretchy belt. 303-1419 removal, routing, 3 mm cable tie and hand-rotation installation."
+        },
+        {
+          "documentId": "G1694561",
+          "purpose": "303-03B · Degas bottle. Cold-system hose isolation, suction, hose connections and 9 Nm mounting bolts."
+        },
+        {
+          "documentId": "G1694559",
+          "purpose": "303-03B · Coolant pump. New gasket/O-ring and belt-protection details during front-cover access."
+        },
+        {
+          "documentId": "G1694563",
+          "purpose": "303-03B · Thermostat housing. Required connection work in the lower-manifold and pump procedures."
+        },
+        {
+          "documentId": "G1692003",
+          "purpose": "303-00 · RTV surface preparation. Applies to the front-cover/RTV joints; it does not override the head-gasket ban on abrasives."
+        },
+        {
+          "documentId": "G1694549",
+          "purpose": "303-03B · Cooling-system draining, vacuum filling and bleeding. Follow one complete filling branch, with its hot-coolant precautions."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "414-01 · Battery disconnect/connect. Isolation and restoration requirements."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "100-02 · Jacking and lifting. Approved vehicle support and lifting points."
+        },
+        {
+          "documentId": "G1671536",
+          "purpose": "310-00B · Fuel quick-release coupling. Correct disconnect/reconnect and connection check."
+        },
+        {
+          "documentId": "G1681493",
+          "purpose": "303-01B · 3.7L specifications. Head flatness, valve clearances and service oil fill. The block-flatness unit discrepancy is flagged in this guide."
+        },
+        {
+          "documentId": "G1804267",
+          "purpose": "303-00 · Engine diagnosis. Cylinder leakage interpretation and investigation of overheating, contamination and mechanical faults."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "documentId": "G1681528",
+          "sourceHash": "3293cb15b95aa03309ed82875cf0595c837719b4a1e920ef917aebfc792aa1a1"
+        },
+        {
+          "documentId": "G1681517",
+          "sourceHash": "61a306a2773351d1dae57497236e3558236c409620ac918684b7de26b0f07d68"
+        },
+        {
+          "documentId": "G1681532",
+          "sourceHash": "159995cfdc3952b641f93e661e606558ab882ba140bd73dee519b028aeed4c72"
+        },
+        {
+          "documentId": "G1681495",
+          "sourceHash": "b8ecab3c27ec1616a4c52862c3565b0cab25722ba9fb0342e793545f4b106e80"
+        },
+        {
+          "documentId": "G1681496",
+          "sourceHash": "42d3e4e67f12b3ca463d9dc24575ee086086396167c5f0887868668072a3357b"
+        },
+        {
+          "documentId": "G1681513",
+          "sourceHash": "900491496a8a4feea78e3d1f49bcfb63c8d0a5538f6b92bb971a431449fdb022"
+        },
+        {
+          "documentId": "G1681529",
+          "sourceHash": "81ac09a43deb0a82d504fa56878d037ac20b176d388222247ec0d8af81a4f2c6"
+        },
+        {
+          "documentId": "G1681530",
+          "sourceHash": "3f463879683bbaf9812d4341330d459675dc71e9887b7b6cd9640ff034ec9fed"
+        },
+        {
+          "documentId": "G1681531",
+          "sourceHash": "36e469ea712b9cb2352fe17191f2ba6326338a1927dba71690bcd342b6e06c29"
+        },
+        {
+          "documentId": "G1675558",
+          "sourceHash": "aeea52dc9d4a66069f87d5a7916def42158d25474abf5a7a5e88d7cf03ccf115"
+        },
+        {
+          "documentId": "G1675695",
+          "sourceHash": "187f2db88aa010351e298ec5d4e669bf07353365e4674cd7c7b0e7fc8635c766"
+        },
+        {
+          "documentId": "G1688121",
+          "sourceHash": "824a55b0746c02d40bb3224423f218fc1f08bf5c396af597106e3b32ccd8d4c5"
+        },
+        {
+          "documentId": "G1688123",
+          "sourceHash": "70b96bc1a051493e31990df66f2a821ac5c217675b6b5e05330d2d279d828e15"
+        },
+        {
+          "documentId": "G1694561",
+          "sourceHash": "6160858694511826b0e5e92a41dead2bacb7cf9e83ee8013388728e46ee5ca46"
+        },
+        {
+          "documentId": "G1694559",
+          "sourceHash": "ca423ed7cd87a7fd3ab1af420b880c1d66573e9bd95d09bc8f0af22c21874ca5"
+        },
+        {
+          "documentId": "G1694563",
+          "sourceHash": "afbdd6ab09b65d15253a44c94f89b14bcc7b981004516606200778b0794e8e13"
+        },
+        {
+          "documentId": "G1692003",
+          "sourceHash": "246a69b58a97a2f688f2a1ab4eed89624d38214cd36133c31c10a1714ffa616d"
+        },
+        {
+          "documentId": "G1694549",
+          "sourceHash": "19af5f7761488665bceba63cc8abbf170be49ef78f877a5c35db743cf5f3c027"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1671536",
+          "sourceHash": "f8ba01bf67763359ac6725e5816ad3e39283e6d81849c554e2ee679893b75a3b"
+        },
+        {
+          "documentId": "G1681493",
+          "sourceHash": "7c832e9c9589d2ef062519157b826c3a139d53887874a67736973388d1214b67"
+        },
+        {
+          "documentId": "G1804267",
+          "sourceHash": "73c4e15b76b2f0246afe067e2f8b32c725a37d43f077f3d1872d523dab5c9c4e"
+        }
+      ],
+      "relatedGuideIds": [
+        "3-7l-v6-head-gasket",
+        "engine-cylinder-leakdown",
+        "coolant-change"
+      ],
+      "evidence": []
     }
   ],
   "schedule": {

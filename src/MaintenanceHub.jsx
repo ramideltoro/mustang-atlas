@@ -14,6 +14,7 @@ import './maintenance-hub.css';
 import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 import HeadGasketWorkshop from './HeadGasketWorkshop.jsx';
 import HeadGasketAccess from './HeadGasketAccess.jsx';
+import TimingChainWorkshop from './TimingChainWorkshop.jsx';
 export function SpecialMaintenanceTeaser(){return <section className="special-maintenance-teaser"><Wrench size={30} aria-hidden="true"/><div><h2>Special maintenance</h2><p>Bigger jobs, explained carefully. Plan the diagnosis, understand the repair, and work through the checks with the workshop references beside you.</p><a className="text-link" href="#/maintenance?category=special">Explore special maintenance <ArrowRight size={16}/></a></div></section>;}
 
 
@@ -78,8 +79,9 @@ function Guide({id,engine,year,onZoom,filters,section}){
  if(!guide)return null;
  const mismatch=maintenanceMismatch(guide.applicability),outline=guideOutline(guide);
  return <GlossaryProvider terms={glossary?.terms||[]} open={glossary?.open} context={{system:guide.systemId,title:guide.title}}><div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={guide.categoryId==='special'?{...filters,category:'special'}:filters}/><header className={'maintenance-article-header'+(mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> {guide.categoryId==='special'?'Special maintenance':'Care & workshop'}</span><h1>{guide.title}</h1><GuideBadges guide={guide}/><Markdown body={guide.summary}/><EngineNote engine={engine} applicability={guide.applicability}/></div>{!mismatch&&(guide.thumbnail?<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>:<ArticleThumbnail item={guide} className="maintenance-card-art"/>)}</header>
-  {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className="maintenance-article-layout"><article className="maintenance-article-body">
+  {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className={"maintenance-article-layout"+(guide.stepGroups?.length?" is-phased":"")}><article className="maintenance-article-body">
    {guide.visualGuide==='v6-37-head-gasket'&&<GuideSection id="gasket-location" title="Where the head gasket lives" icon={BookOpen}><HeadGasketAccess onJump={jumpTo}/></GuideSection>}
+   {guide.visualGuide==='v6-37-timing-chain'&&<GuideSection id="timing-drive" title="Meet the timing drive" icon={BookOpen}><TimingChainWorkshop onJump={jumpTo}/></GuideSection>}
    {guide.when?.summary&&<section id="when" tabIndex={-1} className="maintenance-when"><CalendarClock size={25} aria-hidden="true"/><div><h2>{guideWhenTitle(guide)}</h2><Markdown body={guide.when.summary}/>{guide.when.notes?.map((note,index)=><div className="maintenance-application" key={index}><Markdown body={note}/></div>)}</div></section>}
    {guide.introduction&&<GuideSection id="understand" title="Understand the task" icon={BookOpen} tone="blue"><Markdown body={guide.introduction}/></GuideSection>}
    {guide.why&&<GuideSection id="why" title="Why it matters" icon={HeartPulse}><Markdown body={guide.why}/></GuideSection>}
