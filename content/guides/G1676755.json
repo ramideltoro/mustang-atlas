@@ -1,9 +1,65 @@
 {
   "documentId": "G1676755",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1676755",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693184",
+      "sourceHash": "d7e46b64aa52ae84ab86a5758064469bc4d590e9469cd2078e1219dbd0f66b50",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693184",
+      "sourceUnitCount": 11,
+      "mediaCount": 5
+    }
+  ],
   "sourceHash": "66401ded7d8e51485045ece0e95755fefbb73ec8a5e863f81f05bb7f49d8aa7e",
   "title": "Air Inlet Door Actuator",
   "introduction": "The air inlet door selects outside air or recirculated cabin air. Its small reversible actuator moves the door, and a position sensor reports where the door is to the climate controller. It is the cabin’s air-source gatekeeper; the blower still moves the air, and the heater core and evaporator handle temperature.\n\nI start with the right-hand lower instrument panel insulator shown in the first drawing. Removing that panel opens the working area; the next drawing identifies the actuator connector and mounting retainers. This guide covers removal and installation. It supplies no diagnostic test, calibration sequence or functional verification procedure.",
-  "requirements": [],
+  "requirements": [
+    {
+      "category": "General service safety",
+      "items": [
+        {
+          "name": "Prevent unintended starting",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        },
+        {
+          "name": "Remote start",
+          "detail": "If equipped, disable remote start through the Central Display under Vehicle settings > Remote Start Setup before service requiring work underneath or around the vehicle. Otherwise, the vehicle could be remotely started at any time, causing personal injury or death."
+        },
+        {
+          "name": "Eye and ear protection",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Failure to do so may result in serious personal injury."
+        },
+        {
+          "name": "Sharp edges",
+          "detail": "Wear protective gloves when handling parts with pointed or sharp edges. Failure to do so may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Required safety review",
+      "items": [
+        {
+          "name": "Climate control precautions",
+          "detail": "Before beginning, review the supplied [Climate Control System Health and Safety Precautions](#/document/G1693184), as required by the general safety reference. The actuator sequence involves the insulator, electrical connector and retainers; it calls for no refrigerant handling, heater-water-hose disconnection or electric booster heater servicing."
+        }
+      ]
+    }
+  ],
   "edits": [
     {
       "blockId": "G1676755-b00001",
@@ -31,10 +87,10 @@
       "why": "The actuator mounting and electrical connection are restored while the access area remains open; the insulator closes the area afterward."
     }
   ],
-  "checkedAt": "2026-10-27T11:55:17.612Z",
+  "checkedAt": "2026-10-27T13:24:58.067Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -43,7 +99,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "52f54b61bc4a92bfc463a3abb60beed26166b7a9debdd55945c39dc1c42c54ce",
   "sourcePdfHash": null,
@@ -51,10 +107,71 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "826be845b0304087b10066bcaed9925793e0e96858799ef32357fafb7170497b",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 8,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "32831c203865ecca49af4793ae78b19a33ee4d3404f4c4ce6cdd4a8b28a0abd1",
+      "reviewedAt": "2026-10-27T11:55:17.612Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 59,
     "sourceUnitCount": 8,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "32831c203865ecca49af4793ae78b19a33ee4d3404f4c4ce6cdd4a8b28a0abd1",
-    "reviewedAt": "2026-10-27T11:55:17.612Z"
+    "fingerprint": "a105d215689beec15860b46d69dc5ae4a7b2ca594f0f85d64e7d5c779fe11456",
+    "reviewedAt": "2026-10-27T13:16:32.192Z",
+    "editorialRevision": "eb5a557a7860e2d5c840f35f8c75819af9b29dc070acf30b3796b740ed3812ac",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:24:58.067Z",
+      "baselineHash": "3694d6a57878deb5db128e3bc4c53c7d600fdbceb3abbdfdfabc28790178e659",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "General service safety",
+          "item": "Prevent unintended starting",
+          "before": "Remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "826be845b0304087b10066bcaed9925793e0e96858799ef32357fafb7170497b",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "sourceUnitCount": 8,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "32831c203865ecca49af4793ae78b19a33ee4d3404f4c4ce6cdd4a8b28a0abd1",
+          "reviewedAt": "2026-10-27T11:55:17.612Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 2,
+        "supportingSourceUnitCount": 59,
+        "sourceUnitCount": 8,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "a105d215689beec15860b46d69dc5ae4a7b2ca594f0f85d64e7d5c779fe11456",
+        "reviewedAt": "2026-10-27T13:16:32.192Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

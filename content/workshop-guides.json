@@ -90804,87 +90804,230 @@
       }
     },
     {
-      "title": "Replace and configure the SYNC non-touchscreen display module",
-      "summary": "Remove the front control/display interface module and use the scan-tool installation process to transfer its configuration when fitting a replacement.",
-      "introduction": "The front control/display interface module (FCDIM) provides the non-touchscreen display in this SYNC information and entertainment system. It works within a system that also has a separate audio unit, SYNC interface and front control panel. Removing it requires access through the front controls interface module (FCIM). Replacing it also requires configuration work, so the job begins before the old display is disconnected.",
-      "why": "A replacement module needs the vehicle's existing configuration information. The programmable module installation (PMI) process uploads that information to a diagnostic scan tool before removal and downloads it into the replacement after installation. Fitting the hardware without completing that process leaves the replacement work unfinished.",
+      "title": "Replace and configure the 4.2-inch SYNC display module",
+      "summary": "Save the module configuration, remove the console and dashboard trim to reach the FCDIM, then reinstall the display and complete its scan-tool configuration.",
+      "introduction": "The little SYNC screen has quite the entourage: getting it out means persuading a surprising amount of console trim to leave first. I’ll take you through that procession in order, keeping the display separate from the button panel below it. The front control/display interface module, or FCDIM, provides the 4.2-inch non-touchscreen display. The front controls interface module, or FCIM, is the separate control panel you must remove to reach it. Both belong to the wider [information and entertainment system](#/document/G1692884), so a display complaint alone does not prove the screen module has failed.",
+      "why": "When replacing the FCDIM, its existing vehicle configuration must be saved before removal and transferred into the replacement afterward. Ford calls this programmable module installation, or PMI. I treat that electronic handover as part of the replacement itself: the bolts hold the module in place, but they cannot tell it how this Mustang is equipped.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "SYNC non-touchscreen display replacement",
-        "FCDIM configuration",
-        "blank SYNC display",
-        "front control display interface module"
+        "2015 Mustang FCDIM replacement",
+        "4.2-inch SYNC display removal",
+        "non-touchscreen display module",
+        "FCDIM PMI configuration",
+        "FCIM removal",
+        "Mustang center console trim removal"
       ],
       "when": {
-        "summary": "When diagnosis calls for FCDIM replacement, or the module must be removed for access.",
+        "summary": "Use this procedure when diagnosis has established that the FCDIM needs replacement, or when the existing module must be removed and reinstalled for access.",
         "notes": [
-          "Configuration upload must precede removal when a new module is being installed.",
-          "The final PMI completion step is required when replacing the component."
+          "Applies to 2015 Mustangs with the specified SYNC 4.2-inch non-touchscreen FCDIM and 2.3L, 3.7L, 5.0L or 5.2L engines.",
+          "The selector-trim illustrations show an automatic transmission; Ford describes the manual-transmission procedure as similar.",
+          "The dashboard finish-panel illustration includes the optional ICM. Disconnect and reconnect its electrical connector only if fitted.",
+          "FCDIM replacement requires configuration capture before removal and PMI completion after installation. Merely removing and reinstalling the original module does not require the replacement-only final PMI step."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange scan-tool capability",
-          "detail": "Use a diagnostic scan tool capable of performing FCDIM PMI and follow its on-screen instructions. Plan configuration capture while the original module is still installed."
+          "title": "Arrange the electronic handover first",
+          "detail": "Have a diagnostic scan tool capable of performing FCDIM and FCIM PMI. Keep the original modules installed for the initial scan-tool work. A replacement FCDIM requires its configuration to be uploaded before removal; if that cannot be accomplished, stop before dismantling and resolve configuration recovery with appropriate service support. Recovery instructions are outside this procedure."
         },
         {
-          "title": "Prepare the control-panel access",
-          "detail": "Be able to remove and reinstall the FCIM before working on the display module behind it. Have suitable tools for the module bolts and their low tightening torque."
+          "title": "Gather tools and the intended replacement",
+          "detail": "Have an interior trim remover, tools that fit the actual fasteners, and a torque tool capable of accurately applying 18 lb.in (2 Nm) and 22 lb.in (2.5 Nm). If replacing the display, arrange the correct FCDIM for this vehicle and display arrangement. Keep removed fasteners grouped by location so the console hardware does not become a tiny, expensive jigsaw."
+        },
+        {
+          "title": "Prepare the car and protect yourself",
+          "detail": "Work with the vehicle stationary on the ground and the parking brake set. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before service. Follow the scan tool's ignition instructions during PMI; before physically dismantling the interior, switch the ignition off and remove the key to prevent another person starting the car. Wear eye and ear protection while servicing, and protective gloves when handling sharp-edged components. See [health and safety precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Plan space for panels and wiring",
+          "detail": "Make room to place the console side panels, upper console panel, dashboard finish panel and FCIM safely aside. As each wired panel comes loose, support it while releasing its connector locks; do not let a panel hang from its wiring."
         }
       ],
       "steps": [
         {
-          "title": "Begin the configuration process",
-          "body": "Begin FCDIM PMI with the diagnostic scan tool as directed in the [module procedure](#/document/G1704851). If installing a new module, upload the existing configuration before removing the original unit."
+          "title": "Begin FCDIM and FCIM PMI before removing anything",
+          "body": "With both modules still installed, use the diagnostic scan tool to begin FCDIM PMI and follow its on-screen instructions. If fitting a new FCDIM, upload its configuration to the tool before removal.\n\nNext begin FCIM PMI as directed in the [FCIM procedure](#/document/G1704003). If the FCIM itself will also be replaced, save its configuration before removing it. Access to the FCDIM normally involves removing and reinstalling the existing FCIM; that does not make it a replacement.\n\nOnce the preliminary scan-tool work permits dismantling, switch the ignition off and remove the key before proceeding."
         },
         {
-          "title": "Remove the front control panel",
-          "body": "Remove the FCIM to expose the display-module attachment. Keep the distinction clear: the access panel and the FCDIM are separate components in this sequence."
+          "title": "Remove the right-hand console side trim",
+          "body": "Find the small floor-console side panel below the front of the center stack on the right-hand side. Use the interior trim remover at the panel edge to release its five retaining clips, working around the panel rather than pulling hard against clips that are still engaged. Remove the panel."
         },
         {
-          "title": "Release and disconnect the display module",
-          "body": "Remove the FCDIM mounting bolts, remove the module and disconnect its electrical connector. The illustration identifies the mounting points and the connector at the rear of the unit."
+          "title": "Remove the left-hand console side trim",
+          "body": "Use the interior trim remover to release the five clips securing the corresponding left-hand floor-console side panel. Take the panel away once the clips are free. These two panels expose the sides of the console's front attachment area."
         },
         {
-          "title": "Install the module and restore access trim",
-          "body": "Reverse the removal sequence: reconnect the electrical connector, position the FCDIM and install its bolts. Tighten the bolts to 22 lb.in (2.5 Nm), then reinstall the FCIM."
+          "title": "Lift out the stowage mat and remove the upper console bolts",
+          "body": "Lift the mat out of the small stowage area immediately below the center-stack switches and ahead of the selector. Remove the two floor-console upper bolts revealed beneath it. Keep these bolts separate from the side retainers removed later."
         },
         {
-          "title": "Complete PMI for a replacement",
-          "body": "When a replacement module has been fitted, complete FCDIM PMI using the scan tool's on-screen instructions. Download the configuration captured before removal into the new module."
+          "title": "Release the selector bezel, move the boot aside and unplug it",
+          "body": "Use the interior trim remover to release the selector-lever bezel. The automatic-transmission illustration shows five clips around its perimeter and release points at its forward edge.\n\nPosition the selector-lever boot aside, then release the lock on its electrical connector and disconnect it. Leave the selector trim supported without pulling on the harness. Ford describes the manual-transmission arrangement as similar; use the corresponding bezel and boot on that car rather than expecting the automatic markings and shape."
+        },
+        {
+          "title": "Open the console lid and remove the front side retainers",
+          "body": "Open the floor-console storage lid. At the front of the console, remove the two right-hand side retainers exposed by the side-panel removal, then remove the two left-hand side retainers.\n\nTheir installation torque is 18 lb.in (2 Nm) on both sides. Keep all four identified for reassembly."
+        },
+        {
+          "title": "Lift off the upper console trim and disconnect its wiring",
+          "body": "Release the eight clips holding the floor-console upper trim panel—the long panel containing the cupholders and extending forward around the selector. Use the interior trim remover to assist the clip release, then lift the panel upward as its clips disengage.\n\nKeep the gear-selector cover positioned aside while lifting the upper panel clear. Support the panel, disconnect the electrical connectors underneath it, and remove it. I like to pause here and account for the connectors: a trim panel is a poor tool for discovering how far a harness stretches."
+        },
+        {
+          "title": "Remove the stowage tray",
+          "body": "With the upper console trim removed, lift out the stowage-area tray beneath the center-stack switches. This is the molded tray that remained below the mat and its two bolt recesses; the illustration shows it lifting upward."
+        },
+        {
+          "title": "Release the right-hand dashboard trim panel",
+          "body": "Use the interior trim remover to release the three clips securing the narrow right-hand instrument-panel trim panel beside the glovebox. Remove this panel first, as shown in the [instrument panel center finish-panel procedure](#/document/G1693976)."
+        },
+        {
+          "title": "Remove the dashboard center finish panel",
+          "body": "Release the clips securing the wide instrument-panel center finish panel, which runs across the upper center stack and passenger-side dashboard. The illustration identifies thirteen clips; work around the panel with the interior trim remover and support it as it comes free.\n\nIf the optional ICM is fitted, release and disconnect its electrical connector behind the panel before taking the panel away. A car without that module does not need this connector operation."
+        },
+        {
+          "title": "Remove the small lower center-stack trim cover",
+          "body": "Use the interior trim remover to release the small rectangular trim cover below the switch row, between the USB-port area and the round power outlet. Remove the cover to expose the lower FCIM mounting area."
+        },
+        {
+          "title": "Unbolt and disconnect the FCIM",
+          "body": "Remove the four FCIM mounting bolts: two at the top of the control-panel assembly and two in its lower mounting area. Support the assembly and draw it clear far enough to reach the rear electrical connectors.\n\nRelease the connector locks and unplug the electrical connectors, then remove the FCIM. The bolts will be tightened to 22 lb.in (2.5 Nm) during installation. You should now have access to the separate display module behind the control-panel opening."
+        },
+        {
+          "title": "Remove the FCDIM and disconnect its rear connector",
+          "body": "Identify the rectangular display module below the center air outlets. Remove its four mounting bolts, one at each corner of the side mounting brackets, while supporting the module.\n\nMove the FCDIM out of its mounting position, release the locking tab on the rear electrical connector, and unplug it. Remove the module. This is the final hardware-removal stage of the [FCDIM procedure](#/document/G1704851)."
+        },
+        {
+          "title": "Connect and fasten the display module",
+          "body": "Reconnect the rear electrical connector to the replacement FCDIM, or to the original module if it is being reused. Make sure the connector is fully seated and its lock engaged, then position the module and its brackets at the four mounting points.\n\nInstall the four bolts and tighten them to 22 lb.in (2.5 Nm). Keep the harness clear of the mounting surfaces as the module seats."
+        },
+        {
+          "title": "Refit the FCIM and its lower trim cover",
+          "body": "Reconnect the electrical connectors at the back of the FCIM and confirm their locks engage. Position the panel without trapping wiring, install its four bolts, and tighten them to 22 lb.in (2.5 Nm).\n\nRefit the small rectangular lower trim cover between the USB-port area and power outlet, seating it in its original opening."
+        },
+        {
+          "title": "Restore the dashboard finish panels",
+          "body": "If the optional ICM connector was disconnected, reconnect and lock it before bringing the wide center finish panel back against the dashboard. Align the panel's thirteen clips with their mounting locations and seat the panel evenly.\n\nThen align and engage the three clips on the narrow right-hand instrument-panel trim panel beside the glovebox. Check the adjoining panel edges sit flush before moving on."
+        },
+        {
+          "title": "Put the stowage tray back",
+          "body": "Return the molded stowage-area tray to its position below the center-stack switches. Seat it in the opening and align its bolt recesses for the console hardware that will be restored later."
+        },
+        {
+          "title": "Reconnect and seat the upper console trim",
+          "body": "Support the floor-console upper trim panel above the console and reconnect the electrical connectors underneath it. Confirm each connector lock has engaged.\n\nKeep the gear-selector cover positioned aside while lowering the panel into place. Align the eight retaining clips, check that wiring is clear of the edges and clip locations, then seat the panel. The cupholder section and forward console edges should lie evenly against the surrounding trim."
+        },
+        {
+          "title": "Install the left-hand and right-hand console retainers",
+          "body": "Reinstall the two left-hand front console retainers, followed by the two right-hand front retainers. Tighten each to 18 lb.in (2 Nm).\n\nThese are inch-pound values. A small trim fastener does not need the full motivational speech from a long wrench."
+        },
+        {
+          "title": "Restore the console lid, selector wiring, boot and bezel",
+          "body": "Close the console storage lid. Reconnect the electrical connector disconnected at the selector trim and confirm its lock engages.\n\nReturn the selector boot and gear-selector cover from their aside positions. Align the selector-lever bezel and engage its retaining clips; the illustrated automatic bezel has five. Check that the boot is seated rather than caught beneath the bezel."
+        },
+        {
+          "title": "Reinstall the console upper bolts and stowage mat",
+          "body": "Install the two floor-console upper bolts through the stowage-area recesses, restoring their original attachment. Return the mat over the bolt recesses and lay it flat in the tray."
+        },
+        {
+          "title": "Refit both console side panels",
+          "body": "Refit the left-hand floor-console side panel first, aligning and engaging its five clips. Then refit the right-hand panel in the same way, engaging its five clips.\n\nCheck the panel edges meet the console evenly and that neither panel remains loose at a clip location."
+        },
+        {
+          "title": "Complete replacement PMI and check the finished installation",
+          "body": "If the FCIM was replaced, complete its PMI using the diagnostic scan tool and download the saved FCIM configuration as directed on screen. If the original FCIM was simply removed and reinstalled, its replacement-only completion step does not apply.\n\nIf the FCDIM was replaced, complete FCDIM PMI and download the configuration saved before removal, following the tool's on-screen instructions. Reinstalling the original FCDIM does not require this replacement-only completion step.\n\nAfter the required programming is complete, check normal display and control operation and review the physical installation checks below. An unfinished PMI operation is an unfinished replacement, however tidy the dashboard looks."
         }
       ],
       "watchFor": [
         {
-          "title": "Old module removed too early",
-          "body": "Do not dismantle first and leave configuration capture until afterward. Uploading the configuration is a prerequisite to removing a module that will be replaced."
+          "title": "Configuration must be captured before a replacement is disconnected",
+          "body": "Begin the scan-tool process while the original modules are installed. Capture FCDIM configuration before replacing the display, and FCIM configuration before replacing the control panel if that additional replacement is planned."
         },
         {
-          "title": "Replacement configuration unfinished",
-          "body": "A connected and bolted-in replacement is not the end of the job; the required PMI process must also be completed."
+          "title": "The display and control panel are different modules",
+          "body": "The FCIM comes out to provide access. Its four mounting bolts and the FCDIM's four mounting bolts both use 22 lb.in (2.5 Nm), but each module has its own connectors and PMI process."
+        },
+        {
+          "title": "Panel resistance deserves a closer look",
+          "body": "Before pulling harder, look for a clip that remains engaged or a connector still attached. Release the relevant attachment with the trim remover or connector lock and support the panel as it comes free."
+        },
+        {
+          "title": "Keep the small torque values straight",
+          "body": "The four console front side retainers use 18 lb.in (2 Nm). The FCIM and FCDIM mounting bolts use 22 lb.in (2.5 Nm). Do not apply those module values to unrelated trim hardware."
         }
       ],
       "notes": [
-        "A display complaint alone does not establish that the FCDIM has failed; it is one component within the information and entertainment system.",
-        "This procedure applies to the specified non-touchscreen SYNC display arrangement."
+        "This is a removal, installation and configuration article. It does not establish an electrical fault test or a basis for condemning the FCDIM.",
+        "Install the access trim in reverse removal order. Clip-retained panels and the stowage-area upper bolts are restored without borrowing a tightening value from another fastener.",
+        "The automatic selector is illustrated and the manual procedure is described as similar; no separate manual-specific selector dismantling sequence is established here."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm physical installation",
-          "body": "Confirm the electrical connector is reattached, the mounting bolts are tightened and the FCIM is reinstalled."
+          "finding": "A blank or otherwise troublesome display is the only reason being considered for replacement.",
+          "meaning": "The display is one component in a system that also contains separate audio, SYNC and control modules. The complaint alone does not identify a failed FCDIM.",
+          "next": "Establish the fault through appropriate diagnosis before buying or replacing the module. This article provides no circuit tests or failure thresholds."
         },
         {
-          "title": "Record configuration completion",
-          "body": "For a replacement, record completion of PMI and the configuration download. If the scan-tool process cannot be completed, retain that as an unresolved installation issue."
+          "finding": "The FCIM is being reused after removal for display access.",
+          "meaning": "Removing the control panel for access is different from replacing it.",
+          "next": "Begin its PMI process as directed before removal, reinstall its original connectors and hardware, and omit the replacement-only final FCIM PMI completion step."
+        },
+        {
+          "finding": "An electrical connector is present on the optional ICM behind the wide dashboard finish panel.",
+          "meaning": "That panel has an additional wired attachment.",
+          "next": "Support the panel, disconnect the ICM connector before removal, and reconnect it before seating the panel during reassembly."
+        },
+        {
+          "finding": "The manual-transmission selector trim does not release using the corresponding bezel-and-boot operations.",
+          "meaning": "The automatic illustration is not enough to establish additional manual-specific dismantling.",
+          "next": "Stop at the selector trim and obtain matching instructions for that arrangement before forcing or dismantling additional parts."
+        },
+        {
+          "finding": "A replacement module's final PMI process does not complete.",
+          "meaning": "The required configuration handover remains unresolved.",
+          "next": "Retain the scan tool's failure information and resolve the programming issue before treating the replacement as finished. Do not use further parts replacement as a substitute for completing configuration."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm module mounting and connector engagement",
+          "body": "Confirm the FCDIM's four bolts and FCIM's four bolts were tightened to 22 lb.in (2.5 Nm), their connectors were fully seated and locked, and wiring was clear of mounting surfaces."
+        },
+        {
+          "title": "Confirm console and dashboard restoration",
+          "body": "Confirm the four console front side retainers were tightened to 18 lb.in (2 Nm), both stowage-area upper bolts are installed, and the mat and tray are restored. Check the dashboard finish panels, lower trim cover, upper console panel, selector bezel and both console side panels are seated. Confirm the optional ICM and console electrical connectors were reconnected wherever disconnected."
+        },
+        {
+          "title": "Confirm the required configuration transfer",
+          "body": "For every module actually replaced, confirm its PMI completed and its saved configuration was downloaded. A reused module does not require the replacement-only final step."
+        },
+        {
+          "title": "Check ordinary operation after assembly",
+          "body": "Check that the display operates and responds to the reinstalled controls, and that the selector boot, bezel and console lid sit and move normally. These are completion checks, not a diagnostic test proving every part of the entertainment system is fault-free. If the original complaint remains, return to diagnosis."
         }
       ],
       "procedures": [
         {
           "documentId": "G1704851",
-          "purpose": "SYNC FCDIM removal and installation, including configuration capture before replacement and PMI completion afterward.",
+          "purpose": "Primary FCDIM removal and installation, four mounting bolts, 22 lb.in (2.5 Nm) tightening torque and replacement configuration transfer through PMI.",
           "mediaId": "G1704851-m0001"
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "Identify the 4.2-inch non-touchscreen display arrangement and explain its place among the separate information and entertainment system components."
+        },
+        {
+          "documentId": "G1704003",
+          "purpose": "Provide the complete console and FCIM access sequence, connector operations, reverse-order refitting, console-retainer and FCIM torques, transmission qualifier and FCIM PMI requirements."
+        },
+        {
+          "documentId": "G1693976",
+          "purpose": "Remove and reinstall the right-hand instrument-panel trim and wide center finish panel, including the optional ICM electrical connection."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant remote-start prevention, key control and personal-protection precautions before service."
         }
       ],
       "hero": {
@@ -90920,14 +91063,73 @@
         {
           "documentId": "G1692884",
           "sourceHash": "54224601ccf734d2ea4edd4c12f1c27fe53e097555ddfc4fff9f510959b36aad"
+        },
+        {
+          "documentId": "G1704003",
+          "sourceHash": "9c561bd42d94ddb2c50cacf758376fbd9766aa58088cf459e7cf1467cf59c74e"
+        },
+        {
+          "documentId": "G1693976",
+          "sourceHash": "2c07e03dc97d22325dfe4c2c028f5c8aa0a48c88b6ed0a432735289e493704a3"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "7e8c6d29b4bc7a4eebbe6ec5e59496fab7669c7404d7a96844e3355557a8cd7a"
-      }
+        "fingerprint": "7e8c6d29b4bc7a4eebbe6ec5e59496fab7669c7404d7a96844e3355557a8cd7a",
+        "editorialVersion": 2,
+        "editorialFingerprint": "60d1ecc13ec99b39b39ca3dc778617b0422c3a5997efe2c7d1d618df2f581e8e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "configuration",
+          "title": "Save configuration before dismantling",
+          "summary": "Begin the module installation processes with the original hardware connected.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "console",
+          "title": "Open the console access",
+          "summary": "Remove side trim, selector trim, console attachments, upper trim and the stowage tray.",
+          "start": 2,
+          "end": 8
+        },
+        {
+          "id": "controls",
+          "title": "Remove dashboard trim and the FCIM",
+          "summary": "Release the finish panels and disconnect the control assembly to expose the display.",
+          "start": 9,
+          "end": 12
+        },
+        {
+          "id": "display",
+          "title": "Remove and install the FCDIM",
+          "summary": "Disconnect the display, install the intended module and tighten its four mounting bolts.",
+          "start": 13,
+          "end": 14
+        },
+        {
+          "id": "reassembly",
+          "title": "Restore controls and interior trim",
+          "summary": "Reconnect the control panel and restore the dashboard and console in reverse order.",
+          "start": 15,
+          "end": 22
+        },
+        {
+          "id": "completion",
+          "title": "Complete programming and check the result",
+          "summary": "Finish PMI for replaced modules and confirm the assembled display and trim operate normally.",
+          "start": 23,
+          "end": 23
+        }
+      ]
     },
     {
       "title": "Replace the front controls interface module on SYNC-equipped vehicles",
@@ -144904,9 +145106,13 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with a 2.3L, 3.7L, 5.0L or 5.2L engine. The illustrated opening method applies to a metal spin-on oil filter."
       },
-      "notes": [],
+      "notes": [
+        "The comparison is qualitative: a few particles versus a large amount of bearing metal. There is no numerical particle-count, size or weight threshold for this inspection.",
+        "Photographs and retained parts document the inspection; they are completion records, not additional diagnostic tests."
+      ],
       "relatedGuideIds": [
         "oil-service",
         "engine-noise-diagnosis",
@@ -144915,117 +145121,160 @@
       "evidence": [],
       "id": "engine-oil-filter-inspection",
       "title": "Inspect a used oil filter: read the debris without creating it",
-      "summary": "Open and examine a removed filter carefully to look for evidence of internal wear or damage.",
+      "summary": "Open a removed metal spin-on filter, examine its support tube and pleats, and distinguish a few normal particles from debris that calls for internal engine inspection.",
       "searchTerms": [
         "metal in oil",
-        "filter debris",
+        "oil filter debris",
         "bearing material",
         "cut open oil filter",
-        "engine glitter"
+        "engine glitter",
+        "oil filter inspection"
       ],
       "hero": {
         "documentId": "G2394879",
         "mediaId": "G2394879-m0006"
       },
-      "introduction": "The oil filter catches material circulating with the engine oil. Examining a used element can reveal debris that was not obvious in the drained oil. The challenge is keeping the inspection clean: metal made by your cutting method can otherwise be mistaken for material from the engine.",
-      "why": "A substantial amount of bearing material can justify further internal inspection, while a few particles alone are not an automatic engine-failure verdict. Filter evidence becomes more useful when it is kept with the oil-pressure, noise and repair history.",
+      "introduction": "An oil filter is the engine’s rubbish bin, and sometimes the rubbish deserves a closer look. I’ll walk you through opening a used filter and exposing what it caught, while keeping the cutting operation from adding its own damn evidence. The important distinction is between a few metal particles and a substantial accumulation that demands investigation.",
+      "why": "The filter material traps debris carried by the engine oil. Its folds, called pleats, provide a large filtering area, while the support tube holds the element’s shape. Opening both lets you examine trapped material that might otherwise stay hidden. A large amount of bearing metal can point to serious internal damage; a few particles alone are not an engine-failure verdict.",
       "when": {
-        "summary": "Use when engine damage is suspected or a repair investigation calls for debris inspection.",
+        "summary": "Use this inspection when investigating suspected internal engine damage or examining a removed used filter for debris.",
         "notes": [
-          "Opening a filter destroys it; this is inspection of a removed used filter.",
-          "The illustrated opening method is for a metal spin-on housing. A cartridge element must be handled according to its own housing and service procedure."
+          "Opening the filter destroys it; the inspected filter cannot return to service.",
+          "The can-cutting sequence applies to a metal spin-on filter. A cartridge element requires its own housing and service procedure."
         ]
       },
       "prepare": [
         {
-          "title": "Correct filter removal and a replacement",
-          "detail": "Remove the filter using the correct engine-specific oil-service procedure. Restore the engine with a suitable new filter and the specified oil before any permitted operation."
+          "title": "Start with the used filter removed",
+          "detail": "This article covers bench inspection of a removed filter. Vehicle access, filter removal, replacement-filter installation and oil refill require the service procedure for the actual engine and filter configuration. The linked [Engine Oil Draining and Filling](#/document/G1929382) is a reference destination for the 5.2L only; matching service instructions for the 2.3L, 3.7L and 5.0L are not included here. Internal engine work following a serious debris finding also requires its own procedures."
         },
         {
-          "title": "Filter cutter and clean collection area",
-          "detail": "Use the proper filter cutter rather than a cutting method that sheds metal into the element. Have a drain container and a clean surface for laying out the parts."
+          "title": "Gather the opening and draining equipment",
+          "detail": "Have oil drain equipment, a dedicated oil-filter cutter, a knife and a vise ready. Provide a clean surface where the housing, element, support tube and endcaps can stay separate and visible."
         },
         {
-          "title": "Hand and eye protection",
-          "detail": "The opened housing can be sharp. The inspection procedure also uses a knife and vise for separating parts of the element assembly."
+          "title": "Protect yourself and preserve the evidence",
+          "detail": "Wear eye protection and suitable hand protection when handling the cut housing. Keep hands out of the knife’s cutting path. Keep dirt and material produced during opening away from the surfaces you will inspect."
+        },
+        {
+          "title": "Plan for a replacement filter",
+          "detail": "Have the correct replacement filter and the oil required by the engine-specific service procedure available for eventual restoration. A replacement filter does not resolve a finding of serious internal damage."
         }
       ],
       "steps": [
         {
-          "title": "Identify and remove the used filter",
-          "body": "Keep the filter associated with its engine and mileage. Drain the remaining oil into suitable collection equipment so the element can be handled and inspected."
+          "title": "Drain the removed filter",
+          "body": "Position the removed filter over the oil drain equipment and let the excess oil drain into it. Keep the filter and its contents associated with the engine being investigated. I want the evidence on the bench, not spread across the floor."
         },
         {
-          "title": "Open a spin-on housing with a filter cutter",
-          "body": "Cut the housing away from its base using the proper cutter. Keep externally produced debris away from the element. Do not apply this can-cutting step to a cartridge housing."
+          "title": "Cut the housing away from the baseplate",
+          "body": "Place the metal filter in the oil-filter cutter, with the cutting wheel positioned to separate the can-shaped housing from the baseplate—the mounting end of the filter. The illustrated cutter supports the can against rollers while the cutting wheel works around its circumference.\n\nUse the cutter to separate the housing from the baseplate. Handle the newly cut edges carefully and keep material released during opening away from the filter element. The opening and inspection sequence is shown in [Oil Filter Inspection](#/document/G2394879)."
         },
         {
-          "title": "Separate the element and support assembly",
-          "body": "Follow the illustrated sequence for removing the support tube and separating the element and end caps. Keep the pieces on the clean inspection surface."
+          "title": "Withdraw the element and support tube together",
+          "body": "Remove the support tube and oil-filter element assembly from the opened housing. Keep the parts together at this stage: the pleated filtering material surrounds the central tube, with endcaps at its ends. Lay the housing and baseplate aside on the clean inspection surface."
         },
         {
-          "title": "Inspect the support tube",
-          "body": "Look for retained debris before spreading out the element. Document the amount and appearance of material rather than identifying an engine part solely from color."
+          "title": "Cut the pleated element free from its endcaps",
+          "body": "Support the element assembly in the vise as illustrated. Use the knife to separate the pleated material at its upper and lower endcap edges; the illustrated cut paths run around both ends of the pleated cylinder.\n\nKeep your hands clear of the blade and separate the filter material from the support tube. Retain the pleated material for inspection rather than discarding it with the cut housing."
         },
         {
-          "title": "Open the pleats for inspection",
-          "body": "Spread the filter material so debris hidden in the folds becomes visible. Compare the overall condition with the examples in the inspection article; a few particles and a large accumulation of bearing material are different findings."
+          "title": "Twist the endcaps to expose the support tube",
+          "body": "Grip the top and bottom endcaps and twist them relative to one another, as the opposing arrows in the illustration indicate. Separate the top or bottom endcap from the support tube so you can look into the tube. Keep any loose material with the part it came from."
         },
         {
-          "title": "Decide whether internal inspection is justified",
-          "body": "Excessive metallic debris calls for investigation of the engine, including the bearings where directed. The filter alone does not establish every failed part or the full extent of damage."
+          "title": "Inspect the support tube for metal debris",
+          "body": "Look into the exposed support tube and examine its inner surfaces and accessible bottom area for retained debris. Look for both fine and coarse metal; serious contamination does not have to arrive as one impressive chunk.\n\nRecord what you find and how much is present. Excessive metallic debris can indicate catastrophic engine failure. Do not identify a particular failed component solely from the appearance of a particle."
         },
         {
-          "title": "Preserve the evidence and restore the oil system",
-          "body": "Keep useful photographs or the inspected element with the diagnosis. Refit the correct new filter and oil as part of the appropriate service procedure; do not restart an engine whose damage assessment requires it to remain stopped."
+          "title": "Expand the filter material and examine the pleats",
+          "body": "Spread the separated filter element into an extended strip, as illustrated. Open the pleats enough to see the material held between the folds, then examine the strip along its length.\n\nCompare isolated particles with the overall accumulation. The inspection examples show a few scattered metal particles as normal, while a large amount of bearing metal is abnormal. I’m looking for that difference in amount and distribution—not awarding a glitter trophy."
+        },
+        {
+          "title": "Choose the next action from the debris finding",
+          "body": "Use the diagnostic branches below to separate a few particles, excessive metal and an uncertain or contaminated finding. A few particles alone do not justify condemning the engine.\n\nIf excessive metallic debris indicates catastrophic engine failure, keep the engine stopped and arrange removal of the engine oil pan, inspection of the main and connecting-rod bearings, and engine disassembly to establish the source and extent of damage. Main bearings support the crankshaft; connecting-rod bearings support the joints between the rods and crankshaft. [Bearing Inspection](#/document/G1661742) is the next reference destination for that bearing assessment."
+        },
+        {
+          "title": "Record the finding and close the bench inspection",
+          "body": "Photograph or retain the useful filter evidence, noting whether the debris was in the support tube, the pleats or both. Record any contamination introduced while opening the filter so it cannot quietly become an engine diagnosis later.\n\nThe cut filter is finished as a service part. If the finding permits the vehicle to return to service, complete the correct replacement-filter and oil-service work before operation. If the finding calls for internal inspection, retain the evidence for that investigation."
         }
       ],
       "diagnostics": [
         {
-          "finding": "Only a few particles are present",
-          "meaning": "The inspection examples allow that a small amount can occur without catastrophic failure.",
-          "next": "Consider the symptoms and other test results before condemning the engine."
+          "finding": "A few isolated metal particles in the expanded element",
+          "meaning": "This matches the normal comparison for the filter inspection. It does not by itself indicate catastrophic engine failure.",
+          "next": "Record the finding. Do not condemn the engine on those particles alone; continue the investigation that prompted the inspection if its concern remains unresolved."
         },
         {
-          "finding": "A large amount of bearing-like metallic material is present",
-          "meaning": "Serious internal damage may be involved.",
-          "next": "Follow the specified internal inspection path and determine the extent and cause."
+          "finding": "A large accumulation of bearing metal in the element",
+          "meaning": "This is abnormal and indicates bearing damage rather than the few-particle normal example.",
+          "next": "Keep the engine stopped. Arrange oil-pan removal, inspection of the main and connecting-rod bearings, and engine disassembly to determine the source and extent of damage. Use [Bearing Inspection](#/document/G1661742) as the bearing-assessment reference destination."
         },
         {
-          "finding": "Debris appeared while cutting the housing",
-          "meaning": "The opening method may have contaminated the evidence.",
-          "next": "Do not treat newly produced cutting debris as proof of engine wear."
+          "finding": "Excessive fine or coarse metal in the support tube or element",
+          "meaning": "Excessive metallic debris can indicate catastrophic engine failure; coarse fragments are not required for the finding to matter.",
+          "next": "Escalate to the same internal inspection path: remove the engine oil pan, inspect the main and connecting-rod bearings, and disassemble the engine to establish the damage source and extent."
+        },
+        {
+          "finding": "Material was introduced while cutting or separating the filter",
+          "meaning": "The inspection may contain debris that did not circulate through the engine.",
+          "next": "Identify and record the contamination. Exclude clearly introduced material from the engine-debris finding. If its origin cannot be distinguished, retain the parts and treat the result as uncertain."
+        },
+        {
+          "finding": "The amount or identity of the debris is uncertain",
+          "meaning": "The qualitative examples do not establish a precise threshold or identify every possible material.",
+          "next": "Preserve the filter and photographs for further assessment. Do not turn uncertainty into either an engine-failure verdict or clearance to operate an engine suspected of serious damage."
         }
       ],
       "watchFor": [
         {
-          "title": "A clean-looking filter does not clear every fault",
-          "body": "Some problems require pressure measurements, cylinder testing or other inspections even when the filter contains little visible debris."
+          "title": "Debris created during opening",
+          "body": "Material produced by cutting or separating the filter can confuse the result. Keep it away from the inspection surfaces, and do not count identifiable opening debris as material circulated by the engine."
+        },
+        {
+          "title": "Fine metal still matters",
+          "body": "Inspect for fine as well as coarse metallic debris. Particle size alone does not decide whether the finding is serious; the amount and overall accumulation matter."
+        },
+        {
+          "title": "A few particles are not a complete engine health check",
+          "body": "The normal example permits a few particles. That observation alone neither establishes a failed part nor resolves the concern that prompted the inspection."
+        },
+        {
+          "title": "Sharp housing edges and knife work",
+          "body": "Treat the cut housing as sharp. Support the assembly for knife work and keep your hands out of the blade’s path."
         }
       ],
       "verification": [
         {
-          "title": "Useful, uncontaminated evidence",
-          "body": "Record how the filter was opened and what was found in the support tube and pleats."
+          "title": "Both inspection areas were examined",
+          "body": "Confirm that you inspected the exposed support tube and the expanded pleated material, including between the folds."
         },
         {
-          "title": "A clear next action",
-          "body": "Decide from the combined evidence whether normal service, further testing or internal inspection is appropriate."
+          "title": "The finding is traceable",
+          "body": "Record the location and amount of debris, retain useful photographs or parts, and note any material introduced during opening."
+        },
+        {
+          "title": "The next action matches the finding",
+          "body": "A few particles alone do not trigger an engine condemnation. Excessive metallic debris indicating catastrophic failure triggers oil-pan removal, main and connecting-rod bearing inspection, and engine disassembly to determine the source and extent."
+        },
+        {
+          "title": "The destroyed filter cannot return to service",
+          "body": "Confirm that the opened filter is kept out of the service parts. Vehicle operation depends on completing the appropriate oil service and resolving any serious damage finding."
         }
       ],
       "procedures": [
         {
           "documentId": "G2394879",
-          "purpose": "Illustrated oil-filter opening and debris inspection.",
+          "purpose": "Primary procedure for draining and opening the removed filter, separating its internal parts, inspecting debris and choosing the internal-damage escalation.",
           "mediaId": "G2394879-m0006"
         },
         {
           "documentId": "G1661742",
-          "purpose": "Bearing inspection following evidence of internal damage."
+          "purpose": "Reference-only destination for bearing inspection after an abnormal metallic-debris finding; its internal procedure is outside this article."
         },
         {
           "documentId": "G1929382",
-          "purpose": "5.2L oil-service procedure, including its applicable filter variants."
+          "purpose": "Reference-only oil draining and filling destination for the 5.2L engine; it does not provide service coverage here for the other listed engines."
         }
       ],
       "sourceRefs": [
@@ -145058,8 +145307,42 @@
         "mediaReview": {
           "reviewedAt": "2026-10-12T03:11:03.990Z",
           "reason": "Opened filter pleats with inspection cue directly depict debris inspection; preserve this exact source image."
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "7ac138c53d9b009d7eca23d80f626cf08a54ce059edc4d0e4e47fe0f0217c547",
+        "independentSourceReview": true,
+        "humanReviewed": false
+      },
+      "stepGroups": [
+        {
+          "id": "open",
+          "title": "Drain and open the filter",
+          "summary": "Drain the removed filter, separate the housing and withdraw its internal assembly.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "separate",
+          "title": "Expose the inspection surfaces",
+          "summary": "Separate the pleated material and open the support tube.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "inspect",
+          "title": "Read the debris",
+          "summary": "Examine the support tube and expanded pleats for the amount and distribution of metal.",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "decide",
+          "title": "Choose and document the next action",
+          "summary": "Apply the debris branches, preserve the finding and establish the next service or internal-inspection action.",
+          "start": 8,
+          "end": 9
         }
-      }
+      ]
     },
     {
       "categoryId": "advanced",

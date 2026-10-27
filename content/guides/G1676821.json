@@ -1,10 +1,56 @@
 {
   "documentId": "G1676821",
-  "supportingSourceRefs": [],
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1676821",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693184",
+      "sourceHash": "d7e46b64aa52ae84ab86a5758064469bc4d590e9469cd2078e1219dbd0f66b50",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693184",
+      "sourceUnitCount": 11,
+      "mediaCount": 5
+    }
+  ],
   "sourceHash": "ea4fa2f7c4526e2e931e4eb173233f9be6bb94b62b2615c0dc59753f457082ba",
   "title": "Sunload Sensor",
   "introduction": "The sunload sensor is the small domed component on top of the dashboard near the windshield. I use the wide view to find it, then the inset to understand its retaining tabs and electrical connector. It may look like a simple trim cap, but there is a plug underneath—give the wiring a say before carrying it away.\n\nThis guide covers releasing the sensor with the listed trim tool, disconnecting it and refitting it. It does not provide a sensor diagnostic or calibration procedure.",
-  "requirements": [],
+  "requirements": [
+    {
+      "category": "Preparation and safety",
+      "items": [
+        {
+          "name": "Review the applicable precautions",
+          "detail": "Before beginning, review [Health and Safety Precautions](#/document/G1693189) and [Climate Control System Health and Safety Precautions](#/document/G1693184)."
+        },
+        {
+          "name": "Eye, ear and hand protection",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Wear protective gloves when handling parts with pointed or sharp edges. Failure to use the required protection may result in serious personal injury."
+        },
+        {
+          "name": "Prevent an accidental start",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from accidentally starting the engine during service. An accidental start may result in serious personal injury."
+        },
+        {
+          "name": "Disable remote start when equipped",
+          "detail": "Before work underneath or around the vehicle, disable remote start using the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death."
+        }
+      ]
+    }
+  ],
   "edits": [
     {
       "blockId": "G1676821-b00001",
@@ -32,10 +78,10 @@
       "why": "The plug restores the electrical connection, while the tabs hold the sensor in the dashboard. Both attachments must be restored to complete the supplied refitting sequence."
     }
   ],
-  "checkedAt": "2026-10-27T12:15:34.943Z",
+  "checkedAt": "2026-10-27T13:24:58.067Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 3,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -44,7 +90,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 3
+    "validationVersion": 5
   },
   "sourceContextHash": "5b1db7452469a36d67fc1473cef58a925a8e3eed323b4cd21278f702d0a4d72d",
   "sourcePdfHash": null,
@@ -52,13 +98,77 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "63381a3eff687bd9a0b156717a64981a4882ac738665dc231922fb6b3b32d9cb",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "supportingSourceCoverage": "complete-units-and-illustrations",
+      "supportingSourceDocumentCount": 0,
+      "supportingSourceUnitCount": 0,
+      "sourceUnitCount": 9,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "e5d7112271d7a07170f1c6ee0581d8cd66f399f97499021ac2db6ef66a5afabc",
+      "reviewedAt": "2026-10-27T12:15:34.943Z"
+    },
     "supportingSourceCoverage": "complete-units-and-illustrations",
-    "supportingSourceDocumentCount": 0,
-    "supportingSourceUnitCount": 0,
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 59,
     "sourceUnitCount": 9,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "e5d7112271d7a07170f1c6ee0581d8cd66f399f97499021ac2db6ef66a5afabc",
-    "reviewedAt": "2026-10-27T12:15:34.943Z"
+    "fingerprint": "670e0d11ad78b1adee0a13790f1d253b6e5e10965f783f47cfe6dce389e803c6",
+    "reviewedAt": "2026-10-27T13:20:14.548Z",
+    "editorialRevision": "2d632ec11d25d541e352888db2808ed7aa07a49caf93b06d138d5b568b747e0f",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:24:58.067Z",
+      "baselineHash": "b68f846ba18faf7d7829720ab29adaf64a0175a764f9771e48d5af1975dfa10f",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "Preparation and safety",
+          "item": "Prevent an accidental start",
+          "before": "Remove the key from the vehicle to prevent another person from accidentally starting the engine during service. An accidental start may result in serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from accidentally starting the engine during service. An accidental start may result in serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "63381a3eff687bd9a0b156717a64981a4882ac738665dc231922fb6b3b32d9cb",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "supportingSourceCoverage": "complete-units-and-illustrations",
+          "supportingSourceDocumentCount": 0,
+          "supportingSourceUnitCount": 0,
+          "sourceUnitCount": 9,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "e5d7112271d7a07170f1c6ee0581d8cd66f399f97499021ac2db6ef66a5afabc",
+          "reviewedAt": "2026-10-27T12:15:34.943Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 2,
+        "supportingSourceUnitCount": 59,
+        "sourceUnitCount": 9,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "670e0d11ad78b1adee0a13790f1d253b6e5e10965f783f47cfe6dce389e803c6",
+        "reviewedAt": "2026-10-27T13:20:14.548Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

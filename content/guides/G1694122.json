@@ -1,5 +1,22 @@
 {
   "documentId": "G1694122",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1694122",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    }
+  ],
   "sourceHash": "d8244b7088b465e2820fe68d09c56e4b6784ac158055be2017dd06d970b7c5b7",
   "title": "Light Sensor",
   "introduction": "The light sensor sits on top of the instrument panel near the windshield, above the center vents in the illustration. I use the wide view to locate it and the close-up to understand the connector beneath it. The trick is to lift the sensor out of its mounting first, then disconnect it—the wiring is a tether, not a lifting handle.\n\nHave a non-marring tool ready for the release. This procedure covers removal and refitting; it provides no electrical test or lighting-response check.",
@@ -10,6 +27,27 @@
         {
           "name": "Non-marring tool",
           "detail": "Use it to release the sensor from the instrument panel at the illustrated location."
+        }
+      ]
+    },
+    {
+      "category": "General service safety",
+      "items": [
+        {
+          "name": "Prevent unintended starting",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        },
+        {
+          "name": "Remote start",
+          "detail": "If equipped, disable remote start through the Central Display under Vehicle settings > Remote Start Setup before service requiring work underneath or around the vehicle. Otherwise, the vehicle could be remotely started at any time, causing personal injury or death."
+        },
+        {
+          "name": "Eye and ear protection",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Failure to do so may result in serious personal injury."
+        },
+        {
+          "name": "Sharp edges",
+          "detail": "Wear protective gloves when handling parts with pointed or sharp edges. Failure to do so may result in serious personal injury."
         }
       ]
     }
@@ -41,10 +79,10 @@
       "why": "Reassembly restores both the electrical connection and the sensor’s seated position in the instrument panel."
     }
   ],
-  "checkedAt": "2026-10-27T11:51:02.450Z",
+  "checkedAt": "2026-10-27T13:24:58.065Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -53,7 +91,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
   "sourcePdfHash": null,
@@ -61,10 +99,71 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "600eacc52a4f80928c4413a8fca2ce6a4f7c6615328b6a66a2f25c836b80e405",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 8,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "963b3b0f420574b4bcd13e80455dac220c808b623027fbf1b5d7f730b4a563b6",
+      "reviewedAt": "2026-10-27T11:51:02.450Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 48,
     "sourceUnitCount": 8,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "963b3b0f420574b4bcd13e80455dac220c808b623027fbf1b5d7f730b4a563b6",
-    "reviewedAt": "2026-10-27T11:51:02.450Z"
+    "fingerprint": "eebfbd31a01cfcc98c21169b8892907647eb93bd31a5bbcd0cd35df7728d8ec6",
+    "reviewedAt": "2026-10-27T13:16:32.177Z",
+    "editorialRevision": "031312d5ad5e84a6e5c9813f6f578cbba34fdc4eb66c07965d669b5b5d0664c7",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:24:58.065Z",
+      "baselineHash": "55d7112a5c3fda9db9ca6b9a787ff7933ad9d687cbf5b40335b36f1e7802e0c0",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "General service safety",
+          "item": "Prevent unintended starting",
+          "before": "Remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "600eacc52a4f80928c4413a8fca2ce6a4f7c6615328b6a66a2f25c836b80e405",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "sourceUnitCount": 8,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "963b3b0f420574b4bcd13e80455dac220c808b623027fbf1b5d7f730b4a563b6",
+          "reviewedAt": "2026-10-27T11:51:02.450Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 1,
+        "supportingSourceUnitCount": 48,
+        "sourceUnitCount": 8,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "eebfbd31a01cfcc98c21169b8892907647eb93bd31a5bbcd0cd35df7728d8ec6",
+        "reviewedAt": "2026-10-27T13:16:32.177Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

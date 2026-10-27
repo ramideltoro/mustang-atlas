@@ -1,5 +1,22 @@
 {
   "documentId": "G1817827",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1817827",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    }
+  ],
   "sourceHash": "c47cf98dc757df5b0a9f21c98c8b6d4f432f0fbf104eb3a581e0e417c692bd82",
   "title": "Engine Mount Control Solenoid",
   "introduction": "This procedure applies to the 2.3L EcoBoost (231kW/314PS). The illustration shows the engine mount control solenoid assembly, its vacuum connections, its electrical connection and the mounting retainer. I use those connections as landmarks before loosening anything: the bracket is the anchor, and the hoses are the plumbing that needs to return to the same layout.\n\nThe removal step also contains the installation tightening specification. Keep it beside the reassembly instructions. This page covers the illustrated removal and refitting sequence; it does not supply a separate vehicle-access route or a solenoid diagnostic test.",
@@ -14,6 +31,44 @@
         {
           "name": "Torque wrench",
           "detail": "Use equipment capable of applying the retainer tightening specification stated in the removal step."
+        }
+      ]
+    },
+    {
+      "category": "General service safety",
+      "items": [
+        {
+          "name": "Prevent unintended starting",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        },
+        {
+          "name": "Remote start",
+          "detail": "If equipped, disable remote start through the Central Display under Vehicle settings > Remote Start Setup before service requiring work underneath or around the vehicle. Otherwise, the vehicle could be remotely started at any time, causing personal injury or death."
+        },
+        {
+          "name": "Eye and ear protection",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Failure to do so may result in serious personal injury."
+        },
+        {
+          "name": "Sharp edges",
+          "detail": "Wear protective gloves when handling parts with pointed or sharp edges. Failure to do so may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Engine-area safety",
+      "items": [
+        {
+          "name": "Cooling fan condition",
+          "detail": "Before under-hood work, turn the ignition OFF and inspect all cooling fans for damage, cracks or separation. Do not work under the hood with a damaged fan; replace a damaged fan with a new one before continuing. A damaged fan can separate during operation and cause serious personal injury."
+        },
+        {
+          "name": "Unexpected fan operation",
+          "detail": "Cooling fans can run with the ignition off. Disable them before working nearby; unexpected operation may cause personal injury. Ignition off alone does not establish that a fan is disabled."
+        },
+        {
+          "name": "Auto start-stop, if equipped",
+          "detail": "Vehicles with engine auto start-stop technology may start automatically with the ignition on. Keep the ignition off when servicing or working close to rotating engine parts. Failure to do so may result in serious personal injury."
         }
       ]
     }
@@ -45,10 +100,10 @@
       "why": "Completion restores the bracket attachment and every disconnected connection. I compare the finished connection layout with the drawing rather than relying on memory."
     }
   ],
-  "checkedAt": "2026-10-27T11:51:02.454Z",
+  "checkedAt": "2026-10-27T13:24:58.066Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -57,7 +112,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
   "sourcePdfHash": null,
@@ -65,10 +120,71 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "ac4bc6841dbbbe49cf109da5ccd7deecbfff0dda4c593179fdedb5a1f4eabbd4",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 7,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "1e0ab635c12dc0b03ad25b03ebe36f99a02b64b98714c6ea60f0160455b29958",
+      "reviewedAt": "2026-10-27T11:51:02.454Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 48,
     "sourceUnitCount": 7,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "1e0ab635c12dc0b03ad25b03ebe36f99a02b64b98714c6ea60f0160455b29958",
-    "reviewedAt": "2026-10-27T11:51:02.454Z"
+    "fingerprint": "82c73922e974004e03acd97dd83e95e6186dabc9615aff04761fdc04afabac59",
+    "reviewedAt": "2026-10-27T13:16:32.184Z",
+    "editorialRevision": "e8f74a4a0e7a172617d2f8bc72362cdd758136b3f0fad7b9fd4b873c1c47859d",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:24:58.066Z",
+      "baselineHash": "3a5ebee3f0d2adf0ba5d90d519a470cf4335766fb3f39b2b4a65ece6745afe19",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "General service safety",
+          "item": "Prevent unintended starting",
+          "before": "Remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle before service to prevent another person from starting the engine. An accidental start may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "ac4bc6841dbbbe49cf109da5ccd7deecbfff0dda4c593179fdedb5a1f4eabbd4",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "sourceUnitCount": 7,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "1e0ab635c12dc0b03ad25b03ebe36f99a02b64b98714c6ea60f0160455b29958",
+          "reviewedAt": "2026-10-27T11:51:02.454Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 1,
+        "supportingSourceUnitCount": 48,
+        "sourceUnitCount": 7,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "82c73922e974004e03acd97dd83e95e6186dabc9615aff04761fdc04afabac59",
+        "reviewedAt": "2026-10-27T13:16:32.184Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

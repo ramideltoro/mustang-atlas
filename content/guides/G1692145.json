@@ -1,9 +1,70 @@
 {
   "documentId": "G1692145",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1692145",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    }
+  ],
   "sourceHash": "010aac204d3ac12ae2a7142ab9798e6b623293b62d8cc9cc0e50cf23af63923a",
   "title": "Intake Air Temperature (IAT) Sensor",
   "introduction": "This procedure applies to the 2.3L EcoBoost (231kW/314PS). I use the ribbed intake hose as the landmark: the IAT sensor fits into the neighboring smooth intake duct beside the large molded chamber. The abbreviation means intake air temperature.\n\nThe useful detail is in the close-up. This little sensor has a twist-release mounting, so the drawing provides the choreography: release the tab, turn through the illustrated angle, then withdraw it. The instructions cover removal and reverse installation; they contain no sensor test or post-installation verification procedure.",
-  "requirements": [],
+  "requirements": [
+    {
+      "category": "Required safety review",
+      "items": [
+        {
+          "name": "Review before beginning the repair",
+          "detail": "Carefully review [Health and Safety Precautions](#/document/G1693189) before beginning this repair, including its general service warnings. Before working on any listed system, also review that system’s safety reference linked there. These applicable linked references remain required reading; the selected precautions below do not replace that review. For work involving cooling fans, retain the referral to Engine Cooling System Health and Safety Precautions through that reference."
+        }
+      ]
+    },
+    {
+      "category": "Prevent unexpected engine operation",
+      "items": [
+        {
+          "name": "Disable remote start",
+          "detail": "Before beginning this work around the vehicle, disable the remote start feature, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death."
+        },
+        {
+          "name": "Remove the key",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury."
+        },
+        {
+          "name": "Account for auto start-stop equipment",
+          "detail": "On vehicles with engine auto start-stop technology, the engine may start automatically with the ignition on. Make sure the ignition is off when servicing or working near rotating engine parts. Failure to do so may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Underhood preparation and protection",
+      "items": [
+        {
+          "name": "Check cooling fans before underhood work",
+          "detail": "With the ignition OFF, inspect all cooling fans for damage, cracks or separation. Do not work under the hood with a damaged cooling fan; it can separate during operation. Replace a damaged fan with a new fan before proceeding. Failure to follow this instruction may result in serious personal injury. Fan replacement requires its own service instructions."
+        },
+        {
+          "name": "Disable fans before working nearby",
+          "detail": "Cooling fans may run with the ignition off. Disable them before working nearby; ignition off alone is not protection against fan operation. Failure to disable them may result in personal injury. If this access requires nearby fan work, obtain the applicable fan-disabling instructions before proceeding."
+        },
+        {
+          "name": "Wear protective equipment",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Wear protective gloves when handling parts with pointed or sharp edges. Failure to follow either precaution may result in serious personal injury."
+        }
+      ]
+    }
+  ],
   "edits": [
     {
       "blockId": "G1692145-b00001",
@@ -36,10 +97,10 @@
       "why": "The mounting is restored before the electrical connection. Reversing the illustrated release movement returns the sensor to its secured position."
     }
   ],
-  "checkedAt": "2026-10-27T11:55:17.616Z",
+  "checkedAt": "2026-10-27T13:37:18.117Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -48,7 +109,7 @@
     "receivedBlocks": 6,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "971a8545071d51eaec64dd7ee141aabc5af44d7e0c4230a789676840e8670808",
   "sourcePdfHash": null,
@@ -56,10 +117,77 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "0aa6ebc9b2367885d1e6bf43e27d3789408d77fe65e3d607c70f630af831f656",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 9,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "25a0d59cf15a21f0c57fabdff6c0dd86385f376d51a58e290774bc83b6b4dc72",
+      "reviewedAt": "2026-10-27T11:55:17.616Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 48,
     "sourceUnitCount": 9,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "25a0d59cf15a21f0c57fabdff6c0dd86385f376d51a58e290774bc83b6b4dc72",
-    "reviewedAt": "2026-10-27T11:55:17.616Z"
+    "fingerprint": "48ce0fc0945f915bee6a895ecc79ea97affe80c3d3bbb9873853c1adae055893",
+    "reviewedAt": "2026-10-27T13:36:45.894Z",
+    "editorialRevision": "bc96e12605424b45a8ec048243f678cd60a94126bced3ca63bdd6827711cbb87",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:37:18.117Z",
+      "baselineHash": "3babc3b363ecc297569dc2a697a60e5eb87d5e8b8a2412e465ad9f8c511f95ac",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "Prevent unexpected engine operation",
+          "item": "Disable remote start",
+          "before": "Before beginning this work around the vehicle, disable the remote start feature through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death.",
+          "after": "Before beginning this work around the vehicle, disable the remote start feature, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death."
+        },
+        {
+          "category": "Prevent unexpected engine operation",
+          "item": "Remove the key",
+          "before": "Remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "0aa6ebc9b2367885d1e6bf43e27d3789408d77fe65e3d607c70f630af831f656",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "sourceUnitCount": 9,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "25a0d59cf15a21f0c57fabdff6c0dd86385f376d51a58e290774bc83b6b4dc72",
+          "reviewedAt": "2026-10-27T11:55:17.616Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 1,
+        "supportingSourceUnitCount": 48,
+        "sourceUnitCount": 9,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "48ce0fc0945f915bee6a895ecc79ea97affe80c3d3bbb9873853c1adae055893",
+        "reviewedAt": "2026-10-27T13:36:45.894Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

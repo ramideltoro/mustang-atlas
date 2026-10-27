@@ -16,6 +16,21 @@
       "sourceReference": "G1692599",
       "sourceUnitCount": 13,
       "mediaCount": 2
+    },
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1694045",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
     }
   ],
   "sourceHash": "f18c1d7bc4702e3b62d5766fe2d2259af7021284790ef5a3a2eac4d7b74ed47e",
@@ -32,6 +47,27 @@
         {
           "name": "Recognize the illustrated side",
           "detail": "Both trim references show LHD; RHD is similar. They show the RH side; the LH side is similar."
+        }
+      ]
+    },
+    {
+      "category": "Preparation and service safety",
+      "items": [
+        {
+          "name": "Complete the required safety review",
+          "detail": "Before beginning this repair, carefully review [Health and Safety Precautions](#/document/G1693189), including its general service warnings. Review the safety references linked there for every listed system involved in your work before working on that system. Those applicable system references remain required reading; the precautions here do not replace them."
+        },
+        {
+          "name": "Prevent remote starting",
+          "detail": "Before service requiring work underneath or around the vehicle, disable the remote start feature, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death."
+        },
+        {
+          "name": "Remove the key",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury."
+        },
+        {
+          "name": "Wear protective equipment",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Wear protective gloves when handling parts with pointed or sharp edges. Failure to follow either precaution may result in serious personal injury."
         }
       ]
     }
@@ -63,10 +99,10 @@
       "why": "I check that the tabs retain the speaker before enclosing it with the trim. For a convertible, refit the panel by engaging the clips, reconnecting the speaker electrical connector if equipped, and securing the retainers. Reconnect the visor electrical connector if equipped, refit the visor, engage its clip, and reinstall its cap. For a coupe, engage the panel clips, reconnect the speaker electrical connector if equipped, reconnect the tether anchor and engage the remaining clips. Return the door weatherstrip to position and reinstall its pin-type retainer. Completion means restoring the speaker retention, electrical connections and body-style-specific attachments released during removal."
     }
   ],
-  "checkedAt": "2026-10-27T12:20:59.850Z",
+  "checkedAt": "2026-10-27T13:36:14.800Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 3,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -75,7 +111,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 3
+    "validationVersion": 5
   },
   "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
   "sourcePdfHash": null,
@@ -83,13 +119,83 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "83cda6e9105cfce929a873aa0dc9066f3b1179b9c5f32baca1b6af58aa90b3fc",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "supportingSourceCoverage": "complete-units-and-illustrations",
+      "supportingSourceDocumentCount": 2,
+      "supportingSourceUnitCount": 30,
+      "sourceUnitCount": 7,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "45fb817f803f9bdef78d79e394a48e4aa027b56a51abf2d9931aacf87231846d",
+      "reviewedAt": "2026-10-27T12:20:59.850Z"
+    },
     "supportingSourceCoverage": "complete-units-and-illustrations",
-    "supportingSourceDocumentCount": 2,
-    "supportingSourceUnitCount": 30,
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 3,
+    "supportingSourceUnitCount": 78,
     "sourceUnitCount": 7,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "45fb817f803f9bdef78d79e394a48e4aa027b56a51abf2d9931aacf87231846d",
-    "reviewedAt": "2026-10-27T12:20:59.850Z"
+    "fingerprint": "565af9ebcef5ef2721b11a3bb8c0a643808d6515a1035e8499f73a890cac3198",
+    "reviewedAt": "2026-10-27T13:36:06.788Z",
+    "editorialRevision": "6e8dbc91097a9aff58ff21e23260cf91da2a5e84ee713ee4998956d3f074d091",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T13:36:14.800Z",
+      "baselineHash": "8946c26af65e6404878278616a4d6e4d31f8faf42b462072907cc3ace75d73d5",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "Preparation and service safety",
+          "item": "Prevent remote starting",
+          "before": "Before service requiring work underneath or around the vehicle, disable the remote start feature through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death.",
+          "after": "Before service requiring work underneath or around the vehicle, disable the remote start feature, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death."
+        },
+        {
+          "category": "Preparation and service safety",
+          "item": "Remove the key",
+          "before": "Remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury.",
+          "after": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service. An accidental start may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "safetyRefreshOf": "83cda6e9105cfce929a873aa0dc9066f3b1179b9c5f32baca1b6af58aa90b3fc",
+        "preservedTechnicalReview": {
+          "kind": "independent-codex-technical-review",
+          "humanReviewed": false,
+          "supportingSourceCoverage": "complete-units-and-illustrations",
+          "supportingSourceDocumentCount": 2,
+          "supportingSourceUnitCount": 30,
+          "sourceUnitCount": 7,
+          "sourceChunkCount": 1,
+          "reviewedChunkCount": 1,
+          "fingerprint": "45fb817f803f9bdef78d79e394a48e4aa027b56a51abf2d9931aacf87231846d",
+          "reviewedAt": "2026-10-27T12:20:59.850Z"
+        },
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 3,
+        "supportingSourceUnitCount": 78,
+        "sourceUnitCount": 7,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "565af9ebcef5ef2721b11a3bb8c0a643808d6515a1035e8499f73a890cac3198",
+        "reviewedAt": "2026-10-27T13:36:06.788Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
   }
 }

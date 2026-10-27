@@ -12843,8 +12843,8 @@
         "checks"
       ],
       "id": "driveline-vibration-runout",
-      "title": "Driveline vibration: measure before changing parts",
-      "summary": "Separate a repeatable road-speed vibration from a guess, inspect the shaft and joints, then use runout measurements to choose the next check.",
+      "title": "Driveline vibration: installed inspection and runout",
+      "summary": "Inspect and hand-turn the installed driveshaft, measure each section, and use the results to choose the next job on a 2015 Mustang with the 2.3L, 3.7L or 5.0L engine. Includes an angle-check reference for follow-up diagnosis.",
       "applicability": {
         "engines": [
           "2.3L",
@@ -12860,8 +12860,8 @@
         "documentId": "G2214730",
         "mediaId": "G2214730-m0002"
       },
-      "introduction": "The driveshaft carries rotation from the transmission to the rear axle. Its joints and center support have to allow that rotation without binding, excessive movement or a distorted path. Runout is the amount the shaft wanders as it turns, measured with a dial indicator. Balance is a different check involving how mass is distributed around the rotating assembly. Keeping those ideas separate makes a vibration investigation much more useful.",
-      "why": "The diagnostic chart lists several possible causes of a cruising-speed vibration: joints, the center support, flange fasteners, runout, balance and driveline angles. Adding a weight or replacing the shaft before checking that list can leave the actual problem in place. A repeatable symptom and recorded measurements give each decision a reason.",
+      "introduction": "I want a measurement before a shopping list. A tremor through the floor or a road-speed rumble can start an expensive game of parts roulette: joints, supports, mounting, runout, balance and angles all appear in Ford’s diagnostic branches. Here, I cover the installed inspection and engine-off runout check, including the hoist setup and return to secure parking. Hidden spline inspection, flange disconnection, repairs and balancing are separate jobs; the later angle reference explains what that follow-up should establish. [Vibration diagnosis](#/document/G2214728) [Inspection and runout](#/document/G2214730)",
+      "why": "The driveshaft connects the transmission and rear axle through joints that accommodate their angular relationship. Runout measures how far the shaft wanders as it turns; balance concerns the distribution of mass around that rotation. A shaft can pass its runout check while another vibration source remains. I keep the findings separate so a balance weight does not become the answer to every damn question. [Driveline relationships](#/document/G2214729) [Runout and balance decisions](#/document/G2214730)",
       "when": {
         "summary": "When a repeatable driveline vibration, rumble or shudder remains after an initial inspection, or diagnosis calls for runout checks.",
         "notes": [
@@ -12871,82 +12871,176 @@
       },
       "prepare": [
         {
-          "title": "Preserve a useful starting point",
-          "detail": "Before making adjustments, document the road speed and conditions that reproduce the concern. The runout procedure says not to alter tire pressure or vehicle load before its initial road test; record the starting condition rather than changing several variables at once."
+          "title": "Identify the fitted arrangement",
+          "detail": "Record the engine, automatic or manual transmission, number of shaft sections and flange arrangement. Use only the matching angle specifications. Record aftermarket steering, suspension, wheel or tire changes: Ford excludes those equipped vehicles from the factory suspension specifications used here. [Driveshaft specifications](#/document/G2214897) [Modified-vehicle limitation](#/document/G1686610)"
         },
         {
-          "title": "Set up support and measuring equipment",
-          "detail": "Use the specified type of holding fixture and dial indicator, such as tool 100-002. The procedure requires the shaft to stay close to its curb-weight position while supported.\n\n> **WARNING:** Never work underneath a vehicle supported only by a jack. Use the correct lifting points and the prescribed stands or hoist arrangement."
+          "title": "Arrange the hoist and suspension supports",
+          "detail": "Use a twin-post hoist or frame hoist with jackstands, keeping the driveshaft equal or close to its curb-weight angle. Have suitable vehicle/axle stands to support the rear suspension at curb height beneath the rear lower-arm area illustrated by Ford. The hoist supports the body; the suspension stands retain its working position. Equipment must accommodate the vehicle’s weight, cargo and modifications. [Runout support](#/document/G2214730) [Curb-height suspension support](#/document/G1686649) [Equipment capacity](#/document/G1693189)"
         },
         {
-          "title": "Identify the actual shaft configuration",
-          "detail": "Know whether the shaft has one or multiple sections and identify its flange type. If angle checks are needed, use the engine/transmission-specific values in [Driveshaft specifications](#/document/G2214897), rather than substituting an angle from another variant."
+          "title": "Gather the measuring equipment",
+          "detail": "Use holding fixture with dial indicator gauge 100-002, also identified as TOOL-4201-C, and have its manufacturer’s instructions available for mounting, probe contact, preload, zeroing and reading convention. Have a surface gauge for the ride-height reference measurements, a marker for an excessive rear runout high point, and a record with front, center and rear entries for every shaft section. [Runout equipment and locations](#/document/G2214730) [Surface gauge](#/document/G1686616)"
+        },
+        {
+          "title": "Plan any angle follow-up",
+          "detail": "Angle measurements use Anglemaster II driveline inclinometer/protractor 164-R2402, a level surface such as a drive-on hoist or alignment rack, normal tire pressures and verified curb ride height. This is a separate setup from the all-wheels-clear hand-rotation check. [Angle equipment and setup](#/document/G2214729)"
+        },
+        {
+          "title": "Prepare protection and starting precautions",
+          "detail": "Wear eye and ear protection, plus protective gloves when handling sharp-edged parts. Disable remote start if fitted. Keep the ignition off and the key out of the vehicle during underbody inspection and hand rotation, preventing an unexpected start. [Service precautions](#/document/G1693189)"
         }
       ],
       "steps": [
         {
-          "title": "Reproduce and describe the concern",
-          "body": "Start with a visual check, then have the symptom verified during an appropriate road test. Note whether it follows road speed and whether it appears at cruise, acceleration or coast. Use the [Driveshaft diagnostic chart](#/document/G2214728) to select the matching branch instead of calling every tremor a balance problem."
+          "title": "Record the original complaint",
+          "body": "Begin with a visual check for an obvious mechanical fault. If one is found, arrange its correction before proceeding with further diagnosis or a road test that the fault could make unsafe. Otherwise, reproduce the concern during an appropriate road test before making adjustments or changing tire pressure or vehicle load. Record the speed and conditions, whether acceleration or deceleration changes it, and whether it feels like a floor tremor or sounds like a rumble, hum or boom. [Initial inspection](#/document/G2214728) [Unchanged road-test baseline](#/document/G2214730)\n\nThe runout branch investigates a concern tied to road speed. Acceleration shudder also points toward binding or damaged joints and incorrect angles; a buzz similar at cruise and coast points toward angles. These patterns select checks—they do not convict a part. [Symptom branches](#/document/G2214728)"
         },
         {
-          "title": "Inspect the shaft, joints and support",
-          "body": "Look for shaft damage, unwanted undercoating, missing balance weights and poorly seated joints. With the vehicle correctly supported, the inspection procedure rotates the shaft slowly by hand to check for binding and end play. The diagnostic chart also checks the center support for damage, wear or rough operation and the axle flange fasteners for looseness."
+          "title": "Record the rear suspension’s curb position",
+          "body": "After preserving the original road-test condition, prepare the curb-load reference: full service fluids, full fuel tank, no passengers and no cargo. On a flat, level surface, check the tires cold against the vehicle certification label. [Curb-load definition](#/document/G1686608) [Tire-pressure reference](#/document/G1686610)\n\nOn each rear side, use the surface gauge to measure from that surface to the center of the toe-link inboard cam bolt, measurement 2, and to the center of the outboard bolt, measurement 3. Record both measurements and calculate **rear ride height = measurement 2 − measurement 3**. This bolt-center difference provides the reference for retaining the suspension’s curb position when raised. [Rear reference points and calculation](#/document/G1686616) [Curb-height support](#/document/G1686649)\n\nFor the variants covered here, rear ride height is **32.1 mm (1.264 in) ± 10 mm (0.394 in)**, with a maximum side-to-side difference of **6.3 mm (0.248 in)**. An out-of-specification result also requires suspension diagnosis before interpreting later operating-angle measurements. [Height specifications](#/document/G1686608) [Height-concern diagnosis](#/document/G1686610)"
         },
         {
-          "title": "Correct an identified fault and recheck",
-          "body": "Follow the relevant repair procedure for the specific defect. Removal, joint or shaft replacement and flange fastener work each have their own requirements. After a correction, recheck at the road-test speed that reproduced the vibration. This preserves the link between the observed fault and the result of the repair."
+          "title": "Raise and support the car before releasing the parking brake",
+          "body": "Disable remote start through **Vehicle settings > Remote Start Setup**, if fitted. Set the parking brake, select **Neutral** for the hoist check, switch the ignition off and remove the key. If jack lifting is involved during setup, work on a hard, level surface and block every wheel remaining on the ground. Never go underneath a vehicle supported only by a jack: it can lower unexpectedly. [Starting and lifting precautions](#/document/G1693189) [Neutral hoist setup](#/document/G1693766)\n\nPosition the hoist at the designated body lifting points identified by stamped triangles. Incorrect placement can let the car shift or fall. Keep adapters clear of suspension, steering, exhaust, mounting brackets, the axle and rear cover. The emergency tire-changing jack and the bumpers are unsuitable lifting arrangements for this work. [Approved lifting points and clearances](#/document/G1663631)\n\nRaise the car with **all four wheels clear of the ground**. With the body securely supported by the specified hoist, support the rear suspension at curb height using vehicle/axle stands beneath the rear lower-arm area shown in Ford’s support illustration. Use the recorded rear reference-point differences to retain that position, keeping the driveshaft equal or close to its curb-weight angle. Confirm that the stands and hoist remain securely seated and that the rear wheels can turn without contacting anything. Leave wheels, suspension links, exhaust and driveshaft connections installed. [Runout arrangement](#/document/G2214730) [Suspension support location](#/document/G1686649) [Hoist precautions](#/document/G1693189)"
         },
         {
-          "title": "Measure runout at each required position",
-          "body": "If the vibration remains, fit the dial indicator and rotate the driveshaft by turning the axle as directed. Measure at the **front, center and rear**; on a multi-piece shaft, measure those positions on each section. The linked specifications list **0.6 mm (0.024 in)** for driveshaft runout. Record each position separately so a rear-only result is not confused with a shaft-wide problem."
+          "title": "Release the brake for engine-off hand rotation",
+          "body": "Only after all wheels are clear and the body and suspension supports are secure, fully release the parking brake. Hold its end button, lift the handle slightly, then lower it. Keep the transmission in **Neutral**, the ignition off and the key outside the vehicle. The hoist and stands now support the car independently of its wheel brakes; retain that arrangement throughout rotation. Ford’s parking-brake checks support released-brake rear-wheel rotation on a hoist, alongside its Neutral hoist setup. [Released-brake checks](#/document/G1693765) [Neutral setup](#/document/G1693766) [Parking-brake controls](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539565&Uid=G1642800&ProcUid=G1642801&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nThis setup is for **slow hand rotation only**. Do not start the engine or use it to turn the wheels during this inspection. Before lowering or changing supports, complete step 10’s return to secure parking. [Hand-rotation method](#/document/G2214730) [Unexpected-start precautions](#/document/G1693189)"
         },
         {
-          "title": "Use the pattern of measurements",
-          "body": "The procedure calls for shaft replacement when front or center runout exceeds the specification. A rear-only excess leads to its index-marked flange recheck, which helps distinguish shaft eccentricity from a flange or pinion problem. Follow that complete branch, preserving the index marks and correct reassembly details. If all runout points meet the specification but vibration remains, continue to the balance or angle checks indicated by the diagnosis."
+          "title": "Inspect the stationary shaft and mounting",
+          "body": "Look along the installed shaft for damage, undercoating, missing balance weights and incorrectly seated U-joints. Record the location of any finding. Inspect the rear axle pinion-flange connection for loose bolts. If a center bearing support is fitted, examine its rubber insulator for wear or damage. [Shaft inspection](#/document/G2214730) [Weights, support and mounting checks](#/document/G2214728)\n\nAn obvious defect belongs in its matching repair branch. Do not loosen flange or center-support bolts as part of this inspection; their removal introduces replacement-fastener and installation requirements. [Diagnostic decisions](#/document/G2214728) [Connection requirements](#/document/G2214904)"
         },
         {
-          "title": "Keep balancing and angle work controlled",
-          "body": "The electronic balancing branch uses an accelerometer, a photo-tachometer and the specified vehicle measurement equipment to select and verify corrections. Arrange that work with a shop that can perform the full procedure. For an angle concern, use [Driveshaft Angle Measurement](#/document/G2214729) and the correct variant specifications. Recheck the original symptom after the final correction."
+          "title": "Feel for binding, end play and support roughness",
+          "body": "With the engine-off rotation setup maintained, turn the driveshaft slowly by hand. Feel for binding or end play at the U-joint pivots: binding is resistance to smooth movement, while end play is unwanted movement at the joint. Record which joint produces the finding. [Hand inspection](#/document/G2214730)\n\nIf a center bearing support is fitted, check for rough operation as the shaft turns. Binding, unwanted joint movement or a worn, damaged or rough support requires the corresponding repair assessment. Adding a weight does not resolve those findings. [Joint and support diagnosis](#/document/G2214728)"
+        },
+        {
+          "title": "Record what the installed inspection cannot see",
+          "body": "Ford’s full inspection includes removing the shaft to inspect slip-yoke splines for galling, dirt, rust and incorrect lubrication. Galling is damage at the sliding contact surfaces. Record that hidden inspection as **not performed** unless it has actually been completed separately; the assembled checks cannot clear it. [Spline inspection](#/document/G2214730)\n\nComplete shaft extraction has its own access procedure, including muffler-and-tailpipe removal. The supplied exhaust procedure covers the **3.7L** branch only. Those extraction requirements do not become prerequisites for the installed measurements here. [Shaft removal](#/document/G2214904) [3.7L exhaust procedure](#/document/G1688092)\n\nIf an identified fault is corrected or a component replaced, recheck the vibration at the original road-test speed. If it remains, continue with runout measurement while keeping unfinished inspection items in the record. [Correction and recheck](#/document/G2214730)"
+        },
+        {
+          "title": "Measure every shaft section",
+          "body": "Maintain the all-wheels-clear, Neutral, released-parking-brake setup and the shaft’s near-curb position. Use holding fixture and dial indicator gauge **100-002/TOOL-4201-C**. Follow the gauge/fixture manufacturer’s instructions for secure mounting, probe contact, preload, zeroing and reading convention before taking measurements. Ford specifies the tool and measurement locations; use those equipment instructions to establish the measuring setup. [Runout equipment and method](#/document/G2214730)\n\nKeep the fixture stationary. Turn the axle slowly by hand until the **driveshaft completes one full revolution**, watching the indicator throughout. Record the highest and lowest indicator readings, accounting for the gauge’s reading convention. **Runout is the difference between those readings: highest − lowest.** It is the total variation during that revolution, not simply the highest number displayed on the dial. [Runout check](#/document/G2214730)\n\nRepeat at the **front, center and rear** of the shaft. On a multiple-piece assembly, measure those three positions on **every section**, setting up the gauge according to its instructions at each position. Record each section, location, highest reading, lowest reading and calculated runout. Compare each calculated runout with the maximum of **0.6 mm (0.024 in)**. One result labelled “shaft” throws away the information needed for the next decision. [Measurement positions](#/document/G2214730) [Runout limit](#/document/G2214897)"
+        },
+        {
+          "title": "Choose the next action from the readings",
+          "body": "Use the complete set of measurements:\n\n- **Front or center exceeds 0.6 mm (0.024 in):** Ford directs driveshaft replacement through the separate replacement procedure.\n- **Front and center meet the limit, but rear exceeds it:** mark the rear high point—the shaft position producing the greatest runout—and retain the readings for the indexed recheck described in step 11.\n- **All positions meet the limit:** after securing and lowering the vehicle, recheck at the original road-test speed. If vibration persists, the runout branch directs balancing.\n\nKeep separate joint, support and angle findings active in the diagnosis. [Runout decisions](#/document/G2214730) [Shaft limit](#/document/G2214897)"
+        },
+        {
+          "title": "Restore secure parking and lower the vehicle",
+          "body": "Stop rotation and remove the dial indicator, holding fixture and other measuring equipment. **Before lowering or changing the support arrangement, fully apply the parking brake by pulling its handle up as far as possible.** Restore the parked transmission position: **Park for an automatic; first gear for a manual** on this level work surface. Keep the ignition off and the key removed. Do not leave the car in the free-turning test condition. [Parking-brake application and transmission positions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539565&Uid=G1642800&ProcUid=G1642801&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nWith the hoist still supporting the body, unload and remove the auxiliary suspension stands using the lifting equipment’s operating instructions, then lower the car. During any jack-supported transition, keep wheels remaining on the ground blocked. Clear people and equipment from the lowering path. [Support and restraint precautions](#/document/G1693189) [Lifting arrangement](#/document/G1663631)\n\nThe installed checks have disturbed no wheel or driveshaft fasteners, so there is no fastener reassembly stage within this job. Any separate repair must be fully completed before road use. [Installed measurement scope](#/document/G2214730) [Driveshaft installation requirements](#/document/G2214904)"
+        },
+        {
+          "title": "Understand the rear-only indexed recheck",
+          "body": "Arrange this as a separate disconnection job if only rear runout is excessive. Ford records the original shaft-to-pinion-flange relationship, disconnects the rear connection, changes its relative position by **180 degrees**, reconnects it and measures rear runout again. Circular flanges permit 90-degree increments, half-round flanges have two positions, and six-bolt CV flanges permit 60-degree increments; the diagnostic change remains **180 degrees**. [Indexed recheck](#/document/G2214730)\n\n**If rear runout now meets the limit:** recheck the original vibration at the road-test speed. If vibration persists, Ford directs balancing. [Within-limit recheck decision](#/document/G2214730)\n\n**Only if rear runout remains excessive:** mark the new high point and compare it with the original high-point mark:\n\n- **Within 25 mm (1 in) of each other:** Ford identifies an eccentric shaft and directs replacement.\n- **On opposite sides, 180 degrees apart:** investigate the slip yoke or pinion flange with component-specific runout testing.\n\nIf the marks fit neither stated pattern, retain the results for further diagnosis. Do not apply the shaft’s **0.6 mm (0.024 in)** limit to a flange or pinion. [High-point interpretation](#/document/G2214730) [Driveshaft specification](#/document/G2214897)\n\nThe workshop needs an established access and separation plan before disconnecting anything. The shaft must be supported, with articulation limited to **4 degrees at the flex coupling** and **15 degrees at any U-joint or driveshaft CV joint**; exceeding those limits can damage it. Rear bolts are discarded after removal. Reconnection requires an assistant, clean mating surfaces including removal of old blue Loctite, and full rear seating before starting new bolts. Tighten new rear bolts in a **star pattern to 55 Nm (41 lb-ft)**. [Handling and rear installation](#/document/G2214904)\n\nA tight rear coupler may require removal of center-bearing retainers. If those bolts are removed, discard them. Align the flex coupling and position the shaft to the rear drive-unit flange before installing new center-bearing bolts at **48 Nm (35 lb-ft)**. This contingency does not itself establish rear-only clearance or require automatic exhaust removal. [Coupler and center-support requirements](#/document/G2214904)"
+        },
+        {
+          "title": "Prepare an angle follow-up when the symptoms call for it",
+          "body": "Use the following reference when arranging angle diagnosis. First establish correct U-joint and CV-joint operation. Position the vehicle on a level surface such as a drive-on hoist or alignment rack, unloaded at verified curb ride height, with normal tire pressures. Check for underbody interference before driving onto a lift. [Angle prerequisites](#/document/G2214729) [Drive-on clearance](#/document/G1663631)\n\nRetain the parking brake and parked transmission position while the wheels support the car. The hand-rotation setup in steps 3–4 applies to the all-wheels-clear hoist arrangement; it does not authorize releasing the brake on a wheel-supported rack. Center-joint positioning, if needed, must be arranged separately with suitable support before returning to the specified level curb-height measuring condition. [Parking restraints](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539565&Uid=G1642800&ProcUid=G1642801&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Center-joint positioning](#/document/G2214729)"
+        },
+        {
+          "title": "Verify ride height before interpreting angles",
+          "body": "Use a surface gauge on the flat, level surface, with correct tire pressures and a full fuel tank. Measure both sides. These heights are differences between suspension reference points, rather than body-to-ground measurements. [Ride-height method](#/document/G1686616)\n\n**Front:** measure to the center of the rear control-arm ball-joint cap, measurement 2, and to that arm’s inboard bolt center, measurement 3. Calculate **front ride height = measurement 3 − measurement 2**. Here, “rear control arm” identifies an arm within the front suspension. [Front reference points](#/document/G1686616)\n\n**Rear:** use the toe-link inboard cam-bolt center as measurement 2 and the outboard bolt center as measurement 3. Calculate **rear ride height = measurement 2 − measurement 3**, as in step 2. [Rear reference points](#/document/G1686616)\n\n| Check | Specification for the variants covered here |\n| --- | --- |\n| Front ride height | 48.8 mm (1.921 in) ± 12 mm (0.472 in) |\n| Rear ride height | 32.1 mm (1.264 in) ± 10 mm (0.394 in) |\n| Maximum front side-to-side difference | 7.5 mm (0.295 in) |\n| Maximum rear side-to-side difference | 6.3 mm (0.248 in) |\n\nRecord the underlying measurements and calculated results. Resolve an out-of-specification height or lean before interpreting operating angles. These are the non-GT350/GT350R specifications; aftermarket-equipped vehicles require their applicable assessment. [Height specifications](#/document/G1686608) [Suspension diagnosis and exclusions](#/document/G1686610)"
+        },
+        {
+          "title": "Use the correct angle references",
+          "body": "For the flex-coupling/CV-joint branch, use **Anglemaster II 164-R2402** and match the transmission:\n\n- **Automatic:** place it on a transmission-fluid-pan bolt and press **ALT-ZERO**, then measure the front shaft slope relative to that reference.\n- **Manual:** place it on the transmission drain plug and press **ALT-ZERO**, then measure the front shaft slope relative to that reference.\n\nFor the rear reading, establish a new reference on the drive axle’s clean, flat surface with **ALT-ZERO**, then measure the rear shaft slope. The relative readings give the respective operating angles. Ford also provides front/rear shaft-slope measurements for a single-piece shaft; select the branch matching the installed assembly. [Instrument references and shaft branches](#/document/G2214729)\n\nFor a multiple-piece shaft, Ford positions the flange U-joint cup parallel with the floor to simplify measurement. Once safely positioned and at the required measuring condition, zero the instrument on a clean shaft section ahead of the center support bearing, then measure behind the center-support U-joint. That relative reading is the center-joint operating angle. This reference does not teach brake release or wheel-free lifting on a loaded alignment rack. [Center-joint measurement](#/document/G2214729)\n\nWhen calculating from separate component slopes, subtract the smaller magnitude from the larger if both slope in the same direction; add their magnitudes if they slope in opposite directions. Ford’s general U-joint guidance calls for connected operating angles equal or within **1 degree**, a **3-degree maximum**, and at least **0.5 degree** of continuous operating angle. Keep this guidance separate from the specific flex-coupling/CV-joint values in the next step. [Calculation and U-joint guidance](#/document/G2214729)"
+        },
+        {
+          "title": "Compare only the matching engine and transmission",
+          "body": "All values below are **degrees at curb ride height**. Use only the matching row; no additional tolerance is specified here. [Vehicle-specific angles](#/document/G2214897)\n\n| Engine and transmission | Transmission joint | Center-bearing joint | Rear-differential joint |\n| --- | ---: | ---: | ---: |\n| 2.3L automatic | 0.45 | 0.63 | 0.0 |\n| 2.3L manual | 0.46 | 0.64 | 0.0 |\n| 3.7L automatic | 0.26 | 0.42 | 0.0 |\n| 3.7L manual | 0.24 | 0.40 | 0.0 |\n| 5.0L automatic | 0.58 | 0.76 | 0.0 |\n| 5.0L manual | 0.55 | 0.79 | 0.54 |\n\nAn incorrect applicable angle directs inspection of the engine mounts, transmission mounts, center-support mounting, rear suspension, rear axle and its mounting, and frame for wear or damage. Repair or adjustment is a separate job. An angle reading is a reason to investigate, not permission to improvise a shim. [Angle follow-up](#/document/G2214729)"
+        },
+        {
+          "title": "Arrange balancing when the runout branch leads there",
+          "body": "If all required shaft runout readings meet specification but the original vibration remains, Ford directs balancing. Give the workshop the original symptom record, installed inspection findings, every runout reading and any indexed-recheck results. Keep unfinished spline, joint or angle work visible. [Balancing decision](#/document/G2214730)\n\nFord’s electronic **VCMM/VMS** method uses an accelerometer near the transmission or differential end and reflective tape with a photo-tachometer. The sensor is placed approximately **20 degrees from perpendicular** to the tape surface and must remain fixed through testing. The workflow is an unmodified baseline test, a second test with a known test weight, removal of that test weight and installation of the directed correction, then a **third test to verify the repair**. Equipment operating instructions are a prerequisite; this article does not establish a powered hoist-test setup or substitute universal controls for the equipment’s directions. [Electronic balancing workflow](#/document/G2214730)\n\nFord also documents a hose-clamp balancing alternative. Both balancing methods remain workshop follow-up here. I want a measured correction and a verification result, not a collection of clamps installed because somebody sounded confident. [Balancing alternatives](#/document/G2214730)"
+        },
+        {
+          "title": "Recheck the original symptom and close the record",
+          "body": "Before road use, confirm all measuring equipment is removed, the car has been lowered with parking restraints restored, and any separate repair has completed its own installation checks. [Restraints](#/document/G1693189) [Driveshaft installation](#/document/G2214904)\n\nAfter a correction, repeat the road-test condition at the speed that originally produced the vibration. Record whether it is gone, reduced, unchanged or different. Electronic balancing also needs its third verification test. [Road-test and balance verification](#/document/G2214730)\n\nFinish with the completed observations, readings and chosen next action. A passing runout measurement clears that measurement only; it does not certify balance, hidden spline condition or every other possible vibration source. [Runout decisions](#/document/G2214730) [Other diagnostic branches](#/document/G2214728)"
         }
       ],
       "watchFor": [
         {
-          "title": "A damaged shaft, rough joint or worn support",
-          "body": "These are inspection findings to address through the matching repair branch, rather than reasons to add a balance weight."
+          "title": "Support position changes during rotation",
+          "body": "Stop if a stand or hoist contact shifts, a wheel contacts anything, or the suspension drops away from the retained curb position. Restore secure support before continuing; support failure risks serious injury, and the runout setup requires the shaft near its curb-weight angle. [Lifting precautions](#/document/G1693189) [Runout position](#/document/G2214730)"
         },
         {
-          "title": "Only the rear measurement is out of range",
-          "body": "The index-marked recheck is there to separate possible sources. Preserve the measurements and marks before components are moved."
+          "title": "The shaft resists hand rotation",
+          "body": "Confirm Neutral and full parking-brake release within the supported setup. Record binding or roughness and route a brake-release problem to diagnosis; do not adjust cables or disconnect brake parts to force this inspection to continue. [Neutral setup](#/document/G1693766) [Parking-brake diagnosis](#/document/G1693765) [Joint inspection](#/document/G2214730)"
         },
         {
-          "title": "Shudder associated with acceleration",
-          "body": "The symptom chart includes driveline angles and binding or damaged joints. That pattern deserves its own branch rather than an automatic balancing operation."
+          "title": "A damaged joint or worn support gets called a balance problem",
+          "body": "Keep binding, unwanted movement and support damage attached to their repair branches. They remain findings even if runout passes. [Joint and support decisions](#/document/G2214728)"
+        },
+        {
+          "title": "The brake warning lamp stays on after full release",
+          "body": "Ford warns that the brakes may not be operating correctly. Have the vehicle checked promptly before proceeding with normal use. [Owner brake warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539565&Uid=G1642800&ProcUid=G1642801&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "notes": [
-        "Have balancing performed by a workshop with the equipment and experience required for the fitted shaft and flange arrangement.",
-        "The illustration is the inspection view of a multi-piece driveshaft. Confirm the fitted shaft before following any assembly-specific direction."
+        "This is symptom-led diagnosis and adds no inspection, balancing or replacement interval.",
+        "The Neutral, released-brake and curb-height support instructions are combined specifically for engine-off hand inspection and runout. They do not establish an energized balancing setup. [Hand inspection](#/document/G2214730) [Curb-height support](#/document/G1686649) [Neutral setup](#/document/G1693766) [Released-brake checks](#/document/G1693765)",
+        "The installed job leaves wheels, suspension links, parking-brake cables, exhaust and driveshaft connections assembled. Their removal or adjustment belongs to a separate repair.",
+        "For adjacent symptoms, see the [driveshaft and U-joint guide](#/maintenance/driveshaft), [wheel and hub guide](#/maintenance/wheel-hubs) or [tire guide](#/maintenance/tires)."
       ],
       "procedures": [
         {
           "documentId": "G2214728",
-          "purpose": "Choose the correct clunk, shudder, cruise-vibration or noise diagnostic branch."
+          "purpose": "Select symptom branches and interpret joint, support, mounting and angle findings."
         },
         {
           "documentId": "G2214730",
-          "purpose": "Follow the complete inspection, runout, indexed recheck and specialist balancing instructions."
+          "purpose": "Teach installed inspection, hand rotation, runout measurement, result decisions and balancing follow-up."
         },
         {
           "documentId": "G2214897",
-          "purpose": "Check the runout limit, engine/transmission angle values and fastener specifications."
-        },
-        {
-          "documentId": "G2214729",
-          "purpose": "Measure driveline angles with the specified setup and fitted-joint branch."
+          "purpose": "Supply the shaft runout limit and engine/transmission-specific angle values."
         },
         {
           "documentId": "G1663631",
-          "purpose": "Review the designated lifting points and support precautions."
+          "purpose": "Identify approved lifting points and adapter-clearance requirements."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Provide unexpected-start prevention, protection, support and restraint precautions."
+        },
+        {
+          "documentId": "G1686649",
+          "purpose": "Establish curb-height rear suspension support and its illustrated lower-arm support area without importing link removal."
+        },
+        {
+          "documentId": "G1693766",
+          "purpose": "Establish Neutral for hoist work without importing cable adjustment."
+        },
+        {
+          "documentId": "G1693765",
+          "purpose": "Support fully released-parking-brake rotation checks on a hoist and route release faults."
+        },
+        {
+          "documentId": "G1686616",
+          "purpose": "Teach ride-height reference points and front/rear subtraction order."
+        },
+        {
+          "documentId": "G1686608",
+          "purpose": "Define curb load and supply applicable ride-height and lean limits."
+        },
+        {
+          "documentId": "G1686610",
+          "purpose": "Supply the pressure reference, aftermarket limitation and height-concern follow-up."
+        },
+        {
+          "documentId": "G2214729",
+          "purpose": "Explain the optional angle workflow, instrument references, calculations and follow-up."
+        },
+        {
+          "documentId": "G2214904",
+          "purpose": "Route separate shaft work and preserve articulation, replacement-fastener and connection requirements."
+        },
+        {
+          "documentId": "G1688092",
+          "purpose": "Identify the 3.7L exhaust branch for separate complete-shaft removal."
         }
       ],
       "relatedGuideIds": [
@@ -12974,8 +13068,159 @@
         {
           "documentId": "G1663631",
           "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1686649",
+          "sourceHash": "fd8d2673a9096caae584141cae83e9911d05ca91756a331afda574a47f490bcc"
+        },
+        {
+          "documentId": "G1693766",
+          "sourceHash": "410254a1c802fdd37039dcd58279738294ca4addc027f71d57605deb3901cfc6"
+        },
+        {
+          "documentId": "G1693765",
+          "sourceHash": "958e1ebda4857414c237e995250ecf14dd25fa34646d796c034850f8b1f3552c"
+        },
+        {
+          "documentId": "G1686616",
+          "sourceHash": "c94580beac33bd8154db3ddbe648f4889b58e10f8dab60b5ced187696885c5eb"
+        },
+        {
+          "documentId": "G1686608",
+          "sourceHash": "d0c2fcf21e269805645390d412f95b3bceb6772c617df06866fadb28c64cc70f"
+        },
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        },
+        {
+          "documentId": "G2214904",
+          "sourceHash": "1b31960cb8684325586af41176b8ad5a60ec017041153e5302a2afecd2cf8dcd"
+        },
+        {
+          "documentId": "G1688092",
+          "sourceHash": "5fe45b32065155ab0b8958a9aa9516ea2eb5deff814c396cb82b6b1b1004d137"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "baseline-and-support",
+          "title": "Record the concern and establish support",
+          "summary": "Preserve the road-test baseline, record curb position and prepare safe hand rotation.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "inspect-and-measure",
+          "title": "Inspect and measure the installed shaft",
+          "summary": "Check visible condition and joint movement, then record every runout position.",
+          "start": 5,
+          "end": 9
+        },
+        {
+          "id": "secure-and-route",
+          "title": "Secure the car and interpret rear-only excess",
+          "summary": "Restore parking restraints and understand the separate indexed-recheck branch.",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "id": "angle-reference",
+          "title": "Reference for angle follow-up",
+          "summary": "Verify ride height and use the correct instrument references and variant values.",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "id": "balance-and-outcome",
+          "title": "Arrange the next test and verify the outcome",
+          "summary": "Carry the measurement record into balancing or repair and recheck the complaint.",
+          "start": 16,
+          "end": 17
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Shudder occurs while accelerating from a stop or low speed.",
+          "meaning": "Ford lists incorrect driveline angles and binding or damaged joints.",
+          "next": "Assess joint operation and arrange the angle follow-up when indicated. [Acceleration-shudder branch](#/document/G2214728)"
+        },
+        {
+          "finding": "Front or center shaft runout exceeds 0.6 mm (0.024 in).",
+          "meaning": "The runout procedure directs driveshaft replacement.",
+          "next": "Arrange the separate replacement job and preserve the readings. [Replacement decision](#/document/G2214730) [Runout limit](#/document/G2214897)"
+        },
+        {
+          "finding": "Only rear shaft runout exceeds the limit.",
+          "meaning": "The next diagnostic branch changes rear flange indexing by 180 degrees.",
+          "next": "Mark the first high point and arrange the separate disconnection and recheck with established access. [Rear-only branch](#/document/G2214730)"
+        },
+        {
+          "finding": "After reindexing, excessive rear runout produces high-point marks within 25 mm (1 in).",
+          "meaning": "Ford identifies an eccentric shaft.",
+          "next": "Arrange driveshaft replacement. [High-point comparison](#/document/G2214730)"
+        },
+        {
+          "finding": "After reindexing, rear runout remains excessive and the high-point marks are 180 degrees apart.",
+          "meaning": "The procedure identifies the slip yoke or pinion flange as the next area to investigate.",
+          "next": "Use component-specific runout methods and limits before reaching a flange or bent-pinion conclusion. [Flange and pinion branch](#/document/G2214730)"
+        },
+        {
+          "finding": "All required shaft runout positions meet the limit, but vibration remains.",
+          "meaning": "The runout branch leads to balancing.",
+          "next": "Arrange the selected balancing method while retaining separate joint, support and angle findings. [Balancing decision](#/document/G2214730)"
+        },
+        {
+          "finding": "Ride height or side-to-side lean is outside specification.",
+          "meaning": "The angle-check prerequisite has not been met.",
+          "next": "Investigate suspension height before interpreting operating angles. [Angle prerequisites](#/document/G2214729) [Height limits](#/document/G1686608) [Suspension diagnosis](#/document/G1686610)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The hand-rotation setup was maintained",
+          "body": "Confirm the record identifies the hoist arrangement, rear curb-height reference and suspension support. Rotation used Neutral, a fully released parking brake, all wheels clear, ignition off and key removed. [Runout support](#/document/G2214730) [Suspension support](#/document/G1686649) [Neutral](#/document/G1693766) [Released-brake checks](#/document/G1693765) [Starting precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Every reading represents a complete revolution",
+          "body": "Confirm the gauge was set up using its manufacturer’s instructions and the fixture stayed stationary during each complete driveshaft revolution. Retain the highest reading, lowest reading and their difference at the front, center and rear of every shaft section. Compare that total variation with 0.6 mm (0.024 in), and preserve any rear high-point marks and later indexed results. [Measurement requirements](#/document/G2214730) [Runout limit](#/document/G2214897)"
+        },
+        {
+          "title": "Inspection findings and unfinished work are clear",
+          "body": "Record shaft damage, coating, balance weights, joint seating and movement, support condition and flange concerns. Keep hidden spline inspection separate as completed or not performed. [Inspection requirements](#/document/G2214730) [Support and flange checks](#/document/G2214728)"
+        },
+        {
+          "title": "Parking restraints were restored before lowering",
+          "body": "The parking brake is fully applied; the automatic is in Park or the manual is in first gear on the level work surface. Equipment is removed, auxiliary supports are cleared through the hoist’s lowering sequence, and the vehicle is securely parked. [Owner parking instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539565&Uid=G1642800&ProcUid=G1642801&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Lifting precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Follow-up results include their conditions",
+          "body": "For angle work, retain curb load, tire pressures, ride-height calculations, instrument references and the matching engine/transmission row. After a correction, record the original-speed road-test outcome; electronic balancing also requires its third verification test. [Angle setup](#/document/G2214729) [Ride-height method](#/document/G1686616) [Variant angles](#/document/G2214897) [Symptom verification](#/document/G2214730)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang driveline vibration",
+        "installed driveshaft inspection",
+        "Mustang hand rotation Neutral parking brake",
+        "driveshaft runout 0.6 mm",
+        "dial indicator total variation",
+        "rear runout high-point marks",
+        "driveshaft 180 degree reindex",
+        "Mustang driveline angles",
+        "Mustang curb ride height",
+        "center support bearing vibration"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "e5b354ae605073e8bc82c5ad854fd98ce09db7bed84571f0066d6054efe69ac5"
+      }
     },
     {
       "categoryId": "advanced",
