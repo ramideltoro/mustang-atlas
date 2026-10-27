@@ -1,0 +1,60 @@
+{
+  "documentId": "G1688197",
+  "supportingSourceRefs": [],
+  "sourceHash": "d19f4c5549a36ce25d2dcf1f96b7f713643adafabd056b7ee52aa85b5f37a114",
+  "title": "How the Horn Turns a Press into Sound",
+  "introduction": "I read this diagram like a doorbell with a switchboard in the middle: pressing the steering-wheel airbag operates the horn switch, and the BCM commands the relay that supplies the horn. Follow the drawing from Horn Switch through Clockspring and BCM to Horn Relay and Horn.\n\nThis is an explanation of normal operation. The arrows show the operating sequence; they are not a connector map or an electrical test procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688197-b00001",
+      "text": "Trace how a press at the steering wheel becomes a command to sound the horn.",
+      "why": "Separating the driver's request from the horn's voltage supply makes the roles of the switch, BCM and relay easier to understand."
+    },
+    {
+      "blockId": "G1688197-b00002",
+      "text": "Follow the Horn Command",
+      "why": "Read the drawing from left to right. Each labeled component passes the operating sequence toward the horn; the drawing does not establish physical wiring routes."
+    },
+    {
+      "blockId": "G1688197-b00004",
+      "text": "From Contact to Sound",
+      "why": ""
+    },
+    {
+      "blockId": "G1688197-b00005",
+      "text": "Springs hold the horn switch contacts apart. The lower contacts connect to ground, while the upper contacts connect to the horn signal circuit. Pressing the driver airbag pushes the upper contacts down, compressing the springs until the contacts touch. That closes the circuit and sends a ground signal through the clockspring to the BCM horn input. The BCM then grounds the horn relay coil, energizing the relay. The energized relay supplies voltage to the horn, allowing it to sound.",
+      "why": "The switch supplies a ground request to the BCM; the relay switches the horn's supply. I keep those jobs distinct because the command path and the circuit powering the sound are different parts of the same chain. A relay label alone does not establish that the relay is a separate plug-in component."
+    }
+  ],
+  "checkedAt": "2026-10-27T16:02:04.191Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b246abf27e94a6f88feb50fb1d1461d3f6222de9c802694f308f0369306862d4",
+    "reviewedAt": "2026-10-27T16:02:04.191Z"
+  }
+}
