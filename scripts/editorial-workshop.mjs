@@ -50,6 +50,8 @@ function evidenceFor(g){
  if(primary.has('G1693782')&&docs.has('G1693786')&&byId.get('G1693782')?.source_hash==='a2e2d71958c3640f11598ec511b30d29824af074f530461d556296db137525f8'&&byId.get('G1693786')?.source_hash==='1822f65a1f429d8809618bd1f816c2f398ccd69bd39b36a1907b6610f6236a96'&&byId.get('G1694687')?.source_hash==='c1909f2c4ff8ca77cb33862bb9d20b51fa06642cb1c6c22c7b1c36f1148188e6'){const spec=byId.get('G1694687'),end=spec.text.indexOf('Torque Specifications');if(end<0)throw Error('Missing verified brake fluid boundary');docs.set(spec.id,spec);dependencySpans.set(spec.id,[{id:'brake-fluid',start:0,end,title:'Specified brake fluid'}]);}
  // Physical repairs and switch access need relevant general startup/support precautions.
  if(job.kind==='repair'||switchAccess||docs.has('G1686507')||docs.has('G1663631'))docs.set('G1693189',byId.get('G1693189'));
+ // Battery isolation requires its own applicable chemical/gas precautions.
+ if(docs.has('G1692356'))docs.set('G1693181',byId.get('G1693181'));
  const nodes=[];for(const d of docs.values()){
   const spans=primary.has(d.id)?job.spans.filter(s=>s.documentId===d.id):dependencySpans.get(d.id)||[{id:'dependency',start:0,end:d.text.length,title:d.title}];
   for(const s of spans)for(const piece of splitSpan(d.text,s.start,s.end))nodes.push({nodeId:`${d.id}:${s.id}:${piece.start}-${piece.end}`,documentId:d.id,sourceHash:d.source_hash,sectionId:s.id,title:d.title,role:primary.has(d.id)?'primary':'dependency',engines:scopeEngines(d),start:piece.start,end:piece.end,text:piece.text,images:[]});
