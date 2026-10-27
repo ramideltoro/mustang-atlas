@@ -1,0 +1,210 @@
+{
+  "documentId": "G1671573",
+  "supportingSourceRefs": [],
+  "sourceHash": "f5fc1be433e58428be6354c9e068585824ea60575f3ef27a0248f755de736b88",
+  "title": "Fuel Tank and Lines: 2.3L EcoBoost Overview",
+  "introduction": "I follow the fuel supply in stages: the electric tank pump feeds the high-pressure pump, which supplies the rail, and the injectors meter fuel into the cylinders. It is a relay, with different equipment doing each leg. The level sender keeps the inventory; it cannot certify that the relay is working.\n\nThis overview explains the delivery layout, vapor-related components, service boundaries and collision shut-off feature. It does not provide component access, pressure tests or replacement instructions. Use the matching engine-specific safety and pressure-release procedures before opening fuel plumbing; the supply and high-pressure sides need their own applicable instructions. Control-module labels are retained as written, without establishing their physical relationship.",
+  "requirements": [
+    {
+      "category": "After a collision",
+      "items": [
+        {
+          "name": "Inspect the fuel system before any restart attempt",
+          "detail": "Fuel leaks after a collision must be inspected and repaired where necessary; failing to do so can increase the risk of fire and serious injury. Ford recommends inspection of the fuel system by an authorized dealer after any collision. Do not treat an ignition reset as permission to drive or as a substitute for that inspection."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1671573-b00001",
+      "text": "The fuel system includes the following storage, delivery, sensing and control components:",
+      "why": "I keep fuel delivery, vapor containment and level reporting distinct so that a symptom in one function does not condemn the others."
+    },
+    {
+      "blockId": "G1671573-b00003",
+      "text": "A saddle-type fuel tank stores the fuel.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00005",
+      "text": "Quick connect couplings join the fuel and vapor tubes.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00007",
+      "text": "The fuel tank filler pipe assembly contains a restrictor plate that permits only unleaded fuel to be pumped into the tank. Do not modify the assembly in any way.",
+      "why": "The restrictor is part of the intended refueling arrangement."
+    },
+    {
+      "blockId": "G1671573-b00009",
+      "text": "The Easy Fuel™ capless fuel tank filler pipe assembly must not be modified in any way. Its only service method is installation of a new fuel tank filler pipe assembly.",
+      "why": "The complete filler assembly is the stated service item."
+    },
+    {
+      "blockId": "G1671573-b00011",
+      "text": "The system includes a Fuel Pump Control Module (FPCM).",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00013",
+      "text": "The fuel rail distributes fuel to the injectors.",
+      "why": "In this layout, the high-pressure pump feeds the rail; the rail is distinct from the supply pump in the tank."
+    },
+    {
+      "blockId": "G1671573-b00015",
+      "text": "The fuel injectors are electrically controlled valves that meter fuel into the engine.",
+      "why": "In this EcoBoost layout, the injectors deliver fuel into the cylinders."
+    },
+    {
+      "blockId": "G1671573-b00017",
+      "text": "The Fuel Tank Pressure (FTP) sensor is part of the fuel vapor tube assembly.",
+      "why": "Tank-pressure sensing is separate from the delivery-pressure functions of the fuel pumps."
+    },
+    {
+      "blockId": "G1671573-b00019",
+      "text": "The fuel system uses Closed Loop Pressure Control (CLPC).",
+      "why": "Keep this control-system designation with the engine-specific reference; this overview does not supply its feedback logic or test values."
+    },
+    {
+      "blockId": "G1671573-b00021",
+      "text": "The Fuel Level Sensor reports the fuel quantity in the tank.",
+      "why": "Fuel quantity is a different measurement from delivery pressure."
+    },
+    {
+      "blockId": "G1671573-b00038",
+      "text": "The Fuel Pump (FP) module contains the following supply, level-sensing, pressure-management and filtration components:",
+      "why": "The tank module combines several jobs and remains distinct from the high-pressure pump it supplies."
+    },
+    {
+      "blockId": "G1671573-b00024",
+      "text": "The electric FP module supplies pressurized fuel to the high pressure Fuel Pump (FP).",
+      "why": "This identifies the supply stage. The high-pressure pump then raises pressure for the direct-injection circuit and feeds the rail."
+    },
+    {
+      "blockId": "G1671573-b00027",
+      "text": "The Fuel Level Sender measures the fuel level in the tank.",
+      "why": "Its measurement supports the gauge reading, not a verdict on either pump’s performance."
+    },
+    {
+      "blockId": "G1671573-b00030",
+      "text": "A check valve maintains system pressure after the pump shuts off.",
+      "why": "A stopped pump does not establish that the fuel plumbing is depressurized."
+    },
+    {
+      "blockId": "G1671573-b00033",
+      "text": "A pressure relief protects against overpressure if fluid flow is restricted.",
+      "why": "Overpressure protection and pressure retention are separate functions within the module."
+    },
+    {
+      "blockId": "G1671573-b00036",
+      "text": "A lifetime fuel filter removes foreign material to protect the fuel injectors.",
+      "why": "Filtration helps keep contamination away from the components that meter fuel."
+    },
+    {
+      "blockId": "G1671573-b00040",
+      "text": "The vehicle also has the following service features, refueling provisions and tube routing:",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00042",
+      "text": "A serviceable fuel level sender is mounted on the fuel pump module.",
+      "why": "The sender is a distinct service item despite being attached to the module."
+    },
+    {
+      "blockId": "G1671573-b00044",
+      "text": "A restrictor plate in the fuel tank filler pipe permits only unleaded fuel to be pumped into the fuel tank.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00046",
+      "text": "The Easy Fuel capless fuel tank filler pipe assembly must not be modified in any way.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00048",
+      "text": "The supplemental refueling adapter is stored in the luggage compartment.",
+      "why": "This identifies where to find the additional refueling equipment."
+    },
+    {
+      "blockId": "G1671573-b00050",
+      "text": "The lifetime in-tank fuel filter is serviced as part of the fuel pump.",
+      "why": "Its stated service boundary is the pump, unlike the separately serviceable level sender."
+    },
+    {
+      "blockId": "G1671573-b00052",
+      "text": "The liquid-fuel and vapor tubes share a bundle with the brake tubes beneath the floorpan. A protective cover shield covers the bundle.",
+      "why": "This protected route carries separate systems; sharing a bundle does not make the tubes interchangeable."
+    },
+    {
+      "blockId": "G1671573-b00054",
+      "text": "The fuel tubes use quick connect and spring lock couplings.",
+      "why": "Disconnection and refitting require the matching coupling service instructions."
+    },
+    {
+      "blockId": "G1671573-b00056",
+      "text": "The FPDM shuts off fuel in the event of a collision.",
+      "why": "The following description traces the event signal responsible for the shutdown."
+    },
+    {
+      "blockId": "G1671573-b00058",
+      "text": "Collision-Triggered Fuel Pump Shut-off",
+      "why": ""
+    },
+    {
+      "blockId": "G1671573-b00059",
+      "text": "NOTE: For vehicles equipped with Intelligent Access with Push Button Start, refer to Description and Operation, Intelligent Access with Push Button Start, in Section 419-01A for the procedures that establish ignition OFF, ignition in ACCESSORY, ignition ON and ignition START.",
+      "why": "I check how to establish the intended ignition state before using the reset description."
+    },
+    {
+      "blockId": "G1671573-b00060",
+      "text": "In a moderate to severe collision, an event notification signal initiates the vehicle’s Fuel Pump and Sender Shut-off Feature.",
+      "why": "The resulting shutdown can be a protective command rather than evidence of a failed pump."
+    },
+    {
+      "blockId": "G1671573-b00061",
+      "text": "The restraints control module (RCM) provides the event notification signal to the fuel pump driver module (FPDM). Communication between the RCM and FPDM allows the PCM to shut off the Fuel Pump.",
+      "why": "This signal path connects the detected collision event to the fuel-pump shutdown."
+    },
+    {
+      "blockId": "G1671573-b00062",
+      "text": "When collision shut-off has stopped the vehicle, the workshop overview describes an ignition OFF-to-ON reset. It notes that the initial attempt may not restart the vehicle and an additional ignition cycle may be needed.",
+      "why": "Complete the fuel-system inspection and any necessary leak repairs before attempting to restart. The matching owner’s manual, Roadside Emergencies — Fuel Shutoff, gives the actual pushbutton-control sequence and explains that the vehicle checks systems before allowing a restart. Use that sequence rather than interpreting this general OFF-to-ON description as a keyed-ignition or complete restart procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:34:55.345Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 31,
+    "receivedBlocks": 31,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ff1773d499367232af5f784054c4ced5aa8c5959fb5563639e0c778207a050df",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 39,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1007dc414fd9979dad89dcfe9b99932c6c926df3439aa6cfd643d59b5607f495",
+    "reviewedAt": "2026-10-27T19:33:28.747Z",
+    "editorialRevision": "Owner-backed collision inspection prerequisite and informational actual-control referral only",
+    "supplementalCollisionEvidence": {
+      "ownerSource": "owner-source.json",
+      "priorReviewedPattern": "G1794911-collision-safety"
+    }
+  }
+}
