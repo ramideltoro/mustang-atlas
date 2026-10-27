@@ -136544,102 +136544,171 @@
       ]
     },
     {
-      "title": "Initialize the front door window motor",
-      "summary": "Teach the door-window motor its travel limits and lower soft stop, then verify the automatic functions fitted to the vehicle.",
-      "introduction": "The door-window regulator motor contains electronics that control automatic travel and the short drop used to clear the door weatherstrip. Initialization establishes the window’s travel limits and lower soft stop. It is needed when fitting a new door-window motor or restoring lost initialization. Convertible equipment needs care: it has no one-touch up or bounce-back feature, and its rear quarter-window motors do not require initialization.",
-      "why": "The motor must reach both ends of travel and complete the final cycle to establish the required positions. The door must remain closed. During initialization, the glass closes with high force and cannot detect an obstruction, so normal obstacle protection must not be relied upon.",
+      "title": "Initialize a new front door window motor",
+      "summary": "Teach a newly installed coupe door-window motor its travel limits and lower soft stop, then check one-touch operation in both directions.",
+      "introduction": "A new window motor can move the glass without knowing where to call it a day. I’ll walk you through teaching it those limits using the door switch—one small lesson before the damn thing gets its automatic privileges back. The regulator motor moves the glass, while electronics inside it manage automatic travel and the small window drop that clears the weatherstrip when you open the door.",
+      "why": "Initialization establishes the upper and lower travel limits. An additional up-and-down cycle sets the lower soft stop, the learned stopping position used for downward travel. The door must stay closed throughout learning. During this procedure, the glass closes with high force and cannot detect obstacles.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
         "power door window initialization",
-        "window motor relearn",
-        "one-touch window stopped working",
-        "window soft stop",
-        "window initialization after motor replacement",
-        "window won't close",
-        "window won't open",
-        "window stuck",
-        "window will not go up"
+        "new window motor initialization",
+        "Mustang coupe window relearn",
+        "window motor travel limits",
+        "window lower soft stop",
+        "one-touch window check after motor replacement"
       ],
       "when": {
-        "summary": "After door-window motor replacement or loss of initialization, including power interruption while the glass is moving.",
+        "summary": "After installing a new front door window regulator motor on a coupe and completing all mechanical installation and reassembly.",
         "notes": [
-          "An existing motor must first be de-initialized; a new motor skips that operation."
+          "A new motor proceeds directly to travel-limit learning; it does not need the existing-motor de-initialization operation.",
+          "Convertible models do not have one-touch up or bounce-back. Their rear quarter-window motors have neither one-touch direction and do not require initialization."
         ]
       },
       "prepare": [
         {
-          "title": "Make the glass path safe",
-          "detail": "Review the health and safety precautions in Section 100-00. Keep all objects and body parts clear of the glass throughout the procedure."
+          "title": "Start with the replacement work finished",
+          "detail": "This procedure covers only initialization of a new front door window motor on a fully reassembled coupe. Complete the motor installation, electrical connections and door reassembly before applying power here. Existing-motor de-initialization and motor replacement require their separate complete procedures. Nothing needs removing or unplugging for this task."
         },
         {
-          "title": "Arrange operating access",
-          "detail": "Use the window control switch with the door closed and window power available. For an existing motor, arrange access to the battery cable or window motor fuse for the required interruption while the window is moving."
+          "title": "Keep the car grounded and restrained",
+          "detail": "Park on a firm, level surface, apply the parking brake and chock the wheels. Keep these restraints in place throughout. With the engine OFF, put an automatic transmission in Park or a manual transmission in a parked gear; keep that selection throughout this engine-off procedure. Perform the work from the normal seated operating position with all four wheels on the ground; lifting and underhood access are unnecessary."
+        },
+        {
+          "title": "Clear the entire glass opening",
+          "detail": "Keep every person, body part and object away from the glass and its closing path throughout initialization. The glass closes with high force and obstacle detection is unavailable during learning. Never use a hand or an object to test reversal."
+        },
+        {
+          "title": "Have the normal controls ready",
+          "detail": "Have a valid intelligent access key available and wear eye and ear protection for service work. Use the driver's master switch for either front window, or the passenger-door switch for the passenger window. The second detent is the second felt switch position: pull upward for UP and press downward for DOWN."
         }
       ],
       "steps": [
         {
-          "title": "De-initialize an existing motor",
-          "body": "For an existing motor, disconnect the battery cable or window motor fuse while the window is operating. Reconnect the cable or fuse before continuing. If a new motor has been installed, skip this step."
+          "title": "Secure the vehicle and establish ignition OFF",
+          "body": "Apply the parking brake, chock the wheels and with the engine OFF, confirm an automatic transmission is in Park or a manual transmission is in a parked gear before operating the ignition controls. Keep that gear selection throughout. Begin with the engine stopped and ignition OFF.\n\nIf the ignition is currently ON, press and release ENGINE START/STOP once with the brake and clutch pedals released to switch it OFF. Remove the key from the vehicle while you finish arranging the work area. The 2015 Mustang Owner’s Manual, First Printing, printed pages 121–122, explains the keyless ignition modes."
         },
         {
-          "title": "Establish the upper travel limit",
-          "body": "With the door closed and window fully open, pull and hold the switch UP at its second detent. Continue holding until the glass has stalled against the top run for at least 2 seconds, then release the switch."
+          "title": "Switch the ignition ON without starting the engine",
+          "body": "Sit at the controls and bring the valid key inside the vehicle. From OFF, keep both brake and clutch pedals released, then press and release ENGINE START/STOP once. The ignition is now ON, the electrical circuits are available and the warning lamps illuminate; the engine must remain stopped.\n\nPressing the button with the brake applied on an automatic, or the clutch applied on a manual, requests an engine start. I’m only asking for window power here. These control distinctions are described in the 2015 Mustang Owner’s Manual, First Printing, printed page 121.\n\nIf remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before proceeding. Leave the parking brake and wheel chocks in place."
         },
         {
-          "title": "Establish the lower travel limit",
-          "body": "Press and hold the switch DOWN at its second detent. Keep holding until the glass has stalled at the bottom of travel for at least 2 seconds. Reaching the bottom without the required hold does not complete this step."
+          "title": "Close the door and lower the glass completely",
+          "body": "Close the door containing the new motor and keep it closed through the learning sequence and one-touch checks. The motor will not initialize with the door open.\n\nMake sure all people and objects are clear of the window opening. Use the appropriate door-window switch to lower the glass fully. Begin the upper-limit learning step only when the glass has reached the bottom of its travel.\n\nIf the glass cannot reach the fully open position, stop this attempt and carry out the final OFF/key-out action before arranging further work."
         },
         {
-          "title": "Set the lower soft stop",
-          "body": "Cycle the glass up and down once more. This additional cycle sets the soft stop for downward travel and completes the learning sequence before the operational checks."
+          "title": "Teach the upper limit with a second-detent UP hold",
+          "body": "With the door closed and glass fully open, pull and hold the switch UP at the second detent. Keep holding as the glass rises into the upper window channel, also called the top run.\n\nOnce the glass has stopped against that upper limit, continue holding UP for at least 2 seconds. Count the hold from when the glass stops at the top, not from when you first move the switch. Then release it.\n\nKeep the opening completely clear: the closing glass has high force and cannot detect an obstacle during this procedure."
+        },
+        {
+          "title": "Teach the lower limit with a second-detent DOWN hold",
+          "body": "Press and hold the switch DOWN at the second detent. Keep holding while the glass travels fully downward.\n\nAfter it stops at the bottom of its travel, continue holding DOWN for at least 2 seconds, then release the switch. A stop partway down does not establish the lower limit."
+        },
+        {
+          "title": "Run one additional complete up-and-down cycle",
+          "body": "With the door still closed, operate the glass fully up and then fully down once more. This extra cycle sets the lower soft stop.\n\nComplete both movements before checking automatic operation. This little encore has a job to do; it is not just the window taking a bow."
+        },
+        {
+          "title": "Check one-touch UP",
+          "body": "From fully open, momentarily pull the switch UP to the second detent and release it. The glass should continue upward without you holding the switch and reach the fully closed position.\n\nKeep everyone and everything clear of its path. Do not insert an obstruction to check bounce-back. If automatic upward travel fails, treat the completion check as unsuccessful and use the decision rows below."
+        },
+        {
+          "title": "Check one-touch DOWN",
+          "body": "From fully closed, momentarily press the switch DOWN to the second detent and release it. The glass should continue downward without a held switch and reach the fully open position.\n\nBoth one-touch directions must work to pass the coupe completion check. If the UP check failed, do not record a pass just because DOWN works."
+        },
+        {
+          "title": "Finish with ignition OFF and the key outside",
+          "body": "If both checks passed, close the glass using the normal window control before shutting down.\n\nWhether the checks passed, failed or were interrupted, finish by pressing and releasing ENGINE START/STOP once from ignition ON with both brake and clutch pedals released. Confirm the ignition is OFF and remove the intelligent access key from the vehicle. Keep the parking brake applied and the wheel chocks in place until the car is ready to return to use.\n\nAny renewed connector or component work begins with ignition OFF and the key outside the vehicle."
         }
       ],
       "watchFor": [
         {
-          "title": "An open door",
-          "body": "The door-window motor will not initialize with the door open."
+          "title": "High closing force during learning",
+          "body": "Obstacle detection is unavailable during initialization. Keep the whole opening clear, including fingers near the upper weatherstrip. A physical obstruction test is not part of this procedure."
         },
         {
-          "title": "An obstruction during learning",
-          "body": "Do not place an object or body part in the opening to test reversal during initialization; obstacle detection is unavailable."
+          "title": "A door opened during the sequence",
+          "body": "The motor needs the door closed to initialize. Do not open it between the upper hold, lower hold and additional cycle."
+        },
+        {
+          "title": "Counting travel time as the required hold",
+          "body": "Each minimum 2-second hold starts only after the glass reaches and stops at the correct end of travel. Time spent moving toward that limit does not count."
+        },
+        {
+          "title": "A stop before the actual end of travel",
+          "body": "Do not treat a mid-travel stop as the required stall at the top or bottom. Stop the attempt, switch OFF and remove the key before investigating through the appropriate repair procedure."
         }
       ],
       "notes": [
-        "The second detent is the switch position used to request automatic window travel.",
-        "Short-drop operation is fitted to both coupe and convertible door windows."
+        "The [initialization procedure](#/document/G1957566) supplies the learning sequence and both one-touch completion checks.",
+        "On memory-seat cars, the master switch communicates through the driver door module; passenger commands also pass through the passenger door module. Without memory seats, the switches signal the motors directly. The visible system diagrams show these different control paths, but both use the same initialization sequence described here. See [system operation](#/document/G1958069).",
+        "Short drop is the small automatic lowering movement that clears the grooved weatherstrip when a door opens; closing the door seats the glass again. Both coupe and convertible door windows use this feature.",
+        "The [window overview](#/document/G1958068) explains switch operation and convertible exceptions. The [general service precautions](#/document/G1693189) cover remote-start prevention and service protection.",
+        "Rear-quarter-window, convertible-top and rear-defrost circuits are separate functions; their diagrams do not add operations to this front door-window task."
       ],
       "diagnostics": [
         {
-          "finding": "One-touch up and obstacle detection stopped after power was disconnected while a door window was moving.",
-          "meaning": "That interruption disables these functions where fitted; it does not by itself establish motor failure.",
-          "next": "Carry out the applicable initialization sequence and check operation."
+          "finding": "The door was open during learning.",
+          "meaning": "The required closed-door condition was not met, so the attempt cannot establish successful initialization.",
+          "next": "Close the door, clear the opening, fully lower the glass and carry out the learning sequence again. Finish OFF/key-out after the checks."
         },
         {
-          "finding": "A convertible has no one-touch up or bounce-back response.",
-          "meaning": "These features are not fitted to the convertible.",
-          "next": "Assess only the functions fitted to that vehicle; do not use this absence to condemn the motor."
+          "finding": "The glass stops before reaching the top run or bottom of travel.",
+          "meaning": "The required end position has not been reached. This initialization sequence does not establish the cause.",
+          "next": "Stop the attempt and finish OFF/key-out. Have the completed motor and glass installation assessed using the appropriate repair procedure before trying again."
+        },
+        {
+          "finding": "A switch request produces no movement on a car without a memory driver seat after an abrupt move to the second detent.",
+          "meaning": "Moving through the switch positions too quickly can prevent the motor from identifying the requested direction; this alone does not establish motor failure.",
+          "next": "Release the switch completely and activate it again deliberately through its positions. If movement remains unavailable, finish OFF/key-out and arrange diagnosis rather than continuing the learning holds."
+        },
+        {
+          "finding": "One-touch UP or DOWN fails after both timed holds and the additional cycle.",
+          "meaning": "The required completion check has failed. This result alone does not identify a defective motor, switch or module.",
+          "next": "Confirm that the door stayed closed, both holds lasted at least 2 seconds after reaching their limits, and the additional full cycle was completed. If any requirement was missed, repeat the complete sequence correctly. If all were met and the check still fails, finish OFF/key-out and arrange diagnosis."
+        },
+        {
+          "finding": "The vehicle is a convertible and has no one-touch UP or bounce-back.",
+          "meaning": "Those functions are not fitted to the convertible; their absence is not a motor-failure finding.",
+          "next": "Use a procedure appropriate to that vehicle and its fitted functions. Do not apply the coupe's two-direction one-touch pass criteria."
+        },
+        {
+          "finding": "The motor is an existing unit rather than the newly installed motor required here.",
+          "meaning": "Existing-motor initialization has a separate de-initialization prerequisite.",
+          "next": "Use the separate complete existing-motor procedure before attempting its initialization."
         }
       ],
       "verification": [
         {
-          "title": "Test the fitted automatic functions",
-          "body": "Check one-touch down on the door window and one-touch up where fitted. Convertible rear quarter windows are excluded from this initialization and one-touch test."
+          "title": "Confirm all learning actions were completed",
+          "body": "The door stayed closed, the glass started fully open, the second-detent UP hold continued at least 2 seconds after the upper stall, the second-detent DOWN hold continued at least 2 seconds after the lower stall, and one further complete up-and-down cycle followed."
         },
         {
-          "title": "Record the outcome",
-          "body": "Note which door was initialized, whether the motor was new or existing, and whether each applicable one-touch function operated correctly."
+          "title": "Confirm both automatic directions",
+          "body": "A momentary second-detent UP request carried the glass fully closed after switch release, and a momentary second-detent DOWN request carried it fully open. These are the completion checks; no physical bounce-back test is required here."
+        },
+        {
+          "title": "Confirm safe shutdown",
+          "body": "The ignition is OFF, the intelligent access key is outside the vehicle, and the parking brake and wheel restraints remain in place. Record which front door received the new motor and whether both one-touch checks passed."
         }
       ],
       "procedures": [
         {
           "documentId": "G1957566",
-          "purpose": "Door-window motor de-initialization, travel-limit learning, soft-stop setting and operational verification."
+          "purpose": "New front door-window motor initialization: closed-door requirement, high-force warning, upper and lower timed holds, additional cycle and both one-touch checks."
+        },
+        {
+          "documentId": "G1958068",
+          "purpose": "Door-window switch operation and the distinction between coupe automatic functions and convertible equipment."
         },
         {
           "documentId": "G1958069",
-          "purpose": "Door-motor operation, effects of interrupted power and convertible feature exceptions.",
+          "purpose": "Motor electronics, memory-seat control paths, switch-request behavior, short drop and convertible feature exceptions.",
           "mediaId": "G1958069-m0001"
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant service precautions, including remote-start disabling, personal protection and prevention of unauthorized engine starts."
         }
       ],
       "hero": null,
@@ -136661,7 +136730,7 @@
         "years": [
           2015
         ],
-        "equipment": "Front power door windows; distinguish coupe functions from convertible equipment."
+        "equipment": "2015 Mustang coupe front power door windows, with or without a memory driver seat; engine coverage: 2.3L, 3.7L, 5.0L and 5.2L. Convertible feature differences are explained, but convertible initialization is outside this procedure."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -136676,14 +136745,44 @@
         {
           "documentId": "G1958068",
           "sourceHash": "500ec7d3721b26ebbd601e57fad472b6f6e150149d062c4901ed355ec55ceab0"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "e8e474cb031159e5db2375ced31d4f17635994c336d84a99278e918c18d0461e"
-      }
+        "fingerprint": "e8e474cb031159e5db2375ced31d4f17635994c336d84a99278e918c18d0461e",
+        "editorialVersion": 2,
+        "editorialFingerprint": "8b8a512ef58a5791d0fd7984a950561ff9eec40de415dfa6ea66a47989677df7",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-position",
+          "title": "Secure the car and position the glass",
+          "summary": "Establish safe restraints, select engine-off ignition ON and fully open the window with the door closed.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "teach-travel-limits",
+          "title": "Teach the limits and soft stop",
+          "summary": "Complete both timed end-position holds and the additional full cycle.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "check-and-shut-down",
+          "title": "Check automatic travel and shut down",
+          "summary": "Verify one-touch UP and DOWN, then finish with ignition OFF and the key outside.",
+          "start": 7,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Replace a front-door glass run and adjust the window",
@@ -148624,75 +148723,141 @@
       }
     },
     {
-      "title": "Clean seatbelt webbing safely",
-      "summary": "Clean fully extended seatbelt webbing using the solution recommended in the vehicle’s Owner’s Literature, without bleaching or re-dyeing it.",
-      "introduction": "Seatbelt webbing is the flexible part of the restraint that holds an occupant in place. Its retractor stores the unused length and can lock the belt during sudden vehicle movement. Cleaning cares for this load-bearing material, so the choice of cleaning product matters as much as the visible result.",
-      "why": "Bleaching or re-dyeing can weaken the webbing and increase the risk of serious injury or death in a crash. Fully extracting the belt before cleaning exposes its length for the procedure. The vehicle’s care instructions identify the recommended solution; the product manufacturer’s instructions govern its use.",
-      "taskType": "repair",
+      "title": "Clean Mustang seatbelt webbing safely",
+      "summary": "Fully extend the belt, vacuum loose dirt, and treat stains with the specified Motorcraft products while protecting the webbing and nearby airbag-equipped seats.",
+      "introduction": "A seatbelt can collect an impressive archive of old spills. I’ll walk you through cleaning that grubby strip of fabric without getting ambitious with chemicals that could weaken it. The useful trick is to expose the entire belt first, then let the type of dirt decide the cleaning sequence.",
+      "why": "Webbing is the flexible, load-bearing strap that restrains you. Its retractor stores the unused length and locks during events such as hard braking or cornering to limit occupant movement. Cleaning needs to preserve that material, even when a stubborn stain refuses to surrender. The cleaning guidance here combines the [seatbelt cleaning procedure](#/document/G1692223) with the 2015 Mustang Owner Manual, Vehicle Care, printed page 230.",
+      "taskType": "maintenance",
       "difficulty": "basic",
       "searchTerms": [
+        "2015 Mustang seatbelt cleaning",
         "dirty seatbelt webbing",
-        "seatbelt stains",
-        "how to clean a seatbelt"
+        "Motorcraft seatbelt cleaner",
+        "seatbelt clicks after fully extending",
+        "seatbelt grease or tar stains"
       ],
       "when": {
-        "summary": "When seatbelt webbing needs cleaning.",
-        "notes": []
+        "summary": "Clean accessible seatbelt webbing when it has loose dirt, light stains, soil, grease or tar.",
+        "notes": [
+          "Coverage: 2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engines.",
+          "Choose the treatment by the contamination present; grease or tar needs spot treatment before general stain cleaning."
+        ]
       },
       "prepare": [
         {
-          "title": "Have the care instructions ready",
-          "detail": "Locate the seatbelt-care information in the vehicle’s Owner’s Literature and obtain the recommended cleaning solution with its manufacturer’s instructions."
+          "title": "Keep the job to accessible webbing",
+          "detail": "Work with the belt installed. No rear cushion, anchor, trim or electrical connector needs removal for this cleaning procedure, and a fitted rear seat is not a prerequisite. This is surface care, not crash inspection, retractor repair or certification of the restraint’s condition."
         },
         {
-          "title": "Allow access to the full belt",
-          "detail": "Arrange access so the webbing can be fully extracted before any cleaning begins."
+          "title": "Gather the appropriate cleaning materials",
+          "detail": "Have a vacuum cleaner and Motorcraft Professional Strength Carpet & Upholstery Cleaner for light stains and soil. For grease or tar, have Motorcraft Spot and Stain Remover; in Canada, use Motorcraft Multi-Purpose Cleaner for that spot-treatment step."
+        },
+        {
+          "title": "Read the product directions before wet cleaning",
+          "detail": "Have the cleaning-product manufacturer’s instructions and safety data sheet ready. Application tools, dilution if required, product removal and drying requirements must come from those directions; no universal mixture or drying time is established here. If the directions are missing or conflict with the seatbelt precautions, stop before applying the product and obtain clarification. Do not improvise a substitute cleaner."
+        },
+        {
+          "title": "Observe the chemical restrictions before any cleaning",
+          "detail": "Do not use cleaning solvents, bleach or dye on seatbelt webbing, and do not re-dye it: these can weaken the restraint. Do not use household cleaning products or glass cleaners. Where seat-mounted side airbags are fitted, do not use chemical solvents or strong detergents on the seats; contamination can impair side-airbag performance in a collision. Follow the 2015 Mustang Owner Manual, Vehicle Care, printed page 230 and the applicable product instructions before applying any cleaner."
         }
       ],
       "steps": [
         {
-          "title": "Select the recommended solution",
-          "body": "Read the vehicle’s seatbelt-care instructions before choosing a product. Follow the cleaning-solution manufacturer’s directions for preparation and application; do not substitute an invented mixture or concentration."
+          "title": "Park and prepare the work area",
+          "body": "Work with the vehicle grounded, engine and ignition OFF, an automatic transmission in Park or a manual transmission in a parked gear, and the parking brake applied. Keep that gear selection and parking restraint throughout the cleaning. Remove the key to prevent another person starting the vehicle during service. Read the product safety information and use its required protection. Wear eye and ear protection when operating the vacuum, consistent with the [general service precautions](#/document/G1693189)."
         },
         {
-          "title": "Fully extract the webbing",
-          "body": "Pull the seatbelt completely out of its retractor before starting the cleaning procedure. Cleaning only the length normally exposed across the seat does not meet this prerequisite."
+          "title": "Pull the belt fully out before cleaning",
+          "body": "Unbuckle the belt if necessary, then draw the webbing completely out of its retractor—the mechanism that winds up the unused strap. Keep the full length exposed while cleaning; the short section normally lying across the seat is not enough.\n\nOn a passenger belt, full extraction followed by some retraction can engage Automatic Locking Retractor (ALR) mode. You may hear clicking as it winds in, and it will then resist being pulled out again. That is the child-seat locking mode described in the [seatbelt system explanation](#/document/G1692176). If it interrupts access, let the belt retract completely to release that mode, then fully extract it again before continuing."
         },
         {
-          "title": "Clean according to the product instructions",
-          "body": "Use the recommended solution as directed, following any finishing instructions it specifies. Keep bleaching and re-dyeing out of the process, even if discoloration remains. The [seatbelt cleaning procedure](#/document/G1692223) provides the governing care requirements."
+          "title": "Vacuum away dust and loose dirt",
+          "body": "With the webbing fully extended, use the vacuum cleaner to remove dust and loose dirt from the exposed belt. Look over the material as you work: light stains and ordinary soil take the general-cleaning branch, while grease or tar takes the spot-treatment branch first. Getting the loose muck out now gives the cleaner less work to do."
+        },
+        {
+          "title": "Spot-clean grease or tar first, if present",
+          "body": "For grease or tar, treat the affected area first with Motorcraft Spot and Stain Remover, following its manufacturer’s directions. In Canada, use Motorcraft Multi-Purpose Cleaner for this step. If there is no grease or tar, continue to the next step.\n\nWatch the boundary of the treated patch. If a ring forms after spot cleaning, immediately clean the entire affected area using the applicable product directions, without oversaturating the material. Do not leave the ring until later; it can set. This is a prompt cleanup, not an invitation to drown the belt."
+        },
+        {
+          "title": "Clean light stains and soil",
+          "body": "Use Motorcraft Professional Strength Carpet & Upholstery Cleaner on light stains and soil, following the manufacturer’s preparation, application and removal directions. Keep the belt fully extracted throughout the cleaning operation.\n\nIf spot treatment produces a ring, address the entire affected area immediately without oversaturating it. Do not chase remaining discoloration with bleach, dye, cleaning solvents, household cleaners or glass cleaner."
+        },
+        {
+          "title": "Complete the product’s finishing requirements",
+          "body": "Carry out the cleaner manufacturer’s remaining removal and drying instructions before returning the belt to service. Check that you have completed each applicable finishing action and have not left a newly formed cleaning ring unattended. A stubborn cosmetic mark is no reason to escalate to a harsher chemical."
+        },
+        {
+          "title": "Return the belt to its normal position",
+          "body": "Once the product’s finishing requirements are satisfied, allow the webbing to retract fully. On a passenger belt, full retraction releases ALR mode that may have engaged during cleaning.\n\nLeave the webbing flat and untwisted, with the belt tongue and buckle accessible to the occupant. If the belt will not return normally or remains locked after full retraction, stop treating it as a cleaning problem and arrange seatbelt-system diagnosis."
         }
       ],
       "watchFor": [
         {
-          "title": "Appearance is not a measure of strength",
-          "body": "A desire to restore the original color must not lead to bleaching or re-dyeing the webbing."
+          "title": "Chemicals can weaken the restraint",
+          "body": "Do not use cleaning solvents, bleach or dye on seatbelt webbing, and do not re-dye it. Weakening the strap can increase the risk of serious injury or death in a crash. Household cleaning products and glass cleaners are also prohibited by the interior-care guidance."
+        },
+        {
+          "title": "Protect seats with side airbags",
+          "body": "Where seat-mounted airbags are fitted, do not use chemical solvents or strong detergents on those seats. They can contaminate the side-airbag system and impair its performance in a collision. Keep the belt-cleaning work consistent with that adjacent-seat precaution."
+        },
+        {
+          "title": "A ring needs immediate attention",
+          "body": "After spot cleaning, watch for a visible ring around the treated patch. Clean the entire affected area immediately without oversaturating it; waiting can allow the ring to set."
         }
       ],
       "notes": [
-        "Cleaning is separate from diagnosing a retractor operating concern; the system-operation article identifies the relevant functional tests."
+        "The applicable owner guidance is Cleaning the Interior in the 2015 Mustang Owner Manual, Vehicle Care, printed page 230.",
+        "Rear cushion and child-seat anchor removal are separate service tasks; their illustrations do not create an access requirement for cleaning exposed belt webbing.",
+        "Belt-Minder activation or deactivation is unnecessary for this job."
       ],
       "diagnostics": [
         {
-          "finding": "A passenger belt clicks while retracting and will not pull out again after full extraction.",
-          "meaning": "Full extraction followed by retraction activates Automatic Locking Retractor (ALR) mode, used to secure a child seat.",
-          "next": "Allow the webbing to retract fully to disengage ALR mode."
+          "finding": "Grease or tar is present.",
+          "meaning": "The contamination needs spot treatment before general stain cleaning.",
+          "next": "Use Motorcraft Spot and Stain Remover first, or Motorcraft Multi-Purpose Cleaner in Canada, according to the product instructions."
+        },
+        {
+          "finding": "A ring appears around a spot-cleaned patch.",
+          "meaning": "The cleaning boundary can become a lasting ring if left untreated.",
+          "next": "Immediately clean the entire affected area without oversaturating it."
+        },
+        {
+          "finding": "A passenger belt clicks while retracting and cannot be pulled out again after full extraction.",
+          "meaning": "Full extraction followed by retraction can engage ALR, the locking mode used to secure a child seat.",
+          "next": "Allow the webbing to retract completely to disengage ALR. Fully extract it again if cleaning remains unfinished."
+        },
+        {
+          "finding": "The belt cannot be fully extracted, will not return normally, or remains locked after complete retraction.",
+          "meaning": "The cleaning sequence cannot resolve or establish the cause of that operating concern.",
+          "next": "Stop the cleaning job and arrange seatbelt-system diagnosis. The [system description](#/document/G1692176) identifies separate retractor functional tests; this article does not provide those test procedures."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the care sequence is complete",
-          "body": "Check that the belt was fully extracted before cleaning and that the recommended product’s application and finishing instructions were followed."
+          "title": "Confirm the cleaning sequence",
+          "body": "Confirm that the belt was fully extracted before cleaning, loose dirt was vacuumed away, and any grease or tar received spot treatment before general stain cleaning."
+        },
+        {
+          "title": "Confirm product finishing and appearance",
+          "body": "Check that the manufacturer’s application, removal and drying requirements were completed, and that any ring appearing after spot cleaning received immediate attention without oversaturation."
+        },
+        {
+          "title": "Confirm the belt is ready to reach",
+          "body": "After finishing, confirm that the webbing has returned to its normal position without twists and that the belt tongue and buckle remain accessible. These are completion checks for the cleaning work."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692223",
-          "purpose": "Seatbelt cleaning requirements and prohibited treatments."
+          "purpose": "Primary cleaning requirements: fully extract the webbing, prohibit bleaching and re-dyeing, and follow the recommended cleaner’s manufacturer instructions."
         },
         {
           "documentId": "G1692176",
-          "purpose": "Retractor operation, including passenger-belt ALR activation and release."
+          "purpose": "Explain the retractor’s purpose and passenger-belt ALR activation and release during full extraction and retraction."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup-prevention, protective-equipment and chemical-safety precautions."
         }
       ],
       "hero": null,
@@ -148713,7 +148878,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Fitted seatbelts; passenger-seat Automatic Locking Retractor (ALR); seat-mounted side airbags where fitted."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -148724,14 +148890,56 @@
         {
           "documentId": "G1692176",
           "sourceHash": "fec09d2364c1354e26f7f4bd570aa62e6cc0da2d7747a877fdcd680a1d4595cb"
+        },
+        {
+          "documentId": "G1693942",
+          "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319"
+        },
+        {
+          "documentId": "G1692228",
+          "sourceHash": "f44c9d3fd563a1a6fa1d22e9596691ee4787d54f0dfdabb6c98e53f0fedd4fd6"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "ac91cf1e644fb9853e4155b40341c0078d55cf91c864ae3b595c3f6163d62925"
-      }
+        "fingerprint": "ac91cf1e644fb9853e4155b40341c0078d55cf91c864ae3b595c3f6163d62925",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c256a8cc82ca4ffb650b1300bdd7723e5eccf7c5fcbe2c9bb8deea0b7949f35c",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-expose",
+          "title": "Prepare and expose the belt",
+          "summary": "Park, fully extend the webbing and remove loose dirt.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "treat-the-stains",
+          "title": "Treat the contamination",
+          "summary": "Spot-clean grease or tar first, then address light stains and any cleaning rings.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "finish-and-return",
+          "title": "Finish and return the belt",
+          "summary": "Complete the product directions and restore the belt’s normal position.",
+          "start": 6,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Inspect seatbelts and verify replacement assemblies",
@@ -149228,91 +149436,121 @@
       ]
     },
     {
-      "title": "Remove a seatbelt twist at the upper guide",
-      "summary": "Fold the twisted webbing and feed it through the seatbelt guide to restore a flat belt path.",
-      "introduction": "The upper seatbelt guide, often called the D-ring, directs the webbing toward the occupant. A twist caught at this guide changes how the belt lies as it passes through. This adjustment corrects the webbing’s orientation by passing a folded section through the guide; it does not involve dismantling the retractor.",
-      "why": "The fold allows the twisted section to change orientation as it passes through the guide’s opening. Identifying the actual twist also helps distinguish a webbing problem from normal retractor locking, which requires a different response.",
+      "title": "Untwist a seatbelt at the guide",
+      "summary": "Fold the twisted webbing over itself and feed it through an accessible D-ring to restore a flat belt path.",
+      "introduction": "A seatbelt can turn one little twist into a surprisingly stubborn ribbon puzzle. I’ll walk you through passing that twist through the guide, without giving the rest of the interior an unnecessary striptease. The D-ring is the guide that directs the belt toward the occupant; the webbing is the woven strap running through it.",
+      "why": "Folding the twisted section lets it change orientation as it passes through the guide. Once the fold has passed through and is opened out, the belt should lie flat instead of carrying a twist at the guide.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "seatbelt twisted at upper guide",
-        "shoulder belt will not lie flat",
-        "seatbelt twist at D-ring"
+        "Mustang seatbelt twisted at guide",
+        "seatbelt D-ring twist",
+        "shoulder belt twisted",
+        "untwist seatbelt webbing"
       ],
       "when": {
-        "summary": "When a visible twist is caught at the seatbelt guide.",
+        "summary": "Use this adjustment when you can see a twist in the webbing at an already accessible seatbelt guide.",
         "notes": [
-          "A belt that will not extend is not, by itself, evidence of a twist."
+          "A belt that will not pull out does not, by itself, establish that the webbing is twisted.",
+          "The illustrated D-ring is a typical example; similar accessible guides use the same fold-and-feed adjustment."
         ]
       },
       "prepare": [
         {
-          "title": "Review restraint-service precautions",
-          "detail": "Read the applicable warnings in Health and Safety Precautions before starting. Follow the general precautions, including preventing an unintended start and using the specified personal protection."
+          "title": "Confirm the working boundary",
+          "detail": "This is an adjustment at an accessible guide. If trim blocks your hands or prevents the folded webbing from passing through, stop and obtain the complete trim removal and refitting procedure for that vehicle configuration before continuing. Crash-damage assessment, retractor repair and restraint-system certification require separate work."
         },
         {
-          "title": "Assess guide access",
-          "detail": "Determine whether surrounding trim obstructs the adjustment. Remove trim only where necessary, using the applicable trim procedure."
+          "title": "Prepare for a hands-only adjustment",
+          "detail": "Keep the vehicle on the ground with the parking brake applied, an automatic transmission in Park or a manual transmission in a parked gear, and the engine OFF. No lifting, rear seat cushion removal, child-seat anchor removal, electrical disconnection or fastener loosening is needed for this accessible-guide adjustment. No replacement parts or tightening operation are involved."
+        },
+        {
+          "title": "Apply the relevant service precautions",
+          "detail": "Wear eye and ear protection for vehicle service, and protective gloves if handling sharp-edged components. Before work around the vehicle, disable remote start, if fitted, through Vehicle settings > Remote Start Setup. Switch the ignition off and remove the key to prevent someone starting the vehicle during the work. See [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Expose and identify the twist",
-          "body": "With any necessary trim removed, locate the twisted portion at the D-ring. The illustration shows a typical guide; the same adjustment principle applies to similar guides."
+          "title": "Locate the guide and follow the twist",
+          "body": "Find the guide through which the affected shoulder-belt webbing passes. I start by following both edges of the strap immediately above and below the opening so I can identify the actual twisted section. Work directly at the guide and support the hanging webbing below it. Leave the guide attached."
         },
         {
-          "title": "Fold the webbing over itself",
-          "body": "Grasp the belt at the D-ring and fold the twisted portion over itself, as illustrated. Keep the fold at the section that needs to pass through the guide."
+          "title": "Grasp and fold the twisted section over itself",
+          "body": "Hold the webbing at the D-ring and fold the twisted portion back over itself close to the guide opening. Support the hanging strap with your other hand so you can control the fold. You are making a temporary doubled section that can pass through the opening—not trying to flatten the twist by pulling harder. The belt has already had its little tantrum."
         },
         {
-          "title": "Feed the fold through the guide",
-          "body": "Pass the folded portion through the D-ring. This changes the orientation of that section and removes the twist from the webbing."
+          "title": "Feed the folded portion through the D-ring",
+          "body": "Guide the folded section through the D-ring by hand, keeping control of the webbing on both sides. Continue until the folded portion has passed through and the twisted section has changed orientation. This fold-and-feed movement is the adjustment described in [Seatbelt Twisted at the Seatbelt Guide](#/document/G1726475)."
         },
         {
-          "title": "Check the corrected belt path",
-          "body": "Confirm that the adjusted section now lies flat through the guide. If trim was removed, complete its applicable refitting procedure after checking the webbing."
+          "title": "Open out the fold and check the belt path",
+          "body": "Spread the temporary fold back into a flat strap. Follow both edges through the guide and along the section you adjusted. The webbing should lie flat through the guide and down past the sliding buckle tongue, rather than remaining doubled or twisted. Confirm that you removed the twist instead of merely moving it just below the guide."
         }
       ],
       "watchFor": [
         {
-          "title": "Persistent withdrawal problems",
-          "body": "If the webbing is flat but the belt still behaves incorrectly, proceed to the appropriate retractor functional test instead of repeating the twist adjustment."
+          "title": "Do not confuse retractor locking with a twist",
+          "body": "The retractor is the mechanism that stores the belt. Its locking modes can prevent withdrawal even when the webbing is flat. A stubborn belt is a reason to identify what is happening, not to keep hauling on the guide."
+        },
+        {
+          "title": "A flat belt is the completion check for this adjustment",
+          "body": "Checking the webbing’s orientation confirms the result of the fold-and-feed operation. It does not test emergency locking or establish the condition of every restraint component."
         }
       ],
       "notes": [
-        "Correcting a twist does not establish that every retractor or restraint function is operating correctly."
+        "Rear seat cushion and child-seat anchor removal concern separate service tasks; neither provides a required access step for this already accessible guide.",
+        "Belt-Minder programming changes reminder behavior and has no role in removing this physical twist."
       ],
       "diagnostics": [
         {
-          "finding": "Passenger belt clicks and will not extend after being fully pulled out",
-          "meaning": "Automatic Locking Retractor mode may be active; this mode secures a child seat.",
-          "next": "Allow the webbing to retract fully to disengage that mode."
+          "finding": "The adjusted webbing lies flat through the guide and along the formerly twisted section.",
+          "meaning": "The fold-and-feed operation has removed the visible twist.",
+          "next": "Finish the visual completion checks below."
         },
         {
-          "finding": "The belt locks during hard braking or cornering",
-          "meaning": "Emergency Locking Retractor operation can be normal.",
-          "next": "Use the dedicated retractor functional tests if operation remains in question."
+          "finding": "A twist remains immediately beside the guide after the fold passes through.",
+          "meaning": "The twisted portion has not yet been completely corrected.",
+          "next": "Locate that remaining twisted section and repeat the fold-over-itself and feed-through movement, then open out the webbing and check both edges again."
+        },
+        {
+          "finding": "A passenger belt clicks while retracting and will not pull back out after being fully extended.",
+          "meaning": "Automatic Locking Retractor mode may be engaged. This mode locks the belt for securing a child seat.",
+          "next": "Allow the webbing to retract fully to disengage that mode. If withdrawal remains abnormal afterward, arrange the dedicated Seatbelt Systems retractor functional testing."
+        },
+        {
+          "finding": "The belt locks during hard braking or cornering.",
+          "meaning": "Emergency Locking Retractor operation can account for this behavior.",
+          "next": "Use the dedicated Seatbelt Systems diagnostic procedure if operation is in question. Do not perform a braking or cornering test as part of this untwisting job."
+        },
+        {
+          "finding": "The webbing is flat, but the original operating concern remains.",
+          "meaning": "A visible guide twist no longer explains the concern.",
+          "next": "Stop repeating the adjustment and obtain the appropriate Seatbelt Systems diagnosis and functional testing."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the adjustment result",
-          "body": "Check that the formerly twisted section is untwisted and passes flat through the D-ring."
+          "title": "Confirm the twist is gone",
+          "body": "Trace both edges of the adjusted webbing through the D-ring and down the section you handled. Confirm that the strap lies flat, with no remaining temporary fold or twist."
+        },
+        {
+          "title": "Confirm the finished arrangement",
+          "body": "Check that the belt and its buckle tongue remain accessible and that the adjustment has not left webbing folded against the guide. Leave the reminder-system settings and restraint hardware undisturbed."
         }
       ],
       "procedures": [
         {
           "documentId": "G1726475",
-          "purpose": "Seatbelt-guide adjustment by folding and feeding the twisted webbing through the D-ring.",
+          "purpose": "Primary fold-over-itself and feed-through adjustment, including the illustrated flat-webbing result.",
           "mediaId": "G1726475-m0002"
         },
         {
           "documentId": "G1693189",
-          "purpose": "Required general health and safety precautions before restraint service."
+          "purpose": "Relevant personal protection and unintended-start prevention precautions."
         },
         {
           "documentId": "G1692176",
-          "purpose": "Explain normal emergency and automatic retractor locking modes and the route to functional testing."
+          "purpose": "Explain emergency and automatic retractor locking and identify when separate functional testing is needed."
         }
       ],
       "hero": {
@@ -149336,7 +149574,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang, 2.3L, 3.7L, 5.0L or 5.2L, with the affected seatbelt guide/D-ring already accessible. No body-specific trim access is covered."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -149351,14 +149590,52 @@
         {
           "documentId": "G1692176",
           "sourceHash": "fec09d2364c1354e26f7f4bd570aa62e6cc0da2d7747a877fdcd680a1d4595cb"
+        },
+        {
+          "documentId": "G1693942",
+          "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319"
+        },
+        {
+          "documentId": "G1692228",
+          "sourceHash": "f44c9d3fd563a1a6fa1d22e9596691ee4787d54f0dfdabb6c98e53f0fedd4fd6"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "db5e3f76d9227b5b930e2e59f07452142ce71b9932dc81823ada4609ebb52125"
-      }
+        "fingerprint": "db5e3f76d9227b5b930e2e59f07452142ce71b9932dc81823ada4609ebb52125",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c4b954e92feceeebde6cf5a5997fb4f53ca5d7ca3061b8c9ece5fe77bff7d047",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "locate-the-twist",
+          "title": "Identify the twisted section",
+          "summary": "Follow the webbing edges at the accessible guide.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "fold-and-feed",
+          "title": "Pass the twist through",
+          "summary": "Fold the webbing over itself and feed that section through the D-ring.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "confirm-flat-webbing",
+          "title": "Check the finished belt path",
+          "summary": "Open out the fold and confirm the twist is removed.",
+          "start": 4,
+          "end": 4
+        }
+      ]
     },
     {
       "title": "Replace the rear child-seat lower anchor",
@@ -182632,130 +182909,209 @@
       }
     },
     {
-      "title": "Diagnose occupant classification faults behind an airbag warning",
-      "summary": "Trace B00A0 occupant-classification codes through module fault messages, part identification and restraints-module configuration.",
-      "introduction": "The occupant classification system module (OCSM) sends information to the restraints control module (RCM) over the high-speed controller area network, HS-CAN2. The RCM checks both the messages and the module's identity. If classification information is faulty or incompatible, it stores a diagnostic trouble code (DTC) and requests the airbag warning indicator. This job separates reported classification faults from incorrect components or configuration.",
-      "why": "An airbag warning does not identify a failed airbag. These codes concern information exchanged between modules, and some require diagnosis inside the occupant classification system first. Checking actual part numbers and configuration prevents replacing a working module simply because its messages are unacceptable to another module.",
+      "title": "Interpret recorded B00A0 occupant-classification test results",
+      "summary": "Follow documented RCM/OCSM test results, module identities and configuration records through the five B00A0 branches.",
+      "introduction": "The occupant-classification module and restraints module exchange messages like two extremely serious pen pals. I’ll help you interpret an existing technician’s records without turning a code into a shopping list. This article does not teach live scanning, harness inspection, programming or restraint repairs; missing evidence leaves the affected branch unresolved.",
+      "why": "The occupant classification system module (OCSM) reports occupant-classification information to the restraints control module (RCM). The RCM monitors that information and checks the OCSM’s identity over HS-CAN2, a high-speed network connecting control modules. The RCM also uses other sensor inputs to decide when to activate airbags and seatbelt pretensioners. These B00A0 codes describe problems with classification-system information or identification; they do not, by themselves, identify a failed airbag.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "airbag warning light",
-        "occupant classification fault",
+        "2015 Mustang airbag warning",
+        "occupant classification system",
+        "OCSM",
+        "RCM",
         "B00A0:09",
         "B00A0:4A",
         "B00A0:63",
         "B00A0:64",
-        "B00A0:68"
+        "B00A0:68",
+        "RCM As-Built PMI"
       ],
       "when": {
-        "summary": "When RCM self-test or stored fault information identifies one of the listed B00A0 occupant-classification codes.",
+        "summary": "Use only with existing vehicle-specific technician records for B00A0:09, :4A, :63, :64 or :68.",
         "notes": [
-          "A current self-test fault and a stored intermittent fault follow different branches."
+          "On-demand means recorded during the relevant self-test, not merely present in stored history. Preserve the full suffix and test stage.",
+          "The :09/:63/:68 branch needs OCSM results; :4A/:64 needs identities and, when applicable, configuration and retest records.",
+          "This interpretation does not authorize vehicle release or certify restraint operation."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange diagnostic and programming capability",
-          "detail": "Use a scan tool supporting RCM and OCSM self-tests, Log Viewer and programmable module installation. Have access to the Ford parts catalog, vehicle As-Built configuration data, Wiring Diagrams Cell 46 and applicable service bulletins."
+          "title": "Start with completed inspection evidence",
+          "detail": "Require documentation of the thorough preliminary wiring/connector inspection and verification specified by the primary, using Cell 46. An absent or ambiguous inspection record blocks A1 interpretation. Do not perform that inspection or manipulate any SRS connection under this article."
         },
         {
-          "title": "Prepare for restraint-system work",
-          "detail": "Read Health and Safety Precautions before service. Disable remote start if fitted and wear the specified protection. Inspect wiring and connectors thoroughly, but disconnect or reconnect supplemental restraint system (SRS) components only when a procedure instructs it."
+          "title": "Collect the applicable existing records",
+          "detail": "Have the initial RCM on-demand results; relevant OCSM results; recorded Log Viewer module part numbers and vehicle-specific Ford catalog comparisons; completed RCM PMI with manual As-Built entry and its retest where applicable; documented OASIS findings; and final Restraints results. Only branches actually reached require their subsequent records. Missing required records mean stop interpreting that branch, not assume a pass."
+        },
+        {
+          "title": "Keep execution separate",
+          "detail": "All scanning, ignition cycling, harness flexing, programming, bulletin retrieval and physical repairs must already have been performed and documented under their complete applicable procedures. Do not obtain missing evidence by carrying out those operations from this article. Preserve the original records and unresolved faults."
         }
       ],
       "steps": [
         {
-          "title": "Establish whether the fault is current",
-          "body": "With ignition ON, run the RCM self-test. A listed B00A0 code retrieved on demand represents a fault that cannot be cleared successfully until corrected. Record the code and its suffix; that suffix determines whether to investigate classification-system faults or module identity."
+          "title": "Confirm documented preliminary inspection",
+          "body": "Read the technician’s preliminary inspection and verification record against the Cell 46 identification used. The primary requires this before its pinpoint test. If absent or unclear, stop. Do not infer a sound harness from an attached connector or an unlit warning lamp. CPA tabs and protective shorting bars explain possible faults, but this article does not direct connector manipulation."
         },
         {
-          "title": "Follow reported classification faults",
-          "body": "For current B00A0:09, :63 or :68, retrieve OCSM codes and follow the OCSM DTC chart in the SRS diagnostic procedure. The RCM is reporting information received from the OCSM, so replacing the RCM at this stage would bypass the required diagnosis."
+          "title": "A1: Interpret the initial RCM self-test record",
+          "body": "Confirm the record identifies the ignition-ON RCM self-test and distinguishes on-demand from stored codes. For on-demand :09, :63 or :68, continue to step 3; for :4A or :64, continue to step 5. If none of the five returned on demand, continue to step 4. If results do not establish the branch, stop. A current fault cannot be cleared successfully until corrected."
         },
         {
-          "title": "Verify the classification module for identity-related codes",
-          "body": "For B00A0:4A or :64, use Log Viewer to retrieve and record the OCSM part number. Compare it with the parts catalog for this vehicle. If incorrect, install the correct component using the OCS sensor procedure, then proceed to the final restraints self-test."
+          "title": "Read the recorded OCSM diagnostic destination",
+          "body": "For :09, :63 or :68, use the already recorded OCSM codes to identify the separate DTC Chart: OCSM diagnostic destination. The RCM code alone does not condemn either module. The directed OCSM diagnosis and any repair require separate complete procedures; their documented completion precedes the final evidence in step 10. Missing OCSM or completion records leave the branch unresolved."
         },
         {
-          "title": "Verify the restraints module",
-          "body": "If the OCSM is correct, retrieve and record the RCM part number in the same way. An incorrect RCM requires the correct replacement and final testing. If both module identities match the catalog, proceed to configuration."
+          "title": "Interpret the documented intermittent investigation",
+          "body": "When none of the five entry codes returned on demand, look for the recorded Cell 46 investigation, accessible-harness flexing and frequent ignition cycling performed by the technician. This is a record requirement, not an instruction to recreate the fault now. Preserve the primary prohibition on speculative new SRS components. Review any reproduced fault and its documented resolution before the final record in step 10; missing investigation evidence blocks completion."
         },
         {
-          "title": "Check RCM configuration",
-          "body": "Carry out programmable module installation (PMI) for the RCM, manually entering As-Built data as directed by the scan tool. Repeat the RCM self-test. If B00A0:4A remains, check Ford OASIS for an applicable technical service bulletin and follow it; without an applicable bulletin, the test directs RCM replacement."
+          "title": "A2: Compare the recorded OCSM identity",
+          "body": "Read the OCSM part number previously retrieved through Log Viewer and the vehicle-specific Ford catalog comparison. Correct identity leads to step 6. Incorrect identity requires the separate correct-OCSM installation procedure; after its documented completion, the chart leads directly to step 10. Missing or ambiguous identity evidence is unresolved. Similar appearance is not a catalog match."
         },
         {
-          "title": "Investigate intermittent faults without speculative replacement",
-          "body": "If none of the listed codes returns on demand at entry, attempt to reproduce the fault by flexing the harness and cycling ignition as directed. Do not install new SRS components merely because a stored code exists. Continue to the final restraints self-test after this investigation."
+          "title": "A3: Compare the recorded RCM identity",
+          "body": "With OCSM identity confirmed, read the recorded Log Viewer RCM number and its vehicle-specific catalog comparison. Correct identity leads to step 7. Incorrect identity requires the separate correct-RCM replacement procedure, followed by documented final testing in step 10. Do not guess a part number or execute replacement here."
+        },
+        {
+          "title": "A4: Check the completed configuration record",
+          "body": "With both identities confirmed, require a record of completed RCM PMI using manually entered vehicle-specific As-Built data. This article does not supply the scan-tool programming method. Without that completed record, stop before interpreting its retest. Configuration does not substitute for correct hardware."
+        },
+        {
+          "title": "Interpret the recorded post-PMI :4A result",
+          "body": "Read the RCM self-test recorded after that PMI. If B00A0:4A returned on demand, continue to step 9. If :4A did not return, the configuration branch calls the fault corrected, but final system-wide evidence in step 10 remains required. The question specifically concerns :4A even if :64 initiated the branch. Missing retest evidence is not a negative result."
+        },
+        {
+          "title": "Read the recorded bulletin decision",
+          "body": "If :4A remained, require the documented OASIS check for applicable bulletins. An applicable bulletin ends this pinpoint path and transfers the work to that bulletin’s complete procedure. If no bulletin addresses the concern, the source directs a new RCM under the separate replacement procedure, followed by step 10. An absent bulletin search is not evidence that no bulletin applies."
+        },
+        {
+          "title": "A5: Interpret final Restraints records",
+          "body": "Require documentation of the final ignition OFF-to-ON cycle and Restraints selection in Self Test, covering RCM, OCSM and BECMB if fitted. Any on-demand code leaves the path incomplete: the source requires separate diagnosis and repair and prohibits clearing codes before all are resolved. No on-demand codes satisfies this final code gate, but the source additionally requires a fully operational, fault-free SRS before vehicle release. This article reviews evidence; it does not independently certify that condition. Missing module coverage or final records leaves completion unverified."
         }
       ],
       "watchFor": [
         {
-          "title": "Similar-looking modules",
-          "body": "Physical similarity does not establish compatibility. Verify the catalog part number before installation."
+          "title": "Do not turn missing records into a pass",
+          "body": "Every reached gate needs its own documented result. Stored codes, an empty report or a warning lamp observation do not replace the specified on-demand self-test."
         },
         {
-          "title": "Premature clearing",
-          "body": "Do not clear codes while unresolved SRS faults remain; a warning disappearing temporarily is not completion."
+          "title": "Keep programming and hardware work separate",
+          "body": "Manual As-Built entry, correct catalog identities and directed replacement remain mandatory where the branch requires them, but their execution is outside this article."
+        },
+        {
+          "title": "Retain unresolved codes",
+          "body": "The source prohibits clearing unresolved faults. Do not use this interpretation to clear codes, move connectors or release a vehicle."
         }
       ],
       "notes": [
-        "The configuration branch specifically rechecks B00A0:4A. Final testing must still address every other on-demand restraint code."
+        "The final A4 decision asks specifically whether B00A0:4A returns, even when B00A0:64 originally led into the identity/configuration branch.",
+        "Use catalog-verified SRS replacement parts. Similar appearance does not establish compatibility.",
+        "The full Restraints self-test is a required completion check, not an optional extra after the RCM-only test."
       ],
       "diagnostics": [
         {
-          "finding": "B00A0:09 or B00A0:68",
-          "meaning": "The OCSM reports an occupant classification fault; :68 identifies fault-event information.",
-          "next": "Retrieve OCSM codes for the next diagnostic direction."
+          "finding": "B00A0:09 returns on demand.",
+          "meaning": "Occupant Classification System: Component Failure. The RCM has received an OCSM message reporting an OCS fault; the code alone does not identify the failed part.",
+          "next": "Recorded OCSM codes route to its separate diagnostic chart; require documented subsequent completion before step 10."
         },
         {
-          "finding": "Diagnostic trouble code B00A0:63 is recorded.",
-          "meaning": "The RCM has received at least 8 invalid states from the OCSM.",
-          "next": "Follow the OCSM DTC chart."
+          "finding": "B00A0:63 returns on demand.",
+          "meaning": "Occupant Classification System: Circuit / Component Protection Time-Out. The RCM has received 8 or more invalid states from the OCSM.",
+          "next": "Use recorded OCSM codes and their separate chart destination; missing records block interpretation."
         },
         {
-          "finding": "Diagnostic trouble code B00A0:4A is recorded.",
-          "meaning": "The OCSM is detected but is not configured.",
-          "next": "Verify both module identities before carrying out RCM PMI."
+          "finding": "B00A0:68 returns on demand.",
+          "meaning": "Occupant Classification System: Event Information. The OCSM has sent a message indicating that an OCS fault exists.",
+          "next": "Use recorded OCSM codes and their separate diagnostic direction."
         },
         {
-          "finding": "Diagnostic trouble code B00A0:64 is recorded.",
-          "meaning": "Received upper or lower data limits differ from those stored by the RCM.",
-          "next": "Follow the part-number and configuration branch."
+          "finding": "B00A0:4A returns on demand at entry.",
+          "meaning": "Occupant Classification System: Incorrect Component Installed. The RCM detects the OCSM but finds it unconfigured.",
+          "next": "Compare recorded OCSM identity, then RCM identity; both correct requires documented PMI with manual As-Built entry."
+        },
+        {
+          "finding": "B00A0:64 returns on demand at entry.",
+          "meaning": "Occupant Classification System: Signal Plausibility Failure. Received upper or lower data limits differ from those stored in memory.",
+          "next": "Follow the recorded identity and configuration evidence in source order."
+        },
+        {
+          "finding": "None of the five entry codes returns during the initial RCM self-test.",
+          "meaning": "The reported fault is not reproduced on demand during this test; the intermittent branch applies.",
+          "next": "Require documented intermittent investigation and final Restraints evidence; no speculative replacement."
+        },
+        {
+          "finding": "The OCSM part number does not match the vehicle’s catalog listing.",
+          "meaning": "The installed classification module is incorrect for this vehicle.",
+          "next": "Separate correct-OCSM installation is required, followed by documented final Restraints testing."
+        },
+        {
+          "finding": "The OCSM is correct, but the RCM part number does not match the catalog.",
+          "meaning": "The restraints module is incorrect for this vehicle.",
+          "next": "Separate correct-RCM installation is required, followed by documented final Restraints testing."
+        },
+        {
+          "finding": "B00A0:4A returns after RCM PMI.",
+          "meaning": "The configuration branch has not corrected the condition.",
+          "next": "Read documented OASIS findings: an applicable bulletin takes precedence; otherwise separate new-RCM installation is required."
+        },
+        {
+          "finding": "B00A0:4A does not return after RCM PMI.",
+          "meaning": "The configuration branch considers its fault corrected.",
+          "next": "Read the final complete Restraints record; other faults remain relevant."
+        },
+        {
+          "finding": "The final Restraints self-test retrieves an on-demand RCM, OCSM or fitted BECMB code.",
+          "meaning": "A current restraint-system fault remains, so the job is not complete.",
+          "next": "The source requires separate diagnosis and repair of all faults before final verification; retain unresolved codes."
+        },
+        {
+          "finding": "The final Restraints self-test retrieves no on-demand codes.",
+          "meaning": "The pinpoint test’s final code check has passed.",
+          "next": "This passes the recorded code gate; documented fully operational, fault-free SRS remains necessary for release by the responsible technician."
         }
       ],
       "verification": [
         {
-          "title": "Run the complete restraints self-test",
-          "body": "Cycle ignition OFF, then ON, and select Restraints self-test. Resolve all on-demand codes from the RCM, OCSM and any other fitted module included in that test before clearing codes. Release the vehicle only with the SRS fully operational and fault-free."
+          "title": "Check evidence completeness",
+          "body": "Every reached branch has its required documented inspection, result, identity, configuration, bulletin or repair evidence; otherwise mark it unresolved."
         },
         {
-          "title": "Retain the identification results",
-          "body": "Record the retrieved OCSM and RCM part numbers when checked, their catalog comparison, and the final self-test result."
+          "title": "Keep final module coverage explicit",
+          "body": "The recorded final Restraints test covers RCM, OCSM and BECMB if fitted after the specified OFF-to-ON cycle. An RCM-only result is insufficient."
+        },
+        {
+          "title": "Separate interpretation from release",
+          "body": "No current on-demand codes and documented fully operational, fault-free SRS are the source’s completion conditions. This article alone does not establish them or authorize vehicle release."
         }
       ],
       "procedures": [
         {
           "documentId": "G1696368",
-          "purpose": "Complete B00A0 diagnosis, identity checks, configuration branch and final self-test."
+          "purpose": "Primary chart for interpreting documented B00A0 A1–A5 results; live execution is not taught here."
         },
         {
           "documentId": "G1693189",
-          "purpose": "Required service safety preparations."
+          "purpose": "Safety context for the prior technician work; this article directs no physical service or ignition operation."
+        },
+        {
+          "documentId": "G1696290",
+          "purpose": "Explain RCM operation and why deployable-component connector assurance tabs affect self-diagnostic results."
         },
         {
           "documentId": "G1696305",
-          "purpose": "OCS sensor removal and installation when the classification component is incorrect.",
+          "purpose": "Reference-only replacement destination when the OCSM part number is incorrect; internal removal and installation instructions are outside this article.",
           "mediaId": "G1696305-m0008"
         },
         {
           "documentId": "G1696307",
-          "purpose": "RCM removal and installation when directed by the diagnostic branch.",
+          "purpose": "Reference-only replacement destination for an incorrect RCM or replacement directed after the configuration and bulletin checks.",
           "mediaId": "G1696307-m0003"
         },
         {
           "documentId": "G1696340",
-          "purpose": "OCSM DTC routing and diagnosis of additional restraint faults."
+          "purpose": "Reference-only diagnostic destination for OCSM fault-code routing and additional on-demand SRS faults."
         }
       ],
       "hero": null,
@@ -182776,7 +183132,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine and occupant classification/SRS equipment. The final self-test also includes BECMB if fitted. This diagnostic procedure states no body-style restriction."
       },
       "relatedGuideIds": [
         "job-6b306cf9dfc64810",
@@ -182824,8 +183181,48 @@
               "end": 6118
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "fce8f4a1d3dc1b2c30cff9096fb061d9185f2737b86c0f70950073b6963eac2e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "initial-inspection",
+          "title": "Review preliminary and entry records",
+          "summary": "Confirm inspection evidence and identify the on-demand entry branch.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "fault-routing",
+          "title": "Interpret reported or intermittent faults",
+          "summary": "Read OCSM routing or the completed intermittent investigation.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "module-identification",
+          "title": "Compare documented module identities",
+          "summary": "Verify vehicle-specific catalog comparisons in OCSM-then-RCM order.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "configuration-check",
+          "title": "Review configuration and bulletin records",
+          "summary": "Require completed manual As-Built PMI, its :4A retest and applicable bulletin findings.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "final-restraints-test",
+          "title": "Interpret final restraints evidence",
+          "summary": "Confirm complete recorded module coverage and retain unresolved outcomes.",
+          "start": 10,
+          "end": 10
         }
-      }
+      ]
     },
     {
       "title": "Diagnose a horn that will not sound or stays on",

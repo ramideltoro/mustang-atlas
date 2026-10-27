@@ -1,0 +1,375 @@
+{
+  "documentId": "G1958069",
+  "supportingSourceRefs": [],
+  "sourceHash": "4cf8acf5874c4b551ec3b1bb405f6cbffb2cb27265a5c2d62d1500b40d775158",
+  "title": "How Mustang Power Windows and Rear Defrost Work",
+  "introduction": "A window switch starts a conversation as well as moving glass. I think of it as an elevator call button: requesting movement and supplying the motor’s working voltage are different jobs. The memory-seat layout makes that distinction especially clear.\n\nStart with the power-window diagram that matches whether the car has a memory driver seat. Each layout has a drawing with component names, a matching drawing with numbered callouts, and its own identification table. Match callouts within that layout; their numbering changes between configurations. Follow the arrows from the switch toward the window regulator motor, then use the message charts to see which module originates a command and which receives it. The regulator mechanism supports and moves the glass; its motor supplies the motion.\n\nThe rear-defrost drawing follows a different route: requests pass through the control modules before the defrost relay operates the rear-window grid. Its display and voice-control path has a touchscreen equipment qualifier.\n\nThese drawings explain command paths and operating behavior. They do not provide connector pinouts, electrical test values, physical access instructions or a repair sequence. Keep the convertible feature exceptions in view, and use the separately named initialization and configuration references when those operations are needed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1958069-b00001",
+      "text": "How the window systems work",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00002",
+      "text": "Power-Window Diagram — With Memory Driver Seat",
+      "why": "I start at the master switch and trace its communication link to the driver door module. The passenger-window request then crosses to the passenger door module before reaching its motor. This separates the driver's request from the module output that actually operates the glass."
+    },
+    {
+      "blockId": "G1958069-b00006",
+      "text": "Power-Window Messages — With Memory Driver Seat",
+      "why": "Read the message charts alongside the matching diagram: the originating module sends the request, and the receiving module uses it to command the next part of the system."
+    },
+    {
+      "blockId": "G1958069-b00007",
+      "text": "Passenger Door Module (PDM): Incoming Messages",
+      "why": "The chart explains how a passenger-window request made at the master switch reaches the module on the other door. The master switch is not shown supplying the passenger motor's operating voltage directly."
+    },
+    {
+      "blockId": "G1958069-b00009",
+      "text": "Body Control Module B (BCM-B): Incoming Messages",
+      "why": "The incoming requests have different origins, but both lead to a command that opens all windows. Keep the request's origin separate from the module that sends the final global-open signal."
+    },
+    {
+      "blockId": "G1958069-b00010",
+      "text": "Activating the convertible top switch makes the Movable Roof Control Module A (MRCMA) send a message to the Body Control Module B (BCM-B). The BCM-B then sends the global open signal/command that fully opens all windows.",
+      "why": "The roof switch initiates coordinated window opening through the modules. That explains why operating the top can also move the glass without an individual window-switch request."
+    },
+    {
+      "blockId": "G1958069-b00011",
+      "text": "When the RKE transmitter initiates global open, the BCM sends the request to the Body Control Module B (BCM-B). The BCM-B then sends the global open signal/command to fully open all windows.",
+      "why": "RKE means remote keyless entry. The transmitter starts the request; the module chain carries it to the window motors."
+    },
+    {
+      "blockId": "G1958069-b00013",
+      "text": "Power-Window Diagram — Without Memory Driver Seat",
+      "why": "This drawing shows the door-window switches connected to their regulator motors without the separate door modules shown in the memory-seat layout. It also shows door-ajar inputs at the door motors and the master-switch connections to the rear quarter-window motors. I use this layout's own callout table when identifying those paths."
+    },
+    {
+      "blockId": "G1958069-b00017",
+      "text": "Power-Window Messages — Without Memory Driver Seat",
+      "why": "The absence of the separate door modules in this layout does not remove the network-controlled global-open path. The following chart identifies the requests received by the body controller."
+    },
+    {
+      "blockId": "G1958069-b00018",
+      "text": "Body Control Module B (BCM-B): Incoming Messages",
+      "why": "Use the originating-module column to distinguish a convertible-top request from a remote global-open request. Both are routed through the receiving body controller."
+    },
+    {
+      "blockId": "G1958069-b00019",
+      "text": "When the convertible top switch is activated, the Movable Roof Control Module A (MRCMA) sends a message to the Body Control Module B (BCM-B). The BCM-B then commands global open, fully opening all windows.",
+      "why": "In this configuration, too, the roof switch requests coordinated glass movement through the modules rather than operating each window separately."
+    },
+    {
+      "blockId": "G1958069-b00020",
+      "text": "A global-open request from the RKE transmitter passes from the BCM to the Body Control Module B (BCM-B). The BCM-B then sends the global open signal/command that fully opens all windows.",
+      "why": "This is the remote-request route for the configuration without a memory driver seat. It leads to the same coordinated opening action described by the chart."
+    },
+    {
+      "blockId": "G1958069-b00022",
+      "text": "Rear-Window Defrost Diagram",
+      "why": "Trace the display and microphone paths into the interface module, then follow the network route through the gateway to the front controls interface module. Its output operates the defrost relay, which in turn supplies the rear-window grid. The relay is the handoff between the control request and the heating circuit."
+    },
+    {
+      "blockId": "G1958069-b00026",
+      "text": "Rear-Window Defrost Messages",
+      "why": "The diagram shows the route; the message chart explains what request travels along it and which equipment configuration uses that route."
+    },
+    {
+      "blockId": "G1958069-b00027",
+      "text": "Front Controls Interface Module (FCIM): Incoming Messages",
+      "why": "The chart identifies the climate-control request received by the FCIM and retains the touchscreen qualifier for its originating interface module."
+    },
+    {
+      "blockId": "G1958069-b00028",
+      "text": "On vehicles equipped with a touchscreen, the climate control requests message carries the rear window defrost request. Requesting rear defrost by voice command or selecting its touchscreen button sends the input that activates the rear window defrost system.",
+      "why": "Different user inputs can initiate the same heating function. The touchscreen button and voice request enter the control path shown in the diagram before the relay and grid do their work."
+    },
+    {
+      "blockId": "G1958069-b00030",
+      "text": "Operating the Power Windows",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00031",
+      "text": "NOTE: Disconnecting the vehicle battery while a door window is moving disables one-touch up and obstacle detection. Convertible rear window motors do NOT need initialization because they have neither one-touch up nor one-touch down.",
+      "why": "Loss of these door-window features after that specific battery-disconnection event points to the initialization reference below. Do not extend that requirement to the convertible rear-window motors."
+    },
+    {
+      "blockId": "G1958069-b00032",
+      "text": "NOTE: Convertible models have neither one-touch up nor bounce back.",
+      "why": "This equipment exception governs how to read the general one-touch and obstacle-reversal descriptions below. Do not expect those upward-travel features on a convertible."
+    },
+    {
+      "blockId": "G1958069-b00033",
+      "text": "For door-window initialization, refer to Power Door Window Initialization (501-11).",
+      "why": "Use that separate procedure to carry out initialization. This operating overview explains when the referral matters but does not teach the initialization sequence."
+    },
+    {
+      "blockId": "G1958069-b00034",
+      "text": "The power windows operate while the delayed accessory relay is active. That relay is inside the BCM and is non-serviceable. Both door windows provide one-touch up, one-touch down and obstacle detection, subject to the convertible exceptions noted above. Where obstacle detection is fitted, detecting an obstruction during upward glass travel makes the motor reverse automatically and lower the glass.",
+      "why": "The relay's active state is the operating condition for normal window use. Automatic reversal is a response to an obstruction during upward travel; the convertible exception means that behavior must not be assumed on every body style."
+    },
+    {
+      "blockId": "G1958069-b00035",
+      "text": "Where the corresponding one-touch feature is fitted, pull the window control switch to the up position or press it to the down position, through the second detent. The front door glass then travels to fully closed or fully open. To stop the glass during either upward or downward travel, briefly operate the window control switch again.",
+      "why": "The second detent requests a complete trip rather than requiring a sustained switch input. A fresh, momentary switch operation cancels that travel; keep the convertible feature exceptions above in mind."
+    },
+    {
+      "blockId": "G1958069-b00036",
+      "text": "With a memory driver seat, the master window control switch sends its requests to the DDM over the LIN, or local interconnect network. For the driver door window, the DDM supplies the voltage signals that make the driver door window regulator motor move in the requested direction. For a passenger-window request from the master switch, the DDM sends the command to the PDM over the Medium Speed Controller Area Network (MS-CAN); the PDM then supplies the voltage signals that operate the passenger door window regulator motor in the requested direction. The passenger door window control switch takes a different input route: it supplies ground signals to the PDM, which then supplies the motor's operating voltage signals.",
+      "why": "I separate the request path from the motor output here. The passenger motor can receive a command originating at either door, but the PDM supplies its operating voltage in both cases. This explains the architecture without turning the diagram into an unsupported electrical test."
+    },
+    {
+      "blockId": "G1958069-b00037",
+      "text": "Opening the Windows Remotely",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00038",
+      "text": "NOTE: The customer can enable or disable global open using the procedure in the Owner's Literature. For the complete list of available programmable parameters, refer to Module Configuration in Section 418-01.",
+      "why": "I check whether the feature is enabled before interpreting its absence as a malfunction. Use the named references for the actual customer setting procedure and module configuration options."
+    },
+    {
+      "blockId": "G1958069-b00039",
+      "text": "Global open uses the RKE transmitter to open both door windows automatically, plus the rear quarter windows on a convertible. It works only with the ignition off and the delayed accessory relay inactive. Unlock the vehicle, then press and hold the RKE transmitter's unlock button. The Body Control Module B (BCM-B) sends a global open signal to each power window regulator motor, and the windows begin opening. To stop them while they are moving, press either the lock button or the unlock button on the RKE transmitter.",
+      "why": "The ignition and relay conditions distinguish remote opening from normal switch operation. Stopping remote window travel requires the separate lock-or-unlock button press described here; releasing the initial request is not the stated stop command."
+    },
+    {
+      "blockId": "G1958069-b00040",
+      "text": "How Short Drop Windows Work",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00041",
+      "text": "On both the coupe and convertible, the window motor monitors the door ajar switch. When it detects that the door has opened, it lowers the glass slightly so it can clear the grooved channel weatherstrip. When it detects that the door has closed, it raises the glass fully and seats it back into that channel.",
+      "why": "I think of the weatherstrip channel as a snug parking space for the glass: the small drop provides clearance, and the return movement restores the seated fit. This describes the response to detected door opening without assuming it happens before the door moves."
+    },
+    {
+      "blockId": "G1958069-b00042",
+      "text": "Convertible Rear Quarter Window Operation",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00043",
+      "text": "NOTE: Convertible rear quarter window motors do NOT require initialization because they have neither one-touch up nor one-touch down operation.",
+      "why": "The rear quarter windows do not share the door windows’ one-touch functions, so their initialization requirements differ."
+    },
+    {
+      "blockId": "G1958069-b00044",
+      "text": "Operating the rear quarter window control on the master window control switch moves both rear quarter windows together.",
+      "why": "Simultaneous movement is the intended response to this control."
+    },
+    {
+      "blockId": "G1958069-b00045",
+      "text": "Window Lowering During Convertible Top Operation",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00046",
+      "text": "Operating the convertible top switch to raise or lower the roof makes the Body Control Module B (BCM-B) signal the 4 window motors through the global open circuit, requesting a full down movement of all 4 windows. When each rear quarter window reaches full DOWN, its motor’s full down sensor reports that position to the BCM-B. The BCM-B permits the roof to move up or down only after receiving the full down signals from both rear quarter window motors. If either signal is missing, the convertible top does not operate. While the roof is between its full UP and full DOWN positions, the BCM-B also sends pulses on the global open circuit to inhibit rear quarter window operation from the rear quarter window control switch. The front door window motors ignore these pulses. This coordination prevents accidental roof opening with the windows UP, which could bring the roof and glass into contact and damage the convertible top or windows.",
+      "why": "I read this as a clearance checkpoint: requesting lowered windows and receiving confirmation that the rear quarter windows are down are separate events. Both confirmations are required before the roof is allowed to move."
+    },
+    {
+      "blockId": "G1958069-b00047",
+      "text": "How Rear Window Defrost Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00048",
+      "text": "Pressing the rear window defrost switch, which is built into the FCIM, makes the FCIM activate the rear window defrost relay in the BJB. The activated relay then supplies voltage to the rear window defrost grid.",
+      "why": "The relay is the electrically controlled switch in this chain: the FCIM commands it, and it switches the voltage supply to the grid."
+    },
+    {
+      "blockId": "G1958069-b00049",
+      "text": "If equipped, voice commands and the rear window defrost button on the touchscreen (FDIM) can also turn rear window defrost on or off. Refer to the Owner’s Literature for operation of these voice and touchscreen features.",
+      "why": "These are additional ways to request the same feature; their availability depends on the installed equipment."
+    },
+    {
+      "blockId": "G1958069-b00050",
+      "text": "The FCIM switches off the rear window defrost relay when any of the following conditions occurs:",
+      "why": "A defrost session can end through a user command, an ignition change, its timer or battery load management."
+    },
+    {
+      "blockId": "G1958069-b00052",
+      "text": "The rear window defrost switch is pressed while defrost is already active.",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00054",
+      "text": "If equipped, a voice command or the touchscreen interface requests defrost off while it is active.",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00056",
+      "text": "The ignition changes from ON to OFF.",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00058",
+      "text": "The predetermined defrost timer finishes.",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00060",
+      "text": "Battery voltage falls below the specified threshold, triggering the load management strategy.",
+      "why": "This is a power-management reason for switching the feature off."
+    },
+    {
+      "blockId": "G1958069-b00062",
+      "text": "Rear Window Defrost During Remote Start",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00063",
+      "text": "Remote-start climate modes and preferences are selected through the message center; refer to the Owner’s Literature for the settings procedure. With rear defrost set to AUTO, rear window defrost activates during a remote start when the outside temperature is below 0°C (32°F). Climate control adjustments are not recognized while remote start is operating. Once the ignition is cycled to ON, the climate system restores the settings from the last ignition ON cycle, and normal adjustment becomes available again. If that previous setting was off, the climate system turns off.",
+      "why": "I keep the remote-start preference separate from the previous driving settings: the automatic cold-weather behavior applies during remote start, while the earlier settings return when the ignition is switched on."
+    },
+    {
+      "blockId": "G1958069-b00064",
+      "text": "What Each Component Does",
+      "why": "These descriptions explain system roles and command paths. They do not provide electrical probing, component replacement or PMI procedures; any stated PMI requirement still applies when a new module is installed."
+    },
+    {
+      "blockId": "G1958069-b00065",
+      "text": "Window Switches Without a Memory Driver Seat",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00066",
+      "text": "Without a memory driver seat, the master and passenger window control switches each send 2 separate signals directly to the window motor: up and down. Moving a switch to its first detent sends a 12-volt signal on the selected direction line. Moving it to the second detent requests auto up or auto down by supplying a 12-volt signal on both direction lines simultaneously. The motor identifies the intended automatic direction from whichever signal arrived first. If the switch reaches the second detent too quickly—less than 5 milliseconds between the first-detent and second-detent signals—the motor cannot determine the requested direction and will not operate. Release the switch and activate it again. In the neutral position, the up and down contacts float within the switch. All up and down feeds to the motor carry low current.",
+      "why": "A detent is a distinct switch position. I picture the first signal as the direction label attached to the automatic request: the motor needs that brief lead to know which way to move."
+    },
+    {
+      "blockId": "G1958069-b00067",
+      "text": "On a convertible, the master window control switch also controls the rear quarter windows. Activating that control sends a 12-volt signal to both rear quarter window motors to request upward or downward movement.",
+      "why": "The shared request explains why the rear quarter windows respond together."
+    },
+    {
+      "blockId": "G1958069-b00068",
+      "text": "Master Window Switch With a Memory Driver Seat",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00069",
+      "text": "With a memory driver seat, the master window control switch receives voltage whenever the delayed accessory relay is active. Its ground path runs through the DDM, and its commands travel to the DDM over a LIN.",
+      "why": "DDM means driver door module, and LIN means local interconnect network. This arrangement gives the master switch a communication link to the door module."
+    },
+    {
+      "blockId": "G1958069-b00070",
+      "text": "Passenger Window Switch With a Memory Driver Seat",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00071",
+      "text": "With a memory driver seat, the PDM provides the passenger window control switch’s return, or ground. The switch sends 2 separate direction signals to the PDM: up and down. At the first detent, it grounds the selected direction line to request movement. At the second detent, it grounds both direction lines simultaneously to request auto up or auto down. The PDM determines the intended automatic direction from the signal it received first.",
+      "why": "PDM means passenger door module. Here the direction requests are ground signals received by that module, so the memory-seat configuration matters when understanding the circuit."
+    },
+    {
+      "blockId": "G1958069-b00072",
+      "text": "How the Door Window Regulator Motor Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00073",
+      "text": "Each door window regulator motor can run in either direction. Low current voltage signals tell it which way to move; these come from the window control switch or, with a memory driver seat, the associated door module. Electronics built into the motor control one-touch up/down movement and the short drop window feature.",
+      "why": "The motor supplies motion, while the regulator mechanism supports and moves the glass. The electronics inside the motor also manage the automatic movements described here."
+    },
+    {
+      "blockId": "G1958069-b00074",
+      "text": "How the Rear Quarter Window Regulator Motor Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00075",
+      "text": "Each rear quarter window regulator motor can run upward or downward. Its direction is determined by low current voltage signals from the master window control switch or by a command on the global open circuit.",
+      "why": "This gives the rear quarter windows both a switch-command path and a global-open command path."
+    },
+    {
+      "blockId": "G1958069-b00076",
+      "text": "FCIM — Front Controls Interface Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00077",
+      "text": "The FCIM houses the rear window defrost button and controls the rear window defrost relay. Installing a new FCIM requires PMI.",
+      "why": "The button and relay-control function belong to the same module."
+    },
+    {
+      "blockId": "G1958069-b00078",
+      "text": "FDIM — Front Display Interface Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00079",
+      "text": "The FDIM provides an additional rear window defrost button on its touchscreen. It plugs directly into the APIM and has no direct communication connection to any network.",
+      "why": "APIM means accessory protocol interface module. I distinguish the displayed control from the module that switches the defrost relay; the screen is another place to request the feature."
+    },
+    {
+      "blockId": "G1958069-b00080",
+      "text": "DDM — Driver Door Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00081",
+      "text": "On vehicles with a memory driver seat, the DDM receives master window control switch commands over a LIN. It then supplies the appropriate voltage signals to the driver door window regulator motor to move the glass in the requested direction.",
+      "why": "This is the driver-window command path: the switch communicates its request, and the door module supplies the motor’s direction signals."
+    },
+    {
+      "blockId": "G1958069-b00082",
+      "text": "To operate the passenger window from the master window control switch, the DDM passes that switch request to the PDM over the Medium Speed Controller Area Network (MS-CAN). Installing a new DDM requires PMI.",
+      "why": "The driver’s switch can command the opposite door because the door modules exchange the request over the network."
+    },
+    {
+      "blockId": "G1958069-b00083",
+      "text": "PDM — Passenger Door Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00084",
+      "text": "The PDM receives passenger-window commands either from the passenger door window control switch or from the DDM over the Medium Speed Controller Area Network (MS-CAN). It supplies the appropriate voltage signals to the passenger door window regulator motor for the requested direction. Installing a new PDM requires PMI.",
+      "why": "Both control locations lead to the passenger door module, which supplies the motor’s direction signals."
+    },
+    {
+      "blockId": "G1958069-b00085",
+      "text": "BCM-B — Body Control Module B",
+      "why": ""
+    },
+    {
+      "blockId": "G1958069-b00086",
+      "text": "During a global open command, the Body Control Module B (BCM-B) signals the window motors over a shared circuit to lower all windows fully. It also sends this full down request whenever the convertible top switch is operated to raise or lower the roof, if equipped. Installing a new BCM-B requires PMI.",
+      "why": "The shared circuit lets the module coordinate a full-window lowering request for global open and convertible top operation."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:26:11.129Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 67,
+    "receivedBlocks": 67,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "87ed896ef9da38786220a185ffbf610a12de4c034981bcb24697ff07f0cf5152",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 149,
+    "sourceChunkCount": 3,
+    "reviewedChunkCount": 3,
+    "fingerprint": "1efba72d43b258f1c57dfa8e8c28d1348fe1015dabff68abc940b3d861e3f05d",
+    "reviewedAt": "2026-10-27T23:26:11.129Z"
+  }
+}
