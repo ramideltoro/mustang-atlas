@@ -23,8 +23,9 @@ function evidenceFor(g){
  const job=getJob(g),primary=new Set(job.documents.map(d=>d.id)),docs=new Map(job.documents.map(d=>[d.id,d]));
  for(const d of job.contextDocs||[])docs.set(d.id,d);
  if(primary.has('G1692554'))docs.set('G1716189',byId.get('G1716189'));
- // The curated switch bench check needs the actual passenger-side access/refit procedure.
- if(g.id==='passenger-window-switch-testing')docs.set('G1695936',byId.get('G1695936')); 
+ // Curated switch contact tests need their exact, short access/refit procedures.
+ const switchAccess={'passenger-window-switch-testing':'G1695936','headlamp-switch-contact-testing':'G1694120','power-seat-switch-contact-testing':'G1695513'}[g.id];
+ if(switchAccess)docs.set(switchAccess,byId.get(switchAccess)); 
  if(['suspension','brakes','driveline'].includes(job.systemId))for(const id of ['G1686507','G1663631']){const d=byId.get(id);if(d)docs.set(id,d);}
  const referenceOnly=new Map();
  for(const r of g.sourceRefs||[]){const d=byId.get(r.documentId);if(!d)continue;referenceOnly.set(d.id,d);if(job.kind==='repair'&&d.kind!=='diagnosis'&&d.text.length<45000)docs.set(d.id,d);}
