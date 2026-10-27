@@ -1,0 +1,174 @@
+{
+  "documentId": "G1672844",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1672844",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693184",
+      "sourceHash": "d7e46b64aa52ae84ab86a5758064469bc4d590e9469cd2078e1219dbd0f66b50",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693184",
+      "sourceUnitCount": 11,
+      "mediaCount": 5
+    },
+    {
+      "documentId": "G1693181",
+      "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693181",
+      "sourceUnitCount": 14,
+      "mediaCount": 6
+    },
+    {
+      "documentId": "G1693183",
+      "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693183",
+      "sourceUnitCount": 6,
+      "mediaCount": 2
+    },
+    {
+      "documentId": "G1693182",
+      "sourceHash": "de4e8f836dd80293e46954ea86b0b227e4b0b996436b9b9cbdbe11913c532e94",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693182",
+      "sourceUnitCount": 16,
+      "mediaCount": 7
+    },
+    {
+      "documentId": "G1693187",
+      "sourceHash": "c675bde516ef3f5ad9dba9e05e848d4ad72f20ff944749c7d1f73350fea5ab5f",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693187",
+      "sourceUnitCount": 3,
+      "mediaCount": 1
+    },
+    {
+      "documentId": "G1693188",
+      "sourceHash": "8ab966daf1b76b4e72d63ee8564aae6f18be1fca559398fd41474c41a46492e6",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693188",
+      "sourceUnitCount": 17,
+      "mediaCount": 8
+    },
+    {
+      "documentId": "G1693186",
+      "sourceHash": "2b257ce83e39c1801fd41f91227b8b0711e0088ffade08b1249dbcbab8b2aaee",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693186",
+      "sourceUnitCount": 3,
+      "mediaCount": 1
+    },
+    {
+      "documentId": "G1693190",
+      "sourceHash": "8b6b55e6c388981e1394dd3a322d4e384831a3a1792fb74d648701c590ccef83",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693190",
+      "sourceUnitCount": 16,
+      "mediaCount": 7
+    },
+    {
+      "documentId": "G1693193",
+      "sourceHash": "b6595acbaf5a90a8f1ebad6ee421b396717797e29b8e00e7ae645a06e6d145ed",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693193",
+      "sourceUnitCount": 13,
+      "mediaCount": 6
+    }
+  ],
+  "sourceHash": "b1a0acf65040972f5d21dd5750e634ba6236e66d76024b03eff306de06310432",
+  "title": "Program Staged Unlocking",
+  "introduction": "Staged unlocking gives the driver’s door first dibs: an unlock press unlocks that door while the passenger door stays locked. All-door mode unlocks all the doors with that initial press. I think of it as changing the remote’s guest list, not fixing a broken passenger lock.\n\nThe button combination below toggles between those choices. The turn signals acknowledge that the setting changed, but the flashes do not tell you which choice is now active. The meaning of the settings follows the Mustang Owner’s Manual, Unlocking the Doors section; the hold duration below follows this workshop procedure.",
+  "requirements": [
+    {
+      "category": "Preparation and service safety",
+      "items": [
+        {
+          "name": "Keep the car stationary",
+          "detail": "Park the car, apply the parking brake and keep the ignition OFF. Keep the transmitter accessible throughout the setting change and the ordinary lock/unlock check."
+        },
+        {
+          "name": "Prevent remote starting",
+          "detail": "If equipped, disable remote start before working around the vehicle. Use the Central Display: Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, resulting in personal injury or death."
+        },
+        {
+          "name": "Control the key",
+          "detail": "Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service. Keep the transmitter with you for the programming action. An accidental engine start may cause serious personal injury."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1672844-b00001",
+      "text": "Program staged unlocking",
+      "why": ""
+    },
+    {
+      "blockId": "G1672844-b00003",
+      "text": "WARNING: Before beginning any service procedure in this manual, read the health and safety warnings in section 100-00 General Information. Failure to follow this instruction may result in serious personal injury.",
+      "why": "The required safety preparation comes before the transmitter programming action."
+    },
+    {
+      "blockId": "G1672844-b00004",
+      "text": "Read [Health and Safety Precautions](#/document/G1693189) (100-00 General Information, Description and Operation) before starting.",
+      "why": ""
+    },
+    {
+      "blockId": "G1672844-b00007",
+      "text": "With the ignition in OFF, press and hold the lock and unlock buttons on the remote keyless entry (RKE) transmitter at the same time for 4 seconds.",
+      "why": "Holding both buttons together is the command that changes the staged unlocking setting."
+    },
+    {
+      "blockId": "G1672844-b00009",
+      "text": "Watch the turn signals: they flash twice to confirm that the unlocking mode has changed.",
+      "why": "This acknowledgment is the completion check for the mode change."
+    },
+    {
+      "blockId": "G1672844-b00011",
+      "text": "Repeat Step 2 to switch the staged unlocking feature between enabled and disabled.",
+      "why": "Repeat the command when you want the opposite setting; another completed toggle changes it back. To confirm the selected behavior, with the car still parked and the transmitter accessible, lock the doors and make an initial unlock press. Check whether only the driver’s door unlocks or all doors unlock. That observation identifies the selected mode; the confirmation flashes alone do not. If the desired mode is not selected, repeat the programming command above and check again. An abnormal response needs the relevant locking-system diagnosis; this preference change is not a repair test."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:19:44.607Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "b8cd4b6dc80b475734e0a79a0ed2b7bfc6cb082352a5cca44ae656f3ee75f6e6",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 10,
+    "supportingSourceUnitCount": 147,
+    "sourceUnitCount": 9,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "79d4205bcc2a25659f6fdb5b541fc3177bb3247f061d47b29be7c44356030a55",
+    "reviewedAt": "2026-10-27T18:18:08.517Z",
+    "editorialRevision": {
+      "kind": "owner-backed-setting-purpose-and-ordinary-verification",
+      "at": "2026-10-27T18:19:44.607Z",
+      "priorReviewPreserved": true
+    }
+  }
+}

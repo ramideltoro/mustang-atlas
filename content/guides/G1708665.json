@@ -1,0 +1,95 @@
+{
+  "documentId": "G1708665",
+  "supportingSourceRefs": [],
+  "sourceHash": "c7682e4b080836ba3760916c905d272b5fff73b2740d3501b5c15cb73d7954b8",
+  "title": "Convertible Top — Controls and Operating Conditions",
+  "introduction": "The convertible top uses a lead-and-partner arrangement: smart motor modules coordinate roof movement, while the driver keeps the switch held in the requested direction. I read the opening and closing conditions separately, because each direction has its own permission checklist.\n\nThis overview applies to the convertible-top system on convertible vehicles. It explains control logic and operating conditions; it does not teach latch handling, tonneau-cover removal, manual roof operation or fault testing.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1708665-b00001",
+      "text": "How the Roof Is Controlled",
+      "why": ""
+    },
+    {
+      "blockId": "G1708665-b00002",
+      "text": "The convertible top is controlled by 2 smart electric motors called the Moveable Roof Control Module A (MRCMA) and the Moveable Roof Control Module B (MRCMB). The Moveable Roof Control Module A (MRCMA) is the primary system module; it communicates with other modules and the Moveable Roof Control Module B (MRCMB) over MS-CAN. To raise or lower the roof, hold the convertible top switch in the corresponding up or down position throughout the movement. Operation requires the applicable conditions below:",
+      "why": "The primary module coordinates the system through network communication. Holding the switch is part of the operating method, while the conditions below determine whether the requested movement is permitted."
+    },
+    {
+      "blockId": "G1708665-b00003",
+      "text": "Conditions for Opening the Top",
+      "why": "All conditions in this opening list must be met."
+    },
+    {
+      "blockId": "G1708665-b00005",
+      "text": "The accessory delay relay must be active.",
+      "why": "This is a required system state; this overview does not specify how to activate or test the relay."
+    },
+    {
+      "blockId": "G1708665-b00007",
+      "text": "Vehicle speed must be less than 5 km/h (3 mph).",
+      "why": "The speed requirement is strictly below the stated threshold."
+    },
+    {
+      "blockId": "G1708665-b00009",
+      "text": "The convertible top latch switch must be open.",
+      "why": "“Open” describes the required switch state. It does not supply a physical latch-release procedure."
+    },
+    {
+      "blockId": "G1708665-b00011",
+      "text": "Conditions for Closing the Top",
+      "why": "All conditions in this closing list must be met."
+    },
+    {
+      "blockId": "G1708665-b00013",
+      "text": "The accessory delay relay must be active.",
+      "why": "Closing requires this relay state as well as the other conditions in this list."
+    },
+    {
+      "blockId": "G1708665-b00015",
+      "text": "Vehicle speed must be less than 5 km/h (3 mph).",
+      "why": "The same strictly-below speed requirement applies during closing."
+    },
+    {
+      "blockId": "G1708665-b00017",
+      "text": "Tonneau covers, if equipped, must not be in place.",
+      "why": "This closing condition applies only when the vehicle has tonneau covers. Their removal method belongs to the applicable operating instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:29:39.865Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 10,
+    "receivedBlocks": 10,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "300f31d72f7e742b2c6adf6e88da98bb704fa16ba6812623c61cf3a5f0e6d213",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 13,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b1abbe6a21c34ec48f38db9c50b6c15aa7314be628e51f38b1a42ac20e0d3e01",
+    "reviewedAt": "2026-10-27T18:28:08.054Z",
+    "editorialRevision": {
+      "kind": "reader-facing-scope-wording",
+      "at": "2026-10-27T18:29:39.865Z",
+      "priorReviewPreserved": true
+    }
+  }
+}
