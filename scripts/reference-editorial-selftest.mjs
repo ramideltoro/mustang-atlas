@@ -148,3 +148,7 @@ test('direct authenticated general safety does not falsely require an About Manu
 test('direct general safety retains full text while selecting only task-relevant child precautions',async()=>{
  const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const make=(id,title,related=[],kind='general')=>({id,title,text:'Complete source text.',source_hash:id,engines:[],related,kind,blocks:[],media:[]});const primary=make('primary','Brake booster tube',['G1693189'],'repair'),general=make('G1693189','General safety',['G1693183','G1693184']),brake=make('G1693183','Brake safety'),climate=make('G1693184','Climate safety');const result=buildSupportingPackage(primary,[primary,general,brake,climate]);assert.deepEqual(result.documents.map(d=>d.id),['G1693189','G1693183']);assert.equal(result.documents[0].text,general.text);assert.deepEqual(result.unavailableSupportingReferences,[]);
 });
+
+test('general safety primary is its own complete evidence without a self-reference',async()=>{
+ const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const primary={id:'G1693189',title:'Health and Safety Precautions',text:'Complete primary warnings.',source_hash:'safety',engines:[],related:[],kind:'general',blocks:[],media:[]};const result=buildSupportingPackage(primary,[primary]);assert.deepEqual(result.supportingSourceRefs,[]);assert.deepEqual(result.unavailableSupportingReferences,[]);
+});
