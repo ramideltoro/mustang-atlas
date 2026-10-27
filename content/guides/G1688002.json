@@ -1,0 +1,50 @@
+{
+  "documentId": "G1688002",
+  "sourceHash": "6d210ff7e1959a51b704686d8db7ffc0a515960d595f61e8c116173b1003cc86",
+  "title": "Evaporative Emissions Diagnostic Routing",
+  "introduction": "The evaporative emissions system (EVAP) handles fuel vapor so it can later be used by the engine. Vapor control and liquid-fuel delivery have different jobs; a vapor-system code alone does not put the fuel pump in the guilty seat.\n\nI use this page as a fork in the diagnostic road: a powertrain control module (PCM) diagnostic trouble code (DTC) leads to engine-control diagnosis, while driveability symptoms without a code lead to symptom charts. The named references contain the actual diagnostic work; this page does not supply the tests or authorize a parts replacement.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688002-b00001",
+      "text": "Choose the Diagnostic Reference",
+      "why": ""
+    },
+    {
+      "blockId": "G1688002-b00002",
+      "text": "For a diagnostic trouble code (DTC) in the powertrain control module (PCM), refer to [Electronic Engine Controls](#/document/G1692929) (303-14A Electronic Engine Controls - 2.3L EcoBoost (231kW/314PS), Diagnosis and Testing).",
+      "why": "This branch takes a PCM code to the diagnostic information for the specified engine configuration. The code selects a diagnostic route rather than proving a component has failed."
+    },
+    {
+      "blockId": "G1688002-b00003",
+      "text": "For driveability symptoms without a DTC, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual, Section 3, Symptom Charts.",
+      "why": "The absence of a code does not dismiss the complaint. It changes the next reference to the symptom-based diagnostic charts."
+    }
+  ],
+  "checkedAt": "2026-10-27T11:17:54.026Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "c28d1eb4f9cce4338baf21cec06cd087d934c91cdbd4936ce3b6a4889c918555",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 4,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "594716070344b1da5052a8d0516dc0c9f27b1fede3148fe07d4a1f66adc79dba",
+    "reviewedAt": "2026-10-27T11:17:54.026Z"
+  }
+}
