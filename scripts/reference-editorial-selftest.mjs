@@ -98,3 +98,17 @@ test('startup normalization handles mid-sentence key removal and separate equipm
  const alreadyClear={requirements:[{category:'Setup',items:[{name:'Starting',detail:'WARNING: Switch off the ignition and remove the key from the vehicle.'},{name:'Switch off the ignition and remove the key',detail:'Remove the key from the vehicle before service.'}]}]};
  assert.equal(clarifyStartupPreparation(alreadyClear,context).length,0);
 });
+
+test('publication startup check rejects missed variants without mutating reviewed content',async()=>{
+ const {startupReadinessIssues}=await import('./reference-editorial-readiness.mjs');
+ const {GENERAL_SAFETY_HASH}=await import('./reference-editorial-startup.mjs');
+ const make=detail=>({supportingSourceRefs:[{documentId:'G1693189',sourceHash:GENERAL_SAFETY_HASH}],requirements:[{category:'Setup',items:[{name:'Startup',detail}]}],edits:[{text:'Switch the ignition ON for this operating test.'}]});
+ for(const detail of ['Once seat access is arranged, remove the key from the vehicle.','Disable remote start through the display. Switch the ignition OFF and remove the key. If equipped with engine auto start-stop, keep ignition off.']){
+  const candidate=make(detail),before=JSON.stringify(candidate);
+  assert.equal(startupReadinessIssues({kind:'repair'},candidate).length,1);
+  assert.equal(JSON.stringify(candidate),before);
+  assert.equal(candidate.edits[0].text,'Switch the ignition ON for this operating test.');
+  assert.deepEqual(startupReadinessIssues({kind:'diagnosis'},candidate),[]);
+ }
+ assert.deepEqual(startupReadinessIssues({kind:'repair'},make('If equipped, disable remote start through the display. Switch off the ignition and remove the key.')),[]);
+});
