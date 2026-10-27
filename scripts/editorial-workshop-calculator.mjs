@@ -1,0 +1,17 @@
+/** Private complete executable calculator evidence; never modifies the source database or runtime. */
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+export const OXYGEN_PRIMARY_IDS=new Set(['G1692139','G1692247','G1692275','G1802180','G1692144','G1692251','G1692279','G1802184']);
+const MANIFEST_HASH='e32cc4d3dfbd4967f8aa6b10f7e720d61c9125ff4ba22a97179ae5cbf1b11996';
+export function enrollCalculator(prior,retry=false){return retry||!prior||prior.calculatorEvidence===true||['reserved','pair-fallback'].includes(prior.status);}
+export const CALCULATOR_CONSTRAINT='Complete original calculator JavaScript is supplied alongside all original calculator text and figures, plus the current Atlas UI/model. Teach the actual applicable calculator route, inputs and output setting for the COMPLETE installed socket/wrench assembly. Match real centers, extension and orientation to the selected form; never assume a generic90degree arrangement fits303-476. Straight/crowfoot numeric forms differ from restricted calibrated half-moon menus. No undocumented tool dimensions, universal wrench setting or inferred fit. If actual geometry cannot be established, retain the execution hold. External code evidence is private: cite the real reference document route, never invent an external-source route. Do not execute source scripts outside the isolated deterministic verification harness.';
+export function calculatorEvidence(root,primary,byId,{prior,retry=false,engines=[]}={}){
+ if(![...primary].some(id=>OXYGEN_PRIMARY_IDS.has(id))||!enrollCalculator(prior,retry))return null;
+ const file=path.join(root,'work/editorial-workshop/evidence/torque-calculator-scripts/source-manifest.json'),raw=fs.readFileSync(file);if(hash(raw)!==MANIFEST_HASH)throw Error('Calculator evidence manifest changed');
+ const m=JSON.parse(raw),nodes=[],externalSources=[];
+ for(const s of m.sources){const raw=fs.readFileSync(s.privateCopy);if(hash(raw)!==s.rawHash||byId.get(s.id)?.source_hash!==s.source_hash)throw Error('Calculator source changed: '+s.id);const scripts=[...raw.toString().matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(x=>x[1]);if(JSON.stringify(scripts)!==JSON.stringify(s.scripts))throw Error('Incomplete calculator script: '+s.id);const id='external-calculator-'+s.id;externalSources.push({documentId:id,title:s.title+' complete original executable script',sourceHash:s.rawHash});const text='Original source: '+s.source_path+'\nOriginal extracted body (figures supplied through the matching reference):\n'+s.text+'\nCOMPLETE ORIGINAL SCRIPT BLOCKS:\n'+scripts.join('\n\n');nodes.push({nodeId:id+':complete',documentId:id,sourceHash:s.rawHash,sectionId:'complete-source-script',title:s.title,role:'dependency',engines,start:0,end:text.length,text,images:[]});}
+ for(const s of m.ui){if(hash(fs.readFileSync(s.path))!==s.sha256||hash(s.text)!==s.sha256)throw Error('Atlas calculator implementation changed');const id='external-atlas-'+path.basename(s.path).replace(/\W/g,'-');externalSources.push({documentId:id,title:'Current Atlas calculator '+path.basename(s.path),sourceHash:s.sha256});nodes.push({nodeId:id+':complete',documentId:id,sourceHash:s.sha256,sectionId:'complete-current-ui',title:'Current Atlas calculator '+path.basename(s.path),role:'dependency',engines,start:0,end:s.text.length,text:s.text,images:[]});}
+ return{nodes,externalSources};
+}
