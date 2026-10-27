@@ -136,3 +136,5 @@ The only external-source exception in two-guide mode is this exact complete owne
 supplement. Unknown sources, changed text/figures or incomplete coverage still
 reject pairing; headliner and other external procedures remain isolated. Shared
 owner evidence is deduplicated without widening either guide's allowed evidence.
+
+The exact SYNC 2/3 FDIM primary G1704008 now receives checksum-bound matching FCIM access G1704007 and its existing dependencies. This resolves the primary’s mislink to the separate SYNC display without changing public source data. Author/reviewer scope retains actual FDIM/APIM separation and touchscreen calibration, while preventing unrelated display removal or new-module PMI for a temporarily removed existing FCIM. A fresh full evidence review is still required; existing holds are not automatically cleared.
