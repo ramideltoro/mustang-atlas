@@ -123,3 +123,16 @@ test('supervisory readiness is exact-artifact and cannot borrow another document
  assert.equal(supervisoryReadinessIssues('a','reviewed-sha',{}).length,1);
  assert.equal(JSON.stringify(map),before);
 });
+
+test('brake-booster access adds complete brake safety without treating parking restraint as brake work',async()=>{
+ const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');
+ const doc=(id,title,text,related=[],kind='overview')=>({id,title,text,related,kind,engines:[],media:[],blocks:[],source_hash:id+'-hash'});
+ const about=doc('G1693180','About','',['G1693189']),general=doc('G1693189','General Safety','Review applicable brake and clutch precautions.',['G1693183']),brakes=doc('G1693183','Brake and Clutch Safety','Complete warning text.');
+ const primary=doc('pipe','Air Cleaner Outlet Pipe','Disconnect the brake-booster vacuum tube.',['G1693180'],'repair');
+ const pack=buildSupportingPackage(primary,[primary,about,general,brakes]);
+ assert.deepEqual(pack.documents.map(d=>d.id),['G1693189','G1693183']);
+ const neutral={...primary,text:'Apply the parking brake before cabin work.'};
+ assert.deepEqual(buildSupportingPackage(neutral,[neutral,about,general,brakes]).documents.map(d=>d.id),['G1693189']);
+ const nested=doc('tensioner','Accessory Drive Belt Tensioner','Remove the outlet pipe.',['pipe','G1693180'],'repair');
+ assert.ok(buildSupportingPackage(nested,[nested,primary,about,general,brakes]).documents.some(d=>d.id==='G1693183'));
+});
