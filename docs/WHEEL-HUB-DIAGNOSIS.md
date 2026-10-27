@@ -29,3 +29,7 @@ Browser checks cover desktop and 390/320px layouts, hand-position controls, sect
 ## Deployment
 
 Deploy the application plus both content files together. Keep a matching rollback source/content archive and Docker image because content is mounted separately. No database, media, Caddy or DNS changes are required.
+
+Published application/content commit `7c6205a25d51aadca1e0fe18e7cf3b5c011cf858`; GitHub CI [40431802827](https://github.com/ramideltoro/mustang-atlas/actions/runs/40431802827) passed. The staged image validated the complete catalog against the production database before activation. Live checks confirmed the new bundles, 18 steps, eight decision rows, 12 workshop links, search discovery, all three new glossary entries and incompatible-engine withholding. The public hand-position buttons and step jump work with no browser console errors. The container is healthy.
+
+Rollback source/content: `/srv/mustang-atlas-rollback-20261026-wheel-hubs/source.tar.gz`. Previous image: `mustang-atlas-web:before-20261026-wheel-hubs`. Restore both to return to the prior overview while preserving the existing Special maintenance articles.
