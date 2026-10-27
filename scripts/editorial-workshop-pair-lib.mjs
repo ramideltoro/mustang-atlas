@@ -1,3 +1,4 @@
+import {pairExternalAllowed} from './editorial-workshop-owner.mjs';
 import {hash} from './workshop-author-lib.mjs';
 import {packNodes,validateCandidate,reviewCoverageErrors} from './editorial-workshop-lib.mjs';
 export function buildPair(jobs){
@@ -10,7 +11,7 @@ export function buildPair(jobs){
  if([...nouns[0]].filter(w=>nouns[1].has(w)).length>=2)throw Error('Potential same-component variants need isolated review');
  const nodes=new Map();
  for(const j of jobs){
-  if(j.baseGuide.taskType!=='repair'||j.packets!==1||j.contract.unresolvedDependencies.length||j.contract.externalSources?.length)throw Error('Pair requires complete bounded repair evidence');
+  if(j.baseGuide.taskType!=='repair'||j.packets!==1||j.contract.unresolvedDependencies.length||!pairExternalAllowed(j.contract,j.nodes))throw Error('Pair requires complete bounded repair evidence');
   if(JSON.stringify(j.contract.applicability.engines)!==scope)throw Error('Different applicability families');
   for(const n of j.nodes){if(nodes.has(n.nodeId)&&JSON.stringify(nodes.get(n.nodeId))!==JSON.stringify(n))throw Error('Conflicting source node '+n.nodeId);nodes.set(n.nodeId,n);}
  }

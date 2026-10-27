@@ -108,3 +108,31 @@ The two-guide pilot completed on2026-10-27: both guides passed independent sourc
 Approved bounded queue mode is opt-in with `--pairs`. It retains a maximum of two guides per call and the same complete evidence/coverage gates, rejects shared-primary or likely same-component variants, and falls back to the isolated pipeline when no eligible pair exists or shared execution fails. Per-guide revisions remain isolated. The parent worker starts the pair subprocess in its existing slot, never alongside another call of its own; parent PID verification enforces that handoff. Successful records still pass the ordinary source/base/full-catalog gates before primary staging. Each pair has its own complete private report under `work/editorial-workshop/pairs/`.
 
 Main-worker reservation manifests are explicit assignments to the secondary worker. They are recorded as `reserved` in the main ledger, not treated as completed. Already-reviewed staged records with an exact current base and valid source hashes are reused, including records imported by the secondary coordinator, avoiding duplicate authoring while publication is pending.
+
+### Exact supervisory release gate and owner controls
+
+A successful author/reviewer result is staged, not automatically publication-ready.
+The release coordinator additionally requires an exact guide hash in
+`work/editorial-workshop/supervisory-approvals.json` (or its secondary-worker
+counterpart), recording a complete supervisory article read. A prose correction
+invalidates that approval until the new exact hash is reviewed. Missing technical
+evidence remains a hold even when schema and numerical checks pass.
+
+The private owner-controls supplement contains complete 2015 owner-manual printed
+pages 121–122, physical pages 124–125, with the PDF, text and both rendered pages
+pinned to checksums in `editorial-workshop-owner.mjs`. Its explicit primary-ID
+allowlist covers tasks requiring real ignition, gear-selection, engine-start or
+powered completion controls; it never selects by a broad title keyword or applies
+the 2015 evidence to another year. Existing reviewed records remain reusable.
+Old holds do not acquire this supplement or automatically retry unless explicitly
+requested; new enrolled holds retain the same evidence on restart.
+
+Both author and reviewer receive the complete relevant owner evidence, with OFF,
+engine-off ON and engine-start conditions distinguished. Backup-key recovery is
+outside this supplement's teaching scope because that procedure continues onto
+the following page. Cite the owner publication/page in prose; its private ID must
+not become a nonexistent public source route. Original page artwork stays private.
+The only external-source exception in two-guide mode is this exact complete owner
+supplement. Unknown sources, changed text/figures or incomplete coverage still
+reject pairing; headliner and other external procedures remain isolated. Shared
+owner evidence is deduplicated without widening either guide's allowed evidence.

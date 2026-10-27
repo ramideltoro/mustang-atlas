@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {loadOwnerControls,OWNER_ID} from './editorial-workshop-owner.mjs';
 // Explicit two-guide pilot only; outputs remain outside publication staging.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,6 +19,7 @@ const codex='/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app
 const env=Object.fromEntries(Object.entries(process.env).filter(([k])=>!/(?:API_KEY|ACCESS_TOKEN)$/.test(k)));
 const auth=spawnSync(codex,['login','status'],{encoding:'utf8',env});if(!/Logged in using ChatGPT/.test(auth.stdout+auth.stderr))throw Error('Signed-in ChatGPT Codex required; no API fallback');
 const pidFile=path.join(dir,'worker.pid');if(fs.existsSync(pidFile)){try{process.kill(Number(fs.readFileSync(pidFile)),0);throw Error('Pilot already running');}catch(e){if(e.code!=='ESRCH')throw e;}}fs.writeFileSync(pidFile,String(process.pid));process.on('exit',()=>fs.rmSync(pidFile,{force:true}));
+if(pair.jobs.some(j=>j.contract.externalSources?.some(s=>s.documentId===OWNER_ID))&&!loadOwnerControls(root))throw Error('Missing private owner source');
 const db=openDb({readOnly:true});for(const j of pair.jobs)for(const s of j.contract.sources)if(db.prepare('select source_hash from documents where id=?').get(s.documentId)?.source_hash!==s.sourceHash)throw Error('Changed trusted source');
 const group={type:'object',additionalProperties:false,required:['id','title','summary','start','end'],properties:{id:{type:'string'},title:{type:'string'},summary:{type:'string'},start:{type:'integer'},end:{type:'integer'}}};
 const authorSchema=structuredClone(outputSchema);authorSchema.properties.guides.items.properties.stepGroups={type:'array',items:group};authorSchema.properties.guides.items.required.push('stepGroups');
