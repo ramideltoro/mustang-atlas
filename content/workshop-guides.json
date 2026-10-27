@@ -810,147 +810,440 @@
     },
     {
       "title": "Diagnose suspension pull, uneven ride and noise",
-      "summary": "Use loading, tire, brake, alignment and noise checks to identify the cause of a suspension-related complaint.",
-      "introduction": "Springs support the body, struts and shock absorbers control its movement, and suspension arms and joints locate the wheels. Tires, brakes and steering can produce similar complaints. This diagnosis separates those influences before an alignment adjustment or component replacement is justified.",
-      "why": "The conditions that produce a symptom are useful evidence. Bumps move suspension parts vertically, cornering twists them, and braking or acceleration loads different connections. Matching the complaint to that movement narrows the inspection.",
+      "summary": "Check loading, tires and visible suspension condition, then use wheel exchanges, brake-drag screening and alignment measurements to narrow down a pull. Match noises to the driving conditions that produce them before choosing a repair.",
+      "introduction": "A Mustang suspension has enough moving parts to form a percussion section. Unfortunately, a clunk does not come with a little label naming the guilty bastard. I’ll help you separate what happens over bumps, during turns and under braking, then work through the checks in a useful order.\n\nThis guide covers 2015 Mustangs with the 2.3L, 3.7L, 5.0L and 5.2L engines. Springs support the body, struts and shock absorbers control its movement, and suspension arms and joints keep the wheels located as they move. Tires, brakes and steering can create similar complaints, so we’ll give those their turn before condemning the suspension.",
+      "why": "The useful clue is often the load that produces the symptom. Bumps move suspension parts up and down; turning twists and flexes them; braking applies rearward and downward loads; acceleration loads the powertrain mounts. Following those clues, and changing one influence at a time during the pull test, gives a reason for the next action instead of an expensive parts lottery.",
       "taskType": "diagnostics",
       "difficulty": "intermediate",
       "searchTerms": [
-        "car pulls to one side",
+        "2015 Mustang suspension diagnosis",
+        "Mustang pulls to one side",
+        "Mustang wanders",
         "steering wheel off center",
         "suspension clunk over bumps",
         "front suspension crunch when turning",
-        "car leans to one side",
-        "uneven tire wear"
+        "Mustang leans to one side",
+        "uneven tire wear",
+        "harsh ride",
+        "wheel shimmy"
       ],
       "when": {
-        "summary": "When pulling, wandering, abnormal tire wear, uneven ride height, harshness or repeatable suspension noise occurs.",
+        "summary": "Use this guide for a currently present pull, wander, uneven stance, abnormal tire wear, harsh ride, shimmy or repeatable suspension-related noise.",
         "notes": [
-          "Factory specifications do not apply to vehicles with aftermarket steering, suspension, wheel or tire equipment."
+          "A symptom description identifies possible causes; it does not prove that any listed component needs replacement.",
+          "Factory specifications do not apply to vehicles with aftermarket steering, suspension, wheel or tire equipment.",
+          "For an intermittent complaint, establish the conditions that reproduce it. Do not replace components through a diagnostic branch when its named concern is absent."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange inspection and measurement",
-          "detail": "Have a tire-pressure gauge, the Vehicle Certification (VC) label, alignment equipment and ride-height instructions available. Wheel swapping and brake-drag checks require vehicle-lifting and wheel-refitting capability."
+          "title": "Know where this job ends",
+          "detail": "I’ll cover preliminary inspection, wheel removal and refitting, and the drift/pull decision sequence. Component dismantling, joint or bearing wear measurements, ride-height measurement and alignment adjustment require their matching procedures and specifications. The linked repair destinations are the next stage of work. Before a tire exchange, establish that the fitted assemblies can occupy the proposed positions, including any size or directional restrictions; an incompatible arrangement needs matching tire/fitment guidance."
         },
         {
-          "title": "Plan noise isolation",
-          "detail": "Use a smooth-road test to establish the complaint. An electronic listening tool such as Chassis Ear can help localize noise; follow its manufacturer's instructions for attachment and use."
+          "title": "Gather tools and material for the checks you will perform",
+          "detail": "Have a tire-pressure gauge, access to the Vehicle Certification (VC) label, suitable wheel-nut removal equipment and a torque wrench capable of 150 lb.ft (204 Nm). Wheel swapping and the brake-drag check require suitable lifting equipment. Have cleaning materials for the wheel bore and mounting surfaces, plus Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, for the wheel pilot interface. Alignment checking requires alignment equipment and its manufacturer's instructions. An electronic listening tool such as Chassis Ear is optional for noise isolation."
+        },
+        {
+          "title": "Arrange safe lifting",
+          "detail": "Identify the lifting points by the triangles stamped into the body structure or frame. Never work beneath a vehicle supported only by a jack; use floor stands. The emergency jack supplied with the car is intended for changing a deflated tire, not this workshop inspection. The wheel-removal procedure positions the vehicle in Neutral on a hoist. See [Jacking and Lifting](#/document/G1663631)."
+        },
+        {
+          "title": "Review what changed before the complaint",
+          "detail": "Check previous repairs and whether the steering, suspension, wheels or tires have been altered. An incorrectly completed repair can contribute to the present problem. Check relevant service information or bulletins when available. See [Diagnostic Methods](#/document/G1693185)."
+        },
+        {
+          "title": "Keep electronic diagnosis on its own branch",
+          "detail": "If the investigation moves into electronic steering diagnosis, use its matching diagnostic procedure. General prerequisites include correct battery and charging operation, battery state of charge above 70%, and checking related diagnostic trouble codes across the network modules. Address circuit faults before system or performance faults. Connector probing and scan-tool commands are outside the mechanical checks below."
         }
       ],
       "steps": [
         {
-          "title": "Reproduce and classify the complaint",
-          "body": "Road-test on a smooth road. Separate drift, alignment or ride-height concerns from noise, vibration and harshness (NVH). Record whether the symptom appears over bumps, while turning, braking, accelerating or crossing dips."
+          "title": "Identify the car and decode its spring application",
+          "body": "Find the VIN on the metal tab at the upper left of the instrument panel, visible through the windshield. It is also on the VC label. VIN position 10 identifies model year: F means 2015. Position 8 identifies the engine: H is 2.3L, M is 3.7L, F is 5.0L and Z is 5.2L.\n\nOpen the left-hand door to locate the VC label in the door opening. Use its tire information for the pressure and size checks. Find the SPR field near the bottom of the label. Its spring code has two parts: the first identifies the front springs and the second identifies the rear springs. Decode each part separately using these mappings from [Identification Codes](#/document/G1663651).\n\nFront spring codes:\nAA → BR33-5310-A\nBB → BR33-5310-B\nCC → BR33-5310-C\nFF → BR33-5310-F\nGG → BR33-5310-G\n\nRear spring codes:\nAA → BR33-5560-A\nBB → BR33-5560-B\nCC → BR33-5560-C\nDD → BR33-5560-D\nEE → BR33-5560-E\nFF → BR33-5560-F\nGG → BR33-5560-G\nJJ → BR3V-5560-J\nLL → BR3V-5560-L\nMM → AR3V-5560-M\nNN → AR33-5560-N\n\nRecord the front and rear spring identifications for comparison when checking whether the correct springs are fitted. The same two-letter code can identify different front and rear parts, so keep those lists straight. Ride height alone does not identify a spring.\n\nLook for aftermarket changes to steering, suspension, wheels and tires. If present, the factory specifications used by this diagnostic route do not apply to that modified equipment."
         },
         {
-          "title": "Establish the vehicle's baseline",
-          "body": "Check loading, previous repairs and aftermarket changes. With normal loads aboard and tires cold, compare pressures and sizes with the VC label. Inspect wear and damage. Remove heavy mud or road deposits so underbody damage and displaced components can be seen."
+          "title": "Check loading before blaming the suspension",
+          "body": "Visually check for an unevenly loaded, incorrectly loaded or overloaded vehicle. Loading is a possible cause of pull, wander, excessive sway and a one-sided lean.\n\nFor the pull test, this is A1: if the vehicle is unevenly loaded, address that loading condition and explain its effect to the driver before continuing. If it is evenly loaded, proceed to the tire checks. I like this starting point: luggage is usually less expensive to move than suspension parts."
         },
         {
-          "title": "Inspect before adjusting",
-          "body": "Check suspension fasteners, springs, dampers, bushings, steering parts and wheel bearings. Correct an obvious cause before continuing. Measure ride height for bottoming, low stance or side-to-side lean; loading, incorrect springs and damaged components require different corrections."
+          "title": "Check cold tire pressures, sizes and visible condition",
+          "body": "With the normal loads in the vehicle and the tires cold, measure the pressures and compare them with the VC label. Check that all tire sizes match the vehicle's specified fitment.\n\nLook over the tires for damage and abnormal or uneven wear. Note whether wear is concentrated at the center ribs, both edges, or an inner or outer edge. These patterns help choose the tire-wear branch below, but they do not establish one cause on their own.\n\nFor pull-test step A2, adjust incorrect pressures to the label values and address tires needing replacement before continuing. When pressures and tire condition are acceptable, proceed to tire-force isolation. Detailed tire evaluation belongs with [Wheels and Tires](#/document/G1686502)."
         },
         {
-          "title": "Use Test A to identify tire-induced pull",
-          "body": "First address uneven loading, incorrect pressure and tire damage. Then cross the front wheel-and-tire assemblies left to right. If pull reverses, tire forces are responsible and the test directs front-to-rear rotation. If pull disappears, tire forces caused the corrected concern. Unchanged pull leads to the brake check."
+          "title": "Reproduce and describe the complaint on a smooth road",
+          "body": "Road-test on a smooth road to verify the reported concern. Record whether it is a directional pull, wander, an off-center steering wheel, a ride-height concern, vibration or noise.\n\nFor a noise, record the event that brings it on: bumps, turning, braking, acceleration, driveway entries or dips. Distinguish a turning noise during normal steering movement from one occurring specifically at the full-left or full-right steering stop. That distinction changes the next decision.\n\nUse the same description when you recheck the car later. 'Still sounds weird' gives the diagnosis very little to work with."
         },
         {
-          "title": "Separate brake drag from alignment",
-          "body": "Spin all four wheels by hand with the vehicle appropriately supported. Wheels that do not spin freely require brake-drag diagnosis. Otherwise, check alignment using the equipment manufacturer's instructions. Correct an out-of-specification result through the specified adjustment procedure; with alignment correct, continue to power-steering diagnosis."
+          "title": "Lift only at the designated points when underside access is needed",
+          "body": "Before lifting, use a hard, level surface, set the parking brake and block every wheel remaining on the ground. Confirm that the jack or hoist is rated for the vehicle, including cargo and modifications. A jack alone is never a support for working underneath: use suitable stands at the designated points. See [Health and Safety Precautions](#/document/G1693189).\n\nFor hoist-based wheel work, place the transmission in Neutral and position the vehicle on the hoist. Locate the stamped triangles before raising it. The lifting-point illustration identifies four positions along the sides of the body: behind the front wheels and ahead of the rear wheels. Confirm the actual triangle markings on the car rather than estimating from a wheel opening.\n\nPosition adapters or forks so they do not interfere with suspension parts, mounting brackets or stabilizer mounting brackets. Avoid contact that could damage the axle or rear cover, steering linkage or exhaust. Never apply jack pressure to either bumper.\n\nFor a drive-on lift, check underbody clearance before driving onto it. If a jack is used during workshop work, support the vehicle with floor stands before going underneath. See [Jacking and Lifting](#/document/G1663631)."
         },
         {
-          "title": "Localize noise before choosing a repair",
-          "body": "Follow the matching symptom-chart branch below. Inspect the suspected component rather than replacing it from the sound description alone. If suspension checks do not identify the cause, continue through the broader NVH diagnostic process."
+          "title": "Expose the visible condition before choosing a repair",
+          "body": "Remove excessive mud, dirt and road deposits from the chassis and underbody so they do not hide the parts you are checking.\n\nLook over the front and rear suspension components and their fasteners; springs and their application; front struts; rear shock absorbers; bushings; steering components; and wheel hubs and bearings. The symptom branches below identify specific findings to pursue, including displaced spring seats, out-of-position stabilizer bushings and damaged mounts.\n\nCorrect an obvious cause, where possible, before continuing. A visible fault should lead to the appropriate repair or closer examination; an assembly that merely looks intact has not passed a joint, bearing or damper test.\n\nFor the front-suspension ball-joint branches—wander, sticky steering, front bump noise, turning noise, braking noise and clunk/pop/thump—have the ball joints inspected. A confirmed ball-joint fault calls for replacement of the affected control arm as necessary, using the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) repair destination. These named lower-arm destinations belong to the front-suspension branches; they are not replacement instructions for rear-suspension toe-link or cross-axis joints.\n\nThis preliminary inspection does not call for unplugging wiring, removing brake calipers or dismantling a strut."
+        },
+        {
+          "title": "Enter the pull test only after loading and tires are acceptable",
+          "body": "For a currently present drift or pull, keep the order of [Suspension System Test A](#/document/G1686610): A1 loading, A2 tire pressures and condition, A3 tire-force isolation, A4 brake drag, then A5 alignment.\n\nIf you found uneven loading or a tire problem, correct that first and recheck the original complaint. Move to A3 when loading is even and tire pressures and condition are acceptable. Do not skip straight to an alignment adjustment because the steering wheel happens to be pointing at the scenery."
+        },
+        {
+          "title": "Plan the A3 wheel exchange and record the original pull",
+          "body": "Note which direction the car pulls before changing wheel positions. A3 exchanges the complete front wheel-and-tire assemblies from left to right; it does not call for removing tires from their wheels.\n\nConfirm that the fitted assemblies permit that exchange. The later branch may call for front-to-rear rotation, so confirm compatibility for that exchange separately. If either required exchange is incompatible with the fitted arrangement, stop that swap branch and obtain applicable tire/fitment guidance.\n\nUse the following removal and refitting actions for every wheel moved during this test. See [Wheel and Tire](#/document/G1686507)."
+        },
+        {
+          "title": "Remove the wheel assemblies without heating seized nuts",
+          "body": "With the vehicle in Neutral and correctly positioned and raised on the hoist, remove the five wheel nuts, then take the wheel-and-tire assembly off the hub. Repeat for the other wheel being exchanged and keep track of each assembly's original position.\n\nDo not use heat to free a seized wheel nut. Heat can damage both the wheel and the wheel bearing. Resolve a seized attachment before continuing the exchange."
+        },
+        {
+          "title": "Clean both mounting faces and the central pilot bore",
+          "body": "Before refitting, remove corrosion, dirt and other foreign material from the wheel mounting face and the mating mounting surface on the hub and brake disc or drum, as fitted.\n\nClean the wheel's central pilot bore too. This is the hole that fits around the hub's central locating projection; wipe and clean this bore before applying lubricant. Cleaning only the flat face around it leaves part of the job unfinished.\n\nMake sure any fasteners securing the brake rotor to the hub are secured and do not interfere with the wheel's mounting surface.\n\nThe wheel must seat correctly. Contamination or an interfering fastener can allow the wheel nuts to loosen and the wheel to detach while driving, causing loss of control and serious injury or death."
+        },
+        {
+          "title": "Apply XL-2 only at the pilot interface",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, only where the cleaned wheel pilot bore meets the hub pilot.\n\nKeep the lubricant off the flat wheel-to-brake-disc/drum mounting surfaces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. The wheel-stud and wheel-nut threads must be clean and dry for the stated torque."
+        },
+        {
+          "title": "Position the exchanged wheels and start the nuts by hand",
+          "body": "Place each wheel-and-tire assembly on its intended hub for this stage of the test. Install all five wheel nuts finger tight only at this stage.\n\nFinal wheel-nut tightening is performed with the vehicle resting on its tires."
+        },
+        {
+          "title": "Lower onto the tires and tighten all five nuts in a star pattern",
+          "body": "Before lowering, reapply the parking brake and restore the wheel restraints as the wheels return to the ground. Keep the vehicle restrained for the final wheel-nut tightening.\n\nWith the vehicle resting on its tires, tighten the wheel nuts in a star/cross pattern to 150 lb.ft (204 Nm), using clean, dry stud and nut threads.\n\nTo follow the illustrated sequence, view the wheel face with one nut at the top: tighten the top nut first, lower-left second, upper-right third, upper-left fourth and lower-right fifth. This crosses the wheel instead of proceeding around the circle.\n\nIncorrect sequencing can produce excessive brake-disc runout—side-to-side deviation as the disc turns—which can contribute to brake roughness, shudder and vibration.\n\nRetighten the wheel nuts within 160 km (100 mi) after wheel reinstallation. Wheels can loosen after initial tightening; this follow-up applies after any wheel moved during the diagnosis. Failure to retighten can result in serious injury."
+        },
+        {
+          "title": "Road-test and interpret the A3 result",
+          "body": "After crossing the front assemblies and completing wheel tightening, road-test to establish whether the vehicle still pulls and in which direction.\n\nIf the pull disappears, tire forces caused the complaint and the exchange has corrected it.\n\nIf the pull reverses direction, tire forces are responsible. Test A directs front-to-rear rotation of the wheel-and-tire assemblies. Make that exchange only with compatible fitment, using the same cleaning, lubricant restrictions and refitting actions above, then recheck the complaint.\n\nIf the pull remains in the same direction, continue to A4."
+        },
+        {
+          "title": "Check all four wheels for brake drag at A4",
+          "body": "Raise and support the vehicle using the designated lifting points and the precautions in step 5. Raise all four wheels fully clear of the ground and confirm the vehicle is securely supported. Keep the engine off. With the complete wheel-and-tire assemblies fitted and the transmission in Neutral, release the parking brake and fully release the service-brake pedal before spinning each assembly by hand. Check whether all four turn freely. The [brake-system check](#/document/G1721936) likewise checks wheel rotation with the brakes released; applied brakes would invalidate this check.\n\nIf any wheel does not spin freely, stop this sequence and move to [Brake System diagnosis](#/document/G1721936) to investigate brake drag. This screening result does not identify a particular caliper or bearing as faulty.\n\nIf all four wheels spin freely, continue to A5. Judge this check by free rotation; it does not establish a numerical spin-time or resistance limit.\n\nBefore lowering after this check, reapply the parking brake. Restore the wheel restraints as the wheels return to the ground, and keep the vehicle restrained afterward. Do not lower an unrestrained vehicle in Neutral."
+        },
+        {
+          "title": "Check alignment at A5, then choose the correct destination",
+          "body": "Use alignment equipment and its manufacturer's instructions to check wheel alignment against the correct vehicle specifications. Toe describes the direction the wheels point relative to one another; an alignment check is a measurement, not an invitation to turn adjusters by eye.\n\nIf alignment is outside specification, arrange the appropriate adjustment using the matching specifications and procedure. Test A names front toe adjustment as its repair destination.\n\nIf alignment is within specification, continue with [Power Steering diagnosis](#/document/G1757488) for the remaining drift, pull or wander. Retain the measured alignment results so the next decision rests on actual readings."
+        },
+        {
+          "title": "Use the matching noise branch to localize the next inspection",
+          "body": "For noise, vibration and harshness—usually shortened to NVH—use the diagnostic rows below to match the operating condition to possible sources. Check the indicated area for the named loose, displaced or damaged items before deciding on a repair.\n\nAn electronic listening tool such as Chassis Ear may help isolate the source. Use its manufacturer's attachment and operating instructions, choosing connection areas from the possible sources in the matching branch.\n\nIf the suspension is not the source, continue through [NVH diagnosis](#/document/G1663637) to identify the next likely system. A nearby exhaust, mount or brake can make a perfectly innocent suspension sound guilty."
+        },
+        {
+          "title": "Close the check with a finding and a specific next action",
+          "body": "After a correction, repeat the original driving condition and establish whether the complaint remains. Record what was found, what was changed and the result.\n\nFor pull diagnosis, retain the original pull direction, the result after the front-wheel exchange, any front-to-rear rotation, the four-wheel brake-drag result and the alignment readings reached in the sequence. For noise, record the triggering event and the component area actually implicated.\n\nIf the next action is a repair, identify the exact component and applicable engine or equipment branch. If wheels were reinstalled, include wheel-nut retightening within 160 km (100 mi) in the completion plan."
         }
       ],
       "watchFor": [
         {
-          "title": "Loose attachments",
-          "body": "Loose wheel nuts, suspension fasteners or stabilizer attachments can cause movement and noise; tighten using the applicable component specification."
+          "title": "An unsupported vehicle is a stop condition",
+          "body": "Use the designated lifting points. Never get beneath a vehicle supported only by a jack. Position hoist adapters to avoid interference with suspension, steering, exhaust and mounting brackets, and damage to the axle or rear cover."
         },
         {
-          "title": "Incorrect repair applicability",
-          "body": "The chart's SVT Performance Package hub, 2.3L exhaust/subframe and 3.7L engine-mount references apply only to their stated equipment or engine."
+          "title": "A clean mounting face and a lubricated pilot are different requirements",
+          "body": "Clean both mating mounting faces and the central wheel pilot bore. XL-2 belongs only at the pilot-bore/hub-pilot interface. Keep mounting faces, friction surfaces, studs and nuts free of anti-seize."
+        },
+        {
+          "title": "A sound description is not a replacement order",
+          "body": "The same clunk, rattle or pull can come from several systems. Correct an obvious cause first, then use the matching component examination before replacing parts. A symptom chart does not establish a ball-joint movement limit, bearing-play limit or damper test."
+        },
+        {
+          "title": "Carbon-fiber and alloy wheels need suitable tire machines",
+          "body": "If tire replacement becomes necessary, use a center-clamp tire changer such as Hunter Auto 34, Revolution, TC3900 or equivalent. Do not use a table-top machine that grips inside the wheel and rides on the front flange. Balancing equipment must avoid contact with the wheel face, as with a Hunter Road Force Touch GSP9700. Unsuitable equipment can damage the wheel."
+        },
+        {
+          "title": "Hub destinations have strict applicability",
+          "body": "The general front-hub destination covers the 2.3L, 3.7L and 5.0L. The separate SVT Performance Package front-hub destination covers the 5.2L with that equipment. Neither is a rear-bearing repair procedure. A 5.2L without confirmed SVT Performance Package applicability needs a matching front-hub repair procedure."
+        },
+        {
+          "title": "Keep engine-specific referrals on their own engines",
+          "body": "The exhaust and front-subframe destinations linked here cover the 2.3L only. The left- and right-hand engine-mount destinations cover the 3.7L only. Other engines require matching procedures for those branches."
         }
       ],
       "notes": [
-        "Use the Wheel and Tire procedure for removal, refitting and wheel-nut tightening during the pull test."
+        "Use the owner's literature for tire-rotation intervals.",
+        "The VC label's spring code identifies an application; a ride-height check measures the vehicle's stance. One does not substitute for the other.",
+        "For the front-suspension ball-joint branches, replace the affected control arm as necessary after confirming the joint fault. The Front Lower Arm and Rear Lower Arm destinations named there must not automatically be treated as instructions for rear-suspension control arms, toe-link joints or cross-axis joints.",
+        "Final wheel-nut torque is 150 lb.ft (204 Nm), in a star/cross pattern, with the vehicle resting on its tires and the stud and nut threads clean and dry."
       ],
       "diagnostics": [
         {
-          "finding": "Wander, sticky steering or an off-center wheel",
-          "meaning": "Loading, joint or bearing condition and steering geometry can overlap.",
-          "next": "Inspect arms, ball joints, strut bearings, wheel bearings and steering. Check excessive front toe-out for wander and unequal front/rear toe for an off-center wheel."
+          "finding": "A1: The vehicle is unevenly loaded",
+          "meaning": "Uneven loading is a possible cause of drift or pull and must be addressed before the remaining test.",
+          "next": "Correct the loading condition, explain its effect to the driver and recheck the complaint. With loading even, move to A2."
         },
         {
-          "finding": "Abnormal wear, harshness, bottoming or excessive roll",
-          "meaning": "Pressure, rotation history, cornering, alignment, spring condition and damping can contribute.",
-          "next": "Check tire guidance, toe/camber, ride height and dampers. For sway, inspect loading, stabilizer bushings, links, bar and attachments."
+          "finding": "A2: Tire pressure or tire condition is unacceptable",
+          "meaning": "Incorrect pressure or a tire needing replacement can influence the pull.",
+          "next": "Adjust cold pressures to the VC label or arrange tire replacement as necessary. Use [Wheels and Tires](#/document/G1686502) for detailed tire evaluation. Continue to A3 when pressures and tire condition are acceptable."
         },
         {
-          "finding": "Bump-related squeaks, clunks or rattles",
-          "meaning": "Vertical movement may expose loose, displaced or worn parts.",
-          "next": "Inspect fasteners, spring seats, dampers, boots, jounce bumpers, bushings and joints. Front checks include steering, calipers, hubs, mounts and subframe; rear checks include spring mounts, toe-link and cross-axis joints."
+          "finding": "A3: Pull disappears after exchanging the front assemblies left to right",
+          "meaning": "Tire forces caused the original pull, and the exchange has corrected the concern.",
+          "next": "Record the result and complete the wheel-refitting checks and wheel-nut retightening within 160 km (100 mi)."
         },
         {
-          "finding": "Crunching or ratcheting while turning",
-          "meaning": "Twisting can load strut bearings, spring seats and steering joints.",
-          "next": "Inspect those parts, strut attachments, stabilizer, arms and hubs. A crunch, clunk or grunt specifically from steering stops at full lock is identified as normal."
+          "finding": "A3: Pull reverses direction after exchanging the front assemblies",
+          "meaning": "The direction change identifies tire forces as the cause.",
+          "next": "Rotate the wheel-and-tire assemblies front to rear where the fitted arrangement permits that exchange. Use the wheel cleaning and refitting steps, then recheck the complaint. If fitment prevents the exchange, obtain matching tire/fitment guidance."
         },
         {
-          "finding": "Noise during braking, acceleration or diagonal dips",
-          "meaning": "These conditions load different assemblies.",
-          "next": "For braking, inspect calipers, hubs, arms and mounts. For acceleration, inspect mounts, hubs, exhaust, body and subframe. For dips, inspect body, stabilizer links and subframe."
+          "finding": "A3: Pull remains in the same direction after the front exchange",
+          "meaning": "The test directs the investigation beyond tire-force isolation.",
+          "next": "Proceed to A4 and spin all four wheel-and-tire assemblies by hand on the properly supported vehicle."
         },
         {
-          "finding": "Whine, roar, groan or shimmy",
-          "meaning": "Bearing noise may change with steering; shimmy has several possible sources.",
-          "next": "Inspect bearings for road-speed noise. For shimmy, check wheel nuts, suspension fasteners, bearings and dampers; coast/deceleration shimmy with hard steering also directs attention to excessive positive caster."
+          "finding": "A4: One or more wheels do not spin freely",
+          "meaning": "The brake-drag branch must be investigated before continuing to alignment.",
+          "next": "Use [Brake System diagnosis](#/document/G1721936). Do not identify a particular caliper or bearing as failed from this screening result alone."
+        },
+        {
+          "finding": "A4: All four wheels spin freely",
+          "meaning": "The brake-drag screen permits the sequence to continue.",
+          "next": "Proceed to the equipment-based alignment check at A5."
+        },
+        {
+          "finding": "A5: Alignment is outside specification",
+          "meaning": "Incorrect alignment is a possible source of the pull.",
+          "next": "Arrange the appropriate alignment correction using matching specifications and adjustment instructions. Test A identifies front toe adjustment as the repair destination. Recheck the original concern after correction."
+        },
+        {
+          "finding": "A5: Alignment is within specification but the pull remains",
+          "meaning": "The sequence directs the investigation into the steering system.",
+          "next": "Continue with [Power Steering diagnosis](#/document/G1757488) for drift, pull or wander."
+        },
+        {
+          "finding": "The vehicle wanders",
+          "meaning": "Possible sources include incorrect loading, ball joints, damaged or missing front strut mount bearings, loose or damaged front wheel bearings, suspension or steering components, loose fasteners and excessive total front toe-out.",
+          "next": "Correct loading first. Have the implicated joints, bearings and attachments evaluated before replacement or tightening to their component specifications. Inspect the ball joints; for a confirmed joint fault, install a new affected control arm as necessary through the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) destination. Other repair destinations include [Front Strut and Spring Assembly](#/document/G1692536) and the applicable front hub: [2.3L/3.7L/5.0L](#/document/G1692537) or [5.2L with SVT Performance Package](#/document/G1692554). Check alignment for excessive total front toe-out and use [Power Steering](#/document/G1757488) when steering is implicated. If inspection confirms a damaged or missing front strut mount bearing, install a new bearing as necessary using the strut-assembly procedure. Confirmed loose, worn or damaged front wheel bearings require new bearings as necessary through the applicable hub procedure."
+        },
+        {
+          "finding": "The front bottoms out or rides low",
+          "meaning": "Worn, damaged or incorrect springs and worn front struts are possible sources.",
+          "next": "Use [Ride Height Measurement](#/document/G1686616) to establish the stance before deciding on springs. Compare the spring application with the separate front and rear code mappings in step 1. For a confirmed front spring or strut repair, continue to [Front Strut and Spring Assembly](#/document/G1692536)."
+        },
+        {
+          "finding": "Tires have abnormal or uneven wear",
+          "meaning": "Pressure can contribute to rapid center-rib or inner-and-outer-edge wear. Rotation history, high-speed cornering, excessive front or rear toe, excessive positive or negative camber, and suspension condition are also possible influences. Camber is the wheel's inward or outward tilt.",
+          "next": "Set cold pressures from the VC label and check rotation history against the owner's literature. Use [Wheels and Tires](#/document/G1686502) for the wear investigation, and arrange alignment and suspension evaluation where indicated. Do not diagnose pressure or alignment solely from one wear pattern."
+        },
+        {
+          "finding": "Steering feels sticky or does not return readily",
+          "meaning": "Damaged or worn front strut mount bearings, binding ball joints and steering components are possible sources.",
+          "next": "Have the implicated parts evaluated. Confirmed strut-bearing repairs lead to [Front Strut and Spring Assembly](#/document/G1692536). Inspect the ball joints for binding; a confirmed ball-joint fault calls for a new affected control arm as necessary through the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) destination. Continue steering investigation through [Power Steering](#/document/G1757488). If inspection confirms a damaged or worn front strut mount bearing, install a new bearing as necessary through the front strut-assembly procedure."
+        },
+        {
+          "finding": "The steering wheel is off-center",
+          "meaning": "Unequal side-to-side front or rear toe settings and steering-component problems are possible sources.",
+          "next": "Obtain an alignment check covering front and rear toe. Use the matching front or rear toe adjustment procedure for an out-of-specification result; continue with [Power Steering](#/document/G1757488) if steering components are implicated."
+        },
+        {
+          "finding": "The vehicle sways or rolls excessively",
+          "meaning": "Possible sources include loading, loose wheel nuts, struts or shocks, loose stabilizer bracket-to-frame bolts, worn stabilizer bushings or links, a damaged bar, and worn springs. The stabilizer bar helps resist body roll.",
+          "next": "Correct loading and address loose wheel nuts through the wheel-refitting steps. For confirmed component concerns, use [Front Strut and Spring Assembly](#/document/G1692536), [Rear Shock Absorber](#/document/G1686650), [Front Stabilizer Bar](#/document/G1692533), [Front Stabilizer Bar Bushing](#/document/G1692534), [Front Stabilizer Bar Link](#/document/G1692535), or [Rear Spring](#/document/G1686654), as applicable. Stabilizer bracket bolts require their own specification, not the wheel-nut torque. Replace confirmed worn stabilizer bushings or links, or the bar assembly, as necessary. A damaged or broken stabilizer bar requires a new bar or bar assembly. Replace confirmed worn springs as necessary. Use the matching linked procedure for installation; these decisions do not supply its dismantling or tightening instructions."
+        },
+        {
+          "finding": "The vehicle leans to one side",
+          "meaning": "Uneven or excessive loading, front or rear suspension condition, and incorrect side-to-side ride height are possible sources.",
+          "next": "Address loading, then use [Ride Height Measurement](#/document/G1686616) to establish whether the lean is outside specification. Evaluate the front and rear suspension for the cause before selecting replacement components."
+        },
+        {
+          "finding": "Front squeak, creak or rattle occurs mainly over bumps or rough roads",
+          "meaning": "Vertical suspension movement can expose a loose strut top nut, jounce-bumper concern, displaced stabilizer bushings/isolators/locating pins, steering or tie-rod problems, brake-caliper concerns, lower-arm or ball-joint problems, hub concerns, exhaust or mount concerns, or subframe weld/insulator problems.",
+          "next": "Look for the named displaced stabilizer parts and use the localized finding to choose a destination: [strut assembly](#/document/G1692536), [stabilizer bar](#/document/G1692533), [front stabilizer bushing](#/document/G1692534), [front stabilizer link](#/document/G1692535), [Power Steering](#/document/G1757488), [Brake System](#/document/G1721936), or the applicable front-hub procedure. Inspect ball joints; a confirmed joint fault calls for a new affected control arm as necessary through [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538), as applicable. A jounce bumper—the suspension travel cushion—may require lubrication or replacement after evaluation; the wheel-pilot lubricant is not a specification for that job. Engine-specific destinations are [2.3L Exhaust System](#/document/G1688077), [3.7L Engine Mount LH](#/document/G1681518), [3.7L Engine Mount RH](#/document/G1681519), and [2.3L Front Subframe](#/document/G1686629). Other engines need matching procedures."
+        },
+        {
+          "finding": "Rear squeak, creak or rattle occurs mainly over bumps or rough roads",
+          "meaning": "Possible sources include loose or damaged rear shocks or shock bushings, damaged springs or spring mounts, worn or damaged stabilizer bushings or links, and worn or damaged lower control arms, toe-link ball joints or cross-axis joints.",
+          "next": "Look for the named loose or damaged parts. Confirmed repairs lead to [Rear Shock Absorber](#/document/G1686650), [Rear Spring](#/document/G1686654), [Rear Stabilizer Bar Bushing](#/document/G1686652), or [Rear Stabilizer Bar Link](#/document/G1686653). Rear control-arm, toe-link and cross-axis-joint work needs matching rear-suspension instructions; the lower-arm destinations cited in the front-suspension branches are not substitutes. Inspect the rear lower control arms, toe-link ball joints and cross-axis joints for wear or damage; replace confirmed worn or damaged components as necessary using the matching rear-suspension procedure."
+        },
+        {
+          "finding": "The front crunches or ratchets while turning, away from the specific full-lock-stop condition",
+          "meaning": "Twisting and flexing can load the strut top attachment and bearing, coil spring, strut brackets or seats, stabilizer bar, steering gear, tie-rod ends, hubs and lower-arm ball joints.",
+          "next": "Localize the concern and evaluate those items. Use [Front Strut and Spring Assembly](#/document/G1692536), [Front Stabilizer Bar](#/document/G1692533), [Power Steering](#/document/G1757488), [Tie Rod End](#/document/G1686682), or the applicable front-hub destination for a confirmed finding. Inspect ball joints; replace the affected control arm as necessary for a confirmed joint fault using the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) destination. A strut top nut must be tightened to its own specification."
+        },
+        {
+          "finding": "A crunch, clunk or grunt comes specifically from the steering stops at full left or right lock",
+          "meaning": "This identified steering-stop condition is normal.",
+          "next": "No repair is required for that condition. Keep noises occurring during other parts of steering travel in the separate turning-noise branch."
+        },
+        {
+          "finding": "Noise occurs while braking",
+          "meaning": "Braking applies rearward and downward loads to the suspension and subframe. Possible sources include front brake calipers, hubs, lower arms/ball joints and powertrain mounts.",
+          "next": "Continue with [Brake System](#/document/G1721936) for caliper concerns or the applicable front-hub destination for a localized hub finding. Inspect ball joints; a confirmed joint fault calls for a new affected control arm as necessary through the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) destination. For mount concerns on the 3.7L, use [Engine Mount LH](#/document/G1681518) and [RH](#/document/G1681519). Mount investigation on another engine needs matching instructions."
+        },
+        {
+          "finding": "Noise occurs while accelerating",
+          "meaning": "Powertrain torque and flex can load the mounts. Other possible areas are body structure, hubs, exhaust and subframe welds or insulators.",
+          "next": "Examine the inner fender, bulkhead, seams and pinch welds when the noise is localized to body structure. Relevant component destinations are the applicable front hub, [3.7L Engine Mount LH](#/document/G1681518), [3.7L Engine Mount RH](#/document/G1681519), [2.3L Exhaust System](#/document/G1688077), and [2.3L Front Subframe](#/document/G1686629). Other engine configurations require matching mount, exhaust or subframe guidance."
+        },
+        {
+          "finding": "Noise occurs entering driveways or crossing dips and depressions",
+          "meaning": "Body, subframe and suspension twisting can load body seams and welds, stabilizer links and subframe welds or insulators.",
+          "next": "Localize the noise among the inner fender, bulkhead, seams, pinch welds, stabilizer links and subframe. Confirmed link repairs lead to [Front Stabilizer Bar Link](#/document/G1692535) or [Rear Stabilizer Bar Link](#/document/G1686653). The linked [Front Subframe](#/document/G1686629) destination covers the 2.3L only; body repairs and other subframe configurations need matching instructions."
+        },
+        {
+          "finding": "A clunk, pop, thump or thud sounds like parts striking or shifting under load",
+          "meaning": "A clunk is often repeatable, rhythmic and metallic. Possible sources include loose fasteners, displaced or damaged bushings, worn or damaged struts/shocks, an out-of-position spring or spring seat, and worn or damaged ball joints.",
+          "next": "Look specifically for loose nuts or bolts, displaced bushings, and a displaced or damaged spring or seat. Use the relevant repair procedure before tightening, repositioning or replacement. Confirmed damper repairs lead to [Front Strut and Spring Assembly](#/document/G1692536) or [Rear Shock Absorber](#/document/G1686650). Inspect ball joints; a confirmed fault in the front-suspension ball-joint branch calls for a new affected control arm as necessary through the applicable [Front Lower Arm](#/document/G1692532) or [Rear Lower Arm](#/document/G1692538) destination."
+        },
+        {
+          "finding": "A rapid, repetitive rattle occurs over rough or uneven surfaces at low speed",
+          "meaning": "Possible sources include loose fasteners or brackets; loose or damaged struts, shocks or shock bushings; dust boots; jounce bumpers; damaged springs or mounts; worn control/radius-arm bushings; and worn stabilizer bushings or links.",
+          "next": "Look for loose nuts and bolts and for the named out-of-position or damaged components. Tighten only to the applicable component specification. Arrange adjustment or replacement through the matching repair destination once the responsible area is identified."
+        },
+        {
+          "finding": "A whine, roar or groan generally occurs above 30 mph and becomes more noticeable with steering input",
+          "meaning": "Loose or damaged front or rear wheel bearings are possible sources.",
+          "next": "Arrange bearing evaluation rather than replacing a bearing from the sound alone. For a confirmed front repair, choose [2.3L/3.7L/5.0L Front Hub](#/document/G1692537) or [5.2L SVT Performance Package Front Hub](#/document/G1692554) only when applicable. Rear-bearing repairs need a matching rear procedure."
+        },
+        {
+          "finding": "The vehicle has shimmy",
+          "meaning": "Loose wheel nuts, loose front suspension fasteners, loose front wheel bearings, and struts or shock absorbers are possible sources.",
+          "next": "Address wheel attachments through the wheel-refitting steps. Have suspension attachments and bearings evaluated using their own specifications. Confirmed damper repairs lead to [Front Strut and Spring Assembly](#/document/G1692536) or [Rear Shock Absorber](#/document/G1686650); use the applicable front-hub destination for a confirmed bearing fault."
+        },
+        {
+          "finding": "Shimmy is most noticeable while coasting or decelerating and steering is also hard",
+          "meaning": "Excessive positive caster is a possible source. Caster describes steering-axis tilt and is assessed through alignment measurement.",
+          "next": "Arrange front-suspension and alignment evaluation. Repair or replace a component only after the responsible condition is established."
+        },
+        {
+          "finding": "The ride is rough or harsh",
+          "meaning": "Incorrect tire pressure, struts or shocks, springs, and damaged suspension components are possible sources.",
+          "next": "Check cold pressures against the VC label first. Use [Ride Height Measurement](#/document/G1686616) for the spring/stance branch. Confirmed repairs lead to [Front Strut and Spring Assembly](#/document/G1692536), [Rear Shock Absorber](#/document/G1686650), [Rear Spring](#/document/G1686654), or the matching procedure for another damaged component."
+        },
+        {
+          "finding": "The symptom remains, but the suspension is not identified as its source",
+          "meaning": "Several vehicle systems can create similar noise, vibration or harshness.",
+          "next": "Continue through [NVH diagnosis](#/document/G1663637) using a process of elimination. Preserve the triggering condition and the checks already completed so the investigation moves forward."
         }
       ],
       "verification": [
         {
-          "title": "Repeat the relevant road test",
-          "body": "Recheck the original driving condition after correction to establish whether the complaint remains."
+          "title": "Confirm every refitted wheel is ready for the road",
+          "body": "Before a road test, confirm that mating mounting faces and pilot bores were cleaned, XL-2 was confined to the pilot interface, and all five wheel nuts were finally tightened in the star/cross sequence to 150 lb.ft (204 Nm) with the vehicle resting on its tires and threads clean and dry. This checks completion of the wheel work."
         },
         {
-          "title": "Record the diagnostic result",
-          "body": "Retain the pull direction before and after tire swapping, brake-drag findings and any measured alignment or ride-height results supporting the repair."
+          "title": "Repeat the original condition after correction",
+          "body": "Recheck the same pull or noise condition that started the investigation. Record whether it disappeared, changed or remained. An unrelated quiet drive does not establish that a previously reproducible complaint is corrected."
+        },
+        {
+          "title": "Keep measurements and branch results",
+          "body": "Retain pull directions before and after exchanges, wheel positions, brake-drag screening results, and any alignment or ride-height measurements obtained through the relevant procedures."
+        },
+        {
+          "title": "Complete the wheel-nut follow-up",
+          "body": "Retighten wheel nuts within 160 km (100 mi) after any wheel reinstallation. Initial tightening does not remove this requirement."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686610",
-          "purpose": "Complete inspection, symptom charts and drift/pull Test A."
+          "purpose": "Primary preliminary inspection, suspension and NVH symptom branches, control-arm replacement decisions for confirmed ball-joint faults, and drift/pull Test A."
+        },
+        {
+          "documentId": "G1693185",
+          "purpose": "Diagnostic prerequisites, currently present concern requirement, previous-repair checks and electronic-diagnosis prerequisites."
+        },
+        {
+          "documentId": "G1663651",
+          "purpose": "VIN and VC-label locations, engine/year decoding, tire information and separate front/rear spring-code-to-part-number mappings."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel removal and installation, pilot-bore cleaning and lubrication, clean/dry threads, five-nut tightening sequence, final torque and retightening interval."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Lifting-point identification, support warnings and hoist-positioning precautions."
         },
         {
           "documentId": "G1686616",
-          "purpose": "Measure ride height for sag, lean or bottoming.",
+          "purpose": "Reference-only next step for ride-height measurement on low stance, lean, bottoming or spring-related ride concerns.",
           "mediaId": "G1686616-m0001"
         },
         {
           "documentId": "G1686502",
-          "purpose": "Investigate tire condition and abnormal wear.",
+          "purpose": "Reference-only next step for detailed tire-condition and abnormal-wear diagnosis.",
           "mediaId": "G1686502-m0060"
         },
         {
-          "documentId": "G1686507",
-          "purpose": "Remove and refit wheel-and-tire assemblies."
-        },
-        {
           "documentId": "G1721936",
-          "purpose": "Investigate brake drag and braking-related noise."
+          "purpose": "Reference-only next step for brake drag and brake-caliper-related noise."
         },
         {
           "documentId": "G1757488",
-          "purpose": "Continue steering diagnosis after the specified suspension checks."
+          "purpose": "Reference-only next step for steering concerns and pull remaining after an acceptable alignment check."
         },
         {
           "documentId": "G1663637",
-          "purpose": "Isolate noise or vibration across other possible systems.",
+          "purpose": "Reference-only next step for broader noise, vibration and harshness isolation.",
           "mediaId": "G1663637-m0004"
+        },
+        {
+          "documentId": "G1692532",
+          "purpose": "Reference-only Front Lower Arm repair destination for affected control-arm replacement after a confirmed ball-joint fault in the applicable front-suspension branch."
+        },
+        {
+          "documentId": "G1692538",
+          "purpose": "Reference-only Rear Lower Arm destination for affected control-arm replacement in the applicable front-suspension branch; not a substitute for unspecified rear-suspension joint repairs."
+        },
+        {
+          "documentId": "G1692536",
+          "purpose": "Reference-only next step for front strut, spring, mount-bearing and attachment concerns."
+        },
+        {
+          "documentId": "G1692537",
+          "purpose": "Reference-only front wheel-bearing and hub repair destination for the 2.3L, 3.7L and 5.0L."
+        },
+        {
+          "documentId": "G1692554",
+          "purpose": "Reference-only front wheel-bearing and hub repair destination for the 5.2L with SVT Performance Package."
+        },
+        {
+          "documentId": "G1686650",
+          "purpose": "Reference-only next step for rear shock-absorber and associated bushing concerns."
+        },
+        {
+          "documentId": "G1692533",
+          "purpose": "Reference-only next step for the front stabilizer bar and its attachments."
+        },
+        {
+          "documentId": "G1692534",
+          "purpose": "Reference-only next step for front stabilizer-bar bushing concerns."
+        },
+        {
+          "documentId": "G1692535",
+          "purpose": "Reference-only next step for front stabilizer-bar link concerns."
+        },
+        {
+          "documentId": "G1686654",
+          "purpose": "Reference-only next step for rear springs and spring-mount concerns."
+        },
+        {
+          "documentId": "G1688077",
+          "purpose": "Reference-only exhaust diagnostic destination for the 2.3L."
+        },
+        {
+          "documentId": "G1681518",
+          "purpose": "Reference-only left-hand engine-mount destination for the 3.7L."
+        },
+        {
+          "documentId": "G1681519",
+          "purpose": "Reference-only right-hand engine-mount destination for the 3.7L."
+        },
+        {
+          "documentId": "G1686629",
+          "purpose": "Reference-only front-subframe destination for the 2.3L."
+        },
+        {
+          "documentId": "G1686652",
+          "purpose": "Reference-only next step for rear stabilizer-bar bushing concerns."
+        },
+        {
+          "documentId": "G1686653",
+          "purpose": "Reference-only next step for rear stabilizer-bar link concerns."
+        },
+        {
+          "documentId": "G1686682",
+          "purpose": "Reference-only tie-rod-end repair destination for a confirmed turning-noise-related finding."
         }
       ],
       "hero": null,
@@ -971,7 +1264,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Factory steering, suspension, wheels and tires. Front-hub repair destinations distinguish 2.3L/3.7L/5.0L vehicles from 5.2L vehicles with the SVT Performance Package."
       },
       "relatedGuideIds": [
         "job-aa05c88a21e74077",
@@ -1019,14 +1313,137 @@
         {
           "documentId": "G1663651",
           "sourceHash": "c83df253825e0908a7bd26e5bac350dd5868649d4293edf5eb4839e272421e44"
+        },
+        {
+          "documentId": "G1692532",
+          "sourceHash": "25241658fda81fba33070162efca08976736a7455c58426e31da79c3e18fea68"
+        },
+        {
+          "documentId": "G1692538",
+          "sourceHash": "53ea2a0448751b2a9cd210f2028cb69f62f2cdd664b5928399a09db180ebeba8"
+        },
+        {
+          "documentId": "G1692536",
+          "sourceHash": "cf5bb48271277ef1655c6093035c2a09f7f58ceefeecef5d28581f3633dfb368"
+        },
+        {
+          "documentId": "G1692537",
+          "sourceHash": "94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812"
+        },
+        {
+          "documentId": "G1686650",
+          "sourceHash": "efa0e1e592949099aa501c225cfe4bd574000d4a2ae29913f64f539f57989de8"
+        },
+        {
+          "documentId": "G1692533",
+          "sourceHash": "0c97d583eb2ce43459f3270f0662db79125aadcae19ff32276767d3cc27c6371"
+        },
+        {
+          "documentId": "G1692534",
+          "sourceHash": "5bd7566fb30dfe4763c86d41121201610ff60e60a5947293a3f56f27773d5c96"
+        },
+        {
+          "documentId": "G1692535",
+          "sourceHash": "6aa0c763f427dc4fbb8d1dbfe28d3a059a0690bb446004dccd8c0dd4224cb6a1"
+        },
+        {
+          "documentId": "G1686654",
+          "sourceHash": "15893f90dc6c6a8914e4df2e1ba61e052d1fa10b66d31d4099856c41e65f6818"
+        },
+        {
+          "documentId": "G1692554",
+          "sourceHash": "4066fc0f227995b392bfc015c56fd0dad3a9245df1f74d4cc83bb4cdcf2d3b28"
+        },
+        {
+          "documentId": "G1688077",
+          "sourceHash": "03a06f14cbee952d681ffe5d9bae05b687eafa5cc94e79cf6dec5a9fc48b1103"
+        },
+        {
+          "documentId": "G1681518",
+          "sourceHash": "7b6fa3612f436c7fa79f8b61ec5824b3712869dc560b374c9f8a7e148129aac3"
+        },
+        {
+          "documentId": "G1681519",
+          "sourceHash": "4ca5789f922a157df0ed11c67e9a90085258921cada1fc4aebdc15b291083770"
+        },
+        {
+          "documentId": "G1686629",
+          "sourceHash": "3c681c638c58fe71376bc2a390def31afd935a0dd7353907fb07fbac1e7f747b"
+        },
+        {
+          "documentId": "G1686652",
+          "sourceHash": "4f232fdd7ff25849303c990b1eef903e7b64e5a7c7d9cff35e2e8b5148d55f5a"
+        },
+        {
+          "documentId": "G1686653",
+          "sourceHash": "4922f32b106506e57e79db9caa91b3d64a9994879fcbeb484591f7e538463fe3"
+        },
+        {
+          "documentId": "G1686682",
+          "sourceHash": "e3231ea3173cd8e152b112c979d75dcb8e4284d3a9f915d4e322b780e0633c4f"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "18977ce8f74ab7295a8e61f5d7d9d7de9e389e2e299ae74bd504589f55b4dde7"
-      }
+        "fingerprint": "18977ce8f74ab7295a8e61f5d7d9d7de9e389e2e299ae74bd504589f55b4dde7",
+        "editorialVersion": 2,
+        "editorialFingerprint": "37c9ff194280890f48b857b7f6b2a36ab3e658fce7d603b10490eb76706d1ea5",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "baseline",
+          "title": "Establish the complaint and vehicle baseline",
+          "summary": "Identify the configuration and spring application, check loading and tires, and reproduce the concern.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "inspection",
+          "title": "Gain safe access and inspect",
+          "summary": "Position lifting equipment correctly and uncover visible causes.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "pullsetup",
+          "title": "Prepare the tire-force test",
+          "summary": "Enter Test A in order and confirm that the required wheel exchanges are compatible.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "wheels",
+          "title": "Remove and refit the wheels",
+          "summary": "Exchange assemblies with clean mounting surfaces, controlled pilot lubrication and correct tightening.",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "id": "pullresults",
+          "title": "Interpret pull, brake and alignment results",
+          "summary": "Use the pull direction and subsequent checks to select tire, brake or steering follow-up.",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "id": "noise",
+          "title": "Localize noise and finish the diagnosis",
+          "summary": "Choose the matching symptom branch and document the correction or next repair destination.",
+          "start": 17,
+          "end": 18
+        }
+      ]
     },
     {
       "title": "Adjust front camber at the strut-to-spindle mounting",
@@ -107353,66 +107770,95 @@
     },
     {
       "title": "Replace the fuel filler door spring",
-      "summary": "Release the spring's retaining tab with a screwdriver and fit the replacement into the fuel filler door assembly.",
-      "introduction": "The fuel filler door spring provides spring force for the exterior flap's operation. A retaining tab secures the small spring component in the door assembly. Replacement is a short mechanical job carried out with the filler door open: release the tab, withdraw the component and install its replacement.",
-      "why": "The retaining tab is the key to removal. Pressing it releases the spring from its mounting, allowing the component to move out along the illustrated path. Locating that release point first keeps the work focused on the part designed to disengage.",
+      "summary": "Open the fuel filler door, release the spring's retaining tab with a screwdriver, and slide the replacement into the same mounting.",
+      "introduction": "A fuel flap has a modest job description, yet one little spring can still make it a nuisance. I'll walk you through releasing its retaining tab and fitting the replacement without turning the surrounding assembly into a screwdriver wrestling arena. This procedure applies to 2015 Mustangs with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "The spring supplies spring force for the exterior fuel filler door's movement. Its retaining tab holds the spring component in the door assembly. Releasing that tab before withdrawing the component is the key: the screwdriver operates the catch; it does not need to pry the whole assembly apart.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "fuel filler door spring replacement",
+        "2015 Mustang fuel filler door spring replacement",
         "fuel flap spring",
-        "fuel filler door spring retaining tab"
+        "fuel filler door retaining tab",
+        "fuel door spring removal"
       ],
       "when": {
-        "summary": "When the fuel filler door spring itself requires replacement.",
+        "summary": "Use this procedure when the fuel filler door spring has been identified for replacement.",
         "notes": [
-          "The procedure begins with the fuel filler door open."
+          "The same replacement sequence applies to all four listed engines.",
+          "Access begins with the fuel filler door open."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare the component and tool",
-          "detail": "Have the replacement spring and a screwdriver ready. Use the release-tab illustration to identify the screwdriver contact point before applying pressure."
+          "title": "Have the replacement and screwdriver ready",
+          "detail": "Have a replacement fuel filler door spring suitable for the vehicle and a screwdriver ready. Compare the replacement's shape and retaining-tab position with the installed component before removal."
+        },
+        {
+          "title": "Keep the job within its practical scope",
+          "detail": "This is a spring replacement procedure. It does not establish a spring-force test or a way to open a stuck filler door. If the door cannot be opened, resolve that access problem before starting."
         }
       ],
       "steps": [
         {
-          "title": "Open the door and identify the spring",
-          "body": "Open the fuel filler door. Locate the spring component beside the filler opening and identify its retaining tab using the [replacement illustration](#/document/G1693226). Note how the component sits in its mounting so the replacement can follow the same arrangement."
+          "title": "Open the fuel filler door and locate the spring",
+          "body": "Swing the fuel filler door open and leave it open for access. The spring component sits in a small mounting beside the filler opening; the illustration shows it on the right side of the recessed opening. Opening the door exposes the working area directly.\n\nUse the [fuel filler door spring procedure and illustrations](#/document/G1693226) to identify the small cylindrical component and its retaining tab. I would note its orientation and how far it sits in the mounting before disturbing it—that gives the replacement a useful parking reference."
         },
         {
-          "title": "Press the retaining tab and remove the spring",
-          "body": "Use the screwdriver to press the indicated tab. With the tab released, withdraw the spring from the fuel filler door assembly in the illustrated direction. The image separates these actions: release the tab first, then move the component out."
+          "title": "Press the spring's retaining tab",
+          "body": "Place the screwdriver tip against the retaining tab identified in the close-up illustration. Press the tab to release the spring from the fuel filler door assembly. The close-up marks this release as action 1.\n\nKeep the screwdriver on the tab rather than using the surrounding recess as a prying surface."
         },
         {
-          "title": "Install the replacement",
-          "body": "Reverse the removal sequence to return the replacement spring to the mounting position. Restore the retaining-tab engagement that secured the original component, and confirm the spring is seated in the assembly."
+          "title": "Withdraw the released spring",
+          "body": "With the tab released, slide the spring component out of its mounting along its length, following the withdrawal direction marked as action 2 in the illustration. Keep track of its installed orientation.\n\nIf it remains caught, check that the screwdriver is actually depressing the retaining tab before continuing. More leverage is a poor substitute for finding the catch; little plastic fittings are remarkably unimpressed by determination."
+        },
+        {
+          "title": "Fit and retain the replacement",
+          "body": "Installation reverses removal. Align the replacement with the mounting in the same orientation as the removed component, then slide it back along the removal path in the opposite direction. Seat it in its original position and allow the retaining tab to engage.\n\nCheck that the spring sits in the mounting and that the tab has returned to its retaining position. Simply placing the component in the opening does not finish the job."
+        },
+        {
+          "title": "Check the assembled door",
+          "body": "Remove the screwdriver from the recess. Confirm that the spring remains seated, then close and reopen the fuel filler door through its normal movement. Check that the installed component stays in place and does not obstruct the door.\n\nThis is a completion check of the assembly you have just disturbed, rather than a measurement of spring strength."
         }
       ],
       "watchFor": [
         {
-          "title": "Resistance before tab release",
-          "body": "If the spring remains retained, check that the screwdriver is pressing the indicated tab before continuing withdrawal."
+          "title": "A tab that has not released",
+          "body": "The illustrated sequence releases the tab before withdrawing the spring. If the component will not slide out, return to the release point instead of levering against the surrounding assembly."
         },
         {
-          "title": "Incomplete retention",
-          "body": "A replacement placed in the opening still needs its retaining tab engaged to complete installation."
+          "title": "A replacement that is sitting loose",
+          "body": "The retaining tab must engage as well as the spring being seated. If either condition is missing, correct the installation before treating the job as complete."
         }
       ],
       "notes": [
-        "The close-up illustration shows the release tab more clearly than the overall view of the open door."
+        "The overall illustration establishes access with the door open; the close-up separates tab release from spring withdrawal."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The spring remains held when you try to withdraw it.",
+          "meaning": "The retaining tab may still be engaged; resistance alone does not establish a failed spring or damaged mounting.",
+          "next": "Reposition the screwdriver on the illustrated tab, press it to release the component, and then resume withdrawal."
+        },
+        {
+          "finding": "The replacement will not seat or its retaining tab will not engage.",
+          "meaning": "Installation is incomplete.",
+          "next": "Check the replacement's orientation and alignment against the removed component. Refit it in the reverse removal direction. If it still cannot be retained, stop rather than forcing the mounting."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm seating and retention",
-          "body": "Check that the replacement occupies the original mounting position and is secured by its retaining tab."
+          "title": "Seating and retention",
+          "body": "The replacement occupies the original mounting position and its retaining tab is engaged."
+        },
+        {
+          "title": "Normal door movement",
+          "body": "With the tool removed, the door can be closed and reopened without the replacement obstructing movement or coming out of its mounting."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693226",
-          "purpose": "Fuel filler door spring release-tab removal and reverse-sequence installation.",
+          "purpose": "Fuel filler door spring access, screwdriver-operated retaining-tab release, withdrawal and reverse-sequence installation.",
           "mediaId": "G1693226-m0002"
         }
       ],
@@ -107437,7 +107883,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Exterior fuel filler door and its spring assembly."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -107450,72 +107897,121 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "13bf55c64d17e7247af4df725ee941fb9f08033ba5a508ff2f48877ef4d459f8"
-      }
+        "fingerprint": "13bf55c64d17e7247af4df725ee941fb9f08033ba5a508ff2f48877ef4d459f8",
+        "editorialVersion": 2,
+        "editorialFingerprint": "59bc5282054ce13703bd27c749f76270da723fd9d70fdc8d6790ad024531fde7",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Expose and identify the spring",
+          "summary": "Open the door and establish the component's mounting orientation.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "remove",
+          "title": "Release and remove",
+          "summary": "Depress the retaining tab before withdrawing the spring.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "install",
+          "title": "Install and check",
+          "summary": "Seat the replacement, engage its tab and check normal door movement.",
+          "start": 4,
+          "end": 5
+        }
+      ]
     },
     {
       "title": "Remove and refit the fuel filler door",
-      "summary": "Release the retaining tab, slide the fuel filler door from its hinge and refit it by reversing those actions.",
-      "introduction": "The fuel filler door is the exterior flap that opens to provide access for refueling. The door attaches to its hinge through a sliding connection secured by a retaining tab. This job separates the door from that hinge; it does not require removing the hinge itself. Understanding that attachment makes this a small, focused repair rather than a broader dismantling of the filler area.",
-      "why": "The retaining tab prevents the door from sliding off during normal use. It must be moved back before the sliding connection can release. Pulling on the door without releasing the tab loads the attachment instead of disengaging it, while correct refitting restores both the sliding fit and its retention.",
+      "summary": "Open the fuel filler door, release its retaining tab with a screwdriver and slide the door off its hinge. Reverse those actions to refit it.",
+      "introduction": "The fuel filler door has one small tab doing bouncer duty: until it moves, the door stays on the hinge. I’ll walk you through releasing that attachment without turning a little exterior flap into a big damn project. This procedure applies to the 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "The fuel filler door is the exterior cover over the refueling opening. Its sliding attachment connects it to the hinge, and a retaining tab keeps it from sliding off during use. Moving that tab back lets you remove the door while leaving the hinge in place.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "fuel filler door removal",
-        "fuel filler door replacement",
-        "fuel door retaining tab",
-        "fuel filler door hinge attachment"
+        "2015 Mustang fuel filler door removal",
+        "Mustang fuel door replacement",
+        "fuel filler door retaining tab",
+        "fuel door hinge attachment"
       ],
       "when": {
-        "summary": "When the fuel filler door itself needs replacement or removal.",
+        "summary": "Use this procedure when the fuel filler door itself needs removal, replacement or refitting.",
         "notes": [
-          "A problem with the hinge requires separate assessment; removing the door does not repair the hinge."
+          "This is a door removal and installation procedure, not a test for a refueling fault."
         ]
       },
       "prepare": [
         {
-          "title": "Provide a screwdriver",
-          "detail": "The retaining tab is released with a screwdriver. Identify the tab and sliding attachment before applying pressure."
+          "title": "Have a screwdriver ready",
+          "detail": "The retaining tab releases with a screwdriver. If replacing the door, have the replacement ready so you can refit it through the same sliding attachment."
         },
         {
-          "title": "Arrange access",
-          "detail": "Open the door fully enough to work at its hinge attachment and hold the door as it is released."
+          "title": "Keep the job at the door-to-hinge connection",
+          "detail": "Work from outside the car with the fuel filler door open. This procedure covers separating the door from its hinge; hinge removal, hinge repair and body alignment require separate instructions."
         }
       ],
       "steps": [
         {
-          "title": "Open and identify the attachment",
-          "body": "Open the fuel filler door. Use the [removal and installation procedure](#/document/G1693224) to identify where the door slides onto the hinge and where the retaining tab holds it."
+          "title": "Open the door and locate its retaining tab",
+          "body": "Open the fuel filler door to expose its inner face and hinge attachment. Identify where the door slides onto the hinge and locate the retaining tab at that connection. The second illustration in the [fuel filler door procedure](#/document/G1693224) points the screwdriver toward the tab on the exposed inner face. I’d find that little keeper before putting any pressure on the door."
         },
         {
-          "title": "Release and slide off the door",
-          "body": "Use the screwdriver to pry the retaining tab back, then slide the door from the hinge. Coordinate the release and sliding movement rather than trying to pull the attachment apart."
+          "title": "Release the tab and slide the door off the hinge",
+          "body": "Hold the door so you can control it as the attachment releases. Place the screwdriver at the retaining tab and gently pry the tab back, then slide the door off the hinge while the tab is released.\n\nKeep the screwdriver working on the tab rather than levering against the painted outer edge. Use the sliding connection to separate the parts; do not try to pull them straight apart. If the door resists sliding, pause and check that the tab has cleared the connection before applying more force. The keeper needs persuasion, not a wrestling match."
         },
         {
-          "title": "Refit through the reverse sequence",
-          "body": "Slide the door back onto the hinge in the reverse direction and restore the retaining-tab engagement. The door must be secured to the hinge before normal opening and closing."
+          "title": "Slide the door back onto the hinge and engage the tab",
+          "body": "Position the removed or replacement door at the hinge attachment. Align the same sliding connection and slide the door back on in the opposite direction to removal. Allow the retaining tab to return to its retaining position as the door seats.\n\nCheck that the door is seated and the tab is engaged before letting go. Installation reverses the removal actions; the hinge remains in place."
+        },
+        {
+          "title": "Confirm attachment and normal movement",
+          "body": "With the door still open, gently check that it stays secured to the hinge rather than sliding off. Then close and reopen it, watching that the attachment remains seated throughout the movement.\n\nIf the connection comes loose, reopen the door and revisit the sliding fit and retaining-tab engagement before considering the job finished. These are completion checks for the attachment you disturbed."
         }
       ],
       "watchFor": [
         {
-          "title": "Resistance at the sliding connection",
-          "body": "If the door will not slide free, check that the retaining tab has actually been released before applying more force."
+          "title": "A tab that has not cleared",
+          "body": "Resistance during removal is a reason to recheck the tab release. Increasing force without checking it risks loading the attachment instead of freeing it."
+        },
+        {
+          "title": "Screwdriver contact near paint",
+          "body": "Keep the screwdriver tip focused on the retaining tab and controlled throughout the release so it does not slip across the surrounding surfaces."
         }
       ],
       "notes": [
-        "Keep screwdriver contact focused on the retaining tab to avoid unnecessary contact with the surrounding door surfaces."
+        "No wheel, trim or hinge removal is part of this door replacement sequence."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The door does not slide off after you move the retaining tab.",
+          "meaning": "The release may be incomplete; resistance alone does not establish a failed hinge or door.",
+          "next": "Support the door, recheck the screwdriver position and confirm that the tab is clear before trying the sliding movement again. Stop if it still will not release without force."
+        },
+        {
+          "finding": "The refitted door slides loose from its hinge.",
+          "meaning": "The sliding attachment and retaining tab have not achieved secure retention.",
+          "next": "Reopen the door, check its seating and restore tab engagement. Do not treat the installation as complete while the door can slide free."
+        }
+      ],
       "verification": [
         {
-          "title": "Check retention and movement",
-          "body": "Confirm that the door remains attached to its hinge and opens and closes without the sliding connection coming loose."
+          "title": "The door remains retained",
+          "body": "Confirm that the sliding attachment stays seated and the retaining tab holds the door on the hinge."
+        },
+        {
+          "title": "Opening and closing preserve the attachment",
+          "body": "Close and reopen the door, confirming that it remains attached throughout the movement."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693224",
-          "purpose": "Fuel filler door removal from its hinge and reverse-sequence installation.",
+          "purpose": "Fuel filler door removal by releasing the retaining tab and sliding the door from its hinge, followed by reverse-sequence installation.",
           "mediaId": "G1693224-m0001"
         }
       ],
@@ -107540,7 +108036,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Exterior fuel filler door and hinge."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -107553,8 +108050,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "1da6419e33e41b39e7ea436d2e24353616859667a3c93fba28cfbb94af6dc1e6"
-      }
+        "fingerprint": "1da6419e33e41b39e7ea436d2e24353616859667a3c93fba28cfbb94af6dc1e6",
+        "editorialVersion": 2,
+        "editorialFingerprint": "ff91691e5d662e9d950a0bc8eb1e8c986806a24e9d67adc9759c73986344e409",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Expose the attachment",
+          "summary": "Open the door and identify the sliding connection and retaining tab.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "removal",
+          "title": "Release and remove",
+          "summary": "Move the retaining tab back and slide the door from the hinge.",
+          "start": 2,
+          "end": 2
+        },
+        {
+          "id": "refit",
+          "title": "Refit and check",
+          "summary": "Restore the sliding fit, engage the tab and confirm secure movement.",
+          "start": 3,
+          "end": 4
+        }
+      ]
     },
     {
       "title": "Remove and refit the luggage compartment lid",
@@ -107714,79 +108237,125 @@
     },
     {
       "title": "Remove and refit the coupe A-pillar trim",
-      "summary": "Release the weatherstrip, trim clips, tether anchor and optional speaker connection in sequence to remove the coupe A-pillar panel.",
-      "introduction": "The A-pillar trim covers the interior pillar beside the windshield. On vehicles with a speaker in this panel, it also carries an electrical connection. Removing it involves more than releasing visible trim: a tether remains attached behind the panel and must be disconnected before the panel can come away.",
-      "why": "The clips, tether and speaker lead are separate attachments. Pulling the panel away as though it were held only by clips can load the remaining connection. Moving the weatherstrip aside first opens the panel edge, while controlled clip release allows you to reach the concealed attachments.",
+      "summary": "Move the door weatherstrip aside, release the panel clips and tether, and disconnect the optional speaker before removing the trim. Refit in reverse order.",
+      "introduction": "The A-pillar trim looks like one simple strip of plastic, but behind it there’s a small committee refusing to let go: clips, a tether and sometimes a speaker connection. I work through those attachments in order—“one more tug” is a lousy negotiating strategy here.",
+      "why": "This panel covers the inside of the front roof pillar beside the windshield and, where fitted, houses a speaker. Moving the door weatherstrip aside exposes its edge. Releasing the clips creates access to the tether, a retaining link behind the trim, and the optional speaker connector. Those connections must be released before the panel can leave the car.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "coupe A-pillar trim removal",
-        "A-pillar trim tether",
+        "2015 Mustang coupe A-pillar trim removal",
+        "A-pillar trim tether anchor",
         "A-pillar speaker connector",
-        "windshield pillar interior panel"
+        "windshield pillar interior trim"
       ],
       "when": {
-        "summary": "When the coupe A-pillar panel requires replacement or removal for access behind the trim.",
+        "summary": "Use this procedure when removing or replacing the A-pillar trim on a 2015 Mustang coupe with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
         "notes": [
-          "The illustrated arrangement is left-hand drive and right-side trim; the opposite driving position and side are similar."
+          "The illustrations show the right-hand panel on a left-hand-drive car. The left-hand panel and right-hand-drive arrangement are similar.",
+          "Disconnect and reconnect the speaker electrical connector only if a speaker is fitted."
         ]
       },
       "prepare": [
         {
-          "title": "Identify the concealed attachments",
-          "detail": "Review the [panel removal illustration](#/document/G1692599) before starting. Be prepared to release the clips and tether anchor separately and to disconnect a speaker lead if fitted."
+          "title": "Locate the panel and its access edge",
+          "detail": "Open the door on the side being worked on. Identify the trim running from the dashboard corner up beside the windshield. The door weatherstrip overlaps its door-opening edge; the first illustration places the weatherstrip’s pin-type retainer near the bottom of that edge."
         },
         {
-          "title": "Provide access at the door opening",
-          "detail": "Allow room to move the door weatherstrip aside and support the panel while its remaining attachments are released."
+          "title": "Plan for the concealed attachments",
+          "detail": "Review the [A-pillar trim procedure and illustrations](#/document/G1692599). The removal illustration identifies the initial clip and tether release, the optional speaker connector behind the round grille, and the final release near the dashboard. Keep a hand supporting the panel as these attachments are disconnected."
+        },
+        {
+          "title": "Recognize the release-detail boundary",
+          "detail": "The tether anchor and speaker connector are shown, but their precise latch-release motions are not detailed. Once exposed, identify each release before applying force. If its operation is unclear, pause for attachment-specific guidance rather than prying blindly or pulling on the wiring."
         }
       ],
       "steps": [
         {
-          "title": "Move the weatherstrip aside",
-          "body": "Remove the pin-type retainer and position the door weatherstrip aside. This clears the trim edge for removal; the procedure calls for moving the weatherstrip aside rather than removing it completely."
+          "title": "Remove the weatherstrip retainer and move the seal aside",
+          "body": "Locate and remove the pin-type retainer at the lower end of the illustrated weatherstrip section. Keep it for reassembly.\nMove the door weatherstrip aside along the A-pillar trim edge until that edge is clear. The weatherstrip stays on the car; only the overlapping section needs to be moved out of the way."
         },
         {
-          "title": "Release the initial clips and tether",
-          "body": "Release the trim clips and disconnect the tether anchor as shown in the [complete procedure](#/document/G1692599). Keep control of the panel while working behind it, because releasing the clips does not release every attachment."
+          "title": "Release the initial trim clips",
+          "body": "Support the panel and release the initial clips identified by callout 1 in the [removal illustration](#/document/G1692599). Ease the panel away from the pillar enough to reach behind it.\nExpect it to remain attached: the tether, optional speaker connection and final clips are separate releases. This is the point where patience earns its garage keep."
         },
         {
-          "title": "Disconnect the speaker and remove the panel",
-          "body": "If a speaker is fitted, disconnect its electrical connector. Then release the remaining clips and remove the panel. The illustration identifies the connector and hidden retainers; use those locations to guide the release."
+          "title": "Disconnect the tether anchor",
+          "body": "With the initial clips released, locate the tether attachment behind the panel. The rear-view inset identifies this attachment separately from the trim clips.\nDisconnect the tether anchor while supporting the panel. Do not try to free it by pulling the panel farther away."
         },
         {
-          "title": "Refit in reverse order",
-          "body": "Reverse the removal sequence, restoring the panel clips, optional speaker connection and tether anchor. Return the weatherstrip to its original position and reinstall its pin-type retainer so the trim edge and seal are retained again."
+          "title": "Disconnect the speaker connector if fitted",
+          "body": "If the panel carries a speaker, locate its electrical connector behind the round speaker grille, as shown in callout 2. Release the connector and separate it from the speaker while controlling the panel; pull on the connector body rather than the wires.\nIf there is no speaker connection, continue directly to the final clip release."
+        },
+        {
+          "title": "Release the final clips and remove the panel",
+          "body": "Release the remaining clips at the final removal stage, identified by callout 3 near the panel’s lower end at the dashboard corner. Remove the panel once these clips are free.\nIf it still resists, check which attachment remains engaged before moving it farther. The panel should not be used as a lever against the tether or speaker lead."
+        },
+        {
+          "title": "Begin refitting in reverse removal order",
+          "body": "Bring the panel back into its installed position and restore the clip attachments released in the final removal stage. Keep control of the panel and access to its rear connections while completing the reverse sequence.\nIf a speaker is fitted, reconnect its electrical connector. Then reconnect the tether anchor."
+        },
+        {
+          "title": "Seat the initial clips",
+          "body": "Before closing the gap to the pillar, confirm that the tether is attached and the speaker connector is connected where fitted. Check that the speaker lead is clear of the clip locations.\nAlign and engage the clips released at the start of panel removal. Seat the panel against the pillar, checking that its lower end sits correctly at the dashboard corner."
+        },
+        {
+          "title": "Restore the weatherstrip and pin-type retainer",
+          "body": "Return the displaced weatherstrip over the panel’s door-opening edge in its original position. Reinstall the pin-type retainer removed at the beginning.\nCheck the full section you moved so the seal lies back in place without a folded or trapped edge."
         }
       ],
       "watchFor": [
         {
-          "title": "Unexpected resistance",
-          "body": "Check for an attached tether, connector or clip before increasing the pull on the panel."
+          "title": "A loose panel is still an attached panel",
+          "body": "Releasing the initial clips does not release the tether, optional speaker connector or final clips. Support the panel until all applicable attachments are disconnected."
         },
         {
-          "title": "A concealed connection left behind",
-          "body": "A panel can appear positioned while its tether or speaker lead remains disconnected. Confirm both before completing the refit."
+          "title": "Resistance at the dashboard end",
+          "body": "The lower end has a separate final release. If the upper portion moves but the bottom stays put, return to that release instead of bending the panel."
+        },
+        {
+          "title": "Connections hidden during refitting",
+          "body": "Confirm the tether and optional speaker connection before seating the initial clips. Once the panel is closed against the pillar, those attachments are concealed again."
         }
       ],
       "notes": [
-        "The speaker-disconnection step applies only when that equipment is fitted."
+        "This is a trim removal and refitting procedure, not a diagnosis of speaker faults or noises behind the pillar.",
+        "The completion checks below confirm reassembly; they are not electrical diagnostic tests."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Check the attachment sequence",
-          "body": "Confirm the tether anchor and clips are engaged and the speaker connector is restored where fitted."
+          "finding": "The panel moves after the initial clips release but remains restrained behind it.",
+          "meaning": "The tether anchor or optional speaker connection may still be attached.",
+          "next": "Support the panel, look behind it and disconnect the applicable attachment before continuing."
         },
         {
-          "title": "Check the finished edge",
-          "body": "Confirm the panel is seated and the weatherstrip and pin-type retainer are back in place."
+          "finding": "The upper panel is free but the lower end remains held near the dashboard.",
+          "meaning": "The final clip-release stage is not complete.",
+          "next": "Release the remaining clips identified by callout 3 before removing the panel."
+        },
+        {
+          "finding": "No speaker or speaker connector is fitted to the panel.",
+          "meaning": "The optional electrical-disconnection branch does not apply.",
+          "next": "Continue with the remaining clips during removal, or the tether and clip attachments during refitting."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm the concealed attachments",
+          "body": "Before fully seating the panel, confirm that the tether anchor is reconnected and the speaker connector is restored where fitted."
+        },
+        {
+          "title": "Check panel seating",
+          "body": "Confirm that the initial and final clip locations are engaged and that the panel sits against the pillar with its lower end correctly positioned at the dashboard corner."
+        },
+        {
+          "title": "Check the door-opening edge",
+          "body": "Confirm that the displaced weatherstrip is back in place along the trim edge and its pin-type retainer is installed."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692599",
-          "purpose": "Coupe A-pillar trim removal and reverse-order installation, including tether and optional speaker disconnection.",
+          "purpose": "A-pillar trim removal and reverse-order installation for the coupe, including weatherstrip access, clips, tether anchor and optional speaker connector.",
           "mediaId": "G1692599-m0002"
         }
       ],
@@ -107825,8 +108394,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "5e2659d493b549c6eddb95bbc2d0b191a80b2fe728acdabe39ce7e00f10f0fff"
-      }
+        "fingerprint": "5e2659d493b549c6eddb95bbc2d0b191a80b2fe728acdabe39ce7e00f10f0fff",
+        "editorialVersion": 2,
+        "editorialFingerprint": "165523790ee94e6b770a3b43c47c4deb8a4e802c392db1ce876c4c3baa50536d",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Clear the trim edge",
+          "summary": "Remove the weatherstrip retainer and move the seal aside.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "removal",
+          "title": "Release the panel attachments",
+          "summary": "Work through the initial clips, tether, optional speaker connection and final clips.",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "id": "refitting",
+          "title": "Reconnect and refit",
+          "summary": "Reverse the attachment sequence, seat the trim and restore the weatherstrip.",
+          "start": 6,
+          "end": 8
+        }
+      ]
     },
     {
       "title": "Remove and refit a front door trim panel",
@@ -117861,72 +118456,114 @@
     },
     {
       "title": "Remove and refit the instrument panel center finish panel",
-      "summary": "Release the right-hand trim and center fascia clips, disconnect the optional panel module and refit both panels in reverse order.",
-      "introduction": "The instrument panel center finish panel is the visible fascia across the center and passenger side of the dashboard. Retaining clips secure it to the instrument panel. Some versions also carry an electrical module, so the panel may remain connected to wiring after its clips have released. This job removes the fascia for replacement or access and returns it to its fitted position.",
-      "why": "The right-hand trim panel comes off first to establish the removal sequence. Using an interior trim remover helps release the retaining clips without concentrating force on the decorative face. Supporting the center panel while releasing any electrical connection prevents its weight from pulling on the wiring.",
+      "summary": "Remove the right-hand dashboard trim, release the center finish panel’s clips, disconnect the optional ICM connector and refit both panels.",
+      "introduction": "Thirteen clips give this dashboard trim a surprisingly committed relationship with the car. I’ll walk you through separating them without turning the fascia into a tug-of-war trophy. The center finish panel is the decorative dashboard face around the center vents and across toward the passenger-side vent. It finishes the dashboard’s appearance and conceals the structure behind it; versions with the optional ICM also have an electrical connection to release before the panel can leave the car.",
+      "why": "The small right-hand trim panel comes off first, followed by the larger center finish panel. An interior trim remover lets you work at the retaining clips instead of bending the decorative face. Supporting the released fascia also keeps its optional electrical connection from carrying the panel’s weight.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "instrument panel center finish panel removal",
-        "Mustang dashboard center fascia",
-        "center dash trim replacement"
+        "2015 Mustang instrument panel center finish panel",
+        "Mustang dashboard fascia removal",
+        "Mustang right-hand instrument panel trim",
+        "Mustang center finish panel ICM connector"
       ],
       "when": {
-        "summary": "When the center finish panel needs replacement or removal to reach components behind it.",
-        "notes": []
+        "summary": "For removal, replacement or refitting of the center finish panel on a 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+        "notes": [
+          "The removal sequence applies with or without the optional ICM. Only the connector steps depend on that equipment being fitted.",
+          "This is a trim removal and installation job, not a diagnostic test for the ICM or other dashboard equipment."
+        ]
       },
       "prepare": [
         {
-          "title": "Use the specified trim tool",
-          "detail": "Have an interior trim remover and identify the right-hand trim panel and center finish panel in the complete procedure."
+          "title": "Have an interior trim remover ready",
+          "detail": "Use an interior trim remover to release both panels. Identify the small right-hand trim piece beside the outer edge of the glovebox and the larger fascia extending from the center vent area toward the passenger-side vent."
         },
         {
-          "title": "Allow for an electrical connection",
-          "detail": "Be ready to support the released fascia while checking whether the optional panel-mounted module is fitted."
+          "title": "Plan to support the fascia",
+          "detail": "Keep a hand supporting the larger panel as its clips release, and have somewhere to rest it with its decorative face protected. An equipped panel remains attached to wiring until the ICM connector is disconnected."
+        },
+        {
+          "title": "Recognize the connector limit",
+          "detail": "The ICM connector is identified in the illustration, but its exact latch movement is not detailed. Identify how its release operates before separating it; if that is unclear, obtain connector-specific guidance rather than forcing the connection."
         }
       ],
       "steps": [
         {
-          "title": "Remove the right-hand trim panel",
-          "body": "Use the interior trim remover to release its clips, then remove the panel. Complete this first operation before attempting to withdraw the larger center fascia."
+          "title": "Release and remove the right-hand trim panel",
+          "body": "Start with the narrow trim piece beside the right-hand edge of the glovebox. The [removal illustration](#/document/G1693976) identifies three retaining clips arranged down this piece.\n\nWork the interior trim remover behind the panel edge near the clip locations. Release the clips while supporting the trim, moving the tool to the next retained area rather than bending the whole piece away from the dashboard. Once all three clips are free, remove the trim and set it aside."
         },
         {
-          "title": "Release the center fascia",
-          "body": "Use the trim remover to release the center finish panel clips shown in the illustration. Support the panel as it separates, keeping its movement controlled while checking behind it."
+          "title": "Release the center finish panel’s 13 clips",
+          "body": "Move to the larger fascia surrounding the center circular vent area and extending across to the passenger-side vent. The illustration identifies 13 retaining clips distributed across this panel.\n\nUse the interior trim remover at its edges near the illustrated clip locations. Release the clips progressively, supporting the panel as it separates. If one area remains held, work at that retaining point instead of pulling harder on a distant end. Thirteen clips call for patience, not a stronger swear word.\n\nKeep the released panel close to the dashboard until you have checked for the optional ICM wiring connection."
         },
         {
-          "title": "Disconnect the optional module",
-          "body": "If the panel-mounted module is fitted, disconnect its electrical connector before carrying the fascia away. A panel without that module has no corresponding connector-disconnection step."
+          "title": "Disconnect the optional ICM and remove the fascia",
+          "body": "If the ICM is fitted, support the fascia and locate its electrical connector behind the panel, as shown in the illustration’s inset. Release the connector’s locking feature and separate the connection by its housing without pulling on the wires. With the connection detached, remove the fascia and place it on the prepared surface.\n\nIf the ICM is not fitted, omit that disconnection step and remove the fascia once its retaining clips are free."
         },
         {
-          "title": "Refit in reverse order",
-          "body": "Reconnect the optional module if fitted, position the center fascia and engage its retaining clips. Reinstall the right-hand trim panel after the center panel is back in place."
+          "title": "Reconnect the ICM before seating the center panel",
+          "body": "Bring the center finish panel back to the dashboard and support it close enough to reconnect the wiring without stretching it. If the ICM was disconnected, reconnect its electrical connector and confirm that it is secured before closing the panel against the dashboard.\n\nPosition the wiring so it will not be caught between the fascia and its mounting surfaces. Align the panel’s retaining clips with their receiving locations."
+        },
+        {
+          "title": "Seat the center finish panel",
+          "body": "With the clips aligned, press the fascia into place at the retaining locations so the 13 clips engage. Keep the panel aligned as you work across it; do not use one seated end as a lever to force the other end home.\n\nCheck the perimeter for an evenly seated fit. If a section stands away from the dashboard, check that location for clip alignment or trapped wiring before applying more pressure."
+        },
+        {
+          "title": "Refit the right-hand trim panel",
+          "body": "Install the small right-hand trim piece last. Align its three clips with their receiving locations and press at those locations until the piece is retained.\n\nCheck that its edges sit correctly against the surrounding dashboard and the refitted fascia. Give both panels a gentle hand check for secure retention. The trim should now be holding the dashboard together visually, rather than auditioning as a loose percussion instrument."
         }
       ],
       "watchFor": [
         {
-          "title": "Panel remains tethered",
-          "body": "Released clips do not mean the optional electrical connector has been disconnected."
+          "title": "A released panel can still be connected",
+          "body": "On ICM-equipped cars, support the fascia after its clips release. Do not let the panel hang from its wiring or carry it away before disconnecting the connector."
         },
         {
-          "title": "Localized resistance",
-          "body": "Check for a clip that remains engaged before continuing to pull the fascia."
+          "title": "Resistance concentrated in one area",
+          "body": "A section that remains held during removal calls for checking the nearby retaining clip. Avoid twisting the fascia or pulling from the opposite end to overcome that resistance."
+        },
+        {
+          "title": "A panel that will not sit flush",
+          "body": "During installation, check clip alignment and wiring clearance before pressing harder. A raised edge is a reason to revisit that area, not to increase force across the entire panel."
         }
       ],
       "notes": [
-        "The illustration shows the optional module; its presence is not required for this procedure."
+        "RH means the vehicle’s right-hand side.",
+        "The illustrated fascia has the optional ICM. Its presence does not change the right-hand-trim-first removal sequence.",
+        "Installation reverses removal: restore the optional electrical connection, seat the center finish panel, then install the right-hand trim."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The fascia’s clips have released, but an ICM connector still attaches it to the car.",
+          "meaning": "The panel is mechanically released but remains electrically connected.",
+          "next": "Support the fascia and disconnect the ICM connector before removing the panel completely."
+        },
+        {
+          "finding": "No optional ICM is fitted.",
+          "meaning": "The conditional ICM connector operation does not apply.",
+          "next": "Continue with panel removal or refitting, retaining the same clip-release and installation order."
+        },
+        {
+          "finding": "One area remains retained during removal or stands proud during refitting.",
+          "meaning": "That area has not completed its release or seating operation; this alone does not identify a failed part.",
+          "next": "During removal, check the local clip engagement. During refitting, check clip alignment and wiring clearance before continuing."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm restored fit",
-          "body": "Check that both panels are retained by their clips and that any connector disconnected during removal has been restored."
+          "title": "Confirm both panels are retained",
+          "body": "Check that the center finish panel and right-hand trim sit evenly against their surrounding surfaces and remain secure during a gentle hand check."
+        },
+        {
+          "title": "Confirm the electrical connection was restored",
+          "body": "If you disconnected the optional ICM, confirm that its connector was secured before the fascia was seated and that its wiring was clear of the panel’s seating surfaces. These are reassembly checks, not an ICM diagnostic test."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693976",
-          "purpose": "Center finish panel removal and installation, including initial right-hand trim removal and the optional electrical connection.",
+          "purpose": "Removal and installation of the instrument panel center finish panel, including the three-clip right-hand trim, 13-clip fascia and optional ICM electrical connection.",
           "mediaId": "G1693976-m0002"
         }
       ],
@@ -117951,7 +118588,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Optional panel-mounted ICM, if fitted"
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -117964,8 +118602,27 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "b735404ad3039937ef6c8915d8bc1c0ec3905f0e81837f41689af3cb3779aaaa"
-      }
+        "fingerprint": "b735404ad3039937ef6c8915d8bc1c0ec3905f0e81837f41689af3cb3779aaaa",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c4074952d313c7649099ae6e9b61c4a924e4d1e70d25a93069d92ffab53b538b",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Remove the trim and fascia",
+          "summary": "Release the right-hand trim first, then the center panel and its optional electrical connection.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "refit",
+          "title": "Reconnect and refit",
+          "summary": "Restore the optional connector, seat the center fascia and install the right-hand trim last.",
+          "start": 4,
+          "end": 6
+        }
+      ]
     },
     {
       "title": "Remove and replace the instrument panel upper section",
@@ -152031,70 +152688,130 @@
     },
     {
       "title": "Remove and refit the convertible A-pillar trim panel",
-      "summary": "Remove the sun visor, release the pillar trim in stages, and reconnect any fitted visor and speaker wiring during refitting.",
-      "introduction": "The A-pillar borders the windshield, and its interior trim covers the body member beside the front occupants. On this convertible arrangement, removing the sun visor is the first access step. The panel then releases from retainers and clips. A fitted pillar speaker and an electrically connected sun visor introduce separate connectors that must be dealt with during removal and installation.",
-      "why": "The removal sequence creates access while allowing any attached wiring to be disconnected before the component is carried away. The panel’s retainers are released before the optional speaker connector, followed by the remaining clips. Recognizing these stages helps prevent pulling on a panel that is still mechanically attached or tethered by wiring.",
+      "summary": "Remove the sun visor, release the windshield-pillar trim in stages, and reconnect any fitted visor and speaker wiring during installation. Applies to 2015 Mustang convertibles with the 2.3L, 3.7L or 5.0L engine.",
+      "introduction": "The A-pillar trim looks like an innocent strip of plastic until the sun visor appoints itself head of security. I’ll walk you past that little gatekeeper, then through the panel’s separate attachment and wiring releases. The A-pillar is the body member beside the windshield; this interior panel covers it and, where fitted, carries a speaker.",
+      "why": "Removing the visor opens access to the pillar trim’s upper section. The panel then comes away in stages: release its retainers, disconnect the optional speaker, and release the remaining clips. Keeping that order prevents a partly released panel from becoming a handle for pulling on its own wiring.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "convertible A-pillar trim removal",
-        "windshield pillar interior trim",
-        "convertible pillar speaker connector",
-        "sun visor removal for pillar trim"
+        "2015 Mustang convertible A-pillar trim removal",
+        "convertible windshield pillar panel",
+        "Mustang sun visor removal",
+        "A-pillar speaker connector"
       ],
       "when": {
-        "summary": "When the convertible A-pillar trim needs replacement or removal for access behind it.",
+        "summary": "Use this procedure when replacing the convertible A-pillar trim panel or removing it for access behind the panel.",
         "notes": [
-          "The illustrated arrangement is left-hand drive with the right-side panel shown; right-hand drive and the opposite side are similar.",
-          "Visor and speaker electrical disconnections apply only where those connections are fitted."
+          "Applies to 2015 convertibles with the 2.3L, 3.7L or 5.0L engine.",
+          "The illustrated car is left-hand drive and the right-side panel is shown. Right-hand drive and the left side use a similar arrangement.",
+          "Disconnect visor and speaker wiring only where those connections are fitted."
         ]
       },
       "prepare": [
         {
-          "title": "Identify the fitted connections",
-          "detail": "Check whether the sun visor has an electrical connection and whether the pillar panel carries a speaker. Plan to support each component while disconnecting its wiring."
+          "title": "Locate the visor attachment and pillar panel",
+          "detail": "Find the small visor mounting cap beside the upper end of the A-pillar trim. Identify the panel running from the roof corner down to the dashboard. The illustrations in the [removal and installation procedure](#/document/G1692609) show the visor clip, pillar attachment points and connector locations."
         },
         {
-          "title": "Understand the attachment sequence",
-          "detail": "Use the procedure and illustration to identify the visor cap and clip, followed by the pillar retainers and remaining clips. The speaker connection is released between the panel’s two mechanical release stages."
+          "title": "Plan for equipment-dependent wiring",
+          "detail": "Allow yourself to support the visor as its mounting releases and the pillar panel as it moves inward. A wired visor and a pillar-mounted speaker each have their own connector; neither component should hang from its wires."
+        },
+        {
+          "title": "Keep the job within the illustrated attachment arrangement",
+          "detail": "Keep the removed visor cap and clip together for refitting. If replacing the panel, have a matching panel for the side and fitted speaker arrangement. This procedure covers the illustrated clip-and-retainer assembly; an attachment that differs from it needs matching instructions before you force it."
         }
       ],
       "steps": [
         {
-          "title": "Remove the sun visor",
-          "body": "Remove the sun visor cap, release its clip, and remove the visor. If equipped, disconnect its electrical connector while keeping the visor supported."
+          "title": "Remove the sun visor mounting cap",
+          "body": "Start at the visor mounting point beside the top of the pillar trim. Remove the small cap shown at the outer end of the visor in the first illustration. This exposes the retaining clip beneath it. Keep the cap for installation."
         },
         {
-          "title": "Release the pillar retainers",
-          "body": "Release the A-pillar panel retainers as shown. This is the initial panel-release stage; the remaining clips still need to be released before removal is complete."
+          "title": "Release the visor clip and lower the mounting",
+          "body": "Support the visor and release the retaining clip exposed beneath the cap. The illustration identifies this clip separately from the cap.\n\nWith the clip released, rotate the visor mounting downward out of its seated position, following the curved movement shown in the inset. Control the visor as it comes free; do not carry it away yet if wiring remains attached. The cap was only the opening act."
         },
         {
-          "title": "Disconnect the speaker and remove the panel",
-          "body": "If a speaker is fitted, disconnect its electrical connector. Then release the remaining clips and remove the A-pillar trim panel."
+          "title": "Disconnect fitted visor wiring and set the visor aside",
+          "body": "If the visor has an electrical connection, keep the visor supported and disconnect the plug at its mounting, as shown in the connector inset. Separate the connector by its housing rather than pulling its wires.\n\nIf no electrical connection is fitted, there is no unplugging step. Once the mounting and any connection are free, remove the visor and set it aside."
         },
         {
-          "title": "Refit in reverse order",
-          "body": "Reverse the removal sequence, restoring the panel clips, any speaker connection, and the retainers. Reconnect the visor wiring if fitted, reinstall the visor, and restore its clip and cap."
+          "title": "Release the A-pillar panel retainers",
+          "body": "With the visor removed, work at the upper and intermediate attachment positions indicated in the second illustration. Release the retainers by drawing the trim away from its mounting surface toward the cabin at those positions.\n\nKeep the panel supported and move it only far enough to gain access behind it. This is the first release stage: the remaining clips still hold the panel, and a fitted speaker still has wiring attached. A little movement is progress, not permission to yank."
+        },
+        {
+          "title": "Disconnect the speaker connector, if fitted",
+          "body": "If the pillar panel carries a speaker, reach behind the loosened panel and disconnect the speaker electrical connector shown in the inset. Support the panel while separating the connector housing; do not use the wire as a pull cord.\n\nIf there is no speaker connection, continue directly to the remaining clips."
+        },
+        {
+          "title": "Release the remaining clips and remove the panel",
+          "body": "Release the remaining panel clips after the retainers and any speaker connector are free. Lift the lower end clear of the dashboard area in the upward direction shown by the final removal arrow, then remove the panel.\n\nBefore carrying it away, confirm that no attachment or wire still tethers it to the car. If it stops moving, locate what remains engaged rather than increasing the pull."
+        },
+        {
+          "title": "Position the panel and restore the final-release clips",
+          "body": "Installation reverses the removal sequence. Bring the panel back into position and locate its lower end at the dashboard area. Align and engage the clips that were released last during removal.\n\nKeep the first-stage retainer area accessible for the speaker connection. Guide any wiring clear of the clip locations as the panel goes back into place."
+        },
+        {
+          "title": "Reconnect the speaker and seat the panel retainers",
+          "body": "If a speaker connector was disconnected, reconnect it while you can still reach behind the panel. Then align the upper and intermediate retainers with their mounting points and press the trim into its seated position at those attachment locations.\n\nFor a panel without a speaker connection, proceed directly to seating the retainers. Confirm the panel sits consistently along the pillar before reinstalling the visor."
+        },
+        {
+          "title": "Reconnect and reinstall the sun visor",
+          "body": "Support the visor near its mounting and reconnect its electrical connector if one was disconnected. Return the visor mounting through the reverse of the downward removal movement, keeping the wiring clear of the attachment.\n\nSeat the visor mounting, restore the retaining clip, and reinstall the cap over it. The little gatekeeper can have its job back once everything behind it is secured."
         }
       ],
       "watchFor": [
         {
-          "title": "A component still attached by wiring",
-          "body": "A released visor or panel may remain connected electrically. Disconnect the applicable connector before moving it away."
+          "title": "Wiring behind a released component",
+          "body": "A loose visor or pillar panel can still be electrically connected. Support it and disconnect the applicable plug before moving the component away."
+        },
+        {
+          "title": "Two separate panel-release stages",
+          "body": "The pillar retainers release before the optional speaker connection; the remaining clips release afterward. Do not treat the first movement of the panel as complete removal."
+        },
+        {
+          "title": "Resistance during removal or refitting",
+          "body": "Stop and check the attachment location if the panel will not move or seat. Confirm clip alignment and that wiring is clear before applying more pressure."
         }
       ],
-      "notes": [],
-      "diagnostics": [],
+      "notes": [
+        "Retainers and clips are the attachments that hold the trim to the body. The procedure treats them as separate release stages, so preserve that sequence during removal and reverse it during installation.",
+        "This is a removal and refitting procedure, not a test for speaker faults or interior noises."
+      ],
+      "diagnostics": [
+        {
+          "finding": "The released visor still has an electrical connector attached.",
+          "meaning": "The car has the equipment-dependent visor connection.",
+          "next": "Support the visor, disconnect its plug, and then set the visor aside. Reconnect it before seating the mounting during installation."
+        },
+        {
+          "finding": "A speaker connector is present behind the loosened pillar trim.",
+          "meaning": "The panel remains electrically tethered after its initial retainers release.",
+          "next": "Disconnect the speaker before releasing the remaining clips and removing the panel. During installation, reconnect it before seating the initial retainers."
+        },
+        {
+          "finding": "The panel moves at the initial retainers but remains attached.",
+          "meaning": "Initial movement does not establish that the remaining clips or optional wiring are free.",
+          "next": "Check for the speaker connection, disconnect it if fitted, then release the remaining clips and lift the lower end clear."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm attachments and connections",
-          "body": "Confirm the pillar panel’s retainers and clips are engaged, any speaker and visor connectors are reconnected, and the sun visor clip and cap are restored."
+          "title": "Check the pillar panel seating",
+          "body": "Confirm the lower end is located correctly and the clips and retainers are engaged. Look along the panel edges for a section left standing away from its mounting; recheck alignment there before pressing it home."
+        },
+        {
+          "title": "Account for the electrical connections",
+          "body": "Confirm every visor or speaker connector disconnected during removal has been reconnected, with its wiring clear of the panel attachments."
+        },
+        {
+          "title": "Check the visor assembly",
+          "body": "Confirm the visor mounting is retained and its cap is installed. Move the visor through its normal folding movement to check that it is secured and does not catch the refitted trim."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692609",
-          "purpose": "Remove and install the convertible A-pillar trim, including sun visor access and equipment-dependent electrical connections.",
+          "purpose": "Illustrated removal and reverse-order installation of the convertible A-pillar trim, including sun visor access and optional visor and speaker electrical connections.",
           "mediaId": "G1692609-m0002"
         }
       ],
@@ -152144,8 +152861,34 @@
               "end": 436
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "474c8d0310233be6748dd42fada80b41afd0bead55bfea47e55e5bb3acaade41",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "visor",
+          "title": "Remove the sun visor",
+          "summary": "Expose and release the visor mounting, then disconnect fitted wiring.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "panel",
+          "title": "Release and remove the pillar trim",
+          "summary": "Release the retainers, unplug the optional speaker, and free the remaining clips.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "refit",
+          "title": "Refit the panel and visor",
+          "summary": "Restore attachments and electrical connections in reverse removal order.",
+          "start": 7,
+          "end": 9
         }
-      }
+      ]
     },
     {
       "title": "Adjust Convertible Door Glass for Correct Seal Fit",

@@ -5539,7 +5539,9 @@
         "battery-connections"
       ],
       "notes": [
-        "Do not bridge the battery terminals with tools. A replacement decision should follow the condition assessment."
+        "Applicability remains the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine.",
+        "Clean, sound connections can complete this maintenance task without battery removal, tray removal, charging or drain testing.",
+        "Battery replacement and repairs to damaged cables, clamps or mounting components are separate operations."
       ],
       "relatedGuideIds": [
         "service-inspection",
@@ -5548,69 +5550,145 @@
         "battery-drain-diagnosis"
       ],
       "id": "battery",
-      "title": "Battery connections: check the path before replacing the battery",
+      "title": "Battery connections: inspect, clean and reconnect",
       "categoryId": "electrical",
       "hero": {
         "documentId": "G1692362",
         "mediaId": "G1692362-m0001"
       },
-      "summary": "Inspect connections and assess battery condition when starting performance changes.",
-      "introduction": "Starting demands a strong electrical path as well as a charged battery. Corrosion, a poor connection or a cable problem can interfere with that path. A regular connection check is useful maintenance; replacing the battery on a guessed calendar interval is a different decision.",
-      "why": "A weak-start symptom can involve the battery, charging system, cables or an electrical drain. Looking at connections first gives diagnosis better evidence.",
+      "summary": "Check the connections on your 2015 Mustang, clean corrosion when needed, and complete the reconnection checks before blaming the battery.",
+      "introduction": "I start a weak-start investigation with the damn connections. This guide covers connection inspection and cleaning on the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine, including safe disconnection, reconnection and the applicable window and engine relearning steps. Battery replacement, charging and electrical testing remain separate jobs.",
+      "why": "Starting needs a sound electrical path as well as a battery that can do its job. Ford lists connection maintenance and battery-performance inspection separately, so clean terminals earn you a completed maintenance task—not a battery-health certificate. That distinction can save a perfectly unnecessary parts purchase. [Ford owner checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)",
       "when": {
         "summary": "Check battery connections every six months and clean as needed. Battery performance is part of the recommended multi-point inspection.",
         "notes": []
       },
       "prepare": [
         {
-          "title": "Review battery precautions",
-          "detail": "Keep sparks and ignition sources away and use the appropriate personal protection."
+          "title": "Prevent an unexpected start",
+          "detail": "Keep the vehicle stationary with the parking brake applied. Begin with the ignition off and the key removed. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup so someone cannot start the engine during your work. The window-initialization branch briefly requires powered window operation; keep the engine stopped during that cable work. [Service precautions](#/document/G1693189), [parking brake](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web), [window initialization](#/document/G1957566)"
         },
         {
-          "title": "Read the disconnect procedure before cleaning work",
-          "detail": "A task that requires disconnection needs the correct sequence and any post-connection considerations."
+          "title": "Protect against gas, acid and lead",
+          "detail": "Work with adequate ventilation. Keep flames, sparks and smoking materials away: battery gases can explode. Shield your face and protect your eyes against acid splashes; avoid acid contact with skin or clothing. Keep children away and wash your hands after handling terminals because they contain lead compounds. If acid contacts skin or eyes, flush immediately with water for at least 15 minutes and obtain prompt medical attention. If swallowed, contact a physician immediately. [Ford battery precautions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Gather the inspection and cleaning kit",
+          "detail": "Have a light, a container for the cover retainers, a tool matching the actual retainers, and a wrench or socket matching the terminal-clamp nuts. Cleaning needs a wire brush; Ford also permits baking soda mixed with water to neutralize acid. Have a torque wrench capable of 44 lb.in (5 Nm) for reconnection. Keep tools from bridging terminals or contacting other conductive parts while touching a terminal. [Terminal access and torque](#/document/G1692356), [Ford cleaning method](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Keep the underhood work contained",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Review the safety information for any materials used. With the ignition off, inspect the cooling fans for visible damage; do not continue underhood work with a cracked or separating fan. Fans can operate with the ignition off. Stay outside their operating area; work nearby requires disabling them first. This connection service leaves the battery, hold-down and tray installed. [Service precautions](#/document/G1693189), [battery mounting](#/document/G1692362)"
+        },
+        {
+          "title": "Plan for windows if you disconnect",
+          "detail": "If one-touch-up windows are fitted, read steps 6, 10 and 13 before removing a cable. Ford requires an existing window motor to be de-initialized by interrupting its power while the glass is moving before initialization. A helper makes the battery-cable method practical. Convertible models do not have one-touch-up or bounce-back features, so that branch does not apply to them. [Window initialization](#/document/G1957566)"
         }
       ],
       "steps": [
         {
-          "title": "Inspect the connections",
-          "body": "Look for an obvious connection problem or corrosion and assess what work is actually needed."
+          "title": "Record what brought you here",
+          "body": "Note the starting symptom, any battery-related message and whether the Mustang has been parked for an extended period. Normal electrical loads with the ignition off can discharge a battery during storage; that history helps explain the complaint without making replacement the automatic answer. [Discharge background](#/document/G1692355)"
         },
         {
-          "title": "Clean or correct safely",
-          "body": "Use the specified battery procedure rather than disturbing terminals with the electrical system in an inappropriate state."
+          "title": "Open and support the hood",
+          "body": "Pull the hood-release handle under the left side of the instrument panel. Slightly lift the hood, push the secondary release lever toward your left, then open the hood and support it with its strut. Confirm the support is engaged before reaching underneath. [Ford hood access](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539650&Uid=G1634784&ProcUid=G1642930&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Verify starting and charging as needed",
-          "body": "If the concern remains, test the battery and related system instead of assuming that cleaning proves the battery is healthy."
+          "title": "Uncover the battery",
+          "body": "Remove the battery cover’s three retainers, then lift the cover away. Keep the retainers together. Leave both terminal-clamp nuts untouched while making the initial inspection. [Battery-cover access](#/document/G1692356)"
+        },
+        {
+          "title": "Inspect the connections, cables and mounting",
+          "body": "Identify positive and negative from the battery markings. Move the positive cable’s protective cover aside to see its connection. [Terminal access](#/document/G1692356)\n\nMy visual checklist is simple: look around both posts and clamps for crusty deposits, a visibly displaced clamp, missing or damaged hardware, or cracks. Follow the accessible cables with your light and look for split insulation, exposed strands and damaged cable ends. Also look for case damage, unexplained wetness and a missing or displaced hold-down. These are observations to investigate, not electrical test results.\n\nLeave the battery and hold-down installed. Removing the mounting hardware is part of battery extraction, not connection inspection or routine terminal cleaning. [Battery mounting](#/document/G1692362)"
+        },
+        {
+          "title": "Choose the safe branch",
+          "body": "If the connections are clean, correctly positioned and show no visible concern, leave them connected and continue at step 11. Ford calls for cleaning when necessary; disconnection is not a compulsory souvenir of every inspection. [Ford connection checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)\n\nIf corrosion needs cleaning and the components otherwise appear sound, continue through the service steps. Ford’s cleaning method requires removing the cables from the terminals first. [Ford battery cleaning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nAs a conservative handling rule, stop manipulation if you find suspected leakage, a damaged case, exposed conductors or unsafe connection hardware. Unexplained wetness is not automatically battery acid, but it needs assessment before cleaning or a starting check. Record the location and arrange repair assessment; extra wrench force is not a repair."
+        },
+        {
+          "title": "Disconnect negative first",
+          "body": "For ordinary disconnection, keep the ignition off. Loosen the negative terminal-clamp nut, lift the connection from its post and position the cable aside so it cannot return to the post. Disconnecting negative alone interrupts vehicle power on the normal single-battery installation; positive need not be removed merely to interrupt power. Cleaning both connections does require the positive cable removed next. [Negative-cable procedure](#/document/G1692356)\n\nIf equipped with one-touch-up windows, an existing motor must first be de-initialized by losing power while its glass is moving. With the engine stopped, coordinate with a helper operating the affected window so negative-cable removal interrupts power during movement. Keep everyone and everything clear of the glass. Once the cable is aside, switch the ignition off and remove the key again. Any applicable motor that was not moving at that interruption is addressed in step 10. [Existing-motor preparation](#/document/G1957566), [accidental-start precautions](#/document/G1693189)\n\nIf the vehicle has additional batteries, disconnecting only one does not isolate its electrical system. All batteries must be disconnected to remove vehicle power; have an added or unfamiliar installation assessed before proceeding. [Ford isolation warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Disconnect positive for cleaning",
+          "body": "With negative already disconnected and positioned aside, move the positive cable cover aside, loosen the positive terminal-clamp nut and lift the cable connection from its post. Position it clear of the post. Keep the disconnected ends from slipping back onto their terminals, and keep conductive tools under control. [Positive-cable procedure](#/document/G1692356)"
+        },
+        {
+          "title": "Clean and inspect the exposed connections",
+          "body": "With both cables removed, use a wire brush to remove corrosion from the battery terminals and the mating surfaces of the cable clamps. Ford permits a baking-soda-and-water solution to neutralize acid. Keep your face and eyes protected throughout the work. [Ford cleaning method and precautions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nRemove the loosened residue and leave the battery top clean and dry. Inspect the now-visible contact surfaces for cracks, broken hardware or other damage previously hidden by deposits. If cleaning exposes a defect, stop and obtain repair assessment before reconnecting or starting. The aim is a usable connection, not a shiny disguise for a broken clamp."
+        },
+        {
+          "title": "Reconnect positive, then negative",
+          "body": "After cleaning is complete and no unsafe condition remains, refit the positive cable connection to its post. Tighten its clamp nut to **44 lb.in (5 Nm)** and restore its protective cover. Refit negative last and tighten its clamp nut to **44 lb.in (5 Nm)**. These are inch-pounds, not foot-pounds. [Terminal reconnection](#/document/G1692356)\n\nIf only negative was disconnected for another supported part of this workflow, reconnect only negative; leave an untouched positive connection alone. Do not try to compensate for damaged hardware by exceeding the specified torque. [Disconnect/connect sequence](#/document/G1692356)"
+        },
+        {
+          "title": "Finish preparation for any remaining window motor",
+          "body": "Skip this step if no one-touch-up window requires initialization, or if all applicable existing motors lost power while their glass was moving in step 6. Convertible models skip this branch. [Window applicability and preparation](#/document/G1957566)\n\nFor an existing motor that still needs de-initializing, keep the engine stopped and have your helper operate that window. Interrupt its movement by disconnecting negative only, using step 6. Switch the ignition off, then reconnect negative and tighten its clamp nut to **44 lb.in (5 Nm)** using step 9. Repeat for another applicable motor only if necessary. Positive stays connected during these negative-only interruptions. Complete all cable work before starting the engine. [Motor de-initialization](#/document/G1957566), [negative-only interruption and torque](#/document/G1692356)\n\nThe actual window-learning sequence follows in step 13, after the battery area is reassembled."
+        },
+        {
+          "title": "Restore the covers and close the hood",
+          "body": "Confirm the positive cable cover is in place. Restore any battery vent tube or shield displaced during cleaning. Refit the battery cover and its three retainers, making sure the cover is seated and retained. [Cover installation](#/document/G1692356), [Ford post-cleaning restoration](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nAccount for tools, the brush and your light. Remove the hood support from its catch and secure it correctly. Lower the hood and let it drop under its own weight through the final **8–12 in (20–30 cm)**. Confirm it is latched. [Ford hood closing](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539650&Uid=G1634784&ProcUid=G1642930&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nIf no cable was disconnected, skip the relearning steps and continue at step 15. If an unsafe condition remains unresolved, defer starting and driving."
+        },
+        {
+          "title": "Begin the post-disconnection relearn",
+          "body": "Proceed only after the connection work is complete, the hood is latched and no unresolved damage or suspected leak remains. Keep the parking brake applied. Select **Park (P)** for an automatic or **Neutral (N)** for a manual transmission, switch off accessories, press the brake pedal and start the vehicle. Run the engine until it reaches normal operating temperature. During warm-up, reset the clock and radio presets as needed and complete the applicable window reset in step 13. [Ford post-disconnection sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Initialize the applicable one-touch windows",
+          "body": "For each applicable motor prepared in steps 6 or 10, keep the door **closed** throughout initialization. Keep hands, body parts and objects completely clear of the glass: during this procedure the window closes with high force and cannot detect an obstruction. Never use a hand or object to test protection during initialization. Convertible models do not have the one-touch-up or bounce-back features covered by this branch. [Window initialization and warning](#/document/G1957566)\n\nStart with the window fully open. Hold the window switch upward at the **second detent**—the full switch position used for one-touch operation—until the glass reaches the upper stop, then continue holding for **at least 2 seconds**. Release the switch. Hold it downward at the second detent until the glass reaches the bottom, then continue holding for **at least 2 seconds**. Cycle the glass up and down once more to establish its lower soft stop. Finally, check one-touch up and one-touch down operation. Repeat for each applicable window. [Complete learning sequence](#/document/G1957566)\n\nIf the functional check fails, do not record the reset as complete; arrange window-system assessment."
+        },
+        {
+          "title": "Complete the engine relearn",
+          "body": "After the engine reaches normal operating temperature, allow it to idle for **at least one minute**. Then, when ready to drive, release the parking brake and drive at least **10 mi (16 km)** to complete the idle- and fuel-trim relearn. Ford notes that incomplete learning can affect idle quality. [Ford relearning instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nSome drive behavior can change while the powertrain control module relearns its adaptive settings. Record persistent or concerning symptoms instead of dismissing everything as relearning. [Adaptive-strategy note](#/document/G1692356)"
+        },
+        {
+          "title": "Assess the result and choose the next job",
+          "body": "If no unsafe condition remains, observe the starting behavior after reassembly. Record what you found, whether you cleaned the connections, and whether the original symptom changed. A better start is useful evidence; it does not measure battery capacity or charging performance. Ford treats battery performance as a separate inspection item. [Ford battery-performance check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)\n\nIf starting remains poor, continue with [battery testing and charging](#/maintenance/battery-testing-charging). If a charged battery repeatedly goes flat, use [battery-drain diagnosis](#/maintenance/battery-drain-diagnosis). Ford requires a fully charged, assessed battery before drain testing; active low-battery warnings must be addressed first. [Drain-test prerequisites](#/document/G1692357)"
         }
       ],
       "watchFor": [
         {
-          "title": "A repeat low-charge condition",
-          "body": "Include charging performance and possible drains in diagnosis."
+          "title": "Wetness or damage changes the plan",
+          "body": "Treat suspected leakage, case damage, exposed conductors or unsafe clamps as a reason to stop manipulation and defer starting until assessed. Cleaning is appropriate for otherwise sound connections; it cannot repair damaged parts."
         },
         {
-          "title": "Changes after disconnection",
-          "body": "The vehicle may need to relearn adaptive behavior; follow the reconnection guidance rather than immediately replacing unrelated parts."
+          "title": "A short idle is not a recharge",
+          "body": "Ford says a deeply discharged battery will not return near full charge through a short idle such as 15 minutes. Use the separate external-charging workflow. The post-disconnection idle relearn is not a charging treatment, however convenient that bullshit would be. [Charging guidance](#/document/G1692355)"
+        },
+        {
+          "title": "A protection message is not a replacement verdict",
+          "body": "The battery management system can temporarily switch off electrical features to protect battery charge. Ford says the associated notification does not, by itself, establish an electrical fault or a need for a new battery. [Ford battery-management explanation](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Connection service is not a new-battery reset",
+          "body": "Ford requires a scan-tool Battery Monitoring System reset when installing a new battery. Reconnecting the existing battery after cleaning is a different job; do not substitute an invented reset ritual. [New-battery requirement](#/document/G1692362)"
         }
       ],
       "procedures": [
         {
-          "documentId": "G1692362",
-          "purpose": "Service the battery and its mounting."
+          "documentId": "G1692356",
+          "purpose": "Battery-cover access, cable disconnection order, explicit reconnection order and terminal-clamp torque."
         },
         {
-          "documentId": "G1692356",
-          "purpose": "Disconnect and reconnect correctly."
+          "documentId": "G1693189",
+          "purpose": "Accidental-start prevention, remote-start disabling, personal protection and relevant underhood precautions."
+        },
+        {
+          "documentId": "G1957566",
+          "purpose": "Existing-window-motor de-initialization, applicable initialization sequence, glass hazard and functional checks."
+        },
+        {
+          "documentId": "G1692362",
+          "purpose": "Distinguish connection maintenance from battery extraction and the new-battery BMS reset."
         },
         {
           "documentId": "G1692355",
-          "purpose": "Use the battery-charging procedure."
+          "purpose": "Explain storage discharge and distinguish external charging from a brief idle."
         },
         {
           "documentId": "G1692357",
-          "purpose": "Investigate an abnormal electrical drain."
+          "purpose": "Retain the applicable post-reconnection window requirement and route repeat discharge to a properly prepared drain investigation."
         }
       ],
       "sourceRefs": [
@@ -5629,8 +5707,107 @@
         {
           "documentId": "G1692357",
           "sourceHash": "e78769a2087a9eb11dace99442357b7cbc4ec964308aad039166b6fc03c7ec62"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1957566",
+          "sourceHash": "592cddfd800fabd75ef9bbd517bceba85a9a6713ed1e7e2bb72bb083f122fb63"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "connection-inspection",
+          "title": "Open and inspect",
+          "summary": "Expose the connections and decide whether cleaning is appropriate.",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "id": "terminal-service",
+          "title": "Disconnect, clean and reconnect",
+          "summary": "Service sound connections in the correct order and prepare applicable windows for initialization.",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "id": "restore-operation",
+          "title": "Reassemble and restore operation",
+          "summary": "Secure the battery area and hood, then complete the applicable window and engine relearning steps.",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "id": "assess-outcome",
+          "title": "Check the outcome",
+          "summary": "Record the maintenance result and route any remaining starting or discharge concern.",
+          "start": 15,
+          "end": 15
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Corrosion on otherwise sound terminals or clamps",
+          "meaning": "Connection cleaning is needed, but appearance does not establish battery performance.",
+          "next": "Disconnect negative first, then positive; wire-brush the connections, inspect the cleaned surfaces and reconnect positive before negative. Follow the applicable relearning steps afterward. [Terminal sequence](#/document/G1692356), [Ford cleaning method](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "Suspected leakage, a damaged case, exposed conductors or unsafe hardware",
+          "meaning": "There is a physical concern that cleaning or additional tightening may not resolve.",
+          "next": "Stop manipulation, record the affected area and arrange assessment. Defer starting and driving verification until the concern has been assessed and corrected."
+        },
+        {
+          "finding": "Clean connections, but poor starting remains",
+          "meaning": "The connection maintenance has not established the cause of the starting complaint.",
+          "next": "Continue with battery-performance and related-system assessment before deciding on replacement. [Ford performance inspection](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "The battery repeatedly discharges after charging",
+          "meaning": "A separate key-off drain investigation may be appropriate.",
+          "next": "Have the battery fully charged and assessed first, and address low-battery warnings before beginning the drain procedure. [Battery-drain prerequisites](#/document/G1692357)"
+        },
+        {
+          "finding": "One-touch operation fails after initialization",
+          "meaning": "The required window functional check has not passed.",
+          "next": "Confirm the door was closed and the full learning sequence was completed. If correct one-touch up and down operation is still absent, arrange window-system assessment. [Window initialization](#/document/G1957566)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "Connections restored correctly",
+          "body": "For connections disturbed during service, confirm positive was reconnected before negative and each terminal-clamp nut was tightened to 44 lb.in (5 Nm). Confirm the positive protective cover is restored. [Reconnection requirements](#/document/G1692356)"
+        },
+        {
+          "title": "Battery area and hood secured",
+          "body": "Confirm the battery cover and all three retainers are installed, any displaced vent tube or shield is restored, all tools are removed and the hood is latched. [Battery cover](#/document/G1692356), [post-cleaning restoration](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web), [hood closure](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539650&Uid=G1634784&ProcUid=G1642930&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Applicable reconnection follow-up completed",
+          "body": "After disconnection, confirm the engine warm-up, at least one-minute idle and at least 10 mi (16 km) relearn drive are complete. For applicable one-touch-up windows, confirm initialization and successful one-touch up/down checks. Record an unfinished or failed follow-up explicitly. [Engine relearn](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web), [window checks](#/document/G1957566)"
+        },
+        {
+          "title": "The result is accurately recorded",
+          "body": "Record the visible findings, cleaning performed and starting observation. If damage or suspected leakage remains unresolved, record that starting verification was deferred. Keep a connection-service result separate from a battery-performance result. [Ford inspection distinction](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang battery connections",
+        "Mustang battery terminal cleaning",
+        "battery corrosion",
+        "negative first positive first",
+        "battery terminal torque 5 Nm",
+        "Mustang windows after battery disconnect",
+        "Mustang idle relearn"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "b2823e0c22b8c8cb50a9d0e571accf9707ac93efba6c00237e25d50968394b18"
+      }
     },
     {
       "applicability": {
@@ -5906,76 +6083,138 @@
         "wiper-condition"
       ],
       "notes": [
-        "The illustrated motor/linkage is background context. Routine blade care does not require removing that assembly."
+        "Applicability is limited to the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine. Rain-sensitive checks apply only when equipped.",
+        "This stationary care check does not certify every feature in the system overview, including speed-dependent behavior. [System features](#/document/G1694644)",
+        "Routine blade care does not require removing the motor or linkage. Use the motor procedure only after diagnosis establishes that repair is needed. [Motor repair](#/document/G1694635)"
       ],
       "relatedGuideIds": [
         "lights",
         "service-inspection"
       ],
       "id": "washers-wipers",
-      "title": "Washers and wipers: keep the complete cleaning system working",
+      "title": "Washers and wipers: check fluid, spray and blades",
       "categoryId": "cabin",
       "hero": {
         "documentId": "G1694635",
         "mediaId": "G1694635-m0002"
       },
-      "summary": "Check fluid, spray and blade performance as connected but separate jobs.",
-      "introduction": "The washers loosen and carry dirt, while the blades clear the glass. Weak spray and poor wiping can happen together, but they do not necessarily have the same cause. Start with the fluid and visible condition before deciding that the motor or linkage needs replacement.",
-      "why": "Good visibility depends on the system working as a whole. A new wiper motor cannot correct an empty washer reservoir or a worn blade edge.",
+      "summary": "Check and top up washer fluid, inspect and clean the blades, observe spray and wiping, and replace blades when cleaning does not solve the problem.",
+      "introduction": "I start with fluid, glass and rubber before giving the expensive bits a suspicious look. A damn bug stuck to a blade does not justify a new motor. This guide covers routine washer and wiper care for the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine, including stationary rain-sensitive checks when equipped. Ford starts blade-performance diagnosis with cleaning and a retest. Pump, motor, linkage, sensor and arm-alignment repairs remain separate jobs. [Blade-performance diagnosis](#/document/G1694646)",
+      "why": "Spray delivery and wipe quality need separate observations. Fluid reaching the glass does not establish that the blades clean it properly; streaking does not identify a failed motor. Ford’s diagnosis considers the fluid path, controls, glass and blade condition. Keeping those findings separate makes parts-guessing a less expensive hobby. [Washer and wiper diagnosis](#/document/G1694646)",
       "when": {
         "summary": "Check washer-fluid level monthly. Check spray and wiper operation every six months; clean or replace blades as needed.",
         "notes": []
       },
       "prepare": [
         {
-          "title": "Use the appropriate washer fluid",
-          "detail": "Choose a product suitable for the expected temperatures and vehicle requirements."
+          "title": "Washer fluid suitable for the weather",
+          "detail": "Use fluid meeting Ford specification WSS-M14P19-A; the reservoir procedure lists Motorcraft Premium Windshield Wash Concentrate with Bitterant ZC-32-B2. Prepare concentrate according to its container instructions. [Fluid specification](#/document/G1694630) Below 40°F (5°C), use washer fluid with antifreeze protection: freezing fluid can impair visibility and increase accident risk. Follow local restrictions on methanol; any alternative must protect against freezing without damaging paint, blades or the washer system. [Ford washer-fluid guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539658&Uid=G1634797&ProcUid=G1547160&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Inspect the glass and blades",
-          "detail": "A dirty windshield or contaminated blade can affect the result of an operation check."
+          "title": "Cleaning and test supplies",
+          "detail": "Gather clean, lint-free cloths, a soft sponge or cloth, water for wet-glass checks, blade-cleaning washer fluid such as Motorcraft ZC-32M20-EG or equivalent, and glass cleaner such as Motorcraft ZC-23 or equivalent. Have isopropyl alcohol swabs available for the additional rain-sensor-area cleaning check. [Cleaning materials and wet-glass checks](#/document/G1694646)"
+        },
+        {
+          "title": "Access and a helper",
+          "detail": "The work takes place at the windshield and the underhood washer filler. Use the engine-specific identification in step 2. Routine filling uses the filler from above; the splash-shield removal in the reservoir procedure is for reservoir repair. A helper is useful for the pump-listening observation near the vehicle’s right front. [Filler and reservoir access](#/document/G1694630) [Pump listening check](#/document/G1694646)"
+        },
+        {
+          "title": "Personal and chemical protection",
+          "detail": "Wear eye and ear protection, and read the safety information for the fluid and cleaners. Keep solvents away from flames, sparks and other ignition sources because they can ignite or explode and cause serious injury. [Service precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Replacement blades, if needed",
+          "detail": "Ford lists WW-2201-PF for the driver side and WW-2001-PF for the passenger side across these three engines. Confirm the replacement’s fit for the actual vehicle and follow its attachment instructions. [Ford blade listings](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1517147&Uid=G1634835&ProcUid=G1642992&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "steps": [
         {
-          "title": "Check the supply",
-          "body": "Confirm washer-fluid level and look for an obvious leak if the level repeatedly falls."
+          "title": "Prevent unexpected operation",
+          "body": "If equipped, disable remote start through Vehicle settings > Remote Start Setup before working around the car. Switch the ignition off and remove the key during inspection, filling, cleaning and blade handling so another person cannot start the vehicle. Restore ignition power only for the operating observations, with everyone clear of the blades. [Unexpected-start precautions](#/document/G1693189)\n\nBefore underhood work, inspect the cooling fans with the ignition off for visible cracks, damage or separation. Do not work under the hood with a damaged fan; it can come apart during operation and cause serious injury. Fans can also run with the ignition off. Keep clear and have them disabled before work that requires being nearby. [Cooling-fan precautions](#/document/G1693189)"
         },
         {
-          "title": "Check spray and wiping",
-          "body": "Verify that fluid reaches the glass and that the blades clear it properly."
+          "title": "Find the washer filler for your engine",
+          "body": "Open the hood and identify the washer reservoir using the overview for the engine actually fitted. Each of these illustrations labels it G, toward the front of the engine compartment, ahead of the electrical box marked H.\n\nFor the 2.3L EcoBoost, use G in the [2.3L underhood overview](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539651&Uid=G1642504&ProcUid=G1642531&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web).\n\nFor the 3.7L, use G in the [3.7L underhood overview](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539651&Uid=G1634788&ProcUid=G1642507&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web).\n\nFor the 5.0L, use G in the [5.0L underhood overview](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539651&Uid=G1634789&ProcUid=G1642508&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web).\n\nUse the filler from above. Leave the splash shield, hoses, pump connection and reservoir fasteners installed for this care task. Their removal belongs to reservoir repair. [Reservoir procedure](#/document/G1694630)"
         },
         {
-          "title": "Address the actual finding",
-          "body": "Clean or replace blades when needed. Use washer or wiper diagnosis for continuing spray, motor or linkage concerns."
+          "title": "Check the supply and top up if low",
+          "body": "With the ignition off, open the identified washer cap and look into the filler to assess the visible fluid supply. Ford directs filling the reservoir when the level is low. Add the correctly prepared washer fluid slowly, pausing to let it settle and to observe the rising level. As fluid approaches the filler opening, use small additions and stop before it overflows. This ordinary top-up does not require a measured quantity or an assumed MAX mark. Refit the cap securely and wipe away any spilled fluid. [Ford washer-fluid check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539658&Uid=G1634797&ProcUid=G1547160&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nFill an empty reservoir before operating the washer pump; running it before filling can cause premature failure. If fluid escapes as you add it or the reservoir will not retain a supply, stop the washer test and arrange leak diagnosis. You can still use externally applied water for the blade checks. [Pump protection](#/document/G1694630) [Leak inspection](#/document/G1693185)\n\nIf fluid repeatedly disappears without enough washer use to explain it, look over accessible hoses for wetness, leaks, kinks or damage. Record what you actually see. Unexplained loss deserves investigation even when no leak is visible. [Preliminary hose inspection](#/document/G1693185) [Washer hose checks](#/document/G1694646)"
+        },
+        {
+          "title": "Inspect the rubber and windshield",
+          "body": "Keep the ignition off. Inspect both blades for dirt, ice, debris and visible damage. Gently run your fingertips along each rubber wiping edge to feel for roughness. Note which blade and which part of the glass show the complaint. [Ford blade inspection](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405324&Uid=G1634804&ProcUid=G1448670&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nInspect the windshield for contamination and visible damage, including cracks or pits. Record glass damage separately so a missed patch does not automatically become a shopping list for rubber. [Blade and glass inspection](#/document/G1694646)"
+        },
+        {
+          "title": "Clean before condemning the blades",
+          "body": "With the ignition off, wipe the suspect blades with a clean, lint-free cloth moistened with windshield washer fluid, Motorcraft ZC-32M20-EG or equivalent. Clean the affected glass with a separate clean, lint-free cloth and glass cleaner, Motorcraft ZC-23 or equivalent. Ford calls for cleaning and retesting before replacing blades for poor cleaning, streaking or chatter. [Clean-before-replacement check](#/document/G1694646)\n\nFor routine blade cleaning, water or washer fluid applied with a soft sponge or cloth is also supported. Return any lifted blades gently to the glass before operating them. [Ford blade care](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405324&Uid=G1634804&ProcUid=G1448670&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Set up conventional intermittent operation",
+          "body": "Establish whether the car has rain-sensitive wipers. If equipped, note your current preference. With everyone clear of the blades, turn the ignition on and use the steering-wheel controls to access vehicle settings in the message center. Disable the rain-sensitive feature for the conventional intermittent check; this activates conventional intermittent operation. [Intermittent setup, Test E](#/document/G1694646)\n\nThere are six intermittent/sensitivity selections. Automatic response gets its own observation in step 9. [Available functions](#/document/G1694644)"
+        },
+        {
+          "title": "Check wiping on wet glass and watch the parked position",
+          "body": "Apply water to the windshield and keep it wet during the checks. With hands and supplies clear and the ignition on, select low speed. Watch each blade’s cleared area for streaks, missed patches and chatter—the skipping or juddering across the glass. Select off after observing it. Check high speed, mist and each conventional intermittent selection, recording which mode fails or behaves incorrectly. These are stationary observations; no exact intermittent delay is being measured. [Wet-glass and speed checks](#/document/G1694646) [Wiper functions](#/document/G1694644)\n\nSelect off and let the blades finish parking. Compare their resting positions with the installation marks on the windshield: the blades should sit inside those marks. If you cannot identify the marks, record alignment as unchecked rather than inventing a distance from the cowl. Blades outside the marks need parking/alignment diagnosis. [Windshield alignment reference](#/document/G1694632) [Parking diagnosis](#/document/G1694646)"
+        },
+        {
+          "title": "Observe spray delivery and pump sound",
+          "body": "Proceed with the washer check after establishing fluid supply in step 3. In below-freezing conditions, confirm that the fluid is suitable for the temperature. If unsuitable fluid is present, Ford directs warming the vehicle to room temperature, then draining and refilling with the correct fluid as separate corrective work. Do not run the pump to empty the reservoir. [Cold-weather diagnosis](#/document/G1694646) [Pump protection](#/document/G1694630)\n\nWith the ignition on and everyone clear of the blades, momentarily activate the wash function using the wiper/washer switch. Observe whether each jet delivers fluid to the windshield. Record weak, absent or one-sided delivery and any visible escaping fluid. Release the command and observe whether washing stops. [Washer checks, Tests H and I](#/document/G1694646)\n\nIf spray is absent, have a helper briefly activate the washer while you listen near the vehicle’s right front. Switch the ignition off before examining accessible hoses for kinks, damage or leaks. An audible pump establishes that it activates audibly; it does not establish satisfactory delivery or identify the failed part. Route continuing faults to Test H. [Pump and hose checks H4–H8](#/document/G1694646) [Leak inspection](#/document/G1693185)"
+        },
+        {
+          "title": "Observe rain-sensitive response, if equipped",
+          "body": "With the ignition off, inspect the windshield near the rain sensor for cracks, pits or other visible damage. From outside, look through the glass at the sensor’s contact area. It should appear black, without bubbles, air pockets or contamination. Keep the sensor and its clips attached during this care check; disturbing the assembly can damage or contaminate its gel lens. [Sensor-area inspection F5/F10](#/document/G1694646)\n\nIf streaking remains across the sensor area, clean the glass with glass cleaner and wipe the entire length of the blades with isopropyl alcohol swabs. Keep the ignition off while cleaning. Clear everyone away, turn the ignition on and repeat the low-speed check while applying water, watching the sensor area in particular. [Sensor-area cleaning F6–F7](#/document/G1694646)\n\nEnable rain-sensitive operation in the message center. Select auto/intermittent setting 5—the setting Ford identifies as most sensitive to moisture in Test F8—and apply water to the windshield above the rain sensor. Observe whether wiping starts, then select off. Record no response, erratic response or visible glass/contact-area defects for Test F diagnosis. This observation does not complete the full sensor diagnostic test. [Feature setting and water response F3/F8](#/document/G1694646)"
+        },
+        {
+          "title": "Replace affected blades if cleaning did not help",
+          "body": "If cleaning restores satisfactory wiping, keep the blades in service. If poor cleaning, streaking or chatter remains, Ford directs replacing the affected blade or blades. [Replacement decision, Test J](#/document/G1694646)\n\nSwitch the ignition off. For the original button-lock attachment, lift the blade and arm away from the glass, press the locking buttons together, then rotate and remove the blade. Support the arm while the blade is detached so it cannot fall against the glass. Attach the correct new blade to the arm and snap it into place. Check that it is secure, then lower it gently onto the windshield. Repeat on the other side if needed. If the replacement has a different adapter, follow its attachment instructions and confirm vehicle fit. [Ford blade-changing instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405325&Uid=G1660533&ProcUid=G1660534&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Retest, restore your settings and close up",
+          "body": "Repeat the wet-glass check after blade replacement. Confirm whether both blades clear their areas and whether the original streaking or chatter has disappeared. If a spray fault prompted the work, repeat a brief washer check with fluid in the reservoir and record the result for each jet. [Blade retest and washer checks](#/document/G1694646) [Pump prerequisite](#/document/G1694630)\n\nRestore your intended rain-sensitive preference if you changed it. Select the wiper switch off, let the blades park and compare their positions with the windshield marks again. Switch the ignition off before final handling. [Feature settings](#/document/G1694646) [Parking reference](#/document/G1694632)\n\nCheck that the washer cap is secure, remove the cleaning supplies and close the hood. Record fluid top-up, blade condition, spray delivery and the modes observed. Give every remaining fault or unchecked item a next action. I want a useful checklist; a fictional pass is bullshit."
         }
       ],
       "watchFor": [
         {
-          "title": "Continuing streaks or missed areas",
-          "body": "Inspect blade and glass condition before blaming the motor."
+          "title": "Cold-weather fluid choice",
+          "body": "Below 40°F (5°C), washer fluid needs antifreeze protection. Fluid freezing on the windshield can impair vision and increase accident risk. [Ford cold-weather warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539658&Uid=G1634797&ProcUid=G1547160&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "A pump runs but fluid does not arrive",
-          "body": "Investigate the fluid path rather than assuming the motor is the only serviceable part."
+          "title": "An empty reservoir",
+          "body": "Fill before activating the washer pump. Stop repeated activation when delivery is absent; operating the pump before filling can cause premature failure. [Pump protection](#/document/G1694630)"
+        },
+        {
+          "title": "Wipers that ignore the off setting",
+          "body": "Keep hands clear and stop blade handling if wiping continues with the switch off. Test D covers continuous wiping, including operation with the ignition off; Test I covers a washer that stays on. [Continuous-operation diagnosis](#/document/G1694646)"
+        },
+        {
+          "title": "Rain-sensor bubbles or damage",
+          "body": "Record the defect and arrange diagnosis without releasing the sensor clips. Its gel lens can be damaged or contaminated during disturbance. [Rain-sensor handling](#/document/G1694646)"
+        },
+        {
+          "title": "A symptom that disappears during the check",
+          "body": "Record the conditions under which it occurred. Ford’s component-replacement decisions generally require the named fault to be present during testing; an intermittent complaint does not justify buying a module on suspicion. [Diagnostic assumptions](#/document/G1693185)"
         }
       ],
       "procedures": [
         {
           "documentId": "G1694644",
-          "purpose": "Understand the wiper and washer system."
+          "purpose": "Identify the wiper and washer functions relevant to stationary operating observations."
         },
         {
           "documentId": "G1694646",
-          "purpose": "Diagnose continuing operating concerns."
+          "purpose": "Support cleaning, observable operating checks and routing persistent faults to the appropriate pinpoint test."
         },
         {
           "documentId": "G1694630",
-          "purpose": "Locate and service the washer reservoir if required."
+          "purpose": "Support filler access, the fluid specification and pump protection; reservoir removal remains separate."
+        },
+        {
+          "documentId": "G1694632",
+          "purpose": "Provide the windshield-mark reference for observing parked blade alignment."
         },
         {
           "documentId": "G1694635",
-          "purpose": "Use the motor procedure only when that repair is needed."
+          "purpose": "Route diagnosed motor replacement to its separate repair procedure."
         }
       ],
       "sourceRefs": [
@@ -5994,8 +6233,135 @@
         {
           "documentId": "G1694630",
           "sourceHash": "1da5a48710425a1fd6199904fc13e6886440ad823b499cf32e9fbaf7cd2a7098"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1694632",
+          "sourceHash": "a4fecf50d92ea6da1261db620d83466e8fcc793253099c8e3edd464a14575fc4"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "setup-and-fluid",
+          "title": "Set up and check the fluid",
+          "summary": "Prevent unexpected operation, find the correct filler and top up the supply.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "blade-care-and-wiping",
+          "title": "Inspect, clean and check wiping",
+          "summary": "Assess rubber and glass, conventional modes and parked position.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "spray-and-rain-response",
+          "title": "Observe spray and automatic response",
+          "summary": "Check washer delivery and rain-sensitive operation when equipped.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "replacement-and-finish",
+          "title": "Replace affected blades and finish",
+          "summary": "Secure replacement blades, retest and restore your settings.",
+          "start": 10,
+          "end": 11
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Cleaning restores satisfactory wiping.",
+          "meaning": "The observed performance complaint was caused by contamination on the blades or glass.",
+          "next": "Keep the blades in service and finish the remaining observations. [Test J](#/document/G1694646)"
+        },
+        {
+          "finding": "Poor cleaning, streaks or chatter remain after cleaning.",
+          "meaning": "Ford’s blade-performance check directs replacement of the affected blades.",
+          "next": "Use step 10 and retest on wet glass. If the complaint remains, have blade fit and glass condition reassessed. [Test J](#/document/G1694646)"
+        },
+        {
+          "finding": "Fluid repeatedly disappears without a visible leak.",
+          "meaning": "The loss is unexplained; it does not establish a visible defect or identify a failed component.",
+          "next": "Record washer use and the recurring loss, inspect accessible hoses and arrange fluid-path diagnosis if it continues. [Preliminary inspection](#/document/G1693185) [Washer Test H](#/document/G1694646)"
+        },
+        {
+          "finding": "An accessible hose is visibly leaking, kinked or damaged.",
+          "meaning": "There is an observed fluid-path defect requiring attention.",
+          "next": "Record its location and arrange the appropriate hose repair and delivery retest. [Hose inspection](#/document/G1693185) [Test H5](#/document/G1694646)"
+        },
+        {
+          "finding": "Spray is weak, absent or one-sided while the pump is audible.",
+          "meaning": "The pump activates audibly, but delivery remains faulty.",
+          "next": "Check temperature suitability and accessible hose condition, then arrange Test H diagnosis. A limited visual check does not establish that the entire fluid path is sound. [Test H](#/document/G1694646)"
+        },
+        {
+          "finding": "No spray and no audible pump operation.",
+          "meaning": "The switch input, electrical supply, ground or pump requires targeted testing.",
+          "next": "Arrange Test H diagnosis and report the silent-pump observation. [Test H](#/document/G1694646)"
+        },
+        {
+          "finding": "All modes fail, a particular mode fails, or wiping continues with the switch off.",
+          "meaning": "These operating faults need diagnosis beyond blade cleaning.",
+          "next": "Route all modes dead to Test A, low/intermittent failure to B, high-speed failure to C, continuous wiping to D, and incorrect conventional intermittent behavior to E. [Symptom chart](#/document/G1694646)"
+        },
+        {
+          "finding": "Rain-sensitive wiping is absent or erratic after enabling the feature.",
+          "meaning": "Automatic operation needs further diagnosis.",
+          "next": "Arrange Test F, reporting the setting-5 water response, wipe quality and any visible glass or sensor-contact defects. [Test F](#/document/G1694646)"
+        },
+        {
+          "finding": "Parked blades sit outside the windshield installation marks.",
+          "meaning": "Parking or arm alignment needs attention.",
+          "next": "Arrange Test G and the appropriate arm-alignment repair. Leave the arms on their shafts during routine blade care. [Parking diagnosis](#/document/G1694646) [Arm alignment](#/document/G1694632)"
+        },
+        {
+          "finding": "The washer continues after releasing the wash command.",
+          "meaning": "The washer has a continuous-operation fault.",
+          "next": "Stop repeated spray checks and arrange Test I diagnosis. [Test I](#/document/G1694646)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "Fluid supply checked and cap secured",
+          "body": "Confirm that the correct reservoir was checked, low fluid was topped up with the appropriate product, and the cap is secure. Record unexplained loss or observed leakage separately from spray performance. [Ford fluid check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539658&Uid=G1634797&ProcUid=G1547160&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Leak inspection](#/document/G1693185)"
+        },
+        {
+          "title": "Blades attached and wipe quality retested",
+          "body": "Any replacement blade is snapped securely onto its arm and returned to the glass. On wet glass, record whether both blades clear their areas and whether the original streaking or chatter has disappeared. [Blade attachment](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405325&Uid=G1660533&ProcUid=G1660534&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Blade retest](#/document/G1694646)"
+        },
+        {
+          "title": "Delivery, modes and final settings recorded",
+          "body": "Record delivery from each jet, conventional modes tested and rain-sensitive response when equipped. Confirm that washing stops after release and the blades park inside the windshield marks after selecting off. Restore the intended rain-sensitive preference and assign next actions to remaining concerns. [Operating checks](#/document/G1694646) [Parking marks](#/document/G1694632)"
+        }
+      ],
+      "searchTerms": [
+        "washer fluid check",
+        "Mustang washer filler location",
+        "washer fluid top up",
+        "weak washer spray",
+        "wiper streaks",
+        "wiper chatter",
+        "clean wiper blades",
+        "replace wiper blades",
+        "rain-sensitive wipers",
+        "wiper parking marks"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "8eb3ba6c08c16fbe2f61337377ffe70025dad08b765b5a1dbf1cf683454b94d1"
+      }
     },
     {
       "applicability": {
@@ -6387,21 +6753,23 @@
         "seatbelt-condition"
       ],
       "notes": [
-        "Do not use this inspection as permission to probe, power or dismantle a pretensioner. Restraint repairs have dedicated safety requirements."
+        "Applies to the original 2015 Mustang scope: 2.3L, 3.7L and 5.0L. The inspection has no engine-specific branch.",
+        "Select seat-control and folding-backrest steps by fitted equipment; do not assume the coupe and convertible have identical rear-seat mechanisms.",
+        "Ford documents separate automatic-locking and road-test procedures. They remain follow-on diagnosis or repair verification, rather than universal requirements for this routine checklist. [Functional-test branches](#/document/G1883856)"
       ],
       "relatedGuideIds": [
         "warning-lamps"
       ],
       "id": "seatbelts-latches",
-      "title": "Seatbelts and seat latches: check the parts you rely on",
+      "title": "Seatbelts and seat latches: a hands-on wear-and-function check",
       "categoryId": "cabin",
       "hero": {
         "documentId": "G1692230",
         "mediaId": "G1692230-m0006"
       },
-      "summary": "Inspect wear and function, and keep routine checks separate from the inspection required after a collision.",
-      "introduction": "The seatbelt’s webbing, buckle, retractor and anchorages work together to restrain an occupant. Seat latches must also hold their intended position. A routine check should look beyond whether the buckle clicks: the complete assembly needs to remain in good condition.",
-      "why": "Damage to one part can compromise the whole restraint path. A belt that appears to operate normally after a collision has not thereby passed the required post-collision inspection.",
+      "summary": "Inspect every belt, check stationary buckle and retractor operation, exercise the fitted seat controls, and confirm that moved seats latch securely. Includes cleaning precautions and clear repair routes.",
+      "introduction": "I like a satisfying buckle click, but it is a damn short inspection report. This guide takes you through belt condition, stationary buckle and retractor checks, and the normal release-and-return checks for your fitted seats. It also explains Ford’s cleaning requirements. It covers the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine; select the seat checks by equipment. This routine check does not provide collision clearance or prove vehicle-sensitive locking performance. [Seatbelt maintenance](#/document/G1692224) [Stationary belt checks](#/document/G1883856)",
+      "why": "The webbing is the fabric belt, the tongue is the metal piece that enters the buckle, and the retractor draws the belt back into storage. Their condition and operation matter together. The seat also needs to remain secured in its intended position. A working buckle cannot cancel out damaged webbing, and a backrest resting upright has not necessarily latched. [Belt inspection](#/document/G1883856) [Ford seat-latch checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)",
       "when": {
         "summary": "Check seatbelts and seat latches for wear and proper function every six months.",
         "notes": [
@@ -6410,58 +6778,126 @@
       },
       "prepare": [
         {
-          "title": "Inspect every seating position",
-          "detail": "Do not limit the check to the belt used most often."
+          "title": "Make room for every seating position",
+          "detail": "Park with the engine off and keep the ignition off during the belt checks. Clear belongings from the seat tracks, belt paths and behind the backrests. Never adjust the driver’s seat while moving; unexpected seat movement can cause loss of control. Keep objects out from behind a backrest before returning it. [Manual seat precautions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Keep cleaning appropriate",
-          "detail": "Use the recommended cleaning method; do not bleach or re-dye seatbelt webbing."
+          "title": "Gather viewing aids, not removal tools",
+          "detail": "A light and somewhere to record findings are useful. These checks use accessible belts and normal seat controls; no jack, drill or trim removal is needed. Leave anchors, restraint connectors and pretensioners assembled. Front retractor/pretensioner removal requires a separate SRS depowering procedure, and incorrect restraint work can trigger deployment and serious injury. Do not probe, power or dismantle a pretensioner. [Front restraint service](#/document/G1692230) [SRS safety](#/document/G1696297)"
+        },
+        {
+          "title": "Plan access around child restraints",
+          "detail": "If a child restraint prevents access, follow its manufacturer’s removal and installation instructions before disturbing it. Keep any required refitting separate from the belt checklist so it cannot be forgotten. Ford directs owners to the child-restraint manufacturer for its specific inspection and maintenance requirements. [Restraint maintenance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1517116&Uid=G1634902&ProcUid=G1517132&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Have the correct cleaning instructions if cleaning is needed",
+          "detail": "Identify the solution recommended in the vehicle’s owner literature and have that product’s instructions available. Ford requires full belt extraction before cleaning and prohibits bleaching or re-dyeing because either can weaken the webbing and increase crash-injury risk. No chemical is needed simply to inspect the belt. [Cleaning requirements](#/document/G1692223)"
         }
       ],
       "steps": [
         {
-          "title": "Review visible condition",
-          "body": "Inspect accessible webbing and components for damage, and confirm that belt routing is correct."
+          "title": "Separate routine checking from collision follow-up",
+          "body": "Establish whether the car has been in a crash or a belt has experienced severe stress. Severe stress deserves particular attention during inspection. After any crash, arrange an authorized-dealer check of belt function, including automatic locking operation at passenger positions; this checklist cannot clear the restraints for continued service. All seatbelt components must be inspected and corrected during collision repair. [Seatbelt maintenance](#/document/G1692224) [Collision requirements](#/document/G1692225) [Owner collision instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nFord recommends replacement of assemblies that were in use during a crash. Its owner instructions allow a minor-crash exception only when an authorized dealer finds no damage and correct operation. Assemblies not in use also need inspection and replacement if damaged or operating incorrectly. The workshop procedure specifically requires new belts at positions where deployment occurred and the belts were used. [Owner replacement guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1517116&Uid=G1634902&ProcUid=G1517132&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Collision procedure](#/document/G1692225)"
         },
         {
-          "title": "Check operation",
-          "body": "Check buckle, retractor and seat-latch function using the appropriate inspection procedure."
+          "title": "Inspect both faces and edges of each belt",
+          "body": "Work through every seating position, including the rarely used rear belts. Draw the webbing out slowly as you inspect its accessible length. Look for nicks, tears, cuts, fraying or stretching, examining both faces and edges. Record the seating position and where the defect appears. Do not decide that a small cut is harmless because the buckle still works. Ford’s preliminary inspection specifically includes webbing integrity, the buckle and the tongue. [Belt inspection](#/document/G1883856) [Owner condition checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1517116&Uid=G1634902&ProcUid=G1517132&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nIf the webbing will not come out, continue with the slow-extraction guidance in step 4 rather than forcing access."
         },
         {
-          "title": "Escalate a defect or collision history",
-          "body": "Use the dedicated restraint diagnosis or post-collision procedure. Replacement must include the prescribed checks, not simply bolting in a part."
+          "title": "Inspect hardware and the visible belt path",
+          "body": "Look at each accessible buckle, tongue, guide and attachment area for visible damage or displacement. Note cracked, bent or distorted parts and webbing caught against trim or seating. Keep mounting hardware tight and untouched during this inspection. A damaged retaining area requires assessment as part of restraint repair. [Assembly condition](#/document/G1692224) [Buckle and tongue inspection](#/document/G1883856)\n\nAt the front seats, check the belt’s normal route across the occupant. Ford provides an outboard web guide; use it if the shoulder belt otherwise misses the middle of the shoulder. Match the guide to the fitted seat rather than assuming every Mustang seat uses the same arrangement. [Belt routing and guides](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nRecord an apparent twist instead of rotating an installed anchor to flatten it. The coupe’s front-belt installation has a prescribed 180-degree anchor orientation, so an anchor adjustment is a separate service operation. [Coupe installation detail](#/document/G1692230)"
+        },
+        {
+          "title": "Check retractor travel and return",
+          "body": "At each position, slowly extend the belt to full extension, then allow it to return to its stowed position. Watch for excessive effort, binding or webbing that fails to retract. Ford’s stationary retractor check covers travel between these two positions. If it binds or fails to return, record the concern and arrange diagnosis; do not pull trim away to investigate. [Retractor check](#/document/G1883856)\n\nA belt pulled too quickly can lock normally. Let it retract slightly, then draw it out again slowly and steadily. Full extension can also engage automatic locking mode on the front passenger and rear belts; the driver’s belt does not have that mode. Unbuckle if necessary and let the belt retract completely to restore normal operation, then check slow extraction and return again. [Locking modes and reset](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nIf it remains locked, stop this position’s check and use the separate locked-retractor service route. A locked belt can have a normal cause, but the repair procedure can progress to anchor removal; that is beyond this inspection. [Locked retractor procedure](#/document/G1883858)"
+        },
+        {
+          "title": "Check buckle engagement, retention and release",
+          "body": "With the seatback upright, insert the tongue into its proper buckle—the buckle nearest the direction from which that tongue comes. It should enter without excessive effort, click and feel latched. Keep the lap belt low and snug across the hips, with the shoulder portion across the chest. [Fastening and fit](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nFor Ford’s stationary buckle check, pull forcefully on the webbing after latching to verify that the tongue stays retained. Fully press the release button: it should operate without excessive effort, the tongue should come out easily, and the belt should release and retract. Repeat the complete latching, retention-pull and release sequence three times. This checks buckle retention; it does not establish a calibrated load capacity or vehicle-sensitive locking result. [Buckle and tongue check](#/document/G1883856)\n\nIf engagement, retention or release is unreliable, stop using that position pending assessment. Ford directs replacement of the buckle or retractor as required when this test identifies a concern; identifying the correct component belongs to diagnosis. [Buckle test decisions](#/document/G1883856)"
+        },
+        {
+          "title": "Clean only when needed, using the specified method",
+          "body": "For a soiled belt, first establish the cleaning solution recommended by the vehicle’s owner literature. Fully extract the belt before applying it, then carry out the product manufacturer’s application and completion instructions. Do not substitute bleach, dye or an improvised chemical treatment: weakened webbing can increase the risk of serious injury in a crash. [Seatbelt cleaning](#/document/G1692223)\n\nOnce the product’s instructions are complete, examine the belt again and repeat the extraction-and-return check. Cleaning does not resolve a cut, fraying or a mechanical operating fault. If you have not identified the recommended solution, leave cleaning for later; you can still finish the condition and operation inspection. [Condition requirements](#/document/G1692224) [Retractor check](#/document/G1883856)"
+        },
+        {
+          "title": "Check front-seat movement using the fitted controls",
+          "body": "Look at the accessible seat controls and latch areas for visible wear or damage, then check each front seat using its normal controls. Keep the car stationary and the movement path clear. [Owner wear-and-function check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)\n\nManual seat: use the front bar, identified as A in Ford’s control illustration, to move the seat backward and forward. Release the bar at the intended position, then rock the seat backward and forward to confirm it has fully locked. If fitted, lever B adjusts seat height. Return the seat to its intended position and repeat the track-lock check after movement. [Manual seat controls and locking check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nPower seat: use the switch on the outboard side. Move it in the indicated direction to check forward/backward movement and the fitted cushion raising/lowering functions. Release the switch, return the seat to its intended position and note any failure to move, stop or remain positioned during ordinary use. This is an operating observation, not a manual-track latch test. [Power seat controls](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539512&Uid=G1634988&ProcUid=G1638641&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Check the fitted backrest-angle control",
+          "body": "Where the manual recline lever is fitted, use lever C to change the backrest angle, then return the backrest upright and release the control. Observe whether it remains in the selected position during normal use. Report a control that will not release or a backrest that will not hold its position; do not improvise a force test. Keep the space behind the backrest clear while returning it. [Backrest control](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nLeave the backrest upright for occupancy. Excessive recline can let an occupant slide beneath the belt during a crash and suffer severe injury. [Seating precaution](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Check front-seat folding for rear access",
+          "body": "For the fitted rear-access mechanism on either body style, use the release handle on the upper back of the front seat and fold the front backrest forward. Return it to its original position. Ford specifies that the backrest remembers that position and locks automatically there. Confirm that it has returned and remains secured without holding the release handle; if engagement is uncertain, keep that seat out of use pending assessment. Repeat for the other front seat. [Front backrest release and return](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nKeep objects clear behind the backrest before returning it. A bag wedged in the mechanism is a pain in the ass, not a latch diagnosis. [Return-path precaution](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Check split-folding rear backrests, if fitted",
+          "body": "On a car equipped with split-folding rear backrests, check each section individually. Pull its release strap and fold the backrest down. Raise it again and listen for the latch to engage, then pull down on the backrest to confirm it has latched. A click without secure retention does not complete the check. [Rear backrest operation and engagement check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nSkip this folding check where the feature is absent, including a convertible without folding rear backrests. Do not remove the convertible backrest or loadspace trim to create access for a routine check. Those are separate removal operations. A confirmed coupe rear-backrest latch fault likewise belongs to latch repair, not upholstery removal during this inspection. [Convertible service access](#/document/G1692610) [Rear latch repair](#/document/G1692167)"
+        },
+        {
+          "title": "Restore every seat and belt you moved",
+          "body": "Return front seats to their intended positions. Rock each manually adjusted seat backward and forward to confirm track locking. Make sure front backrests returned through the rear-access release have automatically locked in their original positions. For each folding rear section, confirm engagement again with the specified downward pull. Leave backrests upright for occupancy. [Manual seat locking](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Backrest engagement](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nMake sure no belt or buckle was trapped by the returning seats. Leave them accessible to occupants, and allow belts extended during the check to stow completely. Recheck the front shoulder-belt route after restoring the seat position. [Belt accessibility](#/document/G1692230) [Belt routing and full-stow reset](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Record the outcome and route any fault",
+          "body": "Record which positions you checked and any visible defect, sticking, failed retention, poor retraction or uncertain seat engagement. As an owner precaution, keep an affected seating position out of use until assessed. Describe the actual symptom rather than ordering a part by guesswork. Ford’s symptom chart distinguishes locking modes, routing, trim interference and internal retractor faults. [Belt diagnosis](#/document/G1883856)\n\nIf nothing concerning was found, the routine condition and stationary-operation checklist is finished. Replacement work has additional requirements: inspect retaining areas, restore damaged attachment structure as required, install the correct assembly using its procedure, and carry out the appropriate Functional Test at all seating positions. Those post-replacement requirements do not make every routine owner check a full workshop test. [Maintenance and replacement requirements](#/document/G1692224)"
         }
       ],
       "watchFor": [
         {
-          "title": "Frayed, damaged or twisted webbing",
-          "body": "Have the condition assessed; do not conceal it with a cover or chemical treatment."
+          "title": "Normal locking mistaken for a failed retractor",
+          "body": "Fast extraction can lock a belt; passenger and rear belts can also enter automatic locking mode after full extension. Use the documented slow-extraction or full-stow reset before describing the symptom. Persistent locking still needs assessment. [Owner locking-mode instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "A latch that does not engage reliably",
-          "body": "Address it before relying on that seating position."
+          "title": "Cleaning that hides damage",
+          "body": "Bleach and dye can weaken webbing. Cleaning is for soiling; a damaged belt needs assessment rather than a cosmetic rescue mission. [Cleaning safety](#/document/G1692223) [Condition inspection](#/document/G1692224)"
+        },
+        {
+          "title": "A seat that merely looks back in place",
+          "body": "Use the actual engagement check: rock a manually adjusted seat backward and forward, and pull down on a raised folding rear backrest after hearing it latch. Uncertain engagement means the position is not ready for use. [Manual seat check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Rear backrest check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Warning-lamp or chime concerns",
+          "body": "A missing seatbelt reminder is a separate diagnostic concern, not proof of a mechanical belt fault. Ford routes diagnosis differently when the airbag warning indicator is illuminated. Record the warning behavior and use [Warning lamps](#/maintenance/warning-lamps) for the related owner check. [Warning symptom routes](#/document/G1883856)"
         }
       ],
       "procedures": [
         {
           "documentId": "G1692224",
-          "purpose": "Perform seatbelt maintenance inspection."
+          "purpose": "Routine condition inspection and the separate retaining-area and functional-test requirements after replacement."
+        },
+        {
+          "documentId": "G1883856",
+          "purpose": "Preliminary inspection, stationary buckle/retractor checks and symptom-based diagnostic routing."
         },
         {
           "documentId": "G1692223",
-          "purpose": "Follow the belt-cleaning precautions."
+          "purpose": "Full-extraction cleaning prerequisite, recommended-solution requirement and chemical precautions."
         },
         {
           "documentId": "G1692225",
-          "purpose": "Use the required post-collision procedure."
+          "purpose": "Collision inspection, correction and replacement requirements."
         },
         {
           "documentId": "G1692230",
-          "purpose": "Understand the front retractor/pretensioner assembly."
+          "purpose": "Belt accessibility, coupe anchor-orientation distinction and restraint-removal boundary."
+        },
+        {
+          "documentId": "G1696297",
+          "purpose": "Safety basis for leaving pretensioner and SRS service outside the inspection."
+        },
+        {
+          "documentId": "G1883858",
+          "purpose": "Separate service destination for a persistently locked retractor."
+        },
+        {
+          "documentId": "G1692610",
+          "purpose": "Distinguish convertible backrest/trim service access from routine owner inspection."
         },
         {
           "documentId": "G1692167",
-          "purpose": "Service a confirmed rear seat-backrest latch concern."
+          "purpose": "Separate repair destination for a confirmed coupe rear-backrest latch fault."
         }
       ],
       "sourceRefs": [
@@ -6484,8 +6920,121 @@
         {
           "documentId": "G1692167",
           "sourceHash": "3c6e2d0b6b91e83855946eedadff1c2f9483ad9dfa7b649840db65042a1aaf79"
+        },
+        {
+          "documentId": "G1883856",
+          "sourceHash": "0a0046e790839fc81393f5c7a9f8a8484a534e11a5a852156e3a64f0c046dc02"
+        },
+        {
+          "documentId": "G1696297",
+          "sourceHash": "6e416e21370f0862dbf680b7203bb7510ac7eb581d83edb37c7b5fb308032906"
+        },
+        {
+          "documentId": "G1883858",
+          "sourceHash": "b8de8a0f384ae7d9ce74ca49a9d7589c0ef7c295c7d2a527e40c2b8251ffdbc4"
+        },
+        {
+          "documentId": "G1692610",
+          "sourceHash": "e684d3dd3d835cdaa89ebdfc377c61f89ca03f72c07ac97a05bb4fac8a2b9f78"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "history-and-condition",
+          "title": "Check history and visible condition",
+          "summary": "Separate collision follow-up from routine care and examine every accessible belt assembly.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "belt-operation-and-care",
+          "title": "Check stationary belt operation",
+          "summary": "Check extraction, return, buckle retention and release, then clean only if needed.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "seat-controls-and-latches",
+          "title": "Exercise the fitted seats",
+          "summary": "Check manual or power movement, front backrest return and fitted rear folding latches.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "restore-and-record",
+          "title": "Restore and finish",
+          "summary": "Confirm seat engagement, leave belts accessible and record any required follow-up.",
+          "start": 11,
+          "end": 12
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Webbing is nicked, cut, torn, frayed or stretched",
+          "meaning": "The belt has a condition concern even if it latches and retracts. [Preliminary inspection](#/document/G1883856)",
+          "next": "Record the position and defect; keep that position out of use pending assessment and any required replacement."
+        },
+        {
+          "finding": "Tongue is hard to insert, does not stay retained, or is difficult to release",
+          "meaning": "The stationary buckle-and-tongue check has identified a fault. Ford calls for a new buckle or retractor as required. [Buckle check](#/document/G1883856)",
+          "next": "Arrange diagnosis and the correct restraint repair. Do not treat repeated attempts that occasionally work as a pass."
+        },
+        {
+          "finding": "Belt binds, remains slack or will not extract after the normal reset",
+          "meaning": "Possible causes include routing, trim interference, a locking condition or internal retractor binding; the symptom alone does not identify the part. [Retractor symptom chart](#/document/G1883856) [Locked-belt service](#/document/G1883858)",
+          "next": "Record when it happens and arrange the appropriate diagnosis. Leave anchor removal and internal investigation to the separate service procedure."
+        },
+        {
+          "finding": "Manual seat moves after its control is released, or a backrest fails to engage",
+          "meaning": "The seat has not met its normal locking or engagement check. [Manual seat locking](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Backrest engagement](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+          "next": "Keep the affected seat out of use and report the precise mechanism and failed action. Route a confirmed coupe rear-backrest latch fault to [Latch repair](#/document/G1692167)."
+        },
+        {
+          "finding": "Crash history without completed restraint inspection",
+          "meaning": "Routine checks cannot satisfy the required collision inspection and correction. Skipping that work can leave incorrect restraint operation and increase crash-injury risk. [Collision inspection](#/document/G1692225)",
+          "next": "Arrange authorized-dealer inspection of all belt functions and the applicable collision repair requirements before treating the restraints as cleared."
+        },
+        {
+          "finding": "No damage or operating concern found",
+          "meaning": "The routine visual and stationary checks found no concern within this guide’s scope. [Maintenance inspection](#/document/G1692224)",
+          "next": "Record completion and leave every seat secured and every belt accessible. No additional repair test is required by this checklist solely because you performed the owner check."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Every belt position completed",
+          "body": "Confirm that each accessible belt was inspected, extended and returned, and checked for buckle engagement, retention and easy release. Any position you could not check remains recorded as incomplete rather than assumed satisfactory. [Stationary inspection and checks](#/document/G1883856)"
+        },
+        {
+          "title": "Every moved seat secured",
+          "body": "Confirm manual track locking by rocking backward and forward, front rear-access backrests returned to their original locked positions, and each fitted folding rear section latched and checked with a downward pull. [Manual seats](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539511&Uid=G1634986&ProcUid=G1638640&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Backrest return checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539514&Uid=G1634990&ProcUid=G1638642&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Cabin ready for occupants",
+          "body": "Make sure belts and buckles are accessible, none were caught by seat movement, and any fully extended passenger or rear belt has returned completely to stow. Complete any child-restraint refitting according to its manufacturer’s instructions before using it. [Belt accessibility](#/document/G1692230) [Locking-mode reset](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G910645&Uid=G1634896&ProcUid=G1638636&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Child-restraint instructions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1517116&Uid=G1634902&ProcUid=G1517132&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Findings have a next action",
+          "body": "Record any unresolved fault and affected position. If replacement or collision work follows, confirm that its separate retaining-area inspection and appropriate all-position Functional Test are included in that work. This article does not record those repairs or tests as performed. [Replacement checks](#/document/G1692224) [Collision checks](#/document/G1692225)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang seatbelt inspection",
+        "seatbelt buckle retention check",
+        "seatbelt retractor binding",
+        "seatbelt cleaning precautions",
+        "manual seat track locking",
+        "front seatback release",
+        "rear seatback latch check",
+        "coupe convertible seat inspection"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "e22a1c8c39c39a48bf1e693099f4a51b2c9991f5b53138d28799eb41f25c5e93"
+      }
     },
     {
       "applicability": {
