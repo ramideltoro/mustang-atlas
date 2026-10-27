@@ -29,3 +29,12 @@ test('explained topic search rows favor clear context and distinguish complete g
  assert.equal(documentRowSummary({...document,learningStatus:'pending'}),document.snippet);
  assert.equal(documentRowSummary({...document,summary:null,section:{title:'Connector views'}}),'Connector views');
 });
+
+test('reviewed enthusiast introductions remain visible alongside topic and circuit context',async()=>{
+ const {showArticleIntroduction}=await import('./topic-context-model.mjs');
+ const document={introduction:'Follow the power before blaming the module.',editorial:{teachingVersion:'enthusiast-v2'},learningContext:{status:'complete',summary:'Background',sections:[{title:'Circuit basics'}]},circuitContext:{mode:'curated'}};
+ assert.equal(showArticleIntroduction(document),true);
+ assert.equal(showArticleIntroduction({...document,editorial:undefined}),false);
+ assert.equal(showArticleIntroduction({introduction:'Existing standalone explanation'}),true);
+ assert.equal(showArticleIntroduction({...document,introduction:''}),false);
+});

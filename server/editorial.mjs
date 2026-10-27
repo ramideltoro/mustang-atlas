@@ -5,6 +5,8 @@ export {editableLeaves} from './guide-validation.mjs';
 export function acceptedOverlay(document,overlay,options={}){return validateGuide(document,overlay,options).passed;}
 export function applyOverlay(document,overlay){const result=structuredClone(document);const edits=new Map(overlay.edits.map(e=>[e.blockId,e]));const visit=items=>{for(const b of items||[]){const edit=edits.get(b.id);if(edit){b.text=edit.text;if(typeof edit.why==='string'&&edit.why.trim())b.why=edit.why;}visit(b.children);visit(b.items);for(const row of b.rows||[])for(const c of row.cells||[])visit(c.blocks);}};visit(result.blocks);
  result.teachingStatus='complete';result.editorial={status:'complete',humanReviewed:overlay.checks?.humanReviewed===true,checkedAt:overlay.checkedAt||null,sourceHash:overlay.sourceHash};
+ const review=overlay.referenceReview;
+ if(overlay.referenceEditorialVersion==='enthusiast-v2'&&review?.kind==='independent-codex-technical-review'&&review.humanReviewed===false&&Number.isInteger(review.sourceChunkCount)&&review.sourceChunkCount>0&&review.reviewedChunkCount===review.sourceChunkCount&&Number.isInteger(review.sourceUnitCount)&&review.sourceUnitCount>0&&/^[a-f0-9]{64}$/.test(review.fingerprint||''))result.editorial.teachingVersion='enthusiast-v2';
  if(typeof overlay.title==='string'&&overlay.title.trim())result.title=overlay.title;
  if(typeof overlay.introduction==='string')result.introduction=overlay.introduction;
  if(Array.isArray(overlay.requirements))result.requirements=overlay.requirements;

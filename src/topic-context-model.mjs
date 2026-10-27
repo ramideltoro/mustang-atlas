@@ -29,3 +29,5 @@ export function documentRowSummary(document={}){
 export function documentExplanationLabel(document={}){
  return document.teachingStatus==='complete'?'Explained':document.learningStatus==='complete'?'Topic explained':null;
 }
+
+export function showArticleIntroduction(document){return Boolean(document?.introduction&&(document.editorial?.teachingVersion==='enthusiast-v2'||(!topicContextForView(document)&&!document.circuitContext)));}

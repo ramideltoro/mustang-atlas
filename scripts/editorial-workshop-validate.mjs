@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import{openDb}from '../server/db.mjs';import{validateStagedCatalog}from './editorial-workshop-catalog.mjs';
+const directory=path.resolve('work/editorial-workshop'),reviewed=path.join(directory,'reviewed');const records=fs.existsSync(reviewed)?fs.readdirSync(reviewed).filter(f=>f.endsWith('.json')).map(f=>JSON.parse(fs.readFileSync(path.join(reviewed,f),'utf8'))):[];
+const db=openDb({readOnly:true});const result=validateStagedCatalog(db,records,{directory});fs.writeFileSync(path.join(directory,'catalog-validation.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));db.close();if(!result.valid)process.exitCode=1;

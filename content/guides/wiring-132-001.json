@@ -1,0 +1,33 @@
+{
+  "documentId": "wiring-132-001",
+  "sourceHash": "0527988da80d53b0a918343f1c0ff397c901034bc08d02ca428dbe352385db15",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 60,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ab9ffb07b66e7546d9fa54b69b22a383293d12767a35c5ca6ef2dd88995ecff1",
+    "reviewedAt": "2026-10-27T01:45:47.987Z",
+    "editorialRevision": "441fef7937a37a3b4387d2d0504609c9699a373e0eec6af12b639132d59ff329"
+  },
+  "title": "Audio System-Navigation - AM-FM-CD-SYNC — diagram 1",
+  "introduction": "I read this page as a route map for the front control/display interface module (FCDIM). It looks like electrical spaghetti until I separate the power supply, ground return, communication wires and rear-video wires. Then the tangle starts behaving itself.\n\n### Start with the power route\n\nI find VBATT at the top of the FCDIM and follow its line upward to the body control module (BCM), through the fuse and the marked splice. The dashed box around the splice carries the **coupe** qualifier; I keep that condition attached to the marked feature rather than treating it as a label for every connection on the page. The supply is explicitly **Hot at all times**: switching off the ignition does not establish that this circuit is de-energized.\n\n### Follow the return and signal paths\n\nAt the bottom of the FCDIM, GND leads to the ground symbol and its continuation reference. To the right, the CAN pair leads to **Module Communications Network**, while REAR VIDEO + and REAR VIDEO - lead to **Parking Aid**. I follow the printed reference beside the appropriate arrow to continue that particular route. The nearby word MODULE belongs to Module Communications Network; it does not turn the separate Parking Aid label into a different component name.\n\n### Match a line before matching a terminal\n\nI pick a line at the module, read its terminal number and connector identifier, then follow that same line through its circuit and color labels. This keeps a neighboring wire’s information from accidentally joining the party. The connector identifier names the connection; the terminal number picks out an individual connection within it. I use the drawing’s positions to pair those labels, not the order of loose words in an extracted table.\n\nThis sheet is a connection map, not a physical connector-face view or a test procedure. For probing or repair I use the matching connector view and diagnostic instructions, including their setup and limits.",
+  "requirements": [],
+  "edits": [],
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 0,
+    "receivedBlocks": 0,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "checkedAt": "2026-10-27T01:45:47.986Z"
+}

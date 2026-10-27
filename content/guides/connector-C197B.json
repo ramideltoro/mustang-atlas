@@ -1,0 +1,44 @@
+{
+  "documentId": "connector-C197B",
+  "sourceHash": "202086c070849dba5f73886d5be45209f00f883d830dbfa52665707562acb94f",
+  "title": "C197B — Starter motor connector",
+  "introduction": "I use this page like an ID card for the starter motor connector: identify the connector, match its cavity to the table, then follow the circuit information. A mysterious plastic plug is much less mysterious once it has a name and a job.\n\n### Match the drawing to the row\n\nThe face drawing has a single marked cavity. I find that same cavity in the pin-assignment table and read across the row, keeping the circuit number, color, gauge and function together. The listed function is **RELAY - STARTER**. The harness information under the drawing helps me confirm which reference I’m reading before I go chasing the wrong damn plug.\n\n### Know what each field is telling you\n\nThe connector identifier names this connection; the cavity label identifies its individual terminal position. **Circuit Number** identifies the circuit, while **Color** and **Gauge** record the listed wire information. **Used** and **Terminal Part Number** complete the row. I leave Gauge in the reference’s own notation because this sheet does not state a unit standard. A blank Qualifier field means there is no additional qualifier written here, not that every Mustang uses the same connector.\n\nFor an actual electrical check, I pair this reference with the matching wiring diagram and diagnostic procedure. This drawing does not specify a terminal-side versus wire-side view, physical access or expected test readings.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C197B-b00002",
+      "text": "Harness 14B060 · Read the connector face",
+      "why": "I start with the marked cavity and find the matching row below. The harness identification helps me keep this connector reference separate from a similar-looking one."
+    },
+    {
+      "blockId": "connector-C197B-b00005",
+      "text": "Pin assignments · Read across the cavity row",
+      "why": "I follow the matching row across instead of borrowing a detail from a neighboring field. Circuit identity, wire information and terminal details each answer a different question."
+    }
+  ],
+  "checkedAt": "2026-10-27T01:47:24.286Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7946b0b077b112ae3108876548ee1b975f0e2284285e0d0ce95575a3f69d9099",
+    "reviewedAt": "2026-10-27T01:47:24.288Z",
+    "editorialRevision": "dbccb23a3966b1ffd20aee95a380f84880593be266696aa7404310d253fe7bc3"
+  }
+}

@@ -1,0 +1,64 @@
+# Reference article teaching pass
+
+This workflow stages a complete, independently reviewed enthusiast rewrite of the public reference corpus. It never writes the public content catalog or live `data/guides`. It uses the locally signed-in Codex CLI; it does not call a model API or load API credentials.
+
+## Scope and evidence
+
+`node scripts/reference-editorial-run.mjs --prepare-only` inventories every public SQLite document. The initial inventory is 2,264 documents: 245 overviews, 184 diagnostic articles, 967 repairs, 40 specification references, 16 general articles, 382 wiring references, and 430 connector references. There are 409 documents without editable prose. Those need a specific reading guide for their tables or illustrations, not invented repair instructions.
+
+Every structured block, table row, illustration, and the entire extracted text becomes an evidence unit. Chunking retains all units and exact editable block IDs. It does not cut off long source documents. The initial plan has 235,672 evidence units in 5,140 chunks. The source text is deliberately included in addition to structured blocks to account for labels the importer may not have placed in a block. This evidence duplication is not duplicated public prose.
+
+Each associated image is attached to both author and reviewer at up to 2,400 pixels per dimension. An unreadable label is a reason to hold a claim, never to guess it. Related references are included in full only if small enough and without unreviewed illustrations; other targets remain explicit unavailable prerequisites. The article must retain those referrals and must not claim a standalone procedure when supporting instructions are unavailable.
+
+## Run and resume
+
+```sh
+node --test scripts/reference-editorial-selftest.mjs
+node scripts/reference-editorial-run.mjs --prepare-only
+node scripts/reference-editorial-run.mjs --ids G1686641,G1688123,connector-C197B,wiring-132-001
+node scripts/reference-editorial-run.mjs
+node scripts/reference-editorial-run.mjs --retry-held --limit 10
+```
+
+The runner uses one CLI process at a time. Author and fresh independent reviewer run sequentially. `--max-attempts` defaults to two per chunk. A source/context/prompt fingerprint invalidates checkpoints when evidence changes. Completed chunks resume; a document is accepted only after every chunk passes. A `work/editorial-references/stop-after-current` file drains the current document. SIGINT/SIGTERM terminates the active CLI and leaves the document pending. Remove the drain file before resuming.
+
+`work/editorial-references/progress.json` reports the complete corpus, not merely a selected pilot. `state.json` explicitly records pending, active, held, and accepted documents, reviewed chunk counts, and blocking reasons. `documents/<id>/<fingerprint>/` contains exact inputs, image attachments, raw drafts, reviewer verdicts, and accepted chunk checkpoints. All are private working artifacts. No pending or held document is advertised as rewritten.
+
+A passed automated review is not a human technician's certification. Mechanical validation preserves numbers/units/identifiers in their original blocks; semantic review additionally checks actions, sequence, warnings, branches, scope, supported explanations, teaching quality, and tone. Any reviewer issue holds the chunk. First-person editorial language never fabricates a personal workshop experience. Humor may include mild profanity but stays out of warnings and precise instructions.
+
+## Publishing contract
+
+Accepted full-document overlays are staged in `work/editorial-references/accepted/<id>.json`. They retain the existing overlay fields: `documentId`, `sourceHash`, `title`, `introduction`, `requirements`, exact-ID `edits`, `editorialVersion`, `status: complete`, and passing `checks`.
+
+Additional fields:
+
+```json
+{
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 15,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "source-context-prompt-plan SHA-256",
+    "reviewedAt": "ISO timestamp"
+  }
+}
+```
+
+Before publication, require current state `accepted`, matching state/overlay fingerprint and source hash, all chunks reviewed, then run the existing `validateGuide` with current curated context. Copy only those accepted overlays to `content/guides/` for tracked publication (or the separately managed deployment overlay location). `content/guides` takes precedence over `data/guides`; never leave a stale tracked overlay overriding a newer staged one. Rebuild and run site validation before deployment. Original structured tables and illustrations remain attached; teaching edits replace prose without modifying technical evidence. Reader integration exposes the reviewed version and ensures the reviewed introduction is visible even when system or circuit context also exists.
+
+The initial scope requires at least 10,280 CLI author/reviewer invocations before retries. The inventory and tools are not evidence that this full pass has completed; consult current state and accepted artifacts for actual completion.
+
+## Pilot findings and editorial revisions
+
+The initial pilot deliberately included overview, repair, wiring, and connector material. The first overview passed technical checks but sounded too clinical. A separate editor revision added useful, original enthusiast analogies and removed repetitive scope disclaimers, then passed a fresh independent review with the current teaching context. Editorial revisions live under `work/editorial-references/revisions/`; preparation does not delete these artifacts. `scripts/reference-editorial-review-revision.mjs <revision-directory>` validates and independently reviews complete single-chunk revisions, with full explicitly supplied image attachments when applicable. Its accepted output adds a `referenceReview.editorialRevision` draft hash.
+
+A wiring pilot exposed an evidence-preparation bug: transparent SVG pixels made black labels disappear against the image viewer’s dark background. Future pipeline PNG attachments are flattened onto white. The preserved local PDF export and the same source SVG on white resolved the qualifier and continuation-label associations. Missing labels in that initial raster were not missing source information. Source exports must be visually checked before calling a label ambiguity a source blocker. Multi-page PDF exports must be reviewed in full, not just their first page.
+
+The A/C compressor-belt repair pilot remains held: the source names accessory-drive-belt ribs in parts of A/C-belt installation, and the complete illustrated prerequisite procedures need review. This requires source reconciliation and prerequisite coverage, not invented replacement wording. The full unattended corpus batch has not been launched following these pilots.
+
+The follow-up bounded batch selects 20 references (10 distinct overview topics and 10 connector references), recorded in `work/editorial-references/batch-20.json`. It runs the full author and independent reviewer sequentially, not a template-only transformation. Connector and wiring single-chunk jobs additionally attach every page of the preserved local source PDF export; missing page output or a source export exceeding 12 pages is held for dedicated review rather than silently truncated. Vector images are rendered at a legible density and flattened onto white.
+
+Validated editorial revisions are recognized during preparation and retained as accepted even when generation prompts change. The runner records their artifact path and original review metadata instead of replacing them with an older generated draft. Source hash, complete unit count, review coverage, and current production validation must still match. Voice rules now require natural topic-specific explanation, suppress repetitive missing-information disclaimers, and prohibit mentioning internal chunk boundaries in reader-facing prose.

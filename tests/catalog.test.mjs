@@ -119,3 +119,18 @@ test('orphan section citations are removed with balanced parentheses while mecha
  const namedSection=createReferenceResolver([row('Gautomatic','Transmission','Removal',{section_title:'Automatic Transmission - 6-Speed Automatic Transmission – 6R80'})]);assert.equal(namedSection.cleanObject('Follow the procedure for the 6-Speed Automatic Transmission – 6R80 (307-01).'),'Follow the procedure for the 6-Speed Automatic Transmission – 6R80.');
  assert.equal(neutralCopy('Use the manual-transmission branch and the manual transmission procedure.'),'Use the manual-transmission branch and the manual transmission procedure.');
 });
+
+test('public editorial metadata exposes only the teaching version, never private review provenance',()=>{
+ assert.deepEqual(stripPrivateMetadata({editorial:{teachingVersion:'enthusiast-v2',sourceHash:'private',checkedAt:'private',humanReviewed:false}}),{editorial:{teachingVersion:'enthusiast-v2'}});
+ assert.deepEqual(stripPrivateMetadata({editorial:{sourceHash:'private',teachingVersion:'unrecognized'}}),{});
+});
+
+test('reviewed standard and SVT hub references keep incompatible fastener arrangements separate',()=>{
+ const standard={id:'G1692537',title:'Wheel Bearing and Wheel Hub',source_hash:'94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812'};
+ const svt={id:'G1692554',title:'Wheel Bearing and Wheel Hub - SVT',source_hash:'4066fc0f227995b392bfc015c56fd0dad3a9245df1f74d4cc83bb4cdcf2d3b28'};
+ assert.deepEqual(documentApplicability(standard).engines,['2.3L','3.7L','5.0L']);
+ assert.equal(documentApplicability(standard,'5.2L').matchesSelectedEngine,false);
+ assert.deepEqual(documentApplicability(svt).engines,['5.2L']);
+ assert.equal(documentApplicability(svt,'3.7L').matchesSelectedEngine,false);
+ assert.deepEqual(documentApplicability({...standard,source_hash:'changed'}).engines,[]);
+});

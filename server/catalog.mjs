@@ -8,6 +8,10 @@ const array=value=>{if(Array.isArray(value))return value;try{return JSON.parse(v
 // The 2.3L label is a full-sheet header outside the component/branch boxes on
 // wiring 033-002. Bind the visual finding to the exact reviewed drawing.
 const reviewedApplications={
+ // These are different front hub arrangements: standard central retaining nut
+ // versus the separately documented SVT bolt-on assembly. Keep their specs apart.
+ 'G1692537':{hash:'94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812',engines:['2.3L','3.7L','5.0L']},
+ 'G1692554':{hash:'4066fc0f227995b392bfc015c56fd0dad3a9245df1f74d4cc83bb4cdcf2d3b28',engines:['5.2L']},
  'wiring-033-002':{hash:'7de1c56382d2c220ab5cd07a83d5857bd07178510db14f767b5df160dbdc0864',engines:['2.3L']},
  // This hydraulic-brake chapter contains separate automatic and manual pedal
  // assemblies. G1692563 is only the 6R80 sequence; G1692562 covers MT82/3160.
@@ -61,5 +65,5 @@ export function selectThumbnail(document,resolve=m=>m){
 }
 export function stripPrivateMetadata(value){
  if(Array.isArray(value))return value.map(stripPrivateMetadata);if(!value||typeof value!=='object')return value;
- const out={};for(const[k,v]of Object.entries(value)){if(k==='editorial'){if(v?.kind)out.editorial={kind:v.kind};continue;}if(['source','sourceHash','sourceHashes','sourceBlocks','sourcePath','source_path','pdfUrl','pdf_file','sourceUrl','checkedAt','humanReviewed'].includes(k))continue;out[k]=stripPrivateMetadata(v);}return out;
+ const out={};for(const[k,v]of Object.entries(value)){if(k==='editorial'){const editorial={};if(v?.kind)editorial.kind=v.kind;if(v?.teachingVersion==='enthusiast-v2')editorial.teachingVersion=v.teachingVersion;if(Object.keys(editorial).length)out.editorial=editorial;continue;}if(['source','sourceHash','sourceHashes','sourceBlocks','sourcePath','source_path','pdfUrl','pdf_file','sourceUrl','checkedAt','humanReviewed'].includes(k))continue;out[k]=stripPrivateMetadata(v);}return out;
 }

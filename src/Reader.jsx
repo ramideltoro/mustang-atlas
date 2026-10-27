@@ -9,7 +9,7 @@ import {TermText,useGlossary,GlossaryProvider} from './Glossary.jsx';
 import SystemLearning from './SystemLearning.jsx';
 import TopicContext from './TopicContext.jsx';
 import CircuitContext from './CircuitContext.jsx';
-import {topicContextForView} from './topic-context-model.mjs';
+import {topicContextForView,showArticleIntroduction} from './topic-context-model.mjs';
 import TorqueCalculator from './TorqueCalculator.jsx';
 import PartsPanel from './PartsPanel.jsx';
 import MaintenancePanel from './MaintenancePanel.jsx';
@@ -58,7 +58,7 @@ function Block({block,media,onZoom,depth=0,seen}){
  if(block.type==='paragraph')return <>{block.textBlocks?text:<p className="source-paragraph">{text}</p>}<Why text={block.why}/></>;
  if(block.type==='safety')return <Callout kind={block.severity||'note'}>{block.textBlocks?text:<p>{text}</p>}{children.length>0&&<BlockList blocks={children} media={media} onZoom={onZoom} depth={depth+1} seen={seen}/>}</Callout>;
  if(block.type==='step')return <section className={'repair-step '+(depth?'nested-step ':'')+(!hasReadableText(block.text)&&children.every(child=>['media','missing-media','video','video-link'].includes(child.type))?'illustrated-step':'')} id={'block-'+key}><div className="step-rail"><span>{Number.isFinite(Number(block.number))?Number(block.number):''}</span></div><div className="step-main">{(hasReadableText(block.text)||block.textBlocks?.length>0)&&<div className="step-instruction">{text}</div>}<Why text={block.why}/>{children.length>0&&<BlockList blocks={children} media={media} onZoom={onZoom} depth={depth+1} seen={seen}/>}</div></section>;
- if(block.type==='list'){const Tag=block.ordered?'ol':'ul';return <Tag className="source-list" start={block.ordered?block.start:undefined}>{(block.items||[]).map((item,index)=><li key={item.id||index} value={block.ordered?item.number:undefined}><BlockText block={item} media={media} onZoom={onZoom} depth={depth} omitPunctuation/>{item.children?.length>0&&<BlockList blocks={item.children} media={media} onZoom={onZoom} depth={depth+1} seen={seen}/>}</li>)}</Tag>;}
+ if(block.type==='list'){const Tag=block.ordered?'ol':'ul';return <Tag className="source-list" start={block.ordered?block.start:undefined}>{(block.items||[]).map((item,index)=><li key={item.id||index} value={block.ordered?item.number:undefined}><BlockText block={item} media={media} onZoom={onZoom} depth={depth} omitPunctuation/>{item.why&&<div className="list-explanation"><Markdown body={item.why}/></div>}{item.children?.length>0&&<BlockList blocks={item.children} media={media} onZoom={onZoom} depth={depth+1} seen={seen}/>}</li>)}</Tag>;}
  if(block.type==='table'){const torque=block.torqueTable;return <div className={'table-scroll'+(block.connectorPins?' connector-pin-table':'')+(torque?.active?' torque-spec-table':'')} tabIndex={0} role="region" aria-label={block.caption||(torque?.active?'Torque specifications, scroll horizontally if needed':block.connectorPins?'Connector pin assignments, scroll horizontally for all columns':'Reference table, scroll horizontally if needed')}>{(block.caption||torque?.active)&&<div className={'table-label'+(torque?.active?' torque-table-label':'')}>{torque?.active?<RotateCw size={15} aria-hidden="true"/>:<ClipboardList size={14}/>} {block.caption||'Torque specifications'}</div>}{block.connectorPins&&<div className="table-scroll-hint"><ArrowRight size={13}/> Scroll horizontally to see all pin details.</div>}<table><tbody>{(block.rows||[]).map((row,index)=><tr key={row.id||index}>{(row.cells||[]).map((cell,n)=>{const Tag=cell.header?'th':'td';return <Tag key={cell.id||n} className={!cell.header&&torque?.columns.includes(n)?'torque-value-cell':!cell.header&&torque?.stages&&n===0?'torque-stage-cell':undefined} data-column={cell.columnKey} colSpan={cell.colSpan||undefined} rowSpan={cell.rowSpan||undefined} scope={cell.header?'col':undefined}>{cell.text&&<BlockText block={cell} media={media} onZoom={onZoom} depth={depth} withinTorqueTable={torque?.active}/>}<BlockList blocks={cell.blocks||[]} media={media} onZoom={onZoom} depth={depth+1} seen={seen}/></Tag>;})}</tr>)}</tbody></table></div>;}
  if(block.type==='media'){const figure=media.get(block.mediaId);return figure?<Figure figure={figure} onZoom={onZoom}/>:<div className="missing-media"><Info size={15}/> Illustration unavailable.</div>;}
  if(block.type==='video'&&safeHref(block.url))return <figure className="instruction-video"><video controls preload="metadata" playsInline src={block.url} aria-label={block.title||'Procedure demonstration'}><a href={block.url}>Open the procedure video</a></video><figcaption><PlayCircle size={16} aria-hidden="true"/>{block.title||'Procedure demonstration'}</figcaption></figure>;
@@ -89,7 +89,9 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
  const remainingMedia=[...media.values()].filter(item=>!usedMedia.has(item.id));
  const saved=bookmarks.some(item=>item.id===id),learningContext=topicContextForView(data),circuitContext=data?.circuitContext;
  const showTopicContext=learningContext&&circuitContext?.mode!=='curated';
+ const showIntroduction=showArticleIntroduction(data);
  const outline=[
+  ...(showIntroduction?[{id:'article-introduction',title:'Get your bearings',level:2,tone:'amber'}]:[]),
   ...(showTopicContext?[{id:'understand-topic',title:'Understand this topic',level:2,tone:'amber'},...(learningContext.sections||[]).map((section,index)=>({id:'topic-section-'+(section.id||index),title:section.title,level:3,tone:['amber','blue','green'][index%3]}))]:[]),
   ...(circuitContext?[{id:'understand-circuit',title:'How this circuit works',level:2,tone:'amber'},...[
    ['components','circuit-components','What the components do'],['connections','circuit-paths','What connects to what'],['circuits','circuit-terminals','Circuit and connector map'],['continuations','circuit-continuations','Follow the circuit further'],['readingGuide','circuit-reading-guide','Make sense of the drawing']
@@ -102,7 +104,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
   ...(relatedWorkshopGuides(data?.workshopGuides).length?[{id:'workshop-guides',title:'Care and repair guides',level:2,tone:'blue'}]:[])
  ].filter((entry,index,all)=>entry.title&&all.findIndex(item=>item.id===entry.id)===index);
  async function copy(){try{await navigator.clipboard.writeText(window.location.href);setCopied(true);setTimeout(()=>setCopied(false),1800);}catch{}}
- function jump(blockId){const target=document.getElementById(blockId);if(!target)return;if(!target.hasAttribute('tabindex'))target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
+ function jump(blockId){const target=document.getElementById(blockId);if(!target)return;for(let ancestor=target.parentElement;ancestor;ancestor=ancestor.parentElement)if(ancestor.tagName==='DETAILS')ancestor.open=true;if(!target.hasAttribute('tabindex'))target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
  if(state.loading)return <Loading label="Opening the article…"/>;
  if(state.error)return <ErrorState message={state.error} retry={state.retry}/>;
  if(!data)return null;
@@ -121,10 +123,10 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
   {mismatch?<section className="engine-mismatch"><Info size={24}/><h2>This article belongs to a different engine.</h2><p>It covers {data.engines.join(', ')}. Your filter is set to {engine}. Choose All or a matching engine in the top-right selector to read it.</p><a className="text-link" href={'#/library?system='+encodeURIComponent(data.systemId)}>Find articles for your engine <ArrowRight size={16}/></a></section>:<div className="document-layout">
    <article className="article-body" aria-label="Workshop article">
     <ArticleContents entries={outline} onJump={jump}/>
-    {showTopicContext&&<TopicContext context={learningContext}/>}
+    {showIntroduction&&<section id="article-introduction" className="article-introduction"><div className="section-title"><h2>Get your bearings</h2></div><Markdown body={typeof data.introduction==='string'?data.introduction:data.introduction.body||data.introduction.text}/></section>}
+    {showTopicContext&&(data.editorial?.teachingVersion==='enthusiast-v2'?<details className="article-background"><summary>More background on this topic</summary><TopicContext context={learningContext}/></details>:<TopicContext context={learningContext}/>)}
     {circuitContext&&<CircuitContext context={circuitContext}/>}
     {!learningContext&&!circuitContext&&!data.introduction&&data.kind==='overview'&&<SystemLearning system={system} expanded/>}
-    {!learningContext&&!circuitContext&&data.introduction&&<section className="article-introduction"><span className="eyebrow">UNDERSTAND THE JOB</span><Markdown body={typeof data.introduction==='string'?data.introduction:data.introduction.body||data.introduction.text}/></section>}
     <Requirements items={data.requirements}/>
     {calculatorType&&<TorqueCalculator calculatorType={calculatorType}/>}
     <div className="document-blocks"><BlockList blocks={blocks} media={media} onZoom={onZoom}/></div>

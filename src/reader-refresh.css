@@ -85,3 +85,13 @@
 @media print{.torque-spec,.torque-spec-table,.article-body .torque-spec-table th,.article-body .torque-value-cell{background:white;color:#111;border-color:#777}.torque-spec-label,.torque-spec-body,.torque-line-value,.torque-line-label,.torque-line-stage,.torque-table-label,.torque-inline-value{color:#111}.instruction-video video{display:none}}
 .torque-spec-body:has(>.torque-spec-line){white-space:normal}.torque-spec-line{white-space:pre-line}
 .torque-spec-body:has(>.torque-spec-row){display:grid;gap:8px;white-space:normal;font-size:16px;line-height:1.65}.torque-spec-row{display:block;min-width:0}.torque-spec-row.has-label{display:grid;grid-template-columns:minmax(65px,max-content) minmax(0,1fr);gap:8px 18px;align-items:baseline}.torque-row-label{font-size:14px;font-weight:500;color:var(--info)}.torque-row-value{font-size:16px;line-height:1.65;font-weight:600;color:var(--heading);white-space:normal;font-variant-numeric:tabular-nums}.torque-row-stage+.torque-spec-row{border-top:1px solid var(--info-line);padding-top:8px}.torque-spec-body .torque-spec-row:only-child{padding:0;border:0}@media(max-width:540px){.torque-spec-row.has-label{gap:6px 12px;grid-template-columns:minmax(54px,max-content) minmax(0,1fr)}.torque-row-label{font-size:13px}.torque-row-value{font-size:16px}}@media print{.torque-row-label,.torque-row-value{color:#111}}
+
+/* Keep optional legacy background available without burying the revised article. */
+.article-background{margin:1.25rem 0;border:1px solid var(--line);border-radius:12px;padding:1rem 1.25rem}
+.article-background>summary{cursor:pointer;font-weight:600;line-height:1.5}
+.article-background>summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.article-background[open]>summary{margin-bottom:1rem}
+
+.article-body .list-explanation{margin:.4rem 0 .8rem;padding-left:.8rem;border-left:2px solid var(--line-strong)}
+.article-body .list-explanation .prose{font-size:15px;line-height:1.75}
+.article-body .list-explanation p{margin:.3rem 0}
