@@ -182,3 +182,7 @@ The thirteenth secondary reservation uses G1957566 only for a new motor already 
 ### Accessible seatbelt cleaning evidence
 
 The exact G1692223 cleaning task now receives the complete checksum-bound 2015 owner printed page 230, including its full private rendered page and two-column reading order. This supplies the source-requested cleaning products and precautions without importing adjacent engine, glass or instrument-panel instructions. The external supplement remains excluded from pair mode and requires prospective, persisted or explicit-retry enrollment; existing holds are unchanged. Optional rear-cushion context does not impose cushion access on accessible-webbing cleaning. Reservation 14 contains only this task and still requires complete independent review and exact supervisory approval.
+
+### Rear buckle completion evidence
+
+Reservation 15 supplies the complete exact-hash G1883856 diagnosis/testing chapter for G1692231 rear buckle replacement, including preliminary inspection and the applicable complete buckle/tongue functional test. Separate retractor, ALR and road tests remain available as symptom-specific evidence; the author must retain genuinely applicable requirements and stop when further execution is unsupported. Both source enrichment and its scope constraint require new, persisted or explicit-retry enrollment, preserving existing hold fingerprints. The two-packet review is not a preapproval.
