@@ -174,3 +174,7 @@ Two tasks are reserved after the current six and isolated oxygen-sensor retries:
 ### Accessible upper-guide adjustment scope
 
 The secondary twelfth reservation contains only G1726475, untwisting webbing at an already accessible seatbelt guide. Its complete source and both fold/feed figures remain in the review packet; conditional trim access is explicitly a separate prerequisite, and obstructed access stops. This does not authorize retractor repair or restraint-system certification. Full independent review and exact supervisory approval remain required. The secondary promoter now recognizes this reserved manifest.
+
+### New front window motor initialization
+
+The thirteenth secondary reservation uses G1957566 only for a new motor already installed in a fully reassembled coupe. The complete source explicitly skips de-initialization for a new motor. Existing-motor live battery/fuse interruption remains outside this scope. The complete high-force warning, closed door, fully open start, both second-detent holds, extra cycle and one-touch checks remain required, together with independently reviewed owner controls. This is prospective authoring guidance, not publication approval.
