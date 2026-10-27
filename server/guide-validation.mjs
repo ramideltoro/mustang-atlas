@@ -1,5 +1,5 @@
 export const EDITORIAL_VERSION = 1;
-export const VALIDATION_VERSION = 2;
+export const VALIDATION_VERSION = 3;
 export function editableLeaves(blocks) {
  const result=[];const visit=items=>{for(const block of items||[]){
   if(block.id&&typeof block.text==='string'&&block.text.trim()&&['heading','paragraph','safety','step','list-item'].includes(block.type))result.push({id:block.id,type:block.type,text:block.text,...(block.severity?{severity:block.severity}:{}),...(block.number?{number:block.number}:{})});
@@ -33,8 +33,8 @@ export function selectTeachingContext(doc,{terms=[],systems=[],abbreviations=[]}
 }
 const claimIndex=evidence=>({numbers:numericValues(evidence),quantities:quantities(evidence)});
 function novelClaims(text,index,prefix,errors){const allowed=index.numbers,allowedQuantities=index.quantities;for(const n of numericValues(text))if(!allowed.has(n))errors.push(prefix+': new numeric value '+n);for(const q of quantities(text))if(!allowedQuantities.has(q))errors.push(prefix+': unsupported quantity or unit '+q);}
-export function validateEdits(leaves,output,{evidence=leaves.map(l=>l.text).join('\n'),checkMetadata=true}={}){
- const errors=[],evidenceIndex=claimIndex(evidence);if(!output||!Array.isArray(output.edits))return {passed:false,errors:['Missing edits'],validationVersion:VALIDATION_VERSION};
+export function validateEdits(leaves,output,{evidence=leaves.map(l=>l.text).join('\n'),checkMetadata=true,teachingEvidence=evidence}={}){
+ const errors=[],evidenceIndex=claimIndex(evidence),teachingIndex=claimIndex(teachingEvidence);if(!output||!Array.isArray(output.edits))return {passed:false,errors:['Missing edits'],validationVersion:VALIDATION_VERSION};
  if(output.uncertainties?.length)errors.push(...output.uncertainties.map(x=>'Needs review: '+x));const expected=new Map(leaves.map(l=>[l.id,l])),seen=new Set();
  for(const edit of output.edits){const source=expected.get(edit.blockId);if(!source){errors.push('Unknown block '+edit.blockId);continue;}if(seen.has(edit.blockId))errors.push('Duplicate block '+edit.blockId);seen.add(edit.blockId);if(typeof edit.text!=='string'||!edit.text.trim()){errors.push('Empty block '+edit.blockId);continue;}
   const have=numericValues(edit.text),haveQ=quantities(edit.text);for(const n of numericValues(source.text))if(!have.has(n))errors.push(edit.blockId+': missing numeric value '+n);for(const q of quantities(source.text))if(!haveQ.has(q))errors.push(edit.blockId+': missing quantity or changed unit '+q);
@@ -42,13 +42,34 @@ export function validateEdits(leaves,output,{evidence=leaves.map(l=>l.text).join
   for(const id of identifiers(source.text))if(!visibleText(edit.text).includes(id))errors.push(edit.blockId+': missing identifier '+id);
   if(source.type!=='heading'&&(source.text.length>90||source.text.length>25&&/\b(remove|install|disconnect|check|tighten|loosen|measure|inspect|replace|ensure|attach|apply|clean)\b/i.test(source.text))&&edit.text.trim()===source.text.trim())errors.push(edit.blockId+': unchanged source prose');
   if(source.text.length>180&&edit.text.length<source.text.length*.5)errors.push(edit.blockId+': rewrite too short to retain the source detail');
-  if(typeof edit.why!=='string')errors.push(edit.blockId+': missing explanation field');novelClaims(edit.why,evidenceIndex,edit.blockId+' explanation',errors);
+  if(typeof edit.why!=='string')errors.push(edit.blockId+': missing explanation field');novelClaims(edit.why,teachingIndex,edit.blockId+' explanation',errors);
  }
  for(const leaf of leaves)if(!seen.has(leaf.id))errors.push('Missing block '+leaf.id);
- if(checkMetadata){for(const key of ['title','introduction'])if(typeof output[key]==='string')novelClaims(output[key],evidenceIndex,key,errors);for(const group of output.requirements||[])for(const item of group.items||[])novelClaims((item.name||'')+' '+(item.detail||''),evidenceIndex,'Requirement',errors);}
+ if(checkMetadata){for(const key of ['title','introduction'])if(typeof output[key]==='string')novelClaims(output[key],key==='introduction'?teachingIndex:evidenceIndex,key,errors);for(const group of output.requirements||[])for(const item of group.items||[])novelClaims((item.name||'')+' '+(item.detail||''),teachingIndex,'Requirement',errors);}
  return {passed:errors.length===0,errors,expectedBlocks:leaves.length,receivedBlocks:seen.size,humanReviewed:false,editorialVersion:EDITORIAL_VERSION,validationVersion:VALIDATION_VERSION};
 }
-export function validateGuide(document,guide,{curatedContext=null}={}){
+export function validateGuide(document,guide,{curatedContext=null,resolveDocument}={}){
  if(!guide||guide.documentId!==document.id||guide.sourceHash!==(document.sourceHash||document.source_hash)||guide.status!=='complete'||guide.checks?.passed!==true)return {passed:false,errors:['Guide identity, source hash or publication status does not match'],validationVersion:VALIDATION_VERSION};
- return validateEdits(editableLeaves(document.blocks),guide,{evidence:documentEvidence(document,curatedContext)});
+ const support=validateSupportingSources(document,guide.supportingSourceRefs,{resolveDocument});
+ if(!support.passed)return {passed:false,errors:support.errors,validationVersion:VALIDATION_VERSION};
+ if(support.documents.length){const review=guide.referenceReview,refs=guide.supportingSourceRefs;if(review?.kind!=='independent-codex-technical-review'||review.humanReviewed!==false||review.supportingSourceCoverage!=='complete-units-and-illustrations'||review.supportingSourceDocumentCount!==refs.length||review.supportingSourceUnitCount!==refs.reduce((sum,ref)=>sum+ref.sourceUnitCount,0))return {passed:false,errors:['Supporting source independent review coverage mismatch'],validationVersion:VALIDATION_VERSION};}
+ const evidence=documentEvidence(document,curatedContext);
+ return validateEdits(editableLeaves(document.blocks),guide,{evidence,teachingEvidence:[evidence,...support.documents.map(d=>documentEvidence(d)+'\n'+(d.text||''))].join('\n')});
+}
+
+// Mirrors the complete source-unit inventory, including importer text outside blocks.
+export function sourceUnitCount(document){
+ let count=0;const represented=new Set();
+ const add=value=>{count++;if(value?.mediaId)represented.add(value.mediaId);};
+ const walk=blocks=>{for(const b of blocks||[]){const {children,items,rows,...base}=b;if(Object.keys(base).length)add(base);walk(children);for(const item of items||[]){const {children,...value}=item;add(value);walk(children);}for(const row of rows||[]){add({...row,cells:(row.cells||[]).map(({blocks,...cell})=>cell)});for(const cell of row.cells||[])walk(cell.blocks);}}};walk(document.blocks);
+ let part='';for(const line of String(document.text||'').match(/[^\n]*\n|[^\n]+$/g)||[]){if(part.length&&part.length+line.length>12000){count++;part='';}part+=line;}if(part)count++;
+ for(const media of document.media||[])if(!represented.has(media.id))count++;return count;
+}
+export function validateSupportingSources(primary,refs,{resolveDocument}={}){
+ const errors=[],documents=[];if(refs===undefined)return {passed:true,errors,documents};
+ if(!Array.isArray(refs)||refs.length>32)return {passed:false,errors:['Invalid supporting source list'],documents};
+ const byId=new Map([[primary.id,primary]]),links=new Map();
+ for(const ref of refs){if(!ref||typeof ref.documentId!=='string'||ref.documentId===primary.id||links.has(ref.documentId)){errors.push('Duplicate, self or invalid supporting source');continue;}links.set(ref.documentId,ref);const doc=resolveDocument?.(ref.documentId);if(!doc||doc.id!==ref.documentId||!ref.sourceHash||ref.sourceHash!==(doc.sourceHash||doc.source_hash)){errors.push('Supporting source hash or identity mismatch: '+ref.documentId);continue;}byId.set(doc.id,doc);if(!Number.isInteger(ref.sourceUnitCount)||ref.sourceUnitCount<1||ref.sourceUnitCount!==sourceUnitCount(doc)||ref.mediaCount!==(doc.media||[]).length)errors.push('Supporting source coverage mismatch: '+doc.id);documents.push(doc);}
+ for(const [id,ref]of links){const doc=byId.get(id),parent=byId.get(ref.referencedBy);if(!parent||!Array.isArray(parent.related)||!parent.related.includes(id)||ref.sourceReference!==undefined&&ref.sourceReference!==id){errors.push('Unsupported supporting source edge: '+id);continue;}if(parent.engines?.length&&doc?.engines?.length&&!parent.engines.some(e=>doc.engines.includes(e)))errors.push('Supporting source engine mismatch: '+id);const seen=new Set([id]);let cursor=ref.referencedBy;while(cursor!==primary.id){if(seen.has(cursor)||!links.has(cursor)){errors.push('Supporting source cycle or unreachable root: '+id);break;}seen.add(cursor);cursor=links.get(cursor).referencedBy;}}
+ return {passed:errors.length===0,errors,documents:errors.length?[]:documents};
 }
