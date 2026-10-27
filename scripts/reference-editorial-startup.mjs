@@ -6,7 +6,7 @@ export function clarifyStartupPreparation(draft,{kind,supportingSourceRefs=[]}={
  if(kind!=='repair'||!supportingSourceRefs.some(r=>r.documentId==='G1693189'&&r.sourceHash===GENERAL_SAFETY_HASH&&!r.navigationOnly))return changes;
  for(const group of draft.requirements||[])for(const item of group.items||[]){
   const before=item.detail;if(typeof before!=='string')continue;
-  let after=before.replace(/remove the key\b(?: from the vehicle)?/gi,(match,offset)=>{
+  let after=before.replace(/remove the (?:vehicle )?key\b(?: from the vehicle)?/gi,(match,offset)=>{
    const prefix=before.slice(Math.max(before.lastIndexOf('.',offset),before.lastIndexOf('\n',offset))+1,offset);
    if(/ignition\s+off|(?:switch|turn)\s+off\s+(?:the\s+)?ignition/i.test(prefix+' '+item.name))return match;
    return (match[0]==='R'?'Switch':'switch')+' the ignition OFF and remove the key from the vehicle';

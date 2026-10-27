@@ -103,7 +103,7 @@ test('publication startup check rejects missed variants without mutating reviewe
  const {startupReadinessIssues}=await import('./reference-editorial-readiness.mjs');
  const {GENERAL_SAFETY_HASH}=await import('./reference-editorial-startup.mjs');
  const make=detail=>({supportingSourceRefs:[{documentId:'G1693189',sourceHash:GENERAL_SAFETY_HASH}],requirements:[{category:'Setup',items:[{name:'Startup',detail}]}],edits:[{text:'Switch the ignition ON for this operating test.'}]});
- for(const detail of ['Once seat access is arranged, remove the key from the vehicle.','Disable remote start through the display. Switch the ignition OFF and remove the key. If equipped with engine auto start-stop, keep ignition off.']){
+ for(const detail of ['Remove the vehicle key to prevent another person starting the engine.','Once seat access is arranged, remove the key from the vehicle.','Disable remote start through the display. Switch the ignition OFF and remove the key. If equipped with engine auto start-stop, keep ignition off.']){
   const candidate=make(detail),before=JSON.stringify(candidate);
   assert.equal(startupReadinessIssues({kind:'repair'},candidate).length,1);
   assert.equal(JSON.stringify(candidate),before);
@@ -135,4 +135,8 @@ test('brake-booster access adds complete brake safety without treating parking r
  assert.deepEqual(buildSupportingPackage(neutral,[neutral,about,general,brakes]).documents.map(d=>d.id),['G1693189']);
  const nested=doc('tensioner','Accessory Drive Belt Tensioner','Remove the outlet pipe.',['pipe','G1693180'],'repair');
  assert.ok(buildSupportingPackage(nested,[nested,primary,about,general,brakes]).documents.some(d=>d.id==='G1693183'));
+});
+
+test('public decoded reference validation rejects engine claims absent from its evidence',async()=>{
+ const {DatabaseSync}=await import('node:sqlite');const {decodeDocument}=await import('../server/db.mjs');const {validateGuide,selectTeachingContext}=await import('../server/guide-validation.mjs');const fs=await import('node:fs');const db=new DatabaseSync('data/atlas.sqlite',{readOnly:true});try{const context={terms:JSON.parse(fs.readFileSync('content/glossary.json')).terms,systems:JSON.parse(fs.readFileSync('content/systems.json')).systems,abbreviations:JSON.parse(fs.readFileSync('data/abbreviations.json'))};for(const id of ['G1688154','G1796477']){const d=decodeDocument(db.prepare('select * from documents where id=?').get(id)),g={documentId:id,sourceHash:d.sourceHash,title:d.title,status:'complete',introduction:'This 5.2L overview.',requirements:[],edits:[{blockId:d.blocks[0].id,text:'Locate the external gearshift controls',why:''}],editorialVersion:1,validationVersion:5,checks:{passed:true}};const result=validateGuide(d,g,{curatedContext:selectTeachingContext(d,context)});assert(result.errors.some(x=>x.includes('new numeric value 5.2')));}}finally{db.close();}
 });
