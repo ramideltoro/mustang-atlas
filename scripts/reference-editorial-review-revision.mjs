@@ -1,5 +1,7 @@
 // Independently review a complete, single-chunk editorial revision staged by an editor.
 import fs from 'node:fs';
+import {validateGuide} from '../server/guide-validation.mjs';
+import {documentApplicability} from '../server/catalog.mjs';
 import path from 'node:path';
 import {spawn} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
@@ -10,10 +12,10 @@ if(fs.existsSync(path.join(root,'worker.pid')))throw Error('Wait for reference a
 const read=f=>JSON.parse(fs.readFileSync(f,'utf8')),input=read(path.join(dir,'input.json')),overlay=read(path.join(dir,'base-overlay.json'));
 if(input.chunkCount!==1||input.chunkIndex!==0)throw Error('Revision reviewer requires the complete single-chunk source');
 const images=input.reviewImages||[];if(input.illustrations?.length&&!images.length)throw Error('Illustrated revision requires complete source attachments');for(const file of images)if(!path.resolve(file).startsWith(root+'/')||!fs.existsSync(file))throw Error('Invalid private review image');
-const db=new DatabaseSync('data/atlas.sqlite',{readOnly:true}),doc=db.prepare('select * from documents where id=?').get(input.documentId);db.close();for(const k of['blocks','media','engines'])doc[k]=JSON.parse(doc[k]);
+const db=new DatabaseSync('data/atlas.sqlite',{readOnly:true}),sourceDocuments=db.prepare('select * from documents').all().map(d=>{for(const k of ['blocks','media','engines','related','source'])d[k]=JSON.parse(d[k]);d.engines=documentApplicability(d).engines;return d;});db.close();const resolveDocument=id=>sourceDocuments.find(d=>d.id===id),doc=resolveDocument(input.documentId);
 const context=selectTeachingContext(doc,{terms:read('content/glossary.json').terms,systems:read('content/systems.json').systems,abbreviations:read('data/abbreviations.json')});
 const structural=validateStructure(editableLeaves(doc.blocks),input.draft);if(structural.length)throw Error(structural.join('; '));
-const checks=validateEdits(editableLeaves(doc.blocks),input.draft,{evidence:documentEvidence(doc,context)});if(!checks.passed)throw Error(checks.errors.join('; '));
+const checks=validateGuide(doc,{...overlay,...input.draft,checks:{passed:true}},{curatedContext:context,resolveDocument});if(!checks.passed)throw Error(checks.errors.join('; '));
 fs.writeFileSync(path.join(dir,'schema.json'),JSON.stringify(reviewSchema));fs.writeFileSync(path.join(dir,'AGENTS.md'),'Use only supplied evidence. No tools, file reads, browsing, commands or delegation. Return schema JSON.');
 const output=path.join(dir,'review.json'),fd=fs.openSync(path.join(dir,'review.log'),'a'),env=Object.fromEntries(Object.entries(process.env).filter(([k])=>!/(?:API_KEY|OPENAI_BASE_URL|OPENAI_API_BASE)/i.test(k)));
 const proc=spawn('/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex',['exec','--skip-git-repo-check','--ephemeral','--sandbox','read-only','--color','never','--output-schema',path.join(dir,'schema.json'),'--output-last-message',output,...images.flatMap(f=>['--image',f]),'-'],{cwd:dir,env,stdio:['pipe',fd,fd]});proc.stdin.end(reviewPrompt+'\nSOURCE INPUT:\n'+JSON.stringify(input));const code=await new Promise(resolve=>{proc.on('error',()=>resolve(-1));proc.on('exit',resolve)});fs.closeSync(fd);if(code!==0)throw Error('Revision reviewer exited '+code);const review=read(output),errors=validateReview(input,review);if(errors.length)throw Error(errors.join('; '));
