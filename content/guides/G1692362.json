@@ -1,0 +1,217 @@
+{
+  "documentId": "G1692362",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1692356",
+      "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc",
+      "referencedBy": "G1692362",
+      "sourceReference": "G1692356",
+      "sourceUnitCount": 12,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1692362",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693181",
+      "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693181",
+      "sourceUnitCount": 14,
+      "mediaCount": 6
+    }
+  ],
+  "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0",
+  "title": "Battery",
+  "introduction": "Battery replacement has a mechanical half and an electrical half: free the cables before lifting the battery, then secure the battery before restoring its connections. I use the cover and terminal drawings as a map, with the hold-down drawing showing what keeps the battery seated in its tray.\n\nA new battery also needs an electronic introduction: after connection, a suitable scan tool must carry out the Battery Monitoring System reset. This guide includes the linked disconnection and reconnection sequence; it does not diagnose a battery or charging complaint.",
+  "requirements": [
+    {
+      "category": "Required safety review and equipment",
+      "items": [
+        {
+          "name": "Applicable safety precautions",
+          "detail": "Before beginning, review the [Health and Safety Precautions](#/document/G1693189), including applicable system warnings, and [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181) (100-00 General Information, Description and Operation). The applicable conventional-battery precautions are included below."
+        },
+        {
+          "name": "Handling and tightening equipment",
+          "detail": "Have a battery carrier available, or plan to lift the plastic-cased battery with hands on opposite corners. Use torque equipment suitable for the hold-down and cable-nut specifications given with the relevant actions."
+        },
+        {
+          "name": "Scan tool for a new battery",
+          "detail": "If installing a new battery, have a scan tool that supports the Battery Monitoring System reset. A basic code reader may not provide this service function."
+        }
+      ]
+    },
+    {
+      "category": "Prevent an unexpected start",
+      "items": [
+        {
+          "name": "Remote start and key",
+          "detail": "Before disconnecting the battery, disable remote start, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death. Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service, which may cause serious personal injury."
+        },
+        {
+          "name": "Auto start-stop, if equipped",
+          "detail": "Vehicles with engine auto start-stop may start automatically with the ignition on. Keep the ignition off when servicing or working close to rotating engine parts. Failure to do so may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Underhood and personal protection",
+      "items": [
+        {
+          "name": "Cooling-fan condition",
+          "detail": "With the ignition OFF, inspect all cooling fans for damage, cracks or separation. Do not work under the hood with a damaged fan; replace it with a new fan as necessary before proceeding. A damaged fan can separate during operation and cause serious personal injury."
+        },
+        {
+          "name": "Work near cooling fans",
+          "detail": "Cooling fans may run with the ignition off. Disable them before working nearby; unexpected fan operation may cause personal injury."
+        },
+        {
+          "name": "Eyes, ears and sharp edges",
+          "detail": "Wear eye and ear protection while servicing the vehicle. Wear protective gloves when handling pointed or sharp-edged parts. Failure to follow these precautions may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Battery hazards and handling",
+      "items": [
+        {
+          "name": "Acid and explosive gases",
+          "detail": "Batteries contain sulfuric acid and produce explosive gases. Work in a well-ventilated area, keep flames, sparks and burning substances away, and avoid acid contact with skin, eyes or clothing. Shield your eyes against acid splashes. If acid contacts skin or eyes, immediately flush with water for a minimum of 15 minutes, then get prompt medical attention. If swallowed, call a physician immediately. Failure to follow these instructions may result in serious personal injury."
+        },
+        {
+          "name": "Lift without squeezing the case",
+          "detail": "Lift a plastic-cased battery with a battery carrier or with hands on opposite corners. Excessive pressure on its end walls can force acid through the vent caps, causing personal injury and/or damage to the vehicle or battery."
+        },
+        {
+          "name": "Vent tube",
+          "detail": "If a battery vent tube is disconnected, properly reconnect it to the battery during installation. Leaving it disconnected could allow harmful gases into the cabin and cause serious personal injury or death."
+        },
+        {
+          "name": "Lead exposure",
+          "detail": "Battery posts, terminals and related accessories contain lead and lead components. Wash your hands after handling them. Failure to follow this instruction may result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "After reconnection",
+      "items": [
+        {
+          "name": "Adaptive-strategy relearning",
+          "detail": "Some abnormal drive symptoms may occur after battery disconnection and reconnection while the vehicle relearns its adaptive strategy. The vehicle may need to be driven so the PCM can relearn its adaptive-strategy values."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1692362-b00001",
+      "text": "Remove the Battery",
+      "why": ""
+    },
+    {
+      "blockId": "G1692362-b00003",
+      "text": "Disconnect the battery using [Battery Disconnect and Connect](#/document/G1692356) (414-01 Battery, Mounting and Cables, General Procedures).",
+      "why": "Remove the retainers and battery cover. Loosen the negative cable nut, lift the negative cable off its terminal and position it aside. Then move the positive-terminal cover out of the way, loosen the positive cable nut, lift the positive cable off its terminal and position it aside. For electrical isolation alone, disconnecting the negative cable is sufficient and the positive cable need not be disconnected; battery removal requires freeing both cables. The supporting drawings identify the cover retainers and each terminal connection."
+    },
+    {
+      "blockId": "G1692362-b00005",
+      "text": "Loosen and remove the battery hold-down bolt and clamp, then lift the battery out of its tray.\nInstallation torque: 71 lb.in (8 Nm)",
+      "why": "The hold-down drawing highlights the bolt and clamp beside the battery. Freeing the clamp releases the battery from the tray; use the lifting method in the preparation notes to avoid squeezing the case. The torque applies when the hold-down is reinstalled."
+    },
+    {
+      "blockId": "G1692362-b00007",
+      "text": "Install the Battery",
+      "why": ""
+    },
+    {
+      "blockId": "G1692362-b00009",
+      "text": "Reverse the removal sequence. Place the battery in its tray, install the hold-down clamp and bolt, and tighten the bolt to its specified installation torque. Reconnect and tighten the positive cable nut before restoring the positive-terminal cover. Next, reconnect and tighten the negative cable nut. Finally, refit the battery cover and its retainers.",
+      "why": "Tighten the positive cable nut to 44 lb.in (5 Nm) before restoring its terminal cover. Then tighten the negative cable nut to 44 lb.in (5 Nm), followed by refitting the battery cover and retainers. This preserves the reverse order of the linked disconnect procedure and leaves each fastener accessible until it is tightened. Properly reconnect any vent tube that was disconnected."
+    },
+    {
+      "blockId": "G1692362-b00011",
+      "text": "If installing a new battery, use a suitable scan tool to carry out the Battery Monitoring System (BMS) reset after the battery is connected.",
+      "why": "The reset is required for a newly installed battery and comes after reconnection. Confirm that the scan tool supports this function; reading or clearing fault codes alone is a different operation."
+    }
+  ],
+  "checkedAt": "2026-10-27T14:43:09.227Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "771a7790c59add9d557bffbced0cdb326dba4b9fafeefa9bb04434c1b743af72",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 3,
+    "supportingSourceUnitCount": 74,
+    "sourceUnitCount": 8,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "777022bcfc6e73d9aa8c3f411c414f2083e8ae715f8429763d00166527ae436d",
+    "reviewedAt": "2026-10-27T14:42:17.887Z",
+    "editorialRevision": "753b23b8ed8a2fe654f006780ac05464f7f7cb6e6ae2d8f195142ddd3f1a50d8",
+    "startupClarification": {
+      "kind": "deterministic-source-bound-startup-clarification",
+      "checkedAt": "2026-10-27T14:43:09.227Z",
+      "baselineHash": "8d652f8f7a13d9214447d55571d187faefcbb0a97d471ffb9c461202d6ef9c9c",
+      "sourceDocumentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "sourceUnitIds": [
+        "G1693189:u4",
+        "G1693189:u16",
+        "G1693189:u18"
+      ],
+      "changes": [
+        {
+          "category": "Prevent an unexpected start",
+          "item": "Remote start and key",
+          "before": "Before disconnecting the battery, disable remote start, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death. Remove the key to prevent another person from starting the engine during service, which may cause serious personal injury.",
+          "after": "Before disconnecting the battery, disable remote start, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, potentially causing personal injury or death. Switch the ignition OFF and remove the key from the vehicle to prevent another person from starting the engine during service, which may cause serious personal injury."
+        }
+      ],
+      "technicalProseChanged": false,
+      "priorIndependentReview": {
+        "kind": "independent-codex-technical-review",
+        "humanReviewed": false,
+        "supportingSourceCoverage": "complete-units-and-illustrations",
+        "supportingNavigationDocumentCount": 1,
+        "supportingSourceDocumentCount": 3,
+        "supportingSourceUnitCount": 74,
+        "sourceUnitCount": 8,
+        "sourceChunkCount": 1,
+        "reviewedChunkCount": 1,
+        "fingerprint": "777022bcfc6e73d9aa8c3f411c414f2083e8ae715f8429763d00166527ae436d",
+        "reviewedAt": "2026-10-27T14:42:17.887Z"
+      },
+      "reason": "Explicit ignition OFF and conditional remote start in existing preparation; technical procedure unchanged."
+    },
+    "reviewDisposition": "Prior complete independent technical review retained; exact source-bound requirement-only clarification awaiting supervisory approval."
+  }
+}
