@@ -19,7 +19,7 @@ export function buildSupportingPackage(primary,documents,{maxChars=40000,maxImag
     if(recurse)visit(target,depth+1);
     return true;
   }
-  function visit(parent,depth){for(const reference of parent.related||[]){if(reference==='G1693180')continue;const target=byId.get(reference);if(!target){unavailableSupportingReferences.push({reference,referencedBy:parent.id,reason:'Unresolved or ambiguous source destination'});continue;}add(target,parent,depth);}}
+  function visit(parent,depth){for(const reference of parent.related||[]){if(reference==='G1693180')continue;const target=byId.get(reference);if(!target){unavailableSupportingReferences.push({reference,referencedBy:parent.id,reason:'Unresolved or ambiguous source destination'});continue;}add(target,parent,depth,{recurse:target.id!=='G1693189'});}}
   visit(primary,1);
   if(['repair','diagnosis','general'].includes(primary.kind)){
     const about=byId.get('G1693180'),general=byId.get('G1693189'),anchor=[primary,...selected].find(d=>d.related?.includes('G1693180'));
