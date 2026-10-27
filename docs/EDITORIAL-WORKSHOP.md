@@ -72,3 +72,21 @@ New direct embeds of original `/media/` artwork are rejected. When a procedure r
 Expanded source spelling `Hertz (Hz)` is normalized for physical-quantity validation. This fixes a false rejection without relaxing cross-unit checks or inventing numbers. Values that exist only in a table's implied units still require explicit source-context confirmation.
 
 Private evidence rendering uses an opaque white background for transparent SVG line drawings. A transparent black-on-transparent diagram previously appeared blank on a dark image viewer and correctly caused a passenger-switch article to be held. Versioned raster filenames and rendered-image hashes now invalidate stale author/reviewer image checkpoints. The regression test checks both white paper and visible black ink. Original source artwork remains private evidence; this change does not publish those images.
+
+### Recovered private PDF access procedure
+
+The overhead-console retry can consume a checksum-bound private supplement at
+`work/editorial-workshop/evidence/access-audit/headliner-supplement.json`.
+It restores the exact **Headliner – Lowering** procedure from the supplied 2015
+workshop PDF, physical pages 2422–2424, including all three page images. This is
+not the longer headliner replacement procedure. The supplement records the PDF
+checksum, exact extracted text checksum, figure checksums, page numbers and
+matching indexed A-pillar/quarter-trim dependencies. Source and rendered figures
+remain private. An absent supplement leaves the normal missing-evidence hold;
+a changed checksum fails closed.
+
+External evidence nodes participate in the normal complete author/reviewer
+coverage checks, but their identifiers never become fictitious public database
+references. The guide cites the publication and physical pages in prose. Private
+figure paths are restricted to the work directory. This narrow recovery does not
+change database contents or broaden model-year applicability.
