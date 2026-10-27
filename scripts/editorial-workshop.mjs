@@ -61,7 +61,7 @@ function evidenceFor(g){
  // Physical repairs and switch access need relevant general startup/support precautions.
  if(job.kind==='repair'||switchAccess||docs.has('G1686507')||docs.has('G1663631'))docs.set('G1693189',byId.get('G1693189'));
  // Battery isolation requires its own applicable chemical/gas precautions.
- if(docs.has('G1692356'))docs.set('G1693181',byId.get('G1693181'));
+ if(docs.has('G1692356')||primary.has('G1692364'))docs.set('G1693181',byId.get('G1693181'));
  const nodes=[];for(const d of docs.values()){
   const spans=primary.has(d.id)?job.spans.filter(s=>s.documentId===d.id):dependencySpans.get(d.id)||[{id:'dependency',start:0,end:d.text.length,title:d.title}];
   for(const s of spans)for(const piece of splitSpan(d.text,s.start,s.end))nodes.push({nodeId:`${d.id}:${s.id}:${piece.start}-${piece.end}`,documentId:d.id,sourceHash:d.source_hash,sectionId:s.id,title:d.title,role:primary.has(d.id)?'primary':'dependency',engines:scopeEngines(d),start:piece.start,end:piece.end,text:piece.text,images:[]});

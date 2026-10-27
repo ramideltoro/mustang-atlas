@@ -95,4 +95,6 @@ test('startup normalization handles mid-sentence key removal and separate equipm
  assert.equal((draft.requirements[0].items[1].detail.match(/ignition OFF/g)||[]).length,1);
  assert.match(draft.requirements[0].items[2].detail,/^If equipped, disable remote start through/);
  assert.equal(clarifyStartupPreparation(draft,context).length,0);
+ const alreadyClear={requirements:[{category:'Setup',items:[{name:'Starting',detail:'WARNING: Switch off the ignition and remove the key from the vehicle.'},{name:'Switch off the ignition and remove the key',detail:'Remove the key from the vehicle before service.'}]}]};
+ assert.equal(clarifyStartupPreparation(alreadyClear,context).length,0);
 });
