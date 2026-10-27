@@ -1,0 +1,45 @@
+{
+  "documentId": "G1688196",
+  "sourceHash": "7e91edc87d083ea2614a67d19c6022c6cf4eb088e19307d3a2feb6ded522e3b2",
+  "title": "Horn: From Command to Sound",
+  "introduction": "I read the horn system as a short chain: the BCM gives the cue, the relay performs the switching, and the horn supplies the voice. Understanding those separate roles makes the system easier to follow. This overview explains that chain; wiring, component access and diagnostic tests require additional information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688196-b00001",
+      "text": "How the Horn Sounds",
+      "why": ""
+    },
+    {
+      "blockId": "G1688196-b00002",
+      "text": "The BCM controls horn output by energizing the horn relay, causing the horn to sound. The relay is an electrically controlled switch: it lets the BCM command the circuit that operates the horn.",
+      "why": "I distinguish the command from the switching action so the relay’s purpose is clear. A relay label alone does not establish that the relay is a separate plug-in part."
+    }
+  ],
+  "checkedAt": "2026-10-27T10:54:05.221Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 3,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ecb17b93c38667eec7b09825240bb2aa7638758aa237baa07c8f6f66f9c8faa8",
+    "reviewedAt": "2026-10-27T10:54:05.221Z"
+  }
+}

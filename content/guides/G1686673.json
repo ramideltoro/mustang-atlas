@@ -1,24 +1,26 @@
 {
   "documentId": "G1686673",
   "sourceHash": "d68a64d2085edf9f6148c5b09611049f2970aada76a281ca7b1340897e523e4f",
-  "title": "How electric power steering helps you turn",
-  "introduction": "Picture the steering system as a conversation: you turn the wheel, a sensor measures your effort, and an electric motor supplies the appropriate help. EPAS means electronic power assist steering. Its purpose is to reduce the effort you need without taking away your steering input.\n\nThe power steering control module, or PSCM, uses steering torque as its main input and considers vehicle speed. Parking calls for more assistance; faster travel calls for less, giving you more road feel. The detailed system description explains how a reversible motor moves the rack through a toothed belt and pulley-bearing arrangement, and how tie rods pass that movement to the front wheels.\n\nTorque and angle are different ideas. Steering angle describes where you have turned the wheel. Steering torque describes how hard you are trying to turn it. The torque sensor measures relative movement across a torsion bar, giving the controller a useful picture of your effort.\n\nThe controller also watches its own operation. Certain voltage or temperature concerns can cause reduced assistance; a critical fault can remove electrical assistance. In the described manual-steering failure mode, the mechanical connection remains but turning effort becomes much heavier. A warning message or sudden change in feel is a reason to follow the steering diagnosis, not proof that a particular part needs replacement.\n\nFor the complete network inputs, failure modes and selectable steering modes, open [Power Steering — System Operation and Component Description](#/document/G1686674). Standard, Sport and Comfort alter steering feel; they do not change the basic jobs of the rack, tie rods and motor.",
+  "title": "Power Steering — How EPAS Helps",
+  "introduction": "Electronic power assist steering, or EPAS, uses an electric motor to reduce the effort needed to steer. I picture it as a helping hand on the steering mechanism: you supply the steering input, and the system supplies assistance. This overview explains that relationship; it is not a fault-finding or repair procedure.",
   "requirements": [],
   "edits": [
     {
       "blockId": "G1686673-b00001",
-      "text": "Assistance follows your input",
+      "text": "How Steering Assistance Works",
       "why": ""
     },
     {
       "blockId": "G1686673-b00002",
-      "text": "EPAS responds to your steering-wheel input and uses an electric motor to help you turn. Your input sets the request; the motor provides the power assistance.",
-      "why": "That is the key idea to keep in mind when reading the system diagram: sensing the driver’s input and producing assistance are separate jobs."
+      "text": "The EPAS system responds to your steering-wheel inputs and uses an electric motor to provide steering assistance. You still turn the wheel; the motor reduces the effort required. The electronic controller adjusts that help according to steering effort and operating conditions, providing more assistance at low speed and less at higher speed to preserve road feel.",
+      "why": "Steering input and steering assistance have different jobs. This distinction explains how the driver remains in control while the motor helps, and why assistance can feel different as vehicle speed changes."
     }
   ],
+  "checkedAt": "2026-10-27T10:58:15.783Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
   "status": "complete",
-  "checkedAt": "2026-10-11T16:32:13.477Z",
-  "model": "Codex authored in active session",
   "checks": {
     "passed": true,
     "errors": [],
@@ -26,6 +28,18 @@
     "receivedBlocks": 2,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "sourceMediaInspected": true
+    "validationVersion": 2
+  },
+  "sourceContextHash": "c022e36534ce50735504c9f3d6a1f0137720984a88e05d8e96c774a6834f1cf6",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 3,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "424c9559837f124877b3e80d41c26280c86afd91fa0add4bff0d88753cdf0a69",
+    "reviewedAt": "2026-10-27T10:58:15.783Z"
   }
 }

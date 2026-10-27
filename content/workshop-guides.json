@@ -2,186 +2,327 @@
   "version": 1,
   "guides": [
     {
-      "title": "Find the right diagnostic procedure for a recorded trouble code",
-      "summary": "Match the reporting module, engine and fitted equipment to the diagnostic chapter that can interpret the recorded code.",
-      "introduction": "A diagnostic trouble code (DTC) needs the context of the module that recorded it. The master index connects that module to its system-specific diagnostic procedure. This job takes you from a recorded result to the correct investigation; it does not identify a failed component by itself.",
-      "why": "Similar-looking module names can lead to different chapters, while engine and infotainment variants change which procedure applies. Keeping the module identifier attached to the code prevents a plausible-sounding but incorrect diagnostic route.",
+      "title": "Diagnostic trouble codes: find the right Mustang diagnostic procedure",
+      "summary": "Use the reporting module, installed engine and fitted equipment to select the correct diagnostic chapter for a 2015 Mustang with a 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "introduction": "A trouble code is a useful lead, but it makes a lousy shopping list. Before the parts cannon gets another expensive round, I want to know which module reported the code and which diagnostic chapter belongs to it. This master index makes that connection. We’ll keep the code attached to its reporting module, sort the engine and equipment branches, and land at the right investigation.",
+      "why": "A diagnostic trouble code, or DTC, is a recorded fault identifier. The reporting module is the electronic controller associated with that result. This index connects module identifiers to the system chapters used to investigate their codes. Similar names can lead to different destinations, and the PCM and several infotainment entries require an engine or equipment choice before you can select the correct chapter.",
       "taskType": "diagnostics",
       "difficulty": "basic",
       "searchTerms": [
-        "find diagnostic procedure by module",
-        "Mustang trouble code index",
-        "PCM code engine selection",
-        "SYNC diagnostic code lookup"
+        "2015 Mustang diagnostic trouble code index",
+        "Mustang reporting module diagnostic procedure",
+        "PCM engine diagnostic chart",
+        "SYNC infotainment diagnostic routing",
+        "BCM BCMB diagnostic destination",
+        "Mustang master DTC index"
       ],
       "when": {
-        "summary": "A trouble code has been recorded and you need to identify its system-specific diagnostic procedure.",
-        "notes": []
+        "summary": "Use this guide when you already have a recorded trouble code and need to find its module-specific diagnostic procedure.",
+        "notes": [
+          "Applies to the 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+          "An equipment-specific entry applies only when the vehicle has that equipment.",
+          "A complaint description alone does not identify the reporting module."
+        ]
       },
       "prepare": [
         {
-          "title": "Keep the complete diagnostic result",
-          "detail": "Have the exact code and reporting module identifier available. Match identifiers as written, including suffixes that distinguish separate modules."
+          "title": "Have the recorded result in front of you",
+          "detail": "Keep the exact DTC and reporting module identifier together. Preserve the complete identifier: BCM and BCMB, for example, select different entries. If the result does not identify a module, resolve that before choosing a route."
         },
         {
-          "title": "Identify the vehicle configuration",
-          "detail": "Confirm the engine and relevant fitted equipment, particularly the radio/display system. Testing tools, access and precautions come from the destination procedure."
+          "title": "Confirm the configuration needed for your branch",
+          "detail": "For PCM results, establish whether the installed engine is 2.3L, 3.7L, 5.0L or 5.2L. For the infotainment entries with two destinations, establish whether the car has AM/FM/CD/SYNC or a touchscreen SYNC 2/SYNC 3 system."
+        },
+        {
+          "title": "Set the endpoint before reaching for tools",
+          "detail": "This job ends with selecting the diagnostic chapter. Code retrieval, scan-tool commands, component access, connector checks, test limits, replacement and repair verification require that system’s diagnostic instructions. Obtain those instructions before physical testing or disassembly; no removal or unplugging is needed to use this index."
         }
       ],
       "steps": [
         {
-          "title": "Start with the reporting module",
-          "body": "Open the [Master DTC Index](#/document/G1693178) or its [Quick Links entry](#/document/G1693178-03ac7c67). Locate the module associated with the recorded code before selecting a system. A complaint description alone does not establish which module’s diagnostic chart applies."
+          "title": "Match the reporting module exactly",
+          "body": "Start with the module name recorded alongside the DTC. Find that exact identifier in the routing rows below, using the [Master DTC Index](#/document/G1693178) or the [second Diagnostic Trouble Code Charts entry](#/document/G1693178-03ac7c67) as the reference.\n\nI keep the code and module on the same note throughout this job. A familiar-looking acronym is not a reason to change the identifier or select a chapter by guesswork."
         },
         {
-          "title": "Choose the exact engine-control branch",
-          "body": "For the powertrain control module (PCM), select Electronic Engine Controls for the installed 2.3L, 3.7L, 5.0L or 5.2L engine. These entries share a chapter title but lead to separate engine-specific procedures."
+          "title": "For PCM results, select the installed engine",
+          "body": "If the reporting module is PCM, use the engine-specific Electronic Engine Controls destination:\n\n- 2.3L: [303-14A](#/document/G1692929).\n- 3.7L: [303-14B](#/document/G1692931).\n- 5.0L: [303-14C](#/document/G1692933).\n- 5.2L: [303-14D](#/document/G1807235).\n\nCheck the engine before opening the chapter. The shared chapter title does not make these four routes interchangeable."
         },
         {
-          "title": "Resolve infotainment equipment before testing",
-          "body": "Many infotainment module entries offer an AM/FM/CD/SYNC route and a touchscreen SYNC 2/SYNC 3 route. Choose by fitted equipment, then follow the exact module entry: some display and audio-processing entries have only one destination. The exceptions below help prevent an incorrect selection."
+          "title": "For infotainment results, resolve the display branch and its exceptions",
+          "body": "For APIM, ACM, DACMC, FCIM or GPSM, choose by fitted equipment: AM/FM/CD/SYNC goes to [Information and Entertainment System, 415-00A](#/document/G1692891); a touchscreen display goes to [Information and Entertainment System, 415-00B, SYNC 2/SYNC 3](#/document/G1702418).\n\nTwo entries have a fixed destination in this index: FCDIM goes to 415-00A, and DSP goes to 415-00B. Use those exact entries rather than giving every audio or display module the same branch. The alphabet soup has rules, damn it."
         },
         {
-          "title": "Route body, entry, seat and roof results",
-          "body": "Body Control Module (BCM) and Body Control Module B (BCMB) have separate procedures. Door and remote-entry module entries lead to Locks, Latches and Entry Systems; seat-module entries lead to Front Seats. Moveable Roof Control Modules A and B lead to Convertible Top."
+          "title": "Route body, entry, seat and convertible-top modules",
+          "body": "Keep BCM and BCMB separate: use [Body Control Module](#/document/G1692965) for BCM and [Body Control Module B](#/document/G1704140) for BCMB.\n\nDDM, PDM and RTM lead to [Locks, Latches and Entry Systems, 501-14](#/document/G1695898). DSM and SCME lead to [Front Seats, 501-10A](#/document/G1695509).\n\nMoveable Roof Control Module A, MRCMA, and Moveable Roof Control Module B, MRCMB, both lead to Convertible Top, 501-18. That destination has no matching linked chapter here; obtain it before continuing with either roof-module result."
         },
         {
-          "title": "Keep chassis and driving-assistance systems distinct",
-          "body": "The anti-lock brake system (ABS) module leads to ABS and Stability Control. Power-steering and steering-wheel/column electrical entries have separate destinations. Adaptive cruise control, collision warning, rear parking aid, blind-spot information and vehicle dynamic suspension each use their own diagnostic route."
+          "title": "Route chassis, steering and driving-assistance modules",
+          "body": "Use the exact module row below to select among power steering, steering-wheel and column electrics, adaptive cruise control, collision warning, rear parking aid, blind-spot information and vehicle dynamic suspension. These are separate diagnostic destinations even where the systems sound related.\n\nFor an ABS Module result, the destination is Anti-Lock Brake System (ABS) and Stability Control, 206-09. There is no matching linked chapter here for that branch; obtain section 206-09 before continuing."
         },
         {
-          "title": "Follow the remaining system destinations",
-          "body": "Use the index’s Communications Network entry for its network-module result and Instrumentation, Message Center and Warning Chimes for instrument-module results. Both module entries assigned to airbag diagnosis lead to the Supplemental Restraint System (SRS) procedure. Open the destination and follow its code interpretation and prerequisites before any physical testing."
+          "title": "Route network, instrumentation and restraint-system modules",
+          "body": "GWM goes to [Communications Network, 418-00](#/document/G1813071).\n\nICM and IPC both go to [Instrumentation, Message Center and Warning Chimes, 413-01](#/document/G1693940).\n\nOCSM and RCM both go to [Airbag Supplemental Restraint System (SRS), 501-20B](#/document/G1696340). SRS is the restraint-system chapter, so keep either result attached to that destination."
+        },
+        {
+          "title": "Check and record the diagnostic handoff",
+          "body": "Compare the chosen chapter with the original module identifier. For PCM, check the engine again; for the split infotainment entries, check the fitted radio/display system. Also retain equipment qualifiers such as adaptive cruise control or rear parking aid.\n\nRecord the exact code, module, configuration and destination together. Then use that chapter’s diagnostic instructions for the next stage. We have given the investigation an address; we have not yet convicted a component."
         }
       ],
       "watchFor": [
         {
-          "title": "A module name mistaken for a replacement decision",
-          "body": "The index identifies where to investigate. It provides no component condemnation criteria."
+          "title": "A module entry is not a replacement verdict",
+          "body": "Finding a module in the index tells you where to investigate its result. It does not establish that the module itself has failed."
         },
         {
-          "title": "An equipment branch mistaken for installed equipment",
-          "body": "A touchscreen, adaptive-cruise or suspension entry in the index does not establish that the vehicle has that equipment."
+          "title": "Similar identifiers select different routes",
+          "body": "BCM and BCMB have separate destinations. PSCM and SCCM also lead to different chapters. Read the full identifier before choosing."
+        },
+        {
+          "title": "Infotainment exceptions matter",
+          "body": "APIM, ACM, DACMC, FCIM and GPSM have equipment-dependent routes. FCDIM is assigned to 415-00A and DSP to 415-00B in this index."
+        },
+        {
+          "title": "An index listing does not establish fitted equipment",
+          "body": "The presence of an adaptive-cruise, convertible-top, blind-spot or suspension entry does not establish that the particular car has that system."
         }
       ],
       "notes": [
-        "Keep the recorded code unchanged when moving from the index to the destination chart."
+        "Use the routing rows as module-to-chapter matches, not as interpretations of individual DTCs.",
+        "Keep the original code unchanged when recording the destination."
       ],
       "diagnostics": [
         {
-          "finding": "The reporting infotainment module is labelled FCDIM",
-          "meaning": "This index entry has a SYNC destination.",
-          "next": "Use the information-and-entertainment procedure for AM/FM/CD/SYNC."
+          "finding": "The reporting module is PCM and the installed engine is 2.3L.",
+          "meaning": "The engine-control branch is 303-14A, Electronic Engine Controls — 2.3L EcoBoost.",
+          "next": "Use [2.3L Electronic Engine Controls](#/document/G1692929) for the next diagnostic stage."
         },
         {
-          "finding": "The reporting infotainment module is labelled DSP",
-          "meaning": "This entry points to the touchscreen system.",
-          "next": "Use the information-and-entertainment procedure for SYNC 2/SYNC 3."
+          "finding": "The reporting module is PCM and the installed engine is 3.7L.",
+          "meaning": "The engine-control branch is 303-14B, Electronic Engine Controls — 3.7L Duratec.",
+          "next": "Use [3.7L Electronic Engine Controls](#/document/G1692931) for the next diagnostic stage."
         },
         {
-          "finding": "The report identifies BCM or BCMB",
-          "meaning": "The identifiers refer to separate body-module diagnostic entries.",
-          "next": "Match the complete identifier before selecting the corresponding procedure."
+          "finding": "The reporting module is PCM and the installed engine is 5.0L.",
+          "meaning": "The engine-control branch is 303-14C, Electronic Engine Controls — 5.0L 32V Ti-VCT.",
+          "next": "Use [5.0L Electronic Engine Controls](#/document/G1692933) for the next diagnostic stage."
+        },
+        {
+          "finding": "The reporting module is PCM and the installed engine is 5.2L.",
+          "meaning": "The engine-control branch is 303-14D, Electronic Engine Controls — 5.2L 32V Ti-VCT.",
+          "next": "Use [5.2L Electronic Engine Controls](#/document/G1807235) for the next diagnostic stage."
+        },
+        {
+          "finding": "The reporting module is APIM, ACM, DACMC, FCIM or GPSM, and the vehicle has AM/FM/CD/SYNC.",
+          "meaning": "These entries use the 415-00A infotainment branch for this equipment.",
+          "next": "Use [Information and Entertainment System — vehicles with SYNC](#/document/G1692891)."
+        },
+        {
+          "finding": "The reporting module is APIM, ACM, DACMC, FCIM or GPSM, and the vehicle has a touchscreen display.",
+          "meaning": "These entries use the 415-00B infotainment branch for SYNC 2/SYNC 3.",
+          "next": "Use [Information and Entertainment System — vehicles with SYNC 2/SYNC 3](#/document/G1702418)."
+        },
+        {
+          "finding": "The reporting module is FCDIM.",
+          "meaning": "This entry points directly to the 415-00A infotainment chapter.",
+          "next": "Use [Information and Entertainment System — vehicles with SYNC](#/document/G1692891)."
+        },
+        {
+          "finding": "The reporting module is DSP.",
+          "meaning": "This entry points directly to the 415-00B infotainment chapter.",
+          "next": "Use [Information and Entertainment System — vehicles with SYNC 2/SYNC 3](#/document/G1702418)."
+        },
+        {
+          "finding": "The reporting module is BCM.",
+          "meaning": "The destination is Body Control Module in section 419-10, Multifunction Electronic Modules.",
+          "next": "Use [Body Control Module (BCM)](#/document/G1692965)."
+        },
+        {
+          "finding": "The reporting module is BCMB.",
+          "meaning": "The destination is Body Control Module B in section 419-10, Multifunction Electronic Modules.",
+          "next": "Use [Body Control Module B (BCMB)](#/document/G1704140)."
+        },
+        {
+          "finding": "The reporting module is DDM, PDM or RTM.",
+          "meaning": "All three entries lead to section 501-14, Handles, Locks, Latches and Entry Systems.",
+          "next": "Use [Locks, Latches and Entry Systems](#/document/G1695898), retaining the particular reporting module with the code."
+        },
+        {
+          "finding": "The reporting module is DSM or SCME.",
+          "meaning": "Both entries lead to section 501-10A, Front Seats.",
+          "next": "Use [Front Seats](#/document/G1695509), retaining the particular reporting module with the code."
+        },
+        {
+          "finding": "The reporting module is Moveable Roof Control Module A (MRCMA) or Moveable Roof Control Module B (MRCMB).",
+          "meaning": "Both entries lead to Convertible Top, section 501-18.",
+          "next": "Obtain the Convertible Top diagnostic chapter, section 501-18. Neither roof-module branch has a matching linked destination here."
+        },
+        {
+          "finding": "The reporting module is ABS Module.",
+          "meaning": "The destination is Anti-Lock Brake System (ABS) and Stability Control, section 206-09.",
+          "next": "Obtain the ABS and Stability Control diagnostic chapter, section 206-09. This branch has no matching linked destination here."
+        },
+        {
+          "finding": "The reporting module is PSCM.",
+          "meaning": "The destination is section 211-02, Power Steering.",
+          "next": "Use [Power Steering](#/document/G1757488)."
+        },
+        {
+          "finding": "The reporting module is SCCM.",
+          "meaning": "The destination is section 211-05, Steering Wheel and Column Electrical Components.",
+          "next": "Use [Steering Wheel and Column Electrical Components](#/document/G1693269)."
+        },
+        {
+          "finding": "The reporting module is CCM.",
+          "meaning": "The destination is section 419-03B, Cruise Control — vehicles with adaptive cruise control.",
+          "next": "Use [Cruise Control](#/document/G1693153), preserving the adaptive-cruise equipment qualifier."
+        },
+        {
+          "finding": "The reporting module is HUD.",
+          "meaning": "The destination is section 419-03C, Collision Warning and Collision Avoidance System.",
+          "next": "Use [Collision Warning and Collision Avoidance System](#/document/G1693174)."
+        },
+        {
+          "finding": "The reporting module is PAM.",
+          "meaning": "The destination is section 413-13A, Parking Aid — vehicles with rear parking aid.",
+          "next": "Use [Parking Aid](#/document/G1693946), preserving the rear-parking-aid equipment qualifier."
+        },
+        {
+          "finding": "The reporting module is SODL or SODR.",
+          "meaning": "Both entries lead to Blind Spot Information System in section 419-04, Side and Rear Vision.",
+          "next": "Use [Blind Spot Information System](#/document/G1694004), retaining SODL or SODR exactly as recorded."
+        },
+        {
+          "finding": "The reporting module is VDM.",
+          "meaning": "The destination is section 204-05, Vehicle Dynamic Suspension.",
+          "next": "Use [Vehicle Dynamic Suspension](#/document/G1694674)."
+        },
+        {
+          "finding": "The reporting module is GWM.",
+          "meaning": "The destination is section 418-00, Module Communications Network.",
+          "next": "Use [Communications Network](#/document/G1813071)."
+        },
+        {
+          "finding": "The reporting module is ICM or IPC.",
+          "meaning": "Both entries lead to section 413-01, Instrumentation, Message Center and Warning Chimes.",
+          "next": "Use [Instrumentation, Message Center and Warning Chimes](#/document/G1693940), retaining the exact reporting identifier."
+        },
+        {
+          "finding": "The reporting module is OCSM or RCM.",
+          "meaning": "Both entries lead to section 501-20B, Supplemental Restraint System.",
+          "next": "Use [Airbag Supplemental Restraint System (SRS)](#/document/G1696340), retaining the exact reporting identifier."
+        },
+        {
+          "finding": "The module identifier is missing, does not match an entry, or a required engine or infotainment configuration is unresolved.",
+          "meaning": "The information needed to select a supported route is incomplete.",
+          "next": "Resolve the reporting identifier or vehicle configuration before choosing a chapter. Do not substitute a similar acronym or select a route from the complaint alone."
         }
       ],
       "verification": [
         {
-          "title": "Check the diagnostic handoff",
-          "body": "Confirm that the chosen procedure matches the reporting module, engine and relevant equipment."
+          "title": "Confirm the module-to-chapter match",
+          "body": "Compare the recorded module identifier with its routing row and the selected destination. Check distinguishing letters, including BCM versus BCMB."
         },
         {
-          "title": "Record the route selected",
-          "body": "Keep the exact code, module identifier and destination together. Completion here means the correct investigation is selected; repair verification belongs to that investigation."
+          "title": "Confirm the configuration branch",
+          "body": "For PCM, confirm the chosen chapter matches the installed engine. For APIM, ACM, DACMC, FCIM and GPSM, confirm the infotainment equipment branch. For FCDIM and DSP, retain their fixed index destinations."
+        },
+        {
+          "title": "Keep a usable handoff record",
+          "body": "The completed record should contain the original DTC, reporting module, relevant configuration and destination title or section. For ABS Module, MRCMA or MRCMB, record the named chapter that must be obtained."
+        },
+        {
+          "title": "Recognize what completion means",
+          "body": "These are checks of the route you selected. They do not test the vehicle or demonstrate a successful repair; those conclusions belong to the system-specific investigation."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693178",
-          "purpose": "Master module-to-system index in Diagnosis and Testing."
+          "purpose": "Primary master DTC index establishing the module-to-system routes."
         },
         {
           "documentId": "G1693178-03ac7c67",
-          "purpose": "Master module-to-system index through Quick Links."
+          "purpose": "Second primary Diagnostic Trouble Code Charts entry establishing the same routes."
         },
         {
           "documentId": "G1692891",
-          "purpose": "Infotainment diagnosis for AM/FM/CD/SYNC."
+          "purpose": "Next-step reference only: 415-00A infotainment destination for AM/FM/CD/SYNC and FCDIM."
         },
         {
           "documentId": "G1702418",
-          "purpose": "Touchscreen infotainment diagnosis for SYNC 2/SYNC 3."
+          "purpose": "Next-step reference only: 415-00B infotainment destination for touchscreen SYNC 2/SYNC 3 and DSP."
         },
         {
           "documentId": "G1692965",
-          "purpose": "Body Control Module diagnosis."
+          "purpose": "Next-step reference only: BCM diagnostic destination."
         },
         {
           "documentId": "G1704140",
-          "purpose": "Body Control Module B diagnosis."
+          "purpose": "Next-step reference only: BCMB diagnostic destination."
         },
         {
           "documentId": "G1693153",
-          "purpose": "Adaptive-cruise-control diagnosis."
+          "purpose": "Next-step reference only: CCM destination for adaptive cruise control."
         },
         {
           "documentId": "G1695898",
-          "purpose": "Door and remote-entry module diagnostic destination."
+          "purpose": "Next-step reference only: locks, latches and entry-system destination for DDM, PDM and RTM."
         },
         {
           "documentId": "G1695509",
-          "purpose": "Seat-module diagnostic destination."
+          "purpose": "Next-step reference only: front-seat diagnostic destination for DSM and SCME."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Communications-network diagnostic destination."
+          "purpose": "Next-step reference only: communications-network diagnostic destination for GWM."
         },
         {
           "documentId": "G1693174",
-          "purpose": "Collision-warning and avoidance diagnostic destination."
+          "purpose": "Next-step reference only: collision-warning and avoidance diagnostic destination for HUD."
         },
         {
           "documentId": "G1693940",
-          "purpose": "Instrument-module diagnostic destination."
+          "purpose": "Next-step reference only: instrumentation diagnostic destination for ICM and IPC."
         },
         {
           "documentId": "G1696340",
-          "purpose": "Restraint-system module diagnostic destination."
+          "purpose": "Next-step reference only: restraint-system diagnostic destination for OCSM and RCM."
         },
         {
           "documentId": "G1693946",
-          "purpose": "Rear-parking-aid diagnosis."
+          "purpose": "Next-step reference only: rear-parking-aid diagnostic destination for PAM."
         },
         {
           "documentId": "G1757488",
-          "purpose": "Power-steering diagnostic destination."
+          "purpose": "Next-step reference only: power-steering diagnostic destination for PSCM."
         },
         {
           "documentId": "G1692929",
-          "purpose": "PCM diagnostic route for the 2.3L engine."
+          "purpose": "Next-step reference only: PCM diagnosis for the 2.3L engine, section 303-14A."
         },
         {
           "documentId": "G1692931",
-          "purpose": "PCM diagnostic route for the 3.7L engine."
+          "purpose": "Next-step reference only: PCM diagnosis for the 3.7L engine, section 303-14B."
         },
         {
           "documentId": "G1692933",
-          "purpose": "PCM diagnostic route for the 5.0L engine."
+          "purpose": "Next-step reference only: PCM diagnosis for the 5.0L engine, section 303-14C."
         },
         {
           "documentId": "G1807235",
-          "purpose": "PCM diagnostic route for the 5.2L engine."
+          "purpose": "Next-step reference only: PCM diagnosis for the 5.2L engine, section 303-14D."
         },
         {
           "documentId": "G1693269",
-          "purpose": "Steering-wheel and column electrical diagnosis."
+          "purpose": "Next-step reference only: steering-wheel and column electrical diagnostic destination for SCCM."
         },
         {
           "documentId": "G1694004",
-          "purpose": "Blind-spot-information diagnostic destination."
+          "purpose": "Next-step reference only: blind-spot-information diagnostic destination for SODL and SODR."
         },
         {
           "documentId": "G1694674",
-          "purpose": "Vehicle-dynamic-suspension diagnostic destination."
+          "purpose": "Next-step reference only: vehicle-dynamic-suspension diagnostic destination for VDM."
         }
       ],
       "hero": null,
@@ -203,7 +344,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Route selection depends on fitted equipment: AM/FM/CD/SYNC or touchscreen SYNC 2/SYNC 3, adaptive cruise control, rear parking aid, convertible top, blind-spot information and vehicle dynamic suspension, where applicable."
       },
       "relatedGuideIds": [
         "job-e5bcf5e2728bf847",
@@ -309,8 +451,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "d683a22dcf0d8d01c2815f159aa12a5ddd9d9a56181cd9028e61a53cdf2ed513"
-      }
+        "fingerprint": "d683a22dcf0d8d01c2815f159aa12a5ddd9d9a56181cd9028e61a53cdf2ed513",
+        "editorialVersion": 2,
+        "editorialFingerprint": "ebb7f4327391694286a0e2ee8972f27c84209d7943143ca4bdbb41e86408a3e7",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identify",
+          "title": "Identify the module and configuration",
+          "summary": "Match the recorded identifier and resolve engine or infotainment branches.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "route",
+          "title": "Select the system destination",
+          "summary": "Route body, chassis, assistance, network, instrument and restraint results.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "handoff",
+          "title": "Verify the diagnostic handoff",
+          "summary": "Keep the code, module, configuration and selected chapter together.",
+          "start": 7,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Inspect connector terminal fit and release damaged wire terminals",
