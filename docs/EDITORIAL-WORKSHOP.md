@@ -138,3 +138,5 @@ reject pairing; headliner and other external procedures remain isolated. Shared
 owner evidence is deduplicated without widening either guide's allowed evidence.
 
 The exact SYNC 2/3 FDIM primary G1704008 now receives checksum-bound matching FCIM access G1704007 and its existing dependencies. This resolves the primary’s mislink to the separate SYNC display without changing public source data. Author/reviewer scope retains actual FDIM/APIM separation and touchscreen calibration, while preventing unrelated display removal or new-module PMI for a temporarily removed existing FCIM. A fresh full evidence review is still required; existing holds are not automatically cleared.
+
+The private owner-controls allowlist now also includes the exact reviewed CAC intake, boost sensor, oil-pressure sender variants, SYNC 2/3 display, DSP, seat-climate module and A/C dye tasks. These additions follow observed control-sequence gaps in actual drafts. Complete owner text/page-image checksums, 2015-only scope and explicit enrollment rules remain unchanged; this does not re-run existing accepted or held articles automatically.
