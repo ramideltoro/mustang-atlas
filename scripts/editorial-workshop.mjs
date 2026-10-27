@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawn,spawnSync} from 'node:child_process';
 import {openDb} from '../server/db.mjs';
+import {buildPair} from './editorial-workshop-pair-lib.mjs';
 import {validateStagedCatalog} from './editorial-workshop-catalog.mjs';
 import {buildWorkshopPlan,scopeEngines} from './workshop-author-plan.mjs';
 import {hash,outputSchema,normalizedQuantities} from './workshop-author-lib.mjs';
@@ -83,6 +84,7 @@ function evidenceFor(g){
 }
 const inventory=base.map(g=>{const e=evidenceFor(g);return{id:g.id,title:g.title,fingerprint:e.fingerprint,baseHash:hash(JSON.stringify(g)),primarySpans:e.job.spans.length,evidenceNodes:e.nodes.length,packets:e.packets.length,sourceCharacters:e.nodes.reduce((s,n)=>s+(n.text?.length||0),0),images:e.nodes.reduce((s,n)=>s+n.images.length,0),unresolvedDependencies:e.contract.unresolvedDependencies.length};});
 atomic(path.join(dir,'inventory.json'),{version:VERSION,total:base.length,planned:base.filter(g=>jobMap.has(g.id)).length,curated:base.filter(g=>!jobMap.has(g.id)).length,guides:inventory});
+if(args.includes('--prepare-pair')){const pairIds=opt('--ids','').split(',').filter(Boolean);const jobs=pairIds.map(id=>{const baseGuide=base.find(g=>g.id===id);if(!baseGuide)throw Error('Unknown pair guide '+id);const e=evidenceFor(baseGuide);return{baseGuide,baseHash:hash(JSON.stringify(baseGuide)),contract:e.contract,nodes:e.nodes,fingerprint:e.fingerprint,packets:e.packets.length};});atomic(path.join(dir,'pair-input.json'),buildPair(jobs));console.log('Prepared complete pair evidence');process.exit(0);}
 if(!args.includes('--run')){console.log(JSON.stringify({total:base.length,planned:inventory.filter(g=>jobMap.has(g.id)).length,packets:inventory.reduce((s,g)=>s+g.packets,0),maximumPackets:Math.max(...inventory.map(g=>g.packets)),path:dir}));process.exit(0);}
 const codex=opt('--codex','/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex');
 const env=Object.fromEntries(Object.entries(process.env).filter(([k])=>!/(?:API_KEY|ACCESS_TOKEN)$/.test(k)));
@@ -102,7 +104,8 @@ async function call(folder,name,prompt,schema,images=[]){
 }
 const ids=opt('--ids','').split(',').filter(Boolean),limit=Number(opt('--limit','0'));let count=0;
 const costs=new Map(inventory.map(g=>[g.id,g]));
-const selected=base.filter(g=>!ids.length||ids.includes(g.id));
+const excludedIds=new Set(opt('--exclude-ids','').split(',').filter(Boolean));
+const selected=base.filter(g=>(!ids.length||ids.includes(g.id))&&!excludedIds.has(g.id));
 if(!ids.length)selected.sort((a,b)=>costs.get(a.id).packets-costs.get(b.id).packets||costs.get(a.id).sourceCharacters-costs.get(b.id).sourceCharacters);
 for(const baseGuide of selected){
  if(stopped||fs.existsSync(path.join(dir,'stop-after-current'))||limit&&count>=limit)break;

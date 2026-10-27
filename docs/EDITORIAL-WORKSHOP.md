@@ -90,3 +90,15 @@ coverage checks, but their identifiers never become fictitious public database
 references. The guide cites the publication and physical pages in prose. Private
 figure paths are restricted to the work directory. This narrow recovery does not
 change database contents or broaden model-year applicability.
+
+### Two-guide pilot (not enabled for the full queue)
+
+`editorial-workshop-pair.mjs` runs exactly two independently scoped, complete one-packet repairs through a shared author and a separate shared reviewer. Exact duplicate evidence is supplied once, but each guide retains its own allowed nodes, source hashes, base hash, numeric/reference validation, coverage verdict and full catalog validation. Conflicting identities, missing result IDs, incomplete review coverage and cross-guide quantities/references fail closed. Failed shared results fall back to isolated calls in the same CLI slot; no guide inherits another guide's approval.
+
+Prepare without running a model:
+
+```sh
+node scripts/editorial-workshop.mjs --prepare-pair --ids FIRST,SECOND --directory work/editorial-workshop-pair-pilot
+```
+
+After the main worker finishes its current guide and exits, run `node scripts/editorial-workshop-pair.mjs work/editorial-workshop-pair-pilot` in its freed slot. Never overlap it with that main worker. Resume the main queue afterward with `--exclude-ids FIRST,SECOND` until the pilot outputs receive supervisory review. Pilot records remain in a separate private directory, carry `publicationHeld: true`, and are not collected by the publisher. `pilot-report.json` records actual calls, timing, deduplicated source size and individual outcomes. No broader rollout is implied by a successful pilot.
