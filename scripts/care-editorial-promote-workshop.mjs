@@ -7,7 +7,7 @@ const directory=path.resolve('work/editorial-workshop-care');
 const primary=path.resolve('work/editorial-workshop/reviewed');
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const hash=value=>crypto.createHash('sha256').update(value).digest('hex');
-const reservationFiles=['work/editorial-workshop/care-reserved-subset.json','work/editorial-workshop/care-reserved-subset-2.json'];
+const reservationFiles=['work/editorial-workshop/care-reserved-subset.json','work/editorial-workshop/care-reserved-subset-2.json','work/editorial-workshop/care-reserved-subset-3.json'];
 const allowed=new Set(reservationFiles.filter(file=>fs.existsSync(file)).flatMap(file=>read(file).ids));
 const statusFile=path.join(directory,'promotion-progress.json');
 fs.mkdirSync(directory,{recursive:true});
