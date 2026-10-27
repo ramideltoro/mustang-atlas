@@ -1,0 +1,45 @@
+{
+  "documentId": "connector-C197A",
+  "sourceHash": "7fd965a3992ddcb408d6d4f932779fa330aafcd82811fe0ffbef422cdd2e34f9",
+  "title": "C197A — Starter motor connector reference",
+  "introduction": "I use this page as the starter motor connector’s address book. The identity table names the connection, the drawing shows its labeled cavity, and the pin-assignment table connects that label to circuit information.\n\nStart with CNumber and Description to confirm the entry, then check Gender and Pin Count. Match the cavity label in the drawing to the Cavity column and read across that row for the circuit, wire information, function and terminal part number. The table beneath the drawing provides the associated Fpn, Size and Harness Id fields.\n\nThis is an identification and wiring reference. Physical viewing direction, gauge convention and the meanings of Box, Cols, Size and Used are unspecified here. Keep those entries as printed. Physical access, electrical testing and replacement require separate instructions; the drawing alone cannot establish connector condition.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C197A-b00002",
+      "text": "Connector face · Harness 14B060 — locate the cavity label",
+      "why": "The label inside the circular face links the illustration to the Cavity column in the assignment table. The surrounding outline provides visual context for locating that label."
+    },
+    {
+      "blockId": "connector-C197A-b00005",
+      "text": "Pin assignments — connect the cavity to its circuit",
+      "why": "Each assignment ties a drawing label to circuit identity, wire information, the named electrical function and a terminal part number. These fields describe the connection; they do not establish whether it is working correctly."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:23:22.941Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "58d75213f9bef0291e7443ec365dc2d9a9ed801c9bb355a53235eeb55d5155aa",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a6b667b12223382cd524266381c5c0063144b471bb1c3d43cefcdc06c007250d",
+    "reviewedAt": "2026-10-27T02:23:22.942Z"
+  }
+}

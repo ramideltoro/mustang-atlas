@@ -51,8 +51,8 @@ export function curatedSpans(guide,doc){
 }
 export function spanMedia(doc,spans){
  if(spans.some(s=>s.start===0&&s.end===doc.text.length))return doc.media||[];
- const selected=new Set();let cursor=0;
- const visit=blocks=>{for(const b of blocks||[]){if(b.text?.trim()){const needle=b.text.trim().split('\n')[0],index=doc.text.indexOf(needle,cursor);if(index>=0)cursor=index;}
+ const selected=new Set();let cursor=0,searchCursor=0;
+ const visit=blocks=>{for(const b of blocks||[]){if(b.text?.trim()){const needle=b.text.trim().split('\n')[0],index=doc.text.indexOf(needle,searchCursor);if(index>=0){cursor=index;searchCursor=index+needle.length;}}
   if(b.mediaId&&spans.some(s=>cursor>=s.start&&cursor<s.end))selected.add(b.mediaId);
   visit(b.children);visit(b.items);for(const row of b.rows||[])for(const cell of row.cells||[])visit(cell.blocks);
  }};visit(doc.blocks);return(doc.media||[]).filter(m=>selected.has(m.id));

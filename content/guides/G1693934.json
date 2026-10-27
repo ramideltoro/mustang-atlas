@@ -1,0 +1,55 @@
+{
+  "documentId": "G1693934",
+  "sourceHash": "12ad62085e5d6c69a3224a8d9295daf0919aa813dd71ac510b17615c335ea713",
+  "title": "Warning Chimes: Priority, Speakers and Backup",
+  "introduction": "I treat a warning chime as a tap on the shoulder: it calls attention to the car’s gauges, indicators and message center warnings. Understanding who controls the sound—and where it comes from—helps make sense of what you hear. This overview explains normal operation and backup behavior; it does not provide the complete chime priority ranking or a diagnostic test procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693934-b00001",
+      "text": "How the warning chimes work",
+      "why": ""
+    },
+    {
+      "blockId": "G1693934-b00002",
+      "text": "Warning chimes give the driver audible reminders and alerts that supplement the IPC’s visual indications: gauges, indicators and message center warnings. The IPC controls all warning chimes using messages received from external modules. Its software contains a preset priority hierarchy, so competing requests do not become a dashboard shouting match: the most important requested chime sounds. If a lower-priority chime is already sounding when a higher-priority request arrives, the higher-priority chime takes over, replacing or delaying the lower-priority chime.",
+      "why": "A chime being interrupted can reflect normal prioritization. The sound you hear represents the highest-priority active request, so it does not tell you that no other chime requests exist."
+    },
+    {
+      "blockId": "G1693934-b00003",
+      "text": "The warning chimes sound through the audio system speakers and the IPC. During normal operation, the turn signal on sound—the familiar tick-tock—is the only individual chime sounded by the IPC itself. The parking aid and Blind Spot Information System (BLIS®)/Cross Traffic Alert (CTA) warning chimes sound through the rear speakers. All other warning chimes sound through the front audio system speakers.",
+      "why": "I distinguish control from sound production here: the IPC decides which warning gets heard, while the normal output path determines where you hear it. These speaker assignments help you understand the sound’s location; they are not a fault test."
+    },
+    {
+      "blockId": "G1693934-b00004",
+      "text": "The IPC also provides backup sound. If the audio system fails to sound a chime, the IPC sounds all chimes that are required.",
+      "why": "This backup role explains why the IPC can sound warnings beyond its normal turn-signal tick-tock when audio-system chime output fails."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:02:37.187Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d17042c22231be0b6d9b48d41789e1174cce4f814afb8f9174dc387e39d4ec8d",
+    "reviewedAt": "2026-10-27T02:02:37.187Z"
+  }
+}

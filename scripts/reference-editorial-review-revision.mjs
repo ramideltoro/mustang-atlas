@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {spawn} from 'node:child_process';
 import {DatabaseSync} from 'node:sqlite';
-import {reviewSchema,reviewPrompt,validateReview,validateEdits,editableLeaves,documentEvidence,selectTeachingContext,hash} from './reference-editorial-lib.mjs';
+import {reviewSchema,reviewPrompt,validateReview,validateEdits,validateStructure,editableLeaves,documentEvidence,selectTeachingContext,hash} from './reference-editorial-lib.mjs';
 const dir=path.resolve(process.argv[2]||''),root=path.resolve('work/editorial-references');
 if(!dir.startsWith(root+'/revisions/'))throw Error('Expected staged revision directory');
 if(fs.existsSync(path.join(root,'worker.pid')))throw Error('Wait for reference author/reviewer worker to release its CLI slot');
@@ -12,6 +12,7 @@ if(input.chunkCount!==1||input.chunkIndex!==0)throw Error('Revision reviewer req
 const images=input.reviewImages||[];if(input.illustrations?.length&&!images.length)throw Error('Illustrated revision requires complete source attachments');for(const file of images)if(!path.resolve(file).startsWith(root+'/')||!fs.existsSync(file))throw Error('Invalid private review image');
 const db=new DatabaseSync('data/atlas.sqlite',{readOnly:true}),doc=db.prepare('select * from documents where id=?').get(input.documentId);db.close();for(const k of['blocks','media','engines'])doc[k]=JSON.parse(doc[k]);
 const context=selectTeachingContext(doc,{terms:read('content/glossary.json').terms,systems:read('content/systems.json').systems,abbreviations:read('data/abbreviations.json')});
+const structural=validateStructure(editableLeaves(doc.blocks),input.draft);if(structural.length)throw Error(structural.join('; '));
 const checks=validateEdits(editableLeaves(doc.blocks),input.draft,{evidence:documentEvidence(doc,context)});if(!checks.passed)throw Error(checks.errors.join('; '));
 fs.writeFileSync(path.join(dir,'schema.json'),JSON.stringify(reviewSchema));fs.writeFileSync(path.join(dir,'AGENTS.md'),'Use only supplied evidence. No tools, file reads, browsing, commands or delegation. Return schema JSON.');
 const output=path.join(dir,'review.json'),fd=fs.openSync(path.join(dir,'review.log'),'a'),env=Object.fromEntries(Object.entries(process.env).filter(([k])=>!/(?:API_KEY|OPENAI_BASE_URL|OPENAI_API_BASE)/i.test(k)));

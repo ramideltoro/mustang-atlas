@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C296",
+  "sourceHash": "c59406dbee8f21dc737c0a816bb45cf3ca63a875fddc9637a0f37e234acad9d9",
+  "title": "C296 — Evaporator Temperature Sensor",
+  "introduction": "The evaporator is the cabin-side heat exchanger that cools and dries passing air as refrigerant evaporates inside it. This reference identifies its temperature-sensor connector and maps the connector’s cavities to their circuit entries. Think of it as an address book for the connection: the housing drawing shows where to look on the page, and the table tells you what belongs at each address.\n\nI start with the connector identity table, then match the cavity labels in the drawing to the Cavity column under the circuit map. Read across the matching row to keep its circuit identifier, color code, gauge entry, function and terminal part number together. The housing outline and uneven side projections help distinguish the drawing’s sides; keep the illustration in its printed orientation while reading it.\n\nThis is an identification and wiring reference. Physical access, the direction from which to view the actual connector, probing methods, test values and replacement instructions are outside its scope. Gauge convention and the meanings of the Box, Cols, Size and Used entries are not explained here; retain those entries as printed without interpreting them as dimensions, wire-selection instructions or test results.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C296-b00002",
+      "text": "Connector layout · Harness 18B574",
+      "why": "I use the cavity labels to connect the illustration to the pin-assignment table, and the housing details to keep my place in the drawing. The identity table associates the illustrated connector with its harness and shell. The drawing does not specify the physical viewing direction, so its left and right positions should not be transferred directly to a connector in the car."
+    },
+    {
+      "blockId": "connector-C296-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Each row ties a drawn cavity to its circuit and terminal information. The Function column distinguishes the evaporator-temperature sensor connection from the climate control module’s reference-return connection. I keep those roles separate: a reference-return label alone does not establish a chassis-ground connection. Blank Qualifier cells add no stated configuration condition, and these assignments provide identification rather than a pass-or-fail electrical test."
+    },
+    {
+      "blockId": "connector-C296-b00007",
+      "text": "Pigtail kit and service-part reference",
+      "why": "I use this table to connect the kit entry in the identity table with the corresponding service-part and engineering-shell entries. Those labels distinguish the kit reference, service part, shell and image filename; they are not interchangeable identifiers. The table also records gauge, material and cavity information, but it does not teach installation or establish that replacement is needed."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:27:31.919Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "81f7b6304d5f49af5af611d419095037119c96b6cb58842b9865261e8f9aa9e4",
+  "sourcePdfHash": "5b87a88b43bb74f46bba25df07ade57dfe79d10f4b5ad6fbef9120cb8169f4b8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2a96f2885a4098cb53dc1048cc60f5e66e7664b7a5b31ad2c25efceb5ded8fa9",
+    "reviewedAt": "2026-10-27T02:27:31.919Z"
+  }
+}

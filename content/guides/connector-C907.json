@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C907",
+  "sourceHash": "1a54bd263126068b3f0787fca7f15840a0fdb8ea13d12a37704409e0504197d3",
+  "title": "C907 — VANITY MIRROR LAMP LH",
+  "introduction": "This reference connects the left-hand vanity mirror lamp’s connector drawing with its identification, circuit and service-part tables. I treat the drawing like a seating chart for the wiring: each printed cavity label leads to the table row that explains that connection’s role.\n\nStart with the identification table, then use the connector drawing and its accompanying harness table. In the drawing, the labeled circular cavities sit beneath a small rectangular feature and an upper stepped outline. These shapes help you keep the illustration oriented consistently as you read. Match a printed cavity label to the Cavity column, then read across that same row to connect the circuit identifier, wire description, function and terminal entry.\n\nThis is an identification and wiring-reading guide. It does not establish physical viewing direction, connector access, probing conditions, test results or replacement steps. Size and Used remain reference codes without supplied definitions. The gauge convention and the relationship between the pin-assignment and pigtail gauge entries are also unexplained; those entries are not a wire-selection instruction.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C907-b00002",
+      "text": "Harness 14334/14335 · Connector face",
+      "why": "I use the printed cavity labels to connect the drawing to the assignment table, with the visible housing outline as a visual landmark. The accompanying harness table ties this illustration to its housing entry; the drawing alone does not establish the physical side from which to view the connector."
+    },
+    {
+      "blockId": "connector-C907-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Read across one cavity row at a time so the circuit, color, gauge, function and terminal entry stay together. The battery-saver function identifies the lighting-switching side of the connection, while the ground function identifies the current-return connection. A relay is an electrically controlled switch; its label does not by itself identify a separate plug-in component or tell you where to find it."
+    },
+    {
+      "blockId": "connector-C907-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I match the identification table’s kit entry to the pigtail listing, then distinguish the Service Part entry from the Engineering Shell entry. Their separate columns let you trace the listed service item and its associated housing without treating the housing identifier as the service-part identifier."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:37:36.343Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "f921779ca247c49fbec7bcbc6a495fdc1486aa4653ec219fe5e226dc5a5f5c99",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d48baf29a84625e95d2ec944f06bf29fb21af6aefa33c29445677cbb9c4c4c34",
+    "reviewedAt": "2026-10-27T02:37:36.344Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "documentId": "G1696290",
+  "sourceHash": "4a582037228bb45f2627310f63f4e8cf9003eb65cf18ed97ff805191c258ebd1",
+  "title": "SRS deployment logic and connector assurance",
+  "introduction": "The supplemental restraint system (SRS) coordinates airbags and seatbelt pretensioners to supplement the seat belts. A pretensioner tightens its belt during a qualifying event. I start with the controller’s deployment decision, then explain why a small connector tab matters to the system’s electrical self-checks.\n\nThis overview explains operating principles and one connector-related fault condition. Service requires the dedicated depowering, handling, testing and restoration procedures; those steps are not included here.",
+  "requirements": [
+    {
+      "category": "Service scope",
+      "items": [
+        {
+          "name": "Qualified personnel and restraint-specific procedures",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Before service, use the applicable SRS procedures and [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191). Use the specified test equipment; do not substitute a generic jumper or resistance test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1696290-b00001",
+      "text": "How deployment decisions and connector assurance work",
+      "why": ""
+    },
+    {
+      "blockId": "G1696290-b00002",
+      "text": "The restraints control module (RCM) continually receives and monitors inputs from the occupant classification system module (OCSM) and various other hard-wired switches and sensors. Using that information, it detects sudden vehicle deceleration, lateral deceleration, or both. If the RCM determines that deployment is necessary, it applies voltage and current to deploy the appropriate SRS components.",
+      "why": "I read this as a decision chain: sensor and occupant information inform the controller’s judgment, and that judgment determines which deployable components it commands."
+    },
+    {
+      "blockId": "G1696290-b00003",
+      "text": "The SRS uses Connector Position Assurance (CPA) tabs on deployable-component connectors. Each tab has two jobs: it keeps the harness connector securely attached to the deployable component, and it disengages the component’s shorting bars from its electrical pins. Think of it as a secondary latch with an electrical job on its résumé.",
+      "why": "The tab’s mechanical and electrical roles explain why an attached-looking plug can still have an incorrect electrical configuration."
+    },
+    {
+      "blockId": "G1696290-b00004",
+      "text": "If the connector is attached to the deployable component but its CPA tab is not fully seated, the connector pins still contact the component pins. However, the shorting bars remain applied to the deployable component pins. When the vehicle is powered on, the RCM detects circuit resistance below threshold during self-diagnostics, and the airbag warning indicator illuminates.",
+      "why": "I use this condition to explain how electrical contact and a detected fault can coexist. The illuminated indicator alone does not identify an incompletely seated tab as the cause; diagnosis requires the applicable restraint-specific diagnostic path."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:01:13.888Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "96eb2cbf2b40e3c3f7400a81fe9b6e801b2499d3a7a6a2464a9ffb277e19619e",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b9ce2f1c5c2933cfa65189ec60b004b04f42d62396a7f596945ac047d8a820bd",
+    "reviewedAt": "2026-10-27T02:01:13.888Z"
+  }
+}

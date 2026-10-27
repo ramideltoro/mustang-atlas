@@ -42,8 +42,14 @@ function evidenceFor(g){
   const images=spanMedia(d,spans).filter(m=>m.width>=150&&m.height>=100).map(m=>({...m,documentId:d.id,sourceHash:d.source_hash}));
   for(let i=0;i<images.length;i+=6)nodes.push({nodeId:`${d.id}:images:${i}-${Math.min(images.length,i+6)}`,documentId:d.id,sourceHash:d.source_hash,sectionId:'illustrations',title:d.title,role:primary.has(d.id)?'primary-image':'dependency-image',engines:scopeEngines(d),text:'Interpret only visible details; associate images with the supplied complete text of this document. Do not infer hidden fasteners, measurements or applicability.',images:images.slice(i,i+6)});
  }
+
+ const diagramFindings=[
+  {documentId:'G1686507',sourceHash:'05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454',mediaId:'G1686507-m0003',fileHash:'eca58ea6a46370bf8aa37a02ba727d63821e2151d74945d35f6fb071ea21f108',observation:'The highlighted central pilot bore has both a wiping/cleaning callout and a lubricant tube callout. Clean this bore before applying the specified thin lubricant film; do not restrict the cleaning instruction to the flat wheel mounting face.'},
+  {documentId:'G1693784',sourceHash:'9249ad74482b718dd4a5dd6df7a2f5883b829920530621d8e4bd2f1c1b39a375',mediaId:'G1693784-m0001',fileHash:'861640281be52904844fb3a777dec82f4bd448c9a26c71ff6c7b04cb02e2526f',observation:'In the 2-piston brake-disc access branch, the illustration places a discard-bin symbol and x2 callout at the two caliper assembly mounting bolts. Discard and replace both of these bolts, despite the prose omitting that word. This applies to those assembly mounting bolts at115Nm, not unrelated caliper guide-pin fasteners.'}
+ ];
+ const observations=diagramFindings.filter(f=>{const d=docs.get(f.documentId),m=d?.media?.find(m=>m.id===f.mediaId);if(d?.source_hash!==f.sourceHash||!m)return false;const file=path.join(root,'data',m.url.replace(/^\//,''));return fs.existsSync(file)&&hash(fs.readFileSync(file))===f.fileHash;});
  const sources=[...docs.values()].map(d=>({documentId:d.id,sourceHash:d.source_hash,title:d.title,engines:scopeEngines(d)}));
- const contract={jobId:g.id,title:job.title,applicability:{...g.applicability,engines:job.engines},scopeConstraints:job.scopeConstraints||[],coveredSections:job.spans.map(s=>({documentId:s.documentId,sectionId:s.id})),sources,unresolvedDependencies:unresolved,reviewedEvidence:job.evidenceSupplements||[],relatedGuides:job.documents.some(d=>d.id==='G1692537')?[{id:'job-dc7f65eee891660d',title:'SVT Performance Package front hub: separate bolt-on assembly for5.2L'}]:[]};
+ const contract={jobId:g.id,title:job.title,applicability:{...g.applicability,engines:job.engines},scopeConstraints:job.scopeConstraints||[],coveredSections:job.spans.map(s=>({documentId:s.documentId,sectionId:s.id})),sources,unresolvedDependencies:unresolved,reviewedEvidence:[...(job.evidenceSupplements||[]),...observations],relatedGuides:job.documents.some(d=>d.id==='G1692537')?[{id:'job-dc7f65eee891660d',title:'SVT Performance Package front hub: separate bolt-on assembly for5.2L'}]:[]};
  const fingerprint=hash(JSON.stringify({version:VERSION,guide:g,contract,nodes}));
  return{job,contract,nodes,fingerprint,packets:packNodes(nodes)};
 }
@@ -69,7 +75,7 @@ async function call(folder,name,prompt,schema,images=[]){
 const ids=opt('--ids','').split(',').filter(Boolean),limit=Number(opt('--limit','0'));let count=0;
 for(const baseGuide of base.filter(g=>!ids.length||ids.includes(g.id))){
  if(stopped||fs.existsSync(path.join(dir,'stop-after-current'))||limit&&count>=limit)break;
- const e=evidenceFor(baseGuide),id=baseGuide.id;const textContext=e.nodes.reduce((n,v)=>n+v.text.length,0)<=90000?e.nodes.filter(n=>n.text&&n.images.length===0):[];if(ledger[id]?.fingerprint===e.fingerprint&&ledger[id]?.status==='reviewed')continue;
+ const e=evidenceFor(baseGuide),id=baseGuide.id;const stagedPath=path.join(dir,'reviewed',id+'.json');if(fs.existsSync(stagedPath)){const staged=read(stagedPath);if(staged.guide.authoring?.editorialVersion===VERSION&&JSON.stringify(staged.guide)===JSON.stringify(baseGuide)&&staged.guide.sourceRefs.every(r=>byId.get(r.documentId)?.source_hash===r.sourceHash)){save(id,{status:'reviewed',published:true,fingerprint:e.fingerprint});continue;}}const textContext=e.nodes.reduce((n,v)=>n+v.text.length,0)<=90000?e.nodes.filter(n=>n.text&&n.images.length===0):[];if(ledger[id]?.fingerprint===e.fingerprint&&ledger[id]?.status==='reviewed')continue;
  if(!args.includes('--retry')&&ledger[id]?.fingerprint===e.fingerprint&&['needs-review','failed'].includes(ledger[id]?.status))continue;
  count++;const folder=path.join(dir,'jobs',id,e.fingerprint.slice(0,16));fs.mkdirSync(folder,{recursive:true});atomic(path.join(folder,'manifest.json'),{id,fingerprint:e.fingerprint,baseHash:hash(JSON.stringify(baseGuide)),contract:e.contract,nodes:e.nodes});save(id,{status:'authoring',fingerprint:e.fingerprint,folder});
  try{

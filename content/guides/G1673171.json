@@ -1,0 +1,55 @@
+{
+  "documentId": "G1673171",
+  "sourceHash": "ceb2ebfce1b311dc22a8091934913412883575ee1c0e39b8d27c24a85ad16835",
+  "title": "How the Starting System Cranks the Engine",
+  "introduction": "For the 2.3L EcoBoost (231kW/314PS), starting involves a handoff between control inputs, the PCM, a relay and the starter motor. I use that chain to understand who gives the command and who does the turning. This overview explains system operation; access, testing and repair require separate procedures. Remote-start operating instructions belong with the owner’s literature and the entry-systems reference below.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1673171-b00001",
+      "text": "How Engine Cranking Is Controlled",
+      "why": ""
+    },
+    {
+      "blockId": "G1673171-b00002",
+      "text": "The starting system controls engine cranking. The PCM receives inputs from the ignition switch—push button start; the transmission on vehicles with automatic transmission, or the clutch pedal position switch on vehicles with manual transmission; the run/start relay; and the BCM (body control module). When it receives these inputs, the PCM energizes the starter relay in the BJB (battery junction box). The energized starter relay then supplies power to the starter motor, which turns the engine. I picture the starter relay as the doorman for starter-motor power: the PCM gives the cue, and the relay lets power through.",
+      "why": "I read this sequence as a map of the command and power handoff. It identifies the transmission-dependent input and explains how the PCM’s command results in engine rotation."
+    },
+    {
+      "blockId": "G1673171-b00003",
+      "text": "Remote Starting with an Automatic Transmission",
+      "why": ""
+    },
+    {
+      "blockId": "G1673171-b00004",
+      "text": "Vehicles with automatic transmission are equipped with remote start, allowing the vehicle to be started from up to 30 meters (98 feet) away. For operating information, refer to the owner’s literature and [Handles, Locks, Latches and Entry Systems - System Operation and Component Description](#/document/G1695897) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "The transmission qualifier defines applicability, and “up to” describes the stated maximum range. The referral directs the reader to the operating information needed to use remote start."
+    }
+  ],
+  "checkedAt": "2026-10-27T01:56:00.894Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "0a1d377e6a832723566a0738e54dc2534cf7f952d3b87681afa02adbc9916dcc",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "10de8f98afa41af52665cfbd3a1163945756fb9549370a65be49b3884e193d8b",
+    "reviewedAt": "2026-10-27T01:56:00.894Z"
+  }
+}

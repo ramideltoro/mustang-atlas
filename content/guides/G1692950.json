@@ -1,0 +1,60 @@
+{
+  "documentId": "G1692950",
+  "sourceHash": "23ffaad42776d63b7f88a58abdcfa4cfa3ba564d3f72fea6674e8f2db12f1bdc",
+  "title": "Charging System: Power, Commands and Feedback",
+  "introduction": "I read this charging system as a small power station with a control desk: producing electricity and deciding the requested voltage are different jobs. Follow the belt-driven generator first, then the control messages and current sensors. That makes it easier to understand who supplies power, who sets the target and who reports what is happening.\n\nThis is an operating overview. It explains the relationships between components, but provides no access instructions, electrical test setup, pass/fail values or replacement procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692950-b00001",
+      "text": "How the Charging System Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1692950-b00002",
+      "text": "The FEAD (front end accessory drive) belt turns the generator, also called the alternator. When the engine starts, the generator begins producing AC (alternating current) voltage and converts it internally to DC (direct current) voltage. The voltage regulator, located on the rear of the generator, controls the DC voltage level supplied to the battery.",
+      "why": "I separate the mechanical drive from the electrical conversion: the belt provides the motion, while the generator produces and converts the electricity. The battery stores energy; the generator supplies electrical power while the engine runs."
+    },
+    {
+      "blockId": "G1692950-b00003",
+      "text": "The PCM sets the voltage regulation setpoint—the voltage target—and sends it to the generator’s internal voltage regulator through the generator communication (GENCOM) circuit. Information travels back through a separate path: the generator monitor (GENMON) circuit carries generator load information and error conditions to the PCM.",
+      "why": "I remember these as the request lane and the reporting lane. GENCOM carries the requested target toward the regulator; GENMON carries operating information back. That distinction explains why charging control involves more than the generator’s ability to produce electricity."
+    },
+    {
+      "blockId": "G1692950-b00004",
+      "text": "This vehicle has a load shed strategy to manage electrical demand. With the engine off, the BCM (body control module) monitors battery state of charge—an estimate of the usable charge remaining—using information from the battery current sensor attached to the negative battery cable. That sensor measures current flowing into or out of the battery. With the engine running, the PCM monitors system voltage on VPWR and PSCM (power steering control module).",
+      "why": "I keep the engine-off and engine-running conditions separate because they identify different monitoring responsibilities. The running-engine description names VPWR and PSCM without explaining their relationship in this monitoring arrangement. Treat those as the stated references, without interpreting them as probe locations or inferring which electrical loads are shed."
+    },
+    {
+      "blockId": "G1692950-b00005",
+      "text": "The PCM also monitors generator current through a generator current sensor attached to the generator B+ battery cable. The PCM uses this sensor’s information to adjust engine idle stability and torque control.",
+      "why": "Generating electricity places a load on the engine. This feedback helps explain the connection between charging activity and engine control: the PCM uses generator current information when managing idle stability and torque. I distinguish this generator-output measurement from battery charge monitoring; they answer different questions."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:19:18.561Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "0c20f58768d45faae0a7cedea331f86578b666622c367c3c7143a02150182400",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "199d03326c3e5b1750651719a81c522c52120875b3eefd423848d3550a201b0b",
+    "reviewedAt": "2026-10-27T02:19:18.561Z"
+  }
+}

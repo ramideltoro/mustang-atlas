@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1668",
+  "sourceHash": "5efcdcf3ed8ffa8a3d6e412c054b6421b189e31018437248816f024a6469f298",
+  "title": "C1668 — Left front damper solenoid connector",
+  "introduction": "I use this reference as an address book for the left front damper solenoid’s electrical connection: the drawing locates the cavities, the pin table identifies their circuits, and the service-parts table connects the housing to its listed pigtail. The cavity label is the address; the wire color is a helpful house paint job, not the whole address.\n\nStart with the connector identity table, compare the drawing’s outline and latch detail, then read across the matching cavity row. This lets you connect a position in the illustration with its circuit, wire information, function and terminal entry without mixing neighboring rows.\n\nThis is a connector-reading guide. Physical access, viewing-side confirmation, probing, electrical test conditions and replacement instructions require the applicable workshop procedure. Gauge conventions and the Box, Cols, Size and Used fields are not explained here; keep those entries as printed without turning them into dimensions, wire-selection rules or diagnostic conclusions. The metadata Status field is not a verdict on the connector fitted to the car.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1668-b00002",
+      "text": "Connector-face drawing · Harness 13A840",
+      "why": "I use the latch detail drawn on the left and the vertically arranged cavities as landmarks within this illustration. Match each printed cavity label to the Cavity column below. Those landmarks help you navigate the drawing; confirming the physical viewing side remains necessary before using it at the vehicle."
+    },
+    {
+      "blockId": "connector-C1668-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "Read each row horizontally: Cavity links back to the drawing, Circuit Number identifies the circuit, Color and Gauge describe its wire, and Function states its assigned role. Terminal Part Number identifies the terminal entry for that row. The positive and negative function markings distinguish the labeled sides of the damper-control circuit; they do not authorize applying battery power or treating a wire as chassis ground. A blank Qualifier cell adds no further condition to interpret."
+    },
+    {
+      "blockId": "connector-C1668-b00007",
+      "text": "Identify the listed pigtail service parts",
+      "why": "I cross-check Engineering Shell against Hard Shell in the identity table and Fpn beneath the drawing to connect the pigtail entry with this housing. Number corresponds to Kit List, while Service Part provides the service identifier; neither should be confused with the individual Terminal Part Number in the cavity table. The pigtail and circuit-wire Gauge entries differ and describe their respective entries. That difference alone does not establish a fault or provide a splice or wire-selection instruction. Use this section to identify the listed parts before consulting the applicable repair procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:28:58.384Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "70bd13e9b782d1c3a2a2e41edb0547afe840083d7bbff6d0d9834ae926d5c88d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "09db8cd7aeb941435a60ba5b42fb9b9d72affd0a97d1386c55e47032b6111a4a",
+    "reviewedAt": "2026-10-27T02:28:58.385Z"
+  }
+}

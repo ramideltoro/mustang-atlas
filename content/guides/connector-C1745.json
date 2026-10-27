@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1745",
+  "sourceHash": "7753a85a616012f1726f96384ba6518d81cf866cb53bec55cbcfc61a50e01d71",
+  "title": "C1745 — Cylinder Head Temperature (CHT) Sensor Connector",
+  "introduction": "This reference connects the cylinder head temperature sensor’s connector identity, cavity drawing, circuit assignments and pigtail service listing. I read it like an electrical address book: the cavity label gives the address, and the matching table row tells me which circuit belongs there.\n\nStart with the connector identification table, then compare the drawing’s housing features and printed cavity labels. Read across the matching cavity row to connect its circuit identifier, wire-color code and function. The service-parts table provides a separate cross-reference for the pigtail and shell.\n\nThis is an identification and wiring-reading guide. It does not establish engine applicability, physical viewing direction, access steps, probing methods, test limits or replacement instructions. Gauge conventions and the meanings of the Size and Used codes are not defined here; retain those entries as reference data rather than turning them into wire-selection or diagnostic instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1745-b00002",
+      "text": "Connector-face drawing · Harness 14B485",
+      "why": "I use the housing outline, side features and stacked cavity labels together to navigate the drawing. The printed labels connect the illustration to the Cavity column below. Keep that relationship tied to the drawing as shown; deciding which side of a physical connector to view requires additional orientation information."
+    },
+    {
+      "blockId": "connector-C1745-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "Find the cavity label in the drawing, locate its row, then read across that same row. This keeps the circuit identifier, color code, gauge entry and function associated with the correct cavity. The function descriptions distinguish the temperature-sensor circuit from the powertrain module’s engine signal return. That return label is a circuit identity, not an instruction to connect it to chassis ground. A blank qualifier or unavailable terminal-part entry supplies no evidence about circuit condition."
+    },
+    {
+      "blockId": "connector-C1745-b00007",
+      "text": "Pigtail service-part cross-reference",
+      "why": "I compare the Engineering Shell entry here with the connector’s Hard Shell and Fpn entries to connect the service listing to the housing identification. The kit number, service part and image filename serve different lookup purposes. Keep the harness-wire and pigtail Gauge entries attached to their respective tables; they describe separate entries and do not establish a replacement-wire choice."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:34:15.115Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "aacadeb3c21df65b693cd64f354f92636bb388ef00c4256532029ae58950058f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bb01d17cb9449ba49faad907d79de47b6ee7caf81c7c63839344b47275be5dc8",
+    "reviewedAt": "2026-10-27T02:34:15.115Z"
+  }
+}

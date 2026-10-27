@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1669",
+  "sourceHash": "2b33ef5231b3588ff2eba60a5e4a2c8c09c3622ef48794d5d68d5b662f77b659",
+  "title": "C1669 — Right Front Damper Solenoid",
+  "introduction": "I use this reference like a seating chart for electrical terminals: the drawing locates each cavity, and the pin-assignment table identifies the circuit associated with it. Start with the connector identity table, then use the connector-face drawing and harness details to keep the reference tied to the correct connection.\n\nIn the drawing, the cavities are stacked vertically beside a latch outline on the left. Match each drawn cavity label to the Cavity column, then read across that row for its circuit identifier, color code, gauge, function and terminal part number. The Function column distinguishes the controller-to-damper circuit roles; its polarity labels are not voltage specifications or proof of a chassis-ground connection.\n\nThe pigtail table provides a separate service-part reference. Keep its Gauge entry separate from the harness-wire Gauge entries: these describe different items, not competing answers to the same question.\n\nThis sheet supports identification and reading the circuit map. It does not define the physical viewing direction, decode the Size or Used codes or gauge convention, or provide access, probing, testing or replacement instructions. The COMPLETE status describes the reference entry; it is not a clean bill of health for the connector on the car.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1669-b00002",
+      "text": "Harness 13A840 · connector face",
+      "why": "I use the visible latch outline and cavity labels to keep the drawing's layout straight, then match those labels to the pin table. The illustration establishes their arrangement on the page without specifying how to view the physical connector."
+    },
+    {
+      "blockId": "connector-C1669-b00005",
+      "text": "Read the pin assignments",
+      "why": "Each row connects a cavity label with its circuit and terminal details. Reading across the complete row keeps the circuit identifier, color code and function together; color alone leaves part of the identification behind."
+    },
+    {
+      "blockId": "connector-C1669-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The Number entry connects this table to the Kit List above. Service Part identifies the listed service item, while Engineering Shell can be compared with the connector's Hard Shell and Fpn entries. These cross-references support identification without turning the table into a replacement procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:33:01.509Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "5e5b5efe747485c7005ba1964eeaf4f44174759ad1c679421e4b88550b2c5a77",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1da0de1ea17dff3ef063be40b4589e2b62dfb857f7e0ae7f551276e439613fda",
+    "reviewedAt": "2026-10-27T02:33:01.510Z"
+  }
+}

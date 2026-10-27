@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C107",
+  "sourceHash": "fae8303a2a9a69aef3e0735ff8731bd095e97cb35422f482f4dfcbaf856319a4",
+  "title": "C107 — Cylinder Head Temperature (CHT) Sensor 2",
+  "introduction": "I use this reference as a connector address book: the drawing locates a cavity, and the matching table row tells me which circuit belongs there. Start with the identity table, then read the connector drawing alongside the pin assignments. The service-parts table provides a separate cross-reference for the listed pigtail.\n\nKeep the drawing in its displayed orientation, with the large rectangular housing feature above the cavity markers. Notice the upper shaded marker and the lower outlined marker; their printed labels connect the picture to the Cavity column. Shading is a visual distinction here, not an electrical test result.\n\nThis guide supports identification and reference reading. It does not establish a physical viewing direction, connector access, probing setup, test limits or replacement instructions. Gauge conventions and the Box, Cols, Size and Used codes are not explained, so I leave those entries uninterpreted rather than turn a reference sheet into garage fortune-telling.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C107-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I compare the drawing’s cavity labels and housing features with the reference before using the pin table. The identity table’s Hard Shell entry matches the Fpn entry beneath the drawing, linking the connector record to this illustrated face. The FEMALE designation identifies connector gender; it does not establish which direction to view a physical connector."
+    },
+    {
+      "blockId": "connector-C107-b00005",
+      "text": "Match each cavity to its circuit",
+      "why": "Find a printed cavity label in the drawing, then read across its matching Cavity row. Circuit Number identifies the circuit, Color records its wire-color code, and Function describes its assigned role. Here, the function entries distinguish the temperature-sensor circuit from the powertrain signal-return circuit; signal return should not be casually relabeled as chassis ground. Keep the Gauge, Qualifier, Used and Terminal Part Number entries attached to their own row. A blank qualifier or an N/A terminal entry supplies no additional instruction, and the Used code alone is not a reason to disregard a cavity."
+    },
+    {
+      "blockId": "connector-C107-b00007",
+      "text": "Identify the listed pigtail service parts",
+      "why": "I connect the identity table’s Kit List entry to the service table’s Number entry, then compare Engineering Shell with Hard Shell to check that the records refer to the same housing identifier. Service Part and Engineering Shell are separate identifiers, so keep their labels with them. The Image entry names an image file; it is not an additional illustration shown here. The pigtail and circuit tables contain different gauge entries, but those entries alone do not establish wire-selection or splice instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:30:16.539Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "fad77283ab888eba95266a2d1b178eb104e0fbd3a9a6e3fc762ba62dcfb57c0e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d1ea18d4969aef48f2e3e5c62baf55e8661940649f9338a4c9510abf0d1ef2ac",
+    "reviewedAt": "2026-10-27T02:30:16.540Z"
+  }
+}

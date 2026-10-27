@@ -1,0 +1,45 @@
+{
+  "documentId": "connector-C197C",
+  "sourceHash": "80ade6bf028d550ab0344f609b121ac8563f162802a364e1bb9ac6916fbf381f",
+  "title": "C197C — STARTER MOTOR",
+  "introduction": "I use this starter-motor connector reference like an address label for the wiring: it identifies the connection and links its cavity to a circuit, but it cannot tell us whether electricity is getting through. Start with the identification table, then use the connector drawing to find the cavity label and match it to the Cavity column in the pin-assignment table.\n\nThis is a connector-reading guide. It does not cover physical access, disconnection, probing, wire selection, replacement or electrical testing. The physical viewing direction, gauge convention and meanings of the Size and Used codes are not defined here; keep those entries as printed rather than turning them into tool, wire or parts-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C197C-b00002",
+      "text": "Read the connector face · Harness 14B060",
+      "why": "I use the circular outline, the extension at the left and the tab at the upper right as landmarks within this drawing. The central cavity label is the bridge to the pin-assignment table below. Compare the Fpn entry beneath the drawing with the Terminal Part Number entry in that table: their matching identifiers connect the references, without establishing a replacement-parts procedure."
+    },
+    {
+      "blockId": "connector-C197C-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match the drawing’s cavity label to the Cavity column, then read across that same row. Circuit Number identifies the circuit; Color and Gauge carry its wire entries; Function describes its assigned electrical role; and Terminal Part Number supplies the terminal identifier. I keep these details together so a wire marking does not get mistaken for a cavity label. The Qualifier cell is blank, which supplies no additional condition—it does not establish applicability beyond this reference. These entries identify the connection; they do not verify its electrical condition."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:24:35.512Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "6c18c9f5578d1574bbbacb520a8467dabf72fd67fc461911cb89b583b2f7fd8d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8b0fe77d6da294189e6337306d6d822545c99c3c13e5931be05133dcb7914c98",
+    "reviewedAt": "2026-10-27T02:24:35.512Z"
+  }
+}

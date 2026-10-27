@@ -6,7 +6,7 @@ import {VERSION} from './editorial-workshop-lib.mjs';
 export function validateStagedCatalog(db,records,{directory=path.resolve('work/editorial-workshop'),contentDir=path.resolve('content')}={}){
  const current=JSON.parse(fs.readFileSync(path.join(contentDir,'workshop-guides.json'),'utf8'));
  const replacements=new Map(records.map(r=>[r.guide.id,r]));const errors=[];
- for(const [id,r]of replacements){if(r.guide.authoring?.editorialVersion!==VERSION)errors.push({id,reason:'obsolete-editorial-contract'});const old=current.guides.find(g=>g.id===id);if(!old||hash(JSON.stringify(old))!==r.baseHash)errors.push({id,reason:'base-guide-changed'});
+ for(const [id,r]of replacements){if(r.guide.authoring?.editorialVersion!==VERSION)errors.push({id,reason:'obsolete-editorial-contract'});const old=current.guides.find(g=>g.id===id);if(!old||(hash(JSON.stringify(old))!==r.baseHash&&JSON.stringify(old)!==JSON.stringify(r.guide)))errors.push({id,reason:'base-guide-changed'});
   for(const ref of r.guide.sourceRefs||[]){const row=db.prepare('select source_hash from documents where id=?').get(ref.documentId);if(row?.source_hash!==ref.sourceHash)errors.push({id,reason:'source-changed',documentId:ref.documentId});}
  }
  const check=fs.mkdtempSync(path.join(directory,'catalog-check-'));

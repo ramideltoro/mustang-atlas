@@ -1,0 +1,46 @@
+{
+  "documentId": "connector-C102D",
+  "sourceHash": "331119883a36a2ecc86a682f0e5912757d9d6e30e9244469da1e2a03b6e8c812",
+  "title": "C102D — Generator connector reference",
+  "introduction": "The generator, also called the alternator, supplies electrical power and charges the battery while the engine runs. When the connector labels start looking like a crossword puzzle, I use this reference as the connection’s address book: the drawing locates the labeled connection, and the tables link that label to a circuit description.\n\nStart with CNumber and Description to confirm the entry, then compare Pin Count with the drawing. Status describes the reference entry; it is not an electrical test result. This page supports identification and circuit reading. Physical access, probing, wire selection and replacement require additional service information. The gauge convention and the meanings of the Size and Used codes are unspecified.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C102D-b00002",
+      "text": "Connector face · Harness 14B060",
+      "why": "I use the rectangular section on the left and the circular end on the right as landmarks in this drawing. Find the cavity label inside the smaller circle, then match that label to the Cavity column in the pin-assignment table. Page left and right describe the illustration; the physical viewing direction is unspecified.\n\nUse the Fpn and Harness Id fields beneath the drawing to cross-check the illustrated entry. Base Part Number and Fpn are separate fields; this reference does not establish that either is a replacement-ordering instruction."
+    },
+    {
+      "blockId": "connector-C102D-b00005",
+      "text": "Pin assignments — connect the drawing to the circuit",
+      "why": "Match the drawing’s cavity label to Cavity, then read across that same row. Circuit Number identifies the circuit; Color and Gauge record the wire information; Function supplies the circuit description. Keep its parenthetical wording attached to that description—it helps explain the entry even when its wording differs from the component heading.\n\nTerminal Part Number identifies the terminal entry separately from the connector information above. Keep Qualifier and Used with the same row, too. A blank Qualifier adds no stated condition; it does not establish applicability to every vehicle configuration."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:38:42.365Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "3f2ea7a2c646018f64a4d43d7bc1cd55d1306752029dc7f24aa126f898bb37d2",
+  "sourcePdfHash": "ce320cc7b51fe14694c25f88ae808a6e519a7d0d9ac1f9a090c362914188ac8a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "429afc4e7a905bc2139c4b91d01a6f6dca3350bc82169df4c04c2ffb1d2d88f7",
+    "reviewedAt": "2026-10-27T02:38:42.366Z",
+    "editorialRevision": "4d68559bf3004915f45485157049de9b5d4ad8a19fe497d48588fc7eaf6fa6df"
+  }
+}

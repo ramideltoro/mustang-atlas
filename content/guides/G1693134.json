@@ -1,0 +1,58 @@
+{
+  "documentId": "G1693134",
+  "sourceHash": "8116cac1576a60e4a6cf59ea4c90ebc2de7c3361c9f0518139a2b8450875ec7d",
+  "title": "Cruise Control: Controls, Speed Limits and Hill Behavior",
+  "introduction": "I start with three things: which module controls cruise, where the driver selects its mode, and how road conditions can affect the selected speed. Think of that speed as a target the system works to maintain—even hills get a say in what the speedometer shows. This overview explains those relationships and limits; it is not a complete operating or diagnostic procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693134-b00001",
+      "text": "How cruise control behaves",
+      "why": ""
+    },
+    {
+      "blockId": "G1693134-b00002",
+      "text": "The PCM (powertrain control module) controls the cruise control system.",
+      "why": "This identifies the module responsible for managing cruise control."
+    },
+    {
+      "blockId": "G1693134-b00003",
+      "text": "Select the cruise control mode using the steering-wheel-mounted switches labeled ON/OFF, SET+, SET- and CAN/RES. These controls are integrated into the LH (left-hand) steering wheel switch.",
+      "why": "I use the printed labels to identify the cruise controls within the left-hand switch assembly."
+    },
+    {
+      "blockId": "G1693134-b00004",
+      "text": "Cruise control maintains a selected vehicle speed from 32 km/h (20 mph), or 30 km/h (18 mph) with a metric cluster, up to the vehicle's maximum limited speed. When a MyKey® restricted key is in use and the maximum speed limiter is turned on, vehicle speed is limited to 129 km/h (80 mph).",
+      "why": "I check the cluster configuration when reading the lower speed threshold. The stated MyKey® limit applies when both conditions are present: a restricted key is in use and the maximum speed limiter is on."
+    },
+    {
+      "blockId": "G1693134-b00005",
+      "text": "During normal driving, road conditions can cause vehicle speed to vary slightly from the set speed. Expect possible fluctuations when driving up and down a steep hill. If vehicle speed drops more than 16 km/h (10 mph) below the set speed, cruise control disengages.",
+      "why": "A small speed variation can be normal. I distinguish that fluctuation from a drop beyond the stated threshold, because crossing it ends cruise control's active speed control."
+    }
+  ],
+  "checkedAt": "2026-10-27T01:54:08.850Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2c9ec6cdecd20aba8e0ac8abbe46706fcc176dfcb400ac9ba73301ef142fe259",
+    "reviewedAt": "2026-10-27T01:54:08.850Z"
+  }
+}

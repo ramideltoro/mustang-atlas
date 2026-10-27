@@ -48,3 +48,17 @@ Mechanical checks enforce source section IDs, known document links, primary refe
 The runner validates each accepted replacement with `createMaintenanceGuideCatalog` in a temporary merged catalog before staging. The standalone validator checks the complete staged set against current content and source hashes. Before merging a staged guide, recompute SHA-256 of the exact existing guide JSON and compare with `baseHash`; verify all `sourceRefs` hashes against the current source database. If anything changed, rerun the source review. Preserve existing IDs/routes, independently designed art and applicable editorial metadata. Run normal site content validation/build and inspect representative final pages before deployment. No automatic catalog merge or deployment is built into this tool.
 
 Changing the editorial contract or evidence selection requires incrementing `VERSION` so old reviewed artifacts cannot silently qualify under a new standard. Each actual CLI call also fingerprints its full prompt/schema/figure hashes.
+
+## Application-scope findings and regressions
+
+The front-hub pilot exposed an existing application error: G1692537 uses a central nut at 340 Nm, whereas G1692554 describes the separate SVT bolt-on hub at 133 Nm. Its matching SVT brake-disc dependency G1716189 uses 185 Nm caliper bolts, unlike the generic 115 Nm branch. The reference catalog now has hash-bound application mappings. The pipeline inherits current source-plan engines rather than trusting the old guide's broader application metadata. A scope-only correction is explicitly distinguished from a completed editorial rewrite.
+
+`editorial-workshop-scope-audit.mjs` lists generic/SVT pairs for source review; it does not change their scopes automatically. The reviewed body pairs differ in actual attachment/access sequences, not merely names. `editorial-workshop-body-scope.test.mjs` uses fixtures to cover all 14 reviewed body mappings, changed-source invalidation, and unreviewed-title behavior. The optional `editorial-workshop-scope.test.mjs` inspects the local source database and is intentionally outside the default test suite.
+
+```sh
+node --test scripts/editorial-workshop.test.mjs scripts/editorial-workshop-body-scope.test.mjs
+node --test scripts/editorial-workshop-scope.test.mjs
+node scripts/editorial-workshop-scope-audit.mjs
+```
+
+The first published pilot also received an explicit editorial revision in `editorial-workshop-polish.mjs`: a more natural humorous opening, meaningful step groups, and an irrelevant tire-machine preparation paragraph moved to an optional note. That revision required a fresh independent review. A subsequent source-supported pilot-bore cleaning clarification is recorded as a supervising-editor correction in its staged record.

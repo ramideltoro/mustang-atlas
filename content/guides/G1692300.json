@@ -1,0 +1,56 @@
+{
+  "documentId": "G1692300",
+  "sourceHash": "0ae516b8122bb190ff678295eb4767064ff054e0aa5393329027a58758788488",
+  "title": "Electronic Engine Controls - Overview",
+  "introduction": "For the 5.0L 32V Ti-VCT engine, all those electronics acronyms can look like alphabet soup with a wiring harness. I make them useful by following the conversation: inputs report what is happening, software decides how to respond, and outputs put those decisions to work.\n\nThis is a tour of the engine controller’s responsibilities and diagnostic communication path. For actual testing or programming, I use the matching procedure and its setup.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692300-b00001",
+      "text": "How the engine controls work",
+      "why": ""
+    },
+    {
+      "blockId": "G1692300-b00002",
+      "text": "The electronic engine control (EEC) system uses the capabilities of the PCM, the engine controller, to optimize engine operation. Its job also includes watching how the engine is performing: the on-board diagnostic (OBD) monitoring system provides features and functions needed to meet federal exhaust-emissions regulations. Engine control and emissions monitoring are both part of the EEC system’s workload.",
+      "why": "Engine control and emissions monitoring share this system. Understanding both jobs helps explain why the engine controller also watches for diagnostic information."
+    },
+    {
+      "blockId": "G1692300-b00003",
+      "text": "The EEC system has two major divisions: hardware and software. Hardware includes the PCM, sensors, switches, actuators, solenoids and the terminals that interconnect them. Software lives in the PCM and contains the control strategy: it uses the values arriving at the PCM’s inputs to determine commands for the outputs—the engine hardware. I separate those roles like this: sensors and switches report, software decides, and output hardware carries out the commands. The PCM belongs to the hardware side while also housing the software that makes those decisions.",
+      "why": "The PCM is a physical piece of hardware, and its control strategy is software stored inside it. That is why the same module appears on both sides of this explanation."
+    },
+    {
+      "blockId": "G1692300-b00004",
+      "text": "The PCM receives information from sensor and switch inputs, then uses its stored strategy and calibration to generate the appropriate outputs. Those decisions aim to minimize emissions while optimizing fuel economy and driveability.\n\nThe software strategy controls basic engine operation, provides the OBD strategy and controls the malfunction indicator lamp (MIL). It also communicates with a diagnostic scan tool through the data link connector (DLC). The scan tool is equipment that exchanges information with vehicle modules; the DLC is the connection through which that conversation takes place.\n\nThe strategy also supports flash programming of electrically erasable programmable read only memory (EEPROM), provides idle air and fuel trim, and controls failure mode effects management (FMEM). Fuel trim is the controller’s adjustment to fuel delivery using sensor feedback to correct the air–fuel mixture. I treat a fuel-trim correction as a clue about the controller’s response, not a verdict against a particular part. The useful thread through all these functions is the same: information comes in, the stored strategy determines the response, and commands go out.",
+      "why": "I follow the information path before reaching for a replacement part: inputs inform the strategy, and the strategy controls outputs. Fuel-trim changes tell me about the controller’s response; they do not, by themselves, name a failed component."
+    }
+  ],
+  "checkedAt": "2026-10-27T02:38:19.923Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "7c622498de9a08875b87d5bde962803a7b87e9591c79c6b7af87c0dff5e17f23",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4e025d3296d58f4212d90db30eba0618c8e7e0a3615b64f7ca76d10f832c24e9",
+    "reviewedAt": "2026-10-27T02:38:19.924Z",
+    "editorialRevision": "43876094f883b8dcb61dd2a5600ceb5e79ff81c46a1b9a2928e462060608a434"
+  }
+}
