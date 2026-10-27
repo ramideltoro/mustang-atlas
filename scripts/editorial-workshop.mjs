@@ -42,6 +42,12 @@ function evidenceFor(g){
   for(const[id,sha]of refs){const d=byId.get(id);if(d?.source_hash!==sha)throw Error('Service prerequisite evidence changed: '+id);docs.set(id,d);}servicePrerequisiteEnrolled.add(g.id);
  }
 
+
+ // Pressure-release subprocedure needs complete fuel precautions and actual owner controls, not unrelated repair access.
+ if(enrollServicePrerequisites(ownerPriorLedger[g.id],args.includes('--retry'))&&[...primary].some(id=>["G1671508","G1702143","G1702146","G1794916"].includes(id))){
+  for(const[id,sha]of [["G1671508","3cb59589f9505c85a68718f1eff1dfbe0aaa97c1f08478685b10a2e1e04bcfcb"],["G1702143","7df5cd4d49fcc8f5c7ca5d457da162b088598b38f87401c74abc7c3ebe0b6bbd"],["G1702146","fad8d51321273f7099864698f2f08289cbe895c2773c9045a390dcaf40cc4f22"],["G1794916","d2b45497aaa82292f11d9abdf1fc73c331f1afea8eac0732c3aef6d15cf16fa3"]])if(primary.has(id)&&byId.get(id)?.source_hash!==sha)throw Error('Pressure-release primary changed: '+id);
+  const safety=byId.get('G1693188');if(safety?.source_hash!=='8ab966daf1b76b4e72d63ee8564aae6f18be1fca559398fd41474c41a46492e6')throw Error('Fuel safety source changed');docs.set(safety.id,safety);servicePrerequisiteEnrolled.add(g.id);
+ }
  const alignmentDocs=alignmentDependencies(primary,byId,{prior:ownerPriorLedger[g.id],retry:args.includes('--retry')});
  for(const d of alignmentDocs)docs.set(d.id,d);
  if(alignmentDocs.length)alignmentEnrolled.add(g.id);
