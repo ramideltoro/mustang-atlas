@@ -4300,92 +4300,267 @@
     },
     {
       "title": "Replace a front wheel stud",
-      "summary": "Remove the front hub, press out the damaged stud, inspect the hub and bearing, then press in its replacement and reinstall the assembly.",
-      "introduction": "A wheel stud provides the threaded attachment that lets a wheel nut clamp the wheel against the hub. This repair replaces an individual stud using a hydraulic press after the wheel bearing and hub have been removed. The condition of that assembly determines whether a stud-only repair is appropriate.",
-      "why": "Pressing the stud transfers force through the hub. The assembly must be supported as illustrated, and the bearing and hub must be inspected after removal of the stud. A new stud cannot correct damage to the surrounding assembly.",
+      "summary": "Remove the wheel, brake disc and front hub, replace the stud with a hydraulic press, then refit everything using the fasteners and tightening values for the fitted hub and brakes.",
+      "introduction": "A wheel stud has an impressive talent for turning one small damaged thread into an afternoon of workshop activity. The wheel nut threads onto it to clamp the wheel against the hub, and replacing it properly means taking the hub to a hydraulic press. I'll walk you through the access, the bench work and the return trip. The stubborn little bastard gets replaced; the important surrounding parts get checked before they go back on.",
+      "why": "The stud fits into the hub flange—the broad plate behind the wheel. Pressing it out and installing its replacement requires supporting that flange correctly. The bearing allows the hub and wheel to rotate, so damage to the bearing or hub changes the decision: a fresh stud cannot repair the assembly carrying it.",
       "taskType": "repair",
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "searchTerms": [
-        "damaged front wheel stud",
-        "front wheel stud replacement",
-        "front hub stud press",
-        "SVT Performance Package wheel stud"
+        "2015 Mustang front wheel stud replacement",
+        "Mustang wheel stud hydraulic press",
+        "Mustang front wheel hub stud",
+        "5.2L SVT Performance Package wheel stud",
+        "Mustang front hub nut torque"
       ],
       "when": {
-        "summary": "When a front wheel stud requires replacement.",
+        "summary": "Use this procedure when an individual front wheel stud has already been identified as requiring replacement.",
         "notes": [
-          "Choose the hub procedure that matches the vehicle's fitted equipment."
+          "Choose the access and fastening instructions by the fitted hub and brake equipment.",
+          "Inspect the removed bearing and hub after pressing out the stud to decide whether a stud-only repair can continue.",
+          "This procedure does not diagnose a noise, vibration or bearing fault."
         ]
       },
       "prepare": [
         {
-          "title": "Provide hydraulic-press capability",
-          "detail": "Have a hydraulic press and the capability to support the removed hub correctly during stud removal and installation."
+          "title": "Identify the hub and brake branch",
+          "detail": "The standard hub instructions cover 2.3L, 3.7L and 5.0L vehicles. Within that branch, identify the actually fitted 2-, 4- or 6-piston caliper; the engine list does not establish that every caliper is fitted to every engine. The 5.2L instructions here apply specifically to the SVT Performance Package hub and brakes. Obtain matching instructions before dismantling any configuration outside those combinations. This article covers front studs."
         },
         {
-          "title": "Select the correct access procedure",
-          "detail": "Use the standard front wheel bearing and hub procedure, or the separate SVT Performance Package procedure where fitted. These provide the vehicle removal and reinstallation details surrounding the bench work."
+          "title": "Arrange lifting and hydraulic-press capability",
+          "detail": "Have a hoist rated for the vehicle including cargo and modifications, wheel chocks, a hydraulic press with suitable flange supports, a caliper-support hook or equivalent support, suitable hand tools and torque equipment capable of the applicable values up to 251 lb.ft (340 Nm). The press arrangements below require secure flange support and clearance for the stud. There is no numerical press-load or bearing/hub damage acceptance test here; if you cannot reproduce the support safely or assess the assembly confidently, have a qualified workshop perform the bench work."
+        },
+        {
+          "title": "Have the replacement hardware ready",
+          "detail": "Obtain the correct replacement wheel stud and two new caliper assembly mounting bolts for the fitted brakes. The standard hub also requires a new wheel hub nut and grease cap. The 5.2L SVT Performance Package hub requires four new hub mounting bolts. Replace the bearing/hub assembly if its inspection reveals damage. Critical suspension fasteners must be the same or equivalent quality and design."
+        },
+        {
+          "title": "Gather cleaning materials and personal protection",
+          "detail": "Have a wire brush, cleaning cloths, Motorcraft Brake Parts Cleaner–VOC Compliant or Motorcraft Metal Brake Parts Cleaner, PM-4-A or PM-4-B, and Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2. Wear eye and ear protection and gloves for sharp-edged parts. Read the chemical safety information and keep solvents away from ignition sources."
+        },
+        {
+          "title": "Plan the restraints and startup prevention",
+          "detail": "Use a hard, level surface. Apply the parking brake and chock the wheels while they remain on the ground, including during the shift to Neutral. Complete remote-start settings and powered positioning before the final ignition-off/key-out action. The parking brake can remain applied throughout this repair. No engine-running test, battery disconnection or underhood access is required. Review the relevant [service safety precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
         }
       ],
       "steps": [
         {
-          "title": "Remove the wheel bearing and hub",
-          "body": "Follow the applicable linked hub procedure to remove the assembly from the vehicle. This brings the stud and hub to the press for the specified replacement method."
+          "title": "Disable remote start, select Neutral and finish with the ignition off",
+          "body": "Keep the stationary vehicle restrained by the parking brake and wheel chocks. Begin in Park on an automatic or Neutral on a manual. If the ignition is on or the engine is running, release the pedals and press and release the start/stop button once to switch off. If already off, leave it off.\n\nFor electrical settings or powered positioning, keep a valid intelligent-access key inside. From off, press and release the button once with neither brake nor clutch depressed: this gives engine-off ignition on. Disable remote start, if fitted, through Vehicle settings > Remote Start Setup. Complete any powered positioning now.\n\nThe start command uses the button with the brake depressed on an automatic in Park, or the clutch depressed on a manual in Neutral, with a valid key inside. Keep those start conditions separate from the ignition-only operation used here.\n\nSelect Neutral for the hoist operation. On an automatic, keep the parking brake and chocks established, apply the service brake and move the selector from Park to Neutral with the key inside. On a manual, use the clutch as needed to select Neutral while maintaining the same restraints. Do not press the start/stop button while a starting pedal is depressed.\n\nWith Neutral selected and the parking brake and chocks still restraining the car, release the pedals. From ignition on, press and release the button once to switch off, then remove the intelligent-access key from the vehicle. These keyless-control instructions are from the 2015 Mustang Owner's Manual, Starting and Stopping the Engine, printed pages 121–122."
         },
         {
-          "title": "Press the old stud out",
-          "body": "Use the hydraulic press and the removal arrangement illustrated in the wheel-stud procedure. The illustration shows the hub flange supported while the press acts along the stud. Keep that support relationship clear before applying force."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the stamped triangles in the body sheet metal at the four side lifting locations: behind each front wheel and ahead of each rear wheel. Position the hoist arms and adapters at those marked locations. Check that they clear suspension components, mounting brackets, stabilizer brackets, exhaust, steering components and the rear axle cover.\n\nConfirm adequate hoist capacity and correct adapter positioning. Raise the car until all four wheels are fully clear of the ground and the vehicle is securely supported on the correctly positioned hoist before working underneath. Keep the parking brake applied. Maintain chocks on wheels while they remain on the ground during the lifting transition.\n\nDo not lift at either bumper. The emergency tire-changing jack is unsuitable for this repair, and a jack alone is never adequate under-vehicle support. See [jacking and lifting](#/document/G1663631)."
         },
         {
-          "title": "Inspect the bearing and hub",
-          "body": "Inspect both components for damage after the stud is removed. Replace the damaged assembly as necessary before proceeding; the inspection is the decision point between replacing only the stud and carrying out a larger hub repair."
+          "title": "Remove the front wheel and tire",
+          "body": "Remove the five wheel nuts, then lift the wheel and tire off the studs and place the assembly aside.\n\nDo not use heat to release a seized wheel nut; heat can damage the wheel and wheel bearing. If removal stalls at a seized nut, resolve that with an appropriate non-heating removal method before continuing.\n\nThe tire remains mounted on the wheel. See [wheel removal and installation](#/document/G1686507)."
         },
         {
-          "title": "Install the stud and return the hub to the vehicle",
-          "body": "Press the replacement stud into the wheel bearing and hub using the hydraulic press. Reinstall the assembly through the same equipment-specific hub procedure, completing its fastening and installation requirements."
+          "title": "Standard brakes: support and move the caliper and pads aside",
+          "body": "Use this step for the 2.3L, 3.7L and 5.0L standard hub branch, selecting the actually fitted 2-, 4- or 6-piston caliper. Skip it for the 5.2L SVT Performance Package branch.\n\nSupport the caliper before releasing its attachment. Remove the two caliper assembly mounting bolts on the inboard side, move the caliper and pads clear of the disc, and suspend the assembly from a suitable support. Leave the brake hose connected and ensure it carries none of the caliper's weight.\n\nDiscard both assembly mounting bolts on all three caliper variants, including the 2-piston version. These are the assembly mounting bolts, not separate caliper guide-pin fasteners. Their replacement tightening value is 85 lb.ft (115 Nm).\n\nDo not operate the brake pedal while the caliper is positioned aside. See [standard brake-disc access](#/document/G1693784)."
+        },
+        {
+          "title": "5.2L SVT Performance Package: support and move the caliper and pads aside",
+          "body": "Use this step only for the 5.2L SVT Performance Package brakes; skip it for the standard branch.\n\nSupport the caliper, remove its two mounting bolts and discard both bolts. Move the caliper and pads clear of the disc and suspend the assembly from a suitable support. Leave the brake hose connected, without twisting it or allowing it to carry the caliper's weight.\n\nThe replacement caliper mounting bolts for this branch tighten to 136 lb.ft (185 Nm). Keep that value with the SVT brake hardware.\n\nDo not operate the brake pedal while the caliper is aside. See [SVT Performance Package brake-disc access](#/document/G1716189)."
+        },
+        {
+          "title": "Remove the brake disc",
+          "body": "With the caliper and pads supported out of the way, carefully withdraw the brake disc over the wheel studs. Support it as it comes free, then place it where it will be protected from damage and contamination. The hub is now exposed."
+        },
+        {
+          "title": "Standard hub: remove the grease cap, nut and hub",
+          "body": "For the 2.3L, 3.7L and 5.0L standard hub branch, remove the domed grease cap from the center of the hub and discard it. Remove and discard the central wheel hub nut underneath.\n\nWithdraw the front wheel bearing and hub assembly from the spindle—the stationary shaft through its center—and take it to the press. Protect the exposed mounting area while the hub is away.\n\nSkip this step for the 5.2L SVT Performance Package hub. See [standard front wheel bearing and hub](#/document/G1692537)."
+        },
+        {
+          "title": "5.2L SVT Performance Package: unbolt and remove the hub",
+          "body": "For the 5.2L SVT Performance Package branch, remove the four front wheel bearing and hub mounting bolts from the inboard side of the knuckle, the suspension casting that carries the hub. Discard all four bolts.\n\nRemove the bearing and hub assembly and take it to the press. Protect the exposed mounting area during the bench work.\n\nSkip this step for the standard hub. See [SVT Performance Package front wheel bearing and hub](#/document/G1692554)."
+        },
+        {
+          "title": "Support the flange and press the old stud out",
+          "body": "Position the removed assembly in the hydraulic press with its wheel-mounting face upward and the threaded end of the stud pointing upward. Support the outer flange from beneath, leaving the bearing body and stud head clear within the support opening.\n\nAlign the press with the stud's axis. Press down on the threaded end to drive the stud through the flange toward its head, leaving sufficient clearance for it to exit. Keep the supports stable and direct the pressing load through the supported flange rather than the bearing body.\n\nUse the bench arrangement in the [wheel-stud procedure](#/document/G1692541). Give the setup your attention before giving the press any force."
+        },
+        {
+          "title": "Inspect the bearing and hub before continuing",
+          "body": "After removing the stud, visually examine the hub and bearing assembly for damage. Check the flange, the area around the vacated stud hole and the visible bearing body.\n\nDamage to either component means the affected assembly must be replaced as necessary before reinstallation. If its condition is uncertain, stop for qualified assessment. A new stud cannot make damage around it acceptable; use the decision rows below before proceeding."
+        },
+        {
+          "title": "Invert the assembly and press in the replacement stud",
+          "body": "Turn the assembly over so the bearing body is above the flange and the wheel studs point downward. Support the flange securely, with clearance beneath it for the studs.\n\nInsert the correct new stud from the rear of the flange so its threaded end points toward the wheel-mounting face. Align the press with the stud and press on its head to install it.\n\nConfirm that the head is seated against the rear of the flange and that the assembly has not been damaged during installation. I keep this check separate from the pressing operation: shiny new hardware can be very persuasive."
+        },
+        {
+          "title": "Standard hub: install a new nut and grease cap",
+          "body": "For the 2.3L, 3.7L and 5.0L standard hub branch, install the front wheel bearing and hub assembly onto the spindle.\n\nInstall a new wheel hub nut and tighten it to 251 lb.ft (340 Nm). Install a new wheel hub grease cap over the center. Confirm that the cap is seated before refitting the disc.\n\nSkip this step for the 5.2L SVT Performance Package hub. See [standard hub installation](#/document/G1692537)."
+        },
+        {
+          "title": "5.2L SVT Performance Package: install four new hub bolts",
+          "body": "Position the front wheel bearing and hub assembly in the knuckle and install four new mounting bolts.\n\nTighten the bolts in a cross pattern to 98 lb.ft (133 Nm). Viewed from the inboard side in the installation orientation, the sequence is upper right, lower left, lower right, upper left. This completes one diagonal and then the other.\n\nSkip this step for the standard hub. See [SVT Performance Package hub installation](#/document/G1692554)."
+        },
+        {
+          "title": "Clean the disc mating surfaces and reinstall the disc",
+          "body": "Complete the brake-dust control described in preparation before this cleaning. The wire brush is for corrosion on the disc mating surfaces, not for dispersing friction dust.\n\nUse a wire brush and Motorcraft Brake Parts Cleaner–VOC Compliant or Motorcraft Metal Brake Parts Cleaner, PM-4-A or PM-4-B, to clean the brake disc mating surfaces where the disc seats against the hub. Remove material that could prevent a flat fit.\n\nCarefully position the disc over the studs and against the hub. Support it while returning the caliper to position.\n\nThis cleaning and reverse-order installation applies to both the [standard brake disc](#/document/G1693784) and the [SVT Performance Package brake disc](#/document/G1716189)."
+        },
+        {
+          "title": "Refit the caliper with new mounting bolts",
+          "body": "Return the supported caliper and pads over the disc without twisting or straining the connected hose. Install two new caliper assembly mounting bolts.\n\nFor the 2.3L, 3.7L and 5.0L standard branch with the fitted 2-, 4- or 6-piston caliper, tighten both bolts to 85 lb.ft (115 Nm).\n\nFor the 5.2L SVT Performance Package brake branch, tighten both bolts to 136 lb.ft (185 Nm).\n\nOnce the caliper is secured, remove its support. Confirm that the brake hose is routed without strain and that no temporary support remains attached."
+        },
+        {
+          "title": "Clean the wheel mounting faces and central pilot bore",
+          "body": "Remove corrosion, dirt and foreign material from the wheel's flat mounting face and the corresponding hub/disc wheel-mounting surface. Any fasteners attaching the disc to the hub must be secure and must not interfere with the wheel seating flat.\n\nClean the wheel's central pilot bore as well. This is the center hole that locates over the raised center of the hub; cleaning only the flat wheel face leaves part of the job undone.\n\nApply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between the wheel pilot bore and hub pilot. Keep it off the flat wheel-to-disc mounting faces, wheel studs, wheel nuts, brake pads and disc friction surfaces. The stud and nut threads must remain clean and dry.\n\nSee [wheel preparation and installation](#/document/G1686507)."
+        },
+        {
+          "title": "Install the wheel and finger-tighten the nuts",
+          "body": "Position the wheel fully against its cleaned mounting surface. Install all five wheel nuts finger-tight only at this stage.\n\nConfirm that the wheel sits flat with nothing trapped between the contact faces. Check that hub and brake fastening is complete, temporary supports have been removed and tools are clear before lowering. Final wheel-nut tightening takes place with the car resting on its tires."
+        },
+        {
+          "title": "Maintain restraints while lowering, then torque the wheel nuts",
+          "body": "Before lowering, explicitly confirm that the parking brake is applied. It should have remained applied throughout the repair.\n\nLower the car under control. Restore wheel chocks as the tires reach the ground, before relinquishing hoist support. Do not defer ground-wheel restraint until after lowering; the transmission remains in Neutral during this transition.\n\nWith the vehicle resting on its tires, tighten all five wheel nuts in a star pattern to 150 lb.ft (204 Nm), using clean, dry stud and nut threads.\n\nFor the five-stud arrangement, start at the top nut, then move to lower left, upper right, upper left and lower right. This crossing pattern distributes the clamping load."
+        },
+        {
+          "title": "Check brake operation and arrange the wheel-nut recheck",
+          "body": "With the hub, disc, caliper and wheel fully reassembled, the car on the ground, and the parking brake and chocks established, apply the brake pedal several times to verify correct brake operation. Keep the engine off. If correct operation is not established, keep the car parked and resolve the brake concern before driving.\n\nWith the car fully grounded and chocked, restore the parked transmission position from the ground-accessible cabin. On an automatic, bring the valid key inside and, from the established OFF state, press START/STOP once without the brake to select engine-off ignition ON. Hold the service brake and select Park, then release the brake and press START/STOP once to switch OFF. On a manual, keep the engine stopped and select a parked gear. Leave the parking brake applied. Finish with ignition OFF and the intelligent-access key removed from the vehicle.\n\nArrange to retighten the wheel nuts in the same star pattern to 150 lb.ft (204 Nm) within 160 km (100 mi) after wheel installation. Record the reminder now—the wheel has no interest in anyone's excellent memory."
         }
       ],
       "watchFor": [
         {
-          "title": "Incorrect hub procedure",
-          "body": "The SVT Performance Package has its own front-hub procedure. Confirm the fitted package before beginning removal."
+          "title": "Different hub retention methods",
+          "body": "The standard 2.3L, 3.7L and 5.0L hub requires a new central hub nut and grease cap. The 5.2L SVT Performance Package hub requires four new mounting bolts tightened in a cross pattern. Keep the parts and instructions with their matching branch."
+        },
+        {
+          "title": "Caliper bolts and tightening values",
+          "body": "Replace both caliper assembly mounting bolts, including on the standard 2-piston caliper. Standard 2-, 4- and 6-piston brakes use 85 lb.ft (115 Nm); 5.2L SVT Performance Package brakes use 136 lb.ft (185 Nm). These values apply to assembly mounting bolts."
+        },
+        {
+          "title": "Brake-hose loading",
+          "body": "Support the caliper whenever it is off its mounting points. Its weight must never hang from the connected brake hose."
+        },
+        {
+          "title": "Press alignment and clearance",
+          "body": "Securely support the flange, align the press with the stud and leave space for the stud to move. Recheck the support arrangement after turning the assembly over for installation."
+        },
+        {
+          "title": "Wheel seating and lubricant placement",
+          "body": "Debris between the wheel and disc can prevent secure clamping. Apply XL-2 only at the central pilot interface. Keep the flat contact faces, wheel-fastener threads and brake friction surfaces free of anti-seize."
+        },
+        {
+          "title": "Neutral does not restrain the car",
+          "body": "Keep the parking brake applied and chock wheels remaining on the ground. Before lowering, confirm the parking brake is applied; restore chocks as the tires reach the ground."
         }
       ],
       "notes": [
-        "The specified replacement method uses a hydraulic press for both stud removal and installation."
+        "The tire remains mounted on the wheel throughout this repair; tire-changing and balancing equipment are unnecessary.",
+        "The bearing and hub inspection checks for damage to the removed assembly. It does not establish bearing clearance, disc runout or a symptom-diagnosis test.",
+        "Critical suspension fasteners require the specified quality, design and tightening value.",
+        "Final wheel-nut tightening is performed with the car resting on its tires. Retighten within 160 km (100 mi) after wheel installation."
       ],
       "diagnostics": [
         {
-          "finding": "The wheel bearing or hub is damaged during the inspection.",
-          "meaning": "Replacing the stud alone is insufficient.",
-          "next": "Replace the damaged assembly as necessary before reinstallation."
+          "finding": "No damage is found during the visual bearing and hub inspection.",
+          "meaning": "The stud-only replacement can continue. This visual inspection does not certify bearing performance through a separate measured test.",
+          "next": "Press in the correct replacement stud, confirm its seating and complete the matching hub and brake installation branch."
+        },
+        {
+          "finding": "Damage is found in the flange, stud-hole area or bearing assembly.",
+          "meaning": "Replacing the stud alone leaves damage in the assembly supporting the wheel.",
+          "next": "Replace the damaged bearing/hub assembly as necessary before reinstallation, using the matching standard or SVT Performance Package hub instructions."
+        },
+        {
+          "finding": "The assembly's condition is uncertain or the flange cannot be supported securely at the press.",
+          "meaning": "The bench repair cannot be completed confidently with the present assessment or setup.",
+          "next": "Have a qualified workshop assess the assembly and perform the press work before reassembly."
+        },
+        {
+          "finding": "A seized wheel nut prevents wheel removal.",
+          "meaning": "Access is blocked; applying heat risks damage to the wheel and bearing.",
+          "next": "Stop the access sequence and arrange an appropriate non-heating removal method."
+        },
+        {
+          "finding": "The fitted hub or brakes do not match either equipment branch.",
+          "meaning": "The access method or fastening values cannot be selected reliably for that vehicle.",
+          "next": "Obtain matching front hub and brake removal and installation instructions before dismantling."
+        },
+        {
+          "finding": "Repeated brake-pedal application after full reassembly does not establish correct brake operation.",
+          "meaning": "The required completion check has not passed.",
+          "next": "Keep the car parked and restrained. Resolve the brake concern before driving; this stud-replacement procedure does not provide a brake fault diagnosis."
         }
       ],
       "verification": [
         {
-          "title": "Confirm inspection and reassembly",
-          "body": "Confirm that the bearing and hub inspection has been completed, any necessary replacement addressed, and the stud pressed into the assembly."
+          "title": "Stud and hub assembly",
+          "body": "Confirm that the bearing and hub were inspected after stud removal, damage was addressed as necessary, and the replacement stud head is seated against the rear of the flange."
         },
         {
-          "title": "Complete the matching hub procedure",
-          "body": "Verify that hub installation is complete under the procedure for the fitted equipment."
+          "title": "Equipment-specific hub fastening",
+          "body": "For the standard hub, confirm a new nut tightened to 251 lb.ft (340 Nm) and a new grease cap. For the 5.2L SVT Performance Package hub, confirm four new bolts tightened in the stated cross sequence to 98 lb.ft (133 Nm)."
+        },
+        {
+          "title": "Brakes restored",
+          "body": "Confirm clean disc mating surfaces, an installed caliper and pads, two new assembly mounting bolts tightened to the matching brake value, an unstrained hose and removal of the caliper support. After full reassembly on the ground, apply the brake pedal several times to verify correct operation."
+        },
+        {
+          "title": "Wheel fastening and follow-up",
+          "body": "Confirm clean, flat wheel contact faces, lubricant restricted to the pilot interface and clean, dry wheel-fastener threads. Confirm all five nuts were tightened on the ground in a star pattern to 150 lb.ft (204 Nm), and record retightening within 160 km (100 mi)."
+        },
+        {
+          "title": "Restraints and ignition",
+          "body": "Confirm the parking brake was applied before lowering and chocks were restored as the tires reached the ground. Leave the parked vehicle restrained, the ignition off and the intelligent-access key removed. Once grounded, the automatic selector is in Park or the manual transmission is in a parked gear."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692541",
-          "purpose": "Front wheel-stud press removal, bearing and hub inspection, and press installation.",
+          "purpose": "Hydraulic-press wheel-stud removal and installation, with inspection of the bearing and hub.",
           "mediaId": "G1692541-m0001"
         },
         {
           "documentId": "G1692537",
-          "purpose": "Standard front wheel bearing and hub removal and installation.",
+          "purpose": "Standard 2.3L, 3.7L and 5.0L front hub removal and installation, including a new hub nut at 251 lb.ft (340 Nm) and a new grease cap.",
           "mediaId": "G1692537-m0003"
         },
         {
           "documentId": "G1692554",
-          "purpose": "Front wheel bearing and hub removal and installation for vehicles with the SVT Performance Package.",
+          "purpose": "5.2L SVT Performance Package front hub removal and installation using four new mounting bolts tightened in a cross pattern to 98 lb.ft (133 Nm).",
           "mediaId": "G1692554-m0001"
+        },
+        {
+          "documentId": "G1716189",
+          "purpose": "5.2L SVT Performance Package caliper and disc access, new caliper mounting bolts at 136 lb.ft (185 Nm), disc mating-surface cleaning and brake-pedal completion check."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel removal, mounting-face and pilot-bore preparation, restricted XL-2 application, wheel-nut star-pattern tightening and retightening requirement."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Marked lifting-point identification and safe hoist positioning."
+        },
+        {
+          "documentId": "G1693784",
+          "purpose": "Standard 2-, 4- and 6-piston caliper and disc access, new assembly mounting bolts at 85 lb.ft (115 Nm), disc mating-surface cleaning and brake-pedal completion check."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, key removal, personal protection, chemical handling and lifting/restraint precautions."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Brake friction-dust precautions before disassembly and mating-face cleaning, alongside credited EPA home-mechanic guidance."
         }
       ],
       "hero": {
@@ -4409,7 +4584,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang: standard front hub on 2.3L, 3.7L and 5.0L vehicles, with instructions selected for the actually fitted 2-, 4- or 6-piston front caliper; 5.2L front hub and brakes with SVT Performance Package."
       },
       "relatedGuideIds": [
         "job-b7859723f9f08ec0",
@@ -4427,14 +4603,78 @@
         {
           "documentId": "G1692554",
           "sourceHash": "4066fc0f227995b392bfc015c56fd0dad3a9245df1f74d4cc83bb4cdcf2d3b28"
+        },
+        {
+          "documentId": "G1716189",
+          "sourceHash": "47a20b6796812f4e6c3cc6a414223213bfbf371f9100364e362ab08e052df512"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693784",
+          "sourceHash": "9249ad74482b718dd4a5dd6df7a2f5883b829920530621d8e4bd2f1c1b39a375"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "b9035a765b3562549aab41d155e71cd2d67168d0103bcdc18981133f253ee781"
-      }
+        "fingerprint": "b9035a765b3562549aab41d155e71cd2d67168d0103bcdc18981133f253ee781",
+        "editorialVersion": 2,
+        "editorialFingerprint": "61c85e694d6ae642bdee0a7a40d5100b2cb15f3a0d4b7c121a066a7ec9f2194b",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure the car and remove the wheel",
+          "summary": "Prevent starting, maintain restraints through Neutral selection and lift at the marked points.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "expose-the-hub",
+          "title": "Move the brakes aside and remove the hub",
+          "summary": "Use the fitted brake and hub branches while supporting the connected caliper.",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "id": "press-and-assess",
+          "title": "Replace the stud at the press",
+          "summary": "Press out the old stud, inspect the assembly and install the replacement.",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "id": "rebuild-hub-and-brakes",
+          "title": "Refit the hub and brakes",
+          "summary": "Use the required new hardware, branch-specific torques and clean disc mating surfaces.",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "id": "wheel-and-ground-checks",
+          "title": "Install the wheel and complete the checks",
+          "summary": "Prepare the wheel interfaces, restore ground restraints, tighten the nuts and check brake operation.",
+          "start": 16,
+          "end": 19
+        }
+      ]
     },
     {
       "title": "Replace the rear lower arm vertical link",
@@ -17262,99 +17502,226 @@
     },
     {
       "title": "Remove and refit the rear brake caliper anchor plate",
-      "summary": "Remove the rear brake pads and caliper for access, then refit the anchor plate with new mounting bolts.",
-      "introduction": "The rear brake caliper anchor plate supports the brake pads and locates the caliper assembly beside the disc. Removing it involves the pad-service sequence first. The job finishes by restoring the pad and caliper arrangement, seating the brakes with the pedal and checking the reservoir level.",
-      "why": "The brake hose must remain free of the caliper's weight throughout the work because hanging the assembly from it can damage the hose. The anchor-plate bolts are discarded during removal. Correct piston-to-pad alignment also matters: the rear caliper incorporates a parking-brake mechanism that affects piston retraction.",
+      "summary": "Reach the rear caliper anchor plate by removing the wheel, supporting the caliper aside, and removing the pads and clips. Refit the plate with new bolts, then restore the brakes and wheel with the correct tightening values.",
+      "introduction": "The rear caliper anchor plate is the brake pads’ sturdy little landlord: it holds their place beside the spinning disc while the caliper supplies the squeeze. Getting it out means moving the caliper and pads first. I’ll walk you through that access, the two different bolt torques, and the wheel refit—because this is a lousy place for a bolt-guessing contest.",
+      "why": "The anchor plate supports the pads and locates the caliper assembly beside the brake disc. Its mounting bolts must be replaced after removal. During access, the caliper needs independent support so its weight cannot damage the brake hose. The rear caliper also contains a parking-brake mechanism, which makes piston retraction and alignment with the inner pad especially important.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "rear brake caliper anchor plate",
-        "rear caliper bracket removal",
-        "rear brake pad support",
-        "rear caliper piston will not retract"
+        "2015 Mustang rear brake caliper anchor plate",
+        "rear caliper bracket replacement",
+        "rear brake pad removal",
+        "rear caliper anchor plate bolt torque",
+        "rear brake piston notch alignment"
       ],
       "when": {
-        "summary": "When rear brake service requires removal or replacement of the caliper anchor plate.",
+        "summary": "Use this procedure when an established repair requires removal or replacement of the rear brake caliper anchor plate.",
         "notes": [
-          "Plan the work together with the rear Brake Pads procedure."
+          "This is a removal and refit procedure, rather than a test for deciding whether brake noise or vibration comes from the anchor plate.",
+          "Piston retraction is required here only if installing new brake pads.",
+          "The engine coverage is 2.3L, 3.7L and 5.0L. The broader engine coverage of the supporting wheel and safety procedures does not extend this anchor-plate article to 5.2L cars."
         ]
       },
       "prepare": [
         {
-          "title": "Provide wheel access and caliper support",
-          "detail": "Arrange safe vehicle lifting and wheel removal using the procedure referenced by Brake Pads. Have a means of supporting the caliper independently of its hose."
+          "title": "Arrange supported access",
+          "detail": "Have a vehicle hoist rated for the car’s weight, including cargo and modifications, wheel chocks, and a suitable caliper-support hook or equivalent independent support. This walkthrough uses a hoist with all four wheels clear of the ground before releasing the parking brake."
         },
         {
-          "title": "Have replacement fasteners and suitable tools",
-          "detail": "Obtain new anchor-plate bolts and a torque wrench. A brake caliper piston retractor is required if new pads will be installed."
+          "title": "Have the plate, replacement bolts and tightening tools ready",
+          "detail": "If replacing the anchor plate, obtain the correct plate for the vehicle. Have two new anchor-plate mounting bolts; the removed pair must be discarded. Use suitable fastener tools and a torque wrench capable of accurately applying 24 lb.ft (32 Nm), 129 lb.ft (175 Nm) and 150 lb.ft (204 Nm)."
+        },
+        {
+          "title": "Prepare for the pad branch",
+          "detail": "Have a brake caliper piston retractor if fitting new pads. The existing pads and clips are removed for plate access; removal alone does not require fitting new pads."
+        },
+        {
+          "title": "Gather the specified materials",
+          "detail": "Use Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, only at the wheel pilot interface. For any necessary brake-fluid top-up, use clean Motorcraft DOT 4 LV High Performance Motor Vehicle Brake Fluid, PM-20, meeting WSS-M6C65-A2. Never reuse drained brake fluid."
+        },
+        {
+          "title": "Prepare for brake dust and sharp edges",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Do not breathe brake dust or blow it away with compressed air; use government-approved dust-removal techniques. Review the safety information for the materials you use, and keep flammable solvents away from ignition sources."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
         }
       ],
       "steps": [
         {
-          "title": "Remove the pads for access",
-          "body": "Follow the rear Brake Pads procedure: remove the wheel and tire, remove the caliper bolts, and position the supported caliper aside. Remove the pads and their clips."
+          "title": "Prevent startup and restrain the car",
+          "body": "On a hard, level surface, apply the parking brake and chock every wheel that will remain on the ground. Complete any remote-start disabling, if fitted, through Vehicle settings > Remote Start Setup on the central display.\n\nWhile the car is fully on the ground, select Neutral for wheel service. On an automatic, establish engine-off ignition ON: if ignition is OFF, keep the valid key inside and press ENGINE START/STOP once without pressing the brake; if already ON after settings, leave it ON. Hold the service brake and select Neutral, then release the brake and press the button once to switch OFF. On a manual, keep the engine and ignition OFF while selecting Neutral. Confirm ignition OFF and remove the key before lifting. Keep the parking brake applied until the explicit securely supported, all-wheels-clear release in step 3. These are the ordinary keyless controls in the 2015 owner manual, printed pages 121–122. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Release the anchor plate",
-          "body": "Remove the two anchor-plate mounting bolts and the plate. Discard those bolts. Keep the caliper supported while the mounting area is exposed."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the stamped triangles in the body sheet metal that identify the lifting points. The illustrated arrangement has a point on each side behind the front wheel and ahead of the rear wheel. Position the hoist adapters at the corresponding marked points.\nCheck that the arms and adapters will not contact suspension parts, exhaust components, steering linkage, mounting brackets, stabilizer brackets, the axle or rear cover. Never lift against a bumper. Do not use the emergency tire-changing jack for this repair, and never work beneath a vehicle supported only by a jack. See [jacking and lifting](#/document/G1663631)."
         },
         {
-          "title": "Install the anchor plate",
-          "body": "Reverse the plate-removal operation using new mounting bolts. Tighten them to 129 lb.ft (175 Nm). This is the anchor-plate specification."
+          "title": "Raise fully before releasing the parking brake",
+          "body": "Raise the vehicle and confirm all four wheels are fully clear of the ground and the car is securely supported on the correctly positioned hoist. Have a floor-standing helper safely reach the parking-brake lever and release it for rear-caliper work. If needed, lower the hoist to a securely supported, safely reachable height while keeping all four wheels clear. Do not climb into the raised car. Leave the transmission in Neutral and the engine and ignition OFF."
         },
         {
-          "title": "Prepare the pads and piston",
-          "body": "If fitting new pads, use the piston retractor to compress the caliper piston. Apply moderate to heavy force toward the piston so the internal parking-brake clutch cone engages. Restore the clips and pads, and ensure the piston notch aligns with the pin on the inboard pad."
+          "title": "Remove the rear wheel and tire",
+          "body": "Remove the five wheel nuts and lift off the wheel-and-tire assembly at the corner being serviced. Do not use heat on a seized wheel nut; heat can damage the wheel and wheel bearing. Set the wheel aside where its mounting surfaces will remain protected. See [wheel removal and installation](#/document/G1686507)."
         },
         {
-          "title": "Restore the caliper and wheel",
-          "body": "Refit the caliper without disturbing the piston-notch alignment. Tighten its bolts to 24 lb.ft (32 Nm), then complete wheel and tire installation using the referenced wheel procedure."
+          "title": "Support the caliper and remove its two bolts",
+          "body": "Identify the two caliper bolts at the upper and lower ends of the caliper, beside the rubber slide-pin boots. Arrange independent support before taking the caliper’s weight off its mounting.\nRemove these two bolts, move the caliper off the pads, and suspend it with the support hook or equivalent. Keep the brake hose and parking-brake cable attached and free from strain. The hose must never carry the caliper’s weight. These are the bolts that will be tightened to 24 lb.ft (32 Nm) during refitting. See [rear brake-pad access](#/document/G1693756)."
         },
         {
-          "title": "Seat the brakes and check fluid",
-          "body": "Depress the brake pedal. Check the brake-fluid reservoir level and top up as necessary with the fluid specified in Brake System — General Information."
+          "title": "Remove both pads, then the retaining clips",
+          "body": "Withdraw the pads from the two sides of the disc, noting which is the inboard pad—the one facing the vehicle’s center. Its locating pin must later match the caliper piston notch.\nRemove the two pad-support clips from the upper and lower ends of the anchor plate. Note how each clip sits over its support ledge so you can restore that arrangement. The disc remains in place for this job."
+        },
+        {
+          "title": "Remove the anchor plate and discard its bolts",
+          "body": "Keep the caliper supported aside. Support the anchor plate while removing its two mounting bolts on the inboard side, one above the other beside the axle-shaft boot. Remove the plate from around the edge of the disc.\nDiscard both anchor-plate bolts. Keep them separate from the caliper bolts so they cannot wander back into service. See [anchor-plate removal and installation](#/document/G1693753)."
+        },
+        {
+          "title": "Install the anchor plate with new bolts",
+          "body": "Position the replacement plate, or the original plate if this was an access operation, back at its mounting points around the disc. Install two new anchor-plate mounting bolts and tighten both to 129 lb.ft (175 Nm).\nThis value belongs to the anchor plate’s mounting bolts. The smaller caliper-bolt operation comes later."
+        },
+        {
+          "title": "Retract the piston only when installing new pads",
+          "body": "If reusing the pads, proceed to refitting the clips and pads without adding an unnecessary piston-retraction operation.\nIf installing new pads, use a brake caliper piston retractor to retract the piston into its bore. Turn the retractor to wind the piston into its bore while maintaining moderate to heavy force toward the piston. The source figure shows rotation as well as inward force; it does not specify a turning direction. That inward load engages the internal parking-brake clutch cone—the coupling inside the mechanism—so the piston can compress.\nThe tool illustration shows the retractor acting directly against the piston face. Keep the caliper independently supported throughout. If the piston will not compress, use the decision guidance below rather than declaring the caliper dead on the spot."
+        },
+        {
+          "title": "Refit the clips and pads, then match the piston notch",
+          "body": "Reinstall the upper and lower pad-support clips in their original seating positions on the anchor plate, then install the pads on either side of the disc.\nBefore placing the caliper over them, check that the notch in the piston face aligns with the pin on the inboard pad. The pin must correspond with the notch, rather than meeting an unnotched portion of the piston face. Correct this alignment before continuing."
+        },
+        {
+          "title": "Refit and tighten the caliper",
+          "body": "Bring the caliper back over the pads without disturbing the piston-notch-to-pad-pin alignment. Install the two caliper bolts and tighten them to 24 lb.ft (32 Nm).\nRemove the temporary support only after the caliper is secured. Check that the brake hose and parking-brake cable are no longer carrying any assembly weight and have not been trapped during refitting."
+        },
+        {
+          "title": "Clean the wheel’s mating surfaces and central bore",
+          "body": "Remove corrosion, dirt and foreign material from the wheel’s flat mounting face and the matching hub/brake-disc mounting surface. Also clean the central pilot bore in the wheel—the round opening that fits over the hub’s centering projection. The cleaning callout applies to this bore as well as the flat mounting face.\nCheck that any fasteners securing the disc to the hub are secure and cannot interfere with the wheel sitting flat. Contamination or interference here can allow the wheel nuts to loosen."
+        },
+        {
+          "title": "Lubricate only the pilot interface and fit the wheel",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, only between the wheel’s central pilot bore and the hub pilot.\nKeep it off the flat wheel-to-disc mounting faces, wheel studs, wheel nuts, brake pads and disc friction surfaces. The wheel-stud and wheel-nut threads must be clean and dry for the specified torque.\nPosition the wheel and install all five nuts finger tight. Save final tightening until the vehicle rests on its tires. A little anti-seize has a specific home here; it is not seasoning for the entire damn hub."
+        },
+        {
+          "title": "Apply the brake pedal and restore the parking brake before lowering",
+          "body": "With the caliper, pads and wheel fully refitted, have the floor-standing helper safely reach the brake pedal and depress it as required by the pad-refitting procedure, then reapply the parking brake before lowering. If needed, lower the hoist to a securely supported, safely reachable height while keeping all four wheels clear. Do not climb into the raised car. Keep the vehicle securely supported and restrained throughout this transition."
+        },
+        {
+          "title": "Lower, restore wheel chocks and tighten in a star",
+          "body": "Lower the vehicle under control. As the tires reach the ground, restore the wheel chocks before continuing; keep the parking brake applied.\nOnce the vehicle is resting on its tires, tighten the five wheel nuts in a star/cross pattern to 150 lb.ft (204 Nm), with clean, dry threads. For a wheel with one nut at the top, the illustrated order is top, lower left, upper right, upper left, then lower right. Follow that same crossing pattern if the wheel is rotated.\nWorking around the rim in a circle can contribute to brake-disc runout—sideways variation as the disc turns—and subsequent brake roughness or vibration.\n\nOnce the car rests on its tires and is chocked, restore the parked transmission position from the ground-accessible cabin. On an automatic, keep the valid key inside, press ENGINE START/STOP once without the brake from the established OFF state, then hold the brake and select Park. Release the brake and switch ignition OFF. On a manual, with the engine stopped select a parked gear. Confirm ignition OFF/key out and leave the parking brake applied."
+        },
+        {
+          "title": "Check the reservoir and arrange the wheel-nut recheck",
+          "body": "Keep the ignition OFF, the key removed and remote start disabled if fitted for the underhood fluid check. Open and securely support the hood. Before working under the hood, visually check the cooling fans for cracks, damage or separation; a damaged fan must be replaced before underhood work. The reservoir check does not itself direct fan work. Stay clear of the fans, which can run with the ignition OFF. If actual access would require reaching into their operating area, stop and obtain the applicable isolation procedure before continuing.\nCheck the brake-fluid reservoir level and top up as necessary with clean Motorcraft DOT 4 LV High Performance Motor Vehicle Brake Fluid, PM-20, meeting WSS-M6C65-A2. Never use previously drained fluid. Immediately wash any brake fluid spilled on paintwork with cold water. See [brake-fluid specification](#/document/G1694687) and [brake-system precautions](#/document/G1693183).\nRetighten the wheel nuts within 160 km (100 mi) of wheel installation. Record that follow-up now, while the torque wrench is still getting some attention."
         }
       ],
       "watchFor": [
         {
-          "title": "Hose carrying the assembly",
-          "body": "Support the caliper whenever its fasteners are removed; the hose must not carry the caliper or anchor-plate assembly."
+          "title": "A hanging caliper can damage the hose",
+          "body": "Support the caliper before removing its bolts and throughout anchor-plate removal. Neither the caliper nor a caliper-and-plate assembly may hang from the brake hose."
         },
         {
-          "title": "Different bolt specifications",
-          "body": "Keep the anchor-plate and caliper mounting operations distinct. Their tightening specifications differ."
+          "title": "Three fastening operations, three values",
+          "body": "New anchor-plate bolts: 129 lb.ft (175 Nm). Caliper bolts: 24 lb.ft (32 Nm). Wheel nuts: 150 lb.ft (204 Nm), in a star pattern with the vehicle resting on its tires."
+        },
+        {
+          "title": "The parking-brake mechanism affects piston retraction",
+          "body": "When new pads require retraction, moderate to heavy inward force is needed to engage the internal clutch cone. Also align the piston notch with the inboard-pad pin before fitting the caliper."
+        },
+        {
+          "title": "Brake dust and fluid need controlled handling",
+          "body": "Do not breathe friction dust or disperse it with compressed air. Use only clean fluid meeting WSS-M6C65-A2, never drained fluid, and immediately rinse brake-fluid spills from paint with cold water."
+        },
+        {
+          "title": "Wheel lubricant must stay in its narrow lane",
+          "body": "XL-2 belongs only at the pilot-bore-to-hub-pilot interface. Keep mounting faces, studs, nuts and braking surfaces free of it."
         }
       ],
       "notes": [
-        "Piston retraction is conditional on installing new brake pads."
+        "The wheel comes off as a complete wheel-and-tire assembly. Tire removal and wheel balancing are outside this repair, so tire-changing and balancing equipment are unnecessary.",
+        "Removing the disc, disconnecting the brake hose and detaching the parking-brake cable are not part of this access sequence."
       ],
       "diagnostics": [
         {
-          "finding": "The piston does not compress during new-pad preparation.",
-          "meaning": "Insufficient inward force can prevent the internal parking-brake clutch cone from engaging.",
-          "next": "Follow the retractor method and required inward loading in the Brake Pads procedure; resistance alone does not establish caliper failure."
+          "finding": "The piston will not compress while preparing for new pads.",
+          "meaning": "Insufficient force toward the piston can prevent the internal parking-brake clutch cone from engaging. Resistance alone does not establish caliper failure.",
+          "next": "Check the retractor setup and apply the required moderate to heavy inward force while retracting. If the piston still will not retract, stop the new-pad installation and have the caliper mechanism assessed before proceeding."
+        },
+        {
+          "finding": "The inboard-pad pin does not align with the piston notch.",
+          "meaning": "The pad and piston are not in their required installation relationship.",
+          "next": "Correct the alignment before fitting and tightening the caliper. Do not use the mounting bolts to force the caliper into place."
+        },
+        {
+          "finding": "Dirt, corrosion or a protruding disc-retaining fastener prevents flat wheel seating.",
+          "meaning": "The wheel cannot make the required clean, unobstructed contact with its mounting surface, creating a wheel-loosening risk.",
+          "next": "Remove the contamination and ensure any disc-retaining fasteners are secure and clear of the wheel’s mounting interface before installing the wheel."
+        },
+        {
+          "finding": "A wheel nut is seized.",
+          "meaning": "Normal wheel removal cannot proceed at that fastener.",
+          "next": "Stop and resolve the seized fastener without applying heat; heating it can damage the wheel and wheel bearing."
         }
       ],
       "verification": [
         {
-          "title": "Confirm assembly and completion",
-          "body": "Confirm new anchor-plate bolts were used, both bolt groups were tightened correctly, and the piston notch matches the inboard-pad pin."
+          "title": "Confirm anchor-plate and caliper assembly",
+          "body": "Confirm two new anchor-plate bolts were installed and tightened to 129 lb.ft (175 Nm), and both caliper bolts were tightened to 24 lb.ft (32 Nm). Check that both pad clips and pads are seated, the piston notch matches the inboard-pad pin, and the hose and cable are free from assembly weight or trapping."
         },
         {
-          "title": "Record the final checks",
-          "body": "Record completion of pedal application and the reservoir-level check, including any necessary top-up."
+          "title": "Confirm wheel installation and restraints",
+          "body": "Confirm the wheel’s flat mating surfaces and pilot bore were cleaned, XL-2 was confined to the pilot interface, and the wheel nuts were tightened on clean, dry threads to 150 lb.ft (204 Nm) in a star pattern with the car resting on its tires. Confirm the parking brake was restored before lowering and chocks were restored as the tires reached the ground."
+        },
+        {
+          "title": "Confirm the brake-service completion actions",
+          "body": "Confirm the brake pedal was depressed and the reservoir level checked, with the specified clean fluid used for any top-up. These are assembly-completion checks, not a diagnosis of an existing brake complaint. Do not return the car to use if the brakes fail to operate normally."
+        },
+        {
+          "title": "Complete the wheel-nut follow-up",
+          "body": "Retighten the wheel nuts within 160 km (100 mi) after refitting the wheel."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693753",
-          "purpose": "Rear caliper anchor-plate removal and installation, including discarded bolts and mounting torque.",
+          "purpose": "Primary rear brake caliper anchor-plate removal and reverse-order installation, including discarded mounting bolts and 129 lb.ft (175 Nm) tightening.",
           "mediaId": "G1693753-m0001"
         },
         {
           "documentId": "G1693756",
-          "purpose": "Rear pad and caliper access, conditional piston retraction, pad alignment and final pedal/fluid checks.",
+          "purpose": "Caliper, pad and clip access; conditional piston retraction; piston-to-pad alignment; caliper-bolt torque; pedal application and reservoir check.",
           "mediaId": "G1693756-m0002"
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel removal, mounting-face and pilot-bore cleaning, restricted XL-2 application, wheel-nut tightening sequence and follow-up."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Triangle-marked lifting points, hoist positioning and support precautions."
+        },
+        {
+          "documentId": "G1694687",
+          "purpose": "Brake-fluid identification: Motorcraft DOT 4 LV PM-20 meeting WSS-M6C65-A2."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Brake-dust handling, clean-fluid requirements and immediate treatment of fluid spills on paint."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, relevant underhood precautions, personal protection, vehicle restraints and lifting safety."
         }
       ],
       "hero": {
@@ -17377,7 +17744,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L or 5.0L engine and the rear disc-brake arrangement shown: a separate caliper anchor plate and a caliper incorporating a mechanical parking-brake mechanism."
       },
       "relatedGuideIds": [
         "job-b0b1b65b42f487f5"
@@ -17390,14 +17758,74 @@
         {
           "documentId": "G1693756",
           "sourceHash": "338c06c1e57ba55ac08a0034acd4309c801570ed4f16e8018e452a7da638f752"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1694687",
+          "sourceHash": "c1909f2c4ff8ca77cb33862bb9d20b51fa06642cb1c6c22c7b1c36f1148188e6"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "e16528f122ab618e61cf5e3dd4755d9a68ba4c0647f1b17ca4ef5709b3d4d626"
-      }
+        "fingerprint": "e16528f122ab618e61cf5e3dd4755d9a68ba4c0647f1b17ca4ef5709b3d4d626",
+        "editorialVersion": 2,
+        "editorialFingerprint": "3706983817ab2723a186152658862fecfabb278cb2d80fcf9ed4b17edbac3193",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure the car and establish access",
+          "summary": "Prevent startup, position the hoist and raise all four wheels before releasing the parking brake.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "expose-and-remove",
+          "title": "Expose and remove the anchor plate",
+          "summary": "Remove the wheel, support the caliper, and take out the pads, clips and anchor plate.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "rebuild-the-brake",
+          "title": "Refit the plate, pads and caliper",
+          "summary": "Use new plate bolts, handle the new-pad branch correctly and restore piston alignment.",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "id": "restore-the-wheel",
+          "title": "Prepare and install the wheel",
+          "summary": "Clean the mounting surfaces and pilot bore, then apply lubricant only at the pilot interface.",
+          "start": 12,
+          "end": 13
+        },
+        {
+          "id": "finish-and-check",
+          "title": "Restore restraints and complete the checks",
+          "summary": "Apply the pedal and parking brake, lower with chocks restored, torque the wheel and check fluid.",
+          "start": 14,
+          "end": 16
+        }
+      ]
     },
     {
       "title": "Remove and Replace the Rear Brake Caliper",
@@ -21616,102 +22044,242 @@
     },
     {
       "title": "Replace a front wheel speed sensor",
-      "summary": "Release the front sensor wiring, clean the sensor area and install the replacement in a cavity free of foreign material.",
-      "introduction": "A front wheel speed sensor provides wheel-rotation information used by the anti-lock braking system, or ABS, and stability control. These systems help control wheel locking and vehicle traction through braking and engine-torque intervention. Replacing the sensor involves its electrical connector, several harness retainers and a mounting bolt; it is not simply a matter of pulling the sensor from the wheel assembly.",
-      "why": "Cleaning before removal helps keep loose material out of the sensor opening. Inspecting the cavity before installing the replacement provides a clean mounting location. Restoring all harness retainers returns the wiring to its intended supported path around the wheel and suspension.",
+      "summary": "Reach the front sensor through the wheel opening, release its wiring, clean and inspect its mounting cavity, then refit the sensor and wheel with the correct torques.",
+      "introduction": "A front wheel speed sensor counts wheel rotation; it does not get a vote on how enthusiastically you use the accelerator. Its information helps the anti-lock braking system, or ABS, and stability control manage braking and traction. I’ll walk you through reaching its connector behind the splash shield, releasing all four wiring retainers and replacing the sensor without inviting wheel-arch grit into its mounting cavity.",
+      "why": "The sensor gives the control systems information about how fast its wheel is turning. ABS helps prevent wheel locking during hard braking, while stability control can adjust individual brakes and engine output to help control a slide. During replacement, cleaning protects the sensor opening, and restoring the wiring supports keeps the cable on its intended route around the suspension.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "front wheel speed sensor replacement",
-        "front ABS sensor wiring",
-        "brake pedal pulsation during ABS operation"
+        "2015 Mustang front wheel speed sensor replacement",
+        "front ABS sensor connector",
+        "wheel speed sensor harness retainers",
+        "front wheel speed sensor bolt torque"
       ],
       "when": {
-        "summary": "After diagnosis identifies a front wheel speed sensor requiring replacement, or when related work requires removal.",
+        "summary": "Use this procedure after diagnosis identifies a front wheel speed sensor requiring replacement, or when repair work requires its removal.",
         "notes": [
-          "Brake pedal pulsation during ABS operation does not by itself establish a sensor fault."
+          "Noise or brake pedal pulsation during ABS or stability-control intervention does not, by itself, establish a sensor fault.",
+          "Longer brake pedal travel immediately after an ABS or stability-control event can also be an operating characteristic."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange safe wheel access",
-          "detail": "Have the lifting and support capability required by the wheel-and-tire procedure. Be prepared to move the fender splash shield aside to reach the electrical connection."
+          "title": "Establish the repair boundary",
+          "detail": "I’m covering sensor removal and replacement on the four listed engine applications. Electrical fault isolation, signal testing and confirmation that replacement resolves the original complaint require the applicable diagnostic procedure; this article does not provide a sensor pass/fail test."
         },
         {
-          "title": "Prepare cleaning and fastening equipment",
-          "detail": "Provide compressed air for cleaning around the sensor and a torque tool suitable for its mounting bolt. Identify the original harness routing before releasing its retainers."
+          "title": "Arrange lifting and wheel access",
+          "detail": "Use a hoist rated for the vehicle’s actual weight, including cargo and modifications, on a hard, level surface. Have wheel chocks and suitable wheel-fastener tools ready. The wheel procedure uses Neutral on a hoist; keep the parking brake applied throughout this job. Review the [lifting locations](#/document/G1663631) and [service precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Gather the replacement and fastening equipment",
+          "detail": "Have the correct replacement front wheel speed sensor, tools suitable for the splash-shield retainer and sensor bolt, a torque wrench suitable for 133 lb.in (15 Nm), and a wheel torque wrench suitable for 150 lb.ft (204 Nm). Keep the removed retainers organized so both pairs return to their original locations."
+        },
+        {
+          "title": "Prepare cleaning materials and protection",
+          "detail": "Provide compressed air, cleaning cloths and Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2. Wear eye and ear protection during service, particularly compressed-air cleaning, and protective gloves around sharp edges. Read the lubricant’s material safety information before use."
+        },
+        {
+          "title": "Understand the keyless controls before lifting",
+          "detail": "The 2015 Mustang owner manual, First Printing, “Starting and Stopping the Engine,” printed pages 121–122, distinguishes ignition ON from engine starting. With a valid key inside, pressing and releasing START/STOP from OFF without pressing either pedal switches the ignition ON with the engine stopped. A start request uses the brake pedal with an automatic transmission in Park, or the clutch pedal with a manual transmission in Neutral. No engine start is needed here. Complete display settings and transmission positioning while the car is on the ground, then establish OFF and remove the key before service."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
+        },
+        {
+          "title": "Keep sensor cleaning separate from brake-dust removal",
+          "detail": "Complete the brake-dust controls first. The sensor procedure calls for compressed air at the installed sensor mounting area; this is not permission to blow the pads, disc, caliper or friction residue. Use that sensor-only action only where it will not disperse brake dust. If you cannot establish that condition, stop and have a suitably equipped workshop complete the cleaning and replacement."
         }
       ],
       "steps": [
         {
-          "title": "Expose the electrical connection",
-          "body": "Remove the wheel and tire using the linked procedure. Remove the splash-shield retainer and position the fender splash shield aside to reach the sensor wiring."
+          "title": "Restrain the grounded car and disable remote start",
+          "body": "Position the car on the hard, level hoist area. Apply the parking brake and block all wheels remaining on the ground before releasing the service brake or selecting Neutral.\n\nIf remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup. If display power is needed, keep the valid key inside and, from OFF, press and release START/STOP without pressing either pedal. Do this before work around or underneath the car. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Disconnect the first harness section",
-          "body": "Disconnect the front wheel speed sensor electrical connector and detach the two associated harness retainers. Free this section before working down toward the sensor."
+          "title": "Select Neutral, then establish ignition OFF and remove the key",
+          "body": "For an automatic, with the valid key inside, establish engine-off ignition ON before shifting: if currently OFF, press START/STOP once without pressing either pedal; if already ON after settings, leave it ON. Keep the parking brake and chocks established, then hold the service brake and select Neutral without pressing START/STOP. For a manual, keep the engine stopped and select Neutral under the same restraints. After positioning, release the pedals; if ignition is ON, press START/STOP once to switch OFF. Confirm OFF and remove the key before lifting. These are the keyless controls in the 2015 owner manual, printed pages 121–122."
         },
         {
-          "title": "Clean around the installed sensor",
-          "body": "Use compressed air to clean the area surrounding the sensor while it is still installed. This precedes opening the sensor cavity."
+          "title": "Support the car at the marked lifting points",
+          "body": "Locate the stamped triangles identifying the four body-side lifting locations: a front and rear location on each side. Position the hoist adapters at those locations, using the [Jacking and Lifting overview](#/document/G1663631).\n\nCheck that the arms and adapters clear suspension, exhaust and steering components, mounting brackets, stabilizer brackets where fitted, and the axle or rear cover. Do not lift against either bumper.\n\nKeep the ground wheels blocked until they leave the floor. Raise the car until all four wheels are fully clear of the ground and confirm it is securely supported on the correctly positioned hoist before beginning wheel removal. Leave the parking brake applied. Do not enter the raised cabin."
         },
         {
-          "title": "Remove the sensor",
-          "body": "Detach the two remaining sensor harness retainers shown near the wheel assembly. Remove the mounting bolt and the front wheel speed sensor."
+          "title": "Remove the front wheel and tire",
+          "body": "Remove the five wheel nuts, then remove the wheel and tire assembly from the side being serviced. Set the assembly aside where its mounting surfaces will stay clean.\n\nDo not use heat on a seized wheel nut: it can damage the wheel and wheel bearing. The [Wheel and Tire procedure](#/document/G1686507) covers this access operation and the installation requirements below."
         },
         {
-          "title": "Inspect the cavity and install the replacement",
-          "body": "Before installing a new sensor, inspect the housing and make sure the cavity is clean and free of foreign material. Fit the sensor and tighten its mounting bolt to 133 lb.in (15 Nm)."
+          "title": "Move the fender splash shield aside",
+          "body": "At the inner wheel arch, remove the single push-type splash-shield retainer shown near the upper inner edge of the opening. Position the fender splash shield aside to expose the sensor’s body-side wiring and electrical connector. Keep the retainer for refitting; the shield only needs to be moved aside for access."
         },
         {
-          "title": "Restore the wiring and wheel",
-          "body": "Reverse the remaining removal operations. Reattach both groups of harness retainers, reconnect the electrical connector, restore the splash shield and its retainer, and reinstall the wheel and tire."
+          "title": "Unplug the connector and release the first two wiring retainers",
+          "body": "Locate the front wheel speed sensor electrical connector behind the displaced splash shield. Disconnect it, then detach the two harness retainers along this body-side section of cable.\n\nIdentify where each retainer belongs before freeing it. These are the first pair; another pair supports the cable closer to the sensor. Four little supports can make a surprisingly convincing game of hide-and-seek."
+        },
+        {
+          "title": "Clean around the sensor before removing it",
+          "body": "Complete the brake-dust controls in preparation before this sensor cleaning. With the sensor still fitted, use compressed air only at its mounting area and only where the air will not disperse friction dust. Do not blow the brake pads, disc, caliper or brake residue. If that boundary cannot be maintained, stop for a suitably equipped workshop rather than blowing the wheel opening clean.\n\nWear eye and ear protection and keep other people clear. The source calls for cleaning before the sensor is removed so loose material does not enter the cavity."
+        },
+        {
+          "title": "Release the remaining supports and remove the sensor",
+          "body": "Follow the sensor cable down beside the strut. Detach the two remaining sensor harness retainers: the illustrated route has one higher beside the strut and another near its mounting bracket.\n\nWith both pairs of retainers free, remove the sensor’s mounting bolt, then remove the front wheel speed sensor. Preserve the cable’s original route for installation. See [Front Wheel Speed Sensor](#/document/G1692581)."
+        },
+        {
+          "title": "Clean and inspect the sensor housing and cavity",
+          "body": "Before installing the replacement, wipe the accessible sensor housing area clean and look directly into the sensor cavity—the opening that receives the sensor. Check specifically for dirt or other foreign material.\n\nContinue only when the cavity is clean and free of foreign material. If contamination remains that you cannot safely remove, pause the installation rather than fitting the sensor over it."
+        },
+        {
+          "title": "Install the sensor and tighten its bolt",
+          "body": "Position the replacement sensor in the clean cavity and install its mounting bolt. Tighten the bolt to 133 lb.in (15 Nm).\n\nCheck the torque wrench’s units before tightening: inch-pounds, not foot-pounds. This small fastener does not need the wheel-nut treatment."
+        },
+        {
+          "title": "Restore the two sensor-side harness retainers",
+          "body": "Route the sensor cable back along its original path beside the strut and reattach the two retainers nearest the wheel assembly. Confirm that both are seated and that the cable follows the supported route shown by its mounting locations, rather than hanging loose beside the brake and suspension."
+        },
+        {
+          "title": "Reconnect the body-side wiring and restore the splash shield",
+          "body": "Reattach the two body-side harness retainers, then reconnect the sensor electrical connector. Check that the connection is fully engaged and all four harness retainers are restored.\n\nReturn the fender splash shield to its original position and reinstall its push-type retainer. Check that the shield sits correctly and does not trap the sensor cable. These operations complete the reverse-order sensor refit."
+        },
+        {
+          "title": "Clean the wheel and hub mounting surfaces",
+          "body": "Remove corrosion, dirt and foreign material from the wheel’s flat mounting surface and the corresponding hub/brake-disc mounting surface. Also clean the wheel’s central pilot bore—the round center opening that fits over the hub’s locating lip.\n\nCheck that any fasteners attaching the brake disc to the hub are secured and do not interfere with the wheel seating flat. Contamination or interference here can allow the wheel nuts to loosen in service. Keep the wheel-stud and wheel-nut threads clean and dry."
+        },
+        {
+          "title": "Apply anti-seize only at the central pilot fit",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between the cleaned wheel pilot bore and hub pilot.\n\nKeep it off the flat wheel-to-brake-disc mounting surfaces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. I keep the distinction simple: the central locating fit gets the thin film; the wheel’s clamping faces and threads stay clean and dry."
+        },
+        {
+          "title": "Refit the wheel with the nuts finger-tight",
+          "body": "Position the wheel and tire assembly on the hub and install all five wheel nuts finger-tight only at this stage. Confirm the wheel is seated against its clean mounting surface. Final tightening is performed with the vehicle resting on its tires."
+        },
+        {
+          "title": "Restore ground restraints as the car is lowered",
+          "body": "Before lowering, confirm the parking brake is applied, the sensor wiring and splash shield are restored, and tools and loose parts are clear.\n\nLower the car under control. Restore wheel chocks as the tires reach the ground; do not wait until after lowering to restore ground-wheel restraints. Keep the parking brake applied throughout.\n\nOnce the car is fully supported on its tires, return an automatic transmission to Park using the grounded cabin controls. If ignition power is needed, bring the valid key inside and switch from OFF to ON with a button press without pedals; use the brake to move the selector without pressing START/STOP at the same time. After positioning, release the pedals, switch the ignition OFF and remove the key.\n\nFor a manual transmission, once the car is fully grounded and chocked with the engine OFF, select a parked gear. Leave the parking brake applied and finish with ignition OFF/key out."
+        },
+        {
+          "title": "Torque the wheel nuts in the illustrated star sequence",
+          "body": "With the car resting on its tires, parking brake applied and wheels chocked, tighten the five nuts in a star/cross pattern to 150 lb.ft (204 Nm), using clean, dry stud and nut threads.\n\nFor the wheel orientation shown, the order is top, lower left, upper right, upper left, lower right. On a differently rotated wheel, use the same crossing pattern by moving across the wheel between successive nuts. This sequence helps avoid brake-disc runout, which can contribute to brake roughness, shudder and vibration."
+        },
+        {
+          "title": "Finish the assembly check and schedule the wheel-nut recheck",
+          "body": "Confirm that the sensor bolt has been torqued, the connector is engaged, both pairs of harness retainers are installed, the splash shield is secured and all five wheel nuts have received their final torque. Leave the ignition OFF and the key out of the vehicle.\n\nArrange to retighten the wheel nuts within 160 km (100 mi) after reinstallation. The physical checks confirm assembly; use the applicable diagnostic work to establish whether the original complaint is resolved."
         }
       ],
       "watchFor": [
         {
-          "title": "Unsecured harness sections",
-          "body": "There are two separate pairs of harness retainers in the removal sequence. Restore both groups when routing the replacement sensor wiring."
+          "title": "Two separate pairs of wiring retainers",
+          "body": "Release and restore both pairs: two behind the splash shield and two nearer the strut and sensor. Reconnecting the plug alone does not finish the wiring installation."
         },
         {
-          "title": "Foreign material in the cavity",
-          "body": "Do not install the new sensor until the housing inspection confirms a clean cavity."
+          "title": "Debris at the sensor opening",
+          "body": "Complete brake-dust control first. The source compressed-air action is limited to the installed sensor mounting area where it cannot disperse friction dust; do not blow the brake assembly or wheel opening clean. Stop for suitable workshop cleaning if that separation cannot be maintained. After removal, inspect the housing and cavity before fitting the replacement."
+        },
+        {
+          "title": "Different torque units",
+          "body": "The sensor bolt takes 133 lb.in (15 Nm). The wheel nuts take 150 lb.ft (204 Nm). Verify the wrench and units for each operation."
+        },
+        {
+          "title": "Lubricant on wheel clamping surfaces or threads",
+          "body": "Use XL-2 only as a thin film at the central pilot interface. Flat mounting faces, studs and nuts must remain free of anti-seize; the wheel torque applies to clean, dry threads."
+        },
+        {
+          "title": "Improvised lifting",
+          "body": "Use the triangle-marked lifting locations. Never work underneath a car supported only by a jack; jack lifting requires appropriately rated equipment and floor stands. The vehicle’s emergency tire-change jack is not a workshop hoist substitute."
         }
       ],
       "notes": [
-        "ABS and stability-control features vary with fitted equipment; sensor replacement does not establish which optional features a vehicle has."
+        "ABS-related features vary with fitted equipment. Replacing this sensor does not establish that the car has adaptive cruise control, collision avoidance, launch control or other optional functions.",
+        "This job removes the complete wheel and tire assembly without separating the tire from the wheel or balancing it; tire-changing and balancing-machine requirements do not enter this repair.",
+        "Keep remote start disabled throughout service around or underneath the vehicle."
       ],
       "diagnostics": [
         {
-          "finding": "Noise or brake pedal pulsation during an ABS or stability-control event",
-          "meaning": "These can be normal characteristics of system intervention.",
-          "next": "Establish the actual fault through diagnosis before deciding to replace a sensor."
+          "finding": "Dirt or foreign material remains in the sensor cavity",
+          "meaning": "The mounting cavity is not ready to receive the replacement sensor.",
+          "next": "Clean and reinspect before installation. If you cannot safely clear the material, pause the repair for suitable assistance."
         },
         {
-          "finding": "Longer pedal travel immediately after an ABS or stability-control activation",
-          "meaning": "The system description identifies this as a possible operating characteristic.",
-          "next": "Consider the timing of the complaint during diagnosis rather than treating it as proof of sensor failure."
+          "finding": "A harness retainer is loose or the cable has not returned to its original route",
+          "meaning": "Wiring reassembly is incomplete.",
+          "next": "With the ignition OFF and key removed, restore the cable route and seat the affected retainer before closing the splash shield and refitting the wheel."
+        },
+        {
+          "finding": "A wheel nut is seized",
+          "meaning": "Routine wheel removal cannot continue as intended.",
+          "next": "Stop for an appropriate seized-fastener removal method. Do not apply heat to loosen the nut."
+        },
+        {
+          "finding": "Noise or brake pedal pulsation occurs during ABS or stability-control intervention",
+          "meaning": "The [ABS and Stability Control overview](#/document/G1686528) identifies these as possible normal operating characteristics.",
+          "next": "Assess the actual complaint through diagnosis before treating the sensation as proof of a faulty sensor."
+        },
+        {
+          "finding": "Brake pedal travel is longer immediately after ABS or stability-control activation",
+          "meaning": "This can occur after system intervention and does not independently identify a sensor failure.",
+          "next": "Consider when the sensation occurs during diagnosis rather than replacing parts on that observation alone."
+        },
+        {
+          "finding": "The original concern remains after replacement",
+          "meaning": "Correct physical installation does not establish that the original fault has been resolved.",
+          "next": "Continue with the applicable ABS diagnostic procedure. Begin any renewed connector work with ignition OFF and the key removed."
         }
       ],
       "verification": [
         {
-          "title": "Confirm physical installation",
-          "body": "Check sensor fastening, connector engagement, both pairs of harness retainers and splash-shield restoration. These checks confirm assembly; resolution of the original concern remains part of the applicable diagnostic work."
+          "title": "Sensor and wiring assembly",
+          "body": "Confirm the sensor mounting bolt was tightened to 133 lb.in (15 Nm), the electrical connector is engaged, all four harness retainers are seated and the splash shield and its retainer are restored."
+        },
+        {
+          "title": "Wheel installation",
+          "body": "Confirm the wheel mounting surfaces and pilot bore were cleaned, XL-2 was confined to the pilot interface, and all five nuts were tightened in a star pattern to 150 lb.ft (204 Nm) with the car resting on its tires."
+        },
+        {
+          "title": "Safe service endpoint",
+          "body": "Confirm the car is fully grounded, the parking brake is applied, ground-wheel restraints are in place, and an automatic transmission is back in Park. Leave the ignition OFF and the key removed. A manual transmission is in a parked gear selected after grounding with the engine OFF."
+        },
+        {
+          "title": "Wheel-nut follow-up",
+          "body": "Retighten the wheel nuts within 160 km (100 mi) of wheel reinstallation."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692581",
-          "purpose": "Front wheel speed sensor removal and installation, harness release, compressed-air cleaning and cavity inspection.",
+          "purpose": "Primary sensor removal and reverse-order installation, four harness retainers, compressed-air cleaning, cavity inspection and sensor-bolt torque.",
           "mediaId": "G1692581-m0004"
         },
         {
           "documentId": "G1686507",
-          "purpose": "Required wheel-and-tire removal and installation for sensor access."
+          "purpose": "Required wheel access and refitting, mounting-surface and pilot preparation, XL-2 placement, wheel-nut torque, star sequence and follow-up tightening."
         },
         {
           "documentId": "G1686528",
-          "purpose": "Explain ABS and stability-control functions and normal intervention characteristics relevant to the complaint."
+          "purpose": "ABS and stability-control context, equipment-dependent functions and normal intervention characteristics."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Triangle-marked lifting locations, hoist-adapter positioning and lifting precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start disabling, ignition/key precautions, personal protection, vehicle restraint and rated lifting equipment."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Brake friction-dust precautions before disassembly and mating-face cleaning, alongside credited EPA home-mechanic guidance."
         }
       ],
       "hero": {
@@ -21735,7 +22303,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine and front ABS wheel speed sensors. Disable remote start if fitted. Other ABS-related features depend on the vehicle’s fitted equipment."
       },
       "relatedGuideIds": [
         "job-f7fbc18cba975fc3"
@@ -21752,105 +22321,287 @@
         {
           "documentId": "G1686528",
           "sourceHash": "a70bfc10ccd319dce1d7fe2449896cc71946c5d86496fb5053aeb2305c766e8b"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "767a496b259d163e5ee6c2eaffa69e4aa7ceeb0c39b7ea5f0ef61db505a3261b"
-      }
+        "fingerprint": "767a496b259d163e5ee6c2eaffa69e4aa7ceeb0c39b7ea5f0ef61db505a3261b",
+        "editorialVersion": 2,
+        "editorialFingerprint": "0af7b6d5da96061826508933f8419d82e56ab0c4918173f7074a7985b65f1c35",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Restrain, switch off and lift",
+          "summary": "Disable remote start, select Neutral safely and support the car at its marked lifting points.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "expose-and-clean",
+          "title": "Reach the wiring and sensor",
+          "summary": "Remove the wheel, move the splash shield aside, unplug the connector and clean around the installed sensor.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "replace-the-sensor",
+          "title": "Remove, inspect and replace",
+          "summary": "Free the remaining cable supports, inspect the cavity and torque the replacement sensor.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "restore-wiring",
+          "title": "Restore wiring and splash shield",
+          "summary": "Reattach both pairs of retainers, reconnect the plug and secure the shield.",
+          "start": 11,
+          "end": 12
+        },
+        {
+          "id": "prepare-and-fit-wheel",
+          "title": "Prepare and refit the wheel",
+          "summary": "Clean the mounting surfaces and pilot bore, apply XL-2 correctly and install the wheel finger-tight.",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "id": "ground-and-finish",
+          "title": "Lower, torque and check",
+          "summary": "Restore ground restraints during lowering, torque the wheel nuts and arrange their follow-up tightening.",
+          "start": 16,
+          "end": 18
+        }
+      ]
     },
     {
       "title": "Replace a rear wheel speed sensor",
-      "summary": "Replace the rear wheel speed sensor after cleaning its surroundings, then restore its mounting, connector and harness retainers.",
-      "introduction": "The rear wheel speed sensor reports wheel rotation to the anti-lock brake system (ABS) and stability-control system. That information supports control of wheel locking, wheelspin and vehicle stability. The sensor is reached after removing the wheel and tire; its lead connects to the vehicle harness and is secured by two retainers.",
-      "why": "Cleaning before removal reduces the chance of loose dirt entering the sensor opening. The cavity must also be clean before a new sensor is installed. Restoring both harness retainers keeps the lead in its intended route beside the moving suspension, rather than leaving it hanging from the sensor or connector.",
+      "summary": "Remove the rear wheel, clean and replace the sensor, restore its two harness retainers, then refit and correctly tighten the wheel.",
+      "introduction": "The rear wheel speed sensor is a tiny tattletale, with a whole committee of brake electronics listening. It reports how fast its wheel is turning so the anti-lock brakes and stability systems can help control locking, wheelspin and skids. I’ll walk you through reaching it behind the rear wheel, freeing its lead and fitting the replacement without inviting dirt into its mounting hole.",
+      "why": "Cleaning before removal keeps loose dirt away from the open sensor cavity. Correct bolt tightening secures the replacement, while both harness retainers keep its cable on the intended route beside the suspension. The wheel installation deserves just as much care: clean mating surfaces and the correct tightening pattern help prevent loosening and brake vibration.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "rear wheel speed sensor replacement",
-        "rear ABS sensor removal",
-        "brake pedal pulsation during ABS operation"
+        "2015 Mustang rear wheel speed sensor replacement",
+        "rear ABS sensor",
+        "rear sensor harness retainers",
+        "wheel speed sensor bolt torque",
+        "Mustang wheel nut tightening"
       ],
       "when": {
-        "summary": "After diagnosis establishes that a rear wheel speed sensor requires replacement.",
+        "summary": "Replace the affected rear sensor after diagnosis has established that it needs replacement.",
         "notes": [
-          "Normal ABS or stability-control sensations alone do not justify replacing a sensor."
+          "Noise and brake-pedal pulsation during ABS or stability-control intervention do not, by themselves, establish a sensor fault.",
+          "This is a replacement task, not scheduled maintenance."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange wheel-removal access",
-          "detail": "Use the linked wheel-and-tire procedure for supported access and refitting requirements."
+          "title": "Confirm the replacement and scope",
+          "detail": "Have the affected rear side and sensor fault confirmed before buying the replacement. Match the sensor to the vehicle and position being serviced. Coverage includes the listed four engines with the illustrated mounting arrangement; separate body-style or brake-package combinations are not established here. Electrical fault-finding and ABS fault-clearance are separate jobs."
         },
         {
-          "title": "Prepare cleaning and fastening tools",
-          "detail": "Have compressed air for the surrounding area, tools for the connector, retainers and mounting bolt, and torque equipment suitable for 80 lb.in (9 Nm)."
+          "title": "Arrange safe wheel-removal access",
+          "detail": "Use a hoist rated for the vehicle’s actual weight, including cargo and modifications, on a hard, level work surface. Have wheel chocks ready. The procedure uses Neutral with the parking brake applied. Review the [lifting points](#/document/G1663631), [wheel installation requirements](#/document/G1686507) and [service precautions](#/document/G1693189). Never work underneath a vehicle held only by a jack; the emergency tire-change jack is unsuitable for this repair."
+        },
+        {
+          "title": "Gather tools and protection",
+          "detail": "Have compressed air, eye and ear protection, protective gloves for sharp edges, suitable hand tools for the five wheel nuts and sensor bolt, and torque tools capable of accurately applying 80 lb.in (9 Nm) and 150 lb.ft (204 Nm). Have cleaning materials for the wheel mating surfaces and sensor housing."
+        },
+        {
+          "title": "Prepare the specified lubricant",
+          "detail": "Use Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, for a thin film at the wheel pilot interface only. Read its material safety information before use. Keep it off wheel mounting faces, studs, nuts and brake surfaces."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
+        },
+        {
+          "title": "Keep sensor cleaning separate from brake-dust removal",
+          "detail": "Complete the brake-dust controls first. The sensor procedure calls for compressed air at the installed sensor mounting area; this is not permission to blow the pads, disc, caliper or friction residue. Use that sensor-only action only where it will not disperse brake dust. If you cannot establish that condition, stop and have a suitably equipped workshop complete the cleaning and replacement."
         }
       ],
       "steps": [
         {
-          "title": "Remove the wheel and tire",
-          "body": "Follow the [wheel-and-tire procedure](#/document/G1686507) to expose the affected rear sensor and its harness route."
+          "title": "Secure the car and disable remote start while it is grounded",
+          "body": "Begin with the fully assembled car stationary in the hoist bay on a hard, level surface. Apply the parking brake and chock the wheels before any transmission changes or pedal release.\nIf remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before working around or underneath the car. Complete any powered positioning and settings changes while the cabin is accessible from the ground. The engine stays off during this repair."
         },
         {
-          "title": "Clean before opening the mounting",
-          "body": "Use compressed air to clean the area surrounding the rear wheel speed sensor while it remains installed. This removes loose contamination before the sensor cavity is exposed."
+          "title": "Select Neutral, then establish ignition OFF and remove the key",
+          "body": "For an automatic, with the valid key inside, establish engine-off ignition ON before shifting: if currently OFF, press START/STOP once without pressing either pedal; if already ON after settings, leave it ON. Keep the parking brake and chocks established, then hold the service brake and select Neutral without pressing START/STOP. For a manual, keep the engine stopped and select Neutral under the same restraints. After positioning, release the pedals; if ignition is ON, press START/STOP once to switch OFF. Confirm OFF and remove the key before lifting. These are the keyless controls in the 2015 owner manual, printed pages 121–122."
         },
         {
-          "title": "Disconnect and remove the sensor",
-          "body": "Follow the [rear sensor procedure](#/document/G1692582): disconnect the electrical connector, detach both harness retainers, then remove the mounting bolt and sensor. Freeing the harness first allows the assembly to be removed without pulling against its retained lead."
+          "title": "Position the hoist at the four marked lifting points",
+          "body": "Locate the triangles stamped into the body structure along the side sills, near the front and rear wheel areas on each side. Position the hoist adapters at those indicated lifting points, as shown in the [lifting overview](#/document/G1663631).\nCheck that the arms and adapters clear the suspension, brackets, stabilizer mounts, exhaust, steering components, axle and rear cover. Do not lift against either bumper.\nRaise and securely support the vehicle using the hoist’s operating instructions. Keep the parking brake applied; sensor replacement does not require releasing it. Do not enter the raised cabin."
         },
         {
-          "title": "Inspect the cavity and refit",
-          "body": "Before installing a new sensor, inspect the housing and ensure the cavity is clean and free of foreign material. Reverse removal, tightening the sensor bolt to 80 lb.in (9 Nm). Restore both retainers, reconnect the electrical connector and reinstall the wheel and tire."
+          "title": "Remove the affected rear wheel and identify the sensor",
+          "body": "Remove the five wheel nuts and lift off the wheel-and-tire assembly. Do not use heat to free a seized nut; it can damage the wheel and wheel bearing.\nLook behind the rear brake disc at the hub carrier, the suspension casting that supports the hub. The sensor enters a small mounting pad beside the disc and is held by one bolt. Its lead runs upward and inboard through two retainers to an electrical connector. Trace that lead before disturbing it so you can restore the route. This access does not require removing the brake caliper or disc."
+        },
+        {
+          "title": "Blow dirt away before removing the sensor",
+          "body": "Complete the brake-dust controls in preparation before this sensor cleaning. With the sensor still fitted, use compressed air only at its mounting area and only where the air will not disperse friction dust. Do not blow the brake pads, disc, caliper or brake residue. If that boundary cannot be maintained, stop for a suitably equipped workshop rather than blowing the wheel opening clean.\n\nWear eye and ear protection and keep other people clear. The source calls for cleaning before the sensor is removed so loose material does not enter the cavity."
+        },
+        {
+          "title": "Disconnect the sensor’s electrical connector",
+          "body": "Follow the sensor lead inboard to its connection with the vehicle harness. Release the connector latch and separate the connector bodies without pulling on the wires. Leave the vehicle-side harness in place. Keep the ignition OFF and the key outside the vehicle throughout connector work."
+        },
+        {
+          "title": "Free both harness retainers, then remove the sensor",
+          "body": "Detach both sensor harness retainers: the one above the hub-carrier area and the one farther inboard at its bracket. Free the cable before trying to remove the sensor so it cannot pull against either attachment.\nRemove the single sensor mounting bolt, then withdraw the sensor from its housing and remove the sensor-and-lead assembly. Keep the bolt for reassembly. The [rear sensor procedure](#/document/G1692582) uses this order: connector, two retainers, then bolt and sensor."
+        },
+        {
+          "title": "Inspect and clean the exposed sensor cavity",
+          "body": "Look directly into the sensor opening and examine the surrounding mounting seat. The larger opening receives the sensor; the smaller adjacent hole is for its mounting bolt. Make sure the sensor cavity is clean and free of foreign material before fitting the replacement. Wipe the exposed housing surface clean as needed.\nIf contamination remains, remove it before proceeding. If you cannot establish a clean cavity without risking damage, stop rather than pushing the new sensor into it."
+        },
+        {
+          "title": "Install the sensor and torque its bolt",
+          "body": "Place the replacement sensor into the clean cavity and seat its mounting flange against the housing. Reinstall the mounting bolt and tighten it to 80 lb.in (9 Nm).\nUse inch-pounds, not foot-pounds. This is the sensor fastener’s specification; the wheel nuts have a separate, much higher torque."
+        },
+        {
+          "title": "Restore the lead, both retainers and the connector",
+          "body": "Reverse the remaining removal actions: return the lead to its original route, attach both harness retainers, then reconnect the electrical connector until its latch engages.\nCheck that the cable follows the route you traced before removal, both retainers are attached and the connector is fully joined. Do not leave the lead hanging from the sensor or connector. Complete this check before the wheel hides the work."
+        },
+        {
+          "title": "Clean the wheel interfaces and lubricate only the pilot",
+          "body": "Remove corrosion, dirt and foreign material from the wheel’s flat mounting face and the corresponding hub/brake-disc mounting face. Check that any rotor-to-hub fasteners are secured and do not protrude into the wheel mating surfaces.\nAlso clean the wheel’s central pilot bore—the round center opening that fits over the hub’s raised locating lip. The cleaning requirement includes this bore, not just the flat face.\nApply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between that bore and the hub pilot. Keep it off the flat wheel-to-disc mounting faces, wheel studs, wheel nuts, brake pads and disc friction surfaces. Clean, dry threads are required for the wheel-nut torque."
+        },
+        {
+          "title": "Refit the wheel and start all five nuts by hand",
+          "body": "Position the wheel-and-tire assembly on the hub and install all five wheel nuts finger tight. Final tightening comes with the vehicle resting on its tires, as required by the [wheel-and-tire procedure](#/document/G1686507)."
+        },
+        {
+          "title": "Restore ground restraints during lowering",
+          "body": "Keep the previously applied parking brake applied throughout this sensor work and lowering; this repair does not require releasing it. Do not enter the raised cabin.\nLower the car with the cabin unoccupied. As the tires reach the ground, restore wheel chocks before anyone releases a pedal or changes the transmission position. Continue until the vehicle rests on its tires."
+        },
+        {
+          "title": "Tighten the wheel nuts in the five-point star sequence",
+          "body": "With the vehicle resting on its tires and restrained by the parking brake and chocks, tighten the wheel nuts to 150 lb.ft (204 Nm) using clean, dry stud and nut threads.\nUse the illustrated star/cross order. Viewed with one nut at the top, the sequence is: top, lower left, upper right, upper left, lower right. This crosses the wheel rather than walking around adjacent nuts and helps avoid brake-disc runout, which can cause roughness, shudder and vibration.\nArrange to retighten the wheel nuts within 160 km (100 mi) after reinstallation."
+        },
+        {
+          "title": "Finish grounded, parked and switched OFF",
+          "body": "After full reassembly and wheel tightening, return an automatic transmission to P while the car is grounded: keep the parking brake and chocks in place, bring the valid key inside, switch from OFF to engine-off ignition ON without pressing either pedal, then hold the brake and select P. Release the brake only with the parking brake and chocks holding the car.\nFor either transmission, finish with ignition OFF and the key removed from the vehicle. If ignition was switched ON, release the pedals before pressing START/STOP once to turn it OFF.\nThese are installation checks, not proof that an ABS fault has been resolved. Any renewed connector work begins again with ignition OFF and the key outside.\n\nFor a manual transmission, once the car is fully grounded and chocked with the engine OFF, select a parked gear. Leave the parking brake applied and finish with ignition OFF/key out."
         }
       ],
       "watchFor": [
         {
-          "title": "Debris inside the housing",
-          "body": "Exterior cleaning does not replace the required cavity inspection before fitting the new sensor."
+          "title": "The two torque units",
+          "body": "Sensor bolt: 80 lb.in (9 Nm). Wheel nuts: 150 lb.ft (204 Nm). Select a torque tool and units appropriate to each fastener."
         },
         {
-          "title": "Unsecured sensor lead",
-          "body": "Restore both retainers and the illustrated harness route during installation."
+          "title": "Contamination trapped beneath the wheel",
+          "body": "Dirt or corrosion on the mating faces, or interference from rotor fasteners, can prevent proper wheel seating and allow the nuts to loosen. Clean and check those interfaces before installation."
+        },
+        {
+          "title": "Anti-seize spreading beyond the pilot",
+          "body": "Use only a thin film at the center locating interface. Keep the wheel’s flat mating faces, threads and brake friction components free of lubricant."
+        },
+        {
+          "title": "A lead left loose beside the suspension",
+          "body": "Both harness retainers must be restored. A connected plug alone does not complete the sensor installation."
+        },
+        {
+          "title": "A seized wheel nut",
+          "body": "Do not apply heat. Stop and resolve the seized fastening safely before continuing with wheel removal."
         }
       ],
       "notes": [
-        "The replacement sequence specifies mechanical refitting and cavity cleanliness; it does not prescribe a sensor calibration."
+        "The tire remains mounted on the wheel throughout this job; tire-changing and balancing equipment are not needed.",
+        "The ABS also supports other vehicle-control features where fitted. Replacing this sensor does not establish a fault in adaptive cruise control or collision avoidance.",
+        "Keep the wheel-nut retightening reminder with your service record: within 160 km (100 mi)."
       ],
       "diagnostics": [
         {
-          "finding": "Noise or pedal pulsation during ABS/stability operation, or increased pedal travel immediately afterward.",
-          "meaning": "These can be normal system characteristics and do not establish a sensor fault.",
-          "next": "Evaluate the reported condition through system diagnosis before selecting sensor replacement."
+          "finding": "Noise or pedal pulsation occurs during ABS or stability-control intervention, or pedal travel increases immediately afterward.",
+          "meaning": "These can be normal operating characteristics, as explained in the [ABS and stability-control overview](#/document/G1686528). They do not identify a failed rear sensor.",
+          "next": "Have the reported condition diagnosed before choosing sensor replacement."
         },
         {
           "finding": "Foreign material remains in the sensor cavity.",
-          "meaning": "The required installation condition has not been met.",
-          "next": "Remove the contamination before installing the new sensor."
+          "meaning": "The mounting is not ready to receive the replacement sensor.",
+          "next": "Remove the contamination and visually confirm the cavity is clean. Stop if that condition cannot be achieved without risking damage."
+        },
+        {
+          "finding": "The lead does not follow its original route, a retainer is loose or the connector has not latched.",
+          "meaning": "Reassembly is incomplete.",
+          "next": "With ignition OFF and the key removed, correct the routing, secure both retainers and fully reconnect the plug before fitting the wheel."
+        },
+        {
+          "finding": "The wheel will not sit flush against its mounting face.",
+          "meaning": "Contamination or a protruding rotor-to-hub fastener may be interfering with seating.",
+          "next": "Remove the wheel and correct the interference. Do not use wheel-nut tightening to force it into position."
         }
       ],
       "verification": [
         {
-          "title": "Confirm installation",
-          "body": "Check the mounting-bolt tightening, electrical reconnection, both harness retainers and completion of wheel installation."
+          "title": "Sensor installation",
+          "body": "Confirm that the cavity was clean before insertion, the sensor is seated and its bolt was tightened to 80 lb.in (9 Nm)."
         },
         {
-          "title": "Record the physical checks",
-          "body": "Record that the cavity was clean before insertion and that the sensor fastening and harness restoration were completed."
+          "title": "Harness restoration",
+          "body": "Confirm the original lead route, attachment of both retainers and engagement of the electrical connector latch."
+        },
+        {
+          "title": "Wheel installation",
+          "body": "Confirm clean mating faces and pilot bore, lubricant confined to the pilot interface, and all five nuts tightened on the grounded vehicle in the star sequence to 150 lb.ft (204 Nm)."
+        },
+        {
+          "title": "Safe final condition",
+          "body": "Confirm the parking brake is applied, ground-wheel restraints have been restored, the automatic selector is back in P where applicable, and ignition is OFF with the key removed. Record the wheel-nut retightening due within 160 km (100 mi). A manual transmission is in a parked gear selected after grounding with the engine OFF."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692582",
-          "purpose": "Rear wheel speed sensor removal and installation, including cleaning, harness retainers and bolt torque.",
+          "purpose": "Primary rear sensor removal and reverse-order installation, including compressed-air cleaning, two harness retainers, cavity inspection and sensor-bolt torque.",
           "mediaId": "G1692582-m0002"
         },
         {
           "documentId": "G1686507",
-          "purpose": "Wheel and tire removal and installation for sensor access."
+          "purpose": "Required wheel removal and installation, pilot cleaning and lubricant placement, wheel-nut torque, star sequence and retightening interval."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Triangle-marked lifting locations and precautions for positioning the hoist without damaging adjacent components."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start prevention, key removal, personal protection, lifting capacity and vehicle-restraint precautions."
+        },
+        {
+          "documentId": "G1686528",
+          "purpose": "Explain the ABS and stability systems served by wheel-speed information and distinguish normal intervention sensations from proof of sensor failure."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Brake friction-dust precautions before disassembly and mating-face cleaning, alongside credited EPA home-mechanic guidance."
         }
       ],
       "hero": {
@@ -21874,7 +22625,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine, the illustrated single-bolt rear wheel speed sensor with two harness retainers, and five-nut wheels; remote-start precautions apply where fitted."
       },
       "relatedGuideIds": [
         "job-f7fbc18cba975fc3"
@@ -21891,14 +22643,59 @@
         {
           "documentId": "G1686528",
           "sourceHash": "a70bfc10ccd319dce1d7fe2449896cc71946c5d86496fb5053aeb2305c766e8b"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "3c3fb5d6ca2718492c8daaf7bbbe32b7aafa520aebcea392e8fa5f0c22050e93"
-      }
+        "fingerprint": "3c3fb5d6ca2718492c8daaf7bbbe32b7aafa520aebcea392e8fa5f0c22050e93",
+        "editorialVersion": 2,
+        "editorialFingerprint": "1582518143a03a516759309e47c09166446ebd668047a5a34e83fa94ba961f91",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure the car and establish safe access",
+          "summary": "Disable remote start, select Neutral, switch OFF and support the car at its marked lifting points.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "expose-and-remove",
+          "title": "Expose and remove the sensor",
+          "summary": "Remove the wheel, clean around the sensor and free its connector and two retainers before removal.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "install-and-route",
+          "title": "Fit the sensor and restore its harness",
+          "summary": "Check the cavity, tighten the sensor bolt and restore the lead’s original attachments.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "refit-and-finish",
+          "title": "Refit the wheel and finish safely",
+          "summary": "Clean and lubricate the correct interfaces, lower with restraints restored and torque the wheel on its tires.",
+          "start": 11,
+          "end": 15
+        }
+      ]
     },
     {
       "title": "Replace the stability and traction control switch through the SYNC front controls module",
@@ -35105,107 +35902,212 @@
       }
     },
     {
-      "title": "Strip and reassemble a 5.0L cylinder head",
-      "summary": "Disassemble and rebuild the valves, springs, seals and head-mounted fittings of a prepared 5.0L cylinder head.",
-      "introduction": "The 5.0L V8 uses aluminum cylinder heads with intake and exhaust valves operated by overhead camshafts. Valve springs close the valves, while retainers and keys hold each spring assembly together. Valve-stem seals control oil at the guides. This bench operation services those parts and the head-mounted coolant outlets and sensors, with different fitting sequences for the left-hand and right-hand heads.",
-      "why": "Cleanliness is critical: debris entering oil passages, coolant passages or the oil pan can cause engine failure. Reused components must return to their original positions. Controlled spring compression is essential to removing and installing the retaining keys, and all specified discarded seals and sensors must be renewed.",
+      "title": "Strip and reassemble a 2015 Mustang 5.0L cylinder head",
+      "summary": "Service the valves, springs, valve-stem seals, sensors and coolant outlet on a removed 5.0L cylinder head, with separate left- and right-hand fitting sequences.",
+      "introduction": "A valve spring is remarkably committed to keeping its tiny retaining keys employed—or launching them into another postcode if you get careless. I’ll walk you through controlling that spring, keeping every reusable part in its proper place, and rebuilding the head with fresh seals. The left- and right-hand heads have different fittings, so we’ll give each its own route through the job.",
+      "why": "The aluminum cylinder head carries the valves that admit the engine’s intake charge and release exhaust gases. Springs close those valves; retainers and two small split keys hold each spring assembly on its valve stem. Valve-stem seals control oil passing along the stems through their guides. On this 5.0L, overhead camshafts operate four valves per cylinder through roller followers and hydraulic lash adjusters. During overhaul, clean passages, correctly located reusable parts and securely assembled spring retainers matter as much as the tightening figures.",
       "taskType": "overhaul",
       "difficulty": "specialist",
       "searchTerms": [
-        "5.0L cylinder head disassembly",
-        "5.0L valve stem seal replacement",
-        "cylinder head valve spring removal",
-        "left and right cylinder head assembly"
+        "2015 Mustang 5.0L cylinder head disassembly",
+        "5.0L cylinder head assembly",
+        "Coyote valve stem seal replacement",
+        "5.0L valve spring compressor",
+        "LH RH cylinder head coolant outlet",
+        "5.0L CMP CHT sensor installation"
       ],
       "when": {
-        "summary": "When a removed 5.0L cylinder head requires valve, valve-stem-seal or head-fitting service.",
+        "summary": "Use this procedure when a removed, prepared 5.0L cylinder head requires valve, spring, valve-stem-seal or head-mounted fitting service.",
         "notes": [
-          "Begin with the head prepared for bench disassembly. Vehicle removal, camshaft and timing work, and engine refitting are separate phases."
+          "This is an overhaul sequence, not a symptom-based diagnosis or a scheduled maintenance operation.",
+          "Work through the fitting steps for the head being serviced; the valve and spark-plug steps apply to either head."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange the spring-compressor equipment",
-          "detail": "Use the specified compressor components: 303-300, 303-350, 303-1249 and 303-1418. This work requires the capability to control spring load and handle the small retaining keys."
+          "title": "Establish the bench-work starting point",
+          "detail": "Begin with the cylinder head removed and prepared so its valve springs and combustion-chamber side are accessible. Vehicle access, head removal and installation, camshaft and timing-drive work, and valve/guide/seat measurements require their own procedures; they are outside this bench operation. Do not use this sequence to decide whether a worn or damaged head is fit for reuse."
         },
         {
-          "title": "Prepare a clean, organized bench",
-          "detail": "Provide marked storage for components by original location, clean engine oil, and torque tools suitable for the listed fasteners. Keep cleaning debris away from all internal passages."
+          "title": "Restrain the head and make the work area safe",
+          "detail": "Secure the heavy cylinder head to its support fixture with straps and wooden support blocks before applying spring-compressor force. Merely resting it on the bench does not prevent shifting or tipping. Whenever you reposition the head, secure it again with the straps and wooden support blocks and confirm the restraint before continuing work or applying compressor force. Wear eye and ear protection during service, and protective gloves when handling sharp edges. Read the safety information for coolant and any cleaning materials; keep solvents away from ignition sources. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Gather the required new parts",
-          "detail": "Have new valve-stem seals for either head, a new coolant-outlet gasket for the left head, and a new cylinder head temperature sensor and coolant-outlet O-ring for the right head. The outlet O-ring uses clean Motorcraft Orange coolant, VC-3-B, specification WSS-M97B44-D."
+          "title": "Keep vehicle preparation separate from the bench operation",
+          "detail": "The head must already be removed and prepared using the applicable engine procedure before this bench sequence begins. Maintain any isolation and protections established for the unfinished vehicle repair. Do not reconnect power or change vehicle settings merely to perform this off-car work. Vehicle access, fan isolation and return to service belong to their complete separate procedures."
+        },
+        {
+          "title": "Gather the spring-compressor assembly and torque tools",
+          "detail": "Use compressor components 303-300 (T87C-6565-A), 303-350 (T89P-6565-A), 303-1249 and 303-1418 in the illustrated bridge-and-lever arrangement. Have hand tools for the spark plugs and fittings, plus a torque wrench suitable for 89–133 lb.in (10–15 Nm). The spark-plug illustrations prohibit impact-tool use."
+        },
+        {
+          "title": "Provide clean storage and identify the engine",
+          "detail": "Prepare marked storage that keeps each reusable valve, spring, retainer, pair of keys and other removed component associated with its original position. Check the engine identification label when ordering parts: engine part number, build information and revisions distinguish parts within the 5.0L family. See [Engine — Overview](#/document/G1685308)."
+        },
+        {
+          "title": "Have the replacement parts and lubricants ready",
+          "detail": "For either head, obtain new valve-stem seals and clean engine oil. For the LH head, obtain a new coolant-outlet gasket. For the RH head, obtain a new cylinder head temperature sensor and coolant-outlet O-ring. Lubricate that O-ring with clean Motorcraft Orange Concentrated Antifreeze/Coolant VC-3-B, specification WSS-M97B44-D."
+        },
+        {
+          "title": "Protect every internal passage",
+          "detail": "Keep foreign material out of the oil passages, coolant passages and any exposed engine interior. Debris generated while cleaning gasket surfaces is included: contamination reaching the oil passages, coolant passages or oil pan can cause engine failure. Keep the bench and component storage clean throughout the job."
         }
       ],
       "steps": [
         {
-          "title": "Identify the head and mark reusable parts",
-          "body": "Establish whether the head is left-hand or right-hand before stripping its fittings. Mark components so anything reused returns to its original location. Keep this organization through both disassembly and assembly."
+          "title": "Identify the head and establish the component map",
+          "body": "Confirm whether you are working on the LH or RH head before removing its fittings. Mark reusable components by their original locations and keep them separated as they come off.\n\nThe two heads have different external arrangements: the LH coolant outlet has two retaining bolts, while the RH outlet is a curved pipe retained by one bolt. The RH head also carries the threaded cylinder head temperature sensor. Use the appropriate branch below, then join the common valve-work steps. The full bench sequence is in [Cylinder Head](#/document/G1685339)."
         },
         {
-          "title": "Strip the left-hand head fittings",
-          "body": "For the left-hand head, remove the coolant-outlet bolts and outlet, then discard its gasket. Remove the bolts, camshaft position (CMP) sensors and radio interference capacitor."
+          "title": "LH head: remove the coolant outlet",
+          "body": "Remove the two bolts from the coolant outlet, then lift the outlet away from the head. The fitting shown has a broad hose connection and a smaller projecting connection.\n\nRemove and discard the gasket at its mounting face. Keep gasket debris away from the exposed coolant opening."
         },
         {
-          "title": "Strip the right-hand head fittings",
-          "body": "For the right-hand head, remove the CMP sensor and its bolt. Remove and discard the cylinder head temperature (CHT) sensor. Remove the coolant-outlet bolt and outlet, and discard the O-ring."
+          "title": "LH head: remove the CMP sensors and capacitor",
+          "body": "Remove the two retaining bolts for the camshaft position (CMP) sensors and radio interference capacitor, then remove those components. The CMP sensors report camshaft position; the capacitor helps suppress electrical interference.\n\nThe fitting group shown has two sensor bodies and a small rectangular capacitor with a short lead. Preserve the components’ positions and arrangement for refitting."
         },
         {
-          "title": "Remove the plugs and valve assemblies",
-          "body": "On either head, remove the spark plugs. Use the specified compressor equipment to remove each valve's keys, retainer and spring. Remove and discard the valve-stem seal, then withdraw the valve. Repeat for the remaining valves while preserving their locations."
+          "title": "RH head: remove the CMP and CHT sensors",
+          "body": "Remove the bolt securing the CMP sensor near the upper corner of the head, then remove the sensor.\n\nNext, remove and discard the cylinder head temperature (CHT) sensor. This is the threaded sensor shown lower on the outside of the head, beside the circular casting feature. Keep it separate from reusable parts: this sensor is replaced during assembly."
         },
         {
-          "title": "Install new seals and return the valves",
-          "body": "Lubricate each new valve-stem seal and valve-guide bore with clean engine oil. Install the new seal, then install the valve into the head. Return reused valves to their original positions."
+          "title": "RH head: remove the curved coolant outlet",
+          "body": "Remove the single bolt through the curved coolant-outlet pipe’s mounting flange, then withdraw the pipe from the head.\n\nRemove and discard the O-ring from the pipe’s inserted end. The replacement seal belongs around that end of the pipe, rather than between the bolt flange and the head."
         },
         {
-          "title": "Rebuild the spring assemblies",
-          "body": "Using the specified compressor equipment, install each spring, retainer and set of keys. Repeat for all remaining valves. Install the spark plugs and tighten them to 15 Nm."
+          "title": "Either head: remove the spark plugs",
+          "body": "Remove the spark plugs from the head being serviced using hand tools. Do not use an impact wrench for removal or installation.\n\nKeep reusable plugs identified by position. Across both heads, the complete engine has eight spark plugs."
         },
         {
-          "title": "Restore the right-hand head fittings",
-          "body": "Install a new CHT sensor and tighten it to 11 Nm. Install the CMP sensor and bolt at 10 Nm. Lubricate a new coolant-outlet O-ring with the specified clean coolant, install the outlet pipe, and tighten its fastener to 10 Nm."
+          "title": "Restrain the head, compress one valve spring and remove its retaining parts",
+          "body": "Before applying compressor force, secure the cylinder head to its support fixture with straps and wooden support blocks so it cannot shift or tip. If it has been repositioned since preparation, secure it again and confirm the restraint before proceeding.\n\nArrange tools 303-300, 303-350, 303-1249 and 303-1418 across the top of the restrained head in the illustrated bridge-and-lever configuration. The supported crossbar carries the operating lever, with the compressor positioned over the circular spring retainer.\n\nAlign the compressor with the spring being worked on and compress the spring under control until the two split retaining keys can be removed from the top of the valve stem. Remove both keys while the compressor holds the spring load.\n\nRelease the compressor gradually, then remove the retainer and spring. Keep that valve’s spring, retainer and two keys together in their marked location. Those little keys are far easier to store than to hunt."
         },
         {
-          "title": "Restore the left-hand head fittings",
-          "body": "Install the coolant outlet with a new gasket and tighten its bolts to 10 Nm. Refit the CMP sensors, radio interference capacitor and bolts, also tightening to 10 Nm."
+          "title": "Remove the old stem seal and withdraw the valve",
+          "body": "With the spring removed, remove and discard the valve-stem seal surrounding the stem at the guide.\n\nKeep the valve controlled, then withdraw it toward the combustion-chamber side of the head. The underside view shows the valve head moving away from its seat and the stem leaving the guide. Store the valve with its matching spring components.\n\nIf you need to reposition the head for access, first ensure the compressor is unloaded. After repositioning, secure the head to its support fixture again with straps and wooden support blocks before continuing."
+        },
+        {
+          "title": "Repeat the removal sequence for the remaining valves",
+          "body": "For each remaining valve, repeat the same sequence: compress the spring, remove both keys, release the compressor under control, remove the retainer and spring, discard the stem seal, then withdraw the valve. Confirm the head’s restraint before applying compressor force, including after every repositioning.\n\nMaintain the location map throughout. Do not combine apparently identical valves or springs into a communal parts pile; that is how a tidy overhaul becomes a damn sorting puzzle."
+        },
+        {
+          "title": "Lubricate and install a new valve-stem seal",
+          "body": "For the first valve position, lubricate the new valve-stem seal and the valve-guide bore with clean engine oil. The guide bore is the passage through which the valve stem slides.\n\nInstall the new seal at the guide before installing the valve. Keep the lubricated seal and bore free of debris."
+        },
+        {
+          "title": "Return the valve to its original guide",
+          "body": "Insert the valve from the combustion-chamber side, guiding its stem upward through the guide and new seal. Return a reused valve to the same position from which it was removed.\n\nThe assembly view shows the opposite movement to removal: the valve head approaches its seat as the stem enters the head. If access requires repositioning the head, secure it again to the support fixture with straps and wooden support blocks before continuing."
+        },
+        {
+          "title": "Install the spring, retainer and both keys",
+          "body": "Return the matching spring and retainer to the valve. Confirm that the head is restrained to its support fixture with straps and wooden support blocks, then use the same four compressor components to compress the spring and expose the retaining area at the top of the valve stem.\n\nInstall both split keys around the stem, then release the compressor gradually so the retainer takes the spring load. Confirm that both keys remain seated and the retainer is holding the spring before removing the compressor from that position.\n\nIf a key moves or the retainer does not capture both halves, stop and recompress the spring under control to correct the assembly. Do not leave a partly retained spring loaded."
+        },
+        {
+          "title": "Complete the remaining valves and refit the spark plugs",
+          "body": "Repeat the assembly sequence at every remaining valve position: oil the new seal and guide bore, install the seal, insert the correct valve, then install its spring, retainer and two keys with the compressor. Maintain the head’s restraint throughout, securing it again after any repositioning.\n\nOnce the valve assemblies are complete, install the spark plugs with hand tools and tighten each to 133 lb.in (15 Nm). These are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "RH head: install the new CHT sensor and refit the CMP sensor",
+          "body": "Install a new CHT sensor in the lower threaded sensor opening and tighten it to 97 lb.in (11 Nm).\n\nInstall the CMP sensor at its upper mounting position, fit its retaining bolt and tighten the bolt to 89 lb.in (10 Nm)."
+        },
+        {
+          "title": "RH head: seal and install the coolant-outlet pipe",
+          "body": "Lubricate a new outlet-pipe O-ring with clean Motorcraft Orange Concentrated Antifreeze/Coolant VC-3-B, specification WSS-M97B44-D.\n\nFit the O-ring around the pipe’s inserted end, seat the pipe in the head, and install its single retaining bolt through the flange. Tighten the bolt to 89 lb.in (10 Nm)."
+        },
+        {
+          "title": "LH head: restore the coolant outlet, sensors and capacitor",
+          "body": "Install the coolant outlet with a new gasket and its two bolts. Tighten the bolts to 89 lb.in (10 Nm).\n\nRefit the CMP sensors and radio interference capacitor in their original arrangement. Install their two retaining bolts and tighten them to 89 lb.in (10 Nm)."
+        },
+        {
+          "title": "Finish the bench assembly check",
+          "body": "Account for every valve position: valve, new stem seal, spring, retainer and two seated keys. Confirm that reused components match their recorded locations and that all compressor equipment has been removed.\n\nCheck that the correct head-specific replacement parts are installed and record the completed spark-plug, sensor and coolant-outlet torque checks. Keep the completed head and its internal passages protected from contamination while it awaits the next assembly phase."
         }
       ],
       "watchFor": [
         {
-          "title": "Uncontrolled spring load",
-          "body": "Keep the spring controlled by the specified compressor while removing or installing its keys. Do not improvise around an inadequately supported spring."
+          "title": "Stored spring energy and head movement",
+          "body": "Secure the head to its support fixture with straps and wooden support blocks before applying compressor force, and secure it again after repositioning. Remove the keys only while the compressor controls the spring. Release compression gradually during both removal and assembly. Both keys must be captured by the retainer before the compressor leaves the valve position."
         },
         {
-          "title": "Mixed locations or reused discard parts",
-          "body": "Maintain component identification throughout the work. Renew every removed valve-stem seal and the head-specific discarded gasket, O-ring or CHT sensor."
+          "title": "Contamination during gasket removal",
+          "body": "Watch the exposed coolant openings and oil passages while handling old seals or cleaning mating surfaces. Debris entering the engine can cause engine failure; pause and restore cleanliness before continuing."
+        },
+        {
+          "title": "Parts that must not return to service",
+          "body": "Discard every removed valve-stem seal. Also discard the LH outlet gasket, or the RH outlet O-ring and CHT sensor, according to the head being serviced."
+        },
+        {
+          "title": "Small torque values and impact tools",
+          "body": "Use the stated inch-pound or Nm settings. Keep impact tools away from the spark plugs; the illustrations explicitly prohibit their use."
         }
       ],
       "notes": [
-        "Use the engine identification information when selecting replacement parts; revisions can differ within the same engine family."
+        "The common valve sequence applies to both heads; the LH and RH fitting sequences are alternatives for their respective heads.",
+        "CMP means camshaft position; CHT means cylinder head temperature. Keep the reusable CMP sensor separate from the discarded RH CHT sensor.",
+        "Engine identification matters when selecting replacement parts, even when two engines share the same displacement."
       ],
       "diagnostics": [
         {
-          "finding": "Foreign material enters an oil or coolant passage during stripping or cleaning.",
-          "meaning": "Contamination can cause engine failure after reassembly.",
-          "next": "Restore cleanliness before continuing and prevent further debris from entering the passages."
+          "finding": "The head shifts or tips, or the compressor is unstable or does not align with the spring retainer.",
+          "meaning": "Spring force cannot be controlled reliably.",
+          "next": "Do not remove the keys. With spring force safely controlled and the compressor unloaded before repositioning, secure the head to its support fixture with straps and wooden support blocks and restore the correct compressor arrangement. Confirm the restraint and alignment before applying spring load again."
+        },
+        {
+          "finding": "One key is missing, displaced or not captured as compression is released.",
+          "meaning": "The valve-spring assembly is not securely retained.",
+          "next": "Stop releasing compression. Recompress the spring under control, locate and correctly install both keys, then repeat the controlled release and seating check."
+        },
+        {
+          "finding": "Reusable components have lost their original-location identification.",
+          "meaning": "Their required return to the original positions cannot be confirmed.",
+          "next": "Pause assembly and recover a reliable location record before installing those components."
+        },
+        {
+          "finding": "Foreign material enters an oil or coolant passage.",
+          "meaning": "The head is contaminated, with a risk of engine failure after assembly.",
+          "next": "Stop assembly and restore cleanliness before continuing. Do not close the head up with contamination still present."
+        },
+        {
+          "finding": "The removed RH CHT sensor, outlet seal or an old valve-stem seal remains among the installation parts.",
+          "meaning": "A mandatory replacement item could be reused accidentally.",
+          "next": "Separate and discard it, then obtain the correct new part before completing that assembly."
         }
       ],
       "verification": [
         {
-          "title": "Account for every valve assembly",
-          "body": "Confirm that each valve has its new seal, spring, retainer and keys installed, and that reused components occupy their original locations."
+          "title": "Check every spring assembly",
+          "body": "Confirm that every valve has a new stem seal, its correctly located spring and retainer, and both keys captured after controlled compressor release. This is an assembly check, not a valve-sealing or guide-clearance test."
         },
         {
-          "title": "Record the completed head assembly",
-          "body": "Record the head side, required new parts and completed tightening checks for spark plugs, sensors and coolant outlet before the head proceeds to engine assembly."
+          "title": "Check the common tightening work",
+          "body": "Confirm that all installed spark plugs were tightened to 133 lb.in (15 Nm) using hand tools."
+        },
+        {
+          "title": "Check the RH branch when applicable",
+          "body": "Confirm a new CHT sensor at 97 lb.in (11 Nm), the CMP retaining bolt at 89 lb.in (10 Nm), and the coolant-outlet bolt at 89 lb.in (10 Nm). Confirm that a new outlet O-ring was lubricated with the specified clean coolant before installation."
+        },
+        {
+          "title": "Check the LH branch when applicable",
+          "body": "Confirm the new coolant-outlet gasket, both outlet bolts at 89 lb.in (10 Nm), and the CMP sensor/capacitor retaining bolts at 89 lb.in (10 Nm)."
+        },
+        {
+          "title": "Account for parts and protect the finished head",
+          "body": "Confirm that all reused parts occupy their original positions, all discarded items have been replaced, and no tools, loose keys or cleaning debris remain in the head. Maintain clean protection for the passages during storage or transfer."
         }
       ],
       "procedures": [
         {
           "documentId": "G1685339",
-          "purpose": "5.0L cylinder-head bench disassembly and assembly, including common valve work and separate left/right fitting sequences.",
+          "purpose": "Primary bench disassembly and assembly sequence, compressor arrangement, discard parts, LH/RH fitting branches and tightening values.",
           "mediaId": "G1685339-m0011"
+        },
+        {
+          "documentId": "G1685308",
+          "purpose": "5.0L engine architecture, valve-train context and engine identification for replacement-part selection."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable personal protection, material handling, restraint to a support fixture with straps and wooden support blocks, and startup-prevention precautions."
         }
       ],
       "hero": {
@@ -35226,7 +36128,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang 5.0L V8 with aluminum cylinder heads, dual overhead camshafts and four valves per cylinder. Covers both LH and RH cylinder-head bench assemblies."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -35237,14 +36140,58 @@
         {
           "documentId": "G1685308",
           "sourceHash": "d4131828acb8d6ecb337175012c6cba808220635d37a5758bf2027845fc78754"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "88f63edb29cc4c4f6ab9285e40d6e8d4ce8db432f32cb63e26dcd171792d7694"
-      }
+        "fingerprint": "88f63edb29cc4c4f6ab9285e40d6e8d4ce8db432f32cb63e26dcd171792d7694",
+        "editorialVersion": 2,
+        "editorialFingerprint": "927d7da7eebee58c9dc7185f3e454be570965f588dea469b4c029c4d792d3194",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identify-and-organize",
+          "title": "Identify and organize the head",
+          "summary": "Choose the correct fitting branch and preserve original component locations.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "remove-head-fittings",
+          "title": "Remove the head-mounted fittings",
+          "summary": "Strip the appropriate LH or RH fittings, then remove the spark plugs.",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "id": "strip-valve-assemblies",
+          "title": "Strip the valve assemblies",
+          "summary": "Restrain the head, control each spring, remove its retaining parts and seal, then withdraw the valve.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "rebuild-valve-assemblies",
+          "title": "Rebuild the valve assemblies",
+          "summary": "Install lubricated new seals, return the valves and secure the springs before refitting the plugs.",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "id": "restore-and-check",
+          "title": "Restore the fittings and check the assembly",
+          "summary": "Complete the applicable head branch and verify the finished bench assembly.",
+          "start": 14,
+          "end": 17
+        }
+      ]
     },
     {
       "title": "Service the left-hand camshafts on the 5.0L and 5.2L V8",
@@ -169755,88 +170702,164 @@
     },
     {
       "title": "Replace the 3160 Manual Transmission Vehicle Speed Sensor",
-      "summary": "Replace the vehicle speed sensor on the 5.2L engine's 3160 manual transmission and secure its bolt and electrical connection.",
-      "introduction": "The vehicle speed sensor (VSS) works with a tone wheel in the transmission to turn rotational movement into an electrical speed signal. The 3160 transmission carries engine torque toward the rear differential, while this sensor provides information about rotation. The repair removes the externally accessible sensor through its electrical connector and retaining bolt.",
-      "why": "Safe underside access is the main preparation requirement. Once the sensor is reached, the specified bolt torque secures it in its mounting, and reconnecting the electrical connector restores the signal path. Replacing the sensor is a repair action; it does not by itself establish the cause of a speed-signal concern.",
+      "summary": "Locate and replace the external vehicle speed sensor on a 2015 5.2L Mustang with the 3160 6-speed manual transmission, then tighten its retaining bolt to 71 lb.in (8 Nm).",
+      "introduction": "The gearbox handles the muscle; the vehicle speed sensor counts the action. Naturally, the little fellow conducts business underneath the car. I'll walk you through reaching its connector, moving the wiring aside and removing its single retaining bolt without turning a small repair into a transmission excavation.",
+      "why": "The vehicle speed sensor, or VSS, turns rotation at an internal tone wheel—a toothed rotating ring—into an electrical speed signal. The sensor fits into the transmission's rear extension housing and can be removed externally. Correct seating, the specified bolt torque and a fully connected electrical plug are the essentials of this replacement.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "3160 vehicle speed sensor replacement",
-        "5.2L VSS removal",
-        "manual transmission speed sensor"
+        "2015 Mustang 5.2L vehicle speed sensor replacement",
+        "3160 manual transmission VSS",
+        "3160 speed sensor bolt torque",
+        "Mustang transmission extension housing speed sensor"
       ],
       "when": {
-        "summary": "When diagnosis or other transmission service requires removal or replacement of the VSS.",
+        "summary": "Use this procedure when the VSS has been selected for removal or replacement through diagnosis or other service work.",
         "notes": [
-          "Confirm the 3160 transmission application before following this procedure."
+          "Confirm that the car has the 3160 6-speed manual transmission before starting.",
+          "This is component replacement, not a symptom-based instruction to buy a sensor."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange lifting access",
-          "detail": "Use a hoist positioned at the designated lifting points marked by stamped triangles. Check adapter clearance around suspension, steering, exhaust and underbody components. Never work beneath a vehicle supported only by a jack."
+          "title": "Confirm the application and repair boundary",
+          "detail": "This procedure covers the 2015 5.2L Mustang with the 3160 manual transmission. Its identification tag is on the transmission's upper right side and carries replacement-part and assembly identification. Use those details when matching the replacement sensor. Electrical fault testing and internal tone-wheel repair are outside this procedure. See [transmission identification](#/document/G1794228)."
         },
         {
-          "title": "Prepare the fastener tools",
-          "detail": "Have suitable tools for the sensor bolt and a torque wrench capable of 71 lb.in (8 Nm). Be able to access and disconnect the sensor's electrical connector."
+          "title": "Arrange safe underside access",
+          "detail": "Use a hoist with adequate capacity for the vehicle, including cargo and modifications. The steps below use a hoist that raises all four wheels clear of the ground. Have wheel chocks ready. Locate the stamped triangles identifying the lifting points before positioning the adapters. The emergency tire-changing jack is unsuitable for this work, and a jack alone must never support a person working underneath."
+        },
+        {
+          "title": "Gather the sensor and fastener tools",
+          "detail": "Have the correctly matched VSS, a suitable tool for its retaining bolt and a torque wrench capable of accurately applying 71 lb.in (8 Nm). Keep the removed retaining bolt for installation; no mandatory bolt replacement is called for."
+        },
+        {
+          "title": "Prepare personal protection",
+          "detail": "Wear eye and ear protection during service, with protective gloves when handling sharp-edged parts. Read the relevant [service safety precautions](#/document/G1693189) before positioning yourself beneath the car."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle",
-          "body": "With the transmission in NEUTRAL, position the vehicle on a hoist. Follow [Jacking and Lifting](#/document/G1663631) for lifting-point and clearance requirements."
+          "title": "Prevent startup and restrain the car",
+          "body": "Position the car on a hard, level surface in the lifting position. Apply the parking brake and chock the wheels while they remain on the ground.\n\nIf remote start is fitted, disable it through Vehicle settings > Remote Start Setup on the central display. Select Neutral with the car restrained, switch the ignition off and remove the key from the vehicle to prevent another person starting it. Keep the parking brake applied throughout this repair."
         },
         {
-          "title": "Disconnect and remove the sensor",
-          "body": "Locate the VSS using the [3160 sensor procedure](#/document/G1794239). Disconnect its electrical connector, then remove the retaining bolt and the sensor."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the triangles stamped into the body's sheet metal at the lifting locations: the illustration shows a front and rear location along each side, behind the front wheels and ahead of the rear wheels. Position the hoist adapters at those designated points.\n\nCheck that the arms and adapters clear the suspension, steering linkage, exhaust, mounting brackets, stabilizer brackets and rear axle cover. Do not lift against either bumper. Incorrect lifting-point placement can allow the vehicle to shift or fall. See [jacking and lifting](#/document/G1663631)."
         },
         {
-          "title": "Install the sensor",
-          "body": "Install the VSS and its retaining bolt. Tighten the bolt to 71 lb.in (8 Nm), using a torque wrench suited to this small-fastener specification."
+          "title": "Raise and secure the vehicle",
+          "body": "Confirm that the transmission is in Neutral and the parking brake remains applied. Raise the vehicle with the correctly positioned hoist until all four wheels are fully clear of the ground. Secure the hoist on its safety locks according to its operating instructions and verify stable support before going underneath.\n\nKeep the wheel chocks ready for the return to the ground. This repair does not require releasing the parking brake or running the engine."
         },
         {
-          "title": "Restore the electrical connection",
-          "body": "Connect the VSS electrical connector after securing the sensor. Confirm the connection is complete before finishing the underside work."
+          "title": "Find the sensor on the rear extension housing",
+          "body": "From underneath, locate the rear section of the transmission leading toward its output flange and driveshaft. Find the small electrical sensor mounted on the upper surface of that extension housing.\n\nIn the close view, its plug is tucked beside curved metal tubing and a tall bracket with a large hex-head bolt. The sensor has a short mounting ear secured by one small bolt beside its electrical socket. Use these features together to identify it before unplugging anything. The [VSS procedure](#/document/G1794239) shows the installed location; the [component description](#/document/G1794229) distinguishes the external sensor from the internal tone wheel. We're after the small plug-in part, not a reason to scatter gears across the bench."
+        },
+        {
+          "title": "Unplug the connector and move the wiring clear",
+          "body": "Release the electrical connector's retention and disconnect it from the VSS, handling the connector body rather than pulling on its wires. The precise latch-release direction is not shown, so establish how it releases before applying force.\n\nMove the disconnected connector and its attached wiring aside far enough to expose the sensor and retaining bolt. The illustrated wiring crosses in front of this area; keep it clear without stretching it or disturbing the nearby metal tubes."
+        },
+        {
+          "title": "Remove the retaining bolt, then the sensor",
+          "body": "With the connector disconnected and the wiring clear, remove the single bolt through the sensor's mounting ear. Retain the bolt for reassembly.\n\nWithdraw the VSS from its mounting bore in the extension housing. Leave the surrounding brackets, tubing and transmission housings installed. The removal sequence is connector first, bolt second, sensor last."
+        },
+        {
+          "title": "Seat the replacement sensor and torque its bolt",
+          "body": "Install the replacement VSS into the same mounting bore, with its mounting ear aligned over the bolt hole. Seat the sensor and start the retaining bolt by hand.\n\nTighten the VSS retaining bolt to 71 lb.in (8 Nm). Use inch-pounds, not foot-pounds. This little fastener needs a measured hand, not a damn wrestling match."
+        },
+        {
+          "title": "Reconnect the wiring and check the assembly",
+          "body": "Return the wiring from its aside position and connect the electrical plug to the installed VSS. Confirm that the plug is fully engaged and its retention holds.\n\nCheck that the sensor's mounting ear sits against its mounting surface, the retaining bolt has received the specified torque, and the wiring is neither trapped under the mounting ear nor stretched across the surrounding bracket or tubing. Remove tools from the underside before lowering."
+        },
+        {
+          "title": "Restore ground restraints as you lower",
+          "body": "Before lowering, confirm that the parking brake is fully applied; the transmission has been in Neutral during service. Clear everyone from beneath the vehicle and lower it using the hoist's operating procedure.\n\nAs the wheels reach the ground, restore the wheel chocks before removing the hoist arms or leaving the car standing in Neutral. Once fully grounded and chocked, select an appropriate parking gear before removing the restraints for normal use."
         }
       ],
       "watchFor": [
         {
-          "title": "Wrong transmission application",
-          "body": "Use this sensor procedure for the 3160 transmission. Its identification tag is on the upper right side of the transmission."
+          "title": "Unsafe support",
+          "body": "Stamped lifting-point triangles identify where the hoist must support the body. Stop if an adapter cannot sit correctly or an arm contacts another component. Never work beneath a vehicle supported only by a jack."
         },
         {
           "title": "Torque-unit confusion",
-          "body": "Use the inch-pound scale for the specified bolt value. Choosing a foot-pound scale instead changes the applied torque."
+          "body": "The sensor bolt specification is 71 lb.in (8 Nm). Read the wrench's units before tightening: inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "A connector that resists removal",
+          "body": "Do not pull harder on the wiring. Identify and release the connector retention before separating the plug; the illustrations do not establish a particular latch direction."
+        },
+        {
+          "title": "Confusing the sensor with internal parts",
+          "body": "The VSS is the externally connected component retained by one bolt. The tone wheel lives inside the transmission. Removing the extension housing or opening the geartrain is not part of this replacement."
         }
       ],
       "notes": [
-        "The sensor and its retaining bolt are separate service items from the internal speed-sensor tone wheel."
+        "The transmission identification tag's upper-right location helps confirm the application; its illustrated identification numbers are examples, not replacement-part ordering instructions.",
+        "The gear powerflow and exploded geartrain views provide context for the sensor's relationship to rotating transmission parts. They do not add teardown steps to this external repair."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm installation",
-          "body": "Confirm the sensor is installed and its electrical connector is reconnected."
+          "finding": "The transmission identification or installed component does not match the 3160 application and illustrated sensor mounting.",
+          "meaning": "This replacement procedure has not been established for the hardware on the car.",
+          "next": "Stop before removing parts. Confirm the transmission identification and obtain the matching sensor procedure and part."
         },
         {
-          "title": "Record the fastener result",
-          "body": "Record tightening of the VSS bolt to 71 lb.in (8 Nm)."
+          "finding": "The replacement sensor will not seat with its mounting ear aligned, or its bolt will not start by hand.",
+          "meaning": "The sensor is not ready to be secured; tightening cannot substitute for correct fit.",
+          "next": "Stop tightening. Recheck the replacement part and its position in the original bore before proceeding."
+        },
+        {
+          "finding": "The electrical connector will not fully engage or remain retained.",
+          "meaning": "The electrical reconnection is incomplete.",
+          "next": "Check the connector's alignment and retention before lowering the vehicle. Resolve a damaged connector rather than leaving it loosely attached."
+        },
+        {
+          "finding": "The original speed-signal concern remains after replacement.",
+          "meaning": "Completing the mechanical replacement does not establish that the sensor was the cause.",
+          "next": "Continue with appropriate VSS circuit diagnosis before replacing further parts or opening the transmission."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Sensor and fastener",
+          "body": "Confirm that the VSS is seated, its mounting ear is against the mounting surface and its retaining bolt was tightened to 71 lb.in (8 Nm)."
+        },
+        {
+          "title": "Connector and harness",
+          "body": "Confirm full connector engagement and retention, with the displaced wiring returned clear of the sensor mounting and surrounding hardware."
+        },
+        {
+          "title": "Vehicle restraint restored",
+          "body": "Confirm that the parking brake was applied before lowering and wheel chocks were restored as the wheels reached the ground. Complete the parking-gear selection before removing restraints for normal use."
+        },
+        {
+          "title": "Understand what completion establishes",
+          "body": "These checks establish that the sensor replacement is assembled and the car is safely grounded. They do not constitute an electrical performance test."
         }
       ],
       "procedures": [
         {
           "documentId": "G1794239",
-          "purpose": "VSS removal and installation for the 5.2L application with the 3160 manual transmission.",
+          "purpose": "Primary VSS location, connector disconnection, sensor removal, installation and retaining-bolt torque.",
           "mediaId": "G1794239-m0002"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Vehicle lifting points, support precautions and hoist positioning."
+          "purpose": "Triangle-marked lifting locations, hoist positioning and underbody clearance precautions."
         },
         {
           "documentId": "G1794228",
-          "purpose": "3160 transmission identification and identification-tag location.",
+          "purpose": "3160 transmission application, identification-tag location and tag information.",
           "mediaId": "G1794228-m0001"
+        },
+        {
+          "documentId": "G1794229",
+          "purpose": "Identify the external speed sensor and its retaining bolt on the extension housing, and distinguish them from the internal tone wheel."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, personal protection, lifting capacity and vehicle-restraint precautions relevant to underside service."
         }
       ],
       "hero": {
@@ -169858,7 +170881,7 @@
         "years": [
           2015
         ],
-        "equipment": "3160 6-speed manual transmission"
+        "equipment": "2015 Mustang with 5.2L engine and 3160 6-speed manual transmission"
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -169877,6 +170900,10 @@
         {
           "documentId": "G1794229",
           "sourceHash": "04b38fe10948a0a1dd1cef9f34107854b2c0977c8c528e6e772437c761f73e0a"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -169895,8 +170922,34 @@
               "end": 342
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "58acf898e0e9c74171cd66f28a1a6fced396e9a3ba326f56f99227e786ec74de",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure and lift the car",
+          "summary": "Prevent startup, restrain the car in Neutral and establish safe hoist support.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "locate-and-remove",
+          "title": "Reach and remove the VSS",
+          "summary": "Identify the external sensor, unplug its connector and remove its single retaining bolt.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "install-and-lower",
+          "title": "Install and finish",
+          "summary": "Torque the sensor bolt, reconnect the wiring and restore ground restraints during lowering.",
+          "start": 7,
+          "end": 9
         }
-      }
+      ]
     },
     {
       "title": "Replace a Two-Piston Front Brake Caliper",

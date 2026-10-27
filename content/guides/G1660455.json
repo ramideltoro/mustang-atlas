@@ -1,0 +1,56 @@
+{
+  "documentId": "G1660455",
+  "supportingSourceRefs": [],
+  "sourceHash": "ca827a39e3b12cd3aa150ffa07a92bdbca484f1bc320a09b6141eeda5ba1fdd6",
+  "title": "Engine Component View",
+  "introduction": "This reference maps the 2.3L EcoBoost, from the equipment around the engine to the rotating assembly inside it. I use the drawings like an engine address book: find the shape, follow its leader line, then match the callout to the Item, Part Number and Description columns in the accompanying table.\n\nEach drawing starts its own callout sequence, so keep the drawing and its table together. The separated parts show relationships, not a removal order. These views identify components; access instructions, timing setup, tightening specifications and replacement rules belong to the matching service procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1660455-b00001",
+      "text": "External Engine Components",
+      "why": "Start with the equipment surrounding the assembled engine. The throttle body controls incoming airflow, and the intake manifold distributes that air to the cylinders. Nearby, the high-pressure fuel pump, its bracket, cover and drive unit have separate identities; the fuel rail and its shield are separate entries too. I follow each leader line rather than treating every nearby cover as part of the same assembly.\n\nThe coolant pump pulley, coolant outlet tube, coolant outlet and thermostat assembly help you distinguish the cooling-system pieces. The engine coolant temperature (ECT) sensor is identified here; the cylinder head temperature sensor appears in the front and upper view. The brake vacuum pump and its cover are another distinct pair. The flywheel and flexplate have their own entries, so identify the component relevant to the vehicle's configuration rather than reading the exploded layout as an instruction to install everything shown."
+    },
+    {
+      "blockId": "G1660455-b00004",
+      "text": "Front Drive and Upper Engine Components",
+      "why": "The front cover is a useful dividing line. The crankshaft damper and accessory drive belt idler pulley are outside it; the drawing separates the timing chain, sprocket, tensioner, tensioner arm and guide from the cover. The timing chain synchronizes crankshaft and camshaft movement, while the external accessory belt serves a different job. Similar-looking loops do not make them interchangeable systems.\n\nIn the upper view, distinguish the intake and exhaust camshafts, their variable camshaft timing (VCT) units and the VCT oil control solenoids. Camshaft lobes operate the valves; VCT changes when those events occur. The head gasket marks the joint between the head and block, while the valve cover encloses the upper machinery. Spark plugs and ignition coil-on-plugs are shown above it. The oil pump, its separate chain drive, oil filter and adapter belong to the lubrication system; the oil indicator checks oil level, which is a different question from oil pressure. Keep the table's quantities and 'part of' descriptions attached to their exact entries."
+    },
+    {
+      "blockId": "G1660455-b00007",
+      "text": "Lower Engine and Rotating Assembly",
+      "why": "Read this view from the pistons down toward the oil pan. Combustion pushes a piston down, its connecting rod carries that force, and the crankshaft turns it into rotation—the engine's way of turning a repeated shove into something the transmission can use. The cylinder block contains the cylinders and supports the crankshaft; it is a separate casting from the cylinder head shown in the upper view.\n\nThe drawing distinguishes connecting rod bearings, the block-side main bearings and thrust bearing, and the bearings associated with the main bearing beam. Keep those names separate even though the pieces have similar curved shapes. Beneath the crankshaft are the main bearing beam and balance shaft assembly. Lower still, the oil pump screen and cover assembly, its separately identified O-ring and the oil pan show the relationship between the oil pickup hardware and the reservoir. Their spacing in the drawing identifies the pieces without establishing assembly clearances or installation steps."
+    }
+  ],
+  "checkedAt": "2026-10-27T21:50:23.462Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d3c23d2501edc9a72e2ac604deba9f82c3987154bdf28b65ab3c37f0fa882b95",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 91,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "73e9003f3ef525e5aadf5fc2af0c07287ef802e6672b46627757ca05bc7f0fa2",
+    "reviewedAt": "2026-10-27T21:48:44.727Z",
+    "editorialRevision": "Bounded inherited power-parenthetical removal and exploded-view description clarification; actual 2.3L EcoBoost scope and component names unchanged."
+  }
+}
