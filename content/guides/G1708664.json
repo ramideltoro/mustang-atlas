@@ -1,46 +1,105 @@
 {
   "documentId": "G1708664",
   "sourceHash": "4cfb2dd3759d81c4d6f15028b693b991a516fa6691a463270da58cadd6085498",
-  "title": "Convertible Top - Component Location",
-  "introduction": "The convertible top combines a folding frame, fabric-support pieces, seals, smart motor assemblies and position-sensing components. The frame drawing helps you identify the parts that move and support the roof. The separate sensor-and-switch drawing shows where the control system receives its inputs. Match each numbered callout to the key beside that particular drawing.\n\n**Understanding the motor names:** MRCMA means Moveable Roof Control Module A, and MRCMB means Moveable Roof Control Module B. The [convertible-top overview](#/document/G1708665) describes these as smart electric motors; the module names refer to their electronic control role. MRCMA is the primary controller. The [system-operation reference](#/document/G1708666) explains how they coordinate motor motion and monitor position.\n\n**Source wording clarification:** Item 7 in the frame key has a misplaced “RH.” Read its side labels as MRCMA on the left-hand (LH) side and MRCMB on the right-hand (RH) side. The original table is retained below so you can compare it with the [source PDF](/source/G1708664.pdf).",
+  "title": "Convertible Top: Finding the Frame Parts and Controls",
+  "introduction": "This component map covers the convertible top. I use the exposed-frame view for the roof structure, tension parts and seals, then the vehicle view for the switch and sensor locations. Think folding tent with a control system: fabric support and electrical feedback have different jobs, even when they live inches apart.\n\nEach drawing has its own callouts and matching table, so restart with the appropriate table when changing views. The colored insets enlarge individual parts; their colors distinguish components rather than reporting a fault. This is a location guide, without operating, adjustment, removal or electrical-test instructions.",
   "requirements": [],
   "edits": [
     {
       "blockId": "G1708664-b00001",
-      "text": "Folding frame and related components",
-      "why": "Use this map for the frame, tensioning pieces, smart motor assembly and seals. The numbered labels identify components; they are not a work sequence."
+      "text": "Roof Frame, Tension Parts and Seals",
+      "why": "Start at the front panel and trace the exposed framework rearward. The long stay pads run along the roof sides over the bows; the floating bow forms the rearward curved frame member. The tension cable is routed through the top material, whereas the tension belt is located in the luggage compartment. The rear glass tension rod and the side-mounted motor are enlarged separately. Compare the seal insets by their table names: the rear panel lower seal, center panel side weather-strip sections and front panel side weather-strip occupy different portions of the roof. MRCMA means movable roof control module A, and MRCMB means movable roof control module B; retain those identifiers when discussing the motor entry. The motor row prints “MRCMA - LH side, MRCMB - side) RH”. The final RH may be a displaced word intended for the MRCMB label, but the page does not settle that reading. I leave the original row visible and do not use this uncertain label to identify a side-specific replacement motor."
     },
     {
       "blockId": "G1708664-b00004",
-      "text": "Control switch, sensors and latch-related parts",
-      "why": "This diagram has its own numbered key. It separates the overhead switch, cover-related sensor parts and front striker from the frame components shown above."
+      "text": "Top Switch and Sensor Locations",
+      "why": "Use the vehicle view to connect the overhead-console open/close switch with the front-header and rear-cover locations. The tonneau cover includes the magnet used to operate its sensor; the rear inset shows the sensor as part of the D-tower cover assembly, identified as PIA in the table. At the windshield header, the LH front striker contains the top latch switch. LH means left-hand and RH means right-hand. These locations help distinguish a switch, its associated mechanical part and the cover-mounted sensor; they do not establish test pinouts or authorize dismantling."
     }
   ],
-  "model": "Codex",
-  "checkedAt": "2026-10-11T17:01:58.717Z",
+  "uncertainties": [],
+  "coveredUnitIds": [
+    "G1708664:u1",
+    "G1708664:u2",
+    "G1708664:u3",
+    "G1708664:u4",
+    "G1708664:u5",
+    "G1708664:u6",
+    "G1708664:u7",
+    "G1708664:u8",
+    "G1708664:u9",
+    "G1708664:u10",
+    "G1708664:u11",
+    "G1708664:u12",
+    "G1708664:u13",
+    "G1708664:u14",
+    "G1708664:u15",
+    "G1708664:u16",
+    "G1708664:u17",
+    "G1708664:u18",
+    "G1708664:u19",
+    "G1708664:u20",
+    "G1708664:u21",
+    "G1708664:u22",
+    "G1708664:u23",
+    "G1708664:u24",
+    "supplement:original-pdf-layout:complete"
+  ],
+  "readerOutcome": "Navigate the convertible-top component maps while recognizing that the malformed motor-side label remains uncertain and cannot identify a side-specific replacement.",
+  "teachingNotes": [
+    "Both requested headings remain concise titles; component teaching sits in their why fields.",
+    "Explains the separate callout sets and actual front-header, roof-side and rear-cover locations.",
+    "Retains the cable routing, luggage-compartment belt location, magnet, integrated sensor and LH latch-switch qualifications.",
+    "Leaves original table data unchanged and flags the malformed motor-side entry.",
+    "Original failed layout review preserved; tentative interpretation is explicit and no authoritative corrected side assignment is asserted."
+  ],
+  "supportingSourceRefs": [],
+  "sourceContextHash": "814aa0eb1f7e482be172f1bc13f63cb26e4880120c73aaa2d902bdb5eb72e789",
   "status": "complete",
+  "editorialVersion": 1,
+  "validationVersion": 5,
   "checks": {
     "passed": true,
-    "humanReviewed": false,
-    "sourceWordingClarifications": true,
-    "adjacentSourceEvidence": [
-      "G1708665",
-      "G1708666"
-    ],
-    "visualEvidence": [
-      {
-        "mediaId": "G1708664-m0001",
-        "inspected": true
-      },
-      {
-        "mediaId": "G1708664-m0002",
-        "inspected": true
-      }
-    ],
     "errors": [],
     "expectedBlocks": 2,
     "receivedBlocks": 2,
+    "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
-  }
+    "validationVersion": 5
+  },
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 24,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "5327cde5ee507fb50047590f74f9eeba26721ca5b1a44bf66f86003aee6bd29a",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "resolvedHold": true,
+    "supplementalSourceCoverage": {
+      "unitId": "supplement:original-pdf-layout:complete",
+      "kind": "supplemental-source",
+      "ancestors": [],
+      "value": {
+        "sourceHash": "4cfb2dd3759d81c4d6f15028b693b991a516fa6691a463270da58cadd6085498",
+        "pdfSha256": "7516a9a2c2bfbffdda1480ad2f589246bb142138ee01e21106380969d56b9cdd",
+        "originalRow": "Convertible top motor (MRCMA - LH side, MRCMB - side) RH",
+        "proposedReading": "Convertible top motor (MRCMA - LH side, MRCMB - RH side)",
+        "scope": "Original two-page PDF rendered in full for review. This is a proposed displaced-word-order reconciliation, not geometry-derived assignment. Full original table remains preserved; public teaching explains editorial reading. Reject if evidence insufficient."
+      }
+    },
+    "sourceReconciliation": {
+      "sourceHash": "4cfb2dd3759d81c4d6f15028b693b991a516fa6691a463270da58cadd6085498",
+      "pdfSha256": "7516a9a2c2bfbffdda1480ad2f589246bb142138ee01e21106380969d56b9cdd",
+      "originalRow": "Convertible top motor (MRCMA - LH side, MRCMB - side) RH",
+      "proposedReading": "Convertible top motor (MRCMA - LH side, MRCMB - RH side)",
+      "scope": "Original two-page PDF rendered in full for review. This is a proposed displaced-word-order reconciliation, not geometry-derived assignment. Full original table remains preserved; public teaching explains editorial reading. Reject if evidence insufficient."
+    },
+    "reviewedAt": "2026-10-27T20:06:34.416Z",
+    "editorialRevision": "380d454a4f1804efe70b22d553984f9cf543e49a785e848a5ec0897eb686f278"
+  },
+  "checkedAt": "2026-10-27T20:06:34.415Z"
 }

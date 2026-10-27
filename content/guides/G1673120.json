@@ -1,0 +1,155 @@
+{
+  "documentId": "G1673120",
+  "supportingSourceRefs": [],
+  "sourceHash": "9177dbd861008d0d161dc61fa4310ec2f839076854dac1c8abda7d8322f04a9b",
+  "title": "How the 2.3L EcoBoost Cooling System Works",
+  "introduction": "Coolant moves heat; the radiator releases it; the thermostat controls access to that radiator route. I picture the thermostat as a temperature-operated traffic gate, with a bypass that keeps coolant circulating when the radiator route is closed.\n\nThis overview explains normal circulation, cold-side thermostat behavior and the escalating warnings of Fail Safe Cooling on the 2.3L EcoBoost. It also explains why reduced engine power or an automatic shutdown needs attention: protection changes how the engine runs, but it does not fix the overheating cause. This is a guide to system behavior, not a coolant-service, diagnostic or repair procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1673120-b00001",
+      "text": "Normal Cooling System Operation",
+      "why": ""
+    },
+    {
+      "blockId": "G1673120-b00002",
+      "text": "The coolant pump sends coolant through the engine block and cylinder head. The main circulation route carries coolant from the engine through the radiator circuit and back to the pump; a separate engine circuit supplies the heater core and turbocharger. Engine rotation drives the pump through the accessory drive belt. The thermostat is a coolant-temperature-operated valve: when closed, it directs coolant around the radiator circuit and back to the pump; when open, it allows coolant through the radiator circuit, where engine heat passes to the outside air.",
+      "why": "I separate circulation from heat rejection: the pump moves coolant, while the radiator transfers its heat to outside air. A closed thermostat bypasses the radiator; it does not stop all coolant circulation."
+    },
+    {
+      "blockId": "G1673120-b00003",
+      "text": "This engine uses a cold-side thermostat at the lower radiator hose connection to the engine, where radiator-cooled coolant returns. During initial warm-up, warm engine coolant opens the thermostat slightly, but the cooler coolant arriving from the radiator quickly closes it again. That opening-and-closing cycle repeats until the returning coolant is warm enough for the thermostat to stay open. Compared with an engine using a hot-side thermostat, this engine must run much longer before its thermostat remains fully open.",
+      "why": "The valve responds to coolant arriving on the cooler inlet side. Its repeated movement during warm-up is part of the described operation, so that behavior alone is not a thermostat fault verdict."
+    },
+    {
+      "blockId": "G1673120-b00004",
+      "text": "The degas bottle stores surplus coolant and removes air from the cooling system. It provides space for coolant expansion, supports system pressurization and supplies reserve coolant back to the system. It is also the service-fill location.",
+      "why": "The bottle is more than a spare-coolant cupboard: expansion space, air removal and reserve supply are separate parts of its job. Identifying the fill location here does not provide an opening or filling procedure."
+    },
+    {
+      "blockId": "G1673120-b00005",
+      "text": "The powertrain control module (PCM) checks thermostat operation with its thermostat monitor. The monitor runs once per drive cycle, with a run duration of 300-800 seconds. If it detects a malfunction, diagnostic trouble code (DTC) P0125 or P0128 is set and the malfunction indicator lamp (MIL) illuminates.",
+      "why": "These codes identify a concern detected by the thermostat monitor. They provide a diagnostic starting point rather than an instruction to replace the thermostat."
+    },
+    {
+      "blockId": "G1673120-b00006",
+      "text": "Fail Safe Cooling",
+      "why": ""
+    },
+    {
+      "blockId": "G1673120-b00007",
+      "text": "Fail Safe Cooling is a protection strategy built into the PCM. If the engine begins to overheat, the strategy takes control of engine operation.",
+      "why": "I read this as an emergency response to excessive temperature, not evidence that the underlying cooling problem has gone away."
+    },
+    {
+      "blockId": "G1673120-b00008",
+      "text": "Fail Safe Cooling has two modes. Closed Loop uses the cylinder head temperature (CHT) sensor; Open Loop uses the engine coolant temperature (ECT) sensor, with an additional sensor-failure fallback described below. The PCM chooses a mode according to sensor availability and failures, giving Closed Loop priority. A functioning CHT sensor can reliably track engine block temperature even if coolant is lost; the ECT sensor cannot reliably track that temperature when the coolant has escaped.",
+      "why": "The important distinction is what remains measurable during coolant loss. A coolant-temperature reading cannot stand in for reliable engine-temperature tracking when the coolant is gone."
+    },
+    {
+      "blockId": "G1673120-b00009",
+      "text": "Closed Loop Mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1673120-b00010",
+      "text": "Stage 1 begins when the engine starts to overheat. The CHT sensor signals the PCM, which moves the temperature gauge pointer into the red zone.",
+      "why": "The red-zone indication is the first described warning in this mode, before the later restrictions on engine operation."
+    },
+    {
+      "blockId": "G1673120-b00011",
+      "text": "If the engine remains running and its temperature keeps rising, the Powertrain Check Lamp illuminates. This means the engine is approaching critical limits and should be stopped. The PCM also sets DTC P1285, which can be retrieved with a scan tool.",
+      "why": "The lamp adds urgency to the temperature warning. The stored code gives subsequent diagnosis a record of the overheating event."
+    },
+    {
+      "blockId": "G1673120-b00012",
+      "text": "Stage 2 begins if the driver ignores the lamp and temperature gauge. The PCM cuts out 2 cylinders and restricts engine load. Engine speed is initially limited below 3,000 RPM, then gradually reduced over time to as low as 800 RPM. The MIL illuminates at the same time, indicating that long-term engine damage can occur and vehicle emissions will be affected. The PCM sets DTC P1299, which can be retrieved with a scan tool.",
+      "why": "Reduced power is deliberate intervention, not recovery. The damage and emissions consequences still apply while the strategy is limiting engine operation."
+    },
+    {
+      "blockId": "G1673120-b00013",
+      "text": "The deactivated cylinders draw in air to help control the temperature of internal engine components. The PCM alternates which cylinders are deactivated so cooling is shared evenly across all cylinders.",
+      "why": "Cylinder deactivation has a cooling purpose here. Alternating the inactive cylinders spreads that cooling effect through the engine."
+    },
+    {
+      "blockId": "G1673120-b00014",
+      "text": "NOTE: If the driver is using a large amount of throttle travel—for example, during an overtaking maneuver—when the PCM starts engine deactivation (Stage 2), deactivation is delayed for 10 seconds.",
+      "why": "This delay explains why deactivation may not begin immediately under that particular throttle condition."
+    },
+    {
+      "blockId": "G1673120-b00015",
+      "text": "NOTE: Once 2-cylinder operation begins, the engine will not return to 4-cylinder operation until the ignition has been switched off and then on again, even if engine temperature falls.",
+      "why": "A falling temperature does not automatically restore normal cylinder operation. The ignition-cycle requirement describes the strategy's behavior; it does not establish that the overheating cause has been corrected."
+    },
+    {
+      "blockId": "G1673120-b00016",
+      "text": "NOTE: The MIL can be extinguished only by using a scan tool after the fault has been corrected and the DTC cleared.",
+      "why": "Correcting the fault and clearing its stored record are both required; merely cycling the ignition is insufficient."
+    },
+    {
+      "blockId": "G1673120-b00017",
+      "text": "Stage 3 begins if engine temperature continues to rise. The strategy completely disables the engine before major engine damage or seizure occurs. The Powertrain Check Lamp starts flashing to warn that the engine will switch off after 30 seconds, giving the driver time to choose a suitable parking place.",
+      "why": "The flashing lamp announces an impending shutdown. Use that warning to select a suitable parking place rather than expecting continued engine power."
+    },
+    {
+      "blockId": "G1673120-b00018",
+      "text": "Open Loop Mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1673120-b00019",
+      "text": "Open Loop mode begins when the ECT sensor reports a high engine temperature that is climbing dangerously fast—much faster than current engine-running conditions would normally suggest. The strategy can also enter this mode if all sensors used to determine Fail Safe Cooling operation have failed.",
+      "why": "This mode covers both an unexpectedly rapid temperature rise and the fallback condition in which the strategy has no functioning determination sensors."
+    },
+    {
+      "blockId": "G1673120-b00020",
+      "text": "In this mode, the PCM restricts engine load and initially limits engine speed to below 3000 RPM. It then gradually reduces speed to as low as 800 RPM and holds it there.",
+      "why": "The progressive speed reduction is commanded protection. It is not an indication that normal engine performance has returned."
+    },
+    {
+      "blockId": "G1673120-b00021",
+      "text": "At the same time, the PCM moves the temperature gauge pointer into the red zone and sets code P1285.",
+      "why": "The gauge warning accompanies the engine restrictions, while the code records the event for diagnosis."
+    },
+    {
+      "blockId": "G1673120-b00022",
+      "text": "If the engine is not switched off after a short period, the strategy completely disables it before major engine damage or seizure occurs. The Powertrain Check Lamp starts flashing to warn that the engine will switch off, and code P1299 is set.",
+      "why": "Respond to the shutdown warning rather than relying on the engine to keep running. This Open Loop description gives no exact shutdown countdown."
+    },
+    {
+      "blockId": "G1673120-b00023",
+      "text": "If the driver restarts the vehicle while P1299 remains set, the engine can restart but its speed is limited to 800 RPM. This mode can be reset only by clearing the DTC with a diagnostic scan tool.",
+      "why": "Restarting does not restore normal operation in this mode. Clearing the code resets the strategy; it does not itself correct the overheating cause."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:03:49.718Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 23,
+    "receivedBlocks": 23,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "c397764f5ff9205a13751e5b372349201a957bd37a8c15809aad91daca58c8c0",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 24,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8e6dc0146d2369219219bdf1e43da9641192419af370a2b1748530fb11b9134d",
+    "reviewedAt": "2026-10-27T20:03:49.718Z"
+  }
+}

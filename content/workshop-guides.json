@@ -90210,88 +90210,186 @@
       }
     },
     {
-      "title": "Remove or replace the battery on a 5.2L Mustang",
-      "summary": "Disconnect and remove the battery, secure it correctly on installation, and reset the Battery Monitoring System when fitting a new battery.",
-      "introduction": "The maintenance-free battery supplies the vehicle's 12-volt electrical system and helps stabilize its voltage. The cable system includes battery and generator current sensors, so replacing the battery has both mechanical and electronic completion steps. This job covers removal and refitting or replacement; a new battery additionally requires a scan-tool Battery Monitoring System reset after connection.",
-      "why": "The cables must be disconnected before the battery is lifted out, and the hold-down must be restored to secure it. Correctly completing a replacement also includes the monitoring reset. Power interruption can affect learned engine-control values, so temporary changes in driving behavior after reconnection need to be understood in that context.",
+      "title": "Remove or replace the battery on a 2015 5.2L Mustang",
+      "summary": "Remove the battery cover, disconnect both cables in order, release the hold-down and lift out the battery. Refit with the correct tightening values and perform a Battery Monitoring System reset when installing a new battery.",
+      "introduction": "The battery is a quiet little box with an impressive talent for making the whole Mustang wait on it. I’ll walk you through reaching it beneath the rear underhood cover, disconnecting it safely and securing it again. This article covers the 2015 5.2L Mustang with the illustrated underhood battery arrangement, including the electronic reset required when you fit a new battery.",
+      "why": "The maintenance-free battery supplies 12-volt direct current and helps keep the electrical system’s voltage steady. Its negative terminal connects to the vehicle’s ground system. The surrounding system includes the battery tray, battery junction box and cables carrying battery and generator current sensors. Correct replacement means restoring both the physical mounting and the monitoring system’s new-battery reference. See [Battery and Cables — Overview](#/document/G1692350) and [System Operation and Component Description](#/document/G1814511).",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "5.2L battery replacement",
-        "battery hold down clamp",
-        "battery monitoring system reset",
-        "drive symptoms after battery reconnection"
+        "2015 Mustang 5.2L battery replacement",
+        "Mustang battery cover removal",
+        "battery hold-down torque",
+        "battery terminal nut torque",
+        "Battery Monitoring System reset",
+        "PCM relearning after battery disconnect"
       ],
       "when": {
-        "summary": "When a faulty battery needs replacing or the battery must be removed for another repair.",
+        "summary": "Use this procedure when replacing a battery already identified as faulty, or when removing and refitting the battery for another repair.",
         "notes": [
-          "Removing and refitting the same battery does not trigger the new-battery reset instruction."
+          "This is a removal and installation procedure; it does not establish whether the battery is faulty.",
+          "Disconnecting only the negative cable is sufficient to interrupt vehicle electrical power. Removing the battery requires disconnecting both cables.",
+          "The new-battery BMS reset instruction applies when installing a replacement battery, rather than simply refitting the original."
         ]
       },
       "prepare": [
         {
-          "title": "Access and tightening equipment",
-          "detail": "Have tools for the battery-cover retainers, cable nuts and hold-down bolt, plus torque equipment suitable for the specified fasteners."
+          "title": "Arrange the replacement and reset capability",
+          "detail": "If replacing the battery, obtain the correct maintenance-free 12-volt battery for the vehicle and confirm its fit and terminal arrangement before starting. Have a scan tool capable of performing the Battery Monitoring System (BMS) reset. Battery part number, capacity selection and the scan tool’s menu sequence are outside this article’s instructions."
         },
         {
-          "title": "Replacement capability",
-          "detail": "If fitting a new battery, have a scan tool capable of performing the Battery Monitoring System reset."
+          "title": "Gather removal and tightening tools",
+          "detail": "Have tools that fit the three battery-cover retainers, both terminal-clamp nuts and the battery hold-down bolt. Use torque equipment capable of accurately applying 44 lb.in (5 Nm) and 71 lb.in (8 Nm). These are inch-pounds, not foot-pounds. A battery carrier is useful; lifting with hands on opposite corners is also permitted."
+        },
+        {
+          "title": "Protect yourself from acid and explosive gas",
+          "detail": "Work in a well-ventilated area, wear eye protection and prevent battery acid from contacting skin or clothing. Keep flames, sparks and burning substances away. Use protective gloves when handling sharp edges. If acid contacts skin or eyes, immediately flush with water for at least 15 minutes and get prompt medical attention. If swallowed, call a physician immediately. See [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181)."
+        },
+        {
+          "title": "Keep this a ground-level job",
+          "detail": "Access is from above with the wheels on the ground; no jack or hoist is required. Establish startup prevention before reaching under the hood, as described below. See [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Disconnect the cables in sequence",
-          "body": "Follow [Battery Disconnect and Connect](#/document/G1692356). Remove the cover retainers and cover, then loosen and position the negative cable aside. Move the positive cable cover, loosen its nut and position that cable aside for battery removal."
+          "title": "Park and prevent an unexpected start",
+          "body": "Park on level ground, set the parking brake and leave this manual-transmission car in a parked gear. If remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before service begins. Switch the ignition off and remove the key from the vehicle so another person cannot start it during the work."
         },
         {
-          "title": "Release the hold-down and remove the battery",
-          "body": "Remove the hold-down bolt and clamp, then lift out the battery. Releasing the clamp frees the battery from its mounting."
+          "title": "Open the hood and check the working area",
+          "body": "Open and securely support the hood. With the ignition off, visually check the cooling fans for damage, cracks or separation without putting your hands near them. A damaged fan must be replaced before underhood work continues. Fans can run with the ignition off; keep clear of their operating area throughout this battery job. Work near a fan requires disabling it first.\n\nLocate the battery-cover panel at the rear of the engine compartment, alongside the strut tower and below the windshield cowl. The illustrated panel has a vented section and three retaining points."
         },
         {
-          "title": "Install, secure and reconnect",
-          "body": "Reverse removal: position the battery, fit the clamp and tighten its bolt to 8 Nm. Reconnect the positive cable before the negative cable, tightening each cable nut to 5 Nm. Restore the positive cable cover and battery cover with its retainers."
+          "title": "Remove the three retainers and battery cover",
+          "body": "Remove all three cover retainers, then lift the cover away to expose the battery and its cable connections. Keep the retainers together for refitting. This is the access operation in [Battery Disconnect and Connect](#/document/G1692356); the battery itself remains secured in its tray at this stage."
         },
         {
-          "title": "Complete the new-battery branch",
-          "body": "After connecting a new battery, use the scan tool to reset the Battery Monitoring System (BMS). If the original battery was refitted, this replacement-specific step does not apply."
+          "title": "Disconnect the negative cable first",
+          "body": "Identify the negative terminal by its polarity marking. In the illustrated arrangement, its exposed clamp is toward the front edge of the battery. Loosen the clamp nut, lift the cable clamp off the battery post and position the cable aside so it cannot return into contact with the post.\n\nFor power interruption alone, this is the electrical disconnection endpoint. Continue through both cable removals when taking the battery out."
+        },
+        {
+          "title": "Move the positive cover and disconnect the positive cable",
+          "body": "At the positive connection toward the rear of the illustrated battery, move the protective terminal cover out of the way. Confirm the terminal’s positive polarity marking, loosen the clamp nut and lift the cable clamp off its post. Position the cable aside, clear of the battery’s lifting path.\n\nThe negative cable must already be disconnected before this operation."
+        },
+        {
+          "title": "Remove the hold-down and lift out the battery",
+          "body": "Locate the hold-down bolt and clamp along the battery’s narrow side beside the strut tower. Loosen and remove the bolt, then remove the clamp. The battery can now be lifted from the tray, as described in [Battery](#/document/G1692362).\n\nBefore lifting, check whether a vent tube is attached to the battery. If present, note its routing and connection, then disconnect its battery end so it is not pulled during removal.\n\nLift the plastic-cased battery with a battery carrier or with your hands on opposite corners. Avoid squeezing its end walls: excessive pressure can force acid through the vent caps. Lift clear of the tray and the surrounding cables. That little hold-down clamp earns its keep; put it somewhere it cannot disappear into the engine bay."
+        },
+        {
+          "title": "Seat the battery and restore its hold-down",
+          "body": "Lower the replacement or original battery into the tray in the same orientation, with its posts correctly aligned to the cables. Make sure the battery is seated and no cable or vent tube is trapped beneath it.\n\nRefit the hold-down clamp so it engages the battery’s lower edge, install its bolt and tighten to 71 lb.in (8 Nm).\n\nIf a battery vent tube was disconnected, reconnect it properly to the battery and restore its routing. This connection prevents harmful gases from entering the cabin."
+        },
+        {
+          "title": "Reconnect the positive cable first",
+          "body": "Refit the positive cable clamp onto the positive battery post. Tighten its nut to 44 lb.in (5 Nm), then return the positive terminal’s protective cover to its installed position.\n\nReconnection reverses the disconnection sequence: positive first, negative last."
+        },
+        {
+          "title": "Reconnect the negative cable and replace the battery cover",
+          "body": "Before restoring electrical power, confirm that this battery work and any associated repair are complete, the ignition is OFF and the key is outside. Remove loose tools and keep everyone clear of the cooling fans and other moving parts: reconnecting power can permit fan operation even with ignition OFF.\n\nRefit the negative cable clamp onto the negative post and tighten its nut to 44 lb.in (5 Nm).\n\nCheck that both cable clamps are seated on their posts and that the positive terminal cover is restored. Position the outer battery cover over the battery and reinstall its three retainers. The cover should sit in its original position without trapping a cable."
+        },
+        {
+          "title": "Reset the BMS if you installed a new battery",
+          "body": "After the new battery is connected, use a capable scan tool to carry out the Battery Monitoring System reset, following its required ignition-state instructions. Confirm that the tool reports completion before considering the replacement finished.\n\nIf you removed and refitted the original battery, the replacement-specific reset step does not apply. I’d have the scan tool ready before starting; a freshly installed battery deserves a better finale than a tool hunt."
+        },
+        {
+          "title": "Finish the installation and account for relearning",
+          "body": "After the scan-tool work, establish ignition OFF again and remove the key; if it is already OFF, leave it OFF. Keep the parking brake applied and the car in its parked gear.\n\nConfirm that the hold-down is secured, both terminal nuts have been tightened to their specified values, the vent tube is connected if fitted, and all covers and retainers are restored. Remove tools and loose hardware before closing the hood.\n\nAfter reconnection, the powertrain control module (PCM), which controls the engine and related powertrain functions, may need driving time to relearn its adaptive values. Some temporary abnormal driving behavior can occur during that process; this alone does not establish another battery fault.\n\nWash your hands after handling the battery posts, terminals or related accessories because they contain lead compounds. Return a faulty lead-acid battery to an authorized recycling facility."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing isolation with removal",
-          "body": "Disconnecting only the negative cable interrupts vehicle power. Physically removing the battery also requires disconnecting the positive cable."
+          "title": "Cable order matters",
+          "body": "Disconnect negative before positive. Reconnect positive before negative. Keep disconnected cable clamps clear of their battery posts until their reconnection step."
+        },
+        {
+          "title": "Use the correct torque scale",
+          "body": "The hold-down bolt takes 71 lb.in (8 Nm). Each terminal-clamp nut takes 44 lb.in (5 Nm). Read an inch-pound scale correctly; these are small fasteners."
+        },
+        {
+          "title": "Protect the battery case while lifting",
+          "body": "Use a carrier or support opposite corners. Squeezing the plastic end walls can force acid out through the vent caps."
+        },
+        {
+          "title": "Restore any battery vent connection",
+          "body": "If a vent tube is fitted and disconnected during removal, reconnect it properly before returning the car to service. Leaving it detached can allow harmful gases into the cabin."
         }
       ],
       "notes": [
-        "Return faulty lead-acid batteries to an authorized recycling facility."
+        "The battery cable carries battery and generator current sensors. Battery replacement here does not require removing those sensors or dismantling the battery junction box or tray.",
+        "The lithium-ion-specific warnings are not an instruction to substitute a lithium-ion battery for the maintenance-free battery covered here.",
+        "A BMS reset and PCM adaptive relearning are separate matters: a new battery requires the scan-tool reset after connection, while power interruption can also require driving time for adaptive relearning."
       ],
       "diagnostics": [
         {
+          "finding": "You only need to interrupt electrical power for another repair.",
+          "meaning": "Removing the battery cover and disconnecting the negative cable provides the required power interruption; positive-cable disconnection is unnecessary for that purpose alone.",
+          "next": "Stop after negative-cable isolation. When that repair is complete, reconnect the negative clamp to 44 lb.in (5 Nm), then restore the battery cover and three retainers."
+        },
+        {
+          "finding": "A new battery has been installed.",
+          "meaning": "Mechanical installation and cable reconnection are complete, but the replacement also requires a BMS reset.",
+          "next": "Perform the scan-tool BMS reset after connection and confirm completion."
+        },
+        {
+          "finding": "The original battery has been removed and refitted.",
+          "meaning": "The new-battery reset condition has not been triggered.",
+          "next": "Complete the mounting, connection, cover and vent checks. Allow for possible PCM adaptive relearning after power interruption."
+        },
+        {
           "finding": "Driving behavior changes after battery reconnection.",
-          "meaning": "The powertrain control module (PCM) may be relearning its adaptive strategy.",
-          "next": "The vehicle may need to be driven for relearning. This observation alone does not establish a battery fault."
+          "meaning": "The PCM may be relearning its adaptive strategy values.",
+          "next": "The vehicle may need to be driven to allow relearning. Do not use this observation alone to condemn the battery; persistent symptoms need separate diagnosis."
+        },
+        {
+          "finding": "A cooling fan has visible cracks, damage or separation.",
+          "meaning": "Underhood work presents a risk of the fan separating during operation.",
+          "next": "Stop this job and have the damaged fan replaced before continuing underhood service."
         }
       ],
       "verification": [
         {
-          "title": "Confirm installation",
-          "body": "Confirm the hold-down, both cable connections, protective covers and retainers are restored at the specified tightening values."
+          "title": "Battery mounting and venting",
+          "body": "Confirm the battery is seated in its tray, the clamp engages its lower edge and the hold-down bolt was tightened to 71 lb.in (8 Nm). Confirm any fitted vent tube is properly reconnected and no cable or tube is trapped."
         },
         {
-          "title": "Record the replacement reset",
-          "body": "Record whether a new battery was fitted and, when applicable, completion of the BMS reset after connection."
+          "title": "Cable and cover restoration",
+          "body": "Confirm both cable clamps are correctly seated and each nut was tightened to 44 lb.in (5 Nm). Check that the positive terminal cover and outer battery cover are restored, with all three outer-cover retainers installed."
+        },
+        {
+          "title": "Replacement completion",
+          "body": "For a new battery, confirm the scan-tool BMS reset completed after connection. For the original battery, record that it was refitted so the replacement-only reset is not confused with adaptive relearning."
+        },
+        {
+          "title": "Ready to close the hood",
+          "body": "Confirm ignition OFF and the key outside after any BMS reset, with the parking brake applied and the car in its parked gear. Account for tools and removed hardware, clear the engine compartment and close the hood. These are installation checks; they do not constitute a battery-capacity or charging-system test."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692362",
-          "purpose": "Battery removal and installation for this 5.2L job, hold-down tightening and conditional new-battery BMS reset.",
+          "purpose": "Primary battery removal and reverse-order installation, hold-down bolt torque and the new-battery BMS reset requirement.",
           "mediaId": "G1692362-m0001"
         },
         {
           "documentId": "G1692356",
-          "purpose": "Battery-cover access, cable disconnection and reconnection, cable-nut tightening and adaptive-relearning note.",
+          "purpose": "Three-retainer battery-cover access, negative and positive cable removal, reverse-order reconnection, terminal-nut torque and adaptive-relearning guidance.",
           "mediaId": "G1692356-m0002"
+        },
+        {
+          "documentId": "G1692350",
+          "purpose": "Identify the battery system’s tray, junction box and sensor-equipped cables without adding unnecessary teardown."
+        },
+        {
+          "documentId": "G1814511",
+          "purpose": "Explain the maintenance-free 12-volt negative-ground battery, voltage stabilization, cable current sensors and authorized recycling."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply startup prevention, conditional remote-start disabling and relevant underhood cooling-fan precautions."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Apply battery acid and gas precautions, exposure response, safe lifting, vent reconnection and lead-handling hygiene."
         }
       ],
       "hero": {
@@ -90312,7 +90410,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "12-volt maintenance-free battery in a negative-ground electrical system; battery and generator current sensors attached to the battery cable. Remote start precautions apply if that feature is fitted."
       },
       "relatedGuideIds": [
         "job-1b34182bc209ddea",
@@ -90335,14 +90434,55 @@
         {
           "documentId": "G1814511",
           "sourceHash": "9b4a62a13a579668ffc6703774fd1529b91debfa54fafd94f3f8564a8c94b0a1"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "5f714e329e011b58a474f4c7bfb96d4e813f419db43f055cb17cd3b1bcbd9bd6"
-      }
+        "fingerprint": "5f714e329e011b58a474f4c7bfb96d4e813f419db43f055cb17cd3b1bcbd9bd6",
+        "editorialVersion": 2,
+        "editorialFingerprint": "7a9cebed47ff9203956c98291c311c5ff6701c64c3d165fbca298bc1a3b04a63",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-access",
+          "title": "Prevent startup and expose the battery",
+          "summary": "Secure the parked vehicle, check the underhood working area and remove the three-retainer cover.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "disconnect-and-remove",
+          "title": "Disconnect and lift out",
+          "summary": "Remove negative then positive, release the hold-down and lift the battery safely.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "secure-and-reconnect",
+          "title": "Install and restore connections",
+          "summary": "Secure the battery and vent, reconnect positive then negative, and refit the covers.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "reset-and-finish",
+          "title": "Complete the reset and final checks",
+          "summary": "Reset monitoring for a new battery, verify assembly and account for adaptive relearning.",
+          "start": 10,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Replace and correctly position the generator current sensor",
@@ -139747,105 +139887,237 @@
     },
     {
       "title": "Replace the windshield wiper motor",
-      "summary": "Remove the wiper linkage assembly, separate its links and motor bracket carefully, and install the replacement motor.",
-      "introduction": "The windshield wiper motor drives the linkage that moves the wiper arms. It also contains operating logic and sensors that monitor arm position, so it does more than simply turn when power is applied. The motor controls wiping modes and the washer relay. Replacement involves removing the linkage assembly and separating the motor from it.",
-      "why": "The link seals need protection when the links are detached from the motor crank. Damage here can leave poor wiper performance even after the motor has been replaced. Electrical control also matters: high speed has a separate fail-safe command path, so unusual operation does not automatically prove that the motor itself has failed.",
+      "summary": "Remove the wiper arms and cowl grille, position and remove the linkage, replace its motor, then restore the motor’s park position and blade alignment.",
+      "introduction": "The wiper motor runs a two-arm orchestra underneath the cowl, and nobody enjoys an unscheduled windshield percussion solo. I’ll walk you through replacing it once diagnosis has identified the motor as the culprit. The important details are getting the linkage into its removal position, protecting the little link seals and parking the replacement motor before the arms go back on.",
+      "why": "The motor turns a short crank, and the linkage converts that rotation into the sweeping movement of both wiper arms. The motor also contains control electronics and position sensors, and operates the washer pump through an internal relay. Replacing it means removing the complete linkage, separating the motor on the bench and restoring the correct relationship between the motor’s resting position and the blades.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "windshield wiper motor replacement",
-        "wipers only work on high speed",
-        "poor windshield wiper performance",
-        "rain sensing wipers use intermittent mode"
+        "2015 Mustang windshield wiper motor replacement",
+        "Mustang wiper linkage removal",
+        "Mustang cowl grille removal",
+        "Mustang wiper arm alignment",
+        "wiper motor park position",
+        "wipers only work on high"
       ],
       "when": {
-        "summary": "When diagnosis has established that the windshield wiper motor requires replacement.",
+        "summary": "Use this procedure after diagnosis has established that the windshield wiper motor needs replacement.",
         "notes": [
-          "Identify whether the vehicle has ordinary intermittent or rain-sensitive wipers when assessing the original complaint."
+          "High-speed-only operation does not prove motor failure: high speed has a separate fail-safe command path.",
+          "Identify conventional intermittent or rain-sensitive equipment before assessing the original complaint.",
+          "Perform this job from above with the car on the ground. Hood removal is unnecessary; the service illustrations omit it for visibility."
         ]
       },
       "prepare": [
         {
-          "title": "Plan removal of the complete linkage",
-          "detail": "Follow the separate [wiper linkage assembly procedure](#/document/G1694633) for access and removal. The motor procedure starts with that assembly removed."
+          "title": "Gather the replacement and tools",
+          "detail": "Have the correct replacement windshield wiper motor, a two-leg puller for the wiper arms, suitable fastener tools and torque equipment covering 80 lb.in (9 Nm), 115 lb.in (13 Nm) and 26 lb.ft (35 Nm). Prepare a stable bench and a tray for the covers, nuts, bolts, clips and retainers."
         },
         {
-          "title": "Prepare for careful link and bracket work",
-          "detail": "Provide a suitable working area for the removed assembly and fastening equipment capable of applying the motor-bracket torque. Identify both links and their seals before separating them."
+          "title": "Know the push-button ignition states",
+          "detail": "The 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122, distinguishes ignition ON from engine starting. From known OFF, bring a valid key inside and press and release the start button without pressing the brake or clutch: this selects engine-off ignition ON, with warning lamps and indicators illuminated. From ON, press and release the button without applying the pedals to return to OFF. Engine starting instead uses the brake with an automatic transmission in P, or the clutch with a manual transmission in Neutral. This repair requires ignition power at specific stages, but no engine-running step."
+        },
+        {
+          "title": "Confirm that powered positioning is possible",
+          "detail": "The motor crank must reach the 270-degree down position before the linkage comes out. If the failed motor cannot move it there, stop before extracting the assembly and obtain a safe alternative positioning method. Forcing the crank or applying improvised external power is outside this procedure."
+        },
+        {
+          "title": "Protect yourself and the mechanism",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp panel edges. Stay clear of the crank and rods during powered positioning, and switch ignition OFF before hands-on linkage work. The separate, stationary external-arm fitting sequence in steps 16–17 deliberately retains ignition ON until the arm nuts are tightened, as the source specifies; do not operate the wiper switch while fitting the arms. Protect both crank-link seals. Review the relevant [service precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Remove the wiper linkage assembly",
-          "body": "Complete the linked assembly-removal procedure before beginning motor separation. This provides access to the links, motor crank and mounting bracket as an assembly."
+          "title": "Secure the car and disable remote starting",
+          "body": "Park on a hard, level surface, apply the parking brake and chock the wheels. Leave an automatic transmission in P; leave a manual-transmission car in gear for this stationary, engine-off work. Keep the parking brake and chocks in place throughout.\n\nBefore beginning underhood work, disable remote starting, if fitted, through the central display: Vehicle settings > Remote Start Setup. Complete this powered settings work first. Then establish ignition OFF and remove the intelligent access key from the vehicle."
         },
         {
-          "title": "Separate the links from the motor crank",
-          "body": "Remove the left-hand link, followed by the right-hand link. Protect the link seals throughout separation; the [motor procedure](#/document/G1694635) specifically warns that seal damage can impair wiping."
+          "title": "Open and secure the hood",
+          "body": "With ignition OFF, open and securely support the hood. Check the cooling fans visually for damaged blades, cracks or separation before beginning underhood work. If a fan is damaged, stop and arrange its replacement before proceeding.\n\nCooling fans can operate with the ignition off. Keep this job at the rear cowl area; if you need to work near a fan, have it disabled before approaching it. Keep the key outside during hands-on removal."
         },
         {
-          "title": "Remove the motor bracket",
-          "body": "Remove the bracket mounting bolts, then slide the bracket out in the illustrated direction. Keep this sliding movement distinct from removing the motor itself."
+          "title": "Remove the wiper-arm nut covers and nuts",
+          "body": "At the base of each external wiper arm, remove the cover over the pivot nut, then remove both nuts. Keep the covers and nuts organized for refitting.\n\nThe arms must come off before the cowl grille. Their installation torque is 26 lb.ft (35 Nm), as detailed in the [wiper pivot-arm procedure](#/document/G1694632)."
         },
         {
-          "title": "Separate and replace the motor",
-          "body": "Remove the windshield wiper motor from the linkage assembly. Install the replacement by reversing the removal sequence, restoring the motor, bracket and link connections."
+          "title": "Pull both arms off their pivot shafts",
+          "body": "Use a two-leg puller on each arm’s mounting hub. Position the legs beneath the hub and center the puller screw over the pivot shaft. Keep the tool centered as you release the hub, then lift the arm away.\n\nDo not use the glass or plastic cowl as a levering surface. Put the removed arms somewhere their blades and mounting ends will be protected. A stubborn hub gets the puller, not a wrestling match with the windshield."
         },
         {
-          "title": "Secure the bracket and reinstall the assembly",
-          "body": "Tighten the motor-bracket mounting bolts to 115 lb.in (13 Nm). Complete reinstallation using the separate linkage-assembly procedure, which governs the assembly's return to the vehicle."
+          "title": "Remove the battery cover",
+          "body": "Remove the three battery-cover retainers, then lift the cover away to clear the adjacent cowl access. Leave the battery installed and connected; this access step removes its cover only.\n\nKeep these retainers separate from the cowl fasteners. The [cowl panel grille procedure](#/document/G1693246) governs this access sequence."
+        },
+        {
+          "title": "Release the cowl retainers and outer clips",
+          "body": "Remove the seven retainers along the cowl grille at the base of the windshield. Depress and remove the two clips at its outer ends, near the sides of the windshield.\n\nRelease both end clips before lifting the panel. Those little plastic pieces should not be asked to hold the whole damn grille while you pull."
+        },
+        {
+          "title": "Lift and withdraw the cowl grille",
+          "body": "Lift the grille upward first, then pull it outward and remove it. This exposes the long tubular wiper linkage and the motor near its center below the windshield.\n\nLeave the hood installed. Its omission from the [linkage procedure’s](#/document/G1694633) illustrations is for clarity."
+        },
+        {
+          "title": "Position the crank for linkage removal",
+          "body": "Clear hands, tools and loose parts from the exposed mechanism. With the parking brake applied and wheels chocked, bring the valid key inside. From OFF, select engine-off ignition ON by pressing and releasing the start button without pressing either pedal. Set the wiper switch to continuous operation.\n\nObserve from clear of the moving linkage. Let the motor rotate the crank to the required 270-degree down position, then switch the ignition OFF to stop it there. The crank is the short rotating piece at the motor shaft beneath the two link connections; judge its downward orientation rather than the position of the long rods alone.\n\nRemove the key before approaching the assembly. This position provides access to all three assembly mounting bolts. Never reach into the powered linkage to catch or guide it."
+        },
+        {
+          "title": "Disconnect and remove the complete linkage",
+          "body": "With ignition OFF and the key outside, support the assembly and remove its three mounting bolts: one at each end and one at the lower central motor support.\n\nRelease the retaining catch on the motor’s electrical connector and disconnect it. Lift the complete motor-and-linkage assembly from the cowl, keeping its wiring clear, and place it on the prepared bench.\n\nThese three vehicle mounting bolts return at 80 lb.in (9 Nm). Keep them separate from the four motor-bracket bolts."
+        },
+        {
+          "title": "Detach the left link, then the right link",
+          "body": "Identify the two links connected to the motor crank. Remove the left-hand link first, followed by the right-hand link; left and right refer to the vehicle’s sides. This order comes from the [motor replacement procedure](#/document/G1694635).\n\nWatch each connection’s seal as the link separates. Avoid cutting, pinching or levering against the seals. Check for damage caused during separation and resolve any damaged connection before refitting: a fresh motor cannot compensate for a damaged link seal."
+        },
+        {
+          "title": "Remove the bracket and separate the motor",
+          "body": "Remove the four motor-bracket mounting bolts, arranged in two pairs across the tubular linkage frame. Slide the bracket out along its open path rather than trying to lift it through the tube.\n\nWith the bracket released and both links detached, remove the windshield wiper motor from the linkage assembly. Retain the bracket and its fasteners for installation."
+        },
+        {
+          "title": "Install the replacement motor and bracket",
+          "body": "Reverse the motor-separation sequence: position the replacement motor in the linkage assembly, slide the bracket into its fitted position and install its four mounting bolts.\n\nTighten the bracket bolts to 115 lb.in (13 Nm). This is an inch-pound specification, not foot-pounds, and applies only to the motor-bracket bolts."
+        },
+        {
+          "title": "Reconnect the right link, then the left link",
+          "body": "Reattach the right-hand link to the motor crank, followed by the left-hand link. Restore their original arrangement and protect the seals as the connections seat.\n\nConfirm both links are fully reattached and neither seal has been damaged or displaced. This checks the work just completed; it is not a test for internal linkage wear."
+        },
+        {
+          "title": "Refit the assembly and tighten its three mounts",
+          "body": "With ignition OFF and the key outside, place the complete assembly back into the cowl. Reconnect the motor’s electrical connector and confirm that its catch is secured and its wiring is clear of the linkage.\n\nInstall all three assembly mounting bolts finger tight before final tightening. Standing at the front of the car looking toward the windshield, tighten the end mount on your right first, the end mount on your left second and the lower central mount beside the motor last. Tighten each to 80 lb.in (9 Nm).\n\nThis preserves the connector-first installation and mounting sequence in the [linkage procedure](#/document/G1694633)."
+        },
+        {
+          "title": "Restore the cowl grille and battery cover",
+          "body": "Reverse the grille-removal movements: position the grille back into place, then lower it into its seated location. Refit the two outer clips and all seven grille retainers.\n\nRefit the battery cover and its three retainers. Confirm both panels are seated and retained. Leave the external wiper arms off for the motor-parking stage."
+        },
+        {
+          "title": "Run one complete cycle to park the motor",
+          "body": "Clear the mechanism, bring the valid key inside and, from known OFF, select engine-off ignition ON without pressing either pedal. Push the wiper stalk downward for a single wipe, then release it. Let the motor complete its cycle and stop in PARK—its normal resting position. The 2015 owner manual, printed page 67, identifies the downward single-wipe control.\n\nThe motor must reach PARK before either external arm is fitted. Keep the wiper control OFF after this cycle and leave ignition ON for the stationary fitting and tightening in step 17, following the [pivot-arm procedure](#/document/G1694632). Do not command another wipe while fitting the arms. The 270-degree removal position is not the blade-installation position."
+        },
+        {
+          "title": "Align and secure both wiper arms",
+          "body": "With the motor stopped in PARK, the wiper control OFF and ignition still ON from step 16, fit both external arms onto their pivots. Keep clear of the covered linkage and do not operate the wiper control during this stationary work. Align each blade inside the marks on the windshield.\n\nInstall both arm nuts and tighten them to 26 lb.ft (35 Nm). Confirm that the blades remain within the windshield marks after tightening. Now switch ignition OFF, remove the key, then refit the nut covers—in that order. The glass gives you the alignment reference; eyeballing a jaunty resting angle is not an upgrade."
+        },
+        {
+          "title": "Check operation after full reassembly",
+          "body": "Complete all reassembly, remove tools from the engine compartment and close the hood. Keep the parking brake applied and wheels chocked. Bring the key inside and select engine-off ignition ON without pressing either pedal.\n\nConfirm that the washer reservoir contains suitable washer fluid and wet the windshield before sweeping the blades. Check mist, low and high operation. Switch the wipers off and confirm that both blades return to their marked resting positions without contacting each other or surrounding trim. Check the function involved in the original complaint. Pull the wiper lever toward you to operate the washers, then release it, as described in the 2015 owner manual, printed page 67. Keep everyone clear of the wipers throughout the check.\n\nAfter release of the washer switch, expect three additional wipes. If courtesy wipe is enabled, one further wipe follows a few seconds later. Conventional intermittent settings should produce longer pauses at lower settings. For rain-sensitive equipment, account for its message-center configuration and the fallback behavior described below."
+        },
+        {
+          "title": "Finish with power off and the key outside",
+          "body": "Return the wiper switch to OFF. If restoring the original remote-start setting, do so only after all service work and powered checks are finished.\n\nWhether the checks pass or fail, finish by selecting ignition OFF and removing the key from the vehicle. Any renewed connector, linkage or arm work starts with ignition OFF and the key outside.\n\nLeave the parking brake applied. Remove the wheel chocks only when the car is ready to move."
         }
       ],
       "watchFor": [
         {
-          "title": "Damaged link seals",
-          "body": "Treat any seal damage during separation as a concern requiring attention before the assembly is returned to service."
+          "title": "Exposed linkage during powered positioning",
+          "body": "The crank and rods can move during powered positioning. Observe from clear of the mechanism and switch ignition OFF before approaching or disconnecting the exposed linkage. The stationary external-arm installation in steps 16–17 is a separate source-specified sequence: the motor is parked and the wiper control remains OFF while ignition stays ON until both arm nuts are tightened."
         },
         {
-          "title": "Confusing a feature fault with a motor fault",
-          "body": "Rain-sensitive operation can fall back to ordinary intermittent wiping when a rain-sensing fault is detected."
+          "title": "Removal position versus PARK",
+          "body": "The crank’s 270-degree down position provides removal access. PARK is the normal resting position required before fitting the external arms. They serve different purposes."
+        },
+        {
+          "title": "Damage to the link seals",
+          "body": "Watch the seals at both crank connections during removal and refitting. Damage or displacement must be resolved before returning the assembly to service."
+        },
+        {
+          "title": "Different fasteners require different torques",
+          "body": "Four motor-bracket bolts: 115 lb.in (13 Nm). Three assembly-to-vehicle bolts: 80 lb.in (9 Nm). Two external arm nuts: 26 lb.ft (35 Nm). The bracket and assembly values are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Fitting arms before the motor has parked",
+          "body": "Complete the parking cycle with both external arms removed. With the motor stopped in PARK and wiper control OFF, retain ignition ON while installing, aligning and tightening the external arms. Switch ignition OFF afterward, then fit the nut covers. Never command a wipe during arm fitting."
         }
       ],
       "notes": [
-        "The bracket torque applies to the motor-bracket mounting bolts; do not transfer it to other linkage or vehicle fasteners.",
-        "The steering column control module sends normal commands over the Local Interconnect Network, abbreviated LIN."
+        "The steering column control module, abbreviated SCCM, reads the wiper switch and sends normal commands to the motor over the Local Interconnect Network, or LIN—a communication connection between the control electronics.",
+        "The [system overview](#/document/G1694644) covers mist, wash, courtesy wipe, low/high speeds, six intermittent or rain-sensitivity settings, speed-dependent wiping and wiper-activated exterior lamps. Rain-sensitive operation applies only when fitted.",
+        "Vehicle speed affects intermittent wipe frequency. A stationary completion check does not verify the speed-dependent feature.",
+        "With the headlamp switch in AUTO, ordinary switch-commanded wiping turns the exterior lamps on within 10 seconds; they turn off approximately 60 seconds after wiping stops. Rain-triggered operation uses separate delays. Lamp behavior alone does not diagnose the motor.",
+        "Retain the linkage and bracket unless their condition independently requires further work. Motor replacement does not require rain-sensor removal or additional teardown."
       ],
       "diagnostics": [
         {
-          "finding": "High-speed wiping works while other modes do not.",
-          "meaning": "High speed has a direct ground-command fail-safe path that bypasses the motor's normal LIN-controlled logic.",
-          "next": "Consider command and communication faults before treating this behavior as proof of a failed motor."
+          "finding": "The motor cannot move the crank to the required removal position.",
+          "meaning": "The normal powered access sequence cannot be completed.",
+          "next": "Stop before extracting the assembly and obtain a safe alternative positioning method. Do not force the crank or improvise a direct-power test."
         },
         {
-          "finding": "Rain-sensitive wiping has changed to timed intermittent operation.",
-          "meaning": "This is the described fallback behavior for a rain-sensitive feature fault.",
-          "next": "Investigate that feature rather than selecting a motor solely from this symptom."
+          "finding": "High speed operates while the normal commanded modes do not.",
+          "meaning": "High speed receives a separate ground command from the SCCM that bypasses the motor’s normal LIN-controlled logic. Command or communication trouble can therefore leave high speed working.",
+          "next": "Have the command and communication paths diagnosed before replacing the motor solely for this symptom. The [system operation description](#/document/G1694645) explains those paths; it is not an electrical test sequence."
+        },
+        {
+          "finding": "A rain-sensitive system operates at regular timed intervals.",
+          "meaning": "A rain-sensitive feature fault can trigger conventional intermittent fallback. Rain-sensitive operation also depends on the message-center configuration.",
+          "next": "Check whether rain-sensitive operation is enabled and distinguish fallback operation from motor failure before selecting parts."
+        },
+        {
+          "finding": "Rain-sensing trouble is associated with a missing or damaged sensor lens.",
+          "meaning": "The sensor uses a gel-type optical interface against the windshield. A missing or damaged interface can prevent rain detection, and that lens is not separately replaceable on this sensor type.",
+          "next": "Pursue the rain-sensor concern separately. It does not establish motor failure, and sensor removal is outside this replacement procedure."
+        },
+        {
+          "finding": "One extra wipe occurs shortly after the washer cycle finishes.",
+          "meaning": "Courtesy wipe adds a delayed wipe when enabled.",
+          "next": "Compare the message-center setting with the observed behavior before treating the extra wipe as a fault."
+        },
+        {
+          "finding": "The blades park outside the windshield marks or approach each other or surrounding trim.",
+          "meaning": "The installation has not passed its alignment and clearance check.",
+          "next": "Stop operation, select ignition OFF and remove the key. Recheck that the motor was parked before arm installation, correct alignment using the windshield marks and tighten the arm nuts to 26 lb.ft (35 Nm). Complete reassembly before repeating the powered check."
+        },
+        {
+          "finding": "A link seal is damaged during separation or refitting.",
+          "meaning": "The damaged connection can impair wiping even with a replacement motor.",
+          "next": "Resolve the connection damage before returning the assembly to service. Do not finish the job hoping the replacement motor will compensate."
         }
       ],
       "verification": [
         {
-          "title": "Check the completed mechanical assembly",
-          "body": "Confirm that the bracket is secured, both links are reattached with their seals protected, and linkage installation is complete."
+          "title": "Motor and linkage are secured",
+          "body": "Confirm both crank links are fully reattached with their seals intact. Verify the four bracket bolts were tightened to 115 lb.in (13 Nm) and all three vehicle mounting bolts to 80 lb.in (9 Nm), with all three started finger tight before the specified final sequence."
         },
         {
-          "title": "Check and record the affected function",
-          "body": "Compare the original complaint with operation after installation. Check the relevant mist, low, high, washer and intermittent or rain-sensitive functions against their described behavior."
+          "title": "Access parts and blade alignment are restored",
+          "body": "Confirm the motor connector is secured, the cowl grille has its seven retainers and two outer clips, and the battery cover has its three retainers. Both blades must sit inside the windshield marks, with their nuts tightened to 26 lb.ft (35 Nm) and covers fitted."
+        },
+        {
+          "title": "The repaired function operates correctly",
+          "body": "After full reassembly, confirm mist, low, high, wash and the applicable intermittent or rain-sensitive behavior. Check repeatable return to the marked resting position and clearance between the blades and surrounding trim. These are completion checks, not new electrical diagnostic tests."
+        },
+        {
+          "title": "Power and restraints are left in a known state",
+          "body": "Finish with the wiper switch OFF, ignition OFF and the key outside, regardless of the check results. Leave the parking brake applied and retain the chocks until the car is ready to move."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694635",
-          "purpose": "Motor separation from the removed linkage assembly and reverse-order installation, including bracket torque and seal precautions.",
+          "purpose": "Primary motor replacement: left-then-right link removal, seal protection, bracket removal, motor separation and reverse-order installation with 115 lb.in (13 Nm) bracket torque.",
           "mediaId": "G1694635-m0002"
         },
         {
           "documentId": "G1694633",
-          "purpose": "Required removal and reinstallation of the complete wiper linkage assembly.",
+          "purpose": "Required linkage removal and refitting, 270-degree down crank positioning, electrical disconnection, three mounting bolts, finger-tight installation and final mounting sequence at 80 lb.in (9 Nm).",
           "mediaId": "G1694633-m0003"
         },
         {
+          "documentId": "G1693246",
+          "purpose": "Required cowl access and reverse-order refitting, including battery cover, grille retainers, end clips and upward-then-outward grille removal."
+        },
+        {
+          "documentId": "G1694632",
+          "purpose": "Required arm removal with a two-leg puller, motor parking cycle, windshield-mark alignment and arm-nut torque of 26 lb.ft (35 Nm)."
+        },
+        {
           "documentId": "G1694645",
-          "purpose": "Operating behavior used to distinguish command, rain-sensing and motor concerns and to assess the repaired function."
+          "purpose": "Motor purpose, normal and fail-safe command paths, washer behavior, courtesy wipe, intermittent operation and rain-sensitive fallback."
+        },
+        {
+          "documentId": "G1694644",
+          "purpose": "System feature coverage and six intermittent or rain-sensitivity settings."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable remote-start prevention, key removal, personal protection and underhood cooling-fan precautions."
         }
       ],
       "hero": {
@@ -139869,7 +140141,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine. Covers conventional intermittent wipers and optional rain-sensitive wipers. Cowl access is shown for left-hand drive; right-hand drive is similar."
       },
       "relatedGuideIds": [
         "job-ad54a05f41c1f34a"
@@ -139890,14 +140163,73 @@
         {
           "documentId": "G1694644",
           "sourceHash": "e3688d97625b08b4d59b57d2e3211a295ff22870250ff29bfd10b539470643c8"
+        },
+        {
+          "documentId": "G1693246",
+          "sourceHash": "ca75c69405aff4a70846043793a7a41c811030b37e15e059344f8d2effabeb64"
+        },
+        {
+          "documentId": "G1694632",
+          "sourceHash": "a4fecf50d92ea6da1261db620d83466e8fcc793253099c8e3edd464a14575fc4"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "614c99aedf1f5fda2f4425053a8a6df222348d33b82abd84bc3e2f8254a8fee3"
-      }
+        "fingerprint": "614c99aedf1f5fda2f4425053a8a6df222348d33b82abd84bc3e2f8254a8fee3",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c884858797c469396e5a7d647cde32378e7869b5f1512b5d262fd12094716d74",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-prepare",
+          "title": "Secure the car",
+          "summary": "Disable remote starting and establish safe underhood access.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "clear-the-cowl",
+          "title": "Remove the arms and cowl grille",
+          "summary": "Pull both arms and release the cover, retainers and clips.",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "id": "position-and-extract",
+          "title": "Position and remove the linkage",
+          "summary": "Stop the crank in its removal position, disconnect and lift out the assembly.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "exchange-the-motor",
+          "title": "Replace the motor on the bench",
+          "summary": "Protect the link seals, transfer the bracket and reconnect both links.",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "id": "restore-and-align",
+          "title": "Refit, park and align",
+          "summary": "Secure the assembly, restore the cowl, park the motor and align the arms.",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "id": "check-and-finish",
+          "title": "Verify operation and shut down",
+          "summary": "Check the fully assembled system and finish with ignition OFF and the key outside.",
+          "start": 18,
+          "end": 19
+        }
+      ]
     },
     {
       "title": "Remove and refit the windshield wiper pivot arms",
@@ -166141,100 +166473,226 @@
     },
     {
       "title": "Replace the convertible tonneau-cover sensor assembly",
-      "summary": "Replace the affected D-tower cover and its integrated sensor, then check roof operation with the tonneau covers removed.",
-      "introduction": "Each optional tonneau cover contains a magnet that activates a Hall-effect sensor, an electronic switch responsive to a magnetic field. The roof control modules use these signals to prevent the convertible top from being raised with the covers installed. The sensor being serviced is part of the D-tower cover, so replacement means changing that assembly rather than removing a separate sensor.",
-      "why": "Cover detection is an operating interlock. A refusal to raise the roof may be correct behavior when a cover is fitted. Confirming the actual cover condition and other roof operating requirements helps avoid replacing a working assembly.",
+      "summary": "Reach the sensor through the rear-seat and loadspace trim, replace its complete D-tower cover assembly, and restore the trim, seat attachments and roof operation.",
+      "introduction": "The tonneau-cover sensor is the roof’s little bouncer: cover still fitted, roof stays down. Sensible arrangement—until a fault leaves the bouncer arguing with an empty doorway. I’ll walk you through reaching and replacing the affected assembly, including the rear-seat hooks and trim flap that deserve just as much attention as the electrical connector.",
+      "why": "Each removable tonneau cover contains a magnet. A Hall-effect sensor—an electronic switch that responds to a magnetic field—detects that magnet and tells the roof controls that a cover is installed. That signal prevents the roof from being raised into the covers. The sensor is built into the fixed D-tower cover beside the roof mechanism, so the repair replaces that complete assembly. The removable tonneau cover and the sensor-bearing D-tower cover are different parts.",
       "taskType": "repair",
-      "difficulty": "basic",
+      "difficulty": "intermediate",
       "searchTerms": [
         "tonneau cover sensor replacement",
+        "D-tower cover assembly",
+        "Mustang convertible tonneau sensor",
         "TOP DISABLED REMOVE COVERS",
-        "convertible top will not raise",
-        "D-tower cover replacement"
+        "convertible loadspace trim removal",
+        "rear seat backrest locking clips"
       ],
       "when": {
-        "summary": "When the integrated tonneau-cover sensor or its D-tower cover assembly has been identified as requiring replacement.",
+        "summary": "Use this replacement procedure after the affected sensor or D-tower cover assembly has been identified as needing replacement.",
         "notes": [
-          "Left and right sides use similar operations; replace the affected assembly."
+          "A cover-removal message with a tonneau cover actually installed is normal interlock behavior, not a reason to buy a sensor.",
+          "Left and right sides use similar removal and installation operations. Replace the affected side rather than assuming both assemblies need changing.",
+          "The convertible trim illustrations show left-hand-drive access; right-hand-drive access is similar."
         ]
       },
       "prepare": [
         {
-          "title": "Assembly and trim access",
-          "detail": "Obtain the appropriate D-tower cover assembly. Have tools suitable for trim clips and pin-type retainers, and the convertible loadspace-trim procedure available."
+          "title": "Confirm the repair and the access prerequisite",
+          "detail": "Identify the affected side and obtain its correct complete D-tower cover/sensor assembly. The roof must be fully open before this trim access begins. If it cannot reach that position, resolve the roof fault before dismantling; this article does not provide manual roof movement or electrical fault-isolation procedures. A warning message alone cannot identify a failed sensor, and there is no resistance, voltage or magnet-test specification here for condemning one."
         },
         {
-          "title": "Establish the complaint",
-          "detail": "Note whether the tonneau covers are physically installed and which message appears. A cover-removal message with covers fitted is expected."
+          "title": "Have the fastening and protection equipment ready",
+          "detail": "Have suitable tools for the seat-backrest floor fasteners and trim retainers, plus a torque wrench capable of 47.5 Nm (35 lb-ft). Wear eye and ear protection during service, and protective gloves when handling sharp-edged parts. Keep removed fasteners and clips organized by panel so each returns to its own location."
+        },
+        {
+          "title": "Protect the seat installation",
+          "detail": "Keep objects out from between the seat components and the vehicle body, and out of joints within the seat structure. Incorrect seat installation can compromise operation and increase the risk of serious injury. The backrest’s hooked locking clips must be engaged again during assembly; tightening the floor fasteners does not replace that action."
+        },
+        {
+          "title": "Keep this an interior access job",
+          "detail": "Keep the car stationary on the ground with the parking brake applied, automatic in P or manual transmission in a parked gear; the engine remains off. No lifting or underhood access is needed. Empty the top stowage compartment behind the rear seat, remove roof-surface debris and keep people and objects clear of the roof and windows. Avoid folding wet roof material for storage. Follow the relevant [service precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Know the normal roof controls before dismantling",
+          "detail": "The 2015 owner manual, printed pages 121–122 and 185–187, supplies the keyless and roof controls used below. If either optional tonneau cap is fitted, slide its side edge inward toward the car’s center, lift that edge, then pull the cap back to release the leading edge. Remove both and store them in their trunk bag, never in the roof stowage compartment. These removable caps are not the fixed D-tower sensor assemblies."
         }
       ],
       "steps": [
         {
-          "title": "Expose the affected side",
-          "body": "Remove the loadspace trim only as necessary using [Loadspace Trim Panel — Convertible](#/document/G1692610). Establish access to the connector and D-tower cover on the side being repaired."
+          "title": "Park and prevent an unintended start",
+          "body": "Park on level ground, apply the parking brake and leave an automatic in P or a manual in a parked gear. Keep that restraint throughout this engine-off job. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before service. From known OFF, a valid key inside and a press/release of ENGINE START/STOP without either pedal selects engine-off ignition ON for settings and positioning. If already ON, do not press the button again until the OFF step. Keep the roof and window travel areas clear."
         },
         {
-          "title": "Disconnect the harness",
-          "body": "Disconnect the sensor harness connector before releasing the cover assembly. The connector operation is similar on both sides."
+          "title": "Fully open the roof, move both front seats forward, then switch off",
+          "body": "If the roof is already fully open, leave it there. Otherwise, with engine-off ignition ON, empty rear stowage and clear roof travel, lower the latch handle above the interior mirror toward the windshield and rotate it clockwise to release the roof. Hold the roof rocker in DOWN until the windows are fully lowered and the top is completely stored, then release it. The car stays stationary.\n\nThe system first commands all four windows down and waits for both rear quarter windows to confirm full down before moving the roof. Keep everyone clear throughout.\n\nMove both front seats fully forward now, before disconnecting anything. Once roof and seat positioning are complete, press/release ENGINE START/STOP from ON without either pedal to switch OFF, then remove the key. Do not operate the roof during dismantling. See the owner manual, printed pages 121–122 and 185–187, and [roof overview](#/document/G1708665)."
         },
         {
-          "title": "Remove the D-tower cover",
-          "body": "Remove the bumper stop and the two pin-type retainers, then release the remaining clip and remove the cover. Follow [Tonneau Cover Sensor](#/document/G1723917) for the attachment locations."
+          "title": "Release and remove the rear seat cushion",
+          "body": "At the front edge of the rear cushion, locate the locking tab on each side. Press each tab inward to release the cushion from the floor; then lift, release and remove the cushion.\n\nDo not simply yank upward against the locked tabs. They must be pressed in first or they can be damaged. Guide the cushion clear of the belt buckles rather than dragging them out with it. See [Rear Seat Cushion](#/document/G1692168)."
         },
         {
-          "title": "Install the complete replacement",
-          "body": "Reverse removal: engage the cover clip, restore the retainers and bumper stop, reconnect the harness and reinstall the disturbed loadspace trim. The sensor stays part of the replacement cover assembly."
+          "title": "Remove the backrest floor fasteners, release its hooks and lift it out",
+          "body": "With the cushion out, remove the fasteners securing the backrest to the floor at its lower outer mounting points.\n\nMove the upper locking portions of the backrest clips inward toward the upholstery, pivoting the hooked clips clear of their body catches, then lift the backrest upward and remove it. Lifting alone does not release those hooks—this is one place where a bigger tug is a lousy substitute for the right movement.\n\nKeep the seat-to-body mating areas and the seat’s structural joints clear of loose objects. Set the backrest and its fasteners aside for refitting. The floor fasteners must be tightened to 47.5 Nm (35 lb-ft) during installation. See [Rear Seat Backrest — Convertible](#/document/G1709034)."
+        },
+        {
+          "title": "Move the belt guide aside and release the upper loadspace trim",
+          "body": "Work on the side being repaired. Remove loadspace trim only as far as needed to reach the connector, all D-tower cover attachments and a clear removal path. The following steps describe the trim access sequence; refit only the pieces you actually remove.\n\nPosition the seatbelt guide aside at the opening in the upper trim. Release the upper panel’s clips and lift the panel away from the body edge. Its underside has two clip styles, shown as four of one style and five of the other; work around the attachment locations rather than bending the long panel against clips still engaged.\n\nKeep track of the flexible convertible flap beside this panel. Its position matters when the panel goes back. See [Loadspace Trim Panel — Convertible](#/document/G1692610)."
+        },
+        {
+          "title": "Release the middle trim, then free its rear tab",
+          "body": "If further access is needed, release the middle loadspace panel’s clips. The panel is the broad side trim beside the rear seat, with the speaker grille; the illustration shows four pin-style attachments and three spring-style clips.\n\nAfter releasing the clips, pull the panel forward and outward to disengage its rear tab. Position both the front and rear safety belts aside, clear them from the panel and remove it. Do not treat the rear tab as another clip to pull straight out."
+        },
+        {
+          "title": "Remove the scuff plate and lower trim if they still obstruct access",
+          "body": "Release the clips and lift off the scuff plate—the narrow trim along the door opening beneath the front seat. Its illustration shows five spring clips along the panel and two additional clips at the sill.\n\nNext, release the clips securing the lower loadspace trim and remove that panel. The lower trim runs along the side below the middle panel and around the belt area; release its attachments rather than pulling against the belt webbing. Leave panels in place if the connector and every cover attachment are already accessible and the cover can be removed freely."
+        },
+        {
+          "title": "Find and disconnect the sensor harness",
+          "body": "Locate the sensor lead running down the upright beside the roof linkage to the connector near its lower end. Disconnect that harness connector before releasing the D-tower cover. Separate the connector at its housing rather than pulling on the thin lead.\n\nThe connector illustration shows the right side; the left uses a similar operation. Note the lead’s existing route so you can restore it without trapping it behind the replacement cover. See [Tonneau Cover Sensor](#/document/G1723917)."
+        },
+        {
+          "title": "Remove the bumper stop, two pin retainers and D-tower cover",
+          "body": "Remove the bumper stop from the top of the affected D-tower cover by lifting it out. Remove the two pin-type retainers from the cover’s face. Then release the remaining clip at the lower edge and remove the cover assembly, taking its sensor lead clear with it.\n\nThe cover-removal illustration shows the left side; the right is similar. Replace the whole sensor-bearing cover assembly. The sensor is not a separate service part in this repair."
+        },
+        {
+          "title": "Install the replacement assembly and reconnect the harness",
+          "body": "Position the correct replacement D-tower cover with its sensor lead following the original route. Engage the cover clip, reinstall the two pin-type retainers, and reinstall the bumper stop—the reverse of removal.\n\nReconnect the harness connector fully. Before covering the area, look along the lead and the cover edges: the wire must not be caught under the cover or displaced into the roof linkage. Confirm the cover attachments and bumper stop are back in place. The small sensor gets the glory; the damn connector still has to be plugged in."
+        },
+        {
+          "title": "Restore the lower trim and scuff plate",
+          "body": "If removed, position the lower loadspace trim back around the belt area and engage its clips. Keep the webbing clear of the panel’s attachments.\n\nNext, align and engage the scuff plate clips along the door opening. Check that the panel sits in position without loose edges before moving upward through the trim stack."
+        },
+        {
+          "title": "Refit the middle loadspace panel around the belts",
+          "body": "If removed, guide the front and rear safety belts back into their proper relationship with the middle panel. Reverse the removal movement to engage the rear tab, align the panel’s clip locations and engage the clips.\n\nCheck the belts along the panel edges before seating the trim completely. Their webbing must remain untwisted, and the belts and buckles must be accessible to the occupants."
+        },
+        {
+          "title": "Keep the convertible flap clear while installing the upper panel",
+          "body": "Before seating the upper loadspace trim, visually inspect the flexible convertible flap beside it. Move the flap aside if needed so it cannot become caught underneath the panel.\n\nAlign and engage the upper panel’s clips, watching the flap as the panel settles into place. Then return the seatbelt guide to its fitted position. Check that the flap is free and that the belt webbing has not been trapped or twisted. This is the installation exception to remember: the panel going down must not take the flap prisoner."
+        },
+        {
+          "title": "Lower the backrest into position, engage its hooks and torque the floor fasteners",
+          "body": "Check that nothing has been left between the backrest and body or within the seat structure’s joints. Position the belts so they will remain untwisted and accessible.\n\nLower the backrest into its installed position, then pivot the hooked locking clips back into engagement with their body catches. Confirm engagement before installing and tightening the lower floor fasteners.\n\nTighten the backrest-to-floor fasteners to 47.5 Nm (35 lb-ft). Do not regard a backrest that has merely been lowered into place as fully secured."
+        },
+        {
+          "title": "Refit the cushion and restore usable belts",
+          "body": "Position the rear cushion back in place, keeping the buckles accessible above the cushion and the webbing untwisted. Reverse the cushion-removal movement and engage both front locking tabs with the floor attachments.\n\nConfirm that both sides are retained. Recheck that the rear occupants can reach their belts and buckles. Leave the front seats in their access positions until the fully reassembled powered completion check in step 17."
+        },
+        {
+          "title": "Clear the car for a roof-operation check",
+          "body": "Account for the removed tools, fasteners and loose parts. Check that every disturbed trim panel is seated, the seatbelt guide is restored, the convertible flap is free, and the rear seat is secured.\n\nKeep people and objects clear of the roof mechanism. Remove both removable tonneau covers before requesting roof raising. Leave the car stationary with the parking brake applied."
+        },
+        {
+          "title": "Check normal roof raising and record the result",
+          "body": "After all connectors, trim and rear seating are restored, remove tools and clear the seat, window and roof travel areas. Bring the valid key inside; from OFF, press/release ENGINE START/STOP without either pedal for engine-off ignition ON. Restore the front seats to their normal positions with hands and objects clear. Keep the parking brake applied and the transmission in its parked gear.\n\nWith both removable tonneau caps absent, hold UP. Observe both rear quarter windows reaching full down before roof movement. When the latch handle is reachable, keep it down and rotated clockwise into its fully open position. Continue UP until the roof aligns evenly with the windshield header, then release the rocker. Pull the handle down and turn it counterclockwise to secure the roof, then push it up to stow it. See the owner manual, printed pages 185–187.\n\nRecord any cover-removal message or incomplete movement. Whether the check passes or fails, switch ignition OFF with both pedals released and remove the key. Any renewed connector or trim work starts OFF/key out. This is an ordinary-operation check, not an electrical sensor test."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing the two covers",
-          "body": "The removable tonneau cover carries the magnet; the D-tower cover contains the sensor being replaced."
+          "title": "Seat cushion tabs must be released before lifting",
+          "body": "Press in the locking tabs at both front attachment points. Pulling the cushion upward while they remain locked can damage them."
+        },
+        {
+          "title": "Backrest hooks need an actual engagement movement",
+          "body": "Move their upper locking portions inward toward the upholstery and pivot the hooked clips clear before lifting the backrest out. During installation, lower the backrest and pivot the hooks back into their body catches; then restore and torque the floor fasteners."
+        },
+        {
+          "title": "The upper trim can trap the convertible flap",
+          "body": "Look at the flap before and during upper-panel installation. Move it aside as necessary and confirm it remains free afterward."
+        },
+        {
+          "title": "Belts can disappear behind a tidy-looking panel",
+          "body": "At each trim and seat refit, keep webbing untwisted and clear of attachments. Leave belts and buckles accessible to the occupants."
+        },
+        {
+          "title": "Keep the roof still during access work",
+          "body": "Fully open it before dismantling, then switch off and remove the key. Restore the assembly, trim and seats and clear the mechanism before operating it again."
         }
       ],
       "notes": [
-        "The roof switch must be held in the requested direction during roof movement."
+        "The right-hand sensor is wired to Moveable Roof Control Module A (MRCMA); the left-hand sensor is wired to Moveable Roof Control Module B (MRCMB). The modules share cover-status information, so the dashboard message does not identify a side.",
+        "The roof switch is momentary: keep holding the requested direction during movement.",
+        "A brief audio mute when latching or unlatching the roof is normal.",
+        "The broader engine coverage of the rear-cushion and general-safety procedures does not extend this article to a 5.2L convertible."
       ],
       "diagnostics": [
         {
-          "finding": "TOP DISABLED — REMOVE COVERS appears with a tonneau cover installed.",
-          "meaning": "The roof is reporting an expected closing interlock.",
-          "next": "Remove the tonneau covers before requesting roof raising."
+          "finding": "TOP DISABLED — REMOVE COVERS appears while one or both tonneau covers are installed.",
+          "meaning": "The roof controls are reporting the expected cover interlock.",
+          "next": "Remove both tonneau covers before requesting roof raising. Do not replace a sensor on this observation alone."
         },
         {
-          "finding": "The same message appears with both covers removed.",
-          "meaning": "The reported cover condition needs investigation; the message alone does not prove which sensor or circuit is responsible.",
-          "next": "Establish the affected side and cause before replacing an assembly."
+          "finding": "The cover-removal message remains with both tonneau covers physically removed.",
+          "meaning": "The reported cover state disagrees with the physical condition, but the message does not establish which sensor, connection or circuit is responsible.",
+          "next": "After replacement, switch ignition OFF and remove the key before reopening access. Then confirm that the disturbed connector is fully connected and its lead is not trapped. If the message remains, stop parts swapping and arrange electrical diagnosis. [System Operation and Component Description](#/document/G1708666) explains the two sensor inputs and their control modules."
         },
         {
-          "finding": "The roof remains inoperative without a cover warning.",
-          "meaning": "Roof operation also depends on accessory-delay status, vehicle speed and confirmation that both rear quarter windows are fully lowered.",
-          "next": "Continue roof-system diagnosis rather than assuming the new sensor is defective."
+          "finding": "The roof does not move and one or both rear quarter windows have not reached fully down.",
+          "meaning": "The roof system waits for both rear-window down confirmations before permitting movement.",
+          "next": "Resolve the window movement or down-confirmation issue before judging the tonneau sensor repair. Do not bypass this interlock or force roof movement."
+        },
+        {
+          "finding": "TOP DISABLED — REDUCE SPEED appears.",
+          "meaning": "Vehicle speed is preventing roof operation; this message is not a tonneau-sensor finding.",
+          "next": "Carry out the completion check stationary. Roof operation requires a speed below 5 km/h (3 mph)."
+        },
+        {
+          "finding": "TOP NOT SECURE appears after the roof has been raised.",
+          "meaning": "The message is associated with a roof latch that is not fully engaged when vehicle speed exceeds 5 km/h (3 mph).",
+          "next": "Stop safely and fully engage the roof latch before driving. Do not use a road-speed check to assess this repair."
+        },
+        {
+          "finding": "The roof remains inoperative without a cover-removal message.",
+          "meaning": "Cover sensing is only one operating condition. Accessory-delay status, the opening latch condition and rear-window confirmation also affect operation. A roof-control or body-control module can store a diagnostic trouble code, meaning an electronic fault record, without a dedicated roof warning lamp.",
+          "next": "Confirm the operating conditions for the requested direction, record the roof response and any displayed message, and continue roof-system diagnosis if those conditions are met. Do not condemn the new sensor solely because the roof remains still."
         }
       ],
       "verification": [
         {
-          "title": "Check closing under valid conditions",
-          "body": "With the vehicle stationary, accessory delay active and tonneau covers removed, hold the UP switch. Confirm the windows lower and the roof raises."
+          "title": "Assembly and wiring restored",
+          "body": "Confirm that the correct D-tower cover assembly is fitted, its clip and both pin retainers are engaged, the bumper stop is restored, and the connector is fully connected with the lead clear of the cover edges and roof linkage."
         },
         {
-          "title": "Record the result",
-          "body": "Record roof response and whether a cover-removal message remains despite both covers being physically removed."
+          "title": "Trim and seat safety restored",
+          "body": "Confirm the convertible flap is free, the seatbelt guide is back, and all removed trim is seated. Verify the backrest hooks are engaged, its floor fasteners were tightened to 47.5 Nm (35 lb-ft), both cushion tabs are retained, and belts and buckles are accessible with untwisted webbing."
+        },
+        {
+          "title": "Normal operating result recorded",
+          "body": "With the vehicle stationary, accessory delay active and both tonneau covers removed, confirm whether the windows lower and the roof raises while UP is held. Record any remaining message or failure, and fully latch the raised roof before use."
+        },
+        {
+          "title": "Final power state",
+          "body": "Confirm ignition OFF and key outside after the completion check, whether it succeeds or fails. Keep the parking brake applied and do not reopen connectors or trim while powered."
         }
       ],
       "procedures": [
         {
           "documentId": "G1723917",
-          "purpose": "Tonneau sensor and D-tower cover assembly removal and installation."
+          "purpose": "Primary removal and reverse-order installation of the integrated tonneau sensor and D-tower cover assembly."
         },
         {
           "documentId": "G1692610",
-          "purpose": "Convertible loadspace-trim removal and installation for access.",
+          "purpose": "Convertible loadspace-trim access, belt positioning and the upper-panel convertible-flap installation precaution.",
           "mediaId": "G1692610-m0002"
         },
         {
+          "documentId": "G1709034",
+          "purpose": "Convertible rear-backrest removal, hooked locking-clip restoration and 47.5 Nm floor-fastener tightening."
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Front-seat positioning, rear-cushion locking-tab release and reverse-order cushion installation."
+        },
+        {
+          "documentId": "G1708665",
+          "purpose": "Roof-positioning prerequisites and the opening and closing operating conditions."
+        },
+        {
           "documentId": "G1708666",
-          "purpose": "Cover-sensor operation, roof interlocks and message interpretation."
+          "purpose": "Magnetic cover sensing, left/right module connections, window interlocks and roof-message interpretation."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start disabling, unintended-start prevention and personal-protection precautions."
         }
       ],
       "hero": null,
@@ -166255,7 +166713,7 @@
         "years": [
           2015
         ],
-        "equipment": "Convertible with tonneau-cover sensors"
+        "equipment": "2015 Mustang convertible with tonneau-cover sensors and a fitted rear seat, with 2.3L, 3.7L or 5.0L engine. This access sequence does not cover coupes or rear-seat-delete configurations."
       },
       "relatedGuideIds": [
         "job-12665e7d6ce62ada"
@@ -166276,6 +166734,18 @@
         {
           "documentId": "G1708665",
           "sourceHash": "c7682e4b080836ba3760916c905d272b5fff73b2740d3501b5c15cb73d7954b8"
+        },
+        {
+          "documentId": "G1709034",
+          "sourceHash": "956324f9f6d63426c2ab161a9b64ca6e32a4a3d9bb71403f56a8d918dc1f7f35"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -166294,8 +166764,62 @@
               "end": 628
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "d76a3bd0e4aa36e17f7c10db9bb9123e56fc9485da99689255bb77c66ed49869",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "park-and-position",
+          "title": "Park and position the roof",
+          "summary": "Prevent unintended starting and establish fully open roof access.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "remove-rear-seating",
+          "title": "Remove the rear seating",
+          "summary": "Release the cushion tabs and backrest hooks in the correct order.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "open-trim-access",
+          "title": "Open the trim access",
+          "summary": "Work through the affected side’s trim only as far as access requires.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "replace-sensor-cover",
+          "title": "Replace the sensor-bearing cover",
+          "summary": "Disconnect the harness and exchange the complete D-tower assembly.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "restore-side-trim",
+          "title": "Restore the side trim",
+          "summary": "Refit removed panels while keeping belts and the convertible flap free.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "secure-rear-seating",
+          "title": "Secure the rear seating",
+          "summary": "Engage the backrest hooks, torque its fasteners and retain the cushion.",
+          "start": 14,
+          "end": 15
+        },
+        {
+          "id": "confirm-roof-operation",
+          "title": "Confirm the completed repair",
+          "summary": "Clear the mechanism, check normal roof raising and record the result.",
+          "start": 16,
+          "end": 17
         }
-      }
+      ]
     },
     {
       "title": "Replace the 3160 Manual Transmission Vehicle Speed Sensor",
@@ -167781,103 +168305,197 @@
     },
     {
       "title": "Replace the convertible top switch and overhead console",
-      "summary": "Replace the convertible top switch as part of the overhead console and perform initialization if the new assembly includes an intrusion sensor.",
-      "introduction": "The convertible top switch is a momentary rocker with UP, DOWN and neutral positions. Holding it sends a request to the roof’s control modules, which coordinate the windows and roof motors. The switch is serviced as part of the overhead console assembly, so replacement involves releasing the console and disconnecting its electrical connectors.",
-      "why": "The roof operates only when its enabling conditions are satisfied, and it waits for confirmation that both rear quarter windows are fully down. A roof that does not move therefore does not, by itself, establish a switch fault. A new console equipped with an intrusion sensor also needs electronic initialization.",
+      "summary": "Replace the overhead console assembly containing the convertible top switch, initialize an intrusion sensor when fitted, and check roof operation.",
+      "introduction": "That little roof rocker has expensive taste: when it leaves, the whole overhead console goes with it. Ford services the convertible top switch as part of that assembly. I’ll walk you through releasing the console, unplugging it without dangling it from its wiring, and completing the equipment-dependent electronic setup.",
+      "why": "The switch asks the roof to move; it does not directly power the roof motors. Its three positions are UP, DOWN and a neutral resting position, and you must hold the requested direction while the roof moves. Two motor-and-control-module assemblies coordinate roof movement with the windows and safety inputs. That makes a motionless roof a reason to investigate, not automatic proof that the rocker is faulty.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "convertible top switch replacement",
-        "convertible roof will not open",
-        "convertible roof will not close",
-        "overhead console intrusion sensor initialization"
+        "2015 Mustang convertible top switch replacement",
+        "Mustang convertible overhead console removal",
+        "convertible top switch assembly",
+        "overhead console intrusion sensor initialization",
+        "LIN New Module Initialization"
       ],
       "when": {
-        "summary": "When assessment identifies a top-switch fault requiring replacement of the overhead console assembly.",
+        "summary": "Use this procedure when the convertible top switch has been identified as requiring replacement.",
         "notes": [
-          "Use the convertible branch of the console procedure; headliner lowering belongs to the coupe branch."
+          "A roof that refuses to move can be responding correctly to a latch, tonneau-cover or window-position input.",
+          "This article covers the convertible console on the listed engines. Its direct clip-release access does not require the coupe’s headliner-lowering operation.",
+          "A new console equipped with an intrusion sensor requires initialization and a BCM fault-code check."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare the console tools",
-          "detail": "Use an interior trim remover to release the overhead console clips and provide access to its electrical connectors."
+          "title": "Have the correct replacement assembly",
+          "detail": "Obtain the complete overhead console containing the convertible top switch. Match the vehicle’s control layout and intrusion-sensor equipment. This is an assembly replacement procedure; electrical pin tests for proving a switch fault are outside its scope."
         },
         {
-          "title": "Check the replacement equipment",
-          "detail": "If the new console has an intrusion sensor, arrange a diagnostic scan tool capable of Local Interconnect Network (LIN) New Module Initialization and Body Control Module (BCM) self-testing."
+          "title": "Gather the trim tool and protection",
+          "detail": "Have an interior trim remover ready. Wear eye and ear protection for service work, and protective gloves when handling sharp-edged parts."
+        },
+        {
+          "title": "Arrange the conditional scan-tool work",
+          "detail": "If the new console includes an intrusion sensor, have a diagnostic scan tool capable of LIN New Module Initialization and BCM self-testing. LIN is the local communications network used by the component; BCM means Body Control Module. Arrange that capability before taking the console out."
+        },
+        {
+          "title": "Understand the keyless controls",
+          "detail": "The 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122, distinguishes ignition ON from engine start. With a valid key inside and the ignition OFF, press and release ENGINE START/STOP with both brake and clutch pedals released to obtain engine-off ignition ON. From ON, press and release it again with the pedals released to switch OFF. Pressing the button with the brake depressed on an automatic, or clutch depressed on a manual, requests an engine start. The checks here require engine-off ignition ON."
+        },
+        {
+          "title": "Make room for the completion check",
+          "detail": "Keep the car on the ground and stationary, with the parking brake applied: automatic in P or manual transmission in a parked gear, engine off. Provide clearance for the entire roof and all windows, with everyone clear of moving parts. Empty the top stowage compartment behind the rear seat and clear debris from the roof fabric. Do not fold a wet top for storage; trapped moisture encourages mold or mildew. The 2015 owner manual, Convertible Top, printed pages 185–187, supplies these normal operating instructions."
+        },
+        {
+          "title": "Remove fitted tonneau caps before raising the roof",
+          "detail": "If the roof is down with the two optional caps installed, remove them before the UP check. On each cap, slide its side edge toward the center of the car to free it from the surrounding trim. Lift that side edge, then pull the cap back to release its leading edge. Repeat on the other side and store both in their bag in the trunk. Do not put either cap or other objects in the roof stowage compartment."
         }
       ],
       "steps": [
         {
-          "title": "Check the roof operating conditions",
-          "body": "Confirm the accessory delay relay is active and vehicle speed is below 5 km/h (3 mph). Opening requires the top latch to be released; closing requires any tonneau covers to be removed. These conditions help distinguish an inhibited request from a switch concern."
+          "title": "Secure the car and disable remote start if fitted",
+          "body": "Apply the parking brake and keep it applied throughout the job. Put an automatic transmission in P, or leave a manual-transmission car in a parked gear; the engine remains off.\nIf remote start is fitted, disable it through the central display at Vehicle settings > Remote Start Setup before service. If the display needs power, use engine-off ignition ON with a valid key inside and both pedals released. Finish this setting before switching OFF and unplugging anything. No roof repositioning is required to reach the console."
         },
         {
-          "title": "Remove the overhead console",
-          "body": "Follow the convertible console procedure. Release its clips with the interior trim remover, disconnect the electrical connectors and remove the assembly. The top-switch replacement procedure specifies assembly replacement rather than separate switch removal."
+          "title": "Establish ignition OFF and remove the key",
+          "body": "From ignition ON, press and release ENGINE START/STOP once with the brake and clutch pedals released to switch OFF. If it is already OFF, leave it OFF. Remove the intelligent-access key from the vehicle and retain control of it so another person cannot start the car during the work."
         },
         {
-          "title": "Install the replacement assembly",
-          "body": "Reverse the convertible console removal sequence, reconnecting the electrical connectors and engaging the clips. Identify whether the new assembly includes an intrusion sensor before considering installation complete."
+          "title": "Reach the console and release its two retaining clips",
+          "body": "From inside the cabin, locate the overhead console between the sun visors, immediately behind the windshield header. The roof switch is in this console.\nSupport the console with one hand. Use the interior trim remover at the console-to-surrounding-trim seam to release the two side retaining clips. Work at the retaining points rather than pulling hard on the switch face. Lower the console away from its opening only far enough to reach the rear connections. Leave the headliner in place; the convertible uses this direct access route. See [Overhead Console](#/document/G1693978)."
         },
         {
-          "title": "Initialize the intrusion sensor when fitted",
-          "body": "For a new component equipped with an intrusion sensor, run Toolbox > Electrical > Service Functions > LIN New Module Initialization. Then perform the BCM self-test, clear its diagnostic trouble codes and retrieve them again to confirm they have cleared."
+          "title": "Unplug the rear connections and remove the assembly",
+          "body": "Keep supporting the lowered console. Locate each electrical connector attached to its rear, release its locking feature, and separate the connector by its housing rather than pulling on the wires. The rear view shows connections around the console’s perimeter and toward its upper center; disconnect every connection fitted to your assembly before taking it away.\nOnce the wiring is free, remove the console from the cabin work area. Replace the complete assembly as directed in [Convertible Top Switch](#/document/G1708677); there is no separate switch-removal operation in this repair."
+        },
+        {
+          "title": "Reconnect and refit the replacement console",
+          "body": "Keep the ignition OFF and the key outside the vehicle. Hold the replacement beside the opening and reconnect the electrical plugs to their matching connections, making sure their locks engage.\nGuide the wiring back into the opening without trapping it between the console and surrounding trim. Align the two retaining clips with their mounting locations and press the console into place until both engage. Check that the console sits evenly and stays retained. This reverses the convertible removal sequence; do not dismantle the replacement to extract its rocker. The little switch has already negotiated its package deal."
+        },
+        {
+          "title": "Initialize a new intrusion-sensor-equipped console",
+          "body": "Complete the physical installation before applying power. Bring the valid key into the vehicle and, from OFF, press and release ENGINE START/STOP with both pedals released for engine-off ignition ON.\nOnly when the new console is equipped with an intrusion sensor, use the diagnostic scan tool to run Toolbox > Electrical > Service Functions > LIN New Module Initialization.\nThen carry out the BCM self-test, clear the BCM diagnostic trouble codes, and retrieve them again to confirm that they have cleared. A diagnostic trouble code, or DTC, is a stored fault record. If codes remain or return, the electronic completion check has not passed; retain the results for diagnosis.\nFor a console without an intrusion sensor, omit this initialization and BCM sequence."
+        },
+        {
+          "title": "Check the DOWN request with the console fully installed",
+          "body": "For the functional check, use engine-off ignition ON as described above if it is not already ON. Keep the car stationary with the parking brake applied, automatic in P or manual in a parked gear. Confirm the rear stowage compartment is empty and the roof surface and travel space are clear.\n\nOpening requires an active accessory-delay relay, speed below 5 km/h (3 mph), and the top latch released. Above the interior mirror, move the latch handle down toward the windshield, then rotate it clockwise to release the roof. If the roof is already fully down, begin with the UP check in step 8, then check DOWN afterward.\n\nHold the rocker in DOWN until the windows are completely lowered and the top is fully stowed, then release it. All four windows receive a full-down command; roof movement waits for both rear quarter windows to confirm full down. Keep people and objects clear. If movement is inhibited, use the decision rows rather than forcing the roof or blaming the new switch. These normal latch controls are described in the owner manual, printed page 185."
+        },
+        {
+          "title": "Check the UP request and secure the roof",
+          "body": "Remove both optional tonneau caps as described in preparation. With accessory-delay power active and the car still secured and stationary, hold the rocker in UP. The windows receive a full-down command and the roof waits for both rear quarter windows to confirm full down before rising.\n\nWhen the latch handle is within reach, make sure it is down and turned clockwise into its fully open position. Continue the UP request until the top lines up evenly with the windshield header, then release the rocker. Pull the latch handle downward and rotate it counterclockwise to secure the top. Once fully secured, push the handle up into its stowed position. The owner manual, printed pages 186–187, supplies this closing sequence. Keep everyone clear of roof and window movement.\n\nConfirm that the rocker returns to neutral when released. If the roof was initially down, complete the DOWN check and then return it fully up and latched. A brief audio mute during latching or unlatching is normal—the roof is rearranging the cabin’s acoustics, not taking a swipe at your playlist."
+        },
+        {
+          "title": "Switch OFF after the checks, including an unsuccessful check",
+          "body": "Whether the checks passed or a fault interrupted them, finish by pressing and releasing ENGINE START/STOP from ON with both pedals released to switch OFF. Remove the key from the vehicle. Keep the parking brake applied.\nIf a fault requires reopening the console or touching its connectors, begin that work only after this OFF/key-out step. Record any incomplete roof movement, displayed message or returning fault code before further diagnosis."
         }
       ],
       "watchFor": [
         {
-          "title": "Windows lower but the roof remains still",
-          "body": "The roof requires full-down confirmation from both rear quarter windows. Lack of that confirmation prevents roof movement."
+          "title": "Do not let the console hang from its harness",
+          "body": "Support it as the clips release and while unplugging the rear connectors. Lowering the shell creates access; pulling it down by the wires does not."
         },
         {
-          "title": "An equipment-dependent final step",
-          "body": "Initialization and the BCM code check apply when installing a new component equipped with an intrusion sensor."
+          "title": "Both rear quarter windows must confirm full-down",
+          "body": "The roof can remain stationary after a valid switch request if either rear quarter window fails to provide its full-down signal. Do not bypass that protection."
+        },
+        {
+          "title": "Remove the tonneau covers before raising",
+          "body": "The optional covers contain magnets detected by sensors. Either installed cover can inhibit the UP operation."
+        },
+        {
+          "title": "Keep connector work separate from powered checks",
+          "body": "Fully reconnect and clip the console into place before ordinary powered checks. Switch OFF and remove the key again before renewing connector work."
         }
       ],
       "notes": [
-        "Hold the switch in the requested direction while the roof raises or lowers."
+        "UP is wired to Moveable Roof Control Module A, and DOWN to Module B. The modules exchange requests and coordinate their motors over the vehicle communications network; replacing the rocker does not resolve every fault elsewhere in that chain.",
+        "Hall-effect sensors detect magnetic fields. In this system they help report roof position, latch engagement and optional tonneau-cover installation.",
+        "The rear quarter window switches are deliberately inhibited while the roof is between its fully raised and fully lowered positions.",
+        "The roof system has no dedicated warning indicator. Message-center information and stored fault codes can still identify an interrupted operation.",
+        "The engine stays off for this replacement and its ordinary completion checks.",
+        "Ford recommends leaving the engine running during ordinary roof operation to avoid draining the battery; the owner manual requires ignition ON, not a running engine. This stationary workshop completion check retains engine-off ON and does not add an engine-start step."
       ],
       "diagnostics": [
         {
-          "finding": "The message center requests removal of covers or reduced speed.",
-          "meaning": "A stated roof operating condition is preventing movement.",
-          "next": "Correct that condition before judging switch operation."
+          "finding": "The roof does not respond to a held switch request.",
+          "meaning": "A missing operating condition can inhibit an otherwise valid request.",
+          "next": "Keep the car stationary. Check that accessory-delay power is active, the latch is released for DOWN, and both optional tonneau covers are removed for UP. Review the [operating conditions](#/document/G1708665) before judging the switch."
         },
         {
-          "finding": "The roof remains inoperative with the enabling conditions satisfied.",
-          "meaning": "The complaint can involve window confirmation or roof-control faults as well as the switch.",
-          "next": "Establish the fault before replacing the console."
+          "finding": "The windows lower, but the roof remains still.",
+          "meaning": "The request has initiated the window sequence, but roof movement still requires full-down confirmation from both rear quarter windows. This observation alone does not identify the failed part.",
+          "next": "Observe whether both rear quarter windows reach full down. If the roof remains inhibited, obtain diagnosis of the window-confirmation and roof-control systems using the [system operation description](#/document/G1708666). Do not bypass the confirmation signals."
+        },
+        {
+          "finding": "TOP DISABLED — REMOVE COVERS appears.",
+          "meaning": "The system is detecting an optional tonneau cover during a request to raise the roof.",
+          "next": "Remove both covers and retry under the correct operating conditions. If the message persists with both removed, investigate the cover-sensing system rather than replacing another console."
+        },
+        {
+          "finding": "TOP DISABLED — REDUCE SPEED appears.",
+          "meaning": "The system has identified vehicle speed above its operating threshold.",
+          "next": "Perform this workshop check with the vehicle stopped. If the message persists while stationary, pursue the speed-input or control-system fault."
+        },
+        {
+          "finding": "TOP NOT SECURE appears.",
+          "meaning": "This message is associated with a raised roof whose latch is not fully engaged when speed exceeds 5 km/h (3 mph).",
+          "next": "Stop and fully secure the roof latch before driving. Do not drive to provoke the message as a test."
+        },
+        {
+          "finding": "The rear quarter window switches do not operate while the roof is partway through travel.",
+          "meaning": "The system deliberately inhibits those switches between the roof’s end positions.",
+          "next": "Do not treat that condition alone as a second switch failure. Complete roof travel through the normal roof control if the system permits; otherwise diagnose the interrupted roof operation."
+        },
+        {
+          "finding": "The roof still will not move with the operating conditions satisfied.",
+          "meaning": "Roof modules or the body-control system can store faults even without a dedicated warning lamp.",
+          "next": "Retain any messages and obtain fault-code diagnosis of MRCMA, MRCMB and BCMB as appropriate. The [system description](#/document/G1708666) explains their roles; this replacement procedure does not establish electrical test values."
+        },
+        {
+          "finding": "BCM codes remain or return after intrusion-sensor initialization and clearing.",
+          "meaning": "The required electronic completion check has not succeeded.",
+          "next": "Record the retrieved codes and resolve their cause before calling the sensor-equipped installation complete. Switch OFF and remove the key before any renewed connector work."
         }
       ],
       "verification": [
         {
-          "title": "Verify the operating sequence",
-          "body": "Under the required operating conditions, confirm the held switch request lowers the windows and permits the requested roof movement."
+          "title": "Console retention and connections",
+          "body": "Every disconnected plug has been reconnected, the wiring is clear of the seating edge, both retaining clips engage, and the console sits evenly without hanging loose."
         },
         {
-          "title": "Record the conditional electronic checks",
-          "body": "For an intrusion-sensor-equipped replacement, record completion of initialization and the final BCM code retrieval result."
+          "title": "Equipment-dependent setup",
+          "body": "For a new console with an intrusion sensor, LIN New Module Initialization is complete and the BCM self-test, clearing and subsequent code retrieval confirm that its DTCs have cleared."
+        },
+        {
+          "title": "Ordinary switch response",
+          "body": "With the vehicle stationary and the operating prerequisites met, held DOWN and UP requests produce the window-first roof sequence. The rocker returns to neutral when released, and the roof finishes fully raised and latched."
+        },
+        {
+          "title": "Final power state",
+          "body": "After all checks, including any unsuccessful check, ignition is OFF, the key is outside the vehicle, and the parking brake remains applied."
         }
       ],
       "procedures": [
         {
           "documentId": "G1708677",
-          "purpose": "Identify the overhead console assembly as the replacement unit for the convertible top switch."
+          "purpose": "Establish complete overhead-console replacement as the repair for the convertible top switch."
         },
         {
           "documentId": "G1693978",
-          "purpose": "Remove and install the convertible overhead console and perform intrusion-sensor initialization when required.",
+          "purpose": "Provide convertible console clip release, connector disconnection, reverse-order installation and conditional intrusion-sensor initialization and BCM checks.",
           "mediaId": "G1693978-m0001"
         },
         {
           "documentId": "G1708665",
-          "purpose": "Check the opening and closing conditions before assessing switch response."
+          "purpose": "Define the operating conditions for roof opening and closing."
         },
         {
           "documentId": "G1708666",
-          "purpose": "Understand switch requests, window confirmation and roof-inhibition messages."
+          "purpose": "Explain held switch requests, window-first operation, rear-window confirmation, roof sensors and message-center decisions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant service protection, remote-start disabling and key-removal precautions."
         }
       ],
       "hero": null,
@@ -167898,7 +168516,7 @@
         "years": [
           2015
         ],
-        "equipment": "Convertible; overhead-console intrusion sensor if fitted"
+        "equipment": "2015 Mustang convertible with 2.3L, 3.7L or 5.0L engine; overhead-console intrusion sensor if fitted."
       },
       "relatedGuideIds": [
         "job-182f6103a6e8f1af"
@@ -167919,6 +168537,10 @@
         {
           "documentId": "G1708666",
           "sourceHash": "1cf5dbab89395d09fd4405eb88ccbea927cc73c150a3e0bf4725aeb23753a27f"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -167937,8 +168559,41 @@
               "end": 239
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "5c5f38d02ea3b84e6095a020271c32ced9bac4794e30339006b0be5d85becdf1",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-power-down",
+          "title": "Secure the car and switch off",
+          "summary": "Disable remote start when fitted, establish ignition OFF and remove the key.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "release-and-unplug",
+          "title": "Remove the overhead console",
+          "summary": "Release the two clips, support the console and disconnect its rear wiring.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "refit-and-initialize",
+          "title": "Install and configure the replacement",
+          "summary": "Reconnect and retain the console, then complete sensor setup when required.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "check-and-finish",
+          "title": "Check roof operation and finish",
+          "summary": "Check both held switch requests, secure the roof and end with ignition OFF and the key removed.",
+          "start": 7,
+          "end": 9
         }
-      }
+      ]
     },
     {
       "title": "Remove and refit the convertible rear seat backrest",
@@ -169354,79 +170009,161 @@
     },
     {
       "title": "Replace the convertible top rear-panel lower weatherstrip",
-      "summary": "Release the riveted weatherstrip with the roof partly open, remove all drilling debris and secure the replacement with the specified rivets.",
-      "introduction": "This weatherstrip forms a sealing edge at the convertible top's rear panel and is secured with blind rivets. Replacement requires controlled removal of the rivet heads. The surrounding roof material must have enough slack for access, while the linkage holes must retain their original size for the replacement fasteners.",
-      "why": "Drilling through the linkage instead of stopping at the rivet head enlarges the mounting hole and can compromise rivet installation. Metal shavings must also be removed from the convertible-top assembly. Roof position matters because a fully closed top holds its material under tension.",
+      "summary": "Position the roof halfway open, remove the weatherstrip’s three rivets on the affected side without drilling into the linkage, and fit the replacement with the specified blind rivets.",
+      "introduction": "A convertible roof should welcome sunshine without giving the weather an open invitation. This rear-panel weatherstrip helps form the roof’s sealing edge, and its replacement comes down to three rivets and a little drilling restraint. I’ll walk you through getting slack into the roof, releasing the strip and fitting its replacement without turning the linkage holes into an expensive little science project.",
+      "why": "The partly open roof relaxes the fabric and surrounding components so you can reach the weatherstrip. The important distinction is between removing a rivet head and drilling through the linkage beneath it: enlarging that mounting hole can prevent the replacement rivet from fastening correctly. Removing every metal shaving is also part of the job.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "convertible rear panel lower weatherstrip",
-        "convertible top weatherstrip replacement",
-        "rear roof seal rivets"
+        "2015 Mustang convertible rear panel lower weatherstrip",
+        "convertible top rear seal replacement",
+        "Mustang convertible weatherstrip rivets"
       ],
       "when": {
-        "summary": "When the convertible top rear-panel lower weatherstrip requires removal or replacement.",
+        "summary": "Use this procedure when the convertible top rear-panel lower weatherstrip needs removal or replacement.",
         "notes": [
-          "The right side is illustrated; the left side is similar."
+          "The illustrated work is on the right side; the left side uses the same method.",
+          "This is a weatherstrip replacement procedure, not a test for locating a water leak or diagnosing an inoperative roof."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare drilling, riveting and cleanup equipment",
-          "detail": "Have an electric drill, 4.2 mm drill bit, pneumatic rivet gun and vacuum cleaner."
+          "title": "Gather the working equipment",
+          "detail": "Have an electric drill, a 4.2 mm drill bit, a pneumatic rivet gun and a vacuum cleaner ready. Wear eye and ear protection, and use protective gloves when handling sharp components or drilled fasteners."
         },
         {
-          "title": "Obtain the specified fasteners",
-          "detail": "Use silver multigrip blind rivets with a 4 mm diameter, 12 mm length and 8 mm head diameter."
+          "title": "Have the replacement strip and correct rivets ready",
+          "detail": "For each side being replaced, have the appropriate weatherstrip and three silver multigrip blind rivets: 4 mm (0.157 in) diameter, 12 mm (0.472 in) length and 8 mm (0.314 in) head diameter. A blind rivet is installed from its accessible side using the rivet gun."
+        },
+        {
+          "title": "Plan for normal roof operation",
+          "detail": "The roof must operate normally to reach its service position. With the car stationary, use engine-off ignition ON with a valid key inside: from known OFF, press and release ENGINE START/STOP without pressing the brake or clutch. The 2015 owner manual, printed pages 121–122 and 185–187, describes these controls. Empty the roof stowage compartment behind the rear seat, remove debris from the roof surface and keep people and objects clear of its full travel. Avoid folding wet roof material for storage. Resolve any existing roof-operation problem before dismantling the weatherstrip."
+        },
+        {
+          "title": "Keep the work at ground level",
+          "detail": "Keep the vehicle on the ground with the parking brake applied, automatic transmission in P or manual transmission in a parked gear; the engine remains off. This roof-side job needs no wheel removal or lifting. For fitted tonneau caps, slide each cap’s side edge toward the car’s center to free the trim, lift that edge and pull the cap back to release its leading edge. Store both caps in their bag in the trunk before raising the roof. Never place them in the roof stowage compartment."
         }
       ],
       "steps": [
         {
-          "title": "Position the roof for slack",
-          "body": "Follow the [weatherstrip procedure](#/document/G1708676). Open the top approximately 50 percent. Although the illustrations show it fully closed, the service position should be approximately 25–50 percent open to relax the material and adjacent components."
+          "title": "Prevent an unintended start before positioning the roof",
+          "body": "Park on level ground, apply the parking brake and retain it throughout. Select P on an automatic or a parked gear on a manual; keep the engine off. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before service, using the engine-off ignition controls in preparation if power is needed. Finish these settings before roof positioning.\n\nWear eye and ear protection for drilling. Keep everyone clear of the moving roof and linkage whenever the top switch is operated. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Remove only the rivet heads",
-          "body": "Locate the illustrated weatherstrip rivets and drill their heads with the 4.2 mm bit. Control the cut so the drill does not pass through the linkage assembly. The linkage holes are to be preserved, not redrilled."
+          "title": "Open the roof approximately halfway",
+          "body": "If ignition is already ON after settings, leave it ON. If it is OFF, bring the valid key inside and press and release ENGINE START/STOP without either pedal for engine-off ignition ON. With the car secured and stationary, lower the latch handle above the interior mirror toward the windshield and rotate it clockwise to release the roof. Confirm the empty stowage area and clear roof travel.\n\nHold the top switch in DOWN. All four windows are commanded down first; roof movement waits for both rear quarter windows to confirm full down. Release the switch at approximately 50 percent open. The service working range is approximately 25–50 percent open, giving the fabric and nearby components slack. If starting fully down, remove the caps as described in preparation and use UP to reach that same position.\n\nDo not copy the closed-roof position in the detail illustration. The actual service position comes from the [weatherstrip procedure](#/document/G1708676); ordinary latch controls are in the owner manual, printed pages 185–187."
         },
         {
-          "title": "Remove the strip and all shavings",
-          "body": "Remove the released weatherstrip and vacuum the drilling debris from the convertible-top assembly. All rivet shavings must be removed before installation."
+          "title": "Stop roof operation and identify the three attachment points",
+          "body": "After positioning the roof, press and release ENGINE START/STOP from ON without either pedal to switch OFF, then remove the key from the vehicle. Keep the roof switch untouched while your hands or tools are in the mechanism.\n\nAt the side of the roof’s rear panel, find the long, narrow weatherstrip running along the sloping linkage beside the rear-window area. The right-side illustration shows three rivet locations spaced along this strip: near its upper end, around the middle and near its lower end. Identify all three before drilling. The left side is similar; no electrical connector or separate trim-removal step is part of this operation."
         },
         {
-          "title": "Install the weatherstrip",
-          "body": "Reverse removal, positioning the weatherstrip at its mountings and using the pneumatic rivet gun to install the specified multigrip blind rivets. Keep the roof in the slack service position during attachment."
+          "title": "Drill off the rivet heads without entering the linkage",
+          "body": "Fit the 4.2 mm bit to the electric drill. Center it on a weatherstrip rivet head and remove only the head, stopping once the head releases. Repeat at the other two attachment points on that side.\n\nDo not drill through the linkage assembly. The bit is for releasing the rivet heads, not enlarging or clearing the linkage holes. I’d rather spend a little longer on each head than make a small seal job a damn linkage repair."
+        },
+        {
+          "title": "Lift away the released strip and remove the drilling debris",
+          "body": "Once all three rivet heads are released, separate the weatherstrip from its mounting on the linkage. If it remains held at an attachment point, check that the corresponding head has actually released; do not force the strip or drill deeper into the linkage.\n\nVacuum the weatherstrip mounting area and the surrounding convertible-top assembly. Look along the linkage and nearby folds of roof material for remaining rivet shavings, and remove all of them. With the mounting exposed, check whether drilling has enlarged any linkage hole. If a hole has been enlarged, stop before fitting the replacement rivet."
+        },
+        {
+          "title": "Position the replacement and install the specified rivets",
+          "body": "Reverse the removal operation with the roof still in its slack service position. Place the replacement weatherstrip in the same orientation and mounting position as the removed strip, aligning its three attachment points with the existing linkage holes.\n\nUse the pneumatic rivet gun to install three new silver multigrip blind rivets on the serviced side: 4 mm diameter, 12 mm length and 8 mm head diameter. Check that the strip remains correctly positioned as each rivet is set. If replacing both sides, carry out the same removal, cleanup and installation on the other side."
+        },
+        {
+          "title": "Check the attachment before moving the roof",
+          "body": "Check each of the three rivet locations on every serviced side. The weatherstrip should sit in its intended position and be retained at every mounting point. If a rivet has failed to secure the strip, resolve that attachment before operating the roof.\n\nVacuum again if installation has left debris. Remove all loose rivet pieces, shavings and tools from the roof assembly. Clear your hands and clothing from the linkage before restoring power for roof operation."
+        },
+        {
+          "title": "Return the roof to its closed and latched position",
+          "body": "Remove any fitted tonneau caps using preparation’s sequence. With all riveting complete, tools removed and everyone clear, bring the valid key inside. From OFF, press and release ENGINE START/STOP without either pedal for engine-off ignition ON. Keep the parking brake applied and the car in its parked gear.\n\nHold the rocker in UP. When the latch handle is reachable, keep it down and rotated clockwise into its fully open position. Continue UP until the roof aligns evenly with the windshield header, then release the rocker. Pull the handle down, rotate it counterclockwise to secure the roof, then push it up into its stowed position. These are the owner manual’s normal closing controls, printed pages 186–187.\n\nThe rear quarter-window switches are intentionally disabled during intermediate roof travel; do not bypass that interlock. After closing, switch ignition OFF with the pedals released and remove the key, whether the check succeeds or fails. Visually confirm the strip remains attached without folding out of position. Any renewed hands-on work begins OFF/key out. This verifies installation, not an unrelated water-leak cure."
         }
       ],
       "watchFor": [
         {
-          "title": "Roof movement unavailable",
-          "body": "Opening requires the accessory-delay relay to be active and the roof latch released. Both rear quarter windows must report fully lowered before the roof can move. Resolve access conditions before drilling."
+          "title": "The illustration’s roof position is not the working position",
+          "body": "The detailed view shows a closed roof with tension in the material. Perform the work with the roof approximately 25–50 percent open, targeting the approximately halfway-open position."
         },
         {
-          "title": "Tonneau covers during closing",
-          "body": "Remove fitted tonneau covers before commanding the roof closed."
+          "title": "The linkage hole must retain its original size",
+          "body": "Drill only the rivet head. Continuing through the linkage can enlarge the hole and hinder proper installation of the specified replacement rivet."
+        },
+        {
+          "title": "Keep hands clear during powered movement",
+          "body": "Finish drilling, riveting and cleanup with roof operation stopped. Move the roof only after people, tools and loose material are clear of its moving parts."
+        },
+        {
+          "title": "Clean beyond the immediately visible mounting face",
+          "body": "All rivet shavings must be removed from the convertible-top assembly. Check the nearby material folds and linkage as well as the exposed strip mounting."
         }
       ],
-      "notes": [],
+      "notes": [
+        "The roof uses two coordinated motor-and-control units. Window-down confirmation and the latch and tonneau-cover signals determine whether movement is permitted; these interlocks are not reasons to dismantle the weatherstrip.",
+        "Brief audio muting when the roof is latched or unlatched is normal.",
+        "The general lifting and underhood precautions do not add lifting or engine-bay work to this roof-side repair.",
+        "The owner manual recommends running the engine during normal roof use to limit battery drain, but requires ignition ON. This brief workshop positioning and completion sequence deliberately keeps the engine off."
+      ],
       "diagnostics": [
         {
-          "finding": "A drill has enlarged a linkage mounting hole.",
-          "meaning": "Correct installation of the specified rivet may be hindered.",
-          "next": "Resolve the mounting damage before continuing weatherstrip installation."
+          "finding": "The top will not begin opening.",
+          "meaning": "Opening requires active accessory-delay power, a released latch and vehicle speed below 5 km/h (3 mph). The roof also waits for both rear quarter windows to report fully down.",
+          "next": "Keep the vehicle stationary and check these operating conditions before attempting access. If the conditions are met and movement remains unavailable, stop the weatherstrip job and arrange roof-system diagnosis. The [operating description](#/document/G1708666) explains the interlocks but is not a fault-testing procedure."
+        },
+        {
+          "finding": "The rear quarter-window switches do not operate with the roof partly open.",
+          "meaning": "The system deliberately disables those switches while the roof is between its fully open and fully closed positions.",
+          "next": "Leave the interlock intact and carry out the weatherstrip work in the prescribed roof position."
+        },
+        {
+          "finding": "The message center displays TOP DISABLED — REMOVE COVERS during closing.",
+          "meaning": "One or both optional tonneau covers are detected as installed, preventing the roof from being raised.",
+          "next": "Remove the fitted covers, clear the mechanism and try the normal closing operation again."
+        },
+        {
+          "finding": "Drilling has enlarged a linkage mounting hole, or a replacement rivet does not secure the strip.",
+          "meaning": "The intended rivet attachment may no longer be sound.",
+          "next": "Stop before returning the roof to service and have the attachment assessed. Do not improvise a larger rivet or continue drilling."
+        },
+        {
+          "finding": "The roof remains unable to move after the normal operating conditions are satisfied.",
+          "meaning": "The roof or body control modules can store a diagnostic trouble code even though the system has no dedicated warning indicator.",
+          "next": "Arrange diagnosis of the roof system rather than replacing more weatherstrip parts. Do not bypass its movement interlocks."
         }
       ],
       "verification": [
         {
-          "title": "Confirm attachment and cleanliness",
-          "body": "Check that the specified rivets secure the weatherstrip, the linkage holes have not been enlarged and no rivet shavings remain in the top assembly."
+          "title": "Every mounting point is secured",
+          "body": "Confirm three correctly specified new rivets retain the strip on each serviced side, with the strip aligned in its mounting position and no enlarged linkage hole left unresolved."
+        },
+        {
+          "title": "The assembly is free of debris",
+          "body": "Confirm no rivet heads, loose pieces or metal shavings remain in the mounting area, linkage or nearby roof-material folds."
+        },
+        {
+          "title": "The roof returns to its normal closed condition",
+          "body": "With optional tonneau covers removed and the mechanism clear, confirm the roof closes and the latch fully engages. Visually confirm that the weatherstrip remains attached and correctly positioned after movement."
+        },
+        {
+          "title": "Finish with power off",
+          "body": "After the ordinary roof check, confirm ignition OFF, key outside and parking brake still applied. Stop and arrange diagnosis if the roof cannot finish its normal closed and latched condition; do not bypass its interlocks."
         }
       ],
       "procedures": [
         {
           "documentId": "G1708676",
-          "purpose": "Convertible rear-panel lower-weatherstrip removal and installation, including service position and rivet specification.",
+          "purpose": "Primary weatherstrip removal and reverse-order installation, roof service position, three illustrated attachments and replacement rivet dimensions.",
           "mediaId": "G1708676-m0002"
+        },
+        {
+          "documentId": "G1708665",
+          "purpose": "Roof-switch operation and the conditions required to open and close the convertible top."
+        },
+        {
+          "documentId": "G1708666",
+          "purpose": "Window-down sequencing, intermediate-position window interlock, tonneau-cover restrictions and roof-status messages."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, key removal and eye, ear and sharp-edge protection."
         }
       ],
       "hero": {
@@ -169450,7 +170187,7 @@
         "years": [
           2015
         ],
-        "equipment": "Convertible top"
+        "equipment": "Convertible top on 2015 Mustang convertibles with the 2.3L, 3.7L or 5.0L engine; optional tonneau covers affect roof-closing operation."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -169465,6 +170202,10 @@
         {
           "documentId": "G1708666",
           "sourceHash": "1cf5dbab89395d09fd4405eb88ccbea927cc73c150a3e0bf4725aeb23753a27f"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -169483,8 +170224,34 @@
               "end": 1224
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "2be1b91f7ede2d84c428fb27aee1dcf432b4f6659ae7b232eae64aaaaf64a29a",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "position-and-access",
+          "title": "Prepare and position the roof",
+          "summary": "Prevent unintended starts, open the roof halfway and identify the weatherstrip attachments.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "release-and-clean",
+          "title": "Remove the weatherstrip",
+          "summary": "Release only the rivet heads, lift away the strip and remove all drilling debris.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "refit-and-close",
+          "title": "Fit the replacement and finish",
+          "summary": "Rivet the replacement into place, check its attachment and return the roof to its closed position.",
+          "start": 6,
+          "end": 8
         }
-      }
+      ]
     },
     {
       "title": "Adjust convertible-top tension belt buckles",

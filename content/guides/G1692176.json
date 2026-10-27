@@ -1,0 +1,282 @@
+{
+  "documentId": "G1692176",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1883856",
+      "sourceHash": "0a0046e790839fc81393f5c7a9f8a8484a534e11a5a852156e3a64f0c046dc02",
+      "referencedBy": "G1692176",
+      "sourceReference": "G1883856",
+      "sourceUnitCount": 94,
+      "mediaCount": 1
+    },
+    {
+      "documentId": "G1883858",
+      "sourceHash": "b8de8a0f384ae7d9ce74ca49a9d7589c0ef7c295c7d2a527e40c2b8251ffdbc4",
+      "referencedBy": "G1883856",
+      "sourceReference": "G1883858",
+      "sourceUnitCount": 53,
+      "mediaCount": 8
+    },
+    {
+      "documentId": "G1692226",
+      "sourceHash": "03ce0b57c02c96f239aca4b4cfa820d987fde3cfdb53de58d49fc653bcea61fc",
+      "referencedBy": "G1883856",
+      "sourceReference": "G1692226",
+      "sourceUnitCount": 6,
+      "mediaCount": 2
+    },
+    {
+      "documentId": "G1726475",
+      "sourceHash": "e527864f3538e3d2cd505b65b1f6130a06101d24994bc026100f31eb16738ab9",
+      "referencedBy": "G1883856",
+      "sourceReference": "G1726475",
+      "sourceUnitCount": 13,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1726475",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693942",
+      "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319",
+      "referencedBy": "G1883856",
+      "sourceReference": "G1693942",
+      "sourceUnitCount": 21,
+      "mediaCount": 1
+    },
+    {
+      "documentId": "G1692223",
+      "sourceHash": "7f5217365c38023eb95c6d672899db975434889287ba559d133e33bf4dceb380",
+      "referencedBy": "G1883856",
+      "sourceReference": "G1692223",
+      "sourceUnitCount": 6,
+      "mediaCount": 1
+    }
+  ],
+  "sourceHash": "fec09d2364c1354e26f7f4bd570aa62e6cc0da2d7747a877fdcd680a1d4595cb",
+  "title": "Seatbelt Systems: Locking Modes, Warnings and Child-Seat Anchors",
+  "introduction": "A seatbelt reel has more than one job. It normally lets the webbing move, can lock in response to vehicle movement, and—in passenger seating positions—can ratchet inward to secure a child seat. I separate those functions before interpreting any clicking: a reel holding its ground may be doing exactly what it should.\n\nThis guide explains the locking modes, the warning light and chime, and the locations of the child-seat anchors. Use the operating conditions to understand what you notice, then take any concern to the matching functional test or service reference. This is an overview, not a complete child-seat installation, road-test or restraint-replacement procedure.",
+  "requirements": [
+    {
+      "category": "Before investigating a seatbelt concern",
+      "items": [
+        {
+          "name": "Start with the belt and buckle",
+          "detail": "Check the webbing for tearing, fraying, cuts or stretching, and inspect the buckle and tongue assembly before diagnosis or repair. Ford-specific diagnostic work also requires the practices in Diagnostic Methods (100-00 General Information, Description and Operation); retain that referral rather than substituting an improvised electrical test. See [Seatbelt Systems diagnosis and testing](#/document/G1883856)."
+        },
+        {
+          "name": "Prepare for the selected retractor test",
+          "detail": "For the ALR functional test, place an adjustable backrest fully upright and, if equipped, put the shoulder height adjuster fully down or fully up. For the road-test inspection, fasten the seatbelts, use a safe area, keep excessive slack out of the webbing across the torso and do not jerk the webbing. Use the complete matching test in [Seatbelt Systems](#/document/G1883856), including its result and replacement branches."
+        },
+        {
+          "name": "Road-test braking warning",
+          "detail": "Apply maximum brake force only on dry concrete or an equivalent hard surface, never on wet pavement or gravel. Failure to follow this instruction may result in serious personal injury. The linked road-test inspection requires maximum braking without a skid; the operating description here is not a substitute for that complete test."
+        }
+      ]
+    },
+    {
+      "category": "Before service or warning configuration",
+      "items": [
+        {
+          "name": "Review safety and prevent an unexpected start",
+          "detail": "Before service, review [Health and Safety Precautions](#/document/G1693189), including the applicable system warnings; failure to follow the required safety instructions may result in serious personal injury. For service, inspection or maintenance requiring work underneath or around the vehicle, disable remote start if equipped through the Central Display at Vehicle settings > Remote Start Setup. Otherwise the vehicle could be remotely started at any time, causing personal injury or death. Then switch the ignition OFF and remove the key during service to prevent another person from starting the engine; an accidental start may cause serious personal injury. Use ignition settings required by a selected functional check only as that check directs."
+        },
+        {
+          "name": "Protect yourself during hands-on service",
+          "detail": "Wear eye and ear protection when servicing the vehicle, and protective gloves when handling parts with pointed or sharp edges. Failure to follow these precautions may result in serious personal injury. If subsequent work involves an airbag or seatbelt pretensioner, use qualified personnel and the dedicated SRS depowering, handling and testing procedures, including the required Pyrotechnic Device Health and Safety Precautions."
+        },
+        {
+          "name": "Prepare before changing Belt-Minder® settings",
+          "detail": "Use [Seatbelt Minder Deactivating/Activating](#/document/G1693942) for the complete sequence and confirmation. Its preparation is to apply the parking brake, select Park (P) with an automatic transmission or Neutral (N) with a manual transmission, place the ignition OFF, unbuckle both front belts, then select RUN without starting the engine. Driver and front passenger settings are changed independently; leave the other position unbuckled while configuring the selected position. A diagnostic scan tool is an alternative described by that reference."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1692176-b00001",
+      "text": "How the seatbelt system operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1692176-b00002",
+      "text": "Emergency Locking Retractor (ELR)",
+      "why": "This mode responds to vehicle movement and helps restrain an occupant; it serves a different purpose from the passenger-belt mode used to secure a child seat."
+    },
+    {
+      "blockId": "G1692176-b00003",
+      "text": "All retractors have an Emergency Locking Retractor (ELR) mode. This vehicle-sensitive feature locks the seatbelt webbing during hard braking, cornering or an impact of approximately 24 km/h (14.9 mph), helping limit the forward movement of the driver and passengers. For the prescribed check, use Functional Test - Safety Belt Retractor, Road Test Inspection in [Seatbelt Systems (501-20A Seatbelt Systems, Diagnosis and Testing)](#/document/G1883856).",
+      "why": "I read “vehicle-sensitive” as the key distinction: the reel responds to what the vehicle is doing. The linked road test checks for locking with minimal webbing extension during its specified braking application. All retractors being tested must lock; any that fail to lock require replacement through the appropriate service procedure. The impact description is not an instruction to reproduce a collision or a stand-alone test specification."
+    },
+    {
+      "blockId": "G1692176-b00004",
+      "text": "Automatic Locking Retractor (ALR)",
+      "why": "This mode allows the webbing to wind inward while preventing it from being pulled outward, which is useful when securing a child seat."
+    },
+    {
+      "blockId": "G1692176-b00005",
+      "text": "Automatic Locking Retractor (ALR) mode is used to lock a child seat in any passenger seating position. Pull the seatbelt webbing fully out of the retractor, then let it retract to activate ALR mode. Clicking as the webbing winds onto the spool indicates that ALR mode is engaged: the webbing can retract but cannot be pulled back out. Let the webbing retract completely into the retractor to disengage ALR mode. For testing, use Functional Test - Safety Belt Retractor, Automatic Locking Retractor (ALR) Mode in [Seatbelt Systems (501-20A Seatbelt Systems, Diagnosis and Testing)](#/document/G1883856).",
+      "why": "Think of this as a ratchet taking up slack: inward movement is allowed, outward movement is held. The clicking explains the selected mode; it does not replace a functional check. The linked test verifies both that ALR holds and that full stowage restores normal extraction. Failure to hold, or remaining locked after that reset, requires a new retractor. Child-seat fitting still requires the applicable installation instructions."
+    },
+    {
+      "blockId": "G1692176-b00006",
+      "text": "Seatbelt Warning Indicator and Chime",
+      "why": ""
+    },
+    {
+      "blockId": "G1692176-b00007",
+      "text": "The initial warning light and chime respond to the driver and/or front passenger buckle state and when the ignition is switched on:",
+      "why": "I distinguish this initial reminder from Belt-Minder®, which adds a later, intermittent warning under its own operating conditions."
+    },
+    {
+      "blockId": "G1692176-b00009",
+      "text": "If the driver and/or passenger seatbelt is unbuckled with the ignition ON, the warning indicator illuminates for 1 to 2 minutes and the chime sounds for 4 to 8 seconds.",
+      "why": "The light and sound have different durations, so the chime ending before the light goes out is part of the described behavior."
+    },
+    {
+      "blockId": "G1692176-b00011",
+      "text": "If the driver and/or passenger buckles the seatbelt while the warning indicator is lit and the chime is sounding, both warnings turn off.",
+      "why": "The buckle state ends the active initial reminder."
+    },
+    {
+      "blockId": "G1692176-b00013",
+      "text": "If the driver and/or passenger seatbelt is already buckled before the ignition reaches ON, the warning indicator and chime remain off.",
+      "why": "Buckle timing matters when comparing observed behavior with the initial-warning description."
+    },
+    {
+      "blockId": "G1692176-b00015",
+      "text": "Belt-Minder®",
+      "why": ""
+    },
+    {
+      "blockId": "G1692176-b00016",
+      "text": "Belt-Minder® adds another reminder to the initial seatbelt warning. When the driver and/or front passenger belt remains unbuckled under the applicable conditions, it intermittently sounds the chime and illuminates the seatbelt warning indicator in the instrument panel cluster (IPC).",
+      "why": "The IPC is where the visual reminder appears. The intermittent pattern belongs to this supplemental reminder, so it should be interpreted using the operating table below."
+    },
+    {
+      "blockId": "G1692176-b00017",
+      "text": "Either the driver or front passenger seatbelt system can activate Belt-Minder®. If the warnings for one occupant have expired after approximately 5 minutes, the other occupant can still activate the feature.",
+      "why": "I treat the seating positions as separate reminder requests: one occupant's warning ending does not silence the other occupant's reminder. The MyKey® exception is explained below."
+    },
+    {
+      "blockId": "G1692176-b00018",
+      "text": "Passenger Belt-Minder® activates only when the occupant classification system (OCS) detects a passenger in the right front seat and that passenger's weight exceeds a programmed limit. For OCS operation, refer to Airbag and Seatbelt Pretensioner Supplemental Restraint System (SRS) - System Operation and Component Description (501-20B Supplemental Restraint System, Description and Operation).",
+      "why": "An unbuckled passenger belt alone does not establish that the passenger reminder should activate; occupant classification is also part of the decision. This overview gives no numerical weight threshold and is not an OCS diagnostic test. Retain the dedicated SRS reference for that system's operation."
+    },
+    {
+      "blockId": "G1692176-b00019",
+      "text": "When a MyKey® programmed key is used, Belt-Minder® cannot be deactivated. Refer to the Owner's Literature for further information about MyKey® functionality.",
+      "why": "The linked configuration procedure also explains that using a MyKey® programmed key re-enables a previously disabled reminder and prevents its normal timeout. That key-dependent behavior matters before interpreting an unsuccessful attempt to change the setting."
+    },
+    {
+      "blockId": "G1692176-b00020",
+      "text": "To activate or deactivate Belt-Minder®, use [Seatbelt Minder Deactivating/Activating (413-01 Instrumentation, Message Center and Warning Chimes, General Procedures)](#/document/G1693942).",
+      "why": "The setting change uses a timed buckle sequence and an indicator confirmation, with the front seating positions configured independently. I keep the complete sequence in its dedicated procedure so a partial buckle-and-unbuckle description is not mistaken for a successful setting change."
+    },
+    {
+      "blockId": "G1692176-b00021",
+      "text": "Read the Belt-Minder® table by matching the buckle state, ignition timing and vehicle-speed conditions on the left with the resulting warning behavior on the right:",
+      "why": "The conditions work together. I use the matching row before treating a quiet chime or an intermittent light as a fault; the table describes expected operation rather than identifying a failed part."
+    },
+    {
+      "blockId": "G1692176-b00022",
+      "text": "The driver and/or front passenger seatbelt remains unbuckled when the vehicle has reached at least 9.7 km/h (6.0 mph), and 1-2 minutes have elapsed since the ignition was turned ON...",
+      "why": "Both the speed condition and elapsed ignition time belong to this activation condition."
+    },
+    {
+      "blockId": "G1692176-b00023",
+      "text": "Belt-Minder® activates: the seatbelt warning indicator illuminates and the chime sounds for 6 seconds every 25 seconds. This repeats for approximately 5 minutes or until the seatbelt(s) is buckled.",
+      "why": "This is the warning response paired with the unbuckled-belt condition in the adjacent cell. Apply the MyKey® qualification described above when interpreting timeout behavior."
+    },
+    {
+      "blockId": "G1692176-b00024",
+      "text": "The driver or front passenger seatbelt becomes unbuckled for approximately one minute while the vehicle is traveling at least 9.7 km/h (6.0 mph), and more than 1-2 minutes have elapsed since the ignition has been ON...",
+      "why": "This row covers a belt becoming unbuckled during travel, rather than simply remaining unbuckled from startup."
+    },
+    {
+      "blockId": "G1692176-b00025",
+      "text": "Belt-Minder® activates: the seatbelt warning indicator illuminates and the chime sounds for 6 seconds every 25 seconds. This repeats for approximately 5 minutes or until the seatbelt(s) is buckled.",
+      "why": "The warning pattern matches the other activation branch, but its triggering buckle history differs. The MyKey® qualification above also applies to timeout behavior."
+    },
+    {
+      "blockId": "G1692176-b00027",
+      "text": "Where the child-seat anchors are",
+      "why": ""
+    },
+    {
+      "blockId": "G1692176-b00028",
+      "text": "Child Safety Seat Tether Anchor",
+      "why": ""
+    },
+    {
+      "blockId": "G1692176-b00029",
+      "text": "On the Coupe, the child safety seat tether anchors serve the rear seating positions and are formed as part of the parcel shelf sheet metal. For the Convertible, the owner’s manual locates the tether anchors behind the rear seatback.",
+      "why": "The parcel shelf is the shelf behind the Coupe’s rear backrest. I keep the body styles separate when locating the upper tether anchors, and distinguish them from the lower anchors at the cushion-to-backrest junction. Use the matching Coupe or Convertible instructions in the owner’s manual, Child Safety — Using Tether Straps, together with the child-seat manufacturer’s instructions for installation."
+    },
+    {
+      "blockId": "G1692176-b00030",
+      "text": "If a child safety seat was in use during a collision, inspect its mounting areas and restore the vehicle to its original production configuration.",
+      "why": "The required attention extends to the vehicle's mounting areas, not just the removable child seat. This overview identifies the post-collision obligation; it does not provide damage limits or the structural restoration procedure."
+    },
+    {
+      "blockId": "G1692176-b00031",
+      "text": "Child Safety Seat Tether Anchor: Lower Anchors and Tethers for Children (LATCH)",
+      "why": "The following description locates the lower anchors, separately from the parcel-shelf tether anchors."
+    },
+    {
+      "blockId": "G1692176-b00032",
+      "text": "The Lower Anchors and Tethers for Children (LATCH) lower anchors are under the rear seat at the junction between the backrest and cushion. They are released for service; for that work, refer to Child Safety Seat Tether Anchor (501-20A Seatbelt Systems, Removal and Installation).",
+      "why": "I use the backrest-to-cushion junction as the locating landmark. “Released for service” refers to the separate service operation, not an instruction to pull or loosen an anchor during child-seat fitting. Retain the removal-and-installation referral; its release method is outside this overview."
+    },
+    {
+      "blockId": "G1692176-b00033",
+      "text": "If a child safety seat was in use during a collision, inspect its mounting areas and restore the vehicle to its original production configuration.",
+      "why": "The same post-collision requirement applies to the lower-anchor mounting areas. Their location at the seat junction does not remove the need to assess and restore the vehicle attachment structure."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:06:33.122Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 28,
+    "receivedBlocks": 28,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "049dc6c2ab368c77b87af02b48cfe3780ce57a26a13286d49666b76359295ec7",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 7,
+    "supportingSourceUnitCount": 241,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a8506a5e0ca5afd9ef613d7ed45bf5db96873a0233b74604f03ea62e3a468617",
+    "reviewedAt": "2026-10-27T20:04:31.375Z",
+    "editorialRevision": "anchor-context-2026-10-27T20:06:33.122Z",
+    "focusedCorrection": {
+      "scope": "Only explicit conditional startup, source-supported MyKey-use wording and owner-backed body-style tether location. All numerical states, test branches and other warnings unchanged.",
+      "ownerPdfHash": "ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592",
+      "ownerPrintedPages": [
+        23,
+        24,
+        25
+      ]
+    }
+  }
+}
