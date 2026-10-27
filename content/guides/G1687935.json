@@ -1,0 +1,60 @@
+{
+  "documentId": "G1687935",
+  "supportingSourceRefs": [],
+  "sourceHash": "fcf40ff8239c867d2f62eb3f08b7fe59cd617eb4ffadd48300d3ce5771f76791",
+  "title": "How the Accelerator Controls the Throttle",
+  "introduction": "I read this system as a relay: your foot makes the request, the pedal sensor reports it and the engine controller commands the throttle. Understanding that chain makes the accelerator less mysterious. This overview explains normal operation and the limited-performance fallback; it does not identify a failed component or provide a diagnostic test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1687935-b00001",
+      "text": "From Pedal Movement to Throttle Movement",
+      "why": ""
+    },
+    {
+      "blockId": "G1687935-b00002",
+      "text": "The acceleration controls comprise the accelerator pedal and its sensor assembly.",
+      "why": "The pedal assembly is the starting point for the driver’s request in the electronic control chain."
+    },
+    {
+      "blockId": "G1687935-b00003",
+      "text": "The accelerator pedal position (APP) sensor is on the accelerator pedal assembly. As the driver moves the pedal, the APP sensor sends a signal to the PCM. The PCM then signals the electronic throttle control to increase or decrease the throttle position.",
+      "why": "Pedal movement becomes an electrical message before the throttle moves. Keeping the sender, controller and throttle control distinct helps make sense of what each part contributes."
+    },
+    {
+      "blockId": "G1687935-b00004",
+      "text": "The engine management system operates the engine throttle electronically in response to the driver’s pedal movements. If the system fails, it provides a “limp home” mode that allows the car to be driven with limited performance.",
+      "why": "“Limp home” describes a reduced-performance fallback. It explains why a system failure can leave some driving capability available without preserving normal accelerator response."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:41:25.501Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bf8cdb07a83f9645e304d3ba4a70f7002857d38960d9b6f78eec50f7a3ee2136",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d04db5713e0f769a1f01223afb184fac47fc0bf60017d2da7ca3d57735a2d0ff",
+    "reviewedAt": "2026-10-27T20:41:25.501Z"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "documentId": "G1686515",
+  "supportingSourceRefs": [],
+  "sourceHash": "0bcdc73d101b64395bae33bdabe1073924a58842a604fca399a8020e13cfe946",
+  "title": "Tire Pressure Monitoring System: Overview",
+  "introduction": "The tire pressure monitoring system (TPMS) passes pressure information from the wheels to the vehicle's electronics, then brings a problem to your attention through the instruments. I follow that handoff like a relay race: the sensor's radio message is only the opening leg. This overview explains the route and the reasons for a warning; pressure specifications, warning-pattern interpretation and diagnostic tests are outside its scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686515-b00001",
+      "text": "From Tire Sensors to Dashboard Warnings",
+      "why": ""
+    },
+    {
+      "blockId": "G1686515-b00002",
+      "text": "The BCM (body control module) monitors tire pressure using battery-operated sensors mounted to the valve stems. Each sensor transmits tire-pressure information by radio to the RTM (radio transceiver module). The RTM passes that information to the BCM over a LIN (local interconnect network). When tire pressure falls below the low-pressure limit, or a fault is present, the IPC (instrument panel cluster) illuminates the TPMS warning indicator and the message center displays a message.",
+      "why": "The communication route explains how information leaves the rotating wheel and reaches the vehicle's control electronics. I keep the warning's meaning separate from its appearance: this overview identifies both low pressure and a fault as reasons for an alert, so the indicator alone does not establish which condition is present."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:36:56.852Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "24d5d620d1a3d00c315c429be773137107e9d2979e533ae29abc5734b48e41b8",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 3,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "089325e56739ced643d0a32d670a2e68d95a9d4559841568a84d0ced35c99d76",
+    "reviewedAt": "2026-10-27T20:36:56.852Z"
+  }
+}

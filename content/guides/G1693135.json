@@ -1,0 +1,397 @@
+{
+  "documentId": "G1693135",
+  "sourceHash": "d6b064655024c1e086feb5f2031aeda96ef6ce061c121f1a908e6faac724a099",
+  "title": "Cruise Control: Commands, Speed Holding and Cancellation",
+  "introduction": "Cruise control is a relay team: the steering-wheel switches make the request, the network carries it, and the engine controller manages the throttle. The pedals and other vehicle systems can interrupt that arrangement. I find the behavior much easier to understand once those jobs are separated.\n\nUse the labeled drawing to follow the solid pedal-input arrows and the patterned network paths through the Gateway Module. Match the numbered drawing to the component key, then use the message charts to identify who sends each request and why. The clutch input applies to manual-transmission vehicles. This overview explains operation and cancellation behavior; the drawings are not connector pinouts, and this is not a diagnostic or repair procedure.",
+  "requirements": [
+    {
+      "category": "Before using standard cruise control",
+      "items": [
+        {
+          "name": "Choose suitable driving conditions",
+          "detail": "Do not use cruise control in heavy traffic, on winding roads or on slippery surfaces. Doing so can cause loss of vehicle control, serious injury or death."
+        },
+        {
+          "name": "Keep control on downhill roads",
+          "detail": "The vehicle can exceed its selected speed downhill. Standard cruise control does not apply the brakes; change down a gear to help maintain the selected speed. Failure to do so can cause loss of vehicle control, serious injury or death."
+        },
+        {
+          "name": "Use the matching owner controls",
+          "detail": "This article explains standard cruise control. Use the Using Cruise Control section of the owner’s manual supplied for your vehicle and its actual controls. The owner evidence used here is the supplied first edition, not an assumed later replacement. The workshop editions disagree about the change produced by a brief SET press and the selector positions that cancel cruise; both discrepancies are identified below. Adaptive cruise control has separate controls, capabilities and instructions."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1693135-b00001",
+      "text": "I read this system from the driver's inputs toward the controller: switches request cruise operation, pedal inputs can interrupt it, and the network carries information between the modules shown.",
+      "why": "The drawing separates direct inputs from shared network messages. That distinction explains why the steering-wheel controls and pedal switches reach the controller by different paths."
+    },
+    {
+      "blockId": "G1693135-b00005",
+      "text": "Reading the Network Message Charts",
+      "why": "The heading identifies the recipient; each row identifies a broadcast message, its origin and its purpose. Some cells span several rows, so their sender or purpose applies across those rows rather than leaving the intervening entries undefined."
+    },
+    {
+      "blockId": "G1693135-b00006",
+      "text": "Messages Received by the IPC",
+      "why": "This chart concerns information sent to the instrument display, helping separate what the driver sees from the commands that control vehicle speed."
+    },
+    {
+      "blockId": "G1693135-b00008",
+      "text": "Messages Received by the PCM",
+      "why": "Cruise requests share the controller's attention with vehicle-motion and intervention information. Stability control helps manage a developing skid; traction control limits driven-wheel spin. Either system's request can interrupt speed holding."
+    },
+    {
+      "blockId": "G1693135-b00010",
+      "text": "How Cruise Control Operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00011",
+      "text": "Cruise control provides the following functions:",
+      "why": "The switch-operation section below explains how the driver selects these functions."
+    },
+    {
+      "blockId": "G1693135-b00013",
+      "text": "Switch the cruise control system on.",
+      "why": "Turning it on prepares the system; setting a speed is a separate action."
+    },
+    {
+      "blockId": "G1693135-b00015",
+      "text": "Set and maintain the desired vehicle speed.",
+      "why": "This is the speed-holding function, subject to the operating range and cancellation conditions below."
+    },
+    {
+      "blockId": "G1693135-b00017",
+      "text": "Increase the vehicle's maintained speed.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00019",
+      "text": "Coast down to a lower maintained speed.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00021",
+      "text": "Resume the previously selected vehicle speed.",
+      "why": "Resuming depends on the system remaining in an eligible standby condition."
+    },
+    {
+      "blockId": "G1693135-b00023",
+      "text": "Switch the cruise control system off.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00025",
+      "text": "Cruise control maintains a selected speed from 32 km/h (20 mph), or 29 kmh (18 mph) with a metric cluster, up to the vehicle's maximum limited speed. With a MyKey® restricted key, speed cannot exceed the MyKey® maximum limited speed. Small variations from the selected speed can occur under normal road conditions, with more noticeable variation on steep uphill and downhill sections.",
+      "why": "I read the lower limit with the cluster configuration in mind. Speed holding is not a promise of a perfectly motionless speedometer needle, particularly as road gradient changes."
+    },
+    {
+      "blockId": "G1693135-b00026",
+      "text": "Cruise control deactivates under the following conditions:",
+      "why": "These conditions help explain a loss of speed holding without assuming that every cancellation is an unexplained failure."
+    },
+    {
+      "blockId": "G1693135-b00028",
+      "text": "The parking brake is applied.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00030",
+      "text": "The indexed description lists moving the transmission gear selector to any position other than D as a cancellation condition.",
+      "why": "The supplied earlier workshop edition instead says any position other than D or OD. These editions do not establish a single confirmed selector rule for every vehicle. I preserve that difference rather than turn either wording into a universal operating instruction; use the owner controls matched to the vehicle and its fitted transmission."
+    },
+    {
+      "blockId": "G1693135-b00032",
+      "text": "The accelerator pedal overrides the cruise control set speed for longer than 5 minutes.",
+      "why": "A prolonged accelerator override is a cancellation condition, rather than an indefinitely maintained temporary override."
+    },
+    {
+      "blockId": "G1693135-b00034",
+      "text": "A cruise control switch remains pressed or stuck for longer than 2 minutes.",
+      "why": "A continuously held switch is not accepted indefinitely as a normal operating request."
+    },
+    {
+      "blockId": "G1693135-b00036",
+      "text": "The clutch pedal is pressed, if equipped.",
+      "why": "The clutch input tells the controller to stop cruise operation when the driver disengages the clutch."
+    },
+    {
+      "blockId": "G1693135-b00038",
+      "text": "Vehicle speed falls more than 16 kmh (10 mph) below the set speed.",
+      "why": "This cancellation threshold is distinct from the smaller speed variations described during normal speed holding."
+    },
+    {
+      "blockId": "G1693135-b00040",
+      "text": "An ABS fault occurs.",
+      "why": "Cruise operation depends on more than its own switches; a fault in a related system can also disable it."
+    },
+    {
+      "blockId": "G1693135-b00042",
+      "text": "The brake pedal position (BPP) switch assembly contains the stoplamp switch and cruise control deactivator switch. That assembly, the accelerator pedal position (APP) sensor and the clutch pedal position (CPP) switch, if equipped, provide hardwired inputs to the PCM.",
+      "why": "These pedal signals have direct electrical input paths. They are distinct from steering-wheel requests carried through the module network."
+    },
+    {
+      "blockId": "G1693135-b00043",
+      "text": "The PCM sends its Electronic Throttle Body (ETB) command through a hardwired output.",
+      "why": "The throttle body contains the valve that meters air entering the engine. This output is the controller's command to that assembly, rather than a mechanical cable from the cruise switches."
+    },
+    {
+      "blockId": "G1693135-b00044",
+      "text": "The PCM controls vehicle speed through the Electronic Throttle Control (ETC) subsystem.",
+      "why": "The switches request a speed; the engine controller manages the throttle response needed for speed holding."
+    },
+    {
+      "blockId": "G1693135-b00045",
+      "text": "Cruise control monitors itself and disables operation whenever it detects a system error. These cruise control faults do not produce an IPC fault indicator or message-center fault message. Fault codes are stored by the PCM or SCCM.",
+      "why": "A quiet dashboard does not prove cruise control is fault-free. The stored codes provide information that the normal driver display does not show; interpreting them requires a separate diagnostic procedure."
+    },
+    {
+      "blockId": "G1693135-b00046",
+      "text": "An ETC system fault also disables cruise control. In that case, the ETC system powertrain malfunction warning indicator—the wrench symbol—is displayed.",
+      "why": "This is the important display distinction: an electronic-throttle fault can disable cruise while also producing its own warning indication."
+    },
+    {
+      "blockId": "G1693135-b00047",
+      "text": "What the Cruise Control Indicator Means",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00048",
+      "text": "The cruise control indicator in the IPC illuminates when cruise control is active.",
+      "why": "This is an operating-status indication, separate from the fault-reporting behavior described above."
+    },
+    {
+      "blockId": "G1693135-b00049",
+      "text": "Using the Steering-Wheel Controls",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00050",
+      "text": "The SCCM receives the cruise control switch inputs and sends them through the GWM to the PCM on HS-CAN1.",
+      "why": "The steering column control module is the switch interface, and the gateway carries the request between network paths. A button press therefore reaches the engine controller as communicated information."
+    },
+    {
+      "blockId": "G1693135-b00051",
+      "text": "Press and release ON to turn cruise control on. When traveling at the desired speed, press SET+ or SET- on the SET switch to activate speed holding.",
+      "why": "ON readies the system; the subsequent set action tells it which speed to maintain."
+    },
+    {
+      "blockId": "G1693135-b00052",
+      "text": "With cruise control active, the SET switch increases or decreases the maintained speed. A brief press requests a discrete change; holding the respective switch continues the adjustment until it is released. The indexed workshop paragraph gives 5 kmh per press or 3.1 mph, but the earlier supplied workshop and owner editions disagree with those increments. Use the matching owner’s control instructions rather than treating the indexed values as confirmed vehicle behavior.",
+      "why": "A tap and a held switch request different kinds of adjustment. The supplied earlier workshop section and matching owner’s manual specify a smaller tap increment than the indexed revision. I retain that edition discrepancy openly instead of guessing which value applies from this paragraph. Check the owner’s Using Cruise Control section and the displayed set speed when operating the controls."
+    },
+    {
+      "blockId": "G1693135-b00053",
+      "text": "Press and release OFF, or turn the ignition to the off position, to turn cruise control off. While cruise is active, applying the brake pedal or pressing CNCL (cancel) instead puts it into standby. From standby, pressing RES (resume) causes the vehicle to accelerate to the last selected speed. Resume will not work after OFF is pressed, after the ignition is cycled OFF, if the clutch pedal is pressed (if equipped), or when current vehicle speed is below the minimum operational speed.",
+      "why": "Standby preserves an eligible route back to the previous speed; switching the system off does not. I treat RES as a request for acceleration to the stored speed, not merely as a harmless status button."
+    },
+    {
+      "blockId": "G1693135-b00054",
+      "text": "How the Steering-Wheel Switches Work",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00055",
+      "text": "The steering-wheel cruise control switches are momentary-contact switches that toggle up and down to select a switch state. Their inputs are received by the SCCM.",
+      "why": "The switch supplies a momentary request; continued speed holding is managed by the control system after that request."
+    },
+    {
+      "blockId": "G1693135-b00056",
+      "text": "How the Brake Switch Cancels Cruise",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00057",
+      "text": "Applying the brake pedal sends an electrical signal from the stoplamp circuit to the PCM and deactivates cruise control. With increased brake-pedal effort, the cruise control deactivator switch opens and removes the ground signal from the PCM input circuit. This releases the throttle and immediately deactivates cruise control.",
+      "why": "The stoplamp signal and deactivator switch provide distinct cancellation inputs. Removing the ground signal is itself meaningful to the controller; an open circuit here is part of the described switch operation."
+    },
+    {
+      "blockId": "G1693135-b00058",
+      "text": "How the Clutch Pedal Position (CPP) Switch Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693135-b00059",
+      "text": "Manual-transmission vehicles have a CPP switch. Its circuit is normally closed with the clutch pedal released. Pressing the clutch pedal opens the switch circuit, signaling the PCM to deactivate cruise control.",
+      "why": "Here, 'normally closed' refers to the released-pedal condition. The change to an open circuit communicates the clutch-pedal action; it is not automatically evidence of a broken connection."
+    }
+  ],
+  "uncertainties": [],
+  "coveredUnitIds": [
+    "G1693135:u1",
+    "G1693135:u2",
+    "G1693135:u3",
+    "G1693135:u4",
+    "G1693135:u5",
+    "G1693135:u6",
+    "G1693135:u7",
+    "G1693135:u8",
+    "G1693135:u9",
+    "G1693135:u10",
+    "G1693135:u11",
+    "G1693135:u12",
+    "G1693135:u13",
+    "G1693135:u14",
+    "G1693135:u15",
+    "G1693135:u16",
+    "G1693135:u17",
+    "G1693135:u18",
+    "G1693135:u19",
+    "G1693135:u20",
+    "G1693135:u21",
+    "G1693135:u22",
+    "G1693135:u23",
+    "G1693135:u24",
+    "G1693135:u25",
+    "G1693135:u26",
+    "G1693135:u27",
+    "G1693135:u28",
+    "G1693135:u29",
+    "G1693135:u30",
+    "G1693135:u31",
+    "G1693135:u32",
+    "G1693135:u33",
+    "G1693135:u34",
+    "G1693135:u35",
+    "G1693135:u36",
+    "G1693135:u37",
+    "G1693135:u38",
+    "G1693135:u39",
+    "G1693135:u40",
+    "G1693135:u41",
+    "G1693135:u42",
+    "G1693135:u43",
+    "G1693135:u44",
+    "G1693135:u45",
+    "G1693135:u46",
+    "G1693135:u47",
+    "G1693135:u48",
+    "G1693135:u49",
+    "G1693135:u50",
+    "G1693135:u51",
+    "G1693135:u52",
+    "G1693135:u53",
+    "G1693135:u54",
+    "G1693135:u55",
+    "G1693135:u56",
+    "G1693135:u57",
+    "G1693135:u58",
+    "G1693135:u59",
+    "G1693135:u60",
+    "G1693135:u61",
+    "G1693135:u62",
+    "G1693135:u63",
+    "G1693135:u64",
+    "G1693135:u65",
+    "G1693135:u66",
+    "G1693135:u67",
+    "G1693135:u68",
+    "G1693135:u69",
+    "G1693135:u70",
+    "G1693135:u71",
+    "supplement:workshop2015:complete",
+    "supplement:owner2015:complete"
+  ],
+  "readerOutcome": "Understand standard-cruise network/control behavior, cancellation conditions and owner operating warnings. SET tap increment remains an explicit edition conflict with referral to the matching owner controls, not a guessed replacement value.",
+  "teachingNotes": [
+    "Read both attached diagram variants, all component and message tables including spanning cells, and the complete raw text. Original table data and illustrations remain separate and unchanged.",
+    "Preserved every speed, duration, unit, switch identifier and network identifier in its requested text block, including the supplied display-unit increments.",
+    "Explained direct pedal inputs, the gateway-mediated switch path and electronic throttle control without adding pinouts, tests or replacement instructions.",
+    "Retained MyKey, metric-cluster, selector-position and manual-transmission conditions without extending their applicability.",
+    "Distinguished ordinary cruise fault reporting from the separate electronic-throttle wrench warning, and retained every supplied resume restriction.",
+    "Complete earlier2015 workshop section and owner pages preserved with rendered originals. No new numeric value imported into public action text; original conflicting5/3.1 values retained as attributed discrepancy. No adaptive function, new speed limit or diagnosis added."
+  ],
+  "supportingSourceRefs": [],
+  "sourceContextHash": "69a505d25ea2ffd620241b31d16d5848add1e07458eb58e59d3709219e7d3113",
+  "status": "complete",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 39,
+    "receivedBlocks": 39,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 71,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e02ebf1a2022da7de4ad2350b01684453102bc2d5728565d36a9ac9a8908be4a",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "resolvedHold": true,
+    "sourceReconciliation": {
+      "scope": "Original indexed2019 revision conflicts with supplied2015 workshop and owner SET increment. Public copy attributes originalnumbers as disputed and refers to matching owner controls rather than introducing replacementnumeric. Ownerstandard-cruise warnings added. No adaptive operating instructions imported. Independently assess complete sources/figures and whole article; reject if misleading.",
+      "sources": [
+        {
+          "name": "workshop2015",
+          "file": "/Users/ramideltoro/Downloads/OneDrive_1_10-9-2026/mustang-2015-ford-workshop-manual.pdf",
+          "physicalPages": [
+            176,
+            177,
+            178,
+            179
+          ],
+          "textFile": "workshop-pages.txt",
+          "sha256": "c2d62c1ce9371b5cb38ae011457ad96617cb3cfe1cac1bbb0324d982c2b26a31"
+        },
+        {
+          "name": "owner2015",
+          "file": "/Users/ramideltoro/Downloads/OneDrive_1_10-9-2026/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf",
+          "physicalPages": [
+            155,
+            156
+          ],
+          "printedPages": [
+            152,
+            153
+          ],
+          "textFile": "owner-pages.txt",
+          "sha256": "ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592"
+        }
+      ]
+    },
+    "supplementalSourceCoverage": [
+      {
+        "name": "workshop2015",
+        "file": "/Users/ramideltoro/Downloads/OneDrive_1_10-9-2026/mustang-2015-ford-workshop-manual.pdf",
+        "physicalPages": [
+          176,
+          177,
+          178,
+          179
+        ],
+        "textFile": "workshop-pages.txt",
+        "sha256": "c2d62c1ce9371b5cb38ae011457ad96617cb3cfe1cac1bbb0324d982c2b26a31"
+      },
+      {
+        "name": "owner2015",
+        "file": "/Users/ramideltoro/Downloads/OneDrive_1_10-9-2026/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf",
+        "physicalPages": [
+          155,
+          156
+        ],
+        "printedPages": [
+          152,
+          153
+        ],
+        "textFile": "owner-pages.txt",
+        "sha256": "ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592"
+      }
+    ],
+    "reviewedAt": "2026-10-27T20:34:17.958Z",
+    "editorialRevision": "11ce83efca27ddbae068d599355ec6ba8879aaecbc0b0cfb08c94999ac7c888e"
+  },
+  "checkedAt": "2026-10-27T20:34:17.956Z"
+}

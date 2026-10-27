@@ -1,0 +1,55 @@
+{
+  "documentId": "G1692855",
+  "supportingSourceRefs": [],
+  "sourceHash": "c5f1523a1a367c23c1ef432ba95014e12da1f74ecd579d6190ec38cb81734032",
+  "title": "Instrument Panel and Interior Switch Illumination: Overview",
+  "introduction": "Interior switch lighting follows different operating rules. I sort the lamps into dimmable and non-dimmable groups before interpreting what stays lit: sharing the cabin does not put every backlight on the same dimmer. This overview explains the enabling conditions, brightness controls and control arrangements. Wiring tests and fault isolation require more detailed information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692855-b00001",
+      "text": "Dimmable and Non-Dimmable Backlighting",
+      "why": ""
+    },
+    {
+      "blockId": "G1692855-b00002",
+      "text": "Dimmable illumination backlights switches and control components when the headlamps or parking lamps are on. Press the illumination dim up switch to increase brightness, or the dim down switch to reduce it. Illumination components may be controlled directly through a non-networked arrangement or indirectly through a networked module arrangement.",
+      "why": "The exterior-lamp condition establishes when this backlighting operates, while the dim switches set its intensity. Direct and networked control describe different ways the illumination can be commanded."
+    },
+    {
+      "blockId": "G1692855-b00003",
+      "text": "Non-dimmable illumination uses a non-networked arrangement to backlight the window switches. It operates with the ignition ON or OFF while the accessory relay is energized.",
+      "why": "For these window-switch backlights, the accessory relay's energized state is the key condition. I therefore avoid treating ignition OFF as proof that their illumination must already be off."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:36:56.887Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 4,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f9c067c85ff540fba6c898e5de05f1c27859a6ce86f6ddc4d7e642218ebe95be",
+    "reviewedAt": "2026-10-27T20:36:56.887Z"
+  }
+}

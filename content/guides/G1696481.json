@@ -1,0 +1,55 @@
+{
+  "documentId": "G1696481",
+  "supportingSourceRefs": [],
+  "sourceHash": "976981d8c1ea72907c3338131be9dd47a3bafff83f9a37136440b83236d29a17",
+  "title": "Universal Transmitter: Operation and Shared Circuits",
+  "introduction": "The universal transmitter stores a hand-held transmitter's code so a visor button can send the corresponding radio signal. I think of the buttons as labeled memory slots: pressing a button calls up what was learned for that slot. This overview explains storage, transmission and the shared visor circuits. Programming steps and indicator-lamp meanings are outside its scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1696481-b00001",
+      "text": "Operation begins with learning and storing a hand-held transmitter code.",
+      "why": "Stored information connects the learning function to later button-operated transmission."
+    },
+    {
+      "blockId": "G1696481-b00002",
+      "text": "Universal Transmitter Functions",
+      "why": ""
+    },
+    {
+      "blockId": "G1696481-b00003",
+      "text": "The universal transmitter learns a hand-held transmitter's radio-frequency code and stores it in memory. It has 3 buttons and an indicator lamp. After a code has been stored, pressing its corresponding button makes the universal transmitter emit the hand-held transmitter's radio frequency. It can store 3 unique transmitter codes at a time. The universal transmitter and the LH (left-hand) vanity mirror lamp are both part of the LH sun visor and share the same power and ground circuits.",
+      "why": "The button-to-stored-code relationship explains how the transmitter selects what to send. I also keep the shared electrical paths in mind: power supplies both devices, and ground provides their electrical return path. Their common circuits are useful context for later diagnosis, but do not identify a failed component on their own."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:36:56.893Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3245f589c721944d2eae978b5e791fff72678c680d91b71d6e5375f71ea6a316",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 4,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6588c3ebfa37cc659a26b43bf24f084cad3a3bceadf69610786aa2d8fa42f09f",
+    "reviewedAt": "2026-10-27T20:36:56.893Z"
+  }
+}

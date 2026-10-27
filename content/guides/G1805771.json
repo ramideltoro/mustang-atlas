@@ -1,0 +1,80 @@
+{
+  "documentId": "G1805771",
+  "supportingSourceRefs": [],
+  "sourceHash": "cecf533de04d21ae4d140f41e2198f34ad44b44a35f715617141161fa86a8629",
+  "title": "Fuel-Vapor Management — 5.2L 32V Ti-VCT",
+  "introduction": "For the 5.2L 32V Ti-VCT application, the evaporative emissions system captures fuel vapor for the engine to consume later. I think of it as temporary storage with managed exits: the canister holds vapor, while the purge and vent controls have different routes to look after. This overview identifies those jobs; it does not provide component locations, diagnostic settings or service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1805771-b00001",
+      "text": "Fuel Vapor’s Route Back to the Engine",
+      "why": ""
+    },
+    {
+      "blockId": "G1805771-b00002",
+      "text": "The evaporative emissions (EVAP) system prevents hydrocarbon emissions from reaching the atmosphere by storing fuel vapors. It then routes those vapors to the engine to be consumed during normal engine operation.",
+      "why": "Vapor is held for later combustion rather than allowed to escape freely. This is a vapor-management function, separate from the liquid-fuel supply."
+    },
+    {
+      "blockId": "G1805771-b00003",
+      "text": "The EVAP system brings together these components:",
+      "why": "I distinguish storage, vapor-flow control and pressure sensing when reading the names below. Similar terminology does not make the parts interchangeable."
+    },
+    {
+      "blockId": "G1805771-b00005",
+      "text": "EVAP canister: activated-carbon storage that captures fuel vapor until the engine draws it in during purging.",
+      "why": "Purge removes the captured vapor so the carbon can store more on a later cycle."
+    },
+    {
+      "blockId": "G1805771-b00007",
+      "text": "EVAP canister purge valve: an electrically controlled valve regulating vapor flow from the canister toward the engine intake.",
+      "why": "The purge path carries stored vapor toward combustion. It has a different destination from the vent path."
+    },
+    {
+      "blockId": "G1805771-b00009",
+      "text": "EVAP canister vent solenoid: an electrically operated valve managing the canister’s connection to outside air.",
+      "why": "This is the outside-air control, distinct from the valve metering vapor toward the intake."
+    },
+    {
+      "blockId": "G1805771-b00011",
+      "text": "Fuel Tank Pressure (FTP) sensor and tube: the components used for sensing fuel-tank pressure.",
+      "why": ""
+    },
+    {
+      "blockId": "G1805771-b00013",
+      "text": "Easy Fuel (capless) fuel tank filler pipe: the capless refueling entry forming part of the system.",
+      "why": ""
+    }
+  ],
+  "checkedAt": "2026-10-27T20:41:25.534Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 8,
+    "receivedBlocks": 8,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "c16f4cdc2723575877a0df35b77d19e8017531de01f578a05a5aabcc322ccdac",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 10,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "140a8eb8690aeb636fa00a011e6143cd99073a2d37e4b812b0acf3602144b925",
+    "reviewedAt": "2026-10-27T20:41:25.534Z"
+  }
+}
