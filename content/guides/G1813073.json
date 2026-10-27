@@ -1,0 +1,361 @@
+{
+  "documentId": "G1813073",
+  "supportingSourceRefs": [],
+  "sourceHash": "123d0f3bb8b253821b4ed14b2b7413fbbe56db2dd33e550e4b1820650e8a37f1",
+  "title": "Module configuration: settings, software and learning",
+  "introduction": "A replacement control module needs the right information to belong in your Mustang. I separate that information into vehicle settings, operating software and learned values. Think of them as the module’s address book, instruction manual and working memory: changing one does not automatically sort out the others.\n\nThis overview explains how those jobs differ and how to read the module chart. It also identifies preparation and follow-up that matter during replacement. Use the specific module removal and installation procedure for the actual repair, including any required learning or calibration; this overview is not a standalone programming procedure.",
+  "requirements": [
+    {
+      "category": "Before module replacement or configuration",
+      "items": [
+        {
+          "name": "Capture the original configuration",
+          "detail": "Use a diagnostic scan tool with the functions required by the module's chart entry. Before removing any modules, let the tool identify the vehicle and obtain the original configuration data. The replacement module must communicate with the tool for Programmable Module Installation (PMI) to proceed."
+        },
+        {
+          "name": "Use the prompted recovery route",
+          "detail": "If original-module data cannot be retrieved, the scan tool may request As-Built data or manual parameter selections. Obtain As-Built data only when the tool directs you to; it is a vehicle-specific configuration record available through the technician service publication website. Customer preferences changed from their defaults are not preserved in that record and must be restored through programmable parameters after configuration."
+        },
+        {
+          "name": "Complete the separate learning requirement",
+          "detail": "The chart distinguishes adaptive learning or calibration from programmable preferences. For the actual learning or calibration instructions, refer to the specific module removal and installation procedure. The chart names the required routine; it does not supply its setup, operating sequence or completion criteria."
+        }
+      ]
+    },
+    {
+      "category": "When module reprogramming applies",
+      "items": [
+        {
+          "name": "Choose programming for the stated reason",
+          "detail": "Limit module reprogramming to circumstances recommended by a published TSB procedure. Reinstalling the same software level does not improve operation or repair hardware failure. During PMI, reprogramming occurs automatically when a later strategy/calibration is available. A software flash is not a universal electronic tune-up."
+        },
+        {
+          "name": "Follow programming prompts and finish the network cleanup",
+          "detail": "A module cannot communicate with other network modules while it is being reprogrammed. Some modules are programmed together: follow the IDS key-cycling instructions carefully, because errors can cause programming to fail in one or more modules. After programming, clear any network communication Diagnostic Trouble Codes (DTCs) set in other modules."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1813073-b00001",
+      "text": "How module configuration works",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00002",
+      "text": "Programmable Module Installation (PMI)",
+      "why": "PMI prepares a replacement module with the configuration it needs for this vehicle."
+    },
+    {
+      "blockId": "G1813073-b00003",
+      "text": "Programmable Module Installation (PMI) uses a diagnostic scan tool to configure a new module’s settings. When the scan-tool session starts, configuration data for Programmable Module Installation (PMI) is automatically downloaded from the original module and stored. If the tool cannot retrieve that data from the module being replaced, it may request As-Built data or present parameter values for manual selection. Some modules also receive a strategy/calibration update during Programmable Module Installation (PMI) when an update is available.",
+      "why": "The original module is the starting point for transferring configuration. If its data cannot be recovered, the scan tool determines which alternative input is needed."
+    },
+    {
+      "blockId": "G1813073-b00004",
+      "text": "Before removing any modules, let the diagnostic scan tool identify the vehicle and obtain its configuration data. The replacement module must communicate with the diagnostic scan tool before Programmable Module Installation (PMI) can be carried out.",
+      "why": "I capture the configuration while the original module is still connected. Removing it first can lose the opportunity to retrieve its settings, and a replacement that cannot communicate cannot complete this process."
+    },
+    {
+      "blockId": "G1813073-b00005",
+      "text": "Module programming",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00006",
+      "text": "Module reprogramming, also called “flashing,” uses a diagnostic scan tool to update a module’s strategy/calibration. Installing the same software level again does not improve operation or repair failed hardware. During Programmable Module Installation (PMI), reprogramming happens automatically when a later strategy/calibration is available.",
+      "why": "Software supplies operating instructions; it cannot mend a damaged physical component. Reinstalling unchanged instructions is not a magic reset button for broken hardware."
+    },
+    {
+      "blockId": "G1813073-b00007",
+      "text": "Limit module reprogramming to cases where a published TSB procedure recommends it.",
+      "why": "Flash capability in the chart identifies what a module supports; it is not, by itself, a reason to reprogram it."
+    },
+    {
+      "blockId": "G1813073-b00008",
+      "text": "While a module is being reprogrammed, it cannot communicate with other modules on the network. After programming finishes, clear any network communication Diagnostic Trouble Codes (DTCs) that the interruption may have set in other modules.",
+      "why": "Other controllers may record the temporary loss of communication. Those programming-related codes need clearing after the module returns to network operation."
+    },
+    {
+      "blockId": "G1813073-b00009",
+      "text": "Some modules must be reprogrammed in coordination with other modules. Follow the IDS key-cycling instructions carefully: incorrect key cycling can cause reprogramming errors, including failure to program one or more modules.",
+      "why": "IDS means Integrated Diagnostic System. Its key prompts coordinate the participating modules, so ignition timing here is part of the programming sequence."
+    },
+    {
+      "blockId": "G1813073-b00010",
+      "text": "Programmable parameters",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00011",
+      "text": "Programmable parameters are customer preference settings. A dealer can change them with a diagnostic scan tool; some can also be changed by the customer using the procedure in the Owner’s Literature. A module may have many configuration options, but only a few qualify as programmable parameters.",
+      "why": "I distinguish an exposed preference setting from the rest of the module’s configuration. The existence of a configuration option does not establish a customer adjustment procedure."
+    },
+    {
+      "blockId": "G1813073-b00012",
+      "text": "Adaptive learning and calibration",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00013",
+      "text": "Some replacement modules need a separate learning procedure as part of the repair. Obtain the required adaptive learning and calibration instructions from that module’s specific removal and installation procedure.",
+      "why": "A module can have its configuration installed and still need to learn operating corrections or reference values. Keep the module-specific procedure open through this follow-up work."
+    },
+    {
+      "blockId": "G1813073-b00014",
+      "text": "Vehicle Identification (VID) block",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00015",
+      "text": "The vehicle identification block commonly holds powertrain configuration information, including the VIN, tire size, axle ratio and whether cruise control is fitted.",
+      "why": "VIN means vehicle identification number. These entries describe the vehicle and its equipment, helping explain why configuration must match the car receiving the module."
+    },
+    {
+      "blockId": "G1813073-b00016",
+      "text": "Transmission identification",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00017",
+      "text": "Each solenoid body has a unique strategy data file for the PCM, along with a 12-digit solenoid body identification and a 13-digit solenoid body strategy. When a new solenoid body or transmission is installed, use the diagnostic scan tool to retrieve the solenoid body strategy data file and download it into the PCM. If the PCM is replaced and its data cannot be inhaled or exhaled, the solenoid body identification and solenoid body strategy must be downloaded into the PCM.",
+      "why": "Keep the triggers separate: a new solenoid body or transmission requires the strategy-file retrieval and download; a replacement PCM whose data cannot be transferred requires the identification and strategy download. The identifier lengths describe the entries rather than creating an additional unconditional download step."
+    },
+    {
+      "blockId": "G1813073-b00018",
+      "text": "As-Built data",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00019",
+      "text": "As-Built data is the module configuration record for a specific VIN. During vehicle manufacture, configuration from all modules is downloaded and stored in the As-Built database. That record does not include customer preferences changed from their defaults. After configuring the module, restore those changes through programmable parameters.",
+      "why": "I treat As-Built as the factory record. It can establish the original configuration without remembering the owner’s later preference changes."
+    },
+    {
+      "blockId": "G1813073-b00020",
+      "text": "Obtain As-Built data only when the diagnostic scan tool directs you to do so. It is available through the technician service publication website.",
+      "why": "The scan-tool prompt determines when this alternative configuration record is needed."
+    },
+    {
+      "blockId": "G1813073-b00021",
+      "text": "Module configuration and parameter chart",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00022",
+      "text": "Find the module by name and address, then read across its row to check PMI availability, reprogramming/flash capability, adaptive learning or calibration requirements, and available programmable parameters. Keep any lists within that row attached to their respective columns. A blank cell is not automatically a “No”; check for an accompanying list. Use the specific module removal and installation procedure for the steps behind a listed learning or calibration task.",
+      "why": "The columns answer different questions. A module’s ability to accept software does not establish whether it needs learning, and a listed preference does not explain how to perform a calibration. The chart is a planning reference, not a collection of programming commands."
+    },
+    {
+      "blockId": "G1813073-b00024",
+      "text": "Initialize IVD",
+      "why": "This is the ABS module’s listed learning or calibration task; obtain the method from its specific removal and installation procedure."
+    },
+    {
+      "blockId": "G1813073-b00027",
+      "text": "Line Lock feature enable setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00030",
+      "text": "Calibrate ambient lighting",
+      "why": "This entry belongs to the BCM calibration requirements."
+    },
+    {
+      "blockId": "G1813073-b00032",
+      "text": "Calibrate the rear view camera",
+      "why": "This is another BCM calibration entry, separate from its customer preference settings."
+    },
+    {
+      "blockId": "G1813073-b00035",
+      "text": "Enable or disable auto unlock",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00037",
+      "text": "Enable or disable trim switch inhibit",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00039",
+      "text": "Configure DRL",
+      "why": "DRL means daytime running lamps."
+    },
+    {
+      "blockId": "G1813073-b00041",
+      "text": "Enable remote start",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00043",
+      "text": "Configure the front/rear placard",
+      "why": "Keep this chart label as the parameter identifier; it does not specify a value to enter."
+    },
+    {
+      "blockId": "G1813073-b00055",
+      "text": "Entry lighting color",
+      "why": "The nested color entries belong to this BCMB programmable parameter."
+    },
+    {
+      "blockId": "G1813073-b00047",
+      "text": "Blue entry lighting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00050",
+      "text": "Red entry lighting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00053",
+      "text": "Green entry lighting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00058",
+      "text": "Calibrate radar horizontal and vertical alignment",
+      "why": "This is the CCM’s alignment calibration requirement. Use the module-specific procedure for the actual setup and method."
+    },
+    {
+      "blockId": "G1813073-b00061",
+      "text": "Initialize the windows",
+      "why": "This is the DDM’s listed learning task, separate from installing its configuration."
+    },
+    {
+      "blockId": "G1813073-b00064",
+      "text": "AEIS with override setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00066",
+      "text": "Auto unlock control setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00068",
+      "text": "DRL control setting",
+      "why": "This entry concerns the daytime running lamps control function."
+    },
+    {
+      "blockId": "G1813073-b00085",
+      "text": "Remote start settings",
+      "why": "The nested entries identify the functions included under this IPC parameter group."
+    },
+    {
+      "blockId": "G1813073-b00071",
+      "text": "Remote start climate settings",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00074",
+      "text": "Remote start driver seat setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00077",
+      "text": "Remote start passenger seat setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00080",
+      "text": "Remote start rear defrost setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00083",
+      "text": "Remote start steering wheel setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00087",
+      "text": "Line lock feature enable setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00090",
+      "text": "Re-zero the OCSM",
+      "why": "OCSM means occupant classification system module. Its re-zero requirement is a calibration task, even though its row does not offer PMI or flashing."
+    },
+    {
+      "blockId": "G1813073-b00093",
+      "text": "Complete the Misfire Monitor Neutral Profile Correction procedure.",
+      "why": "This is the PCM's adaptive-learning requirement. I treat it as a separate completion step rather than assuming that loading configuration data also performs the learning."
+    },
+    {
+      "blockId": "G1813073-b00096",
+      "text": "Complete windows initialization.",
+      "why": "This entry belongs to the PDM's learning requirement. It identifies work needed beyond module configuration; use the matching module removal and installation procedure for the instructions."
+    },
+    {
+      "blockId": "G1813073-b00099",
+      "text": "Driver Beltminder: enable or disable.",
+      "why": "This is an available RCM preference, separate from adaptive learning and software reprogramming."
+    },
+    {
+      "blockId": "G1813073-b00101",
+      "text": "Passenger Beltminder: enable or disable.",
+      "why": "The passenger preference has its own RCM entry, so keep it distinct from the driver setting."
+    },
+    {
+      "blockId": "G1813073-b00104",
+      "text": "BLIS/CTA: enable or disable.",
+      "why": "This entry belongs to SODL, the side obstacle detection control module LH. Keep the setting attached to its module row when reading the chart."
+    },
+    {
+      "blockId": "G1813073-b00106",
+      "text": "Blockage enabled parameter",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00109",
+      "text": "BLIS/CTA: enable or disable.",
+      "why": "This separate entry belongs to SODR, the side obstacle detection control module RH. The matching label does not merge the left and right module rows."
+    },
+    {
+      "blockId": "G1813073-b00111",
+      "text": "Blockage enabled parameter",
+      "why": ""
+    },
+    {
+      "blockId": "G1813073-b00114",
+      "text": "Courtesy wipe: enable or disable.",
+      "why": "This is a programmable preference associated with the SCCM, or steering column control module. Changing a preference and updating module software are different jobs."
+    },
+    {
+      "blockId": "G1813073-b00117",
+      "text": "Complete suspension height sensor calibration.",
+      "why": "This is the VDM's separate calibration requirement. Configuration supplies module settings; the required calibration must still be completed using the applicable module procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T22:24:30.708Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 58,
+    "receivedBlocks": 58,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2885c691f78e3c8adf210b976d4dfc9fd1ddc14f1d00ec71742ae0724b456287",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 116,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "524868372b077d2b0ceab6eac1437ef2530ed2c426bfc3aa562efc2cb0805248",
+    "reviewedAt": "2026-10-27T22:24:30.708Z"
+  }
+}
