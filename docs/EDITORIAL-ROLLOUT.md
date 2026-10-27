@@ -28,3 +28,15 @@ Local catalog validation retains950 guides with zero errors, verifies the new ar
 Publication status and exact rollback details will be recorded after activation. Pending or held drafts stay private; the original A/C-belt pilot is held for terminology/prerequisite reconciliation. Use `node scripts/editorial-progress.mjs` for local staged/merged counts. A local merge does not itself prove live deployment.
 
 A follow-up comparison also separates fourteen standard/SVT body references covering splash shields, hood, front/rear bumper covers and front bumper access. Five existing guide applicability records were narrowed accordingly. These are scope corrections, not prose rewrites. Distinct attachment layouts, splitter/duct/tether operations and fastener groups establish the differences; equal torque values alone do not make procedures interchangeable. Later-build or equipment-specific branches remain subject to their documented qualifiers.
+
+## First publication verified
+
+Published through commit `39b752393c4b1c9a95ccf77e7a4782afc652ddc5`. [GitHub CI 40435896370](https://github.com/ramideltoro/mustang-atlas/actions/runs/40435896370) passed all289 tests. The application image was built from3e6df2c;39b7523 supplies the separately mounted final content correction for pilot-bore cleaning. Production-database validation passed before activation. Live health, cabin-filter and stabilizer phase/step counts, revised-reference visibility and incompatible hub withholding passed afterward. The container reports healthy.
+
+Image: `sha256:fb33ced49848c1625693706f6f886dcc74ee3a8283e5f11d6c9df26cc12c6698`.
+Rollback source/content archive: `/srv/mustang-atlas-rollback-20261026-editorial/source.tar.gz`.
+The exact previous content directory is retained at `/srv/mustang-atlas-rollback-20261026-editorial/content-before-activation`.
+Previous image: `mustang-atlas-web:before-20261026-editorial`.
+Restore matching source/content and image together. No database, media, Caddy or DNS changes were made.
+
+Only the five named article rewrites, thirteen system introductions, reader changes and scope corrections are part of this publication. Further author/reviewer batches continue into private staged files. In particular, an oil-service draft was withheld after supervisory review found that it imported excessive access prerequisites from oil-pan removal; an automated pass did not override that finding. Do not merge staged results without checking applicability, actual access, observations, decisions, source evidence and reader-facing tone.
