@@ -1,0 +1,55 @@
+{
+  "documentId": "G1692298",
+  "supportingSourceRefs": [],
+  "sourceHash": "5f8a3a56e3a731fba0aeaa8e5ed6484e4db6ef1434469575a5fae1bf42b521b2",
+  "title": "Electronic Engine Controls — 5.0L Component Locations",
+  "introduction": "I use this page as the engine's address book: find the component's name in the table beside a drawing, then follow the matching callout to its cyan-highlighted location. Keep each table with its own drawing; callout numbering starts again in the separate views.\n\nThe front view locates the cam-timing oil control solenoids and the air-intake sensor. The rear view gathers the camshaft sensors, intake manifold runner control hardware and other engine and exhaust sensing locations. The transparent engine-bay view places the powertrain control module in the vehicle. Use the LH and RH labels in the tables rather than treating the left edge of a picture as the component's identity.\n\nThese drawings establish component locations. Surrounding parts are simplified or transparent, so visibility here does not establish physical access. Connector pinouts, probing directions, test values, removal steps and fault diagnosis require separate information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692298-b00002",
+      "text": "Electronic Engine Controls — Front View",
+      "why": "Use the intake manifold and large intake duct as landmarks. The highlighted VCT oil control solenoids sit at the fronts of the cam covers; the highlighted MAF/IAT sensor is at the air-cleaner outlet beside the intake duct. Variable camshaft timing changes when the valves open and close, with intake and exhaust timing controlled separately. Match the table's side and intake/exhaust description before identifying a solenoid: similar-looking neighbors have different jobs."
+    },
+    {
+      "blockId": "G1692298-b00005",
+      "text": "Electronic Engine Controls — Rear View",
+      "why": "The large circular flywheel/flexplate area anchors this rear view. The CMP sensor locations flank the upper engine, while the IMRC hardware is grouped around the rear of the intake manifold. IMRC means intake manifold runner control; its position sensors, actuators and solenoids have separate table entries, so proximity does not make them interchangeable. The drawing also places the knock sensor, cylinder-head temperature sensor and crankshaft-position sensor relative to this rear structure. Along each exhaust path, distinguish the sensor location ahead of the large converter body from the catalyst-monitor location farther downstream. Follow each leader to its endpoint, including leaders that identify matching locations on both exhaust paths."
+    },
+    {
+      "blockId": "G1692298-b00008",
+      "text": "Powertrain Control Module (PCM) Location",
+      "why": "Use the transparent engine-bay drawing to place the highlighted module beside the engine, between the forward body structure and the suspension-tower area. Transparency reveals its position; it is not an access instruction. The PCM uses sensor information and stored control strategies to command powertrain devices. I use this drawing to answer where the controller lives, while a component-related fault code alone does not prove that the controller needs replacement."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:08:06.227Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f1e72e9f2830b9b8fa1e11a051ab51dae90fbd5c14c90b0344b6bd266d748312",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c43b77199858a985614c6a25b5f8bf30fe9b517872538a73cf2af1ce8840e3e7",
+    "reviewedAt": "2026-10-27T19:08:06.227Z"
+  }
+}

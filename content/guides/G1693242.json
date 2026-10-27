@@ -1,0 +1,110 @@
+{
+  "documentId": "G1693242",
+  "supportingSourceRefs": [],
+  "sourceHash": "dafdc35d4ca2122a6e41660603aeba88874c832585b196d2aa7b3b98082b99fa",
+  "title": "Active Grille Shutters: Commands, Calibration and Components",
+  "introduction": "The grille shutters work like linked window blinds with a motor taking requests from the PCM. Their position can change with operating conditions, and their startup movement checks the ends of their travel. An open grille with the engine stopped is therefore a sight to interpret, not an automatic fault verdict.\n\nI read the diagram from the incoming HS-CAN path to the PCM, then across the two-way LIN connection to the actuator. The message chart identifies the network input, while the operating description explains movement, calibration and fault responses. This is a guide to system behavior and service boundaries, not a wiring test or replacement procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693242-b00001",
+      "text": "How the PCM controls the grille shutters",
+      "why": ""
+    },
+    {
+      "blockId": "G1693242-b00002",
+      "text": "Command and Feedback Diagram",
+      "why": "The drawing shows ABS connected toward PCM through HS-CAN, followed by a bidirectional LIN connection between PCM and Grille Shutter Actuator. The actuator can report information as well as receive requests."
+    },
+    {
+      "blockId": "G1693242-b00004",
+      "text": "Network Message Reference",
+      "why": "Read the chart across from the broadcast message to its originating module and then its purpose."
+    },
+    {
+      "blockId": "G1693242-b00005",
+      "text": "PCM Network Input Messages",
+      "why": "This chart identifies an input used for shutter positioning; it is not a complete list of every operating input."
+    },
+    {
+      "blockId": "G1693242-b00007",
+      "text": "Shutter Movement and Calibration",
+      "why": ""
+    },
+    {
+      "blockId": "G1693242-b00008",
+      "text": "The grille shutter actuator moves the shutters to positions commanded by the PCM. Travel from fully closed to fully open covers 90 degrees. The PCM can select 1 of 16 positions, with approximately 6 degrees between positions.",
+      "why": "The shutters can hold intermediate positions, much like adjusting a blind rather than simply flipping a door open or shut."
+    },
+    {
+      "blockId": "G1693242-b00009",
+      "text": "Depending on ambient temperature, the shutters may normally remain partially or fully open with the engine off. After an engine start, the system calibrates by detecting its open and closed end positions; this typically takes 15-20 seconds. The sequence can begin toward either open or closed and continues until calibration succeeds or a fault is sensed. A long pause may occur between the 2 portions of the open/close sequence. Certain faults, including a blocked shutter or actuator error, trigger recalibration attempts. If the problem remains after the calibrated number of attempts, usually 3 or 4, a timer starts; a DTC is set when that timer reaches its predetermined limit. Other faults request recalibration only after a grille shutter DTC has been set in the PCM.",
+      "why": "Direction changes and a pause can belong to normal calibration. Repeated attempts and fault timing explain why movement alone cannot identify the cause of a problem."
+    },
+    {
+      "blockId": "G1693242-b00010",
+      "text": "The PCM chooses the desired grille shutter position, including open and closed, using inputs such as vehicle speed, coolant temperature, ambient temperature and A/C system pressure. It sends requests to the actuator over the local interconnect network (LIN). Communication is bidirectional: the actuator returns position and fault information to the PCM.",
+      "why": "The control link carries both the request and the actuator’s report, so commanded position and reported position are distinct pieces of information."
+    },
+    {
+      "blockId": "G1693242-b00011",
+      "text": "The PCM stores grille shutter Diagnostic Trouble Codes (DTCs) when the actuator communicates fault information for a predetermined duration. If LIN communication fails continuously for over 10 seconds, the actuator positions the shutters fully open. A grille shutter system fault or a grille shutter DTC stored in the PCM produces no indication to the driver.",
+      "why": "Fully open can be a communication-failure response, and the absence of a driver indication does not establish that the system is fault-free. A stored code identifies a monitored problem rather than proving which part needs replacement."
+    },
+    {
+      "blockId": "G1693242-b00012",
+      "text": "The motor and the linked shutter assembly",
+      "why": ""
+    },
+    {
+      "blockId": "G1693242-b00013",
+      "text": "Grille Shutter Actuator",
+      "why": ""
+    },
+    {
+      "blockId": "G1693242-b00014",
+      "text": "The grille shutter actuator is a smart motor that receives PCM position requests over LIN. A retainer connects it to an individual shutter blind. The actuator can be serviced separately or as part of the complete assembly, which includes the grille shutter, grille shutter actuator, retainer, housing and jumper harness.",
+      "why": "The actuator combines movement with communication. Its separate service option differs from the service boundary for the individual blinds."
+    },
+    {
+      "blockId": "G1693242-b00015",
+      "text": "Linked Grille Shutters",
+      "why": ""
+    },
+    {
+      "blockId": "G1693242-b00016",
+      "text": "The grille shutter consists of blinds linked together inside a framed housing. An individual blind is fixed to the actuator; when the actuator moves that blind, the linkage moves the others with it. Individual shutter blinds are not serviceable. Service the grille shutter as an assembly containing the grille shutter, grille shutter actuator, retainer, housing and jumper harness.",
+      "why": "The linkage explains how the actuator moves the whole set. The assembly service rule remains applicable even when damage appears confined to an individual blind."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:16:18.586Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 14,
+    "receivedBlocks": 14,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "da70c90cc06b0c4069503ffa9581d4710a584547ffe697596a7102b136a18818",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 19,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2cd9d52071b11ab40bb73b83023093e01af7d5623c24d34d8082cc37be19137d",
+    "reviewedAt": "2026-10-27T19:16:18.586Z"
+  }
+}

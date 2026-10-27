@@ -1,0 +1,115 @@
+{
+  "documentId": "G1807365",
+  "supportingSourceRefs": [],
+  "sourceHash": "1e58f2c6a813cbf96c4fcbd70615d1ebb499b4adaf9aafe99edaf9c81443cefe",
+  "title": "5.2L 32V Ti-VCT Cooling: Coolant Flow and Fail Safe Operation",
+  "introduction": "I picture this cooling system as a heat-delivery loop with a temperature-operated gate. The pump keeps coolant moving, the radiator releases heat outdoors, and a separate branch puts some of that heat to work warming the cabin. The thermostat controls the radiator route, including an opening-and-closing routine during warm-up that makes sense once you know where the valve lives.\n\nUse this overview to understand circulation, thermostat monitoring and the escalating warnings during overheating. Service access, coolant filling and diagnostic tests require their matching procedures. Fail Safe Cooling controls the engine during an overheating emergency; correcting the cause remains essential.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1807365-b00001",
+      "text": "Understanding Coolant Circulation",
+      "why": ""
+    },
+    {
+      "blockId": "G1807365-b00002",
+      "text": "Engine rotation drives the coolant pump through the accessory drive belt. The pump circulates coolant through the engine block and cylinder heads. The main route carries coolant from the engine through the radiator circuit and back to the pump, while a separate engine circuit supplies the heater core, the small heat exchanger that warms cabin air. The thermostat is a valve operated by coolant temperature. When it is closed, coolant bypasses the radiator circuit and returns to the pump. When it opens, coolant passes through the radiator circuit so that engine heat can transfer to the outside air.",
+      "why": "I separate the jobs before tracing the route: the pump supplies circulation, the thermostat controls the radiator path, and the radiator transfers heat to air."
+    },
+    {
+      "blockId": "G1807365-b00003",
+      "text": "The cold-side thermostat sits at the lower radiator hose connection to the engine, where coolant enters after being cooled in the radiator. During initial warm-up, warm engine coolant opens the thermostat slightly. Cooler coolant then arrives from the radiator and quickly closes it again. The valve opens and closes several times before the radiator’s returning coolant becomes warm enough for it to remain open. This engine must run much longer than an engine with a hot-side thermostat before its thermostat stays fully open.",
+      "why": "That first cool return flow gives the valve a reason to close again. I keep this warm-up behavior in mind before treating repeated thermostat movement as evidence of a fault."
+    },
+    {
+      "blockId": "G1807365-b00004",
+      "text": "The degas bottle holds reserve coolant, removes air from the cooling system and provides room for coolant expansion. It also allows system pressurization, replenishes coolant in the system and serves as the service fill point.",
+      "why": "There is more going on here than spare coolant in a container: the bottle accommodates changing coolant volume and helps separate air from the circulating supply."
+    },
+    {
+      "blockId": "G1807365-b00005",
+      "text": "The powertrain control module (PCM) checks thermostat operation with its thermostat monitor. This monitor runs once per drive cycle, with a run duration of 300-800 seconds. A detected malfunction sets diagnostic trouble code (DTC) P0125 or P0128 and illuminates the malfunction indicator lamp (MIL).",
+      "why": "The monitor supplies an electronic indication that thermostat operation needs investigation. Its codes alone do not supply the test results needed to choose a repair."
+    },
+    {
+      "blockId": "G1807365-b00006",
+      "text": "Fail Safe Cooling and Its Warning Stages",
+      "why": "This sequence explains how temperature warnings develop into automatic restrictions and eventual engine shutdown."
+    },
+    {
+      "blockId": "G1807365-b00007",
+      "text": "The PCM includes a strategy called Fail Safe Cooling. When the engine starts to overheat, this strategy takes control of engine operation.",
+      "why": "I treat automatic intervention as evidence that the temperature concern demands attention. Protection does not correct the condition that caused overheating."
+    },
+    {
+      "blockId": "G1807365-b00008",
+      "text": "Stage 1 starts as the engine begins to overheat. The cylinder head temperature (CHT) sensor sends a signal to the PCM, which moves the temperature gauge pointer into the red zone.",
+      "why": "This connects the dashboard indication to the temperature reported from the cylinder head."
+    },
+    {
+      "blockId": "G1807365-b00009",
+      "text": "If the engine is left running and temperature continues to climb, the Powertrain Check Lamp illuminates. This means the engine is approaching critical limits and should be stopped. The PCM sets DTC P1285 at this point; a scan tool can retrieve it.",
+      "why": "The additional lamp marks an escalation in urgency. The stored code provides information for investigating the overheating concern after the engine has been stopped."
+    },
+    {
+      "blockId": "G1807365-b00010",
+      "text": "Stage 2 starts if the driver ignores the lamp and temperature gauge. The PCM deactivates 4 cylinders and limits engine speed to below 3,000 RPM. At the same time, the MIL illuminates, warning that long-term engine damage can occur and vehicle emissions will be affected. The PCM sets DTC P1299, which can be retrieved using a scan tool.",
+      "why": "The engine’s restricted operation is a protective response to the temperature emergency. The warning about damage still applies while that restriction is active."
+    },
+    {
+      "blockId": "G1807365-b00011",
+      "text": "Air is drawn into the deactivated cylinders to help control the temperature of internal engine components. The strategy alternates the deactivated cylinders so that all cylinders receive even cooling.",
+      "why": "The inactive cylinders contribute a cooling airflow, and alternating their selection distributes that cooling effect throughout the engine."
+    },
+    {
+      "blockId": "G1807365-b00012",
+      "text": "NOTE: When the PCM starts engine deactivation in Stage 2, a high percentage of throttle travel—such as during an overtaking maneuver—delays deactivation for 10 seconds.",
+      "why": "High throttle demand affects the timing of intervention. The delay does not mean the overheating condition has gone away."
+    },
+    {
+      "blockId": "G1807365-b00013",
+      "text": "NOTE: After 4-cylinder operation has started, a drop in temperature will not restore 8-cylinder operation. The ignition must be switched off and then on again before that return can occur.",
+      "why": "This explains the mode’s ignition-cycle requirement. Completing that cycle does not establish that the overheating cause has been corrected."
+    },
+    {
+      "blockId": "G1807365-b00014",
+      "text": "NOTE: Only a scan tool can extinguish the MIL, and only after the fault has been corrected and the DTC cleared.",
+      "why": "Fault correction and code clearing are required parts of the lamp-clearing sequence; a change in engine operating mode does not complete them."
+    },
+    {
+      "blockId": "G1807365-b00015",
+      "text": "Stage 3 starts if engine temperature keeps rising. The engine is completely disabled before major engine damage or seizure occurs. The Powertrain Check Lamp begins flashing to indicate that the engine will switch off after 30 seconds. This interval gives the driver time to choose a suitable parking place.",
+      "why": "A flashing lamp signals impending automatic shutdown. Choosing a suitable parking place becomes the immediate task."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:16:55.630Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 15,
+    "receivedBlocks": 15,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "624868cb60ce528717715ab6f6b8be17e978fe1ed8aedd3050536ee465237215",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 16,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "72c783fa787e66fd0f06d19a1c7ffebdbacdb59a7e41a884f69fac121310b244",
+    "reviewedAt": "2026-10-27T19:16:55.630Z"
+  }
+}

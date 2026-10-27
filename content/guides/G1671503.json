@@ -1,0 +1,181 @@
+{
+  "documentId": "G1671503",
+  "supportingSourceRefs": [],
+  "sourceHash": "5455535ee848355e4067d5c8075bfd48134f55f27d745169a7e3de93325a7afa",
+  "title": "2.3L EcoBoost Fuel System Overview",
+  "introduction": "I follow this fuel system as a relay: the tank pump supplies the high-pressure pump, the high-pressure pump feeds the rail, and the injectors meter fuel into the engine. Keeping those jobs separate makes the hardware much easier to understand. The fuel gauge reports quantity; it cannot vouch for delivery pressure.\n\nThis overview identifies the components, their service boundaries and the collision-triggered pump shut-off feature. It does not teach access, pressure testing or replacement. Before opening fuel plumbing, use the matching engine’s safety and pressure-release procedure: switching the engine off does not establish that fuel pressure is gone. The shut-off explanation below is informational; inspect and repair collision damage before considering a restart, using the actual vehicle-control sequence in the owner’s manual.",
+  "requirements": [
+    {
+      "category": "After a collision",
+      "items": [
+        {
+          "name": "Inspect the fuel system before any restart attempt",
+          "detail": "Fuel leaks after a collision must be inspected and repaired where necessary; failing to do so can increase the risk of fire and serious injury. Ford recommends inspection of the fuel system by an authorized dealer after any collision. Do not treat an ignition reset as permission to drive or as a substitute for that inspection."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1671503-b00001",
+      "text": "How Fuel Reaches the Engine",
+      "why": ""
+    },
+    {
+      "blockId": "G1671503-b00002",
+      "text": "Read the following components as a connected system, from fuel storage through pressure supply to injector metering:",
+      "why": "Following the delivery path helps distinguish a component’s job from its location."
+    },
+    {
+      "blockId": "G1671503-b00004",
+      "text": "The system uses Closed Loop Pressure Control Fuel System (CLPC) operation.",
+      "why": "Closed-loop control uses feedback to regulate pressure rather than assuming the commanded supply is correct."
+    },
+    {
+      "blockId": "G1671503-b00006",
+      "text": "Fuel is stored in a saddle-type fuel tank.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671503-b00008",
+      "text": "The supply Fuel Pump operates on 6-12 volts, depending on load, and delivers pressurized fuel to the high pressure Fuel Pump.",
+      "why": "These pumps perform successive jobs. The supply pump feeds the next stage rather than supplying the injectors directly."
+    },
+    {
+      "blockId": "G1671503-b00010",
+      "text": "The lifetime fuel filter is serviced as part of the Fuel Pump and Sender Unit.",
+      "why": "The filter belongs to the combined unit’s service arrangement."
+    },
+    {
+      "blockId": "G1671503-b00012",
+      "text": "The Easy Fuel™ capless fuel tank filler pipe assembly must not be modified in any way. Service it only by installing a new fuel tank filler pipe assembly.",
+      "why": "The service boundary is the complete filler pipe assembly; modification is expressly prohibited."
+    },
+    {
+      "blockId": "G1671503-b00014",
+      "text": "A supplemental refueling adapter is stored in the luggage compartment.",
+      "why": "This identifies where to find the adapter for the capless refueling system."
+    },
+    {
+      "blockId": "G1671503-b00016",
+      "text": "The high pressure Fuel Pump supplies the fuel rails with fuel at high pressure and low volume.",
+      "why": "Pressure and volume describe different things: this stage raises the delivery pressure for the injection circuit."
+    },
+    {
+      "blockId": "G1671503-b00018",
+      "text": "The Fuel Pump Control Module is beneath the rear seat cushion on the LH, or left-hand, side of the vehicle.",
+      "why": "This locates the control module separately from the pump and sender hardware."
+    },
+    {
+      "blockId": "G1671503-b00020",
+      "text": "Liquid-fuel and fuel-vapor tubes run along the underside of the vehicle.",
+      "why": "Both kinds of tube belong to the fuel system, but liquid delivery and vapor containment have different jobs."
+    },
+    {
+      "blockId": "G1671503-b00022",
+      "text": "Each cylinder has a separately controlled fuel injector mounted directly into the cylinder head.",
+      "why": "An injector is an electrically controlled metering valve. Here, the direct-injection layout places it in the head."
+    },
+    {
+      "blockId": "G1671503-b00024",
+      "text": "The high pressure Fuel Pump feeds pressurized fuel to the fuel rail, which supplies the fuel injectors.",
+      "why": "The rail distributes fuel; the injectors determine how it is metered into the engine."
+    },
+    {
+      "blockId": "G1671503-b00026",
+      "text": "The system includes a Fuel Level Sensor.",
+      "why": "Fuel level describes the quantity in the tank, rather than the pressure being delivered to the engine."
+    },
+    {
+      "blockId": "G1671503-b00028",
+      "text": "A serviceable Fuel Level Sender is mounted on the Fuel Pump and Sender Unit.",
+      "why": "The sender measures fuel level even though it shares an assembly with the pump."
+    },
+    {
+      "blockId": "G1671503-b00045",
+      "text": "The Fuel Pump and Sender Unit contains the following components:",
+      "why": "This assembly combines fuel delivery, level measurement, filtration and pressure-management functions."
+    },
+    {
+      "blockId": "G1671503-b00031",
+      "text": "An electric Fuel Pump supplies pressurized fuel to the high pressure Fuel Pump (FP).",
+      "why": "This is the supply stage of the fuel-delivery relay."
+    },
+    {
+      "blockId": "G1671503-b00034",
+      "text": "A fuel level sender measures the fuel level in the tank.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671503-b00037",
+      "text": "A check valve maintains system pressure after the pump shuts off.",
+      "why": "Pump shut-off and pressure release are different events; retained pressure is part of the system’s design."
+    },
+    {
+      "blockId": "G1671503-b00040",
+      "text": "A pressure-relief device protects against overpressure if fuel flow becomes restricted.",
+      "why": "It provides protection when a restriction prevents fuel from flowing normally."
+    },
+    {
+      "blockId": "G1671503-b00043",
+      "text": "A lifetime fuel filter removes foreign material to protect the fuel injectors.",
+      "why": "Filtration protects the metering components downstream."
+    },
+    {
+      "blockId": "G1671503-b00047",
+      "text": "Collision-Triggered Fuel Pump Shut-off",
+      "why": ""
+    },
+    {
+      "blockId": "G1671503-b00048",
+      "text": "During a moderate to severe collision, an event notification signal initiates the Fuel Pump and Sender Unit Shut-off Feature.",
+      "why": "The feature responds to a collision event rather than an ordinary fuel-delivery request."
+    },
+    {
+      "blockId": "G1671503-b00049",
+      "text": "The restraints control module (RCM) provides the event notification signal to the Fuel Pump Control Module. Communication between the RCM and the Fuel Pump Control Module allows the PCM to shut off the Fuel Pump.",
+      "why": "This identifies the collision-notification path and the resulting pump shut-off."
+    },
+    {
+      "blockId": "G1671503-b00050",
+      "text": "When collision shut-off has stopped the vehicle, the workshop overview describes an ignition OFF-to-ON reset. It notes that the initial attempt may not restart the vehicle and an additional ignition cycle may be needed.",
+      "why": "Complete the fuel-system inspection and any necessary leak repairs before attempting to restart. The matching owner’s manual, Roadside Emergencies — Fuel Shutoff, gives the actual pushbutton-control sequence and explains that the vehicle checks systems before allowing a restart. Use that sequence rather than interpreting this general OFF-to-ON description as a keyed-ignition or complete restart procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:18:58.108Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 25,
+    "receivedBlocks": 25,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "396063b3be52959f13a5f3c3ec276954e1abae3f155407a6e6ab9529a292aaa0",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b753c9085d13cc90138f2282aa8d0eeef24c21c84fede8bb007577f66ec00fa6",
+    "reviewedAt": "2026-10-27T19:16:18.573Z",
+    "editorialRevision": "Owner-backed collision inspection precaution and actual-control informational referral; title-only inherited power deletion, all other technical content unchanged",
+    "supplementalCollisionEvidence": {
+      "ownerSource": "owner-source.json",
+      "priorReviewedPattern": "G1794911-collision-safety",
+      "scope": "No architecture modification; primary2.3 high-pressure pump remains applicable."
+    }
+  }
+}

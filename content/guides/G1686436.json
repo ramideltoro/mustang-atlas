@@ -1,0 +1,75 @@
+{
+  "documentId": "G1686436",
+  "supportingSourceRefs": [],
+  "sourceHash": "64413681e8ce8970cefaed9f14d1973beb441221a5f4d2bbe6e067ea6f1945c6",
+  "title": "Intermediate Clutch Assembly — 6R80",
+  "introduction": "The intermediate clutch uses hydraulic pressure to apply its clutch pack. Its regulator valve has a particularly useful lesson hidden in the plumbing: pressure can push against another control pressure to soften the transition. More pressure in a passage does not automatically mean more clutch force—where it acts matters.\n\nI start with the cutaway, match its callouts to the table, and use the exploded view to separate the clutch pack, piston, springs and support parts in my mind. The table also identifies neighboring components, so its direct-clutch label is not a second name for the intermediate clutch. The model-dependent quantities and selective retaining part require the matching assembly specifications; the picture is not a parts-count prescription.\n\nFor the hydraulic views, trace DRIVE to the regulator valve, then compare the solenoid-control passages with the passage leading to the clutch. Read the labels and arrow directions rather than treating color alone as a universal pressure legend. This overview covers the listed engine applications equipped with this transmission; it explains operation and component identity, rather than access, live testing or overhaul.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686436-b00001",
+      "text": "Locate the Intermediate Clutch",
+      "why": "The cutaway places the highlighted assembly within the transmission and provides the context for the separated parts in the exploded view."
+    },
+    {
+      "blockId": "G1686436-b00004",
+      "text": "Intermediate (2, 6) Clutch — Exploded View",
+      "why": "Match the callouts with the unchanged table. The separated layout identifies parts and their relationships; it does not supply an assembly sequence or selective-part measurement."
+    },
+    {
+      "blockId": "G1686436-b00006",
+      "text": "Intermediate Clutch (C) — Hydraulic Operation",
+      "why": "Read the line-pressure supply, solenoid control and clutch feed as connected paths with different jobs."
+    },
+    {
+      "blockId": "G1686436-b00007",
+      "text": "With the manual valve in DRIVE, 3, 2 or 1, line pressure can reach the clutch C regulator valve through the DRIVE circuit. SSC, the shift solenoid controlling the intermediate clutch, supplies regulated solenoid pressure from SREG through VFS3 to position the regulator valve for application. As the intermediate clutch applies, SSC increases pressure to the regulator valve, which sends regulated line pressure through CL C to apply the clutch. In 6th gear, the clutch E latch valve also supplies regulated solenoid pressure through VFS3E to the clutch C regulator valve. VFS3E pressure opposes VFS3 pressure, reducing the effective VFS3 force on the valve and helping produce a smooth shift into 6th gear.",
+      "why": "I picture the opposing control pressures as hands pushing on opposite sides of the valve. The extra feed changes the balance of force, rather than simply adding to the apply command. Keep that control action separate from the regulated line pressure sent to the clutch."
+    },
+    {
+      "blockId": "G1686436-b00008",
+      "text": "Intermediate (2, 6) Clutch Circuits — Applied",
+      "why": "Follow the regulator’s output to the clutch, then locate the opposing control-pressure connection shown for the upper-gear application."
+    },
+    {
+      "blockId": "G1686436-b00010",
+      "text": "In 2nd, 3rd, 4th, 5th and 6th gear, the D2 Latch valve directs a small amount of fluid from the PUMP circuit into CL EXH. When SSC is hydraulically off and the Manual Valve is in DRIVE, fluid from CL EXH fills the Clutch C circuits at low pressure, (21kPa/ 3 PSI). This keeps air out of the Clutch C circuits and helps the clutch apply smoothly in 2nd and 6th gear.",
+      "why": "Hydraulically off does not mean dry. This small fluid supply keeps the circuit filled while the clutch is released, so application does not begin with an air-filled passage. The stated fill pressure is not a substitute for a diagnostic test specification."
+    },
+    {
+      "blockId": "G1686436-b00011",
+      "text": "Intermediate (2, 6) Clutch Circuits — Released",
+      "why": "Compare the released view with the applied view to see how the low-pressure fill path differs from the clutch-applying path."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:07:26.183Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 7,
+    "receivedBlocks": 7,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 25,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "865314e865d06391b3d12020eb042e754151917d1afd30cd955cdb9e026d561b",
+    "reviewedAt": "2026-10-27T19:07:26.183Z"
+  }
+}

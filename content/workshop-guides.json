@@ -85749,92 +85749,164 @@
     },
     {
       "title": "Check rear parking-aid distance readings with positioned targets",
-      "summary": "Place targets at specified distances behind the rear bumper and compare their detection with scan-tool parking-aid readings.",
-      "introduction": "The rear parking aid uses ultrasonic echoes to detect objects and estimate their distance from the bumper. Its azimuth is the horizontal area it monitors behind the vehicle. This check places objects at known locations so you can assess sensor distance readings; it does not establish maximum detection range.",
-      "why": "Target position and the reflected sound affect detection. The inner and outer sensors have different coverage, so the staggered arrangement matters. Warning tones also depend on vehicle movement and obstacle distance, making scan-tool readings essential during this stationary check.",
+      "summary": "Arrange five pipe targets behind the Mustang, then use live scan-tool readings to check rear parking-aid detection at known distances.",
+      "introduction": "Five lengths of plumbing pipe are about to give your Mustang’s parking sensors a performance review. I’ll walk you through arranging them behind the bumper and checking what the car actually reports. The rear parking aid uses four ultrasonic sensors—little sound-wave transmitters and receivers—to estimate obstacle distance. Its “azimuth” is the horizontal area it watches behind the car, roughly a 170-degree semicircle. This check compares known target positions with live distance readings; it does not explore the sensors’ maximum reach.",
+      "why": "A parking sensor needs a useful echo before it can report a useful distance. Target shape, placement, sensor condition and weather all affect that echo. The staggered target layout exercises different parts of the rear detection area, while scan-tool data lets you see detection that may produce no warning sound when the car is stationary. I want measurements doing the talking here; silence alone makes a lousy diagnosis.",
       "taskType": "diagnostics",
       "difficulty": "intermediate",
       "searchTerms": [
+        "2015 Mustang rear parking aid azimuth check",
+        "parking sensor distance PID",
         "rear parking sensors miss objects",
-        "parking aid distance reading incorrect",
-        "rear parking aid silent when stationary",
+        "parking aid silent when stationary",
         "parking aid disabled message"
       ],
       "when": {
-        "summary": "Use when rear parking-aid object detection or reported distance needs checking against known target positions.",
+        "summary": "Use this check when you need to compare rear parking-aid detection and reported distance with targets at measured positions.",
         "notes": [
-          "This is the rear-system check with reverse selected."
+          "Applies to 2015 Mustang coverage for 2.3L, 3.7L, 5.0L and 5.2L engines when equipped with rear parking aid. The check has no separate body-style branch.",
+          "Use reverse for this rear-system check, with either an automatic or manual transmission.",
+          "Perform the check on a level surface with the vehicle stationary and fully assembled."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare the targets and location",
-          "detail": "Use a level surface and upright PVC or similar pipe targets matching the procedure's 9 cm diameter (3 in I.D.) specification and 100 cm (39 in) length. I.D. means internal diameter."
+          "title": "Gather five upright targets",
+          "detail": "Use PVC or similar pipe matching the test-object description: 9 cm diameter (3 in I.D.), 100 cm (39 in) long. I.D. means internal diameter. Prepare five targets that stand securely upright, as shown in the [target-layout procedure](#/document/G1672936). The pipes extend upward from ground level; do not lay them flat."
         },
         {
-          "title": "Prepare distance measurement and live data",
-          "detail": "Have a means of measuring from the rear bumper and a diagnostic scan tool that displays parking-aid sensor distance parameter identifications (PIDs). The check requires an operator to maintain the brake controls with the engine running."
+          "title": "Have distance measurement and live data ready",
+          "detail": "Have a measuring tool and a diagnostic scan tool capable of displaying the parking-aid sensor distance PIDs. A PID is an individual live-data value reported by a vehicle controller. This check requires distance data, not merely a code reader. It documents detection and distance agreement, but provides no numerical error tolerance for declaring a reading acceptable; unresolved discrepancies need further diagnosis before any part is condemned."
+        },
+        {
+          "title": "Plan a stationary, engine-running check",
+          "detail": "Use a level location suitable for running the engine. One operator must remain at the controls, holding the brake pedal with the parking brake applied throughout the reverse-gear portion. Arrange every target before starting that portion. No bumper removal, sensor unplugging, underhood work or lifting is needed. Do not start the engine in a closed garage or other enclosed area; provide adequate ventilation."
+        },
+        {
+          "title": "Prepare personal protection and prevent unintended starts",
+          "detail": "Wear eye and ear protection while servicing the vehicle. Before working around the car, disable remote start, if fitted, through Vehicle settings > Remote Start Setup. Switch the ignition off, remove the key from the vehicle and keep it under your control before the walkaround or target setup. Repeat that key-removal precaution after shutting down, before approaching the targets. See the relevant [service precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Check conditions that affect detection",
-          "body": "Confirm the parking aid is enabled through the message center. Note any disabled warning, covered sensors, incorrect alignment or add-on equipment obstructing the detection area. Dirt, ice, heavy rain and snow can affect echoes and must be considered before interpreting a missed target."
+          "title": "Secure the car before arranging anything behind it",
+          "body": "Park on the level test surface and apply the parking brake. Disable remote start as described in preparation before working around the vehicle. Switch the engine and ignition off, remove the key from the vehicle and keep it under your control before beginning the walkaround or target setup.\n\nKeep people out of the space behind the car during the later engine-running check."
         },
         {
-          "title": "Arrange the staggered targets",
-          "body": "Follow the position diagram for the lateral arrangement. Place the outboard P1 and P5 targets 25 cm (10 in) from the rear bumper, intermediate P2 and P4 targets 50 cm (20 in) away, and centered P3 150 cm (59 in) away. Measure from the bumper; do not arrange every target in one straight row."
+          "title": "Look over the fitted sensors and their detection area",
+          "body": "From outside the rear bumper, locate the four parking-aid sensor faces: an inner and outer sensor on each side. Look for dirt or ice covering their faces, an obviously displaced sensor, and add-on equipment blocking the area behind the bumper. Note heavy rain or snow that could affect detection.\n\nAddress a covered face or obstructed test area before interpreting the readings. If a sensor appears incorrectly installed or aligned, record that finding for further diagnosis; this check does not call for removing or adjusting it. Actual sensor placement can differ from the simplified target illustration."
         },
         {
-          "title": "Activate the rear system while holding the vehicle",
-          "body": "Switch the ignition on with the engine running. Apply the parking brake and keep your foot on the brake pedal, then select reverse. Maintain these braking conditions while taking the readings."
+          "title": "Arrange the five targets in the staggered pattern",
+          "body": "Stand the targets upright across the rear of the vehicle. Reading across the layout, the order is P1, P2, P3, P4 and P5. These are five target positions, not five sensors.\n\nPlace P1 and P5 at the two outboard positions, closest to the bumper: 25 cm (10 in) from the rear bumper.\n\nPlace P2 and P4 inward of those targets at the intermediate positions: 50 cm (20 in) from the rear bumper.\n\nPlace P3 centrally behind the vehicle, farthest away: 150 cm (59 in) from the rear bumper.\n\nMeasure from the rear bumper, not from a wheel or another target. Preserve the symmetric, staggered arrangement shown in the [position diagram](#/document/G1672936), using the exact distances in [Specifications](#/document/G1693945). The lateral spacing is illustrated rather than numerically dimensioned. A neat straight row would be easier to arrange—and would be the wrong test."
         },
         {
-          "title": "Check detection through the scan tool",
-          "body": "Monitor the sensor distance PIDs and verify detection at P1, P2, P3, P4 and P5. Compare the reported distances with the known layout. Use the live data to assess the farther targets: silence alone does not mean those targets are undetected."
+          "title": "Prepare the scan tool display",
+          "body": "With the car still secured, prepare the diagnostic scan tool to display parking-aid sensor distance data. Keep the display where the operator can read it without leaving the controls or releasing the brake pedal during the check."
+        },
+        {
+          "title": "Start the engine and activate rear parking aid",
+          "body": "Do not run the engine in a closed garage or other enclosed area; open the garage door and provide adequate ventilation before starting. Keep everyone clear of the area behind the vehicle. The starting controls and exhaust precautions are described on printed pages 121–122 of the 2015 Mustang owner’s manual.\n\nTake the driver’s position with the valid key inside. Keep the parking brake applied and hold the service-brake pedal throughout the running check. Confirm P on an automatic or Neutral on a manual before starting. From ignition OFF, press the brake pedal on an automatic, or press the clutch pedal on a manual, and press the start button to start the engine. Keep the service brake held on either transmission. Do not press the accelerator.\n\nCheck the instrument-cluster message center for parking-aid status. Enable the system through its menu if it has been manually disabled. A manual disable lasts until the system is enabled again or the ignition is cycled off and on. With a MyKey restricted key, the parking-aid menu is unavailable and the system cannot be manually disabled.\n\nIf a parking-aid disabled fault warning remains, use the diagnostic decisions below before treating any missing readings as a distance-check result.\n\nOnce the system is enabled and ready, select R using the automatic selector lever or manual gearshift as fitted; keep the clutch fully depressed while selecting and holding Reverse on the manual. Keep the parking brake applied and the service brake firmly held, maintain control of the vehicle and keep it stationary throughout the readings. This is the rear-system test; selecting D is not part of it."
+        },
+        {
+          "title": "Check and record detection at every target position",
+          "body": "Monitor the parking-aid sensor distance PIDs. Verify that the targets at P1, P2, P3, P4 and P5 are detected with the layout undisturbed. Compare the reported distances with the measured bumper-to-target distances: 25 cm (10 in) at the outboard positions, 50 cm (20 in) at the intermediate positions and 150 cm (59 in) at the center position.\n\nRecord the target positions, their measured distances, the sensor/PID identifiers displayed by the tool, the readings and any missing detection or message-center warning. Do not assume there is one PID for each target: four sensors are checking five positions.\n\nKeep the car stationary. If anything needs repositioning, end the running check and secure the car as described in the final step before anyone goes behind it."
+        },
+        {
+          "title": "Interpret the warning sound alongside the live readings",
+          "body": "While stationary in reverse, the system provides an audible warning only when a detected obstacle is less than 12 in (30 cm) from the rear bumper. The 25 cm (10 in) outboard targets fall within that stationary-warning distance; the 50 cm (20 in) and 150 cm (59 in) targets do not.\n\nA detected object within 12 in (30 cm) of the sensors produces a continuous tone, and warning priority goes to the closest detected object. Use the PIDs to evaluate the farther targets rather than expecting a separate sound for each pipe. One continuous warning is not a five-target roll call."
+        },
+        {
+          "title": "End the check before approaching the targets",
+          "body": "Keep the brake pedal pressed and the parking brake applied. On an automatic, select P and switch the engine and ignition off. On a manual, switch the engine and ignition off and leave the transmission in gear for parking. Only release the brake pedal and leave the controls after the vehicle is secured.\n\nRemove the key from the vehicle and keep it under your control before approaching, collecting or repositioning any target. When all work around the vehicle is finished, restore the remote-start setting if you changed it and want it enabled."
         }
       ],
       "watchFor": [
         {
-          "title": "Stationary warning behavior",
-          "body": "The system provides stationary audio warnings only for obstacles less than 12 in (30 cm) from the bumper. Farther targets may be detected without a warning tone."
+          "title": "Movement during the test",
+          "body": "The engine runs with reverse selected. Keep the parking brake applied and the brake pedal pressed throughout. Stop the test if the vehicle cannot remain stationary; nobody should reposition targets behind a running vehicle in reverse. Keep the clutch fully depressed throughout the Reverse readings on a manual transmission."
+        },
+        {
+          "title": "A poor echo can resemble a sensor problem",
+          "body": "Object size, surface and material affect sound reflection. Dirt, ice, heavy rain, snow, incorrect sensor installation and blocked detection zones can prevent detection. Keep the specified upright pipe targets and their measured arrangement before drawing conclusions."
+        },
+        {
+          "title": "Parking aid remains an aid",
+          "body": "The system detects certain objects and may miss moving ones. Do not use the warning tone or a favorable scan reading as permission to move the car toward a target or person."
         }
       ],
       "notes": [
-        "P1–P5 identify target positions, not five separate sensors. Actual sensor arrangement may differ from the diagram.",
-        "A MyKey restricted key prevents disabling parking aid through the message-center menu."
+        "The parking-aid module, or PAM, powers the four sensors and calculates distance from their returned signals. It is built into the body control module, or BCM, while communicating as a separate controller.",
+        "The system diagram shows a separate audio path: parking-aid requests reach the instrument cluster, which commands the audio equipment. Cars without a touchscreen use the audio control module and rear speakers; touchscreen-equipped cars use the digital signal processing module and rear speakers. A silent speaker therefore does not, by itself, identify a failed parking sensor.",
+        "The lifting and underhood precautions do not add work to this check: it takes place on the ground with the vehicle assembled."
       ],
       "diagnostics": [
         {
-          "finding": "A positioned target is absent from the distance readings",
-          "meaning": "Detection is inconsistent with the check, but target reflection, positioning, sensor obstruction or alignment may contribute.",
-          "next": "Recheck the setup and visible detection conditions before proceeding to fault diagnosis."
+          "finding": "All five positioned targets are detected and the readings agree with their measured placement",
+          "meaning": "The system demonstrates detection and sensible distance reporting at the specified test locations.",
+          "next": "Retain the recorded results and finish the shutdown sequence. This result concerns these target positions and conditions; it does not establish maximum range or detection of every possible obstacle."
         },
         {
-          "finding": "The message center reports parking aid disabled",
-          "meaning": "A detected sensor, communications-network or parking-aid module fault can disable the system.",
-          "next": "Investigate the disabling fault before interpreting this as a distance-accuracy result."
+          "finding": "A target is missing from the readings or a reported distance disagrees with the measured layout",
+          "meaning": "The check has identified a detection or distance discrepancy. Target placement, poor reflection, an obstructed sensor or installation condition may contribute.",
+          "next": "Shut down and secure the car, removing the key from the vehicle, before rechecking the upright targets, bumper measurements, staggered layout and visible sensor conditions. Repeat after correcting a setup problem. If the discrepancy persists, retain the readings for further parking-aid diagnosis rather than replacing a sensor on this result alone."
+        },
+        {
+          "finding": "Farther targets appear in live data but produce no stationary warning",
+          "meaning": "Stationary audio warnings are limited to detected obstacles less than 12 in (30 cm) from the rear bumper.",
+          "next": "Evaluate P2, P3 and P4 through the distance PIDs. Their silence alone is not a failed detection result."
+        },
+        {
+          "finding": "The close targets are detected in live data but no warning sounds",
+          "meaning": "Distance reporting and audible output are separate parts of the system. The cluster, audio equipment and communications path participate in producing the warning.",
+          "next": "Record the close-target readings and missing sound, then pursue audible-warning diagnosis. Use the [system-operation description](#/document/G1693951) to understand the fitted audio path; this finding does not isolate a sensor."
+        },
+        {
+          "finding": "Parking aid was manually switched off",
+          "meaning": "The system can be disabled through the message center for the current key cycle.",
+          "next": "Enable it through the message center or cycle the ignition off and on before repeating the check. A MyKey restricted key removes the disable option."
+        },
+        {
+          "finding": "A parking-aid disabled fault warning remains",
+          "meaning": "A detected fault in a sensor, the communications network or the PAM can disable the whole system.",
+          "next": "Stop interpreting missing target data as an accuracy result. Record the warning and arrange fault diagnosis before repeating this check. The [parking-aid overview](#/document/G1693950) explains this disabled state."
         }
       ],
       "verification": [
         {
-          "title": "Confirm each specified position",
-          "body": "Verify object detection at all five positions using distance PIDs, retaining the specified staggered layout."
+          "title": "Account for all five positions",
+          "body": "Confirm the record includes P1 and P5 at 25 cm (10 in), P2 and P4 at 50 cm (20 in), and centered P3 at 150 cm (59 in), with the staggered arrangement maintained."
         },
         {
-          "title": "Record the measured result",
-          "body": "Record each position, its bumper-to-target distance, the corresponding PID readings and any missed detection or warning message."
+          "title": "Separate distance results from audio observations",
+          "body": "Record live distance readings, missed detections and warning sounds separately. Note any weather, obstruction or sensor-face condition that affected interpretation."
+        },
+        {
+          "title": "Leave the vehicle secured and the area clear",
+          "body": "Confirm the engine and ignition are off, the parking brake remains applied, the transmission is secured for parking and the key has been removed from the vehicle and is under your control before collecting all five targets and test equipment."
         }
       ],
       "procedures": [
         {
           "documentId": "G1672936",
-          "purpose": "Rear azimuth check, target geometry, activation and scan-tool monitoring.",
+          "purpose": "Primary rear azimuth check: pipe targets, staggered geometry, engine-running activation and distance-PID monitoring.",
           "mediaId": "G1672936-m0001"
         },
         {
           "documentId": "G1693945",
-          "purpose": "Exact rear-bumper distances for target positions P1–P5."
+          "purpose": "Exact bumper-to-target distances for P1 through P5."
+        },
+        {
+          "documentId": "G1693950",
+          "purpose": "System enablement, MyKey restrictions and the meaning of a parking-aid disabled warning."
+        },
+        {
+          "documentId": "G1693951",
+          "purpose": "Sensor operation, detection influences, stationary warning behavior and audio-equipment branches."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, removal of the key from the vehicle and personal-protection precautions."
         }
       ],
       "hero": {
@@ -85878,110 +85950,216 @@
         {
           "documentId": "G1693951",
           "sourceHash": "5bcdabf65677733a7f5d3f15debab33c1174377b8c4456b9c9bdef2f63b444d6"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "405f593ed9f66e4a26fe59421886fe820ca7ec6b57b4cba8257f6e99f1fb0535"
-      }
+        "fingerprint": "405f593ed9f66e4a26fe59421886fe820ca7ec6b57b4cba8257f6e99f1fb0535",
+        "editorialVersion": 2,
+        "editorialFingerprint": "78856f59e8c430892e89ed246c0d76354a8edb7b043cfa8629a319ef9f3ad9aa",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-survey",
+          "title": "Secure the car and check conditions",
+          "summary": "Prevent unintended starts and look for conditions that could spoil detection.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "position-and-connect",
+          "title": "Arrange targets and prepare live data",
+          "summary": "Set the measured staggered layout and prepare the scan-tool display within the operator’s view.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "activate-and-measure",
+          "title": "Run the stationary check",
+          "summary": "Hold the vehicle in reverse, record distance data and interpret warning sounds.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "shutdown-and-clear",
+          "title": "Secure the vehicle and clear the test area",
+          "summary": "End the running check and remove the key from the vehicle before approaching the targets.",
+          "start": 8,
+          "end": 8
+        }
+      ]
     },
     {
-      "title": "Check rear parking sensor aim when an empty area triggers a warning",
-      "summary": "Compare rear parking sensor distance data with audible warnings to identify possible downward sensor aim from bumper misalignment.",
-      "introduction": "The rear parking aid uses ultrasonic sensors to detect reflected sound and estimate the distance to nearby objects. It warns through the rear audio speakers when reverse is selected. This elevation check asks whether the sensors are aimed downward enough to detect the ground as an obstacle.",
-      "why": "Sensor direction depends on correct bumper installation. A downward-tilted bumper can create an apparent obstacle even when the area is clear. Both scan-tool readings and sound matter: silence alone is not a passing result, especially if a fault has disabled the system.",
+      "title": "Check rear parking sensor aim when empty space triggers a warning",
+      "summary": "Use live rear parking sensor readings and warning tones to check whether bumper alignment is making the sensors detect the ground.",
+      "introduction": "If your Mustang considers an empty patch of asphalt a parking emergency, I want to check where its sensors are looking before putting one on trial. This elevation check compares live sensor readings with a clear area behind the car, then checks whether a downward-tilted bumper could be aiming a sensor at the ground.",
+      "why": "The four rear parking sensors send out ultrasonic sound and listen for reflections. The parking aid module, or PAM, uses those echoes to estimate an object's distance and request warning tones through the rear speakers. Correct bumper position matters because it determines where the sensors look. A warning in empty space can justify checking that position; it does not, by itself, prove a sensor has failed.",
       "taskType": "diagnostics",
       "difficulty": "intermediate",
       "searchTerms": [
+        "2015 Mustang parking sensor elevation check",
         "rear parking aid beeps with no obstacle",
-        "parking sensors detecting the ground",
+        "parking sensors detecting ground",
         "rear bumper sensor alignment",
-        "false rear parking warning"
+        "parking aid distance PID"
       ],
       "when": {
-        "summary": "When rear parking aid reports an obstacle in a clear area or bumper alignment is in question.",
+        "summary": "Use this stationary check when rear parking aid reports an obstacle in a clear area or rear bumper alignment is in question.",
         "notes": [
-          "This is a stationary check with the engine running and reverse selected."
+          "Applies to the contracted 2015 Mustang coverage with 2.3L, 3.7L, 5.0L or 5.2L engines and rear parking aid. No body-style-specific variation is established for this check.",
+          "Reverse activates the rear parking aid on both automatic and manual transmissions.",
+          "The general elevation procedure also mentions Drive for front sensors. That branch does not apply to this rear-parking-aid article or establish that front sensors are fitted."
         ]
       },
       "prepare": [
         {
-          "title": "Provide live sensor data",
-          "detail": "Use a diagnostic scan tool capable of displaying parking-aid sensor-distance parameter identification (PID) data."
+          "title": "Have the right live-data tool",
+          "detail": "Use a diagnostic scan tool capable of displaying the rear parking aid sensor-distance PIDs. PID means parameter identification: an individual live-data reading. Have the tool ready and its leads positioned so they cannot interfere with the pedals or gearshift."
         },
         {
-          "title": "Control the test conditions",
-          "detail": "Use a clear rear detection area. Be able to maintain the parking brake and continuous foot-brake application during the check."
+          "title": "Keep this an assembled-car check",
+          "detail": "Leave the wheels, bumper, sensors and wiring installed, with the car on the ground. This job ends at live-data assessment and an exterior bumper-position check. Bumper removal, alignment correction and further fault isolation require the separate Parking Aid diagnosis and repair instructions."
+        },
+        {
+          "title": "Choose a suitable test area",
+          "detail": "Use a level location with adequate ventilation for a running engine and clear space behind the car and beside the rear bumper. Keep people and moving objects out of that area. The driver must remain at the controls throughout the running check."
+        },
+        {
+          "title": "Prevent an unexpected start during the exterior inspection",
+          "detail": "Before working around the vehicle, disable remote start, if fitted, through Vehicle settings > Remote Start Setup in the central display. Perform exterior inspection with the engine and ignition off and the key removed. Wear eye and ear protection during service."
         }
       ],
       "steps": [
         {
-          "title": "Establish whether the system is available",
-          "body": "Check for a parking-aid-disabled message and confirm the system has not been switched off through the message center. A disabled system cannot establish correct sensor aim simply by remaining quiet."
+          "title": "Prepare the clear area with the engine off",
+          "body": "Park on level ground and apply the parking brake. Disable remote start as described above, then switch the ignition off and remove the key before walking around the car.\n\nClear objects from behind the bumper and its nearby sides. Look at the four rear sensor faces for dirt or ice, and note any fitted accessory that intrudes into their view. These conditions can affect the result; do not mistake an obstructed test area for an alignment fault.\n\nNo trim or connector needs to be removed for this check."
         },
         {
-          "title": "Set up the stationary reverse check",
-          "body": "Follow the [Elevation System Check](#/document/G1672937): turn the ignition on with the engine running, apply the parking brake and keep your foot on the brake pedal. Select reverse to activate the rear sensors."
+          "title": "Set up the running check from the driver's seat",
+          "body": "Prepare the diagnostic scan tool according to its operating instructions and select the rear parking aid sensor-distance live data.\n\nSit in the driver's seat with the valid key inside. Keep the parking brake applied and press and hold the brake pedal. Confirm P on an automatic or Neutral on a manual before starting. From ignition OFF, press the brake pedal on an automatic, or also press the clutch pedal on a manual, and press the start button to start the engine without pressing the accelerator. Keep the service brake held on either transmission. These keyless starting controls are described on printed pages 121–122 of the 2015 Mustang owner’s manual.\n\nThe engine-running condition is required by the [Elevation System Check](#/document/G1672937). On a manual, keep the clutch fully depressed while selecting and holding Reverse. Maintain control of the pedals throughout the check. Do not leave the driver's seat with Reverse selected."
         },
         {
-          "title": "Compare readings with the clear area",
-          "body": "Monitor the sensor-distance PIDs and listen for an audible warning. The required result is that no object is detected. Note any sensor reporting an object even if there is no warning tone."
+          "title": "Confirm that parking aid is available",
+          "body": "Check the instrument-cluster message center for a parking-aid-disabled warning. If parking aid was switched off through the menu, enable it before interpreting the test.\n\nA driver-selected disable setting lasts until the system is enabled again or the ignition is cycled. With a MyKey restricted key, the parking aid menu is unavailable and the system cannot be switched off through that menu.\n\nIf a fault-disabled warning remains, end the running check using step 6. Silence from a disabled system cannot establish correct sensor aim. The [Parking Aid overview](#/document/G1693950) explains this distinction."
         },
         {
-          "title": "Follow the alignment decision",
-          "body": "If a warning sounds or a PID reports an object, check that the bumper is installed correctly and is not tilted downward, pointing a sensor toward the ground. Continue through Parking Aid diagnosis and testing; this check does not itself authorize sensor replacement."
+          "title": "Select Reverse without moving the car",
+          "body": "With the parking brake applied and your foot continuously holding the brake pedal, select R. Keep the clutch fully depressed on a manual transmission.\n\nReverse activates the rear parking aid. Keep the vehicle stationary and ensure nobody enters the space behind it. This is a sensor-aim check, so there is no need to reverse toward a target."
+        },
+        {
+          "title": "Compare all four distance readings with the warning sound",
+          "body": "Monitor the distance data for the left outer, left inner, right inner and right outer rear sensors. Verify that none indicates an object in the clear area, and listen for a parking aid warning through the rear speakers.\n\nUse the scan tool's definition of each distance reading to recognize its no-object condition; do not invent a numerical pass threshold. Record which sensor reports an object and whether a warning sounds.\n\nI give the live data as much attention as the speakers here. The stationary warning strategy normally sounds for obstacles less than 12 in (30 cm) from the rear bumper, so a quiet car can still have an object indication that needs attention."
+        },
+        {
+          "title": "Secure the car before returning to the bumper",
+          "body": "Keep holding the brake pedal and leave the parking brake applied. Select P on an automatic, or select Neutral on a manual while maintaining pedal control, then shut the engine and ignition OFF. On a manual, select a parked gear after the engine has stopped. Remove the key before leaving the driver's seat.\n\nConfirm the vehicle remains stationary and secured before releasing the foot brake. Keep remote start disabled during the exterior inspection."
+        },
+        {
+          "title": "If either indication was present, inspect bumper position",
+          "body": "If a warning sounded or any distance PID indicated an object, view the rear bumper and sensor faces from outside the secured car. Check whether the bumper is correctly seated and whether it appears tilted downward, directing a sensor toward the road.\n\nThe elevation illustration shows the important relationship: the sensor's downward path meets the ground. Use that relationship to understand what you are checking; the drawing is not an angle gauge.\n\nRecord any apparent bumper mispositioning, downward sensor aim or accessory obstruction. Do not loosen the bumper or unplug a sensor as part of this check."
+        },
+        {
+          "title": "Choose the next action and record the result",
+          "body": "Use the diagnostic decisions below to separate a clear-area pass, an alignment concern and an unavailable system. If either the audible warning or a distance indication persists in a clear area, continue with Parking Aid Diagnosis and Testing, section 413-13.\n\nRecord the individual sensor readings, warning behavior, system-enabled status and exterior findings. After any separately completed correction, repeat this same stationary check. Parts guessing is an expensive way to ask a bumper where it is pointing."
         }
       ],
       "watchFor": [
         {
-          "title": "Obstructions and environmental effects",
-          "body": "Add-on devices can cause false alerts. Dirt, ice, heavy rain and snow can also impair object detection."
+          "title": "A running car in Reverse requires continuous control",
+          "body": "Keep the parking brake applied and hold the brake pedal throughout the active check. Keep the clutch fully depressed on a manual transmission. Stop and secure the car before anyone approaches the rear bumper."
+        },
+        {
+          "title": "Silence is only part of the result",
+          "body": "A fault can disable parking aid, and the stationary warning strategy is limited. Check system availability and all four distance readings as well as listening for a tone."
+        },
+        {
+          "title": "The detection area is broad, but it is not a guarantee",
+          "body": "The rear system covers approximately a 170-degree semicircle. Outer sensors can detect objects about 24 in (60 cm) behind the car; inner sensors reach about 70 in (177 cm). Objects approximately 14 in (35 cm) beside the rear bumper may also be detected. Treat these as operating descriptions, not precise boundaries for declaring the area clear."
+        },
+        {
+          "title": "Surface and weather conditions affect echoes",
+          "body": "Object size, material and surface affect sound reflection. Dirt, ice, heavy rain, snow and incorrect sensor installation or alignment can impair detection. Add-on devices can obstruct the detection zone and produce false alerts."
         }
       ],
       "notes": [
-        "Use the reverse branch for this rear-parking-aid application. The general procedure's Drive branch concerns front sensors and does not establish that front sensors are fitted."
+        "The rear sensors assist the driver; they may not detect moving objects. The described system requires an object to be at least 12 in (30 cm) above the ground for detection, so this check does not prove that every low obstacle will be recognized.",
+        "The system diagram places the PAM within the body control module, or BCM. Sensor information passes through the vehicle's communications network before a warning reaches the speakers; a warning concern does not identify a failed sensor by itself.",
+        "Without a touchscreen, the audio control module drives the warning through the rear speakers. With a touchscreen, that role goes through the digital signal processing module. The elevation-check method is the same for both arrangements."
       ],
       "diagnostics": [
         {
-          "finding": "No warning and no object reported",
-          "meaning": "The system passes the empty-area elevation check under these conditions.",
-          "next": "Record the readings; this does not establish detection of every possible obstacle."
+          "finding": "Parking aid is enabled, all four readings indicate no object, and no warning sounds.",
+          "meaning": "The system passes the clear-area elevation check under the conditions tested.",
+          "next": "Record the result. This establishes the outcome of this check, not detection of every possible obstacle."
         },
         {
-          "finding": "A warning or an object-distance reading in the clear area",
-          "meaning": "Incorrect bumper installation may be directing a sensor toward the ground.",
-          "next": "Inspect bumper position and continue the diagnostic procedure."
+          "finding": "A warning sounds or any sensor reports an object, and the rear bumper appears tilted downward or incorrectly seated.",
+          "meaning": "Bumper position may be directing a sensor toward the ground. This is an alignment concern, not proof of an internally failed sensor.",
+          "next": "Record the affected sensor and visible bumper condition. Continue with Parking Aid Diagnosis and Testing, section 413-13, and the appropriate bumper repair instructions before making an adjustment. Repeat the elevation check after correction."
         },
         {
-          "finding": "Parking-aid-disabled message",
-          "meaning": "A sensor, network or parking aid module fault can disable operation.",
-          "next": "Resolve the disabling concern before interpreting silence as a pass."
+          "finding": "An object indication remains, but the bumper has no obvious external misalignment.",
+          "meaning": "The elevation check has identified a concern without establishing its cause.",
+          "next": "Confirm that the rear and nearby side areas are clear and note sensor contamination, weather and fitted accessories. If the indication persists, continue with Parking Aid Diagnosis and Testing, section 413-13."
+        },
+        {
+          "finding": "A distance PID reports an object but no warning sounds.",
+          "meaning": "Silence does not override the live-data finding. Stationary warning behavior can limit when a tone is produced.",
+          "next": "Treat the object indication as a reason to check bumper position and continue diagnosis if the area is clear."
+        },
+        {
+          "finding": "Parking aid was switched off through the message center.",
+          "meaning": "The system is unavailable by driver selection.",
+          "next": "Enable it through the message center or cycle the ignition, then repeat the controlled check. MyKey prevents menu deactivation."
+        },
+        {
+          "finding": "A parking-aid-disabled warning remains.",
+          "meaning": "A sensor, communications-network or PAM fault can disable the system.",
+          "next": "End the check and pursue Parking Aid Diagnosis and Testing, section 413-13. Do not record silence as an elevation-check pass."
+        },
+        {
+          "finding": "The scan tool cannot provide interpretable rear sensor-distance data.",
+          "meaning": "The required live-data comparison cannot be completed.",
+          "next": "Use a compatible diagnostic scan tool before assigning a pass or failure. Audible behavior alone is insufficient."
         }
       ],
       "verification": [
         {
-          "title": "Repeat after an alignment correction",
-          "body": "Under the same clear-area and brake-held conditions, confirm there is neither an object indication nor an audible warning."
+          "title": "Confirm the complete passing condition",
+          "body": "With parking aid enabled, the engine running, Reverse selected, the parking brake applied and the brake pedal held, verify that all four sensor-distance readings indicate no object in the clear area and no parking aid warning sounds."
         },
         {
-          "title": "Record the result",
-          "body": "Record the sensor-distance readings, warning behavior and bumper alignment findings."
+          "title": "Repeat after a separately completed correction",
+          "body": "Use the same clear-area setup and pedal control after bumper or other corrective work. Compare the readings and warning behavior with the original record."
+        },
+        {
+          "title": "Leave the vehicle secured",
+          "body": "Finish with the engine and ignition off, the parking brake applied, the key removed and the transmission secured as described in step 6. Disconnect and stow the scan tool and leads before normal driving."
         }
       ],
       "procedures": [
         {
           "documentId": "G1672937",
-          "purpose": "Perform the rear sensor elevation check and follow its bumper-alignment decision."
+          "purpose": "Perform the stationary rear sensor elevation check and its conditional bumper-position assessment."
         },
         {
           "documentId": "G1693951",
-          "purpose": "Understand rear sensor operation, detection limitations and warning behavior."
+          "purpose": "Explain the four-sensor layout, detection limits, stationary warning behavior and audio equipment branches."
         },
         {
           "documentId": "G1693950",
-          "purpose": "Identify system enablement and the significance of a disabled warning."
+          "purpose": "Establish system enablement, MyKey restrictions and the significance of a parking-aid-disabled warning."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply remote-start prevention and relevant service protection before working around the vehicle."
         }
       ],
       "hero": null,
@@ -86003,7 +86181,7 @@
         "years": [
           2015
         ],
-        "equipment": "Rear parking aid"
+        "equipment": "Rear parking aid; with or without touchscreen"
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -86018,14 +86196,44 @@
         {
           "documentId": "G1693950",
           "sourceHash": "7850e5e2b0dc6944232b4093327872f67769828cd55c0c78e8d73de2e77981a1"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "5cf3cb90b6d8f58fbaa8a50ba3cc78a90af87cb5a9d84dd451332388a1e7a041"
-      }
+        "fingerprint": "5cf3cb90b6d8f58fbaa8a50ba3cc78a90af87cb5a9d84dd451332388a1e7a041",
+        "editorialVersion": 2,
+        "editorialFingerprint": "7824fbbac1b497e4f9169ad37b1f348b3bed66c99f794bbe77ddab218413a7a8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-the-area",
+          "title": "Prepare the car and detection area",
+          "summary": "Secure the parked vehicle and establish a clear rear sensor view.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "run-the-elevation-check",
+          "title": "Run the stationary check",
+          "summary": "Confirm availability, select Reverse and compare live readings with warning behavior.",
+          "start": 2,
+          "end": 5
+        },
+        {
+          "id": "secure-and-assess",
+          "title": "Secure the car and assess the result",
+          "summary": "Shut down before exterior inspection, then record findings and choose the next action.",
+          "start": 6,
+          "end": 8
+        }
+      ]
     },
     {
       "title": "Replace a rear parking aid sensor and check its alignment",
@@ -104307,101 +104515,274 @@
       }
     },
     {
-      "title": "Remove and replace the front marker lamp",
-      "summary": "Remove the front bumper cover and grille cover to replace the marker lamp, then verify its integrated lighting functions.",
-      "introduction": "The front marker lamp assembly contains the front parking lamp, front side marker and front turn lamp. Replacing the assembly therefore concerns several lighting functions at the same mounting location. Access requires removal of the front bumper cover, followed by the front bumper grille cover before the marker lamp's mounting screws can be removed.",
-      "why": "The grille cover uses both screws and retaining tabs, so removing its screws alone does not release it. Working through the bumper and grille-cover sequence exposes these attachments in order. The bumper's fender bracket teeth also need inspection because they help retain the cover when it is reinstalled.",
+      "title": "Replace the front marker lamp on a 2.3L, 3.7L or 5.0L Mustang",
+      "summary": "Remove the front wheels, bumper cover and grille cover to replace the marker lamp, then restore the bodywork and check its parking, side-marker and turn functions.",
+      "introduction": "Little lamp, big entrance fee: this one wants the Mustang’s bumper cover off before it will leave the party. I’ll walk you through the attachments in order, including the tabs that make pulling harder such a lousy strategy. The front marker assembly combines the front parking lamp, front side marker and front turn lamp; the round fog lamp beside it is a separate component.",
+      "why": "Removing the bumper cover exposes the back of the grille cover, which must come off before the marker lamp’s three mounting screws are accessible. Careful handling protects the grille-cover tabs and the toothed brackets that hold the bumper corners against the fenders. Correct wheel installation matters just as much as getting the little lamp back in place.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "front marker lamp replacement",
-        "front parking lamp not working",
-        "front turn signal not flashing",
-        "front side marker removal"
+        "2015 Mustang front marker lamp replacement",
+        "front parking lamp assembly removal",
+        "front side marker lamp",
+        "front turn signal assembly",
+        "front bumper grille cover removal"
       ],
       "when": {
-        "summary": "When the front marker assembly requires replacement or removal for an established repair.",
+        "summary": "Use this procedure when removal or replacement of the front marker lamp assembly is already the established repair.",
         "notes": [
-          "A missing parking, marker or turn function identifies the complaint but does not alone prove the complete assembly has failed.",
-          "Vehicles with a fog lamp are illustrated; the procedure is similar without one."
+          "An inoperative parking, side-marker or turn function does not by itself establish that the complete assembly needs replacement.",
+          "The left side is illustrated; the right side uses a similar sequence.",
+          "The marker-lamp procedure illustrates a vehicle with fog lamps and also applies without them. The bumper electrical-access illustration shows halogen fog lamps; LED fog lamps use a similar access sequence."
         ]
       },
       "prepare": [
         {
-          "title": "Plan front bumper access",
-          "detail": "Arrange a hoist and the capability to remove the front wheels using the lifting and wheel procedures referenced in the bumper-cover instructions."
+          "title": "Confirm the engine and access route",
+          "detail": "This complete access route covers the 2015 Mustang with 2.3L, 3.7L or 5.0L engine. It does not cover the different 5.2L bumper-access arrangement. Match the fitted fog-lamp and license-plate-bracket branches described below."
         },
         {
-          "title": "Prepare for mixed attachments",
-          "detail": "Have suitable tools for push pins, screws and bolts, and torque control for the low-torque lamp and grille-cover screws."
+          "title": "Arrange lifting equipment and a helper",
+          "detail": "Use a hoist rated for the vehicle’s actual weight, including cargo and modifications, with its arms positioned at the designated lifting points. Have wheel chocks ready. Arrange a second person for lifting the bumper cover off and putting it back, plus a clean, protected place to support it."
+        },
+        {
+          "title": "Gather fastening tools",
+          "detail": "Have suitable tools for the fitted wheel nuts, screws, bolts and push pins. You need torque control at 13–48 lb.in for the body and lamp fasteners, and a torque wrench capable of 150 lb.ft for the wheels. Keep each fastener group separate so its location and torque remain clear."
+        },
+        {
+          "title": "Prepare the lamp and wheel materials",
+          "detail": "Have the correct replacement marker assembly for the side being repaired. Have Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 and cleaning materials for the wheel mounting surfaces and central pilot bores. A replacement fender bracket may be needed if its retaining teeth are damaged."
+        },
+        {
+          "title": "Protect yourself and prevent unexpected operation",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Read the safety information for cleaning products and XL-2; keep flammable solvents away from ignition sources. Disconnect the negative battery cable as described below before fan-area access, and leave it isolated until all bodywork and wheels are restored on the ground."
+        },
+        {
+          "title": "Use the battery handling precautions",
+          "detail": "Work in ventilation away from flames, sparks and burning materials. Shield your eyes, avoid battery acid contact and wash hands after handling terminals. If acid contacts skin or eyes, flush immediately with water for at least 15 minutes and get prompt medical attention. Battery removal, positive-cable removal and vent-tube handling are not part of this job. See [Battery precautions](#/document/G1693181)."
         }
       ],
       "steps": [
         {
-          "title": "Expose the bumper-cover attachments",
-          "body": "Follow the front bumper procedure: raise the vehicle, remove the front wheels and lower air deflector, and release the specified push pins on both sides. Position the inner fender liners aside, disconnect the electrical connectors and separate the cover from the fender brackets."
+          "title": "Restrain the car and prevent an unintended start",
+          "body": "On a hard, level surface at the hoist, apply the parking brake and chock the wheels remaining on the ground. Disable remote start, if fitted, through Vehicle settings > Remote Start Setup, then establish ignition OFF.\nOn an automatic, with a valid key inside and neither pedal pressed, press the start button to switch ignition ON without starting the engine. Hold the brake pedal, select Neutral, then release the pedal and press the button to switch OFF. On a manual, select Neutral with the engine stopped. Remove the key before work. Keep the parking brake applied throughout this job; no release is required. The keyless controls are described on printed page 121 of the 2015 Mustang owner’s manual."
         },
         {
-          "title": "Remove the front bumper cover",
-          "body": "Remove the radiator sight shield and, if fitted, the license plate bracket. Move the outer hood-seal edges aside to reach the bolts. Remove the remaining cover screws, lift the cover off its alignment pins and pull it forward. Inspect the fender bracket teeth and address damage through the bumper procedure."
+          "title": "Make the underhood work area safe",
+          "body": "Open and securely support the hood. At the rear of the engine compartment beside the windshield, remove the three battery-cover retainers and the cover. Loosen the negative battery cable clamp nut, lift the cable from its terminal and position it clear so it cannot contact the terminal again. Leave the positive cable connected; the negative disconnect interrupts vehicle electrical power. Follow [Battery Disconnect and Connect](#/document/G1692356).\nKeep tools clear of the positive terminal. With power isolated and ignition OFF, visually inspect the cooling fans for damage, cracks or separation. A damaged fan must be replaced before underhood work proceeds; do not operate it as a test."
+        },
+        {
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the stamped triangles at the four designated support locations along the underside near the front and rear wheel areas. Position the hoist adapters at those points, checking that the arms and adapters clear suspension parts, steering linkage, exhaust, mounting brackets, stabilizer brackets, axle and rear cover.\nRaise the vehicle and establish secure support on the correctly positioned hoist before working underneath or removing wheels. Keep the parking brake applied; this job does not require releasing it. Keep it applied during every change of hoist height.\nDo not lift against a bumper or use the emergency tire-changing jack for this work. Never work under a car supported only by a jack. See [Jacking and Lifting](#/document/G1663631)."
+        },
+        {
+          "title": "Remove both front wheels",
+          "body": "With the vehicle securely supported, remove the five nuts from each front wheel and remove both wheel-and-tire assemblies. Keep them protected while you work. Do not use heat to free a seized wheel nut; it can damage the wheel and wheel bearing. The required wheel-refitting actions are included below. See [Wheel and Tire](#/document/G1686507)."
+        },
+        {
+          "title": "Remove the lower air deflector",
+          "body": "Under the nose, support the broad lower air deflector while removing its 16 screws and six push pins. Lower the deflector away and keep its two fastener types together but distinguishable. This opens the underside of the bumper area. See [Front Bumper Cover](#/document/G1694213)."
+        },
+        {
+          "title": "Open the front wheel-arch access on both sides",
+          "body": "On each side, remove the two wheelhouse push pins: one at the upper wheel arch above the strut and spring, and one low on the inboard side beside the suspension and hub area. Then remove the three push pins securing the forward section of each inner fender liner and position that liner section aside. The liner stays on the car; move it enough to expose the wiring and the bumper-to-fender attachment behind it."
+        },
+        {
+          "title": "Disconnect the bumper electrical connections",
+          "body": "Through the opened liner access, disconnect the electrical connectors on both sides before moving the bumper cover away. The illustrated corner identifies three connection points. Release the connector retainers and separate the connector bodies without pulling on their wires. Account for the connections fitted to your car, including the fog-lamp connections where equipped."
+        },
+        {
+          "title": "Release the bumper corners from the fender brackets",
+          "body": "On each side, remove the bolt at the bumper-to-fender bracket, then separate the bumper-cover corner from the bracket. The attachment is behind the forward liner area you have just opened. Support the corner as it comes free rather than leaving it hanging from the opposite side. Keep these bolts identified: their installation torque is 15 lb.in (1.7 Nm). Leave all upper bumper screws and hood-seal bolts installed during the next change of hoist height; do not leave the cover hanging from one corner."
+        },
+        {
+          "title": "Remove the radiator sight shield and optional plate bracket",
+          "body": "Before upper access, clear everyone and equipment from beneath the car and lower the hoist to a stable working height where you and your helper can stand on the ground and reach the top attachments. Keep the vehicle securely supported on the hoist and the battery isolated. The front wheels are removed: never unload the hoist onto the wheel-less car or let the hubs/body contact the floor. Do not climb into the raised vehicle.\n\nAt the top of the nose, remove the eight push pins and lift off the radiator sight shield—the broad panel above the radiator and behind the upper bumper edge. If the car has a front license plate bracket, remove its two screws and take off the bracket."
+        },
+        {
+          "title": "Expose and remove the bolts beneath the hood-seal ends",
+          "body": "On both sides, move the outer edge of the hood seal aside to expose the bolt beneath it, then remove that bolt. Keep the seal positioned clear without pulling it unnecessarily out of place. These bolts also tighten to 15 lb.in (1.7 Nm) during refitting."
+        },
+        {
+          "title": "Lift the bumper cover off its alignment pins",
+          "body": "Keep the cover controlled with your helper before releasing its final upper attachments. Have your helper support the other side of the cover. Remove the six screws along its upper attachment edge. Lift the bumper cover upward off the alignment pins, then pull it forward off the vehicle. Check that the disconnected wiring is clear as the cover moves, and place the cover on its protected support.\nThe six upper screws tighten to 48 lb.in (5.4 Nm) during installation. The upward movement comes before the forward movement; the alignment pins are not persuaded by extra enthusiasm."
+        },
+        {
+          "title": "Inspect the fender bracket teeth",
+          "body": "With the cover removed, look directly at the row of retaining teeth on each fender bracket where the bumper corner engages. Check those teeth for damage before refitting the cover.\nIf a bracket requires replacement, remove its two bolts and take off the bracket. Install the replacement bracket and tighten its bolts to 13 lb.in (1.5 Nm). Leave an undamaged bracket installed; removing it is not part of ordinary lamp access."
         },
         {
           "title": "Remove the front bumper grille cover",
-          "body": "Remove its screws, release the tabs and then remove the grille cover. Both attachment types must be released before the cover comes away."
+          "body": "At the back of the removed bumper cover, identify the grille-cover section around the lamp area. Remove its six screws first, then release its four retaining tabs and remove the grille cover. Do not pull against tabs that are still engaged. The grille-cover screws tighten to 15 lb.in (1.7 Nm) on installation. See [Front Marker Lamp](#/document/G1694116)."
         },
         {
-          "title": "Remove the marker lamp",
-          "body": "Identify the marker assembly using the lamp illustration, then remove its mounting screws and lift out the assembly. The adjacent fog lamp shown in the illustration does not add a fog-lamp removal step."
+          "title": "Remove the marker lamp’s three screws",
+          "body": "On the removed grille-cover assembly, identify the upper marker-lamp assembly. In the fog-lamp illustration, it sits above the large round fog lamp. Remove the three screws securing the marker assembly and withdraw the marker lamp from the grille cover. Leave the adjacent fog lamp installed; its removal is not required for this operation."
         },
         {
-          "title": "Reassemble in reverse order",
-          "body": "Install the marker lamp, then refit the grille cover with its tabs and screws. Both sets of screws use 1.7 Nm. Reinstall the bumper cover using its own fastening specifications and restore the electrical connections, liners, lower air deflector and wheels."
+          "title": "Install the replacement marker lamp",
+          "body": "Position the replacement marker assembly in the same mounting location and align its three screw attachments. Install the three screws and tighten them to 15 lb.in (1.7 Nm). Use an inch-pound torque tool: these are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Refit the grille cover",
+          "body": "Place the grille cover back into the bumper cover, engage all four retaining tabs and install its six screws. Tighten the screws to 15 lb.in (1.7 Nm). Check that the cover is seated and each tab is engaged rather than trapped outside its mating opening."
+        },
+        {
+          "title": "Return the bumper cover to its alignment pins",
+          "body": "Keep the hoist at the same securely supported, ground-reachable working height used for removal. With your helper, bring the bumper cover toward the front of the vehicle while keeping the wiring clear. Reverse the removal movement: position the cover over the alignment pins and lower it into place. Install the six upper screws and tighten them to 48 lb.in (5.4 Nm)."
+        },
+        {
+          "title": "Restore the hood-seal attachments, plate bracket and sight shield",
+          "body": "Install the bolt beneath each outer hood-seal edge and tighten each to 15 lb.in (1.7 Nm), then return the seal edges to their original positions.\nIf fitted, reinstall the front license plate bracket with its two screws. Refit the radiator sight shield and its eight push pins. These bracket screws and push pins return in the reverse removal sequence; do not apply an unrelated bumper torque to them."
+        },
+        {
+          "title": "Reconnect the bumper corners to the fender brackets",
+          "body": "With the upper screws and hood-seal bolts already secured, clear both people and all equipment, then raise and securely support the car for wheelhouse access again. Keep the parking brake applied and battery isolated.\n\nOn both sides, return the bumper-cover corner to its fender bracket and engage it with the retaining teeth. Reinstall the corner bolt and tighten it to 15 lb.in (1.7 Nm). Confirm that each corner sits against the fender without a visibly disengaged section. If a corner will not seat, check its engagement and bracket condition instead of tightening the bolt harder."
+        },
+        {
+          "title": "Reconnect the bumper wiring",
+          "body": "Reconnect all electrical connectors disconnected through the liner openings on both sides. Make sure the connector retainers engage, and return the wiring to its original route so it cannot be trapped by the liner or bumper attachments. Account for all three connection points at the illustrated corner and the corresponding connections fitted on the other side."
+        },
+        {
+          "title": "Return both inner fender liners",
+          "body": "Bring each forward liner section back into its original position and align its attachment holes. Reinstall the three push pins securing that section on each side, then restore the two previously removed wheel-arch push pins on each side. Check that no wire is caught beneath a liner edge."
+        },
+        {
+          "title": "Reinstall the lower air deflector",
+          "body": "Raise the lower air deflector into its original position under the nose. Align its attachment points and reinstall its six push pins and 16 screws. Confirm that its edges are seated and that no attachment location has been left empty."
+        },
+        {
+          "title": "Clean the wheel mounting faces and central bores",
+          "body": "Before installing either front wheel, remove corrosion, dirt and foreign material from the wheel’s flat mounting face and the matching hub/brake-disc mounting face. Also clean the wheel’s central pilot bore—the hole that locates the wheel over the hub’s raised center. Cleaning that bore is a separate action from wiping the flat face.\nMake sure any fasteners securing the brake disc to the hub are secure and cannot stand between the wheel and its mounting surface. If debris or an interfering fastener prevents flat contact, correct that before fitting the wheel."
+        },
+        {
+          "title": "Lubricate only the wheel’s locating interface",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between the cleaned wheel pilot bore and the hub pilot. Keep it off the flat wheel-to-disc mounting faces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. Leave the wheel-stud and wheel-nut threads clean and dry."
+        },
+        {
+          "title": "Install both front wheels finger tight",
+          "body": "Position each wheel on its hub and install all five wheel nuts. Tighten them only finger tight at this stage. Final wheel-nut tightening must be performed with the vehicle resting on its tires."
+        },
+        {
+          "title": "Restore restraints before and during lowering",
+          "body": "Keep the parking brake applied throughout. Check that the area beneath the vehicle is clear. Lower the car under control and restore wheel chocks as the tires reach the ground, before removing the hoist support completely. Leave the battery isolated and do not start or move the vehicle; final wheel tightening and power restoration come next."
+        },
+        {
+          "title": "Torque the wheel nuts with the car resting on its tires",
+          "body": "Tighten every front wheel nut to 150 lb.ft (204 Nm) in a star/cross pattern, using clean, dry stud and nut threads. Following the illustrated wheel orientation, tighten the top nut, then lower-left, upper-right, upper-left and lower-right. If the wheel is rotated, preserve the same crossing pattern around the five nuts.\nArrange to retighten the wheel nuts within 160 km (100 mi) after reinstallation. Do not drive away with only the finger-tight stage completed."
+        },
+        {
+          "title": "Check the restored lighting and finish the job",
+          "body": "With the vehicle fully on the ground and restrained, confirm all bodywork, wiring and wheels are restored, all final torques completed and all tools removed. Keep everyone clear of fans and moving parts. Refit the negative battery cable to its terminal and tighten its clamp nut to 44 lb.in (5 Nm), then refit the battery cover and its three retainers. Battery reconnection may temporarily change driving behavior while the engine computer relearns adaptive settings; the positive cable has remained connected. See [Battery Disconnect and Connect](#/document/G1692356).\n\nStart from ignition OFF. On a manual, select a parked gear with the engine stopped. With the valid key inside and neither pedal pressed, press the start button to switch ignition ON without starting the engine. On an automatic, now hold the brake pedal and select P. Keep the parking brake applied, the wheels chocked, the engine stopped and everyone clear. Operate the parking lamps and confirm both parking and side-marker illumination at the repaired assembly. Select the corresponding turn signal and confirm flashing, then activate hazards and confirm both front turn lamps flash.\n\nIf fog-lamp connections were disturbed, check those lamps where fitted with ignition ON, parking lamps on and high beams off. Switch all lamps and ignition OFF and remove the key after the checks. If a function remains absent, record which one and use the same power-isolated access sequence before inspecting connections. Restore a previously enabled remote-start setting only after service is finished, then finish with ignition OFF/key out."
         }
       ],
       "watchFor": [
         {
-          "title": "Tabs still engaged",
-          "body": "Release the grille-cover tabs after removing the screws rather than trying to pull the retained cover away."
+          "title": "Low body-fastener torques",
+          "body": "Marker and grille-cover screws use 15 lb.in (1.7 Nm). Bumper corner and hood-seal-access bolts use that same value, but the six upper bumper screws use 48 lb.in (5.4 Nm), and replacement fender-bracket bolts use 13 lb.in (1.5 Nm). Keep these fastener groups distinct."
         },
         {
-          "title": "Different bumper fasteners",
-          "body": "Use the bumper procedure's individual torque settings when reinstalling the cover; the lamp-screw setting does not apply throughout the bumper assembly."
+          "title": "Retaining tabs and alignment pins",
+          "body": "The grille cover remains attached after its screws are removed until its four tabs are released. The bumper cover must lift off its alignment pins before moving forward."
+        },
+        {
+          "title": "Electrical connections on both sides",
+          "body": "Both sides need disconnecting even when only one marker assembly is being replaced. Check connector engagement and wire clearance before closing the liner openings."
+        },
+        {
+          "title": "Wheel contamination",
+          "body": "Anti-seize belongs only at the pilot-bore/hub-pilot interface. Contaminating mounting faces, wheel fastener threads or brake friction parts compromises the wheel-refitting work."
+        },
+        {
+          "title": "Unexpected fan operation",
+          "body": "Ignition OFF alone does not prevent cooling-fan operation. Keep the negative battery cable disconnected throughout nearby work, as described in step 2, and restore it only after full grounded reassembly in step 28. Do not continue underhood work with a cracked or damaged fan."
         }
       ],
       "notes": [
-        "The left-side lamp is shown; the right-side removal and installation sequence is similar."
+        "The front turn lamp, parking lamp and side-marker lamp share the marker assembly. The adjacent fog lamp is separate.",
+        "This is assembly removal and installation, not a bulb-service or electrical fault-isolation procedure.",
+        "Tire removal from the wheel and wheel balancing are not required for marker-lamp access; keep the wheel-and-tire assemblies intact.",
+        "Retighten the reinstalled wheel nuts within 160 km (100 mi)."
       ],
       "diagnostics": [
         {
-          "finding": "Only one integrated lighting function is missing",
-          "meaning": "The assembly houses parking, side-marker and turn functions, so a complaint should identify which function is affected.",
-          "next": "Establish the electrical repair requirement before replacing the assembly solely because one function is absent."
+          "finding": "One lighting function is absent before replacement",
+          "meaning": "The marker assembly contains several functions. Losing one function identifies the complaint, but does not prove the entire assembly has failed.",
+          "next": "Establish the repair requirement before starting this teardown. The [Exterior Lighting Overview](#/document/G1694241) identifies the shared functions and their controls; it does not provide an electrical fault-isolation test."
+        },
+        {
+          "finding": "Fender-bracket retaining teeth are damaged",
+          "meaning": "The bumper corner may not engage correctly with the bracket.",
+          "next": "Replace the affected bracket through its two-bolt attachment before refitting the bumper cover. Tighten the bracket bolts to 13 lb.in (1.5 Nm)."
+        },
+        {
+          "finding": "A bumper corner will not seat during reassembly",
+          "meaning": "Its bracket engagement needs checking; extra bolt torque is not an adjustment method.",
+          "next": "Recheck the corner’s engagement with the bracket teeth and inspect those teeth for damage. Correct the engagement or replace the damaged bracket before completing the attachment."
+        },
+        {
+          "finding": "A wheel cannot sit flat against its mounting face",
+          "meaning": "Contamination or an interfering disc-to-hub fastener prevents proper wheel seating.",
+          "next": "Remove the wheel again, clean the mating faces and verify that the disc-to-hub fasteners do not interfere. Refit only after the wheel can seat correctly."
+        },
+        {
+          "finding": "Parking, side-marker or turn operation is still missing after reassembly",
+          "meaning": "The completion check has failed; that observation alone does not identify a bulb, assembly, wiring or control fault.",
+          "next": "Switch the ignition off and record the affected function. Recheck the connections disturbed during this repair using the same safe access sequence, then obtain appropriate electrical diagnosis if the fault remains."
         }
       ],
       "verification": [
         {
-          "title": "Confirm mechanical installation",
-          "body": "Check the marker mounting screws, grille-cover tabs and screws, and restored bumper attachments and electrical connections."
+          "title": "Lamp and grille cover secured",
+          "body": "Confirm the marker’s three screws are tightened to 15 lb.in (1.7 Nm), and the grille cover has all four tabs engaged and all six screws tightened to 15 lb.in (1.7 Nm)."
         },
         {
-          "title": "Check and record the lighting functions",
-          "body": "Confirm the parking and front side-marker illumination, then check the corresponding turn signal and hazard operation. Record which functions operate after reassembly."
+          "title": "Bumper attachments restored",
+          "body": "Confirm both bumper corners engage their brackets, the six upper screws and side/hood-seal-access bolts have their correct torques, and any replaced brackets have their two bolts tightened correctly. Check the hood-seal ends, sight shield, optional plate bracket, both liners and lower air deflector are restored."
+        },
+        {
+          "title": "Wiring clear and functions operating",
+          "body": "Confirm all disturbed connectors are engaged and the wiring is clear of liner and bumper attachments. Check parking, side-marker, corresponding turn and hazard operation. Check fog-lamp operation if those connections were disturbed."
+        },
+        {
+          "title": "Wheels and vehicle restraints complete",
+          "body": "Confirm both front wheels received final star-pattern tightening to 150 lb.ft (204 Nm) with the car resting on its tires. Confirm the parking brake and appropriate parked transmission position are restored, and record the wheel-nut retightening requirement within 160 km (100 mi)."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694116",
-          "purpose": "Front marker lamp and front bumper grille-cover removal and installation, with or without fog lamps.",
+          "purpose": "Primary marker-lamp and grille-cover removal and reverse-order installation, including screw torques and left/right and fog-lamp qualifiers.",
           "mediaId": "G1694116-m0002"
         },
         {
           "documentId": "G1694213",
-          "purpose": "Prerequisite front bumper-cover removal and installation, including bracket inspection.",
+          "purpose": "Required bumper-cover access and reassembly for 2.3L, 3.7L and 5.0L, including electrical disconnection, fastener torques and fender-bracket inspection.",
           "mediaId": "G1694213-m0009"
         },
         {
           "documentId": "G1694241",
-          "purpose": "Identify the parking, side-marker and turn functions integrated into the front marker assembly."
+          "purpose": "Explain the functions integrated into the marker assembly and the operating conditions used for lighting completion checks."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Identify designated lifting points and protect the vehicle while positioning hoist adapters."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Required front-wheel removal and installation, pilot-bore cleaning and lubrication, wheel-nut torque and tightening sequence."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup prevention, cooling-fan precautions, personal protection, lifting capacity and vehicle restraint precautions."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Complete negative-cable isolation and 5 Nm reconnection before/after fan-area access."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Relevant battery handling, ignition-source and acid-exposure precautions."
         }
       ],
       "hero": {
@@ -104420,12 +104801,12 @@
         "engines": [
           "2.3L",
           "3.7L",
-          "5.0L",
-          "5.2L"
+          "5.0L"
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Front marker lamp assemblies with or without adjacent fog lamps; halogen or LED fog lamps where fitted; front license plate bracket if fitted."
       },
       "relatedGuideIds": [
         "job-a320b8db05a79c9d"
@@ -104442,14 +104823,88 @@
         {
           "documentId": "G1694241",
           "sourceHash": "7e517f1bd6befb7b7645ce7b996ed37110d424c50e59206b42df524a5bc71892"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "fc521862055c83bf11e8ef6f7b34c1db65102b559e83fa267109cefcceea1b2e"
-      }
+        "fingerprint": "fc521862055c83bf11e8ef6f7b34c1db65102b559e83fa267109cefcceea1b2e",
+        "editorialVersion": 2,
+        "editorialFingerprint": "37215064621ac4f31259ce2f00a18eee7e3b2da5014ee1d240aa8f358dcf0643",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure the car and remove the wheels",
+          "summary": "Prevent unexpected operation, establish hoist support and open wheel access.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "uncover-the-nose",
+          "title": "Remove the bumper cover",
+          "summary": "Release the underside, liners, wiring, corners and upper attachments in order.",
+          "start": 5,
+          "end": 11
+        },
+        {
+          "id": "reach-the-marker",
+          "title": "Inspect the brackets and expose the marker",
+          "summary": "Check bumper retention, release the grille cover and remove the lamp.",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "id": "fit-the-lamp",
+          "title": "Install the marker and grille cover",
+          "summary": "Seat the lamp and restore the screws and retaining tabs.",
+          "start": 15,
+          "end": 16
+        },
+        {
+          "id": "restore-the-bodywork",
+          "title": "Refit the bumper and access panels",
+          "summary": "Restore alignment, fasteners, electrical connections, liners and deflector.",
+          "start": 17,
+          "end": 22
+        },
+        {
+          "id": "refit-the-wheels",
+          "title": "Clean, refit and torque the wheels",
+          "summary": "Prepare the wheel interfaces, restore restraints and complete ground-level tightening.",
+          "start": 23,
+          "end": 27
+        },
+        {
+          "id": "confirm-operation",
+          "title": "Check the lighting",
+          "summary": "Verify the restored functions and finish the vehicle settings.",
+          "start": 28,
+          "end": 28
+        }
+      ]
     },
     {
       "title": "Replace a front turn signal bulb through the wheel opening",
@@ -118347,75 +118802,167 @@
     },
     {
       "title": "Replace a front door check arm",
-      "summary": "Remove the door trim and watershield to replace the check arm, then restore its mountings and the door's interior connections.",
-      "introduction": "The check arm restrains the front door as it opens and helps control its travel. Its attachment inside the door means replacement involves both mechanical fasteners and interior trim. The door panel must be released carefully because wiring and the interior latch cable remain connected behind it.",
-      "why": "Once disconnected, the arm cannot restrain door movement. Controlling the door protects nearby panels, while supporting the trim prevents its remaining cable and electrical connections from carrying the panel's weight.",
+      "summary": "Remove the window-switch bezel, door trim and front watershield, replace the check arm, then restore the connections and tighten each fastening to its own specification.",
+      "introduction": "A Mustang door has plenty of presence; it doesn't need to make a dramatic entrance into the next parking space. The check arm helps restrain its opening travel. I'll walk you through reaching its hidden mounting, including the trim clips, window-switch connector and latch cable that stand between you and the arm.",
+      "why": "The check arm connects the door to the body and controls its travel as you open it. Once its body attachment is disconnected, it cannot restrain the door. Keeping the door controlled protects nearby panels, while supporting the trim panel prevents its wiring and latch cable from becoming accidental carrying handles.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "front door check arm replacement",
-        "door will not hold open",
-        "door opening restraint"
+        "2015 Mustang front door check arm replacement",
+        "door check strap replacement",
+        "front door trim removal",
+        "door check arm mounting torque"
       ],
       "when": {
-        "summary": "When a front door check arm requires removal or replacement.",
+        "summary": "Use this procedure when a front door check arm has been identified for removal or replacement.",
         "notes": [
-          "A door movement complaint alone does not establish that the check arm needs replacement."
+          "A complaint about door movement does not by itself establish that the check arm needs replacement. This is a replacement procedure, without a diagnostic test for condemning the arm.",
+          "The check-arm illustration shows the left door; the right is similar. Trim illustrations show a right door on a left-hand-drive vehicle, while switch illustrations show the left door. Follow the matching physical features on your door."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange controlled access",
-          "detail": "Allow room to hold the door steady and support the trim panel during disconnection."
+          "title": "Prevent an unexpected start",
+          "detail": "Park the car and apply the parking brake. If remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup before service. Then switch the ignition OFF and remove the key from the vehicle before opening trim or disconnecting wiring."
         },
         {
-          "title": "Prepare fastening tools",
-          "detail": "Use hand tools and torque equipment suitable for the check-arm hardware and the smaller trim-panel fasteners."
+          "title": "Make room to control the door",
+          "detail": "Allow enough space to hold the door steady throughout removal and refitting. Arrange support for the trim panel while its electrical connections and latch cable are disconnected. Wear eye and ear protection during service, and protective gloves when handling sharp door edges."
+        },
+        {
+          "title": "Gather the tools and replacement arm",
+          "detail": "Have the correct replacement check arm, suitable hand tools, a trim-removal wedge for the switch bezel, and torque equipment covering 13–106 lb.in and 18 lb.ft. Keep the small trim fasteners separate from the check-arm hardware."
         }
       ],
       "steps": [
         {
-          "title": "Release the external attachment",
-          "body": "Follow the [check-arm procedure](#/document/G1693222). Control the door and remove the check-arm bolt. Its installation torque differs from that of the nuts inside the door."
+          "title": "Hold the door steady and disconnect the arm from the body",
+          "body": "Open the door far enough to reach the check arm across the gap between the door and body. Hold the door under control before removing anything.\nRemove the single bolt through the arm's body-side attachment. Keep controlling the door from this point until that attachment is restored. The [front door check-arm procedure](#/document/G1693222) gives its refitting torque as 18 lb.ft (25 Nm)."
         },
         {
-          "title": "Remove the door trim",
-          "body": "Follow [Front Door Trim Panel](#/document/G1692600): remove the upper bolt cover and bolt, the window control switch through its referenced procedure, the center bolt and lower retainers. Release the clips and pin retainers in the specified rear-upper, rear/lower and remaining-panel sequence. Lift the panel up and out, then disconnect electrical connectors where fitted and release the latch cable."
+          "title": "Remove the concealed upper trim bolt",
+          "body": "At the interior door-handle recess, remove the small bolt cover, then remove the upper trim-panel bolt behind it. Set the cover and bolt aside together.\nThis bolt returns at 48 lb.in (5.4 Nm). The [door-trim procedure](#/document/G1692600) supplies the access sequence used below."
         },
         {
-          "title": "Withdraw the check arm",
-          "body": "Remove the check-arm nuts, then the front watershield. Remove the check-arm assembly through the resulting access. Preserve this sequence so the shield and surrounding trim do not obstruct withdrawal."
+          "title": "Lift out the window-switch and bezel assembly",
+          "body": "Use the trim-removal wedge to release the window-switch bezel from the armrest. The bezel illustration shows four retaining clips. Lift the switch and bezel together, then disconnect the switch's electrical connector underneath.\nLeave the switch attached to its bezel for this job. The driver-side switch retainers and passenger-side retaining tab are for separating a switch when installing a new component; they do not need to come apart for check-arm access. See [Front Door Window Control Switch](#/document/G1695936)."
         },
         {
-          "title": "Restore the arm and trim",
-          "body": "Reverse removal. Refit the arm and watershield, tightening the nuts to 106 lb.in (12 Nm). Reconnect the latch cable and applicable connectors before seating the trim; transfer trim parts as necessary. Follow the panel procedure's individual fastening torques. Install the check-arm bolt to 18 lb.ft (25 Nm)."
+          "title": "Remove the center bolt and two lower retainers",
+          "body": "With the switch bezel out, remove the trim-panel center bolt at the armrest opening. Its installation torque is 48 lb.in (5.4 Nm).\nRemove the two lower trim-panel retainers along the bottom portion of the panel. Their installation torque is 13 lb.in (1.5 Nm). Those small fasteners have a small torque for a reason—save the enthusiasm for the check-arm bolt."
+        },
+        {
+          "title": "Release the rear upper panel attachments",
+          "body": "Start at the rear upper edge of the trim panel, toward the door's latch end. Release the upper clip, then the two pin-type retainers below it, drawing that portion of the panel away from the door as the attachments release.\nWork at the attachment locations rather than pulling the entire panel outward."
+        },
+        {
+          "title": "Release the rear and lower attachments",
+          "body": "Continue around the rear and lower portion of the panel. Release the pin-type retainer first, then the clip near the lower speaker area. Position that section away from the door without letting the panel hang from its remaining attachments."
+        },
+        {
+          "title": "Release the remaining front-edge retainers",
+          "body": "At the front edge, toward the hinges and speakers, release the remaining two pin-type retainers. The illustration places one near the upper part of the large lower speaker area and another higher up the front edge.\nKeep supporting the panel. Released clips do not mean the wiring and latch cable have magically disappeared."
+        },
+        {
+          "title": "Lift the panel free, then disconnect what is behind it",
+          "body": "Lift the trim panel up and out to disengage its upper edge from the door. Hold it close enough that the connections behind it remain slack.\nDisconnect the electrical connectors where fitted. Release the interior latch cable from the handle mechanism: the illustration shows the cable housing retained at the mechanism and its end attached to the operating lever. Free those attachments before carrying the panel away.\nSet the panel somewhere it can rest without loading its connectors or cable."
+        },
+        {
+          "title": "Remove the check-arm nuts and front watershield",
+          "body": "At the forward edge of the door, beside the wiring pass-through, remove the two nuts securing the check-arm assembly. Their refitting torque is 106 lb.in (12 Nm).\nNext remove the front watershield, the covering over the forward access opening inside the door. This opens the route needed to withdraw the arm. Keep the door controlled while the arm is loose."
+        },
+        {
+          "title": "Withdraw the old arm and position its replacement",
+          "body": "Reach through the exposed forward opening and remove the check-arm assembly from inside the door, withdrawing its arm from the opening in the door's front edge.\nPosition the replacement assembly in the reverse direction, with the arm projecting through the front-edge opening and its two mounting studs aligned with their holes. Keep nearby wiring clear of the assembly."
+        },
+        {
+          "title": "Restore the watershield and secure the door-side mounting",
+          "body": "Restore the front watershield over its access opening, then install the two check-arm mounting nuts, reversing their removal sequence. Tighten the nuts to 106 lb.in (12 Nm).\nCheck that the watershield is back in position and that no wiring is caught beneath the check-arm mounting or shield."
+        },
+        {
+          "title": "Reconnect the latch cable and trim-panel wiring",
+          "body": "Bring the supported trim panel back to the door. Transfer trim parts if necessary when using a replacement panel.\nReconnect the latch cable end and secure its housing at the interior handle mechanism. Reconnect the applicable electrical connectors. Keep the cable and wiring clear of the panel's attachment points, then engage the upper edge by reversing the up-and-out removal motion."
+        },
+        {
+          "title": "Seat the panel attachments in reverse order",
+          "body": "Seat the two front-edge pin retainers first. Restore the lower clip and rear/lower pin retainer next, then the rear upper pin retainers and upper clip.\nAlign each attachment with its receiving point before pressing it home. If a section will not sit flush, check its alignment and the routing behind it before applying more force."
+        },
+        {
+          "title": "Refit the trim fasteners and window-switch bezel",
+          "body": "Install the two lower retainers and tighten them to 13 lb.in (1.5 Nm).\nInstall the center bolt at the armrest opening and tighten it to 48 lb.in (5.4 Nm). Reconnect the window-switch connector, then seat the switch-and-bezel assembly and its retaining clips.\nInstall the upper bolt in the interior-handle recess, tighten it to 48 lb.in (5.4 Nm), and replace its cover."
+        },
+        {
+          "title": "Reconnect the arm to the body",
+          "body": "Still holding the door under control, align the arm's body-side attachment and install its bolt. Tighten it to 18 lb.ft (25 Nm).\nOnly release your restraint on the door once both check-arm mountings are secured."
         }
       ],
       "watchFor": [
         {
-          "title": "Attached trim",
-          "body": "Do not pull a partly released panel away while its retainers, latch cable or electrical connections still hold it."
+          "title": "Unrestrained door movement",
+          "body": "The arm cannot control the door while its body-side bolt is removed. Hold the door throughout the work and prevent it from swinging into nearby bodywork or objects."
+        },
+        {
+          "title": "A panel still attached behind the scenes",
+          "body": "Lift the panel off its upper engagement before disconnecting the wiring and latch cable, while supporting its weight. Stop pulling if a connection remains attached."
+        },
+        {
+          "title": "Several different torque settings",
+          "body": "The check-arm nuts and trim fasteners use inch-pounds, not foot-pounds. The body-side check-arm bolt uses 18 lb.ft (25 Nm). Match the setting to the actual fastener."
         }
       ],
       "notes": [
-        "The check-arm procedure shows the left side; the right is similar. Trim instructions show a right-hand door on a left-hand-drive vehicle, with opposite arrangements similar."
+        "This job is performed through the open door and its interior access opening; it does not require a lifting operation.",
+        "The switch remains assembled to its bezel during ordinary check-arm replacement.",
+        "The watershield and trim are restored by reversing removal. No additional trim-fastener torque should be substituted for the individual values given here."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "Door movement is the only reason for considering replacement.",
+          "meaning": "The movement complaint has not established which component needs repair.",
+          "next": "Establish the cause before replacing parts; this procedure does not provide a check-arm condemnation test."
+        },
+        {
+          "finding": "The trim resists moving away after its visible fasteners are removed.",
+          "meaning": "A staged clip or pin attachment may still be engaged.",
+          "next": "Return to the rear upper, rear/lower and front-edge release sequence. Once the upper edge is lifted free, check for the remaining cable and electrical connections."
+        },
+        {
+          "finding": "A refitted section of trim will not sit flush.",
+          "meaning": "Its attachment may be misaligned, or a cable or wire may obstruct seating.",
+          "next": "Support and reposition the panel, check the routing, and align the attachment before pressing it into place."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm fastening and reconnection",
-          "body": "Check the arm bolt and nuts against their separate torque settings, and confirm the watershield, latch cable, applicable connectors and panel retainers are restored."
+          "title": "Confirm both arm mountings",
+          "body": "Confirm the two door-side nuts are tightened to 106 lb.in (12 Nm) and the body-side bolt to 18 lb.ft (25 Nm). Check that the watershield is restored."
+        },
+        {
+          "title": "Confirm trim and connections",
+          "body": "Check that the panel is seated at its upper edge and around its perimeter, the bolt cover and switch bezel are installed, and the latch cable and applicable connectors are attached."
+        },
+        {
+          "title": "Check the functions disturbed during access",
+          "body": "With both check-arm mountings secured, move the door slowly by hand while controlling it, checking that the arm and trim do not obstruct travel. Confirm that the interior handle releases the door.\n\nAfter all connections and trim are restored, keep the car parked with its parking brake applied and engine stopped. With the valid key inside, start from ignition OFF and press the start button without either pedal to switch the ignition ON without starting the engine. Keep hands clear of the glass and check normal window-switch operation. After the check, switch the ignition OFF and remove the key. If a function fails, retain that OFF/key-out state before reopening trim or rechecking a connector. These are ordinary completion checks of the parts disturbed, not fault isolation. The keyless controls are described on printed page 121 of the 2015 Mustang owner’s manual."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693222",
-          "purpose": "Front door check-arm removal and installation, including mounting torques."
+          "purpose": "Primary check-arm removal and reverse installation, with separate body-bolt and door-side nut torques."
         },
         {
           "documentId": "G1692600",
-          "purpose": "Door-trim access, staged retainer release, cable disconnection and trim refitting.",
+          "purpose": "Upper, center and lower trim fasteners; staged attachment release; upper-edge disengagement; wiring and latch-cable reconnection.",
           "mediaId": "G1692600-m0007"
+        },
+        {
+          "documentId": "G1695936",
+          "purpose": "Required switch-and-bezel removal, connector disconnection and reverse refitting; internal switch separation is unnecessary for this access job."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup prevention and personal protection precautions."
         }
       ],
       "hero": {
@@ -118439,7 +118986,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang front door; 2.3L, 3.7L, 5.0L or 5.2L. Left and right doors, with applicable electrical connections as fitted; left-hand-drive and right-hand-drive trim arrangements."
       },
       "relatedGuideIds": [
         "job-037ab8cbb8e92de9"
@@ -118452,14 +119000,62 @@
         {
           "documentId": "G1692600",
           "sourceHash": "d1396b9fb23cabdad250b5b608673216e6d27e506c4a72d48ae0107149593cd9"
+        },
+        {
+          "documentId": "G1695936",
+          "sourceHash": "8d9839060ef93ac6d01cffc2acee1ea8f87072a965480fc12de25d1172a819c7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "89dd707b929eeaf79e26b5d4d3b3b681c083a268cb05e3b40c9c531c9bc06067"
-      }
+        "fingerprint": "89dd707b929eeaf79e26b5d4d3b3b681c083a268cb05e3b40c9c531c9bc06067",
+        "editorialVersion": 2,
+        "editorialFingerprint": "6c4742b843d677c763fb8abdfc398284dfbd83c73f081ec60d1b09bb0c253e38",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "open-and-unfasten",
+          "title": "Control the door and remove trim fasteners",
+          "summary": "Disconnect the arm's body attachment and expose the panel attachments.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "release-the-panel",
+          "title": "Release and disconnect the trim panel",
+          "summary": "Work around the attachments, lift the panel free and disconnect its connections.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "exchange-the-arm",
+          "title": "Replace the check arm",
+          "summary": "Open the forward access, exchange the assembly and secure its door-side mounting.",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "id": "restore-door-trim",
+          "title": "Reconnect and refit the trim",
+          "summary": "Restore the cable, wiring, panel attachments and individual fasteners.",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "id": "secure-body-mount",
+          "title": "Restore the body attachment",
+          "summary": "Tighten the final check-arm bolt before releasing control of the door.",
+          "start": 15,
+          "end": 15
+        }
+      ]
     },
     {
       "title": "Remove and refit a front door",
@@ -129535,97 +130131,169 @@
     },
     {
       "title": "Replace a front door window control switch",
-      "summary": "Remove the switch and bezel together, separate the switch using the correct driver or passenger retention method, and restore its electrical connection.",
-      "introduction": "The door switch requests window movement; electronics in the window motor or door modules carry out that request. The driver’s master switch controls both front windows and, on convertibles, the rear quarter windows. The passenger switch controls its own door glass. This job changes the switch while retaining the bezel, unless the complete assembly is simply being removed and refitted.",
-      "why": "The bezel and switch have separate retention points. Removing the complete assembly first exposes the connector and the correct switch attachments without forcing the visible trim. Driver and passenger switches separate differently, and memory-seat equipment changes the electrical command path, so an unresponsive window does not by itself identify a failed switch.",
+      "summary": "Lift the switch and its armrest bezel together, unplug the connector, and use the correct driver or passenger attachment method to replace the switch.",
+      "introduction": "For a little button, the window switch has quite a staff: press it and an entire sheet of glass gets moving. I’ll walk you through replacing it without making the surrounding trim a casualty. The trick is to remove the switch and bezel—the trim surround—as one assembly before separating them. The driver and passenger switches have different attachments, so this is one place where enthusiasm should wait for identification.",
+      "why": "The switch requests window movement; the window motor’s electronics control the movement itself. The driver’s master switch operates both front windows and, on a convertible, the rear quarter windows. The passenger switch operates its own front window. Without memory driver-seat equipment, the front switches send low-current voltage commands to the motors. With memory equipment, the driver’s switch communicates with the driver door module, and passenger-window requests involve the passenger door module. That distinction matters when choosing a replacement and explains why a silent window does not automatically condemn its switch.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "front window switch replacement",
-        "master window control switch",
-        "passenger window switch bezel",
-        "door window switch retainers"
+        "2015 Mustang front door window switch replacement",
+        "driver master window control switch",
+        "passenger window switch retaining tab",
+        "window switch bezel clips",
+        "memory seat window switch"
       ],
       "when": {
-        "summary": "When a front window switch needs replacement or its switch-and-bezel assembly must be removed for access.",
+        "summary": "Use this procedure to replace an identified front-door window control switch or remove and refit its complete switch-and-bezel assembly.",
         "notes": [
-          "Select the driver or passenger branch by function, rather than assuming the driver is always on the left.",
-          "Left-hand-drive illustrations also guide the similar right-hand-drive operation."
+          "Engine coverage is 2015 Mustang 2.3L, 3.7L, 5.0L and 5.2L. Select body-specific checks according to the actual vehicle; the engine list does not establish every engine/body combination.",
+          "Both front doors are covered. The illustrated left-hand-drive, left-door operation is similar on right-hand-drive vehicles and the opposite door.",
+          "Choose the driver or passenger separation method by the door’s function, rather than assuming the driver is always on the left.",
+          "Separating the switch from its bezel is necessary only when installing a replacement switch."
         ]
       },
       "prepare": [
         {
-          "title": "Identify the switch and equipment",
-          "detail": "Confirm which door is being serviced and whether the vehicle has memory driver-seat equipment. With memory equipment, switch requests pass through door modules; without it, the switches provide low-current commands to the window motors."
+          "title": "Match the replacement to the vehicle",
+          "detail": "Identify the serviced door, left- or right-hand drive, memory driver-seat equipment and actual body style. Obtain the corresponding replacement switch, including the appropriate rear-quarter-window controls where fitted."
         },
         {
-          "title": "Locate the retention points",
-          "detail": "Use the illustrations in the switch procedure to identify the bezel clips and driver-switch retainers before applying force."
+          "title": "Have the trim and retainer tools ready",
+          "detail": "Use a trim-removal lever of the illustrated type to release the armrest bezel. For a driver-switch replacement, have a suitable tool matching the three switch-retainer heads. Keep the removed retainers together for reassembly."
+        },
+        {
+          "title": "Set the job’s boundary",
+          "detail": "This is a switch replacement through the armrest bezel, with the vehicle on the ground. It does not include electrical fault isolation or window initialization. If the cause of a window complaint is still uncertain, establish that fault before buying parts—the parts cannon is an expensive way to open a window."
+        },
+        {
+          "title": "Protect yourself and prevent an unexpected start",
+          "detail": "If remote start is fitted, disable it through the Central Display at Vehicle settings > Remote Start Setup before service. Turn the ignition off and remove the key from the vehicle. Use eye and hearing protection during service, and protective gloves when handling sharp-edged parts. The relevant precautions are in [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Lift out the switch and bezel together",
-          "body": "Following the [switch removal procedure](#/document/G1695936), use the illustrated trim lever to release the bezel from the door trim and remove the switch-and-bezel assembly. The same overall method applies to both front doors."
+          "title": "Prepare the door for trim work",
+          "body": "Park the car and apply the parking brake. Complete the remote-start and ignition precautions above before touching the assembly. Open the door being serviced and let any automatic short-drop window movement finish. Keep the glass stationary while working on the switch."
         },
         {
-          "title": "Disconnect the electrical connector",
-          "body": "Disconnect the switch connector once the assembly is accessible. This frees the assembly from the door wiring before any work on the switch-to-bezel attachment."
+          "title": "Release the bezel’s four clips and lift the complete assembly",
+          "body": "Locate the slim window-switch bezel in the door armrest, immediately above the door-pull pocket. The bezel and switch come out together; the complete door trim panel stays in place.\n\nUse the trim-removal lever at the bezel edge to lift it from the armrest, releasing its four retaining clips. Work the clips free progressively rather than trying to pull the switch through its surround. Lift the assembly only far enough to reach the electrical connector underneath, keeping its wiring supported. This is the common access operation for both doors in the [front door window control switch procedure](#/document/G1695936)."
         },
         {
-          "title": "Separate the switch only when replacing it",
-          "body": "For the driver switch, remove the retainers and lift the switch out of the bezel. For the passenger switch, release its retaining tab and remove the switch. If the existing assembly is only being removed for access, this separation is unnecessary."
+          "title": "Unplug the switch before separating it from the bezel",
+          "body": "Support the raised assembly, disengage the electrical connector’s lock and disconnect the plug from the switch. Pull on the connector housing rather than its wires. The switch-and-bezel assembly can now be taken away from the door opening and turned over to expose its underside.\n\nIf you are only removing the existing assembly for access and will reinstall it unchanged, leave the switch attached to the bezel and continue at Step 7."
         },
         {
-          "title": "Install the switch and restore the bezel",
-          "body": "Reverse the appropriate branch: secure the replacement switch in the bezel with its retainers or tab, reconnect the electrical connector, and reinstall the assembly into the door trim. Check that the switch is retained before seating the bezel."
+          "title": "Driver door: remove the three switch retainers",
+          "body": "Use this branch only when replacing the driver’s master switch. With the bezel turned over, identify the three retainers around the rectangular switch body. Remove all three with a tool matching their heads, retain them, then lift the switch away from the underside of the bezel.\n\nThe three switch retainers are separate from the four clips that secured the whole bezel to the door. Keeping those two jobs straight saves the trim a damn awkward argument."
+        },
+        {
+          "title": "Passenger door: release the switch’s retaining tab",
+          "body": "Use this branch only when replacing the passenger switch. With the underside accessible, locate the retaining tab beside the smaller switch body. Release that tab, then withdraw the switch from the underside of the bezel in the direction away from the trim face.\n\nDo not apply the driver’s three-retainer method to this switch: the passenger attachment shown here uses the release tab."
+        },
+        {
+          "title": "Fit the replacement switch using its original attachment method",
+          "body": "Position the matching replacement switch in the bezel in the same orientation as the removed component.\n\nDriver door: seat the switch against the underside of the bezel and reinstall the three retainers in their original positions, reversing removal.\n\nPassenger door: insert the switch back into the bezel and engage its retaining tab, reversing removal.\n\nBefore returning to the door, check that the switch stays attached to the bezel and its controls move freely. Check that the bezel’s four mounting clips remain present and positioned to enter their door-trim openings. If an attachment will not hold, correct that retention problem before fitting the assembly."
+        },
+        {
+          "title": "Reconnect the plug and seat the bezel",
+          "body": "Bring the assembled switch and bezel back to the armrest opening. Reconnect the switch electrical connector and engage its lock. Arrange the wiring beneath the assembly so it is clear of the mounting clips and bezel edge.\n\nAlign the four bezel clips with their openings and press the assembly back into place, reversing the lift-out operation. Check around the perimeter: the bezel should sit evenly, remain retained and leave the switch controls unobstructed. If an edge remains raised, lift the assembly enough to check clip alignment and trapped wiring rather than forcing the trim down."
+        },
+        {
+          "title": "Check normal window commands and the fitted automatic functions",
+          "body": "After reassembly, keep the car parked with the parking brake applied and the engine stopped. With the valid key inside, start from ignition OFF and press the start button without either pedal to switch ignition ON without starting the engine. The keyless controls are described on printed page 121 of the 2015 Mustang owner’s manual. Keep hands and objects clear of the moving glass.\n\nOperate the serviced switch up and down through its first detent—the first distinct switch position. After replacing the driver’s master switch, check its commands for both front windows. After replacing the passenger switch, check that door’s window locally and from the master switch.\n\nOn a coupe, check one-touch down and up by momentarily pressing or pulling to the second detent and releasing. The glass should continue to its open or closed position; a further momentary switch operation should stop an automatic movement.\n\nOn a convertible, do not expect one-touch up or bounce-back. Check the fitted front-window one-touch-down function. If the driver’s master switch was replaced, also operate its rear-quarter-window control with the convertible top already fully up or fully down: both rear quarter windows should move together. These are completion checks based on [normal window operation](#/document/G1958069) and the [feature overview](#/document/G1958068)."
+        },
+        {
+          "title": "Check door-glass seating and finish the job",
+          "body": "With the front glass raised and the opening clear, check the serviced door’s normal short-drop action: opening the door should lower the glass slightly to clear the grooved weatherstrip, and closing it should raise the glass back into its seated position. This function applies to both coupe and convertible doors and is managed by the window motor using the door-ajar signal.\n\nConfirm that the original command being repaired now works and that the bezel remains seated after operating the controls. Turn the ignition off and remove the key when finished. Restore the owner’s remote-start preference only after service is complete."
         }
       ],
       "watchFor": [
         {
-          "title": "Convertible feature differences",
-          "body": "Convertibles do not have one-touch up or bounce-back. Their absence must not be treated as evidence that the replacement switch has failed."
+          "title": "The wiring is still attached when the bezel first lifts",
+          "body": "Raise and support the assembly only enough to reach its plug. Disconnect it before carrying the assembly away or working on the switch-to-bezel attachments."
         },
         {
-          "title": "Conditional initialization",
-          "body": "If the battery was disconnected while a door window was moving, one-touch up and obstacle detection can be disabled. Follow Power Door Window Initialization when that condition applies; switch replacement alone is not stated to require initialization."
+          "title": "Convertible functions differ",
+          "body": "Convertibles have no one-touch up or bounce-back. Their rear quarter windows also have no one-touch up or down. Judge the replacement against the functions fitted to the car."
+        },
+        {
+          "title": "Battery disconnection can create a separate recovery job",
+          "body": "Disconnecting the battery while a front door window is moving can disable one-touch up and obstacle detection. If that has occurred, obtain the Power Door Window Initialization procedure before restoring those functions. Convertible rear quarter motors do not require initialization."
+        },
+        {
+          "title": "A new switch is not a diagnosis",
+          "body": "The command path includes motor electronics and, with memory driver-seat equipment, door modules and their communications. A remaining fault calls for electrical diagnosis rather than another speculative replacement."
         }
       ],
       "notes": [
-        "The short-drop movement that clears the door weatherstrip is controlled by window-motor electronics responding to the door-ajar signal."
+        "Ford’s installation method for this switch is the reverse of removal: restore the appropriate switch attachments, connect the plug, then seat the bezel.",
+        "The short-drop function belongs to the window motor’s electronics; the switch is not the sole controller of every glass movement.",
+        "Rear-window defrost operates through separate controls and is outside this switch replacement."
       ],
       "diagnostics": [
         {
-          "finding": "A window does not respond to the switch.",
-          "meaning": "The missing response could involve the switch command path, door module where fitted, or window motor.",
-          "next": "Establish the fault before treating switch replacement as the remedy."
+          "finding": "The refitted switch or bezel will not remain seated.",
+          "meaning": "The switch-to-bezel attachment or bezel-to-door retention has not been restored.",
+          "next": "With the ignition off, expose the assembly again. Check the driver’s three retainers or passenger retaining tab, then the four bezel clips and wiring clearance. Resolve the attachment problem before finishing."
         },
         {
-          "finding": "A window without memory-seat equipment ignores an unusually quick second-detent command.",
-          "meaning": "The motor may not have received enough separation between signals to determine the requested direction.",
-          "next": "Release and operate the switch again before concluding that it is defective."
+          "finding": "A window still does not respond after replacement.",
+          "meaning": "A missing response alone does not identify the switch as the cause. Operating power, the command path, door modules where fitted, and motor electronics remain relevant.",
+          "next": "Confirm the normal powered setup in step 8 before judging a missing window response. If it still does not respond, switch the ignition OFF and remove the key before exposing the assembly to check connector engagement. If the complaint remains, obtain the appropriate electrical diagnostic procedure; do not use the system diagrams as connector pin-testing instructions."
+        },
+        {
+          "finding": "Without memory driver-seat equipment, an unusually quick second-detent command produces no movement.",
+          "meaning": "If the first- and second-detent signals arrive less than 5 milliseconds apart, the motor may be unable to determine the requested direction.",
+          "next": "Release the switch completely and operate it again normally before judging it defective. This explains a possible operating response; it is not a timed workshop test."
+        },
+        {
+          "finding": "A convertible’s rear quarter windows do not respond while the top is between its end positions.",
+          "meaning": "The body control system inhibits rear-quarter-window switch operation while the top is neither fully up nor fully down.",
+          "next": "Assess rear-quarter-window commands only with the top fully up or fully down. Do not condemn the master switch from this inhibited condition."
+        },
+        {
+          "finding": "A convertible does not provide one-touch up or bounce-back.",
+          "meaning": "Those features are not fitted to this body style.",
+          "next": "Use its normal up/down controls and check the functions actually fitted; no corrective switch replacement is indicated by those absent features."
         }
       ],
       "verification": [
         {
-          "title": "Check the applicable window functions",
-          "body": "With delayed accessory power active, confirm up and down commands from the serviced switch. Check equipped one-touch functions, respecting the convertible exceptions. At the master switch, check both front-window commands."
+          "title": "Mechanical installation is secure",
+          "body": "The switch is retained in its bezel, the connector lock is engaged, all four bezel clips are seated, the trim lies evenly and the controls move freely."
         },
         {
-          "title": "Record the original complaint result",
-          "body": "Record which switch and window were affected and whether the same command now works. Note any remaining feature issue separately from the completed switch installation."
+          "title": "The serviced controls operate their windows",
+          "body": "Confirm up and down operation, both front-window commands at a replaced master switch, and the passenger window from both controls when its switch was replaced. Check automatic functions according to body style."
+        },
+        {
+          "title": "Body-specific behavior is normal",
+          "body": "Check the serviced door’s short-drop and reseating movement. For a replaced convertible master switch, confirm that both rear quarter windows respond together with the top at an end position."
+        },
+        {
+          "title": "The repair result is clear",
+          "body": "Record whether the original complaint is resolved. Treat any remaining electrical or initialization issue as a separate follow-up rather than calling a neatly fitted switch a successful functional repair."
         }
       ],
       "procedures": [
         {
           "documentId": "G1695936",
-          "purpose": "Both-door switch-and-bezel removal, driver/passenger switch separation and reverse-order installation.",
+          "purpose": "Primary procedure for both-door bezel access, electrical disconnection, driver/passenger switch separation and reverse-order installation.",
           "mediaId": "G1695936-m0001"
         },
         {
           "documentId": "G1958069",
-          "purpose": "Window command paths, normal operating behavior and the conditional initialization reference.",
+          "purpose": "Explains memory-seat command paths, normal window operation, short drop, convertible interlocks and the conditional initialization requirement.",
           "mediaId": "G1958069-m0001"
+        },
+        {
+          "documentId": "G1958068",
+          "purpose": "Establishes front-window control functions and convertible feature exceptions used in completion checks."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Provides relevant remote-start prevention, ignition-key and personal-protection precautions."
         }
       ],
       "hero": {
@@ -129650,7 +130318,7 @@
         "years": [
           2015
         ],
-        "equipment": "Trim-removal lever as illustrated, suitable tools for the driver-switch retainers, and a replacement switch matching the door and vehicle equipment."
+        "equipment": "Driver or passenger front-door power-window switch; with or without memory driver-seat equipment. Apply coupe and convertible feature checks only to the body style actually being serviced."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -129665,14 +130333,58 @@
         {
           "documentId": "G1958068",
           "sourceHash": "500ec7d3721b26ebbd601e57fad472b6f6e150149d062c4901ed355ec55ceab0"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "9fa6c04a890188be4a4a07d666783ce08cd9b81f6f359574993d78407a480ad8"
-      }
+        "fingerprint": "9fa6c04a890188be4a4a07d666783ce08cd9b81f6f359574993d78407a480ad8",
+        "editorialVersion": 2,
+        "editorialFingerprint": "fb8fb47152cee1114a4a76f4aa7c337684aca14e9a6c41e9378cf6c7fa515c57",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-the-door",
+          "title": "Prepare the door",
+          "summary": "Prevent unexpected operation and let the glass stop moving.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "access-and-disconnect",
+          "title": "Release and disconnect the assembly",
+          "summary": "Free the four bezel clips and unplug the switch.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "replace-the-switch",
+          "title": "Replace the correct switch",
+          "summary": "Choose the driver-retainer or passenger-tab branch, then secure the replacement.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "restore-the-bezel",
+          "title": "Reconnect and seat the bezel",
+          "summary": "Restore the electrical connection and four mounting clips.",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "id": "confirm-window-operation",
+          "title": "Confirm operation and finish",
+          "summary": "Check fitted window functions, door-glass seating and the original repair result.",
+          "start": 8,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Replace and align the front door window glass on a coupe or convertible",
@@ -136912,100 +137624,242 @@
       ]
     },
     {
-      "title": "Replace the windshield washer pump",
-      "summary": "Drain the washer reservoir, gain access behind the right-hand splash shield, and replace the pump before refilling and checking windshield washing.",
-      "introduction": "The washer pump sends cleaning fluid from the reservoir to the windshield. Its power comes through a relay inside the windshield wiper motor, following a request from the steering column control module. Replacement therefore addresses the pump itself; a windshield that receives no fluid does not, by itself, establish that the pump has failed.",
-      "why": "Siphoning the reservoir limits the fluid released when the hose and pump are removed, but residual fluid can still escape. Refilling before the first operation is especially important: the procedure warns that running the pump with an empty reservoir can cause premature pump failure.",
+      "title": "Replace the windshield washer pump on a 2.3L, 3.7L or 5.0L Mustang",
+      "summary": "Drain the reservoir, remove the right-front wheel and splash shield, replace the washer pump, and restore the fluid supply and wheel safely.",
+      "introduction": "The washer pump has one modest ambition: put cleaning fluid on the windshield instead of leaving the wipers to smear yesterday’s bugs into modern art. I’ll walk you through reaching it behind the right-front wheel liner, releasing its connections without sacrificing the plastic coupling, and putting everything back together.",
+      "why": "The pump moves washer fluid from the reservoir to the windshield. Operating the washer switch sends a request through the steering column control module to the windshield wiper motor; a relay inside that motor then supplies power to the pump. Replacing the pump addresses that component, but a dry windshield alone does not prove it has failed. Draining first limits spills, and refilling before operation protects the replacement from premature failure.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "windshield washer pump replacement",
-        "windshield washers not spraying",
-        "no washer fluid at windshield",
-        "washer pump behind right fender splash shield"
+        "2015 Mustang windshield washer pump replacement",
+        "washer reservoir pump removal",
+        "right front fender splash shield",
+        "washer hose C-lock coupling",
+        "washer hose pinch coupling"
       ],
       "when": {
-        "summary": "When the washer pump requires removal or replacement after the cause of the washer complaint has been established.",
+        "summary": "Use this repair when the windshield washer pump has been identified as requiring removal or replacement.",
         "notes": [
-          "Use the separate splash-shield and hose-coupling procedures for their access and release details."
+          "This is a pump replacement walkthrough, not an electrical fault-isolation procedure.",
+          "Right-hand means the vehicle’s right side when facing forward."
         ]
       },
       "prepare": [
         {
-          "title": "Fluid handling",
-          "detail": "Have a fluid suction gun and a means of collecting escaping washer fluid. The specified refill material is Motorcraft® Premium Windshield Wash Concentrate with Bitterant ZC-32-B2, specification WSS-M14P19-A."
+          "title": "Confirm the engine and access coverage",
+          "detail": "This complete pump and right-hand wheel-liner access route covers 2015 Mustangs with 2.3L, 3.7L or 5.0L engines. It does not cover the different 5.2L splash-shield arrangement. These procedures do not distinguish body styles."
         },
         {
-          "title": "Access and connection procedures",
-          "detail": "Review [Fender Splash Shield](#/document/G1693247) and [Washer Hose Coupling](#/document/G1694647). Be able to complete the right-hand shield access before disturbing the pump."
+          "title": "Gather the fluid-handling supplies and replacement",
+          "detail": "Have the correct replacement washer pump, a fluid suction gun, a suitable collection container and a catch pan. Refill with Motorcraft Premium Windshield Wash Concentrate with Bitterant ZC-32-B2, specification WSS-M14P19-A, prepared according to its product directions. A pinch-coupling O-ring may also need replacement after inspection."
+        },
+        {
+          "title": "Arrange safe wheel access",
+          "detail": "Use a vehicle hoist rated for the car’s weight, including cargo and modifications, wheel chocks, suitable wheel-nut tools and a torque wrench capable of 150 lb.ft (204 Nm). Have cleaning materials and Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 for wheel refitting. This walkthrough uses the hoist route in [Wheel and Tire](#/document/G1686507), with positioning explained in [Jacking and Lifting](#/document/G1663631)."
+        },
+        {
+          "title": "Protect yourself and handle materials correctly",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Read the safety information for the washer concentrate and anti-seize before use. Keep washer solvent away from ignition sources. Review the relevant [service precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Empty the reservoir",
-          "body": "Use the fluid suction gun to siphon out the windshield washer fluid. Prepare to collect the fluid that remains around the pump and hose connection."
+          "title": "Restrain the car and prevent an unexpected start",
+          "body": "Position the car on a hard, level surface, apply the parking brake and chock the wheels. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup, then establish ignition OFF.\nOn an automatic, with the valid key inside and neither pedal pressed, press the start button to switch ignition ON without starting the engine. Hold the brake pedal, select Neutral, then release the pedal and press the button to switch OFF. On a manual, select Neutral with the engine stopped. Remove the key before work. Keep the parking brake applied throughout this job; no release is required. The keyless controls are described on printed page 121 of the 2015 Mustang owner’s manual."
         },
         {
-          "title": "Expose the pump",
-          "body": "Remove the right-hand fender splash shield using the [shield procedure](#/document/G1693247). This provides access to the reservoir-mounted pump and its electrical and fluid connections."
+          "title": "Make the underhood area safe",
+          "body": "Open the hood. With ignition OFF, visually check the cooling fans for damage, cracks or separation without reaching into their operating area. A damaged fan must be replaced before underhood work. This task uses the washer filler and does not itself direct fan work. Keep clear of the fans, which can operate with ignition OFF. If actual access requires reaching into their operating area, stop and obtain the applicable isolation procedure before continuing; do not improvise a fan-disabling method."
         },
         {
-          "title": "Disconnect and remove",
-          "body": "Disconnect the pump electrical connector, then release the washer hose coupling using the [coupling procedure](#/document/G1694647). Remove the pump, following the upward direction shown in the [pump illustration](#/document/G1694629). Collect escaping fluid as the connections are opened."
+          "title": "Siphon the washer reservoir",
+          "body": "Open the washer-reservoir filler cap at the front-right corner of the engine compartment. Insert the fluid suction gun through the filler opening and siphon the washer fluid into the collection container. Leave room for the fact that some fluid will remain around the pump and hose. The reservoir is about to have an exit farther down, and it will use it."
         },
         {
-          "title": "Install and refill before operation",
-          "body": "Reverse the removal procedure to install the pump, reconnect the hose and electrical connector, and restore the splash shield. Fill the reservoir with the specified washer-fluid material before operating the pump."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the triangles stamped into the body structure at the four lifting positions, near the sill areas behind the front wheels and ahead of the rear wheels. Position the hoist adapters at those designated points, checking that the arms and pads clear the suspension, steering linkage, exhaust, brackets, axle and rear cover.\nRaise the car until all four wheels are fully clear of the ground and it is securely supported on the correctly positioned hoist. Keep the parking brake applied. Do not support or lift the car by either bumper, and do not use the emergency tire-changing jack for this repair. Never work beneath a car supported only by a jack. See [lifting precautions](#/document/G1663631)."
+        },
+        {
+          "title": "Remove the right-front wheel",
+          "body": "Remove the five right-front wheel nuts, then take off the assembled wheel and tire and place it safely aside. Do not apply heat to a seized wheel nut; heat can damage the wheel and wheel bearing. If a nut cannot be released without heat, stop and resolve that fastening problem before continuing. The tire remains mounted on its wheel."
+        },
+        {
+          "title": "Release both groups of splash-shield retainers",
+          "body": "Inside the right-front wheel opening, locate the liner that covers the wheel arch and separates the tire from the reservoir area. Remove the first group of seven push-type retainers around the liner perimeter and lower edge, then the second group of eight retainers shown from the other view of the liner. Keep the groups organized for refitting.\nThe [splash-shield illustrations](#/document/G1693247) show the left side; the right side is similar for the covered engines. Use the actual right-side liner edges to locate the corresponding retainers rather than treating the left-side picture as the side to dismantle. Do not pull the liner free while a retainer still holds it."
+        },
+        {
+          "title": "Lower the liner out of the wheel opening",
+          "body": "With both retainer groups removed, lower the splash shield out of the arch and set it aside. This exposes the washer reservoir near the front of the wheel opening. Find the small upright pump at the lower portion of the reservoir, together with its electrical lead and washer hose. The pump’s removal direction is upward in the [pump illustration](#/document/G1694629); the reservoir itself stays in place."
+        },
+        {
+          "title": "Catch the remaining fluid and unplug the pump",
+          "body": "Place the catch pan beneath the pump and hose connection before opening either fluid connection. Disconnect the pump’s electrical connector and move the lead clear, handling the connector rather than pulling on its wires. Next identify which hose coupling is actually fitted: a C-lock has a rotating locking ring; a pinch coupling has two raised squeeze points."
+        },
+        {
+          "title": "Disconnect the fitted hose coupling by hand",
+          "body": "Use only the branch that matches your connection. Neither coupling should be disconnected or connected with hand tools.\nC-lock: Hold the female coupling at its hose connection so it cannot rotate internally. Gently turn its lock ring approximately 90 degrees, then slide the coupling off the pump fitting. Keep the O-ring inside the female coupling from falling out. Leave the ring attached to the coupling and immediately turn it back to its original locked position; leaving it unlocked weakens its ability to latch later.\nPinch type: Squeeze the two raised points with your fingers and gently pull the connection apart. Examine the O-ring on the exposed male fitting and replace it if necessary before reconnection.\nSee [Washer Hose Coupling](#/document/G1694647). These are finger-operated locks; pliers are an expensive way to turn a small plastic part into confetti."
+        },
+        {
+          "title": "Lift out the washer pump",
+          "body": "With the electrical connector and hose disconnected, lift the pump upward out of its reservoir mounting position, as shown in the [pump procedure](#/document/G1694629). Collect the remaining fluid as it comes free. Keep the disconnected hose and wiring out of the pump’s removal path."
+        },
+        {
+          "title": "Seat the replacement pump",
+          "body": "Install the replacement by reversing the removal movement: lower it into the original reservoir mounting position. Make sure it is seated before loading it with the hose or electrical lead. Do not operate it yet; the reservoir must contain washer fluid first."
+        },
+        {
+          "title": "Reconnect and prove the hose coupling is latched",
+          "body": "C-lock: Confirm the ring is already in its locked position. Insert the male fitting into the female coupling; the ring flexes slightly to admit it and snaps into the locked position. Gently pull the coupling to confirm it is seated.\nPinch type: With the inspected O-ring in place, insert the male fitting until the coupling locks with an audible click. Gently pull the coupling to confirm it is seated.\nIf either connection pulls apart, it has not passed the seating check. Correct the engagement before moving on."
+        },
+        {
+          "title": "Reconnect the electrical lead and refill",
+          "body": "Reconnect the pump electrical connector and return the hose and lead to their original routes, clear of the liner’s mounting edges. Clear everyone and equipment from beneath the car, then lower the hoist to a stable height where the filler is reachable while standing on the ground. Keep the car securely supported on the hoist: the right-front wheel is removed, so never unload onto the wheel-less car or let the hub/body contact the floor. Keep the parking brake applied and ignition OFF/key out.\nRefill through the underhood filler using the specified ZC-32-B2 material, specification WSS-M14P19-A, and close the cap. Before covering the pump, look for escaping fluid at its reservoir seating and hose coupling. If necessary for safe viewing, raise and securely support the car again before inspecting from underneath; never reach under an unsupported car. Correct any leak with the pump OFF before installing the liner."
+        },
+        {
+          "title": "Refit the right-hand splash shield",
+          "body": "When needed for wheelhouse access, clear everyone and equipment and raise the car again on the same correctly positioned hoist adapters, securing it before work. Keep the parking brake applied and ignition OFF/key out.\nPosition the liner back into the wheel arch, reversing its downward removal movement. Align its edges and retainer holes without trapping the washer hose or electrical lead. Reinstall the second group of eight retainers, then the first group of seven, reversing removal. Check that the liner is held at every disturbed attachment point and that its edges sit back in their original positions."
+        },
+        {
+          "title": "Clean the wheel mounting faces and central bore",
+          "body": "Remove corrosion, dirt and other foreign material from the wheel’s flat mounting face and the matching hub/brake-disc mounting face. Check that any fasteners retaining the brake disc to the hub are secured and do not stand between the mating faces.\nAlso clean the wheel’s central pilot bore—the round opening that locates the wheel on the hub’s central projection. That bore needs cleaning too, not just the flat face around the stud holes. Clean mating surfaces are essential to keeping the wheel nuts tight."
+        },
+        {
+          "title": "Apply anti-seize only at the centering interface",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between the wheel pilot bore and hub pilot. Keep it off the flat wheel-to-brake-disc mounting faces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. The wheel-stud and wheel-nut threads must remain clean and dry for the specified torque."
+        },
+        {
+          "title": "Install the wheel finger tight",
+          "body": "Position the right-front wheel on the hub and install all five wheel nuts finger tight only at this stage. Final tightening must be done with the vehicle resting on its tires, as directed in [Wheel and Tire](#/document/G1686507)."
+        },
+        {
+          "title": "Restore ground restraints before completing the lowering",
+          "body": "Keep the parking brake applied throughout lowering. Clear people, tools and the catch pan from the lowering area. Lower the car carefully and restore wheel chocks as the tires reach the ground, before withdrawing hoist support.\nOnly once the car is fully grounded, restore P on an automatic: with the valid key inside, use the start button without pedals from OFF to switch ignition ON, hold the brake and select P, then release the pedal and switch OFF. On a manual, select a parked gear with the engine stopped. Finish with ignition OFF/key out before continuing the final wheel tightening."
+        },
+        {
+          "title": "Torque the wheel nuts in the five-point star",
+          "body": "With the car resting on its tires and restrained, tighten the wheel nuts to 150 lb.ft (204 Nm) using a torque wrench on clean, dry threads.\nFollow the illustrated star sequence: top nut, lower-left, upper-right, upper-left, then lower-right. These positions describe the wheel as pictured; if it has rotated, preserve the same crossing pattern around the five nuts. Tightening around the circle instead can contribute to brake-disc runout and subsequent brake vibration."
+        },
+        {
+          "title": "Check windshield washing and arrange the wheel-nut recheck",
+          "body": "Confirm the reservoir has been filled, remove tools, close the hood and keep everyone clear of the wipers. Keep the grounded car parked with parking brake and chocks in place, engine stopped. With the valid key inside, start from ignition OFF and press the start button without either pedal to switch ignition ON without starting the engine.\nPull the washer lever toward you for a brief wash request, then release it. Confirm fluid reaches the windshield. The wipers should continue for three additional wipes; an enabled courtesy wipe can add another wipe a few seconds later. The ordinary washer control is described on printed page 67 of the 2015 Mustang owner’s manual.\nAllow all wiping to finish, then switch ignition OFF and remove the key before inspecting for fresh dripping or approaching the repaired area. If delivery or sealing is unsatisfactory, stop testing and use the decision rows below with the same safe access sequence.\nRetighten the wheel nuts within 160 km (100 mi) of reinstalling the wheel. Include that follow-up even if the washer now sprays like it has something to prove."
         }
       ],
       "watchFor": [
         {
-          "title": "Residual fluid",
-          "body": "An emptied reservoir can still release fluid when the hose or pump is disconnected."
+          "title": "Never run the pump empty",
+          "body": "Do not give the new pump a quick electrical try before filling the reservoir. Operating it dry can cause premature failure."
         },
         {
-          "title": "An early function test",
-          "body": "Do not briefly run the pump to test the connection before refilling. The empty-reservoir warning applies to that operation too."
+          "title": "C-lock ring position matters",
+          "body": "Do not remove the ring or leave it in the unlocked position after disconnecting. Reconnection starts with the ring locked, followed by insertion and a gentle pull check."
+        },
+        {
+          "title": "Residual fluid remains after siphoning",
+          "body": "Keep the catch pan under the connection and pump during removal. Siphoning reduces the spill; it does not eliminate it."
+        },
+        {
+          "title": "Wheel cleanliness is a safety requirement",
+          "body": "Debris between mounting faces can allow the wheel nuts to loosen. Anti-seize belongs only at the central pilot interface, with the fastener threads clean and dry."
+        },
+        {
+          "title": "Neutral requires deliberate restraint restoration",
+          "body": "Keep the parking brake applied throughout. Restore chocks as the tires reach the ground, before withdrawing hoist support. Select P or a parked manual gear only after the car is fully grounded, using the controls in step 18; no raised-cabin entry is required."
         }
       ],
       "notes": [
-        "The washer relay is part of the windshield wiper motor; it is not identified here as a separate relay to replace."
+        "The washer relay is inside the windshield wiper motor. The separate wiper relay shown in the system diagram should not be confused with that internal washer relay.",
+        "Rain-sensitive wiping is optional equipment. Its presence does not establish that a pump or hose connection needs replacement.",
+        "This repair removes an assembled wheel and tire. Tire-changing and wheel-balancing equipment are outside the work required here."
       ],
       "diagnostics": [
         {
-          "finding": "The washer switch is operated but fluid does not reach the windshield.",
-          "meaning": "The symptom alone does not distinguish the pump from the command, power or fluid-delivery path.",
-          "next": "Establish the cause before selecting pump replacement; the component description explains the control path."
+          "finding": "The complaint is simply that no washer fluid reaches the windshield.",
+          "meaning": "That observation alone does not distinguish a failed pump from a control, power-supply or fluid-delivery problem.",
+          "next": "Establish the fault before choosing pump replacement. The [system operation description](#/document/G1694645) explains the control path; it does not provide a step-by-step electrical test here."
+        },
+        {
+          "finding": "The disconnected C-lock coupling loses its internal O-ring.",
+          "meaning": "The seal needed for reconnection is no longer in place.",
+          "next": "Recover and correctly restore the seal, or obtain the appropriate replacement before reconnecting. Do not proceed with an unsealed coupling."
+        },
+        {
+          "finding": "The pinch-type coupling O-ring is missing or damaged.",
+          "meaning": "The connection cannot be relied upon to seal.",
+          "next": "Replace the O-ring before inserting the fitting and repeating the latch and gentle-pull checks."
+        },
+        {
+          "finding": "The reconnected coupling separates during the gentle pull check.",
+          "meaning": "The fitting has not locked securely.",
+          "next": "Reconnect using the correct coupling branch and repeat the pull check. Do not cover the connection with the liner until it holds."
+        },
+        {
+          "finding": "Fluid escapes at the pump seating or coupling after refilling.",
+          "meaning": "The disturbed assembly has not passed its leak check.",
+          "next": "Keep the pump off, collect the fluid and correct the seating or coupling engagement. Recheck the applicable O-ring and repeat the refill leak check before closing access."
+        },
+        {
+          "finding": "The filled, reassembled system still does not deliver fluid.",
+          "meaning": "The replacement has not resolved the complaint; this result does not identify the remaining fault.",
+          "next": "Stop repeated wash requests, allow wiping to finish, then switch ignition OFF and remove the key. Use the same safe access sequence to confirm the disturbed connector and hose were reconnected. If the complaint remains, obtain the appropriate fault-isolation procedure rather than guessing at another component."
+        },
+        {
+          "finding": "Three wipes follow release of the washer switch, with a possible later extra wipe.",
+          "meaning": "Three additional wipes are normal. A later courtesy wipe is also normal when that feature is enabled.",
+          "next": "Treat this as expected operation when fluid delivery and sealing are satisfactory."
         }
       ],
       "verification": [
         {
-          "title": "Check fluid delivery",
-          "body": "With the reservoir filled, request windshield wash and confirm fluid reaches the windshield. Check the disturbed hose connection and pump seating for escaping fluid."
+          "title": "Pump and connections",
+          "body": "The pump is seated, its electrical connector is reconnected, and the hose coupling passes the gentle-pull check. With the reservoir filled, no fluid escapes at the exposed assembly before the liner is refitted."
         },
         {
-          "title": "Recognize the normal wipe sequence",
-          "body": "After the washer switch is released, the wipers perform 3 additional wipes. A later courtesy wipe may also occur if that feature is enabled."
+          "title": "Liner and wheel",
+          "body": "Both liner-retainer groups are restored, with the hose and wiring clear of its edges. The wheel mating faces and pilot bore were cleaned, lubricant was confined to the pilot interface, and all five nuts were tightened in a star pattern to 150 lb.ft (204 Nm) with the car resting on its tires."
+        },
+        {
+          "title": "Vehicle restraints",
+          "body": "The parking brake is applied, the transmission is out of Neutral, and ground-wheel chocks were restored as the tires reached the ground."
+        },
+        {
+          "title": "Operation and follow-up",
+          "body": "A brief wash request delivers fluid to the windshield without fresh leakage. The normal post-wash wipe sequence is recognized, and wheel-nut retightening is scheduled within 160 km (100 mi)."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694629",
-          "purpose": "Washer pump draining, removal, installation and specified refill material.",
+          "purpose": "Primary washer-pump draining, connection removal, upward pump removal, reverse-order installation and refill requirements.",
           "mediaId": "G1694629-m0003"
         },
         {
           "documentId": "G1693247",
-          "purpose": "Remove and reinstall the right-hand fender splash shield for pump access.",
+          "purpose": "Required wheel-liner access and reverse-order refitting for 2.3L, 3.7L and 5.0L; does not establish the 5.2L access branch.",
           "mediaId": "G1693247-m0003"
         },
         {
           "documentId": "G1694647",
-          "purpose": "Release and reconnect the washer hose coupling."
+          "purpose": "Hand-operated C-lock and pinch-type coupling release, seal handling, reconnection and seating checks."
         },
         {
           "documentId": "G1694645",
-          "purpose": "Explain washer pump control through the windshield wiper motor and normal post-wash wiping."
+          "purpose": "Explain pump control through the windshield wiper motor and the normal post-wash wipe sequence."
+        },
+        {
+          "documentId": "G1694644",
+          "purpose": "Identify washer-switch operation and distinguish optional rain-sensitive wiping from the pump replacement task."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel removal, mounting-face and pilot-bore preparation, restricted XL-2 application, final torque, star sequence and retightening interval."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Identify triangle-marked lifting points and required hoist-positioning precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, relevant underhood precautions, personal protection, chemical handling and vehicle restraint."
         }
       ],
       "hero": {
@@ -137024,12 +137878,12 @@
         "engines": [
           "2.3L",
           "3.7L",
-          "5.0L",
-          "5.2L"
+          "5.0L"
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Windshield washer system; C-lock or pinch-type washer hose coupling, as fitted."
       },
       "relatedGuideIds": [
         "job-50be9490747be10a",
@@ -137055,14 +137909,66 @@
         {
           "documentId": "G1694644",
           "sourceHash": "e3688d97625b08b4d59b57d2e3211a295ff22870250ff29bfd10b539470643c8"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "91f190d721e0366e77a216134cedbc5e90a5d3716c7d2e3318646e9f4dc0e85f"
-      }
+        "fingerprint": "91f190d721e0366e77a216134cedbc5e90a5d3716c7d2e3318646e9f4dc0e85f",
+        "editorialVersion": 2,
+        "editorialFingerprint": "99fc5f33f8d6d0067ccd73003cb89155c9558afc0147b16c6a4e3ca2f575e4aa",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-drain",
+          "title": "Secure the car and drain the reservoir",
+          "summary": "Prevent unexpected starts and remove most of the washer fluid.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "open-wheel-access",
+          "title": "Reach the reservoir through the wheel opening",
+          "summary": "Lift safely, remove the right-front wheel and release the liner.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "exchange-pump",
+          "title": "Disconnect and replace the pump",
+          "summary": "Handle the fitted coupling correctly, replace the pump and check sealing.",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "id": "restore-liner-and-wheel",
+          "title": "Restore the liner and wheel",
+          "summary": "Refit the access parts and prepare the wheel’s mating surfaces.",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "id": "lower-and-confirm",
+          "title": "Lower, torque and confirm operation",
+          "summary": "Restore ground restraints, tighten the wheel and check windshield washing.",
+          "start": 18,
+          "end": 20
+        }
+      ]
     },
     {
       "title": "Remove and replace the windshield washer reservoir",

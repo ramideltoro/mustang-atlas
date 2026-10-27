@@ -1,0 +1,90 @@
+{
+  "documentId": "G1686435",
+  "supportingSourceRefs": [],
+  "sourceHash": "f41c7d9ffbc7002d6f55828d1118e12038c81d1ed45624edfaa269c5641a2c72",
+  "title": "Forward Clutch Assembly — 6R80",
+  "introduction": "The forward clutch is a hydraulically applied clutch inside the automatic transmission. I read its operation as two connected stories: the solenoid positions the control valves, and those valves direct the pressure that applies the clutch. Think of the solenoid as operating the tap rather than supplying all the water itself.\n\nUse the cutaway to locate the assembly, then match the exploded-view callouts to the component table. The exploded spacing helps identify the piston, springs, clutch pack and retaining parts; it is not a dismantling sequence. Keep the model-dependent quantity and selective-part labels tied to the matching assembly specifications.\n\nIn the hydraulic drawings, follow the named passages and arrows between the solenoid, regulator valve, latch valve and clutch. Compare the application and release views, especially the difference between clutch-applying pressure and the low-pressure fluid that keeps the circuit filled. This overview covers the listed engine applications equipped with this transmission. It supplies no live test, assembly clearance, selective-part sizing or overhaul procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686435-b00001",
+      "text": "Locate the Forward Clutch",
+      "why": "The cutaway establishes where the assembly sits; the exploded view and unchanged table identify its parts without establishing removal order."
+    },
+    {
+      "blockId": "G1686435-b00005",
+      "text": "How the Forward Clutch Applies",
+      "why": "Follow the pressure supply first, then the solenoid control path, and finally the passage feeding the clutch."
+    },
+    {
+      "blockId": "G1686435-b00006",
+      "text": "For the forward clutch to apply, the manual valve must be in DRIVE, 3, 2 or 1. These positions supply line pressure through the DRIVE circuit to the clutch A regulator valve.",
+      "why": "This establishes the pressure supply needed for application. Having that supply available is distinct from the control valves actually directing it to the clutch."
+    },
+    {
+      "blockId": "G1686435-b00007",
+      "text": "SSA, the shift solenoid controlling the forward clutch, supplies regulated solenoid pressure from SREG through VFS1 to the clutch A regulator and latch valves. That pressure positions the valves so the forward clutch can apply.",
+      "why": "I trace this as the control side of the drawing: solenoid pressure operates the valves that manage the clutch’s pressure supply."
+    },
+    {
+      "blockId": "G1686435-b00008",
+      "text": "The clutch A regulator valve then sends regulated line pressure into the CL A circuit, applying the forward clutch.",
+      "why": "This is the delivery side of the hydraulic story: the regulated line-pressure path reaches the clutch itself."
+    },
+    {
+      "blockId": "G1686435-b00009",
+      "text": "Forward (1, 2, 3, 4) Circuits — Applied in 1st, 2nd, 3rd and 4th Gear",
+      "why": "Use the application drawing to connect the control-pressure path with the regulated line-pressure path to the clutch."
+    },
+    {
+      "blockId": "G1686435-b00011",
+      "text": "The forward clutch releases with the manual valve in NEUTRAL, REVERSE or PARK. It also releases with the manual valve in DRIVE when the transmission is in 5th or 6th gear.",
+      "why": "Selecting a forward driving range does not mean this particular clutch stays applied throughout that range. Its state also depends on the operating gear."
+    },
+    {
+      "blockId": "G1686435-b00012",
+      "text": "To release the forward clutch, SSA lowers pressure to the clutch A regulator valve and clutch A latch valve. Their resulting positions block regulated line pressure to the CL A circuit, releasing the clutch.",
+      "why": "The change begins on the solenoid-control side and changes the clutch’s pressure supply. Release does not mean every passage becomes empty of fluid."
+    },
+    {
+      "blockId": "G1686435-b00013",
+      "text": "In 2nd, 3rd, 4th, 5th and 6th gear, the D2 Latch valve routes exhaust-circuit pressure from CL EXH into CL A. This keeps the circuit and forward clutch filled with fluid at low pressure, approximately 21 kPa (3 psi). Keeping air out of the Clutch A circuits helps the clutch apply smoothly during a downshift into 4th gear.",
+      "why": "A fluid-filled circuit can still belong to a released clutch. Think of this low-pressure fill as keeping the hydraulic path primed, rather than commanding the clutch to grip. It is an operating description, not an apply-pressure test specification."
+    },
+    {
+      "blockId": "G1686435-b00014",
+      "text": "Forward Clutch Circuits — Released in 5th and 6th Gear",
+      "why": "Compare this view with the application drawing: the low-pressure fill route remains relevant even though clutch-applying pressure is blocked."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:07:26.174Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 10,
+    "receivedBlocks": 10,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 27,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "54c61ad99e335be9717d929fa442edbfb6c11bced60ab950c53100db14f0c325",
+    "reviewedAt": "2026-10-27T19:07:26.174Z"
+  }
+}
