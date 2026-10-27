@@ -510,7 +510,9 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "market": "U.S. Mustang",
+        "equipment": "Factory 2015 wheel-end arrangements. Optional brake-off steps cover the standard front and rear disc procedures, not the separate SVT package. Confirm the fitted brakes and any wheel/suspension modifications before using specifications."
       },
       "evidence": [
         "normal",
@@ -520,22 +522,22 @@
         "wheel-bearing-inspection"
       ],
       "notes": [
-        "Hub designs and fastener requirements vary by equipment. No repacking or automatic bearing-replacement schedule is supplied here."
+        "This is an original diagnostic walkthrough for the documented 2015 U.S. Mustang configurations. It does not establish coverage for the separate SVT brake/hub package or modified wheel-end arrangements.",
+        "The hand-position illustration is independently designed to explain the checks. It is not a lifting-point drawing or a component identification template. Use the linked Ford illustrations for actual mounting locations.",
+        "Online supplier references supplement the Ford material. Their general symptoms are clues, not automatic replacement rules. No mileage-based bearing replacement interval is adopted."
       ],
       "relatedGuideIds": [
         "tires",
-        "brakes"
+        "brakes",
+        "suspension",
+        "wheel-tire-runout-matching"
       ],
       "id": "wheel-hubs",
-      "title": "Wheel and hub checks: investigate noise and looseness",
+      "title": "Wheel and hub checks: find the cause of noise and looseness",
       "categoryId": "chassis",
-      "hero": {
-        "documentId": "G1692537",
-        "mediaId": "G1692537-m0005"
-      },
-      "summary": "Check the wheel-end assembly as a whole before deciding that a bearing is responsible.",
-      "introduction": "A hum, shake or dragging sensation may seem to come from the wheel, but the tire, hub, brake and mounting all occupy the same area. A useful inspection narrows the possibilities. It does not start with a universal bearing-replacement mileage or a guess based only on the sound.",
-      "why": "The hub supports the wheel while allowing it to turn. Play, damage or drag can affect that job, but nearby brake or tire faults can produce similar clues.",
+      "summary": "Track down a hum, wobble or dragging wheel with tire checks, a safe noise assessment, hands-on movement checks and an optional brake-off hub inspection. Learn what each finding means before buying parts.",
+      "introduction": "I want to find the part making the complaint before asking your wallet to participate. A wheel bearing is one suspect; the tire, brake, wheel mounting, steering and suspension all share the neighborhood.\n\nThe **wheel hub** is the rotating mounting point for the wheel. Its **wheel bearing** supports that rotation. The **wheel knuckle** carries the hub; suspension joints and, at the front, steering links position the knuckle. If something rocks, we need to see **which connection moves**, not just feel movement at the tire.\n\nThis guide takes you from checks on the ground to supported, engine-off inspection. The optional brake-off branch is **advanced brake work** and is only needed when the earlier checks do not separate brake contact from a hub concern. No wheel-bearing clearance limit is invented here: a measured pass/fail decision needs the current Ford method and limit for the fitted assembly.",
+      "why": "A sound is a clue, not a parts number. Finding the actual source avoids replacing a perfectly useful hub while a damaged tire or dragging brake keeps making the same guest appearance. It also separates an irritating noise from movement, overheating or damage that makes driving inappropriate.",
       "when": {
         "summary": "Inspect wheel-related condition at each oil-change service; investigate a new noise, looseness or drag sooner.",
         "notes": [
@@ -544,53 +546,189 @@
       },
       "prepare": [
         {
-          "title": "Describe the symptom",
-          "detail": "Note whether it changes with speed, braking, load or road surface."
+          "title": "Choose your stopping point before the tools come out",
+          "detail": "**On the ground:** symptom notes, cold tire pressure, visible damage and wheel mounting. **Supported wheel:** hand rotation, gentle rocking and observing the moving joint. **Advanced branch:** remove and restore the fitted brake assembly to inspect the hub without brake-disc contact. If you cannot safely support the car or identify the brake fasteners, take your observations to a workshop; that is useful diagnosis, too.\n\nHave a helper for watching movement. Keep fingers out of gaps between moving parts. Let hot brakes cool naturally; do not touch a disc to judge its temperature."
         },
         {
-          "title": "Arrange safe access",
-          "detail": "Wheel-off and raised-vehicle checks require the appropriate lifting points and support."
+          "title": "Gather the right kit",
+          "detail": "| Equipment | What I use it for |\n|---|---|\n| Digital tire-pressure gauge and tread-depth gauge | Record cold pressure and wear across the tread. |\n| Flashlight, mirror and a notebook or phone used while parked | See inner tire edges, hardware and the exact place movement occurs. |\n| Rated workshop jack, correctly rated stands, wheel chocks and the Ford lifting-point drawing; or a suitable hoist | Support the car securely before a wheel leaves the ground. |\n| Correct wheel-nut socket and calibrated torque wrench capable of 204 Nm / 150 lb-ft | Wheel removal and final tightening, if needed. |\n| For brake-off work: correct sockets, replacement bolts for the fitted caliper branch, caliper hanger and suitable brake cleaner | Move the brake assembly safely and restore it correctly. |\n| For unresolved cases: dial indicator with suitable rigid mounting, or chassis-listening equipment | Workshop measurement or noise localization using the correct setup. |\n\nA floor jack holds the car up while you position supports; it is not the support system. The emergency wheel-change jack is not the tool for this inspection."
+        },
+        {
+          "title": "Know the car you are checking",
+          "detail": "Write down the year, engine, front or rear location, brake package, wheel/tire sizes and recent work. Note spacers, different-offset wheels, lowered suspension, an impact or a recent wheel removal. Ford specifically excludes aftermarket-equipped vehicles from some standard suspension specifications. Use the current instructions for those parts.\n\nKeep [the lifting-point illustration](#/document/G1663631) and [wheel fitting instructions](#/document/G1686507) available. For the optional branch, identify the actual assembly using [front brake-disc access](#/document/G1693784) or [rear brake-disc access](#/document/G1693754)."
         }
       ],
       "steps": [
         {
-          "title": "Start with tire and wheel condition",
-          "body": "Confirm tire pressure, visible damage and unusual wear before blaming the bearing."
+          "title": "Decide whether the car should stay parked",
+          "body": "Before a road test, look for a visibly tilted or wobbling wheel, missing or loose wheel nuts, a damaged tire, severe grinding, smoke, a burning smell, a fluid leak near the brake, or changed braking/steering control. **If any is present, do not drive to “see if it gets worse.”** Arrange inspection and suitable transport. Do the same if supported checks later reveal unexplained mechanical looseness or binding.\n\nNo roadside shaking test can certify a damaged wheel end as safe. The aim here is to gather evidence without adding another problem."
         },
         {
-          "title": "Inspect the assembly methodically",
-          "body": "Use the diagnosis procedure to distinguish bearing play or noise from brake drag, loose components and tire concerns."
+          "title": "Give the tire a fair hearing",
+          "body": "With the tires cold, measure and record each pressure against the vehicle tire label on the driver’s door/door pillar. Use the vehicle specification, not the maximum printed on the tire sidewall.\n\n1. Look at both sidewalls and all the tread you can see. Check for bulges, cuts, exposed cords, embedded objects and uneven wear. Do not run a bare hand across suspected exposed cord.\n2. Compare tread depth at the inner shoulder, center and outer shoulder, then at several points around the tire as access allows. Inspect the hidden circumference after safe lifting.\n3. Look for alternating high/low patches or tread blocks with different leading/trailing heights. These patterns can produce noise and point to tire, alignment or suspension work. Record them rather than calling every pattern a bearing symptom.\n4. Verify tire sizes and rotation direction. Do not swap staggered front/rear sizes or reverse a directional tire as a casual noise experiment.\n\nA tire can supply its own soundtrack. Finding wear does not prove it is the only fault. References: [wheel/tire diagnosis](#/document/G1686502), [suspension preliminary inspection](#/document/G1686610)."
         },
         {
-          "title": "Repair the confirmed cause",
-          "body": "Choose the exact hub or brake procedure for the fitted package, then verify that the original symptom has been resolved."
+          "title": "Check the wheel mounting before rocking anything",
+          "body": "Inspect for missing nuts, damaged studs or wheel holes, a cracked wheel and visible gaps or debris at the wheel mounting. A wheel loose on its studs can imitate bearing play. If fasteners are loose, stop driving and have the mounting faces, wheel holes, studs and nuts checked for damage; simply tightening them is not proof that no damage occurred.\n\nFor the documented factory wheel fitment, final wheel-nut torque is **204 Nm / 150 lb-ft**, on **clean, dry stud and nut threads**, in a star/cross pattern with the vehicle resting on its tires. This is a wheel-nut value, **not a hub or spindle-nut value**. Do not loosen the large center nut to check the bearing. Reference: [wheel installation](#/document/G1686507)."
+        },
+        {
+          "title": "Write a useful noise description",
+          "body": "Record what you already noticed: speed range, straight road versus curves, braking versus brakes released, smooth versus coarse pavement, cold versus warmed up, and whether you feel it in the steering wheel or seat. Include recent tire, brake or hub work.\n\nTry this note: **“Low hum at a steady road speed; changes on coarse pavement; no obvious brake-pedal effect; left-front location is only my impression.”** That is much more useful than “wheel sounds expensive.” Do not type or handle a recording device while driving.\n\nFord warns that sound can travel through the structure and seem to come from a different place. Treat the apparent corner as a lead, not a verdict. Reference: [NVH preparation and symptom verification](#/document/G1663637)."
+        },
+        {
+          "title": "If safe, observe the noise during an ordinary drive",
+          "body": "Only do this after the ground checks reveal no reason to stop, and only if steering and braking feel normal. Choose a quiet, familiar route, stay within legal speeds, turn off the audio/blower if practical, and have a passenger record observations or make notes after parking.\n\n- Gently reach the speed where the complaint normally occurs; do not increase speed to chase a new or severe noise.\n- Compare normal smooth and coarse pavement. A surface-related change puts tire/road interaction on the list.\n- Note changes through ordinary gentle curves, staying in your lane. **Do not weave or perform abrupt steering maneuvers.**\n- Observe ordinary light braking. A change directs attention to the brakes and suspension as well as the hub; it is not a diagnosis by itself.\n- If the symptom only appears over bumps, inspect the suspension/steering connections rather than forcing it into a bearing explanation.\n\nStop the test if control changes, grinding develops or vibration worsens. Do not use a “turn left means replace right” rule. Ford lists bearings, hubs **and tire tread wear** as possible causes of a steering-sensitive noise. This is a conservative observation exercise, not the manual’s full professional road-test sequence. Reference: [NVH road-test interpretation](#/document/G1663637)."
+        },
+        {
+          "title": "Support the car for engine-off checks",
+          "body": "Work on firm, level ground with the engine off and the key secured. Chock the wheels that remain on the ground against rolling in either direction. Use a workshop jack and stands suited to the car and the approved locations, or a suitable hoist. Identify the stamped triangle markers and the exact support geometry in [Ford’s lifting-point drawing](#/document/G1663631); do not improvise on the floorpan, differential cover, exhaust or suspension links.\n\nLower onto the supports and confirm they are seated and the vehicle is stable before working at the wheel. Never put any part of your body under a car held only by a jack. If the jack and stand cannot safely occupy the required locations, use a suitable lift instead.\n\nFor **front** hand checks, keep the car secured against rolling. For **rear** rotation, the parking brake and transmission can prevent movement: only select Neutral and release the parking brake after the car is securely supported, with the grounded wheels chocked. If you cannot establish that arrangement, have a workshop perform the rotation test. Restore the securing controls before lowering. **Never run the engine to spin raised wheels.**"
+        },
+        {
+          "title": "Rotate each wheel by hand and compare",
+          "body": "With the wheel secured to the hub, turn it slowly by hand through a complete revolution. Listen for scraping, grinding or a repeating tick, and feel whether the resistance is smooth or catches at a particular position. Record which corner and where in the revolution it happens. Compare the opposite wheel on the **same axle**, with equivalent brake/gear conditions.\n\nA light pad-on-disc brushing sound may be present. Rear wheels also turn driveline parts, so their resistance is not directly comparable with a free front wheel. There is **no “must spin three turns” rule** here. A wheel that spins quietly unloaded has not ruled out a noise that appears under road load.\n\nKeep hands, clothing and tools clear of pinch points. Use hand force only. References: [wheel rotation and brake-drag check](#/document/G1686610), [Timken’s hand inspection]( https://www.timken.com/wp-content/uploads/2017/08/LV3-Checking-Hub-Assembly.pdf ), [MOOG’s note on noise that appears only while driving](https://www.moogparts.com/en-eu/pdf/technical-tips/lv/en/MOOG-ESB-Diagnosis-of-worn-wheel-end-bearings.pdf)."
+        },
+        {
+          "title": "Rock at 3 and 9, then at 12 and 6",
+          "body": "Imagine a clock on the wheel face. Grip the tire at **3 and 9 o’clock**, gently push one side away while pulling the other toward you, then reverse. Repeat with your hands at **12 and 6 o’clock**. Feel for a knock or free movement and have your helper watch the assembly. Do not shake hard enough to disturb the vehicle supports.\n\nThis checks movement in two directions; the hand position does **not** identify the failed part. Tire sidewall flex and normal steering movement are different from a loose joint. Reference: [Timken’s two-position hand check](https://www.timken.com/wp-content/uploads/2017/08/LV3-Checking-Hub-Assembly.pdf)."
+        },
+        {
+          "title": "Find the connection that actually moves",
+          "body": "Repeat the gentle rocking while your helper uses a light or mirror to watch from a safe position. Keep fingers out of the joints.\n\n| What moves relative to what? | What that tells us |\n|---|---|\n| Wheel shifts on the studs/mounting face | Investigate the wheel mounting first; do not condemn the bearing from this result. |\n| Wheel and hub move relative to the knuckle | Investigate hub/bearing attachment and bearing condition. Correct clamping matters. |\n| Knuckle and wheel move together, with a joint visibly shifting | Trace the movement to suspension links, ball joints or steering connections. |\n| Front wheel steers smoothly but no free movement is localized | Steering motion is not a bearing-play measurement. Continue diagnosis if the symptom persists. |\n\nAt the front, watch the tie rod connection and lower suspension joints. At the rear, look at the locating links and their knuckle connections. Do not assume all play at 12/6 is a bearing, or all play at 3/9 is a tie rod. If the source is hidden or unclear, record **“movement present; source not localized”** and stop using the car until assessed. Do not pry on a boot or loosen a joint to make the test easier. References: [suspension symptom chart](#/document/G1686610), [steering diagnosis](#/document/G1757488)."
+        },
+        {
+          "title": "Check whether the brake releases",
+          "body": "With the brakes fully assembled and the car safely supported, have a helper apply and release the service brake. Then turn the wheel by hand again. For rear wheels, confirm the parking brake is released under the securing conditions in step 6.\n\nCompare before/after resistance. If one wheel is substantially harder to rotate or binds after release, investigate its brake caliper, sliding/mounting parts and, at the rear, parking-brake mechanism. If several wheels drag, the cause can be elsewhere in the brake system. These are different branches in Ford’s diagnosis.\n\nDo not open a bleeder, loosen a hydraulic line, disconnect a hose or adjust a hub nut as an exploratory shortcut. Those actions change the system and require their own repair/bleeding procedure. If the disc is hot, let it cool; a hot corner does not distinguish brake heat from bearing trouble. Reference: [brake-drag component check](#/document/G1721936)."
+        },
+        {
+          "title": "Choose the next check from your findings",
+          "body": "**Tire damage or a loose wheel mounting:** stop and correct that condition first, then reassess. **Visible movement at a suspension/steering joint:** follow that component’s diagnosis. **Binding after brake release:** follow the brake branch. **Roughness or play not yet localized:** the optional brake-off inspection below can help separate disc/pad contact from the hub itself.\n\nIf everything feels smooth but the road noise remains, skip speculative disassembly and use the workshop-localization step later in this guide. A result of “not reproduced on stands” is useful information; it is not a certificate of bearing health. The findings table below collects these branches in one place."
+        },
+        {
+          "title": "Optional advanced branch: remove the wheel and inspect behind it",
+          "body": "Proceed only if you can identify and correctly restore the fitted brake assembly. Let it cool, secure the car as in step 6, remove the wheel nuts and wheel, and inspect the wheel’s rear mating face, hub/disc mating area, studs, disc shield, visible pad wear, caliper mounting and hose routing. Look for fresh contact marks, trapped debris or a shield contacting the disc. Do not bend, pry or replace parts until the actual interference is identified.\n\nDo not loosen the center hub/spindle nut. This diagnosis keeps the bearing clamped in its assembled condition. If the nut or hub attachment is suspect, stop for the correct repair and damage assessment.\n\nFor disc removal, choose **one** of the next two steps according to the axle. The separate SVT procedure and modified brake kits are outside these branches. Read the restoration step before undoing anything. References: [wheel removal](#/document/G1686507), [standard front hub construction](#/document/G1692537), [rear hub construction](#/document/G1686657)."
+        },
+        {
+          "title": "Front only: move the caliper assembly aside and remove the disc",
+          "body": "Identify the caliper by the actual fitted hardware, not engine size alone. Follow [the standard front disc drawing](#/document/G1693784) to identify the **two mounting bolts**; do not confuse them with hose or bleed fittings.\n\n1. Arrange a proper caliper hanger before removing the bolts.\n2. Remove the two mounting bolts and move the caliper/pad assembly aside. Support it without stretching, twisting or loading the brake hose.\n3. For the **4-piston or 6-piston branch**, discard those bolts and have the specified new bolts ready. The 2-piston branch does not give that same discard instruction.\n4. Remove the brake disc to expose the hub’s rotating mounting face.\n\nDo not disconnect the hydraulic hose and **do not press the brake pedal with the caliper/disc removed**. Skip the rear-only step and continue to the hub check. Reinstallation torque for the specified front mounting bolts is **115 Nm / 85 lb-ft**; identify them using the figure, not this number alone."
+        },
+        {
+          "title": "Rear only: move the caliper and anchor plate aside",
+          "body": "Use [the standard rear disc drawing](#/document/G1693754) to locate the **two caliper/anchor-plate mounting bolts**. The parking brake must be released with the car secured as described in step 6.\n\n1. Arrange support for the complete caliper/anchor-plate assembly.\n2. Remove and **discard the two mounting bolts**. Position the assembly aside with the hose and parking-brake cable unstressed; do not let either carry its weight.\n3. Remove the brake disc. Leave the halfshaft and spindle nut installed for this diagnosis.\n\nDo not operate the brake pedal or parking brake with the assembly removed. On restoration, use the specified **new mounting bolts at 175 Nm / 129 lb-ft**. This is the rear caliper/anchor-plate value, not the hub-bolt or spindle-nut specification."
+        },
+        {
+          "title": "Check the exposed hub and compare with the assembled result",
+          "body": "Turn the exposed hub by hand and check for roughness, noise or looseness with the bearing clamping untouched. Compare with the earlier wheel-on result. If a scraping sound disappears, inspect the removed brake parts and contact marks; disappearance alone does not certify the bearing. If roughness or movement remains, localize it at the hub/knuckle and assess bearing condition and attachment. The rear halfshaft still transmits driveline resistance.\n\nDo not spin the hub with compressed air, dismantle the sealed bearing or add grease as a diagnostic experiment. A confirmed bearing fault needs the correct assembly repair. If uncertain, restore the brakes and wheel correctly before moving the vehicle and continue with specialist diagnosis. Reference: [Timken’s exposed-hub check](https://www.timken.com/wp-content/uploads/2017/08/LV3-Checking-Hub-Assembly.pdf); Mustang assembly references: [front hub](#/document/G1692537), [rear hub](#/document/G1686657)."
+        },
+        {
+          "title": "Restore the brakes and wheel before moving the car",
+          "body": "1. Clean the disc/hub mating surfaces using the specified method and brake cleaner. Keep debris and lubricant away from friction surfaces. Refit the disc.\n2. Restore the correct caliper assembly, with replacement bolts where required: **front 115 Nm / 85 lb-ft**; **standard rear, new bolts 175 Nm / 129 lb-ft**. Check hose/cable routing and remove the hanger.\n3. With every brake component fully installed, apply the brake pedal several times and confirm normal firm pedal feel. Check for leaks and that the brake applies/releases. If pedal travel or feel is abnormal, do not drive.\n4. Clean the wheel and hub/disc mounting faces; confirm no retaining hardware prevents the wheel sitting flush. Fit the wheel and finger-start all nuts.\n5. Ford specifies a thin coat of XL-2 only at the **wheel pilot bore/hub pilot interface**, not on the flat mounting faces, studs, nuts or brake friction surfaces. Keep the wheel-nut threads clean and dry.\n6. Restore the vehicle’s securing controls and lower it using the proper lifting procedure. Final-tighten wheel nuts in a star/cross pattern with the vehicle resting on the tires: **204 Nm / 150 lb-ft**. Recheck within **100 mi / 160 km** after wheel reinstallation.\n\nNever use a road test to find out whether the brakes went back together correctly. References: [front brake restoration](#/document/G1693784), [rear brake restoration](#/document/G1693754), [wheel installation](#/document/G1686507)."
+        },
+        {
+          "title": "For an unresolved noise, ask for a targeted next test",
+          "body": "Bring your notes and ask for **localization**, not an automatic hub replacement. Useful next checks include chassis-listening equipment during a controlled road test, a tire/wheel investigation for imbalance or out-of-round condition, or a dial-indicator check using the current Ford setup and specification.\n\n**Bearing endplay** is movement along the axle direction under an applied load. **Runout** is the measured variation as a surface rotates. They are not interchangeable readings. A loose mounting or an incorrectly positioned gauge can mislead either test; this guide supplies no universal millimeter limit.\n\nIf an ABS warning accompanies the complaint, record the codes with a capable scan tool and investigate the wheel-speed signal, sensor and wiring as directed. An ABS lamp alone is not proof of a failed bearing. References: [NVH tools and diagnosis](#/document/G1663637), [wheel/tire diagnosis](#/document/G1686502), [ABS diagnosis](#/document/G2117220)."
+        },
+        {
+          "title": "Prove the result, and write it down",
+          "body": "After the confirmed cause is repaired and all safety checks pass, repeat the original observation under comparable safe conditions. Check that the noise, looseness or drag is resolved—not merely quieter on a different road. Recheck the disturbed area for correct mounting, leaks, rubbing and abnormal heat symptoms. If the complaint persists, return to the recorded findings rather than replacing the next part on the shelf.\n\nRecord **corner → symptom → observed movement/noise → confirmed cause → repair → verification**. Include the wheel-nut recheck if a wheel was removed. I would much rather leave the next owner a useful trail than “vibes were off; installed shiny thing.”"
         }
       ],
       "watchFor": [
         {
-          "title": "A noise described as “definitely the bearing”",
-          "body": "The description is a starting clue. Confirmation matters before ordering a hub."
+          "title": "The giant center nut is not an adjustment knob",
+          "body": "The supplied front and rear hub procedures require new fasteners and different tightening methods. Do not tighten or loosen the hub/spindle nut experimentally to hide play."
         },
         {
-          "title": "Movement or drag",
-          "body": "Have it assessed promptly rather than waiting for the next routine service."
+          "title": "A brake-off result needs careful interpretation",
+          "body": "Removing brake contact changes what you feel. Rear driveline resistance remains. A noise disappearing on stands does not settle a load-dependent bearing complaint."
+        },
+        {
+          "title": "A numeric limit without its measurement setup",
+          "body": "Do not borrow a generic endplay or runout limit from a different bearing design. The instrument position, load direction, assembled condition and vehicle specification belong together."
         }
       ],
       "procedures": [
         {
+          "documentId": "G1686610",
+          "purpose": "Suspension inspection and symptom charts; distinguishes wheel-bearing, steering, tire and brake concerns."
+        },
+        {
+          "documentId": "G1686502",
+          "purpose": "Tire wear, damage and wheel/tire vibration diagnosis."
+        },
+        {
+          "documentId": "G1663637",
+          "purpose": "Noise and vibration diagnosis, symptom recording and electronic listening tools."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Approved lifting points and supported-vehicle precautions."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Wheel removal and installation: clean mating faces, dry threads, star pattern, 204 Nm and 100-mile recheck."
+        },
+        {
+          "documentId": "G1721936",
+          "purpose": "Brake-drag checks and the distinction between one-wheel and multiple-wheel concerns."
+        },
+        {
+          "documentId": "G1693784",
+          "purpose": "Standard front brake-disc access: caliper-specific bolt replacement, 115 Nm and pedal restoration."
+        },
+        {
+          "documentId": "G1693754",
+          "purpose": "Standard rear brake-disc access: supported caliper/anchor assembly, new bolts, 175 Nm and pedal restoration."
+        },
+        {
           "documentId": "G1692537",
-          "purpose": "Service the standard front wheel bearing and hub."
+          "purpose": "Standard front bearing/hub repair after diagnosis; new hub nut and grease cap."
         },
         {
           "documentId": "G1686657",
-          "purpose": "Service the rear wheel bearing and hub."
+          "purpose": "Rear bearing/hub repair after diagnosis; new fasteners and staged spindle-nut tightening."
         },
         {
-          "documentId": "G1686610",
-          "purpose": "Follow the suspension inspection and diagnosis path."
+          "documentId": "G1757488",
+          "purpose": "Steering diagnosis when movement or noise is traced to steering components."
+        },
+        {
+          "documentId": "G2117220",
+          "purpose": "ABS and stability-control diagnosis when wheel-speed faults accompany the complaint."
         }
       ],
       "sourceRefs": [
+        {
+          "documentId": "G1686610",
+          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+        },
+        {
+          "documentId": "G1686502",
+          "sourceHash": "9a2e3e3b1876c54adcc5feff9e34e68a4a455e002ffbdb3a6e037d233465f333"
+        },
+        {
+          "documentId": "G1663637",
+          "sourceHash": "807711a1baf9496d6e07a93fe56a297a0837efcaf5a3a09337995bdf911f63b7"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1721936",
+          "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
+        },
+        {
+          "documentId": "G1693784",
+          "sourceHash": "9249ad74482b718dd4a5dd6df7a2f5883b829920530621d8e4bd2f1c1b39a375"
+        },
+        {
+          "documentId": "G1693754",
+          "sourceHash": "591c9c4b082fb959fc9b3a5cec8f1ec1b5c45ed8923b05283e3f6810198ee350"
+        },
         {
           "documentId": "G1692537",
           "sourceHash": "94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812"
@@ -600,8 +738,142 @@
           "sourceHash": "53f1e27c74128186ebfc2033d69df806f79c020b79f20de819b20b2298a2c597"
         },
         {
-          "documentId": "G1686610",
-          "sourceHash": "feacbd43f1f144ddf46f472c7b05e3a8f8628b16c86e0aad5ed254be75ccd53a"
+          "documentId": "G1757488",
+          "sourceHash": "bc9fcc768a9bf7cabbb5f6b00f43eaa9593e80651255616440f7350cb98b29cb"
+        },
+        {
+          "documentId": "G2117220",
+          "sourceHash": "4e866b45270ad0100a14cd5783620874b8788611d732faa8f52110fcb53c70c7"
+        }
+      ],
+      "systemId": "suspension",
+      "taskType": "diagnostics",
+      "difficulty": "intermediate",
+      "thumbnailMode": "explicit-only",
+      "visualGuide": "wheel-hub-diagnosis",
+      "searchTerms": [
+        "wheel bearing noise",
+        "wheel hub looseness",
+        "wheel play",
+        "wheel humming",
+        "wheel wobble",
+        "wheel bearing diagnosis",
+        "brake drag",
+        "12 and 6",
+        "3 and 9"
+      ],
+      "stepGroups": [
+        {
+          "id": "wheel-ground-checks",
+          "title": "Start on the ground",
+          "summary": "Steps 1–3 · Decide whether to drive, inspect the tires and check wheel mounting.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "wheel-noise-checks",
+          "title": "Describe and safely reproduce the noise",
+          "summary": "Steps 4–5 · Collect clues without treating one sound as a diagnosis.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "wheel-supported-checks",
+          "title": "Check rotation, looseness and brake release",
+          "summary": "Steps 6–11 · Engine off, car securely supported: find what actually moves or drags.",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "id": "wheel-brake-isolation",
+          "title": "If needed: inspect the hub with the brakes moved aside",
+          "summary": "Steps 12–16 · Advanced branch. Choose the fitted front or rear brake procedure, inspect, then restore everything.",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "id": "wheel-confirm-result",
+          "title": "Resolve the remaining clues and verify the result",
+          "summary": "Steps 17–18 · Get the right measurement or noise test, then confirm the repair.",
+          "start": 17,
+          "end": 18
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Damaged tire, loose/missing wheel nuts, wobble, severe grinding or impaired control",
+          "meaning": "There is a condition that can make further driving unsafe.",
+          "next": "Keep the car parked; arrange inspection and suitable transport. Do not continue a road test."
+        },
+        {
+          "finding": "Hum changes with pavement; tire has uneven tread",
+          "meaning": "Tire/road interaction is a credible source. More than one fault can coexist.",
+          "next": "Record pressure, wear and conditions; follow tire/wheel diagnosis before condemning a hub."
+        },
+        {
+          "finding": "Noise changes on ordinary curves",
+          "meaning": "Wheel loading changes; tire wear and hub/bearing concerns remain possible.",
+          "next": "Compare supported checks and use professional localization if needed. Do not select a side from turn direction alone."
+        },
+        {
+          "finding": "Wheel moves relative to its mounting face",
+          "meaning": "Wheel attachment must be investigated.",
+          "next": "Check the wheel, studs, nuts and mating surfaces for damage; do not drive on unexplained looseness."
+        },
+        {
+          "finding": "Wheel/hub moves relative to knuckle",
+          "meaning": "Bearing condition or hub attachment/clamping needs assessment.",
+          "next": "Keep the central fastener undisturbed for diagnosis. Use the correct front/rear repair after confirming the cause."
+        },
+        {
+          "finding": "Knuckle and wheel move together; movement is visible at a joint",
+          "meaning": "Suspension or steering movement may be responsible.",
+          "next": "Identify the exact joint and apply its inspection method; hand position alone is not a diagnosis."
+        },
+        {
+          "finding": "One wheel binds after the brake is released",
+          "meaning": "A local brake or parking-brake issue is possible.",
+          "next": "Follow brake diagnosis. Several dragging wheels require a different system-level investigation."
+        },
+        {
+          "finding": "Hand checks are quiet but road noise persists",
+          "meaning": "The unloaded test has not reproduced the operating condition.",
+          "next": "Use chassis listening, tire/wheel diagnosis or specified measurements. Do not declare the bearing good solely because it has no detectable hand play."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Before any road observation",
+          "body": "No unresolved dangerous tire/wheel condition, abnormal brake or steering control, severe grinding, binding or unexplained mechanical looseness. If present, transport the car for assessment."
+        },
+        {
+          "title": "After a wheel or brake was removed",
+          "body": "Correct parts and required new bolts installed; specified torque applied; hoses/cables unstressed; normal firm brake pedal and brake release verified; wheel seated flush; dry-thread wheel nuts tightened in a star pattern; tools and supports cleared."
+        },
+        {
+          "title": "A diagnosis you can explain",
+          "body": "You can identify the observed fault and the evidence linking it to the symptom. If you cannot, record the uncertainty and the next specific test. A replacement part is not evidence by itself."
+        },
+        {
+          "title": "After repair",
+          "body": "Original symptom checked under comparable safe conditions; no remaining looseness, drag, leak or rubbing; wheel nuts rechecked within 100 mi / 160 km if a wheel was reinstalled."
+        }
+      ],
+      "references": [
+        {
+          "title": "Timken · Checking a hub bearing assembly",
+          "url": "https://www.timken.com/wp-content/uploads/2017/08/LV3-Checking-Hub-Assembly.pdf",
+          "description": "Two-position hand check and exposed-hub inspection; general technique, not Mustang fastener specifications."
+        },
+        {
+          "title": "Timken · Symptoms of a worn wheel hub bearing",
+          "url": "https://www.timken.com/wp-content/uploads/2019/10/Timken-TechTips-LV5-Symptoms-of-a-Worn-Wheel-Hub-Bearing.pdf",
+          "description": "Explains overlapping symptoms and why noise, wobble or brake effects need diagnosis."
+        },
+        {
+          "title": "MOOG · Diagnosis of worn wheel-end bearings",
+          "url": "https://www.moogparts.com/en-eu/pdf/technical-tips/lv/en/MOOG-ESB-Diagnosis-of-worn-wheel-end-bearings.pdf",
+          "description": "Notes that a wheel-bearing noise may only be noticeable while driving. Its generic replacement mileage is not used here."
         }
       ]
     },

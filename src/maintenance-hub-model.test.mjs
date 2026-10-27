@@ -98,3 +98,8 @@ test('timing repair navigation exposes its own visual and access phases without 
  const outline=guideOutline({visualGuide:'v6-37-timing-chain',steps:[{},{}],stepGroups:[{id:'access-timing-chain',title:'How to get to the timing chain',start:1,end:1},{id:'fit-primary-chain',title:'Fit the primary chain',start:2,end:2}]});
  assert.deepEqual(outline.map(x=>x.id),['timing-drive','access-timing-chain','fit-primary-chain']);assert.equal(outline.some(x=>/head|bolt/i.test(x.title)),false);
 });
+
+test('wheel diagnosis outline keeps its visual and named diagnostic phases',()=>{
+ const outline=guideOutline({visualGuide:'wheel-hub-diagnosis',steps:[{},{}],stepGroups:[{id:'wheel-ground-checks',title:'Start on the ground',start:1,end:1},{id:'wheel-supported-checks',title:'Check rotation and looseness',start:2,end:2}],diagnostics:[{}]});
+ assert.equal(outline[0].id,'wheel-check-map');assert(outline.some(item=>item.id==='wheel-supported-checks'));assert(outline.some(item=>item.id==='diagnostic-decisions'));assert(!outline.some(item=>item.id==='timing-drive'||item.id==='gasket-location'||item.id==='steps'));
+});

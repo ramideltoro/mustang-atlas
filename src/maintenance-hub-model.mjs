@@ -39,6 +39,7 @@ export function guideOutline(guide){
  return [
   [guide.visualGuide==='v6-37-head-gasket','gasket-location','Where the head gasket lives'],
   [guide.visualGuide==='v6-37-timing-chain','timing-drive','Meet the timing drive'],
+  [guide.visualGuide==='wheel-hub-diagnosis','wheel-check-map','Your route through the checks'],
   [guide.when?.summary,'when',guideWhenTitle(guide)],
   [guide.introduction,'understand','Understand the task'],
   [guide.why,'why','Why it matters'],

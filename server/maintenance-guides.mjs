@@ -36,11 +36,11 @@ const idArray = (v = []) => Array.isArray(v) && v.length <= 150 && v.every(safeI
 const fitValid = v => object(v) && Array.isArray(v.engines) && v.engines.length > 0 && v.engines.every(e => ENGINE_OPTIONS.includes(e)) && new Set(v.engines).size === v.engines.length && Array.isArray(v.years) && v.years.length > 0 && v.years.every(y => Number.isInteger(y) && y >= 1900 && y <= 2100) && (!v.equipment || safeText(v.equipment, 1000)) && (!v.market || safeText(v.market, 240));
 const proseRows = (v = [], field = 'body') => Array.isArray(v) && v.length <= 60 && v.every(s => object(s) && safeText(s.title, 240) && safeText(s[field]));
 const diagnosticRows = (v = []) => Array.isArray(v) && v.length <= 60 && v.every(s => object(s) && ['finding','meaning','next'].every(k => safeText(s[k], 4000)));
-const visualSources = { 'v6-37-head-gasket':['G1681515','G1681516'], 'v6-37-timing-chain':['G1681528','G1681517','G1681532'] };
+const visualSources = { 'v6-37-head-gasket':['G1681515','G1681516'], 'v6-37-timing-chain':['G1681528','G1681517','G1681532'], 'wheel-hub-diagnosis':['G1686610','G1663631','G1686507','G1721936'] };
 const stepGroupsValid = g => {
  if (g.stepGroups === undefined) return true;
  if (!Array.isArray(g.stepGroups) || !g.stepGroups.length || g.stepGroups.length > 12 || !Array.isArray(g.steps)) return false;
- let next = 1; const seen = new Set(), reserved = new Set(['when','understand','why','prepare','gasket-location','timing-drive','visual-guide','steps','diagnostic-decisions','verify-results','watch-for','keep-in-mind','repair-guides','online-references']);
+ let next = 1; const seen = new Set(), reserved = new Set(['when','understand','why','prepare','gasket-location','timing-drive','wheel-check-map','visual-guide','steps','diagnostic-decisions','verify-results','watch-for','keep-in-mind','repair-guides','online-references']);
  for (const group of g.stepGroups) {
   if (!object(group) || !safeId(group.id) || reserved.has(group.id) || group.id.startsWith('job-step-') || seen.has(group.id) || !safeText(group.title,240) || !safeText(group.summary,2000) || !Number.isInteger(group.start) || !Number.isInteger(group.end) || group.start !== next || group.end < group.start || group.end > g.steps.length) return false;
   next = group.end + 1; seen.add(group.id);
@@ -169,7 +169,7 @@ export function createMaintenanceGuideCatalog(db, { contentDir = path.resolve('c
       if (!reason && !stepGroupsValid(g)) reason = 'invalid-step-groups';
       if (!reason && g.visualGuideStep !== undefined && (g.visualGuide !== 'v6-37-head-gasket' || !Number.isInteger(g.visualGuideStep) || g.visualGuideStep < 1 || g.visualGuideStep > g.steps.length)) reason = 'invalid-visual-guide-step';
       if (!reason && !referenceRows(g.references)) reason = 'invalid-public-references';
-      if (!reason && g.visualGuide !== undefined && (typeof g.visualGuide !== 'string' || !Object.hasOwn(visualSources,g.visualGuide) || g.applicability.engines.length !== 1 || g.applicability.engines[0] !== '3.7L' || g.applicability.years.length !== 1 || g.applicability.years[0] !== 2015 || !visualSources[g.visualGuide].every(id=>g.sourceRefs.some(r=>r.documentId===id)))) reason = 'invalid-visual-guide';
+      if (!reason && g.visualGuide !== undefined && (typeof g.visualGuide !== 'string' || !Object.hasOwn(visualSources,g.visualGuide) || (g.visualGuide === 'wheel-hub-diagnosis' ? g.applicability.engines.some(e=>!['2.3L','3.7L','5.0L'].includes(e)) : g.applicability.engines.length !== 1 || g.applicability.engines[0] !== '3.7L') || g.applicability.years.length !== 1 || g.applicability.years[0] !== 2015 || !visualSources[g.visualGuide].every(id=>g.sourceRefs.some(r=>r.documentId===id)))) reason = 'invalid-visual-guide';
       if (!reason && workshop && (!idArray(g.primaryDocumentIds) || !g.primaryDocumentIds?.length || g.primaryDocumentIds.some(id => !g.procedures.some(p => p.documentId === id)))) reason = 'invalid-primary-procedures';
       if (!reason && workshop) {
         // Supporting references such as lifting or surface cleaning do not

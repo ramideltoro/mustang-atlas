@@ -237,3 +237,15 @@ test('timing-chain visual requires current chain, cover and secondary references
  const c=make();assert.equal(c.detail('oil',{engine:'3.7L',year:2015}).visualGuide,'v6-37-timing-chain');assert.equal(c.detail('oil',{engine:'5.0L'}).visualGuide,undefined);assert.equal(c.detail('oil',{year:2016}).visualGuide,undefined);
  for(const change of[g=>g.sourceRefs.pop(),g=>g.sourceRefs.at(-1).sourceHash='stale',g=>g.applicability.engines.push('5.0L'),g=>g.applicability.years.push(2016),g=>g.visualGuide='toString',g=>g.visualGuide=['v6-37-timing-chain'],g=>g.visualGuideStep=1])assert.equal(make(change).detail('oil'),null);
 });
+
+test('wheel diagnosis visual requires current inspection sources and compatible vehicle scope',t=>{
+ const make=(change=()=>{})=>{
+  const f=fixture(t);const ids=['G1686610','G1663631','G1686507','G1721936'];
+  for(const id of ids)f.db.prepare('INSERT INTO documents VALUES (?,?,?,?,?,?,?,?,?,?)').run(id,'Wheel inspection','diagnosis','suspension','204-00','Suspension','[]','hash-'+id,'[]','[]');
+  const data=seed(),g=data.guides[0];g.applicability={engines:['2.3L','3.7L','5.0L'],years:[2015]};g.visualGuide='wheel-hub-diagnosis';g.sourceRefs.push(...ids.map(documentId=>({documentId,sourceHash:'hash-'+documentId})));change(g);
+  fs.writeFileSync(path.join(f.dir,'maintenance-guides.json'),JSON.stringify(data));return createMaintenanceGuideCatalog(f.db,{contentDir:f.dir});
+ };
+ const c=make();for(const engine of ['2.3L','3.7L','5.0L'])assert.equal(c.detail('oil',{engine}).visualGuide,'wheel-hub-diagnosis');
+ assert.equal(c.detail('oil',{engine:'5.2L'}).visualGuide,undefined);assert.equal(c.detail('oil',{year:2016}).visualGuide,undefined);
+ for(const change of[g=>g.sourceRefs.pop(),g=>g.sourceRefs.at(-1).sourceHash='stale',g=>g.applicability.engines.push('5.2L'),g=>g.applicability.years.push(2016),g=>g.visualGuideStep=1])assert.equal(make(change).detail('oil'),null);
+});

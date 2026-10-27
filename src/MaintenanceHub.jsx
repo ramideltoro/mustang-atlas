@@ -15,6 +15,7 @@ import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 import HeadGasketWorkshop from './HeadGasketWorkshop.jsx';
 import HeadGasketAccess from './HeadGasketAccess.jsx';
 import TimingChainWorkshop from './TimingChainWorkshop.jsx';
+import WheelHubChecks from './WheelHubChecks.jsx';
 export function SpecialMaintenanceTeaser(){return <section className="special-maintenance-teaser"><Wrench size={30} aria-hidden="true"/><div><h2>Special maintenance</h2><p>Bigger jobs, explained carefully. Plan the diagnosis, understand the repair, and work through the checks with the workshop references beside you.</p><a className="text-link" href="#/maintenance?category=special">Explore special maintenance <ArrowRight size={16}/></a></div></section>;}
 
 
@@ -82,6 +83,7 @@ function Guide({id,engine,year,onZoom,filters,section}){
   {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className={"maintenance-article-layout"+(guide.stepGroups?.length?" is-phased":"")}><article className="maintenance-article-body">
    {guide.visualGuide==='v6-37-head-gasket'&&<GuideSection id="gasket-location" title="Where the head gasket lives" icon={BookOpen}><HeadGasketAccess onJump={jumpTo}/></GuideSection>}
    {guide.visualGuide==='v6-37-timing-chain'&&<GuideSection id="timing-drive" title="Meet the timing drive" icon={BookOpen}><TimingChainWorkshop onJump={jumpTo}/></GuideSection>}
+   {guide.visualGuide==='wheel-hub-diagnosis'&&<GuideSection id="wheel-check-map" title="Your route through the checks" icon={BookOpen}><WheelHubChecks onJump={jumpTo}/></GuideSection>}
    {guide.when?.summary&&<section id="when" tabIndex={-1} className="maintenance-when"><CalendarClock size={25} aria-hidden="true"/><div><h2>{guideWhenTitle(guide)}</h2><Markdown body={guide.when.summary}/>{guide.when.notes?.map((note,index)=><div className="maintenance-application" key={index}><Markdown body={note}/></div>)}</div></section>}
    {guide.introduction&&<GuideSection id="understand" title="Understand the task" icon={BookOpen} tone="blue"><Markdown body={guide.introduction}/></GuideSection>}
    {guide.why&&<GuideSection id="why" title="Why it matters" icon={HeartPulse}><Markdown body={guide.why}/></GuideSection>}
