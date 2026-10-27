@@ -170,3 +170,7 @@ The eleventh secondary reservation contains only two screened tasks: already-rem
 
 ### Eleventh screened secondary reservation
 Two tasks are reserved after the current six and isolated oxygen-sensor retries: an already-removed 5.2L cylinder-head bench procedure and the four-engine pressure-release subprocedure. Exact pressure-release primary hashes enroll complete FuelSafety and owner starting controls; removed-head work does not acquire vehicle startup instructions. Existing holds retain prior evidence unless explicitly retried. Offline preparation retains all figures and full source; both tasks still require complete independent and supervisory reviews. All 34 focused tests pass.
+
+### Accessible upper-guide adjustment scope
+
+The secondary twelfth reservation contains only G1726475, untwisting webbing at an already accessible seatbelt guide. Its complete source and both fold/feed figures remain in the review packet; conditional trim access is explicitly a separate prerequisite, and obstructed access stops. This does not authorize retractor repair or restraint-system certification. Full independent review and exact supervisory approval remain required. The secondary promoter now recognizes this reserved manifest.
