@@ -54,3 +54,25 @@ test('identical image bytes share one attachment with explicit per-document mapp
  await Promise.all([call('author',{documentId:'a'},[a],dir+'/a'),call('author',{documentId:'b'},[b],dir+'/b')]);assert.equal(observed.images.length,1);assert.deepEqual(observed.input.imageOrder.map(x=>[x.documentId,x.index,x.localIndex]),[['a',1,1],['b',1,1]]);
  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('media hub and fuel door names do not import unrelated wheel or fuel-system hazards',async()=>{
+ const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');
+ const make=(id,title,related=[])=>({id,title,related,media:[],engines:[],blocks:[],text:'Source text.',source_hash:id+'-hash'});
+ const bridge=make('G1693180','About this Manual',['G1693189']),general=make('G1693189','Health and Safety Precautions',['G1693193','G1693188']),wheel=make('G1693193','Wheel and Tire Safety'),fuel=make('G1693188','Gasoline Fuel System Safety');
+ for(const title of['Media Hub','Fuel Filler Door']){const primary={...make('job',title,['G1693180']),kind:'repair',section_title:'Interior Trim'};const p=buildSupportingPackage(primary,[primary,bridge,general,wheel,fuel]);assert.deepEqual(p.documents.map(d=>d.id),['G1693189']);assert.equal(p.unavailableSupportingReferences.length,0);}
+});
+
+test('focused safety refresh preserves approved prose and existing requirements',async()=>{
+ const {validatePreservedProse}=await import('./reference-editorial-lib.mjs');const old={title:'A title',introduction:'Reviewed introduction',edits:[{blockId:'a',text:'Refit the part.',why:'Reviewed explanation.'}],requirements:[{category:'Tools',items:[{name:'Tool',detail:'Existing requirement.'}]}]};
+ const good=structuredClone(old);good.requirements.push({category:'Preparation',items:[{name:'Key',detail:'New sourced preparation.'}]});assert.deepEqual(validatePreservedProse(old,good),[]);const changed=structuredClone(good);changed.edits[0].why='Changed technical explanation.';assert.ok(validatePreservedProse(old,changed).length);const missing=structuredClone(good);missing.requirements.shift();assert.ok(validatePreservedProse(old,missing).length);
+});
+
+test('startup wording requires exact reviewed safety evidence and leaves actions untouched',async()=>{
+ const {clarifyStartupPreparation,GENERAL_SAFETY_HASH}=await import('./reference-editorial-startup.mjs');
+ const draft={requirements:[{category:'Preparation',items:[{name:'Starting',detail:'Remove the key from the vehicle.'},{name:'Remote start',detail:'If equipped, disable remote start through the display.'}]}],edits:[{text:'Switch the ignition ON for this test.'}]};
+ const ref={documentId:'G1693189',sourceHash:GENERAL_SAFETY_HASH};assert.equal(clarifyStartupPreparation(structuredClone(draft),{kind:'repair',supportingSourceRefs:[{...ref,navigationOnly:true}]}).length,0);assert.equal(clarifyStartupPreparation(structuredClone(draft),{kind:'diagnosis',supportingSourceRefs:[ref]}).length,0);assert.equal(clarifyStartupPreparation(draft,{kind:'repair',supportingSourceRefs:[ref]}).length,1);assert.match(draft.requirements[0].items[0].detail,/ignition OFF/);assert.equal(draft.requirements[0].items[1].detail,'If equipped, disable remote start through the display.');assert.equal(draft.edits[0].text,'Switch the ignition ON for this test.');assert.equal(clarifyStartupPreparation(draft,{kind:'repair',supportingSourceRefs:[ref]}).length,0);
+});
+
+test('body closures include complete applicable body safety evidence without fuel-system assumptions',async()=>{
+ const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const make=(id,title,related=[])=>({id,title,related,media:[],engines:[],blocks:[],text:'Complete precautions.',source_hash:id+'-hash'});const primary={...make('door','Fuel Filler Door',['G1693180']),kind:'repair',section_title:'Body Closures'},bridge=make('G1693180','About this Manual',['G1693189']),general=make('G1693189','General Safety',['G1693182','G1693188']),body=make('G1693182','Body Repair Health and Safety'),fuel=make('G1693188','Gasoline Fuel Safety');const p=buildSupportingPackage(primary,[primary,bridge,general,body,fuel]);assert.deepEqual(p.documents.map(d=>d.id),['G1693189','G1693182']);assert.equal(p.unavailableSupportingReferences.length,0);
+});
