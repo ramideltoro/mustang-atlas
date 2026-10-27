@@ -35,3 +35,13 @@ All 45 legacy care articles have completed the expanded-evidence author/reviewer
 Three articles remain held and unchanged: routine oil/filter service lacks established engine-specific routine access; A/C odor treatment lacks the vehicle-specific drain identification/access and restriction check; transmission cooler backflushing lacks established adapter connection/circuit isolation. These are concrete missing core instructions, not optional follow-up work. No guessed access operations or specifications were published. Exact per-guide artifact hashes, live equality and hold reasons are recorded privately in work/editorial-care/coverage-checkpoint.json.
 
 The broader workshop/reference workers and automatic publisher continue. The 13:40 UTC release reached 190 live rewrites overall (84 practical guides and 106 references). This does not mean the entire manual library is rewritten.
+
+## Secondary workshop continuation
+
+After the 45-guide care sweep, its single Codex CLI slot moved to explicit, disjoint workshop reservations rather than increasing writer concurrency. `scripts/care-editorial-promote-workshop.mjs` accepts only reserved IDs with complete independent source review, exact supervisory guide-hash approval, preserved review-folder provenance and successful full-catalog validation. It stages approved records into the main workshop queue; the existing release coordinator remains the only publisher.
+
+The first twelve reserved brake, suspension and 5.2L oil/filter articles all passed independent and supervisory review. Eleven were live in release `20261027T145102Z-editorial`; the two-piston anchor-plate article was staged afterward following an exact missing-fluid-source correction. A second twelve-article reservation continues serially in the same slot. Private reservation files, supervisory approvals and promotion manifests remain under `work/editorial-workshop` and `work/editorial-workshop-care`.
+
+The 5.2L oil article includes full workshop access, both fitted filter arrangements, drain-plug handling and refill. Its final dipstick check was independently checked against the official [2015–2016 GT350 supplement, printed page 36 / physical page 39](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-2016-Mustang-Shelby-GT350-Supplement-version-1_su_EN-US_07_2015.pdf#page=39), including the model-specific 15-minute drainback wait. This does not resolve the separately held routine-oil guide for other engines.
+
+The 14:51 UTC release reached 215 live rewrites overall: 102 practical guides and 113 reference entries. Every changed route and the complete catalog passed validation. The whole library remains in progress; held drafts are not counted as published.
