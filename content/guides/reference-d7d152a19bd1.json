@@ -2,18 +2,47 @@
   "documentId": "reference-d7d152a19bd1",
   "sourceHash": "c20fe49825285b931e8767e84e866168ef4fd6627b67eebba74b9e2e32fb9fb1",
   "title": "15 Degree Wobble Extension",
-  "introduction": "Changing the tool arrangement does not always require a different torque setting. For the arrangement pictured here, follow the fastener specification from the relevant repair procedure and the setup limits shown below.\n\nUse the original illustration to check how the adapter or extension is positioned. A different arrangement may need a different correction.",
-  "requirements": [],
+  "introduction": "A wobble extension gives the socket a little freedom to lean when a straight approach is awkward. I use the drawing to check that lean: the marked angle is between the extension and the fastener’s axis, rather than between the torque-wrench handle and the extension. Think of it as elbow room with a firm boundary.\n\nUse the workshop-manual specification for the fastener and keep within the angular limit stated below. This reference establishes the illustrated tool arrangement; the fastener’s own procedure supplies the rest of the tightening instructions.",
+  "requirements": [
+    {
+      "category": "Before tightening",
+      "items": [
+        {
+          "name": "Fastener specification",
+          "detail": "Obtain the tightening specification for the particular fastener from the workshop manual."
+        },
+        {
+          "name": "Extension angle",
+          "detail": "Check the extension’s lean against the fastener axis shown in the drawing, and do not exceed the stated limit."
+        }
+      ]
+    }
+  ],
   "edits": [],
-  "checkedAt": "2026-10-11T16:44:12.018Z",
-  "model": "Codex",
+  "checkedAt": "2026-10-27T11:55:17.603Z",
+  "model": "Codex configured model",
   "editorialVersion": 1,
+  "validationVersion": 2,
   "status": "complete",
   "checks": {
     "passed": true,
+    "errors": [],
     "expectedBlocks": 0,
     "receivedBlocks": 0,
     "humanReviewed": false,
-    "notes": "Calculator UI preserves and verifies original mathematical behavior; all source illustrations retained."
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "ee4ce9e9f864f194b5a814ecb3a002ae969112e8331e6b565b5e5bccca6c0a7f",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 9,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ef51e6260e206afeed5025ab13f0f32ce95e6e5071520744cffbdf88c9cd232a",
+    "reviewedAt": "2026-10-27T11:55:17.603Z"
   }
 }

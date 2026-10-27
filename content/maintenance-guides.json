@@ -4257,22 +4257,25 @@
         "coolant-replacement"
       ],
       "notes": [
-        "These time and mileage intervals are for the stated 2015 base engines. They do not establish a 5.2L schedule."
+        "The existing maintenance schedule is retained separately; this article adds no interval and makes no 5.2L applicability claim.",
+        "The 3.7L vacuum option is separate from its non-vacuum running sequence. The latter has not been imposed on the vacuum option.",
+        "Keep vehicle restraints in place throughout stationary running. Remove wheel blocks only when the service is finished and the vehicle is ready to move.",
+        "The visual finishing inspection and service record are practical completion checks; they do not replace fault diagnosis or pressure testing."
       ],
       "relatedGuideIds": [
         "cooling-check",
         "cooling-pressure-leak-test"
       ],
       "id": "coolant-change",
-      "title": "Coolant replacement: fluid choice and trapped air matter",
+      "title": "2015 Mustang coolant replacement: correct fluid, complete bleeding",
       "categoryId": "engine",
       "hero": {
         "documentId": "G1694549",
         "mediaId": "G1694549-m0005"
       },
-      "summary": "Refresh the coolant at its time-or-distance deadline and use the correct filling and bleeding process.",
-      "introduction": "Coolant carries heat and helps protect the cooling system’s internal surfaces. A replacement renews the fluid, but the job is not finished merely because the reservoir looks full. The system also needs the specified concentration and a filling method that removes trapped air.",
-      "why": "Air pockets and incorrect coolant can undermine an otherwise sound cooling system. The correct procedure is as important as choosing the bottle with the right specification.",
+      "summary": "Drain and replace coolant on the 2015 2.3L, 3.7L or 5.0L Mustang, with separate filling routes and final mixture checks.",
+      "introduction": "I want fresh coolant throughout the system, not a full-looking reservoir hiding a damn air pocket. This guide covers routine coolant replacement on the 2015 2.3L, 3.7L and 5.0L Mustang. The 2.3L and 5.0L require a compatible vacuum refiller followed by Ford's running sequence; the 3.7L also has a documented non-vacuum option. Have the refiller's operating instructions ready when using it. Chemical flushing and cooling-system repairs are separate jobs. [2.3L procedure](#/document/G1673124), [3.7L procedure](#/document/G1694549), [5.0L procedure](#/document/G1694583)",
+      "why": "Coolant carries heat and protects against boiling, freezing and internal corrosion. Correct fluid, concentration and reservoir level all matter. Trapped air makes the finishing sequence a pain in the ass, but skipping it does not make the job finished. These procedures specify Motorcraft Orange coolant and warn that mixing coolant types can reduce corrosion protection and damage the engine or cooling system. Bottle color alone is no compatibility test. [2.3L requirements](#/document/G1673124), [3.7L requirements](#/document/G1694549), [5.0L requirements](#/document/G1694583)",
       "when": {
         "summary": "First replacement: six years or 100,000 mi (160,000 km). Afterward: every three years or 50,000 mi (80,000 km), whichever comes first.",
         "notes": [
@@ -4281,50 +4284,174 @@
       },
       "prepare": [
         {
-          "title": "Let the engine cool",
-          "detail": "Opening a hot pressurized cooling system can cause serious burns."
+          "title": "Choose your engine's filling route",
+          "detail": "Read your branch before draining. The 2.3L requires an Airlift Cooling System Tester UVU550000 or equivalent vacuum tester/refiller; the 5.0L requires a cooling-system vacuum tester/refiller. The 3.7L permits either vacuum filling or its separate non-vacuum sequence. For any vacuum route, obtain the actual equipment's instructions, compatible reservoir adapter and required operating supplies before starting. Ford delegates the equipment controls and acceptance criteria to its manufacturer. [2.3L equipment](#/document/G1673124), [3.7L options](#/document/G1694549), [5.0L equipment](#/document/G1694583)"
         },
         {
-          "title": "Gather the specified fluid and equipment",
-          "detail": "Read the engine-specific draining, vacuum-filling and bleeding instructions before starting. Arrange collection and proper disposal of old coolant."
+          "title": "Gather coolant and concentration equipment",
+          "detail": "Use Motorcraft Orange Prediluted VC-3DIL-B meeting WSS-M97B44-D2, or Motorcraft Orange Concentrated VC-3-B meeting WSS-M97B44-D with distilled water for adjustment. Any equivalent must meet the applicable specification. Have the ROB75240 coolant/battery refractometer and its instructions. Ford's owner guidance recommends a refractometer rather than a hydrometer or test strips for concentration measurement. [2.3L materials](#/document/G1673124), [3.7L materials](#/document/G1694549), [5.0L materials](#/document/G1694583), [Ford coolant checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Prepare collection, access and restraints",
+          "detail": "Have a suitable clean fluid container, drain hose, thick cloth, wheel blocks and tools matching the fitted shield fasteners. A timer helps with the bleeding sequence. Arrange proper disposal of removed coolant. The procedures use a hoist; its capacity must cover the vehicle's actual weight, including cargo or modifications. This guide does not substitute an undocumented floor-jack access route. [Draining equipment](#/document/G1694549), [lifting precautions](#/document/G1663631), [hoist capacity and restraints](#/document/G1693189)"
+        },
+        {
+          "title": "Prevent unexpected starting and fan injuries",
+          "detail": "If fitted, disable remote start through Vehicle settings > Remote Start Setup. During hands-on work, switch the ignition off and remove the key. With the ignition off, inspect the cooling fans for cracks, damage or separation; a damaged fan needs replacement before work continues. Fans can run with the ignition off: disable them before working nearby, and restore their operation before the running checks. Keep clear of fans and other rotating parts whenever the engine runs. [Starting and fan safety](#/document/G1693189)"
+        },
+        {
+          "title": "Let the engine cool and protect yourself",
+          "detail": "Wear eye and ear protection, and gloves when handling sharp-edged parts. Read the coolant's material safety information. Never loosen the reservoir cap while the engine runs or the cooling system is hot: pressurized steam and coolant can escape even as the cap first loosens and cause serious burns. Cover the cap with a thick cloth whenever removing it. The one-minute pauses later in this guide are purge timing, not permission to open a hot system. [Personal protection](#/document/G1693189), [cap precautions](#/document/G1673124)"
         }
       ],
       "steps": [
         {
-          "title": "Confirm the service history and fluid",
-          "body": "Identify what is due and use the required coolant for the engine."
+          "title": "Check the existing coolant and service history",
+          "body": "Confirm the fitted engine and review what coolant has been used. Inspect the coolant through the expansion tank, also called the reservoir or degas bottle. Motorcraft Orange can become pink or light red during normal use; if it remains clear and uncontaminated, that change alone does not require replacement or flushing. Dirty, rusty or contaminated coolant requires replacement. If non-specified coolant has been used, stop this routine replacement route and arrange the separate chemical-flushing procedure. A partial drain does not satisfy that requirement. [2.3L condition checks](#/document/G1673124), [3.7L condition checks](#/document/G1694549), [5.0L condition checks](#/document/G1694583)"
         },
         {
-          "title": "Drain and refill by the correct procedure",
-          "body": "Follow its access, draining, filling-equipment and bleeding requirements in order."
+          "title": "Measure concentration and select the target",
+          "body": "With the engine cold and off, cover the reservoir cap with the thick cloth and unscrew it slowly. Measure the coolant with the refractometer according to its instructions. For ordinary year-round use, choose 48/52 to 50/50 coolant to distilled water, giving approximately −34°C to −37°C [−30°F to −34°F] freeze protection. If the existing concentration is within that range, use the specified prediluted coolant to maintain it. For other readings, use the specified concentrate and/or distilled water to reach the selected target. After a separately completed flush, establish the mixture with concentrate and distilled water. [2.3L mixture selection](#/document/G1673124), [3.7L mixture selection](#/document/G1694549), [5.0L mixture selection](#/document/G1694583)\n\nFor climates below −37°C [−34°F], a concentration above 50% may be needed, but never exceed 60/40. A 60% concentration provides freeze protection to −50°C [−58°F]; more than 60% reduces overheating protection and can damage the engine. In extremely hot climates, 40/60 is the minimum: less than 40% coolant reduces freeze and corrosion protection. Ratios here are coolant to distilled water. [2.3L climate limits](#/document/G1673124), [3.7L climate limits](#/document/G1694549), [5.0L climate limits](#/document/G1694583)"
         },
         {
-          "title": "Complete the final checks",
-          "body": "Verify the final level and absence of leaks as directed, then record the date, mileage and coolant used."
+          "title": "Check the replacement fluid before opening the drain",
+          "body": "Match the coolant specifications in preparation. Do not mix coolant types or use alcohol, methanol, brine, or coolant containing alcohol or methanol; protection can be compromised and the engine damaged by overheating or freezing. These procedures also advise against recycled coolant for systems originally filled with Motorcraft Orange. Keep the old fluid separate from the replacement fill. [2.3L fluid restrictions](#/document/G1673124), [3.7L fluid restrictions](#/document/G1694549), [5.0L fluid restrictions](#/document/G1694583)\n\nDo not add stop-leak pellets, cooling-system sealants or extra inhibitors/additives; Ford warns that these can damage the cooling or heating system or compromise corrosion protection. [Ford coolant guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Position and raise the car on the hoist",
+          "body": "With the engine off, follow the coolant procedure's instruction to position the vehicle on the hoist with the transmission in NEUTRAL. Use the designated lifting points identified by stamped triangles and the lifting-point diagram. Incorrect support can let the car shift or fall. Position the adapters clear of suspension, steering, exhaust, mounting brackets and the axle/rear cover. Check underbody clearance before using a drive-on lift. [2.3L hoist setup](#/document/G1673124), [3.7L hoist setup](#/document/G1694549), [5.0L hoist setup](#/document/G1694583), [lifting points](#/document/G1663631)\n\nUse the hoist's operating instructions and appropriate restraints while positioning. Never work beneath a vehicle held only by a jack, and do not use the emergency tire jack for this service. NEUTRAL here is the hoist-positioning instruction; the car must be secured again before lowering and stationary engine operation. [Support and hoist safety](#/document/G1693189), [jack restrictions](#/document/G1663631)"
+        },
+        {
+          "title": "Remove the fitted underbody shields",
+          "body": "Remove the shield or shields covering radiator-drain access, keeping each panel's fasteners together. Both shield-removal operations are conditional on equipment fitted: inspect the actual car and remove each fitted panel once. Match tools to the actual fasteners and retain the clips for installation. [2.3L shield access](#/document/G1673124), [3.7L shield access](#/document/G1694549), [5.0L shield access](#/document/G1694583)\n\nThe 2.3L drawings include fastening patterns of 16 screw-type fasteners with six retainers, and 19 with four retainers. The 3.7L drawings include 16 with six retainers, and 19 with six retainers. The 5.0L drawings include 19 with six retainers, and 19 with eight retainers. Use these to recognize the fitted panels; the drawings do not establish that every car has two panels or that the patterns are necessarily alternatives. [2.3L panel details](#/document/G1673124), [3.7L panel details](#/document/G1694549), [5.0L panel details](#/document/G1694583)"
+        },
+        {
+          "title": "Collect coolant from the radiator drain",
+          "body": "Locate the radiator drain valve from underneath. The 2.3L drawing shows it on the radiator end tank behind the front structural member. The 3.7L and 5.0L drain drawings show the valve low on the radiator end tank, near the formed metal lines and behind the front crossmember. Identify the valve on the actual radiator before turning anything. [2.3L drain location](#/document/G1673124), [3.7L drain location](#/document/G1694549), [5.0L drain location](#/document/G1694583)\n\nPosition the clean collection container, route a hose from the drain into it, then open the valve and let the coolant drain. Be ready to catch fluid as the valve opens. Less than 80% of system capacity can be recovered with the engine installed, so the collected amount is not the total capacity and the system is not completely empty. Keep contaminated fluid out of the new fill and dispose of it correctly. [2.3L draining](#/document/G1673124), [3.7L draining](#/document/G1694549), [5.0L draining](#/document/G1694583)"
+        },
+        {
+          "title": "Close the drain, refit the shields and secure the car",
+          "body": "Close the radiator drain valve and remove the collection hose when draining has stopped. Reposition each removed shield, align its attachment points and reinstall its matching screws and retainers. Check that the panels are attached securely and no fasteners remain loose. Match the actual fittings without assigning an unspecified torque. [2.3L underside closure](#/document/G1673124), [3.7L underside closure](#/document/G1694549), [5.0L underside closure](#/document/G1694583)\n\nBefore lowering, apply the parking brake and restore the hoist's required restraints. For an automatic, select P for stationary work. For a manual, use NEUTRAL for the subsequent engine-running sequence, with the parking brake applied. Lower according to the hoist instructions and block the wheels as they return to the ground; have the vehicle fully lowered, securely restrained and the hoist clear before starting. Keep the restraints in place throughout filling and bleeding. Restore any disabled cooling fans before engine operation. [Movement prevention and fan safety](#/document/G1693189), [lifting precautions](#/document/G1663631)"
+        },
+        {
+          "title": "2.3L: connect and use the vacuum refiller",
+          "body": "Use the Airlift Cooling System Tester UVU550000 or equivalent. With the engine cold and off, the reservoir cap removed and the radiator drain closed, fit the compatible refiller adapter at the expansion-tank filler neck. Set up the tool's operating supplies and coolant pickup with the selected mixture according to its instructions. Evacuate the system, perform the equipment manufacturer's acceptance checks, then use its filling and bleeding sequence to draw in coolant. Follow its specified endpoint and safe disconnection procedure. Tool valves, operating requirements and passing vacuum readings are equipment-specific. [2.3L vacuum-filling procedure](#/document/G1673124), [reservoir-mounted refiller illustration](#/document/G1694549)\n\nAfter removing the equipment, continue through steps 9–13. Vacuum filling does not replace the 2.3L running sequence. [2.3L bleeding requirements](#/document/G1673124)"
+        },
+        {
+          "title": "2.3L: perform the initial purge",
+          "body": "Install the degas-bottle cap until it reaches its hard stop. Switch the climate control off. With the car secured as in step 7, start the engine and hold 3,500 rpm for 30 seconds. Switch the engine off and wait one minute to let large air pockets purge. Keep clear of rotating components and leave the cap closed while the system is hot. [2.3L initial purge](#/document/G1673124), [fan safety](#/document/G1693189)"
+        },
+        {
+          "title": "2.3L: check the intermediate level",
+          "body": "Read the reservoir level without opening a hot system. Ford specifies the top of MAX FILL when warm or the top of MIN FILL LEVEL when cold at this intermediate stage. If adjustment is needed, wait until the engine is cold, cover and remove the cap, then add the correct mixture to the top of MIN FILL LEVEL. Reinstall the cap to its hard stop before restarting. The one-minute purge pause is not a cooling-time specification. [2.3L intermediate level and cap precautions](#/document/G1673124)"
+        },
+        {
+          "title": "2.3L: reach the fan-on checkpoint",
+          "body": "Start the engine and let it idle to normal operating temperature. Ford uses the cooling fan cycling on at least once as confirmation that the thermostat is fully open for this procedure. Observe from clear of the fan. If the checkpoint is not reached, the specified warm-up remains incomplete; do not substitute a guessed temperature or waiting time. Stop if abnormal temperature behavior develops. [2.3L warm-up checkpoint](#/document/G1673124), [fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "2.3L: complete five purge cycles",
+          "body": "Complete this cycle five times in total: hold 3,500 rpm for 30 seconds, idle for 30 seconds, then switch the engine off for one minute. Restart as needed for the following cycle. These five cycles follow the separate initial purge in step 9. Keep the climate control off, the cap fitted and the vehicle restrained throughout. [2.3L repeated bleeding sequence](#/document/G1673124)"
+        },
+        {
+          "title": "2.3L: finish the reservoir level",
+          "body": "After the final cycle, leave the engine off and let it cool before opening the system. Cover and remove the cap, check the coolant level and add the correct mixture to the top of MAX FILL if necessary. Reinstall the pressure-relief cap fully. Continue at step 26. [2.3L final level and closure](#/document/G1673124)"
+        },
+        {
+          "title": "3.7L: choose and complete the initial filling route",
+          "body": "Vacuum option: with the engine cold and off, drain closed and shields installed, fit the compatible vacuum-refiller adapter to the expansion-tank filler neck in place of the cap. Arrange operating supplies and the selected coolant mixture according to the equipment instructions. Evacuate, perform its acceptance checks, fill and bleed to its specified endpoint, then disconnect and close the system as instructed. Ford delegates the tool controls and criteria to the manufacturer. Once this route is complete, go to step 26; steps 15–19 belong to the separate non-vacuum method. [3.7L vacuum route and installation illustration](#/document/G1694549)\n\nNon-vacuum option: with the drain closed and shields installed, fill the degas bottle to MAX FILL with the selected coolant mixture, then complete steps 15–19. This option applies to the 3.7L only. [3.7L non-vacuum route](#/document/G1694549)"
+        },
+        {
+          "title": "3.7L non-vacuum: perform the initial purge",
+          "body": "Install the degas-bottle cap to its hard stop and switch the climate control off. With the vehicle secured as in step 7, start the engine and hold 3,500 rpm for 30 seconds. Switch off and wait one minute to purge large air pockets. Keep the cap closed while hot and stay clear of rotating components. [3.7L initial purge](#/document/G1694549), [fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "3.7L non-vacuum: check the intermediate level",
+          "body": "Observe the reservoir level without opening a hot system. The intermediate target is the top of MAX FILL when warm or the top of MIN FILL LEVEL when cold. If topping up is needed, let the engine become cold, cover and remove the cap, and add the correct mixture to the top of MIN FILL LEVEL. Refit the cap to its hard stop before restarting. One minute off does not establish that the system is safe to open. [3.7L intermediate level and warning](#/document/G1694549)"
+        },
+        {
+          "title": "3.7L non-vacuum: reach the fan-on checkpoint",
+          "body": "Start the engine and let it idle to normal operating temperature. The cooling fan must cycle on at least once, which Ford uses to confirm a fully open thermostat in this procedure. Observe from clear of the fan. Without that checkpoint, the prescribed warm-up is incomplete. Stop if abnormal temperature behavior develops. [3.7L warm-up checkpoint](#/document/G1694549), [fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "3.7L non-vacuum: complete five purge cycles",
+          "body": "Perform five total cycles of 3,500 rpm for 30 seconds, idle for 30 seconds, then engine off for one minute. Restart as necessary for each following cycle. These cycles are additional to the initial purge in step 15. Leave the climate control off, the cap installed and the vehicle restrained. [3.7L repeated bleeding sequence](#/document/G1694549)"
+        },
+        {
+          "title": "3.7L non-vacuum: finish the reservoir level",
+          "body": "Leave the engine off after the last cycle and allow it to cool before opening the system. Cover and remove the cap, check the level, and add the correct mixture to the top of MAX FILL if necessary. Reinstall the pressure-relief cap fully. Continue at step 26. [3.7L final level and closure](#/document/G1694549)"
+        },
+        {
+          "title": "5.0L: connect and use the vacuum refiller",
+          "body": "With the engine cold and off, reservoir cap removed, drain closed and shields refitted, install a compatible cooling-system vacuum tester/refiller at the expansion-tank filler neck. Set up its operating supplies and coolant pickup with the selected mixture according to the manufacturer. Evacuate, perform its acceptance checks, and complete its filling and bleeding sequence to the specified endpoint. Remove the equipment using its disconnection instructions. Follow that tool's controls and criteria rather than transferring settings from another refiller. [5.0L vacuum-filling procedure](#/document/G1694583), [reservoir-mounted refiller illustration](#/document/G1694549)\n\nContinue through steps 21–25. The 5.0L requires this vacuum route followed by its running sequence; the 3.7L non-vacuum option is not a substitute. [5.0L bleeding requirements](#/document/G1694583)"
+        },
+        {
+          "title": "5.0L: perform the initial purge",
+          "body": "Install the degas-bottle cap to its hard stop and switch the climate control off. With the car secured as in step 7, start the engine and hold 3,500 rpm for 30 seconds. Switch the engine off and wait one minute to purge large air pockets. Leave the cap closed while hot and keep clear of rotating components. [5.0L initial purge](#/document/G1694583), [fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "5.0L: check the intermediate level",
+          "body": "Read the level through the reservoir without opening a hot system. At this stage, the target is the top of MAX FILL when warm or the top of MIN FILL LEVEL when cold. For an adjustment, wait until the engine is cold, cover and remove the cap, then add the correct mixture to the top of MIN FILL LEVEL if needed. Reinstall the cap to its hard stop before restarting. The one-minute pause does not override the cooling requirement. [5.0L intermediate level and warning](#/document/G1694583)"
+        },
+        {
+          "title": "5.0L: reach the fan-on checkpoint",
+          "body": "Start the engine and let it idle to normal operating temperature. The cooling fan cycling on at least once is Ford's specified confirmation that the thermostat is fully open for this procedure. Observe from clear of the fan. If the checkpoint is not reached, do not declare the warm-up complete or substitute an invented threshold. Stop if abnormal temperature behavior develops. [5.0L warm-up checkpoint](#/document/G1694583), [fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "5.0L: complete five purge cycles",
+          "body": "Complete five total cycles: hold 3,500 rpm for 30 seconds, idle for 30 seconds, then switch off for one minute. Restart as necessary for the next cycle. These follow the separate initial purge in step 21. Keep the climate control off, the cap installed and the vehicle restrained. [5.0L repeated bleeding sequence](#/document/G1694583)"
+        },
+        {
+          "title": "5.0L: finish the reservoir level",
+          "body": "After the final cycle, leave the engine off and let it cool before opening the system. Cover and remove the cap, check the reservoir and add the correct mixture to the top of MAX FILL if necessary. Reinstall the pressure-relief cap fully. Continue at step 26. [5.0L final level and closure](#/document/G1694583)"
+        },
+        {
+          "title": "Pass the final concentration check or correct the fill",
+          "body": "After completing the selected filling and bleeding route, let the engine become cold and measure concentration with the refractometer according to its instructions. Compare it with the target chosen in step 2. Retained coolant means the replacement bottle's label alone cannot establish the final system mixture. [2.3L measurement requirements](#/document/G1673124), [3.7L measurement requirements](#/document/G1694549), [5.0L measurement requirements](#/document/G1694583)\n\nIf the reading passes, confirm the final level and close the cap. If it does not, the job remains unfinished: use the specified concentrate and/or distilled water to correct the fill through the applicable engine's filling and bleeding workflow. If correction requires draining, repeat the cold access, collection and closure operations. Complete that branch again, including its required running checks, then recheck concentration and final level when cold. Adding concentrate or water to the reservoir and immediately sampling that addition does not establish the system mixture. Do not substitute an invented correction volume or circulation time. [2.3L adjustment and bleeding](#/document/G1673124), [3.7L adjustment and filling options](#/document/G1694549), [5.0L adjustment and bleeding](#/document/G1694583)"
+        },
+        {
+          "title": "Inspect, record and check again after driving",
+          "body": "As a finishing inspection, look for fresh coolant at the drain, reservoir cap and accessible areas disturbed during service. Confirm that the drain is closed, shields are secure, the cap is fitted and all tools and containers are clear. Continuing loss or abnormal temperature behavior needs diagnosis; a coolant change does not repair a leak. Use [cooling-system checks](#/maintenance/cooling-check) or [pressure and leak testing](#/maintenance/cooling-pressure-leak-test) for follow-on work. [2.3L closure](#/document/G1673124), [3.7L closure](#/document/G1694549), [5.0L closure](#/document/G1694583)\n\nRecord the date, mileage, engine, coolant specification, final concentration and filling method. Keep removed coolant contained and dispose of it under local requirements. Check the reservoir when cold over the next few drives; normal owner checks use the MIN–MAX range, and additions must not exceed MAX. Repeated topping up calls for investigation. [Ford follow-up checks and disposal](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "watchFor": [
         {
-          "title": "Repeated coolant loss",
-          "body": "Find and repair the cause; a scheduled fluid replacement is not a leak repair."
+          "title": "Hot coolant remains dangerous during bleeding",
+          "body": "One-minute engine-off periods allow purging; they do not establish safe cap-opening conditions. Let the engine cool before loosening the cap, and cover it with a thick cloth. Pressurized steam and liquid can cause serious burns. [2.3L precautions](#/document/G1673124), [3.7L precautions](#/document/G1694549), [5.0L precautions](#/document/G1694583)"
         },
         {
-          "title": "Unstable temperature after service",
-          "body": "Stop and assess the filling/bleeding result rather than assuming the new coolant solved the issue."
+          "title": "The system retains old coolant",
+          "body": "Less than 80% of capacity can be recovered with the engine installed. A single drain is neither a complete fluid evacuation nor a chemical flush. This is why final concentration must be measured. [2.3L recovery limit](#/document/G1673124), [3.7L recovery limit](#/document/G1694549), [5.0L recovery limit](#/document/G1694583)"
+        },
+        {
+          "title": "Required checkpoints stay required",
+          "body": "For the 2.3L, 5.0L and 3.7L non-vacuum branches, complete the initial purge, intermediate level check, fan-on warm-up checkpoint and five subsequent purge cycles. A full reservoir does not replace them. [2.3L sequence](#/document/G1673124), [3.7L non-vacuum sequence](#/document/G1694549), [5.0L sequence](#/document/G1694583)"
+        },
+        {
+          "title": "Overheating is a stop signal",
+          "body": "During this stationary service, stop the running sequence if abnormal temperature behavior develops and let the engine cool before investigating. On a later drive, an overheating warning or fail-safe operation requires getting safely off the road and seeking repairs; fail-safe cooling is an emergency provision, not permission to keep testing the result. [Ford overheating guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "procedures": [
         {
           "documentId": "G1673124",
-          "purpose": "2.3L draining, vacuum filling and bleeding."
+          "purpose": "2.3L coolant selection, draining, vacuum filling and subsequent running bleed."
         },
         {
           "documentId": "G1694549",
-          "purpose": "3.7L draining, vacuum filling and bleeding."
+          "purpose": "3.7L coolant selection and draining, separate vacuum and non-vacuum routes, and reservoir-mounted refiller illustration."
         },
         {
           "documentId": "G1694583",
-          "purpose": "5.0L draining, vacuum filling and bleeding."
+          "purpose": "5.0L coolant selection, draining, vacuum filling and subsequent running bleed."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Designated lifting points, hoist positioning and support precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant personal protection, starting, fan, hoist and vehicle-restraint requirements."
         }
       ],
       "sourceRefs": [
@@ -4339,8 +4466,127 @@
         {
           "documentId": "G1694583",
           "sourceHash": "44e50780c007d7a5ff767548bd72f8ea9233623f08fa9cd43243baa90c82b2cc"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "fluid-access-draining",
+          "title": "Select the fluid and drain the system",
+          "summary": "Shared preparation and draining, with engine-specific shield and drain details.",
+          "start": 1,
+          "end": 7
+        },
+        {
+          "id": "ecoboost-fill-bleed",
+          "title": "2.3L filling and bleeding",
+          "summary": "Vacuum filling followed by the complete running sequence.",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "id": "v6-fill-bleed",
+          "title": "3.7L filling and bleeding",
+          "summary": "Choose vacuum filling or the separate non-vacuum sequence.",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "id": "v8-fill-bleed",
+          "title": "5.0L filling and bleeding",
+          "summary": "Vacuum filling followed by the complete running sequence.",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "id": "mixture-completion",
+          "title": "Verify the result",
+          "summary": "Pass or correct concentration, inspect closure and arrange follow-up checks.",
+          "start": 26,
+          "end": 27
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Orange coolant has become pink or light red but remains clear.",
+          "meaning": "That color change can occur normally and does not itself establish degradation. [2.3L condition guidance](#/document/G1673124), [3.7L condition guidance](#/document/G1694549), [5.0L condition guidance](#/document/G1694583)",
+          "next": "Base the service decision on history, contamination and concentration; do not order a flush solely for this color change."
+        },
+        {
+          "finding": "Coolant is dirty, rusty or contaminated.",
+          "meaning": "Replacement is required, and contaminated coolant must not be reused because it can damage the engine or cooling components. [2.3L contamination guidance](#/document/G1673124), [3.7L contamination guidance](#/document/G1694549), [5.0L contamination guidance](#/document/G1694583)",
+          "next": "Keep it separate for proper disposal and assess the contamination before treating the job as ordinary scheduled maintenance."
+        },
+        {
+          "finding": "Non-specified coolant was used.",
+          "meaning": "Ford requires chemical flushing; routine partial draining is insufficient. [2.3L flushing requirement](#/document/G1673124), [3.7L flushing requirement](#/document/G1694549), [5.0L flushing requirement](#/document/G1694583)",
+          "next": "Arrange the separate documented flushing procedure before completing the replacement fill."
+        },
+        {
+          "finding": "The vacuum refiller fails its manufacturer's checks.",
+          "meaning": "The equipment-dependent filling route has not passed its operating requirements. Ford directs use of the actual manufacturer's instructions. [2.3L equipment requirement](#/document/G1673124), [3.7L equipment requirement](#/document/G1694549), [5.0L equipment requirement](#/document/G1694583)",
+          "next": "Stop and resolve the equipment connection, equipment fault or system issue according to those instructions. Resume only when its checks pass."
+        },
+        {
+          "finding": "The fan never cycles during the specified warm-up.",
+          "meaning": "The thermostat-opening checkpoint for the running-bleed branch has not been established. [2.3L checkpoint](#/document/G1673124), [3.7L checkpoint](#/document/G1694549), [5.0L checkpoint](#/document/G1694583)",
+          "next": "Verify that fan operation was restored after hands-on work. If the checkpoint remains unmet, stop and arrange diagnosis rather than extending engine operation indefinitely."
+        },
+        {
+          "finding": "Final concentration misses the selected target.",
+          "meaning": "The intended mixture has not been established, even if the reservoir level looks correct. [2.3L concentration requirements](#/document/G1673124), [3.7L concentration requirements](#/document/G1694549), [5.0L concentration requirements](#/document/G1694583)",
+          "next": "Correct with the specified concentrate and/or distilled water within the applicable filling and bleeding workflow, then verify concentration and final level again. Do not accept an immediate sample of a reservoir addition as the final system result."
+        },
+        {
+          "finding": "Fresh leakage or repeated level loss appears after service.",
+          "meaning": "The replacement has an unresolved observation; fresh coolant does not establish that the system is sound.",
+          "next": "Switch off and let the engine cool before inspecting the serviced areas. Continue with [cooling-system checks](#/maintenance/cooling-check) and, where needed, [pressure and leak testing](#/maintenance/cooling-pressure-leak-test)."
+        }
+      ],
+      "verification": [
+        {
+          "title": "The correct engine branch is complete",
+          "body": "2.3L and 5.0L: manufacturer-directed vacuum fill, initial purge, intermediate level check, fan-on checkpoint, five purge cycles and final level check. 3.7L: either the completed manufacturer-directed vacuum route or its full non-vacuum sequence. [2.3L completion](#/document/G1673124), [3.7L completion](#/document/G1694549), [5.0L completion](#/document/G1694583)"
+        },
+        {
+          "title": "Concentration passes after the completed workflow",
+          "body": "The final measured mixture matches the selected climate target—normally 48–50% coolant. Any correction has been followed by the applicable filling and bleeding workflow and renewed measurement, rather than an immediate reservoir sample. [2.3L mixture requirements](#/document/G1673124), [3.7L mixture requirements](#/document/G1694549), [5.0L mixture requirements](#/document/G1694583)"
+        },
+        {
+          "title": "Level and closures are correct",
+          "body": "For the running-bleed branches, the final service target is the top of MAX FILL. The cap is fully installed, the radiator drain is closed, and every removed shield has its fasteners and retainers installed. For the 3.7L vacuum option, finish the equipment-directed closure and confirm the cold reservoir level is within MIN–MAX without overfilling. [2.3L final checks](#/document/G1673124), [3.7L filling routes](#/document/G1694549), [5.0L final checks](#/document/G1694583), [Ford cold-level guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "The finishing inspection has no unresolved loss",
+          "body": "No fresh escaping coolant is visible in the inspected areas, and any abnormal temperature behavior or continuing level loss has been routed for diagnosis. Recheck the level cold over the next few drives. This is a service completion check, not a pressure-test certification. [Ford follow-up checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539654&Uid=G1634794&ProcUid=G1749488&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        }
+      ],
+      "searchTerms": [
+        "coolant-change",
+        "2015 Mustang coolant replacement",
+        "2.3L EcoBoost vacuum coolant fill",
+        "3.7L non-vacuum coolant bleeding",
+        "5.0L coolant bleeding",
+        "Motorcraft Orange VC-3DIL-B",
+        "WSS-M97B44-D2",
+        "coolant refractometer",
+        "radiator drain valve",
+        "degas bottle"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "5d3465a270316662534ccfe6f0de800a56ab213d54f5b4c3a93c6890cb6a1d83"
+      }
     },
     {
       "applicability": {
@@ -4774,22 +5020,23 @@
         "belt-condition"
       ],
       "notes": [
-        "The belt interval does not automatically require new pulleys or tensioners. Use the belt routing for the selected engine."
+        "Keep the existing belt maintenance schedule separate from these condition decisions. The scheduled belt service does not itself establish a need for new pulleys or a tensioner. [Ford normal maintenance schedule](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649139&Uid=G1634876&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)",
+        "Pulley, tensioner, generator and compressor repairs are follow-on jobs when diagnosis identifies a fault. The optional tests here help direct that work without turning routine belt care into an accessory-drive rebuild. [Diagnostic repair decisions](#/document/G1673162)"
       ],
       "relatedGuideIds": [
         "cooling-check",
         "service-inspection"
       ],
       "id": "accessory-belts",
-      "title": "Accessory belts: inspect the belt and the system driving it",
+      "title": "Accessory belts: inspect and replace by engine on your 2015 Mustang",
       "categoryId": "engine",
       "hero": {
         "documentId": "G1688121",
         "mediaId": "G1688121-m0002"
       },
-      "summary": "Follow the belt inspection and replacement cadence, while keeping pulley and tensioner diagnosis separate.",
-      "introduction": "An accessory belt transfers crankshaft rotation to its driven accessories. Its routing, the way tension is controlled and any separate A/C belt depend on the engine. Knowing that layout helps you distinguish belt wear from a pulley, tensioner or installation problem.",
-      "why": "A belt may deteriorate with age or contamination, but noise alone does not identify the failed part. Replacing a tensioner on a mileage schedule intended for the belt can add work without addressing the cause.",
+      "summary": "Inspect belt condition and seating, replace the accessory belt using the correct engine branch, and investigate noise without automatically buying every pulley in sight.",
+      "introduction": "I want a belt inspection to end with a useful answer, not a shopping cart full of guesses. This guide covers the 2015 Mustang’s 2.3L, 3.7L and 5.0L accessory belts, including the separate A/C belt operation required for 2.3L replacement. The detailed wear limits and tensioner tests below apply specifically to the 2.3L. Separate 3.7L and 5.0L A/C-belt replacement is outside this guide. Choose your engine’s branch and keep its routing drawing handy. [2.3L belt](#/document/G1688219), [2.3L A/C belt](#/document/G1688221), [3.7L belt](#/document/G1688121), [5.0L belt](#/document/G1688132), [2.3L diagnosis](#/document/G1673162)",
+      "why": "The belt carries crankshaft rotation around the accessory drive; its path and tensioner arrangement depend on the engine. On the 2.3L, Ford distinguishes belt damage from poor seating, contamination, pulley faults and tensioner trouble. Finding the cause gives the next belt a fair chance—and keeps the damn parts cannon parked. [Engine layouts](#/document/G1688219), [Drive-system diagnosis](#/document/G1673162)",
       "when": {
         "summary": "Inspect at 100,000 mi (160,000 km), then every other oil change until replacement. Replace the belts at 150,000 mi (240,000 km).",
         "notes": [
@@ -4798,54 +5045,214 @@
       },
       "prepare": [
         {
-          "title": "Identify the belt arrangement",
-          "detail": "Use the correct engine diagram, including a separate A/C belt where fitted."
+          "title": "Choose one replacement branch",
+          "detail": "Use steps 7–10 for the 3.7L, steps 11–14 for the 5.0L, or steps 15–23 for the 2.3L. Replacement requires intake-pipe access on all three engines; the 2.3L also requires removing and refitting its A/C belt. These operations are not automatically necessary for an initial visual inspection. [3.7L method](#/document/G1688121), [5.0L method](#/document/G1688132), [2.3L method](#/document/G1688219), [2.3L A/C access](#/document/G1688221)"
         },
         {
-          "title": "Plan for safe access",
-          "detail": "Inspect with the engine off. Read the removal and installation method before releasing tension or removing a belt."
+          "title": "Viewing aids and personal protection",
+          "detail": "A light and inspection mirror are useful viewing aids. Wear eye and ear protection for service work, plus protective gloves when handling sharp-edged parts. Keep hands and viewing aids clear during any running observation. [Service precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Tools and parts for belt replacement",
+          "detail": "Have the correct vehicle-specific belt, a tool that fits the actual tensioner operating interface, tools matching the intake clamps and cover fasteners, and an inch-pound torque wrench covering the specifications in your branch. The intake-pipe clamp specification is 48 lb.in (5.4 Nm). Match the actual hardware rather than guessing a socket or screwdriver size. [3.7L belt](#/document/G1688121), [3.7L pipe](#/document/G1675695), [5.0L belt](#/document/G1688132), [5.0L pipe](#/document/G1675684), [2.3L belt](#/document/G1688219), [2.3L pipe](#/document/G1675706)"
+        },
+        {
+          "title": "Additional 2.3L equipment",
+          "detail": "For full belt replacement, obtain the flexible stretchy-belt removal tool illustrated as 303-1419, a tool fitting the crankshaft pulley bolt for controlled hand rotation, cable ties at least 3 mm (0.12 in) wide, and a suitable cutter for removing the tie without damaging the belt. Have the correct A/C belt available for installation. The appearance-cover fasteners in this A/C-belt sequence tighten to 80 lb.in (9 Nm). [2.3L stretch-belt method](#/document/G1688221)"
+        },
+        {
+          "title": "Access beneath the car, if needed",
+          "detail": "If reaching the work requires lifting, use equipment with adequate capacity on a hard, level surface. Set the parking brake and block wheels remaining on the ground. Locate the stamped triangles identifying the lifting points and support a jacked vehicle on stands before getting underneath. The emergency tire jack is not a service lift. Protect nearby suspension, steering, exhaust and body parts when positioning lifting equipment. [Lifting safety](#/document/G1693189), [Lifting points](#/document/G1663631)"
         }
       ],
       "steps": [
         {
-          "title": "Review belt condition and routing",
-          "body": "Check for contamination, incorrect seating and visible deterioration using the relevant accessory-drive diagnosis."
+          "title": "Prevent an unexpected start",
+          "body": "Switch the ignition off and remove the key from the vehicle before hands-on work. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup on the central display. Another person or a remote-start command must not be able to start the engine while you are working beside its rotating parts. [Starting precautions](#/document/G1693189)"
         },
         {
-          "title": "Investigate the cause of abnormal wear",
-          "body": "A damaged or misaligned pulley can affect a replacement belt too. Check the system when the evidence calls for it."
+          "title": "Make the fan area safe",
+          "body": "With the ignition off, inspect the cooling fans for damage, cracks or separation. Stop underhood work if a fan is damaged; it can break apart during operation and needs replacement. Fans can operate with the ignition off, so disable them before working nearby. Keep that protection in place throughout hands-on belt work. [Fan precautions](#/document/G1693189)"
         },
         {
-          "title": "Replace and verify by engine",
-          "body": "Follow the correct installation sequence and routing, then complete its operation checks."
+          "title": "Inspect the installed belt and its seating",
+          "body": "With the engine off, examine the accessible belt surfaces and each visible pulley contact. Compare the path with your engine’s routing drawing. Look for ribs sitting outside their matching grooves, an edge overhanging a pulley, contamination and visible deterioration. A light or mirror can improve the view; record any sections you cannot inspect rather than calling the whole belt checked. Every pulley must have correct belt seating after installation. [3.7L routing and seating](#/document/G1688121), [2.3L routing and seating](#/document/G1688219), [5.0L routing and seating](#/document/G1688132)"
+        },
+        {
+          "title": "2.3L: separate small cracks from failed rubber",
+          "body": "Inspect the ribbed face—the lengthwise raised strips that engage the grooved pulleys. Small cracks alone do not condemn this belt. Replace it when a crack reaches the bottom of a groove and exposes the internal cord, or when any rubber chunks are missing. Long strips separating from a rib also count as failure. Apply these acceptance criteria to the 2.3L branch. [Cracking and chunking](#/document/G1673162)"
+        },
+        {
+          "title": "2.3L: judge rubber deposits by severity",
+          "body": "Pilling is worn rubber collecting into little balls between the ribs. Examples 1–2 show small, scattered pills: no action is required. Examples 3–4 show longer pills reaching up to 50% of rib height: replace the belt if noise is apparent. Examples 5–6 show heavy groove deposits: replace the belt because noise and belt stability can be affected. Early pilling may clear during 3,000–5,000 mi (4,800–8,000 km) of normal driving; that observation is not a new service interval or a reason to ignore heavy deposits. [Pilling examples and decisions](#/document/G1673162)"
+        },
+        {
+          "title": "2.3L: look for the cause before ordering parts",
+          "body": "Check for a damaged or contaminated belt, damaged or contaminated pulleys, an incorrect belt, poor fitment, loose hardware and obvious damage around the generator or A/C compressor. Correct an identifiable cause before continuing diagnosis. If lubricant or another leak has contaminated the belt, repair the leak and replace the belt. Do not apply lubricant or belt dressing: it can damage the belt material. Suspect pulleys also warrant checks for trapped stones and alignment; freedom-of-rotation checks require the belt to be unloaded. [Visual inspection and noise diagnosis](#/document/G1673162)"
+        },
+        {
+          "title": "3.7L: remove the air cleaner outlet pipe",
+          "body": "Follow steps 7–10 only for the 3.7L. Disconnect the brake booster tube and crankcase ventilation tube from the air cleaner outlet pipe, and position them aside. Loosen the pipe’s two clamps and remove the pipe. Keep track of the original tube connections for reassembly. [3.7L intake access](#/document/G1675695)"
+        },
+        {
+          "title": "3.7L: release tension and remove the belt",
+          "body": "Use the correctly fitting tool to rotate the accessory-belt tensioner counterclockwise. Hold the spring-loaded tensioner under control, slip the belt off and let the tensioner return under control. Remove the belt from the remaining pulleys. Keep fingers out of the belt-to-pulley pinch points. [3.7L belt removal](#/document/G1688121)"
+        },
+        {
+          "title": "3.7L: route and install the replacement",
+          "body": "Match the replacement belt to the vehicle and follow the 3.7L routing drawing around the large upper-left pulley, right-hand generator pulley, lower-left crankshaft pulley and central tensioner. Preserve the exact path shown rather than copying another engine’s layout. Rotate the tensioner counterclockwise for clearance, fit the belt and return the tensioner under control. Inspect every pulley contact for complete seating. [3.7L routing and installation](#/document/G1688121)"
+        },
+        {
+          "title": "3.7L: restore the intake",
+          "body": "Refit the air cleaner outlet pipe and tighten both clamps to 48 lb.in (5.4 Nm). Reconnect the crankcase ventilation tube and brake booster tube to their original connections, then check that each connection is secure. Continue at step 27. [3.7L intake reassembly](#/document/G1675695)"
+        },
+        {
+          "title": "5.0L: clear the air cleaner outlet pipe",
+          "body": "Follow steps 11–14 only for the 5.0L. Remove the engine appearance cover. Disconnect and position aside both brake booster tubes, the crankcase ventilation tube and the resonator air inlet tube. Loosen the two outlet-pipe clamps and remove the pipe. Match the tools to the actual attachments. [5.0L intake access](#/document/G1675684)"
+        },
+        {
+          "title": "5.0L: release tension and remove the belt",
+          "body": "Rotate the accessory-belt tensioner counterclockwise using the correctly fitting tool. Hold it under control while slipping the belt off, then let it return under control. Remove the belt from the remaining pulleys. Keep the 5.0L routing drawing available for installation. [5.0L belt removal](#/document/G1688132)"
+        },
+        {
+          "title": "5.0L: install along the V8 path",
+          "body": "Route the correct replacement belt exactly as the 5.0L drawing shows, including the upper small pulley and central tensioner. Rotate the tensioner counterclockwise to provide installation clearance, fit the belt and return the tensioner under control. Check every pulley contact for correct seating. This operation services the accessory belt shown in the drawing. [5.0L routing and installation](#/document/G1688132)"
+        },
+        {
+          "title": "5.0L: reconnect the tubes and cover",
+          "body": "Refit the air cleaner outlet pipe and tighten both clamps to 48 lb.in (5.4 Nm). Reconnect the resonator air inlet tube, crankcase ventilation tube and both brake booster tubes. Check the connections, then reinstall and secure the appearance cover using its actual attachments. Continue at step 27. [5.0L intake reassembly](#/document/G1675684)"
+        },
+        {
+          "title": "2.3L replacement: remove the appearance cover",
+          "body": "Follow steps 15–23 for full 2.3L accessory-belt replacement. Remove the appearance-cover bolts and nuts, then lift off the cover. Keep its hardware together. This branch follows the A/C-belt access sequence, whose cover reassembly specification is 80 lb.in (9 Nm). [2.3L A/C-belt access](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: remove the outlet pipe without admitting debris",
+          "body": "Keep particles out of every opened intake connection: even small debris can damage the turbocharger compressor vanes. Loosen the clamp securing the CAC bypass valve inlet tube—the short curved tube shown connecting to the outlet pipe—then disconnect it and position it aside. Disconnect and position aside the crankcase ventilation tube. Loosen the three clamps identified in the outlet-pipe removal operation and remove the pipe. Keep the opened intake protected from debris while working. [2.3L pipe removal and debris precaution](#/document/G1675706)"
+        },
+        {
+          "title": "2.3L: remove the A/C belt with the flexible tool",
+          "body": "Use the strap-style stretchy-belt tool illustrated as 303-1419. Turn the crankshaft pulley bolt clockwise by hand while feeding the tool onto the A/C compressor pulley through approximately 180°, wrapping it around the pulley as shown. At the lower belt departure, fold the flexible tool under the inside of the A/C belt so its free tail hangs downward. Pull the tool downward firmly in one quick motion to remove the belt. The fold and pull peel the belt off the compressor pulley; keep fingers clear of the belt and pulley throughout. [Illustrated A/C-belt removal](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: remove the accessory belt",
+          "body": "Rotate the accessory-belt tensioner counterclockwise with the correctly fitting tool. Hold it under control, slip the accessory belt off and return the tensioner under control. Remove the belt from the remaining pulleys. Keep the replacement accessory belt off the tensioner and away from the crankshaft pulley while installing the A/C belt in the following steps. [Accessory-belt removal](#/document/G1688219), [A/C installation clearance](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: position the A/C belt and cable tie",
+          "body": "Fit the A/C belt onto the compressor pulley, then place it over the top of the crankshaft pulley. Feed a cable tie at least 3 mm (0.12 in) wide through a crankshaft-pulley spoke, bring it up and over the belt and tighten it to hold the belt against the pulley. The illustration places this loop at the right-hand side of the crankshaft pulley with the tie tail pointing downward. Keep the accessory belt clear of the crankshaft pulley. [Cable-tie placement](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: roll the A/C belt onto the crankshaft pulley",
+          "body": "Continue turning the crankshaft clockwise by hand through 180° to install the A/C belt. Use controlled hand rotation; keep hands clear of the moving belt-to-pulley contact. Once the belt is installed, remove the cable tie completely without nicking the belt. [180° installation and tie removal](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: verify A/C-belt seating through a full turn",
+          "body": "With the cable tie removed, rotate the crankshaft by hand through a further 360°. Check that the A/C belt is correctly seated on both the crankshaft and compressor pulleys. Do not proceed with a rib outside its groove or a belt edge riding over the pulley. [360° seating check](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: install and seat the accessory belt",
+          "body": "Route the replacement accessory belt along the 2.3L path shown in its drawing. Rotate the tensioner counterclockwise for clearance, fit the belt and return the tensioner under control. Check every accessory-belt pulley contact, then check the A/C belt again. Both belts must be correctly seated before reassembly. [Accessory-belt routing](#/document/G1688219), [Both-belt completion checks](#/document/G1688221)"
+        },
+        {
+          "title": "2.3L: restore the intake pipe and appearance cover",
+          "body": "Inspect the intake components and clean them if needed before reconnecting them, keeping debris out of the system. Refit the outlet pipe and tighten the three clamps specified in its removal operation to 48 lb.in (5.4 Nm). Reconnect the crankcase ventilation tube. Reconnect the CAC bypass valve inlet tube and secure its clamp; no separate tightening value is specified for that clamp. Refit the appearance cover and tighten its bolts and nuts to 80 lb.in (9 Nm) for this A/C-belt sequence. Continue at step 27. [Intake reassembly](#/document/G1675706), [Cover reassembly](#/document/G1688221)"
+        },
+        {
+          "title": "Optional 2.3L static test: use the smaller access route",
+          "body": "Use steps 24–26 only when a concern warrants an unloaded tensioner check and you are not already working through the replacement branch. With the engine secured against starting, remove the appearance-cover fasteners and cover, then remove the outlet pipe using step 16. The tensioner-access drawing identifies three bolts as item 1 and a nut as item 2; retain that distinction for reassembly. This access route allows the accessory belt to be detached at the tensioner without removing the A/C belt. Do not remove the tensioner’s mounting bolts for this test. [Tensioner access](#/document/G1688220), [Static-test scope](#/document/G1673162)"
+        },
+        {
+          "title": "Optional 2.3L static test: check movement and the unloaded pulley",
+          "body": "Inspect around the tensioner for lubricant or other contamination. Repair leaks first; a contaminated tensioner must not be cleaned as a repair because its internal damping mechanism may be damaged. Rotate the tensioner counterclockwise, detach the accessory belt at that pulley and return the tensioner under control. Using the correct tool, move it from its relaxed position through its full stroke and back. Spring resistance must be present, without excessive sticking, grabbing or binding; some damping friction is normal. Turn the unloaded tensioner pulley by hand and check for damage, free rotation and alignment. A failed check calls for tensioner replacement through its separate repair procedure before operational testing. [Static criteria](#/document/G1673162), [Belt detachment](#/document/G1688220)"
+        },
+        {
+          "title": "Optional 2.3L static test: restore everything you detached",
+          "body": "If the tensioner passes, rotate it counterclockwise, refit the accessory belt and return it under control. Verify correct seating on every pulley. Reinstall the outlet pipe, tightening its three specified clamps to 48 lb.in (5.4 Nm); reconnect the crankcase ventilation tube and CAC bypass valve inlet tube and secure the bypass-tube clamp. Refit the appearance cover using the torque assignments in the tensioner-access procedure: the three item-1 bolts take 53 lb.in (6 Nm), and the item-2 nut takes 89 lb.in (10 Nm). These assignments belong to this access branch. [Belt and cover restoration](#/document/G1688220), [Pipe restoration](#/document/G1675706)"
+        },
+        {
+          "title": "Finish the engine-off checks",
+          "body": "Inspect the complete installed belt path against your engine’s drawing and confirm seating at every pulley. Check all intake connections disturbed in your branch and confirm their specified clamp torques. On the 2.3L replacement branch, also confirm that the installation tie and stretchy-belt tool are removed and that both belts are seated. Remove all tools and viewing aids, secure the covers and restore anything disabled for safe service before preparing for operation. If the vehicle was raised, retain its parking brake and appropriate wheel restraints while safely returning it to the ground. [3.7L completion](#/document/G1688121), [5.0L completion](#/document/G1688132), [2.3L completion](#/document/G1688221), [Service and lifting safety](#/document/G1693189)"
+        },
+        {
+          "title": "2.3L: interpret remaining noise safely",
+          "body": "Only perform a running check after complete reassembly. Keep hands, tools and clothing clear of rotating parts. A chirp is an intermittent twittering sound: look for central tracking on flat pulleys, then shut the engine off before checking alignment, excessive pulley end movement or bent flanges. A metallic rattle directs attention to component installation and loose hardware, also checked with the engine off. Ford specifies a stethoscope or listening device to locate unresolved noise, including an idle check for chirp; route close-range listening to someone equipped to perform it safely. Correct the identified cause and retest. [Noise diagnosis](#/document/G1673162), [Rotating-parts precautions](#/document/G1693189)"
+        },
+        {
+          "title": "2.3L: interpret tensioner movement after a passing static check",
+          "body": "The dynamic test follows a satisfactory static test. With the assembled engine running, observe from a safe position: the tensioner should respond to rapid acceleration or A/C clutch cycling, with movement that can be up to 4 mm. This describes its response during those changes, not a universal replacement threshold. Irregular movement under steady conditions can indicate a bent or out-of-round pulley or shaft, or damaged tensioner damping. Uneven belt-groove depth, called belt rideout, can also cause excessive movement; Ford checks that possibility by fitting a new belt. Diagnose the cause, repair as necessary and test normal operation again. Do not reach into the running drive to measure it. [Dynamic tensioner test](#/document/G1673162)"
         }
       ],
       "watchFor": [
         {
-          "title": "A proposed lubricant or belt dressing",
-          "body": "Do not lubricate the accessory belt."
+          "title": "A new belt over an active leak",
+          "body": "For the 2.3L, contamination requires fixing the leak and replacing the belt. Belt dressing or lubricant can damage the belt rather than repair the cause. [Contamination decisions](#/document/G1673162)"
         },
         {
-          "title": "Cracks versus actual damage",
-          "body": "The 2.3L diagnostic guidance distinguishes small cracks from exposed cord or missing chunks; apply the relevant engine’s inspection criteria."
+          "title": "Debris in the 2.3L intake",
+          "body": "Small particles can damage turbocharger compressor vanes. Keep opened intake connections protected and inspect the components before reconnecting them. [Intake precautions](#/document/G1675706)"
+        },
+        {
+          "title": "A cable tie left on the pulley",
+          "body": "The 2.3L A/C-belt installation tie comes off after the 180° installation turn and before the subsequent 360° seating check. Account for the entire tie before operation. [Tie removal sequence](#/document/G1688221)"
+        },
+        {
+          "title": "Cover torque depends on the access procedure",
+          "body": "The 2.3L A/C-belt sequence specifies 80 lb.in (9 Nm) for its cover bolts and nuts. The tensioner-access sequence assigns 53 lb.in (6 Nm) to the three item-1 bolts and 89 lb.in (10 Nm) to the item-2 nut. Keep the hardware identification and its branch together. [A/C access](#/document/G1688221), [Tensioner access](#/document/G1688220)"
+        },
+        {
+          "title": "Keep the units attached",
+          "body": "The intake-pipe clamp value is 48 pound-inches, or 5.4 Nm. Setting 48 pound-feet would be a very different—and unwelcome—experiment. [2.3L clamps](#/document/G1675706), [3.7L clamps](#/document/G1675695), [5.0L clamps](#/document/G1675684)"
+        },
+        {
+          "title": "Moving diagnostic limits between engines",
+          "body": "The crack limits, pilling categories and static/dynamic tensioner criteria here belong to the 2.3L diagnosis. Use them within that engine branch. [2.3L diagnostic scope](#/document/G1673162)"
         }
       ],
       "procedures": [
         {
-          "documentId": "G1688219",
-          "purpose": "Replace the 2.3L accessory belt."
+          "documentId": "G1688121",
+          "purpose": "3.7L accessory-belt removal, routing, installation and seating checks."
         },
         {
-          "documentId": "G1688121",
-          "purpose": "Replace the 3.7L accessory belt."
+          "documentId": "G1675695",
+          "purpose": "3.7L intake-pipe access, tube reconnection and clamp torque."
         },
         {
           "documentId": "G1688132",
-          "purpose": "Replace the 5.0L accessory belt."
+          "purpose": "5.0L accessory-belt removal, routing, installation and seating checks."
+        },
+        {
+          "documentId": "G1675684",
+          "purpose": "5.0L intake-pipe access and explicit reassembly."
+        },
+        {
+          "documentId": "G1688219",
+          "purpose": "2.3L accessory-belt replacement and engine-specific routing."
+        },
+        {
+          "documentId": "G1688221",
+          "purpose": "2.3L A/C-belt removal, illustrated tool folding and tie placement, installation rotations and cover reassembly."
+        },
+        {
+          "documentId": "G1675706",
+          "purpose": "2.3L intake access, debris protection, reconnection and clamp torque."
+        },
+        {
+          "documentId": "G1688220",
+          "purpose": "Smaller 2.3L access route for belt detachment at the tensioner, with branch-specific cover torque assignments."
         },
         {
           "documentId": "G1673162",
-          "purpose": "Use the 2.3L accessory-drive condition checks."
+          "purpose": "2.3L wear decisions, contamination diagnosis, noise checks and optional tensioner tests."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Unexpected-start, fan, personal-protection and lifting precautions."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Correct lifting-point identification and support precautions if raised access is needed."
         }
       ],
       "sourceRefs": [
@@ -4864,8 +5271,156 @@
         {
           "documentId": "G1673162",
           "sourceHash": "1db5ffa270407479b94aa4b70a9bc448799b6167b95c9a896505d11471f9f7a2"
+        },
+        {
+          "documentId": "G1675695",
+          "sourceHash": "187f2db88aa010351e298ec5d4e669bf07353365e4674cd7c7b0e7fc8635c766"
+        },
+        {
+          "documentId": "G1675684",
+          "sourceHash": "b273a1655f89430d872aba9c5a861f80c390353c29aa77ac45d43ff26e689ee3"
+        },
+        {
+          "documentId": "G1688221",
+          "sourceHash": "83203fa364e1b0ca33e4dc337075c9f8d72a39e81083a086d906d8a227340236"
+        },
+        {
+          "documentId": "G1675706",
+          "sourceHash": "1b98edd6d5abed66910276cdc71a5b60e53cf088e8c6207c41e84982e94a75db"
+        },
+        {
+          "documentId": "G1688220",
+          "sourceHash": "a0d34fd08a951387a4f1a44bac7642051141ba39adc348afe0a49c086eaf9d28"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "inspection",
+          "title": "Set up and inspect",
+          "summary": "Make hands-on work safe, check seating and apply the 2.3L condition criteria.",
+          "start": 1,
+          "end": 6
+        },
+        {
+          "id": "v6-replacement",
+          "title": "3.7L accessory-belt replacement",
+          "summary": "Remove the intake pipe, replace the belt and reconnect the intake.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "v8-replacement",
+          "title": "5.0L accessory-belt replacement",
+          "summary": "Use the V8 access, routing and reassembly sequence.",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "id": "ecoboost-replacement",
+          "title": "2.3L accessory-belt replacement",
+          "summary": "Remove the A/C belt, replace the accessory belt and complete the illustrated stretch-belt installation.",
+          "start": 15,
+          "end": 23
+        },
+        {
+          "id": "ecoboost-static-test",
+          "title": "Optional 2.3L unloaded tensioner check",
+          "summary": "Use the smaller access route without removing the A/C belt.",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "id": "completion",
+          "title": "Verify and follow up",
+          "summary": "Complete reassembly checks and interpret remaining 2.3L symptoms.",
+          "start": 27,
+          "end": 29
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "2.3L: small cracks without exposed cord or missing rubber",
+          "meaning": "Small cracking alone does not meet Ford’s belt-failure criteria.",
+          "next": "Continue checking seating, contamination and other damage rather than replacing solely for small cracks. [Crack criteria](#/document/G1673162)"
+        },
+        {
+          "finding": "2.3L: exposed cord, missing chunks or long strips separating from ribs",
+          "meaning": "The belt has unacceptable damage.",
+          "next": "Use the complete 2.3L replacement branch and investigate any associated pulley, fitment or contamination concern. [Damage criteria](#/document/G1673162)"
+        },
+        {
+          "finding": "2.3L: rubber pills between the ribs",
+          "meaning": "The deposit severity determines the action.",
+          "next": "Leave small scattered pills alone; replace for longer pills up to 50% of rib height when noise is present; replace for heavy groove deposits. [Pilling decisions](#/document/G1673162)"
+        },
+        {
+          "finding": "A belt rib sits outside its matching pulley groove",
+          "meaning": "The installation has not achieved correct seating; on the 2.3L this can also generate noise.",
+          "next": "Correct fitment through the appropriate engine branch and inspect every pulley before operation. [3.7L seating](#/document/G1688121), [2.3L seating](#/document/G1688219), [5.0L seating](#/document/G1688132), [Noise diagnosis](#/document/G1673162)"
+        },
+        {
+          "finding": "2.3L: belt contamination",
+          "meaning": "A leak or other contamination source needs attention as well as the belt.",
+          "next": "Correct the source and replace the belt, then test normal operation. [Contamination diagnosis](#/document/G1673162)"
+        },
+        {
+          "finding": "2.3L: excessive tensioner binding, absent spring resistance or a damaged or poorly rotating tensioner pulley",
+          "meaning": "The tensioner fails the static criteria; ordinary damping friction alone is expected.",
+          "next": "Arrange tensioner replacement through its separate repair procedure before operational testing. [Static-test decisions](#/document/G1673162), [Tensioner repair](#/document/G1688220)"
+        },
+        {
+          "finding": "2.3L: chirping or metallic rattling",
+          "meaning": "Chirping points toward tracking or pulley alignment; rattling points toward loose components or hardware.",
+          "next": "Use step 28 to direct diagnosis, correct the identified cause and retest. [Symptom chart](#/document/G1673162)"
+        },
+        {
+          "finding": "2.3L: irregular tensioner movement under steady conditions",
+          "meaning": "Pulley or shaft geometry, tensioner damping and uneven belt-groove depth are possible causes.",
+          "next": "Follow the static-to-dynamic sequence and investigate the cause before selecting parts. [Dynamic-test decisions](#/document/G1673162)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The inspection has a defined result",
+          "body": "Record your engine, the sections inspected, any inaccessible sections and the findings. For the 2.3L, identify which findings meet the documented replacement criteria. An inspection record should distinguish checked surfaces from hidden ones. [2.3L condition decisions](#/document/G1673162)"
+        },
+        {
+          "title": "The installed belt follows the correct path",
+          "body": "Confirm the engine-specific routing and full seating at every pulley. On the 2.3L replacement branch, confirm that the A/C belt passed the additional 360° hand-rotation seating check and that the cable tie was removed. [3.7L verification](#/document/G1688121), [5.0L verification](#/document/G1688132), [2.3L verification](#/document/G1688221)"
+        },
+        {
+          "title": "The intake and cover are restored",
+          "body": "Confirm every tube removed in your branch is reconnected, the specified intake-pipe clamps are tightened to 48 lb.in (5.4 Nm), and the appearance cover is secured where removed. For the 2.3L, use the cover torque assignments belonging to the access branch you followed. [3.7L reassembly](#/document/G1675695), [5.0L reassembly](#/document/G1675684), [2.3L pipe](#/document/G1675706), [2.3L replacement cover](#/document/G1688221), [2.3L static-test access cover](#/document/G1688220)"
+        },
+        {
+          "title": "The original 2.3L concern has been retested",
+          "body": "After correction and full reassembly, check normal operation and whether the original noise or tracking concern remains. Record persistent symptoms for further diagnosis; a new belt does not establish that every driven component is healthy. [Operational verification](#/document/G1673162)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang accessory belt inspection",
+        "2015 Mustang 2.3L accessory belt replacement",
+        "Mustang EcoBoost A/C stretch belt cable tie",
+        "Mustang 3.7L accessory belt routing",
+        "Mustang 5.0L accessory belt replacement",
+        "Mustang belt cracks pilling chirp",
+        "2.3L belt tensioner static dynamic test"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "413f7fd5a636c0c35718605e03ae9f575f852b59ecfc33cbe853a4e5109cf0cd"
+      }
     },
     {
       "applicability": {
@@ -7053,7 +7608,9 @@
       ],
       "ruleIds": [],
       "notes": [
-        "The cluster can display warnings from other modules. Replacing the display is not the default response to an active warning."
+        "Respond to an active warning when it occurs; do not wait for the next routine check.",
+        "This cabin check does not require lifting the vehicle, removing the cluster, disconnecting the battery or entering engineering test mode.",
+        "MyKey notices can describe an active restriction rather than a fault. For example, Buckle Up to Unmute Audio is a belt reminder associated with MyKey. [MyKey message meanings](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
       ],
       "relatedGuideIds": [
         "brake-fluid",
@@ -7062,15 +7619,15 @@
         "battery-testing-charging"
       ],
       "id": "warning-lamps",
-      "title": "Warning lamps: know a check from an active warning",
+      "title": "Warning lamps: an owner’s start-up check and response guide",
       "categoryId": "electrical",
       "hero": {
         "documentId": "G1693931",
         "mediaId": "G1693931-m0002"
       },
-      "summary": "Check that safety indicators work and respond to the actual message instead of merely clearing it.",
-      "introduction": "Warning lamps and messages are part of the car’s conversation with you. An indicator’s normal start-up behavior differs from a warning that remains on or appears while driving. Checking operation is useful maintenance; interpreting an active warning requires the meaning of that exact lamp or message.",
-      "why": "A working warning system can alert you to a developing problem. Clearing a code or turning a reminder off does not repair the system that produced it.",
+      "summary": "Check the warning lamps on your 2015 Mustang, distinguish normal start-up behavior from an active warning, and choose the right next action.",
+      "introduction": "A dashboard full of lights at start-up can be perfectly normal. One stubborn light afterward can deserve your immediate attention. I’ll walk you through the stationary owner check for a 2015 Mustang with the 2.3L, 3.7L or 5.0L engine, then explain the important warning responses. This covers observation and owner action; circuit tests, pressure measurements and repairs are separate jobs. The goal is to understand what the damn car is saying before buying parts.",
+      "why": "The instrument panel cluster, or IPC, displays information supplied by several vehicle modules. Brake, airbag, engine and other warnings can originate outside the cluster, so an illuminated symbol does not automatically mean the display needs replacing. A normal lamp check confirms the observed display behavior; it does not certify the entire monitored system. [Cluster operation](#/document/G1693931)",
       "when": {
         "summary": "Check operation of brake, ABS, airbag and seatbelt warning lamps every six months.",
         "notes": [
@@ -7079,50 +7636,82 @@
       },
       "prepare": [
         {
-          "title": "Know the expected behavior",
-          "detail": "Use the information-display and system descriptions for the actual fitted cluster."
+          "title": "Set up a stationary check",
+          "detail": "Park somewhere safe and level, apply the parking brake and begin with the engine and ignition off. Stay in the driver’s seat for the check. The brake lamp is expected to illuminate with the ignition on and parking brake applied. [Brake-lamp behavior](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Record the exact message",
-          "detail": "A photograph taken while safely parked can help preserve wording and conditions for diagnosis."
+          "title": "Have a way to record what happens",
+          "detail": "No service tools or replacement materials are needed for this cabin check. A clock or timer helps compare the short lamp checks. A notebook or phone can preserve the exact message, whether a lamp flashed or stayed on, and whether the engine was running. Take photographs only while safely parked."
+        },
+        {
+          "title": "Match the fitted equipment",
+          "detail": "Identify the ABS, brake, airbag and seatbelt symbols before switching on. Check additional indicators only where fitted. Some warnings appear in the information display and do not illuminate during start-up; an absent start-up appearance is not automatically a fault for every symbol. [Ford warning-lamp guide](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Deal with an existing urgent warning first",
+          "detail": "If you are responding to a warning that appeared while driving, read step 6 before attempting another start. An oil-pressure, overheating or brake-system warning takes priority over finishing a routine checklist. [Required message responses](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
         }
       ],
       "steps": [
         {
-          "title": "Observe normal start-up indications",
-          "body": "Compare the lamp behavior with the described operation rather than assuming every illuminated lamp is a fault."
+          "title": "Switch on and watch the actual lamp check",
+          "body": "While stationary, leave the driver’s belt unbuckled briefly and switch the ignition to ON/RUN without starting the engine. Watch from the moment you switch on. Ford calls this a prove-out: a short display check before normal indications take over.\n\nUse these expected durations:\n\n- ABS: 3 seconds.\n- Airbag: 6 seconds.\n- Brake: 3 seconds for the prove-out; it can remain illuminated because the parking brake is applied.\n- Seatbelt: 65 seconds with the belt unbuckled, or until you buckle it.\n- Stability/traction control, stability control OFF and tire-pressure warning: 3 seconds each.\n- LED low-beam malfunction indicator: 3 seconds, where applicable.\n\nThe analog gauges also sweep and then return to the indication commanded by their inputs. Record any expected lamp that never appears, continues flashing or remains illuminated beyond its normal check without an explained operating condition. [Start-up and prove-out details](#/document/G1693931)"
         },
         {
-          "title": "Act on a continuing warning",
-          "body": "Follow the action associated with that exact message. Do not treat a brake-system warning as an oil-service reminder."
+          "title": "Check the belt response and separate the parking-brake indication",
+          "body": "Fasten the driver’s belt and confirm that the seatbelt indicator goes out. Do not count its timed disappearance while unbuckled as a successful buckle-response check. If the reminder does not respond correctly, record the behavior and arrange diagnosis; the [seatbelt and latch guide](#/maintenance/seatbelts-latches) covers the separate physical inspection. [Seatbelt indicator operation](#/document/G1693931)\n\nFor the brake lamp, keep the vehicle stationary with the foot brake firmly applied. Briefly release the parking brake and observe the lamp after the initial prove-out. If it remains on, do not dismiss it as a parking-brake reminder: low fluid or a brake-system malfunction can also illuminate it. Arrange immediate assessment. Reapply the parking brake before continuing or leaving the seat. Do not drive to try to make the light disappear. [Brake warning meaning and urgency](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Diagnose before clearing",
-          "body": "Use the relevant system’s tests to find the reason, then verify that the warning behaves normally after repair."
+          "title": "Recognize the engine light’s pre-start behavior",
+          "body": "The engine-shaped Service Engine Soon lamp, also called the malfunction indicator lamp or MIL, normally illuminates with the ignition on before the engine starts. That alone is not an engine fault. If, after 15 seconds with the engine still off, it blinks eight times, Ford identifies that pattern as not ready for Inspection/Maintenance emissions testing. That is different from a blinking lamp with the engine running.\n\nParking-lamp, high-beam, fog-lamp and turn-signal indicators have no timed prove-out in the cluster table; they normally follow the corresponding controls. Do not mark them faulty merely because they stayed dark during this check. [MIL behavior](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Indicator prove-out table](#/document/G1693931)"
+        },
+        {
+          "title": "Observe what remains after a normal start",
+          "body": "If there is no unresolved warning requiring the engine to remain off, fasten the belt and start the car using its normal starting procedure in a suitable open-air location. Keep the car stationary and the parking brake applied. No road test or deliberate ABS or traction-control activation is needed for this owner check.\n\nObserve which warnings remain after the start-up sequence. The Service Engine Soon lamp normally goes out after cranking when no malfunction is present. The brake lamp can remain on with the parking brake applied. Treat any other continuing warning according to its specific meaning below, rather than expecting every symbol to behave identically. An airbag lamp that never illuminated, keeps flashing or stays on requires service. [After-start warning behavior](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Read and record the message before pressing OK",
+          "body": "Write down the exact wording, accompanying symbols, steady or flashing behavior, and whether the warning appeared before starting, with the engine running or during an earlier drive. Include other warnings that appeared at the same time.\n\nThe steering-wheel OK button acknowledges and removes some messages; others disappear automatically. Certain messages must be acknowledged before menus become available. Wording may be shortened, and available messages depend on equipment and cluster type. Acknowledging a message changes what is displayed—it does not establish that the underlying condition has been corrected. [Information-display messages and controls](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Give stop warnings their proper priority",
+          "body": "For an active warning, follow the matching response immediately:\n\n- **LOW Engine Oil Pressure or the oil warning with the engine running:** stop as soon as safely possible, switch off and check the oil level using the [oil-level guide](#/maintenance/oil-level). If the level is correct and the warning is present, do not resume the journey; obtain immediate service. A warning that persists or returns with the engine running needs prompt professional attention. Repeated starts are not a pressure test.\n- **Check Brake System:** stop in a safe place and contact an authorized dealer. **Brake Fluid Level LOW:** have the brake system inspected immediately. The [brake-fluid guide](#/maintenance/brake-fluid) covers the separate reservoir check; topping up is not proof that the cause is fixed.\n- **High engine-coolant-temperature warning:** stop as soon as possible, switch off the engine and let it cool.\n\n[Oil, brake and coolant warning responses](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Exact oil-pressure and brake messages](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)\n\n- **Steering Loss Stop Safely:** power steering is not working. Stop safely and contact an authorized dealer.\n- **Transmission Overheating Stop Safely or Transmission Overtemperature Stop Safely, where displayed:** stop safely as soon as possible so the transmission can cool. **Transmission Too Hot Press Brake:** stop to let it cool. Do not invent a cooling time or treat a disappearing message as a repair. Transmission service or malfunction messages require dealer attention.\n\n[Steering and transmission message actions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Route continuing warnings before clearing anything",
+          "body": "Use the finding/meaning/next decisions below for warnings that are not explained by the normal check or an intentional operating state. Keep the observations for whoever diagnoses the car. Clearing a message is not a repair plan; replacing the cluster because it delivered bad news is an expensive way to shoot the messenger.\n\nThe cluster receives commands from the engine, brake, restraint and body systems through the vehicle network. Missing communications can also change displayed indications. Several simultaneous lights therefore do not, by themselves, identify a failed sensor or cluster. [Warning inputs and network behavior](#/document/G1693931)\n\nFor a separate instrumentation investigation, use [instrumentation and message-center diagnosis](#/document/G1693940). For a separate brake or ABS investigation, use [brake-system diagnosis](#/document/G1721936). Those are follow-on diagnostic destinations; their tests and repairs are outside this owner check."
+        },
+        {
+          "title": "Finish with a recorded result and a safe parked car",
+          "body": "Record each of the four core safety lamps—brake, ABS, airbag and seatbelt—as observed normal, abnormal or not confirmed. Include the buckle response, the brake-lamp response to the stationary parking-brake check, and any exact messages requiring follow-up. Compare the observations with the expected behavior rather than recording a blanket “all good.” [Expected safety-lamp behavior](#/document/G1693931)\n\nSwitch the ignition off when finished and leave the vehicle securely parked with the parking brake applied. Nothing was removed, so there is no reassembly. If a concern was repaired separately, repeat the applicable normal start-up and owner-response checks afterward; the absence of a warning alone does not certify the repair or the whole safety system."
         }
       ],
       "watchFor": [
         {
-          "title": "Low engine oil pressure",
-          "body": "Stop safely and turn off the engine; check the level and obtain assistance if the warning persists."
+          "title": "A brake warning can mean reduced stopping ability",
+          "body": "With the parking brake released, a continuing brake warning requires immediate assessment. Braking performance may be significantly reduced and stopping distance increased. Driving extended distances with the parking brake engaged can also cause brake failure and injury. [Ford brake warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Check Brake System or low brake fluid",
-          "body": "Stop safely and arrange prompt brake-system assessment."
+          "title": "A blinking engine light while running needs immediate service",
+          "body": "Ford identifies this as misfire that can damage the catalytic converter. Excessive exhaust heat can damage surrounding components and potentially cause a fire. Avoid heavy acceleration and deceleration, drive moderately and obtain service immediately. This is distinct from the engine-off readiness blink pattern in step 3. [Ford misfire response](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "An oil-service reminder is not an oil-pressure warning",
+          "body": "Change Engine Oil Soon means remaining oil life is 10% or less; Oil Change Required means it is at 0%. LOW Engine Oil Pressure requires the stop-and-switch-off response in step 6. Resetting a service reminder cannot resolve that warning. [Ford maintenance messages](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
         }
       ],
       "procedures": [
         {
           "documentId": "G1693931",
-          "purpose": "Understand cluster indicators and message operation."
+          "purpose": "Explain start-up prove-out, indicator timing, warning inputs and normal operating states."
         },
         {
           "documentId": "G1693940",
-          "purpose": "Diagnose instrumentation and message concerns."
+          "purpose": "Reference-only destination for separate instrumentation, message-center and warning-chime diagnosis."
         },
         {
           "documentId": "G1721936",
-          "purpose": "Follow brake-system diagnosis."
+          "purpose": "Reference-only destination for separate brake-system and ABS diagnosis."
         }
       ],
       "sourceRefs": [
@@ -7138,7 +7727,118 @@
           "documentId": "G1721936",
           "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "observe-startup",
+          "title": "Check normal operation",
+          "summary": "Observe the timed checks, belt response and parking-brake indication.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "respond-to-warnings",
+          "title": "Read the warning and act",
+          "summary": "Preserve the message, handle urgent conditions and route remaining concerns.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "close-the-check",
+          "title": "Record and finish",
+          "summary": "Document what was actually confirmed and leave the car secure.",
+          "start": 8,
+          "end": 8
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "A core safety lamp does not appear during its expected check.",
+          "meaning": "Its operation has not been confirmed. In particular, Ford treats an airbag lamp that fails to illuminate at start-up as a malfunction.",
+          "next": "Record the missing indication and arrange diagnosis. Do not mark the check satisfactory simply because no warning stayed on. [Prove-out expectations](#/document/G1693931) · [Airbag warning response](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "ABS remains on after the check or illuminates while driving.",
+          "meaning": "An ABS malfunction is indicated. Normal braking remains available without ABS unless the brake-system warning is also illuminated.",
+          "next": "Have ABS checked by an authorized dealer. If the brake warning is also on, follow the immediate brake-system response; do not assume normal braking remains available. [ABS warning response](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "The airbag lamp keeps flashing or stays illuminated.",
+          "meaning": "The restraint system is indicating a malfunction.",
+          "next": "Arrange dealer diagnosis. If the exact message says Occupant Sensor BLOCKED Remove Objects Near Passenger Seat, remove the obstructing objects; a continuing airbag warning still needs assessment. [Airbag lamp](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Occupant-sensor message](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "The belt reminder does not respond when the driver’s belt is fastened.",
+          "meaning": "The expected buckle-dependent indicator behavior was not observed.",
+          "next": "Record the result and arrange diagnosis. The buckle contains an integrated sensor; the warning alone does not establish which component has failed. [Belt warning and buckle sensor](#/document/G1693931)"
+        },
+        {
+          "finding": "The Service Engine Soon lamp stays on after the engine starts.",
+          "meaning": "The onboard diagnostic system has detected an emissions-control malfunction.",
+          "next": "Arrange service. If it blinks with the engine running, use the immediate misfire response in watchFor. [Engine-light meanings](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "The battery lamp illuminates while driving, or a charging-system service message appears.",
+          "meaning": "A charging-system malfunction or service need is indicated; the warning alone does not prove the battery needs replacement.",
+          "next": "For a battery lamp while driving, switch off unnecessary electrical equipment and obtain immediate dealer assessment. Continuing Check Charging System or Charging System Service Soon messages need attention as soon as possible; Charging System Service Now also calls for prompt dealer contact. The [battery testing and charging guide](#/maintenance/battery-testing-charging) covers separate testing. [Battery lamp response](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Charging messages](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "Battery State of Charge Low, Turn Power Off to Save Battery, or Low Battery Features Temporarily Turned Off appears.",
+          "meaning": "Battery management has detected low charge or an extended low-voltage condition and may disable features.",
+          "next": "For the low-charge or power-off message, switch the ignition off as soon as possible to protect the battery. For temporarily disabled features, reduce unnecessary electrical loads; the features return when system voltage recovers. Do not keep cycling the ignition to chase a clean display. [Battery-management actions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "The tire-pressure lamp stays on, or flashes before staying on.",
+          "meaning": "A steady warning indicates low tire pressure. A monitoring or sensor fault can produce 75 seconds of flashing followed by steady illumination.",
+          "next": "For a steady warning, check tire pressures as soon as possible. If the lamp flashes or fails its ignition-on check, have the system checked. Record Tire Pressure Monitor Fault or Tire Pressure Sensor Fault exactly; a spare tire in use can also produce the sensor-fault message. [TPMS flash strategy](#/document/G1693931) · [Owner response](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [TPMS messages](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "The sliding-car indicator flashes during intervention, stays on, or the separate OFF indicator is illuminated.",
+          "meaning": "Flashing during an actual stability-control event indicates operation. A continuing main indicator or missing ignition-on check indicates a malfunction. The separate OFF indicator can reflect an intentional disabled state or selected mode.",
+          "next": "Do not provoke a skid to test it. Have a continuing main warning checked immediately. Compare the OFF indication with the selected mode and exact message; Service AdvanceTrac is a concern, while an on/off or SPORT MODE message describes system status. [Stability lamp responses](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Mode and service messages](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "finding": "Low fuel, lamps-on, high-beam, fog-lamp or turn-signal indications appear.",
+          "meaning": "These can report a fuel condition or a selected lighting function rather than a system failure.",
+          "next": "Refuel as soon as possible for a low-fuel warning. Compare lighting indicators with the controls in use. A turn indicator that stays on or flashes faster calls for checking for a failed bulb. [Fuel and lighting indications](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "A fitted driver-assistance feature reports unavailable, blocked or malfunctioning.",
+          "meaning": "The exact wording distinguishes a blocked sensor, an unavailable function and a reported system fault.",
+          "next": "Read the matching entry in Ford’s message list. For the specified adaptive-cruise or collision-warning radar-blockage messages, weather or contamination can obstruct the sensor and cleaning can typically resolve it; use that system’s instructions for access and cleaning. Malfunction messages require service. [Driver-assistance message actions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1642765&Uid=G1634747&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The four core safety lamps were actually observed",
+          "body": "Confirm the ABS 3-second check and airbag 6-second check separately, and confirm that the driver’s seatbelt indicator went out when the belt was fastened. For the brake lamp, record illumination with the ignition on and parking brake applied, then whether it extinguished when the parking brake was briefly released after prove-out with the foot brake firmly applied. The applied parking brake masks the end of the brake lamp’s timed prove-out, so this sequence does not confirm its independent 3-second duration. Any missed observation remains unconfirmed. [Prove-out and indicator operation](#/document/G1693931)"
+        },
+        {
+          "title": "Every continuing indication has an explanation or a next action",
+          "body": "Record whether each remaining indication is an expected operating state, an owner action such as fastening the belt, or a warning routed for service. A dismissed message is not a completed repair. [Warning meanings](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539493&Uid=G1801494&ProcUid=G1642762&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "The car is left secure",
+          "body": "Finish with the ignition off and parking brake reapplied. Preserve the exact warning record and arrange any required service before treating the concern as resolved."
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang warning lamps",
+        "ABS brake airbag seatbelt lamp check",
+        "dashboard prove-out",
+        "low engine oil pressure",
+        "check brake system",
+        "flashing check engine light",
+        "tire pressure warning",
+        "Service AdvanceTrac"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "c0cbc2ae806d1eeec753d9d93164e298bcffb2a161ce71c362d20e7e77fc5088"
+      }
     },
     {
       "applicability": {
