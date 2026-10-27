@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {cleaningEnrolled,seatbeltCleaningEvidence,CLEANING_PRIMARY} from './editorial-workshop-seatbelt-cleaning.mjs';
+import {pairExternalAllowed} from './editorial-workshop-owner.mjs';
+test('cleaning enrollment is exact and never silently retries old holds',()=>{const p=new Set([CLEANING_PRIMARY]);assert.equal(cleaningEnrolled(p),true);for(const status of ['failed','needs-review','reviewed'])assert.equal(cleaningEnrolled(p,{status}),false);for(const status of ['reserved','pair-fallback'])assert.equal(cleaningEnrolled(p,{status}),true);assert.equal(cleaningEnrolled(p,{status:'needs-review'},true),true);assert.equal(cleaningEnrolled(p,{status:'reviewed',seatbeltCleaningEvidence:true}),true);assert.equal(cleaningEnrolled(new Set(['G1692226']),undefined,true),false);});
+test('cleaning evidence checks primary identity before reading external files',()=>assert.throws(()=>seatbeltCleaningEvidence('/not-used',new Set([CLEANING_PRIMARY]),new Map([[CLEANING_PRIMARY,{source_hash:'changed'}]])),/primary changed/));
+test('seatbelt cleaning external evidence remains excluded from pairs',()=>assert.equal(pairExternalAllowed({externalSources:[{documentId:'OWNER2015-SEATBELT-CLEANING'}]},[]),false));

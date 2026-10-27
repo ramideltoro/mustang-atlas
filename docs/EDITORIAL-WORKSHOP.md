@@ -178,3 +178,7 @@ The secondary twelfth reservation contains only G1726475, untwisting webbing at 
 ### New front window motor initialization
 
 The thirteenth secondary reservation uses G1957566 only for a new motor already installed in a fully reassembled coupe. The complete source explicitly skips de-initialization for a new motor. Existing-motor live battery/fuse interruption remains outside this scope. The complete high-force warning, closed door, fully open start, both second-detent holds, extra cycle and one-touch checks remain required, together with independently reviewed owner controls. This is prospective authoring guidance, not publication approval.
+
+### Accessible seatbelt cleaning evidence
+
+The exact G1692223 cleaning task now receives the complete checksum-bound 2015 owner printed page 230, including its full private rendered page and two-column reading order. This supplies the source-requested cleaning products and precautions without importing adjacent engine, glass or instrument-panel instructions. The external supplement remains excluded from pair mode and requires prospective, persisted or explicit-retry enrollment; existing holds are unchanged. Optional rear-cushion context does not impose cushion access on accessible-webbing cleaning. Reservation 14 contains only this task and still requires complete independent review and exact supervisory approval.

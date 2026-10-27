@@ -93,6 +93,7 @@ const CLIMATE_SERVICE_HASHES={
 // The exposed tongue adjustment does not execute the optional cushion reference.
 export function rearCushionScopeConstraint(primaryIds,hasCushion){
  if(!hasCushion)return [];
+ if(primaryIds.has('G1692223'))return ['G1692223 cleans already accessible seatbelt webbing. Rear cushion references are optional context, not access prerequisites; do not require a fitted rear seat or add cushion removal. Preserve fully extracted webbing, relevant product precautions and cleaning-only scope.'];
  if(primaryIds.has('G1726475'))return ['G1726475 adjusts webbing at an already accessible seatbelt guide/D-ring. Rear cushion references are optional context, not access prerequisites; do not require a fitted rear seat or add cushion removal. Preserve the accessible-guide boundary and stop if trim obstructs access.'];
  if(primaryIds.has('G1692226'))return ['G1692226 adjusts an already accessible seatbelt tongue on the assembled vehicle. Rear cushion and child-seat anchor references are optional context, not access prerequisites; do not require a fitted rear seat or add cushion removal.'];
  return ['The supplied access sequence depends on a fitted rear seat cushion. Qualify applicability as rear seat fitted; do not imply that this sequence covers rear-seat-delete configurations. Retain coupe/convertible restrictions independently.'];

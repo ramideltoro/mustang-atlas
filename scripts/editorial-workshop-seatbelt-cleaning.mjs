@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {hash} from './workshop-author-lib.mjs';
+export const CLEANING_PRIMARY='G1692223',CLEANING_PRIMARY_HASH='7f5217365c38023eb95c6d672899db975434889287ba559d133e33bf4dceb380';
+export const CLEANING_ID='OWNER2015-SEATBELT-CLEANING';
+const PDF='ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592',TEXT='5917de789cd6e43014d6a52837227f7e7ec5e923faede5065dc38137637bf021',IMAGE='013d5996035107e141b1fa6561486ed15d181d967270b598d49abe20d113ec5f';
+export function cleaningEnrolled(primary,prior,retry=false){return primary.has(CLEANING_PRIMARY)&&(prior?.seatbeltCleaningEvidence===true||!prior?.status||['reserved','pair-fallback'].includes(prior.status)||retry);}
+export function seatbeltCleaningEvidence(root,primary,byId,{prior,retry=false,engines=[]}={}){
+ if(!cleaningEnrolled(primary,prior,retry))return null;
+ if(byId.get(CLEANING_PRIMARY)?.source_hash!==CLEANING_PRIMARY_HASH)throw Error('Seatbelt cleaning primary changed');
+ const s=JSON.parse(fs.readFileSync(path.join(root,'work/editorial-workshop/evidence/owner-seatbelt-cleaning/supplement.json'),'utf8'));
+ if(s.documentId!==CLEANING_ID||s.sourceHash!==PDF||hash(fs.readFileSync(s.pdfPath))!==PDF||s.textHash!==TEXT||hash(s.text)!==TEXT||JSON.stringify(s.physicalPages)!=='[233]'||s.images.length!==1)throw Error('Incomplete or changed seatbelt cleaning owner evidence');
+ const m=s.images[0],f=path.resolve(root,m.privatePath);if(!f.startsWith(path.join(root,'work')+path.sep)||m.sha256!==IMAGE||hash(fs.readFileSync(f))!==IMAGE)throw Error('Seatbelt cleaning page changed');
+ return{externalSources:[{documentId:CLEANING_ID,title:s.title,sourceHash:PDF,textHash:TEXT,physicalPages:[233]}],nodes:[{nodeId:CLEANING_ID+':text',documentId:CLEANING_ID,sourceHash:PDF,sectionId:'owner-cleaning',title:s.title,role:'dependency',engines,start:0,end:s.text.length,text:s.text,images:[]},{nodeId:CLEANING_ID+':page',documentId:CLEANING_ID,sourceHash:PDF,sectionId:'owner-cleaning-page',title:s.title,role:'dependency-image',engines,text:'Review the complete printed page230 and its two-column reading order. Only Cleaning the Interior applies to seatbelts; do not import engine/window/wiper/instrument-panel cleaning operations. Original page stays private.',images:[{...m,documentId:CLEANING_ID,sourceHash:PDF}]}]};
+}
+export const CLEANING_CONSTRAINT='Complete2015owner printed230 supplies actual seatbelt cleaning context; cite publication/page in prose, never invent a DB route or put this external ID in procedures/sourceRefs. Preserve primary fully-extracted webbing and manufacturer cleaning-product instructions, no bleach/re-dye, owner no cleaning solvents/household/glass cleaners, named Motorcraft products and Canada qualifier, vacuum/light-stain/grease-or-tar/ring/no-oversaturation conditions. Do not invent dilution, drying duration, chemical substitutions or machine-washing. The full page includes unrelated engine/windows/wipers/instrument-panel instructions: do not transfer those to belts. This is cleaning accessible webbing, not cushion/anchor removal, crash inspection or restraint certification. Retain genuine product-method limitations if manufacturer instructions are unavailable.';
