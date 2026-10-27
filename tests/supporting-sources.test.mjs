@@ -15,3 +15,18 @@ test('unit counts match complete authoring inventory, including nested tables an
 test('supporting evidence requires matching independent review accounting',()=>{for(const patch of [{supportingSourceUnitCount:0},{supportingSourceDocumentCount:0},{supportingSourceCoverage:'partial'},{humanReviewed:true}]){const g=guide();Object.assign(g.referenceReview,patch);assert.equal(validateGuide(primary,g,{resolveDocument}).passed,false);}});
 
 test('editorial store rechecks dependency hashes after a previously accepted overlay',async()=>{const fs=await import('node:fs/promises'),os=await import('node:os'),path=await import('node:path');const {createEditorialStore}=await import('../server/editorial.mjs');const dir=await fs.mkdtemp(path.join(os.tmpdir(),'atlas-support-'));let current=support;try{await fs.mkdir(path.join(dir,'guides'));await fs.writeFile(path.join(dir,'guides','A.json'),JSON.stringify(guide()));const store=createEditorialStore({dataDir:dir,contentDir:dir,resolveDocument:id=>id==='B'?current:null});assert.ok(store.get(primary));current={...support,sourceHash:'changed'};assert.equal(store.get(primary),null);}finally{await fs.rm(dir,{recursive:true,force:true});}});
+
+test('navigation bridges authenticate reachability but never lend their content to teaching',()=>{
+ const bridge={...support,text:'Use 777 Nm.',blocks:[{id:'b',type:'paragraph',text:'Use 777 Nm.'}],engines:[]};
+ const nav={documentId:'B',sourceHash:bridge.sourceHash,referencedBy:'A',sourceReference:'B',navigationOnly:true};
+ const resolve=id=>id==='B'?bridge:id==='C'?nested:null;
+ const g=guide();g.supportingSourceRefs=[nav,ref(nested,'B')];g.referenceReview.supportingNavigationDocumentCount=1;
+ assert.equal(validateGuide(primary,g,{resolveDocument:resolve}).passed,true);
+ for(const change of [x=>x.edits[0].why='Use 777 Nm.',x=>x.introduction='Use 777 Nm.',x=>x.requirements[0].items[0].detail='Use 777 Nm.']){const bad=structuredClone(g);change(bad);assert.equal(validateGuide(primary,bad,{resolveDocument:resolve}).passed,false);}
+ for(const change of [x=>x.supportingSourceRefs[0].sourceUnitCount=sourceUnitCount(bridge),x=>x.supportingSourceRefs[0].sourceHash='stale',x=>x.referenceReview.supportingNavigationDocumentCount=0,x=>x.supportingSourceRefs[0].referencedBy='C']){const bad=structuredClone(g);change(bad);assert.equal(validateGuide(primary,bad,{resolveDocument:resolve}).passed,false);}
+ assert.equal(validateGuide(primary,g,{resolveDocument:id=>id==='C'?{...nested,engines:['5.2L']}:resolve(id)}).passed,false);
+});
+
+test('generic navigation cannot erase a narrower ancestor engine scope',()=>{const root={...primary,engines:['3.7L','5.0L']},parent={...support,engines:['5.0L']},bridge={...nested,engines:[],related:['D']},leaf={...nested,id:'D',sourceHash:'d'.repeat(64),engines:['3.7L']};const refs=[ref(parent,'A'),{documentId:'C',sourceHash:bridge.sourceHash,referencedBy:'B',sourceReference:'C',navigationOnly:true},ref(leaf,'C')];const result=validateSupportingSources(root,refs,{resolveDocument:id=>[parent,bridge,leaf].find(d=>d.id===id)});assert.equal(result.passed,false);assert.ok(result.errors.some(e=>e.includes('ancestor engine mismatch')));});
+
+test('engine scope requires one common engine throughout the chain, not pairwise overlap',()=>{const root={...primary,engines:['2.3L','3.7L']},parent={...support,engines:['2.3L','5.0L']},leaf={...nested,engines:['3.7L','5.0L']};assert.equal(validateSupportingSources(root,[ref(parent,'A'),ref(leaf,'B')],{resolveDocument:id=>[parent,leaf].find(d=>d.id===id)}).passed,false);});
