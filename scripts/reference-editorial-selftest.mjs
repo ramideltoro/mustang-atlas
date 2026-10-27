@@ -152,3 +152,4 @@ test('direct general safety retains full text while selecting only task-relevant
 test('general safety primary is its own complete evidence without a self-reference',async()=>{
  const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const primary={id:'G1693189',title:'Health and Safety Precautions',text:'Complete primary warnings.',source_hash:'safety',engines:[],related:[],kind:'general',blocks:[],media:[]};const result=buildSupportingPackage(primary,[primary]);assert.deepEqual(result.supportingSourceRefs,[]);assert.deepEqual(result.unavailableSupportingReferences,[]);
 });
+
