@@ -1,0 +1,214 @@
+{
+  "documentId": "G1694672",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1813073",
+      "sourceHash": "123d0f3bb8b253821b4ed14b2b7413fbbe56db2dd33e550e4b1820650e8a37f1",
+      "referencedBy": "G1694672",
+      "sourceReference": "G1813073",
+      "sourceUnitCount": 116,
+      "mediaCount": 0
+    }
+  ],
+  "sourceHash": "5ccab48bb72dd39b802687ae6bea288d8c927ac96e6b7a5312f0bef4bcde06e9",
+  "title": "How Mustang Dynamic Suspension Works",
+  "introduction": "Dynamic suspension changes how strongly the dampers resist movement as the Mustang brakes, accelerates and corners. I picture an adjustable door closer: the resistance changes to suit the movement, while the suspension springs still carry the load. This overview applies to vehicles equipped with the described dynamic-suspension system.\n\nI start with the labeled drawing, following the height-sensor inputs into the VDM and its outputs toward the struts and rear shock absorbers. The patterned network lines show how other modules share information with the controller. Use the numbered companion drawing with its item table to identify the same components, then use the message chart to understand what information arrives and why it matters.\n\nThis is a system explanation and a guide to its programming and calibration requirements. Component removal, electrical testing and the complete scan-tool routines require their matching service procedures.",
+  "requirements": [
+    {
+      "category": "Preparation for VDM replacement and configuration",
+      "items": [
+        {
+          "name": "Use a diagnostic scan tool with the required functions",
+          "detail": "For a vehicle equipped with the described dynamic suspension, use a diagnostic scan tool capable of the required VDM configuration and suspension calibration routines. A basic code reader may lack these functions. Use the matching module removal and installation procedure for the replacement work; this overview explains the system and its preparation requirements."
+        },
+        {
+          "name": "Capture configuration before removing the original module",
+          "detail": "Start the diagnostic scan tool session while the original module is still installed. Have the tool identify the vehicle and obtain its configuration data before removing any modules. The session automatically retrieves and stores available original-module data for Programmable Module Installation (PMI), which configures the new module's settings. The replacement module must communicate with the scan tool for PMI to proceed. I treat this as saving the controller's settings before unplugging it."
+        },
+        {
+          "name": "Use the scan tool's missing-data branch",
+          "detail": "If configuration cannot be retrieved from the original module, the scan tool may request As-Built data or present parameter values for manual selection. Obtain As-Built data only when the tool directs you to do so; it is available through the technician service publication website. As-Built data is a VIN-specific factory configuration record and does not capture customer preferences changed afterward. Use the prompted configuration path described in [Module Configuration - System Operation and Component Description](#/document/G1813073)."
+        }
+      ]
+    },
+    {
+      "category": "Programming and completion",
+      "items": [
+        {
+          "name": "Distinguish configuration from software updates",
+          "detail": "A new VDM must be programmed with the correct vehicle information; follow all diagnostic scan tool instructions. Reprogramming updates a module's strategy/calibration, and PMI may automatically install a later version when available. Limit module reprogramming to circumstances recommended by a published TSB procedure. Reloading the same software level does not improve operation or repair a hardware failure."
+        },
+        {
+          "name": "Follow programming prompts and clear resulting communication faults",
+          "detail": "Follow IDS key-cycling instructions carefully. Some modules are programmed in coordination with others, and incorrect key cycling can cause programming errors, including failure to program the involved modules. A module cannot communicate with other modules while it is being reprogrammed. Afterward, clear any network communication Diagnostic Trouble Codes (DTCs) that this interruption may have set in other modules."
+        },
+        {
+          "name": "Keep suspension calibration as a separate completion requirement",
+          "detail": "Configuration and suspension calibration serve different purposes: configuration supplies the vehicle information, while suspension calibration teaches the vehicle's neutral position. Complete the required VDM calibration under the level, stationary, unloaded and suspension-neutralizing conditions described in this article. For required adaptive learning and calibration instructions associated with replacement, also refer to the specific module removal and installation procedure, as required by [Module Configuration - System Operation and Component Description](#/document/G1813073)."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1694672-b00001",
+      "text": "How the system works",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00002",
+      "text": "Reading the System Diagrams",
+      "why": "I use the labeled drawing to follow inputs into the controller and control outputs toward the dampers. LF, RF, LR and RR identify the left-front, right-front, left-rear and right-rear corners. Match the numbered companion drawing to the adjacent item table. These drawings explain system relationships; they do not establish connector terminals, physical access or an electrical test."
+    },
+    {
+      "blockId": "G1694672-b00006",
+      "text": "Reading the Network Message Chart",
+      "why": "Read across each row to connect a broadcast message with its originating module and its purpose. This distinguishes information the suspension receives over the network from its directly connected height-sensor inputs."
+    },
+    {
+      "blockId": "G1694672-b00007",
+      "text": "Network Input Messages for the VDM",
+      "why": "The originating module identifies where the information begins. Where the purpose column names a gateway route, that route explains how the message reaches the suspension controller. The chart describes message meaning, rather than pass/fail limits for a diagnostic test."
+    },
+    {
+      "blockId": "G1694672-b00009",
+      "text": "How Vehicle Dynamic Suspension Responds",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00010",
+      "text": "The VDM uses HS-CAN communication with the ABS module, RCM, BCM and PCM to monitor vehicle roll, pitch, cornering, braking and acceleration. It combines those shared messages with the readings from the 4 vehicle height sensors, then calculates the appropriate damping action for each of the 4 suspension dampers.",
+      "why": "The VDM is the vehicle dynamics control module. Its network partners are the anti-lock brake system module, restraints control module, body control module and powertrain control module. I read this as a controller listening to both suspension position and the wider driving situation: a height reading alone cannot tell the whole story of a braking or cornering maneuver."
+    },
+    {
+      "blockId": "G1694672-b00011",
+      "text": "Using the message center, the driver can select 1 of 4 preset modes: Tour, Sport, Track or Drag. The VDM then regulates the magnetic field in the damper pistons to give the suspension a feel suited to the selected mode.",
+      "why": "The selected mode gives the controller a target character for the ride. The adjustable resistance inside the dampers is what lets that character change."
+    },
+    {
+      "blockId": "G1694672-b00012",
+      "text": "At ignition ON, the VDM initializes and performs a preliminary electrical check of the height sensors, their circuits, the damper piston electromagnetic coils and their circuits. If it detects a system malfunction, it sets a DTC and sends a message over HS-CAN2 to the GWM. The GWM passes that message over HS-CAN3 to the IPC, which displays a message in the message center.",
+      "why": "A DTC is a diagnostic trouble code. The GWM is gateway module A, and the IPC is the instrument panel cluster. This communication path explains how a suspension electrical fault can become a dashboard message; the message itself does not identify a replacement part."
+    },
+    {
+      "blockId": "G1694672-b00013",
+      "text": "Depending on the DTC present, the VDM may deactivate dynamic suspension control, leaving the suspension with a firm feel.",
+      "why": "Firmness can therefore accompany a fault response. I would treat it as a clue to interpret with the recorded code, rather than proof that the driver selected a firmer mode."
+    },
+    {
+      "blockId": "G1694672-b00014",
+      "text": "Meet the components",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00015",
+      "text": "Vehicle Dynamics Control Module (VDM): The Controller",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00016",
+      "text": "The VDM monitors the sensor inputs and HS-CAN messages relevant to dynamic suspension. It directly controls the damper piston electromagnetic coils, sending an individual electrical current to each damper piston to produce the required damping.",
+      "why": "Each corner receives its own control current. The controller can tailor the resistance to the movement at that corner instead of treating the whole car as a single adjustable damper."
+    },
+    {
+      "blockId": "G1694672-b00017",
+      "text": "A newly installed VDM must be programmed with the correct vehicle information for dynamic suspension to operate properly. Carry out new-module programming with a diagnostic scan tool and follow all of its instructions. Refer to: [Module Configuration — System Operation and Component Description](#/document/G1813073) (418-01 Module Configuration, Description and Operation).",
+      "why": "The replacement controller needs the vehicle's configuration as well as a working electrical connection. Begin the scan-tool session before removing the original module so its configuration can be captured. The preparation requirements above explain the configuration fallback and programming precautions; this overview does not replace the module installation procedure."
+    },
+    {
+      "blockId": "G1694672-b00018",
+      "text": "Calibrate the VDM whenever any component in the following list is installed new, disassembled, disconnected or removed.",
+      "why": "These operations trigger a calibration requirement even when the affected part is reused. The system must relearn its vehicle-position reference after the listed work."
+    },
+    {
+      "blockId": "G1694672-b00020",
+      "text": "VDM",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00022",
+      "text": "Suspension height sensor",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00024",
+      "text": "Front lower control arm",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00026",
+      "text": "Front strut assembly",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00028",
+      "text": "Rear lower control arm",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00030",
+      "text": "Rear shock",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00032",
+      "text": "The calibration routine teaches the system the vehicle's zero-position. Before running it, neutralize the suspension by driving a short distance, such as around a parking lot. Then place the vehicle on a level surface, stationary and with no passengers or cargo, and carry out the routine using a diagnostic scan tool. Do not calibrate with the vehicle raised off the ground or immediately after lowering it: the suspension will not yet be in a neutral position.",
+      "why": "I want the controller learning the car's settled reference position. A suspended, freshly lowered or loaded vehicle would give it a different starting point. Use the matching service procedure and scan-tool instructions to perform the actual routine."
+    },
+    {
+      "blockId": "G1694672-b00033",
+      "text": "Height Sensor: Reporting Suspension Position",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00034",
+      "text": "The height sensor behaves like a potentiometer, returning a changing voltage to the VDM as suspension position changes. It has 3 circuits: a 5 volt sensor supply, a sensor ground and a sensor output.",
+      "why": "A potentiometer is a variable electrical control; here, its changing output lets the controller follow suspension position. This description explains the circuit roles without supplying terminal assignments or a voltage-based diagnostic test."
+    },
+    {
+      "blockId": "G1694672-b00035",
+      "text": "Damper Piston Electromagnetic Coils",
+      "why": ""
+    },
+    {
+      "blockId": "G1694672-b00036",
+      "text": "Each damper piston has 2 sets of electromagnetic coils wound around it. Their magnetic field restricts fluid flow inside the damper. The VDM varies that field using a PWM output: higher PWM produces a stronger magnetic field and a firmer suspension feel.",
+      "why": "PWM means pulse width modulation. This is the adjustable-door-closer idea at work: greater restriction makes the damper resist movement more strongly. The spring still supports the load while the damper controls how that movement settles."
+    }
+  ],
+  "checkedAt": "2026-10-27T21:19:27.380Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 25,
+    "receivedBlocks": 25,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "64e699be89d1352e34ce9f5f49110be05ea96794cc0602e52c5f54f5a9164546",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 116,
+    "sourceUnitCount": 66,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "26b38119c61861a95a9b2be17d3b0fbb4a878b8ba9414fada62f19c395540e0e",
+    "reviewedAt": "2026-10-27T21:15:35.835Z",
+    "editorialRevision": {
+      "kind": "deduplicate-reviewed-preparation",
+      "scope": "Remove first two near-duplicate requirement groups; retain complete second-chunk version including pre-removal capture, communication, As-Built fallback/preferences, programming restrictions, IDS prompts, DTC cleanup and distinct calibration. All primary edits/introduction/title/source refs unchanged.",
+      "reviewedAt": "2026-10-27T21:19:27.380Z"
+    }
+  }
+}
