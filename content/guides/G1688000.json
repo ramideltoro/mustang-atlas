@@ -1,0 +1,56 @@
+{
+  "documentId": "G1688000",
+  "supportingSourceRefs": [],
+  "sourceHash": "785b6991ceb24fd1a02b7b7b95a78ece4a40f08bda45e1b38a1fb4a889ad3b32",
+  "title": "EcoBoost evaporative-emissions diagram guide",
+  "introduction": "This reference maps the evaporative-emissions system for the 2.3L EcoBoost. EVAP contains fuel vapor for later use by the engine. The canister stores that vapor, the purge valve controls its route toward the intake, and the vent solenoid controls the canister’s outside-air connection. Similar valve names do not make them interchangeable.\n\nI read this schematic like a transit map: the connections matter, while the spacing does not promise an underbody location. Start at the fuel tank and canister on the right, then follow the drawn connections toward the purge valve and intake manifold on the left. Match the circular callouts to the accompanying table. The separate valve-cover branch is also part of the reference, so do not assume every heavy line represents the same kind of passage.\n\nThe drawing has no flow arrows or operating-state instructions. Use it for component and connection identification; system-operation details belong to the PC/ED referral below. It does not supply a leak test, electrical test or removal procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688000-b00001",
+      "text": "System operation reference",
+      "why": ""
+    },
+    {
+      "blockId": "G1688000-b00002",
+      "text": "For system operation, refer to the PC/ED manual, section 1, Description and Operation.",
+      "why": "PC/ED means powertrain control/emissions diagnosis. That referral is needed for operating strategy; the component map alone cannot establish valve states or test conditions."
+    },
+    {
+      "blockId": "G1688000-b00003",
+      "text": "EVAP system component and connection map",
+      "why": "The table distinguishes the purge and vent components, pressure sensing, fuel-level sensing and nearby intake plumbing. The fuel-level sensor reports tank level; it serves a different purpose from the fuel-tank-pressure sensor. Use each component’s label to keep those jobs separate."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:45:15.074Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "03b7775f9c6e517b734a7f71ddf3f881dd42ca1c6fc13a319d9f6dd752e00f55",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 24,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6382b380c617fe09789cfaa6e52d70e4086c262440f44c245bc72d8d25d6e759",
+    "reviewedAt": "2026-10-27T18:44:02.905Z",
+    "editorialRevision": "Intro-only inherited power/inferred engine-list removal; all primary technical prose and actual engine/transmission qualifier retained."
+  }
+}
