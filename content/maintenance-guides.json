@@ -6896,22 +6896,24 @@
       ],
       "ruleIds": [],
       "notes": [
-        "Confirm the vehicle-specific instruction before booking routine axle-fluid replacement. Suspected leakage or submersion needs attention regardless of the odometer."
+        "Applicability remains the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine. Confirm equipment from the installed assembly rather than extending an engine-specific assumption.",
+        "This guide completes a schedule decision and level check/top-up. It does not certify fluid condition or repair a leak.",
+        "Use the separate [rear axle inspection guide](#/maintenance/axle-inspection) for locating leakage."
       ],
       "relatedGuideIds": [
         "axle-inspection",
         "driveshaft"
       ],
       "id": "axle-fluid",
-      "title": "Rear axle fluid: confirm the schedule and the differential type",
+      "title": "Rear axle fluid: confirm the schedule, identify the differential and check the level",
       "categoryId": "driveline",
       "hero": {
         "documentId": "G2214742",
         "mediaId": "G2214742-m0001"
       },
-      "summary": "Understand Ford’s 150,000-mile normal-schedule entry and the separately stated axle exception before choosing a service deadline.",
-      "introduction": "Rear axle lubricant protects the gears and bearings inside the differential. Choosing the right service requires two pieces of information: the fitted differential and the maintenance instruction that applies to the car’s use. The drain/fill procedure also has branches for different equipment, including whether a drain plug or cooler is fitted.",
-      "why": "A gear-oil choice, friction-modifier instruction or filling method from another axle can be wrong for this one. Confirming the assembly first avoids turning a routine fluid job into an experiment.",
+      "summary": "For 2015 Mustangs with the 2.3L, 3.7L or 5.0L engine: make the service decision, confirm the fitted equipment, and complete a differential-fluid level check and top-up.",
+      "introduction": "I’m happy to give the differential some attention. Buying gear oil by vibes, though, is bullshit with a receipt. This guide covers the schedule decision, equipment identification and a complete fill-plug level check, including topping up and closing the job. Fluid replacement, leak repair and internal differential work are separate tasks. [Level-check procedure](#/document/G2214894)",
+      "why": "The rear differential uses a specified gear lubricant, and checking its level answers a useful, limited question: does it need topping up? Ford specifies SAE 75W-85 meeting WSS-M2C942-A. A correct level does not explain a leak or settle what needs doing after water exposure. [Lubricant and level check](#/document/G2214894)",
       "when": {
         "summary": "The normal schedule lists rear axle fluid replacement at 150,000 mi (240,000 km); read the axle exception before treating that as an unconditional deadline.",
         "notes": [
@@ -6921,50 +6923,98 @@
       },
       "prepare": [
         {
-          "title": "Identify the axle and equipment",
-          "detail": "Confirm the differential type and whether a cooler is fitted."
+          "title": "Vehicle and equipment information",
+          "detail": "Have the car’s original maintenance information and vehicle-specific build or service information available. Confirm the installed differential type and cooler equipment; the specification table distinguishes Traction-Lok and Torsen applications with and without a cooler package. Engine size alone does not select those equipment branches. [Equipment distinctions](#/document/G2227514)"
         },
         {
-          "title": "Confirm the applicable service plan",
-          "detail": "Review the normal entry together with the exception and the vehicle’s original maintenance information; obtain a vehicle-specific recommendation if they differ."
+          "title": "Hoist access",
+          "detail": "Arrange a hoist rated for the vehicle’s actual weight, including cargo and modifications, and follow its operating instructions. Ford’s level check specifies the transmission in Neutral and the vehicle on a hoist. Use the triangle-marked lifting locations. The emergency tire-changing jack is unsuitable for this service, and nobody goes underneath a vehicle supported only by a jack. [Check setup](#/document/G2214894) [Lifting locations](#/document/G1663631) [Hoist safety](#/document/G1693189)"
+        },
+        {
+          "title": "Lubricant and plug equipment",
+          "detail": "Have clean Motorcraft SAE 75W-85 Premium Synthetic Hypoid Gear Lubricant, XY-75W85-QL, meeting WSS-M2C942-A; a tool matched to the actual fill-plug drive; and a torque wrench suitable for 25 lb-ft (34 Nm). Arrange clean dispensing equipment and a way to measure the fluid surface relative to the opening’s 9 mm (0.354 in) reference. Ford does not name a special measuring tool for this check. [Materials, measurement and closure](#/document/G2214894)"
+        },
+        {
+          "title": "Protection and restraint",
+          "detail": "Wear eye and ear protection, and use protective gloves when handling sharp-edged parts. Read the lubricant’s safety information before handling it; misuse can cause injury. Have wheel blocks available for securing the car at ground level. [Service precautions](#/document/G1693189)"
         }
       ],
       "steps": [
         {
-          "title": "Resolve the service scope",
-          "body": "Decide whether this is routine replacement, a leak repair or contamination after water exposure."
+          "title": "Read the axle exception before choosing a deadline",
+          "body": "Ford’s normal schedule lists rear axle fluid replacement every 150,000 mi (240,000 km). Its special-conditions page separately identifies a rear axle exception: fluid changes or level checks are not required unless leakage is suspected or the assembly has been submerged, when prompt checking is required. Read those instructions together rather than treating the mileage entry as an unconditional deadline. Compare them with the car’s original maintenance information and obtain a vehicle-specific recommendation if the applicable routine replacement instruction remains unclear. Suspected leakage or submersion needs attention regardless of mileage. This guide adds no recurring level-check interval. [Ford normal schedule](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649139&Uid=G1634876&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259) [Ford rear axle exception](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649140&Uid=G1634877&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
         },
         {
-          "title": "Use the correct equipment branch",
-          "body": "Follow the draining/filling procedure for the actual axle, with its specified lubricant and any applicable additive."
+          "title": "Confirm the differential and equipment",
+          "body": "Record the differential type and whether a cooler package is fitted using information specific to the installed assembly. Ford’s capacity table separates Traction-Lok/Torsen applications by cooler equipment, while its draining procedure also separates assemblies with and without a drain plug. These are equipment distinctions, not an engine-size shortcut. If the assembly’s identity is uncertain, have it confirmed before selecting a replacement-fluid recipe. The level check below uses the specified lubricant and measured level. [Differential specifications](#/document/G2227514) [Drain and cooler branches](#/document/G2214742)"
         },
         {
-          "title": "Finish with the correct level",
-          "body": "Complete the specified fill, closure and leak checks, and record what fluid and service were used."
+          "title": "Prevent an unintended start",
+          "body": "Before working around or beneath the car, disable remote start if fitted through Vehicle settings > Remote Start Setup. An unexpected remote start can seriously injure someone servicing the vehicle. Once the car is positioned and the transmission is in the required Neutral position, keep the ignition off and remove the key to prevent another person starting it. Put on the prepared protection before beginning underside work. [Starting and personal-protection precautions](#/document/G1693189) [Neutral requirement](#/document/G2214894)"
+        },
+        {
+          "title": "Raise the car at the marked locations",
+          "body": "With the transmission in Neutral, position the vehicle on the hoist. Locate the triangles stamped into the body or frame and position the hoist adapters at the specified lifting points. Incorrect support can let the car shift or fall. Keep the arms and adapters clear of suspension parts, brackets, exhaust, steering components, the axle and rear cover. For a drive-on lift, check underbody clearance before driving onto it. Use the hoist manufacturer’s restraint and operating instructions throughout. [Level-check access](#/document/G2214894) [Lifting points and clearances](#/document/G1663631) [Capacity and arm positioning](#/document/G1693189)"
+        },
+        {
+          "title": "Confirm the hardware and find the fill plug",
+          "body": "From the safely supported underside, compare the actual assembly with its equipment information. Note any cooler connections and whether a drain plug is present without disconnecting or removing them. In the provided rear-cover illustrations, the fill plug is the upper plug, above and to the right of the lower drain plug. The level-check illustration highlights that upper plug. Make sure you have identified it before reaching for the tool. [Fill-plug location](#/document/G2214894) [Drain plug and cooler connections](#/document/G2214742)"
+        },
+        {
+          "title": "Open the fill port and measure the level",
+          "body": "Remove the differential fill plug using a tool matched to its actual drive. If it cannot be removed without damage, stop and arrange plug service. Measure how far the fluid surface sits below the fill opening. Ford’s check procedure specifies a level within 9 mm (0.354 in) of the opening; the specification footnote describes the intended position as approximately 9 mm below it. Compare the surface with that reference rather than guessing from how wet the plug looks. [Plug removal and level check](#/document/G2214894) [Final-level reference](#/document/G2227514)"
+        },
+        {
+          "title": "Top up only if needed",
+          "body": "If the surface is farther than 9 mm (0.354 in) below the opening, add clean XY-75W85-QL SAE 75W-85 lubricant meeting WSS-M2C942-A and remeasure as you add it. Establish the approximately 9 mm-below-opening level. If the level already meets the reference, no top-up is needed. This is a measured top-up, not a capacity fill: the level-check procedure calls for gear lubricant and does not prescribe a separate friction-modifier dose. [Top-up instruction](#/document/G2214894) [Level reference](#/document/G2227514)"
+        },
+        {
+          "title": "Close the fill opening and inspect it",
+          "body": "Install the differential fill plug and tighten it to 25 lb-ft (34 Nm). As a finishing observation, wipe away fluid spilled during the check so you can distinguish residue from fresh wetness, then inspect the plug area. If fresh fluid appears, have the closure assessed; extra tightening beyond the specified torque is no substitute for finding the problem. For wetness elsewhere on the assembly, use the separate [rear axle inspection guide](#/maintenance/axle-inspection). [Fill-plug installation](#/document/G2214894)"
+        },
+        {
+          "title": "Secure the car and finish",
+          "body": "Account for the plug tool, measuring and dispensing equipment, and confirm the fill plug is installed. Before lowering, set the parking brake so the Neutral transmission does not leave the car free to roll. Clear the underside and lower using the hoist manufacturer’s instructions; block the wheels once they are on the ground before leaving the car unattended. Ford’s restraint precautions call for the parking brake and blocking wheels remaining on the ground. [Vehicle restraint precautions](#/document/G1693189) [Plug closure](#/document/G2214894)\n\nFor your own service record, note the date, mileage, confirmed differential equipment, measured level, whether a top-up was needed and how much lubricant you added. Record unresolved leakage or water exposure as follow-up work, rather than marking it repaired."
         }
       ],
       "watchFor": [
         {
-          "title": "Water exposure or leaking seals",
-          "body": "Do not delay assessment because a mileage milestone is far away."
+          "title": "A top-up mistaken for a leak repair",
+          "body": "Adding lubricant completes the level correction, not the diagnosis. If leakage prompted the check, continue with the [rear axle inspection guide](#/maintenance/axle-inspection). Ford calls for prompt checking when leakage is suspected. [Ford axle exception](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649140&Uid=G1634877&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
         },
         {
-          "title": "Additive used by habit",
-          "body": "A limited-slip label alone is not a substitute for the exact application instructions."
+          "title": "Modifier added out of habit",
+          "body": "Keep the replacement-fluid recipe out of this level check. The check specifies clean gear lubricant for topping up; a limited-slip label is not an instruction to pour in another bottle of additive. [Level-check materials and method](#/document/G2214894)"
+        },
+        {
+          "title": "A correct level after submersion",
+          "body": "A satisfactory level does not establish that water exposure caused no problem. Keep the prompt axle assessment on the to-do list even when no top-up is needed. [Ford water-exposure instruction](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1649140&Uid=G1634877&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
         }
       ],
       "procedures": [
         {
-          "documentId": "G2214742",
-          "purpose": "Use the axle-equipment branches for draining and filling."
-        },
-        {
           "documentId": "G2214894",
-          "purpose": "Check differential fluid level."
+          "purpose": "Perform the complete fill-plug level check, lubricant top-up and plug closure."
         },
         {
           "documentId": "G2227514",
-          "purpose": "Confirm the axle lubricant specifications."
+          "purpose": "Distinguish differential equipment and establish the final-level reference."
+        },
+        {
+          "documentId": "G2214742",
+          "purpose": "Identify drain and cooler equipment without opening the replacement-service branches."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Use the marked lifting locations and avoid underside interference."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply starting prevention, personal protection, hoist capacity and vehicle restraint precautions."
+        },
+        {
+          "documentId": "G2214747",
+          "purpose": "Define the access limitation affecting no-drain-plug replacement."
         }
       ],
       "sourceRefs": [
@@ -6979,8 +7029,105 @@
         {
           "documentId": "G2227514",
           "sourceHash": "c316309e460bbef0974ee1ce61ceb0035dacb88a813604577ec6738c1df5c980"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G2214747",
+          "sourceHash": "43b75431e2ff0d45a900eba5f6e414903b4683782a80a962a2a875c0b77557be"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "schedule-and-equipment",
+          "title": "Make the service decision",
+          "summary": "Read the schedule exception and confirm the installed differential equipment.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "safe-access",
+          "title": "Prepare and access the fill plug",
+          "summary": "Prevent unintended starting, lift safely and identify the correct opening.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "measure-and-top-up",
+          "title": "Check and correct the level",
+          "summary": "Measure against Ford’s reference and add only the specified lubricant if needed.",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "closure-and-completion",
+          "title": "Close and secure",
+          "summary": "Torque the plug, inspect the serviced area and restore ground-level restraint.",
+          "start": 8,
+          "end": 9
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Fluid is farther than 9 mm (0.354 in) below the fill opening.",
+          "meaning": "The level is below Ford’s stated check range; this measurement does not identify the cause.",
+          "next": "Top up with the specified clean lubricant and remeasure. Investigate suspected leakage separately. [Level check](#/document/G2214894)"
+        },
+        {
+          "finding": "Fluid meets the approximately 9 mm-below-opening reference.",
+          "meaning": "The level portion of the check is satisfied.",
+          "next": "Install the fill plug at 25 lb-ft (34 Nm), then complete the closure and restraint checks. [Level reference](#/document/G2227514) [Plug torque](#/document/G2214894)"
+        },
+        {
+          "finding": "The level cannot be measured confidently or differs unexpectedly from the reference.",
+          "meaning": "There is no reliable basis for deciding how much lubricant to add.",
+          "next": "Do not add fluid by guesswork. Arrange a reliable level assessment, and reinstall the fill plug at 25 lb-ft (34 Nm) before finishing. [Required level and closure](#/document/G2214894)"
+        },
+        {
+          "finding": "Fresh wetness appears around the installed fill plug.",
+          "meaning": "The closure needs attention before this check can be considered finished.",
+          "next": "Have the plug and closure assessed against the specified installation requirement; do not exceed 25 lb-ft (34 Nm) to chase the leak. [Plug installation](#/document/G2214894)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "Service decision and equipment recorded",
+          "body": "Confirm that the normal schedule entry was read with the axle exception, and record the differential type and cooler equipment—or the need to have that identity confirmed. [Equipment distinctions](#/document/G2227514)"
+        },
+        {
+          "title": "Level and lubricant confirmed",
+          "body": "Verify the measured level against the approximately 9 mm (0.354 in)-below-opening reference. Any top-up must use clean XY-75W85-QL lubricant meeting WSS-M2C942-A. [Level-check requirements](#/document/G2214894) [Level reference](#/document/G2227514)"
+        },
+        {
+          "title": "Fill plug secured",
+          "body": "Confirm installation at 25 lb-ft (34 Nm). Check that fresh fluid is not appearing at the serviced opening after spilled lubricant has been wiped away. [Closure requirement](#/document/G2214894)"
+        },
+        {
+          "title": "Car restrained and follow-up preserved",
+          "body": "Confirm the parking brake was applied before lowering and the wheels were blocked at ground level. Any suspected leak or submersion remains a separate assessment item in the service record. [Restraint precautions](#/document/G1693189)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang rear axle fluid schedule",
+        "Mustang differential fluid level check",
+        "75W-85 WSS-M2C942-A",
+        "XY-75W85-QL",
+        "Traction-Lok Torsen differential",
+        "rear axle cooler package"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "2d65658473936e1c35e8c194fdbbf8f684cbd15cf43d420a0058316d023b5d06"
+      }
     },
     {
       "applicability": {
@@ -11856,8 +12003,8 @@
         "checks"
       ],
       "id": "ecoboost-charge-air-cooler-cleaning",
-      "title": "EcoBoost charge-air cooler: clean only when it needs it",
-      "summary": "Understand the off-car cleaning process, protect the intake from debris, and complete the required leak test before the cooler goes back in.",
+      "title": "2015 EcoBoost charge-air cooler: remove, clean, leak-test and refit",
+      "summary": "Clean the 2015 Mustang 2.3L charge-air cooler when needed, complete its required pressure test, and restore the bumper, intake connections and front wheels.",
       "applicability": {
         "engines": [
           "2.3L"
@@ -11871,8 +12018,8 @@
         "documentId": "G1675707",
         "mediaId": "G1675707-m0005"
       },
-      "introduction": "The charge-air cooler, often called the CAC, is part of the pressurized air path between the turbocharger and the engine. This cleaning procedure deals with contamination inside the removed cooler. It involves draining contaminants, washing and rinsing, drying, and then checking that the cooler still holds pressure. The removal-and-installation procedure directs inspection and cleaning when needed; it does not give this job a recurring service interval.",
-      "why": "Cleaning and sealing are both important to the completed job. Contamination has to leave the cooler, and the cleaned assembly has to pass its leak test before installation. Debris introduced while working on the intake can damage the turbocharger compressor, so a careful removal and clean connections matter as much as the wash itself.",
+      "introduction": "I’d rather give the charge-air cooler a reason to come out than nominate it for a bath because boost feels disappointing. This guide covers the 2015 Mustang 2.3L EcoBoost job from bumper access through internal washing, drying, leak testing and reassembly. Ford directs inspection and cleaning when necessary; these procedures prescribe no recurring washing interval. Arrange the hoist and pressure-test equipment before taking anything apart. The wash is straightforward. Getting there is the pain in the ass. [CAC removal and installation](#/document/G1675707), [CAC cleaning](#/document/G1675715), [Bumper access](#/document/G1694213)",
+      "why": "The charge-air cooler, or CAC, is part of the turbocharger and engine intake system. This service removes internal contamination and checks whether the cleaned cooler meets Ford’s leakage limit before it goes back in. Clean rinse water alone does not finish the job. Keeping particles out of the opened intake matters just as much: even tiny debris can damage the turbocharger compressor vanes. This procedure does not identify the original cause of contamination or diagnose every low-boost complaint. [Cleaning and leak test](#/document/G1675715), [Intake protection](#/document/G1675707)",
       "when": {
         "summary": "When inspection confirms that the removed 2.3L charge-air cooler needs cleaning, or the repair procedure requires it.",
         "notes": [
@@ -11882,75 +12029,240 @@
       },
       "prepare": [
         {
-          "title": "Plan safe access and intake protection",
-          "detail": "Removal uses a hoist and includes the active grille shutter and lower radiator support bracket. Follow the linked removal procedure. Keep dirt and loose particles out of all opened turbocharger and intake connections."
+          "title": "Arrange the complete access job",
+          "detail": "Use a hoist rated for the vehicle, including cargo and modifications. Access requires removing the front wheels, lower air deflector, front bumper cover, active grille shutter and lower radiator support bracket. Arrange a helper for bumper-cover removal and installation; its illustration specifies two people. The radiator and condenser are omitted from a shutter illustration for clarity, not listed for removal. [Bumper access](#/document/G1694213), [Shutter access](#/document/G1693244), [CAC access](#/document/G1675707), [Hoist safety](#/document/G1693189)"
         },
         {
-          "title": "Have the right cleaning materials",
-          "detail": "The procedure names a commercially available detergent such as Simple Green Pro HD or equivalent, used to its manufacturer’s instructions. Metal brake-parts cleaner is specified for the joint clamp areas and connections; keep that task distinct from the detergent wash inside the cooler."
+          "title": "Gather tools and organize the hardware",
+          "detail": "Match sockets, drivers and trim-fastener tools to the actual hardware. Have torque equipment covering 13–71 lb.in (1.5–8 Nm), plus a wheel torque wrench capable of 150 lb.ft (204 Nm). Keep bumper, shutter, support, sensor and clamp hardware in separate labeled groups. Have wheel blocks and a protected place for the removed bumper cover. [Bumper fasteners](#/document/G1694213), [Shutter fasteners](#/document/G1693244), [CAC fasteners](#/document/G1675707), [Sensor and tester fasteners](#/document/G1675715), [Wheel installation](#/document/G1686507), [Restraints](#/document/G1693189)"
         },
         {
-          "title": "Arrange a suitable leak-test kit",
-          "detail": "A commercial charge-air cooler tester, such as the listed 351-CAS type or equivalent, is needed after cleaning. The operator must be able to apply the specified pressure slowly and measure loss accurately. A shop with this equipment is the appropriate next step if it is not available."
+          "title": "Prepare cleaning materials and intake protection",
+          "detail": "Have commercially available detergent such as Simple Green Pro HD or equivalent, clean water, metal brake-parts cleaner, suitable caps or plugs, and containers for draining and examining the discharge. Follow the detergent manufacturer’s directions. The detergent wash inside the cooler and brake-parts cleaning of the connection areas are separate operations. Protect every opened intake connection from debris. [Cleaning materials](#/document/G1675715), [Intake protection](#/document/G1675707)"
+        },
+        {
+          "title": "Have the pressure-test equipment ready",
+          "detail": "Use a commercial CAC test kit such as Johnson Manufacturing Company 351-CAS or equivalent, with its manufacturer’s installation instructions. Have a controllable air supply, pressure gauge and timer so you can apply 21.8 psi (150 kPa) slowly and measure loss over time. Arrange testing with an equipped shop before dismantling if you cannot perform it yourself. The leak test is required before installation. [Test equipment and requirements](#/document/G1675715)"
+        },
+        {
+          "title": "Prepare for wheel reinstallation",
+          "detail": "Have Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 for a thin coating only at the wheel pilot-bore/hub-pilot interface—the centering surfaces where the wheel fits over the hub. Wheel studs and nut threads must remain clean and dry. [Wheel materials and installation](#/document/G1686507)"
+        },
+        {
+          "title": "Protect yourself and prevent unexpected operation",
+          "detail": "Have eye and ear protection and gloves for sharp components. Read the cleaning products’ safety information and keep solvents away from ignition sources. Disable remote start before service. Cooling fans can operate with the ignition off; arrange to disable them before working nearby and keep track of the measures used so you can restore them before vehicle operation. [Service precautions](#/document/G1693189)"
         }
       ],
       "steps": [
         {
-          "title": "Remove the assembly using its own procedure",
-          "body": "Follow [Charge Air Cooler removal and installation](#/document/G1675707), including the sensor connector, inlet and outlet tubes, support and mounting sequence. Once removed, take the boost-pressure sensor and its screw out of the cooler as directed by the cleaning procedure. Protect the opened intake throughout the work."
+          "title": "Prevent an unexpected start",
+          "body": "If equipped, disable remote start through Vehicle settings > Remote Start Setup. Keep the ignition off and remove the key from the vehicle so nobody can start it during service. Wear eye and ear protection, and protective gloves when handling sharp parts. With the ignition off, inspect the cooling fans for cracks, damage or separation; a damaged fan requires replacement before work continues nearby. Disable the fans before working close to them because ignition off alone does not prevent fan operation. Keep cleaning solvents away from ignition sources. [Service safety](#/document/G1693189)"
         },
         {
-          "title": "Drain contamination and prepare the connections",
-          "body": "Drain coolant, fuel, oil or other contaminants before washing. Clean the specified joint clamp areas and turbocharger, engine and CAC connections. Lay the cooler flat with its inlet and outlet pointing upward.\n\n> **NOTE:** Do not use a high-pressure power washer; it can damage the cooler."
+          "title": "Position and raise the vehicle safely",
+          "body": "Position the vehicle on the hoist with the transmission in NEUTRAL. Identify the four lifting locations by the triangles stamped into the body or frame, and position the hoist adapters at those points. Confirm adequate hoist capacity and clearance from suspension, steering, exhaust, mounting brackets, axle and rear-cover components. Check underbody clearance before entering a drive-on lift. Incorrect support can let the vehicle shift or fall. [CAC setup](#/document/G1675707), [Lifting locations](#/document/G1663631), [Hoist precautions](#/document/G1693189)\n\nDo not lift against either bumper or use the emergency tire-change jack for this service. Never work underneath a vehicle supported only by a jack; floor stands are required when using a jack. Set the parking brake and block wheels remaining on the ground during jack-supported work. This job does not require releasing the parking brake or rotating driven wheels. [Lifting precautions](#/document/G1663631), [Vehicle restraints](#/document/G1693189)"
         },
         {
-          "title": "Wash, agitate and rinse until the discharge is clear",
-          "body": "Add the specified type of detergent according to its instructions, then fill with water to **40% of the cooler’s volume**. Cap or plug the openings before agitation. Raise one end and agitate by hand for at least **five minutes**, then raise the other end and repeat for at least **five minutes**. Drain and rinse thoroughly with clean water. Repeat the cleaning cycle until the rinse contains no contaminants."
+          "title": "Remove both front wheel assemblies",
+          "body": "Remove the front wheel nuts and take off both front wheels with their tires attached. Keep each assembly and its nuts organized for reinstallation. Do not apply heat to a seized wheel nut; heat can damage the wheel and wheel bearing. [Bumper access requirement](#/document/G1694213), [Wheel removal](#/document/G1686507)"
         },
         {
-          "title": "Let it air-dry and prepare the pressure test",
-          "body": "Allow the cooler to air-dry. Reinstall the boost-pressure sensor and its screw at **44 lb.in (5 Nm)**. Install the commercial tester according to its instructions and tighten the tester clamps to **44 lb.in (5 Nm)**. These values belong to the named sensor and test connections; the vehicle’s inlet and outlet tube clamps have their own installation specification."
+          "title": "Remove the lower air deflector",
+          "body": "Remove the lower air deflector’s screws and push pins, then take the panel off. The illustration identifies 16 screws and six push pins. Keep these two fastener groups separate and note their locations for refitting. [Lower air deflector](#/document/G1694213)"
         },
         {
-          "title": "Verify pressure loss before deciding to reuse it",
-          "body": "> **WARNING:** Never exceed the specified pressure. Too much pressure can eject the test adapter or damage the cooler and cause serious injury.\n\nApply air slowly to **21.8 psi (150 kPa)**. Let the cooler stand for a few minutes and note the pressure loss, then release the pressure. Repeat until **three consecutive tests** show approximately the same drop. If loss exceeds **1.5 psi (10 kPa) per minute**, the procedure calls for a new cooler."
+          "title": "Open access through both front wheel arches",
+          "body": "On each side, remove the two push pins shown in the first wheel-arch view. Then remove the three push pins securing the illustrated forward section of the inner fender liner and position that section aside. Repeat on the opposite side. [Wheel-arch and liner access](#/document/G1694213)"
         },
         {
-          "title": "Reinstall the assembly only after the required checks",
-          "body": "Complete the linked removal-and-installation procedure after cleaning, drying and the leak test. Its connection-cleaning instructions, illustrated mounting order and individual fastener torques remain part of the job. Record what contamination was found and the verified pressure-loss result so the next repair decision has useful evidence."
+          "title": "Disconnect the bumper wiring and release its sides",
+          "body": "Disconnect the bumper-area electrical connectors on both sides. Ford shows halogen foglamps and states that LED foglamps are similar. Remove the bumper-cover-to-fender-bracket bolt on each side, then separate each cover edge from its bracket. Keep the cover supported rather than letting it pull on wiring or the remaining attachments. [Bumper connections and side attachments](#/document/G1694213)"
+        },
+        {
+          "title": "Remove the upper shield and license plate bracket",
+          "body": "Remove the eight push pins and lift off the radiator sight shield—the panel across the top of the grille area. If a front license plate bracket is fitted, remove its two screws and the bracket. [Sight shield and plate bracket](#/document/G1694213)"
+        },
+        {
+          "title": "Release the hood-seal fasteners",
+          "body": "On both sides, move the outer edge of the hood seal aside and remove the bolt underneath. Keep these bolts distinct from the bumper’s larger upper screw group; their installation torques differ. [Hood-seal access](#/document/G1694213)"
+        },
+        {
+          "title": "Lift the bumper cover off with a helper",
+          "body": "With two people supporting the cover, remove the six upper screws. Lift the cover up and off its alignment pins, then pull it forward and off the vehicle. Place it where its painted surfaces and attachments are protected. [Bumper removal sequence](#/document/G1694213)"
+        },
+        {
+          "title": "Inspect the fender bracket teeth",
+          "body": "Examine the teeth on the bumper-cover fender brackets for damage. If a bracket requires replacement, remove its bolts and bracket, fit the correct vehicle-specific replacement and tighten its bolts to 13 lb.in (1.5 Nm). Do not try to complete the cover installation against damaged bracket teeth. [Bracket inspection and fastening](#/document/G1694213)"
+        },
+        {
+          "title": "Remove the active grille shutter",
+          "body": "Detach the ambient air temperature sensor. Remove the shutter retainers and mounting bolts, then position the shutter forward. Disconnect the shutter actuator electrical connector. Remove the bridge-link retainers and bridge link, then remove the shutter assembly. Keep bridge-link hardware separate from shutter mounting hardware. The radiator and condenser remain in place; their absence in one illustration is for clarity. [Active grille shutter removal](#/document/G1693244)"
+        },
+        {
+          "title": "Remove the lower radiator support bracket",
+          "body": "Remove the four bolts and the lower radiator support bracket across the bottom of the cooler assembly. Keep the bracket and all four bolts together. [Lower support bracket](#/document/G1675707)"
+        },
+        {
+          "title": "Disconnect the cooler wiring and air tubes",
+          "body": "Disconnect the turbocharger boost-pressure sensor electrical connector from the CAC. Loosen the inlet-tube clamp and disconnect the inlet tube, then loosen the outlet-tube clamp and disconnect the outlet tube. Immediately protect the open tube ends and cooler ports against debris. Even small particles entering the intake can damage the turbocharger compressor vanes. [CAC connections and intake protection](#/document/G1675707)"
+        },
+        {
+          "title": "Release the cooler in its illustrated order",
+          "body": "Support the cooler. In the CAC mounting illustration, remove the retaining bolt marked 1, disengage the mounting connection marked 2, then release the two locations marked 3, following the movement arrows. Remove the cooler without forcing its mounting features. These callouts describe removal movements, not cleaning operations. [CAC mounting sequence](#/document/G1675707)"
+        },
+        {
+          "title": "Remove the sensor and drain contamination",
+          "body": "With the cooler off the car, remove the boost-pressure sensor screw and sensor. Keep them aside until drying is complete. Drain all coolant, fuel, oil or other contaminants before adding cleaner. Record what drains out as a useful observation; appearance alone does not establish its cause. [Sensor removal and draining](#/document/G1675715)"
+        },
+        {
+          "title": "Clean the connections and position the cooler",
+          "body": "Thoroughly clean the joint clamp areas and the turbocharger, engine and CAC connections using metal brake-parts cleaner. Continue protecting opened intake connections against debris. Lay the CAC flat with its inlet and outlet ports pointing upward. Do not use a high-pressure power washer; it can damage the cooler. [Connection cleaning and positioning](#/document/G1675715), [Intake protection](#/document/G1675707)"
+        },
+        {
+          "title": "Add detergent, water and caps",
+          "body": "Add an appropriate amount of commercially available detergent such as Simple Green Pro HD or equivalent, following the detergent manufacturer’s directions. Fill the CAC to 40% of its volume with water. Plug or cap the openings before agitation. [Detergent fill and closure](#/document/G1675715)"
+        },
+        {
+          "title": "Agitate from each end",
+          "body": "Raise one end of the cooler and agitate it by hand for at least five minutes. Raise the opposite end and agitate by hand for at least another five minutes. Each end gets its own full agitation period. [Agitation sequence](#/document/G1675715)"
+        },
+        {
+          "title": "Drain, flush and repeat until clean",
+          "body": "Drain the cooler and flush it thoroughly with clean water. Examine the discharge for contamination. If any remains, repeat the cleaning preparation, detergent-and-water fill, capped agitation from both ends, draining and clean-water flush. Continue until no contaminants appear in the flush water. [Cleaning endpoint](#/document/G1675715)"
+        },
+        {
+          "title": "Air-dry and reinstall the sensor",
+          "body": "Allow the cooler to air-dry. Reinstall the boost-pressure sensor and its screw, tightening the screw to 44 lb.in (5 Nm). Complete the following leak test before installing the cooler in the vehicle. [Drying and sensor installation](#/document/G1675715)"
+        },
+        {
+          "title": "Fit the commercial pressure tester",
+          "body": "Install the CAC tester according to its manufacturer’s installation instructions. Tighten the tester clamps to 44 lb.in (5 Nm). Follow the kit’s instructions for its controls and connections; do not substitute improvised adapters. This clamp setting applies to the tester, while the vehicle’s air-tube clamps have their own setting during reassembly. [Tester installation](#/document/G1675715)"
+        },
+        {
+          "title": "Apply the specified pressure slowly",
+          "body": "Slowly apply air until the cooler reaches 21.8 psi (150 kPa). Never exceed this pressure. Excess pressure can eject a test adapter or damage the cooler, causing serious injury. [Test pressure and warning](#/document/G1675715)"
+        },
+        {
+          "title": "Measure and verify pressure loss",
+          "body": "Let the pressurized cooler stand for a few minutes and note the pressure loss, then release the air pressure. Record starting pressure, ending pressure and elapsed time. Calculate loss per minute by dividing the pressure lost by the elapsed minutes. [Pressure-loss measurement](#/document/G1675715)\n\nRepeat the slow pressurization, observation and pressure-release sequence until three consecutive tests show approximately the same pressure drop. Use comparable observation periods when comparing readings. One favorable reading does not complete the verification. [Three-test requirement](#/document/G1675715)"
+        },
+        {
+          "title": "Make the reuse decision",
+          "body": "If the verified pressure loss exceeds 1.5 psi (10 kPa) per minute, install a new CAC. More washing does not satisfy that replacement requirement. A verified loss at or below the limit meets this procedure’s leakage criterion. Fully release test pressure before removing the test equipment. [Leakage limit and replacement decision](#/document/G1675715)"
+        },
+        {
+          "title": "Inspect the intake and remount the cooler",
+          "body": "Inspect the turbocharger and engine air-intake components and clean them if necessary, keeping debris out throughout assembly. Position the clean, dry cooler that meets the leakage criterion in its mountings. Reverse the illustrated removal movements: restore the two engagements marked 3, restore the engagement marked 2, then install the retaining bolt marked 1. Tighten the CAC bolt to 55 lb.in (6.2 Nm). [Intake inspection and cooler installation](#/document/G1675707)"
+        },
+        {
+          "title": "Reconnect both air tubes and the sensor",
+          "body": "Thoroughly clean the tube joint clamp areas with metal brake-parts cleaner before installation. Remove temporary intake protection as each connection is assembled. Reconnect the outlet tube and tighten its clamp to 48 lb.in (5.4 Nm). Reconnect the inlet tube and tighten its clamp to 48 lb.in (5.4 Nm). Reconnect the boost-pressure sensor electrical connector. Check that both tubes are seated and their connections secured. [Tube and sensor connections](#/document/G1675707)"
+        },
+        {
+          "title": "Restore the lower support bracket",
+          "body": "Position the lower radiator support bracket and install all four bolts. Tighten them to 71 lb.in (8 Nm). Confirm that all four are present and the bracket is secured. [Support bracket installation](#/document/G1675707)"
+        },
+        {
+          "title": "Reinstall the active grille shutter",
+          "body": "Return the shutter assembly to position. Reinstall the bridge link and its retainers, tightening the bridge-link fastenings to 27 lb.in (3 Nm). Reconnect the shutter actuator electrical connector. Move the shutter back from its forward access position, reinstall its retainers and mounting bolts, and tighten the mounting bolts to 71 lb.in (8 Nm). Reattach the ambient air temperature sensor. [Shutter installation](#/document/G1693244)"
+        },
+        {
+          "title": "Return the bumper cover to its alignment pins",
+          "body": "With a helper, bring the bumper cover back toward the vehicle, align it with the mounting pins and lower it onto them. Install the six upper screws and tighten them to 48 lb.in (5.4 Nm). Check that the cover is located before securing the remaining attachments. [Bumper installation sequence](#/document/G1694213)"
+        },
+        {
+          "title": "Restore the bolts beneath the hood seal",
+          "body": "On each side, move the outer edge of the hood seal aside, reinstall the bolt and tighten it to 15 lb.in (1.7 Nm). Return both seal edges to their installed positions. [Hood-seal fastenings](#/document/G1694213)"
+        },
+        {
+          "title": "Refit the plate bracket and sight shield",
+          "body": "If fitted, reinstall the license plate bracket with its two original screws in their recorded locations. Match the driver to the actual screw heads and secure the bracket. Refit the radiator sight shield and all eight push pins in their original locations. [Plate bracket and sight shield installation](#/document/G1694213)"
+        },
+        {
+          "title": "Secure the bumper sides and reconnect wiring",
+          "body": "Reengage the bumper-cover edges with the fender brackets on both sides. Install each side bolt and tighten it to 15 lb.in (1.7 Nm). Reconnect the electrical connectors disconnected during bumper removal on both sides. Check that wiring is connected before closing the wheel-arch access. [Side attachments and electrical connections](#/document/G1694213)"
+        },
+        {
+          "title": "Restore both inner fender liners",
+          "body": "Return each displaced inner fender liner section to its installed position and reinstall its three push pins. Reinstall the separate pair of wheel-arch push pins on each side. Check both sides for missing or unsecured fasteners. [Liner and wheel-arch reassembly](#/document/G1694213)"
+        },
+        {
+          "title": "Refit the lower air deflector",
+          "body": "Position the lower air deflector and reinstall its 16 original screws and six push pins in their recorded locations. Match the tools to the actual hardware, secure the panel and check every attachment. [Lower air deflector installation](#/document/G1694213)"
+        },
+        {
+          "title": "Prepare the wheel mounting surfaces",
+          "body": "Remove corrosion, dirt and foreign material from each wheel mounting face and the corresponding hub or brake-disc mounting face. Ensure any rotor-to-hub fasteners are secured and do not obstruct those faces. Contamination or interference can let the wheel nuts loosen and the wheel detach, causing loss of control. [Wheel seating requirements](#/document/G1686507)\n\nApply a thin coat of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only between the wheel pilot bore and hub pilot. Keep it off the wheel-to-disc mounting faces, studs, nuts, brake pads and brake-disc friction surfaces. The wheel-stud and nut threads must be clean and dry. [Lubricant placement](#/document/G1686507)"
+        },
+        {
+          "title": "Install the front wheels",
+          "body": "Position both front wheel assemblies and install their wheel nuts finger-tight at this stage. Final tightening must be performed with the vehicle resting on its tires. [Initial wheel installation](#/document/G1686507)"
+        },
+        {
+          "title": "Restrain, lower and torque the wheels",
+          "body": "Before lowering from the NEUTRAL service setup, confirm the parking brake is applied. Lower the vehicle until it rests on its tires, then block the wheels to prevent rolling during final tightening. Keep people clear while lowering. [Vehicle restraints](#/document/G1693189)\n\nTighten the wheel nuts in a star/cross pattern to 150 lb.ft (204 Nm), using clean, dry stud and nut threads. The crossing pattern helps prevent brake-disc runout that can lead to shudder and vibration. Do not confuse this foot-pound setting with the inch-pound settings used on the cooler and bumper hardware. [Final wheel torque](#/document/G1686507)"
+        },
+        {
+          "title": "Restore the fans and complete the final inventory",
+          "body": "Account for all temporary intake caps, plugs, test adapters, tools and unused hardware. Check the cooler mountings, both air tubes, boost-pressure sensor connector, lower support bracket, shutter connector, ambient air temperature sensor, bumper attachments, liners and lower deflector. Confirm the electrical connections disturbed for bumper removal are restored. [CAC assembly](#/document/G1675707), [Shutter assembly](#/document/G1693244), [Bumper assembly](#/document/G1694213)\n\nOnce work near the cooling fans is finished and hands and tools are clear, reverse whatever measures were used to disable them. Confirm every affected connection or device is restored before vehicle operation. Keep the ignition off and the key removed during this restoration; the fans can operate even with the ignition off. [Cooling-fan and start precautions](#/document/G1693189)\n\nRecord the contamination observed, the cleaning result and the verified pressure-loss readings. Arrange to retighten the wheel nuts within 100 mi (160 km) after reinstallation; wheels can loosen after initial tightening. [Wheel follow-up](#/document/G1686507)"
         }
       ],
       "watchFor": [
         {
-          "title": "Contaminants continuing to appear in rinse water",
-          "body": "The cleaning procedure calls for another wash-and-rinse cycle until the discharge is free of contaminants."
+          "title": "Particles beside an open intake",
+          "body": "Pause connection work and keep the particles out. Even very small debris can damage the turbocharger compressor vanes. Maintain intake protection and inspect the components before assembly. [Intake protection](#/document/G1675707)"
         },
         {
-          "title": "Pressure loss beyond the stated limit",
-          "body": "A cleaned cooler that exceeds the verified leak limit is a replacement case in this procedure."
+          "title": "Contamination still appearing in the rinse",
+          "body": "The wash is unfinished while contaminants remain in the discharge. Repeat the complete cleaning cycle before drying. [Cleaning endpoint](#/document/G1675715)"
         },
         {
-          "title": "Particles near open intake connections",
-          "body": "Even small particles can damage turbocharger compressor vanes. Protect the intake while parts are detached and inspect components before assembly."
+          "title": "Pressure approaching the test limit",
+          "body": "Never exceed 21.8 psi (150 kPa). Excess pressure can eject an adapter or damage the cooler and cause serious injury. [Pressure warning](#/document/G1675715)"
+        },
+        {
+          "title": "Similar hardware with different torque settings",
+          "body": "Tester clamps use 44 lb.in (5 Nm); vehicle air-tube clamps use 48 lb.in (5.4 Nm). Bumper side and hood-seal bolts use 15 lb.in (1.7 Nm), while the six upper cover screws use 48 lb.in (5.4 Nm). Keep labeled hardware groups with their settings. [Tester clamps](#/document/G1675715), [Tube clamps](#/document/G1675707), [Bumper fasteners](#/document/G1694213)"
+        },
+        {
+          "title": "Contamination or lubricant on wheel seating surfaces",
+          "body": "Clean the wheel and hub mounting faces. Keep anti-seize confined to the pilot interface and away from threads and braking surfaces. Incorrect seating can allow wheel loosening; lubricant in the wrong location can damage components. [Wheel installation precautions](#/document/G1686507)"
         }
       ],
       "notes": [
-        "The cleaning pressure test must be completed before installation; washing alone is not the complete service.",
-        "This guide describes the 2.3L EcoBoost CAC only. It does not apply its test pressure or cleaning method to an engine coolant radiator or transmission cooler.",
-        "The illustration is from CAC removal and installation. Its numbered arrows describe mounting movements, not the detergent-cleaning sequence."
+        "Scope is the 2015 Mustang 2.3L EcoBoost CAC. Do not transfer these cleaning or pressure-test specifications to another engine, an engine-coolant radiator or a transmission cooler.",
+        "This is condition-based cleaning. The CAC procedures direct inspection and cleaning when necessary and provide no recurring wash interval. [Inspection](#/document/G1675707), [Cleaning](#/document/G1675715)",
+        "The mounting illustration’s numbered arrows describe component removal movements. They are separate from the detergent-cleaning sequence. [CAC mounting](#/document/G1675707)",
+        "Keep notes on what drained out, the cleaning cycles and the verified pressure-loss result. Meeting the cooler leakage limit does not certify the rest of the intake system or explain the original contamination."
       ],
       "procedures": [
         {
           "documentId": "G1675715",
-          "purpose": "Follow the complete detergent cleaning, drying and mandatory pressure-loss test."
+          "purpose": "Internal cleaning, air-drying, sensor installation and mandatory pressure-loss testing."
         },
         {
           "documentId": "G1675707",
-          "purpose": "Remove and reinstall the 2.3L cooler with its illustrations and connection-specific torques."
+          "purpose": "Cooler access, intake protection, mounting sequence and installation torques."
         },
         {
           "documentId": "G1663631",
-          "purpose": "Use the correct lifting points and supports for the removal work."
+          "purpose": "Lifting-point identification and support precautions."
+        },
+        {
+          "documentId": "G1694213",
+          "purpose": "Complete bumper-cover access and restoration, including liner, deflector and bracket details."
+        },
+        {
+          "documentId": "G1693244",
+          "purpose": "Active grille shutter removal and explicit reassembly."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Unexpected-start prevention, fan precautions and restoration, personal protection, chemicals and vehicle restraints."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Front wheel removal, mounting-surface preparation, lubricant placement, final torque and retightening."
         }
       ],
       "relatedGuideIds": [
@@ -11969,8 +12281,151 @@
         {
           "documentId": "G1663631",
           "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1694213",
+          "sourceHash": "3ba02fddd34915c3b15f0d370976fe00f28cb75f9dc6e4e49a954deb34c5ab5d"
+        },
+        {
+          "documentId": "G1693244",
+          "sourceHash": "daf148f072304f44ca74909bd86b3b8d95bd3bcb0e69b445c5d9b6cadbfe5f96"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "vehicle-setup",
+          "title": "Prepare and lift safely",
+          "summary": "Prevent unexpected operation, raise the car and remove the front wheels.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "bumper-access",
+          "title": "Remove the bumper cover",
+          "summary": "Open the lower and wheel-arch access, disconnect wiring and remove the cover with a helper.",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "id": "cac-removal",
+          "title": "Reach and remove the cooler",
+          "summary": "Remove the shutter and support, protect the intake and release the cooler.",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "id": "wash-and-dry",
+          "title": "Clean the cooler",
+          "summary": "Clean the connections, wash from both ends, rinse until clean and air-dry.",
+          "start": 16,
+          "end": 20
+        },
+        {
+          "id": "leak-verification",
+          "title": "Verify the leakage result",
+          "summary": "Fit the tester, establish three consistent readings and decide whether the cooler can be reused.",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "id": "cac-refitting",
+          "title": "Restore the cooler and shutter",
+          "summary": "Reconnect the cooler, tubes, support and shutter with their individual torques.",
+          "start": 25,
+          "end": 28
+        },
+        {
+          "id": "body-refitting",
+          "title": "Restore the bumper and access panels",
+          "summary": "Locate the cover, secure its attachments and reconnect wiring before closing access.",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "id": "wheels-and-completion",
+          "title": "Install the wheels and finish",
+          "summary": "Prepare the wheel seats, restrain the car, perform final torque, restore the cooling fans and record the result.",
+          "start": 35,
+          "end": 38
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Contaminants remain in the flush water.",
+          "meaning": "The specified cleaning endpoint has not been reached. [Cleaning endpoint](#/document/G1675715)",
+          "next": "Repeat the preparation, detergent wash, both agitation periods, draining and clean-water flush."
+        },
+        {
+          "finding": "Successive pressure-drop readings vary.",
+          "meaning": "The result is not yet verified under the three-consecutive-test requirement. [Verification requirement](#/document/G1675715)",
+          "next": "Repeat the specified pressurize, observe and release sequence until three consecutive tests show approximately the same drop."
+        },
+        {
+          "finding": "Verified loss exceeds 1.5 psi (10 kPa) per minute.",
+          "meaning": "The cooler exceeds Ford’s leakage limit. [Replacement criterion](#/document/G1675715)",
+          "next": "Install a new, correct vehicle-specific CAC rather than returning that cooler to service."
+        },
+        {
+          "finding": "Three consistent tests establish loss at or below 1.5 psi (10 kPa) per minute.",
+          "meaning": "The cooler meets this procedure’s leakage criterion. [Leakage criterion](#/document/G1675715)",
+          "next": "Release pressure, remove the tester and proceed with installation after inspecting the intake components."
+        },
+        {
+          "finding": "A bumper fender bracket has damaged teeth.",
+          "meaning": "The bumper procedure calls for bracket inspection and replacement when required. [Fender bracket inspection](#/document/G1694213)",
+          "next": "Replace the affected bracket with the correct part and tighten its bolts to 13 lb.in (1.5 Nm) before securing the cover."
+        },
+        {
+          "finding": "The drained material or recurring contamination raises a concern about another fault.",
+          "meaning": "The cleaning procedure addresses removal of contaminants and cooler leakage; it does not establish the contamination’s source. [Cleaning scope](#/document/G1675715)",
+          "next": "Keep the observations and arrange diagnosis of the underlying concern rather than treating a clean cooler as proof that it is resolved."
+        }
+      ],
+      "verification": [
+        {
+          "title": "The cooler is clean, dry and tested",
+          "body": "Confirm the final flush contained no contaminants, the cooler air-dried, and three consecutive tests produced approximately matching pressure drops. Record elapsed time and loss per minute. Testing starts at 21.8 psi (150 kPa); verified loss must not exceed 1.5 psi (10 kPa) per minute for reuse. [Cleaning and test completion](#/document/G1675715)"
+        },
+        {
+          "title": "The cooler assembly is secured",
+          "body": "Confirm sensor screw: 44 lb.in (5 Nm); CAC retaining bolt: 55 lb.in (6.2 Nm); inlet and outlet clamps: 48 lb.in (5.4 Nm) each; all four lower support bolts: 71 lb.in (8 Nm). Check the sensor connector and account for all intake caps and plugs. [Sensor installation](#/document/G1675715), [CAC installation](#/document/G1675707)"
+        },
+        {
+          "title": "The shutter and bumper are restored",
+          "body": "Confirm bridge-link fastenings: 27 lb.in (3 Nm); shutter mounting bolts: 71 lb.in (8 Nm); bumper side and hood-seal bolts: 15 lb.in (1.7 Nm); six upper cover screws: 48 lb.in (5.4 Nm). Any replaced fender bracket uses 13 lb.in (1.5 Nm). Check the shutter actuator, ambient temperature sensor, bumper wiring, hood-seal edges, sight shield, plate bracket if fitted, liners and lower deflector. [Shutter installation](#/document/G1693244), [Bumper installation](#/document/G1694213)"
+        },
+        {
+          "title": "The cooling fans are restored before operation",
+          "body": "Confirm that every measure used to disable the cooling fans has been reversed and all affected connections or devices are restored. Finish this with the ignition off, key removed, and hands and tools clear of the fans before operating the vehicle. Fans can operate with the ignition off. [Cooling-fan and start precautions](#/document/G1693189)"
+        },
+        {
+          "title": "The wheels and ground-level restraint are complete",
+          "body": "Confirm the parking brake and wheel blocks secured the car before ground-level final tightening. Both front wheels must have clean mounting faces and clean, dry threads, with nuts tightened in a star/cross pattern to 150 lb.ft (204 Nm) while resting on the tires. Retighten within 100 mi (160 km) after installation. [Vehicle restraint](#/document/G1693189), [Wheel completion](#/document/G1686507)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang 2.3L EcoBoost charge air cooler cleaning",
+        "EcoBoost intercooler removal and installation",
+        "CAC detergent wash",
+        "charge air cooler pressure loss test",
+        "Mustang front bumper cover removal",
+        "active grille shutter removal"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "3304ae43e8ece6a35816f466f06284587bb0601096feb23cd78d09c441dbb986"
+      }
     },
     {
       "categoryId": "advanced",
@@ -12280,9 +12735,9 @@
     },
     {
       "id": "corrosion-protection",
-      "title": "Corrosion protection: restore the barriers that keep water out",
+      "title": "Corrosion protection: inspect and restore accessible seams and surfaces",
       "categoryId": "advanced",
-      "summary": "Inspect damaged seam sealer, underbody protection and repaired cavities, then choose the right restoration process.",
+      "summary": "Find damaged protection, reseal sound accessible joints and restore exterior coating. Includes safe underside access and a separate reference for concealed-cavity treatment.",
       "applicability": {
         "engines": [
           "2.3L",
@@ -12301,8 +12756,8 @@
       "evidence": [
         "checks"
       ],
-      "introduction": "The body has several layers of protection doing different jobs. Seam sealer closes joints between panels. Underbody coating protects exposed surfaces. Cavity treatment reaches enclosed areas that a brush cannot. Keeping these barriers intact matters just as much as keeping the outside paint looking good, especially where a repair or scrape has disturbed them.",
-      "why": "Water and dirt can enter an open seam or remain against unprotected metal. Restoring the correct barrier helps limit corrosion and can also prevent water, dust, noise or fumes finding a route into the cabin. A fresh coating is only useful when the surface underneath has been properly inspected and prepared.",
+      "introduction": "I like shiny paint, but the protection hiding around panel edges deserves some damn attention too. This guide covers inspecting visible surfaces, resealing accessible joints and restoring exterior undercoating after the underlying repair is complete. It includes supported underside access without removing wheels, trim or panels. Concealed-cavity treatment is explained separately as a repair-planning reference; establishing access inside those cavities is outside this job. [Protection systems](#/document/G1687506), [Coating processes](#/document/G1687508)",
+      "why": "Seam sealer closes panel joints and helps keep water, dust, wind noise and exhaust fumes out. Underbody coating provides an elastic, abrasion-resistant corrosion barrier on exposed underside surfaces. Cavity treatment protects enclosed metal. Structural adhesive can also provide a corrosion barrier, but its bond helps hold the body together. I identify the damaged layer first: fresh goo cannot establish that a damaged panel or bond is sound. [Sealers, coatings and adhesives](#/document/G1687506)",
       "when": {
         "summary": "Inspect exposed metal, damaged coatings or open seams; restore protection as part of the affected repair.",
         "notes": [
@@ -12312,70 +12767,118 @@
       },
       "prepare": [
         {
-          "title": "Make the surface visible",
-          "detail": "Clean away dirt and inspect underbody areas using appropriate vehicle support. Record damaged seams, exposed edges and previous repair areas before deciding what needs treatment."
+          "title": "Choose an accessible treatment area",
+          "detail": "Start with joints and surfaces you can see and reach directly. For underside access, the raised-work route below uses a suitable hoist and Ford's illustrated lifting locations. Match the hoist and adapters to the vehicle and follow the equipment manufacturer's operating instructions. Capacity must cover the car, cargo and modifications. The emergency tire-changing jack is unsuitable for this work. [Lifting locations](#/document/G1663631), [Hoist precautions](#/document/G1693189)"
         },
         {
-          "title": "Identify the protection layer",
-          "detail": "Seam sealer, exterior undercoating and internal cavity wax have different jobs. Choose the procedure and material for the location rather than using one aerosol for everything."
+          "title": "Gather inspection and preparation supplies",
+          "detail": "Have a light and a way to photograph findings. For exterior undercoating preparation, gather a wire brush and Motorcraft Metal Surface Prep Wipes ZC-31-B. The treatment surface must be free of oil, dirt, wax, grease and other contamination. Ford recommends room-temperature application conditions for best results. [Surface preparation](#/document/G1687508)"
         },
         {
-          "title": "Plan repair and application together",
-          "detail": "Welding, metal repair and refinishing come before the specified protective treatments. Spraying enclosed areas needs the correct coating gun or cavity wand, ventilation and product-specific protective equipment."
+          "title": "Select the sealer for the actual joint",
+          "detail": "Use an application-appropriate sealer that remains flexible after curing and can be painted. A heavy-bodied, non-sag seam sealer suits applications such as standing cosmetic seams, tooled door-skin seams and floor pans; a joint needing a gap bridged requires heavy-bodied sealer. Obtain the manufacturer's preparation, application, curing and painting instructions, plus the applicator those instructions require. [Sealer selection](#/document/G1687506)"
+        },
+        {
+          "title": "Match the exterior coating and spray equipment",
+          "detail": "Ford lists ValuGard Premium Undercoating VG101/VG101A or 3M 08804. The spray process requires an undercoating gun and an air supply adjustable to 552–621 kPa (80.06–90.07 psi). Have a compatible mild cleanup solvent, such as mineral spirits or bug and tar remover, and check its surface-use instructions. [Exterior materials and equipment](#/document/G1687508)"
+        },
+        {
+          "title": "Prepare for chemicals and sharp metal",
+          "detail": "Read the safety data sheets for every cleaner, sealer, coating and solvent. Follow their ventilation and protective-equipment requirements, including a respirator and chemically resistant gloves where directed; improper chemical handling can cause serious injury. Wear eye and ear protection during service, and protective gloves around sharp panel edges. Keep solvents away from ignition sources because they can ignite or explode. [Chemical protection](#/document/G1693182), [Service and solvent precautions](#/document/G1693189)"
         }
       ],
       "steps": [
         {
+          "title": "Secure the Mustang",
+          "body": "Switch the ignition off and remove the key from the vehicle. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before inspecting or working around the car. Unexpected starting can seriously injure someone working nearby. [Prevent unexpected starting](#/document/G1693189)\n\nFor ground-level work, choose a hard, level surface, set the parking brake and block the wheels. Keep the parking brake set throughout this stationary job. [Vehicle restraint precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Establish underside access only if needed",
+          "body": "Skip lifting when the selected area is reachable from ground level. For hoist access, use the four locations shown in Ford's lifting diagram, with two along each side of the vehicle. Identify the corresponding stamped triangles in the body sheet metal and position the lift arms and adapters at those specified locations. Lifting elsewhere can let the vehicle shift or fall. If you cannot identify a point or engage it correctly, stop and arrange suitable workshop access. [Mustang lifting points](#/document/G1663631), [Hoist setup](#/document/G1693189)\n\nBefore raising, check that adapters and arms cannot damage the suspension, exhaust, steering linkage, mounting brackets, axle or rear cover. If using a drive-on lift, first check for underbody interference. Raise and secure the vehicle using the hoist manufacturer's operating and support instructions. Never work underneath a vehicle supported only by a jack; jack-supported work requires floor stands. [Lifting precautions](#/document/G1663631)"
+        },
+        {
           "title": "Inspect before covering anything",
-          "body": "Look for broken or missing sealer, bare metal and damaged coating around panel joints and exposed edges. Have corrosion and the underlying metal assessed before applying a new layer. Covering a damaged area does not establish that the metal is sound."
+          "body": "Make the area visible by removing obscuring dirt, then look for cracked, lifted or missing sealer, open joints, exposed metal and damaged exterior coating. Ford identifies door and luggage-compartment hem flanges, wheelhouses, quarter panels, floor, cowl, roof and other panel attachment points as sealing locations. A hem flange is a folded panel edge. The sealing illustrations are examples, not a complete map of every joint. [Sealing locations](#/document/G1687506), [Clean surfaces](#/document/G1687508)\n\nI would photograph each suspect patch and note its location before treatment. Look along the edge of the damage as well as its center. If you see holes, separating metal or a swollen seam whose condition you cannot judge, my recommendation is to have a body repair specialist assess it before coating. A smooth black finish is a lousy substitute for knowing what is underneath."
         },
         {
-          "title": "Restore the joint or metal first",
-          "body": "Deal with the damaged panel or joint as required. The sealing guide calls for damaged originally sealed joints to be resealed. Select a compatible, flexible, paintable sealer and follow its application and curing instructions."
+          "title": "Choose the protection and finish any underlying repair",
+          "body": "A damaged originally sealed joint needs resealing. An affected exterior underbody surface needs suitable exterior protection. Enclosed inner surfaces use the separate rust-inhibitor process described in the reference notes. Structural adhesive has a bonding role; adding surface sealer does not restore a failed structural bond. [Choose the protection layer](#/document/G1687506), [Exterior and internal processes](#/document/G1687508)\n\nComplete any necessary panel or joint repair before restoring its protection. Both specified coating processes belong after welding and refinishing; these products cannot be welded through. Route metal repair, welding and structural bonding to the applicable body-repair procedure or a body repair specialist. [Application sequence](#/document/G1687508)"
         },
         {
-          "title": "Prepare a clean surface",
-          "body": "The corrosion-protection procedure requires removal of dirt, oil, wax and grease before coating. Use the specified preparation process and compatible materials; the coating is not a substitute for surface cleaning."
+          "title": "Prepare the exterior treatment surface",
+          "body": "For an area receiving exterior undercoating, wire-brush it and remove oil, dirt and other foreign material. Thoroughly clean and degrease the metal to remove wax and grease using Motorcraft Metal Surface Prep Wipes ZC-31-B. Ford recommends having the vehicle at room temperature for best results. The coating's moisture-displacing property does not replace this cleaning. [Undercoating preparation](#/document/G1687508)\n\nPrepare a joint receiving seam sealer according to that sealer manufacturer's directions. Use the instructions for the material actually being applied rather than assuming that coating preparation also covers every sealer. [Sealer preparation and application](#/document/G1687506)"
         },
         {
-          "title": "Protect exposed and enclosed areas differently",
-          "body": "Apply the specified exterior protection after the relevant welding and refinishing work. Treat internal cavities with the appropriate rust inhibitor and wand so the material reaches hidden surfaces. The linked article explains the separate equipment and application settings; these products are not weld-through coatings."
+          "title": "Reseal the affected joint",
+          "body": "Reseal the damaged portion of the originally sealed joint with a suitable flexible, paintable material. Use heavy-bodied sealer where the application requires bridging an open gap; Ford recommends heavy-bodied, non-sag seam sealer for locations such as standing cosmetic seams, tooled door-skin seams and floor pans. [Joint restoration](#/document/G1687506)\n\nApply it using the manufacturer's directions, including any tooling, curing and painting requirements. Inspect the affected length for remaining openings. Complete those product-specific requirements before treating the sealing work as finished. [Sealer instructions](#/document/G1687506)"
         },
         {
-          "title": "Keep drainage paths open",
-          "body": "Check the bottom of doors and other intended water outlets after treatment. The goal is to protect the metal while still letting water escape. Remove unintended overspray using the compatible cleanup method specified for the product and surface."
+          "title": "Set up the exterior undercoating gun",
+          "body": "If the selected exterior area needs undercoating, attach the canister to the undercoating gun. Use ValuGard Premium Undercoating VG101/VG101A or 3M 08804 and set the applicator air pressure to 552–621 kPa (80.06–90.07 psi). Follow the gun manufacturer's connection and operating instructions. [Undercoating setup](#/document/G1687508)\n\nFord also permits suitable underbody protection material to be rolled or brushed. If using one of those methods, follow that material's application instructions; the air-pressure range belongs to the documented spray process. [Permitted application methods](#/document/G1687506)"
         },
         {
-          "title": "Document the repair and check it again",
-          "body": "Keep photos of the treated area and record the product and repair performed. During later body checks, look for lifted coating, reopened seams, trapped dirt or recurring moisture so an application problem can be caught early."
+          "title": "Restore exterior coverage",
+          "body": "Spray light mist coats using the applicator's fogging pattern. Cover the selected exterior repair surfaces, including exposed repaired flange edges, after welding and refinishing are complete. Inspect the treatment area for missed bare metal and complete its coverage. [Exterior application](#/document/G1687508)\n\nKeep the application confined to the intended protection area. The generic rail illustrations explain where exterior protection belongs on a repair; they do not establish Mustang cavity access or authorize drilling. [Application illustration scope](#/document/G1687508)"
+        },
+        {
+          "title": "Clean overspray and leave drainage open",
+          "body": "Remove unintended overspray with a suitable mild solvent, such as the mineral spirits or bug and tar remover listed by Ford. Follow the cleaner's directions for the affected surface and keep it away from ignition sources. [Overspray cleanup](#/document/G1687508), [Solvent precautions](#/document/G1693189)\n\nCheck that treatment has not obstructed door drain holes; these outlets must remain open to prevent moisture buildup. Check accessible body drains for obstructions and clean them if needed. For a focused drainage inspection, use the related [body drains and weather seals guide](#/maintenance/body-drains-seals). [Door drainage requirement](#/document/G1687508), [Ford owner checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Inspect the finished area",
+          "body": "Look along the treated joint for remaining openings and across exterior coating for missed repair edges or bare metal within the intended treatment area. Correct an opening with the appropriate sealing process and missed exterior coverage with the appropriate coating process. Confirm that the sealer manufacturer's curing and painting requirements have been satisfied. [Sealing completion](#/document/G1687506), [Exterior coverage](#/document/G1687508)\n\nMy final comparison is before-and-after photos of the same area. Record anything you could not inspect separately; a finished visible patch does not establish the condition of hidden metal."
+        },
+        {
+          "title": "Return the car to ground level and record the work",
+          "body": "If the car was raised, clear people, tools and materials from underneath and from the lift's movement area. Keep the parking brake set and lower the vehicle using the hoist manufacturer's release and lowering instructions. Once it is fully supported on the ground, clear the lifting equipment and remove the ground restraints when ready to move the car. [Vehicle restraint and lifting precautions](#/document/G1693189), [Lifting locations and clearance precautions](#/document/G1663631)\n\nNo wheels, trim or panels are removed in this workflow, so there is no component refitting step. Before returning the car to use, satisfy the applied products' curing and finishing instructions. Save the product names, treatment locations and photos. At later body checks, I would compare for reopened seams, lifted coating or recurring moisture. [Sealer finishing requirements](#/document/G1687506)"
         }
       ],
       "watchFor": [
         {
-          "title": "Swollen seams or metal that appears weakened",
-          "body": "A coating alone cannot repair a structurally damaged panel. Have the extent of corrosion assessed before deciding on cosmetic treatment."
+          "title": "A bonding problem disguised as a sealing problem",
+          "body": "Structural adhesive helps bond body components. Surface sealer cannot establish a correct structural bond, so a suspect bond needs assessment before cosmetic sealing. [Adhesive function](#/document/G1687506)"
         },
         {
-          "title": "Water that remains inside a door",
-          "body": "Check the intended drain openings and the water path. Adding more sealant can make the problem worse if it closes an outlet."
+          "title": "Coating before the final weld",
+          "body": "Apply the listed undercoating and rust inhibitor after welding and refinishing. Neither product can be welded through. [Repair sequence](#/document/G1687508)"
         },
         {
-          "title": "Repeated rust at the same repaired edge",
-          "body": "Review surface preparation, the underlying repair and coverage of hidden faces rather than continually coating over the visible spot."
+          "title": "A protected door with a blocked outlet",
+          "body": "Cavity treatment must leave door drains clear. Closing an outlet can allow moisture to build up inside the door. [Drainage precaution](#/document/G1687508)"
+        },
+        {
+          "title": "The same damaged edge returning",
+          "body": "I would revisit the underlying repair, cleaning and coverage before adding another layer. Repeated coating can make the original problem harder to inspect."
         }
       ],
       "notes": [
-        "The hero shows underbody seam locations. Some drawings in the corrosion-treatment article are generic application examples; they are not exact access-point maps for every Mustang panel.",
-        "Do not use this coating procedure to lubricate suspension bushings or treat friction surfaces. The material and location must match the job."
+        "Applies to the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine. The supplied body-protection procedures have no engine-specific application branches.",
+        "This remains condition-based care and repair follow-up. It does not introduce a whole-car recoating interval.",
+        "Separate cavity-treatment reference — preparation and equipment: Ford specifies surfaces free of oil, dirt and other contamination, followed by thorough wax and grease removal with Motorcraft Metal Surface Prep Wipes ZC-31-B. Room-temperature conditions give best results. The listed treatments are ValuGard Rust Inhibitor VG104/VG104A or 3M Cavity Wax Plus 08852, used with a rust protection coating gun and an appropriate-length wand. The applicator pressure is 448–517 kPa (64.97–74.98 psi), distinct from exterior undercoating pressure. Treatment follows welding and refinishing; the products cannot be welded through. [Cavity preparation and setup](#/document/G1687508)",
+        "Separate cavity-treatment reference — application: after the applicable repair procedure has established access, Ford's method inserts the wand as far as possible through the access hole, starts spraying, pauses 2–3 seconds and slowly withdraws the wand while applying light mist coats. The same pause and slow withdrawal fog inner rail surfaces. This describes application technique, not a Mustang access-hole location. [Wand technique](#/document/G1687508)",
+        "Separate cavity-treatment reference — coverage and finish: door-shell treatment covers all interior metal surfaces and affected exposed repaired edges while leaving drain holes clear. Quarter-panel and door-opening treatment targets the closed channels along spot-weld flanges, meaning the joined panel edges containing spot welds. Horizontal surfaces need particular attention because Ford identifies them as more susceptible to corrosion. Overspray cleanup uses a suitable mild solvent such as mineral spirits or bug and tar remover. A separate cavity job must include its required access-part refitting and drainage checks before completion. [Internal coverage and cleanup](#/document/G1687508)",
+        "The adhesive illustrations include material placed between inner and outer panels before assembly. They do not instruct an owner to inject structural adhesive into an assembled hood, door or luggage lid. [Adhesive examples](#/document/G1687506)"
       ],
       "procedures": [
         {
           "documentId": "G1687506",
-          "purpose": "Identify the roles and typical locations of seam sealers, adhesives and underbody protection."
+          "purpose": "Identify protection layers, inspect typical sealing locations and select and apply suitable seam sealer."
         },
         {
           "documentId": "G1687508",
-          "purpose": "Restore exterior corrosion protection and internal cavity treatment with the correct preparation and application process."
+          "purpose": "Prepare and coat accessible exterior surfaces; explain concealed-cavity treatment separately as a repair-planning reference."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Identify the Mustang's illustrated lifting locations and stamped triangle markers."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Prevent unexpected starting and apply vehicle-restraint, support, personal-protection and solvent precautions."
+        },
+        {
+          "documentId": "G1693182",
+          "purpose": "Apply chemical safety-data-sheet and protective-equipment requirements."
         }
       ],
       "relatedGuideIds": [
@@ -12390,8 +12893,125 @@
         {
           "documentId": "G1687508",
           "sourceHash": "1c40ff5cbdc7db5eb4428bff2670e2864986cb0445e68ee38ef56abf0f10ea74"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693182",
+          "sourceHash": "de4e8f836dd80293e46954ea86b0b227e4b0b996436b9b9cbdbe11913c532e94"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "secure-and-access",
+          "title": "Secure the car and establish access",
+          "summary": "Prevent starting and use the specified lifting locations if underside access is needed.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "inspect-and-select",
+          "title": "Inspect and choose the protection",
+          "summary": "Identify damaged barriers and route underlying repairs before coating.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "prepare-and-reseal",
+          "title": "Prepare and reseal",
+          "summary": "Clean the treatment area and restore damaged accessible joints.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "apply-exterior-protection",
+          "title": "Restore exterior protection",
+          "summary": "Use the correct coating setup and complete the intended exterior coverage.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "clean-check-and-finish",
+          "title": "Clean up and finish",
+          "summary": "Keep drains open, verify the visible result and return the vehicle to ground level.",
+          "start": 9,
+          "end": 11
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "An accessible originally sealed joint has cracked or missing sealer.",
+          "meaning": "Its sealing barrier needs restoration.",
+          "next": "Assess the joint underneath, then reseal with an application-appropriate flexible, paintable material. Use heavy-bodied sealer where a gap must be bridged. [Resealing requirements](#/document/G1687506)"
+        },
+        {
+          "finding": "A treated exterior repair edge still has bare metal.",
+          "meaning": "The intended protective coverage is incomplete.",
+          "next": "Confirm repair and refinishing are finished, prepare the missed area and complete exterior coating coverage. [Exterior protection](#/document/G1687508)"
+        },
+        {
+          "finding": "Metal is perforated, separating or obscured by a swollen seam.",
+          "meaning": "The visible coating condition does not establish the condition of the panel or joint.",
+          "next": "My recommendation is to stop coating that area and have a body repair specialist assess the underlying damage."
+        },
+        {
+          "finding": "An enclosed repaired channel needs internal protection.",
+          "meaning": "The affected inner surfaces call for the separate rust-inhibitor process.",
+          "next": "Arrange the applicable cavity-access and refitting procedure as part of the body repair. Use the separate cavity-treatment reference below to understand its materials, application and coverage targets. [Internal protection](#/document/G1687508)"
+        },
+        {
+          "finding": "A door drain is obstructed after treatment.",
+          "meaning": "Moisture cannot leave through the intended outlet.",
+          "next": "Clear the obstruction and recheck the outlet before finishing. If water continues collecting with the drain open, investigate the water path through the related drainage guide. [Door drains](#/document/G1687508), [Drainage guide](#/maintenance/body-drains-seals)"
+        },
+        {
+          "finding": "A stamped lifting triangle cannot be identified or the adapter cannot engage correctly.",
+          "meaning": "The specified lifting setup has not been established.",
+          "next": "Keep the vehicle down and arrange suitable equipment or workshop access. Do not substitute a convenient nearby lifting point. [Lifting-point requirement](#/document/G1663631)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The selected joint is closed and finished",
+          "body": "Inspect the affected length for remaining openings and confirm completion of the sealer manufacturer's application, curing and painting requirements. [Sealer completion](#/document/G1687506)"
+        },
+        {
+          "title": "Exterior coverage reaches the intended edges",
+          "body": "Check the accessible treatment area for missed bare metal, especially exposed repaired flange edges. Correct missed coverage before closing out that area. [Exterior coverage](#/document/G1687508)"
+        },
+        {
+          "title": "Drainage remains open",
+          "body": "Confirm that coating and cleanup have left door drains unobstructed. Continue the separate owner check of body and door drains. [Door drainage](#/document/G1687508), [Ford owner checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "The vehicle and work record are ready",
+          "body": "If raised, confirm the car is fully back on the ground and the lifting equipment and work materials are clear. Record which visible areas were inspected, treated or referred for repair; do not mark uninspected cavities as checked. [Vehicle support precautions](#/document/G1693189)"
+        }
+      ],
+      "searchTerms": [
+        "corrosion protection",
+        "seam sealer",
+        "underbody coating",
+        "cavity wax",
+        "rust inhibitor",
+        "door drain holes",
+        "hem flange",
+        "spot-weld flange",
+        "Mustang lifting points"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "15630546605a3c33abf113c7d50f4d261621ca5345983013873abd0034418d3c"
+      }
     },
     {
       "id": "3-7l-v6-head-gasket",

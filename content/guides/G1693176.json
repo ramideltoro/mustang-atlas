@@ -1,5 +1,22 @@
 {
   "documentId": "G1693176",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1693176",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    }
+  ],
   "sourceHash": "4dd6205faedae6b4e0e072275bc0e3f90f0bf7c40e63be06c022f0abf3730c27",
   "title": "Head Up Display (HUD) Module",
   "introduction": "The illustrations locate the head up display module in the narrow strip at the top of the instrument panel, near the windshield and above the instrument cluster. The installed view marks the tab-release point; the raised view exposes the electrical connector underneath.\n\nI think of the tab as a cupboard latch: release what holds the module before lifting it. A non-marring tool is specified for that release. The sequence below covers removal and refitting; it supplies no electrical diagnosis or operational-test procedure.",
@@ -10,6 +27,19 @@
         {
           "name": "Non-marring tool",
           "detail": "Use a non-marring tool to release the retaining tab at the illustrated point."
+        }
+      ]
+    },
+    {
+      "category": "Preparation and safety",
+      "items": [
+        {
+          "name": "Prevent an unexpected start",
+          "detail": "Before service, disable remote start, if equipped, through the Central Display: Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, causing personal injury or death. Remove the key from the vehicle to prevent another person starting the engine during service; an accidental start can cause serious personal injury."
+        },
+        {
+          "name": "Personal protection",
+          "detail": "Wear eye and ear protection during vehicle service. Wear protective gloves when handling components with pointed or sharp edges. Ignoring these precautions may result in serious personal injury."
         }
       ]
     }
@@ -41,10 +71,10 @@
       "why": "The connector is accessible while the module is raised. Seating the module restores the tab's retention and completes the supplied installation sequence."
     }
   ],
-  "checkedAt": "2026-10-27T11:46:23.081Z",
+  "checkedAt": "2026-10-27T13:06:45.692Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -53,7 +83,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "345654b0276a4aff3c30a6e3417cb9fbd0045a4801ccf65275be0061d532142c",
   "sourcePdfHash": null,
@@ -61,10 +91,24 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "d107f10f5d4b3c0661ba7ae299640c87f067f9ef501f7a747d388bc24910b5ba",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 8,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "eaeca5bd90ac323bbf46080159fb1de0a42dde04bb62d028226c54e0815d024b",
+      "reviewedAt": "2026-10-27T11:46:23.081Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 48,
     "sourceUnitCount": 8,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "eaeca5bd90ac323bbf46080159fb1de0a42dde04bb62d028226c54e0815d024b",
-    "reviewedAt": "2026-10-27T11:46:23.081Z"
+    "fingerprint": "6b80dec1d5ba430100bf9d967e5d4a9ad20bf81c3b009207f1da31ed2f1765cf",
+    "reviewedAt": "2026-10-27T13:06:45.692Z"
   }
 }

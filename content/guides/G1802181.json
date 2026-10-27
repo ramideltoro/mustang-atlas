@@ -1,9 +1,52 @@
 {
   "documentId": "G1802181",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1802181",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693183",
+      "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693183",
+      "sourceUnitCount": 6,
+      "mediaCount": 2
+    }
+  ],
   "sourceHash": "b4c1ddfb76665faed0144186cd13f6346d09b357e586a72ab0c49db950ba3ab0",
   "title": "Clutch Pedal Position (CPP) Switch",
   "introduction": "For the 5.2L 32V Ti-VCT configuration, this procedure shows how the clutch pedal position switch comes out of its bracket and goes back in. The blue switch sits beside the pedal mechanism; the purple connector joins it to the wiring. The inset makes the bracket engagement easier to see.\n\nI read this little assembly as a plug attached to a clipped-in part: disconnect the plug, then free the mounting. Keeping those jobs distinct makes the crowded pedal area less of a puzzle. Electrical diagnosis, switch adjustment and a functional test are outside the supplied instructions.",
-  "requirements": [],
+  "requirements": [
+    {
+      "category": "Preparation and safety",
+      "items": [
+        {
+          "name": "Prevent an unexpected start",
+          "detail": "Before service, disable remote start, if equipped, through the Central Display: Vehicle settings > Remote Start Setup. Otherwise, the vehicle could be remotely started at any time, causing personal injury or death. Remove the key from the vehicle to prevent another person starting the engine during service; an accidental start can cause serious personal injury."
+        },
+        {
+          "name": "Personal protection",
+          "detail": "Wear eye and ear protection during vehicle service. Wear protective gloves when handling components with pointed or sharp edges. Ignoring these precautions may result in serious personal injury."
+        },
+        {
+          "name": "Clutch-system safety review",
+          "detail": "Before starting, review the applicable precautions in [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183), as required by [Health and Safety Precautions](#/document/G1693189)."
+        }
+      ]
+    }
+  ],
   "edits": [
     {
       "blockId": "G1802181-b00001",
@@ -31,10 +74,10 @@
       "why": "The bracket supports the switch before its wiring is reconnected. The supplied sequence ends with refitting and does not include a diagnostic confirmation."
     }
   ],
-  "checkedAt": "2026-10-27T11:46:23.061Z",
+  "checkedAt": "2026-10-27T13:06:45.686Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
-  "validationVersion": 2,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
@@ -43,7 +86,7 @@
     "receivedBlocks": 5,
     "humanReviewed": false,
     "editorialVersion": 1,
-    "validationVersion": 2
+    "validationVersion": 5
   },
   "sourceContextHash": "add8f9bb298a8c55b23f4c96fb961fa8e8798eff00bb2c229a5e7ccdee433dcd",
   "sourcePdfHash": null,
@@ -51,10 +94,24 @@
   "referenceReview": {
     "kind": "independent-codex-technical-review",
     "humanReviewed": false,
+    "safetyRefreshOf": "81184803174c3dba8915844eac5d8d21dfa9265fd1c696b666986db2f4bd4c3e",
+    "preservedTechnicalReview": {
+      "kind": "independent-codex-technical-review",
+      "humanReviewed": false,
+      "sourceUnitCount": 7,
+      "sourceChunkCount": 1,
+      "reviewedChunkCount": 1,
+      "fingerprint": "6cb14187c0bfe8372970ebdfd8b7ca2e61c0a9a2c943f915040a9dbbfd2f5e05",
+      "reviewedAt": "2026-10-27T11:46:23.061Z"
+    },
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 54,
     "sourceUnitCount": 7,
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
-    "fingerprint": "6cb14187c0bfe8372970ebdfd8b7ca2e61c0a9a2c943f915040a9dbbfd2f5e05",
-    "reviewedAt": "2026-10-27T11:46:23.061Z"
+    "fingerprint": "acf805e6c6609ff67327c3a7e84fc6c59e6529ee05e7398ae62d75383c9da6ef",
+    "reviewedAt": "2026-10-27T13:06:45.686Z"
   }
 }
