@@ -1,0 +1,155 @@
+{
+  "documentId": "G1693951",
+  "supportingSourceRefs": [],
+  "sourceHash": "5bcdabf65677733a7f5d3f15debab33c1174377b8c4456b9c9bdef2f63b444d6",
+  "title": "Rear parking aid: from ultrasonic echo to warning chime",
+  "introduction": "I think of rear parking aid as an ultrasonic game of Marco Polo: the sensors send sound, but they need a useful echo before the car can warn you. Understanding that limitation makes the beeps—and the occasional silence—much easier to interpret.\n\nStart with the labeled system drawing, then use the matching numbered drawing and its table to identify components and network paths. Follow the rear sensors into the control system, through the gateway and instrument cluster, and onward to the audio branch that matches the car’s touchscreen equipment. The message charts explain what information travels between those modules. This is an operating guide, not a wiring test, sensor replacement procedure or module-programming procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693951-b00001",
+      "text": "How the rear parking aid works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00002",
+      "text": "Audible parking aid",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00003",
+      "text": "Follow the system diagram",
+      "why": "I read the solid sensor connections separately from the patterned network paths. The dashed PAM box sits inside the BCM, while the lower dotted boxes show the alternative audio arrangements with and without a touchscreen. The drawings explain functional connections, not connector pins or physical access."
+    },
+    {
+      "blockId": "G1693951-b00007",
+      "text": "Read the network message charts",
+      "why": "Each chart names the broadcast message, the module that originates it and the job that message performs. A network lets a controller use information supplied elsewhere in the car instead of needing its own sensor for everything."
+    },
+    {
+      "blockId": "G1693951-b00008",
+      "text": "Messages received by the PAM",
+      "why": "These inputs explain how the parking assist control module knows the ignition state, driver request, transmission state and vehicle speed. Key type controls whether the driver can disable parking aid, while outside air temperature is used to compensate the sensor data."
+    },
+    {
+      "blockId": "G1693951-b00010",
+      "text": "Messages received by the IPC",
+      "why": "The instrument cluster receives both the request for a parking warning tone and the parking aid fault status. The obstacle warning and the system-concern message therefore have distinct purposes."
+    },
+    {
+      "blockId": "G1693951-b00012",
+      "text": "Messages received by the ACM and DSP",
+      "why": "The audio front control module or audio digital signal processing module receives the cluster’s chime request, which carries the parking aid request data. This is the final message handoff before the audio system produces the warning."
+    },
+    {
+      "blockId": "G1693951-b00014",
+      "text": "When rear parking aid operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00015",
+      "text": "With the selector lever of an automatic transmission, or the gearshift lever of a manual transmission, in reverse, the PAM calculates object distance within a 170 degree semicircular area behind the vehicle. This coverage area is called the azimuth. When parking aid is active and detects an object within that area, the rear audio system speakers sound a warning tone whose repetition rate varies.",
+      "why": "The coverage area describes where the system looks; the changing rhythm communicates the detected object’s proximity."
+    },
+    {
+      "blockId": "G1693951-b00016",
+      "text": "The system uses 4 ultrasonic sensors to calculate the distance to objects behind the vehicle. The rear outer sensors can detect objects approximately 24 in (60 cm) away, while the rear inner sensors can detect objects approximately 70 in (177 cm) away. The sensors can also detect objects approximately 14 in (35 cm) to the side of the rear bumper. Objects must be 12 in (30 cm) above the ground for the rear parking aid system to detect them. The PAM supplies the sensors with voltage and ground and monitors a separate signal return circuit from each sensor. All 4 sensors share common voltage and ground circuits.",
+      "why": "The inner and outer sensors have different reaches, so the detection area is not a uniform band behind the bumper. Electrically, individual sensor signals coexist with shared supply and ground paths; ground is the return path that completes the electrical circuit."
+    },
+    {
+      "blockId": "G1693951-b00017",
+      "text": "An object is detected only if it reflects enough of the sensors’ sound back toward them. Its surface, size and material all affect that echo. Incorrect sensor alignment or installation, dirt or ice covering the sensors, and heavy rain or snow can also prevent detection.",
+      "why": "Silence does not prove the space behind the car is clear. I keep the echo requirement in mind before treating a missed object as proof of a failed sensor."
+    },
+    {
+      "blockId": "G1693951-b00018",
+      "text": "You can disable rear parking aid through the message center. It stays disabled until you enable it there again or turn the ignition off and back on. When a MyKey® restricted key is in use, rear parking aid cannot be disabled.",
+      "why": "A driver setting can explain an inactive system, and cycling the ignition restores operation after this temporary disable. The restricted-key condition removes that disable option."
+    },
+    {
+      "blockId": "G1693951-b00019",
+      "text": "What the warning tones mean",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00020",
+      "text": "When an object is detected with the automatic transmission’s selector lever or the manual transmission’s gearshift lever in reverse, the IPC decides the chime’s priority. Its built-in logic determines when to mute the audio and sends a chime request to the ACM with the 4.2 in (107 mm) display, or to the DSP with the 8 in (203 mm) touchscreen. The selected audio module reduces the current audio volume and sounds the parking aid chime through the rear speakers. The warning tones become more frequent as the vehicle approaches an obstacle. Within 12 in (30 cm) of the sensors, the tone becomes continuous. An object detected beside the vehicle, outside the continuous-tone area, produces a warning for 3 seconds. The closest detected object takes priority.",
+      "why": "The cluster acts as the chime’s traffic controller: it coordinates the warning with other audio demands. A brief side warning and a continuous close-object warning represent different detection conditions."
+    },
+    {
+      "blockId": "G1693951-b00021",
+      "text": "The standstill strategy can still sound a warning while the vehicle is stationary. For this warning, the transmission must be in reverse and the detected obstacle must be less than 12 in (30 cm) from the rear bumper.",
+      "why": "Stopping the car does not automatically silence a warning about an obstacle very close behind it."
+    },
+    {
+      "blockId": "G1693951-b00022",
+      "text": "NOTE: Some add-on devices can obstruct the system’s normal detection zone and cause false audible alerts.",
+      "why": "An accessory in the detection area can change what the sensors encounter, even when the parking aid hardware itself has not changed."
+    },
+    {
+      "blockId": "G1693951-b00023",
+      "text": "Meet the sensors and controller",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00024",
+      "text": "The ultrasonic parking aid sensors",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00025",
+      "text": "The parking aid sensors transmit wide beams of ultrasonic sound. With the ignition on, they continuously send ultrasonic signals to detect objects and report the information to the PAM.",
+      "why": "Sensor activity with the ignition on and an audible warning are separate parts of operation. The warning also depends on the system’s activation conditions and a detected object."
+    },
+    {
+      "blockId": "G1693951-b00026",
+      "text": "The PAM controller",
+      "why": ""
+    },
+    {
+      "blockId": "G1693951-b00027",
+      "text": "The PAM powers and grounds the rear ultrasonic sensors and monitors each sensor’s signal return circuit. When the sensors detect an object while rear parking aid is active, the PAM calculates its distance from the rear bumper and has that distance communicated through the audio system’s warning tones.",
+      "why": "The sensors gather the information; the controller turns it into a distance warning. The speaker is the messenger at the end of that chain."
+    },
+    {
+      "blockId": "G1693951-b00028",
+      "text": "The PAM is built into the BCM, but it communicates on HS-CAN1 as a separate network node.",
+      "why": "Physical integration and network identity are different things. The parking aid controller can appear separately in network communication even though it lives within the body controller."
+    },
+    {
+      "blockId": "G1693951-b00029",
+      "text": "Replacing the BCM requires PMI, meaning programmable module installation.",
+      "why": "A replacement body controller also needs the specified programming process. This overview explains that requirement; it does not provide the replacement or programming instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:20:31.243Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 23,
+    "receivedBlocks": 23,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f98143e7f7a3c349c2f9c0de9e2e3d16798127ec50a15159847e13df8314a1ee",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 64,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c708f897b768db5c7c56bf719af4e9c1b9d04b105db3349a98324d2ec2dad579",
+    "reviewedAt": "2026-10-27T20:20:31.243Z"
+  }
+}

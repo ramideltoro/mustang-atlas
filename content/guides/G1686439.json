@@ -1,0 +1,96 @@
+{
+  "documentId": "G1686439",
+  "supportingSourceRefs": [],
+  "sourceHash": "6ce3aae334eb30397b6014767678f187f4fac86bab4f6c0b074ee8abe8405185",
+  "title": "Main Control Valve Body: Components and Solenoid Operation",
+  "introduction": "The 6R80 valve body turns electrical commands into hydraulic action. Its passages and valves route and regulate transmission fluid pressure, while the controller commands solenoids to manage engagement and shifting. Think of it as a hydraulic switchboard: the interesting part is how an electrical request becomes a change you feel through the car.\n\nI start with the exploded assembly drawing and its component legend. Then I use the separate solenoid view, the valve-and-spring layouts and the check-ball location drawing to identify the smaller parts. Match each callout to the accompanying table, and keep the upper and lower valve-body names attached to their castings as the views change. The auxiliary pump check ball and spring are model dependent; their appearance in the reference does not establish that every application includes them.\n\nThe assembled leadframe photograph has its own legend, so restart your callout lookup there. Finally, use the operation chart to connect selector position and commanded gear with solenoid commands. This overview covers the 6R80 automatic transmission. It teaches component identification and chart reading; the exploded views are not a removal or assembly sequence, and the connector inset is not a complete pinout or an electrical test procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686439-b00007",
+      "text": "Main Control Valve Body and Molded Leadframe",
+      "why": "Use the assembled photograph with its own legend. TSS means turbine shaft speed, OSS means output shaft speed, TFT means transmission fluid temperature and TR means transmission range. The photograph locates these features on the assembly, and its close-ups show the temperature-sensing feature and selected connector terminals. The terminal labels identify the illustrated contacts; they do not establish circuit assignments or a probing method."
+    },
+    {
+      "blockId": "G1686439-b00010",
+      "text": "Reading the Solenoid Operation Chart",
+      "why": "I find the base selector lever position first, then the commanded gear, and read across that row. Blank selector-position cells continue the Drive group. Keeping selector position separate from commanded gear prevents the lever setting from being mistaken for the transmission’s requested operating gear."
+    },
+    {
+      "blockId": "G1686439-b00011",
+      "text": "Solenoid Commands by Selector Position and Gear",
+      "why": "Read On and Off as the chart’s solenoid command states. An On/Off entry allows either state, with the lettered notes supplying specific qualifications where marked. The chart describes commands; it does not verify hydraulic pressure or prove that the requested gear actually engaged. The torque converter clutch controls slip within the converter system, so its command is a separate consideration from whether the converter is transmitting drive."
+    },
+    {
+      "blockId": "G1686439-b00014",
+      "text": "NC means normally closed.",
+      "why": ""
+    },
+    {
+      "blockId": "G1686439-b00016",
+      "text": "NH means normally high.",
+      "why": ""
+    },
+    {
+      "blockId": "G1686439-b00018",
+      "text": "NL means normally low.",
+      "why": "These abbreviations describe the solenoid’s normal-state classification. Read that classification alongside its commanded state; the definitions themselves are not pressure specifications."
+    },
+    {
+      "blockId": "G1686439-b00021",
+      "text": "For note a, the solenoid switches from off to on just after the 2-3 upshift, then from on to off just before the 3-1 downshift.",
+      "why": "This timing explains the marked On/Off entry: its state changes around the specified shifts."
+    },
+    {
+      "blockId": "G1686439-b00023",
+      "text": "For note b, the solenoid is on when vehicle speed is above 3 mph.",
+      "why": "This speed condition qualifies the marked Off entry. Account for vehicle speed when interpreting that row."
+    },
+    {
+      "blockId": "G1686439-b00025",
+      "text": "For note c, all gears are available when the driver requests them.",
+      "why": "The dashes in the marked selector row do not mean that gear selection is unavailable; this note explains how to interpret that row."
+    },
+    {
+      "blockId": "G1686439-b00026",
+      "text": "How the Main Control Valve Body Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1686439-b00027",
+      "text": "The main control combines a valve body assembly with solenoids commanded by the PCM. The PCM operates these electrical components to manage how the transmission engages drive, how shifts feel and when shifts happen. Inside the valve body, passages and valves route and regulate fluid pressure, turning the controller’s electrical requests into hydraulic action.",
+      "why": "I connect the component drawings to the operation chart here: the drawings identify the hardware, while the chart shows its commanded solenoid states. Together they explain the valve body’s control role without mistaking it for the transmission’s gearset or treating a command as proof of a successful shift."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:33:22.091Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 11,
+    "receivedBlocks": 11,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4e1ca1e6edc6800df2b4dca562018595699eadf4aa88e9e2047ad158020b7620",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 85,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "49fa6aeb9cb0da726a5c07e7aea5604e3bf83dc86398b3019c878af9670983a6",
+    "reviewedAt": "2026-10-27T20:33:02.368Z",
+    "editorialRevision": "Bounded intro-only cleanup under coordinator-authorized recurring pattern; actual engine/transmission identity retained and technical body unchanged."
+  }
+}

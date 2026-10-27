@@ -1,0 +1,246 @@
+{
+  "documentId": "G1660454",
+  "supportingSourceRefs": [],
+  "sourceHash": "29400e5413888b0b8d887d40678ba813a32d12880384b541cf2bc60e4ff9a016",
+  "title": "EcoBoost engine overview",
+  "introduction": "I read this engine as a set of connected jobs: the cylinders produce motion, the camshafts organize breathing, and the oil circuit supplies both moving parts and timing controls. The turbocharger has its own oil supply and return paths, while the switchable mounts help keep idle vibration from becoming the cabin’s backing track.\n\nUse the label illustration and its table to separate engine identity from production dates. Then compare the cylinder drawing with the oil-flow illustration, following arrowheads and matching component callouts to the accompanying table. The separated parts reveal connections; their positions do not prescribe a dismantling order.\n\nThis overview explains construction and operating logic. It supplies neither removal instructions nor oil-pressure or mount-diagnostic tests. The mount thresholds describe switching triggers, not every possible control state; use the matching service information before testing or replacing components.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1660454-b00001",
+      "text": "Engine layout and features",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00002",
+      "text": "The 2.3L Gasoline Turbocharged Direct Injection (GTDI) 4-cylinder engine combines the following construction and valve-control features:",
+      "why": "The name identifies turbocharging and direct fuel injection; the list introduces the engine structure and the hardware coordinating its valves."
+    },
+    {
+      "blockId": "G1660454-b00004",
+      "text": "Dual overhead camshafts operate the valves.",
+      "why": "Camshaft lobes control valve opening, coordinating the movement of intake air and exhaust gases."
+    },
+    {
+      "blockId": "G1660454-b00006",
+      "text": "Four valves per cylinder handle intake and exhaust flow.",
+      "why": "Intake valves admit the fresh charge; exhaust valves release burned gases."
+    },
+    {
+      "blockId": "G1660454-b00008",
+      "text": "A composite intake manifold distributes incoming air to the cylinders.",
+      "why": "The manifold is the distribution assembly feeding the intake passages."
+    },
+    {
+      "blockId": "G1660454-b00010",
+      "text": "An aluminum cylinder head houses the valves and forms the tops of the combustion chambers.",
+      "why": "The head routes intake air and exhaust gases and is separate from the block below it."
+    },
+    {
+      "blockId": "G1660454-b00012",
+      "text": "An aluminum cylinder block contains the cylinders and supports the crankshaft.",
+      "why": "The block is the main engine casting, with built-in oil and coolant passages."
+    },
+    {
+      "blockId": "G1660454-b00014",
+      "text": "Twin Independent Variable Camshaft Timing (Ti-VCT) adjusts intake and exhaust camshaft timing separately.",
+      "why": "This lets valve events change with operating conditions rather than remaining fixed."
+    },
+    {
+      "blockId": "G1660454-b00016",
+      "text": "Verify engine identity",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00017",
+      "text": "Always check the engine identification labels before installing new parts or checking engine calibrations. Parts can differ within the same CID family. Verify the identification codes to obtain the correct parts: those codes carry the relevant production-date, optional-equipment and revision information.",
+      "why": "CID refers to cubic-inch displacement. I treat the identification codes as the engine’s build record; a shared displacement family alone does not establish that parts are interchangeable."
+    },
+    {
+      "blockId": "G1660454-b00018",
+      "text": "Read the engine code information label",
+      "why": "Match each callout in the label illustration to the accompanying table. Keep the encoded engine build date separate from the date the label was printed; they record different events. Use the actual engine’s label when checking identity."
+    },
+    {
+      "blockId": "G1660454-b00021",
+      "text": "Locate the cylinders",
+      "why": "Use the labels along the cylinder row in the drawing to identify each cylinder. Keep the illustrated orientation while comparing positions; the drawing does not establish a firing order or an in-vehicle viewing direction."
+    },
+    {
+      "blockId": "G1660454-b00023",
+      "text": "Trace the engine oil circuit",
+      "why": "I start at the oil pan and screened pickup, then follow the pump and filter paths toward the block and head. Notice the turbocharger supply and return branches, plus the paths serving the camshafts and timing controls. Match the arrowheads and callouts to the table without treating the exploded view as an access procedure."
+    },
+    {
+      "blockId": "G1660454-b00026",
+      "text": "Lubrication and pressure control",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00027",
+      "text": "This force-feed lubrication system supplies oil under full pressure to the crankshaft, connecting rod bearings, timing chain tensioners, camshaft bearing caps and VCT solenoids. A restricting orifice in the cylinder head gasket controls oil flow to the valve tappets and valve train.",
+      "why": "The oil circuit lubricates loaded moving parts and supplies oil-operated timing controls. The gasket restriction meters the valve-train feed rather than leaving every branch unrestricted."
+    },
+    {
+      "blockId": "G1660454-b00028",
+      "text": "The lubrication system is designed to provide the oil flow critical engine components need throughout the operating range.",
+      "why": "This describes the system’s intended capability. Oil present in the pan does not, by itself, prove correct pressure throughout the circuit."
+    },
+    {
+      "blockId": "G1660454-b00029",
+      "text": "A positive displacement internal gear oil pump supplies the lubrication circuit.",
+      "why": "Positive displacement means the turning pump moves a volume of oil through the system."
+    },
+    {
+      "blockId": "G1660454-b00030",
+      "text": "This internal gear design is commonly called a gerotor pump. Its drive and pressure-control features are outlined below:",
+      "why": "The pump moves oil; its relief valve limits pressure. Keeping those jobs separate makes the circuit easier to understand."
+    },
+    {
+      "blockId": "G1660454-b00032",
+      "text": "A chain transmits crankshaft rotation to the oil pump.",
+      "why": "This identifies the pump’s drive arrangement; it is not an instruction for setting or removing the chain."
+    },
+    {
+      "blockId": "G1660454-b00034",
+      "text": "An integral, internally vented relief valve limits system pressure by routing bypassed oil back to the pump’s inlet side.",
+      "why": "The bypass provides a return route within the pump circuit when pressure needs limiting."
+    },
+    {
+      "blockId": "G1660454-b00036",
+      "text": "The pump’s displacement is selected to provide enough oil volume for correct pressure at hot idle and at maximum engine speed.",
+      "why": "The design must cover different operating demands. This statement does not supply a pressure-test value."
+    },
+    {
+      "blockId": "G1660454-b00038",
+      "text": "The relief valve is calibrated to protect the system from excessive pressure when oil viscosity is high.",
+      "why": "Higher-viscosity oil resists flow more strongly, so pressure limitation matters as well as oil delivery."
+    },
+    {
+      "blockId": "G1660454-b00040",
+      "text": "The relief valve is also designed to preserve adequate connecting rod bearing lubrication under high-temperature, high-speed conditions.",
+      "why": "The circuit must control pressure while maintaining the oil supply to loaded bearings."
+    },
+    {
+      "blockId": "G1660454-b00042",
+      "text": "How the valve train operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00043",
+      "text": "The valve train uses Direct Acting Mechanical Buckets (DAMB). Each camshaft lobe sits directly above a mechanical bucket, and the bucket sits on top of its valve. The lobe acts through the bucket to open the valve.",
+      "why": "The mechanical path is cam lobe, bucket, valve. Understanding that stack does not establish how to measure or adjust valve clearance."
+    },
+    {
+      "blockId": "G1660454-b00044",
+      "text": "How Ti-VCT changes valve timing",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00045",
+      "text": "The Ti-VCT system varies valve-closing timing to optimize combustion at full load, improve power and low-speed torque, and broaden the torque curve. Variable valve overlap also improves fuel economy and emissions, while optimized cold-start operation improves exhaust emissions.",
+      "why": "Valve overlap is the period when intake and exhaust valves are open together. Independent timing control changes that relationship to suit the engine’s operating conditions."
+    },
+    {
+      "blockId": "G1660454-b00046",
+      "text": "How the switchable engine mounts work",
+      "why": ""
+    },
+    {
+      "blockId": "G1660454-b00047",
+      "text": "The switchable engine mounts use hydraulic damping to reduce engine vibration at idle.",
+      "why": "Think of the mounts as cushioning the engine’s idle handshake with the body. The hydraulic design addresses vibration transmission, while the vacuum system provides the switching control."
+    },
+    {
+      "blockId": "G1660454-b00048",
+      "text": "The switchable engine-mount system includes the following components:",
+      "why": "Read the mounts, vacuum controls and connecting hoses as parts of the same system."
+    },
+    {
+      "blockId": "G1660454-b00050",
+      "text": "2 glycol-filled engine mounts provide the hydraulic damping.",
+      "why": "The fluid-filled mounts are the vibration-damping components."
+    },
+    {
+      "blockId": "G1660454-b00052",
+      "text": "A vacuum reservoir and vacuum solenoid switch are mounted on the driver’s side engine-compartment frame rail.",
+      "why": "This locates the vacuum-control hardware separately from the mounts themselves."
+    },
+    {
+      "blockId": "G1660454-b00054",
+      "text": "Vacuum hoses with check valves connect the vacuum circuit.",
+      "why": "The hoses carry vacuum between components; the check valves control flow direction."
+    },
+    {
+      "blockId": "G1660454-b00056",
+      "text": "The Vacuum On trigger is set only when all three conditions below are satisfied:",
+      "why": "Read the following conditions together. Meeting an individual condition alone does not establish the Vacuum On trigger."
+    },
+    {
+      "blockId": "G1660454-b00058",
+      "text": "Vehicle speed is below 20 MPH in drive, or below 10 MPH in reverse/neutral/park.",
+      "why": "Choose the speed condition that matches the transmission state."
+    },
+    {
+      "blockId": "G1660454-b00060",
+      "text": "Engine speed is between 360 RPM and 860 RPM.",
+      "why": "This is the engine-speed window for the Vacuum On trigger, alongside the other required conditions."
+    },
+    {
+      "blockId": "G1660454-b00062",
+      "text": "Engine run time is greater than 1.5 seconds.",
+      "why": "The run-time condition must also be satisfied before the Vacuum On trigger is set."
+    },
+    {
+      "blockId": "G1660454-b00064",
+      "text": "The Vacuum OFF trigger is set when any of the following conditions occurs:",
+      "why": "These are alternative off triggers. Their thresholds differ from the on conditions, so the lists should not be treated as simple mirror images or a complete diagnostic decision tree."
+    },
+    {
+      "blockId": "G1660454-b00066",
+      "text": "Engine speed rises above 960 RPM.",
+      "why": "Crossing this upper engine-speed threshold sets the Vacuum OFF trigger."
+    },
+    {
+      "blockId": "G1660454-b00068",
+      "text": "Engine speed falls below 260 RPM.",
+      "why": "Crossing this lower engine-speed threshold also sets the Vacuum OFF trigger."
+    },
+    {
+      "blockId": "G1660454-b00070",
+      "text": "Vehicle speed rises above 22 MPH.",
+      "why": "This vehicle-speed condition independently sets the Vacuum OFF trigger."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:24:35.476Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 41,
+    "receivedBlocks": 41,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "aa080e56dc3b2179fbf882904561ad6ac9bb301b1bfe2e0f1c7b6d65f485720b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 85,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a8665e709c4e12ace0de404bdf4fbd493dc237bbcd9010d88741fc2fe48b3d86",
+    "reviewedAt": "2026-10-27T20:21:44.417Z",
+    "editorialRevision": "Narrow deletion of inaccurate above-cylinder-head positioning; supported cam-lobe/valve relationship retained and all other fields unchanged."
+  }
+}

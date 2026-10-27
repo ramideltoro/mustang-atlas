@@ -1,0 +1,170 @@
+{
+  "documentId": "G1693169",
+  "supportingSourceRefs": [],
+  "sourceHash": "39453b658bb1f37a0c28b3654c121a3ccb7da5ac8869b2957b023cb374ba2d90",
+  "title": "Collision Warning: How the Alerts and Modules Work",
+  "introduction": "A collision warning is a coordinated production: the radar spots a possible threat, the red lights demand attention, and the audio makes room for the chime. I follow that chain here so each alert has a clear job.\n\nStart with the labeled drawing, then match the numbered version to its component key. The Gateway Module connects the network paths shown between the sensing, display and audio modules. Read each message table as a relationship between a sender, a recipient and a purpose—not as a connector pinout. This overview explains warning behavior, settings and limitations; it does not teach electrical testing, repairs or automatic braking. The performance-shift feature applies only to the specified equipment.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693169-b00001",
+      "text": "How the warning system works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693169-b00002",
+      "text": "Warning System Network Diagram",
+      "why": "I use the labeled drawing to follow the communication paths and the numbered drawing with its accompanying key to identify components. These are functional network connections, not physical wire routes or probe locations."
+    },
+    {
+      "blockId": "G1693169-b00006",
+      "text": "Reading the Network Message Charts",
+      "why": "Each chart names the receiving module in its heading. Read across a row to connect the broadcast message with its originating module and intended purpose."
+    },
+    {
+      "blockId": "G1693169-b00007",
+      "text": "Messages Received by the ACM",
+      "why": "This chart explains the audio end of the warning chain: what information arrives to make the warning audible."
+    },
+    {
+      "blockId": "G1693169-b00009",
+      "text": "Messages Received by the CCM",
+      "why": "Feedback about display availability is different from a command to display a warning. This chart identifies that return information."
+    },
+    {
+      "blockId": "G1693169-b00011",
+      "text": "Messages Received by the HUD",
+      "why": "The display receives both warning instructions and operating-state information. The originating-module column distinguishes their senders."
+    },
+    {
+      "blockId": "G1693169-b00013",
+      "text": "Messages Received by the IPC",
+      "why": "The message purposes explain how an incoming warning request can lead to another outgoing instruction, including making the audio quiet enough for the chime."
+    },
+    {
+      "blockId": "G1693169-b00015",
+      "text": "How Forward Collision Warning Operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1693169-b00016",
+      "text": "Forward collision warning works with adaptive cruise control. During a possible collision event, the cruise control module (CCM) initiates these coordinated warning actions:",
+      "why": "Think of the CCM as the cue caller: it identifies the possible threat and starts the warning sequence. The network charts explain how the other modules carry those cues onward."
+    },
+    {
+      "blockId": "G1693169-b00018",
+      "text": "The HUD flashes its red warning Light Emitting Diodes (LEDs).",
+      "why": "This is the visual part of the warning, intended to draw the driver's attention."
+    },
+    {
+      "blockId": "G1693169-b00020",
+      "text": "The IPC activates a warning chime and warning messages.",
+      "why": "The network chart identifies both chime and warning-message requests, clarifying the outputs involved in this part of the sequence."
+    },
+    {
+      "blockId": "G1693169-b00022",
+      "text": "The ACM mutes the audio volume.",
+      "why": "Quieting the audio helps the warning chime stand out. The IPC sends the mute message onward as part of the warning sequence."
+    },
+    {
+      "blockId": "G1693169-b00024",
+      "text": "Forward collision warning becomes active when the vehicle is moving forward faster than 8 kmh (5 mph). A radar sensor built into the CCM detects vehicles traveling in the same direction in the vehicle's path and determines their distance and relative speed. If the CCM judges that a collision is possible, it commands the HUD module Light Emitting Diodes (LEDs) to flash and the IPC to sound a chime.",
+      "why": "Relative speed describes how the gap is changing, rather than simply how fast either vehicle is traveling. The warning decision uses both that changing gap and the distance ahead."
+    },
+    {
+      "blockId": "G1693169-b00025",
+      "text": "Use the message center display in the IPC to enable or disable forward collision warning and its audible warning chime. The system returns to ON with each ignition cycle. The HUD module and/or chime operates briefly to confirm the last setting.",
+      "why": "I check the setting again after an ignition cycle rather than assuming a previous OFF selection remains in effect. The brief confirmation is distinct from an alert about a possible collision."
+    },
+    {
+      "blockId": "G1693169-b00026",
+      "text": "Choose among the three sensitivity settings—HIGH, NORMAL and LOW—in the message center's Driver Assist menu.",
+      "why": "These are selectable sensitivity levels. No warning-distance or timing values are specified here for comparing them."
+    },
+    {
+      "blockId": "G1693169-b00027",
+      "text": "With a MyKey® restricted key, forward collision warning starts each ignition cycle at its most sensitive setting. The MyKey® user can still adjust the warning sensitivity.",
+      "why": "The startup default and the user's ability to change sensitivity are separate behaviors; the restricted key does not make the sensitivity adjustment unavailable."
+    },
+    {
+      "blockId": "G1693169-b00028",
+      "text": "If the system detects a forward collision warning fault, the IPC message center displays COLLISION WARNING NOT AVAILABLE, COLLISION WARNING NOT AVAILABLE SENSOR BLOCKED SEE MANUAL, or COLLISION WARNING MALFUNCTION.",
+      "why": "I keep the exact displayed wording when identifying the complaint. These messages report an availability or fault condition; this overview does not turn any of them into a component-replacement verdict."
+    },
+    {
+      "blockId": "G1693169-b00029",
+      "text": "HUD Performance Shift Indication — SVT Only",
+      "why": "This equipment-specific use of the display is separate from collision warning."
+    },
+    {
+      "blockId": "G1693169-b00030",
+      "text": "For performance shift indication, the HUD module flashes its Light Emitting Diodes (LEDs) at selected shift points. Use the IPC message center to select the performance shift mode, shift points and display intensity. Available HUD modes are Drag, Tach, Track and Off. For the detailed controls, refer to [Message Center - System Operation and Component Description](#/document/G1696140) (413-01 Instrumentation, Message Center and Warning Chimes, Description and Operation).",
+      "why": "The display can serve as a shift cue as well as a collision-warning output. The linked message-center reference is still needed for the detailed selection procedure; this overview does not supply its menu sequence."
+    },
+    {
+      "blockId": "G1693169-b00031",
+      "text": "Meet the sensing and warning components",
+      "why": ""
+    },
+    {
+      "blockId": "G1693169-b00032",
+      "text": "CCM: Radar Sensing",
+      "why": ""
+    },
+    {
+      "blockId": "G1693169-b00033",
+      "text": "The CCM houses the radar sensor that determines the distance and relative speed of a vehicle in the path ahead.",
+      "why": "The sensing function is built into this module; it supplies the information used to judge a possible collision."
+    },
+    {
+      "blockId": "G1693169-b00034",
+      "text": "HUD: Visual Warning",
+      "why": ""
+    },
+    {
+      "blockId": "G1693169-b00035",
+      "text": "The head up display (HUD) contains the red Light Emitting Diodes (LEDs) that warn the driver of a possible collision when commanded by the CCM.",
+      "why": "The display presents the warning; the collision assessment comes from the radar-equipped control module."
+    },
+    {
+      "blockId": "G1693169-b00036",
+      "text": "Strong sunlight or sunglasses can make the warning Light Emitting Diodes (LEDs) difficult or impossible to see. Separately, a temperature-sensor circuit built into the HUD module monitors the temperature of its internal Light Emitting Diodes (LEDs). High passenger-compartment temperatures, such as those caused by strong sunlight, can temporarily disengage the warning Light Emitting Diodes (LEDs). When that happens, only the audible warning chime is used.",
+      "why": "There are distinct reasons for a missing visible alert: the light may be obscured, or heat may temporarily disable it. I keep those possibilities separate rather than treating every absent flash as the same symptom."
+    },
+    {
+      "blockId": "G1693169-b00037",
+      "text": "Warnings may not appear when the distance to the vehicle ahead is very short or when abrupt steering-wheel and pedal movements are made.",
+      "why": "An absent warning is not confirmation that the situation is safe. These operating limits matter when interpreting what the system did—or did not—announce."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:20:13.348Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 26,
+    "receivedBlocks": 26,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3a6b598566ea8d03b91190497c4aa70aa482e639aa13880c1f1a490ab03dc6bf",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 52,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e96acf2abeaaa4bf614742926733a17ace5093daf48aec40b10d781cb3db92a5",
+    "reviewedAt": "2026-10-27T20:20:13.348Z"
+  }
+}

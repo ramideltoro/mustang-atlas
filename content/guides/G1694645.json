@@ -1,0 +1,295 @@
+{
+  "documentId": "G1694645",
+  "supportingSourceRefs": [],
+  "sourceHash": "5bab3a19189e2844cce1491eccf7a256d019621b3050c481ae0b48a6a4d16820",
+  "title": "How Mustang Wipers and Washers Work",
+  "introduction": "The clever bit is inside the windshield wiper motor: it contains the electronics that turn switch and sensor information into wiping and washing. I think of it as a little dispatch desk—the stalk requests a job, and the motor assembly organizes the response.\n\nUse the drawings to follow the connections, the message tables to understand incoming information, and the operating descriptions to distinguish timed wiping, rain-sensitive wiping and the extra sweeps after washing. SCCM means steering column control module; LIN means local interconnect network. This is a system overview, with rain-sensitive features applying only when equipped. Component access, connector probing, electrical tests and replacement require their own procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1694645-b00001",
+      "text": "How the System Operates",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00002",
+      "text": "Wiper and Washer System Diagram",
+      "why": "I start at the Wiper/Washer Switch, trace its connection into the SCCM, then follow the LIN connection to the windshield wiper motor and rain sensor. The wiper relay appears inside the dashed BJB outline, while the washer motor is drawn separately below. The numbered drawing repeats the layout and uses the adjacent item table as its key."
+    },
+    {
+      "blockId": "G1694645-b00006",
+      "text": "Network Messages and Their Jobs",
+      "why": "Read each row across from the broadcast message to its originating module and then its purpose. This separates the information being shared from the component that acts on it."
+    },
+    {
+      "blockId": "G1694645-b00007",
+      "text": "Network Messages Received by the SCCM",
+      "why": "These are incoming information paths. Reading the sender and purpose together explains why a column-switch system also needs information from elsewhere in the car."
+    },
+    {
+      "blockId": "G1694645-b00009",
+      "text": "Network Messages Received by the BCM",
+      "why": "This table connects wiper operation with the exterior-lamp behavior described later."
+    },
+    {
+      "blockId": "G1694645-b00011",
+      "text": "Windshield Wiper Control",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00012",
+      "text": "With the ignition on, the wiper relay is energized and supplies voltage to both the windshield wiper motor and the rain sensor.",
+      "why": "This is the supply side of the system. Having a supply and receiving an operating request are separate parts of making the wipers work."
+    },
+    {
+      "blockId": "G1694645-b00013",
+      "text": "The SCCM monitors the wiper/washer switch inputs and passes the switch data to the windshield wiper motor through a LIN circuit.",
+      "why": "The switch request travels through the column module before reaching the motor's control electronics."
+    },
+    {
+      "blockId": "G1694645-b00014",
+      "text": "The windshield wiper motor uses that input to select the appropriate wash, low-speed, high-speed, intermittent or rain-sense operation. The logic controlling these modes is contained within the windshield wiper motor.",
+      "why": "The motor assembly makes the operating decisions as well as producing movement; it is more than an electric motor waiting for power."
+    },
+    {
+      "blockId": "G1694645-b00015",
+      "text": "With the wiper/washer switch set to high speed, the windshield wiper motor also receives a ground signal directly from the SCCM. This signal bypasses the logic within the windshield wiper motor module. The separate fail-safe circuit allows high-speed wiping to function if LIN communication fails.",
+      "why": "I keep this direct command path separate from the normal network path when reading the system. Its fallback function applies when high speed is selected."
+    },
+    {
+      "blockId": "G1694645-b00016",
+      "text": "Mist-Wipe Operation",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00017",
+      "text": "Activating mist wipe makes the SCCM send a single-wipe request to the windshield wiper motor over the LIN. If the mist-wipe function remains active, the windshield wipers continue operating for as long as it stays active.",
+      "why": "The distinction is between a single-wipe request and keeping the function active; sustained operation in the latter case is part of the described behavior."
+    },
+    {
+      "blockId": "G1694645-b00018",
+      "text": "Windshield Washing",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00019",
+      "text": "When the windshield washer switch is activated, the SCCM sends a washer request to the windshield wiper motor over the LIN. The windshield wash relay is inside the windshield wiper motor. Activating that relay supplies voltage to the washer pump, which directs washer solvent to the windshield. After the switch is released, the windshield wiper motor performs 3 additional wipes and then turns off.",
+      "why": "The washer request coordinates solvent delivery and wiping. The continued sweeps after switch release are the programmed end of the wash cycle."
+    },
+    {
+      "blockId": "G1694645-b00020",
+      "text": "The Courtesy Wipe",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00021",
+      "text": "After a windshield washer request, the courtesy-wipe feature adds a windshield wipe a few seconds after the wash cycle has finished, clearing washer solvent left on the glass.",
+      "why": "That late sweep is the cleanup pass: it has a different job from the wipes that finish the main wash cycle."
+    },
+    {
+      "blockId": "G1694645-b00022",
+      "text": "Use the message center to switch the courtesy-wipe feature on or off.",
+      "why": "Whether the extra cleanup sweep occurs depends on this configuration choice."
+    },
+    {
+      "blockId": "G1694645-b00023",
+      "text": "Timed Intermittent Wiping",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00024",
+      "text": "With the wiper/washer switch in an intermittent setting, the windshield wiper motor operates at timed intervals. A lower setting leaves a longer pause between wipes.",
+      "why": "The setting changes the waiting time between sweeps, which is the useful distinction when comparing intermittent operation with continuous wiping."
+    },
+    {
+      "blockId": "G1694645-b00025",
+      "text": "Wiping That Responds to Vehicle Speed",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00026",
+      "text": "In an intermittent wiper/washer switch setting, the speed-dependent feature makes the wipers sweep more frequently as vehicle speed increases. This compensates for the extra moisture accumulating on the windshield.",
+      "why": "An unchanged switch position can produce a different wiping frequency as road speed changes; that adjustment is intentional."
+    },
+    {
+      "blockId": "G1694645-b00027",
+      "text": "The SCCM receives vehicle-speed information from the PCM, then sends that data to the windshield wiper motor through the LIN.",
+      "why": "This information path explains how the motor can adjust intermittent wiping without the driver moving the switch."
+    },
+    {
+      "blockId": "G1694645-b00028",
+      "text": "Rain-Sensitive Wiping (if equipped)",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00029",
+      "text": "If equipped, rain-sensitive wiping replaces the intermittent-wiper feature. It is active in any of the 6 auto/intermittent sensitivity settings on the wiper/washer switch. The setting nearest OFF is least sensitive to moisture; the highest setting is most sensitive.",
+      "why": "In rain-sensitive operation, the setting expresses how readily the system should respond to moisture rather than simply choosing a fixed pause between wipes."
+    },
+    {
+      "blockId": "G1694645-b00030",
+      "text": "The rain sensor sends data to the windshield wiper motor through the LIN. The system combines that data with the wiper/washer switch's auto/intermittent setting to activate the wipers automatically and adjust their speed and frequency when moisture is detected on the windshield.",
+      "why": "The sensor reports conditions, while the switch supplies the sensitivity choice. Both contribute to the resulting wipe behavior."
+    },
+    {
+      "blockId": "G1694645-b00031",
+      "text": "If the system detects a fault in the rain-sensitive feature, the windshield wipers fall back to a default intermittent mode. The wipe timing then matches a standard intermittent setting corresponding to the auto/intermittent sensitivity position selected on the wiper/washer switch.",
+      "why": "The fallback preserves timed wiping instead of relying on rain-sensitive control. This describes the system's response to a detected fault; it does not identify which component caused it."
+    },
+    {
+      "blockId": "G1694645-b00032",
+      "text": "Exterior Lamps Activated by Wiping",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00033",
+      "text": "With the headlamp switch set to AUTO, the BCM turns the exterior lamps on within 10 seconds after the wiper/washer switch activates the windshield wipers. Approximately 60 seconds after the wipers turn off, the BCM turns the exterior lamps off.",
+      "why": "The lamp response includes deliberate delays, so the lamps need not change at the same instant as the wipers."
+    },
+    {
+      "blockId": "G1694645-b00034",
+      "text": "When moisture detection activates the rain-sensitive wipers and the headlamp switch is in AUTO, the BCM turns the exterior lamps on after a time delay. After the rain-sensitive wipers deactivate because moisture is no longer detected on the windshield, the BCM turns the exterior lamps off following a further time delay.",
+      "why": "This is the moisture-triggered branch of lamp operation. Keep it distinct from the preceding description of activation by the wiper/washer switch."
+    },
+    {
+      "blockId": "G1694645-b00035",
+      "text": "The Components and Their Roles",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00036",
+      "text": "Wiper/Washer Switch Inputs",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00037",
+      "text": "The wiper/washer switch mounts directly to the SCCM. It supplies the following windshield wiper/washer inputs to the SCCM:",
+      "why": "These labels identify the requests entering the control system."
+    },
+    {
+      "blockId": "G1694645-b00039",
+      "text": "Mist wipe request",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00041",
+      "text": "Windshield wash request",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00043",
+      "text": "Off selection",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00045",
+      "text": "AUTO 1/INT 1 setting",
+      "why": "AUTO refers to rain-sensitive operation when equipped; INT refers to timed intermittent operation."
+    },
+    {
+      "blockId": "G1694645-b00047",
+      "text": "AUTO 2/INT 2 setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00049",
+      "text": "AUTO 3/INT 3 setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00051",
+      "text": "AUTO 4/INT 4 setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00053",
+      "text": "AUTO 5/INT 5 setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00055",
+      "text": "AUTO 6/INT 6 setting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00057",
+      "text": "Low-speed wipe request",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00059",
+      "text": "High-speed wipe request",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00061",
+      "text": "Windshield Wiper Motor and Controller",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00062",
+      "text": "The windshield wiper motor assembly contains a logic module, internal sensors that monitor wiper-arm position, and a multi-speed motor. With the ignition on, its logic module continuously monitors the wiper/washer switch inputs received from the SCCM and the rain-sensor input. It operates the motor according to the requested function.",
+      "why": "Position sensing and control electronics are built into the assembly, explaining why so much of the system's decision-making happens at the motor."
+    },
+    {
+      "blockId": "G1694645-b00063",
+      "text": "The windshield wiper motor mounts to the wiper and linkage assembly.",
+      "why": "This identifies its mechanical attachment within the wiping system."
+    },
+    {
+      "blockId": "G1694645-b00064",
+      "text": "Washer Pump Control",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00065",
+      "text": "The windshield wiper motor controls the washer pump. When it activates its internal windshield washer relay, that relay supplies voltage to the pump. The energized pump then delivers washer solvent to the windshield.",
+      "why": "Keep the internal washer relay distinct from the wiper relay shown in the BJB. The internal relay switches the pump; the other relay supplies the windshield wiper motor and rain sensor."
+    },
+    {
+      "blockId": "G1694645-b00066",
+      "text": "How the Rain Sensor Detects Moisture",
+      "why": ""
+    },
+    {
+      "blockId": "G1694645-b00067",
+      "text": "The rain sensor detects windshield moisture optically with an infrared beam. It measures the reflected beam's intensity and compares it with the transmitted beam's intensity. Water on the windshield surface distorts the beam and reduces the intensity returning to the sensor. Incomplete reflection is interpreted as rain, prompting the windshield wipers to activate.",
+      "why": "Think of the returning beam as a light echo: water changes what comes back, giving the sensor an optical indication of moisture."
+    },
+    {
+      "blockId": "G1694645-b00068",
+      "text": "A gel-type lens forms the interface between the rain sensor and the windshield. If that lens is missing or damaged, rain-sensing wiping may be inoperative. On this type of rain sensor, the gel-type lens cannot be replaced separately.",
+      "why": "The lens is part of the sensor's optical connection to the glass. Its condition can affect rain sensing, and the separate-replacement restriction matters when considering service."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:31:55.541Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 51,
+    "receivedBlocks": 51,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bfcc03a9a80f1160ce0df74dd6cbcdaa0d777a9d67e90985e5815e3a32b49841",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 75,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2f212d8f99398b34ee7eabdb93ee5694d2f253a4a16183a1ff3f0fafcddcf717",
+    "reviewedAt": "2026-10-27T20:31:55.541Z"
+  }
+}
