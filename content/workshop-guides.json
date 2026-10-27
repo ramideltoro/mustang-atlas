@@ -7777,88 +7777,164 @@
       ]
     },
     {
-      "title": "Calibrate TPMS sensor positions",
-      "summary": "Train the tire-pressure sensors in wheel order and verify that the body control module has accepted their locations.",
-      "introduction": "The tire pressure monitoring system (TPMS) uses battery-operated sensors mounted at the tire valve stems. Their radio reports pass through a receiver to the body control module (BCM). Location calibration teaches the BCM which sensor belongs at each wheel; it does not itself correct low tire pressure or diagnose a failed sensor.",
-      "why": "The module learns positions in a fixed sequence, so the order and acknowledgement after each wheel matter. Training also has time limits. Moving on without recognition, or waiting too long between wheels, can leave the procedure unsuccessful even though some sensors were accepted.",
+      "title": "Calibrate your Mustang’s TPMS sensor locations",
+      "summary": "Enter training mode, teach the four tire-pressure sensors in the correct order, and confirm that the body control module accepted them.",
+      "introduction": "Four tire-pressure sensors, four corners, one seating chart. The Mustang’s TPMS needs to know which sensor belongs where, and I’ll walk you through teaching it without turning a missed horn beep into a shopping list of expensive guesses. Normal calibration happens with the wheels fitted and the car on the ground.",
+      "why": "Each valve stem carries a battery-powered pressure sensor inside the wheel. Its radio signal reaches the radio transceiver module (RTM), which passes the information over a local interconnect network (LIN), an electronic communication link, to the body control module (BCM). The instrument cluster displays warnings for low pressure or a system fault. Location calibration teaches the BCM the sensor identities in a fixed wheel order; acknowledgement and timing are what make the lesson stick. See the [TPMS overview](#/document/G1686515).",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "TPMS sensor location calibration",
-        "tire pressure sensor training",
-        "tire training not complete",
-        "TPMS warning light"
+        "2015 Mustang TPMS sensor location calibration",
+        "TPMS sensor training",
+        "TRAIN LF TIRE",
+        "TIRE TRAINING COMPLETE",
+        "204-D081A",
+        "BCM TPMS Initialization"
       ],
       "when": {
-        "summary": "When sensor positions need to be learned, including after installation of a new body control module.",
+        "summary": "For a 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine when TPMS sensor locations need learning, including training after BCM replacement.",
         "notes": [
-          "A tire-pressure warning can indicate low pressure or a system fault; it does not establish a need for sensor replacement."
+          "A TPMS warning can mean low tire pressure or a system fault. The warning alone does not establish that calibration or sensor replacement is needed.",
+          "Choose one training-mode entry method: IDS, FDRS or the manual ignition sequence. All three lead to the same four-wheel activation sequence.",
+          "Keep the wheels fitted for location calibration; wheel removal and sensor replacement are separate jobs."
         ]
       },
       "prepare": [
         {
-          "title": "Have the activation tool ready",
-          "detail": "Use tire-pressure monitor tool 204-D081A (204-D081). Manual entry into training mode still requires this tool to activate the wheel sensors."
+          "title": "Have the sensor activation tool within reach",
+          "detail": "Use Tire Pressure Monitor tool 204-D081A (204-D081). Manual entry replaces the scan tool for entering training mode; it does not replace the activation tool used at each tire."
         },
         {
-          "title": "Arrange diagnostic access",
-          "detail": "Ford diagnostic equipment can enter training mode and read the updated sensor identifiers. It is also needed for the additional checks following BCM replacement."
+          "title": "Arrange diagnostic equipment for readback and BCM work",
+          "detail": "Ford diagnostic equipment provides the IDS or FDRS entry paths and reads the updated sensor identifiers for recording on an applicable warranty claim. After a new BCM is installed, it is also required to clear diagnostic trouble codes and carry out the BCM On-Demand Self-Test."
+        },
+        {
+          "title": "Know the practical endpoint",
+          "detail": "This article covers location training with all wheels fitted. Valve-stem sensor replacement, wheel or tire removal and persistent-fault diagnosis require separate procedures."
         }
       ],
       "steps": [
         {
-          "title": "Choose scan-tool entry if available",
-          "body": "Follow [Sensor Location Calibration](#/document/G1686523). In the IDS interface, select Chassis > TPMS > Training Mode. In the FDRS interface, select Toolbox > BCM > BCM — TPMS Initialization. These are alternative entry paths."
+          "title": "Secure the car and prevent an unexpected start",
+          "body": "Park on a hard, level surface, apply the parking brake and chock the wheels. Keep the engine stopped throughout calibration.\n\nIf remote start is fitted, disable it through Vehicle settings > Remote Start Setup before working around the car. Keep the key under your control and prevent anyone else from starting the engine. You will deliberately use ignition RUN during training; keep clear of moving engine components and do not start the engine.\n\nWear eye and ear protection for service work, and protective gloves when handling sharp-edged components. The horn will sound during training. These precautions come from [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Use manual entry when needed",
-          "body": "With ignition OFF, press and release the brake pedal. Use the start/stop switch to cycle OFF to RUN 3 times, finishing in RUN. Press and release the brake pedal, switch ignition OFF, then repeat the 3 OFF-to-RUN cycles, again ending in RUN."
+          "title": "Choose IDS or FDRS entry when using diagnostic equipment",
+          "body": "Use one of these alternatives from [Sensor Location Calibration](#/document/G1686523):\n\nIDS: select Chassis > TPMS > Training Mode.\n\nFDRS: select Toolbox > BCM > BCM — TPMS Initialization.\n\nAfter using either route, skip the manual-entry step and check for the training-mode acknowledgement."
         },
         {
-          "title": "Confirm training mode",
-          "body": "Successful entry produces one horn sound and a flashing TPMS indicator. If a message center is fitted, it displays TRAIN LF TIRE. Have the activation tool at hand before beginning the timed wheel sequence."
+          "title": "Alternatively, enter training mode manually",
+          "body": "Start with the ignition OFF.\n\n1. Press and release the brake pedal.\n2. Use the start/stop switch to cycle the ignition from OFF to RUN three times, ending in RUN.\n3. Press and release the brake pedal.\n4. Switch the ignition OFF.\n5. Again cycle OFF to RUN three times, ending in RUN.\n\nThese are ignition-state changes with the engine stopped. Complete the sequence in that order; this particular dance gives the BCM its cue."
+        },
+        {
+          "title": "Confirm training mode before approaching the first tire",
+          "body": "Successful entry produces one horn sound and a flashing TPMS indicator. If a message center is fitted, it displays TRAIN LF TIRE.\n\nHave the activation tool ready before entering this mode: the first wheel must be activated within two minutes of the horn sounding. If the acknowledgement does not occur, repeat your chosen entry method before attempting the wheel sequence."
         },
         {
           "title": "Train the left-front sensor",
-          "body": "Within 2 minutes of the horn sounding, place the tool against the left-front tire sidewall at the valve stem. Press and release its test button. Keep it in place: activation can take up to 6 seconds. A brief horn sound confirms BCM recognition."
+          "body": "LF means left-front, using the car’s left and right as viewed from the driver’s seat facing forward.\n\nWithin two minutes of the entry horn, place tool 204-D081A (204-D081) against the left-front tire sidewall at the valve stem. Press and release the tool’s test button. Leave the tool in that position while the sensor activates; this can take up to six seconds.\n\nA brief horn sound means the BCM has recognized that sensor. Wait for that acknowledgement before moving on."
         },
         {
-          "title": "Continue around the vehicle",
-          "body": "Train the right-front, right-rear and then left-rear sensor using the same placement and activation method. Begin each activation within 2 minutes of the preceding horn acknowledgement. Training finishes after the last tire is accepted."
+          "title": "Train the right-front sensor",
+          "body": "Within two minutes of the left-front acknowledgement, place the tool against the right-front tire sidewall at its valve stem. Press and release the test button and hold the tool in place for activation, allowing up to six seconds.\n\nWait for the brief horn acknowledgement before continuing. The order is left-front → right-front → right-rear → left-rear."
         },
         {
-          "title": "Document identifiers and complete any BCM follow-up",
-          "body": "Read the updated sensor identifiers from the BCM with the scan tool and document them on the applicable warranty claim. If training follows installation of a new BCM, clear diagnostic trouble codes (DTCs) and run the BCM On-Demand Self-Test. This is required to clear B1182:55, exit manufacturing mode and check for other concerns."
+          "title": "Train the right-rear sensor",
+          "body": "Within two minutes of the right-front acknowledgement, place the tool against the right-rear tire sidewall at the valve stem. Press and release the test button, keeping the tool in position for up to six seconds as needed.\n\nWait for the brief horn acknowledgement. Do not count a button press by itself as a learned sensor."
+        },
+        {
+          "title": "Train the left-rear sensor",
+          "body": "Within two minutes of the right-rear acknowledgement, place the tool against the left-rear tire sidewall at the valve stem. Press and release the test button and keep the tool in position for activation, allowing up to six seconds.\n\nTraining ends when this final tire has been accepted. The horn acknowledgements are the BCM’s attendance register; all four corners need to answer."
+        },
+        {
+          "title": "Check the completion result and switch the ignition off",
+          "body": "With a message center, look for TIRE TRAINING COMPLETE after the final sensor is trained, then switch the ignition OFF.\n\nWithout a message center, switch the ignition OFF and listen: successful training is confirmed by no horn sound. Two horn sounds when switching OFF mean the procedure was unsuccessful. Repeat the complete entry and four-wheel sequence, observing placement, order and the two-minute windows."
+        },
+        {
+          "title": "Read and record the learned sensor identifiers",
+          "body": "Use Ford diagnostic equipment to locate the updated TPMS sensor identifiers stored in the BCM. Record them on the applicable warranty claim. Manual training-mode entry does not provide this readback; scan-tool access is needed for the identifier record."
+        },
+        {
+          "title": "Complete the additional checks after BCM replacement",
+          "body": "If training was performed because a new BCM was installed, use Ford diagnostic equipment to clear diagnostic trouble codes (DTCs) and carry out the BCM On-Demand Self-Test.\n\nThis follow-up is required to clear B1182:55, take the BCM out of manufacturing mode and check the newly programmed module for other concerns. Retain the test result and address any reported faults before calling the BCM installation finished.\n\nFinish with the ignition OFF and the car restrained. Remove service chocks only when preparing to move the vehicle."
         }
       ],
       "watchFor": [
         {
-          "title": "An unacknowledged sensor",
-          "body": "Allow the stated activation time with the tool held at the valve stem. Lack of acknowledgement alone does not prove sensor failure."
+          "title": "No horn acknowledgement at a wheel",
+          "body": "Keep the activation tool against the tire sidewall at the valve stem for the full activation period of up to six seconds. Moving it away early can interrupt the attempt. Silence alone does not prove that the sensor needs replacing."
+        },
+        {
+          "title": "The two-minute windows",
+          "body": "The first window begins at the training-entry horn. Each subsequent wheel must be activated within two minutes of the preceding acknowledgement. Have access to all four valve stems before starting."
         }
       ],
-      "notes": [],
+      "notes": [
+        "No replacement parts are required for location training itself.",
+        "A successful learning sequence confirms that the BCM accepted the sensor identities in order. It is not an inflation adjustment or a separate pressure-accuracy test.",
+        "Separate wheel service is covered in [Wheel and Tire](#/document/G1686507); none is required to perform this calibration."
+      ],
       "diagnostics": [
         {
-          "finding": "The horn sounds twice when ignition is switched OFF after training.",
+          "finding": "No single horn sound or flashing TPMS indicator after the entry sequence.",
+          "meaning": "Training-mode entry has not been confirmed.",
+          "next": "Repeat the selected IDS, FDRS or manual entry path. Begin tire activation only after the entry acknowledgement."
+        },
+        {
+          "finding": "A sensor produces no acknowledgement after up to six seconds.",
+          "meaning": "Recognition of that wheel has not been confirmed; this result alone does not identify a failed sensor.",
+          "next": "Check that the tool is against the sidewall at the correct valve stem and remains there during activation. Do not advance to the next wheel without acknowledgement. If the timing window is lost, restart the full sequence. Persistent failure needs TPMS fault diagnosis before choosing replacement parts."
+        },
+        {
+          "finding": "The horn sounds twice when the ignition is switched OFF after training.",
           "meaning": "The training procedure was unsuccessful.",
-          "next": "Repeat the complete training sequence, observing wheel order and timing."
+          "next": "Re-enter training mode and repeat left-front, right-front, right-rear and left-rear, waiting for each acknowledgement and respecting every two-minute window."
+        },
+        {
+          "finding": "TIRE TRAINING COMPLETE appears, or a car without a message center switches OFF without a horn sound.",
+          "meaning": "The prescribed completion check confirms successful training.",
+          "next": "Read and record the updated identifiers with diagnostic equipment. Complete DTC clearing and the BCM On-Demand Self-Test if a new BCM prompted the training."
+        },
+        {
+          "finding": "The TPMS warning remains after a successful training result.",
+          "meaning": "Location learning does not establish that tire pressures are correct or that the whole system is fault-free.",
+          "next": "Have the tire pressures and TPMS concern assessed rather than treating another training cycle as proof of a repair."
         }
       ],
       "verification": [
         {
-          "title": "Confirm completion",
-          "body": "Look for TIRE TRAINING COMPLETE where a message center is fitted. Without a message center, successful completion is confirmed by switching ignition OFF without a horn sound."
+          "title": "All four sensors were acknowledged in order",
+          "body": "Confirm the sequence was left-front, right-front, right-rear, left-rear, with a horn acknowledgement at each wheel and each activation within its two-minute window."
         },
         {
-          "title": "Check the recorded result",
-          "body": "Confirm that the identifier record reflects the newly trained BCM entries. For a new BCM, also retain the result of the required On-Demand Self-Test."
+          "title": "The final completion signal was successful",
+          "body": "Confirm TIRE TRAINING COMPLETE on cars with a message center. Without one, confirm that switching the ignition OFF produced no horn sound; two sounds indicate failure."
+        },
+        {
+          "title": "Diagnostic follow-up is complete",
+          "body": "Confirm the updated BCM sensor identifiers were read and recorded on any applicable warranty claim. After BCM replacement, confirm DTC clearing and the BCM On-Demand Self-Test were completed and review the result."
+        },
+        {
+          "title": "The vehicle is left safely parked",
+          "body": "Confirm the ignition is OFF and the parking brake is applied. Keep wheel chocks in place until the vehicle is ready to move."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686523",
-          "purpose": "Scan-tool or manual training-mode entry, sensor activation order, completion checks and new-BCM follow-up."
+          "purpose": "Training-mode entry through IDS, FDRS or the manual ignition sequence; timed four-wheel activation; completion checks; identifier recording; and new-BCM follow-up."
+        },
+        {
+          "documentId": "G1686515",
+          "purpose": "Explain valve-stem sensor location, radio communication to the BCM and the meaning of TPMS warnings."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Separate wheel-service reference; no wheel removal is required for sensor location training."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, personal protection and stationary vehicle-restraint precautions."
         }
       ],
       "hero": null,
@@ -7891,14 +7967,59 @@
         {
           "documentId": "G1686515",
           "sourceHash": "0bcdc73d101b64395bae33bdabe1073924a58842a604fca399a8020e13cfe946"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "a81c7be8bbc54cb282df528e1d3ddda7336ff0bb4a4de53dec1f980c6b0737a7"
-      }
+        "fingerprint": "a81c7be8bbc54cb282df528e1d3ddda7336ff0bb4a4de53dec1f980c6b0737a7",
+        "editorialVersion": 2,
+        "editorialFingerprint": "41ce6f958b25798d62f1f1e10e568434776775a3a7ae43738885e1faf1fa267e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-the-car",
+          "title": "Secure the car",
+          "summary": "Prevent movement and unexpected starting before working around the tires.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "enter-training-mode",
+          "title": "Enter training mode",
+          "summary": "Choose one entry method and confirm the horn and indicator response.",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "teach-four-corners",
+          "title": "Teach the four wheel positions",
+          "summary": "Activate each sensor in order, observing the acknowledgement and timing limits.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "confirm-and-record",
+          "title": "Confirm and record the result",
+          "summary": "Verify completion, record sensor identities and perform any new-BCM checks.",
+          "start": 9,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Replace a tire-pressure sensor and train its wheel position",
@@ -39504,113 +39625,197 @@
       }
     },
     {
-      "title": "Replace the fuel pump driver module, including the 5.2L twin-module assembly",
-      "summary": "Access the fuel pump driver module beneath the rear seat and follow the engine-specific mounting procedure for a single module or the 5.2L pair.",
-      "introduction": "The fuel pump driver module (FPDM) is part of the pump’s electrical control system. It sits beneath the rear seat cushion on the left-hand side. The 2.3L, 3.7L and 5.0L procedures service a single mounted module. The 5.2L uses two modules on a bracket, adding an assembly-removal and bracket-disassembly phase.",
-      "why": "Engine identification matters because the bracket arrangement and tightening specifications differ. The seat cushion also needs deliberate release: pulling it up without pressing its locking tabs can damage them. Restoring the seat includes keeping the seatbelt webbing straight and the belts and buckles available to occupants.",
+      "title": "Replace the fuel pump driver module on a 2015 Mustang",
+      "summary": "Remove the rear seat cushion to replace the single FPDM on 2.3L, 3.7L and 5.0L cars, or service the twin-module bracket assembly on the 5.2L.",
+      "introduction": "The fuel pump driver module gets a seat beneath the rear passengers without contributing a penny toward petrol. Its actual job is more useful: it handles electrical control of the fuel pump. I’ll walk you through reaching it, disconnecting it and fitting it back securely. On the 2015 Mustang, the 2.3L, 3.7L and 5.0L use a single module; the 5.2L has two modules mounted on a shared bracket.",
+      "why": "The important differences are underneath that cushion. The single-module cars use 44 lb.in (5 Nm) at the mounting nuts, while the 5.2L uses 71 lb.in (8 Nm) at both its module mountings and its assembly mountings. Getting access also takes a little finesse: the cushion’s front locking tabs must be pressed inward before lifting. I’d rather spend a moment releasing a stubborn clip than turn a module replacement into a seat repair.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "fuel pump driver module replacement",
-        "FPDM under rear seat",
-        "5.2L fuel pump driver modules",
-        "fuel pump control module bracket"
+        "2015 Mustang fuel pump driver module replacement",
+        "FPDM beneath rear seat",
+        "Mustang left rear seat fuel pump module",
+        "5.2L twin FPDM bracket",
+        "FPDM mounting torque"
       ],
       "when": {
-        "summary": "When diagnosis identifies an FPDM for replacement or its assembly must be removed for service.",
+        "summary": "Use this procedure when an FPDM has been identified for replacement or its mounting assembly needs removal for service.",
         "notes": [
-          "Choose the engine-specific procedure before disconnecting or unfastening the module."
+          "Choose the engine branch before loosening any module fasteners.",
+          "Removing both modules from the 5.2L bracket does not establish that both require replacement."
         ]
       },
       "prepare": [
         {
-          "title": "Select the correct installation branch",
-          "detail": "Use the [2.3L procedure](#/document/G1673144), [3.7L procedure](#/document/G1691951), [5.0L procedure](#/document/G1692000) or [5.2L procedure](#/document/G1805342). The 5.2L bracket work is a separate branch."
+          "title": "Choose the matching engine procedure",
+          "detail": "The single-module branches are covered by the [2.3L procedure](#/document/G1673144), [3.7L procedure](#/document/G1691951) and [5.0L procedure](#/document/G1692000). The [5.2L procedure](#/document/G1805342) covers two modules and their shared bracket. All are reached beneath the left-hand side of the rear seat cushion."
         },
         {
-          "title": "Provide seat access and torque equipment",
-          "detail": "Arrange access to the rear cushion’s front locking tabs and have suitable tools for the module retainers and their specified tightening torques."
+          "title": "Establish that replacement is the next job",
+          "detail": "This article covers removal and installation after the replacement decision; electrical fault isolation needs engine-matched diagnostic instructions. The [2.3L system information](#/document/G1673137) and [3.7L system information](#/document/G1691850) direct system operation and component description to Section 1 of the Powertrain Control/Emissions Diagnosis manual, abbreviated PC/ED. No electrical test procedure is established here for those engines or for the 5.0L and 5.2L."
+        },
+        {
+          "title": "Arrange tools and replacement components",
+          "detail": "Have suitable tools for the mounting nuts and an inch-pound torque wrench capable of accurately applying your branch’s specification: 44 lb.in (5 Nm) for the single module, or 71 lb.in (8 Nm) for the 5.2L mountings. Obtain the correct replacement FPDM for the car and, on the 5.2L, the module position being serviced."
+        },
+        {
+          "title": "Plan cabin access and personal protection",
+          "detail": "The job is performed through the rear seating area with the car on the ground. Allow room to move both front seats fully forward and carry the rear cushion out. Have eye and ear protection, and protective gloves for handling sharp-edged components. The relevant startup precautions are in [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Release and remove the rear seat cushion",
-          "body": "Follow [Rear Seat Cushion](#/document/G1692168). Move both front seats fully forward. Press in the locking tabs at the front of the rear cushion to release it from the floor, then lift, release and remove the cushion."
+          "title": "Prevent an unexpected start",
+          "body": "Set the parking brake and leave the car on the ground throughout this job. If remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup. Switch the ignition off and remove the key from the vehicle so another person cannot start it while you work. Put on eye and ear protection; use protective gloves when handling sharp edges."
         },
         {
-          "title": "Remove the single module on 2.3L, 3.7L or 5.0L",
-          "body": "For these engines, disconnect the FPDM electrical connector. Remove its retaining nuts and lift out the module. Continue with the single-module installation branch."
+          "title": "Move both front seats fully forward",
+          "body": "Move the left and right front seats to their full forward positions. This creates access to the front edge of the rear cushion and room to remove it. The access and refitting actions are covered by [Rear Seat Cushion](#/document/G1692168)."
         },
         {
-          "title": "Remove and separate the 5.2L assembly",
-          "body": "For the 5.2L, disconnect the FPDM electrical connectors and remove the assembly retainers. Swing the assembly out from beneath the trim panel and remove it. Then remove the module retainers and separate both FPDMs from their bracket."
+          "title": "Press the rear cushion’s locking tabs inward, then remove it",
+          "body": "Find the locking tabs beneath the front edge of the rear cushion, one toward each seating position. Press each tab inward to release its connection to the floor before lifting that part of the cushion.\n\nOnce both front attachments are released, lift and release the cushion, then remove it from the car. The cushion comes out as one piece. If an attachment still holds, return to its locking tab and press it inward rather than pulling harder. Those tabs are retainers, not a strength competition."
         },
         {
-          "title": "Install the correct module arrangement",
-          "body": "On 2.3L, 3.7L and 5.0L engines, install the FPDM and tighten its retaining nuts to 44 lb.in (5 Nm). On the 5.2L, install the modules onto their bracket and tighten those retainers to 71 lb.in (8 Nm); install the assembly and tighten its retainers to 71 lb.in (8 Nm)."
+          "title": "Locate the left-side module and select your branch",
+          "body": "Look beneath the left-hand side of the removed rear cushion.\n\nOn the 2.3L, 3.7L and 5.0L, identify the single rectangular module with one electrical plug and a mounting ear on either side. Complete steps 5–7, then continue at step 13.\n\nOn the 5.2L, identify the pair of modules on a shared bracket tucked partly beneath the adjacent trim panel. There are two electrical plugs. Complete steps 8–12, then continue at step 13."
         },
         {
-          "title": "Reconnect the electrical connections",
-          "body": "After securing the module or assembly, reconnect the single FPDM connector on the 2.3L, 3.7L and 5.0L, or the FPDM connectors on the 5.2L."
+          "title": "2.3L, 3.7L and 5.0L: disconnect the single electrical plug",
+          "body": "Release the FPDM connector’s locking catch and withdraw the plug from the socket on the lower face of the module. The plug moves away from the module toward its attached wiring. Handle the connector body rather than pulling on the wires, and leave the disconnected plug clear of the mounting nuts."
         },
         {
-          "title": "Restore the rear seat",
-          "body": "Install the cushion by reversing its removal procedure. Make sure the seatbelt webbing is not twisted and that the seatbelts and buckles remain accessible to the occupants."
+          "title": "2.3L, 3.7L and 5.0L: remove the two mounting nuts and module",
+          "body": "Remove the two retaining nuts, one at each side mounting ear. With both nuts removed and the connector disconnected, lift the FPDM off its mounting points and remove it."
+        },
+        {
+          "title": "2.3L, 3.7L and 5.0L: install, torque and reconnect the module",
+          "body": "Position the replacement FPDM on its mounting points and install both retaining nuts. Tighten them to 44 lb.in (5 Nm).\n\nAfter the module is secured, insert the electrical plug fully into its socket and make sure its catch engages. Continue at step 13 for the common seat-refitting steps."
+        },
+        {
+          "title": "5.2L: disconnect both module plugs",
+          "body": "Release the locking catches and disconnect both FPDM electrical connectors before loosening the assembly. The two plugs sit beside one another, with their wiring curving across the front of the modules. Move the disconnected plugs clear so the wiring will not be dragged as the bracket comes out."
+        },
+        {
+          "title": "5.2L: unfasten and swing the assembly out from under the trim",
+          "body": "Remove the two assembly retaining nuts at the exposed bracket mountings: one near the outer left end and the other near the gap between the modules.\n\nSwing the FPDM assembly outward from beneath the trim panel, then remove the assembly from the car. This movement clears the overlapping trim before the bracket is taken away; do not try to pull the assembly straight through the trim."
+        },
+        {
+          "title": "5.2L: separate both modules from the bracket",
+          "body": "With the assembly out of the car, remove the retaining nuts securing the two FPDMs to their shared bracket. Each module has a mounting ear on either side. Remove both modules from the bracket, keeping their positions clear for reassembly.\n\nThis is bracket disassembly, not a verdict that both modules are faulty. Replace the module or modules identified for replacement."
+        },
+        {
+          "title": "5.2L: attach both modules to the bracket",
+          "body": "Position both FPDMs on the bracket in their respective mounting positions. Install the module-to-bracket retaining nuts and tighten them to 71 lb.in (8 Nm).\n\nComplete these module mountings before returning the assembly to the car."
+        },
+        {
+          "title": "5.2L: refit the assembly, torque its mountings and reconnect",
+          "body": "Guide the assembly back beneath the trim panel, reversing the outward swing used during removal. Seat the bracket on its vehicle mounting points without trapping the connector wiring.\n\nInstall the assembly retaining nuts and tighten them to 71 lb.in (8 Nm). This is a second set of mountings, separate from the module-to-bracket nuts tightened in step 11.\n\nReconnect both FPDM electrical plugs and make sure their locking catches engage."
+        },
+        {
+          "title": "Refit the rear cushion with the belts and buckles accessible",
+          "body": "Before covering the work, confirm the applicable module mountings are tightened and every disconnected electrical plug is reconnected.\n\nReturn the rear cushion by reversing its removal: position it in the seating area, lower it into place and engage both front floor attachments. Keep the seatbelt webbing straight and bring the belts and buckles into their usable positions as the cushion is lowered. Do not leave a buckle beneath the cushion or trap wiring underneath it.\n\nCheck that both front cushion attachments hold. If either does not engage, reposition the cushion and its attachment rather than forcing it down."
+        },
+        {
+          "title": "Finish the cabin checks",
+          "body": "Confirm that the cushion is secure at both front attachments, the seatbelt webbing is untwisted and the belts and buckles are accessible to occupants. Remove tools and loose fasteners, then return the front seats to suitable positions.\n\nThese are installation-completion checks. A tidy seat and secure connectors confirm the work is reassembled; they do not independently prove an electrical fault has been cured."
         }
       ],
       "watchFor": [
         {
-          "title": "Seat tabs resisting release",
-          "body": "Press the locking tabs inward before lifting the cushion; forcing it upward risks breaking the tabs."
+          "title": "A cushion that will not lift",
+          "body": "A front attachment may still be locked. Press its tab inward before lifting. Pulling upward against an engaged tab can damage it."
         },
         {
-          "title": "Torque transferred between layouts",
-          "body": "Use the specification for the actual engine and mounting location. The single-module specification differs from the 5.2L bracket and assembly specification."
+          "title": "Inch-pounds versus foot-pounds",
+          "body": "The mounting values are 44 lb.in (5 Nm) or 71 lb.in (8 Nm), depending on the branch. These are inch-pound values; do not set a wrench to the same number in foot-pounds."
+        },
+        {
+          "title": "Two fastening stages on the 5.2L",
+          "body": "The modules must first be secured to their bracket, and the complete bracket assembly must then be secured to the car. Both stages use 71 lb.in (8 Nm). Completing one does not complete the other."
+        },
+        {
+          "title": "Wiring and belt routing during closure",
+          "body": "Keep the electrical wiring clear of the bracket and cushion as they return to position. Seatbelt webbing must remain untwisted, with belts and buckles accessible above the installed cushion."
         }
       ],
       "notes": [
-        "Removing both 5.2L modules from the bracket is part of the assembly procedure; it does not itself establish that both modules are faulty."
+        "Left-hand side means the vehicle’s left side when facing forward.",
+        "The 5.2L assembly swings out from beneath the trim panel after its vehicle retainers are removed; trim-panel removal is not part of this sequence."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The exposed module arrangement does not match the selected engine branch.",
+          "meaning": "The single-module and twin-module instructions cannot be treated as interchangeable.",
+          "next": "Stop before disconnecting or unfastening parts. Confirm the engine and match the installation to its linked FPDM procedure."
+        },
+        {
+          "finding": "The rear cushion remains attached at the front after an attempt to lift it.",
+          "meaning": "A locking tab may not have released from the floor attachment.",
+          "next": "Lower the cushion enough to remove tension from the attachment, press the tab inward and release it before lifting again."
+        },
+        {
+          "finding": "Both modules have been removed from the 5.2L bracket.",
+          "meaning": "That is part of the assembly-disassembly sequence and does not establish two failed modules.",
+          "next": "Keep track of their mounting positions and replace only the module or modules identified for replacement."
+        },
+        {
+          "finding": "A buckle is buried, webbing is twisted or a cushion attachment will not engage during refitting.",
+          "meaning": "Rear-seat reassembly is incomplete.",
+          "next": "Release and reposition the cushion as necessary, correct belt routing and engage both front attachments before returning the seat to use."
+        }
+      ],
       "verification": [
         {
-          "title": "Mounting branch completed",
-          "body": "Record the engine branch used and confirm its mounting fasteners were tightened. On the 5.2L, check both the module-to-bracket and assembly-to-vehicle retainers."
+          "title": "Confirm the correct mounting torque",
+          "body": "For 2.3L, 3.7L and 5.0L cars, confirm both FPDM retaining nuts were tightened to 44 lb.in (5 Nm). For the 5.2L, confirm the module-to-bracket retainers and the assembly-to-vehicle retainers were each tightened to 71 lb.in (8 Nm)."
         },
         {
-          "title": "Connections restored",
-          "body": "Confirm the electrical connector or connectors have been reconnected before completing seat installation."
+          "title": "Confirm electrical reassembly",
+          "body": "Before installing the cushion, confirm the single connector or both 5.2L connectors are fully seated with their catches engaged, and that wiring is clear of the mounting and cushion contact areas."
         },
         {
-          "title": "Occupant access restored",
-          "body": "Confirm the cushion is reinstalled with untwisted webbing and accessible seatbelts and buckles."
+          "title": "Confirm seat retention and belt access",
+          "body": "Check that both front cushion attachments retain the cushion. Check each rear seating position for accessible belts and buckles, with no twisted webbing."
         }
       ],
       "procedures": [
         {
           "documentId": "G1673144",
-          "purpose": "2.3L EcoBoost single FPDM removal and installation.",
+          "purpose": "2.3L single FPDM location, removal, installation and 44 lb.in (5 Nm) mounting torque.",
           "mediaId": "G1673144-m0001"
         },
         {
           "documentId": "G1691951",
-          "purpose": "3.7L Duratec single FPDM removal and installation.",
+          "purpose": "3.7L single FPDM location, removal, installation and 44 lb.in (5 Nm) mounting torque.",
           "mediaId": "G1691951-m0001"
         },
         {
           "documentId": "G1692000",
-          "purpose": "5.0L single FPDM removal and installation.",
+          "purpose": "5.0L single FPDM location, removal, installation and 44 lb.in (5 Nm) mounting torque.",
           "mediaId": "G1692000-m0001"
         },
         {
           "documentId": "G1805342",
-          "purpose": "5.2L twin-FPDM assembly removal, separation from the bracket and installation.",
+          "purpose": "5.2L twin-module assembly access, removal from beneath trim, bracket disassembly and both 71 lb.in (8 Nm) fastening stages.",
           "mediaId": "G1805342-m0002"
         },
         {
           "documentId": "G1692168",
-          "purpose": "Rear seat cushion access, locking-tab release and correct seatbelt positioning during installation.",
+          "purpose": "Both front seats moved forward, rear cushion locking-tab release, cushion removal and reverse-order refitting with correct belt positioning.",
           "mediaId": "G1692168-m0003"
+        },
+        {
+          "documentId": "G1673137",
+          "purpose": "2.3L system-information pointer to PC/ED Section 1; does not provide an electrical test procedure."
+        },
+        {
+          "documentId": "G1691850",
+          "purpose": "3.7L system-information pointer to PC/ED Section 1; does not provide an electrical test procedure."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start disabling, ignition-off, key-removal and personal-protection precautions."
         }
       ],
       "hero": {
@@ -39637,7 +39842,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the rear seat cushion fitted: 2.3L, 3.7L or 5.0L single FPDM, or 5.2L twin-FPDM bracket assembly."
       },
       "relatedGuideIds": [
         "job-7b4004c8d23a60ed"
@@ -39670,14 +39876,51 @@
         {
           "documentId": "G1691850",
           "sourceHash": "6c4483a6085cb4f6f3d873280aa6143ed55cca1ebccec01d8ba0c06e5b14c0e6"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "3e3ccb22201adc2ffbb3ccfdc0ae679b092fda008bca17d964d49038911e8212"
-      }
+        "fingerprint": "3e3ccb22201adc2ffbb3ccfdc0ae679b092fda008bca17d964d49038911e8212",
+        "editorialVersion": 2,
+        "editorialFingerprint": "cdb8bd59dd60a22be5718a4faaadd38ce763ea45f665a8fac17b26db0e3b00f7",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-uncover",
+          "title": "Secure the car and uncover the modules",
+          "summary": "Prevent starting, move the front seats and release the rear cushion before identifying the engine branch.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "single-module-service",
+          "title": "2.3L, 3.7L and 5.0L single module",
+          "summary": "Disconnect, replace and secure the single FPDM at its engine-specific torque.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "twin-module-service",
+          "title": "5.2L twin-module assembly",
+          "summary": "Remove the shared assembly, service its modules and complete both fastening stages before reconnecting.",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "id": "restore-rear-seating",
+          "title": "Restore and check the rear seating",
+          "summary": "Refit the cushion, preserve belt access and confirm installation is complete.",
+          "start": 13,
+          "end": 14
+        }
+      ]
     },
     {
       "title": "Remove and refit the fuel rail on 2.3L, 3.7L, 5.0L and 5.2L engines",
@@ -66981,89 +67224,135 @@
     },
     {
       "title": "Replace the accelerator pedal and sensor assembly",
-      "summary": "Replace the complete electronic accelerator pedal assembly while keeping the ignition off during electrical disconnection and reconnection.",
-      "introduction": "The accelerator pedal is an electrical input to the engine management system. Its accelerator pedal position (APP) sensor tells the powertrain control module (PCM) how the driver is moving the pedal. The PCM then commands the electronic throttle to change its opening. This repair replaces the pedal and sensor together as an assembly.",
-      "why": "Disconnecting the pedal with the ignition on can set diagnostic trouble codes (DTCs), confusing subsequent diagnosis. Secure mounting is also important: the pedal must remain fixed to its mounting points while the driver operates it.",
+      "summary": "Remove and refit the electronic accelerator pedal assembly on a 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine. Keep the ignition off for connector work and tighten the three mounting nuts to 80 lb.in (9 Nm).",
+      "introduction": "The accelerator pedal puts your right foot in charge of an electronic conversation. Three mounting nuts and one plug hold its end of the conversation together—so let's keep the wiring happy and save the enthusiastic throttle requests for later. I'll walk you through replacing the pedal and its sensor as one assembly, working in the driver's footwell.",
+      "why": "The accelerator pedal position (APP) sensor tells the powertrain control module (PCM), the engine-management computer, how you move the pedal. The PCM then commands the electronic throttle to open or close. The assembly needs secure mounting and a connected signal plug to do its job. Disconnecting it with the ignition on can also create diagnostic trouble codes (DTCs), adding an unnecessary distraction to the repair.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "accelerator pedal sensor replacement",
-        "limited accelerator response",
-        "acceleration control limp home mode"
+        "2015 Mustang accelerator pedal replacement",
+        "accelerator pedal position sensor assembly",
+        "APP sensor connector",
+        "accelerator pedal mounting nut torque"
       ],
       "when": {
-        "summary": "When diagnosis calls for replacement of the accelerator pedal and sensor assembly.",
+        "summary": "Use this procedure when diagnosis has established that the accelerator pedal and sensor assembly needs replacement.",
         "notes": [
-          "Limited performance alone does not identify the pedal assembly as the failed component."
+          "Applies to the 2015 Mustang with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+          "Limited performance or limp-home operation alone does not establish that the pedal assembly has failed."
         ]
       },
       "prepare": [
         {
-          "title": "Prevent unintended starting",
-          "detail": "Review the linked health and safety precautions. Disable remote start if equipped, switch the ignition OFF and remove the key from the vehicle."
+          "title": "Gather the assembly and fastening tools",
+          "detail": "Have the replacement accelerator pedal and sensor assembly ready, along with a tool that fits the three mounting nuts and a torque wrench capable of accurately applying 80 lb.in (9 Nm). Pay attention to inch-pounds when selecting the wrench."
         },
         {
-          "title": "Prepare the working area and tools",
-          "detail": "Arrange access to the pedal connector and mounting nuts. Use appropriate eye protection and a torque wrench suitable for the small mounting fasteners."
+          "title": "Plan for footwell access",
+          "detail": "Work through the driver's doorway with the vehicle on the ground. Locate the accelerator pedal, its upper sensor housing and its three mounting points before disconnecting anything. The replacement operation goes directly to the connector and mounting nuts; no preliminary trim removal is required."
+        },
+        {
+          "title": "Understand the repair boundary",
+          "detail": "This is a complete assembly replacement. Sensor testing, separate sensor repair and adjustment are outside this procedure. Establish the cause of an acceleration complaint before buying parts; guessing can get expensive remarkably quickly."
+        },
+        {
+          "title": "Use appropriate protection",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp edges. Review the relevant [general service precautions](#/document/G1693189) before beginning."
         }
       ],
       "steps": [
         {
-          "title": "Establish the ignition-off condition",
-          "body": "Confirm the ignition is OFF before touching the pedal connector. Keep it off throughout the connector work to avoid creating service-induced fault codes."
+          "title": "Secure the car and prevent unintended starting",
+          "body": "Park on a hard, level surface, apply the parking brake and chock the wheels. Leave the vehicle on the ground throughout this job.\n\nIf remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup. Then switch the ignition OFF and remove the key from the vehicle to prevent another person from starting it. Keep the ignition off throughout removal and reconnection of the pedal plug."
         },
         {
-          "title": "Disconnect and remove the assembly",
-          "body": "Disconnect the pedal sensor electrical connector. Remove the three mounting nuts and take out the pedal and sensor assembly together, as shown in the [replacement procedure](#/document/G1687937)."
+          "title": "Locate the connector and all three mounting nuts",
+          "body": "From the driver's doorway, look into the footwell and trace the accelerator pedal arm upward to the sensor housing at its top. The electrical plug connects at the top of that housing, with the wiring approaching from above.\n\nIdentify the three mounting nuts around the housing: two at the upper mounting ears, one on either side, and a third on the lower ear to the left of the pedal arm. These secure the complete assembly to the body. I like to account for all three before starting—footwells are quite capable of making a small job feel unnecessarily mysterious."
         },
         {
-          "title": "Secure the replacement pedal",
-          "body": "Position the replacement assembly on its mounting points and reinstall the three nuts. Tighten them to 9 Nm; these fasteners secure the complete pedal unit."
+          "title": "Disconnect the pedal sensor plug",
+          "body": "Confirm once more that the ignition is OFF. Disconnect the electrical connector from the top of the pedal sensor housing, handling the connector body rather than pulling on its wires. Move the disconnected lead clear of the assembly so it cannot catch as the pedal comes away.\n\nThis disconnection comes before removal of the mounting nuts in the [accelerator pedal replacement procedure](#/document/G1687937)."
         },
         {
-          "title": "Restore the electrical connection",
-          "body": "Reconnect the pedal sensor connector with the ignition still OFF. This completes the reverse removal sequence and restores the pedal’s signal connection to engine management."
+          "title": "Remove the three nuts and lift out the assembly",
+          "body": "Support the pedal and sensor assembly while removing its three mounting nuts. Keep the nuts together for refitting.\n\nWith all three nuts removed and the electrical lead clear, move the assembly away from its mounting points and take it out through the driver's footwell. The pedal and sensor come out together; do not attempt to separate the sensor as part of this operation."
+        },
+        {
+          "title": "Mount the replacement pedal and tighten the nuts",
+          "body": "Place the replacement pedal and sensor assembly onto the same three mounting points. Make sure the disconnected wiring remains clear rather than becoming trapped behind the housing.\n\nStart all three nuts by hand and seat the assembly against its mounting surface. Tighten each mounting nut to **80 lb.in (9 Nm)**. Check the wrench units and setting before tightening."
+        },
+        {
+          "title": "Reconnect the sensor and check your work",
+          "body": "With the ignition still OFF, reconnect the electrical plug at the top of the sensor housing and make sure it is fully seated. This completes installation in reverse removal order.\n\nAccount for all three tightened nuts, confirm the housing sits securely at its mounting points, and check that the wiring is clear of the pedal arm and mounting surfaces. Remove tools and loose hardware from the footwell and confirm nothing obstructs the pedal. Keep the parking brake applied and the wheel chocks in place during these completion checks."
         }
       ],
       "watchFor": [
         {
-          "title": "Ignition left on",
-          "body": "An ignition-on disconnection can introduce DTCs that were not part of the original complaint."
+          "title": "Ignition-on disconnection",
+          "body": "Disconnecting the pedal sensor with the ignition on can set DTCs. Establish the ignition-off condition before unplugging it, and keep that condition through reconnection."
+        },
+        {
+          "title": "Incorrect torque units",
+          "body": "The three mounting nuts require 80 lb.in (9 Nm). Confirm the wrench units and setting before applying torque."
+        },
+        {
+          "title": "A trapped lead or unsecured connector",
+          "body": "Before finishing, look at the wiring around the sensor housing and pedal arm. If the lead is trapped or the plug is not fully seated, correct that installation issue with the ignition off."
         },
         {
           "title": "Unexpected starting",
-          "body": "Turning off the ignition does not replace the requirement to disable an equipped remote-start feature before service."
+          "body": "Disable an equipped remote-start system before service and remove the key after switching the ignition off. Ignition-off alone does not disable remote start."
         }
       ],
       "notes": [
-        "The service operation replaces the pedal and sensor assembly together; it does not describe separate sensor adjustment."
+        "The pedal and sensor are serviced together in this operation.",
+        "The [acceleration-control overview](#/document/G1687935) explains the signal path from pedal sensor to PCM to electronic throttle.",
+        "The final visual and fastening checks confirm assembly completion; they do not diagnose the original acceleration complaint."
       ],
       "diagnostics": [
         {
-          "finding": "Acceleration-control failure produces limited performance.",
-          "meaning": "Engine management can provide a limp-home mode after a system failure; that behavior does not isolate the pedal.",
-          "next": "Establish the fault before authorizing assembly replacement."
+          "finding": "The car operates with limited performance or in limp-home mode.",
+          "meaning": "Engine management can limit performance after an acceleration-control system failure. This behavior does not identify the pedal assembly as the failed part.",
+          "next": "Have the fault diagnosed before replacing the assembly. Use the [system overview](#/document/G1687935) to understand the components involved; it is not a pedal test procedure."
+        },
+        {
+          "finding": "The pedal connector was disconnected while the ignition was on.",
+          "meaning": "The service action may have introduced DTCs in addition to any original fault.",
+          "next": "Switch the ignition off before reconnecting the plug and record the ignition-on disconnection for subsequent fault assessment. Do not treat a resulting code alone as proof that the replacement pedal is defective."
+        },
+        {
+          "finding": "The housing is not seated securely, or the connector cannot be fully reconnected.",
+          "meaning": "The installation is incomplete.",
+          "next": "Keep the ignition off and resolve the mounting or connection problem before returning the vehicle to use. If damaged parts prevent secure assembly, stop and obtain the appropriate repair instructions."
         }
       ],
       "verification": [
         {
-          "title": "Check the completed installation",
-          "body": "Confirm all three mounting nuts are tightened and the sensor connector is fully reconnected."
+          "title": "Confirm the mounting",
+          "body": "Verify that all three mounting nuts are installed and tightened to 80 lb.in (9 Nm), and that the assembly is seated at all three mounting points."
         },
         {
-          "title": "Record the service conditions",
-          "body": "Record assembly replacement and any known ignition-on disconnection so later fault assessment can distinguish the original complaint from service events."
+          "title": "Confirm the connection and footwell clearance",
+          "body": "Verify that the sensor plug is fully reconnected, its wiring is not trapped, and all tools and loose hardware have been removed from the pedal area."
+        },
+        {
+          "title": "Finish with the car restrained",
+          "body": "Leave the parking brake applied while completing the checks. Remove the wheel chocks only after the work is complete and the car is ready for normal use."
         }
       ],
       "procedures": [
         {
           "documentId": "G1687937",
-          "purpose": "Complete accelerator pedal and sensor assembly removal and installation.",
+          "purpose": "Accelerator pedal and sensor assembly removal, reverse-order installation and mounting-nut torque.",
           "mediaId": "G1687937-m0002"
         },
         {
           "documentId": "G1693189",
-          "purpose": "Required general service precautions, including remote-start disabling and prevention of unintended starting."
+          "purpose": "Relevant service precautions for unintended-start prevention and personal protection."
+        },
+        {
+          "documentId": "G1687935",
+          "purpose": "Explanation of the pedal sensor, PCM, electronic throttle and limited-performance mode."
         }
       ],
       "hero": {
@@ -67087,7 +67376,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Electronic throttle control with an accelerator pedal position (APP) sensor integrated into the pedal assembly."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -67108,8 +67398,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "f46ef82cdde690a8d90717298ee432fe712ab7d65851cb38e19c815ae07e2718"
-      }
+        "fingerprint": "f46ef82cdde690a8d90717298ee432fe712ab7d65851cb38e19c815ae07e2718",
+        "editorialVersion": 2,
+        "editorialFingerprint": "00249b8c07400f1069c1b48385a2ddc1d111d5ba796fb6912e7419ccd54e4b33",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-locate",
+          "title": "Secure the car and find the assembly",
+          "summary": "Prevent starting and identify the connector and three mounting points.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "disconnect-and-remove",
+          "title": "Remove the pedal assembly",
+          "summary": "Unplug the sensor, remove the nuts and withdraw the complete assembly.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "refit-and-check",
+          "title": "Install and check the replacement",
+          "summary": "Torque the mounting nuts, reconnect the sensor and confirm a clear footwell.",
+          "start": 5,
+          "end": 6
+        }
+      ]
     },
     {
       "title": "Diagnose dual automatic climate control faults",
@@ -72491,90 +72807,135 @@
       }
     },
     {
-      "title": "Replace the cabin blower speed-control module",
-      "summary": "Remove the right-hand insulation panel, disconnect the blower speed controller, and release its sliding mount for replacement.",
-      "introduction": "The cabin blower moves air through the heating and air-conditioning system. Its speed control allows airflow to change with the selected fan setting. Electronic Manual Temperature Control (EMTC) uses a blower switch, while Dual Automatic Temperature Control (DATC) provides buttons that override automatic blower operation. This job replaces the speed-control module behind the right-hand insulation panel.",
-      "why": "The module has both an electrical connection and a mechanical locking arrangement. Disconnecting and moving the harness aside gives clearance; releasing the lock before sliding the module avoids forcing its mounting. The insulation panel also carries an ambient light, so removing the panel requires attention to more than its push pins.",
+      "title": "Replace the blower motor speed-control module",
+      "summary": "Replace the cabin blower speed controller behind the right-hand lower insulation panel on a 2015 Mustang with a 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "introduction": "A little cabin breeze is lovely; a leaf-blower audition under the dashboard is less charming. The blower motor moves air through the heating and air-conditioning system, and its speed-control module lets that airflow change with your fan selection. I’ll walk you through reaching the module, disconnecting its wiring and releasing its sliding mount. The small but important trick: release the lock before asking the module to move.",
+      "why": "The controller sits behind the right-hand insulation panel beneath the dashboard. That panel carries an ambient light, so it cannot simply be pulled away after removing its fasteners. Once the panel is clear, the controller’s wiring must move aside before its locking tab and sliding mount are released. The [removal and installation procedure](#/document/G1676758) uses this same arrangement across the listed engines.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "blower speed does not change",
-        "cabin fan speed control",
-        "blower motor speed control replacement"
+        "2015 Mustang blower motor speed control",
+        "cabin fan speed controller replacement",
+        "right-hand footwell blower controller",
+        "EMTC blower speed control",
+        "DATC blower speed control"
       ],
       "when": {
-        "summary": "When diagnosis has established that the blower motor speed-control module requires replacement.",
+        "summary": "Use this replacement procedure once diagnosis has established that the blower motor speed-control module needs replacing.",
         "notes": [
-          "A fan-speed complaint alone does not establish that this module has failed."
+          "The procedure applies to the listed 2015 engines with either manual or dual automatic climate control."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange access",
-          "detail": "Be ready to work behind the right-hand insulation panel and to release its push pins, ambient light and electrical connection without straining the wiring."
+          "title": "Set the scope before buying parts",
+          "detail": "Have the appropriate replacement blower motor speed-control module ready. This article covers removal and refitting; electrical tests to distinguish a failed module from other causes of a fan-speed complaint are outside its scope."
         },
         {
-          "title": "Recognize the mounting",
-          "detail": "Identify the module lock and sliding direction in the illustration before attempting removal."
+          "title": "Arrange footwell access",
+          "detail": "Work from the right-hand front footwell, looking upward beneath the dashboard. The access panel is the broad lower insulation panel with two push pins and an ambient-light fitting. This job does not require lifting the vehicle."
+        },
+        {
+          "title": "Gather the small essentials",
+          "detail": "Wear eye and ear protection, and wear protective gloves when handling sharp-edged parts. A small trim-release tool is illustrated with the connector access operation; use it only as needed to help release the catch. Keep the two panel push pins together for refitting."
         }
       ],
       "steps": [
         {
-          "title": "Remove the insulation panel",
-          "body": "Remove the push pins and the right-hand insulation panel, then remove the panel's ambient light. This opens access to the controller and its wiring."
+          "title": "Park and prevent an unexpected start",
+          "body": "Park the car and set the parking brake. If remote start is fitted, disable it through the central display at Vehicle settings > Remote Start Setup before starting work. Switch the ignition off and remove the key from the vehicle to prevent someone starting it while you are working. Put on the appropriate protection before reaching beneath the dashboard. See [health and safety precautions](#/document/G1693189)."
         },
         {
-          "title": "Disconnect the controller",
-          "body": "Disconnect the blower motor speed-control connector and position the wiring harness aside. Keep the harness clear of the module's removal path."
+          "title": "Lower the right-hand insulation panel and release its light",
+          "body": "From the right-hand front footwell, locate the broad insulation panel beneath the dashboard. Support it while removing its two push pins, then lower it enough to reach the ambient-light fitting without pulling on the light’s wiring.\n\nThe fitting sits in a round opening in the panel. Viewed from the exposed underside of the panel, turn the ambient-light fitting counterclockwise to release it, then withdraw it from the opening. With the light freed, move the insulation panel out of your working space. The wiring is not a handy panel-support strap, tempting though that shortcut may be."
         },
         {
-          "title": "Release and slide the module",
-          "body": "Release the speed-control module lock tab first. Slide the module to the right and remove it, following the sequence shown in the illustration."
+          "title": "Unplug the controller and move its harness aside",
+          "body": "Look upward into the exposed area. Find the rectangular speed-control module beside the large rounded blower housing; its electrical connector and harness are at the side of that housing.\n\nRelease the connector catch and unplug the connector by its housing. If necessary, use the illustrated trim-release tool to assist the catch rather than pulling harder on the wires. Position the wiring harness aside so it cannot obstruct the module’s sliding removal path."
         },
         {
-          "title": "Install and restore the panel",
-          "body": "Reverse the removal sequence: slide the replacement into its mounting, engage the lock, restore the harness connection, and reinstall the ambient light, insulation panel and push pins."
+          "title": "Release the upper tab, then slide the module right",
+          "body": "Locate the locking tab at the top of the module. Press the tab downward to release the lock, then slide the module to the right in its installed orientation. Once it has disengaged from its mounting, remove it.\n\nKeep those movements in order: tab first, sideways slide second, removal last. If the module resists, stop and check that the tab is released and the harness is clear; extra force is a poor substitute for an unlocked clip."
+        },
+        {
+          "title": "Fit the replacement into the sliding mount",
+          "body": "Position the replacement module in the mounting and reverse the removal movement: slide it left into its installed position. Ensure the upper locking tab engages and the module sits securely in its mount before reconnecting the wiring."
+        },
+        {
+          "title": "Reconnect and restore the wiring",
+          "body": "Bring the harness back from its aside position and reconnect the blower motor speed-control connector. Confirm the connector is fully seated and its catch has engaged. Arrange the harness clear of the module mount and the insulation panel’s refitting path."
+        },
+        {
+          "title": "Refit the ambient light and insulation panel",
+          "body": "Support the insulation panel near its installed position. Insert the ambient-light fitting into its round opening, then turn it clockwise when viewed from the exposed underside of the panel to secure it.\n\nRaise the panel into position without trapping the light wiring or controller harness. Align the panel’s attachment holes and reinstall both push pins. Confirm the panel is held securely and the light fitting remains seated. This completes the reverse-order refit described in the [blower motor speed-control procedure](#/document/G1676758)."
+        },
+        {
+          "title": "Check the fitted climate control",
+          "body": "Remove tools and loose parts from the footwell, then switch on the ignition as needed to operate the climate controls.\n\nWith Electronic Manual Temperature Control (EMTC), vary the blower motor switch and confirm the airflow changes with the selected fan speed.\n\nWith Dual Automatic Temperature Control (DATC), use the blower override buttons to select different fan speeds and confirm the airflow responds. Manual override gives you a deliberate selection to check instead of waiting for automatic temperature regulation to change the fan.\n\nTreat this as a completion check. If the original complaint remains, return to fault diagnosis before replacing another part."
         }
       ],
       "watchFor": [
         {
-          "title": "Resistance at the mounting",
-          "body": "Make sure the lock is released before trying to slide the module; pulling outward is not the specified removal movement."
+          "title": "A panel still tethered by its light",
+          "body": "The two push pins are only part of panel removal. Support the lowered panel until the ambient-light fitting is released; do not let the panel hang from its wiring."
+        },
+        {
+          "title": "A module that will not slide",
+          "body": "Check the upper locking tab and harness clearance before trying again. The required removal movement is to the right after unlocking, rather than a straight outward pull."
+        },
+        {
+          "title": "Wiring caught during refitting",
+          "body": "Before pushing the panel pins home, look along the panel edge and around the light opening. Reposition any wiring caught between the panel and its mounting area."
         }
       ],
       "notes": [
-        "Fan-speed selection and temperature selection perform different functions; this repair addresses blower-speed control."
+        "Fan speed and temperature selection do different jobs. On [EMTC](#/document/G1681091), the blower switch varies fan speed while the temperature setting determines outlet-air temperature.",
+        "On [DATC](#/document/G1676851), the temperature setting is the desired cabin temperature, and the blower override buttons let the driver change fan speed."
       ],
       "diagnostics": [
         {
-          "finding": "Blower speed does not follow the selected setting.",
-          "meaning": "This identifies a speed-control complaint but does not isolate the module.",
-          "next": "Establish the fault in the fitted climate-control system before replacing the controller."
+          "finding": "The module resists the rightward removal slide.",
+          "meaning": "Its mechanical release or removal clearance has not yet been established; resistance does not identify an electrical fault.",
+          "next": "Check that the upper tab is released and the disconnected harness is positioned clear, then retry the specified sliding movement without forcing the mount."
+        },
+        {
+          "finding": "The refitted module is loose or its locking tab has not engaged.",
+          "meaning": "The sliding mount is not securely retained.",
+          "next": "With the ignition off and key removed, reposition the module and complete the leftward installation slide until the lock engages before closing the access panel."
+        },
+        {
+          "finding": "Blower speed still does not respond to deliberate fan-speed selections after replacement.",
+          "meaning": "The completion check has failed; it does not establish which component or circuit is responsible.",
+          "next": "Switch the ignition off, remove the key and recheck the disturbed connector for full engagement. If the connection is secure and the complaint remains, obtain climate-control fault diagnosis before further parts replacement."
         }
       ],
       "verification": [
         {
-          "title": "Check assembly retention",
-          "body": "Confirm that the module lock, electrical connector, ambient light and insulation-panel push pins are restored."
+          "title": "Confirm the assembly is secure",
+          "body": "The module is seated with its upper lock engaged, the electrical connector is latched, the harness is clear, and the ambient light and both panel push pins are restored."
         },
         {
-          "title": "Check the relevant control",
-          "body": "Use the manual blower switch or automatic-system override buttons, as fitted, and confirm that blower speed responds to selection."
+          "title": "Confirm fan-speed response",
+          "body": "Airflow responds when you change the EMTC blower switch or the DATC blower override selection, as fitted. This checks the completed repair without claiming to test every climate-control function."
         }
       ],
       "procedures": [
         {
           "documentId": "G1676758",
-          "purpose": "Complete blower motor speed-control removal and installation sequence.",
+          "purpose": "Blower motor speed-control access, connector removal, locking-tab release, sliding removal and reverse-order installation.",
           "mediaId": "G1676758-m0003"
         },
         {
           "documentId": "G1681091",
-          "purpose": "Explains blower selection with Electronic Manual Temperature Control."
+          "purpose": "EMTC blower-switch operation and the distinction between fan speed and temperature selection."
         },
         {
           "documentId": "G1676851",
-          "purpose": "Explains blower override with Dual Automatic Temperature Control."
+          "purpose": "DATC automatic operation, manual blower override and temperature-selection context."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup-prevention and personal-protection precautions before service."
         }
       ],
       "hero": {
@@ -72598,7 +72959,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Electronic Manual Temperature Control (EMTC) or Dual Automatic Temperature Control (DATC)."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -72613,14 +72975,51 @@
         {
           "documentId": "G1676851",
           "sourceHash": "f50354d3648437cb8090ebef6caf1cd9e789a5456aa49546d8ac5bf0bff19b78"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "aaf1397a211e603e7d0390590f168861701f51abc2e245142b9c31ef93076cc9"
-      }
+        "fingerprint": "aaf1397a211e603e7d0390590f168861701f51abc2e245142b9c31ef93076cc9",
+        "editorialVersion": 2,
+        "editorialFingerprint": "23503dee66a7baa0eb9daf1eb315b0414deaabb84983f3a41bd7116135afd9c8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-access",
+          "title": "Secure the car and uncover the controller",
+          "summary": "Prevent startup, free the insulation panel and light, then disconnect the harness.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "exchange-controller",
+          "title": "Release and replace the module",
+          "summary": "Unlock the sliding mount and secure the replacement.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "restore-footwell",
+          "title": "Restore wiring, light and panel",
+          "summary": "Reconnect the controller and complete the reverse-order panel refit.",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "confirm-operation",
+          "title": "Check fan-speed control",
+          "summary": "Use the fitted climate-control interface to confirm airflow responds.",
+          "start": 8,
+          "end": 8
+        }
+      ]
     },
     {
       "title": "Replace the cabin blower motor",
@@ -156011,88 +156410,226 @@
     },
     {
       "title": "Replace the convertible luggage compartment lid latch",
-      "summary": "Remove and refit the convertible’s luggage lid latch while restoring its electrical connection, release cable, emergency handle and trim.",
-      "introduction": "The luggage compartment lid latch holds the lid closed and releases it when operated. Its installation includes an electrical connector and a release cable routed through trim and clipped alongside the wiring harness. Replacement requires access to that whole route, as well as removal of the lock cylinder and emergency release handle.",
-      "why": "The latch cannot be removed cleanly while its cable remains trapped by the trim and routing clips. Releasing those attachments in order avoids pulling on the cable or harness. The cover also has a retaining tab, so controlled, gentle prying is part of the procedure.",
+      "summary": "Replace the trunk latch on a 2015 Mustang Convertible with the 2.3L, 3.7L or 5.0L engine, including rear-seat access, lock-cylinder removal, cable routing and complete reassembly.",
+      "introduction": "The trunk latch guards your luggage, but replacing it sends you into the rear seat first. Apparently, this little gatekeeper has an entourage. I’ll walk you through that access route, then the trim, electrical connection and release cable, so the new latch goes in without leaving a forgotten clip behind.",
+      "why": "The latch holds the luggage lid closed and releases it when operated. Its electrical connection supports powered release, while the mechanical release cable and emergency handle provide mechanical operation. On the convertible, removing the latch also means freeing the cable through the compartment trim and disconnecting it at the lock cylinder. Pulling the latch before those attachments are released risks dragging the cable and wiring along with it.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "convertible trunk latch replacement",
-        "luggage compartment lid will not release",
-        "trunk lid will not latch",
-        "luggage lid emergency release handle"
+        "2015 Mustang convertible trunk latch replacement",
+        "luggage compartment lid latch",
+        "convertible trunk release cable",
+        "trunk emergency release handle",
+        "convertible luggage lid lock cylinder"
       ],
       "when": {
-        "summary": "When the convertible luggage lid latch requires replacement after the release or latching concern has been assessed.",
+        "summary": "Use this procedure when the luggage compartment lid latch has been identified as requiring removal or replacement.",
         "notes": [
-          "A release complaint alone does not identify which part of the latch, cable or electrical connection requires repair."
+          "Applies to 2015 Mustang Convertibles with the 2.3L, 3.7L or 5.0L engine.",
+          "A lid that will not release does not, by itself, prove that the latch needs replacement.",
+          "This is a repair task, with no scheduled replacement interval."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare for trim and latch access",
-          "detail": "Have a flat-bladed screwdriver for the latch cover and suitable fastener and torque tools. Access is needed to both the lid trim and the load compartment trim around the cable route."
+          "title": "Establish the starting point",
+          "detail": "Begin with the replacement decision established and the luggage lid open and reliably held in its open position. Electrical fault-finding, cable adjustment and access to a lid stuck shut require separate instructions."
         },
         {
-          "title": "Include the lock cylinder procedure",
-          "detail": "Use the convertible-specific lock cylinder removal and installation procedure as part of the job."
+          "title": "Gather the tools and replacement latch",
+          "detail": "Have a flat-bladed screwdriver for the latch cover, suitable tools for the seat fasteners and latch nuts, and torque tools capable of accurately applying 62 lb.in (7 Nm) and 35 lb.ft (47.5 Nm). If replacing the latch, have the correct replacement for this convertible configuration."
+        },
+        {
+          "title": "Protect yourself and the seat installation",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp-edged components. Keep removed hardware and tools out of the seat mounting areas. Nothing may be trapped between the seat components and the body or inside a seat-structure joint; incorrect seat installation can cause serious injury. See [health and safety precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Organize the small attachments",
+          "detail": "Keep the rear-seat fasteners, cylinder retaining clip, lid-trim retainers, compartment-trim retainers and latch nuts in separate groups. Before freeing the cable, note its path through the trim and its relationship to the wiring harness."
         }
       ],
       "steps": [
         {
-          "title": "Remove the lock cylinder and emergency handle",
-          "body": "Remove the luggage lid lock cylinder using its linked procedure. Press down the emergency release handle’s retaining tab, then remove the handle. This frees the components that must come off before the latch cover and trim."
+          "title": "Prepare the car and move both front seats forward",
+          "body": "Keep the vehicle parked with the parking brake applied; this work is performed with the wheels on the ground. If remote start is fitted, disable it through the central display at Vehicle settings > Remote Start Setup before service.\nMove both front seats fully forward to give access to the rear cushion. Switch the ignition off and remove the key from the vehicle before dismantling anything. Keep the luggage lid open."
         },
         {
-          "title": "Release the cover and lid trim",
-          "body": "Insert the flat-bladed screwdriver between the latch cover and latch. Gently pry the cover away until it disengages from the latch tab. Remove the retainers and luggage lid trim panel."
+          "title": "Release and remove the rear seat cushion",
+          "body": "At the front edge of the rear cushion, locate the locking tabs on both sides. Press each tab inward to release its attachment to the floor, then lift and release the cushion and remove it from the cabin.\nDo not simply yank the cushion upward: the tabs must be pressed in first or they can be damaged. See the [rear seat cushion procedure](#/document/G1692168)."
         },
         {
-          "title": "Free the cable through the load compartment trim",
-          "body": "Remove the retainer and move the load compartment trim panel aside. Remove the cable retainers, then route the latch cable through the panel as shown in the complete procedure. The cable must be free before the latch is withdrawn."
+          "title": "Release the backrest floor fasteners",
+          "body": "With the cushion out, locate the backrest-to-floor fasteners at the lower outer ends of the backrest, one on each side. Release these fasteners and retain them for refitting.\nTheir installation torque is 35 lb.ft (47.5 Nm). These are seat mounting fasteners, so keep them separate from the much smaller latch nuts."
         },
         {
-          "title": "Disconnect and remove the latch",
-          "body": "Disconnect the electrical connector and move the wiring harness aside. Release the latch cable from the harness routing clips. Remove the mounting nuts and lift out the latch assembly."
+          "title": "Pivot the backrest locking clips clear and lift out the backrest",
+          "body": "Locate the hooked locking clips behind the backrest. Pivot the hooked clips clear of their body catches, then lift the backrest upward to disengage it and remove it from the vehicle. See the [convertible backrest procedure](#/document/G1709034).\nIf the backrest remains attached, locate the clip that is still engaged before lifting farther. Move the backrest clear without trapping or pulling the safety belts."
         },
         {
-          "title": "Install the latch and restore its connections",
-          "body": "Reverse the removal sequence. Tighten the latch mounting nuts to 62 lb.in (7 Nm), restore the cable to its routing clips and reconnect the electrical connector. Return the cable through the trim and reinstall its retainers."
+          "title": "Detach the latch cable at the lock cylinder",
+          "body": "With the backrest removed, find the cable-operated fitting at the luggage-lid lock cylinder in the exposed body panel beside the rear seat-belt area. Release the two retaining tabs at the fitting’s connection to the cylinder, then detach the luggage-lid latch cable fitting.\nKeep the cable clear rather than pulling on it to force the tabs free. This is the first stage of the [convertible lock-cylinder procedure](#/document/G1695892)."
         },
         {
-          "title": "Restore the trim, handle and cylinder",
-          "body": "Refit the trim panels and latch cover, engaging their retainers. Reinstall the emergency release handle and complete lock cylinder installation using the linked convertible procedure."
+          "title": "Remove the lock cylinder",
+          "body": "Remove the separate retaining clip that holds the lock cylinder in the body panel. With the cable detached and the clip removed, withdraw the cylinder from the panel.\nKeep the cylinder and its retaining clip together. The clip secures the cylinder; the two tabs released in the previous step secure the cable fitting."
+        },
+        {
+          "title": "Remove the emergency release handle",
+          "body": "On the inside of the open luggage lid, locate the emergency release handle attached to its cable. Press down the handle’s retaining tab, then remove the handle from the cable attachment.\nI’d put this handle somewhere conspicuous now—it is easy to admire a freshly fitted latch and forget the small part that matters when someone needs an emergency exit."
+        },
+        {
+          "title": "Disengage the latch cover and lift it off",
+          "body": "Insert a flat-bladed screwdriver at the lower edge of the rectangular latch cover, between the cover and the latch. Gently pry the cover away from the latch to disengage the retaining tab, then lift the cover upward and off.\nUse the screwdriver to release that attachment rather than levering hard against the surrounding lid trim. See the [latch removal and installation procedure](#/document/G1709223)."
+        },
+        {
+          "title": "Remove the luggage-lid trim panel",
+          "body": "Remove the nine retainers securing the large trim panel to the underside of the luggage lid, then remove the panel. The attachment points extend across the panel, including its upper edge near the latch opening.\nCheck that every retainer has been released before moving the panel away. One stubborn clip is quite capable of making a trim panel audition as a spring."
+        },
+        {
+          "title": "Free the cable through the load-compartment trim",
+          "body": "At the load-compartment trim covering the cable route, remove the single panel retainer and move the panel aside. Remove the two retainers along the cable route at the upper edge of this area.\nFeed the luggage-lid latch cable through the trim panel so it is free to come away with the latch. Guide it through the opening rather than using the cable to pull the panel aside."
+        },
+        {
+          "title": "Disconnect the latch electrical connector",
+          "body": "At the exposed latch on the underside of the lid, disconnect its electrical connector and position the wiring harness aside. Separate the connector at its housing, keeping pulling force off the wires.\nObserve where the harness sits relative to the latch and cable so it can return to the same arrangement."
+        },
+        {
+          "title": "Release the cable clips and remove the latch",
+          "body": "Release the latch cable from the four wiring-harness routing clips along its path across the inside of the lid. Confirm that the cable is also free of the compartment trim and the lock cylinder.\nSupport the latch while removing its three mounting nuts, then remove the latch and its freed cable. If anything still tethers the assembly, stop and find that attachment before pulling farther."
+        },
+        {
+          "title": "Install the latch and restore its lid-side connections",
+          "body": "Position the replacement latch at its mounting points and install the three nuts. Tighten the latch mounting nuts to 62 lb.in (7 Nm). This value is in pound-inches, not pound-feet.\nReturn the cable to all four wiring-harness routing clips along the lid. Return the harness to its original position and reconnect the latch electrical connector fully."
+        },
+        {
+          "title": "Return the cable through the compartment trim",
+          "body": "Feed the cable back through the load-compartment trim opening along its original route. Reinstall the two cable-route retainers, return the trim panel to its fitted position and reinstall its single panel retainer.\nBefore securing the panel, look along its edge to confirm that neither the cable nor the harness is trapped behind a fastening point."
+        },
+        {
+          "title": "Refit the luggage-lid trim and latch cover",
+          "body": "Position the lid trim panel and reinstall its nine retainers. Keep the release-handle cable available at its proper opening rather than burying it behind the panel.\nRefit the latch cover by reversing its upward removal movement, engaging it with the retaining tab on the latch. Confirm that the cover sits in position without being held out by the trim or cable."
+        },
+        {
+          "title": "Reattach the emergency release handle",
+          "body": "Reconnect the emergency release handle to its cable attachment, reversing its removal, and make sure its retaining tab engages.\nConfirm that the handle remains accessible inside the luggage compartment and that its attachment stays together when handled gently. Do not leave it tucked behind the lid trim."
+        },
+        {
+          "title": "Refit the lock cylinder and reconnect its cable",
+          "body": "Return the lock cylinder to its opening in the body panel and reinstall its retaining clip. Reattach the latch-cable fitting to the cylinder, engaging both retaining tabs released during removal.\nCheck the two separate attachments: the cylinder must be retained in the panel, and the cable fitting must be retained at the cylinder. Complete this before hiding the area behind the rear backrest."
+        },
+        {
+          "title": "Reinstall and secure the rear backrest",
+          "body": "Keep the backrest mounting areas and internal joints clear of tools, loose hardware and other objects. Position the backrest and lower it into place, reversing the upward removal movement. Pivot the hooked locking clips back into engagement with their body catches.\nRefit the backrest-to-floor fasteners and tighten them to 35 lb.ft (47.5 Nm). Confirm that the clips are engaged and the backrest is retained. Keep the safety-belt webbing untwisted and make sure the belts and buckles remain accessible to the occupants."
+        },
+        {
+          "title": "Reinstall the rear cushion and restore seat access",
+          "body": "Position the rear cushion, keeping the safety belts and buckles accessible and the webbing untwisted. Reverse the cushion-removal sequence and engage the front locking tabs in their floor attachments.\nCheck that both front attachments have retained the cushion. Return the front seats from their fully forward access positions, taking care around the belts and newly installed rear seat."
+        },
+        {
+          "title": "Complete the installation checks",
+          "body": "Before closing the luggage lid, confirm that the connector is connected, the cable follows its retained route, the lock cylinder and emergency handle are secured, and all trim is fitted. Remove tools and loose hardware from the compartment.\nKeep the key outside the luggage compartment. Close the lid normally and confirm that it stays latched, then operate the normal release and confirm that it opens again. These are completion checks of the finished assembly. If either action fails, stop and recheck the disturbed connections and attachments before further use; repeated slamming is a poor substitute for finding the problem."
         }
       ],
       "watchFor": [
         {
-          "title": "Cover resisting removal",
-          "body": "Release its retaining tab with gentle prying; the cover is not simply a friction fit."
+          "title": "Rear cushion tabs must release before lifting",
+          "body": "Press the front locking tabs inward on both sides before raising the cushion. Pulling against engaged tabs can damage them."
         },
         {
-          "title": "Cable still attached to the harness",
-          "body": "Free the routing clips before removing the latch, and restore that routing during installation."
+          "title": "Seat installation is safety-critical",
+          "body": "Keep every seat-to-body interface and internal seat joint clear of foreign objects. Pivot the backrest hooks into their body catches, tighten the floor fasteners correctly and leave the belts and buckles accessible."
+        },
+        {
+          "title": "Two very different torque values",
+          "body": "Latch nuts: 62 lb.in (7 Nm). Backrest-to-floor fasteners: 35 lb.ft (47.5 Nm). Check the torque-tool units before tightening."
+        },
+        {
+          "title": "A cable caught behind trim",
+          "body": "Look at the cable path before securing each panel. A cable trapped at a trim edge or omitted from a routing clip means the routing must be corrected before closing up."
+        },
+        {
+          "title": "Cover resistance",
+          "body": "The latch cover engages a retaining tab. Gently release it with a flat-bladed screwdriver at the cover’s lower edge, then lift the cover upward and off."
         }
       ],
       "notes": [
-        "The installation torque is given with the removal instructions and applies when the latch nuts are refitted."
+        "Refitting reverses removal for the cylinder, handle, cover, trim and seat attachments; the two specified fastening torques are included at their installation steps.",
+        "The passive entry system can release the luggage lid latch. That operating relationship alone does not distinguish a latch fault from a cable or electrical concern. See the [entry-system overview](#/document/G1695896)."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The rear cushion does not lift after an initial release attempt.",
+          "meaning": "A front locking tab may still be engaged; resistance alone is not a reason to pull harder.",
+          "next": "Return to the front-edge attachment on each side and press the locking tab inward before lifting again."
+        },
+        {
+          "finding": "The backrest remains attached after its floor fasteners are released.",
+          "meaning": "A hooked locking clip may still be engaged with its body catch.",
+          "next": "Locate the engaged hook and pivot it clear of its catch before lifting the backrest upward."
+        },
+        {
+          "finding": "The latch remains tethered after its mounting nuts are removed.",
+          "meaning": "An electrical connection, cable routing clip, trim retainer or cylinder-side cable attachment remains connected.",
+          "next": "Support the latch and trace the cable and harness back along the removal route. Release the remaining attachment before withdrawing the assembly."
+        },
+        {
+          "finding": "The cable is pinched or a fitting will not remain attached during reassembly.",
+          "meaning": "The routing or retention is incomplete.",
+          "next": "Reopen the affected trim area, restore the cable path and engage its retainers. Do not conceal an attachment that will not stay secured."
+        },
+        {
+          "finding": "The completed lid will not stay latched or will not release normally.",
+          "meaning": "The completion check has failed; it does not establish which component is faulty.",
+          "next": "Recheck the connector, cable routing, cylinder connection and latch mounting disturbed during the job. If those are correctly restored and the concern remains, obtain the appropriate fault-diagnosis procedure before replacing further parts."
+        }
+      ],
       "verification": [
         {
-          "title": "Check the completed installation",
-          "body": "Confirm the latch nuts are tightened, the electrical connector is connected, the cable is retained along its route and the emergency handle, cylinder, cover and trim have been restored."
+          "title": "Latch fastening and connections",
+          "body": "All three latch nuts are tightened to 62 lb.in (7 Nm), the electrical connector is fully connected and the cable is secured in its four lid-side routing clips."
+        },
+        {
+          "title": "Cable, cylinder and emergency handle",
+          "body": "The cable passes through the trim along its original route with both route retainers restored. The cylinder retaining clip and both cable-fitting tabs are engaged, and the emergency handle is attached and accessible."
+        },
+        {
+          "title": "Trim restored",
+          "body": "The compartment panel and its retainer, all nine lid-trim retainers and the tab-retained latch cover are fitted without trapping the cable or harness."
+        },
+        {
+          "title": "Rear seat restored",
+          "body": "The hooked backrest clips engage their body catches, its floor fasteners are tightened to 35 lb.ft (47.5 Nm), and both cushion attachments retain the cushion. Belt webbing is untwisted and belts and buckles are accessible."
+        },
+        {
+          "title": "Normal lid operation",
+          "body": "With tools removed and the key outside the compartment, the lid stays closed when normally shut and opens using its normal release. A failed check requires correction before considering the repair finished."
         }
       ],
       "procedures": [
         {
           "documentId": "G1709223",
-          "purpose": "Remove and install the convertible luggage lid latch, cable attachments, emergency handle and surrounding trim.",
+          "purpose": "Primary convertible latch removal and refitting, including the emergency handle, cover, trim, cable routing, connector and 62 lb.in (7 Nm) latch-nut torque.",
           "mediaId": "G1709223-m0005"
         },
         {
           "documentId": "G1695892",
-          "purpose": "Remove and reinstall the convertible luggage lid lock cylinder required for latch access."
+          "purpose": "Remove and refit the convertible lock cylinder and detach and reconnect its latch cable."
+        },
+        {
+          "documentId": "G1709034",
+          "purpose": "Remove and refit the convertible rear backrest, pivot its hooked locking clips clear of and into their body catches, and tighten its floor fasteners to 35 lb.ft (47.5 Nm)."
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Move both front seats forward, release and refit the rear cushion, and preserve accessible, untwisted seat belts."
+        },
+        {
+          "documentId": "G1695896",
+          "purpose": "Explain the relationship between passive entry and luggage-lid latch release."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply remote-start prevention, key control and personal protection relevant to this ground-level repair."
         }
       ],
       "hero": {
@@ -156133,6 +156670,18 @@
         {
           "documentId": "G1695896",
           "sourceHash": "722613b9939c667faba1075bf478bd1b7459ebccb530cb5d1e94844935d45c8c"
+        },
+        {
+          "documentId": "G1709034",
+          "sourceHash": "956324f9f6d63426c2ab161a9b64ca6e32a4a3d9bb71403f56a8d918dc1f7f35"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -156151,8 +156700,62 @@
               "end": 1600
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "a363fbab626f6f5f0d306cc9fb985f654a2c2ed60620bc5bb3262551670f9f74",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-prepare",
+          "title": "Prepare for access",
+          "summary": "Disable remote start and position the front seats.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "rear-seat",
+          "title": "Remove the rear seat",
+          "summary": "Release the cushion and backrest to expose the lock-cylinder area.",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "cylinder",
+          "title": "Disconnect the lock cylinder",
+          "summary": "Free the cable fitting and remove the cylinder.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "trim",
+          "title": "Expose the latch and cable",
+          "summary": "Remove the emergency handle, cover and lid trim, then free the cable through the compartment trim.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "latch",
+          "title": "Replace the latch",
+          "summary": "Disconnect the wiring, release the cable clips and fit the latch at the correct torque.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "connections",
+          "title": "Restore trim and release connections",
+          "summary": "Reinstall the cable retainers, trim, emergency handle and lock cylinder.",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "id": "finish",
+          "title": "Restore the seats and verify completion",
+          "summary": "Secure the rear seat, check belt access and confirm normal lid operation.",
+          "start": 18,
+          "end": 20
         }
-      }
+      ]
     },
     {
       "title": "Replace the convertible top switch and overhead console",
@@ -164657,93 +165260,202 @@
     },
     {
       "title": "Replace a convertible rear quarter speaker with SYNC or SYNC 2/SYNC 3",
-      "summary": "Access and replace the rear quarter speaker, then restore the loadspace trim without trapping the convertible flap or twisting the seatbelts.",
-      "introduction": "The rear quarter speaker converts the audio system's electrical signal into sound beside the rear seating area. It sits behind the convertible loadspace trim, so reaching it requires more work than removing the speaker itself. The SYNC and SYNC 2/SYNC 3 procedures use the same removal sequence and speaker-bolt torque.",
-      "why": "The access panels have clips and a rear locating tab that must be released in the correct direction. Seatbelts pass through this area, and the upper trim sits near a convertible flap. Correct reassembly preserves belt accessibility and prevents the flap from becoming caught beneath the panel.",
+      "summary": "Remove the rear seat and surrounding loadspace trim, replace the rear quarter speaker, and restore the trim, convertible flap and seatbelts correctly. Applies to 2015 Mustang convertibles with 2.3L, 3.7L or 5.0L engines and SYNC or SYNC 2/SYNC 3.",
+      "introduction": "Three bolts hold the speaker in place; apparently the surrounding interior wanted a bigger role in the concert. I’ll walk you through that supporting cast first: rear seat cushion, backrest and four trim pieces. The speaker itself turns the audio system’s electrical signal into sound beside the rear seats. Once it is exposed, replacement is straightforward—the important work is releasing the trim properly and putting the seats, belts and convertible flap back where they belong.",
+      "why": "The rear quarter speaker sits behind the convertible’s loadspace trim, the interior panels beside and behind the rear seating area. Pulling those panels in the wrong direction can damage their retainers. Reassembly also affects seat attachment, belt accessibility and the small convertible flap beside the upper panel, so this job deserves more care than its three speaker bolts suggest.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "convertible rear quarter speaker replacement",
-        "SYNC rear quarter speaker",
-        "SYNC 2 SYNC 3 rear speaker removal",
-        "convertible speaker trim access"
+        "2015 Mustang convertible rear quarter speaker replacement",
+        "SYNC rear quarter speaker removal",
+        "SYNC 2 SYNC 3 convertible speaker",
+        "convertible loadspace trim removal",
+        "Mustang rear seat cushion and backrest removal"
       ],
       "when": {
-        "summary": "When a rear quarter speaker requires replacement or removal after the repair need has been established.",
+        "summary": "Use this procedure when the rear quarter speaker needs removal or its replacement need has already been established.",
         "notes": [
-          "Select the speaker procedure for the fitted audio system; a shared removal method does not establish parts interchangeability."
+          "The same access sequence and speaker-bolt torque apply to both covered audio-system procedures.",
+          "Match the replacement speaker to the fitted audio system. Shared mounting instructions do not establish parts interchangeability.",
+          "The trim illustrations show the right-hand side of a left-hand-drive car; left-hand access and right-hand-drive arrangements are similar."
         ]
       },
       "prepare": [
         {
-          "title": "Plan the complete trim access",
-          "detail": "Use the convertible loadspace-trim procedure, including its prerequisite rear seat backrest removal. The convertible top must be fully open for this access sequence."
+          "title": "Identify the fitted audio system and replacement",
+          "detail": "Have the correct replacement speaker for your car’s equipment before dismantling the interior. The [SYNC overview](#/document/G1692884) describes six speakers and a 4.2-inch non-touchscreen display. The [touchscreen-system overview](#/document/G1702412) describes an 8-inch display with nine speakers without Shaker or ten with Shaker. I use those distinctions to check equipment, not to assume that speakers interchange. This article covers removal and refitting; establishing an electrical fault requires separate diagnosis."
         },
         {
-          "title": "Prepare for clips and small fasteners",
-          "detail": "Have the capability to release the trim clips and speaker bolts without forcing the panels, and a torque wrench suitable for the speaker's low tightening specification."
+          "title": "Prepare the fastening tools",
+          "detail": "Have hand tools that fit the speaker bolts and backrest fasteners, plus torque equipment capable of accurately applying both 22 lb.in (2.5 Nm) and 35 lb.ft (47.5 Nm). Keep the speaker bolts and seat fasteners separate so their very different tightening values stay with the correct parts."
+        },
+        {
+          "title": "Protect yourself and the seating attachments",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp-edged components. Do not place objects between the seat components and the vehicle body, or inside any joint in the seat structure. Incorrect seat installation can impair operation and increase the risk of serious injury. Keep the seating attachment areas clear throughout removal and refitting."
+        },
+        {
+          "title": "Plan ground-level access",
+          "detail": "This interior access sequence needs no vehicle lifting or underhood work. Leave the car on its wheels with the parking brake applied. The roof must be fully open and both front seats fully forward before rear-seat removal."
         }
       ],
       "steps": [
         {
-          "title": "Open the roof and remove the backrest",
-          "body": "Fully open the convertible top. Remove the rear seat backrest through the prerequisite identified in the [loadspace-trim procedure](#/document/G1692610). This creates the starting access for the surrounding trim panels."
+          "title": "Secure the car and arrange access",
+          "body": "Apply the parking brake. If remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup before service.\n\nFully open the convertible top and move both front seats to their full forward positions. Once those powered movements are complete, switch the ignition off and remove the key from the vehicle to prevent another person starting it during the work. Keep the engine off throughout the repair. The relevant general precautions are in [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Release the upper and middle trim",
-          "body": "Position the seatbelt guide aside, release the clips and remove the upper panel. Release the middle-panel clips, then pull forward and outward to disengage its rear tab. Move the front and rear safety belts aside and remove the middle panel."
+          "title": "Release and remove the rear seat cushion",
+          "body": "Find the locking tabs beneath the front edge of the rear cushion, one at each side. Press each tab inward to release the cushion from its floor attachment. With the tabs released, lift the cushion free and remove it.\n\nDo not try to overcome a locked tab by pulling harder: the tabs must be pressed in first or they can be damaged. I’d rather persuade two little catches than turn a speaker job into a seat-parts shopping trip. See [Rear Seat Cushion](#/document/G1692168)."
         },
         {
-          "title": "Expose and remove the speaker",
-          "body": "Release the scuff-plate clips and remove that trim, then release and remove the lower loadspace panel. Remove the speaker bolts and speaker, and disconnect its electrical connector. Follow the matching [SYNC procedure](#/document/G1694055) or [SYNC 2/SYNC 3 procedure](#/document/G1693903)."
+          "title": "Unfasten and lift out the rear backrest",
+          "body": "With the cushion out, locate the two backrest-to-floor fasteners at the lower outer corners of the backrest. Remove them and keep them together for refitting.\n\nPivot the hooked locking clips behind the backrest clear of their body catches, then lift the backrest upward and remove it. Release the clips before lifting rather than using the backrest as a lever against them. Keep the belts clear as the backrest comes out.\n\nThese floor fasteners will be tightened to 35 lb.ft (47.5 Nm) during installation. See [Rear Seat Backrest — Convertible](#/document/G1709034)."
         },
         {
-          "title": "Connect and secure the replacement",
-          "body": "Reverse speaker removal: connect the electrical connector, position the speaker and install its bolts. Tighten the bolts to 2.5 Nm."
+          "title": "Move the belt guide aside and remove the upper trim",
+          "body": "On the side being serviced, move the seatbelt guide aside where the belt passes through the upper loadspace trim. Release the upper panel’s retaining clips and lift the panel away from the body.\n\nThis is the long, narrow panel along the upper edge beside the rear seat. Its underside has four rectangular retainers and five spring clips. Work through the attachment locations instead of bending the whole panel from one end. Keep the belt clear as you remove it. The complete trim sequence is in [Loadspace Trim Panel — Convertible](#/document/G1692610)."
         },
         {
-          "title": "Restore the trim and belt routing",
-          "body": "Reverse the trim-removal sequence. Before installing the upper panel, visually inspect the convertible flap and move it aside if required so it cannot become trapped underneath. Refit the upper panel and return the seatbelt guide to position. Keep belt webbing untwisted and belts and buckles accessible as the trim and backrest are restored."
+          "title": "Release the middle panel and its rear tab",
+          "body": "Release the clips holding the broad middle panel—the panel containing the speaker grille. Its reverse side shows four push-in retainers and three spring clips.\n\nAfter releasing the clips, pull the panel forward and outward to disengage its rear locating tab. Move both the front and rear safety belts aside, then remove the panel without trapping either belt. That rear tab needs the specified movement; extra force in the wrong direction is just expensive enthusiasm."
+        },
+        {
+          "title": "Remove the scuff plate",
+          "body": "Release the scuff-plate trim clips and lift the panel away. This is the long sill trim beneath the door opening, alongside the front seat.\n\nThe illustration shows five spring clips along the panel and two additional retaining points beneath it. Free the attachments along its length rather than twisting the strip upward from one end."
+        },
+        {
+          "title": "Remove the lower loadspace trim",
+          "body": "Release the lower loadspace panel’s clips and remove the panel. It is the long, shaped trim section below the middle panel, extending rearward from the sill area.\n\nThe illustration shows two spring-clip locations and a separate end attachment. Release the retaining points as you withdraw the panel, keeping the adjacent belts aside. With the upper, middle, scuff and lower panels removed, the round rear quarter speaker is accessible."
+        },
+        {
+          "title": "Remove the speaker and unplug its connector",
+          "body": "Locate the three bolts around the speaker’s outer mounting flange. Support the speaker as you remove all three bolts, then withdraw it far enough to reach its electrical connector.\n\nThe connector is at the lower edge of the speaker in the illustrated installation. Release its retaining latch and unplug it before taking the speaker away; support the speaker rather than leaving its weight on the wiring.\n\nThe [SYNC speaker procedure](#/document/G1694055) and [SYNC 2/SYNC 3 speaker procedure](#/document/G1693903) use this same removal sequence."
+        },
+        {
+          "title": "Connect and secure the replacement speaker",
+          "body": "Connect the electrical plug to the replacement speaker and make sure it is retained. Position the speaker in its mounting opening with the wiring clear of the mounting flange.\n\nRefit all three bolts and tighten them to 22 lb.in (2.5 Nm). Check the torque wrench’s units before tightening: this is an inch-pound value. The backrest’s foot-pound setting has absolutely no business here."
+        },
+        {
+          "title": "Refit the lower panel and scuff plate",
+          "body": "Reverse the lower-panel removal: return the panel to its original position, align its end attachment and clips with their mating locations, and engage the retainers without trapping the adjacent belts.\n\nRefit the scuff plate next. Align its retaining points along the sill and seat the clips. Check that both panels sit in their original positions before covering their edges with the middle trim."
+        },
+        {
+          "title": "Refit the middle panel around the belts",
+          "body": "Keep the front and rear belts aside while returning the middle panel to position. Engage the rear locating tab by reversing its forward-and-outward removal movement, then align and seat the panel’s clips.\n\nReturn the belts to their original routing. Look along both belt paths before fully seating the panel: the webbing must remain untwisted and clear of the trim attachments."
+        },
+        {
+          "title": "Keep the convertible flap clear while fitting the upper trim",
+          "body": "Before seating the upper panel, visually inspect the small convertible flap beside its rear end. Move the flap aside if necessary so it cannot become caught beneath the panel.\n\nAlign the upper panel’s retainers and install the panel while watching that flap. Once the panel is seated, return the seatbelt guide to its original position. Check that the flap remains clear and that the belt passes through the guide without a twist."
+        },
+        {
+          "title": "Install and torque the rear backrest",
+          "body": "Keep the seat-to-body contact areas and all internal seat joints free of tools, loose parts and other objects. Route the belts clear of the backrest’s attachment points.\n\nReturn the backrest to position by reversing its upward removal movement, then pivot the hooked locking clips back into engagement with their body catches. Refit the two lower floor fasteners and tighten them to 35 lb.ft (47.5 Nm).\n\nCheck that the backrest is retained and that the belt webbing is untwisted, with the belts and buckles accessible to occupants."
+        },
+        {
+          "title": "Refit the cushion and restore front-seat positions",
+          "body": "Return the rear cushion to its original position, keeping the belts and buckles accessible above and beside it. Lower the cushion into place and engage its front locking attachments by reversing removal.\n\nCheck that both front attachment points are retained; do not leave one side sitting loosely over its catch. Confirm again that the webbing is untwisted and that no buckle has disappeared beneath the cushion. Restore the front seats to their intended positions."
+        },
+        {
+          "title": "Complete the attachment and sound checks",
+          "body": "Confirm that the speaker connector was secured and all three speaker bolts were tightened to 22 lb.in (2.5 Nm). Confirm that the backrest floor fasteners were tightened to 35 lb.ft (47.5 Nm), its locking clips are engaged and the cushion is retained.\n\nCheck that the trim is seated, the convertible flap is clear of the upper panel, the belt guide is restored, and all belts and buckles remain accessible with untwisted webbing.\n\nAfter clearing the work area, operate the audio system normally and listen for output from the replaced speaker. This is a completion check, not proof of the condition of the rest of the audio system. If the original problem remains, stop replacing parts by guesswork and have the fitted system diagnosed."
         }
       ],
       "watchFor": [
         {
-          "title": "Middle panel still held at the rear",
-          "body": "Release the rear tab with the specified forward-and-outward movement after releasing the clips."
+          "title": "Two fastening values with different units",
+          "body": "Speaker bolts: 22 lb.in (2.5 Nm). Backrest-to-floor fasteners: 35 lb.ft (47.5 Nm). Keep the fasteners and torque settings associated with their own components."
         },
         {
-          "title": "Flap or belt caught during assembly",
-          "body": "Reposition the convertible flap before seating the upper panel, and check belt routing as each surrounding panel is restored."
+          "title": "Seat attachments must remain unobstructed",
+          "body": "Never leave objects between the seat and body or inside a seat-structure joint. Follow the backrest locking-clip and floor-fastener installation steps completely."
+        },
+        {
+          "title": "Belts can become trapped during several stages",
+          "body": "Watch the belt paths while installing the middle trim, upper guide, backrest and cushion. Correct routing means untwisted webbing and belts and buckles accessible to occupants."
+        },
+        {
+          "title": "The convertible flap must stay above and clear of the trim",
+          "body": "Watch the flap while seating the upper panel. A panel that appears fitted can still have the flap caught underneath; inspect its position before considering that stage finished."
         }
       ],
       "notes": [
-        "The trim procedure illustrates right-hand access and a left-hand-drive vehicle; the opposite arrangements are similar."
+        "The covered removal and refitting method is shared across the 2015 2.3L, 3.7L and 5.0L convertible applications with the specified audio equipment.",
+        "The left and right sides use similar access. Remove the trim on the side being serviced; the rear seat cushion and backrest are the shared access prerequisites."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Check the speaker attachment",
-          "body": "Confirm that the electrical connector is restored and the mounting bolts have been tightened to 2.5 Nm."
+          "finding": "The rear cushion resists lifting at its front edge.",
+          "meaning": "A front locking tab may still be engaged; pulling upward is not a substitute for releasing it.",
+          "next": "Lower the cushion enough to remove the load from the catch, press the locking tab inward at that location, and lift only after it releases."
         },
         {
-          "title": "Inspect the flap and seatbelts",
-          "body": "Verify that the convertible flap is not caught beneath the upper trim, the seatbelt guide is back in position, and belt webbing is untwisted with belts and buckles accessible to occupants."
+          "finding": "The middle trim clips have released, but the panel remains attached at the rear.",
+          "meaning": "The rear locating tab still needs to be disengaged.",
+          "next": "Use the forward-and-outward removal movement, keeping the front and rear belts aside. Do not continue bending the panel against the tab."
+        },
+        {
+          "finding": "The convertible flap starts to disappear beneath the upper panel during installation.",
+          "meaning": "The flap is being trapped instead of remaining clear.",
+          "next": "Lift the panel back clear, reposition the flap to the side as needed, and reinstall while watching its position."
+        },
+        {
+          "finding": "A belt is twisted or a buckle is inaccessible after refitting.",
+          "meaning": "The trim or seat installation has left the restraint routing incorrect.",
+          "next": "Reopen the affected installation stage, free and straighten the webbing or retrieve the buckle, then refit and check accessibility again before the seat is used."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Speaker installation",
+          "body": "The electrical connector is retained, the wiring is clear of the mounting flange, and all three bolts have been tightened to 22 lb.in (2.5 Nm)."
+        },
+        {
+          "title": "Trim and convertible flap",
+          "body": "The lower, scuff, middle and upper panels are seated at their retaining points. The rear locating tab is engaged, the convertible flap is not trapped beneath the upper panel, and the seatbelt guide is back in position."
+        },
+        {
+          "title": "Seats and belts",
+          "body": "The backrest locking clips are engaged, its two floor fasteners are tightened to 35 lb.ft (47.5 Nm), and both cushion front attachments are retained. Seat attachment areas are clear of objects. Belt webbing is untwisted and belts and buckles are accessible."
+        },
+        {
+          "title": "Normal audio operation",
+          "body": "Check for sound from the replaced speaker during normal audio operation. Treat a remaining complaint as a reason for further diagnosis, rather than evidence that another speaker should automatically be replaced."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694055",
-          "purpose": "Remove and install the convertible rear quarter speaker on vehicles with SYNC.",
+          "purpose": "Rear quarter speaker removal and reverse-order installation for the covered SYNC application, including the speaker-bolt torque.",
           "mediaId": "G1694055-m0001"
         },
         {
           "documentId": "G1693903",
-          "purpose": "Remove and install the convertible rear quarter speaker on vehicles with SYNC 2/SYNC 3."
+          "purpose": "Rear quarter speaker removal and reverse-order installation for the covered SYNC 2/SYNC 3 application, including the speaker-bolt torque."
         },
         {
           "documentId": "G1692610",
-          "purpose": "Remove and restore the convertible loadspace trim, including the flap and seatbelt installation precautions.",
+          "purpose": "Convertible loadspace trim access and refitting, including the middle-panel rear tab, belt guide and convertible flap precautions.",
           "mediaId": "G1692610-m0002"
+        },
+        {
+          "documentId": "G1709034",
+          "purpose": "Rear backrest removal and installation, including locking clips, seat safety precautions and floor-fastener torque."
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Front-seat positioning and rear cushion release and refitting, including the locking-tab damage precaution."
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "Identify the six-speaker SYNC system context without assuming replacement-speaker interchangeability."
+        },
+        {
+          "documentId": "G1702412",
+          "purpose": "Identify touchscreen and Shaker equipment distinctions relevant to selecting the correct speaker."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant remote-start prevention, ignition/key and personal-protection precautions."
         }
       ],
       "hero": {
@@ -164793,6 +165505,18 @@
         {
           "documentId": "G1702412",
           "sourceHash": "2789f586b395afd05f27ecb4295fc145b561d4a03655e574cd0ec54b29d278d2"
+        },
+        {
+          "documentId": "G1709034",
+          "sourceHash": "956324f9f6d63426c2ab161a9b64ca6e32a4a3d9bb71403f56a8d918dc1f7f35"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -164818,8 +165542,48 @@
               "end": 409
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "21aceb95de6d5c91f866ccb259aae764c8eeb9deeb0ca0e7410b4cfe1499c470",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "seat_access",
+          "title": "Prepare and remove the rear seats",
+          "summary": "Secure the car, arrange roof and front-seat access, then remove the cushion and backrest.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "trim_access",
+          "title": "Expose the speaker",
+          "summary": "Remove the upper, middle, scuff and lower trim in order while protecting the belts and retainers.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "speaker",
+          "title": "Replace the speaker",
+          "summary": "Remove three bolts, disconnect the speaker and secure its replacement at the correct low torque.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "trim_refit",
+          "title": "Restore trim and belt routing",
+          "summary": "Refit the panels in reverse order and keep the convertible flap clear.",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "id": "seat_refit",
+          "title": "Restore the seats and check completion",
+          "summary": "Secure the backrest and cushion, verify belt accessibility and check normal speaker output.",
+          "start": 13,
+          "end": 15
         }
-      }
+      ]
     },
     {
       "title": "Diagnose no-crank, slow-crank and starter-control faults on the 5.0L",
