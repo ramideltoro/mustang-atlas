@@ -1959,84 +1959,154 @@
     },
     {
       "title": "Measure front and rear suspension ride height",
-      "summary": "Measure specified suspension reference points and calculate front and rear ride height from their differences.",
-      "introduction": "This ride-height check measures the vertical relationship between suspension mounting points. It does not use the wheel arch or bodywork as a reference. At the front, the reference points belong to the rear control arm within the front suspension; at the rear, they belong to the toe link. A surface gauge measures each point from the same level surface, and subtraction gives the required ride-height value.",
-      "why": "Using identified suspension points makes the result specific and repeatable. Correct tire pressure, a full fuel tank and a level surface establish the required measuring condition. The front and rear calculations use different numbered measurements, so keeping the readings clearly labelled matters as much as locating the points accurately.",
-      "taskType": "repair",
+      "summary": "Use a surface gauge to measure suspension reference points and calculate front and rear ride height on a 2015 Mustang.",
+      "introduction": "Wheel-arch gaps can start a garage argument before the kettle boils. I go straight to the suspension’s reference points: two at the front, two at the rear, and a little subtraction to keep everyone honest. This check applies to 2015 Mustangs with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "The front control arm locates the wheel while allowing suspension movement. The rear toe link helps control the direction the rear wheel points. Measuring the vertical difference between specified points on these parts gives a repeatable ride-height measurement. Correct tire pressure, a full fuel tank and a flat, level surface establish the measuring conditions.",
+      "taskType": "diagnostics",
       "difficulty": "basic",
       "searchTerms": [
-        "front suspension ride height measurement",
-        "rear suspension ride height measurement",
-        "control arm ride height",
-        "toe link ride height"
+        "2015 Mustang ride height measurement",
+        "front control arm ride height",
+        "rear toe link ride height",
+        "surface gauge suspension measurement"
       ],
       "when": {
-        "summary": "When front or rear suspension ride height needs to be established.",
+        "summary": "Use this check when you need to record front or rear suspension ride height.",
         "notes": [
-          "This procedure obtains measurements; it does not specify an adjustment or an acceptable ride-height range."
+          "The front and rear use different subtraction orders. Label each reading by axle, side and physical measuring point."
         ]
       },
       "prepare": [
         {
-          "title": "Establish the measuring condition",
-          "detail": "Position the vehicle on a flat, level surface, inflate the tires to the correct pressure and make sure the fuel tank is full."
+          "title": "Establish the measuring conditions",
+          "detail": "Use a flat, level surface, correctly inflated tires and a full fuel tank. Obtain the correct tire-pressure information for the fitted tires before starting. Take the actual measurements with the wheels installed and the vehicle resting on its tires."
         },
         {
-          "title": "Prepare the gauge and record",
-          "detail": "Use a surface gauge. Keep separate labelled records for the front and rear reference-point measurements so their numbering cannot be confused."
+          "title": "Gather the measuring equipment",
+          "detail": "Have a surface gauge, a readable height scale and a way to record the readings. The gauge’s adjustable pointer transfers the height of each suspension reference point to the scale. Use the same units throughout."
+        },
+        {
+          "title": "Plan safe access",
+          "detail": "Reach the reference points from beside the vehicle where practical. If access underneath is necessary, use a suitable drive-on lift that keeps the tires supporting the vehicle on a level surface. Verify that its capacity covers the vehicle, including cargo and modifications, and check underbody clearance before driving onto it. Never crawl underneath a vehicle supported only by a jack."
+        },
+        {
+          "title": "Understand the endpoint",
+          "detail": "This job ends with recorded front and rear heights. To decide whether a result is acceptable or requires repair, obtain the ride-height specification and assessment instructions matching the vehicle’s suspension configuration."
         }
       ],
       "steps": [
         {
-          "title": "Identify the front reference points",
-          "body": "Use the illustration in the [ride-height procedure](#/document/G1686616) to locate the rear control arm ball-joint cap and inboard bolt within the front suspension. Measure to their centers, not to an adjacent edge or fastener surface."
+          "title": "Prevent startup and restrain the vehicle",
+          "body": "Before working around or underneath the car, disable remote start, if fitted, through Vehicle settings > Remote Start Setup on the central display. Switch the ignition off and remove the key from the vehicle.\nApply the parking brake and chock the wheels on the ground. Wear eye and ear protection during service, and protective gloves when handling sharp-edged parts. These are the relevant precautions from [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Record the front measurements",
-          "body": "With the surface gauge resting on the flat, level surface, measure from that surface to the center of the ball-joint cap and record this as measurement 2. Measure to the center of the control-arm inboard bolt and record this as measurement 3."
+          "title": "Choose the access route before disturbing anything",
+          "body": "The measuring task requires no suspension fasteners to be loosened and no electrical connectors to be unplugged. Locate the points from beside the car or through safe access beneath it, with the tires supporting the vehicle.\nBefore using any lift, verify that its capacity is adequate for the vehicle’s weight, including cargo and modifications. If a drive-on lift is needed, separately check for underbody interference before driving onto it, then secure the vehicle with the parking brake and wheel restraints on the level platform before raising it.\nKeep the wheels installed throughout this measurement. If a reference point cannot be safely identified or reached while the tires support the vehicle, stop and arrange appropriate access before measuring."
         },
         {
-          "title": "Calculate front ride height",
-          "body": "Subtract measurement 2 from measurement 3. Record the result as front ride height, retaining both original readings so the calculation can be checked."
+          "title": "Set up the surface gauge and your record",
+          "body": "Make separate entries for front and rear, identifying the side being measured. For each entry, leave room for both point heights and the calculated difference.\nPlace the surface-gauge base on the flat, level measuring surface. Adjust its pointer to align with the center of the selected reference point, then read and record the pointer height against the scale. Do not push on the suspension while setting the pointer. Both heights in a pair must use the same level surface as their reference.\nI write the point’s name beside every number. Arithmetic is easy; remembering which anonymous scribble belonged to which bolt is a pain in the ass."
         },
         {
-          "title": "Record the rear measurements",
-          "body": "Locate the rear toe link. Measure from the level surface to the center of its inboard cam bolt and record this as measurement 2. Measure to the center of its outboard bolt and record this as measurement 3."
+          "title": "Find the two front suspension reference points",
+          "body": "Work at the front suspension. Here, “rear control arm” means the rearward control arm in the front suspension assembly.\nLocate the round cap at that arm’s outer ball joint beside the wheel knuckle. The close-up in the [ride-height procedure](#/document/G1686616) shows the cap itself as the measuring target. Trace the arm inward to its mounting bolt near the subframe.\nUse the center of the ball-joint cap and the center of the inboard bolt. Leave the cap and bolt installed."
         },
         {
-          "title": "Calculate rear ride height",
-          "body": "Subtract measurement 3 from measurement 2. Record this separately as rear ride height; the numbered subtraction is the reverse of the front calculation."
+          "title": "Record the front ball-joint-cap height",
+          "body": "With the gauge on the flat, level reference surface, set its pointer at the center of the rear control arm’s outer ball-joint cap. Record the vertical distance from the surface to that center as front measurement 2.\nLabel the reading “front ball-joint cap” and identify the side. Measure to the cap’s center, rather than its rim or a nearby nut."
+        },
+        {
+          "title": "Record the front inboard-bolt height and calculate",
+          "body": "Measure from the same flat, level reference surface to the center of that control arm’s inboard mounting bolt. Record this as front measurement 3.\nCalculate:\nFront ride height = measurement 3 − measurement 2.\nIn words: subtract the ball-joint-cap height from the inboard-bolt height. Retain both original readings beside the result."
+        },
+        {
+          "title": "Find the two rear toe-link reference points",
+          "body": "Move to the rear suspension. Locate the toe link extending between its inner mounting point and its outer attachment near the wheel knuckle.\nThe rear suspension figure shows the inner cam-bolt center at one end of this link and the outboard bolt center at the other. A cam bolt is an adjustment fastener; identifying it does not require turning it. Leave both bolts tightened and undisturbed."
+        },
+        {
+          "title": "Record both rear heights and calculate",
+          "body": "Place the gauge on the flat, level reference surface and measure to the center of the toe link’s inboard cam bolt. Record this as rear measurement 2.\nMeasure from the same surface to the center of the toe link’s outboard bolt. Record this as rear measurement 3.\nCalculate:\nRear ride height = measurement 2 − measurement 3.\nIn words: subtract the outboard-bolt height from the inboard-cam-bolt height. Label the side and retain both readings. The numbered subtraction reverses at the rear—give that line a second look before the calculator gets blamed."
+        },
+        {
+          "title": "Check the record and finish safely",
+          "body": "Check each recorded point name, side, unit and subtraction against the actual measuring locations. Repeat a reading if the pointer slipped, the center was uncertain or the gauge used a different reference surface.\nRemove the gauge and tools. If the car is on a drive-on lift, confirm the parking brake is applied before lowering and restore ground-wheel chocks as the tires reach the ground. Keep the vehicle restrained until you are ready to move it."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing the front control arm with the rear axle",
-          "body": "The front measurement instruction names the rear control arm of the front suspension. The rear suspension measurement uses the toe link."
+          "title": "A front suspension name that sounds like a rear axle instruction",
+          "body": "The front check uses the rear control arm of the front suspension. The rear check uses the toe link. Trace the actual part before placing the gauge."
         },
         {
-          "title": "Substituting convenient measuring points",
-          "body": "A wheel-arch height or a measurement to a bolt edge is not the reference-point measurement described here."
+          "title": "Measuring with the suspension hanging",
+          "body": "Take the ride-height readings with the wheels installed and the tires supporting the vehicle. Readings with the suspension hanging do not represent the loaded measuring condition."
+        },
+        {
+          "title": "Using an edge instead of the center",
+          "body": "Aim at the center of each specified cap or bolt. Measuring to a convenient edge changes the reading."
+        },
+        {
+          "title": "Turning a measurement into an adjustment",
+          "body": "Do not loosen the control-arm bolt, ball-joint connection or toe-link cam bolt to take a reading. This check records geometry; disturbing those connections adds a different job."
         }
       ],
       "notes": [
-        "Keep the same units throughout each pair of readings and its subtraction."
+        "No underhood work is needed for this measurement.",
+        "Keep the original point heights with the calculated results so the measurement can be checked without reconstructing the arithmetic."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Check the measuring conditions",
-          "body": "Confirm that the recorded readings were taken with the specified tire pressure, full fuel tank and flat, level measuring surface."
+          "finding": "The surface is uneven, the fuel tank is not full or tire pressures are incorrect.",
+          "meaning": "The required measuring conditions have not been established.",
+          "next": "Correct the condition before recording the reference-point heights."
         },
         {
-          "title": "Check the recorded results",
-          "body": "The front record must show measurement 3 minus measurement 2; the rear record must show measurement 2 minus measurement 3. These results alone do not establish whether a suspension component needs replacement."
+          "finding": "The reference-point center cannot be identified or safely reached.",
+          "meaning": "The reading would be uncertain or require unsafe access.",
+          "next": "Stop and arrange safe access while preserving the installed, tire-supported measuring condition. Do not guess the point or measure with the suspension hanging."
+        },
+        {
+          "finding": "Repeated readings disagree.",
+          "meaning": "The point, pointer position or reference surface may have changed.",
+          "next": "Recheck the exact center and gauge placement, then repeat both heights in that pair before calculating."
+        },
+        {
+          "finding": "A result raises concern about vehicle stance or differs from another recorded result.",
+          "meaning": "The measured difference is a reason to check the record and assess it against the matching vehicle specification; it does not identify a failed part.",
+          "next": "Verify conditions, point selection and subtraction first. Then use the matching ride-height assessment instructions before choosing a repair."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Required measuring conditions were maintained",
+          "body": "Confirm a flat, level reference surface, correct tire pressures, a full fuel tank and the vehicle resting on its installed tires."
+        },
+        {
+          "title": "Front readings use the correct points and formula",
+          "body": "The record identifies the front rear-control-arm ball-joint-cap center as measurement 2 and its inboard-bolt center as measurement 3. Front ride height equals 3 minus 2."
+        },
+        {
+          "title": "Rear readings use the correct points and formula",
+          "body": "The record identifies the rear toe-link inboard-cam-bolt center as measurement 2 and its outboard-bolt center as measurement 3. Rear ride height equals 2 minus 3."
+        },
+        {
+          "title": "Tools are removed and restraints restored",
+          "body": "Confirm the parking brake is applied and ground-wheel restraints are in place after any lowering operation. No suspension fasteners should have been disturbed."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686616",
-          "purpose": "Complete front and rear ride-height measuring procedure, including reference points and subtraction order.",
+          "purpose": "Identify the front and rear measuring points, use the surface gauge and calculate the two ride-height values.",
           "mediaId": "G1686616-m0001"
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Observe applicable drive-on-lift clearance and support precautions while keeping the tires supporting the vehicle."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Prevent unintended startup, select relevant personal protection and establish vehicle restraint and support precautions."
         }
       ],
       "hero": {
@@ -2060,21 +2130,74 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Front suspension rear control arms and rear suspension toe links."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
         {
           "documentId": "G1686616",
           "sourceHash": "c94580beac33bd8154db3ddbe648f4889b58e10f8dab60b5ced187696885c5eb"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "8215114e9138ff21e4b84eb6378585624d5dfd0c10fb1b06bf9bb349dd1c963b"
-      }
+        "fingerprint": "8215114e9138ff21e4b84eb6378585624d5dfd0c10fb1b06bf9bb349dd1c963b",
+        "editorialVersion": 2,
+        "editorialFingerprint": "0c243509b7cc934622883808902d4303f089854ee3493f14c18d9bcf0e8cf7bc",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-plan",
+          "title": "Secure the car and plan access",
+          "summary": "Prevent startup, restrain the vehicle and choose a safe route to the measuring points.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "gauge-setup",
+          "title": "Set up the gauge",
+          "summary": "Establish a common reference surface and clearly labelled records.",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "id": "front-measurements",
+          "title": "Measure the front",
+          "summary": "Measure the ball-joint cap and inboard bolt, then subtract their heights.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "rear-measurements",
+          "title": "Measure the rear",
+          "summary": "Measure the toe-link bolt centers and calculate the rear value.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "record-and-finish",
+          "title": "Check the record and finish",
+          "summary": "Verify the readings, remove tools and confirm vehicle restraints.",
+          "start": 9,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Overhaul and reinstall the front strut and spring assembly",
@@ -85597,80 +85720,165 @@
     },
     {
       "title": "Replace and correctly position the battery current sensor",
-      "summary": "Replace the battery current sensor while preserving its cable position and installing its tape tab facing away from the battery.",
-      "introduction": "The battery current sensor monitors current flowing through the battery cable. It is a separate component attached to the cable, rather than the battery itself. The cable system also includes a generator current sensor, so identifying the correct sensor matters. This replacement depends on preserving both the battery sensor’s location along the cable and its direction.",
-      "why": "The sensor must be installed in the proper position and orientation to function correctly. An index mark preserves its original location after removal, while the tape tab provides a clear orientation reference. Fresh electrical tape secures the refitted sensor; reconnecting its plug alone does not complete the installation.",
+      "summary": "Replace the cable-mounted battery current sensor, preserve its original location, and secure it with the tape tab facing away from the battery. Applies to 2015 Mustangs with 2.3L, 3.7L, 5.0L or 5.2L engines.",
+      "introduction": "The battery current sensor is the battery cable’s tiny electrical accountant—and it has a surprisingly strong opinion about which way it faces. It monitors current passing through the cable. I’ll walk you through uncovering it, preserving its position, and fitting the replacement without turning a small tape-and-connector job into a parts-guessing marathon.",
+      "why": "The sensor needs the correct position along the cable and the correct orientation to function properly. Marking its location before removal preserves the first; fitting its tape tab facing away from the battery establishes the second. Fresh electrical tape secures the sensor, while the cable retainer restores the cable’s supported position.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "battery current sensor replacement",
-        "battery current sensor orientation",
-        "battery cable sensor position",
-        "battery sensor tape tab"
+        "2015 Mustang battery current sensor replacement",
+        "battery current sensor tape tab orientation",
+        "battery cable sensor index mark",
+        "battery current sensor retaining nut torque"
       ],
       "when": {
-        "summary": "When diagnosis has established that the battery current sensor requires replacement or removal.",
+        "summary": "Use this procedure when the battery current sensor has been identified for replacement or needs removal for other work.",
         "notes": [
-          "This replacement procedure does not establish the cause of a battery or charging complaint."
+          "Applies to 2015 Mustangs with 2.3L, 3.7L, 5.0L and 5.2L engines.",
+          "The cable system also carries a generator current sensor. Identify the battery current sensor before disturbing either component."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare marking and fastening materials",
-          "detail": "Have a suitable cable-marking method, electrical tape, tools for the battery-cover retainers and cable nut, and a torque wrench."
+          "title": "Gather the replacement, tape and marking supplies",
+          "detail": "Have the correct battery current sensor for the vehicle, fresh electrical tape and a cable-safe marking method. Keep the original sensor in position until you have recorded its tape-tab direction and marked its location."
         },
         {
-          "title": "Identify the sensor and its orientation",
-          "detail": "Use the battery current sensor illustration to locate the component. Be ready to note the tape-tab direction and mark the cable before removing the original tape."
+          "title": "Have suitable fastening tools ready",
+          "detail": "Use tools that fit the battery-cover retainers and battery-cable nut, plus a torque wrench capable of accurately applying 80 lb.in (9 Nm). Keep the removed nut and three cover retainers for reassembly."
+        },
+        {
+          "title": "Protect yourself while working beside the battery",
+          "detail": "Work in a well-ventilated area and keep flames, sparks and burning materials away from the battery. Wear eye protection to shield against acid splashes; avoid acid contact with skin, eyes and clothing. If acid reaches skin or eyes, flush with water immediately for at least 15 minutes and obtain prompt medical attention; if swallowed, call a physician immediately. Wash your hands after handling battery posts, terminals or related accessories. These precautions apply before removing the cover or working on the nearby cable. See [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181)."
+        },
+        {
+          "title": "Plan a ground-level underhood job",
+          "detail": "This access route requires no lifting or wheel removal. Park, apply the parking brake and arrange startup prevention before opening up the work area. Wear eye and hearing protection during service, and protective gloves when handling sharp edges. Review the safety information for the tape and marking materials you use."
+        },
+        {
+          "title": "Understand the completion boundary",
+          "detail": "This is a removal-and-installation procedure. It does not establish a sensor output test, diagnostic limits or a reset/relearn process; the completion checks establish correct assembly, not proof that a charging complaint has been cured."
         }
       ],
       "steps": [
         {
-          "title": "Expose and identify the sensor",
-          "body": "Follow [Battery Current Sensor](#/document/G1692364). Remove the battery-cover retainers and cover. Note the orientation and position of the sensor’s tape tab before disturbing the cable."
+          "title": "Prevent an unexpected start and check the underhood work area",
+          "body": "If remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before beginning service. Switch the ignition off and remove the key from the vehicle to prevent someone else starting it.\nWith the ignition off, visually check the cooling fans for damage, cracks or separation before working under the hood. If a fan is damaged, stop underhood work until it has been replaced. Fans can run with the ignition off: keep clear of them, and have them disabled before any work nearby. The sensor access described below is at the rear of the engine bay.\nSee [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Free the cable and mark the location",
-          "body": "Remove the nut, disconnect the battery cable retainer and position the cable as directed. Disconnect the sensor electrical connector. Index-mark the cable at the sensor so its installation location remains identifiable."
+          "title": "Remove the three retainers and battery cover",
+          "body": "Find the broad battery cover at the rear of the engine bay, below the windshield and beside the suspension strut tower—the round body mounting area next to the cover. Remove its three retainers, then remove the cover and set it aside with the retainers.\nThis exposes the battery and the cable running beside the strut tower. The battery current sensor is the collar-shaped component fitted around that thick cable, with a small electrical connector on its side. Use this location to distinguish it from the generator current sensor also attached to the cable system.\nSee [Battery Current Sensor](#/document/G1692364) for the removal and installation reference."
         },
         {
-          "title": "Remove and position the replacement",
-          "body": "Remove and discard the tape securing the sensor, then remove the sensor. Position the replacement at the cable’s index mark with its tape tab pointing away from the battery. Secure it with electrical tape."
+          "title": "Record the tape-tab position before moving the cable",
+          "body": "Before loosening anything else, look closely at the sensor’s tape tab and note both where it sits and which way it points relative to the battery. A reference photo or sketch can preserve that relationship while the cable is moved.\nThe installation requirement is explicit: the tape tab must point away from the battery. Record the existing arrangement now so a displaced cable does not confuse the reference later."
         },
         {
-          "title": "Reconnect and restore the cover",
-          "body": "Connect the sensor electrical connector. Restore the battery cable position, install the wire retainer and nut, and tighten the nut to 80 lb.in (9 Nm). Reinstall the battery cover and its retainers."
+          "title": "Free the cable, unplug the sensor and mark its location",
+          "body": "Remove the battery-cable nut at the battery end of the cable. Detach the battery cable retainer beside the strut tower, then move the cable enough to work on the sensor.\nDisconnect the small electrical connector from the side of the sensor. Before removing the securing tape, make an index mark on the cable at the sensor’s installed location. An index mark is simply a reference that lets you put the replacement back in the same place along the cable.\nI mark first and peel second; electrical tape is much better at holding things than remembering where they were."
+        },
+        {
+          "title": "Remove the old tape and sensor",
+          "body": "Remove and discard the tape securing the battery current sensor to the cable, then remove the sensor from the cable. Preserve the index mark so it remains usable during installation.\nKeep track of the recorded tape-tab orientation as well as the mark. Position and direction are separate requirements, and both need to survive the swap."
+        },
+        {
+          "title": "Position the replacement and secure it with fresh electrical tape",
+          "body": "Place the replacement battery current sensor at the index mark on the cable. Orient its tape tab so it points away from the battery, then secure the sensor to the cable with fresh electrical tape.\nCheck the location and direction before completing the wrap. If either is wrong, reposition the sensor now. A beautifully wrapped sensor facing the wrong way is still a beautifully wrapped problem."
+        },
+        {
+          "title": "Reconnect the sensor and restore the cable fastening",
+          "body": "Reconnect the battery current sensor electrical connector. Return the battery cable to its original position, reinstall the cable/wire retainer and install the nut removed earlier.\nTighten that nut to 80 lb.in (9 Nm). Use the inch-pound scale or the stated metric setting on your torque wrench."
+        },
+        {
+          "title": "Check the installation while it is still visible",
+          "body": "Confirm that the sensor aligns with the cable’s index mark, its tape tab points away from the battery, and fresh electrical tape secures it to the cable. Confirm that the electrical connector is fully connected.\nCheck that the cable is back in its original position, the retainer is attached and the nut has been tightened to 80 lb.in (9 Nm). Correct any mismatch before hiding the work under the cover."
+        },
+        {
+          "title": "Refit the battery cover and finish the work area",
+          "body": "Return the battery cover to its original position and reinstall all three retainers. Check that the cover is seated and retained.\nRemove tools, discarded tape and loose materials from the engine bay before returning the vehicle to use."
         }
       ],
       "watchFor": [
         {
-          "title": "Lost position reference",
-          "body": "Mark the cable before removing the sensor. Its location must be preserved during replacement."
+          "title": "The wrong cable-mounted sensor",
+          "body": "The system includes both a battery current sensor and a generator current sensor. Identify the collar on the battery cable beside the strut tower before removing its tape or connector."
         },
         {
-          "title": "Reversed sensor orientation",
-          "body": "The tape tab must point away from the battery; correct orientation is required for proper function."
+          "title": "A lost location reference",
+          "body": "Make the cable index mark while the original sensor is still in place and before removing its securing tape. The replacement needs that same location."
+        },
+        {
+          "title": "A reversed tape tab",
+          "body": "The fitted sensor’s tape tab must face away from the battery. The connector being attached does not establish that the sensor is correctly oriented."
+        },
+        {
+          "title": "Confusing torque units",
+          "body": "The cable nut requires 80 lb.in (9 Nm). Check the torque wrench’s units before setting it."
         }
       ],
       "notes": [
-        "Discard the removed securing tape and use electrical tape for installation."
+        "The battery is a 12-volt DC supply and helps stabilize the vehicle’s electrical system. Negative ground means the battery’s negative side is connected to the vehicle ground. See [Battery and Cables — System Operation and Component Description](#/document/G1814511).",
+        "The battery and cable system includes separate battery current and generator current sensors. See [Battery and Cables — Overview](#/document/G1692350).",
+        "Discard the old sensor-securing tape and use fresh electrical tape during installation.",
+        "The same removal, orientation and fastening instructions apply to all four engine configurations covered here."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Check before covering",
-          "body": "Confirm the sensor aligns with the index mark, the tape tab faces away from the battery, and the securing tape and electrical connection are in place."
+          "finding": "The original sensor is still installed, but its location has not yet been marked.",
+          "meaning": "You can still preserve the installation reference before removing the tape.",
+          "next": "Mark the cable at the sensor, record the tape-tab position and direction, then continue removal."
         },
         {
-          "title": "Confirm cable retention",
-          "body": "Confirm the cable and retainer are restored, the nut is tightened to specification, and the cover retainers are installed."
+          "finding": "The sensor has already been removed and its original cable position cannot be recovered.",
+          "meaning": "Correct installation position cannot be established by guessing.",
+          "next": "Pause installation until the correct position for this vehicle can be established from matching service information."
+        },
+        {
+          "finding": "The replacement is off the index mark or its tape tab faces toward the battery.",
+          "meaning": "The required installation position or orientation has not been achieved.",
+          "next": "Remove the securing tape, align the sensor with the mark, turn the tape tab away from the battery and secure it with fresh electrical tape."
+        },
+        {
+          "finding": "A battery or charging complaint remains after the assembly checks pass.",
+          "meaning": "Correct physical installation alone does not establish the cause of the complaint.",
+          "next": "Have the battery and charging system diagnosed before selecting another replacement part."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Sensor position and attachment",
+          "body": "Before fitting the cover, verify alignment with the cable index mark, the tape tab facing away from the battery, fresh securing tape and a connected electrical plug."
+        },
+        {
+          "title": "Cable position and fastening",
+          "body": "Verify that the cable has been returned to its original position, its retainer is attached and the nut is tightened to 80 lb.in (9 Nm)."
+        },
+        {
+          "title": "Cover and work area",
+          "body": "Verify that the battery cover is seated, all three retainers are installed and tools and loose materials have been removed."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692364",
-          "purpose": "Battery current sensor removal and installation, including cable indexing, mandatory orientation, tape replacement and cable fastening.",
+          "purpose": "Battery current sensor access, removal, cable indexing, tape-tab orientation, installation and the 80 lb.in (9 Nm) cable-nut torque.",
           "mediaId": "G1692364-m0002"
+        },
+        {
+          "documentId": "G1692350",
+          "purpose": "Identify the battery and cable-system components, including the separate battery current and generator current sensors."
+        },
+        {
+          "documentId": "G1814511",
+          "purpose": "Explain the 12-volt negative-ground battery system and the two cable-mounted current sensors."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant startup-prevention, underhood cooling-fan and personal-protection precautions before service."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Relevant battery gas, acid, eye-protection and lead-handling precautions for cable work beside the battery; no battery removal or lithium-ion operations."
         }
       ],
       "hero": {
@@ -85694,7 +85902,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "12-volt maintenance-free battery, negative-ground electrical system, and cable-mounted battery current sensor."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -85709,14 +85918,55 @@
         {
           "documentId": "G1814511",
           "sourceHash": "9b4a62a13a579668ffc6703774fd1529b91debfa54fafd94f3f8564a8c94b0a1"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "952a49470f7daa98d941e94a2748bf4b9b515e36a1680bd89111713899b18eee"
-      }
+        "fingerprint": "952a49470f7daa98d941e94a2748bf4b9b515e36a1680bd89111713899b18eee",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c0ca9caddc836e94e908fe442b2ffaeee1dfd7ad4ab5c5c110658bdbd9be68be",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-uncover",
+          "title": "Prevent startup and expose the sensor",
+          "summary": "Prepare the underhood work area and remove the battery cover.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "record-and-remove",
+          "title": "Preserve the references and remove the sensor",
+          "summary": "Record orientation, free the cable, unplug the sensor and mark its position before removing the tape.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "position-and-reconnect",
+          "title": "Fit and check the replacement",
+          "summary": "Align and tape the sensor, restore the connection and cable fastening, and inspect the visible assembly.",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": "close-and-finish",
+          "title": "Restore the cover",
+          "summary": "Install the cover and its three retainers, then clear the work area.",
+          "start": 9,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Remove and replace the battery tray",
@@ -97003,83 +97253,137 @@
     },
     {
       "title": "Calibrate the SYNC 2/SYNC 3 touchscreen",
-      "summary": "Measure and accept new touchscreen calibration settings, then clear stored continuous-memory diagnostic trouble codes.",
-      "introduction": "The front display interface module (FDIM) is the touchscreen through which you select information and entertainment functions. Calibration establishes the relationship between the displayed targets and the positions you touch. This operation updates those settings without removing the display.",
-      "why": "A fully charged battery is an explicit prerequisite because inadequate charge can leave the touchscreen inoperative. Completing the target sequence only measures the new settings: you must also accept them before finishing the procedure.",
+      "summary": "Enter touchscreen calibration, measure and accept the touch targets, then clear stored continuous-memory fault codes.",
+      "introduction": "A touchscreen should know where your finger landed without turning every tap into a small argument. I’ll walk you through calibrating the display from the audio controls, with the diagnostic scan-tool route as an alternative. This applies to the 2015 Mustang with the SYNC 2/SYNC 3 touchscreen and the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "The front display interface module, or FDIM, is the touchscreen used to select information and entertainment functions. Calibration aligns the positions you touch with the targets shown on the screen. Measuring those positions is only part of the job: you must accept the new settings and then clear the stored continuous-memory diagnostic trouble codes.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "SYNC touchscreen calibration",
-        "FDIM touch points",
+        "2015 Mustang touchscreen calibration",
         "SYNC 2 SYNC 3 calibration",
-        "touchscreen calibration settings"
+        "FDIM touch targets",
+        "EJECT SEEK UP SEEK DOWN calibration",
+        "touchscreen calibration CMDTC"
       ],
       "when": {
-        "summary": "When touchscreen calibration is required.",
+        "summary": "Use this procedure when touchscreen calibration is required.",
         "notes": [
-          "Calibration can be performed through diagnostic scan-tool prompts or the specified audio-button sequence."
+          "Calibration can be entered using diagnostic scan-tool prompts or the audio-button sequence below.",
+          "This procedure establishes touch-position settings; it does not establish the cause of a touchscreen fault or determine whether the display needs replacement."
         ]
       },
       "prepare": [
         {
-          "title": "Confirm battery condition and safety prerequisites",
-          "detail": "Review [Health and Safety Precautions](#/document/G1693189) before starting. Make sure the vehicle battery is fully charged before activating calibration."
+          "title": "Start with a fully charged vehicle battery",
+          "detail": "Make sure the vehicle battery is fully charged before beginning. Inadequate charge during calibration can leave the touchscreen inoperative. If battery testing or charging is needed, complete that separate work before starting this cabin procedure."
         },
         {
-          "title": "Arrange access to the controls and scan tool",
-          "detail": "The manual route uses the audio power, EJECT and SEEK buttons. A suitable diagnostic scan tool is needed to clear stored codes afterward. No stylus is required."
+          "title": "Arrange the controls and diagnostic tool",
+          "detail": "Sit where you can reach the touchscreen and the audio power, EJECT, SEEK UP and SEEK DOWN buttons. Nothing needs to be removed, unplugged or positioned aside. Have a diagnostic scan tool capable of clearing continuous-memory diagnostic trouble codes; the button route still requires that final operation. A stylus is unnecessary. Scan-tool menu names and code-clearing commands depend on the tool and are not detailed here."
+        },
+        {
+          "title": "Prepare for stationary cabin work",
+          "detail": "Park the vehicle and apply the parking brake before operating the controls. Review the relevant [Health and Safety Precautions](#/document/G1693189), and wear eye and ear protection during service, including the speaker test used to enter calibration."
         }
       ],
       "steps": [
         {
-          "title": "Choose the calibration route",
-          "body": "Follow the diagnostic scan-tool calibration prompts, or use the following button sequence in [Touchscreen Calibration](#/document/G1702410). For the button route, press the front controls interface module (FCIM) audio power button and operate the audio system in AM/FM mode."
+          "title": "Confirm readiness before switching on the audio",
+          "body": "With the vehicle parked and the parking brake applied, confirm that the battery is fully charged and your diagnostic scan tool is available for the final code-clearing operation. Leave the touchscreen and front audio controls installed; this is an operation performed through their controls."
         },
         {
-          "title": "Enter the calibration function",
-          "body": "Press and hold EJECT. Within 1 second, also press and hold SEEK UP until the speaker walk-around test begins. Then press and hold SEEK DOWN to enter touchscreen calibration. The speaker test is an intermediate stage in this entry sequence."
+          "title": "Choose the button route or the scan-tool route",
+          "body": "For the button route, continue with step 3 using [Touchscreen Calibration](#/document/G1702410).\n\nAlternatively, follow your diagnostic scan tool’s touchscreen-calibration prompts through measurement and acceptance, then complete step 7. If your fitted controls do not include the named buttons, use that prompted route; no alternative button combination is established here."
         },
         {
-          "title": "Complete the touch targets",
-          "body": "Touch and hold each target as it appears on the display. Follow the displayed points through the sequence so the system can measure the new calibration."
+          "title": "Switch the audio system on and select AM or FM",
+          "body": "Press the audio power button on the front controls interface module, or FCIM—the panel carrying the audio controls. Put the audio system into AM or FM radio mode before entering the button sequence."
         },
         {
-          "title": "Accept the settings and clear stored codes",
-          "body": "When the display reports that new calibration settings have been measured and asks for Enter to accept them, touch anywhere on the touchscreen. Then clear all continuous memory diagnostic trouble codes (CMDTCs)."
+          "title": "Enter calibration through the speaker test",
+          "body": "Press and hold EJECT. Within 1 second, also press and hold SEEK UP, keeping both buttons held until the speaker walk-around test begins.\n\nOnce that test has begun, press and hold SEEK DOWN to enter touchscreen calibration. The speaker test is the intermediate entry stage; hearing it begin means you have reached the point where SEEK DOWN is used."
+        },
+        {
+          "title": "Touch and hold each displayed target",
+          "body": "Touch and hold each calibration point as it appears on the FDIM touchscreen. Continue through the points presented by the display. Your finger is sufficient; there is no need to recruit a stylus for this particular negotiation."
+        },
+        {
+          "title": "Accept the measured settings",
+          "body": "Wait for the message saying that new calibration settings have been measured and asking you to press Enter to accept them. When that message appears, touch anywhere on the touchscreen to accept the settings.\n\nDespite the reference to an Enter key, the required action here is a touch on the screen. Reaching the message alone does not finish acceptance."
+        },
+        {
+          "title": "Clear all continuous-memory fault codes",
+          "body": "Use the diagnostic scan tool to clear all Continuous Memory Diagnostic Trouble Codes, abbreviated CMDTCs. These are stored fault records. Complete this operation after accepting the calibration, whichever entry route you used."
         }
       ],
       "watchFor": [
         {
-          "title": "Insufficient battery charge",
-          "body": "Do not begin calibration with an inadequately charged battery; touchscreen operation can be lost."
+          "title": "Battery charge is a prerequisite",
+          "body": "Do not start calibration unless the battery is fully charged. Insufficient charge can leave the FDIM touchscreen inoperative."
         },
         {
-          "title": "Stopping at the measurement message",
-          "body": "The message still requires a touch to accept the measured settings."
+          "title": "The entry sequence has a timed action",
+          "body": "Begin holding SEEK UP within 1 second of pressing and holding EJECT. Keep both held until the speaker walk-around test begins, then use SEEK DOWN to enter calibration."
+        },
+        {
+          "title": "Measured settings still need acceptance",
+          "body": "When the display reports that measurement is complete and requests acceptance, touch anywhere on the touchscreen. Do not stop at the message."
         }
       ],
       "notes": [
-        "If the specified button route cannot be followed, use the diagnostic scan-tool prompts rather than improvising a different combination."
+        "The [Information and Entertainment System overview](#/document/G1702412) identifies the FDIM as an 8-inch (203 mm) touchscreen. FDIM refers to the display; FCIM refers to the front control panel used for the audio-button sequence.",
+        "Shaker equipment changes parts of the audio system, but this calibration procedure gives no separate Shaker sequence.",
+        "Calibration does not justify replacing a display or another audio module. Parts guessing can become an expensive damn hobby."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm acceptance",
-          "body": "Confirm that the calibration measurement message appeared and that the new settings were accepted."
+          "finding": "The vehicle battery is not fully charged.",
+          "meaning": "The required starting condition has not been met, and calibration could leave the touchscreen inoperative.",
+          "next": "Stop before activation. Have battery testing or charging completed as a separate task, then return with a fully charged battery."
         },
         {
-          "title": "Record completion",
-          "body": "Record calibration acceptance and completion of the CMDTC-clearing operation."
+          "finding": "The fitted front controls do not provide the named EJECT and SEEK buttons.",
+          "meaning": "The manual entry sequence cannot be performed on that control arrangement.",
+          "next": "Use the diagnostic scan-tool calibration prompts. Do not substitute a guessed button combination."
+        },
+        {
+          "finding": "The speaker walk-around test does not begin.",
+          "meaning": "The required intermediate stage of the button route has not been reached. This observation alone does not identify a failed component.",
+          "next": "Check that AM or FM is selected and that SEEK UP was held within 1 second of EJECT. If the specified sequence still cannot be completed, use the scan-tool prompted route."
+        },
+        {
+          "finding": "The display reports that the new settings have been measured and requests acceptance.",
+          "meaning": "Target measurement is complete, but acceptance remains outstanding.",
+          "next": "Touch anywhere on the touchscreen, then clear all CMDTCs with the diagnostic scan tool."
+        },
+        {
+          "finding": "Calibration cannot reach measurement or acceptance through the chosen route.",
+          "meaning": "The calibration operation remains incomplete; this procedure does not identify the underlying fault.",
+          "next": "Do not record the job as complete or infer that the display needs replacement. Further system diagnosis is needed."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm calibration acceptance",
+          "body": "For the button route, verify that you reached the measurement-complete message and touched the screen to accept the settings. For the scan-tool route, confirm that its calibration and acceptance prompts were completed."
+        },
+        {
+          "title": "Confirm the final code-clearing operation",
+          "body": "Confirm that the scan tool completed clearing all CMDTCs after calibration acceptance. Record both acceptance and code clearing as the completion checks; neither alone completes the whole procedure."
         }
       ],
       "procedures": [
         {
           "documentId": "G1702410",
-          "purpose": "SYNC 2/SYNC 3 touchscreen activation, calibration acceptance and stored-code clearing."
+          "purpose": "Calibration prerequisites, scan-tool alternative, audio-button entry sequence, target measurement, acceptance and CMDTC clearing."
         },
         {
           "documentId": "G1693189",
-          "purpose": "Required general safety precautions before calibration."
+          "purpose": "Relevant general service precautions for stationary cabin work and the speaker test."
+        },
+        {
+          "documentId": "G1702412",
+          "purpose": "Identify the FDIM touchscreen and distinguish it from the FCIM audio controls."
         }
       ],
       "hero": null,
@@ -97122,8 +97426,41 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "132a0139128e53697d88fa71dc3e5492ea0d5201df65744c108b30fecc75e2d6"
-      }
+        "fingerprint": "132a0139128e53697d88fa71dc3e5492ea0d5201df65744c108b30fecc75e2d6",
+        "editorialVersion": 2,
+        "editorialFingerprint": "b870b5459445a7d6db31bce879be35467dd6adfac5e6fcc4af845b7b5d6b913c",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "ready-the-controls",
+          "title": "Prepare and choose an entry route",
+          "summary": "Confirm battery readiness and select manual or scan-tool calibration.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "enter-calibration",
+          "title": "Enter calibration with the audio buttons",
+          "summary": "Select AM/FM and use the timed sequence through the speaker test.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "measure-and-accept",
+          "title": "Measure and accept the touch positions",
+          "summary": "Hold each displayed target and accept the resulting settings.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "finish-with-code-clearing",
+          "title": "Complete the service operation",
+          "summary": "Clear all continuous-memory diagnostic trouble codes.",
+          "start": 7,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Replace the SYNC 2 or SYNC 3 touchscreen display",
@@ -130594,80 +130931,151 @@
       ]
     },
     {
-      "title": "Repair a damaged rubber windshield-washer hose",
-      "summary": "Remove the damaged rubber hose section and join the clean ends with a washer-hose adapter, adding the specified sleeve and clamps if necessary.",
-      "introduction": "The washer hose carries solvent from the washer pump toward the windshield. A damaged section can let fluid escape before it reaches the glass. This repair restores that liquid path by removing the damaged rubber and connecting the remaining ends with an adapter.",
-      "why": "The hose material determines the repair route: this splice is permitted only on rubber hose. Clean cuts prepare the ends for the adapter, while the optional rubber sleeve and spring clamps provide the additional securing method described for difficult cases.",
+      "title": "Splice an exposed rubber washer hose",
+      "summary": "Remove a 0.5000 in (12.7 mm) damaged section of rubber washer hose, connect the ends with a washer-hose adapter and add the specified rubber sleeve and spring clamps if necessary.",
+      "introduction": "A washer hose doesn't need a side hustle as an underhood sprinkler. Its job is to carry washer fluid toward the windshield, and a damaged section lets that delivery go astray. I'll walk you through the small, tidy splice permitted on rubber hose, including the important moment when plastic tubing sends us down a different repair route.",
+      "why": "An adapter restores the fluid passage after the damaged rubber is removed. Its tapered, ridged ends fit inside the remaining hose ends. Difficult connections may need the additional rubber sleeve and spring clamps described below. The material check comes first: this repair applies only to rubber hose.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "washer fluid leaking",
-        "weak windshield washer spray",
-        "damaged rubber washer hose",
-        "washer hose splice"
+        "2015 Mustang washer hose repair",
+        "rubber windshield washer hose splice",
+        "washer hose adapter",
+        "damaged washer fluid hose",
+        "washer hose spring clamps"
       ],
       "when": {
-        "summary": "When damage has been located and verified in a rubber washer hose.",
+        "summary": "Use this repair after locating and verifying damage in a rubber windshield-washer hose.",
         "notes": [
-          "A damaged plastic washer hose requires a new hose."
+          "Applies to 2015 Mustangs with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+          "Damaged plastic washer hose requires a new washer hose.",
+          "Weak or absent windshield spray alone does not establish that a hose splice is needed."
         ]
       },
       "prepare": [
         {
-          "title": "Repair items",
-          "detail": "Provide access to the damaged section, a cutting knife and a windshield-washer hose adapter. If additional securing is necessary, have the specified black rubber hose and spring clamps available."
+          "title": "Secure the car and prevent startup before any access or inspection",
+          "detail": "Park on a hard, level surface and set the parking brake. If remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup before beginning service or inspection around the vehicle. Turn the ignition off and remove the key from the vehicle to prevent another person starting it during the work."
+        },
+        {
+          "title": "Complete the underhood safety checks before reaching the hose",
+          "detail": "With the ignition off, inspect the cooling fans for damage, cracks or separation before working under the hood. Do not proceed with underhood work if a fan is damaged; it must be replaced first. Cooling fans can run with the ignition off. If reaching the hose will put your hands or tools near a fan, have that fan disabled before proceeding. Wear eye and ear protection, and protective gloves when handling sharp edges. Review the safety information for the washer fluid being handled and keep it away from ignition sources. See [health and safety precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Establish the accessible-hose scope",
+          "detail": "After completing the precautions above, begin the splice with the damaged hose section exposed and accessible. Vehicle-specific hose locations, routing, any trim or component removal and subsequent refitting, and plastic-hose replacement require their matching procedures before proceeding. Keep this accessible splice job at ground level; lifting is not part of these instructions."
+        },
+        {
+          "title": "Gather the repair items",
+          "detail": "Have a cutting knife, a measuring tool for the 0.5000 in (12.7 mm) cut-out and a windshield-washer hose adapter. For a connection that needs additional securing, have black rubber hose with a 6.4 mm (0.25 in) internal diameter and spring clamps. Internal diameter means the size of the hole through the hose."
         }
       ],
       "steps": [
         {
-          "title": "Verify the damaged hose and its material",
-          "body": "Locate the actual damaged section before cutting. Confirm that it is rubber. Weak or absent wash delivery alone does not establish that the hose needs this repair."
+          "title": "Confirm the car is safe to work on",
+          "body": "Before touching the exposed hose, confirm that the parking brake is set, remote start is disabled if fitted, the ignition is off and the key is out of the vehicle. Complete the cooling-fan inspection and any necessary fan disabling described in preparation before underhood access or nearby work."
         },
         {
-          "title": "Remove the damaged section cleanly",
-          "body": "Follow the [washer-hose repair procedure](#/document/G1694648) and its illustration. Cut cleanly and remove the damaged portion using the specified 0.5000 in (12.7 mm) cut-out dimension."
+          "title": "Verify the damaged section and identify its material",
+          "body": "Examine the accessible washer hose and identify the actual damaged portion before making a cut. Confirm that the section is rubber.\n\nIf it is plastic, stop the splice repair and arrange installation of a new washer hose. If the hose material or damaged location is uncertain, resolve that first. A disappointing squirt is not permission to start chopping."
         },
         {
-          "title": "Connect the remaining ends",
-          "body": "Install a windshield-washer hose adapter between the cut ends. This reconnects the fluid passage across the removed section."
+          "title": "Cut out the damaged rubber",
+          "body": "Measure the 0.5000 in (12.7 mm) section to be removed across the damaged area. The repair illustration shows two cuts across the hose, one at each end of that short section.\n\nUse the cutting knife to make clean cuts and remove the damaged piece, leaving two clean hose ends. Keep your hands and adjacent components clear of the blade. The dimension describes the removed section, not the depth to push the adapter into the hose. See [washer-hose repair](#/document/G1694648)."
         },
         {
-          "title": "Add the securing sleeve if necessary",
-          "body": "For difficult cases requiring additional securing, install a segment of 6.4 mm (0.25 in) internal-diameter black rubber hose over both ends of the washer hose and clamp it with spring clamps."
+          "title": "Join both ends with the washer-hose adapter",
+          "body": "Position the windshield-washer hose adapter between the cut ends. Push one hose end over each tapered, ridged end of the adapter.\n\nThe completed connection in the illustration has each hose end seated against the wider central body, which remains visible between them. Check that both sides are seated; fitting only one side beautifully still leaves half a plumbing job."
+        },
+        {
+          "title": "Add the rubber sleeve and spring clamps if necessary",
+          "body": "If the connection is difficult and needs additional securing, install a segment of black rubber hose with a 6.4 mm (0.25 in) internal diameter over both washer-hose ends and secure it using spring clamps.\n\nThis is the conditional securing method for the rubber-hose repair. It does not make damaged plastic tubing eligible for a splice."
+        },
+        {
+          "title": "Check the assembled connection before operating it",
+          "body": "With the ignition still off, look at both sides of the adapter and confirm that the hose ends remain seated. If the extra rubber sleeve was needed, confirm that it covers both washer-hose ends and is secured with the spring clamps.\n\nRemove the knife, loose cut-out and other tools from the work area before moving to the functional check."
+        },
+        {
+          "title": "Request a wash and check the repair",
+          "body": "Keep hands and tools clear of the wipers, linkage and cooling fans. With the engine off, turn the ignition on and operate the windshield-washer switch. Confirm that fluid reaches the windshield and observe the repaired connection from a safe position for leakage.\n\nAfter releasing the switch, allow the three additional wipes to finish. A further delayed courtesy wipe can occur if that feature is enabled. Turn the ignition off and remove the key again before touching or adjusting the repair.\n\nIf the joint leaks, correct the connection and repeat the completion check. If the joint stays dry but delivery remains poor or absent, investigate the remaining washer-system fault rather than assuming another splice will solve it."
         }
       ],
       "watchFor": [
         {
-          "title": "Plastic hose",
-          "body": "Do not apply this rubber-hose repair to damaged plastic tubing; install a new washer hose."
+          "title": "Plastic tubing takes a different route",
+          "body": "Replace damaged plastic washer hose with a new hose. The adapter-and-sleeve repair described here is restricted to rubber hose."
+        },
+        {
+          "title": "Ignition off does not guarantee a stationary cooling fan",
+          "body": "Keep clear of cooling fans unless they have been disabled for nearby work. Keep all hands and tools clear of moving components during the powered completion check."
+        },
+        {
+          "title": "Wipers continue after the washer switch is released",
+          "body": "Expect three additional wipes after releasing the wash switch, plus a possible delayed courtesy wipe. Wait for the cycle to finish before returning to the work area."
         }
       ],
       "notes": [
-        "The washer pump is commanded through the windshield-wiper motor when a wash request is made. A hose repair addresses a verified fluid-path defect."
+        "The washer pump moves fluid through the hose to the windshield. The windshield-wiper motor contains the relay that supplies power to the pump when a wash request is received; see [system operation and component description](#/document/G1694645).",
+        "The washer is operated through the wiper/washer switch. Rain-sensitive wiping, where fitted, does not change the rubber-only repair restriction; see [wipers and washers overview](#/document/G1694644)."
       ],
       "diagnostics": [
         {
-          "finding": "Verified damage in rubber washer hose.",
-          "meaning": "The material is eligible for this adapter repair.",
-          "next": "Remove the damaged portion and join the clean ends."
+          "finding": "Damage is verified in a rubber washer hose.",
+          "meaning": "The hose material is eligible for this splice repair.",
+          "next": "Remove the damaged section using the 0.5000 in (12.7 mm) cut-out dimension and install the washer-hose adapter."
         },
         {
-          "finding": "Verified damage in plastic washer hose.",
-          "meaning": "The splice procedure does not apply.",
-          "next": "Install a new washer hose."
+          "finding": "Damage is verified in plastic washer hose.",
+          "meaning": "The rubber-hose splice method does not apply.",
+          "next": "Install a new washer hose using the matching replacement procedure."
+        },
+        {
+          "finding": "The adapter connection needs additional securing.",
+          "meaning": "The conditional sleeve-and-clamp method is applicable.",
+          "next": "Fit 6.4 mm (0.25 in) internal-diameter black rubber hose over both washer-hose ends and secure it with spring clamps."
+        },
+        {
+          "finding": "The repaired connection leaks during the wash check.",
+          "meaning": "The connection has not successfully restored a sealed fluid path.",
+          "next": "Turn the ignition off, remove the key and recheck both hose ends at the adapter. Use the conditional securing method if necessary, then repeat the wash check."
+        },
+        {
+          "finding": "The repaired joint remains dry, but windshield delivery is still poor or absent.",
+          "meaning": "Successful sealing of this joint does not establish that the rest of the washer system is working.",
+          "next": "Continue with washer-system diagnosis rather than cutting additional hose or guessing at replacement parts. The [system description](#/document/G1694645) explains operation but does not provide a fault-isolation test sequence."
         }
       ],
       "verification": [
         {
-          "title": "Repair and delivery",
-          "body": "Confirm the adapter joins both cut ends and any required sleeve is clamped. Request windshield wash to confirm fluid delivery to the windshield and inspect the repaired joint for leakage."
+          "title": "Both hose ends are connected",
+          "body": "Confirm that each cut end is seated on its side of the adapter and that any necessary rubber sleeve is secured with spring clamps."
+        },
+        {
+          "title": "Fluid reaches the windshield without leaking at the splice",
+          "body": "Use the washer switch for a completion check. Observe delivery to the glass and check the repaired connection for leakage without reaching near moving components."
+        },
+        {
+          "title": "Leave the work area clear",
+          "body": "Allow the wash and any courtesy-wipe cycle to finish, switch the ignition off and remove the key. Confirm that the removed hose piece and all tools are out of the work area."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694648",
-          "purpose": "Rubber washer-hose repair, including the cut-out dimension, adapter and conditional sleeve-and-clamp method.",
+          "purpose": "Primary rubber-hose repair: 0.5000 in (12.7 mm) cut-out, adapter installation and conditional rubber sleeve with spring clamps.",
           "mediaId": "G1694648-m0001"
+        },
+        {
+          "documentId": "G1694644",
+          "purpose": "Wiper/washer switch operation and applicability of optional rain-sensitive wiping."
+        },
+        {
+          "documentId": "G1694645",
+          "purpose": "Washer-pump control, wash-cycle behavior and optional courtesy wipe used to explain the completion check."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention before access or inspection, cooling-fan precautions, personal protection and safe chemical handling."
         }
       ],
       "hero": {
@@ -130691,7 +131099,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Windshield-washer system; splice repair applies only to rubber washer hose."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -130706,102 +131115,192 @@
         {
           "documentId": "G1694645",
           "sourceHash": "5bab3a19189e2844cce1491eccf7a256d019621b3050c481ae0b48a6a4d16820"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "4a83c8d0c0962403e827811046c545b89bb74988c5714ba4fcf92c5e68a220d4"
-      }
+        "fingerprint": "4a83c8d0c0962403e827811046c545b89bb74988c5714ba4fcf92c5e68a220d4",
+        "editorialVersion": 2,
+        "editorialFingerprint": "96b8c612b9e4ab7ccd9f2e76beb46542ca474a8ab6165ec93dff82e9dc57384c",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-identify",
+          "title": "Secure the car and confirm the repair",
+          "summary": "Confirm the safety preparations and verify that the damaged hose is rubber.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "cut-and-connect",
+          "title": "Remove the damage and join the hose",
+          "summary": "Make the measured cut-out, install the adapter and add securing parts if necessary.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "check-and-finish",
+          "title": "Check assembly and washer delivery",
+          "summary": "Inspect the connection, clear the work area and confirm a leak-free wash.",
+          "start": 6,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Remove and replace the windshield rain sensor",
-      "summary": "Release the rain sensor, inspect its gel lens and refit or replace it against clean windshield glass.",
-      "introduction": "The rain sensor uses an infrared beam to detect moisture on the windshield. Water changes the reflected light, and the sensor sends that information to the wiper motor’s control electronics. A gel lens forms the interface between sensor and glass. This job removes the sensor from its bracket and restores that interface with either an undamaged sensor or a replacement.",
-      "why": "Clean glass and an intact gel lens are central to optical sensing. A missing or damaged lens can leave rain-sensitive wiping inoperative, and this lens cannot be replaced separately. Correct bracket seating and clip engagement hold the sensor in its intended position.",
+      "summary": "Remove the cover beside the rearview mirror, unplug and release the sensor, clean its windshield contact area, and inspect the gel lens before refitting or replacing it.",
+      "introduction": "Your Mustang has a tiny weather watcher tucked beside the rearview mirror, and its relationship with the windshield depends on a patch of gel. Glamorous engineering, apparently. I’ll walk you through uncovering the sensor, releasing its retaining clip and checking that all-important gel before everything goes back together.",
+      "why": "The rain sensor shines infrared light through the windshield and measures how much returns. Water changes that reflection, allowing the sensor to tell the wiper motor’s electronics when wiping is needed. Its glass-facing gel lens provides the optical connection between sensor and windshield. Dirt at that interface or a missing or damaged lens can interfere with rain sensing; the gel lens cannot be replaced separately on this sensor.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "rain-sensitive wipers not responding",
+        "2015 Mustang rain sensor replacement",
+        "rain sensor gel lens inspection",
         "automatic wipers revert to intermittent",
-        "rain sensor gel lens damaged",
-        "windshield rain sensor replacement"
+        "rain sensor cover removal",
+        "windshield rain sensor retaining clip"
       ],
       "when": {
-        "summary": "When the rain sensor requires removal or its gel lens is damaged or missing.",
+        "summary": "Use this procedure when the rain sensor needs removal and refitting, or when its missing or damaged gel lens requires replacement of the complete sensor.",
         "notes": [
-          "Intermittent wiping alone does not prove that the sensor has failed."
+          "Applies to 2015 Mustangs with rain-sensitive wipers and the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+          "The illustrated arrangement is left-hand drive; right-hand-drive service is similar.",
+          "Timed intermittent wiping alone does not establish that the rain sensor has failed."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare the glass cleaner",
-          "detail": "Use Motorcraft Ultra-Clear Spray Glass Cleaner ZC-23, specification ESR-M14P5-A, for the windshield contact area."
+          "title": "Have the specified glass cleaner ready",
+          "detail": "Use Motorcraft Ultra-Clear Spray Glass Cleaner ZC-23, specification ESR-M14P5-A. Read its safety information before use, wear eye protection and keep solvents away from ignition sources. Wear protective gloves when handling sharp-edged parts."
         },
         {
-          "title": "Protect the optical interface",
-          "detail": "Handle the removed sensor so its gel pack can be inspected without introducing dirt or additional damage."
+          "title": "Allow for complete sensor replacement",
+          "detail": "If the glass-facing gel pack is missing or damaged, replace the complete rain sensor. A separate replacement gel lens is not a repair option for this sensor type."
+        },
+        {
+          "title": "Know the job’s boundary",
+          "detail": "This is an interior removal, inspection and refitting job at the windshield beside the rearview mirror. Electrical fault diagnosis requires a separate diagnostic procedure; the checks here do not establish whether power or communication circuits are healthy."
         }
       ],
       "steps": [
         {
-          "title": "Expose and disconnect the sensor",
-          "body": "Remove the rain-sensor cover, then disconnect its electrical connector to free the sensor from the vehicle wiring."
+          "title": "Switch off before touching the sensor",
+          "body": "Turn the wiper switch off, switch the ignition off and remove the key from the vehicle to prevent another person starting it during service. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before beginning.\n\nThe wiper relay supplies the sensor and wiper motor when the ignition is on, so leave the ignition off throughout removal and installation. All access for this job is inside the cabin."
         },
         {
-          "title": "Release the bracket retention",
-          "body": "Release the retaining-clip tabs and remove the sensor from its mounting bracket. The illustration identifies the tabs and withdrawal direction."
+          "title": "Unclip the cover beside the rearview mirror",
+          "body": "From inside the cabin, locate the rounded rain-sensor cover against the windshield beside the rearview mirror’s mounting area. Ease the cover away from the windshield into the cabin, disengaging the molded clips around its inner edge, then set it aside.\n\nRemoving this cover exposes the sensor in its windshield mounting bracket. The [rain-sensor procedure](#/document/G1694628) shows this access arrangement; no mirror removal is part of the sequence."
         },
         {
-          "title": "Clean and inspect",
-          "body": "Clean foreign material from the windshield contact area with the specified cleaner. Inspect the gel pack. If it is damaged, install a new sensor rather than attempting a separate lens replacement."
+          "title": "Disconnect the sensor’s electrical plug",
+          "body": "Locate the wiring plug at the upper end of the exposed sensor. Release its latch and unplug it from the sensor, holding the connector body rather than pulling on the wires. Position the disconnected lead clear of the retaining clip and sensor."
         },
         {
-          "title": "Mount and reconnect",
-          "body": "Place the sensor in the bracket, install its retaining clip and reconnect the electrical connector. Restore the cover after completing the sensor installation."
+          "title": "Release both retaining-clip tabs, then withdraw the sensor",
+          "body": "Find the retaining clip spanning the round sensor body. Its two projecting loop-shaped tabs sit on opposite sides of the sensor.\n\nRelease those tabs outward, away from the sensor’s center, to free the clip’s retention. With the tabs released, withdraw the sensor from the windshield mounting bracket toward the cabin. The clip releases before the sensor comes out; pulling the sensor against an engaged clip only makes this little job a pain in the ass.\n\nKeep the mounting bracket in place and handle the removed sensor without contaminating its glass-facing gel surface."
+        },
+        {
+          "title": "Clean the windshield contact area",
+          "body": "With the sensor out, clean foreign material from the exposed windshield area inside the mounting bracket using Motorcraft Ultra-Clear Spray Glass Cleaner ZC-23, specification ESR-M14P5-A. Follow the cleaner’s handling instructions.\n\nLook over that contact area before refitting. It must be clean where the gel lens meets the glass."
+        },
+        {
+          "title": "Inspect the gel lens and choose reuse or replacement",
+          "body": "Turn the removed sensor so you can see its glass-facing side. Inspect the round gel pack covering the sensing face: confirm that it is present and look across its surface for damage. I give this part my full attention—the humble gel is doing the clever optical work.\n\nIf the gel pack is damaged or missing, use a new complete rain sensor. If it is present and undamaged, the sensor can be refitted as part of this removal-and-installation job; that visual result alone does not prove its electronics work."
+        },
+        {
+          "title": "Seat the sensor before securing the retaining clip",
+          "body": "Place the sensor into the windshield mounting bracket with its gel face against the cleaned glass and its rectangular connector end at the top, matching the bracket’s shape.\n\nOnce the sensor is seated, install the retaining clip across its body and engage the retaining tabs on both sides. Check that both sides retain the sensor and that it sits securely in the bracket. The installation order is sensor first, retaining clip second."
+        },
+        {
+          "title": "Reconnect the plug and restore the cover",
+          "body": "Reconnect the electrical plug at the top of the sensor and confirm its latch engages. Check that the lead is clear of the cover’s attachment points.\n\nAlign the cover’s molded clips with their mounting locations and press the cover back into place, reversing its removal. Confirm that it sits evenly and remains attached. Finish the installation checks below before returning the system to use."
         }
       ],
       "watchFor": [
         {
-          "title": "Fallback wiping",
-          "body": "A fault in rain-sensitive operation can cause ordinary timed intermittent wiping, so continued blade movement does not establish that rain sensing works."
+          "title": "A missing or damaged gel lens changes the repair",
+          "body": "The lens is the optical interface with the windshield. Replace the complete sensor if the lens is missing or damaged; do not attempt a separate gel-lens replacement on this type."
+        },
+        {
+          "title": "Moving wipers can conceal a rain-sensing fault",
+          "body": "When the system detects a rain-sensitive feature fault, it falls back to timed intermittent wiping. Blade movement by itself therefore does not confirm that moisture sensing works."
+        },
+        {
+          "title": "Sensitivity and feature configuration matter",
+          "body": "Rain sensing operates in the six auto/intermittent switch positions when the feature is enabled. The position nearest OFF is least sensitive to moisture; the highest setting is most sensitive."
         }
       ],
       "notes": [
-        "The removal illustration shows left-hand drive; right-hand-drive removal is similar."
+        "The sensor reports to the windshield wiper motor over LIN, a communication circuit shared with other wiper-system controls. The motor’s electronics decide the wiping response.",
+        "On cars with rain-sensitive wipers, automatic moisture sensing takes the place of ordinary intermittent operation when enabled.",
+        "The message center can enable or disable the rain-sensitive feature. See the [system operation description](#/document/G1694645) for configuration and operating context."
       ],
       "diagnostics": [
         {
-          "finding": "The gel lens is missing or damaged.",
-          "meaning": "The optical interface is compromised and may prevent rain sensing.",
-          "next": "Replace the complete rain sensor."
+          "finding": "The glass-facing gel pack is missing or damaged.",
+          "meaning": "The optical connection between sensor and glass is compromised and rain sensing may be inoperative.",
+          "next": "Replace the complete rain sensor, clean the windshield contact area and install the replacement using the seating, clip and connector sequence above."
         },
         {
-          "finding": "Rain response is absent but intermittent wiping remains.",
-          "meaning": "The system may be in its fault fallback mode; operation also depends on feature configuration and switch selection.",
-          "next": "Check that rain sensing is enabled and an auto/intermittent sensitivity setting is selected before attributing the complaint to the sensor."
+          "finding": "The gel pack is present and undamaged.",
+          "meaning": "The visual inspection does not call for replacement because of gel damage. It does not establish electrical operation.",
+          "next": "Refit the sensor if removal and refitting was the intended work. If investigating a continuing fault, check feature selection and obtain electrical diagnosis before buying parts."
+        },
+        {
+          "finding": "The windshield contact area contains foreign material.",
+          "meaning": "The sensor will not be refitted against a clean optical contact area.",
+          "next": "Clean the area with ZC-23 glass cleaner meeting ESR-M14P5-A before seating the sensor."
+        },
+        {
+          "finding": "The wipers run at fixed intervals instead of responding to moisture.",
+          "meaning": "This can be the rain-sensing fault fallback mode. Disabled rain sensing or switch selection also affects the operating mode.",
+          "next": "Check that rain sensing is enabled through the message center and that one of the six auto/intermittent settings is selected. If the complaint remains, arrange further system diagnosis rather than treating intermittent operation as proof of a failed sensor."
+        },
+        {
+          "finding": "High-speed wiping works but automatic rain response does not.",
+          "meaning": "High speed has a separate fail-safe control path that can operate during a LIN communication failure. It does not establish that the sensor’s communication path is healthy.",
+          "next": "Use further system diagnosis to identify the fault. The [system operation description](#/document/G1694645) explains the separate control paths."
         }
       ],
       "verification": [
         {
-          "title": "Check the installation",
-          "body": "Confirm clean glass, an intact gel pack, correct bracket seating, an installed retaining clip and a connected electrical connector."
+          "title": "Confirm the optical and mechanical assembly",
+          "body": "Before closing the cover, confirm that the windshield contact area is clean, the gel lens is present and undamaged, the sensor is seated in its bracket, both retaining-clip tabs are engaged and the electrical connector is latched. After refitting, confirm that the cover is secure and does not trap the wiring."
         },
         {
-          "title": "Record the operating result",
-          "body": "With rain sensing enabled and an auto/intermittent setting selected, confirm the moisture-dependent response. Record whether the original sensor was retained or replaced."
+          "title": "Observe normal rain-sensitive operation",
+          "body": "After reassembly, with hands and materials clear of the wipers, enable the rain-sensitive feature and select an auto/intermittent setting. During normal use with moisture on the windshield, observe whether wiping responds to moisture and the selected sensitivity. This is an operating observation, not a calibrated sensor test; fixed intermittent wiping alone does not confirm success."
+        },
+        {
+          "title": "Finish the service",
+          "body": "Return the wiper switch to OFF after the observation. If you disabled remote start solely for this service, restore its previous setting after all work is complete."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694628",
-          "purpose": "Rain-sensor removal, windshield cleaning, gel-pack inspection and installation.",
+          "purpose": "Access through the clipped cover, connector disconnection, retaining-clip release, sensor removal, glass cleaning, gel inspection and sensor installation.",
           "mediaId": "G1694628-m0003"
         },
         {
           "documentId": "G1694645",
-          "purpose": "Explain optical sensing, sensitivity selection and intermittent fallback behavior."
+          "purpose": "Explain infrared sensing, the nonreplaceable gel lens, feature configuration, sensitivity settings, LIN communication and intermittent fallback."
+        },
+        {
+          "documentId": "G1694644",
+          "purpose": "Establish the rain-sensitive wiper equipment context and six intermittent/sensitivity settings."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply ignition and startup prevention, eye and sharp-edge protection, and chemical-handling precautions relevant to this interior service."
         }
       ],
       "hero": {
@@ -130841,14 +131340,51 @@
         {
           "documentId": "G1694644",
           "sourceHash": "e3688d97625b08b4d59b57d2e3211a295ff22870250ff29bfd10b539470643c8"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "83e97e06a996ac074b6c17f3a75847e7eb5a8d874f46a54f6bf5961b0a94e785"
-      }
+        "fingerprint": "83e97e06a996ac074b6c17f3a75847e7eb5a8d874f46a54f6bf5961b0a94e785",
+        "editorialVersion": 2,
+        "editorialFingerprint": "9d206b200e19d46d5a13c79e98f21c69a697dff06f66ba2dab00b0e6c803b47d",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-the-car",
+          "title": "Prepare the car",
+          "summary": "Switch off the system and prevent unintended startup.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "uncover-and-release",
+          "title": "Uncover and remove the sensor",
+          "summary": "Remove the cover, unplug the wiring and release the retaining clip before withdrawing the sensor.",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "clean-and-assess",
+          "title": "Clean and inspect",
+          "summary": "Clean the glass and decide whether the gel lens allows reuse or requires a complete replacement sensor.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "seat-and-reassemble",
+          "title": "Seat and reassemble",
+          "summary": "Secure the sensor, reconnect its wiring and restore the cover.",
+          "start": 7,
+          "end": 8
+        }
+      ]
     },
     {
       "title": "Replace the windshield washer pump",
@@ -131319,82 +131855,153 @@
       }
     },
     {
-      "title": "Remove and refit the windshield wiper arms",
-      "summary": "Remove the wiper arms with a two-leg puller, establish the motor’s PARK position, and align the blades with the windshield marks.",
-      "introduction": "The windshield wiper arms connect the motor-driven pivots to the blades that clear the glass. Their installed position determines where the blades rest when the motor parks. This job removes and refits those external arms; correct alignment matters just as much as securely tightening their retaining nuts.",
-      "why": "The motor has its own position monitoring and operating logic. Its PARK position must be established before the arms are aligned, otherwise correctly tightened arms can still leave the blades resting in the wrong place. The specified puller releases each arm at its pivot without relying on levering against nearby bodywork.",
+      "title": "Remove and refit the windshield wiper pivot arms",
+      "summary": "For 2015 Mustangs with the 2.3L, 3.7L, 5.0L or 5.2L engine: remove the external wiper arms with a two-leg puller, park the motor, align the blades with the windshield marks and tighten each retaining nut to 26 lb.ft (35 Nm).",
+      "introduction": "A wiper arm has a modest ambition: sweep the windshield, then come home without trying to wipe the hood. Getting that home position right is the heart of this job. I’ll walk you through exposing the two arm attachments, pulling the arms free and putting them back where the glass says they belong.",
+      "why": "The external arms carry the blades and transfer movement from the motor-driven pivots to the glass. The motor has its own position sensors and operating logic; the arms must be fitted to match its normal parked position. Tight nuts cannot rescue incorrect alignment. That is why I establish motor PARK first, then position the blades. The [system description](#/document/G1694645) explains the motor and controls, while the [wiper-arm procedure](#/document/G1694632) provides the removal and installation sequence.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "windshield wiper arm removal",
-        "wiper blades parked incorrectly",
-        "windshield wiper arm alignment"
+        "2015 Mustang windshield wiper arm removal",
+        "windshield wiper pivot arm replacement",
+        "wiper arm puller",
+        "wiper blade park alignment",
+        "wiper arm nut torque"
       ],
       "when": {
-        "summary": "When a wiper arm requires removal, replacement, or correction of its installed position.",
+        "summary": "Use this procedure when an external windshield wiper arm needs removal, replacement or refitting to its correct parked position.",
         "notes": [
-          "An operating fault does not by itself establish that a wiper arm needs replacement."
+          "A wiping fault alone does not establish that an arm needs replacement.",
+          "The same arm-removal and refitting procedure applies to the listed 2015 engine configurations.",
+          "Rain-sensitive wiping is optional. Its presence changes how the system requests a wipe, not how the arms are mechanically aligned."
         ]
       },
       "prepare": [
         {
-          "title": "Have the puller and tightening equipment ready",
-          "detail": "Use a two-leg puller, suitable tools for the nut covers and retaining nuts, and a torque wrench capable of the specified nut setting."
+          "title": "Gather the removal and tightening tools",
+          "detail": "Have a two-leg puller, suitable tools for the retaining nuts and a torque wrench capable of 26 lb.ft (35 Nm). Keep the two nut covers and nuts together as they come off. If replacing an arm, have the correct replacement for its vehicle and side ready."
         },
         {
-          "title": "Identify the alignment marks",
-          "detail": "Locate the blade-position marks on the windshield before refitting. The hood is omitted from the illustration for clarity; hood removal is not a listed operation."
+          "title": "Plan a ground-level job",
+          "detail": "Work with the vehicle stationary on level ground and the parking brake applied. Access is at the rear of the engine compartment, immediately below the windshield; lifting the vehicle is unnecessary. The hood is omitted from the illustrations for visibility, but removing it is not part of this job."
+        },
+        {
+          "title": "Have protection ready",
+          "detail": "Wear eye and ear protection when servicing the vehicle. Use protective gloves when handling sharp edges. Review the relevant [health and safety precautions](#/document/G1693189) before opening the work area."
+        },
+        {
+          "title": "Know the execution boundary",
+          "detail": "This job covers the external arms. Refitting requires an identifiable blade-position mark for each blade and a motor that completes its parking cycle. If either prerequisite cannot be established, resolve it before fitting the arms; guessing a resting angle is no substitute."
         }
       ],
       "steps": [
         {
-          "title": "Expose and remove the retaining nuts",
-          "body": "Remove the wiper pivot-arm nut covers, then remove the nuts. This releases the fasteners that hold the arms on their pivots, but the arms may still need the specified puller to separate them."
+          "title": "Prevent an unintended start",
+          "body": "If remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before beginning service. Turn the ignition OFF and remove the key from the vehicle so another person cannot start it during removal.\n\nKeep the engine off throughout this job. The later ignition-ON stage is solely to operate the wiper motor."
         },
         {
-          "title": "Pull the arms from their pivots",
-          "body": "Use the two-leg puller to remove the windshield wiper pivot arms, following the arrangement illustrated in the linked procedure. Keep the extraction force at the arm-to-pivot connection."
+          "title": "Open the hood and identify the arm attachments",
+          "body": "Open and securely support the hood. Before working under it, with the ignition OFF, check the cooling fans for damage, cracks or separation. If a fan is damaged, stop underhood work until it has been replaced. Fans can run with the ignition off: stay clear of them, and disable them before any work nearby.\n\nLook along the bottom of the windshield, above the vented plastic cowl panel. Each wiper arm has a small round nut cover at its pivot end. These are the two attachment points you need; the cowl panel stays in place and no electrical connector is disconnected.\n\nLocate the blade-position marks near the lower windshield before disturbing the arms. These marks, rather than an estimated gap from the cowl, establish the installation position."
+        },
+        {
+          "title": "Remove the covers, then the retaining nuts",
+          "body": "Lift off the round cover at each arm’s pivot end to expose its retaining nut. Remove both nuts and retain them with their covers.\n\nThe arms may remain firmly attached after the nuts are removed. That is the puller’s cue, not an invitation to start levering against the windshield or cowl."
+        },
+        {
+          "title": "Pull each arm off its pivot",
+          "body": "Fit the two-leg puller around the arm’s mounting base. As shown in the [removal procedure](#/document/G1694632), the puller legs engage beneath the arm base and its central forcing screw bears on the centre of the pivot shaft.\n\nKeep the puller centred and its legs engaged while tightening the forcing screw to draw the arm off the shaft. Remove the released arm, then repeat at the other pivot. Keep the puller’s load on the arm-to-shaft connection, clear of the glass and surrounding trim."
         },
         {
           "title": "Establish the motor’s PARK position",
-          "body": "Before installing either arm, turn the ignition ON and use the wiper switch to run one complete cycle. Allow the motor to finish in PARK. This gives the blade alignment a defined starting position."
+          "body": "With both arms removed and hands and tools clear of the pivots, turn the ignition ON without starting the engine. Briefly move the wiper stalk downward, then release it to request one complete wipe cycle. Make sure the wiper switch returns to OFF and allow the motor to finish the complete cycle and stop in PARK—its normal end-of-cycle resting position.\n\nDo not use an auto/intermittent setting to hold the system ready during assembly. On a rain-sensitive car, those settings can request another wipe when moisture is detected. Keep control of the key and switch, and ensure nobody operates them while the arms are being fitted."
         },
         {
-          "title": "Align and secure the arms",
-          "body": "Install the arms with the blades inside the windshield marks. Fit and tighten the retaining nuts to 26 lb.ft (35 Nm). Turn the ignition OFF, then reinstall the nut covers."
+          "title": "Fit the arms with the blades inside the windshield marks",
+          "body": "Once the motor has fully stopped in PARK, place each arm on its corresponding pivot with its blade resting inside the appropriate windshield positioning marks. Check both blades before fitting the nuts.\n\nI treat those little marks as the parking bays: the motor has found home, and now the blades need to occupy the right spaces."
+        },
+        {
+          "title": "Tighten both arm nuts",
+          "body": "Install the retaining nuts while preserving the blade alignment. Tighten each nut to 26 lb.ft (35 Nm) with the torque wrench.\n\nRecheck both blades against their windshield marks after tightening. If a blade moved outside its marks, correct the arm position rather than accepting the shifted position because the nut is already tight."
+        },
+        {
+          "title": "Switch off and reinstall the covers",
+          "body": "Turn the ignition OFF and remove the key. Reinstall the round nut covers over both tightened fasteners.\n\nThis completes the installation sequence: parked motor, aligned arms, torqued nuts, ignition OFF, then covers."
+        },
+        {
+          "title": "Complete the final position and tool check",
+          "body": "Confirm that both blades remain inside their windshield marks, both nut covers are fitted and the wiper switch and ignition are OFF. Account for the puller and all other tools, remove them from the cowl and engine compartment, then close and latch the hood.\n\nThese are installation completion checks. They do not establish that every electrical or rain-sensing function is healthy."
         }
       ],
       "watchFor": [
         {
-          "title": "Positioning before the motor has parked",
-          "body": "Do not use an arbitrary motor stopping point to establish blade alignment. Complete the prescribed parking cycle first."
+          "title": "An arbitrary stopping point is not PARK",
+          "body": "Allow the commanded cycle to finish before fitting either arm. Switching the ignition off partway through movement does not establish the reference position needed for alignment."
+        },
+        {
+          "title": "Keep the puller on the attachment",
+          "body": "The puller must react between the arm base and pivot shaft. Do not use the windshield, cowl or nearby bodywork as a fulcrum."
+        },
+        {
+          "title": "Ignition ON makes the wiper system live",
+          "body": "The wiper relay supplies the motor when the ignition is on. Keep clear during the parking cycle, wait for a complete stop and leave the wiper switch OFF while fitting the arms."
+        },
+        {
+          "title": "Extra wiping can be normal",
+          "body": "A washer request produces three additional wipes after release, and enabled courtesy wipe adds another delayed wipe. Use the deliberate one-cycle parking sequence rather than a wash request so these normal features do not complicate the work."
         }
       ],
       "notes": [
-        "Rain-sensitive wiping, where fitted, changes how wiping is requested; it does not replace the mechanical blade-alignment step."
+        "The [wiper-system overview](#/document/G1694644) lists six intermittent or rain-sensitivity settings. On cars with rain-sensitive wiping, the rain feature replaces ordinary intermittent operation.",
+        "Arm alignment is a mechanical setting. Repositioning an arm does not repair a motor, switch, communication or rain-sensor fault."
       ],
       "diagnostics": [
         {
-          "finding": "The motor reaches PARK but the blades sit outside the windshield marks.",
-          "meaning": "The installed arm position needs checking.",
-          "next": "Refit and align the arms using the prescribed PARK-position sequence."
+          "finding": "The motor completes its cycle and stops, but a blade lies outside its windshield marks during refitting.",
+          "meaning": "The arm’s installed angle does not match the parked motor position.",
+          "next": "Position the arm so its blade lies inside the marks before tightening its retaining nut."
+        },
+        {
+          "finding": "A blade moves outside its marks as the retaining nut is tightened.",
+          "meaning": "The intended installation alignment has shifted.",
+          "next": "With the ignition OFF and key removed, remove the nut and use the puller to release the arm if necessary. Repeat the parking, alignment and tightening sequence; finish with the nut at 26 lb.ft (35 Nm)."
+        },
+        {
+          "finding": "Rain-sensitive wiping operates as timed intermittent wiping.",
+          "meaning": "A detected rain-sensing fault can make the system fall back to ordinary intermittent operation. This behaviour does not identify an arm-position fault.",
+          "next": "Keep arm alignment and rain-sensing diagnosis separate. Use the [system operation description](#/document/G1694645) to understand the fallback behaviour before pursuing diagnosis."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the installed position",
-          "body": "Check that both blades remain inside their windshield marks after the nuts are tightened."
+          "title": "Motor reference established",
+          "body": "Confirm that one complete motor cycle finished in PARK before either arm was installed."
         },
         {
-          "title": "Confirm the fastening sequence is complete",
-          "body": "Verify the retaining nuts received the specified torque, the ignition is OFF, and the nut covers are installed."
+          "title": "Alignment and torque confirmed",
+          "body": "Both blades must remain inside their windshield positioning marks after each retaining nut has been tightened to 26 lb.ft (35 Nm)."
+        },
+        {
+          "title": "Vehicle ready to leave the work area",
+          "body": "Both nut covers are installed, the wiper switch and ignition are OFF, tools are removed and the hood is closed and latched."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694632",
-          "purpose": "Complete wiper-arm removal and installation, including puller use, motor parking, blade alignment and nut tightening.",
+          "purpose": "External wiper-arm access, nut-cover and nut removal, two-leg puller arrangement, motor parking, blade alignment and retaining-nut torque.",
           "mediaId": "G1694632-m0003"
+        },
+        {
+          "documentId": "G1694644",
+          "purpose": "Wiper-system features and applicability of intermittent and optional rain-sensitive operation."
+        },
+        {
+          "documentId": "G1694645",
+          "purpose": "Motor position control, ignition-on operation, rain-sensitive behaviour and normal additional washer/courtesy wipes."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start prevention, ignition and key control, personal protection and relevant underhood cooling-fan precautions."
         }
       ],
       "hero": {
@@ -131418,7 +132025,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Windshield wipers; rain-sensitive wiping if equipped."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -131433,14 +132041,51 @@
         {
           "documentId": "G1694645",
           "sourceHash": "5bab3a19189e2844cce1491eccf7a256d019621b3050c481ae0b48a6a4d16820"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "5d3ea4108c3928df1cfc8df6e7c26f4e4280f49c738aa94311444d102d5b755a"
-      }
+        "fingerprint": "5d3ea4108c3928df1cfc8df6e7c26f4e4280f49c738aa94311444d102d5b755a",
+        "editorialVersion": 2,
+        "editorialFingerprint": "e48e600f729465459f06d6e80a0772624cc41c9e981cdaca23ca729ab9325340",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-access",
+          "title": "Secure the car and locate the attachments",
+          "summary": "Prevent an unintended start and identify the pivot covers and windshield alignment marks.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "release-the-arms",
+          "title": "Remove the wiper arms",
+          "summary": "Remove the covers and nuts, then release each arm with the two-leg puller.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "park-align-and-fasten",
+          "title": "Park the motor and refit the arms",
+          "summary": "Complete the parking cycle, align the blades, torque the nuts and replace the covers.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "finish-the-job",
+          "title": "Check the completed installation",
+          "summary": "Confirm blade position, recover tools and close the hood.",
+          "start": 9,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Remove and replace the windshield wiper linkage",
