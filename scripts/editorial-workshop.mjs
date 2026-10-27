@@ -23,6 +23,8 @@ function evidenceFor(g){
  const job=getJob(g),primary=new Set(job.documents.map(d=>d.id)),docs=new Map(job.documents.map(d=>[d.id,d]));
  for(const d of job.contextDocs||[])docs.set(d.id,d);
  if(primary.has('G1692554'))docs.set('G1716189',byId.get('G1716189'));
+ // This exact SYNC source says 'remove the FCIM' without a document hyperlink.
+ if(primary.has('G1704851')&&byId.get('G1704851')?.source_hash==='fb743ec647f67cf2754413dd1e08fc2a89782cd1e6f79163ab44744af743f771'&&byId.get('G1704003')?.source_hash==='9c561bd42d94ddb2c50cacf758376fbd9766aa58088cf459e7cf1467cf59c74e')docs.set('G1704003',byId.get('G1704003'));
  // Curated switch contact tests need their exact, short access/refit procedures.
  const switchAccess={'passenger-window-switch-testing':'G1695936','headlamp-switch-contact-testing':'G1694120','power-seat-switch-contact-testing':'G1695513'}[g.id];
  if(switchAccess)docs.set(switchAccess,byId.get(switchAccess)); 
