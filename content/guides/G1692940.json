@@ -1,0 +1,60 @@
+{
+  "documentId": "G1692940",
+  "supportingSourceRefs": [],
+  "sourceHash": "bef5ce92a14001c51642d71d1781b31b3bf100825987614d1954c0da08d46689",
+  "title": "Starting System: How the Starter Gets Its Command",
+  "introduction": "Pressing Start looks like a single action from the seat; electrically, there is a small backstage crew. I follow the inputs into the controller, then the relay command out to the starter motor. This overview explains those handoffs for the engine application named on this page and preserves the automatic/manual transmission distinction. Remote-start operation and fault diagnosis require their own information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692940-b00001",
+      "text": "The engine-cranking command path",
+      "why": ""
+    },
+    {
+      "blockId": "G1692940-b00002",
+      "text": "The starting system controls cranking, meaning the starter motor turns the engine. The PCM receives inputs from the ignition switch–push button start, the transmission when an automatic transmission is fitted or the clutch pedal position switch when a manual transmission is fitted, the run/start relay, and the BCM. The PCM then energizes the starter relay in the BJB (battery junction box). The energized relay supplies power to the starter motor, and the motor cranks the engine.",
+      "why": "The relay is the electrically controlled switch between the command and starter power. Reading the sequence this way makes each handoff clear without assuming that a failure to crank proves the motor itself is faulty."
+    },
+    {
+      "blockId": "G1692940-b00003",
+      "text": "Remote start with automatic transmission",
+      "why": ""
+    },
+    {
+      "blockId": "G1692940-b00004",
+      "text": "Vehicles with automatic transmission have a remote start system that allows starting from up to 30 meters (98 feet) away. For more information, use the owner’s literature and [Handles, Locks, Latches and Entry Systems - System Operation and Component Description](#/document/G1695897) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "I keep the transmission condition attached to the feature so the remote-start statement is not extended to manual-transmission vehicles. The referral supplies the next reading for operation; this overview does not teach the button sequence."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:45:55.719Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f9242719d497e5c37d46cfd7d2b8555b2d904a0b3292d2fec64c6179e6ae7a66",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6e4fbe5cc2abd3319f44e42988aa214ac8275af4bfcb446f28f2816f9c308a6a",
+    "reviewedAt": "2026-10-27T20:45:55.719Z"
+  }
+}

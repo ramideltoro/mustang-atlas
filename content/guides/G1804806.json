@@ -1,0 +1,60 @@
+{
+  "documentId": "G1804806",
+  "supportingSourceRefs": [],
+  "sourceHash": "88990680143c6a18a43a2b09eac3c52b86b2cef11d7722f4b3ac0780bc16476b",
+  "title": "Starting System: Understanding the Cranking Sequence",
+  "introduction": "I treat the start button as the request desk: the actual turning happens after the controller and starter relay pass that request along. This overview follows that path for the engine application named on this page. Its transmission branches explain the stated input arrangements; the remote-start information applies to the automatic-transmission condition described below. This is an operating overview, not a test procedure or a guide to available vehicle configurations.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1804806-b00001",
+      "text": "From start inputs to engine cranking",
+      "why": ""
+    },
+    {
+      "blockId": "G1804806-b00002",
+      "text": "The starting system controls the starter’s turning of the engine, called cranking. The PCM receives inputs from the ignition switch–push button start, the transmission with an automatic transmission or the clutch pedal position switch with a manual transmission, the run/start relay, and the BCM. It then energizes the starter relay in the BJB (battery junction box). Energizing that relay supplies power to the starter motor, which cranks the engine.",
+      "why": "The relay acts as an electrically controlled switch. I use this sequence to distinguish the input stage, the relay command and the motor’s response; the overview supplies no measurements for judging a failed handoff."
+    },
+    {
+      "blockId": "G1804806-b00003",
+      "text": "Conditional remote-start capability",
+      "why": ""
+    },
+    {
+      "blockId": "G1804806-b00004",
+      "text": "For vehicles with automatic transmission, the remote start system allows the vehicle to be started from up to 30 meters (98 feet) away. For further information, consult the owner’s literature and [Handles, Locks, Latches and Entry Systems - System Operation and Component Description](#/document/G1695897) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "This feature statement is conditional on automatic transmission. Retain that condition rather than using this overview to establish which configurations were offered, and use the required references for remote-start operation."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:45:55.727Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f9242719d497e5c37d46cfd7d2b8555b2d904a0b3292d2fec64c6179e6ae7a66",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4ad6f028c7a6f0706a3d7252e1f7941035a08c64cc212c47195894f947c5f5dd",
+    "reviewedAt": "2026-10-27T20:45:55.727Z"
+  }
+}

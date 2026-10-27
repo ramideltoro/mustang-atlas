@@ -1,0 +1,66 @@
+{
+  "documentId": "G1692127",
+  "supportingSourceRefs": [],
+  "sourceHash": "00b767809c9e01ed631db8fc629e291096ddaea1a88ef66f38596d181ed6b096",
+  "title": "Electronic Engine Controls: 2.3L EcoBoost Overview",
+  "introduction": "Engine electronics become easier to understand when I follow the information: what reports a condition, what decides the response and what carries it out. The controller is rather like a kitchen coordinating orders—good decisions depend on what comes in as well as what goes out. This overview explains those roles and the controller's monitoring functions for the identified engine. It does not teach diagnosis, module programming or component replacement.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692127-b00001",
+      "text": "This guide explains the engine's electronic control system and the jobs handled by its controller.",
+      "why": ""
+    },
+    {
+      "blockId": "G1692127-b00002",
+      "text": "How the Engine Controller Makes Decisions",
+      "why": ""
+    },
+    {
+      "blockId": "G1692127-b00003",
+      "text": "The electronic engine control (EEC) system uses the PCM's capabilities to optimize engine control. Its on-board diagnostic (OBD) monitoring system also provides features and functions that support compliance with federal exhaust-emissions requirements.",
+      "why": "Controlling engine operation and monitoring emissions-related operation are connected responsibilities within this system."
+    },
+    {
+      "blockId": "G1692127-b00004",
+      "text": "The EEC system has two major divisions: hardware and software. Hardware includes the PCM, sensors, switches, actuators, solenoids and interconnecting terminals. Software within the PCM uses the input values it receives to determine control of the outputs—the engine hardware.",
+      "why": "I separate the physical equipment from the strategy running it. Sensors and switches supply information; the software interprets that information to control the output hardware."
+    },
+    {
+      "blockId": "G1692127-b00005",
+      "text": "The PCM receives information from sensor and switch inputs, then uses its stored strategy and calibration to generate the appropriate outputs. The system is designed to minimize emissions and optimize fuel economy and driveability. Its software controls basic engine operation, provides the OBD strategy, controls the malfunction indicator lamp (MIL), communicates with a scan tool through the data link connector (DLC), supports flash programming of electrically erasable programmable read only memory (EEPROM), manages idle air and fuel trim, and controls failure mode effects management (FMEM).",
+      "why": "Fuel trim is the controller's adjustment to fuel delivery using sensor feedback; a correction needs interpretation under the relevant diagnostic conditions before it can support a repair decision. Scan-tool communication, programmable memory and failure management are additional controller capabilities, with no specific test, programming method or failure response prescribed by this overview."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:51:12.579Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3767475f459d902ee193b85a91fdae968498c7bda90e4127a100bffb99fbe10c",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "00cf60e411f3062dc5ddccfb0692fbc47ec411ab4938a65c3625a221bc02ba55",
+    "reviewedAt": "2026-10-27T20:49:46.046Z",
+    "editorialRevision": "Remove public editorial-process comment only; substantive introduction and complete technical body unchanged."
+  }
+}

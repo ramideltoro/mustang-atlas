@@ -1,0 +1,60 @@
+{
+  "documentId": "G1692829",
+  "supportingSourceRefs": [],
+  "sourceHash": "75ecf7aeace3362da9ccb568224380804ca55cfddf113b54f849a9f0984425e2",
+  "title": "Starting System: From Start Request to Cranking",
+  "introduction": "The start button gets your finger’s attention, but the starter motor does the turning. I read this system as a chain of handoffs: inputs reach the controller, the controller energizes a relay, and the relay supplies the starter. This overview explains that chain for the engine application named on this page, including the transmission-dependent input and remote-start provision. It does not provide fault tests or a remote-start operating sequence.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692829-b00001",
+      "text": "How engine cranking is commanded",
+      "why": ""
+    },
+    {
+      "blockId": "G1692829-b00002",
+      "text": "The starting system controls engine cranking—the starter turning the engine. The PCM receives inputs from the ignition switch–push button start, the transmission on automatic-transmission vehicles or the clutch pedal position switch on manual-transmission vehicles, the run/start relay, and the BCM (body control module). It then energizes the starter relay in the BJB (battery junction box). Once energized, that relay supplies power to the starter motor, which cranks the engine.",
+      "why": "A relay is an electrically controlled switch. Here it connects the controller’s command to starter-motor power. I keep the command stage and the motor’s turning action separate when reading the sequence; this description alone does not identify the cause of a failure to crank."
+    },
+    {
+      "blockId": "G1692829-b00003",
+      "text": "Remote-start capability",
+      "why": ""
+    },
+    {
+      "blockId": "G1692829-b00004",
+      "text": "Vehicles with automatic transmission are equipped with remote start, allowing the vehicle to be started from up to 30 meters (98 feet) away. For operating information, consult the owner’s literature and [Handles, Locks, Latches and Entry Systems - System Operation and Component Description](#/document/G1695897) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "The automatic-transmission qualifier belongs with this feature. Use the owner’s literature and linked system description for its operation rather than treating the stated range as a complete set of instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:45:55.711Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "0a1d377e6a832723566a0738e54dc2534cf7f952d3b87681afa02adbc9916dcc",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b911742f5c84ce19626e26ec8807dce9b8845df94af55717aba6976a437493d6",
+    "reviewedAt": "2026-10-27T20:45:55.711Z"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "documentId": "G1693151",
+  "supportingSourceRefs": [],
+  "sourceHash": "e5799ab7d91b9aabce485d9a5eec3f42cc5af460c87d706170717812a83a9a1e",
+  "title": "Adaptive Cruise Control: Controls and Speed Limits",
+  "introduction": "I think of cruise control as a speed-keeping assistant with a rulebook: the steering-wheel buttons request a setting, and the controller works within its operating limits. This overview identifies those controls and explains when speed variation can end cruise operation. It does not describe gap distances, adaptive braking behavior or a diagnostic test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693151-b00001",
+      "text": "How Cruise Control Is Controlled",
+      "why": ""
+    },
+    {
+      "blockId": "G1693151-b00002",
+      "text": "The PCM controls the cruise control system.",
+      "why": "The steering-wheel controls provide the driver's requests; the PCM is the controller responsible for cruise operation."
+    },
+    {
+      "blockId": "G1693151-b00003",
+      "text": "Select the cruise control mode using the steering-wheel buttons marked ON/OFF, RES+, SET-, GAP+, GAP- and CANCL. These controls are integrated into the LH, or left-hand, steering wheel switch.",
+      "why": "I start by matching the actual button labels to the function being discussed. This identifies the control group without inventing button sequences or operating conditions."
+    },
+    {
+      "blockId": "G1693151-b00004",
+      "text": "Select the gap setting with the steering-wheel GAP control, which is integrated into the LH steering wheel switch.",
+      "why": "Gap selection belongs to the same left-hand control group. This overview identifies the control but does not assign distances to its settings."
+    },
+    {
+      "blockId": "G1693151-b00005",
+      "text": "Cruise control maintains a selected vehicle speed from 29 km/h (18 mph) up to the vehicle's maximum limited speed. When a MyKey® restricted key is being used and its max speed limiter is turned on, vehicle speed is limited to 129 km/h (80 mph).",
+      "why": "The available speed range depends on the active vehicle restrictions. The MyKey limit applies only when both the restricted key and its speed-limiter setting are in use."
+    },
+    {
+      "blockId": "G1693151-b00006",
+      "text": "Road conditions can cause small differences between actual speed and the set speed, particularly on steep uphill or downhill sections. If vehicle speed falls more than 16 km/h (10 mph) below the set speed, cruise control disengages.",
+      "why": "A set speed is a target, not a promise that the speedometer will sit perfectly still. Distinguish ordinary variation on hills from the stated speed deficit that ends cruise operation."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:49:46.020Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 7,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a96b507c566f7adcac6e162ed4ddea1e4623ed83b6bab484700354fae762dfb1",
+    "reviewedAt": "2026-10-27T20:49:46.020Z"
+  }
+}

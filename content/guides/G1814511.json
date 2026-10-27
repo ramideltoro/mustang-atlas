@@ -1,0 +1,115 @@
+{
+  "documentId": "G1814511",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1692951",
+      "sourceHash": "1d23dcea391b3cb5ebb6a97dc14ad2d7e57eec600b704c258e0c9eaf34cf62ba",
+      "referencedBy": "G1814511",
+      "sourceReference": "G1692951",
+      "sourceUnitCount": 91,
+      "mediaCount": 2
+    }
+  ],
+  "sourceHash": "9b4a62a13a579668ffc6703774fd1529b91debfa54fafd94f3f8564a8c94b0a1",
+  "title": "Battery and Cables: How the System Works",
+  "introduction": "I think of this system as an electrical bank account: the battery holds the reserve, the generator replenishes it, and the current sensors help the car keep its balance straight. Charging the battery matters; letting the car account for that charge matters too.\n\nThis overview explains the battery’s role, the sensors attached to its cables and the connection and reset conditions that affect battery monitoring. Complete service procedures are still needed for battery removal, the full charging or jump-starting sequence, and scan-tool reset instructions.",
+  "requirements": [
+    {
+      "category": "Read the complete procedure before physical work",
+      "items": [
+        {
+          "name": "Use this as monitoring context",
+          "detail": "The explanations below describe how connection choices affect battery monitoring. Before charging, jump starting or replacing a battery, use the complete applicable procedure, including its battery safety precautions, connection and removal sequence, and any required scan-tool reset instructions. The [charging-system reference](#/document/G1692951) supplies the monitoring conditions discussed here."
+        }
+      ]
+    },
+    {
+      "category": "Why charging connections affect monitoring",
+      "items": [
+        {
+          "name": "Equipment ground and current measurement",
+          "detail": "Electrical devices and equipment belong on the engine or chassis ground path rather than directly on the negative battery terminal. A direct negative-terminal connection can make the measured battery state of charge inaccurate and cause incorrect load shedding—the deliberate reduction of electrical loads to protect the battery."
+        },
+        {
+          "name": "Charging through the monitored ground path",
+          "detail": "When a complete charging procedure uses an engine or chassis ground for the negative charger connection, the BCM updates battery state of charge during charging and a BMS Reset is not required afterward. The linked charging source describes an unpainted chassis surface or solid engine component, such as a generator mount or engine lifting eye. These ground examples explain the monitoring path; they are not a complete charger connection sequence."
+        },
+        {
+          "name": "The direct-terminal charging exception",
+          "detail": "When charging requires a negative battery terminal connection—for example, a combination charger/tester/analyzer such as the GR 1 190 V3.0 Intelligent Diagnostic Charger—the BCM does not immediately update battery state of charge. That branch requires a diagnostic-scan-tool BMS Reset to prevent premature engine-off load shedding. If the required reset is omitted, learning takes approximately 8 hours with the vehicle undisturbed, without opening doors or pressing keyless-entry buttons. Earlier vehicle use can still cause engine-off load shedding and a message. The learning period does not replace the stated reset requirement."
+        }
+      ]
+    },
+    {
+      "category": "Jump-starting and replacement implications",
+      "items": [
+        {
+          "name": "Why jump-start ground placement matters",
+          "detail": "In the charging source’s jump-start arrangement, the positive connection is at the battery positive post and the negative connection is at vehicle ground, not the negative battery terminal. Its described ground is the body connection reached by following the negative cable from the battery monitoring sensor, typically on the shock tower sheet metal. A direct negative-post connection bypasses incoming-current measurement and leaves the recorded charge unadjusted; recalibration after an improper jump start takes about 8 hours. These are monitoring consequences, not instructions to attach cables: use the complete matching jump-start procedure and its safety precautions."
+        },
+        {
+          "name": "Why a replacement battery needs a reset",
+          "detail": "Battery replacement requires a BMS Reset using a diagnostic scan tool. Without it, old battery parameters and the time-in-service counter remain, the system continues treating the battery as aged, and Electrical Energy Management functions may be limited. The [charging-system reference](#/document/G1692951) establishes this requirement; the complete replacement/reset procedure supplies its execution."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1814511-b00001",
+      "text": "How the system works",
+      "why": ""
+    },
+    {
+      "blockId": "G1814511-b00002",
+      "text": "Battery, Cables and Current Sensors",
+      "why": "The battery stores electrical energy, while the cable-mounted sensors give the control modules information about charging and discharging."
+    },
+    {
+      "blockId": "G1814511-b00003",
+      "text": "Your Mustang uses a 12-volt, maintenance-free battery. It supplies 12V DC (direct current), operates in a negative-ground system and helps stabilize voltage throughout the 12V electrical system.",
+      "why": "Negative ground means the battery’s negative side connects to the vehicle’s ground return path. The battery stores energy; with the engine running, the generator supplies electrical loads and charges the battery. I keep those jobs separate when reading the system: stored energy and charging output answer different questions."
+    },
+    {
+      "blockId": "G1814511-b00004",
+      "text": "The battery cable assembly includes a battery current sensor and a generator current sensor. For their operation and their role in charging control, see [Charging System - System Operation and Component Description](#/document/G1692951) (414-00 Charging System - General Information, Description and Operation).",
+      "why": "The battery current sensor is attached to the battery negative cable. It is a Hall-effect sensor that sends analog feedback to the body control module (BCM), which uses it to track current entering or leaving the battery and estimate its state of charge. The generator current sensor is attached to the generator B+ cable and sends analog feedback to the powertrain control module (PCM) for charging strategy, idle stability and torque control. The sensors are the system’s bookkeepers, which explains why charger and equipment ground locations matter. Sensor malfunction caused by wiring problems or sensor failure sets a diagnostic trouble code (DTC). In most cases, the Electrical Energy Management system functions are turned off until sensor operation is restored."
+    },
+    {
+      "blockId": "G1814511-b00005",
+      "text": "Ford Motor Company strongly recommends returning all faulty lead-acid batteries to an authorized recycling facility for disposal.",
+      "why": ""
+    }
+  ],
+  "checkedAt": "2026-10-27T20:47:14.783Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "a84d0c691f809aa74a5b89882af6b38caf6b339d1ea41833213e4d8c87f7cf0e",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 91,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4cd0dfb1659e9ed3b59c43ba5ea07bd836550c4310720316ea4cdb7ad86863f5",
+    "reviewedAt": "2026-10-27T20:46:24.212Z",
+    "editorialRevision": "Focused overview-scope revision: conditional monitoring explanations replace isolated imperative service snippets; all primary action/explanation fields unchanged. Full independent 97-unit review retained, focused increment review pending."
+  }
+}

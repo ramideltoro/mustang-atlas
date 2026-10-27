@@ -52946,101 +52946,190 @@
     },
     {
       "title": "Replace the 5.2L fuel rail pressure and temperature sensor",
-      "summary": "Release fuel pressure, isolate both battery cables, replace the sensor using staged tightening, and check for leaks before and after starting the engine.",
-      "introduction": "The fuel rail pressure and temperature sensor measures those two conditions in the fuel supply. Replacing it involves opening a fuel-system connection, so pressure release and leak checks are central parts of the work. This guide follows the 5.2L procedure, including its use of both fuel pump control modules and its instruction to disconnect both battery cables.",
-      "why": "Disconnecting the pump-control connectors and running the engine until it stalls provides the prescribed pressure-release sequence. Battery isolation follows that operation. On reassembly, the sensor requires both a torque setting and an additional angle. The separate checks before starting and with the engine running establish whether the serviced fuel connection remains sealed.",
+      "summary": "Remove the rear seat cushion to disable both fuel pumps, release fuel pressure, disconnect both battery cables and replace the sensor with its specified torque-and-angle tightening.",
+      "introduction": "This little sensor measures fuel pressure and temperature, yet replacing it manages to involve the rear seat. Apparently, even the fuel rail enjoys making an entrance. I’ll walk you through that access route, the battery isolation and the two separate leak checks that finish the job.",
+      "why": "The sensor measures conditions in the fuel rail, the passage that supplies fuel to the injectors. Its replacement opens a fuel connection. Disabling both pump-control modules and letting the engine stall releases pressure before that connection is opened; disconnecting both battery cables then isolates electrical power. Correct tightening and checks under fuel pressure complete the repair.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "5.2L fuel rail pressure temperature sensor replacement",
+        "2015 Mustang 5.2L fuel rail pressure temperature sensor",
         "5.2L fuel pressure release",
-        "fuel leak after sensor replacement"
+        "fuel pump control module rear seat access",
+        "fuel rail sensor torque angle"
       ],
       "when": {
-        "summary": "When diagnosis has established that the 5.2L fuel rail pressure and temperature sensor requires replacement.",
+        "summary": "Use this replacement procedure after diagnosis has established that the fuel rail pressure and temperature sensor needs replacement on a 2015 5.2L Mustang with a fitted rear seat cushion.",
         "notes": [
-          "Use the 5.2L pressure-release procedure for this job."
+          "This access sequence does not cover rear-seat-delete configurations or establish additional engine/body-style combinations.",
+          "A running complaint alone does not condemn the sensor. The [engine-controls reference](#/document/G1802177) directs diagnostic work to the Powertrain Control/Emissions Diagnosis manual; it does not provide a sensor test here."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange fuel-system capability",
-          "detail": "Be equipped to perform the specified pressure release, work on the fuel connection and carry out controlled engine-running leak checks."
+          "title": "Gather the replacement and tightening equipment",
+          "detail": "Have the correct replacement sensor, tools that fit its threaded mounting hex and battery cable nuts, a torque wrench suitable for 53 lb.in (6 Nm) and 44 lb.in (5 Nm), and a way to measure an additional 25° of rotation. These small torque settings are inch-pounds, not foot-pounds."
         },
         {
-          "title": "Plan rear-seat and battery access",
-          "detail": "The two fuel pump control modules are on the left side beneath the rear seat cushion. Have the rear-seat cushion procedure and the linked battery procedure available."
+          "title": "Prevent unintended starting",
+          "detail": "Before access work, disable remote start if fitted through Vehicle settings > Remote Start Setup on the central display. Keep the ignition off and remove the key except during the deliberate engine-running pressure-release and leak-check stages. This repair uses ground-level cabin and underhood access; lifting is unnecessary."
         },
         {
-          "title": "Prepare staged tightening",
-          "detail": "Have suitable tools to apply the sensor's specified torque and subsequent angle, as well as the battery cable-nut torque."
+          "title": "Prepare for controlled engine operation",
+          "detail": "Keep the vehicle stationary on level ground with the parking brake applied. Begin with the manual transmission in a parked gear; select Neutral only for the deliberate engine-running stages below. Use a well-ventilated work area, never an enclosed space. Wear eye and ear protection. Open and support the hood with ignition OFF, then check cooling fans for cracks, damage or separation before underhood work; do not proceed with a damaged fan. Stay clear during engine operation. Both battery cables are disconnected before sensor access; do not reach into a fan operating area earlier in the sequence."
+        },
+        {
+          "title": "Handle the battery safely",
+          "detail": "Keep flames, sparks and burning materials away from the battery, protect your eyes and avoid acid contact with skin or clothing. For acid contact with skin or eyes, flush with water for at least 15 minutes and obtain prompt medical attention. Wash hands after handling terminals. If a Li-ion battery is fitted, use insulated tools, remove metallic jewelry, keep tools and other items off the battery, and avoid short circuits; do not open it or touch exposed material from a damaged case."
+        },
+        {
+          "title": "Control fuel pressure, spills and ignition sources",
+          "detail": "Before opening a fuel component, complete pressure release and let the engine cool. Do not smoke or bring lighted tobacco, open flames or personal electronic devices such as phones into the fuel-work area. Be prepared to contain a spill and clean all fuel residue from the engine compartment before restarting; spilled fuel can ignite on hot components. Keep the battery ground disconnected during the physical sensor work. Running leak checks are visual only: avoid contact with fuel, and never touch or tighten a leaking connection while the engine is running or the system is pressurized. See [Gasoline and Gasoline-Ethanol Fuel Systems Health and Safety Precautions](#/document/G1693188)."
         }
       ],
       "steps": [
         {
-          "title": "Release the fuel pressure",
-          "body": "Remove the rear seat cushion and disconnect both fuel pump control module electrical connectors. Start the engine and allow it to idle until it stalls, then turn the ignition off. Follow the complete linked 5.2L pressure-release procedure."
+          "title": "Move both front seats fully forward",
+          "body": "With electrical power still connected, move both front seats to their full forward positions. This creates access to the front edge of the rear seat cushion. Do this before battery disconnection, especially with powered seats. The [rear seat cushion procedure](#/document/G1692168) supplies this access sequence. Complete any powered settings first, then confirm ignition OFF and remove the key before releasing the rear cushion or its electrical connectors."
         },
         {
-          "title": "Disconnect both battery cables",
-          "body": "Remove the battery cover and disconnect the negative cable, then access and disconnect the positive cable using the battery procedure. Although that general procedure permits negative-only disconnection for ordinary power interruption, this sensor repair specifically requires both cables disconnected."
+          "title": "Release and remove the rear seat cushion",
+          "body": "At the front edge of the rear cushion, locate the locking tabs on both sides. Press each tab inward to release it from the floor attachment, then lift and release the cushion and remove it from the car.\n\nDo not try to defeat the clips by simply hauling upward: the tabs must be pressed in first to avoid breaking them. A plastic clip is a lousy place to settle an argument with brute force."
         },
         {
-          "title": "Remove the sensor",
-          "body": "With pressure released and the battery isolated, disconnect and remove the fuel rail pressure and temperature sensor as directed in the sensor procedure."
+          "title": "Disconnect both fuel pump control module connectors",
+          "body": "Look beneath the removed cushion on the left-hand side of the vehicle. Find the two fuel pump control modules and their electrical plugs. Release each plug’s locking latch and withdraw both connectors from their modules, moving the connected wiring aside. Leave the modules and their mounting brackets installed.\n\nBoth connectors must be disconnected for the [5.2L fuel pressure release](#/document/G1794916)."
         },
         {
-          "title": "Install with the specified tightening stages",
-          "body": "Reverse the sensor removal operation. Apply the specified installation tightening in order: Stage 1 is 53 lb.in (6 Nm); Stage 2 is an additional 25°. Restore the sensor connection."
+          "title": "Run the engine until it stalls, then secure the ignition",
+          "body": "Keep the parking brake applied and everyone clear of the engine compartment. From the driver’s seat, select Neutral, bring the valid intelligent access key inside, fully depress the clutch and press ENGINE START/STOP to start the engine. Keep the car stationary and let it idle until it stalls. After the stall, leave the pedals untouched and switch the still-ON ignition OFF with the button; confirm OFF, remove the key and select a parked manual gear before leaving the driver’s seat.\n\nLeave both pump-control connectors disconnected. Let the engine cool before opening the fuel connection. Battery isolation comes next; disconnecting the battery before this stage would prevent the prescribed engine-running pressure release. The actual keyless controls are described in the 2015 Mustang Owner’s Manual, First Printing, printed pages 121–122."
         },
         {
-          "title": "Restore the battery and pump connections",
-          "body": "Reconnect the battery in reverse disconnection order, using 44 lb.in (5 Nm) for the cable nuts, and restore the covers. Reconnect both fuel pump control module connectors and reinstall the rear seat cushion."
+          "title": "Remove the battery cover and disconnect the negative cable",
+          "body": "At the battery enclosure near the rear of the engine compartment, remove the three battery-cover retainers and lift off the cover. Loosen the negative terminal clamp nut, lift the clamp from the battery post and position the cable away from the post so it cannot reconnect accidentally.\n\nThe [battery procedure](#/document/G1692356) permits negative-only isolation for ordinary power interruption, but this sensor repair requires both cables disconnected."
         },
         {
-          "title": "Pressurize and check for leaks",
-          "body": "Cycle the ignition key and wait 3 seconds to pressurize the system. Check for leaks before starting the engine. Once that check is satisfactory, start the engine and check again for leaks."
+          "title": "Disconnect the positive cable",
+          "body": "Move the positive terminal’s protective cover aside. Loosen its clamp nut, lift the positive cable clamp off the post and position it away from the terminal. Keep tools from bridging the battery terminals or contacting a live terminal and surrounding metal.\n\nBoth battery cables are now disconnected. Complete this isolation before working at the sensor or near an electrically operated cooling fan."
+        },
+        {
+          "title": "Unplug and remove the sensor",
+          "body": "Find the sensor projecting from the front-facing side of the fuel rail beneath the edge of the cover marked “5.2L.” Its electrical plug attaches to the outward-facing end, with the wiring leading away from it.\n\nRelease the plug’s locking tab, slide the plug off the sensor and position the wiring aside. Use the sensor’s mounting hex where it enters the rail to unscrew and remove the sensor. Keep dirt out of the exposed connection. The [sensor replacement procedure](#/document/G1812223) does not call for removing the engine cover or rail."
+        },
+        {
+          "title": "Install the new sensor using both tightening stages",
+          "body": "Install the replacement sensor in the rail, reversing its removal. Tighten it in this exact order:\n\n1. Stage 1: 53 lb.in (6 Nm).\n2. Stage 2: turn it an additional 25°.\n\nThe second stage is extra rotation after reaching the first-stage torque. Reconnect the electrical plug and make sure its latch engages. I keep the torque and angle as two separate checklist items; “felt about right” is a poor measuring instrument."
+        },
+        {
+          "title": "Reconnect the battery, positive first",
+          "body": "Before restoring power, confirm ignition OFF, sensor installation and connector engagement complete, all fuel residue cleaned away, and tools and people clear of electrically operated components. Reverse the battery disconnection sequence. Seat the positive cable clamp on its post, tighten its nut to 44 lb.in (5 Nm) and restore its protective cover. Seat the negative cable clamp and tighten its nut to 44 lb.in (5 Nm).\n\nRefit the battery cover and its three retainers. If the battery vent tube was disturbed, reconnect it properly. Remove tools from the engine compartment before restoring controlled engine operation."
+        },
+        {
+          "title": "Restore both pump connectors and the rear cushion",
+          "body": "Reconnect both electrical plugs to the fuel pump control modules on the left beneath the rear seat, making sure both latches engage.\n\nRefit the rear cushion by reversing removal: position it, lower it into place and engage both front locking tabs with the floor attachments. Keep the seatbelt webbing untwisted and bring the belts and buckles through so occupants can reach them. Confirm both sides of the cushion are retained, then return the front seats to suitable positions."
+        },
+        {
+          "title": "Pressurize the fuel system and check before starting",
+          "body": "Keep the parking brake applied and the manual transmission in a parked gear. Bring the valid intelligent access key inside. From confirmed ignition OFF, press ENGINE START/STOP without pressing the clutch or brake to select engine-off ignition ON. Wait 3 seconds for the fuel system to pressurize, as specified by the pressure-release procedure. Before starting the engine, visually examine the serviced sensor-to-rail connection for fuel leakage without touching it.\n\nIf fuel is escaping, switch the ignition OFF and stop. Do not start the engine with a leaking connection. Do not loosen or tighten it while pressurized; the applicable pressure-release, cooling and isolation prerequisites must be completed again before physical correction."
+        },
+        {
+          "title": "Start the engine and repeat the leak check",
+          "body": "After the pre-start check passes, return to the driver’s seat with the parking brake applied. Select Neutral, fully depress the clutch and press ENGINE START/STOP to start the engine. Keep the car stationary in the ventilated work area. Visually check the serviced sensor connection again for leakage, keeping hands, clothing and tools clear of fuel, moving parts and fans. If leakage appears, shut the engine OFF and stop the repair’s return-to-service process; do not touch or tighten the pressurized connection.\n\nAfter the check, whether it passes or fails, switch the engine and ignition OFF, remove the key and select a parked manual gear before leaving the vehicle. Keep the parking brake applied. A dry connection during both checks completes the sealing check; it does not replace diagnosis of any remaining running complaint."
         }
       ],
       "watchFor": [
         {
-          "title": "Leakage during initial pressurization",
-          "body": "Resolve any leakage before starting the engine; the pre-start check is a required part of the pressure-release procedure's restoration sequence."
+          "title": "A rear cushion that will not release",
+          "body": "Confirm that both front locking tabs have been pressed inward before lifting. Pulling harder without releasing them can damage the tabs."
         },
         {
-          "title": "An omitted pump connection",
-          "body": "Both fuel pump control module connectors disconnected for pressure release must be restored."
+          "title": "Unexpected continued engine operation",
+          "body": "If the engine does not stall during pressure release, turn the ignition off and confirm that both pump-control connectors were disconnected. Do not assume pressure has been released or open the sensor connection."
+        },
+        {
+          "title": "Fuel leakage at either completion check",
+          "body": "The pre-start and running checks are separate requirements. A leak at either stage means the repair is not ready for service; stop engine operation and correct the connection safely."
+        },
+        {
+          "title": "Battery reconnection effects",
+          "body": "Temporary changes in driving behavior can occur while the powertrain control module relearns its adaptive values. Relearning does not excuse a fuel leak or replace either leak check."
         }
       ],
       "notes": [
-        "Battery disconnection can temporarily change driving behavior while the powertrain control module relearns its adaptive values. Driving may be needed for that relearning; it does not replace the fuel leak checks."
+        "Both battery cables are required to be disconnected for this sensor repair, even though ordinary electrical isolation may require only the negative cable.",
+        "The engine-controls document is a diagnostic destination pointer, not an electrical test procedure for this sensor.",
+        "Use protective gloves when handling sharp-edged components, and consult the safety information for any chemical material used."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm assembly and tightening",
-          "body": "Confirm completion of both sensor-tightening stages, restored battery connections, both pump-control connectors and rear-seat installation."
+          "finding": "Both pump connectors are disconnected, but the engine does not stall.",
+          "meaning": "The prescribed pressure-release endpoint has not been reached.",
+          "next": "Switch the ignition off and stop before opening the fuel connection. Resolve the pressure-release problem rather than substituting an improvised release method."
         },
         {
-          "title": "Record both leak-check results",
-          "body": "Record the result after ignition pressurization and the separate result with the engine running."
+          "finding": "Fuel appears at the sensor connection during ignition pressurization.",
+          "meaning": "The serviced connection has not passed its initial sealing check.",
+          "next": "Turn the ignition off. Do not start the engine; have the connection made safe and corrected before repeating the completion checks."
+        },
+        {
+          "finding": "The connection passes the pre-start check but leaks with the engine running.",
+          "meaning": "The repair has failed the running sealing check.",
+          "next": "Shut the engine off and correct the leak before returning the vehicle to service."
+        },
+        {
+          "finding": "Both leak checks pass but a running complaint remains.",
+          "meaning": "A sealed replacement connection does not establish the cause of the remaining complaint.",
+          "next": "Continue diagnosis through the destination identified by the [engine-controls reference](#/document/G1802177), rather than replacing further parts by guesswork."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Sensor installation",
+          "body": "Confirm 53 lb.in (6 Nm) followed by an additional 25°, and confirm that the sensor’s electrical connector is latched."
+        },
+        {
+          "title": "Electrical and cabin restoration",
+          "body": "Confirm both battery clamps are secured at 44 lb.in (5 Nm), terminal and battery covers are restored, both pump-control plugs are latched, and both rear cushion tabs are engaged. Belts must be untwisted and buckles accessible."
+        },
+        {
+          "title": "Two successful leak checks",
+          "body": "Confirm no leakage after ignition cycling and the 3-second pressurization wait, then confirm no leakage with the engine running. Finish with engine and ignition OFF, key removed, parking brake applied and a parked manual gear selected."
         }
       ],
       "procedures": [
         {
           "documentId": "G1812223",
-          "purpose": "5.2L fuel rail pressure and temperature sensor removal and installation, including the two-stage tightening requirement.",
+          "purpose": "Primary sensor replacement procedure, visible sensor location and connector access, and two-stage installation tightening.",
           "mediaId": "G1812223-m0001"
         },
         {
           "documentId": "G1794916",
-          "purpose": "5.2L fuel pressure release through both pump-control connectors, followed by reconnection, pressurization and pre-start/running leak checks.",
+          "purpose": "Both pump-control connector disconnections, engine-stall pressure release, reconnection and separate pre-start/running leak checks.",
           "mediaId": "G1794916-m0001"
         },
         {
           "documentId": "G1692356",
-          "purpose": "Battery cable disconnection and reconnection; apply the sensor procedure's requirement to disconnect both cables.",
+          "purpose": "Battery cover removal, negative-then-positive cable isolation, reverse reconnection and cable clamp nut torque.",
           "mediaId": "G1692356-m0002"
+        },
+        {
+          "documentId": "G1802177",
+          "purpose": "Pointer to the Powertrain Control/Emissions Diagnosis manual for diagnostic work; no sensor test is reproduced."
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Front-seat positioning, rear cushion locking-tab release and belt-safe reverse installation."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable startup prevention, fan precautions and personal protection; lifting and unrelated system operations are outside this ground-level repair."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Battery ventilation, ignition-source control, acid precautions, terminal handling and conditional Li-ion precautions."
+        },
+        {
+          "documentId": "G1693188",
+          "purpose": "Fuel pressure, cooling, ignition-source and spill controls; visual-only running leak checks before any later physical correction."
         }
       ],
       "hero": null,
@@ -53058,7 +53147,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Rear seat cushion fitted"
       },
       "relatedGuideIds": [
         "job-bf0f44181df10b2d",
@@ -53082,14 +53172,63 @@
         {
           "documentId": "G1802177",
           "sourceHash": "db218522357690c58c3770a9d599c4ba46be78a61e64a4fcb7ef7bee6a356a99"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1693188",
+          "sourceHash": "8ab966daf1b76b4e72d63ee8564aae6f18be1fca559398fd41474c41a46492e6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "a895d6036d3ce4ba9bf436939c5f827d5590bf5b1a482c9dbfda09b7e0f3a6e2"
-      }
+        "fingerprint": "a895d6036d3ce4ba9bf436939c5f827d5590bf5b1a482c9dbfda09b7e0f3a6e2",
+        "editorialVersion": 2,
+        "editorialFingerprint": "88cbde640a047da61c436c56b807ba60d226f9c520fd54cfb1c8d3ad70afc537",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "seat-and-pressure-release",
+          "title": "Reach the pump controls and release pressure",
+          "summary": "Remove the cushion, disconnect both pump controls and run the engine to a stall.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "isolate-battery-power",
+          "title": "Disconnect both battery cables",
+          "summary": "Remove the battery cover and isolate negative, then positive.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "exchange-the-sensor",
+          "title": "Replace and tighten the sensor",
+          "summary": "Unplug the sensor, replace it and complete torque-plus-angle tightening.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "restore-and-check-sealing",
+          "title": "Restore the car and check for leaks",
+          "summary": "Reconnect power and pumps, refit the cushion and perform both leak checks.",
+          "start": 9,
+          "end": 12
+        }
+      ]
     },
     {
       "title": "Overhaul the 6R80 six-speed automatic transmission",
@@ -107423,83 +107562,164 @@
     },
     {
       "title": "Replace the dashboard headlamp switch",
-      "summary": "Remove the left-hand dashboard trim, disconnect and release the headlamp switch, then reinstall the switch and finish panels.",
-      "introduction": "The headlamp switch provides the driver's lighting selections to a system that also includes the body control module, lamp assemblies and other controls. It incorporates the front fog-lamp switch and participates in automatic lighting control. This job replaces the dashboard switch assembly through the left-hand finish panel; it does not involve removing the headlamps themselves.",
-      "why": "The switch is retained by tabs behind the panel, so gaining access before releasing it protects the surrounding trim. Lighting behavior also depends on operating conditions and other components. A lamp that stays off, or remains on after shutdown, does not by itself establish that the dashboard switch is faulty.",
+      "summary": "Reach the headlamp switch through the left-hand dashboard trim, unplug its connector, release four retaining tabs and refit the replacement before checking the lights.",
+      "introduction": "The headlamp knob gets all the attention when the lights misbehave, but it has a whole electrical committee behind it. I’ll walk you through replacing the dashboard switch without turning the surrounding trim into collateral damage. The route is straightforward: remove the narrow outboard trim, undo one screw, move the switch surround aside and work from behind it.",
+      "why": "The headlamp switch lets you select the exterior lighting functions. It works with the body control module—the computer that coordinates body electrical functions—and incorporates the front fog-lamp control where fitted. Autolamps also depend on a light sensor. Replacing this switch changes the driver’s control assembly; a lighting complaint alone does not prove that assembly has failed. The four retaining tabs are reached from behind the finish panel, so opening the access first saves a great deal of pointless tugging.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "headlamp switch replacement",
-        "headlights will not switch on",
-        "front fog lamps will not turn on",
-        "autolamps stay on after ignition off"
+        "2015 Mustang headlamp switch replacement",
+        "dashboard headlight switch removal",
+        "left dash finish panel",
+        "headlamp switch retaining tabs",
+        "fog lamp switch operating conditions",
+        "autolamp shutdown delay"
       ],
       "when": {
-        "summary": "When the headlamp switch requires replacement after the lighting complaint has been assessed.",
+        "summary": "Use this procedure when the dashboard headlamp switch has been identified for replacement.",
         "notes": [
-          "Check the operating conditions for the affected lighting function before condemning the switch."
+          "Check the operating conditions for the affected lighting function before buying a switch.",
+          "This is an interior dashboard job performed with the vehicle on the ground."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare for trim access",
-          "detail": "Use a non-marring trim tool and a suitable tool for the finish-panel screw. Be able to support the panel while accessing the switch connector and retaining tabs."
+          "title": "Gather the trim tools and replacement",
+          "detail": "Have a non-marring trim tool, a suitable driver for the finish-panel screw and a replacement switch matching the vehicle’s fitted controls. Keep the removed screw somewhere it cannot disappear into the footwell—the dashboard already has enough hiding places."
+        },
+        {
+          "title": "Protect yourself and the trim",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp panel edges. Support the loosened finish panel while working behind it so its wiring does not carry its weight. See [Health and Safety Precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Keep the repair boundary clear",
+          "detail": "This procedure covers switch replacement and ordinary operating checks. It does not establish electrical fault tests for the switch, wiring or control modules. If correctly conditioned lighting checks still fail after installation, arrange further diagnosis before replacing more parts."
         }
       ],
       "steps": [
         {
-          "title": "Remove the access trim",
-          "body": "Use the non-marring tool to remove the trim panel. This exposes the finish-panel attachment without relying on a metal edge against the visible trim."
+          "title": "Park and complete any powered preparation",
+          "body": "Park on a level surface and apply the parking brake. Keep an automatic transmission in Park or a manual transmission in a parked gear. Leave the vehicle on the ground throughout the job.\n\nIf remote start is fitted, disable it through the central display at Vehicle settings > Remote Start Setup before dismantling anything. Complete any powered positioning needed for comfortable dashboard access now, before the final ignition shutdown."
         },
         {
-          "title": "Move the finish panel aside",
-          "body": "Remove its screw and position the left-hand dash finish panel aside. Create enough access to handle the connector and switch retainers directly."
+          "title": "Establish ignition OFF and remove the intelligent access key",
+          "body": "Turn the lighting control off. Establish ignition OFF before touching the switch connector. With the stationary vehicle’s ignition ON, press and release ENGINE START/STOP once without pressing the brake or clutch pedal to switch it OFF. If it is already OFF, leave it there; do not press the button blindly and turn it back on.\n\nRemove the intelligent access key from the vehicle to prevent another person starting it during the work. The 2015 Mustang Owner’s Manual, First Printing, “Starting and Stopping the Engine,” printed pages 121–122, explains that a valid key inside permits ignition operation. From OFF, pressing the button without the pedals selects ignition ON; pressing it with the brake on an automatic or clutch on a manual requests an engine start. This job’s completion checks use engine-off ignition ON."
         },
         {
-          "title": "Disconnect and release the switch",
-          "body": "Disconnect the electrical connector first. Release the retaining tabs shown in the illustration, then remove the switch from the panel. Follow this order so the wiring does not restrain the switch during removal."
+          "title": "Remove the narrow outboard dashboard trim",
+          "body": "Open the driver’s door to reach the outer edge of the dashboard. Locate the narrow, tapering trim piece between the door opening and the left edge of the lower dashboard, below the headlamp-switch area.\n\nUse the non-marring tool at its edge to ease the trim free and remove it. This is the access piece shown beside the lower knee panel, not the larger panel surrounding the lighting knob. Set it aside without loading or scraping its visible surface. The access sequence is shown in [Headlamp Switch](#/document/G1694120)."
         },
         {
-          "title": "Install the switch and restore the panel",
-          "body": "Reverse the removal sequence: seat and retain the switch, reconnect its electrical connector, restore the finish panel and screw, and reinstall the trim. Confirm that the tabs have secured the switch before closing access."
+          "title": "Remove the exposed screw and move the switch surround aside",
+          "body": "Find the screw exposed at the lower outboard corner of the left-hand dash finish panel, beneath the headlamp-switch area. Remove that screw.\n\nEase the finish panel containing the lighting knob away from its installed position below the left air vent and position it aside far enough to reach the rear of the switch. Support it as you move it; the connector is still attached. You need working access behind this surround, not a wrestling match with the rest of the dashboard."
+        },
+        {
+          "title": "Disconnect the headlamp-switch connector",
+          "body": "With the panel supported, locate the wiring connector plugged into the back of the switch housing. Release the connector’s retention and unplug it from the switch, handling the connector body rather than pulling on the wires.\n\nComplete this disconnection before releasing the switch from the panel. The wiring should no longer tether the switch when you remove it."
+        },
+        {
+          "title": "Release all four tabs and remove the switch",
+          "body": "Work from the rear of the finish panel. Locate the four retaining tabs around the switch housing and release them, then withdraw the switch toward the finished front face of the panel.\n\nIf the housing remains caught, stop pulling and check which tab is still engaged. All four retainers must release; extra force on the knob is no substitute for reaching the remaining tab."
+        },
+        {
+          "title": "Fit the replacement switch and reconnect it",
+          "body": "Reverse the switch-removal actions: place the matching replacement into the finish-panel opening and seat it so all four retaining tabs engage. Check that the switch remains held in the panel rather than shifting out of its opening.\n\nReconnect the electrical connector fully and make sure its retention engages. Keep the ignition OFF and the key outside throughout this work."
+        },
+        {
+          "title": "Restore the finish panel, screw and access trim",
+          "body": "Return the left-hand dash finish panel to its installed position, keeping the wiring clear of the panel edges. Reinstall its screw, then refit the narrow outboard trim removed first.\n\nThis completes the reverse-order installation in [Headlamp Switch](#/document/G1694120). Check that the switch and both trim pieces are seated and retained, with no wiring trapped at their edges. Finish reassembly before applying power."
+        },
+        {
+          "title": "Check the fitted lighting functions with the engine off",
+          "body": "Keep the parking brake applied and the automatic selector in Park or the manual transmission in a parked gear. Bring the valid intelligent access key inside. From known ignition OFF, leave both brake and clutch pedals untouched and press and release ENGINE START/STOP once to select ignition ON. The warning lamps and indicators illuminate; the engine remains stopped.\n\nSelect the parking lamps and check the front marker/parking lamps, rear parking lamps, rear side markers and license-plate lamps. Select the headlamps and check their operation.\n\nIf front fog lamps are fitted, check them with ignition ON/RUN, parking lamps on and high beams off. For China-market rear fog equipment, ignition ON/RUN and the headlamps must be on. Use the vehicle’s fitted fog control; do not assume every switch has both functions.\n\nFor autolamps, account for ambient light: the system uses a light sensor to decide when exterior lamps are needed. These are operating checks after replacement, not electrical tests that isolate a failed component. See [Exterior Lighting - Overview](#/document/G1694241)."
+        },
+        {
+          "title": "Finish with ignition OFF and the key outside",
+          "body": "After the checks, whether they pass or fail, press and release ENGINE START/STOP without pressing either pedal to turn the ignition OFF, then remove the intelligent access key from the vehicle.\n\nIf observing autolamp shutdown, leave the switch in its autolamp setting during shutdown and allow for the selected delay. The factory default is 20 seconds; the message-center setting can extend it to approximately 3 minutes. Continued illumination within that delay is expected. After that observation, return the lighting control to OFF. If you are not checking the autolamp delay, turn the lighting control OFF as you finish the checks. Leave both the lamps and ignition OFF.\n\nIf a failed check requires reopening the trim or touching the connector again, begin that work only with ignition OFF and the key outside."
         }
       ],
       "watchFor": [
         {
-          "title": "Switch still caught in its opening",
-          "body": "Check the retaining tabs rather than forcing the switch against the panel."
+          "title": "The finish panel is still connected when first moved",
+          "body": "Support the panel after removing its screw. Disconnect the switch wiring before releasing the switch’s retaining tabs."
+        },
+        {
+          "title": "One remaining tab can hold the whole switch",
+          "body": "There are four retaining tabs around the housing. If the switch will not come free, locate the engaged tab instead of levering harder against the visible panel."
+        },
+        {
+          "title": "A powered check can become a start request",
+          "body": "For engine-off ignition ON, press the start/stop button from known OFF without pressing the brake or clutch. Keep the pedals untouched during these checks."
+        },
+        {
+          "title": "Lighting options change the expected result",
+          "body": "Front fog lamps require ignition ON/RUN, parking lamps on and high beams off. China-market rear fog lamps require ignition ON/RUN and headlamps on. Autolamp shutdown includes a selectable delay."
         }
       ],
       "notes": [
-        "China-market rear fog-lamp controls are a separate equipment branch; their operation should not be assumed for every switch."
+        "The illustrated access is through the left-hand dashboard finish panel; the headlamp assemblies remain installed.",
+        "China-market headlamps have manual leveling, and rear fog-lamp controls are integrated into the headlamp switch for that market. Match the replacement to the actual vehicle equipment.",
+        "Daytime running lamps, where fitted, use the fog-lamp assemblies. Their operation alone does not establish a fault in the dashboard fog control."
       ],
       "diagnostics": [
         {
-          "finding": "Front fog lamps do not illuminate",
-          "meaning": "Their stated operating conditions require ignition in RUN, parking lamps on and high beams off.",
-          "next": "Establish those conditions before interpreting the result as a fault."
+          "finding": "The switch will not leave the finish panel",
+          "meaning": "At least one of the four retaining tabs may still be engaged.",
+          "next": "Keep the panel supported and the connector disconnected. Locate and release the remaining engaged tab before withdrawing the housing."
         },
         {
-          "finding": "Exterior lamps remain on after ignition shutdown in autolamp operation",
-          "meaning": "The system includes an adjustable delayed switch-off function.",
-          "next": "Check the selected delay before treating continued illumination as a failed switch."
+          "finding": "The replacement switch moves out of its opening before the panel is refitted",
+          "meaning": "Its retaining tabs have not secured it in the panel.",
+          "next": "With ignition OFF and the key outside, reseat the switch and confirm all four tabs engage before closing access."
+        },
+        {
+          "finding": "Front fog lamps do not illuminate during the completion check",
+          "meaning": "A missing operating prerequisite can prevent illumination without establishing a switch fault.",
+          "next": "Confirm ignition ON/RUN, parking lamps on and high beams off, then operate the fitted front fog control. If the result remains incorrect, pursue lighting-system diagnosis."
+        },
+        {
+          "finding": "A China-market rear fog lamp does not illuminate",
+          "meaning": "The rear fog function requires ignition ON/RUN and the headlamps on.",
+          "next": "Establish those conditions and operate the fitted rear fog control. If it still fails, arrange further diagnosis."
+        },
+        {
+          "finding": "Exterior lamps remain illuminated after ignition shutdown in autolamp operation",
+          "meaning": "The selected delay may be keeping them on normally: 20 seconds is the factory default, adjustable to approximately 3 minutes.",
+          "next": "Allow the selected delay to expire before judging the result. If the behavior remains incorrect, investigate the autolamp system rather than assuming the new switch is faulty."
+        },
+        {
+          "finding": "The original lighting complaint remains after complete reassembly",
+          "meaning": "The switch is one part of a system that also includes lamp assemblies, wiring, control modules and, for autolamps, a light sensor.",
+          "next": "End the check with ignition OFF and the key outside. Arrange diagnosis of the affected lighting function before further parts replacement."
         }
       ],
       "verification": [
         {
-          "title": "Confirm installation",
-          "body": "Check that the switch is retained, its connector is connected and both panels are restored."
+          "title": "Mechanical installation is complete",
+          "body": "The switch is held by its four retaining tabs, the electrical connector is fully connected, the finish panel and its screw are installed, and the narrow outboard trim is seated."
         },
         {
-          "title": "Assess the affected lighting function",
-          "body": "Operate the relevant control under its stated conditions, accounting for fog-lamp restrictions and the autolamp delay."
+          "title": "Lighting responds under the correct conditions",
+          "body": "Check parking lamps and headlamps after full reassembly. Check only the fog-lamp functions actually fitted, using their stated prerequisites, and account for ambient light and shutdown delay when assessing autolamps."
+        },
+        {
+          "title": "The car is left shut down",
+          "body": "Finish every powered check with the lighting control OFF, ignition OFF and the intelligent access key outside the vehicle. Keep the parking brake applied throughout the stationary work."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694120",
-          "purpose": "Headlamp switch removal and installation through the left-hand dash finish panel.",
+          "purpose": "Complete headlamp-switch access, connector disconnection, four-tab release and reverse-order installation.",
           "mediaId": "G1694120-m0003"
+        },
+        {
+          "documentId": "G1694241",
+          "purpose": "Explain switch-related lighting functions, market qualifiers, fog-lamp operating conditions and autolamp shutdown delay."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply remote-start prevention, key removal and relevant personal protection before dashboard service."
         }
       ],
       "hero": {
@@ -107523,7 +107743,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the illustrated left-hand dashboard headlamp-switch arrangement; engine coverage: 2.3L, 3.7L, 5.0L and 5.2L. No body-style distinction is stated for this procedure. Match the replacement to the fitted lighting controls and market equipment, including autolamps and front fog lamps where fitted; the rear fog-lamp control is China-market equipment only."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -107534,14 +107755,58 @@
         {
           "documentId": "G1694241",
           "sourceHash": "7e517f1bd6befb7b7645ce7b996ed37110d424c50e59206b42df524a5bc71892"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "c3ba688ee84d7bd5601a82470c767633b2c7063e9dda0b5751b4b28b716c4ba3"
-      }
+        "fingerprint": "c3ba688ee84d7bd5601a82470c767633b2c7063e9dda0b5751b4b28b716c4ba3",
+        "editorialVersion": 2,
+        "editorialFingerprint": "02a936fc6f81cffe0f3b5c2e5fc4a545bb520d2fff560eb77f2dddd6b7754565",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "park-and-power-down",
+          "title": "Prepare and shut down",
+          "summary": "Secure the parked car, disable fitted remote start and establish ignition OFF.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "open-dashboard-access",
+          "title": "Reach the switch",
+          "summary": "Remove the narrow trim and screw, then support the finish panel aside.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "exchange-switch",
+          "title": "Replace the switch",
+          "summary": "Unplug the connector, release four tabs and install the replacement.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "close-dashboard",
+          "title": "Restore the dashboard",
+          "summary": "Refit the finish panel, its screw and the access trim.",
+          "start": 8,
+          "end": 8
+        },
+        {
+          "id": "check-and-shut-down",
+          "title": "Check operation and finish",
+          "summary": "Check the fitted lights with engine-off ignition ON, then return to OFF and remove the key.",
+          "start": 9,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Replace the coupe high-mounted stoplamp",
@@ -127181,104 +127446,173 @@
     },
     {
       "title": "Replace and program the driver memory seat module",
-      "summary": "Replace the driver front seat module, complete its programming, and establish the seat travel limits.",
-      "introduction": "The driver front seat module (DSM) controls the memory-equipped driver power seat. It receives adjustment requests, powers the appropriate motors and uses motor position signals to track seat movement. It also supports stored positions and easy entry/exit. Replacement therefore involves both a physical module change and an electronic setup process; installing the module alone does not finish the repair.",
-      "why": "Programmable module installation (PMI) must begin while the original module is still connected so the scan tool can carry out the required configuration process. After replacement, the module also needs established travel limits. These soft stops halt movement just before the mechanical end stops, reducing unnecessary stress on the seat and motors.",
+      "summary": "Reach the DSM beneath the driver seat, replace it, complete its programming and teach it the seat’s travel limits.",
+      "introduction": "Your memory seat remembers your favorite perch, but its replacement brain still needs lessons in where the damn track ends. I’ll walk you through the driver front seat module, or DSM: the small computer beneath the driver seat that turns adjustment requests into motor movement and remembers seat positions. The physical swap involves three plugs and two screws. Programming and travel-limit learning are what make it a finished repair.",
+      "why": "The DSM powers the memory seat motors and reads their position sensors so it knows where the seat is. It also supports three stored positions and easy entry/exit. A new module needs programmable module installation, or PMI, begun with the original module connected and completed after replacement. It then needs learned stopping positions so the seat stops just before its mechanical travel limits, reducing stress on the mechanism.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "driver memory seat module replacement",
-        "power seat stops prematurely",
-        "memory seat moves in short bursts",
-        "DSM programming"
+        "2015 Mustang DSM replacement",
+        "driver front seat module programming",
+        "memory seat module PMI",
+        "driver seat soft stop learning",
+        "memory seat jog mode"
       ],
       "when": {
-        "summary": "When diagnosis establishes that the driver memory seat module requires replacement.",
+        "summary": "Use this procedure when diagnosis has established that the memory-equipped driver seat’s DSM requires replacement, or when removing and reinstalling that same module.",
         "notes": [
-          "A non-memory power seat uses direct switch control and does not follow this DSM replacement path.",
-          "PMI and the replacement-specific travel-learning steps apply when installing a new module."
+          "Coverage includes the contracted 2015 2.3L, 3.7L, 5.0L and 5.2L applications with the specified memory-seat equipment. Confirm the fitted equipment on the actual car; this does not establish every engine and body-style combination.",
+          "The illustrated arrangement is left-hand drive; the right-hand-drive driver seat is serviced similarly.",
+          "A driver power seat without memory uses direct switch control and does not follow this DSM replacement procedure.",
+          "Beginning and completing PMI, and the replacement-specific travel-learning operation, are required when fitting a new DSM."
         ]
       },
       "prepare": [
         {
-          "title": "Provide programming capability",
-          "detail": "Use a diagnostic scan tool capable of DSM PMI. Keep the original module installed until the initial programming stage has begun; if it cannot communicate, the tool may request As-Built Data."
+          "title": "Have programming capability ready before unplugging anything",
+          "detail": "For replacement, use a diagnostic scan tool capable of performing DSM PMI and have the correct replacement DSM ready. The original module must remain installed for the initial PMI stage. If it does not communicate, the tool may request As-Built Data—the vehicle’s original configuration information."
         },
         {
-          "title": "Provide access and controlled tightening",
-          "detail": "The seat must move fully rearward and upward for access. Have suitable screw tools and a torque tool capable of the module's low tightening value."
+          "title": "Confirm that the seat can provide working access",
+          "detail": "The seat must move fully rearward and fully upward before the module is disconnected. If it cannot reach that position, obtain diagnosis and an appropriate access method before proceeding; this procedure does not establish an alternative for a seat stranded over its module. The normal job is performed with the seat fitted and the vehicle on the ground."
+        },
+        {
+          "title": "Gather tools for a small, lightly fastened module",
+          "detail": "Have a screw tool matching the two module screws and a torque tool capable of accurately applying 18 lb.in (2 Nm). Use inch-pounds, not foot-pounds. Wear eye and ear protection during service, and protective gloves when handling sharp seat-frame edges."
+        },
+        {
+          "title": "Plan the ignition changes",
+          "detail": "The 2015 Mustang Owner’s Manual, Starting and Stopping the Engine, printed pages 121–122, describes the keyless controls. With a valid key inside and the ignition known to be OFF, press and release START/STOP without pressing either pedal to obtain engine-off ignition ON. From ON, press and release it again without pressing either pedal to return to OFF. Keep the engine off throughout this job."
         }
       ],
       "steps": [
         {
-          "title": "Begin programming with the original module",
-          "body": "When fitting a new DSM, start PMI with the existing DSM installed and follow the scan-tool prompts. Do this before disconnecting the module. Follow any As-Built Data request if the original module does not respond."
+          "title": "Secure the car and disable remote starting",
+          "body": "Park on a firm, level surface, apply the parking brake and restrain the wheels with chocks. Leave an automatic transmission in P; a manual transmission can remain in gear because this repair requires no engine start or Neutral selection.\n\nEstablish the ignition state before using the button. If it is ON, return it to OFF without pressing either pedal. With the valid key inside, switch from known OFF to engine-off ignition ON without pressing either pedal. If remote start is fitted, disable it through the central display under Vehicle settings > Remote Start Setup before working around or beneath the seat. Leave that protection in place during the repair. See [service safety precautions](#/document/G1693189)."
         },
         {
-          "title": "Position the driver seat",
-          "body": "Move the seat to its fully rearward and fully upward position. This creates the working access shown in the [replacement procedure](#/document/G1695506). The left-hand-drive illustration also applies to the similar right-hand-drive arrangement."
+          "title": "Begin PMI while the original DSM is still installed",
+          "body": "If fitting a new DSM, use the diagnostic scan tool to begin the DSM PMI process now, with the original module still installed and all its connectors attached. Follow the on-screen instructions and any requested ignition changes. Do not disconnect the module before this initial stage.\n\nIf the original DSM does not respond, follow the tool’s request for As-Built Data if one appears. If the required programming stage cannot proceed, resolve that before carrying on with replacement. Two screws may make this look like a quick swap, but the electronics still wants its paperwork.\n\nIf reinstalling the same module, skip this replacement-only PMI stage. The [DSM replacement procedure](#/document/G1695506) covers both removal and installation."
         },
         {
-          "title": "Remove the module",
-          "body": "Disconnect the DSM electrical connectors, then remove its screws and lift out the module. Keep the operation focused on the module and its attachments."
+          "title": "Move the seat fully rearward and upward",
+          "body": "With the original DSM still connected, use the driver seat controls to move the seat completely rearward and raise it fully. Keep hands, tools and loose wiring clear of the moving tracks.\n\nWork from the front of the driver seat, looking beneath the raised front cushion. Locate the wide rectangular DSM mounted across the seat-track structure. Three electrical connectors attach along its lower edge, and a mounting screw sits at each end. The seat stays attached to the car; this access sequence does not require removal of its upholstery, side control trim or floor fasteners."
         },
         {
-          "title": "Install and reconnect",
-          "body": "Reverse the removal sequence to fit the DSM. Tighten its screws to 18 lb.in (2 Nm), then restore the electrical connections."
+          "title": "Switch OFF, remove the key and let automatic movement finish",
+          "body": "After programming preparation and powered positioning are finished, return the ignition to OFF. If it is ON, press and release START/STOP without pressing either pedal, then remove the intelligent access key from the vehicle.\n\nKeep clear until any easy-exit movement has finished. That feature can move the seat rearward when the ignition is switched off. Confirm the seat is still fully rearward and upward before reaching underneath. Keep the key out and do not operate the seat controls during connector or module work."
         },
         {
-          "title": "Complete module programming",
-          "body": "For a new DSM, finish PMI using the diagnostic scan tool and its on-screen instructions. This completes the electronic configuration stage of replacement."
+          "title": "Disconnect the three DSM plugs",
+          "body": "Look beneath the front cushion at the three plugs entering the lower edge of the DSM. Note how their wiring loops pass around the adjacent seat structure so you can restore the same routing.\n\nRelease each plug’s retaining catch and withdraw it by its housing rather than pulling its wires. Disconnect all three before removing the module. Leave unrelated seat wiring connected and move the disconnected DSM plugs just clear of the module’s removal path."
         },
         {
-          "title": "Establish the seat's soft stops",
-          "body": "With a new module installed, operate the seat in every direction through its full travel. Follow the [hard-stop and soft-stop description](#/document/G1695508) when establishing the limits. The module learns a stopping position before the physical end of travel to prevent premature stopping after the vehicle is returned."
+          "title": "Remove the two screws and withdraw the DSM",
+          "body": "Support the module, remove the screw at each end and retain both screws. Withdraw the DSM from its mounting position without dragging it through the disconnected wiring. These are the two module screws, not the seat-track or floor attachments."
+        },
+        {
+          "title": "Install the module and reconnect its wiring",
+          "body": "Place the replacement DSM—or the original module if reinstalling it—in the same mounting position and orientation. Install both mounting screws and tighten them to 18 lb.in (2 Nm).\n\nReconnect all three DSM plugs to their corresponding sockets and confirm their retaining catches engage. Restore the wiring loops to their previous paths, clear of the seat tracks and moving mechanism. Confirm the module is secured and remove tools from beneath the seat before restoring power. This completes the physical reassembly described by the [DSM procedure](#/document/G1695506)."
+        },
+        {
+          "title": "Complete PMI with the new module installed",
+          "body": "With the module secured, all three plugs connected and the work area clear, bring the valid key back inside. From known OFF, obtain engine-off ignition ON by pressing and releasing START/STOP without pressing either pedal. Keep clear of the seat because easy entry can move it when the ignition comes on.\n\nFor a new DSM, complete PMI using the scan tool’s on-screen instructions. Follow its requested ignition changes and confirm the process finishes before treating programming as complete. Reinstallation of the original module does not require this replacement-only PMI stage."
+        },
+        {
+          "title": "Teach a new DSM the full travel limits",
+          "body": "After successful PMI for a new module, use the seat controls to move the seat in every direction through its full range. Keep people, tools and loose objects out of the seat’s path, including the space behind the backrest.\n\nFor each memory-controlled movement, reach both ends of travel. This includes fore/aft movement and the front and rear height adjustments, plus powered backrest recline where fitted. At a true mechanical end of travel, hold the applicable switch for approximately one second. The DSM briefly reverses the motor for 180 ms and establishes a soft stop for that direction. Repeat at the opposite end and for the remaining movements; operate the other fitted seat adjustments through their full travel as required by the replacement procedure.\n\nA hard stop is the physical end of movement. A soft stop is the learned stopping point just before it. Do not keep holding a switch against an obstruction or assume an unexpected mid-travel stop is a valid end point. Use the decision rows below if travel is incomplete. See [DSM travel-limit operation](#/document/G1695508)."
+        },
+        {
+          "title": "Check movement and finish with the ignition OFF",
+          "body": "With full reassembly complete, check normal switch-controlled movement in each direction and confirm the seat does not stop unexpectedly short of its usable range. For a new module, confirm that PMI and the full-travel learning operation both finished. Place the seat in a usable driving position.\n\nFinish by returning the ignition to OFF and removing the key from the vehicle, regardless of whether you installed a new DSM or reinstalled the original. Keep clear until any easy-exit movement ends. If a connector needs further attention, begin that work only after this OFF/key-out step. Leave the parking brake applied and the car restrained until service is finished."
         }
       ],
       "watchFor": [
         {
-          "title": "Premature stopping after replacement",
-          "body": "Do not treat a short travel range as an acceptable finished result. Complete programming and the required full-travel operation."
+          "title": "Automatic seat movement",
+          "body": "Easy exit can move the driver seat rearward by approximately 50.8 mm (2 in), unless it is already near the rear limit. Easy entry can return it toward the previous position when the ignition comes on. Keep hands and tools out of the mechanism during ignition changes."
         },
         {
-          "title": "Different seat systems",
-          "body": "Seat heating and cooling are controlled by a separate climate-controlled seat module; a temperature complaint does not by itself identify a DSM fault."
+          "title": "The very small screw torque",
+          "body": "The two DSM mounting screws tighten to 18 lb.in (2 Nm). Set and read the torque tool in the correct units."
+        },
+        {
+          "title": "Unexpected stopping during learning",
+          "body": "A blocked movement or a lost position signal can interrupt travel. Clear the movement path and use the diagnostic decisions below rather than repeatedly driving the mechanism against the problem."
+        },
+        {
+          "title": "Heating and cooling use a different controller",
+          "body": "The climate-controlled seat module, SCME, controls seat heating and cooling and is mounted beneath the passenger seat. A temperature complaint alone does not establish a driver DSM fault. The [front-seat overview](#/document/G1695507) distinguishes these systems."
         }
       ],
       "notes": [
-        "Travel limits also require setting or resetting after replacement of the driver seat track or horizontal motor."
+        "The DSM receives seat-switch requests directly and exchanges vehicle information over MS-CAN, the vehicle’s medium-speed communications network. Ignition and gear-position information contribute to easy entry/exit and memory functions.",
+        "The three memory buttons communicate through the driver door module. This article covers module replacement and travel learning; programming personal memory positions uses the owner’s memory-seat instructions.",
+        "Travel limits also require setting or resetting after replacement of the driver seat track or horizontal motor. Those component replacements are separate jobs.",
+        "The physical hard stops are fixed by seat design. Travel learning changes the DSM’s soft stopping positions, not the mechanical limits."
       ],
       "diagnostics": [
         {
-          "finding": "A seat motor moves briefly, stops, and requires the switch to be released and pressed again.",
-          "meaning": "This is jog mode, associated with loss of a motor position-sensor signal; a diagnostic trouble code is stored in the DSM.",
-          "next": "Investigate the position-sensor fault before deciding that the DSM itself needs replacement."
+          "finding": "The original DSM does not communicate when beginning PMI.",
+          "meaning": "The scan tool may request As-Built Data to configure the replacement.",
+          "next": "Follow the tool’s prompts while preserving the required initial PMI stage. If the requested configuration data or programming capability cannot be provided, resolve that before proceeding with the replacement."
         },
         {
-          "finding": "The original DSM does not respond during PMI.",
-          "meaning": "The scan tool may need As-Built Data to continue the replacement configuration.",
-          "next": "Follow the scan-tool prompts rather than omitting the initial PMI stage."
+          "finding": "An adjustment moves for about one second, stops and moves for another second only after the switch is released and pressed again.",
+          "meaning": "This is jog mode. The DSM has lost a motor position-sensor signal, and a diagnostic trouble code is stored in the DSM. This behavior does not by itself prove the DSM is defective.",
+          "next": "Have the stored DSM fault and the affected motor’s position-sensor circuit diagnosed before deciding on further parts. Electrical pinpoint testing is outside this replacement procedure."
+        },
+        {
+          "finding": "The seat stops unexpectedly before completing travel after a new DSM is fitted.",
+          "meaning": "Replacement is not complete if programming or travel learning remains unfinished. An obstruction or position-sensor problem can also prevent normal travel.",
+          "next": "Check that the movement path is clear and that PMI completed. Finish full-travel learning if it remains incomplete. If the seat still cannot complete its travel, stop the learning attempt and obtain diagnosis rather than forcing the mechanism."
+        },
+        {
+          "finding": "The seat briefly backs away after reaching a physical travel limit during learning.",
+          "meaning": "The DSM uses an approximately one-second hold at the hard stop followed by a 180 ms reversal to establish the soft stop.",
+          "next": "Continue learning the opposite end and the remaining movements. Confirm ordinary movement afterward without repeatedly holding the motor at its physical limit."
+        },
+        {
+          "finding": "The seat moves when the ignition is switched off or on.",
+          "meaning": "With easy entry/exit enabled, rearward movement at OFF and return movement at ON can be normal DSM operation.",
+          "next": "Keep clear and allow the movement to finish. Do not mistake the feature for an unsolicited repair fault."
         }
       ],
       "verification": [
         {
-          "title": "Confirm learned travel",
-          "body": "Check that the seat has been operated through its full range in every direction and does not stop prematurely."
+          "title": "Physical installation is complete",
+          "body": "Confirm both module screws were tightened to 18 lb.in (2 Nm), all three DSM connectors are retained and the restored wiring paths remain clear of moving seat parts."
         },
         {
-          "title": "Record setup completion",
-          "body": "Record completion of PMI and the full-travel soft-stop setting operation for the new module."
+          "title": "Replacement programming is finished",
+          "body": "For a new DSM, confirm and record successful completion of PMI. Starting the process with the original module and finishing it with the replacement are both required."
+        },
+        {
+          "title": "Travel is usable in every direction",
+          "body": "For a new module, confirm full-travel learning was completed in all directions. Ordinary switch operation should not exhibit an unexplained early stop or one-second jog behavior. This is a completion check, not a substitute for electrical diagnosis."
+        },
+        {
+          "title": "The car is left ready and switched off",
+          "body": "Confirm the seat is in a usable position, tools are removed, the ignition is OFF and the key is outside the vehicle. Allow any easy-exit movement to finish before reaching underneath again."
         }
       ],
       "procedures": [
         {
           "documentId": "G1695506",
-          "purpose": "Driver front seat module removal, installation, replacement programming and travel-limit setup.",
+          "purpose": "DSM access, three-connector and two-screw removal, reverse-order installation, 18 lb.in (2 Nm) tightening, PMI and replacement travel learning.",
           "mediaId": "G1695506-m0003"
         },
         {
           "documentId": "G1695508",
-          "purpose": "Memory-seat operation, position-sensor jog mode and DSM hard-stop/soft-stop behavior."
+          "purpose": "Memory-seat control, position-sensor jog mode, hard-stop and soft-stop behavior, and easy entry/exit operation."
+        },
+        {
+          "documentId": "G1695507",
+          "purpose": "Identify the memory-equipped driver seat, DSM location and setup requirements, and distinguish the separate climate-controlled seat system."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant service protection, remote-start disabling and prevention of unintended starting."
         }
       ],
       "hero": {
@@ -127318,14 +127652,58 @@
         {
           "documentId": "G1695507",
           "sourceHash": "0c9400cdd5240f59ef08096e06c1b1ae63bb44246080821b89324872dc3f7c2e"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "a60b027f6d9a220a5096dd09c9d9f223ac5f45e84e0835f9887b8a9cda089b84"
-      }
+        "fingerprint": "a60b027f6d9a220a5096dd09c9d9f223ac5f45e84e0835f9887b8a9cda089b84",
+        "editorialVersion": 2,
+        "editorialFingerprint": "9b981bf0f50b26a64b83be53ec5ee151b448c3ad50fb081597af53aa7042a6a2",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-and-configure",
+          "title": "Secure the car and begin programming",
+          "summary": "Disable remote starting and begin replacement PMI before disconnecting the original DSM.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "position-and-access",
+          "title": "Create access and make the seat stationary",
+          "summary": "Raise and move the seat rearward, then switch OFF and remove the key.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "exchange-module",
+          "title": "Remove and install the DSM",
+          "summary": "Disconnect three plugs, remove two screws and refit with the correct torque and wiring routing.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "program-and-learn",
+          "title": "Complete programming and travel learning",
+          "summary": "Finish new-module PMI and establish the seat’s soft stops after physical reassembly.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "check-and-finish",
+          "title": "Confirm movement and switch off",
+          "summary": "Check the completed repair and leave the ignition OFF with the key removed.",
+          "start": 10,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Replace the front head restraint guide sleeves",
@@ -166402,87 +166780,218 @@
       ]
     },
     {
-      "title": "Replace the accessory-drive idler pulley on the 2.3L EcoBoost",
-      "summary": "Replace the 2.3L accessory-drive idler, following the separate belt-removal sequence and checking both belts after refitting.",
-      "introduction": "The idler is the freely rotating pulley that guides and supports the accessory belt along its route. It is separate from the tensioner, which is the component moved to release belt tension. On the 2.3L EcoBoost, reaching the idler means dealing with two belts in the correct sequence: the A/C compressor belt comes off before the main accessory belt.",
-      "why": "Taking the belt load off first makes the pulley attachment accessible. The central bolt holds the idler in position while the pulley rotates around its bearing. Correct fastening and final belt seating matter together: a securely mounted pulley cannot guide a belt correctly if that belt is sitting outside its intended grooves.",
+      "title": "Replace the accessory-drive idler pulley on a 2015 2.3L EcoBoost Mustang",
+      "summary": "Remove the intake outlet pipe and both drive belts, replace the fixed idler, then restore belt seating and intake connections with the correct inch-pound tightening values.",
+      "introduction": "The idler doesn't drive an accessory, but it still makes you remove two belts to reach its one bolt. An ambitious job description for a little wheel. I'll take you through that entourage in order: appearance cover, intake pipe, A/C belt, main accessory belt, then the pulley itself.",
+      "why": "The idler is a freely rotating guide that supports the accessory belt along its route. It is separate from the tensioner, the movable pulley assembly that keeps the belt tight. Removing the belt unloads the idler so its central retaining bolt can be removed. Correct bolt tightening and correct belt seating both matter when everything goes back together.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "2.3L EcoBoost idler pulley replacement",
-        "accessory drive belt idler",
-        "2.3L accessory belt seating"
+        "2015 Mustang 2.3L EcoBoost idler pulley replacement",
+        "accessory drive belt idler central bolt torque",
+        "2.3L Mustang A/C stretch belt removal",
+        "Mustang accessory belt tensioner counterclockwise"
       ],
       "when": {
-        "summary": "When inspection or diagnosis establishes that the 2.3L accessory-drive idler needs replacement.",
+        "summary": "Use this replacement procedure after the accessory-drive idler has been identified as the component needing replacement.",
         "notes": [
-          "A belt-drive noise does not by itself identify the idler as the faulty component. Confirm which pulley or belt needs attention before replacing parts."
+          "A belt-drive noise alone does not identify the idler as faulty. This article covers replacement rather than a noise-diagnosis or bearing-test procedure.",
+          "The sequence covers the 2.3L EcoBoost belt arrangement described here. It does not extend its tightening values or belt methods to other engines."
         ]
       },
       "prepare": [
         {
-          "title": "Plan the two-belt access sequence",
-          "detail": "Have the full A/C belt and accessory-belt procedures available. The A/C belt uses its own removal and installation method, including the specified installation aid; it is not released by the main belt tensioner."
+          "title": "Interrupt electrical power before belt work",
+          "detail": "This job uses the negative-battery-cable disconnection in [Battery Disconnect and Connect](#/document/G1692356) to interrupt power to the vehicle electrical system before nearby fan and belt work. Ignition OFF alone does not prevent fan operation. Keep the positive cable connected and its protective cover in place. Have a tool for the negative clamp nut and a torque wrench suitable for 44 lb.in (5 Nm) for restoration."
         },
         {
-          "title": "Prepare the fastening tools",
-          "detail": "Use suitable access tools and a torque wrench capable of 10.5 Nm. Identify the idler’s central bolt in its component illustration before removing it."
+          "title": "Keep the vehicle stationary",
+          "detail": "Work on hard, level ground with the parking brake applied and the wheels chocked. Use Park for an automatic transmission. A manual transmission must be in Neutral for the required crankshaft hand rotation, with the parking brake and chocks maintaining restraint throughout. This sequence keeps the vehicle on the ground."
+        },
+        {
+          "title": "Gather the belt and fastening tools",
+          "detail": "Have a suitable tool for turning the crankshaft pulley bolt by hand, a tool that securely engages the accessory-belt tensioner, the stretchy-belt removal tool shown as 303-1419, and a cable tie at least 3 mm (0.12 in) wide. Use a torque wrench suitable for 48, 80 and 93 lb.in (5.4, 9 and 10.5 Nm). These are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Have the replacement pulley and keep intake parts clean",
+          "detail": "Have the correct replacement idler for this engine ready. Keep dirt away from the intake joints and protect exposed openings while the air cleaner outlet pipe is removed. Even small particles entering the intake can damage the turbocharger compressor vanes."
+        },
+        {
+          "title": "Wear appropriate protection",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp-edged components. If cleaning materials are needed, follow their material safety information and keep flammable solvents away from ignition sources."
+        },
+        {
+          "title": "Protect yourself while handling the battery connection",
+          "detail": "Work in a ventilated area, protect your eyes and keep flames, sparks and burning material away from the battery. Avoid acid contact with skin, eyes and clothing; flush skin or eye exposure with water for at least 15 minutes and obtain prompt medical attention. Wash hands after touching terminals. If a Li-ion battery is fitted, use insulated tools, remove metallic jewelry and keep tools off the battery; do not open its case or touch exposed material from a damaged battery. See [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181). No battery lifting or removal is part of this job."
         }
       ],
       "steps": [
         {
-          "title": "Remove the separate A/C compressor belt",
-          "body": "Follow the [2.3L A/C compressor-belt procedure](#/document/G1688221), including its access steps and stretchy-belt-tool method. Keep the separate belt installation instructions with the job so their hand-rotation and seating checks are not missed later."
+          "title": "Disable remote start, then establish ignition OFF and remove the key",
+          "body": "With the vehicle restrained as described above, disable remote start where fitted through the central display: Vehicle settings > Remote Start Setup. Complete this powered setting before final shutdown and fan isolation.\n\nThe 2015 Mustang owner manual, “Starting and Stopping the Engine,” printed pages 121–122, distinguishes the button modes: from known OFF, a valid key inside the vehicle and one button press with both pedals released selects ignition ON without starting the engine. Applying the brake in an automatic in Park, or the clutch in a manual in Neutral, and pressing the button requests an engine start. Keep the pedals released when using the display for this job.\n\nIf ignition is ON after the settings, or the engine is running and the vehicle is stationary, press and release the button without applying the brake to turn the ignition OFF. If ignition is already OFF, leave it OFF rather than pressing the button. Confirm OFF, then remove the key from the vehicle and prevent anyone from operating the controls. The next step interrupts electrical power before belt access. See the relevant [service safety precautions](#/document/G1693189)."
         },
         {
-          "title": "Release the main accessory belt",
-          "body": "Use the [accessory-drive belt procedure](#/document/G1688219). Rotate its tensioner counter clockwise and remove the belt. The tensioner releases belt tension; the idler is the different pulley being replaced."
+          "title": "Inspect the fans and disconnect the battery negative cable",
+          "body": "With ignition OFF, open and support the hood and visually inspect the cooling fans without reaching into their operating area. If any fan has cracks, damage or separation, stop underhood work and arrange replacement before continuing. Keep hands and tools clear of fan blades.\n\nAt the battery enclosure beside the rear of the engine compartment, remove its three cover retainers and lift off the cover. Loosen the negative battery-terminal clamp nut, lift the clamp from its post and position the cable away so it cannot reconnect accidentally. Leave the positive terminal connected and covered.\n\nThe [battery procedure](#/document/G1692356) explicitly identifies this negative-cable disconnection as interruption of vehicle electrical power. Keep it disconnected throughout the belt, pulley and intake work below."
         },
         {
-          "title": "Remove and refit the idler",
-          "body": "Remove the central retaining bolt and the idler pulley identified in the [idler illustration](#/document/G2086104). Refit the pulley and its central bolt, tightening the bolt to 93 lb.in (10.5 Nm). This value belongs to the idler attachment, not to the tensioner mounting."
+          "title": "Remove the engine appearance cover",
+          "body": "Remove the bolts and nuts securing the top engine appearance cover, then lift the cover away. Keep its fasteners together for refitting. This begins the access sequence in the [A/C compressor-belt procedure](#/document/G1688221)."
         },
         {
-          "title": "Restore the belts and verify their seating",
-          "body": "Complete the linked belt installation sequence. The A/C belt instructions temporarily position the main belt away from the crankshaft pulley, then reinstall it after the A/C belt is fitted. Perform the specified hand-rotation checks, remove the installation aid and confirm that each belt is correctly seated on all of its pulleys."
+          "title": "Disconnect the two smaller tubes from the air cleaner outlet pipe",
+          "body": "Find the small U-shaped CAC bypass-valve inlet tube attached to the larger air cleaner outlet pipe. CAC means charge-air cooler; this is the small bypass-air connection shown curving over the main pipe. Loosen its clamp, disconnect it from the outlet pipe and position it aside.\n\nNext disconnect the crankcase ventilation tube from the outlet pipe and position it aside. This is the smaller upright connection beside the outlet pipe's branched end. Keep debris out of both disconnected connections. The [air cleaner outlet-pipe procedure](#/document/G1675706) provides this access sequence."
+        },
+        {
+          "title": "Remove the air cleaner outlet pipe",
+          "body": "Loosen the three clamps securing the large outlet pipe. The arrangement has two clamped connections at its branched end and another at the opposite, bellows-shaped end. Release those joints and remove the pipe.\n\nProtect the exposed intake openings against debris. Keep loose dirt and anything used to protect the openings out of the air passages. The turbocharger is downstream, and it has very little patience for grit."
+        },
+        {
+          "title": "Record the belt paths and identify the fixed idler",
+          "body": "Before moving either belt, record its installed path so you can reproduce the same pulley contacts during assembly. The short A/C belt runs between the crankshaft pulley and A/C compressor pulley. The main belt follows the longer route around the lower crankshaft pulley, small fixed idler, large central pulley, upper tensioner and lower-right accessory pulley.\n\nThe replacement target is the small fixed pulley above the crankshaft pulley and to the left of the large central pulley. Its single retaining bolt passes through its center. The upper movable tensioner is a different component. Use the [idler-pulley procedure](#/document/G2086104) and [accessory-belt procedure](#/document/G1688219) to keep those identities straight."
+        },
+        {
+          "title": "Remove the separate A/C compressor stretch belt",
+          "body": "Use the stretchy-belt removal tool at the A/C compressor pulley. Turn the crankshaft pulley bolt clockwise by hand while feeding the tool around the compressor pulley approximately 180°.\n\nFold the tool beneath the inside of the A/C belt. Then pull the tool firmly in one quick motion to remove the belt from the compressor pulley. Remove the freed belt from the drive.\n\nThis is the [A/C belt's removal method](#/document/G1688221); the main accessory-belt tensioner does not release this separate stretch belt. Keep fingers out of the belt-to-pulley contact points and use hand rotation only."
+        },
+        {
+          "title": "Release and remove the main accessory belt",
+          "body": "Looking at the belt and pulley faces, locate the tool-engagement point at the center of the upper tensioner pulley assembly. Seat a suitable tool securely there and rotate the complete spring-loaded tensioner counterclockwise to release belt tension; do not loosen the pulley’s central attachment as a removal step. Slip the belt off and remove it from the remaining pulleys. Ease the tensioner back under control after the belt is clear.\n\nKeep the removed belt clear of the crankshaft pulley. The [accessory-belt procedure](#/document/G1688219) requires the A/C belt to be removed first, which is why that little stretch-belt detour came before this step."
+        },
+        {
+          "title": "Remove the idler pulley",
+          "body": "With the main belt removed, undo the fixed idler's single central retaining bolt and remove the pulley. Keep track of its installed orientation as it comes off. Do not loosen the tensioner mounting to perform this replacement."
+        },
+        {
+          "title": "Install the replacement idler and tighten its central bolt",
+          "body": "Place the replacement idler in the same mounting position and orientation, install its central retaining bolt and tighten it to 93 lb.in (10.5 Nm).\n\nThat value belongs specifically to the idler's central attachment in the [idler-pulley procedure](#/document/G2086104). Leave the main accessory belt off the tensioner and away from the crankshaft pulley while fitting the A/C belt next."
+        },
+        {
+          "title": "Position the A/C belt and secure the installation cable tie",
+          "body": "Place the A/C belt onto the compressor pulley, then position it over the top of the crankshaft pulley. Pass a cable tie at least 3 mm (0.12 in) wide through a crankshaft-pulley spoke opening, bring it up and over the belt, and tighten it to hold the belt to the pulley.\n\nThe tie passes through the spoke opening and around the belt; it is a temporary installation aid. Keep the main accessory belt clear so it cannot be caught during this operation."
+        },
+        {
+          "title": "Hand-fit the A/C belt, remove the tie and verify seating",
+          "body": "Rotate the crankshaft clockwise by hand 180° to draw the A/C belt onto its pulleys. Remove the cable tie completely.\n\nThen rotate the crankshaft by hand a further 360° and check the A/C belt at both the crankshaft and compressor pulleys. Look across the belt width: its ribs must sit in the pulley grooves, with no edge riding on a pulley rim or hanging beyond it. If it is not correctly seated, stop assembly and correct the installation before proceeding. These are the fitting and seating checks in the [A/C belt procedure](#/document/G1688221)."
+        },
+        {
+          "title": "Refit the main accessory belt and check every pulley",
+          "body": "Route the main belt along its recorded path around the crankshaft pulley, fixed idler, large central pulley, upper tensioner and lower-right accessory pulley. Match the original belt-to-pulley contacts rather than taking a shortcut across the drive.\n\nRotate the tensioner counterclockwise, place the belt onto its final pulley and slowly release the tensioner to apply belt tension. Check every pulley contact visually. At grooved pulleys, each belt rib must sit in its matching groove; at smooth pulley surfaces, the belt must remain fully supported without an edge hanging off.\n\nRecheck the separate A/C belt as well. Both belt procedures require correct seating after installation."
+        },
+        {
+          "title": "Inspect and refit the air cleaner outlet pipe",
+          "body": "Inspect the removed pipe and exposed turbocharger or engine-intake connections for debris, and clean them if necessary before closing the system. Remove all temporary opening protection without dropping anything into the intake.\n\nRefit the outlet pipe into its three clamped connections and tighten those three clamps to 48 lb.in (5.4 Nm). Reconnect the crankcase ventilation tube. Reconnect the U-shaped CAC bypass-valve inlet tube and secure its previously loosened clamp by reversing its removal. The 48 lb.in value applies to the three outlet-pipe clamps; do not transfer it to the separate bypass-tube clamp."
+        },
+        {
+          "title": "Install the appearance cover",
+          "body": "Refit the engine appearance cover, install its bolts and nuts, and tighten them to 80 lb.in (9 Nm). Confirm the cover is seated and the intake tubes have all been reconnected."
+        },
+        {
+          "title": "Complete the static checks and restore electrical power",
+          "body": "Account for the stretchy-belt tool, cable tie, hand tools and any intake-opening protection. Confirm the cable tie has been removed, both belts are fully seated, the idler bolt is tightened and all intake connections and cover fasteners are secure.\n\nOnly after full reassembly, with ignition OFF, key outside and everyone clear of electrically operated parts, seat the negative battery clamp on its post and tighten its nut to 44 lb.in (5 Nm). Refit the battery cover and all three retainers. If the battery vent tube was disturbed, reconnect it correctly.\n\nKeep ignition OFF and the key outside. With hand rotation finished, select a parked gear on a manual transmission; an automatic remains in Park. Leave the parking brake applied and wheel chocks in place. Temporary driving changes can occur while the PCM relearns adaptive values after battery reconnection; this is not an instruction to run an incomplete belt drive. The completion checks here are static fitting checks; an engine-running test is not part of this procedure."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing the idler with the tensioner",
-          "body": "The idler’s central fastening value is different from the mounting requirements of the tensioner assembly. Use the component picture to keep their jobs separate."
+          "title": "Unexpected engine or fan operation",
+          "body": "Disable remote start before service, establish ignition OFF, remove the key and complete fan isolation before working near the belt drive. Cooling fans can operate with the ignition OFF."
         },
         {
-          "title": "A belt sitting outside its grooves",
-          "body": "Inspect the belt path after installation. The required seating checks include both the A/C belt and the main accessory belt."
+          "title": "Confusing the fixed idler with the tensioner",
+          "body": "The fixed idler is removed using its central retaining bolt. The upper tensioner is rotated counterclockwise to release the main belt. The idler's 93 lb.in (10.5 Nm) tightening value does not specify tensioner mounting torque."
+        },
+        {
+          "title": "Wrong torque units",
+          "body": "Use inch-pounds, not foot-pounds: idler bolt 93 lb.in (10.5 Nm), three outlet-pipe clamps 48 lb.in (5.4 Nm), and appearance-cover bolts and nuts 80 lb.in (9 Nm)."
+        },
+        {
+          "title": "Debris entering the intake",
+          "body": "Protect exposed intake openings while the outlet pipe is removed. Inspect and clean the intake components before refitting them; small particles can damage the turbocharger compressor vanes."
+        },
+        {
+          "title": "A rib or belt edge perched on a pulley rim",
+          "body": "Look across the full width of each belt at every pulley. Correct any rib outside its groove or edge extending beyond the pulley before completing assembly."
         }
       ],
-      "notes": [],
-      "diagnostics": [],
-      "verification": [
+      "notes": [
+        "The A/C belt comes off before the main accessory belt. During assembly, leave the main belt clear while fitting and hand-checking the A/C belt, then install the main belt.",
+        "The cable tie is an installation aid and must be removed before the additional 360° crankshaft hand rotation.",
+        "The specified hand rotations verify A/C belt installation and seating. They do not establish an idler-bearing condition or diagnose a belt-drive noise."
+      ],
+      "diagnostics": [
         {
-          "title": "Confirm the idler attachment",
-          "body": "Confirm the idler’s central bolt has been tightened to its specified value and the pulley is installed in its illustrated position."
+          "finding": "A cooling fan has cracks, damage or separation.",
+          "meaning": "The fan presents an underhood safety hazard.",
+          "next": "Stop underhood work and arrange replacement of the damaged fan before continuing."
         },
         {
-          "title": "Complete both belt procedures",
-          "body": "Confirm the installation aid has been removed, the prescribed hand-rotation checks are complete and both belts are correctly seated."
+          "finding": "The A/C belt is not fully seated after the 180° fitting rotation and subsequent 360° verification rotation.",
+          "meaning": "The stretch-belt installation is not complete.",
+          "next": "Keep the engine OFF and correct the belt installation before fitting the main accessory belt."
+        },
+        {
+          "finding": "A main-belt rib is outside its pulley groove, or a belt edge overhangs a pulley.",
+          "meaning": "The main belt is incorrectly seated.",
+          "next": "Release the main tensioner counterclockwise, correct the belt position and ease the tensioner back under control. Recheck every pulley contact."
+        },
+        {
+          "finding": "Dirt or debris is present at an open intake connection or inside a removed intake component.",
+          "meaning": "Closing the connection could allow debris to reach the turbocharger.",
+          "next": "Keep the opening protected and clean the affected components before refitting the outlet pipe."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Idler fastening completed",
+          "body": "The replacement idler occupies the original fixed-pulley position, and its central retaining bolt has been tightened to 93 lb.in (10.5 Nm)."
+        },
+        {
+          "title": "A/C installation aid removed and hand checks completed",
+          "body": "The A/C belt was fitted with 180° crankshaft hand rotation, the cable tie was removed, and a further 360° hand rotation confirmed seating on the crankshaft and compressor pulleys."
+        },
+        {
+          "title": "Both belts correctly supported",
+          "body": "Both belts sit fully on their intended pulley surfaces, with ribs in the grooves and no edges riding beyond a pulley."
+        },
+        {
+          "title": "Intake and appearance cover restored",
+          "body": "The outlet pipe's three clamps are tightened to 48 lb.in (5.4 Nm), the crankcase ventilation and bypass-valve inlet tubes are reconnected, and the cover bolts and nuts are tightened to 80 lb.in (9 Nm)."
+        },
+        {
+          "title": "Vehicle left safely shut down",
+          "body": "All tools, temporary protection and the cable tie are accounted for. After full reassembly and clearance checks, the negative battery clamp is restored at 44 lb.in (5 Nm), battery cover retained and any disturbed vent tube restored. Ignition is OFF, key outside, automatic in Park or manual in a parked gear, with parking brake and wheel chocks retained."
         }
       ],
       "procedures": [
         {
           "documentId": "G2086104",
-          "purpose": "Idler-pulley attachment illustration, removal/reverse installation and central-bolt tightening.",
+          "purpose": "Fixed idler identification, central-bolt removal, reverse installation and 93 lb.in (10.5 Nm) tightening.",
           "mediaId": "G2086104-m0001"
         },
         {
           "documentId": "G1688219",
-          "purpose": "2.3L accessory-belt removal and installation, including the A/C belt prerequisite, tensioner direction and final seating check."
+          "purpose": "Main accessory-belt removal after the A/C belt, counterclockwise tensioner release, reverse installation and final seating checks."
         },
         {
           "documentId": "G1688221",
-          "purpose": "Separate 2.3L A/C belt access, stretchy-belt removal, installation aid and hand-rotation seating checks.",
+          "purpose": "Appearance-cover access, A/C stretch-belt removal, cable-tie installation, crankshaft hand rotations, belt seating and cover tightening.",
           "mediaId": "G1688221-m0002"
+        },
+        {
+          "documentId": "G1675706",
+          "purpose": "Bypass and crankcase-ventilation tube disconnection, three-clamp outlet-pipe removal, intake cleanliness and reverse installation."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup prevention, remote-start disabling, cooling-fan precautions and personal protection."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Negative-only power interruption and complete clamp/cover restoration at 44 lb.in (5 Nm)."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Relevant battery handling, ignition-source, acid and conditional Li-ion precautions."
         }
       ],
       "hero": {
@@ -166503,7 +167012,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the 2.3L EcoBoost, separate A/C compressor stretch belt and tensioned main accessory belt; keyless starting and remote start where fitted."
       },
       "relatedGuideIds": [
         "accessory-belts",
@@ -166521,6 +167031,22 @@
         {
           "documentId": "G1688221",
           "sourceHash": "83203fa364e1b0ca33e4dc337075c9f8d72a39e81083a086d906d8a227340236"
+        },
+        {
+          "documentId": "G1675706",
+          "sourceHash": "1b98edd6d5abed66910276cdc71a5b60e53cf088e8c6207c41e84982e94a75db"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
@@ -166539,8 +167065,48 @@
               "end": 387
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "2ec5046ce507b1ae88d6246b104943ee2377236d9795e53ec3e03372183187d6",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-isolate",
+          "title": "Secure the car and prevent unexpected operation",
+          "summary": "Disable remote start, establish OFF and complete fan isolation before underhood work.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "open-belt-access",
+          "title": "Clear access to the belt drive",
+          "summary": "Remove the appearance cover and outlet pipe, then identify the belt routes and fixed idler.",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "id": "unload-and-replace",
+          "title": "Remove the belts and replace the idler",
+          "summary": "Remove the A/C belt first, release the main belt and tighten the replacement idler correctly.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "restore-belt-drive",
+          "title": "Fit and check both belts",
+          "summary": "Install and hand-check the A/C belt before restoring the main accessory belt.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "close-and-check",
+          "title": "Reassemble and finish safely",
+          "summary": "Restore the intake and cover, account for installation aids and complete static checks.",
+          "start": 14,
+          "end": 16
         }
-      }
+      ]
     },
     {
       "title": "Replace the output shaft seal on the 5.2L 3160 manual transmission",
@@ -166880,75 +167446,156 @@
     },
     {
       "title": "Adjust the parking brake cable",
-      "summary": "Set parking brake cable tension by measuring rear caliper lever clearance, cycling the mechanism and making the final adjustment.",
-      "introduction": "The parking brake cable transfers movement from the parking brake control to mechanical levers on the rear calipers. The adjustment nut changes cable tension, which changes where those levers sit relative to their stops. This job establishes that setting through measured clearances; it does not, by itself, diagnose the cause of poor parking brake operation.",
-      "why": "The procedure uses an initial setting followed by repeated application and release before the final adjustment. Moving the mechanism through its working travel makes that sequence important. Lever clearance is the adjustment reference, so tightening the nut by feel cannot establish the specified result.",
-      "taskType": "repair",
+      "summary": "Set the rear caliper parking-brake lever clearances in two stages, with five full handbrake applications and releases between adjustments.",
+      "introduction": "The handbrake may look like a respectable place to exercise your elbow, but its cable adjustment answers to a feeler gauge. I’ll walk you through finding the underbody adjuster, measuring the rear caliper levers and completing the two-stage setting without turning cable tension into a guessing contest. This applies to 2015 Mustangs with the 2.3L, 3.7L or 5.0L engine and parking-brake operating levers on the rear calipers. The separate SVT parking-brake shoe arrangement uses a different procedure.",
+      "why": "The cable carries the handbrake lever’s pull to mechanical operating levers on the rear brake calipers. The adjustment nut changes cable tension and therefore the small gaps between those levers and their fixed stops. I first establish a 2.0 mm gap, work the mechanism through five complete applications and releases, then establish the final 1.0 mm gap. That sequence matters: a tight-feeling cable alone does not establish the correct setting.",
+      "taskType": "maintenance",
       "difficulty": "intermediate",
       "searchTerms": [
-        "parking brake cable adjustment",
-        "parking brake caliper lever clearance",
-        "parking brake adjustment nut"
+        "2015 Mustang parking brake cable adjustment",
+        "Mustang handbrake adjustment nut",
+        "rear caliper parking brake lever clearance",
+        "2.0 mm 1.0 mm parking brake adjustment"
       ],
       "when": {
-        "summary": "When the parking brake cable setting requires adjustment.",
+        "summary": "When the parking-brake cable setting needs adjustment on the applicable rear-caliper arrangement.",
         "notes": [
-          "Use the measured lever clearances to establish the setting rather than judging cable tension alone."
+          "This is a measured adjustment procedure, not a diagnosis of why a parking brake operates poorly.",
+          "The specified target is one or both caliper levers at each stated clearance. Equal gaps on both sides are not required."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange safe underside access",
-          "detail": "Use a hoist and the specified lifting points, identified by stamped triangles. Position adapters clear of suspension, exhaust and steering components. Never work underneath a vehicle supported only by a jack."
+          "title": "Arrange a suitable hoist and access to the handbrake",
+          "detail": "Use a hoist rated for the vehicle’s actual weight, including cargo and modifications, on a hard, level working surface. Plan a securely supported working height that provides safe underside access while allowing the cabin handbrake to be reached by someone standing on the floor beside the open door. Nobody should climb into the raised vehicle. If both requirements cannot be met, arrange suitable workshop access before beginning."
         },
         {
-          "title": "Prepare to measure the levers",
-          "detail": "Have a feeler gauge and suitable access to the adjustment nut and both caliper lever stops. The illustrated adjustment nut and lever gap identify the two places involved in the setting."
+          "title": "Gather the measuring and adjustment tools",
+          "detail": "Have a feeler gauge capable of measuring 2.0 mm and 1.0 mm, a suitable tool for the adjustment nut, lighting and wheel chocks. The feeler gauge is a measured blade or stack of blades that checks the gap between the caliper operating lever and its fixed stop."
+        },
+        {
+          "title": "Use appropriate protection",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp-edged components. Keep the area beneath and around the hoist clear. Review the relevant [service safety precautions](#/document/G1693189) before lifting."
+        },
+        {
+          "title": "Understand the keyless controls before positioning",
+          "detail": "The 2015 Mustang owner manual, First Printing, printed pages 121–122, distinguishes ignition OFF, engine-off ignition ON and engine start. With a valid key inside, pressing and releasing the button from OFF without pressing either pedal switches the ignition ON. Pedal-plus-button operation is the engine-start command: brake pedal with an automatic in P, or clutch pedal with a manual in Neutral. This adjustment is performed with the engine off. Complete remote-start settings and any powered positioning before the final OFF/key-out stage."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle",
-          "body": "With the transmission in NEUTRAL, position the vehicle on a hoist using the linked lifting procedure. Establish secure access before working at the cable adjustment mechanism."
+          "title": "Restrain the car, disable remote start and select Neutral",
+          "body": "Position the car at the hoist on a hard, level surface. Apply the parking brake and chock all wheels that remain on the ground before releasing the service brake or selecting Neutral.\n\nIf fitted, disable remote start through the Central Display: Vehicle settings > Remote Start Setup. Do this before working around or underneath the car. If ignition power is needed, keep the valid key inside and, from known OFF, press and release the start/stop button without pressing the brake or clutch pedal.\n\nFor an automatic, keep the valid key inside. Before shifting out of P, establish engine-off ignition ON: if it is OFF, release both pedals and press and release the start/stop button once; if it is already ON from the settings, leave it ON rather than toggling it. With the service brake depressed and the parking brake and chocks still restraining the car, select Neutral. For a manual, select Neutral while retaining the parking brake and chocks.\n\nOnce positioning and settings are complete, leave the engine off. With the car restrained, release the pedals and, if the ignition is ON, press and release the button once to turn it OFF. If it is already OFF, leave it OFF. Remove the key from the vehicle and prevent anyone from operating the controls."
         },
         {
-          "title": "Establish the initial clearance",
-          "body": "Tighten the parking brake cable adjustment nut until one or both caliper levers are 2.0 mm away from their stops. Use the feeler gauge to measure the gap."
+          "title": "Position the hoist at the four marked lifting points",
+          "body": "Locate the stamped triangles identifying the lifting points along both sides of the underbody: one toward the front and one toward the rear on each side. Position the hoist adapters at these marked locations, using the [jacking and lifting overview](#/document/G1663631).\n\nKeep the arms and adapters clear of suspension parts, exhaust, steering linkage, mounting brackets, stabilizer brackets, the axle and the rear cover. Do not lift against either bumper.\n\nRaise the car with the parking brake still applied until all four wheels are fully clear of the ground. Confirm that the vehicle is securely supported on the correctly positioned hoist and engage the hoist’s safety supports before working underneath. Use the planned height that also permits handbrake operation from the floor."
         },
         {
-          "title": "Cycle the parking brake",
-          "body": "Fully apply and release the parking brake 5 times. Complete each application and release before beginning the next, retaining this stage between the initial and final settings."
+          "title": "Release the parking brake only after secure support is established",
+          "body": "With all four wheels fully clear of the ground and the vehicle securely supported on the correctly positioned hoist, have the person standing beside the open door fully release the handbrake. Keep the transmission in Neutral, the ignition OFF and the key outside the vehicle.\n\nDo not enter the raised cabin. Keep everyone clear of the cable mechanism and caliper levers while the handbrake moves."
         },
         {
-          "title": "Make the final adjustment",
-          "body": "After the cycling stage, tighten the adjustment nut until one or both caliper levers are 1.0 mm away from their stops. Measure again with the feeler gauge; the initial clearance is not the finished setting."
+          "title": "Find the adjustment nut and both caliper lever gaps",
+          "body": "From underneath, follow the parking-brake cables toward their shared adjustment bracket. Identify the adjustment nut on the threaded rod passing through that bracket, beside the paired cable connections. This is the nut used in the [parking-brake cable adjustment procedure](#/document/G1693766).\n\nAt each rear caliper, find the external cable-operated lever beside its return spring. Locate the fixed stop that the lever moves away from when cable tension increases. The measurement belongs between that moving lever and its stop—not across the spring or between unrelated edges of the caliper.\n\nKeep the wheels, calipers and cable connections assembled. Establish a clear view and a usable feeler-gauge approach to both lever-to-stop gaps before turning the nut."
+        },
+        {
+          "title": "Set the initial clearance to 2.0 mm",
+          "body": "With the handbrake fully released, tighten the cable adjustment nut gradually. Check both rear caliper lever-to-stop gaps with the 2.0 mm feeler gauge as you adjust.\n\nStop when one or both levers are 2.0 mm away from their stops. Place the gauge between the actual opposing lever and stop surfaces; do not use it to pry the lever away from the stop.\n\nOne side reaching the specified clearance satisfies this stage. I don’t keep tightening just to make the other side match—the gauge has already delivered its verdict."
+        },
+        {
+          "title": "Fully apply and release the handbrake five times",
+          "body": "Stop all work underneath and keep hands and tools clear of the moving cables and caliper levers. With all four wheels still clear and the car securely supported on the hoist, have the person standing on the floor beside the open door fully apply and then fully release the cabin handbrake.\n\nComplete five full application-and-release cycles, counting one application followed by one release as a single cycle. Leave the handbrake fully released after the fifth cycle. Keep the engine and ignition off throughout."
+        },
+        {
+          "title": "Make the final adjustment to 1.0 mm",
+          "body": "After the five complete cycles, return to the underbody adjuster. With the handbrake fully released, tighten the same adjustment nut until one or both rear caliper operating levers are 1.0 mm away from their stops.\n\nUse the 1.0 mm feeler gauge at the lever-to-stop contact surfaces and check both sides. Stop when one or both sides meet the target. The finished reference is 1.0 mm; the earlier 2.0 mm setting was the first stage.\n\nBefore leaving the underside, confirm the final measurement and remove the gauge and adjustment tools."
+        },
+        {
+          "title": "Restore the parking brake before lowering",
+          "body": "Clear everyone from underneath. While all four wheels are still fully clear of the ground and the vehicle remains securely supported, have the floor-standing operator apply the parking brake. Do this before lowering begins.\n\nLower the hoist with everyone clear of its moving parts. As the tires reach the ground, restore wheel chocks before releasing the hoist’s support or relying on the transmission. Keep the parking brake applied throughout this transition."
+        },
+        {
+          "title": "Finish with the car restrained and the ignition off",
+          "body": "Once the car is fully on its tires, with the parking brake applied and wheel chocks in place, restore the transmission from service Neutral to its parked position: P for an automatic, or a parking gear for a manual.\n\nIf the automatic requires ignition power, return the valid key to the cabin, switch from known OFF to engine-off ON without pressing a pedal, then depress the service brake and select P. With the parking brake and chocks holding the car, release the pedals and switch the ignition OFF again.\n\nFinish with the engine off, ignition OFF and key removed from the vehicle. Confirm that all tools are accounted for and the hoist arms are clear."
         }
       ],
       "watchFor": [
         {
-          "title": "Unnecessary tightening to match both sides",
-          "body": "The specified condition is one or both levers at the stated clearance. Do not continue tightening solely to make the opposite lever match."
+          "title": "Releasing the brake while the car can still roll",
+          "body": "Neutral removes transmission restraint. Keep the parking brake applied and ground wheels chocked during positioning. Release the parking brake only after all four wheels are fully clear and the car is securely supported on the correctly positioned hoist."
+        },
+        {
+          "title": "Measuring the wrong gap",
+          "body": "Measure between each rear caliper’s moving parking-brake operating lever and its fixed stop. The spring identifies the mechanism, but spring spacing is not the adjustment measurement."
+        },
+        {
+          "title": "Chasing matching gaps",
+          "body": "The instruction is one or both levers at 2.0 mm initially and one or both at 1.0 mm finally. Do not add tension solely to make both sides identical."
+        },
+        {
+          "title": "Working beside a moving mechanism",
+          "body": "Keep hands, gauges and adjustment tools clear whenever the cabin handbrake is being operated. Resume measuring only after it is fully released and the operator has stopped."
+        },
+        {
+          "title": "Using the emergency jack for underside work",
+          "body": "The vehicle’s emergency jack is intended for a deflated-tire change. Never get underneath a vehicle supported only by a jack; this procedure uses a suitable hoist."
         }
       ],
       "notes": [
-        "The vehicle's emergency jack is intended for changing a deflated tire, not for providing access for this adjustment."
+        "The wheel-and-tire procedure is not needed for this assembled underbody adjustment; wheel removal, tire equipment and wheel-fastener work are outside this job.",
+        "Cable adjustment is controlled by measured lever clearance. Do not substitute an assumed tightening torque or handbrake click count.",
+        "The five full cycles belong between the initial 2.0 mm setting and the final 1.0 mm setting."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "One lever reaches the specified gap before the other.",
+          "meaning": "The stated adjustment condition allows one or both levers to reach the target.",
+          "next": "Stop tightening for that stage. After the initial 2.0 mm setting, perform the five cycles; after the final 1.0 mm setting, proceed to restraint restoration and lowering."
+        },
+        {
+          "finding": "Five complete applications and releases have not yet been performed.",
+          "meaning": "The intermediate cycling stage is incomplete.",
+          "next": "Complete the required five full cycles and leave the handbrake released before making the final adjustment."
+        },
+        {
+          "finding": "Neither lever can be brought to the specified clearance, or the mechanism cannot complete its apply-and-release movement.",
+          "meaning": "The adjustment cannot be completed normally; this observation alone does not identify a failed cable or caliper.",
+          "next": "Stop rather than forcing the nut or assuming a replacement part. Arrange parking-brake diagnosis while maintaining safe vehicle support and restraints."
+        },
+        {
+          "finding": "The final gap has not been measured with the handbrake fully released.",
+          "meaning": "The finished cable setting has not been established.",
+          "next": "With the vehicle securely supported and all four wheels clear, fully release the handbrake, clear the mechanism and measure both lever-to-stop gaps before accepting the adjustment."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm and record the final setting",
-          "body": "Confirm that one or both lever gaps measure 1.0 mm after the prescribed cycling and adjustment sequence. Record the measured result and completion of the 5 full applications and releases."
+          "title": "Confirm the adjustment sequence",
+          "body": "Confirm that the initial setting reached 2.0 mm at one or both caliper levers, five full handbrake application-and-release cycles were completed, and the final released setting measured 1.0 mm at one or both levers."
+        },
+        {
+          "title": "Confirm safe completion",
+          "body": "Confirm that the parking brake was reapplied before lowering, wheel chocks were restored as the tires reached the ground, and the transmission was returned from service Neutral to its parked position."
+        },
+        {
+          "title": "Confirm the final vehicle state",
+          "body": "Leave the car fully supported by its tires, with the engine off, ignition OFF and key removed. Account for all tools and clear the hoist arms. These are completion checks, not a separate brake holding-force test."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693766",
-          "purpose": "Complete parking brake cable adjustment sequence, including initial clearance, cycling and final clearance.",
+          "purpose": "Primary cable-adjustment sequence: initial 2.0 mm lever clearance, five full applications and releases, and final 1.0 mm clearance.",
           "mediaId": "G1693766-m0003"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Correct lifting points, hoist positioning and vehicle-support precautions."
+          "purpose": "Stamped-triangle lifting-point identification and correct hoist positioning."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start disabling, ignition and key precautions, protective equipment, hoist capacity and vehicle restraints."
         }
       ],
       "hero": {
@@ -166983,6 +167630,14 @@
         {
           "documentId": "G1663631",
           "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -167001,8 +167656,41 @@
               "end": 562
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "10ec10f9d7dccdd828a714ea0aa268056f21617a64316528ba46eaec0ca8c76f",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Restrain and lift the car",
+          "summary": "Disable remote start, establish Neutral and OFF, then secure all four wheels clear before releasing the handbrake.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "locate-and-set",
+          "title": "Locate the mechanism and set the initial gap",
+          "summary": "Identify the underbody adjustment nut and both caliper stops, then establish 2.0 mm.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "cycle-and-finish",
+          "title": "Cycle the handbrake and set the final gap",
+          "summary": "Complete five full cycles, then measure the final 1.0 mm clearance.",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "restore-and-lower",
+          "title": "Restore restraints and return to the ground",
+          "summary": "Apply the parking brake before lowering, replace chocks at ground contact and finish parked with the ignition off.",
+          "start": 8,
+          "end": 9
         }
-      }
+      ]
     },
     {
       "title": "Remove and install the side curtain airbag",
@@ -167194,10 +167882,10 @@
     {
       "id": "torque-wrench-adapter-setup",
       "title": "Set the correct torque when using an adapter",
-      "summary": "Match the tool arrangement, measure the right lengths and use the appropriate calculator before tightening a fastener with an offset adapter.",
+      "summary": "Identify the adapter arrangement, measure its geometry and select the correct wrench setting without confusing an offset adapter with a socket extension.",
       "categoryId": "advanced",
       "systemId": "general",
-      "taskType": "repair",
+      "taskType": "maintenance",
       "difficulty": "intermediate",
       "ruleIds": [],
       "evidence": [],
@@ -167222,164 +167910,209 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine; no additional fitted-equipment requirement for this tool setup."
       },
       "hero": {
         "documentId": "reference-6534a6eae93c",
         "mediaId": "reference-6534a6eae93c-m0001"
       },
-      "introduction": "A torque wrench measures the turning effort applied through its drive. An adapter can move the fastener away from that drive, changing the leverage between your hand and the bolt or nut. That means the number you set on the wrench can differ from the torque the fastener needs. A socket extension and an in-line crowfoot may both help you reach a cramped spot, but their geometry is different.",
-      "why": "Getting this setup right preserves the intended tightening load while allowing access around nearby parts. The useful question is where the adapter puts the fastener relative to the wrench handle. An adapter extending that reach calls for a different calculation from one pointing back toward the handle; certain right-angle arrangements use the original fastener specification within their stated limits.",
+      "introduction": "An adapter can help a torque wrench reach a stubborn fastener—and quietly give it extra leverage while it’s there. Helpful little troublemaker. I’ll walk you through matching the tool arrangement, measuring the right distances and choosing the setting that delivers the fastener’s specified torque.",
+      "why": "A torque wrench controls turning effort through its drive. An adapter that moves the fastener along the handle’s direction changes the leverage between your hand and the fastener. A socket extension running along the fastener’s axis has a different effect. The adapter’s shape, direction and angle determine which setup instructions apply.",
       "searchTerms": [
-        "torque wrench adapter",
-        "crowfoot correction",
-        "crows foot torque",
-        "extension torque setting",
+        "torque wrench adapter setting",
+        "crowfoot torque correction",
+        "straight torque adapter",
+        "reversed torque adapter",
         "half moon wrench",
-        "wobble socket extension",
-        "tightening leverage",
-        "torque calculator"
+        "wobble extension angle",
+        "90 degree torque adapter"
       ],
       "when": {
-        "summary": "Before tightening a specified fastener with one of the illustrated adapter or extension arrangements.",
+        "summary": "Before tightening a fastener with one of the ten illustrated adapter or extension arrangements.",
         "notes": [
-          "This is a tool-setup guide. Take the actual fastener torque, tightening sequence, replacement-fastener requirements and any additional angle stages from the exact repair article."
+          "Choose the arrangement by the positions of the wrench drive, handle and fastener—not simply by the tool’s name.",
+          "This guide covers wrench setup. The component repair instructions still govern access, fastener replacement, thread preparation, tightening sequence and any additional angle stages."
         ]
       },
       "prepare": [
         {
-          "title": "The fastener specification",
-          "detail": "Open the repair article for the component and vehicle configuration you are working on. Keep its torque unit visible; lb-ft, lb-in and Nm are different scales."
+          "title": "Have the actual fastener instructions ready",
+          "detail": "Find the torque specification for the exact component and vehicle configuration. Keep its unit beside the number: lb-in means inch-pounds, lb-ft means foot-pounds, and Nm means newton meters. Do not substitute one scale for another."
         },
         {
-          "title": "A matching tool arrangement",
-          "detail": "Compare the direction of the adapter and the position of the socket extension with the linked illustration. Left- and right-hand half-moon setups have separate calculators."
+          "title": "Gather the tools for measuring and setting",
+          "detail": "Have the torque wrench, intended adapter or extension, a length-measuring tool and the matching linked calculator ready. Half-moon arrangements also require the adapter brand selection and arch measurement. Measure the actual tools rather than their packaging dimensions."
         },
         {
-          "title": "Actual tool dimensions",
-          "detail": "Measure wrench length A from the center of the handle to the center of its drive. Measure adapter length B between its drive and fastener centers. Enter the correct length units in the calculator rather than using the tool’s overall end-to-end length."
+          "title": "Separate bench setup from vehicle access",
+          "detail": "Measure and calculate before approaching the fastener. This setup requires no wheel removal or lifting. Establish any component-specific access and support arrangements before applying the wrench."
+        },
+        {
+          "title": "Prevent an unexpected start before vehicle work",
+          "detail": "Before working underneath or around the vehicle, disable remote start, if fitted, through Vehicle settings > Remote Start Setup. Switch the ignition off and remove the key to prevent another person starting the engine. Before underhood work, with the ignition off, inspect all cooling fans for damage, cracks or separation. If any fan is damaged, do not proceed with underhood work; replace the damaged fan with a new fan before continuing. Cooling fans can run with the ignition off. If the component work requires reaching into their operating area, stop until the applicable isolation procedure has been completed; this tool-setup guide does not teach fan isolation. Wear eye and ear protection during vehicle service."
         }
       ],
       "steps": [
         {
-          "title": "Choose the calculator that matches the geometry",
-          "body": "For an adapter pointing away from the handle, choose the [straight adapter](#/document/reference-6534a6eae93c), [straight adapter with extension](#/document/reference-72305394e0aa) or [in-line crowfoot](#/document/reference-d7780e6a592b) calculator as appropriate. If the adapter points back toward the handle, use the [reversed adapter with extension](#/document/reference-6943fbf4e2a0) calculator. Similar-looking tools do not guarantee the same leverage."
+          "title": "Write down the target torque and its unit",
+          "body": "Start with the fastener’s required torque, not a setting remembered from a different job. Keep any tightening sequence and later angle stages with it. The adapter correction changes the wrench setting for the torque stage; it does not replace the rest of the fastening instructions."
         },
         {
-          "title": "Enter the fastener torque and measured lengths",
-          "body": "For the straight and crowfoot calculators, enter the specified fastener torque with its unit, then A and B with their length units. Read A from the handle center to the drive center; do not include B in A. The reversed arrangement requires the adapter to be shorter than the wrench because it subtracts from the effective reach."
+          "title": "Match the assembled tools to the correct arrangement",
+          "body": "Look from the wrench drive toward the fastener. A straight adapter or in-line crowfoot places the fastener beyond the drive, away from the handle. A reversed adapter places it back toward the handle. A right-angle adapter points sideways relative to the handle. A plain socket extension runs along the fastener’s axis.\n\nI check this before measuring: two assemblies can contain the same pieces and still need different settings."
         },
         {
-          "title": "Use the limited half-moon selections when applicable",
-          "body": "Choose the [left half-moon](#/document/reference-bc8de71f1828) or [right half-moon](#/document/reference-a6c44300b9d8) setup. These calculators cover the listed torque specifications, wrench lengths and adapter combinations. Match the actual tool to those selections and the displayed adapter dimensions. If your combination is absent, choosing the nearest option does not establish a valid setting."
+          "title": "Measure wrench length A and adapter length B",
+          "body": "Measure A from the center of the wrench handle to the center of its square drive. Do not use the wrench’s overall end-to-end length.\n\nMeasure B between the adapter’s drive center and the center of the fastener opening. For an open-ended crowfoot, use the center of the fastener position within the jaws, not the jaw tip. For the arrangements with a socket extension, B is the lateral adapter reach; it is not the extension’s length down toward the fastener.\n\nRecord the units with both measurements. The straight and reversed calculators accept inches or millimeters; select the unit that matches each entry."
         },
         {
-          "title": "Check whether your arrangement needs no correction",
-          "body": "The illustrated [crowfoot at 90 degrees](#/document/reference-b9ec8cea2317) and [socket extension](#/document/reference-c5d168787f95) arrangements use the original fastener torque. The [straight adapter at 90 degrees](#/document/reference-62fe207918f9) also uses that torque, provided the adapter is no longer than 50.8 mm (2.0 inches). For the [wobble extension](#/document/reference-d7d152a19bd1), keep the angle at or below 15 degrees. Do not extend those allowances to another geometry."
+          "title": "Calculate an outward-pointing straight adapter or crowfoot",
+          "body": "Choose the [straight torque adapter](#/document/reference-6534a6eae93c), [straight adapter with extension](#/document/reference-72305394e0aa) or [in-line crowfoot](#/document/reference-d7780e6a592b) calculator to match the assembled tools.\n\nEnter the fastener torque and select its torque unit. Enter A, the handle-center-to-drive-center length, and B, the adapter’s center-to-center length, with the appropriate length units. Select Calculate and retain the result in the unit used by your wrench."
         },
         {
-          "title": "Set the wrench using the matching result unit",
-          "body": "Calculate the required setting where a correction applies. Select the result in the unit marked on your wrench. The displayed unit values are rounded separately, so use the matching displayed value rather than converting a rounded result again."
+          "title": "Use the separate calculator for a reversed adapter",
+          "body": "When the adapter folds the fastener position back toward the handle, choose the [reversed straight adapter with extension](#/document/reference-6943fbf4e2a0). In its illustration, the wrench drive sits over one end of the adapter while the fastener end lies closer to the handle.\n\nEnter the specified fastener torque and unit, wrench length A and adapter length B with their length units, then select Calculate. Do not reuse the result for an outward-pointing adapter: reversing the adapter changes the effective reach."
         },
         {
-          "title": "Keep the setup consistent while tightening",
-          "body": "Use the same adapter direction, length and angle that you checked. Follow the component’s complete tightening sequence and any later angle stage. Recalculate or recheck the arrangement if you change tools or reposition the adapter."
+          "title": "Select the calibrated half-moon arrangement and check its dimensions",
+          "body": "Orient the setup with the torque-wrench handle pointing right and the fastener opening to the left. In the [left half-moon](#/document/reference-bc8de71f1828) arrangement, the arch bows below the straight line through the drive and fastener centers. In the [right half-moon](#/document/reference-a6c44300b9d8) arrangement, it bows above that line. Choose the matching calculator.\n\nThe source identifies five quantities: fastener torque, adapter brand, wrench length A, adapter length B and arch height C. On this site, select the fastener specification, torque-wrench length and supported half-moon adapter; the chosen calibrated adapter supplies the displayed B and C values. There are no custom B or C entry fields.\n\nThe listed fastener choices are 25 Nm (18 lb-ft), 31 Nm (23 lb-ft) and 62 Nm (46 lb-ft). Measure A from handle center to drive center and select the matching wrench length. Select the actual adapter brand and size, then compare its displayed dimensions with your tool: B is the straight center-to-center distance between the drive and fastener openings, in inches. C is the perpendicular distance from that same straight centerline to the outermost crown of the arch, also in inches; do not measure along the curved metal or from the curved body’s own centerline.\n\nSelect Calculate and read the result in the wrench’s unit. These torque choices are calculator inputs, not universal Mustang fastener specifications. If the actual torque, wrench length, adapter or dimensions do not match an available calibrated combination, use a supported tool arrangement instead of choosing the nearest option. Close enough is a lousy torque specification."
+        },
+        {
+          "title": "Recognize a plain socket extension",
+          "body": "For the illustrated [torque wrench with extension](#/document/reference-c5d168787f95), set the wrench to the fastener’s specified torque. The extension runs from the wrench drive down the socket axis, at a right angle to the handle; it does not move the fastener farther along the handle’s direction.\n\nAn extension combined with a lateral adapter belongs to the corresponding adapter branch above."
+        },
+        {
+          "title": "Check the two right-angle adapter arrangements",
+          "body": "For the [crowfoot at 90 degrees](#/document/reference-b9ec8cea2317), place the crowfoot at a right angle to the wrench handle and use the fastener’s specified torque.\n\nFor the [straight torque adapter at 90 degrees](#/document/reference-62fe207918f9), also use the fastener’s specified torque, but only with an adapter no longer than 50.8 mm (2.0 inches). Check its drive-center-to-fastener-center length before using this allowance.\n\nMaintain the right-angle arrangement during tightening. Do not carry this guidance over to an adapter at an intermediate angle."
+        },
+        {
+          "title": "Keep a wobble extension within its angle limit",
+          "body": "For the [15-degree wobble extension](#/document/reference-d7d152a19bd1), use the fastener’s specified torque and do not exceed 15 degrees of misalignment. The illustration shows the extension leaning away from the fastener’s axis; that lean is the angle to check.\n\nIf access requires more than 15 degrees, change the tool arrangement before tightening."
+        },
+        {
+          "title": "Set the wrench in the matching torque unit",
+          "body": "For a calculator branch, use its calculated setting in the unit marked on the wrench. For a qualifying no-correction arrangement, use the fastener’s specified torque in the matching unit.\n\nRecheck the target, arrangement and measurements before setting the wrench. Pay particular attention to specifications in inch-pounds: those are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Keep the geometry fixed through the tightening stage",
+          "body": "Apply the wrench with the adapter direction, length and angle you checked. If clearance forces you to reposition the adapter or change tools, stop and select or calculate the setting for that new arrangement.\n\nComplete the component’s tightening sequence and any later angle stage. The satisfying click is only useful when the setup behind it is right."
         }
       ],
       "diagnostics": [
         {
-          "finding": "The adapter points away from the wrench handle.",
-          "meaning": "The fastener is farther from your hand than the wrench drive is, changing the effective leverage.",
-          "next": "Use the corresponding in-line calculator with the measured wrench and adapter lengths."
+          "finding": "The adapter moves the fastener away from the handle beyond the wrench drive.",
+          "meaning": "The assembly has an outward offset along the wrench’s length.",
+          "next": "Use the matching straight-adapter, straight-adapter-with-extension or in-line-crowfoot calculator with measured A and B."
         },
         {
-          "finding": "The adapter points back toward the wrench handle.",
-          "meaning": "The effective reach is shorter than the wrench length.",
-          "next": "Use the reversed-arrangement calculator and confirm that adapter length is less than wrench length."
+          "finding": "The adapter places the fastener back toward the handle.",
+          "meaning": "The adapter has reversed the direction of the offset.",
+          "next": "Use the reversed-adapter-with-extension calculator rather than the outward-adapter calculator."
         },
         {
-          "finding": "A right-angle or wobble setup looks close to a listed arrangement.",
-          "meaning": "Its no-correction guidance applies only when the actual geometry and any stated angle or length limits match.",
-          "next": "Check the exact linked diagram, including the straight-adapter length limit or wobble-angle limit where applicable."
+          "finding": "The half-moon torque, wrench length, adapter or displayed dimensions do not match the actual tools.",
+          "meaning": "That calculator does not establish a setting for the actual combination.",
+          "next": "Choose a supported arrangement that reaches the fastener; do not substitute a nearby selection or assume custom B/C inputs are available."
         },
         {
-          "finding": "Your half-moon adapter or wrench length is not selectable.",
-          "meaning": "The available calculator does not establish a setting for that combination.",
-          "next": "Use a supported setup that suits the job instead of substituting a nearby selection."
+          "finding": "A straight adapter at 90 degrees exceeds 50.8 mm (2.0 inches), or a wobble extension exceeds 15 degrees.",
+          "meaning": "The assembly falls outside that arrangement’s stated allowance for using the original fastener torque.",
+          "next": "Change the tools or their position to a supported arrangement before tightening."
+        },
+        {
+          "finding": "The tools must be repositioned after the setting was chosen.",
+          "meaning": "The geometry used to establish the setting may have changed.",
+          "next": "Recheck the arrangement and recalculate where required before continuing."
         }
       ],
       "verification": [
         {
-          "title": "Recheck the entries against the tools",
-          "body": "Confirm the target fastener torque, torque unit, handle-to-drive measurement, adapter measurement and chosen arrangement before using the displayed setting."
+          "title": "Check the setup before applying torque",
+          "body": "Confirm the fastener target and unit, selected arrangement, measured endpoints and calculator entries. For half-moon tools, include the brand and C measurement. For no-correction arrangements, confirm the applicable angle and length limits."
         },
         {
-          "title": "Complete the component’s tightening instructions",
-          "body": "The corrected wrench setting addresses adapter leverage. Finish the specified tightening stages and component checks in the linked repair article for the job you are performing."
+          "title": "Confirm the component’s fastening work is complete",
+          "body": "Check that the chosen geometry was maintained and that every required tightening stage and sequence was completed. This is a setup and completion check, not a separate test of achieved fastener torque."
         }
       ],
       "watchFor": [
         {
-          "title": "Length measured from the wrong endpoints",
-          "body": "A is the distance from handle center to drive center. B is the distance between adapter centers. Including the adapter in A as well as B changes the calculation."
+          "title": "Measuring to the end of the handle or adapter",
+          "body": "Use handle center to drive center for A, and drive center to fastener center for B. Overall tool length and the crowfoot jaw tips are different measurement endpoints."
         },
         {
-          "title": "Right-angle limits lost during repositioning",
-          "body": "A setup that begins at the illustrated angle may change when space gets tight. Repositioning the adapter changes the arrangement you checked."
+          "title": "Treating every extension as the same geometry",
+          "body": "A socket extension along the fastener axis differs from an adapter that offsets the fastener along the handle’s direction. Compare the complete assembly before choosing a branch."
+        },
+        {
+          "title": "Losing the angle while working around an obstruction",
+          "body": "A crowfoot that swings away from 90 degrees, or a wobble extension pushed past 15 degrees, no longer matches the checked arrangement. Stop and reposition."
+        },
+        {
+          "title": "Skipping the half-moon arch input",
+          "body": "The half-moon calculation depends on C as well as A and B. This site supplies B and C from the selected calibrated adapter. Verify that selection and its displayed dimensions; a curved adapter is not fully described by its center-to-center length alone."
         }
       ],
-      "notes": [],
+      "notes": [
+        "The ten arrangements here define the tool-setup scope. Other adapter angles or combinations require their own applicable instructions.",
+        "No component-specific torque, replacement fastener or tightening order can be inferred from these adapter examples."
+      ],
       "relatedGuideIds": [],
       "procedures": [
         {
-          "documentId": "reference-6534a6eae93c",
-          "purpose": "Calculate the setting for a straight adapter extending the wrench.",
-          "mediaId": "reference-6534a6eae93c-m0001"
-        },
-        {
-          "documentId": "reference-72305394e0aa",
-          "purpose": "Calculate the setting for a straight adapter used with a socket extension.",
-          "mediaId": "reference-72305394e0aa-m0001"
-        },
-        {
           "documentId": "reference-6943fbf4e2a0",
-          "purpose": "Calculate the setting when the adapter points back toward the handle.",
+          "purpose": "Calculator inputs and illustrated geometry for a reversed straight adapter with extension.",
           "mediaId": "reference-6943fbf4e2a0-m0001"
         },
         {
-          "documentId": "reference-d7780e6a592b",
-          "purpose": "Calculate the setting for an in-line crowfoot.",
-          "mediaId": "reference-d7780e6a592b-m0001"
-        },
-        {
-          "documentId": "reference-b9ec8cea2317",
-          "purpose": "Check the right-angle crowfoot arrangement that uses the fastener specification.",
-          "mediaId": "reference-b9ec8cea2317-m0001"
-        },
-        {
-          "documentId": "reference-c5d168787f95",
-          "purpose": "Check the socket-extension arrangement that uses the fastener specification.",
-          "mediaId": "reference-c5d168787f95-m0001"
-        },
-        {
-          "documentId": "reference-62fe207918f9",
-          "purpose": "Check the right-angle straight adapter and its 50.8 mm length limit.",
-          "mediaId": "reference-62fe207918f9-m0001"
-        },
-        {
           "documentId": "reference-d7d152a19bd1",
-          "purpose": "Check the wobble-extension arrangement and its 15-degree angle limit.",
+          "purpose": "Original fastener torque allowance for a wobble extension limited to 15 degrees.",
           "mediaId": "reference-d7d152a19bd1-m0001"
         },
         {
+          "documentId": "reference-d7780e6a592b",
+          "purpose": "Calculator inputs and measurement endpoints for an in-line crowfoot.",
+          "mediaId": "reference-d7780e6a592b-m0001"
+        },
+        {
           "documentId": "reference-bc8de71f1828",
-          "purpose": "Use the supported left-hand half-moon tool combinations.",
+          "purpose": "Left half-moon calculator, torque choices, brand selection and A, B and C inputs.",
           "mediaId": "reference-bc8de71f1828-m0001"
         },
         {
           "documentId": "reference-a6c44300b9d8",
-          "purpose": "Use the supported right-hand half-moon tool combinations.",
+          "purpose": "Right half-moon calculator, torque choices, brand selection and A, B and C inputs.",
           "mediaId": "reference-a6c44300b9d8-m0001"
+        },
+        {
+          "documentId": "reference-6534a6eae93c",
+          "purpose": "Calculator inputs and measurement endpoints for an outward straight adapter.",
+          "mediaId": "reference-6534a6eae93c-m0001"
+        },
+        {
+          "documentId": "reference-72305394e0aa",
+          "purpose": "Calculator inputs and illustrated arrangement for a straight adapter with extension.",
+          "mediaId": "reference-72305394e0aa-m0001"
+        },
+        {
+          "documentId": "reference-b9ec8cea2317",
+          "purpose": "Right-angle crowfoot arrangement using the original fastener torque.",
+          "mediaId": "reference-b9ec8cea2317-m0001"
+        },
+        {
+          "documentId": "reference-c5d168787f95",
+          "purpose": "Plain socket-extension arrangement using the original fastener torque.",
+          "mediaId": "reference-c5d168787f95-m0001"
+        },
+        {
+          "documentId": "reference-62fe207918f9",
+          "purpose": "Right-angle straight-adapter arrangement and its 50.8 mm (2.0 inch) length limit.",
+          "mediaId": "reference-62fe207918f9-m0001"
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup-prevention, cooling-fan inspection and disabling, and personal-protection precautions for applying the tools during vehicle service."
         }
       ],
       "sourceRefs": [
@@ -167422,13 +168155,50 @@
         {
           "documentId": "reference-62fe207918f9",
           "sourceHash": "24a83de0c4cd2e3217886f422d54f6abd49bf72fe0c3a2d414ed00352e169a9a"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex source and original calculator review",
         "humanReviewed": false,
-        "version": 1
-      }
+        "version": 1,
+        "editorialVersion": 2,
+        "editorialFingerprint": "0c8a4f72a1e3e510632c36fecc323e9196ed3ab39d4fa56115928aa12284b5e2",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identify-and-measure",
+          "title": "Identify and measure",
+          "summary": "Establish the target torque and actual tool geometry.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "calculate-offset-settings",
+          "title": "Calculate offset settings",
+          "summary": "Use the matching straight, reversed or half-moon calculator.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "check-direct-settings",
+          "title": "Check direct-setting arrangements",
+          "summary": "Recognize the extension and right-angle arrangements and their limits.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "set-and-tighten",
+          "title": "Set and tighten",
+          "summary": "Match the wrench unit and preserve the checked geometry.",
+          "start": 10,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Replace the convertible tonneau-cover sensor assembly",

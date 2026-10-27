@@ -1,0 +1,60 @@
+{
+  "documentId": "G1802176",
+  "supportingSourceRefs": [],
+  "sourceHash": "ed88a1414ea641a6b6b53d7c730dbc650c56a54d4e1924deb46046bb0ecc8cae",
+  "title": "Electronic Engine Controls: 5.2L 32V Ti-VCT Overview",
+  "introduction": "I picture the electronic engine controls as a conductor reading the instruments before cueing the next response. Sensors and switches provide information; the controller's stored strategy decides what the engine hardware should do. This overview explains that relationship for the engine identified above, together with its monitoring and communication functions. It does not provide fault tests, calibration choices or programming instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1802176-b00001",
+      "text": "How Electronic Engine Control Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1802176-b00002",
+      "text": "The electronic engine control (EEC) system uses the PCM's capabilities to optimize engine control. Its on-board diagnostic (OBD) monitoring features also support compliance with federal exhaust-emissions requirements.",
+      "why": "Engine operation and emissions monitoring share the control system. OBD is the monitoring side of that job, rather than a separate controller."
+    },
+    {
+      "blockId": "G1802176-b00003",
+      "text": "The EEC system has two major divisions: hardware and software. Hardware includes the PCM, sensors, switches, actuators, solenoids and interconnecting terminals. Software within the PCM uses the input values it receives to determine how to control the outputs—the engine hardware.",
+      "why": "Hardware provides the physical connections, information and actions; software supplies the decision-making strategy. I keep both in view because an output makes sense only in relation to its inputs and the strategy interpreting them."
+    },
+    {
+      "blockId": "G1802176-b00004",
+      "text": "The PCM receives information from sensor and switch inputs, then uses its stored strategy and calibration to generate the appropriate outputs. The system aims to minimize emissions while optimizing fuel economy and driveability. Its software controls basic engine operation, provides the OBD strategy, controls the malfunction indicator lamp (MIL), communicates with a scan tool through the data link connector (DLC), supports flash programming of electrically erasable programmable read only memory (EEPROM), manages idle air and fuel trim, and controls failure mode effects management (FMEM).",
+      "why": "The scan tool communicates with the controller; it does not replace the controller's decisions. Fuel trim is the adjustment to fuel delivery made using sensor feedback. I treat that correction as a clue about mixture control, not a verdict against a particular part. Flash programming and FMEM are identified capabilities here, not instructions to program the module or predict a particular failure response."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:49:46.031Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "7c622498de9a08875b87d5bde962803a7b87e9591c79c6b7af87c0dff5e17f23",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "03a8bc2b8a2a14384e8e963d62534f35cdb91792d0e09c6423dc1718c864b967",
+    "reviewedAt": "2026-10-27T20:49:46.031Z"
+  }
+}

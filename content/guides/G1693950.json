@@ -1,0 +1,65 @@
+{
+  "documentId": "G1693950",
+  "supportingSourceRefs": [],
+  "sourceHash": "7850e5e2b0dc6944232b4093327872f67769828cd55c0c78e8d73de2e77981a1",
+  "title": "Rear Parking Aid: Tones, Messages and Controls",
+  "introduction": "I treat rear parking aid as an extra set of ears, not an all-seeing lookout. Its tones can draw attention to certain objects behind the bumper, but silence is not an all-clear. This overview explains when the audible assistance operates, what a disabled message means, and how the message-center control changes with a restricted key. It does not provide sensor testing or repair instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693950-b00001",
+      "text": "Understanding the rear warning tones",
+      "why": ""
+    },
+    {
+      "blockId": "G1693950-b00002",
+      "text": "With the transmission in reverse, the rear parking aid sounds a warning tone through the rear audio speakers to alert the driver to objects near the rear bumper. It assists with detecting certain objects while the vehicle is stationary or moving slowly. Moving objects may not be detected.",
+      "why": "Reverse selection, slow or stationary operation, and limited object detection define the assistance described here. A lack of warning cannot establish that the area behind the vehicle is clear."
+    },
+    {
+      "blockId": "G1693950-b00003",
+      "text": "A detected fault in a parking aid sensor, the communications network or the PAM (parking assist control module) disables the rear parking aid. The message center then displays a parking aid disabled warning message.",
+      "why": "The message identifies unavailable assistance, not a particular failed part. The listed fault paths include the sensors, communications and controller."
+    },
+    {
+      "blockId": "G1693950-b00004",
+      "text": "Use the message center in the IPC to enable or disable the rear parking aid. A driver-selected disable lasts for one key cycle.",
+      "why": "I distinguish this temporary selection from fault-triggered disabling: both affect availability, but the stated key-cycle duration belongs to the driver’s setting."
+    },
+    {
+      "blockId": "G1693950-b00005",
+      "text": "When a MyKey® restricted key is in use, the parking aid menu is unavailable in the message center and the parking aid cannot be deactivated through that menu.",
+      "why": "The missing menu is an expected restriction with that key. It should not, by itself, be interpreted as a menu fault; fault-triggered system disabling remains a separate condition."
+    }
+  ],
+  "checkedAt": "2026-10-27T20:45:55.741Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3d910e43cf006df527b1262c1b177beb044b4d653bbe209de936122f3c47a4e7",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 6,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bf37dd50d3fec71ccd43b9a335c4872319aab4c58114b208f1a48c42cdac952a",
+    "reviewedAt": "2026-10-27T20:45:55.741Z"
+  }
+}
