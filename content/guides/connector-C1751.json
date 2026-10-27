@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1751",
+  "supportingSourceRefs": [],
+  "sourceHash": "2635315f1bb51c11f98f3af1fb5e8de1cee2a3c32dbe44bf03933697af0eee5d",
+  "title": "C1751 — Daytime Running Lamp (DRL), RF",
+  "introduction": "This reference maps the right-front daytime running lamp connector. I start with CNumber and Description, then use the cavity labels in the drawing to find the matching assignment rows. Think of a cavity label as the street address and the circuit entry as the name on the mailbox: the shape helps you navigate, but the row tells you what the connection serves.\n\nRead across a row to keep its circuit, color, gauge, function and terminal information together. The ground entry describes the current's return path; the control-module entry identifies the lamp's control connection. The part-information table beneath the drawing provides a separate connector reference. Gauge conventions and the meanings of Box, Cols, Size and Used are not explained, and a blank Qualifier cell adds no configuration guidance. This sheet supplies no access steps, physical viewing-side designation, test values or replacement procedure; use it to understand the map before moving to the applicable service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1751-b00002",
+      "text": "Connector Face for Harness 14290",
+      "why": "In the drawing as printed, the upper cavity corresponds to the ground entry and the lower cavity to the control-module entry. That describes their positions on the page; it does not establish which side of the physical connector you would be viewing."
+    },
+    {
+      "blockId": "connector-C1751-b00005",
+      "text": "Read the Pin Assignments",
+      "why": "Use Cavity to connect the drawing to a row, then read horizontally through the remaining columns. The ground and control functions identify different electrical roles, but neither provides an expected voltage, switching pattern or pass/fail result."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:46:11.370Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "678fb41afb77c540bd849a09cd50631b9a1af07a5822dfbe6d7a4f47f90836f8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1a784c739b3a4603a38f57c79f3ca2056a2f94911f129edb631c51de664f3670",
+    "reviewedAt": "2026-10-27T23:46:11.370Z"
+  }
+}

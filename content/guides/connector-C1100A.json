@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1100A",
+  "supportingSourceRefs": [],
+  "sourceHash": "f2af8b66636e5f6da82f445878e60e3714a75a906e42cec607a77125e01b76d8",
+  "title": "C1100A — Battery Connector Reference",
+  "introduction": "I start with the identity table, match the drawing's landmarks, then read each pin-assignment row across. Think of this page as the battery connection's address card: it connects a labeled feature in the drawing with its circuit record.\n\nThe identity table describes the connector. The table beneath the drawing carries Fpn, Size and Harness Id; the assignment table connects Cavity and Circuit Number with Color, Gauge, Function, Qualifier, Used and Terminal Part Number. Keep the differing assignment rows separate even where their cavity and circuit entries match.\n\nThis reference supports identification and wiring interpretation. It does not teach physical access, disconnection, probing, wire selection or replacement. Physical viewing direction, the gauge convention and the meanings of the Size and Used codes are unspecified here. The Pin Count field also supplies no assignment beyond the cavity entries actually shown.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1100A-b00002",
+      "text": "Connector Face — Harness 14B060",
+      "why": "The large circular feature contains a cavity label, with a plus sign nearby. A rectangular section extends to the left, and a smaller circular feature sits above. I use these as landmarks within the drawing; the smaller circular feature has no cavity label to support assigning it a pin."
+    },
+    {
+      "blockId": "connector-C1100A-b00005",
+      "text": "Reading the Pin Assignments",
+      "why": "Read each row horizontally to keep its cavity, circuit, color, gauge and function together. Both rows share the same cavity and circuit entries but differ in Color and Gauge. Their blank Qualifier entries do not tell us whether these are alternative configurations or concurrent connections, so keep both records as printed without selecting a wiring arrangement."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:46:11.381Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "430fce41505a28fc8b68c7ea0bfe2453e80941809ce5ccfee77a832308b23d2a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2fe70c922d9973bd2b0e07e2be11c9719cc3ba4cb7f4903f20835a40133badfb",
+    "reviewedAt": "2026-10-27T23:46:11.381Z"
+  }
+}

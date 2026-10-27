@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1142",
+  "supportingSourceRefs": [],
+  "sourceHash": "2111e1e5ffdd38c106c6b1fd562279f24ea2199a037f18048cf4c4162ec47f25",
+  "title": "C1142 — Fuel injector 2 connector",
+  "introduction": "The injector meters fuel, but this page follows its electrical connections. I begin with CNumber and Description so that a familiar-looking connector does not send me into the wrong circuit record. The housing outline is a useful landmark; the labels do the identifying.\n\nUse a cavity callout in the drawing to find the matching Cavity row. Read across for Circuit Number, Color, Gauge, Function and Terminal Part Number, keeping every entry attached to that cavity. The function descriptions distinguish the injector-driver connection from the fuse-or-circuit-breaker connection. The Fpn, Size and Harness Id table is an accompanying identification record, not confirmation that a replacement part fits.\n\nThis is a connector-reading reference. Physical access, release movements, probing, test results and replacement methods need separate instructions. Viewing side, gauge convention and metadata codes are unspecified here. Preserve those entries without guessing their meaning, and do not treat Status as evidence of injector operation.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1142-b00002",
+      "text": "Connector-face drawing · Harness 12C508",
+      "why": "The vertically arranged cavity callouts sit below a rectangular housing feature in the illustrated view. I use those visible relationships to navigate the drawing. They do not establish which physical side of the connector the reader should face."
+    },
+    {
+      "blockId": "connector-C1142-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Each row links a cavity to its circuit description and identifying entries. Keeping the whole row together prevents a color notation or terminal reference from being associated with the wrong cavity. Once the circuit is identified, any operational check belongs to the matching diagnostic instructions; this table contains no pass-or-fail test."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:13.496Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "74b88d5176554a5596a52b4c4113219aa21ac837a0b5a9139faa33cf29eb0683",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f573517571678a49b3d7b9eb2e70fe5c898837994ed021f224ad243c9bd0630e",
+    "reviewedAt": "2026-10-27T23:51:13.496Z"
+  }
+}

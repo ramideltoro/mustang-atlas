@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1143",
+  "supportingSourceRefs": [],
+  "sourceHash": "830eddf4f86aa1e39e8a9ff493a81f9cb1e73d5bb3a958be7cd992c20e9f892c",
+  "title": "C1143 — Fuel injector 3 connector",
+  "introduction": "The connector drawing and assignment table work as a pair: the picture locates a cavity callout, and the row explains its electrical connection. I use them together to follow the injector's wiring on paper. The injector meters fuel; this little map keeps its electrical connections from becoming alphabet soup.\n\nConfirm CNumber and Description first. Match a callout to the Cavity column and read the entire row for its circuit identifier, color notation, gauge entry, function and terminal reference. Function distinguishes the injector-driver connection from the fuse-or-circuit-breaker connection. The separate Fpn, Size and Harness Id table supports identification, without establishing replacement compatibility.\n\nThis is a reading guide, with no access, connector-release, probing, diagnostic-test or replacement procedure. Physical viewing side, gauge convention and metadata codes are unspecified here; keep their entries as printed. Status does not tell us whether the injector operates correctly.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1143-b00002",
+      "text": "Connector-face guide · Harness 12C508",
+      "why": "I orient myself within the picture using the rounded housing, the rectangular feature above the cavities and the vertically arranged callouts. These are visible drawing landmarks. The physical viewing side remains unspecified, so the illustration alone cannot establish a probing orientation."
+    },
+    {
+      "blockId": "connector-C1143-b00005",
+      "text": "Pin assignments and circuit roles",
+      "why": "Matching through Cavity keeps each connection tied to the correct row of identifiers. The function descriptions explain the listed driver and supply roles, while the terminal entry remains a reference rather than a replacement instruction. Identifying the circuit is the result of this lookup; assessing its operation requires the matching diagnostic instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:13.519Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "087f4a0e22d8f1b286d4c1584959eff00a19256cfb8537fdf8e53cf45b89947d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2e2a2ebda769e753b0f1d1aa64e920873bbda8e429bde0d268fe9cd5e71b213f",
+    "reviewedAt": "2026-10-27T23:51:13.519Z"
+  }
+}

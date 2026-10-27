@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1141",
+  "supportingSourceRefs": [],
+  "sourceHash": "c9c6e08ab2b65f21c76649771d9a666af08fcba0d178785c9dcb891f1712346b",
+  "title": "C1141 — Fuel injector 1 connector",
+  "introduction": "An injector is a fuel-metering valve with electrical control. This reference maps the electrical connections at its connector. I read the drawing and table together like a seating chart: the cavity callout tells me where to look, and its row tells me which circuit belongs there.\n\nCheck CNumber and Description before using the map. Find a drawing callout in the Cavity column, then follow that row through the circuit identifier, color notation, gauge entry, function and terminal reference. Function separates the injector-driver connection from the fuse-or-circuit-breaker connection. Keep the separate Fpn, Size and Harness Id record available for identification without treating it as a replacement-parts approval.\n\nThe page teaches reference reading, with no access, disconnection, probing, diagnostic test or replacement sequence. Physical viewing side, gauge convention and metadata codes remain unspecified; their entries stay as printed. Status is not an electrical test result.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1141-b00002",
+      "text": "Connector-face reference · Harness 12C508",
+      "why": "The drawing places the cavity callouts vertically beneath a rectangular feature, inside a rounded housing outline. Those visible landmarks make the illustration easier to read. I keep their meaning limited to the illustrated view because its physical viewing side is unspecified."
+    },
+    {
+      "blockId": "connector-C1141-b00005",
+      "text": "Pin-to-circuit assignments",
+      "why": "The Cavity entry is the link between the picture and the electrical information. Reading the full row preserves the relationship between its circuit, wire notation, function and terminal reference. This identifies the mapped connection; determining whether it operates correctly requires the matching diagnostic instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:13.505Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "ca8f798ca9c937ea6f386d2e517e011856536150ca704a60093e5467de6b6e3a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a37bf3dff4dbc83ba3a461fbba6a9430507ae1108d50076fe83c2fd5360d1245",
+    "reviewedAt": "2026-10-27T23:51:13.505Z"
+  }
+}

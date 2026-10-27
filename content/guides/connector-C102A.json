@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C102A",
+  "supportingSourceRefs": [],
+  "sourceHash": "92049103b4d25b52587e9861c31e524ca822238869b88411c9e4b1124c4db149",
+  "title": "C102A — Generator Connector Reference",
+  "introduction": "I use this generator connector sheet like an address book: identify the connector in the metadata, match the drawing’s cavity label to the Cavity column, then read across for the circuit, recorded wire details, function and terminal part number. The generator, also called the alternator, supplies electrical power and charges the battery while the engine runs.\n\nThe small drawing helps connect a contact label with its table entry. The Fpn entry also appears in Terminal Part Number, linking the identification record to the pin assignment. Keep the printed Function wording and codes intact when comparing this reference with wiring information.\n\nThis sheet supports identification and circuit-map reading. It gives no physical viewing direction, access sequence or electrical test. Gauge convention and the meanings of Size and Used are unspecified; those entries alone do not establish wire selection or replacement compatibility.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C102A-b00002",
+      "text": "Connector Drawing · Harness 14B060",
+      "why": "The drawing shows a labelled circular contact beside a rectangular section with diagonal lines. Match the contact label to the Cavity column. The drawn shape does not establish which side of a physical connector faces the viewer."
+    },
+    {
+      "blockId": "connector-C102A-b00005",
+      "text": "Cavity-to-Circuit Assignments",
+      "why": "Read across the matching cavity row to connect the contact with its circuit, wire-detail fields, stated function and terminal identifier. These are reference details, not test results or instructions to select replacement parts."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:38:22.677Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3f2ea7a2c646018f64a4d43d7bc1cd55d1306752029dc7f24aa126f898bb37d2",
+  "sourcePdfHash": "1cf92683207825a26ed640a9796bc47d459caab496989557fb6bb4f72eb09ee1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b7cd823922966328fdd304dd7010c12bc3cfe2095e534b0711e0a25f977bc6d8",
+    "reviewedAt": "2026-10-27T23:38:22.678Z"
+  }
+}

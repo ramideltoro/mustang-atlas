@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1146",
+  "supportingSourceRefs": [],
+  "sourceHash": "19562403e111951fb443a794a9e20c934da73dcd9ef60f02ffa704b37ffc0d5b",
+  "title": "C1146 — Fuel Injector 6 Connector",
+  "introduction": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as its electrical address book: the identification table tells me which connector I am reading, the drawing locates its labeled cavities, and the pin-assignment table connects those labels to circuit information.\n\nStart with the connector identity, then match a cavity label in the drawing to the Cavity column. Read across that row for the circuit, wire-color code, gauge entry, function and terminal identification. The driver-function row identifies the injector-control connection; the fuse-or-circuit-breaker row identifies the power-feed connection. Those descriptions explain each connection’s role without proving that either circuit is working.\n\nThis is a connector-reading guide. It does not establish physical access, the viewing direction for probing, electrical test conditions or replacement instructions. Gauge conventions and the Box, Cols, Size and Used codes are not explained here; keep them as reference entries rather than treating them as wire-selection or tool-size instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1146-b00002",
+      "text": "Harness 12C508 · Connector Face",
+      "why": "I use the numbered circles as the bridge between the drawing and the cavity rows. The rectangular feature above the vertically arranged labels helps distinguish the drawing’s top from its bottom, but it does not establish whether a physical connector should be viewed from the terminal side or the wire side."
+    },
+    {
+      "blockId": "connector-C1146-b00005",
+      "text": "Cavity and Circuit Assignments",
+      "why": "Read each row horizontally so the cavity, circuit, color, gauge, function and terminal entry stay together. The Function column describes the connection’s job; its wording and symbols are not voltage readings or instructions to apply power. The Fpn entry and Terminal Part Number column are separately labeled identifiers, not an instruction to order or replace a part."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:34.870Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "032a73c10d7d6e9f66dd261e84a2d8991887b4379ab38cbd86aaa9122aba2a99",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b0d8474dd7266372e3238cbf5416a84258d0375855d726a6856956b65f10611d",
+    "reviewedAt": "2026-10-27T23:51:34.871Z"
+  }
+}

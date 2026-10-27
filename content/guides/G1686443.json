@@ -8,8 +8,8 @@
   "edits": [
     {
       "blockId": "G1686443-b00001",
-      "text": "With the TCC released, line pressure reaches the converter release regulator valve from the lubrication control valve through CREL F. The converter release regulator valve sends fluid into the torque converter through CREL. Fluid leaves the converter through CAPLY and enters the bypass clutch control regulator valve, which routes it back to the converter release regulator valve through CAPLY EX. From there, fluid enters DBACK and supplies lubrication through LUBE.",
-      "why": "I trace this as a continuous route into the converter, out through the other passage, and onward to lubrication. A circuit’s name alone does not tell you its flow direction in every operating state; the released-state arrows matter."
+      "text": "With the TCC released, line pressure reaches the converter release regulator valve through CREL F. The converter release regulator valve sends fluid into the torque converter through CREL. Fluid leaves the converter through CAPLY and enters the bypass clutch control regulator valve, which routes it back to the converter release regulator valve through CAPLY EX. From there, fluid enters DBACK and supplies lubrication through LUBE.",
+      "why": "I trace this as a continuous route into the converter, out through the other passage, and onward to lubrication. There is a source disagreement about the feed’s origin: the short converter description names the lubrication control valve, while the [detailed transmission circuit chart and lubrication description](#/document/G1686445) identify the main regulator valve as the CREL F supply to both valves. The illustrated branch also connects those valves. I keep that disagreement visible rather than turning the short description into a definitive upstream-flow claim. A circuit’s name alone does not tell you its flow direction in every operating state; follow the released-state arrows."
     },
     {
       "blockId": "G1686443-b00002",
@@ -37,7 +37,7 @@
       "why": "Use this view to connect solenoid control, valve positioning and clutch-apply flow. The drawings also show cooler and lubrication connections, but they do not establish service measurements."
     }
   ],
-  "checkedAt": "2026-10-27T18:42:01.494Z",
+  "checkedAt": "2026-10-27T23:37:30.112Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
   "validationVersion": 5,
@@ -66,6 +66,10 @@
     "reviewedChunkCount": 1,
     "fingerprint": "6f1d8ec22f82083464b9c2ad3b741162dae5e18c7cb84be80b69b94df59b06a2",
     "reviewedAt": "2026-10-27T18:31:58.876Z",
-    "editorialRevision": "Intro-only removal of inferred engine list absent primary text; 6R80 transmission scope and hydraulic instructions preserved."
+    "editorialRevision": {
+      "kind": "explicit-feed-origin-source-conflict",
+      "reviewedAt": "2026-10-27T23:37:30.112Z",
+      "scope": "Origin-neutral opening and explicit disagreement in first paragraph only; downstream released/applied routes, technical values, remaining body unchanged. Prior full review retained; bounded independent source/figure review recorded in adjacent focused and supervisory approvals."
+    }
   }
 }

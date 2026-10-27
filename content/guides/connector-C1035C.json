@@ -1,0 +1,103 @@
+{
+  "documentId": "connector-C1035C",
+  "supportingSourceRefs": [],
+  "sourceHash": "99f863d7c0d2193b5be0cf96d86034b4534d2c8ae6b747661ab81bc1d38fd5c6",
+  "title": "C1035C — Battery Junction Box (BJB) Connector",
+  "introduction": "I use this battery junction box reference like an address book: the connector identity gets me to the right entry, the drawing shows the numbered terminal, and the assignment table connects that label to circuit information. Start with CNumber and Description, then compare the drawing with the Cavity column. Read across the relevant row for its circuit, color, gauge, function and terminal information.\n\nThe part-information table beneath the drawing is separate from the terminal details in the assignment table. Keep those labels distinct; a part reference is not automatically a replacement instruction. Gauge conventions and the meanings of Box, Cols, Size and Used are not explained here, and blank Qualifier cells do not explain when each color entry applies. The physical viewing side is also unspecified. This is an identification reference, without access, probing, wire-selection or replacement instructions. A mismatch between the pin-count field and the drawing remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1035C-b00002",
+      "text": "Connector Face for Harness 14B060",
+      "why": "I use the numbered terminal and the outline as the visual key to the assignment table. The drawing shows only a single numbered terminal, so the pin-count field cannot be used to invent another cavity or its location."
+    },
+    {
+      "blockId": "connector-C1035C-b00005",
+      "text": "Read the Pin Assignments",
+      "why": "Follow each row horizontally so its color, circuit and terminal details stay together. Both entries refer to the same drawn cavity but have different colors; treat their applicability as unresolved rather than assuming separate cavities or deciding that the wires share a connection."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:42.871Z",
+  "model": "Signed-in Codex author; independent active-agent Codex review",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "7b97a40cb1391cfbaf16f08b4bd2cb17ec6fb1342c84ff32c916cc95956cf26d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "79165b28fe584f996cf7d0eb8ee8a1f7a6cb3832d9c419c9228d3bf88fd0a3cc",
+    "reviewedAt": "2026-10-27T23:50:49.543Z",
+    "coveredUnitIds": [
+      "connector-C1035C:u1",
+      "connector-C1035C:u2",
+      "connector-C1035C:u3",
+      "connector-C1035C:u4",
+      "connector-C1035C:u5",
+      "connector-C1035C:u6",
+      "connector-C1035C:u7",
+      "connector-C1035C:u8",
+      "connector-C1035C:u9",
+      "connector-C1035C:u10",
+      "connector-C1035C:u11",
+      "connector-C1035C:u12",
+      "connector-C1035C:u13",
+      "connector-C1035C:u14",
+      "connector-C1035C:u15",
+      "connector-C1035C:u16",
+      "connector-C1035C:u17",
+      "connector-C1035C:u18",
+      "connector-C1035C:u19",
+      "connector-C1035C:u20",
+      "connector-C1035C:u21",
+      "connector-C1035C:u22"
+    ],
+    "sourcePages": [
+      {
+        "page": 1,
+        "file": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/supervisory-reviews/connector-C1035C/original-page-1.png",
+        "sha256": "537d01066d9b2c06eb7096fda11b0de73d7ccc4eb06803679f174afc0c936188",
+        "fullyViewed": true
+      },
+      {
+        "page": 2,
+        "file": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/supervisory-reviews/connector-C1035C/original-page-2.png",
+        "sha256": "7b479081a97629b2cd63b65d08240393921194ab28edb60fe3b39eac577640c7",
+        "fullyViewed": true
+      }
+    ],
+    "sourceLimitations": [
+      "Pin Count is 2, but the drawing labels only cavity 1 and both assignment rows also identify cavity 1. The rows differ in Color and have blank Qualifier cells. Clarification is needed on the pin count and whether the rows describe alternatives or another arrangement; neither is resolved by the supplied reference."
+    ],
+    "originalAuthorHold": "Needs review: Pin Count is 2, but the drawing labels only cavity 1 and both assignment rows also identify cavity 1. The rows differ in Color and have blank Qualifier cells. Clarification is needed on the pin count and whether the rows describe alternatives or another arrangement; neither is resolved by the supplied reference.",
+    "resolvedHold": {
+      "scope": "Bounded identification-only guide independently reviewed in full; physical pin-count/arrangement ambiguity remains explicit, not resolved.",
+      "reviewArtifact": "active-agent-full-review.json",
+      "draftSha256": "dbfa64233b7a4ce958c8020f4addd11365be1d2e433128d813fbf354c3b2efb6"
+    },
+    "editorialRevision": {
+      "kind": "bounded-identification-complete-active-agent-review",
+      "reviewedAt": "2026-10-27T23:50:49.543Z",
+      "scope": "Unchanged author public prose reviewed completely against all22units and both original pages; ambiguity expressly retained. No claim of CLI reviewer or physical mapping resolution."
+    }
+  }
+}

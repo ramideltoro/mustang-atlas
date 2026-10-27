@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1147",
+  "supportingSourceRefs": [],
+  "sourceHash": "503b952566d6385a24e5423a5f1e71c0406a88b45f0d98de256dfbc9696b6783",
+  "title": "C1147 — Fuel Injector 7 Connector",
+  "introduction": "An injector meters fuel, but this page maps its electrical connections. I read the connector identity before the cavity map: a familiar-looking plug is a poor substitute for the right address.\n\nUse the identification table to confirm the connector, then match the drawing’s cavity labels to the Cavity column below. Follow each row across to keep its circuit identifier, color code, gauge entry, function and terminal identification together. The injector-driver function describes the control connection, while the fuse-or-circuit-breaker function describes the power feed. Neither label establishes circuit health.\n\nThis reference teaches how to read the connector map. Physical access, terminal-side versus wire-side viewing, probing conditions and replacement methods require other instructions. The gauge convention and the Box, Cols, Size and Used codes are not defined here; do not turn those entries into wire-selection, tool-size or service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1147-b00002",
+      "text": "Harness 12C508 · Connector Face",
+      "why": "The drawing places the cavity labels vertically beneath a rectangular upper feature. I use those visible landmarks to navigate the illustration and match its labels to the table, without assuming that this establishes the viewing direction of a connector on the car."
+    },
+    {
+      "blockId": "connector-C1147-b00005",
+      "text": "Cavity and Circuit Assignments",
+      "why": "Each row is a complete set of related connection details. Function wording and symbols describe the assigned circuit role, not a measured voltage or permission to energize it. Fpn and Terminal Part Number identify different labeled entries; this reference does not turn either into a replacement decision."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:34.883Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "84013c568b0cc92b7f996f565d1a46c9474046d3df9f20ef576899bdb9a60834",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b8cb2a92aa70c64941d5aa8dfbee31dfe9539c76ba363563605a8c5b3ae6100d",
+    "reviewedAt": "2026-10-27T23:51:34.884Z"
+  }
+}

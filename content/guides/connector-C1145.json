@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1145",
+  "supportingSourceRefs": [],
+  "sourceHash": "d7a6e030a2844a54fbbf7ab10420a0b1abce30c7583512d659f5a91fccaeabe3",
+  "title": "C1145 — Fuel injector 5 connector",
+  "introduction": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as its electrical address book: the drawing shows the cavity callouts, and the assignment table connects each callout to a circuit and its described job.\n\nStart by matching CNumber and Description to the connector reference you need. Match a drawing callout to the Cavity column, then read across that row for its circuit identifier, color notation, gauge entry, function and terminal reference. Keep the printed color notation intact. The separate Fpn, Size and Harness Id table provides accompanying identification data; it does not establish replacement compatibility.\n\nThis page supports identification and reading the circuit map. Access, connector release, probing, electrical testing and replacement require separate instructions. The physical viewing side, gauge convention and metadata codes are unspecified here, so this guide leaves them uninterpreted. A Status entry cannot establish whether the injector works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1145-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the rectangular feature above the cavity callouts and the rounded housing outline as landmarks within the drawing. The callouts are arranged vertically as shown. These landmarks help navigate the illustration without establishing a mating-side or wire-side viewing direction."
+    },
+    {
+      "blockId": "connector-C1145-b00005",
+      "text": "Pin and circuit assignments",
+      "why": "Reading across a complete cavity row keeps its identifiers together. Function distinguishes the powertrain injector-driver connection from the fuse-or-circuit-breaker connection. That explains the mapped circuit roles; it supplies neither a measured electrical result nor a fault verdict. Use the identified circuit when consulting the matching diagnostic instructions."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:51:13.485Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "1d8552bb45afcbfd292ab420de422c17c5543a63c7f5f6109524d88b47018638",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7105db7a66f828d7747cfe2cc25e4974a1f46cec42ee5792a0fd5c20fdde4700",
+    "reviewedAt": "2026-10-27T23:51:13.485Z"
+  }
+}

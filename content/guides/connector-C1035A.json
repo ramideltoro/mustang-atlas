@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1035A",
+  "supportingSourceRefs": [],
+  "sourceHash": "4c6aaa4c15eeb697b096c944c6b7b1bd2636b6adf8a8be387b83431f9cdb7fa2",
+  "title": "C1035A — Battery junction box (BJB) connector",
+  "introduction": "I use this reference to connect a battery junction box drawing with its electrical identity. Think of it as an address card for the connection: it tells you which circuit belongs here, but it cannot tell you whether that circuit is healthy.\n\nStart with the connector identification table, then use the harness heading to find the drawing and its associated Fpn entry. Match the drawing’s cavity label to the Cavity column in the assignment table. Reading across that row connects the illustrated position with its circuit, wire description, function and terminal identification. Fpn and Terminal Part Number are separately labeled fields; keep those distinctions when consulting the reference.\n\nThis page teaches identification, not access, disconnection, probing or replacement. The physical viewing side, gauge convention and meanings of Size and Used are unspecified. Keep those entries as printed; electrical testing or service work requires the applicable instructions and test conditions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1035A-b00002",
+      "text": "Connector drawing · Harness 14B060",
+      "why": "I use the rounded end, projecting tab and barrel outline to recognize this particular drawing. Its cavity label links the picture to the assignment table below. Those visible shapes help navigate the reference; they do not establish which side of the physical connection to approach or how to disconnect it."
+    },
+    {
+      "blockId": "connector-C1035A-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read across the row selected by the drawing’s cavity label. The Function entry identifies the battery-positive role, while Circuit Number identifies the circuit associated with that position. This is a map of the connection’s assigned purpose, not evidence that power is present or that the connection can carry its working load."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:45:51.683Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "0ac642688ec4e7c1f76be4c996a5e0cabea386c073bbdcf0d279ce97ebf801c1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "832b605775386d7f3258a470557a2f88df888134d91c921e898cf925725f9c61",
+    "reviewedAt": "2026-10-27T23:45:51.683Z"
+  }
+}

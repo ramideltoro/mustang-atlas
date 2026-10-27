@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2280H",
+  "supportingSourceRefs": [],
+  "sourceHash": "fbb479d0e51e7d5b84e6514e7e85ace177337d1de07dceef67602349f8906603",
+  "title": "C2280H — Body control module (BCM) connector",
+  "introduction": "The body control module coordinates body electrical functions and exchanges information with other modules. I use this sheet to identify the particular connection shown here. A switchboard can have plenty going on behind it; this reference gives you an address for a connection, not a verdict on the whole controller.\n\nCheck the connector identification table, then follow the harness heading to the drawing and associated Fpn entry. Match the drawing’s cavity label to the Cavity column and read across the assignment row. Circuit Number identifies the circuit, Function describes its assigned role, and Terminal Part Number identifies the terminal separately from the drawing’s Fpn field. Preserve the Function entry’s alternative between a fuse and a circuit breaker; this sheet does not choose which is fitted.\n\nThis is an identification guide. Physical access, disconnection, probing, replacement and fault diagnosis require their applicable instructions. The physical viewing side, gauge convention and meanings of Size and Used remain unspecified, so keep those entries as printed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280H-b00002",
+      "text": "Connector drawing · Harness 14290",
+      "why": "I use the long rectangular outline, surrounding ribs and detailed end shape to recognize the drawing. The cavity label provides the link to the assignment row. Left and right on this picture describe the page only; the illustration does not establish a physical probing direction or a release movement."
+    },
+    {
+      "blockId": "connector-C2280H-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The selected row ties the illustrated position to its circuit and protective-device function. Keep the fuse-or-circuit-breaker wording when interpreting that role. A documented assignment does not demonstrate supply voltage, terminal condition or a controller fault; those conclusions need the relevant diagnostic setup."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:45:51.693Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6bb5cc52bcc0b80d227cb5c9a78190c9dd0639f3c120e5b24e2cab0114614398",
+  "sourcePdfHash": "c3edfad224228537ae2ef63944f665c270264398cd030d3aec0e2bd5f408e425",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6f5a5c0cf2802a6a2e47c88c43795271e56cafffc86d8d1c18632f6c1c695f9a",
+    "reviewedAt": "2026-10-27T23:45:51.693Z"
+  }
+}
