@@ -1,0 +1,60 @@
+{
+  "documentId": "G1692126",
+  "supportingSourceRefs": [],
+  "sourceHash": "6bc97843d7aa154429d4415b17d8350588519e732aee3698ed633c61625afcae",
+  "title": "EcoBoost Electronic Engine Controls: Component Locations",
+  "introduction": "This reference maps the electronic engine-control components for the EcoBoost engine and output rating named in this section. I use it like a seating chart for the engine’s reporting team: sensors report conditions, while commanded devices carry out the controller’s decisions. Finding the seat tells you which component you are looking at; it does not tell you whether that component has failed.\n\nStart with the LH or RH heading, then match a table description to the callout on that same drawing. Each drawing has its own item sequence. Blue highlighting picks out the components, and the transparent intake-side view reveals parts that surrounding hardware would otherwise hide. The separate vehicle view locates the powertrain controller, and the close-up locates the engine mount control solenoid assembly.\n\nThe abbreviations describe the measured quantity: CMP and CKP refer to camshaft and crankshaft position; KS means knock sensor; FRP means fuel rail pressure; MAPT means manifold absolute pressure and temperature. ECT, CHT and IAT identify engine coolant, cylinder-head and intake-air temperature. HO2S means heated oxygen sensor, and VCT means variable camshaft timing. Use these names to distinguish nearby parts before choosing the matching diagnostic or service information. These are location drawings, without connector pinouts, electrical test values or removal instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692126-b00002",
+      "text": "Electronic Engine Controls — LH",
+      "why": "I use the intake manifold and air cleaner as landmarks in this view. The oil-control solenoids are grouped at one upper end of the engine, and the camshaft-position sensors are at the opposite upper end. The transparent manifold helps reveal the knock and fuel-pressure sensor locations. Keep the manifold sensor, boost-pressure sensor and intake-air temperature sensor distinct by tracing their individual leaders."
+    },
+    {
+      "blockId": "G1692126-b00005",
+      "text": "Electronic Engine Controls — RH",
+      "why": "The turbocharger, exhaust pipe and catalyst anchor this view. Follow each oxygen-sensor leader to its actual mounting point on the exhaust assembly; the nearby electrical connector is only part of that sensor’s connection. The temperature and crankshaft-position sensor leaders identify separate locations on the engine. Their presence on this map establishes identity and position, rather than a fault conclusion."
+    },
+    {
+      "blockId": "G1692126-b00008",
+      "text": "Powertrain Control Module (PCM)",
+      "why": "The highlighted controller sits beside the engine bay’s inner body structure, near the strut-tower area shown through the transparent bodywork. The PCM uses sensor information and stored strategies to manage engine and powertrain functions. I use this wider drawing to establish its position relative to the vehicle; the apparent visibility through surrounding parts does not establish a physical access route."
+    },
+    {
+      "blockId": "G1692126-b00011",
+      "text": "Engine Mount Control Solenoid",
+      "why": "This close-up identifies the solenoid assembly and its bracket against the inner body panel, among the surrounding pipes and hoses. Use the bracket and connected plumbing as visual landmarks when matching the assembly. The highlighted grouping provides location context without identifying every attached piece as a separately serviceable solenoid."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:59:53.474Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4657f45ba17f2ca81e5aa4e81219574fa189f87d7f701e639dc83a494f54b058",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ab666eec4716283de17d11e69cc42ce4eac657151051d36292a5903528771fb1",
+    "reviewedAt": "2026-10-27T18:59:53.474Z"
+  }
+}

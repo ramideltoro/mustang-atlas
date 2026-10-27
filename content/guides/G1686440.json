@@ -1,0 +1,81 @@
+{
+  "documentId": "G1686440",
+  "supportingSourceRefs": [],
+  "sourceHash": "8c1209340788457eadc7b88e252b92a6e48242caf72bc3ef902309a2c32ffc8c",
+  "title": "6R80 Overdrive Clutch: Parts and Hydraulic Operation",
+  "introduction": "This overview explains the overdrive clutch in the 6R80 automatic transmission. I start with the cutaway to locate the clutch inside the transmission, then use the exploded view and shared component callouts to recognize its piston, spring, plate stack and connected shafts.\n\nFor the hydraulic drawings, think of the valves as railway points: solenoids arrange the route, and regulated fluid pressure does the applying. Follow the printed circuit names and arrowheads between valves, then compare the applied and released views. A released clutch circuit can still contain low-pressure fluid; “released” does not mean bone dry.\n\nThese drawings explain component relationships and operating states. They do not provide a disassembly sequence, clutch-clearance specification, pressure-test setup or solenoid electrical test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686440-b00001",
+      "text": "Overdrive (O/D) Clutch in Cutaway",
+      "why": "The sectioned transmission places the clutch assembly around the central shaft area. Match the component callouts to the table and exploded view to connect an installed part with its separated shape."
+    },
+    {
+      "blockId": "G1686440-b00004",
+      "text": "Overdrive (O/D) Clutch Components",
+      "why": "Read along the exploded assembly from the input shaft assembly through the clutch piston, return spring and balance piston to the friction-and-steel plate stack and pressure plate, then toward the intermediate shaft and rear planetary carrier. The separation makes nested parts visible; it is not a removal or installation sequence. Use the table for exact part identification rather than inferring plate counts or service clearances from the picture."
+    },
+    {
+      "blockId": "G1686440-b00006",
+      "text": "Applying the overdrive clutch requires the manual valve to be in DRIVE. Line pressure is supplied to the clutch E regulator valve.",
+      "why": "This states a hydraulic operating condition, rather than an instruction to run the vehicle or select a range for testing."
+    },
+    {
+      "blockId": "G1686440-b00007",
+      "text": "SSD sends regulated solenoid pressure from SREG through VFS4 to the solenoid multiplex valve. SSE supplies pressure to position both the solenoid multiplex valve and the drive enable valve. In those positions, the valves route VFS4 pressure into CLEC F and CLEC, positioning the clutch E regulator and latch valves so the overdrive clutch can apply.",
+      "why": "The drawings identify SSD as shift solenoid D and SSE as shift solenoid E. This is the control-pressure route: trace the named passages to see how the solenoids position the valves before following the separate clutch-apply supply."
+    },
+    {
+      "blockId": "G1686440-b00008",
+      "text": "The clutch E regulator valve regulates line pressure from DRIVE and sends it through CLE to apply the overdrive clutch.",
+      "why": "This is the apply-pressure path to the clutch itself. Keeping it distinct from the valve-control passages makes the hydraulic drawing much easier to read."
+    },
+    {
+      "blockId": "G1686440-b00009",
+      "text": "Overdrive Clutch Applied: 4th, 5th and 6th Gear",
+      "why": "Use this drawing to trace the control passages and the regulated supply reaching the clutch. Compare the same named passages in the released-state drawing rather than assigning pressure values from line colors."
+    },
+    {
+      "blockId": "G1686440-b00011",
+      "text": "In 2nd, 3rd, 4th, 5th and 6th gear, the D2 Latch valve routes a small amount of fluid from PUMP into CL EXH. When SSD is hydraulically off and the Manual Valve is in DRIVE, fluid from CL EXH fills the CLE circuits at low pressure (21kPa/ 3 PSI). This keeps air out of CLE and helps the shift into 4th gear remain smooth.",
+      "why": "Low-pressure filling keeps the circuit ready without describing the full clutch-apply state. The stated pressure explains that filling function; this overview does not turn it into a measured pass/fail test."
+    },
+    {
+      "blockId": "G1686440-b00012",
+      "text": "Overdrive Clutch Released: 2nd and 3rd Gear",
+      "why": "Compare the clutch feed with the applied view. The released-state illustration still shows fluid in the clutch circuit, matching the low-pressure filling explanation rather than suggesting that a released circuit must be empty."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:54:00.817Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 8,
+    "receivedBlocks": 8,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8b266642ef89119f498d65b96f6b77e372152dd4ec3192c6742eb4fe7c197628",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 23,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a563cde99e2716c7e30cb8180e99b9b7286ffd804103168d3f999afb6261de6a",
+    "reviewedAt": "2026-10-27T18:50:57.399Z",
+    "editorialRevision": "Intro-only inferred engine list removal, primary transmission retained. Technical body unchanged."
+  }
+}

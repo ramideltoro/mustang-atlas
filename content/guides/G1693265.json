@@ -1,0 +1,140 @@
+{
+  "documentId": "G1693265",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1694645",
+      "sourceHash": "5bab3a19189e2844cce1491eccf7a256d019621b3050c481ae0b48a6a4d16820",
+      "referencedBy": "G1693265",
+      "sourceReference": "G1694645",
+      "sourceUnitCount": 75,
+      "mediaCount": 2
+    },
+    {
+      "documentId": "G1693135",
+      "sourceHash": "d6b064655024c1e086feb5f2031aeda96ef6ce061c121f1a908e6faac724a099",
+      "referencedBy": "G1693265",
+      "sourceReference": "G1693135",
+      "sourceUnitCount": 71,
+      "mediaCount": 2
+    },
+    {
+      "documentId": "G1694284",
+      "sourceHash": "d4104e8314a5a9cbe7573c3b64d938e1a8edf5b79ed38df9184d159768f900d2",
+      "referencedBy": "G1693265",
+      "sourceReference": "G1694284",
+      "sourceUnitCount": 54,
+      "mediaCount": 0
+    }
+  ],
+  "sourceHash": "aa13f26690eda6ab0cfeb9db26e7558c8530928cef1a442de5306de2ec9b1863",
+  "title": "Steering Wheel and Column Electrical Components",
+  "introduction": "I start by matching each control to its location: the stalks beside the wheel, the buttons on its front and the shift paddles behind it. Think of this area as a compact control desk—the SCCM passes requests to the systems that carry them out. The ignition button and theft-deterrent column lock have separate jobs. This overview explains those roles and points you toward the relevant system descriptions; removal, electrical testing and detailed starting or locking instructions belong in their matching procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693265-b00001",
+      "text": "Steering Column Switches",
+      "why": ""
+    },
+    {
+      "blockId": "G1693265-b00002",
+      "text": "The switches on and around the steering column put several vehicle functions within the driver's reach, helping the driver keep attention on driving. Use the locations below to identify which control serves each function:",
+      "why": "Location is the useful starting point: similar-looking controls can send requests to very different systems."
+    },
+    {
+      "blockId": "G1693265-b00004",
+      "text": "Left multifunction switch — mounted on the left side of the SCCM (steering column control module). It controls the turn signals, low/high beam selection and flash-to-pass feature. For system details, refer to Exterior Lighting - System Operation and Component Description (417-01 Exterior Lighting, Description and Operation).",
+      "why": "This identifies the lighting stalk and its functions. Keep the exterior-lighting referral for the operating details beyond this overview."
+    },
+    {
+      "blockId": "G1693265-b00006",
+      "text": "Right multifunction switch — mounted on the right side of the SCCM. It controls the windshield wipers and washer. For system details, refer to [Wipers and Washers - System Operation and Component Description](#/document/G1694645) (501-16 Wipers and Washers, Description and Operation).",
+      "why": "The SCCM sends the switch requests to the windshield wiper motor through a LIN communication circuit; the motor contains the operating logic and controls the washer pump. High-speed selection also provides a direct ground signal from the SCCM, bypassing the motor's logic so high-speed wiping remains available during a LIN communication failure. The stalk makes the request; the motor handles the choreography."
+    },
+    {
+      "blockId": "G1693265-b00020",
+      "text": "Steering wheel switches — mounted on the front of the wheel and serviceable separately from the wheel itself. They access settings and controls shown in the message center and operate the cruise control, audio and SYNC® systems. The locations below distinguish the switch groups.",
+      "why": "Separate serviceability means the switches are distinct service components. This overview identifies them; it does not teach their removal."
+    },
+    {
+      "blockId": "G1693265-b00009",
+      "text": "Left upper switch — controls the message center. Refer to Message Center - System Operation and Component Description (413-01 Instrumentation, Message Center and Warning Chimes, Description and Operation).",
+      "why": "This is the switch group for navigating the displayed settings and controls."
+    },
+    {
+      "blockId": "G1693265-b00012",
+      "text": "Left lower switch — controls the cruise control system. Use the reference that matches the vehicle's equipment: [Cruise Control - System Operation and Component Description](#/document/G1693135) (419-03A Cruise Control, Description and Operation), or Cruise Control - System Operation and Component Description (419-03B Cruise Control - Vehicles With: Adaptive Cruise Control, Description and Operation).",
+      "why": "In the conventional cruise system, the SCCM receives the momentary switch inputs and sends their requests through the gateway module to the PCM, which manages speed through electronic throttle control. The wheel buttons request the behavior; they do not directly operate the throttle. Use the adaptive-cruise reference for a vehicle fitted with that system."
+    },
+    {
+      "blockId": "G1693265-b00015",
+      "text": "Right upper switch — controls the audio system. Refer to the appropriate section in Group 415 for the procedure.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693265-b00018",
+      "text": "Right lower switch — controls the SYNC® system. Refer to the appropriate section in Group 415 for the procedure.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693265-b00022",
+      "text": "Paddle shifter switches — mounted on the rear of the steering wheel. They let the driver request transmission upshifts and downshifts on the automatic-transmission configuration described in the linked reference. Refer to [External Controls - System Operation and Component Description](#/document/G1694284) (307-05 Automatic Transmission External Controls, Description and Operation).",
+      "why": "These SelectShift™ controls belong to the automatic transmission. The supporting description explains manual paddle selection in the S position; use that reference to understand the transmission's behavior rather than treating the paddles as a mechanical gear linkage."
+    },
+    {
+      "blockId": "G1693265-b00024",
+      "text": "The steering column and steering wheel switches connect with other vehicle modules and components through the SCCM, or steering column control module. The SCCM communicates on High Speed Controller Area Network 2 (HS2-CAN), a network over which vehicle modules share messages.",
+      "why": "I use the SCCM as the switchboard in this explanation: it connects nearby controls with functions elsewhere in the car. That network role does not mean every function uses the same electrical path—the wiper system also uses LIN communication and a separate high-speed fail-safe circuit."
+    },
+    {
+      "blockId": "G1693265-b00025",
+      "text": "Push Button Start Ignition",
+      "why": ""
+    },
+    {
+      "blockId": "G1693265-b00026",
+      "text": "The push button start ignition system selects ignition ON or OFF and starts or shuts off the vehicle powertrain. Its push button ignition switch is integrated into the FCIM, the front controls interface module.",
+      "why": "The ignition button belongs to the front controls interface module, giving it a different component home from the column-mounted switches."
+    },
+    {
+      "blockId": "G1693265-b00027",
+      "text": "Steering Column Lock",
+      "why": ""
+    },
+    {
+      "blockId": "G1693265-b00028",
+      "text": "The steering column lock deters theft by locking the column. When locked, it prevents the steering wheel from being used to turn the front wheels.",
+      "why": "Its job is to block steering-wheel control of the front wheels as a theft deterrent. The lock is distinct from the SCCM's switch-interface role."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:00:27.607Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 15,
+    "receivedBlocks": 15,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55c49e84fe8639da83373c96a5eb9411f41e6af99af807ee18f25300e4e52303",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 3,
+    "supportingSourceUnitCount": 200,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6d651e84343d371e992e3820bdce742111be19d4aaebaa67d5aa441d98215629",
+    "reviewedAt": "2026-10-27T19:00:27.607Z"
+  }
+}

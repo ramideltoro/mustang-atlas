@@ -58227,96 +58227,153 @@
       }
     },
     {
-      "title": "Manually release an automatic transmission selector stuck in Park",
-      "summary": "Use the brake shift interlock override to move the selector into Neutral, then verify brake-light operation before driving.",
-      "introduction": "The brake shift interlock normally prevents the automatic transmission selector from leaving Park until the brake pedal is applied with the ignition on. Its actuator is built into the selector assembly and mechanically blocks the selector’s detent mechanism. This procedure manually releases that block when the normal release fails, allowing the selector to move into Neutral.",
-      "why": "In normal operation, the brake pedal position switch provides the input that allows the body control module to energize the interlock actuator. An override bypasses the mechanical restraint without establishing why it failed to release. Neutral also leaves the transmission output shaft free to turn, making the parking brake and applied brake pedal essential during the release.",
+      "title": "Manually release an automatic Mustang selector stuck in Park",
+      "summary": "Expose the selector’s manual interlock release, move into Neutral and restore the trim. Check the brake lights before driving.",
+      "introduction": "Park is supposed to hold the Mustang still; occasionally, the selector gets a little too committed to the assignment. I’ll walk you through the manual release for a 2015 Mustang with an automatic transmission and a 2.3L, 3.7L or 5.0L engine. Access is through the trim immediately around the selector, so this job stays inside the cabin.",
+      "why": "The brake shift interlock is a small electrically operated gate built into the selector assembly. It blocks the selector’s internal catch until you press the brake with the ignition on. Normally, the brake pedal position switch signals the body control module—the vehicle’s body-electronics controller—to operate that gate. The manual override lets you move the gate mechanically. Once you select Neutral, the transmission no longer holds its output shaft against turning, so the parking brake and your foot on the brake matter throughout the release. See the [interlock operation explanation](#/document/G1694284) and [selector assembly overview](#/document/G1694282).",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "automatic selector stuck in Park",
+        "2015 Mustang automatic stuck in Park",
+        "brake shift interlock actuator manual override",
+        "Mustang selector manual release",
         "cannot shift out of Park with brake applied",
-        "brake shift interlock manual override",
-        "Park release and brake lights not working"
+        "Mustang interlock override brake lights"
       ],
       "when": {
-        "summary": "When the selector will not leave Park with the ignition on and the brake pedal applied.",
+        "summary": "Use this procedure when the selector will not leave P with the ignition on and the brake pedal applied.",
         "notes": [
-          "The override releases the selector; the cause of the failed normal release still needs attention."
+          "A blown fuse may leave both the normal interlock release and the brake lights inoperative.",
+          "The engine can be started in N, but Neutral does not restrain the vehicle."
         ]
       },
       "prepare": [
         {
-          "title": "Secure the vehicle",
-          "detail": "Fully apply the parking brake before exposing or operating the override. Moving into Neutral removes the transmission’s Park restraint."
+          "title": "Understand the endpoint",
+          "detail": "This is a temporary manual release, not an electrical diagnosis or actuator replacement. If the release cannot be operated as described, stop rather than forcing the selector; further fault diagnosis is a separate job."
         },
         {
-          "title": "Prepare access to the selector",
-          "detail": "Have a small screwdriver for the actuator and be ready to lift the selector bezel carefully from its front corners."
+          "title": "Have the access tool ready",
+          "detail": "Have a small screwdriver ready to operate the actuator. The selector surround, called the bezel, lifts from its front corners and uses five retaining clips. No replacement component is needed for the override."
+        },
+        {
+          "title": "Control the vehicle and ignition",
+          "detail": "Work from the driver’s seat with access to both brakes. Fully apply the parking brake. If equipped, disable remote start through the Central Display: Vehicle settings > Remote Start Setup, before switching OFF or starting access. Otherwise the vehicle could be started remotely during the work. This Mustang uses the pushbutton keyless ignition, not a key that inserts into an ignition lock. Switch the ignition OFF and take the intelligent access key outside before lifting the bezel. If the engine was just switched off, let the 20-second fast-restart window expire before access: during that window it can restart even without the key inside. Keep the key outside throughout screwdriver operation; bring it back only after withdrawing the screwdriver and clearing your hands."
+        },
+        {
+          "title": "Protect yourself and arrange the lamp check",
+          "detail": "Wear eye and ear protection during service, and protective gloves if handling sharp edges beneath the trim. Arrange for a helper to observe the rear brake lights while you remain at the controls. Relevant general precautions are in [Health and Safety Precautions](#/document/G1693189)."
+        },
+        {
+          "title": "Provide safe exhaust ventilation before starting",
+          "detail": "Do not start the engine in a closed garage or other enclosed area; exhaust fumes can be toxic. Always open the garage door before starting. Do not park, idle or run the car over dry grass or other dry ground cover. If exhaust fumes are smelled inside the vehicle, do not drive; have it checked. These engine-start precautions and the keyless controls are explained in the owner’s Starting and Stopping the Engine section."
         }
       ],
       "steps": [
         {
-          "title": "Apply the parking brake and switch off",
-          "body": "Fully apply the parking brake, then set the ignition switch to the 0 position, meaning ignition off. This is the starting condition for the manual release."
+          "title": "Apply the parking brake, switch off and remove the key",
+          "body": "Leave the selector in P and pull the parking-brake lever up fully. If equipped, first disable remote start through the Central Display: Vehicle settings > Remote Start Setup. Complete that setting before switching OFF and beginning access. If the ignition is ON or the stationary engine is running, release the brake pedal with the car secured in P and press and release the ignition button once to switch OFF. If it is already OFF, leave it OFF.\n\nTake the intelligent access key outside the vehicle before exposing the release. If the engine has just stopped, wait until its 20-second fast-restart window has expired before bezel access. Keep the key outside throughout access and screwdriver operation; bring it back only after the screwdriver is withdrawn and your hands are clear. The parking brake must remain fully applied when you move the selector into Neutral."
         },
         {
-          "title": "Lift the selector bezel",
-          "body": "Starting at the front corners, carefully pry the bezel upward and position it out of the way. This exposes the actuator on the selector lever assembly."
+          "title": "Lift the trim surrounding the selector",
+          "body": "With the ignition off and the key removed from the vehicle, locate the bezel immediately surrounding the selector and its boot. Start at its two front corners—the corners nearest the dashboard and storage tray—and carefully pry upward.\n\nRelease the bezel from its five retaining clips and lift it enough to position it out of the way of the selector mechanism. Keep the selector knob in place. This access step does not call for unplugging wiring or removing the selector assembly. Treat the clips gently; a stubborn shifter does not need a broken-trim encore."
         },
         {
-          "title": "Operate the manual release",
-          "body": "Use a small screwdriver to push forward on the brake shift interlock actuator. Apply the brake pedal, press the selector knob button and move the selector into N, or Neutral."
+          "title": "Push the release forward and select Neutral",
+          "body": "Keep the key removed from the vehicle. With the bezel aside, find the small interlock release on the right-hand side of the exposed selector assembly, beside the selector mechanism. The access view shows a small screwdriver reaching this feature from above.\n\nUse the small screwdriver to push the release forward, toward the dashboard. While holding it forward, apply and hold the brake pedal, press the button on the selector knob and move the selector to N, meaning Neutral.\n\nKeep the parking brake fully applied and your foot on the brake. Neutral frees the transmission output shaft to turn; it does not hold the car stationary."
         },
         {
-          "title": "Start the engine",
-          "body": "With the selector in Neutral, start the engine. Maintain control of the vehicle with the brakes because Neutral does not hold the transmission output shaft."
+          "title": "Clear the mechanism, bring back the key and start in Neutral",
+          "body": "Once the selector has reached N, withdraw the screwdriver and clear your hands from the mechanism. Only then bring the valid intelligent access key back inside the vehicle; it does not insert into an ignition lock.\n\nWith the exhaust-ventilation precautions satisfied, keep the parking brake fully applied, fully depress and hold the brake pedal, and press the ignition button to start the engine with the selector in Neutral. Do not press the accelerator."
         },
         {
-          "title": "Restore the bezel",
-          "body": "Snap the bezel back into place after starting the engine. Verify brake-light operation before any driving."
+          "title": "Snap the selector bezel back into place",
+          "body": "Bring the bezel back over the selector opening and align it with the surrounding console. Snap its five retaining clips into place. Check that the perimeter sits evenly and the trim is clear of the selector’s movement. Refit is by clip engagement, with no screw-tightening operation."
+        },
+        {
+          "title": "Verify the brake lights before driving",
+          "body": "Keep the vehicle stationary with the parking brake fully applied and your foot controlling the brake pedal. Have your helper stand safely clear behind the vehicle and observe the rear brake lights as you release and reapply the pedal.\n\nConfirm that the brake lights illuminate when you press the pedal and go out when you release it. If they do not work, do not drive; arrange diagnosis and correction of that fault. Needing the override can coincide with a blown fuse, but this check alone does not identify the failed part."
+        },
+        {
+          "title": "Leave the vehicle secured if the job ends here",
+          "body": "If you are leaving the car parked, hold the brake pedal, return the selector to P and keep the parking brake fully applied before releasing the pedal. With the vehicle stationary and secured in P, press and release the ignition button once to switch the running engine and ignition OFF. Take the intelligent access key with you when leaving the vehicle.\n\nReaching Neutral and starting the engine completes the manual-release operation; it does not demonstrate that normal interlock operation has been repaired."
         }
       ],
       "watchFor": [
         {
-          "title": "Brake lights may also be inoperative",
-          "body": "A blown fuse is a possible reason the override is needed, and the brake lights may not work. Do not drive until their operation has been verified."
+          "title": "Prevent an unintended start during access",
+          "body": "Switch the ignition OFF and take the intelligent access key outside before lifting the bezel. If the engine has just stopped, wait until the 20-second fast-restart window expires. Keep the key outside while operating the release with the screwdriver, and bring it back only after the tool is withdrawn and your hands are clear."
+        },
+        {
+          "title": "Neutral removes the transmission’s holding restraint",
+          "body": "Keep the parking brake fully applied and hold the brake pedal during the release and engine start. Do not treat N as a position that secures the car."
+        },
+        {
+          "title": "Brake lights may have failed with the interlock",
+          "body": "Verify brake-light operation before driving. A successful manual release does not make an inoperative brake-light circuit safe to ignore."
+        },
+        {
+          "title": "Release the clips without forcing the surround",
+          "body": "Begin at the bezel’s front corners and lift carefully. If it resists, check where it remains retained instead of wrenching the whole surround upward."
         }
       ],
       "notes": [
-        "The actuator is integral to the selector assembly. Successful manual release does not establish that the actuator itself caused the fault."
+        "The actuator is integral to the selector assembly. Successful manual release does not prove that the actuator itself caused the original complaint.",
+        "The selector cable connects the cabin lever assembly to the transmission’s manual control lever. It stays attached during this override."
       ],
       "diagnostics": [
         {
-          "finding": "The selector remains in Park with ignition on and the brake pedal applied.",
-          "meaning": "The normal interlock release has not occurred.",
-          "next": "Secure the vehicle and follow the manual override sequence when release is necessary."
+          "finding": "The selector stays in P with the ignition on and the brake pedal applied.",
+          "meaning": "Normal interlock release has not occurred; this observation does not identify the failed component.",
+          "next": "When release is necessary, perform the [manual override](#/document/G1694287) with the parking brake fully applied."
         },
         {
-          "finding": "The brake lights do not operate when checked.",
-          "meaning": "The interlock complaint may coincide with a blown fuse and loss of brake-light operation.",
-          "next": "Investigate and correct the fault before driving."
+          "finding": "The release is pushed forward, but the selector still will not move with the brake pedal and knob button pressed.",
+          "meaning": "The manual-release sequence has not achieved its intended result.",
+          "next": "Stop applying force and arrange further diagnosis of the selector/interlock system."
+        },
+        {
+          "finding": "The brake lights do not illuminate when the pedal is pressed.",
+          "meaning": "The car has a brake-light fault. A blown fuse is one possible connection with the interlock complaint.",
+          "next": "Do not drive. Have the brake-light fault diagnosed and corrected before using the vehicle on the road."
+        },
+        {
+          "finding": "The selector reaches N and the engine starts.",
+          "meaning": "The manual override has allowed the intended selector movement and Neutral start.",
+          "next": "Restore the bezel, verify the brake lights and arrange attention to the original failure of normal release."
         }
       ],
       "verification": [
         {
-          "title": "Confirm release and trim restoration",
-          "body": "Confirm that the selector reached Neutral, the engine started and the bezel was snapped back into place."
+          "title": "Release and trim restoration",
+          "body": "Confirm that the screwdriver and your hands were clear before retrieving the key and starting the engine. Confirm that the selector reached N, the engine started and the bezel is evenly seated on its retaining clips."
         },
         {
-          "title": "Record the brake-light result",
-          "body": "Check and record whether the brake lights operate before allowing the vehicle to be driven."
+          "title": "Brake-light operation",
+          "body": "Confirm that a helper observed the rear brake lights responding to brake-pedal application before any driving."
+        },
+        {
+          "title": "Stationary completion",
+          "body": "If leaving the car parked, confirm that the selector is back in P, the parking brake remains fully applied and the ignition is off."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694287",
-          "purpose": "Manual activation of the automatic transmission brake shift interlock override.",
+          "purpose": "Primary manual-override sequence, selector-bezel access, engine start and trim refit.",
           "mediaId": "G1694287-m0003"
         },
         {
           "documentId": "G1694284",
-          "purpose": "Explain normal interlock operation and why Neutral does not restrain vehicle movement."
+          "purpose": "Explain normal interlock release, the components involved and the movement risk in Neutral."
+        },
+        {
+          "documentId": "G1694282",
+          "purpose": "Explain the integral actuator and selector cable; this guide uses the actual keyless controls from the owner’s manual rather than the generic keyed LOCK wording."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant personal protection and key removal to prevent unintended engine starting during access."
         }
       ],
       "hero": {
@@ -58355,14 +58412,44 @@
         {
           "documentId": "G1694282",
           "sourceHash": "e532951e7da6967da17295b5c5529ab928b8232074b2a29070ff9d2fcb856347"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "ec40450f6ed4664b5a89d9c92091e1a044a067d85ef5166cc7f30e12a7844828"
-      }
+        "fingerprint": "ec40450f6ed4664b5a89d9c92091e1a044a067d85ef5166cc7f30e12a7844828",
+        "editorialVersion": 2,
+        "editorialFingerprint": "ddc3462cd2644ab681692cdcfeecad0284ad49b70a1214346fc01e617417590e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-expose",
+          "title": "Secure the car and expose the release",
+          "summary": "Apply the parking brake, switch off, remove the key and lift the clipped selector surround.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "release-and-start",
+          "title": "Release the selector and start in Neutral",
+          "summary": "Operate the actuator with the key removed, then clear the tool and hands before retrieving the key and starting.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "refit-and-confirm",
+          "title": "Restore the trim and check completion",
+          "summary": "Refit the bezel, verify brake lights and secure the car if it remains parked.",
+          "start": 5,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Adjust the automatic transmission selector cable",
@@ -59320,83 +59407,143 @@
     },
     {
       "title": "Replace the automatic transmission selector lever knob",
-      "summary": "Release the console bezel, remove the knob with its boot and bezel, and separate the knob for replacement.",
-      "introduction": "The selector knob is the handgrip on the automatic transmission's range selector. A cable connects the selector assembly to the transmission's manual control lever. This job removes the knob, boot and bezel together before separating the knob; it does not involve opening the transmission.",
-      "why": "The bezel is retained by clips, and an electrical connector must be disconnected before the assembly is removed. Starting at the specified front corners gives a controlled release path. Pulling the whole assembly away before disconnecting it would place strain on its wiring.",
+      "summary": "Secure the car, select S, release the console bezel and electrical connector, then remove and separate the knob, boot and bezel assembly.",
+      "introduction": "The selector knob gets all the handshakes, while five little bezel clips quietly guard the exit. I’ll take you through their release, the connector underneath and the two screws that let the knob assembly come away without turning the console into a wrestling opponent.",
+      "why": "The knob is your handgrip on the automatic transmission’s range selector. A cable connects the selector assembly to the transmission’s manual control lever, and a brake shift interlock prevents unintended movement out of Park. Replacing the knob requires lifting the boot and bezel with it, disconnecting the wiring first so the harness does not become an accidental lifting strap.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "automatic selector knob replacement",
-        "damaged shifter knob",
-        "selector lever boot removal",
-        "shifter stuck in Park"
+        "2015 Mustang automatic selector lever knob replacement",
+        "Mustang automatic shifter knob removal",
+        "selector lever boot and bezel removal",
+        "automatic shifter console trim clips"
       ],
       "when": {
-        "summary": "When the selector knob needs replacement or removal for access to the knob, boot and bezel assembly.",
+        "summary": "Use this procedure when the automatic selector knob needs removal or replacement.",
         "notes": [
-          "The removal position is S.",
-          "The brake shift interlock belongs to the selector assembly; a selection complaint does not by itself justify replacing the knob."
+          "Applies to 2015 Mustangs with automatic transmission and 2.3L, 3.7L or 5.0L engines.",
+          "The required removal position is S.",
+          "A lever that will not leave Park needs an interlock-operation check before a knob replacement is assumed to be the answer."
         ]
       },
       "prepare": [
         {
-          "title": "Secure the vehicle",
-          "detail": "Prevent vehicle movement before selecting S. Park normally locks the transmission output shaft, and that parking lock is not available with the lever moved to S."
+          "title": "Restrain the car before leaving Park",
+          "detail": "Work on level ground, apply the parking brake and chock the wheels before selecting S. Park normally holds the transmission output shaft with a mechanical parking pawl; that restraint is unavailable in S. Keep the engine stopped throughout this job."
         },
         {
-          "title": "Prepare for trim removal",
-          "detail": "Have a suitable trim-prying tool and a driver that fits the retaining screws. Make space to position the released bezel aside without pulling on its connector."
+          "title": "Plan ignition and key control",
+          "detail": "If remote start is fitted, disable it beforehand through Vehicle settings > Remote Start Setup. Start with the ignition OFF. This Mustang uses keyless ignition: with a valid key inside and neither pedal pressed, pressing the start button switches the ignition ON without starting the engine. After selecting S with the brake held, release the pedal and press the button to switch OFF before opening trim or disconnecting wiring. Keep the key out of the vehicle during the repair."
+        },
+        {
+          "title": "Gather trim and screw tools",
+          "detail": "Have a suitable trim-prying tool, a driver that fits the two retaining screws and the replacement knob. Make room to hold the lifted bezel without hanging it from its wiring. Wear eye and ear protection during service, and use protective gloves around sharp edges."
         }
       ],
       "steps": [
         {
-          "title": "Move the selector to S",
-          "body": "Position the shifter in S before beginning trim removal. This establishes the lever position used by the removal procedure."
+          "title": "Secure the vehicle and select S",
+          "body": "With the car on level ground, apply the parking brake and chock the wheels before moving the selector out of P. Disable remote start if fitted, then establish ignition OFF.\n\nWith a valid key inside and neither pedal pressed, press the start button to switch the ignition ON without starting the engine. Hold the brake pedal and move the selector to S, the rearmost marked range position. Release the pedal, press the button to switch the ignition OFF, and remove the key from the vehicle before trim or connector work. Keep the parking brake applied and the chocks in place throughout the work. The keyless ignition controls are described on printed page 121 of the 2015 Mustang owner’s manual."
         },
         {
-          "title": "Release the bezel and connector",
-          "body": "Starting at the front corners, carefully pry the bezel upward and position it out of the way. The illustration identifies five retaining clips. Disconnect the electrical connector before lifting the assembly away."
+          "title": "Start releasing the bezel at its front corners",
+          "body": "At the two corners nearest the front of the car, carefully pry the selector bezel upward. Work progressively to release its five retaining clips around the perimeter, then lift and position the bezel aside far enough to reach underneath.\n\nSupport the lifted trim. If it resists, work on the remaining clips instead of making the wiring earn a towing certificate. See [Selector Lever Knob](#/document/G1694275)."
         },
         {
-          "title": "Remove the assembly and separate the knob",
-          "body": "Remove the retaining screws, then remove the shifter knob, boot and bezel together. With the assembly removed, separate the knob from the boot and bezel."
+          "title": "Disconnect the electrical connector beneath the bezel",
+          "body": "Locate the electrical connector underneath the lifted bezel. Release the connector and unplug it by its housing, keeping pulling force off the wires.\n\nComplete this disconnection before attempting to remove the knob, boot and bezel assembly from the lever."
         },
         {
-          "title": "Reassemble in reverse order",
-          "body": "Fit the knob to the boot and bezel, return the assembly to the lever and reinstall its screws. Reconnect the electrical connector and seat the bezel clips carefully."
+          "title": "Remove the two screws and lift off the assembly",
+          "body": "With the bezel lifted, locate the two retaining screws on the lower side of the knob stem. Remove both screws and keep them together.\n\nLift the shifter knob, boot and bezel off the selector as one assembly. Keep the disconnected wiring clear as the assembly comes away."
+        },
+        {
+          "title": "Separate the knob from the boot and bezel",
+          "body": "Support the removed boot and bezel, then lift the knob upward to separate it from them. Keep the boot clear as the knob comes free.\n\nThe knob is the part being exchanged; retain the boot, bezel and screws for reassembly."
+        },
+        {
+          "title": "Reassemble the knob, boot and bezel",
+          "body": "Fit the replacement knob to the boot and bezel, reversing their separation. Return the assembled pieces to the selector lever and reinstall the two retaining screws to secure the assembly.\n\nKeep the boot correctly positioned as the assembly is seated."
+        },
+        {
+          "title": "Reconnect the wiring and seat all five bezel clips",
+          "body": "Reconnect the electrical connector beneath the bezel and confirm it is engaged. Arrange the wiring clear of the bezel’s seating edge and clips.\n\nAlign the bezel with the console opening and press its five retaining clips back into engagement. Check around the perimeter for an evenly seated edge and a boot that is free to move."
+        },
+        {
+          "title": "Return the selector to Park and finish securing the car",
+          "body": "With all trim and wiring restored, keep the parking brake and wheel chocks in place. Press the brake pedal and return the selector from S to P while the ignition remains OFF. Confirm the knob remains attached and the boot and bezel stay seated during that movement.\n\nConfirm ignition OFF and keep the key out of the vehicle. Leave the parking brake applied. Remove the wheel chocks only when the work is finished and the car is ready for normal use."
         }
       ],
       "watchFor": [
         {
-          "title": "Resistance during bezel removal",
-          "body": "Continue the careful clip-release operation from the front corners. Do not use the wiring to restrain or support the lifted assembly."
+          "title": "Vehicle movement while S is selected",
+          "body": "Apply the parking brake and chock the wheels before leaving P. Keep those restraints in place until the selector has been returned to P and the work is complete."
+        },
+        {
+          "title": "A bezel that lifts only partway",
+          "body": "Five clips retain the bezel. Begin at the front corners and progressively release the remaining clips while supporting the trim."
+        },
+        {
+          "title": "Wiring taking the load",
+          "body": "Disconnect the connector before removing the assembly. During refit, keep the harness clear of the bezel edge and clip locations."
+        },
+        {
+          "title": "Confusing the knob with the interlock",
+          "body": "The brake shift interlock is integral to the selector assembly. Replacing its handgrip does not establish a repair for a Park-release fault."
         }
       ],
       "notes": [
-        "S also provides manual range operation through the steering-wheel SelectShift paddles; those switches are separate from this knob-removal job."
+        "The steering-wheel SelectShift paddles provide manual gear selection in S. They are separate from the knob-removal work.",
+        "This is a cabin trim and knob replacement performed with the vehicle on the ground."
       ],
       "diagnostics": [
         {
-          "finding": "The lever will not leave Park.",
-          "meaning": "The brake shift interlock intentionally blocks movement until the prescribed ignition and brake conditions are met.",
-          "next": "Check operation with the ignition in RUN and the brake pedal pressed before attributing the complaint to the knob."
+          "finding": "The selector will not move out of P.",
+          "meaning": "The brake shift interlock mechanically blocks Park release until the normal ignition-and-brake conditions are met.",
+          "next": "With the vehicle restrained and engine stopped, establish ignition ON using the keyless sequence in step 1, then press the brake pedal. If the lever still will not release, switch the ignition OFF and stop the removal rather than forcing it. [External Controls – System Operation and Component Description](#/document/G1694284) explains the interlock, but this article does not provide its fault-isolation procedure."
+        },
+        {
+          "finding": "The bezel remains attached at part of its perimeter.",
+          "meaning": "One or more of its five retaining clips may still be engaged.",
+          "next": "Support the bezel and continue careful clip release from the front corners around the perimeter. Do not pull against the connected harness."
+        },
+        {
+          "finding": "The refitted bezel does not sit evenly.",
+          "meaning": "A clip may be misaligned or the wiring or boot may be caught at the seating edge.",
+          "next": "Lift the affected area carefully, clear the obstruction, align the clips and reseat the bezel before completing the job."
         }
       ],
       "verification": [
         {
-          "title": "Confirm secure reassembly",
-          "body": "Confirm the knob assembly is retained, the boot and bezel are seated, and the electrical connector is reconnected."
+          "title": "Knob and trim secured",
+          "body": "Confirm both retaining screws are installed, the knob is attached, the boot is correctly positioned and all five bezel clips are engaged."
         },
         {
-          "title": "Confirm normal selector operation",
-          "body": "With the vehicle secured, confirm the reassembled knob operates the selector normally and that Park release follows the ignition-and-brake interlock conditions."
+          "title": "Connector and harness restored",
+          "body": "Confirm the electrical connector was reconnected before the bezel was seated and the harness is clear of the trim edges."
+        },
+        {
+          "title": "Park and ignition restored",
+          "body": "With the car restrained and the engine stopped, confirm the assembled selector returns to P without the knob, boot or bezel coming loose. Confirm ignition OFF, keep the key out of the vehicle and leave the parking brake applied."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694275",
-          "purpose": "Remove and reinstall the automatic selector knob, including bezel release and assembly separation.",
+          "purpose": "Primary selector-knob removal and reverse-order installation, including S position, five bezel clips, connector and two screws.",
           "mediaId": "G1694275-m0005"
+        },
+        {
+          "documentId": "G1694282",
+          "purpose": "Selector cable, integral brake shift interlock and ignition-lock relationship."
+        },
+        {
+          "documentId": "G1694284",
+          "purpose": "Park restraint, normal brake shift interlock release conditions and S-range context."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable service precautions for startup prevention, personal protection and sharp-edged components."
         }
       ],
       "hero": {
@@ -59435,14 +59582,51 @@
         {
           "documentId": "G1694284",
           "sourceHash": "d4104e8314a5a9cbe7573c3b64d938e1a8edf5b79ed38df9184d159768f900d2"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "91929975a7529f50ad6dee83a57c77afbd22077bf41fc2e2a47403cfd77e376d"
-      }
+        "fingerprint": "91929975a7529f50ad6dee83a57c77afbd22077bf41fc2e2a47403cfd77e376d",
+        "editorialVersion": 2,
+        "editorialFingerprint": "de38b4eebe7a86ebb157157e5ee5394bcd98aca43f5c210eb65b3c8649684fa5",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "restrain-and-position",
+          "title": "Restrain the car and position the selector",
+          "summary": "Establish ground restraints before selecting S with the engine stopped.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "release-console-assembly",
+          "title": "Release the console assembly",
+          "summary": "Unclip the bezel, disconnect its wiring and remove the two screws.",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "replace-and-reassemble",
+          "title": "Replace the knob and restore the trim",
+          "summary": "Exchange the knob, secure the assembly and reconnect the bezel wiring.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "restore-park",
+          "title": "Restore Park and key control",
+          "summary": "Return to P, secure the ignition and complete the restraint checks.",
+          "start": 8,
+          "end": 8
+        }
+      ]
     },
     {
       "title": "Replace the SelectShift Upshift Paddle Switch",
@@ -62070,75 +62254,154 @@
     },
     {
       "title": "Replace the MT82 transmission support insulator",
-      "summary": "Support and strap the installed MT82 transmission while removing its support insulator, then refit the assembly with the specified bolt and nut torques.",
-      "introduction": "The transmission support insulator forms part of the mounting for the MT82 six-speed manual gearbox. It carries support loads while limiting direct vibration transfer into the vehicle structure. This repair exchanges the external support component while a transmission jack controls the gearbox during removal and refitting.",
-      "why": "Removing a support changes how the transmission is held. The transmission jack carries the assembly during the relevant stage, and the retaining strap secures it to the jack. The insulator’s bolts and nuts have different tightening specifications, so identifying the two fastener groups is part of completing the job correctly.",
+      "summary": "Replace the external transmission mount using a hoist, transmission jack and retaining strap, then tighten its three bolts and two nuts in the correct installation order.",
+      "introduction": "The MT82 transmission support insulator has an unenviable job: hold up its end of the gearbox without passing every vibration straight into your seat. I’ll walk you through replacing this external mount from underneath the car. There are only five mounting fasteners involved, but supporting the transmission properly is where this little job earns its grown-up trousers.",
+      "why": "The insulator supports the transmission while cushioning vibration between the gearbox and vehicle structure. Removing it interrupts that support, so a transmission jack must carry the gearbox and a retaining strap must secure it to the jack. The three bolts and two nuts also have different tightening values; keeping those groups straight matters more than how quickly they come out.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "MT82 transmission support insulator",
-        "MT82 gearbox mount replacement",
-        "manual transmission support removal"
+        "2015 Mustang MT82 transmission support insulator",
+        "Mustang manual gearbox mount replacement",
+        "MT82 transmission mount bolts and nuts",
+        "transmission support insulator torque"
       ],
       "when": {
-        "summary": "When the MT82 support insulator requires replacement or removal during an established repair.",
+        "summary": "Use this procedure when replacement or removal of the MT82 transmission support insulator has already been established as necessary.",
         "notes": [
-          "Confirm the vehicle has the MT82 transmission before using this procedure."
+          "This procedure covers the 2015 2.3L, 3.7L and 5.0L applications fitted with the MT82 six-speed manual transmission.",
+          "A vibration or shifting complaint alone does not establish that this mount needs replacement."
         ]
       },
       "prepare": [
         {
-          "title": "Lifting and transmission support",
-          "detail": "Provide a vehicle hoist, transmission jack and retaining strap. The work requires competence in lifting the vehicle and securing the transmission while its support is removed."
+          "title": "Arrange proper vehicle and transmission support",
+          "detail": "Have a correctly rated vehicle hoist, transmission jack and retaining strap ready before loosening anything. Include cargo and modifications when checking hoist capacity. This is a hoist procedure; the emergency tire-changing jack is unsuitable, and nobody goes underneath a vehicle supported only by a jack."
         },
         {
-          "title": "Fastener access and torque control",
-          "detail": "Have suitable tools for the insulator nuts and bolts and a torque wrench capable of both installation settings. Keep the two fastener groups identifiable."
+          "title": "Gather the replacement and fastening tools",
+          "detail": "Have the correct replacement transmission support insulator, tools that fit its nuts and bolts, and a torque wrench covering 76 lb.ft (103 Nm) and 52 lb.ft (70 Nm). Keep the three bolts separate from the two nuts so their installation settings remain unmistakable."
+        },
+        {
+          "title": "Set the practical boundary",
+          "detail": "This job replaces the external insulator on an installed transmission; it does not establish a mount-failure test or require opening the gearbox. If the mounting arrangement differs from the ribbed insulator, three bolts and two downward studs described here, resolve the vehicle configuration and access before undoing hardware."
+        },
+        {
+          "title": "Protect yourself and prevent starting",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before working around or beneath the car. Switch the ignition off and remove the key to prevent another person starting the engine. The relevant precautions are in [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle on the hoist",
-          "body": "With the transmission in NEUTRAL, position the vehicle on a hoist. Follow the [lifting procedure](#/document/G1663631), using the marked lifting points and checking that hoist adapters clear suspension components and mounting brackets."
+          "title": "Position and restrain the car before lifting",
+          "body": "Position the Mustang on the hoist on a hard, level surface. Apply the parking brake and chock every wheel remaining on the ground. With the car stationary and restrained, select Neutral for the repair. Complete remote-start disabling, switch the ignition off and remove the key before beginning work beneath the car.\n\nThe parking brake does not need to be released for this procedure; leave it applied throughout."
         },
         {
-          "title": "Remove the nuts and secure the gearbox",
-          "body": "Follow the [insulator procedure](#/document/G1687338): remove the transmission support insulator nuts, then support the transmission with the transmission jack. Secure the transmission to the jack with the retaining strap before removing the insulator bolts."
+          "title": "Locate the four marked lifting points and raise the vehicle",
+          "body": "Locate the triangles stamped into the body structure at the four side lifting locations: behind the front wheels and ahead of the rear wheels. Position the hoist adapters at those designated lifting points, using the [lifting overview](#/document/G1663631).\n\nBefore raising, check that the arms and adapters clear the suspension, exhaust, steering linkage, mounting brackets, stabilizer brackets, axle and rear cover. Do not lift against either bumper. Raise the car with all four wheels clear of the ground and secure the hoist according to its operating instructions before going underneath. Keep the wheel chocks ready for the return to the ground."
         },
         {
-          "title": "Remove the insulator",
-          "body": "With the transmission supported and strapped, remove the support insulator bolts and the insulator. Maintain controlled support while the mounting component is absent."
+          "title": "Identify the insulator and its two fastener groups",
+          "body": "Work from underneath at the transmission support crossmember—the broad member running across beneath the gearbox. Look above it for the ribbed, roughly triangular transmission support insulator. Three bolt heads are arranged across that ribbed component. Two studs project downward through the crossmember, with their nuts accessible underneath.\n\nThose two underside nuts and three insulator bolts are the hardware for this repair. Leave the crossmember's outer attachment fasteners in place. Nothing in this replacement requires unplugging a connector or opening the transmission. The [insulator procedure](#/document/G1687338) covers this external assembly."
         },
         {
-          "title": "Install and tighten the support",
-          "body": "Install the insulator and its bolts, tightening the bolts to 76 lb.ft (103 Nm). Then install the insulator nuts and tighten them to 52 lb.ft (70 Nm). Complete both fastening stages before withdrawing temporary transmission support."
+          "title": "Remove the two underside nuts",
+          "body": "Remove both nuts from the insulator studs projecting beneath the crossmember. Keep them together and separate from the bolts you will remove next.\n\nLeave all three insulator bolts installed at this stage. The removal order is nuts first, transmission support next, then bolts—not five fasteners in a free-for-all."
+        },
+        {
+          "title": "Support and strap the transmission",
+          "body": "Position the transmission jack beneath the gearbox and bring its supporting saddle into contact so it carries the transmission while the insulator is removed. Secure the transmission to the jack with the retaining strap.\n\nCheck that the jack is stable, the strap is secure and the jack can be operated without contacting surrounding components. Do not remove the three insulator bolts until the transmission is supported and strapped. The strap must secure the gearbox itself to the jack; merely having a jack nearby does not provide support."
+        },
+        {
+          "title": "Remove the three bolts and withdraw the insulator",
+          "body": "With the transmission supported and secured, remove the three bolts arranged across the ribbed insulator, then remove the insulator from between the transmission and crossmember. Keep the transmission jack carrying the gearbox throughout.\n\nNote the removed insulator's orientation and the relationship between its three bolt locations and two downward studs. Compare the replacement's mounting arrangement with the removed part before fitting it. If those features do not correspond, stop and resolve the part identification rather than trying to persuade the wrong mount with a wrench."
+        },
+        {
+          "title": "Fit the insulator and tighten its three bolts",
+          "body": "Position the replacement insulator in its installed orientation, with its studs aligned through the crossmember openings and its three bolt locations aligned with the transmission. Keep the gearbox supported and strapped.\n\nInstall the three insulator bolts and tighten them to 76 lb.ft (103 Nm). Complete this bolt-fastening stage before installing and tightening the two underside nuts. If the mount will not seat or the bolts will not engage correctly, stop and check its orientation and alignment."
+        },
+        {
+          "title": "Install and tighten the two nuts",
+          "body": "Install both nuts on the studs beneath the crossmember. Tighten the nuts to 52 lb.ft (70 Nm).\n\nCheck your torque record against the actual fastener groups: three bolts at 76 lb.ft (103 Nm), then two nuts at 52 lb.ft (70 Nm). Two groups, two settings—the torque wrench gets the last word."
+        },
+        {
+          "title": "Transfer the load back to the installed mount",
+          "body": "After both fastening stages are complete, gradually lower the transmission jack enough to transfer the gearbox's load onto the installed insulator. Observe that the insulator remains seated and its attachments remain in position.\n\nOnce the jack is no longer carrying the transmission and the assembly is stable on its mount, release the retaining strap and withdraw the jack without catching surrounding components. If the assembly shifts unexpectedly, stop withdrawing support and resolve the seating or fastening problem first."
+        },
+        {
+          "title": "Clear the work area and lower with restraints restored",
+          "body": "Confirm that the jack, strap, tools and removed parts are clear of the vehicle and hoist. Keep the parking brake applied throughout this job, including lowering; no brake release is needed.\n\nLower the vehicle using the hoist's operating instructions. Restore wheel chocks as the wheels reach the ground, before releasing the hoist's support. Once the car is fully on the ground, select a parked manual-transmission gear and confirm the ignition is off before leaving it. Keep the parking brake and ground-wheel restraints in place while completing the final work-area check."
         }
       ],
       "watchFor": [
         {
-          "title": "Inadequate support",
-          "body": "The required transmission jack and retaining strap work together. Never get beneath a vehicle supported only by a jack; the vehicle’s emergency jack is unsuitable for this repair."
+          "title": "Unsecured transmission support",
+          "body": "Keep the three insulator bolts installed until the transmission jack is carrying the gearbox and the retaining strap is secured. Maintain that support until the replacement's bolts and nuts have both been tightened."
+        },
+        {
+          "title": "Incorrect hoist contact",
+          "body": "Use the triangle-marked lifting locations. Incorrect adapter placement can damage surrounding components or allow the vehicle to move or fall. The transmission jack supports the gearbox; it does not replace the vehicle hoist."
+        },
+        {
+          "title": "Mixing the torque settings",
+          "body": "The three insulator bolts receive 76 lb.ft (103 Nm). The two underside nuts receive 52 lb.ft (70 Nm). Installation completes the bolts before the nuts."
         }
       ],
       "notes": [
-        "Removal releases the nuts before the supported bolt-removal stage. Installation secures the bolts before the nuts."
+        "If transmission identification is uncertain, its identification tag is on the right-hand side of the transmission near the driveshaft flange. The tag includes a replacement part number, manufacturing location, build date and build time; see the [MT82 overview](#/document/G1703000).",
+        "The internal center support shown in the [transmission component description](#/document/G1703002) is a different component from this external support insulator. Internal gears, synchronizers and case fasteners remain outside this repair."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The replacement's three bolt locations or two studs do not match the removed insulator.",
+          "meaning": "The replacement or its orientation has not been confirmed for the vehicle.",
+          "next": "Keep the transmission supported and strapped. Compare the mounting arrangements and resolve part identification before installation."
+        },
+        {
+          "finding": "The insulator will not seat or its fasteners will not engage correctly.",
+          "meaning": "The installation is not ready for tightening.",
+          "next": "Maintain jack support and check the insulator's orientation, stud alignment and bolt-hole alignment. Resolve the fit before applying the installation torques."
+        },
+        {
+          "finding": "The assembly shifts unexpectedly as the jack load is released.",
+          "meaning": "Stable support by the installed mount has not been established.",
+          "next": "Stop withdrawing the jack, maintain controlled transmission support and check the insulator seating and completion of both fastening stages."
+        }
+      ],
       "verification": [
         {
-          "title": "Both fastener groups completed",
-          "body": "Confirm the bolts received 76 lb.ft (103 Nm) and the nuts received 52 lb.ft (70 Nm), and that the installed support is secure before removing the jack and strap."
+          "title": "All five fasteners accounted for",
+          "body": "Confirm that all three insulator bolts and both underside nuts are installed, with the bolts tightened to 76 lb.ft (103 Nm) before the nuts were tightened to 52 lb.ft (70 Nm)."
+        },
+        {
+          "title": "Mount carries the transmission",
+          "body": "Confirm that the insulator remains seated after the transmission jack's load has been removed and that the jack and retaining strap have been withdrawn."
+        },
+        {
+          "title": "Vehicle returned to restrained ground support",
+          "body": "Confirm the parking brake was applied before lowering, the wheel chocks were restored as the wheels reached the ground, and all service equipment is clear. These are completion checks for the replacement, not a diagnosis of any earlier vibration or shifting complaint."
         }
       ],
       "procedures": [
         {
           "documentId": "G1687338",
-          "purpose": "MT82 transmission support insulator removal and installation for the supplied 2.3L, 3.7L and 5.0L applications.",
+          "purpose": "Primary removal and installation procedure, including the required transmission jack and strap, fastener order and tightening values.",
           "mediaId": "G1687338-m0003"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Approved lifting points, hoist positioning and vehicle-support precautions."
+          "purpose": "Four marked vehicle lifting locations and hoist-positioning precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup prevention, personal protection, vehicle restraint and transmission-jack safety precautions."
+        },
+        {
+          "documentId": "G1703000",
+          "purpose": "MT82 identification and the transmission identification-tag location."
+        },
+        {
+          "documentId": "G1703002",
+          "purpose": "Background distinction between the external insulator and the transmission's internal center support; no internal teardown is required."
         }
       ],
       "hero": {
@@ -62162,7 +62425,7 @@
         "years": [
           2015
         ],
-        "equipment": "MT82 6-speed manual transmission"
+        "equipment": "2015 Mustang with 2.3L, 3.7L or 5.0L engine and MT82 6-speed manual transmission"
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -62181,14 +62444,51 @@
         {
           "documentId": "G1703002",
           "sourceHash": "788a12b1e6ad571e23df7e3e469804813a8fae2c267877a7f0474d5cc69308c8"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "1279cf3554bcb564acefd2d599c6059b9ada87a5aeb458ff2f9a6642548dc81c"
-      }
+        "fingerprint": "1279cf3554bcb564acefd2d599c6059b9ada87a5aeb458ff2f9a6642548dc81c",
+        "editorialVersion": 2,
+        "editorialFingerprint": "3f1be46906cd2992923d91528375933f788403e9e755ec2f352d0ffa2a9eabb5",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Restrain, lift and locate",
+          "summary": "Prevent starting, support the vehicle correctly and identify the mount's fasteners.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "support-and-remove",
+          "title": "Support the gearbox and remove the insulator",
+          "summary": "Remove the nuts, secure the transmission to its jack, then remove the bolts and insulator.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "fit-and-tighten",
+          "title": "Install and torque the replacement",
+          "summary": "Fit the insulator, tighten its bolts, then tighten its underside nuts.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "transfer-and-lower",
+          "title": "Restore support and return to the ground",
+          "summary": "Transfer the load to the mount, remove service equipment and lower with parking and wheel restraints in place.",
+          "start": 9,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Overhaul the 5.2L 3160 six-speed manual transmission",
@@ -63399,98 +63699,190 @@
     },
     {
       "title": "Drain and refill the 5.2L 3160 manual transmission",
-      "summary": "Restore the transmission fluid level, including the required circulation and second fill when a transmission cooler is fitted.",
-      "introduction": "The 3160 manual transmission transfers engine torque to the driveshaft through its gears and shafts. Its fluid supports the working components, and an internal pump supplies fluid for cooling. Draining and filling restores the working fluid after a job that requires it to be removed.",
-      "why": "The fill opening establishes the level only when the vehicle is level. A cooler-equipped transmission needs an additional circulation step: the first fill does not account for fluid that must enter the cooling circuit. Skipping the second fill leaves that transmission underfilled.",
+      "summary": "Drain, reseal and refill the 2015 Mustang 5.2L 3160 six-speed manual transmission, including the essential circulation and second fill on cooler-equipped cars.",
+      "introduction": "The 3160 has six forward gears and precisely zero interest in running thirsty. Its cooler-equipped version has a small trap for the unwary: reaching the fill hole once does not finish the job. I'll walk you through the two plugs, the correct fluid and the two-minute circulation step that keeps an apparently finished refill from being an underfilled gearbox.",
+      "why": "The transmission changes and transfers the engine's turning force to the driveshaft. Its fluid lubricates the working gears and bearings, and an internal pump supplies fluid for cooling. The fill opening sets the fluid level, so the car must be level. When a transmission cooler is fitted, fluid must circulate into that cooling circuit before you can establish the final level.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "3160 transmission draining and filling",
-        "5.2L manual transmission fluid level",
-        "transmission cooler refill",
-        "3160 gearbox underfilled"
+        "2015 Mustang 5.2L transmission fluid",
+        "3160 manual transmission drain and fill",
+        "3160 transmission cooler refill",
+        "MERCON LV XT-10-QLVC",
+        "3160 drain fill plug torque"
       ],
       "when": {
-        "summary": "When work on the 3160 transmission requires its fluid to be drained and refilled.",
+        "summary": "Use this procedure when repair work requires draining and refilling the fitted 3160 transmission.",
         "notes": [
-          "The transmission fluid is intended to last the transmission's service life; no routine change interval is specified."
+          "This guide covers the 2015 5.2L Mustang with the 3160 six-speed manual, both with and without a transmission fluid cooler.",
+          "Ford describes this transmission's fluid as lasting the transmission's service life and requiring no routine servicing change. This procedure does not establish a periodic change interval or diagnose a shifting complaint."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange level hoist access",
-          "detail": "Use a suitable hoist and the designated lifting points. Check adapter clearance and never work beneath a vehicle supported only by a jack."
+          "title": "Confirm the transmission and cooler equipment",
+          "detail": "Confirm that the car has the 3160 transmission and establish whether a transmission fluid cooler is fitted before starting. The transmission identification tag is on the top right-hand side of the case; it carries the replacement part number, manufacturing location, build date and time, assembly number and build level. Cooler fitment determines whether you must run the engine and perform a second fill. See the [transmission overview](#/document/G1794228)."
         },
         {
-          "title": "Obtain the specified materials",
-          "detail": "Have the transmission fluid and plug thread sealer specified by the procedure's Specifications references, a drain container, filling equipment and a torque wrench."
+          "title": "Obtain the exact fluid and thread sealant",
+          "detail": "Use Motorcraft MERCON LV Automatic Transmission Fluid XT-10-QLVC, specification WSS-M2C938-A. Despite the automatic-transmission wording on the bottle, this is the specified fluid for this manual gearbox. Use Motorcraft Thread Sealant with PTFE TA-24-B, specification WSK-M2G350-A2, on both plugs. Listed capacities are 2.5 qt (2.4 L) without a cooler and 3.3 qt (3.1 L) with a cooler. Use those figures to plan supplies; establish the actual level at the bottom of the fill hole. See [Specifications](#/document/G1794225)."
         },
         {
-          "title": "Identify the cooler branch",
-          "detail": "Confirm whether a transmission fluid cooler is fitted. That branch requires running the engine with the transmission in Neutral and the clutch pedal released."
+          "title": "Arrange level hoist access and filling equipment",
+          "detail": "Have a hoist rated for the vehicle's actual weight, including cargo and modifications, wheel chocks, a drain container, fluid-filling equipment such as a syringe, a tool that fits the plugs and a torque wrench capable of 21 lb.ft (28 Nm). Both plugs are serviced from underneath with the transmission installed. Keep the vehicle level throughout filling."
+        },
+        {
+          "title": "Prepare for safe handling and the possible engine run",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged components. Read the safety information for the fluid and sealant before using them. Keep the key under your control during service; the only intentional engine run in this job is the cooler-equipped circulation step. Review the relevant [health and safety precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle level",
-          "body": "Place the transmission in Neutral and position the vehicle on the hoist using the [lifting procedure](#/document/G1663631). Keep it level throughout draining and filling so the fill-hole height remains a valid reference."
+          "title": "Secure the car and prevent an unexpected start",
+          "body": "Position the car on a hard, level surface at the hoist. Apply the parking brake and chock all wheels remaining on the ground, then select Neutral.\n\nIf remote start is fitted, disable it through the Central Display under Vehicle settings > Remote Start Setup before working around or beneath the car. Switch the ignition off and remove the key to prevent another person from starting the engine during service. Keep the parking brake applied throughout this job."
         },
         {
-          "title": "Drain and reseal the drain plug",
-          "body": "Follow [Transmission Draining and Filling](#/document/G1794233). Remove the drain plug and drain the fluid. Apply the specified thread sealer and reinstall the plug to 21 lb.ft (28 Nm)."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Locate the triangles stamped into the body or frame at the four lifting locations: the sill areas behind the front wheel openings and ahead of the rear wheel openings. Use the stamped markings to establish the actual adapter positions, rather than guessing from the edge of the sill.\n\nPosition the hoist arms and adapters at those locations. Check clearance from suspension parts, exhaust, steering linkage, mounting brackets and stabilizer brackets, and avoid loading or damaging the axle or rear cover. Do not lift against either bumper. The [lifting overview](#/document/G1663631) shows the four locations."
         },
         {
-          "title": "Make the initial fill",
-          "body": "Remove the fill plug and add the specified transmission fluid until it reaches the bottom of the fill hole. This is the final level-setting stage for vehicles without a transmission fluid cooler."
+          "title": "Raise and securely support the vehicle level",
+          "body": "Raise the car on the correctly positioned hoist until all four wheels are fully clear of the ground. Secure it in accordance with the hoist's operating instructions and confirm that it remains level before going underneath.\n\nLeave the transmission in Neutral and the parking brake applied. Do not work beneath a car supported only by a jack. The cooler circulation stage is performed after lowering the car onto its wheels."
         },
         {
-          "title": "Circulate fluid on cooler-equipped vehicles",
-          "body": "Loosely install the fill plug. With the transmission remaining in Neutral, start the engine and idle for 2 minutes with the clutch engaged, meaning the clutch pedal released. Turn the engine off, then refill to the bottom of the fill hole."
+          "title": "Identify both plugs beside the rear transmission support",
+          "body": "From underneath, follow the transmission rearward to its rear housing and support mounting area. The drain plug is low on the housing, immediately beside the substantial support bracket. The fill plug is higher, in an upward-facing boss beside the support crossmember and beneath the large pipe visible above it.\n\nMatch those physical features to the [draining and filling procedure](#/document/G1794233) before undoing anything. The service access shown is beside the installed support; the parts removed for this job are the drain and fill plugs. Do not mistake nearby mounting bolts, housing bolts or sensor fittings for a fluid plug."
         },
         {
-          "title": "Complete the fill-plug installation",
-          "body": "For all vehicles, apply the specified thread sealer to the fill plug and install it to 21 lb.ft (28 Nm). Complete this final installation after the cooler circulation and top-up when that branch applies."
+          "title": "Remove the drain plug and collect the fluid",
+          "body": "Position the drain container below the lower drain plug so it will catch the escaping fluid. Remove that plug and allow the transmission fluid to drain into the container. Retain the plug for resealing and refitting.\n\nKeep the engine off and the key removed while the transmission is drained."
+        },
+        {
+          "title": "Reseal and tighten the drain plug",
+          "body": "After draining, apply Motorcraft Thread Sealant with PTFE TA-24-B, specification WSK-M2G350-A2, to the drain-plug threads. Reinstall the plug and tighten it to 21 lb.ft (28 Nm).\n\nComplete this installation before adding fresh fluid. This plug's final tightening value is the same for the cooler and non-cooler branches."
+        },
+        {
+          "title": "Remove the fill plug and establish the initial level",
+          "body": "Remove the higher fill plug. With the car still level, use the filling equipment to add Motorcraft MERCON LV XT-10-QLVC, specification WSS-M2C938-A, until the fluid reaches the bottom edge of the fill opening.\n\nFor a car without a transmission cooler, this establishes the final fluid level: proceed directly to the final fill-plug installation in step 11.\n\nFor a car with a cooler, continue through steps 8–10 before sealing the fill plug. Bottle-counting is useful for buying fluid; the opening gets the final vote on level."
+        },
+        {
+          "title": "Cooler-equipped cars: loosely refit the fill plug",
+          "body": "After the initial fill, loosely install the fill plug. This is a temporary installation before circulation, rather than its final sealed and torqued installation.\n\nClear everyone, filling equipment and tools from beneath the car. Keep the parking brake applied and Neutral selected. Lower the car using the hoist instructions, restoring wheel chocks as the tires reach the ground. Leave it stationary on its wheels for circulation; do not drive it with this temporary plug installation."
+        },
+        {
+          "title": "Cooler-equipped cars: idle for two minutes with the clutch pedal released",
+          "body": "With the car fully on the ground, parking brake applied, wheels chocked and transmission in Neutral, sit in the driving position with the valid key inside. Keep everyone clear of the vehicle. Do not run the engine in a closed garage or other enclosed area; open the garage door and provide adequate ventilation before starting. From ignition OFF, press the clutch pedal and then the start button to start the engine, without pressing the accelerator. Release the clutch pedal fully once the engine has started.\n\nLet the engine idle for 2 minutes in Neutral with the clutch pedal fully released. This is the source’s clutch-engaged condition for circulating fluid through the cooling system. Keep Neutral selected and do not drive the vehicle. The keyless controls and exhaust precautions are described on printed page 121 of the 2015 Mustang owner’s manual."
+        },
+        {
+          "title": "Cooler-equipped cars: stop the engine and fill again",
+          "body": "After the two-minute idle, switch the engine OFF and remove the key before leaving the driving position. Keep the parking brake applied and Neutral selected. Reposition the hoist adapters at the same marked lifting points, repeat the clearance checks, and raise and securely support the car level using the earlier lifting steps before returning underneath.\n\nRemove the temporarily installed fill plug and add the same specified fluid until it again reaches the bottom of the fill hole. The first fill alone leaves a cooler-equipped transmission underfilled; this second level setting is essential."
+        },
+        {
+          "title": "All cars: seal and tighten the fill plug",
+          "body": "Once the appropriate branch has reached its final bottom-of-hole level, apply Motorcraft Thread Sealant with PTFE TA-24-B, specification WSK-M2G350-A2, to the fill-plug threads.\n\nInstall the fill plug and tighten it to 21 lb.ft (28 Nm). On cooler-equipped cars, do this only after the two-minute circulation and second fill."
+        },
+        {
+          "title": "Check the completed service before lowering",
+          "body": "With the engine off, confirm that both plugs are installed, both received thread sealant and both were tightened to 21 lb.ft (28 Nm). Remove spilled fluid from the serviced area and check the plug joints for fresh leakage.\n\nConfirm that the final level was set with the car level and, if a cooler is fitted, after circulation. These are completion checks on the work just performed, rather than a test of the transmission's internal condition. Resolve any leakage or unfinished filling before returning the car to service."
+        },
+        {
+          "title": "Restore the ground restraints as the car comes down",
+          "body": "Keep the parking brake applied throughout lowering; no release or raised-cabin entry is required. With the engine OFF, remove all equipment and tools from underneath and lower according to the hoist instructions. Restore wheel chocks as the tires reach the ground before withdrawing the hoist supports. Once fully grounded, select a parked manual-transmission gear and confirm ignition OFF/key out before leaving the car. Keep the parking brake and ground restraints in place until ready to move deliberately."
         }
       ],
       "watchFor": [
         {
-          "title": "The wrong clutch position",
-          "body": "The cooler circulation step requires the pedal released. Holding it down does not follow the specified filling procedure."
+          "title": "An incomplete cooler refill",
+          "body": "A cooler-equipped car needs an initial fill, a loosely fitted plug, 2 minutes of idle with the clutch pedal released, engine shutdown and a second fill. Skipping circulation or the second fill leaves it underfilled."
         },
         {
-          "title": "A tilted vehicle",
-          "body": "A fill-hole reading taken with the vehicle tilted does not establish the specified level."
+          "title": "A tilted car",
+          "body": "The bottom of the fill hole is a valid level reference only when the vehicle is level. Correct the vehicle position before establishing either fill level."
+        },
+        {
+          "title": "Unexpected engine operation",
+          "body": "Keep the ignition off and the key removed during draining, filling and plug work. Restore access to the key only for the deliberate cooler circulation run, then switch off and remove it again before returning underneath."
+        },
+        {
+          "title": "Unsafe support or restraint",
+          "body": "Use the marked lifting points and correctly positioned hoist adapters for underside work. Keep the parking brake applied throughout. Perform the cooler circulation run only after lowering onto the wheels and restoring chocks; switch the engine OFF and remove the key before raising again for the final fill."
         }
       ],
       "notes": [
-        "Use the bottom of the fill hole as the level reference; do not substitute an assumed fluid quantity."
+        "Both the drain plug and fill plug require thread sealant and a final torque of 21 lb.ft (28 Nm).",
+        "The listed capacities help you obtain enough fluid; the bottom edge of the fill opening establishes the level.",
+        "The [component description](#/document/G1794229) identifies the drain/fill plugs in the rear extension housing. Its internal geartrain and shift-fork illustrations are background information; draining and filling requires no internal dismantling."
       ],
       "diagnostics": [
         {
-          "finding": "A cooler-equipped transmission received only the initial fill",
-          "meaning": "The cooling system has not been accounted for and the transmission will be underfilled.",
-          "next": "Perform the specified circulation, stop the engine and refill to the bottom of the opening."
+          "finding": "The car has no transmission fluid cooler.",
+          "meaning": "The initial bottom-of-hole fill is the final level-setting operation.",
+          "next": "Apply the specified sealant to the fill plug and tighten it to 21 lb.ft (28 Nm). Omit the cooler circulation and second-fill steps."
+        },
+        {
+          "finding": "The car has a transmission fluid cooler.",
+          "meaning": "The initial fill does not account for fluid that must circulate into the cooling circuit.",
+          "next": "Loosely install the fill plug, idle for 2 minutes in Neutral with the clutch pedal released, shut the engine off and refill to the bottom of the opening before final plug installation. Follow the grounded circulation and re-lifting sequence in steps 8–10."
+        },
+        {
+          "finding": "Cooler fitment has not been established.",
+          "meaning": "You cannot yet choose the correct completion branch.",
+          "next": "Confirm the fitted equipment before beginning the drain and refill. Do not infer cooler fitment from the amount drained."
+        },
+        {
+          "finding": "The cooler circulation run was omitted or performed with the clutch pedal held down.",
+          "meaning": "The required circulation sequence has not been completed.",
+          "next": "With the initial level established and the fill plug loosely installed, perform the full 2-minute idle with the pedal released. Stop the engine, remove the key and set the level again. Follow the grounded circulation and re-lifting sequence in steps 8–10."
+        },
+        {
+          "finding": "A fill level was established with the vehicle tilted.",
+          "meaning": "That reading does not establish the required level.",
+          "next": "Correct the vehicle's position on the hoist and set the level at the bottom of the fill opening. Retain the cooler circulation requirement when applicable."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the final level and closure",
-          "body": "Confirm the bottom-of-hole level was reached at the correct stage and both plugs received thread sealer and final tightening."
+          "title": "Correct fluid and final level",
+          "body": "Confirm MERCON LV XT-10-QLVC meeting WSS-M2C938-A was used and the final level reached the bottom of the fill opening with the vehicle level."
         },
         {
-          "title": "Record the filling branch",
-          "body": "Record cooler fitment and, where applicable, completion of the 2-minute circulation and subsequent top-up."
+          "title": "Cooler branch completed when fitted",
+          "body": "Confirm the engine idled for 2 minutes in Neutral with the clutch pedal released, was switched off, and the transmission was then filled again to the bottom of the opening."
+        },
+        {
+          "title": "Both plugs sealed and secured",
+          "body": "Confirm TA-24-B thread sealant meeting WSK-M2G350-A2 was applied to both plugs and each was tightened to 21 lb.ft (28 Nm). Check the serviced joints for fresh leakage after removing spilled fluid."
+        },
+        {
+          "title": "Vehicle safely returned to the ground",
+          "body": "Confirm the parking brake remained applied, wheel chocks were restored as the tires returned to the ground, all servicing equipment was removed, and the fully grounded car was left in a parked manual-transmission gear with ignition OFF."
         }
       ],
       "procedures": [
         {
           "documentId": "G1794233",
-          "purpose": "Drain and fill the 5.2L 3160 transmission, including the cooler-specific circulation branch.",
+          "purpose": "Primary drain-and-fill sequence, plug tightening values and cooler-specific circulation and second fill.",
           "mediaId": "G1794233-m0001"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Select lifting points and position the hoist safely."
+          "purpose": "Identify triangle-marked lifting locations and position the hoist without damaging nearby components."
+        },
+        {
+          "documentId": "G1794228",
+          "purpose": "Confirm 3160 transmission context, identification-tag location, cooling pump and service-life fluid guidance."
+        },
+        {
+          "documentId": "G1794229",
+          "purpose": "Identify the rear extension housing and drain/fill plugs; internal component information is background only."
+        },
+        {
+          "documentId": "G1794225",
+          "purpose": "Specify MERCON LV fluid, PTFE thread sealant and capacities for transmissions with and without a cooler."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant startup prevention, personal protection, chemical handling, hoist capacity and wheel-restraint precautions."
         }
       ],
       "hero": {
@@ -63531,114 +63923,232 @@
         {
           "documentId": "G1794229",
           "sourceHash": "04b38fe10948a0a1dd1cef9f34107854b2c0977c8c528e6e772437c761f73e0a"
+        },
+        {
+          "documentId": "G1794225",
+          "sourceHash": "9c3c3dba0f38fa063225ff602ba1fdfa707a8c6bc4068e36976a55e02d5bc4da"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "92ed9924a38173c02869b84c9ef2f4dec0b400059b9455ceb29445c53055ba27"
-      }
+        "fingerprint": "92ed9924a38173c02869b84c9ef2f4dec0b400059b9455ceb29445c53055ba27",
+        "editorialVersion": 2,
+        "editorialFingerprint": "5f4fc5bb006b94075683675ff97e26e931252bb17d7995ea03f5e5c2cfc8c9a0",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure and lift the car",
+          "summary": "Prevent unexpected starts and establish level, correctly supported hoist access.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "locate-and-drain",
+          "title": "Locate the plugs and drain",
+          "summary": "Identify the service plugs, drain the gearbox and reseal the drain plug.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "initial-fluid-fill",
+          "title": "Make the initial fill",
+          "summary": "Fill to the opening and choose the correct cooler branch.",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "id": "cooler-circulation",
+          "title": "Complete the cooler refill",
+          "summary": "On cooler-equipped cars, circulate the fluid and establish the level again.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "seal-and-lower",
+          "title": "Seal, check and lower",
+          "summary": "Secure the fill plug, verify completion and restore ground restraints.",
+          "start": 11,
+          "end": 13
+        }
+      ]
     },
     {
       "title": "Check the fluid level in the 5.2L 3160 manual transmission",
-      "summary": "Set the transmission fluid level at the fill-hole edge, including the required circulation and refill sequence when a cooler is fitted.",
-      "introduction": "The 3160 six-speed manual transmission transfers engine torque to the driveshaft through its gears, shafts and synchronizers. Its fluid serves the internal working components, and an oil pump provides for fluid cooling. On vehicles with a transmission cooler, setting the level includes filling the cooling circuit before making the final level check.",
-      "why": "The bottom of the fill hole provides the level reference only when the vehicle is level. A cooler-equipped transmission can appear full before fluid has circulated through its cooling system. The required engine-idling stage fills that circuit; omitting it leaves the transmission underfilled.",
-      "taskType": "repair",
+      "summary": "Check and restore the fluid level on a level hoist, including the two-minute circulation and second fill required when a transmission cooler is fitted.",
+      "introduction": "The 3160’s little practical joke is that this manual gearbox takes automatic-transmission fluid. Yes, really—the correct bottle matters more than its job title. I’ll show you how to reach the fill plug from underneath, establish the level and handle the extra circulation step a cooler-equipped car needs before you tighten everything up.",
+      "why": "The transmission passes the engine’s turning force to the driveshaft, using different gear ratios to suit road speed and load. Its fluid serves the internal gears, bearings and synchronizers—the parts that help match speeds during a shift—and an internal pump provides fluid circulation for cooling. The bottom of the fill opening establishes the correct level only with the car level. If a cooler is fitted, the initial fill must also be circulated through that cooling circuit before the final level is set. See [Transmission Overview](#/document/G1794228) and [Component Description](#/document/G1794229).",
+      "taskType": "maintenance",
       "difficulty": "intermediate",
       "searchTerms": [
-        "3160 transmission fluid level",
-        "5.2L manual transmission fluid check",
-        "transmission cooler underfill",
-        "manual transmission fill plug"
+        "2015 Mustang 5.2L transmission fluid level",
+        "3160 six-speed manual fill plug",
+        "MERCON LV XT-10-QLVC",
+        "3160 transmission cooler fluid circulation",
+        "manual transmission fill plug torque"
       ],
       "when": {
-        "summary": "When the 3160 transmission fluid level needs checking or restoring.",
+        "summary": "Use this procedure when checking or restoring the fluid level in the specified 3160 transmission.",
         "notes": [
-          "The transmission fluid is intended to last the transmission's service life; this is not a scheduled fluid-change instruction."
+          "The transmission fluid is intended to last the transmission’s service life and does not require routine replacement during servicing. This article checks and restores level; it is not a scheduled fluid-change procedure.",
+          "Establish whether a transmission fluid cooler is fitted before beginning. Cooler-equipped cars require both the initial fill and the circulation/refill sequence."
         ]
       },
       "prepare": [
         {
-          "title": "Provide level, secure access",
-          "detail": "Use a hoist and the designated lifting points. Locate the stamped triangles, check adapter and underbody clearance, and never work beneath a vehicle supported only by a jack. Do not use the emergency tire-changing jack for this task."
+          "title": "Confirm the transmission and the job boundary",
+          "detail": "This procedure covers the 2015 5.2L Mustang with the 3160 six-speed manual transmission. Its identification tag is on the top right-hand side of the transmission if identification is needed. This is an assembled-vehicle level check; it does not determine why fluid has been lost or diagnose an internal shifting fault."
         },
         {
-          "title": "Identify materials and equipment",
-          "detail": "Have the transmission fluid and fill-plug thread sealer specified for the 3160 in Specifications (308-03), suitable filling equipment and a torque wrench. Establish whether a transmission fluid cooler is fitted."
+          "title": "Have the correct fluid and thread sealant",
+          "detail": "Use Motorcraft MERCON LV Automatic Transmission Fluid, XT-10-QLVC, meeting WSS-M2C938-A. For the fill plug, use Motorcraft Thread Sealant with PTFE, TA-24-B, meeting WSK-M2G350-A2. Read the materials’ safety information before use. These are the requirements in [Specifications](#/document/G1794225)."
         },
         {
-          "title": "Plan the cooler-equipped operating step",
-          "detail": "Provide the capability to control the vehicle safely during the prescribed engine-idling phase while it remains in NEUTRAL on the hoist."
+          "title": "Arrange level hoist access",
+          "detail": "Use a hoist rated for the vehicle’s actual weight, including cargo and modifications, on a hard, level surface. Have wheel chocks ready. The car must remain level for the fluid reading. The emergency tire-changing jack is unsuitable for this work, and a jack alone must never support a car you are working beneath."
+        },
+        {
+          "title": "Gather filling and tightening equipment",
+          "detail": "Have a fluid-filling syringe or suitable filling device, a tool that correctly fits the fill plug, and a torque wrench capable of 21 lb.ft (28 Nm). The filling illustration shows a syringe for delivering fluid into the opening. The fill plug is reused with thread sealant for final installation."
+        },
+        {
+          "title": "Prepare for protection and the cooler branch",
+          "detail": "Wear eye and ear protection, and use protective gloves when handling sharp-edged components. If a cooler is fitted, plan to lower the car onto its wheels for the controlled circulation run, then raise it level again for the final fluid check. Keep the parking brake applied throughout; provide adequate ventilation for the engine run."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle level",
-          "body": "Place the transmission in NEUTRAL and position the vehicle on a hoist using [Jacking and Lifting](#/document/G1663631). Confirm that the vehicle is level before following [Transmission Fluid Level Check](#/document/G1794234)."
+          "title": "Prevent unintended starting and restrain the car",
+          "body": "Before working around or underneath the car, disable remote start if fitted through Vehicle settings > Remote Start Setup. Switch the ignition off and remove the key to prevent someone else starting the engine.\n\nWith the car on the ground, apply the parking brake and chock the wheels. Select Neutral while those restraints remain in place. Keep the parking brake applied throughout this check; releasing it is not part of the procedure. The relevant precautions are in [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Establish the initial level",
-          "body": "Remove the fill plug and add the specified transmission fluid to the bottom of the fill hole. This is the level target, rather than an assumed fill quantity. Vehicles without a cooler proceed to final plug sealing."
+          "title": "Position the hoist at the four designated lifting locations",
+          "body": "Locate the triangles stamped into the body or frame. The lifting illustration places the four support locations along the sides of the underbody, behind the front wheels and ahead of the rear wheels. Use the stamped triangles to identify the actual locations on the car, then position the hoist adapters there.\n\nCheck that the arms and adapters clear the suspension, exhaust, steering linkage, mounting brackets, stabilizer brackets, axle and rear cover. Do not lift against either bumper. See [Jacking and Lifting](#/document/G1663631)."
         },
         {
-          "title": "Circulate fluid through the cooler, if fitted",
-          "body": "Loosely install the fill plug. Start the engine and let it idle for 2 minutes with the clutch engaged, meaning the clutch pedal is released. Keep the transmission in NEUTRAL during this circulation stage."
+          "title": "Raise the car and establish a level working position",
+          "body": "Raise the vehicle with all four wheels fully clear of the ground and securely support it on the correctly positioned hoist before going underneath. Confirm that the car is level from front to rear and side to side. Leave the transmission in Neutral and the parking brake applied.\n\nRemove ground-wheel chocks only as needed once the wheels are clear. If the vehicle cannot be held securely and level, stop here: a tilted gearbox makes the fill opening a misleading measuring point."
         },
         {
-          "title": "Restore the level after circulation",
-          "body": "For cooler-equipped vehicles, refill the transmission to the bottom of the fill hole after the required circulation. This second fill accounts for fluid now occupying the cooling system."
+          "title": "Find the fill plug beside the transmission support",
+          "body": "From underneath, locate the rear portion of the transmission and its broad support bracket. In the fluid-check illustration, the fill plug sits in a small raised boss immediately to the left of that bracket in the pictured view, below the large exhaust pipe crossing above it. The inset places the same plug near the rear of the gearbox.\n\nUse this location to identify the fill plug before loosening anything. The illustrated access leaves the exhaust and support bracket installed; no wiring disconnection or transmission disassembly is part of this check. Follow the location and sequence in [Transmission Fluid Level Check](#/document/G1794234)."
         },
         {
-          "title": "Seal and tighten the fill plug",
-          "body": "For all vehicles, apply the specified thread sealer to the fill plug and install it. Tighten the plug to 21 lb.ft (28 Nm). The temporary loose installation used for cooler circulation is not the finished installation."
+          "title": "Remove the fill plug and establish the initial level",
+          "body": "With the engine off and the key removed, remove the fill plug from the identified boss. Observe the fluid level at the opening. I use the bottom edge of that opening as the reference, rather than guessing from how much fluid has gone into the case.\n\nIf the fluid is below the bottom edge, use the filling syringe or suitable filling device to add the specified MERCON LV fluid until it reaches that edge. If it is already there, no addition is needed at this stage.\n\nWithout a transmission cooler, continue to step 8. With a cooler, complete steps 6 and 7 even though the initial level now looks correct."
+        },
+        {
+          "title": "Cooler fitted: loosely fit the plug and circulate the fluid",
+          "body": "Loosely reinstall the fill plug before circulation; final sealing and torque come later.\n\nClear everyone, filling equipment and tools from beneath the car. Keep the parking brake applied and Neutral selected. Lower the car using the hoist instructions, restoring wheel chocks as the tires reach the ground. Leave it stationary on its wheels for circulation; do not drive it with this temporary plug installation.\n\nWith the car fully on the ground, parking brake applied, wheels chocked and transmission in Neutral, sit in the driving position with the valid key inside. Keep everyone clear of the vehicle. Do not run the engine in a closed garage or other enclosed area; open the garage door and provide adequate ventilation before starting. From ignition OFF, press the clutch pedal and then the start button to start the engine, without pressing the accelerator. Release the clutch pedal fully once the engine has started.\n\nLet the engine idle for 2 minutes in Neutral with the clutch pedal fully released. This is the source’s clutch-engaged condition for circulating fluid through the cooling system. Keep Neutral selected and do not drive the vehicle. The keyless controls and exhaust precautions are described on printed page 121 of the 2015 Mustang owner’s manual."
+        },
+        {
+          "title": "Cooler fitted: stop the engine and set the level again",
+          "body": "After the two-minute idle, switch the engine OFF and remove the key before leaving the driving position. Keep the parking brake applied and Neutral selected. Reposition the hoist adapters at the same marked lifting points, repeat the clearance checks, and raise and securely support the car level using the earlier lifting steps before returning underneath.\n\nRemove the temporarily fitted fill plug. Check the fluid against the bottom edge of the opening again and add the specified fluid until it reaches that edge. This second fill accounts for fluid that has moved into the cooling circuit; the initial fill alone does not complete the cooler-equipped branch."
+        },
+        {
+          "title": "Seal and tighten the fill plug on all vehicles",
+          "body": "Apply Motorcraft Thread Sealant with PTFE, TA-24-B, meeting WSK-M2G350-A2, to the fill-plug threads. Install the plug and tighten it to 21 lb.ft (28 Nm).\n\nThis final sealed installation replaces the loose temporary fit used during cooler circulation. A plug merely sitting in its threads is still an unfinished job."
+        },
+        {
+          "title": "Confirm the completed fill and clear the work area",
+          "body": "Before lowering, confirm that the final fluid level reached the bottom of the fill opening while the car was level. On cooler-equipped cars, confirm that this was the second level setting, after the two-minute idle with the clutch pedal released.\n\nConfirm that the plug has thread sealant and has been tightened to 21 lb.ft (28 Nm). Remove filling equipment and tools from underneath, and check that the plug area is not actively losing fluid. These are completion checks, not an internal transmission diagnosis."
+        },
+        {
+          "title": "Restore ground restraints as the car comes down",
+          "body": "Keep the parking brake applied throughout lowering; no release or raised-cabin entry is required. With the engine OFF, remove all equipment and tools from underneath and lower according to the hoist instructions. Restore wheel chocks as the tires reach the ground before withdrawing the hoist supports. Once fully grounded, select a parked manual-transmission gear and confirm ignition OFF/key out before leaving the car. Keep the parking brake and ground restraints in place until ready to move deliberately."
         }
       ],
       "watchFor": [
         {
-          "title": "Vehicle tilted during filling",
-          "body": "A tilted vehicle changes the relationship between the fluid surface and fill-hole edge, defeating the prescribed level reference."
+          "title": "The car must be level",
+          "body": "The bottom of the fill opening is the level reference. A tilted car changes that relationship, so correct the hoist position before accepting a reading."
         },
         {
-          "title": "Clutch pedal held down",
-          "body": "The cooler circulation step specifically requires the clutch engaged with the pedal released."
+          "title": "Neutral and clutch position have different jobs",
+          "body": "Neutral remains selected during the cooler circulation stage. The clutch must be engaged—the pedal released—for the prescribed two-minute idle. Holding the pedal down does not satisfy that instruction."
+        },
+        {
+          "title": "Nominal capacity is not the amount to add",
+          "body": "The listed capacities describe the transmission configurations. They are not top-up quantities. Add only enough to reach the bottom of the fill opening, including the second setting when a cooler is fitted."
+        },
+        {
+          "title": "Keep the running stage separate from hands-on work",
+          "body": "Fit the plug loosely before lowering. Perform the running stage only with the car on its wheels, parking brake applied and wheels chocked. Switch the engine OFF and remove the key before raising again and removing the plug. Keep hands-on work separate from the running stage."
         }
       ],
       "notes": [
-        "Use the 3160-specific fluid and sealer requirements for this 5.2L application."
+        "Listed fluid capacity without a cooler: 2.5 qt (2.4 L). With a cooler: 3.3 qt (3.1 L). The fill-hole edge remains the working level target.",
+        "MERCON LV automatic-transmission fluid is the specified fluid for this manual gearbox. Do not substitute a different lubricant because its label sounds more appropriate.",
+        "The internal geartrain, synchronizers and shift-fork diagrams explain the transmission’s construction. Opening those assemblies is unnecessary for this external fluid-level check."
       ],
       "diagnostics": [
         {
-          "finding": "Fluid is below the bottom of the fill hole with the vehicle level.",
-          "meaning": "The transmission has not reached the specified fill-level target.",
-          "next": "Add the specified fluid and complete the cooler branch if applicable."
+          "finding": "Fluid is below the bottom of the fill opening with the vehicle level.",
+          "meaning": "The transmission has not reached the prescribed level. The reading alone does not identify the reason.",
+          "next": "Add the specified MERCON LV fluid to the bottom edge. If a cooler is fitted, complete the circulation and second-fill sequence before final plug installation."
         },
         {
-          "finding": "A cooler-equipped transmission has received only its initial fill.",
-          "meaning": "The cooling circuit has not been accounted for by the required circulation and refill sequence.",
-          "next": "Perform the prescribed idle stage and refill to the bottom of the fill hole."
+          "finding": "Fluid already reaches the bottom of the fill opening at the initial check.",
+          "meaning": "The initial level target has been reached.",
+          "next": "Without a cooler, seal and tighten the plug. With a cooler, perform the two-minute circulation and check the level again before sealing. Follow the grounded circulation and re-lifting sequence in steps 6–7."
+        },
+        {
+          "finding": "A cooler-equipped transmission has only received its initial fill.",
+          "meaning": "The cooling circuit has not yet been accounted for by the required circulation and refill sequence.",
+          "next": "Loosely install the plug, idle for 2 minutes in Neutral with the clutch pedal released, then stop the engine and restore the level to the bottom of the opening. Follow the grounded circulation and re-lifting sequence in steps 6–7."
+        },
+        {
+          "finding": "The car is tilted or its support is uncertain.",
+          "meaning": "The fluid reading is unreliable, or access is unsafe.",
+          "next": "Stop work and establish secure, level hoist support at the stamped-triangle lifting locations before checking or adding fluid."
         }
       ],
       "verification": [
         {
-          "title": "Confirm final level and closure",
-          "body": "Verify the final fill reached the bottom of the fill hole with the vehicle level, and that the plug received thread sealer and its specified tightening torque."
+          "title": "Final level matches the configuration",
+          "body": "The fluid reached the bottom edge of the fill opening with the vehicle level. A cooler-equipped car completed the two-minute idle with the clutch pedal released and the subsequent level correction."
         },
         {
-          "title": "Record the applicable result",
-          "body": "Record cooler fitment, completion of the circulation step when required, and the final level check."
+          "title": "The fill plug is finished",
+          "body": "The plug received the specified PTFE thread sealant, was tightened to 21 lb.ft (28 Nm), and is not actively losing fluid at the completion check."
+        },
+        {
+          "title": "The car is restrained on the ground",
+          "body": "Confirm the parking brake remained applied, wheel chocks were restored as the tires returned to the ground, all servicing equipment was removed, and the fully grounded car was left in a parked manual-transmission gear with ignition OFF."
         }
       ],
       "procedures": [
         {
           "documentId": "G1794234",
-          "purpose": "5.2L 3160 manual-transmission fluid-level procedure, including the cooler-equipped circulation branch and final plug installation.",
+          "purpose": "Primary fluid-level procedure, cooler circulation and refill branch, and final fill-plug torque.",
           "mediaId": "G1794234-m0002"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Vehicle lifting points, support precautions and hoist-clearance requirements."
+          "purpose": "Stamped-triangle lifting locations, hoist positioning and underbody clearance precautions."
+        },
+        {
+          "documentId": "G1794225",
+          "purpose": "3160 fluid specification, PTFE thread sealant specification and capacities with and without a cooler."
+        },
+        {
+          "documentId": "G1794228",
+          "purpose": "Transmission function, cooling pump, identification-tag location and service-life fluid context."
+        },
+        {
+          "documentId": "G1794229",
+          "purpose": "Component context for the transmission housing, cooling pump and drain/fill plugs; internal teardown is outside this level-check task."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, personal protection, material handling, lifting capacity and vehicle-restraint precautions."
         }
       ],
       "hero": {
@@ -63660,7 +64170,7 @@
         "years": [
           2015
         ],
-        "equipment": "3160 6-speed manual transmission; transmission fluid cooler if fitted"
+        "equipment": "2015 Mustang with 5.2L engine and 3160 6-speed manual transmission; includes vehicles with or without a transmission fluid cooler."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -63679,14 +64189,55 @@
         {
           "documentId": "G1794229",
           "sourceHash": "04b38fe10948a0a1dd1cef9f34107854b2c0977c8c528e6e772437c761f73e0a"
+        },
+        {
+          "documentId": "G1794225",
+          "sourceHash": "9c3c3dba0f38fa063225ff602ba1fdfa707a8c6bc4068e36976a55e02d5bc4da"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "5f29671e4d5bf8498dedabd744982891e272d81fccc1918365f43700bc5148df"
-      }
+        "fingerprint": "5f29671e4d5bf8498dedabd744982891e272d81fccc1918365f43700bc5148df",
+        "editorialVersion": 2,
+        "editorialFingerprint": "0a2f22554b54bf5362bda51e473f277c06c1e0a988c4f83f02453388a2833160",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure and lift the car",
+          "summary": "Prevent unintended starting, position the hoist and establish level support.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "locate-and-fill",
+          "title": "Reach the plug and set the initial level",
+          "summary": "Identify the external fill plug and bring the fluid to the bottom of its opening.",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "cooler-circulation",
+          "title": "Complete the cooler branch",
+          "summary": "If fitted, circulate fluid for two minutes and restore the level afterward.",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "seal-and-lower",
+          "title": "Seal, verify and lower",
+          "summary": "Torque the plug, confirm completion and restore ground restraints.",
+          "start": 8,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Replace the 5.2L 3160 transmission extension housing gasket",
@@ -64454,88 +65005,148 @@
       }
     },
     {
-      "title": "Replace the 5.2L 3160 manual transmission support insulator",
-      "summary": "Replace the transmission support insulator with the gearbox secured on a strapped transmission jack, then tighten its bolts and nuts to their separate specifications.",
-      "introduction": "The transmission support insulator supports the gearbox at its mounting point while limiting vibration transfer into the body. The 3160 manual transmission transfers engine torque toward the rear differential through the driveshaft. This repair changes its external support insulator without opening the transmission case or disturbing the internal geartrain.",
-      "why": "Supporting the vehicle on a hoist does not independently support the transmission when its mounting is removed. A transmission jack carries that load, and a retaining strap secures the gearbox to the jack. The insulator bolts and nuts also have different tightening requirements, so identifying the two fastener groups matters.",
+      "title": "Replace the 5.2L 3160 transmission support insulator",
+      "summary": "Replace the external transmission mounting insulator with the gearbox secured on a transmission jack, then tighten its three bolts and two nuts to their separate specifications.",
+      "introduction": "The transmission support insulator gives the gearbox somewhere to sit without turning the Mustang’s body into a giant tuning fork. Small component, fairly serious furniture-moving responsibilities. I’ll walk you through replacing it on a 2015 Mustang with the 5.2L engine and 3160 6-speed manual transmission, keeping the gearbox supported while its mounting is apart.",
+      "why": "The insulator supports the transmission at its mounting point and cushions vibration passing into the body. The hoist supports the car; a separate transmission jack supports the gearbox when the insulator comes out. I keep those two jobs distinct, because gravity has absolutely no interest in our repair schedule.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "5.2L transmission support insulator",
-        "3160 transmission mount replacement",
-        "manual transmission support mount"
+        "2015 Mustang 5.2L transmission support insulator",
+        "3160 manual transmission mount replacement",
+        "transmission support insulator bolts and nuts"
       ],
       "when": {
-        "summary": "When the transmission support insulator has been assessed as requiring replacement.",
+        "summary": "Use this procedure after the transmission support insulator has been assessed as needing replacement.",
         "notes": [
-          "This is an external mounting repair; the procedure does not diagnose an internal transmission fault."
+          "This is an external mounting repair with the transmission remaining in the vehicle."
         ]
       },
       "prepare": [
         {
-          "title": "Hoist and lifting capability",
-          "detail": "Use the specified lifting points, identified by stamped triangles, and check hoist-adapter clearance. Never work beneath a vehicle supported only by a jack. Do not lift against a bumper or use the emergency tire-changing jack for this operation."
+          "title": "Arrange proper vehicle and transmission support",
+          "detail": "Have a hoist rated for the vehicle’s actual weight, including cargo and modifications, wheel chocks, a transmission jack and its retaining strap. Use suitable wooden support blocks with the support fixture to secure the assembly. Establish a stable jack setup that leaves the insulator accessible before starting."
         },
         {
-          "title": "Secure transmission support",
-          "detail": "Provide the specified transmission jack and retaining strap, with the capability to support and secure the gearbox before removing the insulator bolts."
+          "title": "Gather the replacement and tightening equipment",
+          "detail": "Have the correct replacement insulator and a torque wrench capable of 76 lb.ft (103 Nm) and 52 lb.ft (70 Nm). Keep the three insulator bolts separate from the two nuts; they receive different torques."
         },
         {
-          "title": "Controlled fastener tightening",
-          "detail": "Have a torque wrench suitable for both installation specifications. Keep the insulator nuts and bolts identifiable throughout the repair."
+          "title": "Protect yourself",
+          "detail": "Wear eye and ear protection during servicing, and protective gloves when handling sharp-edged components."
+        },
+        {
+          "title": "Establish the repair boundary",
+          "detail": "This procedure covers replacement, not a test for deciding whether the insulator is defective. It provides no mount-deflection measurement or rejection threshold; establish the need for replacement before dismantling the mounting."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle for access",
-          "body": "Place the transmission in NEUTRAL and position the vehicle on a hoist. Follow the [lifting overview](#/document/G1663631), checking that the lifting equipment does not interfere with suspension components, mounting brackets or the underbody."
+          "title": "Prevent startup and restrain the car before selecting Neutral",
+          "body": "Park on a hard, level surface, apply the parking brake and chock the wheels before selecting Neutral.\nIf remote start is fitted, disable it through Vehicle settings > Remote Start Setup before service. Switch the ignition off and remove the key from the vehicle to prevent another person starting it. Leave the transmission in Neutral and the parking brake applied throughout this repair. These precautions apply before working around or beneath the car. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Remove the nuts and secure the gearbox",
-          "body": "Remove the transmission support insulator nuts. Next support the transmission with the transmission jack and secure it to the jack using the retaining strap, as directed in the [insulator procedure](#/document/G1794238)."
+          "title": "Position the hoist at the four marked lifting locations",
+          "body": "Locate the stamped triangles along the lower body sides: the lifting figure shows a front and rear location on each side, near the corresponding wheels. Position the hoist adapters at those designated lifting points.\nBefore raising, check that the arms and adapters clear the suspension, exhaust, steering linkage, mounting brackets and stabilizer brackets. Avoid contact with the axle and rear cover. Do not support the car by its bumpers or use the emergency tire-changing jack for this job.\nRaise the car until all four wheels are fully clear of the ground and confirm that it is securely supported on the correctly positioned hoist before going underneath. Never work beneath a car supported only by a jack. The [lifting overview](#/document/G1663631) explains these lifting precautions."
         },
         {
-          "title": "Remove the supported insulator",
-          "body": "With the transmission supported and secured, remove the insulator bolts and the insulator. Keep the jack and strap supporting the gearbox throughout this mounting removal."
+          "title": "Find the insulator and distinguish its two fastener groups",
+          "body": "Working from below, find the transverse crossmember beneath the rear portion of the transmission. The exhaust pipes flank this area, and the driveshaft runs above the mounting.\nThe insulator sits immediately above the crossmember’s center section. Identify the two exposed nuts spaced across that center section. Then identify the three insulator bolts above it: two at the outer mounting points and one between them. I separate these groups mentally now; the torque wrench should not have to guess later. The [support-insulator procedure](#/document/G1794238) shows this arrangement."
         },
         {
-          "title": "Install and tighten the replacement",
-          "body": "Install the transmission support insulator and its bolts. Tighten the bolts to 103 Nm. Install the insulator nuts and tighten them to 70 Nm. Complete both fastener groups before withdrawing temporary transmission support."
+          "title": "Remove the two insulator nuts",
+          "body": "Remove the two transmission support insulator nuts from the center section of the crossmember. Leave the three insulator bolts installed at this stage. Put the nuts together so they remain identifiable for reassembly."
+        },
+        {
+          "title": "Support and strap the transmission to the jack",
+          "body": "Position the transmission jack beneath the gearbox with its support fixture arranged to carry the transmission securely while leaving the insulator and its bolts accessible. Bring the fixture into supporting contact.\nSecure the transmission to the jack with the retaining strap and suitable wooden support blocks. The gearbox must be supported and secured before the three insulator bolts are removed. Check that the jack, fixture and strap can move without contacting surrounding components."
+        },
+        {
+          "title": "Remove the three bolts and withdraw the insulator",
+          "body": "With the transmission supported and strapped to the jack, remove the three transmission support insulator bolts and take out the insulator. Keep the transmission supported throughout removal and replacement.\nAs the part comes free, note its installed orientation and the relationship of its bolt holes and two lower studs to the transmission and crossmember. Use that arrangement to orient the replacement."
+        },
+        {
+          "title": "Install the replacement insulator and tighten its three bolts",
+          "body": "Position the replacement insulator in the same orientation, aligning its mounting holes and lower studs with their mating locations. Install the three insulator bolts.\nTighten the bolts to 76 lb.ft (103 Nm). Keep the transmission jack and retaining strap in place while completing the mounting."
+        },
+        {
+          "title": "Install and tighten the two nuts",
+          "body": "Install the two transmission support insulator nuts at the center section of the crossmember. Tighten them to 52 lb.ft (70 Nm).\nConfirm that all three bolts and both nuts have received their respective torque before removing temporary transmission support."
+        },
+        {
+          "title": "Transfer the load back to the mounting",
+          "body": "Carefully ease the transmission jack’s supporting load away while observing the insulator and its attachment points. Confirm that the assembled mounting carries the transmission and remains seated as the jack unloads. This is a reassembly check, not a diagnostic load test.\nIf the mounting shifts out of position or cannot carry the gearbox securely, keep or restore jack support and resolve the assembly problem before proceeding. Once the mounting is supporting the gearbox, release the retaining strap and remove the jack and support blocks, keeping clear of obstructions."
+        },
+        {
+          "title": "Restore ground restraints as the car comes down",
+          "body": "Confirm that the jack, strap, support blocks, tools and removed parts are clear of the vehicle and hoist. Keep the parking brake applied throughout this job, including lowering; no brake release is needed.\n\nLower the vehicle using the hoist’s operating instructions. Restore wheel chocks as the wheels reach the ground, before releasing the hoist support. Once the car is fully on the ground, select a parked manual-transmission gear and confirm ignition OFF before leaving it. Keep the parking brake and ground-wheel restraints in place while completing the final work-area check."
         }
       ],
       "watchFor": [
         {
-          "title": "Transmission resting unsecured on the jack",
-          "body": "The retaining strap is specified equipment and must secure the transmission before the insulator bolts are removed."
+          "title": "An unsecured gearbox",
+          "body": "A transmission resting on a jack without its retaining strap is not ready for insulator removal. Support and secure it before removing the three bolts."
         },
         {
-          "title": "One torque applied to every fastener",
-          "body": "Use 103 Nm for the insulator bolts and 70 Nm for its nuts."
+          "title": "Confusing bolts with nuts",
+          "body": "The three insulator bolts take 76 lb.ft (103 Nm). The two insulator nuts take 52 lb.ft (70 Nm). Complete the bolts first, then the nuts."
+        },
+        {
+          "title": "Incorrect hoist contact",
+          "body": "Locate the stamped triangles before positioning the adapters. Contact with the exhaust, suspension, steering linkage or axle cover can damage components; incorrect lifting locations can allow the vehicle to shift or fall."
         }
       ],
       "notes": [
-        "If transmission identification is needed, the 3160 identification tag is on the top right-hand side of the transmission."
+        "If transmission identification needs confirmation, the 3160 identification tag is on the top right-hand side of the transmission. Its fields include the replacement part number, manufacturing location, build date and time, assembly number and build level. See the [transmission overview](#/document/G1794228).",
+        "The internal geartrain and shift-fork illustrations in [System Operation and Component Description](#/document/G1794229) are background material. Opening the case or dismantling those assemblies is outside this external insulator replacement."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm the restored mounting",
-          "body": "Verify that the insulator, bolts and nuts are installed and secured before ending the supported-work phase."
+          "finding": "The replacement insulator does not align with the original mounting locations.",
+          "meaning": "Correct part identification, orientation or supported transmission position remains unresolved.",
+          "next": "Keep the gearbox secured on the transmission jack. Compare the replacement with the removed part and confirm the application before continuing."
         },
         {
-          "title": "Record both tightening results",
-          "body": "Record completion of the 103 Nm bolt tightening and 70 Nm nut tightening as separate checks."
+          "finding": "The mounting shifts out of position as the transmission jack unloads.",
+          "meaning": "The restored mounting has not passed the basic assembly check.",
+          "next": "Keep or restore transmission-jack support. Recheck insulator seating, the three bolts and the two nuts before attempting to remove the jack."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm both fastener groups",
+          "body": "Account for three installed bolts tightened to 76 lb.ft (103 Nm) and two installed nuts tightened to 52 lb.ft (70 Nm)."
+        },
+        {
+          "title": "Confirm the mounting carries the transmission",
+          "body": "The insulator remains seated when temporary jack support is withdrawn, and the retaining strap, blocks and jack have been removed."
+        },
+        {
+          "title": "Confirm safe completion on the ground",
+          "body": "The parking brake was applied before lowering, wheel chocks were restored as the wheels reached the ground, and tools and lifting equipment are clear."
         }
       ],
       "procedures": [
         {
           "documentId": "G1794238",
-          "purpose": "Remove and install the support insulator for the 5.2L application with the 3160 manual transmission.",
+          "purpose": "Primary removal and installation procedure, including the two nuts, three bolts, strapped transmission support and both tightening specifications.",
           "mediaId": "G1794238-m0003"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Identify safe lifting points and hoist-placement precautions for underbody access."
+          "purpose": "Identify the triangle-marked lifting locations and apply hoist-positioning precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Prevent unintended startup and vehicle movement, select adequate lifting equipment and secure the transmission to its service jack."
+        },
+        {
+          "documentId": "G1794228",
+          "purpose": "Confirm the 3160 transmission application and locate its identification tag."
+        },
+        {
+          "documentId": "G1794229",
+          "purpose": "Background component context only; internal transmission disassembly is not part of this repair."
         }
       ],
       "hero": {
@@ -64576,14 +65187,51 @@
         {
           "documentId": "G1794229",
           "sourceHash": "04b38fe10948a0a1dd1cef9f34107854b2c0977c8c528e6e772437c761f73e0a"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "dc807fc31c04f50a91b1c3be9625499ccb5f8ca63c60960919e79c8a29f6bf09"
-      }
+        "fingerprint": "dc807fc31c04f50a91b1c3be9625499ccb5f8ca63c60960919e79c8a29f6bf09",
+        "editorialVersion": 2,
+        "editorialFingerprint": "79eb3192f2804359f3e7e54e1ec7717be5b9699d4d1a0d59350009389a4ec602",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-access",
+          "title": "Secure the car and locate the mounting",
+          "summary": "Prevent startup, lift at the marked points and identify both fastener groups.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "support-and-remove",
+          "title": "Support the gearbox and remove the insulator",
+          "summary": "Remove the nuts, secure the transmission to its jack, then remove the bolts and insulator.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "install-and-tighten",
+          "title": "Fit and tighten the replacement",
+          "summary": "Install the insulator, torque its three bolts, then torque its two nuts.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "unload-and-lower",
+          "title": "Remove temporary support and lower safely",
+          "summary": "Confirm the mounting carries the gearbox and restore ground restraints during lowering.",
+          "start": 9,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Rebuild the MT82 manual gearshift lever",
@@ -99075,89 +99723,141 @@
       ]
     },
     {
-      "title": "Replace the instrument-panel speaker with SYNC, SYNC 2 or SYNC 3",
-      "summary": "Remove the center trim and speaker grille, exchange the instrument-panel speaker and restore its connector and mountings.",
-      "introduction": "The instrument-panel speaker converts an electrical audio signal into sound through its grille. Replacement involves a small amount of dashboard trim removal followed by disconnecting the speaker itself. The SYNC and SYNC 2/SYNC 3 procedures use the same removal sequence, although the surrounding audio systems differ. Choose the procedure matching the fitted system.",
-      "why": "The center finish panel must come off before the speaker grille. Releasing the trim clips with the specified trim tool gives access without treating the panel as a rigid, bolted part. An optional electrical connection behind the finish panel must also be disconnected before that panel is moved away.",
+      "title": "Replace the Mustang instrument-panel speaker",
+      "summary": "Remove the right-hand trim, center finish panel and speaker grille, exchange the speaker, then tighten its two bolts to 22 lb.in (2.5 Nm) and restore the trim.",
+      "introduction": "This speaker sits beneath the dashboard grille, with enough trim in front of it to suggest it values its privacy. I’ll take you through the panels in order, keep the optional wiring connection out of the tug-of-war and get the replacement secured without overtightening its little bolts.",
+      "why": "The speaker turns the audio system’s electrical signal into sound. To reach it, first remove the right-hand dashboard trim and the long center finish panel, then lift off the speaker grille. The SYNC and SYNC 2/SYNC 3 procedures use the same replacement sequence and tightening value.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "instrument panel speaker replacement",
-        "dashboard speaker grille removal",
-        "SYNC center speaker connector"
+        "2015 Mustang instrument panel speaker replacement",
+        "Mustang dashboard speaker grille removal",
+        "Mustang center finish panel clips",
+        "SYNC instrument panel speaker torque"
       ],
       "when": {
-        "summary": "When the instrument-panel speaker needs replacement or removal for access.",
+        "summary": "Use this procedure when the instrument-panel speaker has been selected for replacement or must be removed for access.",
         "notes": [
-          "Establish the reason for replacement through the appropriate audio diagnosis; this procedure is a removal and installation path."
+          "Engine coverage is 2.3L, 3.7L, 5.0L and 5.2L.",
+          "Select the SYNC or SYNC 2/SYNC 3 procedure to match the fitted system; the removal and installation actions are the same.",
+          "Replacement instructions do not establish whether a sound complaint originates in the speaker, wiring or another audio component."
         ]
       },
       "prepare": [
         {
-          "title": "Trim and fastener tools",
-          "detail": "Have an interior trim remover, suitable speaker-bolt tools and torque equipment capable of accurately applying the small specified tightening value."
+          "title": "Gather trim and fastening tools",
+          "detail": "Have an interior trim remover, tools suitable for the speaker bolts and a torque tool accurate at 22 lb.in (2.5 Nm). The imperial value is inch-pounds, not foot-pounds."
         },
         {
-          "title": "Identify the fitted connections",
-          "detail": "The center finish panel may have an optional ICM electrical connector. Follow the actual panel configuration and disconnect that connector if fitted."
+          "title": "Match the replacement and recognize the optional connection",
+          "detail": "Obtain the speaker appropriate to the vehicle’s fitted audio equipment. The center finish panel may carry an optional ICM electrical connection; be ready to disconnect it while supporting the released panel."
+        },
+        {
+          "title": "Prepare the vehicle and yourself",
+          "detail": "Park and set the parking brake. Disable remote start, if fitted, through Vehicle settings > Remote Start Setup before service. Switch the ignition off and remove the key. Wear eye and ear protection during service and gloves when handling sharp-edged components. All access is inside the car with its wheels on the ground."
         }
       ],
       "steps": [
         {
-          "title": "Open the center-panel access",
-          "body": "Follow the [center finish panel procedure](#/document/G1693976). Use the interior trim remover to release the right-hand instrument-panel trim clips and remove that panel. Release the center finish panel clips, then disconnect its optional electrical connector before removing the panel."
+          "title": "Remove the right-hand dashboard trim",
+          "body": "Start with the [center finish panel access procedure](#/document/G1693976). Locate the narrow trim panel immediately to the right of the glovebox. Its illustration shows three retaining clips arranged along its height.\n\nUse the interior trim remover to release those clips and remove the panel. Work progressively at the retaining areas rather than trying to bend the whole panel free in one pull."
         },
         {
-          "title": "Remove the grille and release the speaker",
-          "body": "Remove the instrument-panel speaker grille. Remove the speaker bolts and lift the speaker sufficiently to reach its electrical connector. Follow the [SYNC procedure](#/document/G1704852) or [SYNC 2/SYNC 3 procedure](#/document/G1704856), according to the fitted equipment."
+          "title": "Release the long center finish panel and its optional connection",
+          "body": "The center finish panel surrounds the center vents and extends across the dashboard above the glovebox. Use the interior trim remover to release its 13 retaining clips progressively while supporting the panel.\n\nOnce it is released, move it only far enough to see behind it. If the optional ICM connector is fitted, release its lock and disconnect it before carrying the panel away. The rear-view inset shows the connection behind the central portion of the panel. That last bit of resistance may be wiring asking for attention, not a clip asking for more force."
         },
         {
-          "title": "Disconnect and exchange the speaker",
-          "body": "Disconnect the speaker’s electrical connector and remove the speaker. During refitting, reverse this sequence: reconnect the electrical connection, position the speaker and install its bolts. Tighten the speaker bolts to 2.5 Nm."
+          "title": "Lift off the instrument-panel speaker grille",
+          "body": "With the center finish panel removed, locate the broad grille at the top center of the dashboard, between the adjacent padded sections. Lift it upward from the exposed edge above the center vents and remove it to uncover the speaker.\n\nThe [SYNC speaker procedure](#/document/G1704852) and [SYNC 2/SYNC 3 speaker procedure](#/document/G1704856) show the same access arrangement."
         },
         {
-          "title": "Restore the dashboard trim",
-          "body": "Refit the speaker grille. Reconnect the optional center-panel connector if it was disconnected, then reinstall the center finish panel and right-hand trim in reverse removal order. Make sure the released clips engage so the panels are retained."
+          "title": "Free the speaker lead and remove the two bolts",
+          "body": "Identify the small round speaker and its two mounting ears, each carrying one bolt. The speaker illustration also shows two attachment points along its wiring lead: one below the rectangular unit above the speaker and another along the lead to its right.\n\nRelease those lead attachments and position the wiring aside for access. Remove the two speaker bolts, keeping the speaker supported. Lift it only far enough to reach its rear electrical connection."
+        },
+        {
+          "title": "Disconnect and remove the speaker",
+          "body": "Release the electrical connector’s locking feature and unplug it from the back of the speaker, as shown in the close-up. Hold the connector body rather than pulling on its wires. With the plug disconnected, remove the speaker.\n\nBefore refitting, identify the plug, both lead-retaining points and both mounting locations so each can be restored. This is a connection and installation check, not an electrical fault test."
+        },
+        {
+          "title": "Connect and fasten the replacement",
+          "body": "Reverse the speaker-removal actions. Reconnect the electrical plug, position the speaker on its mounting locations and install both bolts. Keep the lead clear of the mounting ears.\n\nTighten both speaker bolts to 22 lb.in (2.5 Nm). Use a torque tool suited to this small value. Restore the wiring lead to the two attachment points shown above and beside the speaker, following its original route."
+        },
+        {
+          "title": "Restore the grille and dashboard panels",
+          "body": "Refit the speaker grille in its original position.\n\nBring the center finish panel back to the dashboard and reconnect its optional ICM plug if it was disconnected. Ensure the wiring is clear of the retaining areas, align the panel and engage its 13 clips progressively.\n\nRefit the right-hand trim panel last, engaging its three clips. Check that the grille and panels sit correctly and remain retained. The clip wrestling match should be over before the audio system gets its turn.\n\nAfter all wiring and trim are restored, keep the car parked with the parking brake applied and the engine stopped. With the valid key inside, start from ignition OFF and press the start button without pressing either pedal to switch the ignition ON without starting the engine. Turn on the audio system, select a familiar station or track, and listen at a comfortable volume for sound from the replaced speaker. This is an ordinary function check, not fault isolation. After the check, switch the audio and ignition OFF and remove the key. If the sound is absent or abnormal, keep that OFF/key-out state before reopening trim or checking a connector. The keyless controls are described on printed page 121 of the 2015 Mustang owner’s manual."
         }
       ],
       "watchFor": [
         {
-          "title": "A tethered finish panel",
-          "body": "If the optional connector is present, disconnect it before carrying the center panel away from the dashboard."
+          "title": "Finish-panel wiring",
+          "body": "Support the released center finish panel and check for the optional ICM connector before moving it away from the dashboard."
         },
         {
-          "title": "Small speaker fasteners",
-          "body": "Use the specified low tightening value rather than judging tightness by feel."
+          "title": "Speaker wiring retention",
+          "body": "Restore the two lead attachments as well as the speaker plug. Keep the lead clear of the speaker mountings and trim clips during reassembly."
+        },
+        {
+          "title": "Low bolt torque",
+          "body": "The two speaker bolts require 22 lb.in (2.5 Nm). Use inch-pounds, not foot-pounds, when selecting the imperial scale."
         }
       ],
       "notes": [
-        "Removal instructions also contain the speaker’s installation torque."
+        "The [SYNC overview](#/document/G1692884) describes six speakers and a 4.2-inch non-touchscreen display. The [touchscreen-system overview](#/document/G1702412) describes nine speakers without Shaker or ten with Shaker and an 8-inch touchscreen. Those system differences do not change the two speaker procedures’ removal sequence or bolt torque.",
+        "The trim and grille are restored by reversing removal. No additional trim-fastener torque is required by this procedure.",
+        "The [general safety guidance](#/document/G1693189) supports startup prevention and personal protection here. Underhood, jacking and hoist operations are outside this interior replacement."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Speaker installation",
-          "body": "Confirm the speaker connector is attached and the mounting bolts are tightened to specification."
+          "finding": "The released center finish panel still has an electrical connection attached.",
+          "meaning": "The vehicle has the optional panel connection and the panel is still tethered.",
+          "next": "Support the panel, release and disconnect the ICM plug, then remove the panel. Reconnect it before engaging the panel clips during refitting."
         },
         {
-          "title": "Trim restoration",
-          "body": "Confirm the grille, center finish panel and right-hand trim are refitted, including any optional panel connection."
+          "finding": "The speaker is unbolted but remains connected by its lead.",
+          "meaning": "Mechanical release is complete, but electrical disconnection is still required.",
+          "next": "Support the speaker, lift it only enough to reach the rear plug and disconnect that plug before removing the speaker."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm speaker installation before covering it",
+          "body": "Confirm the rear connector is attached, both mounting bolts are tightened to 22 lb.in (2.5 Nm), and the wiring lead is restored to its two retaining points without being trapped beneath a mounting ear."
+        },
+        {
+          "title": "Confirm all trim and connections are restored",
+          "body": "Check that the grille is fitted, the optional ICM connection is reattached if present, and the center and right-hand trim panels are retained by their clips and sit correctly."
+        },
+        {
+          "title": "Check normal playback after reassembly",
+          "body": "With the car parked and the engine stopped, perform the normal audio check in step 7. After checking playback, switch audio and ignition OFF and remove the key. If sound is absent or abnormal, keep that state before inspecting the restored connections. A failed playback check does not prove that the replacement speaker or another component is faulty; use the matching audio diagnostic procedure if the complaint remains."
         }
       ],
       "procedures": [
         {
           "documentId": "G1704852",
-          "purpose": "Instrument-panel speaker removal and installation for vehicles with SYNC.",
+          "purpose": "SYNC instrument-panel speaker access, grille removal, wiring attachment and connector details, two-bolt mounting and 22 lb.in (2.5 Nm) installation torque.",
           "mediaId": "G1704852-m0002"
         },
         {
           "documentId": "G1704856",
-          "purpose": "Instrument-panel speaker removal and installation for vehicles with SYNC 2/SYNC 3."
+          "purpose": "SYNC 2/SYNC 3 instrument-panel speaker replacement with the same illustrated access, wiring connections and installation torque."
         },
         {
           "documentId": "G1693976",
-          "purpose": "Right-hand trim and center finish panel removal and refitting to access the speaker grille.",
+          "purpose": "Remove the three-clip right-hand trim and 13-clip center finish panel, disconnect the optional ICM connection and restore them in reverse order.",
           "mediaId": "G1693976-m0002"
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "Identify the six-speaker SYNC equipment context without adding unrelated audio-system work."
+        },
+        {
+          "documentId": "G1702412",
+          "purpose": "Identify touchscreen and Shaker equipment context without adding unrelated audio-system work."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant startup-prevention and personal-protection precautions; raised-vehicle and underhood warnings do not apply to this access route."
         }
       ],
       "hero": {
@@ -99183,7 +99883,7 @@
         "years": [
           2015
         ],
-        "equipment": "SYNC or SYNC 2/SYNC 3"
+        "equipment": "2015 Mustang with SYNC or SYNC 2/SYNC 3; optional ICM connection behind the center finish panel if fitted."
       },
       "relatedGuideIds": [
         "job-83a92b4c236963ee"
@@ -99208,14 +99908,44 @@
         {
           "documentId": "G1702412",
           "sourceHash": "2789f586b395afd05f27ecb4295fc145b561d4a03655e574cd0ec54b29d278d2"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "fb16b63445d0d2b2eb104412b88dda52205efafe7b761a224b2334c533d68b97"
-      }
+        "fingerprint": "fb16b63445d0d2b2eb104412b88dda52205efafe7b761a224b2334c533d68b97",
+        "editorialVersion": 2,
+        "editorialFingerprint": "e1109e575f533c2058379cd0367d2d264f9abdee6ff8e35c287f6e2441e8ddf8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "open-dashboard-access",
+          "title": "Open dashboard access",
+          "summary": "Remove the right-hand trim, disconnect the optional center-panel connection and lift off the grille.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "exchange-dashboard-speaker",
+          "title": "Exchange the speaker",
+          "summary": "Release the lead, remove the speaker and install the replacement at the specified torque.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "restore-dashboard-trim",
+          "title": "Restore the dashboard",
+          "summary": "Refit the grille, reconnect the optional panel wiring and engage the trim clips.",
+          "start": 7,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Replace the SYNC microphone through the overhead console",
@@ -167857,83 +168587,167 @@
     },
     {
       "title": "Replace the convertible luggage-compartment lock cylinder",
-      "summary": "Remove the convertible rear backrest, disconnect the latch cable and replace the retained lock cylinder before restoring the seat.",
-      "introduction": "The convertible luggage-compartment lock cylinder provides a mechanical input to the lid latch through a cable. This repair separates that cable connection and removes the cylinder from its mounting. Access comes through the rear seating area, making correct seat reinstallation an essential part of the job.",
-      "why": "The cable connection uses retaining tabs, while a separate retaining clip secures the cylinder. Releasing those attachments in sequence avoids pulling against a part that is still retained. The rear backrest also has critical mounting requirements: nothing may be trapped between seat components and the body or within a seat-structure joint.",
+      "summary": "Remove the rear cushion and backrest, release the latch cable and cylinder clip, then replace the cylinder and correctly secure the rear seating.",
+      "introduction": "A little luggage-compartment lock can demand an unreasonable amount of seat removal. Apparently, even the trunk wants backstage access. I’ll walk you through reaching the convertible’s lock cylinder, releasing its cable and retaining clip, and putting the rear seating back together properly.",
+      "why": "The cylinder provides a mechanical way to operate the luggage-compartment latch through a cable. The cable connection and cylinder mounting have separate retainers, so each must be released before its component can move. Access also involves safety-critical seat attachments: correctly restoring the backrest hooks, floor fasteners and belt routing is part of finishing the repair.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
+        "2015 Mustang convertible luggage compartment lock cylinder",
         "convertible trunk lock cylinder replacement",
-        "luggage compartment lock cylinder",
-        "convertible trunk latch cable"
+        "Mustang convertible rear seat removal",
+        "luggage compartment latch cable connection"
       ],
       "when": {
-        "summary": "When the convertible luggage-compartment lock cylinder requires removal or replacement.",
+        "summary": "Use this procedure when the luggage-compartment lock cylinder requires removal or replacement.",
         "notes": [
-          "A luggage-lid release complaint can involve the cylinder, cable or latch; this procedure covers cylinder replacement."
+          "Applies to 2015 convertibles with 2.3L, 3.7L or 5.0L engines and a fitted rear seat.",
+          "An electrical or passive-entry release complaint alone does not establish that the mechanical cylinder needs replacement."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare seat access",
-          "detail": "Follow the convertible backrest procedure, including its preliminary rear cushion removal. Have suitable fastener tools and a torque wrench for restoring the backrest attachments."
+          "title": "Confirm the access arrangement",
+          "detail": "This route removes a fitted rear cushion and convertible backrest. It does not cover coupe backrests or rear-seat-delete configurations."
         },
         {
-          "title": "Plan the attachment sequence",
-          "detail": "Identify the cable retaining tabs and the separate cylinder retaining clip before removal. Keep the seat mounting joints clear throughout the work."
+          "title": "Gather the replacement and fastening tools",
+          "detail": "Have the replacement lock cylinder, tools that fit the backrest floor fasteners, and a torque wrench capable of 47.5 Nm (35 lb-ft). Keep the removed cylinder clip and seat fasteners organized for reinstallation."
+        },
+        {
+          "title": "Prepare a safe cabin workspace",
+          "detail": "Work with the vehicle stationary and the parking brake applied. Keep the engine stopped. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before service. Make any powered front-seat adjustments before switching the ignition OFF and removing the key from the vehicle to prevent an unauthorized start. Wear eye and ear protection during service and protective gloves when handling sharp-edged parts."
+        },
+        {
+          "title": "Keep seat mounting joints clear",
+          "detail": "Do not place objects between the seat components and the vehicle body or inside a seat-structure joint. Trapped objects can prevent correct installation and operation and increase the risk of serious injury. Keep removed tools and hardware outside those joints."
         }
       ],
       "steps": [
         {
-          "title": "Remove the rear backrest",
-          "body": "Follow [Rear Seat Backrest – Convertible](#/document/G1709034): remove the rear cushion, release the backrest-to-floor fasteners, then release the backrest locking clips and remove the backrest. The attached illustration shows the seat-access fasteners, not the lock cylinder."
+          "title": "Move both front seats fully forward",
+          "body": "Apply the parking brake and keep the engine stopped. Move the front seat on each side to its full forward position to make room for rear-seat access. Complete powered adjustments, then switch the ignition OFF and remove the key from the vehicle."
         },
         {
-          "title": "Detach the latch cable",
-          "body": "Release the lock-cylinder retaining tabs and detach the luggage-compartment lid latch cable. Complete this connection release before attempting to withdraw the cylinder."
+          "title": "Release the rear cushion’s two front locking tabs",
+          "body": "At the front edge of the rear cushion, locate the locking tab on each side. Press each tab inward to disengage it from the floor before lifting the cushion. These tabs need to be released deliberately; hauling upward against a locked tab is how a small access job becomes a damn trim-repair job.\n\nThe access sequence is also shown in [Rear Seat Cushion](#/document/G1692168)."
         },
         {
-          "title": "Exchange the cylinder",
-          "body": "Remove the separate cylinder retaining clip, then remove the lock cylinder. Reverse these operations to install the replacement: secure the cylinder with its clip and restore the cable connection and retaining tabs."
+          "title": "Lift and remove the rear cushion",
+          "body": "With both front tabs released, lift the cushion, free it from its installed position and remove it from the cabin. Keep the seatbelt webbing and buckles clear as the cushion comes out. This exposes the lower backrest attachments."
         },
         {
-          "title": "Restore the rear seating",
-          "body": "Reverse the backrest removal sequence and tighten its floor attachments to 35 lb.ft (47.5 Nm). Restore the cushion as directed. Keep objects out of all seat mounting joints, and leave the belt webbing untwisted with belts and buckles accessible."
+          "title": "Release the backrest floor attachments",
+          "body": "Locate the backrest-to-floor fasteners at the two lower outboard corners of the backrest, now accessible with the cushion removed. Release those fasteners and retain them for installation.\n\nKeep the attachment areas free of loose objects. The reinstallation torque is 47.5 Nm (35 lb-ft), as given in [Rear Seat Backrest – Convertible](#/document/G1709034)."
+        },
+        {
+          "title": "Pivot the backrest hooks clear, then lift the backrest out",
+          "body": "Release the hooked locking clips on the back of the backrest by moving each upper locking portion inward toward the upholstery and pivoting the hooks clear of their catches on the body. Once the hooks are disengaged, lift the backrest upward and remove it.\n\nDo not try to lift the backrest out while a hooked clip remains engaged. Keep the belt webbing clear of the moving backrest."
+        },
+        {
+          "title": "Release the cable connection at the lock cylinder",
+          "body": "Through the exposed rear-seat area, locate the cylinder mounting beside the side trim and the cable attached to its operating connection. Identify the pair of retaining tabs at that connection.\n\nRelease both tabs, then detach the luggage-compartment lid latch cable from the cylinder. Move the disconnected cable clear without using it to pull on the cylinder. This is the cable-release stage of [Luggage Compartment Lid Lock Cylinder – Convertible](#/document/G1695892)."
+        },
+        {
+          "title": "Remove the separate cylinder retaining clip and cylinder",
+          "body": "With the cable detached, remove the separate retaining clip that secures the cylinder at the body-panel opening. Then withdraw the cylinder from its mounting.\n\nThe cable tabs and mounting clip do different jobs. If the cylinder remains held, check that its mounting clip is fully released before pulling harder."
+        },
+        {
+          "title": "Install the cylinder and reconnect the cable",
+          "body": "Fit the replacement cylinder into the mounting opening and reinstall its retaining clip. Confirm the clip is seated and the cylinder is retained before restoring the cable connection.\n\nReconnect the latch cable to the cylinder and engage both retaining tabs. Check that the connection is seated and the cable has not been trapped against the mounting or side trim. This reverses the cylinder-removal sequence.\n\nBefore closing the rear-seat access, keep the car parked with the engine stopped and everyone clear of the luggage lid. Press the side-trim release button behind the rear seat and confirm the luggage-compartment lid unlatches. This is the normal convertible release operation described on printed page 60 of the 2015 Mustang owner’s manual. If it does not release, leave access open and recheck the cable connection and both retaining tabs before completing the seating reassembly. Do not treat a failed check as proof that another part needs replacement."
+        },
+        {
+          "title": "Lower the backrest into position and engage its hooked clips",
+          "body": "Clear all tools and loose hardware from the seat-to-body interfaces. Position the backrest, lower it into place, then pivot its hooked locking clips back into engagement with the body catches. Lowering the backrest alone does not complete this attachment.\n\nKeep the safety-belt webbing untwisted and route the belts and buckles so occupants can reach them."
+        },
+        {
+          "title": "Secure the backrest to the floor",
+          "body": "Restore the lower outboard backrest-to-floor fasteners and tighten them to 47.5 Nm (35 lb-ft). Confirm the hooked clips remain engaged and nothing is trapped in the mounting joints.\n\nDo not return the seating position to use until the backrest clips and floor attachments are correctly secured."
+        },
+        {
+          "title": "Refit the cushion and restore belt access",
+          "body": "Return the cushion to its installed position, keeping the belts and buckles accessible above it. Lower the cushion, align its front locking tabs with the floor retainers and engage both tabs to reverse removal.\n\nCheck both front attachment points for engagement. Confirm the belt webbing is untwisted, the buckles are reachable and no tools or loose parts remain beneath the seating. Return the front seats to suitable positions."
         }
       ],
       "watchFor": [
         {
-          "title": "Cable or cylinder still retained",
-          "body": "The cable tabs and cylinder clip are separate attachments. Confirm the appropriate attachment is released before moving either component."
+          "title": "Cushion tabs resisting removal",
+          "body": "Press the front locking tabs inward before lifting. Pulling against a locked tab can damage it."
         },
         {
-          "title": "Obstructed seat joints",
-          "body": "Objects between the seat structure and body can prevent correct installation and operation. Clear the joints before securing the backrest."
+          "title": "Backrest hooks still engaged",
+          "body": "Pivot the hooks clear before lifting the backrest. During installation, lower the backrest and pivot the hooks back into their body catches."
+        },
+        {
+          "title": "Confusing the two cylinder attachments",
+          "body": "The pair of tabs releases the cable connection. A separate retaining clip holds the cylinder in its body mounting. Release and restore each attachment in its own stage."
+        },
+        {
+          "title": "Trapped objects or belts",
+          "body": "Keep seat mounting joints empty and belt webbing clear throughout installation. Untwisted belts and accessible buckles are required for both the backrest and cushion refit."
         }
       ],
       "notes": [
-        "Mechanical cylinder and cable attachment should be checked separately from any passive-entry release complaint."
+        "The passive-entry system can also release the luggage-compartment latch. Its operation is separate from this mechanical cylinder-and-cable replacement; see [Handles, Locks, Latches and Entry Systems – Overview](#/document/G1695896).",
+        "This access route is performed from the cabin with the vehicle on the ground."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm cylinder and cable attachment",
-          "body": "Before closing access, confirm the cylinder retaining clip is installed and the cable connection and tabs are restored."
+          "finding": "The cushion remains attached at a front corner.",
+          "meaning": "That corner’s locking tab may still be engaged with the floor.",
+          "next": "Press the tab inward to release it before lifting that area."
         },
         {
-          "title": "Confirm seating restoration",
-          "body": "Check the backrest locking clips, specified floor-fastener torque and clear seat joints. Confirm that belts and buckles remain accessible without twisted webbing."
+          "finding": "The backrest resists lifting after the floor fasteners are released.",
+          "meaning": "A hooked locking clip may still be engaged with its body catch.",
+          "next": "Check the hooks and pivot them clear before continuing upward."
+        },
+        {
+          "finding": "The cylinder will not withdraw after the cable is detached.",
+          "meaning": "Detaching the cable does not release the cylinder’s separate mounting clip.",
+          "next": "Check that the mounting clip has been removed before attempting to withdraw the cylinder."
+        },
+        {
+          "finding": "The original complaint concerns passive-entry luggage-lid release.",
+          "meaning": "That complaint alone does not identify a failed mechanical lock cylinder.",
+          "next": "Establish which release function is failing before replacing parts. The system relationship is described in [Handles, Locks, Latches and Entry Systems – Overview](#/document/G1695896); this article does not provide an electrical fault-isolation test."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Cylinder and cable retained",
+          "body": "Before closing rear-seat access, confirm the cylinder mounting clip is seated, the cylinder is retained, and both cable-connection tabs are engaged. Confirm the side-trim release button unlatches the luggage lid before closing rear-seat access."
+        },
+        {
+          "title": "Backrest attachments complete",
+          "body": "Confirm the hooked clips are engaged with the body catches and the floor fasteners are tightened to 47.5 Nm (35 lb-ft). Check that all mounting joints are clear."
+        },
+        {
+          "title": "Cushion and belts restored",
+          "body": "Confirm both front cushion locking tabs are engaged. Check that belt webbing is untwisted and that all belts and buckles remain accessible to occupants."
         }
       ],
       "procedures": [
         {
           "documentId": "G1695892",
-          "purpose": "Convertible luggage-compartment lock cylinder and latch-cable removal and installation."
+          "purpose": "Primary cylinder removal and reverse-order installation, including the cable tabs and separate mounting clip."
         },
         {
           "documentId": "G1709034",
-          "purpose": "Convertible rear backrest removal and installation for cylinder access.",
+          "purpose": "Convertible backrest access, hooked-clip engagement, floor-fastener torque and belt-routing requirements.",
           "mediaId": "G1709034-m0002"
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Required rear cushion removal and installation, including front-seat positioning and locking-tab release."
+        },
+        {
+          "documentId": "G1695896",
+          "purpose": "Context distinguishing passive-entry luggage-lid release from the mechanical cylinder replacement."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable service precautions for startup prevention, personal protection and sharp-edged components."
         }
       ],
       "hero": {
@@ -167957,7 +168771,7 @@
         "years": [
           2015
         ],
-        "equipment": "Convertible"
+        "equipment": "Convertible with rear seat fitted"
       },
       "relatedGuideIds": [
         "job-066d1204854b4ef3"
@@ -167974,6 +168788,14 @@
         {
           "documentId": "G1695896",
           "sourceHash": "722613b9939c667faba1075bf478bd1b7459ebccb530cb5d1e94844935d45c8c"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -167992,8 +168814,34 @@
               "end": 512
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "711ab8eae6d462be920624a8c0297cab3fc6d2aa95e943619c0212eeed822597",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "open-seat-access",
+          "title": "Open rear-seat access",
+          "summary": "Move the front seats, release the cushion and remove the convertible backrest.",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "id": "exchange-lock-cylinder",
+          "title": "Exchange the lock cylinder",
+          "summary": "Detach the cable, release the cylinder mounting and restore both connections.",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": "restore-rear-seating",
+          "title": "Restore the rear seating",
+          "summary": "Engage the backrest hooks, torque its floor attachments and refit the cushion with belts accessible.",
+          "start": 9,
+          "end": 11
         }
-      }
+      ]
     },
     {
       "title": "Remove and refit the convertible A-pillar trim panel",

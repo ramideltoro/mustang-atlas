@@ -1,0 +1,76 @@
+{
+  "documentId": "G1686437",
+  "supportingSourceRefs": [],
+  "sourceHash": "1c78383cde3fb956f3444a3685a648ef455cb83cc05d6b4d5be4b53fd884bfc6",
+  "title": "6R80 Low/Reverse Clutch: Parts and Hydraulic Operation",
+  "introduction": "I read this assembly from hardware to hydraulics. The cutaway shows where the clutch sits inside the transmission; the exploded drawing separates its parts so the adjacent table can identify them. Then the hydraulic drawings show how pressure reaches the clutch and what changes when it is released.\n\nThe useful distinction is between pressure that applies the clutch and a small fluid supply that keeps its circuit filled. Think of the latter as keeping a drinking straw primed: fluid is already there when it is needed. This overview applies to the 6R80 automatic transmission. It explains component relationships and operation, rather than disassembly, assembly clearances or a pressure-test procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686437-b00001",
+      "text": "Low/Reverse Clutch in Cutaway",
+      "why": "I start with the torque converter at the left and trace toward the highlighted clutch area farther along the case. The cutaway places the piston, return spring and clutch pack in their installed relationship; the exploded drawing makes their separate shapes easier to recognize."
+    },
+    {
+      "blockId": "G1686437-b00004",
+      "text": "Low/Reverse Clutch Parts: Exploded View",
+      "why": "Follow the drawing’s common axis and match its callouts to the table. The separated parts show how the center support, piston, return spring, cushion plate, clutch assembly and pressure plate relate to the rear planetary carrier and case. Their spacing on the page is for identification, not an assembly clearance or an instruction to remove them in that order."
+    },
+    {
+      "blockId": "G1686437-b00006",
+      "text": "How the Low/Reverse Clutch Receives Pressure",
+      "why": "I trace the labeled passages and arrowheads rather than treating the drawing as a picture of physical tube routing. Separate the solenoid-control path that positions valves from the line-pressure path that supplies the clutch. The drawings have no supplied pressure-color key, so the circuit names and the accompanying operating descriptions carry the meaning."
+    },
+    {
+      "blockId": "G1686437-b00007",
+      "text": "The low/reverse clutch can be applied with the manual valve in any position. Line pressure reaches the D1 regulator and latch valves through the PUMP circuit. Shift solenoid D (SSD) sends regulated solenoid pressure from SREG through VFS4 to the solenoid multiplex valve. That valve directs the pressure through CL DC to position the D1 regulator and latch valves. The clutch D1 regulator valve then regulates line pressure from PUMP and supplies it through CL D1 to apply the low/reverse clutch.",
+      "why": "The control pressure positions the valves; the regulated line pressure performs the clutch application. Keeping those jobs separate makes the apparent maze readable. The manual-valve statement describes the hydraulic capability, while the applied-state heading identifies the operating states illustrated."
+    },
+    {
+      "blockId": "G1686437-b00008",
+      "text": "Low/Reverse Clutch Applied: PARK, REVERSE, NEUTRAL and 1st Gear",
+      "why": "Use the applied drawing to trace supply from LINE PRESSURE FROM PUMP through the regulator and along the clutch-feed passage to LOW/REV CLUTCH D1. Compare its valve positions and arrows with the released drawing to see what changes."
+    },
+    {
+      "blockId": "G1686437-b00010",
+      "text": "In 2nd, 3rd, 4th, 5th and 6th gear, the D2 Latch valve directs a small amount of fluid from PUMP into CL EXH. When SSD is hydraulically off and the Manual Valve is in DRIVE, fluid from CL EXH keeps the CLD1 circuits filled at low pressure (21kPa/ 3 PSI). This keeps air out of CLD1 and supports a smooth downshift into 1st gear.",
+      "why": "Released does not mean drained dry. This small fluid supply keeps the clutch circuit ready for its next application; it is distinct from the pressure used to apply the clutch. The stated pressure describes this operating condition and is not, by itself, a workshop test specification."
+    },
+    {
+      "blockId": "G1686437-b00011",
+      "text": "Low/Reverse Clutch Released: Hydraulic Paths",
+      "why": "I compare the CL EXH route and the clutch-feed arrows with the applied view. The released drawing illustrates why fluid can remain in the circuit while the clutch is released—an important distinction when reading a hydraulic diagram."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:52:56.066Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 7,
+    "receivedBlocks": 7,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 23,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1bd0169a17ec5786cbb076522eb6b55f5991c7de67780787d7dfaa3eb6ce1b06",
+    "reviewedAt": "2026-10-27T18:51:55.536Z",
+    "editorialRevision": "Intro-only unnecessary inherited power/inferred engines removal, actual scope and complete technical commentary retained."
+  }
+}

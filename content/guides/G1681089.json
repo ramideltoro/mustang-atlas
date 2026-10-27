@@ -1,0 +1,45 @@
+{
+  "documentId": "G1681089",
+  "supportingSourceRefs": [],
+  "sourceHash": "da24bc3e54fdc0d062cf38f83d33f77455edab76358d224100f570b609814f1a",
+  "title": "EMTC Climate Control Component Locations",
+  "introduction": "Electronic Manual Temperature Control (EMTC) has several jobs hiding behind the temperature knob. The blower moves air, the inlet door selects its source, the temperature door changes how much air is heated, and the distribution door chooses its destination. I think of the housing as a little air-handling station: fan, routing gates and heat exchangers all have their own assignments. Weak airflow, the wrong temperature and air at the wrong outlet therefore describe different missing jobs.\n\nStart with the dashboard drawing to identify the registers—the adjustable air outlets—and the FCIM control panel. Move to the transparent housing drawing for the blower, its separate speed control, the door actuators and the evaporator temperature sensor. The prominent cylindrical fan helps orient that view; trace each leader to distinguish its motor from nearby controls. Match callouts only to the table accompanying that drawing, because the item sequence restarts in each view.\n\nThe engine-bay drawing connects the cabin housing at the bulkhead to the refrigerant components toward the front of the vehicle. The thermostatic expansion valve is at the housing’s refrigerant-line connections. The compressor circulates refrigerant, the condenser releases heat to outside air, and the receiver drier alongside the condenser stores refrigerant and removes moisture. The evaporator inside the cabin housing absorbs heat and dries passing air. Its temperature sensor helps prevent icing, while the pressure transducer reports refrigerant discharge pressure; that pressure signal does not directly measure the amount of refrigerant in the system.\n\nUse the named inlet and outlet lines and their leaders to follow the plumbing. The colors distinguish illustrated parts; they are not a supplied pressure legend. This is an EMTC location reference, without access instructions or diagnostic limits. Refrigerant service requires the correct recovery and charging equipment and the matching procedure before opening the circuit.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1681089-b00001",
+      "text": "NOTE: The 5.0L arrangement is shown; all other engines have a similar arrangement.",
+      "why": "Use the illustrations to recognize the component layout while retaining this engine qualifier. Similar arrangements can still require engine-specific service information."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:00:53.454Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 1,
+    "receivedBlocks": 1,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "5c5ad8c0e88961667c056af10f969caaf696ba5c9108224264bcfae5830267fd",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "24473f4fa94d81e6f3c74c370bc958e46dc2914f2b90658c46f22fa24dfe9342",
+    "reviewedAt": "2026-10-27T19:00:53.454Z"
+  }
+}

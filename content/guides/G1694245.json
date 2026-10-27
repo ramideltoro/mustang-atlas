@@ -1,0 +1,190 @@
+{
+  "documentId": "G1694245",
+  "supportingSourceRefs": [],
+  "sourceHash": "41afd5a9653e5cc3ce53ca3373b70d3b7bf1767a6079fea08dc86e6cb6c4ba7c",
+  "title": "Interior Lighting: Courtesy, Demand and Ambient Systems",
+  "introduction": "I start by asking what the light is meant to do: welcome you into the car, illuminate a particular task, or add background color. Those jobs belong to courtesy, demand and optional ambient lighting. The cabin may look like a single lighting arrangement, but its lamps do not all share the same purpose or control path.\n\nThe component groups below explain those relationships, including the latch-integrated switches, controller involvement and battery-saver supply condition. Use this overview to describe which function is affected before choosing a matching diagnostic procedure. It provides no connector pinouts, electrical test values, battery-saver timing or lamp-removal instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1694245-b00001",
+      "text": "How the Cabin Lighting Is Organized",
+      "why": "Grouping the lights by purpose helps turn a vague lighting complaint into a description of the affected function."
+    },
+    {
+      "blockId": "G1694245-b00002",
+      "text": "The interior lighting system is organized into these functional groups:",
+      "why": "The group names describe the lighting jobs; the later lists identify their lamps, switches and controllers."
+    },
+    {
+      "blockId": "G1694245-b00004",
+      "text": "Courtesy lighting for entry and exit",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00006",
+      "text": "Demand lighting for particular areas",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00008",
+      "text": "Ambient lighting, if equipped",
+      "why": "This feature is equipment-dependent."
+    },
+    {
+      "blockId": "G1694245-b00010",
+      "text": "The courtesy-lighting group includes the following lamps, switches and controller:",
+      "why": "A lighting subsystem includes the inputs and control hardware as well as the parts that glow."
+    },
+    {
+      "blockId": "G1694245-b00012",
+      "text": "Roof-mounted interior lamps",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00014",
+      "text": "Pony projection lamps built into the exterior mirror assemblies",
+      "why": "Their exterior location does not exclude them from the courtesy-lighting group."
+    },
+    {
+      "blockId": "G1694245-b00016",
+      "text": "Door-ajar switches built into the door latches",
+      "why": "The listed door-status switches are integrated into the latch assemblies."
+    },
+    {
+      "blockId": "G1694245-b00018",
+      "text": "BCM (body control module)",
+      "why": "The controller participates in the courtesy subsystem; its inclusion alone does not identify the cause of a lighting fault."
+    },
+    {
+      "blockId": "G1694245-b00020",
+      "text": "Courtesy lamps illuminate the cabin as you enter or leave the vehicle.",
+      "why": "Entry and exit illumination is the defining purpose of this group."
+    },
+    {
+      "blockId": "G1694245-b00021",
+      "text": "The demand-lighting group includes these lamps, illuminated areas, switch and controller:",
+      "why": "“Demand” describes localized illumination when needed, rather than requiring every listed lamp to have the same kind of switch."
+    },
+    {
+      "blockId": "G1694245-b00023",
+      "text": "Interior map lamps",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00025",
+      "text": "Luggage-compartment lid-ajar switch built into the lid latch",
+      "why": "The switch is part of the luggage-compartment lid latch, rather than a separately located switch in this component list."
+    },
+    {
+      "blockId": "G1694245-b00027",
+      "text": "Lamp for the luggage compartment",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00029",
+      "text": "Lamps at the vanity mirrors",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00031",
+      "text": "Floor-console bin illumination",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00033",
+      "text": "BCM, the body control module",
+      "why": "The demand group also involves this controller, whose battery-saver supply role is described below."
+    },
+    {
+      "blockId": "G1694245-b00035",
+      "text": "Demand lamps illuminate particular areas of the vehicle when that light is needed.",
+      "why": "Think task light: the illuminated area explains the lamp’s purpose, while its supply and controls explain its operation."
+    },
+    {
+      "blockId": "G1694245-b00036",
+      "text": "When the battery saver feature is not active, the BCM energizes the battery saver output to supply voltage to the demand lamps.",
+      "why": "This condition matters when interpreting lamp operation: supply availability is part of the system behavior. No activation timing or reset sequence is specified here."
+    },
+    {
+      "blockId": "G1694245-b00037",
+      "text": "For vehicles equipped with ambient lighting, the subsystem includes:",
+      "why": "Keep the optional-equipment qualification attached to this group."
+    },
+    {
+      "blockId": "G1694245-b00039",
+      "text": "Light Emitting Diodes (LEDs) for ambient illumination",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00041",
+      "text": "IPC with its message-center control interface",
+      "why": "The ambient-lighting controls are accessed through the message center."
+    },
+    {
+      "blockId": "G1694245-b00043",
+      "text": "BCMB (Body Control Module B)",
+      "why": "Keep the full identifier when discussing this ambient-lighting component; the other lighting groups list BCM."
+    },
+    {
+      "blockId": "G1694245-b00045",
+      "text": "Use the IPC message center to control ambient lighting. It provides decorative colored illumination at the locations below during illuminated entry, when the ignition is ON, or when the parking lamps are on:",
+      "why": "These are the stated operating conditions. The message-center control location is identified, but a menu sequence is outside this overview."
+    },
+    {
+      "blockId": "G1694245-b00047",
+      "text": "Illumination at the IPC",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00049",
+      "text": "Cup holders in the floor console",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00051",
+      "text": "Door release handles inside the cabin",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00053",
+      "text": "Trim panels at the scuff plates",
+      "why": ""
+    },
+    {
+      "blockId": "G1694245-b00055",
+      "text": "Footwell areas at the front seats",
+      "why": ""
+    }
+  ],
+  "checkedAt": "2026-10-27T18:51:55.525Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 30,
+    "receivedBlocks": 30,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6bb5cc52bcc0b80d227cb5c9a78190c9dd0639f3c120e5b24e2cab0114614398",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "87f6edd01e18a115f76206bb651b2bf4691b0f8a61e259e352a787f2003bd9ea",
+    "reviewedAt": "2026-10-27T18:51:55.525Z"
+  }
+}
