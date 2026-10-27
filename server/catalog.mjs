@@ -1,3 +1,4 @@
+import {reviewedBodyApplications} from './reviewed-body-applications.mjs';
 import {detectEngines} from './taxonomy.mjs';
 import {factoryBrakeEngines} from './brake-applicability.mjs';
 import {factoryBodyEngines} from './body-applicability.mjs';
@@ -8,6 +9,7 @@ const array=value=>{if(Array.isArray(value))return value;try{return JSON.parse(v
 // The 2.3L label is a full-sheet header outside the component/branch boxes on
 // wiring 033-002. Bind the visual finding to the exact reviewed drawing.
 const reviewedApplications={
+ ...reviewedBodyApplications,
  // These are different front hub arrangements: standard central retaining nut
  // versus the separately documented SVT bolt-on assembly. Keep their specs apart.
  'G1692537':{hash:'94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812',engines:['2.3L','3.7L','5.0L']},

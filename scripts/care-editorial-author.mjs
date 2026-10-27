@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 const root=process.cwd(),dir=path.join(root,'work/editorial-care'),args=process.argv.slice(2),option=(k,d)=>args.includes(k)?args[args.indexOf(k)+1]:d;
 const atomic=(file,v)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file+'.tmp',JSON.stringify(v,null,2)+'\n');fs.renameSync(file+'.tmp',file);};
-const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const hash=v=>createHash('sha256').update(JSON.stringify(v,(key,value)=>key==='checkedAt'?undefined:value)).digest('hex');
 const db=new DatabaseSync(path.join(root,'data/atlas.sqlite'),{readOnly:true});
 const catalog=JSON.parse(fs.readFileSync('content/maintenance-guides.json','utf8'));
 fs.mkdirSync(path.join(dir,'accepted'),{recursive:true});
