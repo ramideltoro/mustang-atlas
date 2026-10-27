@@ -30,3 +30,17 @@ test('navigation bridges authenticate reachability but never lend their content 
 test('generic navigation cannot erase a narrower ancestor engine scope',()=>{const root={...primary,engines:['3.7L','5.0L']},parent={...support,engines:['5.0L']},bridge={...nested,engines:[],related:['D']},leaf={...nested,id:'D',sourceHash:'d'.repeat(64),engines:['3.7L']};const refs=[ref(parent,'A'),{documentId:'C',sourceHash:bridge.sourceHash,referencedBy:'B',sourceReference:'C',navigationOnly:true},ref(leaf,'C')];const result=validateSupportingSources(root,refs,{resolveDocument:id=>[parent,bridge,leaf].find(d=>d.id===id)});assert.equal(result.passed,false);assert.ok(result.errors.some(e=>e.includes('ancestor engine mismatch')));});
 
 test('engine scope requires one common engine throughout the chain, not pairwise overlap',()=>{const root={...primary,engines:['2.3L','3.7L']},parent={...support,engines:['2.3L','5.0L']},leaf={...nested,engines:['3.7L','5.0L']};assert.equal(validateSupportingSources(root,[ref(parent,'A'),ref(leaf,'B')],{resolveDocument:id=>[parent,leaf].find(d=>d.id===id)}).passed,false);});
+
+test('trusted engine scopes honor hash-bound generic and SVT hub reviews despite empty raw tags',()=>{
+ const generic={...support,id:'G1692537',title:'Front Wheel Hub',sourceHash:'94481a0728bda95593922917ac304e38ebcba58671a3fddf412ae7fa41d42812',engines:[],related:[]};
+ const svt={...support,id:'G1692554',title:'Front Wheel Hub',sourceHash:'4066fc0f227995b392bfc015c56fd0dad3a9245df1f74d4cc83bb4cdcf2d3b28',engines:[],related:[]};
+ const resolve=id=>[generic,svt].find(d=>d.id===id);
+ const root={...primary,engines:['5.2L'],related:[generic.id,svt.id]};
+ assert.equal(validateSupportingSources(root,[ref(generic,'A')],{resolveDocument:resolve}).passed,false);
+ assert.equal(validateSupportingSources(root,[ref(svt,'A')],{resolveDocument:resolve}).passed,true);
+ const genericRoot={...generic,related:[svt.id]};
+ assert.equal(validateSupportingSources(genericRoot,[ref(svt,generic.id)],{resolveDocument:resolve}).passed,false);
+ const standardRoot={...root,engines:['3.7L']};
+ assert.equal(validateSupportingSources(standardRoot,[ref(generic,'A')],{resolveDocument:resolve}).passed,true);
+ assert.equal(validateSupportingSources(standardRoot,[ref(svt,'A')],{resolveDocument:resolve}).passed,false);
+});
