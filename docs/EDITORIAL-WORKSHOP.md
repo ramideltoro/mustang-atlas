@@ -186,3 +186,7 @@ The exact G1692223 cleaning task now receives the complete checksum-bound 2015 o
 ### Rear buckle completion evidence
 
 Reservation 15 supplies the complete exact-hash G1883856 diagnosis/testing chapter for G1692231 rear buckle replacement, including preliminary inspection and the applicable complete buckle/tongue functional test. Separate retractor, ALR and road tests remain available as symptom-specific evidence; the author must retain genuinely applicable requirements and stop when further execution is unsupported. Both source enrichment and its scope constraint require new, persisted or explicit-retry enrollment, preserving existing hold fingerprints. The two-packet review is not a preapproval.
+
+### Removed rear-hub stud pressing scope
+
+Reservation 16 explicitly begins with the rear hub/bearing assembly already removed. Exact G1686659 text and all three original figures were independently inspected: flange support and bearing/stud clearance, threaded-end removal force, inverted head-force installation and head seating are visible. The prospective/enrolled scope constraint requires those actual contacts and stop conditions without invented press loads or fixture dimensions. Vehicle hub removal/refit and return to service remain separate required procedures. This screening is not technical approval; complete figure review and supervisory gating still apply.
