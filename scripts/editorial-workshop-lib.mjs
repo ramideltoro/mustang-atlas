@@ -73,7 +73,8 @@ export async function renderEvidenceImage(input, mime) {
 }
 
 // Exact observed refrigerant-service prerequisites; unrelated climate descriptions are not selected.
-export function climateSafetyDependency(primaryIds, byId) {
+export function climateSafetyDependency(primaryIds, byId, {prior,retry=false}={}) {
+ if(prior?.status&&!prior.climateSafetyEvidence&&!retry&&!['reserved','pair-fallback'].includes(prior.status))return null;
  const matches=[...primaryIds].filter(id=>Object.hasOwn(CLIMATE_SERVICE_HASHES,id));
  if(!matches.length)return null;
  for(const id of matches)if(byId.get(id)?.source_hash!==CLIMATE_SERVICE_HASHES[id])throw Error('Refrigerant-service source changed: '+id);

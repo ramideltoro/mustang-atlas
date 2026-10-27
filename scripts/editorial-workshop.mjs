@@ -28,12 +28,12 @@ if(headlinerSupplement){if(hash(fs.readFileSync(headlinerSupplement.pdfPath))!==
 const ownerControls=loadOwnerControls(root);
 const ownerPriorLedgerFile=path.join(dir,'ledger.json');
 const ownerPriorLedger=fs.existsSync(ownerPriorLedgerFile)?read(ownerPriorLedgerFile):{};
-const ownerEnrolled=new Set();
+const ownerEnrolled=new Set(),climateEnrolled=new Set();
 function evidenceFor(g){
  const job=getJob(g),primary=new Set(job.documents.map(d=>d.id)),docs=new Map(job.documents.map(d=>[d.id,d]));
  const dependencySpans=new Map();
- const climateSafety=climateSafetyDependency(primary,byId);
- if(climateSafety)docs.set(climateSafety.id,climateSafety);
+ const climateSafety=climateSafetyDependency(primary,byId,{prior:ownerPriorLedger[g.id],retry:args.includes('--retry')});
+ if(climateSafety){docs.set(climateSafety.id,climateSafety);climateEnrolled.add(g.id);}
  const ownerNewOrExplicitRetry=enrollOwnerControls(ownerPriorLedger[g.id],args.includes('--retry'));
  const ownerSupplement=ownerNewOrExplicitRetry&&needsOwnerControls(primary,g.applicability.years)?ownerControls:null;
  if(ownerSupplement)ownerEnrolled.add(g.id);
@@ -119,7 +119,7 @@ const auth=spawnSync(codex,['login','status'],{encoding:'utf8',env});if(!/Logged
 const pid=path.join(dir,'worker.pid');if(fs.existsSync(pid)){try{process.kill(Number(fs.readFileSync(pid)),0);throw Error('Editorial worker is already running');}catch(e){if(e.code!=='ESRCH')throw e;}}fs.writeFileSync(pid,String(process.pid));process.on('exit',()=>{try{if(Number(fs.readFileSync(pid))===process.pid)fs.unlinkSync(pid);}catch{}});
 let stopped=false,child=null;process.on('SIGINT',()=>{stopped=true;});process.on('SIGTERM',()=>{stopped=true;});
 const ledgerFile=path.join(dir,'ledger.json');let ledger=fs.existsSync(ledgerFile)?read(ledgerFile):{};
-const save=(id,record)=>{ledger[id]={...ledger[id],...record,ownerControlsEvidence:ownerEnrolled.has(id),updatedAt:new Date().toISOString()};atomic(ledgerFile,ledger);atomic(path.join(dir,'progress.json'),{pid:process.pid,state:stopped?'stopping':'running',total:base.length,reviewed:Object.values(ledger).filter(x=>x.status==='reviewed').length,needsReview:Object.values(ledger).filter(x=>['needs-review','failed'].includes(x.status)).length,active:id,updatedAt:new Date().toISOString(),method:'Signed-in Codex CLI, one process; separate source reviewer; no API calls; not human reviewed.'});};
+const save=(id,record)=>{ledger[id]={...ledger[id],...record,ownerControlsEvidence:ownerEnrolled.has(id),climateSafetyEvidence:climateEnrolled.has(id),updatedAt:new Date().toISOString()};atomic(ledgerFile,ledger);atomic(path.join(dir,'progress.json'),{pid:process.pid,state:stopped?'stopping':'running',total:base.length,reviewed:Object.values(ledger).filter(x=>x.status==='reviewed').length,needsReview:Object.values(ledger).filter(x=>['needs-review','failed'].includes(x.status)).length,active:id,updatedAt:new Date().toISOString(),method:'Signed-in Codex CLI, one process; separate source reviewer; no API calls; not human reviewed.'});};
 async function imagesFor(packet,folder){const out=[];for(const n of packet)for(const m of n.images){const original=m.privatePath?path.resolve(root,m.privatePath):path.join(root,'data',m.url.replace(/^\//,''));if(m.privatePath&&!original.startsWith(path.join(root,'work')+path.sep))throw Error('Private evidence outside work directory');if(!fs.existsSync(original))throw Error('Missing source image '+m.id);const name=path.join(folder,m.id+'-white-v2.png');if(!fs.existsSync(name))fs.writeFileSync(name,await renderEvidenceImage(original,m.mime));out.push({path:name,documentId:m.documentId,mediaId:m.id,sha256:hash(fs.readFileSync(original)),renderSha256:hash(fs.readFileSync(name)),legend:m.legend||[]});}return out;}
 async function call(folder,name,prompt,schema,images=[]){
  fs.mkdirSync(folder,{recursive:true});const output=path.join(folder,name+'.json'),schemaFile=path.join(folder,name+'.schema.json'),promptFile=path.join(folder,name+'.prompt.txt');const callHash=hash(JSON.stringify({prompt,schema,images:images.map(i=>({sha256:i.sha256,renderSha256:i.renderSha256,mediaId:i.mediaId}))}));
