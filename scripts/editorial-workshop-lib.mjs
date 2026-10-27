@@ -89,3 +89,10 @@ const CLIMATE_SERVICE_HASHES={
  G1912329:'2eec4060f18e472da74268f3a01948f03a8e317477d0a97e1927d8ed5b4761c9',
  G1912330:'a007a962107638ddaae1f84811778ccef1c285be274f368dd8c2bcb80314165e'
 };
+
+// The exposed tongue adjustment does not execute the optional cushion reference.
+export function rearCushionScopeConstraint(primaryIds,hasCushion){
+ if(!hasCushion)return [];
+ if(primaryIds.has('G1692226'))return ['G1692226 adjusts an already accessible seatbelt tongue on the assembled vehicle. Rear cushion and child-seat anchor references are optional context, not access prerequisites; do not require a fitted rear seat or add cushion removal.'];
+ return ['The supplied access sequence depends on a fitted rear seat cushion. Qualify applicability as rear seat fitted; do not imply that this sequence covers rear-seat-delete configurations. Retain coupe/convertible restrictions independently.'];
+}

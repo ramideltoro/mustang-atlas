@@ -154,3 +154,9 @@ Wheel-stud source recovery is separately bound to the exact G1692541, SVT hub G1
 ### Tenth reserved subset: complete service prerequisites
 
 Six screened tasks use exact-hash complete adapter evidence for oxygen-sensor work, the complete adaptive cycle for 6R80 strategy programming, and the complete 3160 filling procedure/material specification for its temperature sensor. Explicit prospective enrollment includes new, reserved and pair-fallback jobs; prior held/reviewed jobs require explicit retry unless already enrolled. Complete owner ignition evidence accompanies the actual control tasks. Offline preparation retains all evidence: oxygen-sensor and temperature-sensor packages use two packets where required, with normal independent review and isolated fallback. No publication approval follows from reservation or packaging. The secondary tenth subset waits for the ninth subset and its isolated wheel-stud source recovery retry to finish in the same CLI slot.
+
+### Optional cushion context and rear-anchor evidence (2026-10-27)
+
+The exposed G1692226 tongue adjustment must not inherit a fitted-rear-seat prerequisite from its optional cushion reference. The exact primary exception leaves real cushion-access tasks qualified as before; a regression covers both cases.
+
+The G1693753 rear anchor package can enroll complete BrakeSafety and the checksum-bound G1694687 material span ending before Torque Specifications, alongside the matching pad prerequisite. It does not import the conflicting six-piston bleeding row. Existing held/reviewed packages remain unchanged unless explicitly retried or previously enrolled. Offline preparation found one packet but unresolved-reference context, so any targeted retry remains isolated and requires complete independent and supervisory review. All 28 workshop/pair/owner/alignment tests passed.
