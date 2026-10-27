@@ -71,3 +71,20 @@ export async function renderEvidenceImage(input, mime) {
  const {default:sharp}=await import('sharp');
  return sharp(input,{density:mime==='image/svg+xml'?144:72}).flatten({background:'#ffffff'}).resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).png().toBuffer();
 }
+
+// Exact observed refrigerant-service prerequisites; unrelated climate descriptions are not selected.
+export function climateSafetyDependency(primaryIds, byId) {
+ const matches=[...primaryIds].filter(id=>Object.hasOwn(CLIMATE_SERVICE_HASHES,id));
+ if(!matches.length)return null;
+ for(const id of matches)if(byId.get(id)?.source_hash!==CLIMATE_SERVICE_HASHES[id])throw Error('Refrigerant-service source changed: '+id);
+ const source=byId.get('G1693184');
+ if(source?.source_hash!=='d7e46b64aa52ae84ab86a5758064469bc4d590e9469cd2078e1219dbd0f66b50')throw Error('Climate-control safety source changed');
+ return source; // Whole text and all illustrations, never a warning-only excerpt.
+}
+const CLIMATE_SERVICE_HASHES={
+ G1912323:'07dba0707a3bca214f3c4175d27ef2979125ab6a8d7ceaef64eb8ac1d9e1421d',
+ G1912324:'c6bd56d28cb864756b8e2431bf99d033c8d6783678f79602abf911be8a2be231',
+ G1912326:'03cff5b71c5ce9bbddcce6738e7ca12a684ade76688f4789d256560d8c21d895',
+ G1912329:'2eec4060f18e472da74268f3a01948f03a8e317477d0a97e1927d8ed5b4761c9',
+ G1912330:'a007a962107638ddaae1f84811778ccef1c285be274f368dd8c2bcb80314165e'
+};
