@@ -10994,14 +10994,14 @@
         "checks"
       ],
       "id": "battery-drain-diagnosis",
-      "title": "Parasitic battery drain: find what stays awake",
-      "summary": "Measure current after the car has settled, then isolate the circuit that is drawing too much instead of guessing at a module.",
+      "title": "Parasitic battery drain: measure draw and isolate low-current fuse circuits",
+      "summary": "For 2015 Mustangs with the 2.3L, 3.7L or 5.0L engine: measure settled battery current, access both fuse panels and identify accessible low-current circuits that change the reading.",
       "hero": {
         "documentId": "G1692356",
         "mediaId": "G1692356-m0002"
       },
-      "introduction": "Some electrical use continues after the ignition is switched off. The diagnostic question is whether the car settles to the expected resting draw, or whether a lamp, circuit or module keeps consuming too much. The tricky part is preserving the car’s state while measuring it: opening a circuit or waking a module can change the very behavior you are trying to observe.",
-      "why": "A current reading taken too soon can mistake normal module activity for a fault. A power interruption can also reset a troublesome module and temporarily hide the drain. A deliberate setup makes the final number meaningful.",
+      "introduction": "I want a number before the parts cannon gets loaded. This guide takes you through a continuity-preserving current test, then fuse isolation using the Mustang’s actual panel locations and circuit assignments. Its finish line is a recorded current reading and, when the fault appears on a tested circuit, a useful circuit identification. High-current fuse work, module dismantling and generator disconnection belong to the next diagnostic job. [Drain test](#/document/G1692357) · [Ford fuse locations and assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+      "why": "Some electronics keep drawing electricity after shutdown. The question is whether they settle to the appropriate resting draw with all electrical accessories off. Disconnecting power can reset a troublesome module and hide the fault; measuring too soon can catch normal activity. The fused jumper preserves power while you install the ammeter, and the settling period makes its reading meaningful. Waiting is a pain in the ass, but guessing at modules is considerably more expensive. [How the test works](#/document/G1692357)",
       "when": {
         "summary": "When a charged, tested battery repeatedly loses charge while the vehicle is parked.",
         "notes": [
@@ -11011,85 +11011,192 @@
       },
       "prepare": [
         {
-          "title": "Prepare the correct measuring equipment",
-          "detail": "The procedure specifies an inline ammeter capable of reading milliamps with a 10-amp capability, plus a 30-amp fused jumper used to preserve continuity during setup. A test lamp or voltage reading does not substitute for this current measurement."
+          "title": "Start with a fully charged, tested battery",
+          "detail": "Do not begin with a discharged battery or an active deep-sleep, battery-saver or other low-battery message. Use Ford-approved diagnostic battery equipment and follow its manufacturer’s instructions. Ford specifies the GR-1-190 diagnostic charger, tool 162-00036, for charging. A deeply discharged battery needs external charging; a short idle is insufficient. Complete that separate prerequisite through [Battery testing and charging](#/maintenance/battery-testing-charging). [Battery condition](#/document/G1931208) · [Charging equipment](#/document/G1692355) · [Drain prerequisites](#/document/G1692357)"
         },
         {
-          "title": "Allow enough uninterrupted time",
-          "detail": "Plan for at least 90 minutes of key-off settling, subject to equipment and regional differences, and for another settling period when the isolation procedure requires it."
+          "title": "Check whether auxiliary batteries are fitted",
+          "detail": "Verify the vehicle’s actual battery configuration before setting up the primary-battery measurement. If auxiliary batteries are fitted, Ford requires them to be disconnected for this test so the primary-battery meter captures all current draws. Obtain and use the appropriate battery-specific access and disconnection procedure before installing the primary-battery jumper and meter. Arrange their reconnection through that procedure afterward; do not guess at locations, terminal order or torque. [Auxiliary-battery test requirement](#/document/G1692357) · [Ford multiple-battery warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Use the circuit information",
-          "detail": "Have the fuse locations and relevant wiring information ready before beginning. A thermal camera can help identify activity, but the current measurement confirms the draw."
+          "title": "Gather the test equipment",
+          "detail": "Have an inline ammeter capable of reading milliamps with 10 A capability, suitable leads, a 30 A fused jumper, a flat-blade screwdriver or suitable latch tool, a tool matching the negative-terminal nut and a torque wrench capable of 5 Nm (44 lb-in). Use a fuse-removal tool suited to the actual fuse. A thermal camera is optional. Configure the meter for DC current according to its instructions; neither a voltage reading nor a test lamp substitutes for this test. [Measuring equipment](#/document/G1692357) · [Terminal torque](#/document/G1692356)"
+        },
+        {
+          "title": "Prepare a fuse and current log",
+          "detail": "Record the panel, numbered position, rating, protected circuit, current before and after removal, and every fuse still removed. Keep the official numbered panel diagrams available so identical numbers in different panels do not get confused. This guide limits live engine-compartment testing to chart-identified micro fuses; do not extend it to J-case or M-case fuses. Ford requires battery disconnection before servicing high-current fuses. [Ford fuse chart and safety requirements](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Reserve uninterrupted time",
+          "detail": "Allow at least 90 minutes of ignition-off settling, with equipment and regional differences taken into account. Reinstalling a suspect main-box fuse requires another settling period. Choose somewhere the car can remain undisturbed, all electrical accessories can remain off and every key or fob can stay at least 50 feet away. [Test conditions](#/document/G1692357)"
+        },
+        {
+          "title": "Protect yourself at the battery",
+          "detail": "Ventilate the work area, shield your eyes and keep flames, sparks and smoking materials away. Battery gas can explode, and sulfuric acid can burn skin and eyes. Flush acid contact immediately with water for at least 15 minutes and obtain prompt medical attention; swallowed acid requires immediate medical advice. Wash your hands after handling lead-containing terminals. [Battery precautions](#/document/G1693181)"
         }
       ],
       "steps": [
         {
-          "title": "Establish a sound starting point",
-          "body": "Fully charge and test the battery. Record the parking duration and conditions that lead to discharge. Follow the procedure’s activation drive—at least five minutes above 48 km/h (30 mph)—before setting up the resting test."
+          "title": "Record the complaint and inspect the connections",
+          "body": "Write down how long the car parks before the battery becomes weak and whether the problem follows accessory use, electrical modifications or previous repairs. With ignition off, inspect the battery, its mounting, visible wiring, terminals, battery/chassis grounds and high-current connections at the battery junction box, or BJB. Look for loose connections, corrosion, damaged insulation and chafing. Correct an obvious connection fault and retest battery condition before proceeding. [Battery inspection](#/document/G1931208) · [Preliminary checks](#/document/G1693185)"
         },
         {
-          "title": "Arrange access without keeping the car awake",
-          "body": "With ignition off, prepare hood, door-latch and fuse-box access exactly as the test describes so lamps do not remain on. Disable applicable approach or alarm features. On an automatic, verify that Park indication works; an incorrect indication can prevent modules from sleeping."
+          "title": "Confirm the diagnostic starting condition",
+          "body": "Confirm that charging and battery testing are complete and no low-battery message remains. A replace-battery or bad-cell result belongs in the battery-service branch; it does not identify an external drain. Ford also calls for checking charging-system operation, relevant diagnostic trouble codes and applicable service/software information. Address circuit-related fault codes before deeper system diagnosis. The drain procedure’s fully charged requirement takes precedence over the general diagnostic minimum of greater than 70% state of charge. [Battery condition decisions](#/document/G1931208) · [Diagnostic prerequisites](#/document/G1693185) · [Drain prerequisite](#/document/G1692357)"
         },
         {
-          "title": "Connect the meter without interrupting power",
-          "body": "Use the fused jumper and inline-meter connection sequence in Battery Drain Check. Lock the vehicle as directed and move all keys/fobs at least 50 feet away. If continuity is broken, or meter connections need changing, follow the jumper and power-down instructions rather than treating the earlier settling time as valid."
+          "title": "Activate the systems and shut down",
+          "body": "With the battery normally connected and no inline equipment installed, drive for at least five minutes above 48 km/h (30 mph), where lawful and safe. Disable approach detection and the perimeter alarm if fitted, then park. Switch all electrical accessories off and switch the ignition off. Keep those accessories off throughout the resting-current test. On an automatic with an instrument-panel gear-position display, confirm the selector is in Park and the display correctly indicates Park; an incorrect indication can prevent modules from sleeping. That display check does not apply to the manual transmission. Disable remote start if fitted before beginning work around the vehicle; the safety procedure identifies Vehicle settings > Remote Start Setup in the central display. [Activation, accessories and Park check](#/document/G1692357) · [Remote-start prevention](#/document/G1693189)"
         },
         {
-          "title": "Wait, then interpret the resting draw",
-          "body": "Keep the ignition off and allow at least 90 minutes for the modules to settle. Record the current. The procedure describes a 25–50 mA range depending on equipment and recommends comparison with a similar vehicle; one universal cutoff should not replace that context."
+          "title": "Arrange access without leaving lamps on",
+          "body": "Open the hood and all doors. With a flat-blade screwdriver or other suitable tool, manually move the hood and door latch mechanisms into their closed positions while the panels remain open. Keep fingers clear. Make the fuse panels accessible without turning on interior or underhood lamps. Keep track of each manually closed latch so it can be released before its panel is closed later. Simulated closed latches supplement the accessories-off condition; they do not replace it. [Sleep-test access and conditions](#/document/G1692357)"
         },
         {
-          "title": "Isolate the circuit, then the actual cause",
-          "body": "If draw is excessive, follow the staged fuse and component isolation sequence and note the current change. The first fuse that reduces the draw identifies a circuit, not automatically a failed component. Check whether a module is being kept awake by an input, and include aftermarket electrical connections when fitted."
+          "title": "Open the passenger-footwell fuse access",
+          "body": "The passenger-compartment fuse panel is on the right-hand side of the passenger footwell, behind a trim panel and plastic key code card. Lift the trim panel from its rear retaining hooks while pulling it toward you and swinging it away from the side. Remove the key code card to expose the fuses, and keep it safe for reinstallation. Use the official passenger-panel diagram to match numbered positions. [Footwell access and diagram](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Finish the diagnosis and restore the vehicle",
-          "body": "If fused circuits do not explain the draw, follow the checks for other battery-fed circuits and the generator. Restore the test connections and equipment, carry out required window initialization, and verify that the excessive draw is gone after the prescribed settling period."
+          "title": "Identify the passenger-panel circuits",
+          "body": "These are the assigned passenger-panel fuse positions; test only positions actually fitted to your car. The number alone is insufficient—record the panel too.\n\n| Position | Rating | Protected circuit |\n|---|---|---|\n| 1 | 10 A | Demand lamps |\n| 2 | 7.5 A | Power mirror memory module |\n| 3 | 20 A | Driver console unlock |\n| 5 | 20 A | Subwoofer amplifier |\n| 12 | 7.5 A | Climate control module |\n| 13 | 7.5 A | Gateway module, steering-column control module, instrument cluster |\n| 15 | 10 A | Gateway module |\n| 16 | 15 A | Decklid release |\n| 18 | 5 A | Intrusion sensor module |\n| 19 | 7.5 A | Passenger-airbag deactivation indicator |\n| 21 | 5 A | In-vehicle temperature and humidity sensor |\n| 22 | 5 A | Occupant classification system module |\n| 23 | 10 A | Switches, power windows, rear-view mirror |\n| 24 | 20 A | Central lock/unlock |\n| 26 | 30 A | Right-hand front-window motor |\n| 27 | 30 A | Amplifier |\n| 28 | 20 A | Auxiliary body module |\n| 29 | 30 A | Left-hand rear-window power |\n| 30 | 30 A | Right-hand rear-window power |\n| 32 | 10 A | Remote keyless entry, multifunction display, SYNC, GPS module, gauges |\n| 33 | 20 A | Audio head unit |\n| 34 | 30 A | Run-start bus |\n| 35 | 5 A | Restraints control module |\n| 36 | 15 A | Auxiliary body module |\n| 37 | 20 A | Power distribution box run-start bus |\n\nPositions marked unused or spare are not diagnostic circuit feeds. Shared listings matter: a change at position 32, for example, implicates a group of circuits rather than proving SYNC is faulty. Fuse identification does not authorize dismantling a restraint system or disconnecting its components. [Passenger-panel assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Identify the engine-compartment test positions",
+          "body": "The power distribution box is in the engine compartment. Release its cover using the actual cover retainers and match the numbered positions to Ford’s engine-compartment diagram. For the live test below, stay with these chart-identified micro fuses:\n\n| Position | Rating | Protected circuit |\n|---|---|---|\n| 19 | 20 A | Steering-column lock relay |\n| 20 | 10 A | Brake on-off switch |\n| 21 | 20 A | Horn |\n| 22 | 10 A | Powertrain control module relay |\n| 23 | 10 A | Air-conditioning clutch |\n| 32 | 10 A | Latch relay coil |\n| 33 | 20 A | Left-hand HID headlamps |\n| 35 | 20 A | Right-hand HID headlamps |\n| 36 | 10 A | Alternator sense |\n| 38 | 20 A | Vehicle power 1 |\n| 40 | 20 A | Vehicle power 2 |\n| 41 | 15 A | Fuel injectors |\n| 42 | 15 A | Vehicle power 3 |\n| 44 | 15 A | Vehicle power 4 |\n| 60 | 5 A | Powertrain control module |\n| 62 | 5 A | ABS run-start switch |\n| 64 | 5 A | Electric power-assisted steering |\n| 66 | 5 A | Blind-spot system, rear-view camera, air-conditioning compressor relay coils |\n| 68 | 10 A | Headlamp-leveling switch |\n| 70 | 10 A | Heated exterior mirrors |\n| 72 | 5 A | Rain-sensor module |\n| 74 | 5 A | Mass-airflow sensor |\n\nDo not pull J-case or M-case fuses as part of this live sequence. In particular, the body control module feeds at positions 6, 7 and 8 are 50 A, 60 A and 50 A J-case fuses. Ford requires battery disconnection before high-current fuse service. A connected jumper or ammeter still maintains the battery connection, so lifting the normal cable alone does not satisfy that requirement. High-current isolation needs a separate power-isolated procedure. Refit this box’s cover before reconnecting the normal battery cable or refilling fluid reservoirs. [Engine-panel diagram, assignments and warnings](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Check auxiliary-battery isolation and expose the primary connection",
+          "body": "Before installing the primary-battery jumper or meter, verify whether auxiliary batteries are fitted. If present, have them disconnected using their appropriate battery-specific procedure and record what was disconnected. Do not proceed with the primary-current measurement while they remain connected: the reading may fail to capture all draws. Their access and disconnection are a separate preparation task. [Auxiliary-battery isolation requirement](#/document/G1692357)\n\nAt the primary battery, remove the three battery-cover retainers shown in the battery-access illustration and lift the cover away. Identify the negative cable clamp and its nut. Leave the positive cable connected: Ford’s negative-cable procedure is sufficient for the primary connection used here. Do not loosen the negative clamp until the fused jumper is attached. [Battery access](#/document/G1692356) · [Jumper-first sequence](#/document/G1692357)"
+        },
+        {
+          "title": "Bridge the connection before lifting the cable",
+          "body": "Connect the 30 A fused jumper between the negative battery post and the negative battery cable terminal. With the jumper securely maintaining continuity, loosen the negative clamp nut and move the cable terminal off the post. Keep the jumper connected. A power interruption here can reset the module you are trying to catch. [Continuity-preserving setup](#/document/G1692357) · [Negative clamp access](#/document/G1692356)"
+        },
+        {
+          "title": "Lock the car and connect the meter",
+          "body": "Confirm all electrical accessories are off and the prepared access is not keeping interior or underhood lamps on. Press the key-fob lock button, then move every key and fob at least 50 feet away. With the jumper still attached, connect the configured ammeter between the negative cable terminal and negative battery post. Once the jumper is removed, vehicle current will pass through the meter. Follow its current-input, lead and operating instructions. Keep the ignition off; never crank, start or operate heavy electrical loads through the inline setup. The 30 A jumper fuse does not increase the meter’s capacity. [Test conditions and meter installation](#/document/G1692357)"
+        },
+        {
+          "title": "Remove the jumper and wait",
+          "body": "Remove the fused jumper, leaving the ammeter securely connected. Keep the ignition and all electrical accessories off and leave the vehicle undisturbed for at least 90 minutes, allowing for equipment and regional differences. If a setting or lead socket must change, reinstall the jumper before making the change. If continuity is lost, repeat the time-out/power-down period before interpreting current. [Settling and meter changes](#/document/G1692357)"
+        },
+        {
+          "title": "Record the resting draw and check for clues",
+          "body": "Record current, units and elapsed settling time. The comparison requires all electrical accessories off, the lamp/latch setup maintained, keys away and any auxiliary batteries disconnected as required. Ford describes an equipment-dependent resting draw of 25–50 mA, or 0.025–0.050 A, and recommends comparison with a similar vehicle. This is not a universal 50 mA pass mark. Some individual modules draw 10 mA or more continuously; judge the settled total in context. [Measurement conditions and reference](#/document/G1692357)\n\nIf the reading is appropriate, excessive draw has not been demonstrated under these conditions. If it is excessive, look for a lamp remaining on. Around 1 A can point toward an engine-compartment, glove-compartment or interior lamp. An optional thermal camera can help locate abnormal heat at the fuse panel or BJB; confirm the clue with measured current changes. [Current interpretation and thermal checks](#/document/G1692357)"
+        },
+        {
+          "title": "Test the permitted main-box fuses",
+          "body": "If draw is excessive, remove the engine-compartment micro fuses identified in step 7 one at a time and record the current after each removal. Log the position, circuit, rating and other fuses already out. Do not pull relays merely because they occupy numbered positions, and do not cross into the excluded high-current fuse work. When removal brings current to an acceptable level, you have located an implicated circuit. For example, a change after removing engine-compartment position 66 points toward its three listed circuit groups; it does not select one component. [Main-box isolation](#/document/G1692357) · [Fuse types and circuit assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Confirm a suspect main-box fuse",
+          "body": "Reinstall the fuse whose removal brought the current down. Keep the ignition and electrical accessories off and keys away, then allow at least another 90 minutes for power-down, accounting for equipment and regional differences. Record the settled reading and which other fuses remain removed. A freshly awakened reading and a settled reading are different test conditions, not evidence of a miraculous repair. [Suspect-fuse confirmation](#/document/G1692357)"
+        },
+        {
+          "title": "Isolate the passenger-panel circuits",
+          "body": "Use the accessible passenger-panel fuses and assignments in step 6 to continue recording current changes. If no permitted main-box fuse identified the draw, these tests can still identify an affected passenger-panel circuit directly. During subsystem isolation, leave removed fuses out until testing is finished. Where necessary, Ford’s sequence is to remove the relevant fuses, install one, note current, remove it, then install the next and repeat. Record the exact configuration for every result. [Subsystem isolation](#/document/G1692357)\n\nA drop after removing passenger position 1 implicates the demand-lamp circuit; position 33 implicates the audio head-unit circuit; position 32 leaves several listed possibilities. Treat these as circuit findings. The owner chart does not establish which passenger fuse is downstream of each engine-compartment feed, so do not assume a relationship from similar names. Following a particular main feed into its downstream branches requires Wiring Diagrams Cell 13. [Circuit assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Wiring-diagram requirement](#/document/G1692357)"
+        },
+        {
+          "title": "Choose the next diagnostic branch",
+          "body": "Stop with a precise circuit finding when further work requires component access or system-specific tests. Ford’s next stage disconnects suspect components individually and includes connections between aftermarket equipment and factory wiring. That requires the actual component’s access and safe disconnection instructions; this guide does not authorize unplugging unidentified modules. If a module is implicated, its hardwired inputs or messages from other modules may be keeping it awake. Check the system description, relevant fault codes, input data and software information before replacement. Do not force probes into connector terminals or apply power or ground directly to module-switched components without a specific diagnostic instruction. [Component and module isolation](#/document/G1692357) · [Module testing and connector protection](#/document/G1693185)\n\nIf the permitted fuse tests do not explain the draw, record that result. It does not clear the untested high-current circuits. Further diagnosis may require their safe isolation, identification of battery feeds bypassing the fuse boxes, and eventually generator electrical disconnection and retesting. Ford identifies an internal generator short as a possibility, but generator access and disconnection are outside this article. [Remaining-feed branch](#/document/G1692357)"
+        },
+        {
+          "title": "Remove the meter and restore battery connections",
+          "body": "Keep the ignition and accessories off. Reinstall the 30 A fused jumper between the negative post and cable terminal before removing the meter and its leads. With the meter out, reinstall every ordinary fuse removed during this guide in its logged original position. Refit the power distribution box cover before reconnecting the normal battery cable. Seat the negative cable terminal on its post and tighten its nut to 5 Nm (44 lb-in), then remove the jumper. Check that neither meter leads nor the jumper remain attached. [Continuity-preserving meter handling](#/document/G1692357) · [Cable reconnection](#/document/G1692356) · [Box-cover requirement](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nIf auxiliary batteries were disconnected, coordinate battery restoration with their applicable battery-specific procedure, including its required reconnection order and specifications. Restore every disconnected auxiliary battery before normal vehicle operation and mark each one restored in the log. The primary-cable instructions above do not establish auxiliary-battery connection details. [Auxiliary isolation requirement](#/document/G1692357) · [Ford multiple-battery information](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Restore the footwell trim and panel latches",
+          "body": "Check the fuse log against both panels. Return the plastic key code card to its original position. Align the footwell trim tabs with their grooves, drop the panel into place and push it shut. Use the normal releases to return the manually closed hood and door latches to their open state before closing the panels; confirm normal latching. Restore temporarily disabled approach, perimeter-alarm and remote-start settings when all service work is finished. [Footwell reassembly](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Latch and feature setup](#/document/G1692357) · [Remote-start precaution](#/document/G1693189)"
+        },
+        {
+          "title": "Prepare applicable windows for initialization",
+          "body": "Ford calls for window initialization after reconnecting the negative cable where one-touch up is fitted. Convertibles have neither one-touch up nor bounce-back, so skip this branch on them. For an existing window motor, the initialization procedure first requires de-initialization by interrupting its power while that window operates. [Window applicability and de-initialization](#/document/G1957566) · [Post-test requirement](#/document/G1692357)\n\nWith all inline equipment and the fused jumper removed, the supported primary-battery route is to disconnect the negative cable while the applicable window operates, then reconnect it and tighten the clamp to 5 Nm (44 lb-in). Keep the power distribution box covered before reconnection. If auxiliary batteries are fitted, use the applicable battery-specific power-isolation procedure rather than assuming the primary cable alone removes window power. Then perform the following initialization for that motor. This intentional power interruption also makes step 22 applicable. [Negative-cable handling](#/document/G1692356) · [Window power interruption](#/document/G1957566) · [Multiple-battery isolation warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Initialize and test each applicable window",
+          "body": "Keep people and objects clear of the glass. During initialization it closes with high force and cannot detect an obstruction, creating a serious injury risk. Close the door and start with the window fully open. Hold the switch UP at its second detent—the full one-touch position—until the glass reaches the top and remains stalled for at least two seconds, then release. Hold DOWN at the second detent until it reaches the bottom and remains stalled for at least two seconds. Cycle the glass up and down once more to establish the lower soft stop. Test both one-touch up and one-touch down. Repeat the de-initialization and initialization sequence for each applicable existing motor. [Window initialization](#/document/G1957566)"
+        },
+        {
+          "title": "Refit the battery cover",
+          "body": "Confirm the negative terminal is secure, the positive cable remains normally connected, all test equipment is removed and any auxiliary batteries disconnected for the work have been restored through their applicable procedures. Refit the primary-battery cover and its three retainers. Check both fuse-panel access points and the hood and doors before using the car. [Battery-cover installation](#/document/G1692356) · [Auxiliary-battery test setup](#/document/G1692357) · [Fuse-access restoration](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Restore settings after an actual power interruption",
+          "body": "If battery power was interrupted—including the window de-initialization branch—complete Ford’s relearning sequence after all test equipment is removed and all batteries are restored. Apply the parking brake, select Park on the automatic or Neutral on the manual, switch off accessories, press the brake pedal and start the engine. Let it reach normal operating temperature; reset the clock, radio presets and applicable window functions. Allow at least one minute of idle, then drive at least 10 mi (16 km) for idle and fuel-trim relearning. Temporary abnormal driving behavior can occur while adaptive values relearn. [Owner reconnection sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Adaptive strategy](#/document/G1692356)\n\nAfter battery replacement, or sometimes external charging, the battery management system also needs eight hours with the vehicle fully locked and ignition off to relearn state of charge. That is a separate condition from the drain test’s 90-minute settling period. Do not perform a new-battery BMS reset merely because you measured current. [State-of-charge relearning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [New-battery reset requirement](#/document/G1692362)"
+        },
+        {
+          "title": "Finish with a defensible result",
+          "body": "Keep the initial settled current, test conditions, battery configuration, fuse changes and final restoration record. Report either that excessive draw was absent during testing, that a named circuit changed it, or that the draw remains unexplained by the circuits tested. A low reading with a fuse missing demonstrates isolation, not repair. After a fault is corrected through its separate procedure, restore every circuit and repeat the activation drive, auxiliary-battery preparation if applicable, continuity-preserving setup and at least 90-minute settling test with all electrical accessories off. Remove the equipment and complete restoration again afterward. Do not replace a module simply because an intermittent concern failed to appear. [Confirmation test](#/document/G1692357) · [Concern-present diagnosis](#/document/G1693185)"
         }
       ],
       "watchFor": [
         {
-          "title": "The reading changes when you touch the setup",
-          "body": "A door event, key proximity or interrupted battery connection can change module activity. Restore the required test conditions before deciding a repair worked."
+          "title": "A second battery makes the measurement incomplete",
+          "body": "Verify the actual battery configuration. Any auxiliary batteries must be disconnected through their applicable procedures before measuring primary-battery draw, then restored afterward. Do not accept an apparently normal reading from a setup that skips this condition. [Auxiliary-battery requirement](#/document/G1692357)"
         },
         {
-          "title": "A module appears to be the drain",
-          "body": "Investigate its inputs before replacing it. An input can keep an otherwise functioning module awake."
+          "title": "The battery is still connected through the test equipment",
+          "body": "A lifted negative clamp does not make high-current fuse service safe while a jumper or meter still connects it to the battery. Keep that work outside this live procedure. [High-current fuse warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Only a voltage reading is available",
-          "body": "Battery voltage alone does not locate a parasitic-current path; use the specified current test."
+          "title": "A disturbed setup changes the reading",
+          "body": "Lost continuity can reset modules and conceal the drain. Bridge the connection before changing meter settings or lead sockets, and repeat power-down if continuity breaks. Keep all electrical accessories off throughout the settling and comparison. [Measurement conditions](#/document/G1692357)"
+        },
+        {
+          "title": "A fuse name sounds like a component verdict",
+          "body": "Several fuses supply multiple devices, and some modules have more than one listed feed. Record the exact circuit finding and investigate inputs before buying a module. The parts cannon does not accept refunds for bad logic. [Module-input diagnosis](#/document/G1692357) · [Shared fuse assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Aftermarket equipment bypasses battery monitoring",
+          "body": "Include accessory wiring in follow-on diagnosis. Ford warns against grounding an added electrical device directly to the battery negative post because it can distort battery-condition monitoring. That installation warning is separate from the temporary meter connection specified for this test. [Accessory grounding](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Aftermarket isolation](#/document/G1692357)"
+        },
+        {
+          "title": "Battery protection gets mistaken for a failed battery",
+          "body": "The battery management system can temporarily disable equipment to protect charge. Its notification alone does not prove an electrical fault or justify replacement; establish battery condition before the drain test. [Battery protection behavior](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "notes": [
-        "This guide is an overview of an equipment-based electrical test. Keep the ignition off during the inline-current measurement. Never crank or start the engine, or switch on heavy electrical loads, with the inline ammeter connected. Follow the meter and fused-jumper sequence in the full procedure."
+        "This is condition-based diagnosis, not a new maintenance interval.",
+        "Scope remains the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine; no engine-specific difference is established for this current-test sequence.",
+        "Later drain-test material mentions equipment whose applicability to this Mustang is not established, including OTA updates and a power roller shutter. Those items are not added as Mustang requirements.",
+        "Charging, battery replacement and connection cleaning remain separate jobs: [Battery testing and charging](#/maintenance/battery-testing-charging) and [Battery connections](#/maintenance/battery)."
       ],
       "procedures": [
         {
           "documentId": "G1692357",
-          "purpose": "Perform the complete drain test, sleep preparation and circuit-isolation sequence."
-        },
-        {
-          "documentId": "G1931208",
-          "purpose": "Confirm battery condition before diagnosing an external drain."
-        },
-        {
-          "documentId": "G1692355",
-          "purpose": "Fully charge the battery before the drain test."
+          "purpose": "Current measurement, auxiliary-battery preparation, accessories-off conditions, continuity preservation, sleep timing, fuse isolation and follow-on diagnostic decisions."
         },
         {
           "documentId": "G1692356",
-          "purpose": "Identify the negative cable and use the proper disconnect/reconnect procedure."
+          "purpose": "Battery-cover access, primary negative-cable handling, reconnection torque and adaptive-strategy notes."
+        },
+        {
+          "documentId": "G1931208",
+          "purpose": "Battery-condition prerequisites and visual connection checks."
+        },
+        {
+          "documentId": "G1692355",
+          "purpose": "Separate external-charging prerequisite and manufacturer-controlled charger operation."
         },
         {
           "documentId": "G1957566",
-          "purpose": "Carry out the required one-touch window initialization after reconnection."
+          "purpose": "Applicable window de-initialization, initialization and operating checks."
         },
         {
           "documentId": "G1693181",
-          "purpose": "Review battery precautions before connecting test equipment."
+          "purpose": "Battery gas, acid, eye-protection and terminal-handling precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Preventing remote starts during service."
+        },
+        {
+          "documentId": "G1693185",
+          "purpose": "Preliminary electrical diagnosis, module-input decisions and connector protection."
+        },
+        {
+          "documentId": "G1692362",
+          "purpose": "Distinguishing a new-battery BMS reset from current-test restoration."
         }
       ],
       "relatedGuideIds": [
@@ -11121,8 +11228,145 @@
         {
           "documentId": "G1693181",
           "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1692362",
+          "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "establish-starting-condition",
+          "title": "Establish a valid starting condition",
+          "summary": "Inspect connections, confirm battery health and prepare the car for sleep with accessories off.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "access-and-identify-fuses",
+          "title": "Access and identify the fuse circuits",
+          "summary": "Open the footwell access, identify both panels and establish the live-test boundary.",
+          "start": 5,
+          "end": 7
+        },
+        {
+          "id": "measure-settled-current",
+          "title": "Measure without resetting the fault",
+          "summary": "Confirm auxiliary-battery isolation if applicable, bridge the primary connection, install the meter and obtain a settled reading.",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "id": "isolate-and-route",
+          "title": "Isolate accessible circuits",
+          "summary": "Record fuse-dependent changes, confirm a suspect feed and select the appropriate follow-on diagnosis.",
+          "start": 13,
+          "end": 16
+        },
+        {
+          "id": "restore-and-record",
+          "title": "Restore the Mustang and record the outcome",
+          "summary": "Remove equipment, restore batteries, fuses and trim, initialize applicable windows and complete reconnection checks.",
+          "start": 17,
+          "end": 23
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "The battery is discharged, testing fails or a low-battery message remains.",
+          "meaning": "The required starting condition is absent.",
+          "next": "Complete battery testing, charging or confirmed replacement before the drain test. [Battery decisions](#/document/G1931208) · [Drain prerequisite](#/document/G1692357)"
+        },
+        {
+          "finding": "Auxiliary batteries are fitted but remain connected, or their isolation cannot be established.",
+          "meaning": "The primary-battery measurement setup is incomplete and may not capture all draws.",
+          "next": "Complete auxiliary-battery disconnection through the appropriate battery-specific procedure before installing the primary-battery jumper and meter. [Auxiliary-battery preparation](#/document/G1692357)"
+        },
+        {
+          "finding": "An electrical accessory was intentionally left on during settling.",
+          "meaning": "The reading does not meet the accessories-off condition for the resting-current reference.",
+          "next": "Remove the inline setup safely before operating heavy loads. Correct the accessory settings and repeat the required setup and settling conditions before judging resting draw. [Test conditions](#/document/G1692357)"
+        },
+        {
+          "finding": "The automatic selector is in Park but the display is wrong.",
+          "meaning": "The Park-indication circuit may prevent module sleep.",
+          "next": "Route that fault to its circuit diagnosis before condemning a module for remaining awake. [Park-indication check](#/document/G1692357)"
+        },
+        {
+          "finding": "Settled current is appropriate for the equipment and similar-vehicle reference.",
+          "meaning": "Excessive draw has not been demonstrated during this test.",
+          "next": "Record the conditions and investigate the circumstances of the original complaint; do not replace parts for an absent fault. [Current interpretation](#/document/G1692357) · [Diagnostic principle](#/document/G1693185)"
+        },
+        {
+          "finding": "Draw is approximately 1 A.",
+          "meaning": "A continuously illuminated lamp is one documented possibility.",
+          "next": "Check for a lamp staying on and confirm its circuit through measured isolation. [Lamp clue](#/document/G1692357)"
+        },
+        {
+          "finding": "Removing an engine-compartment micro fuse lowers current to an acceptable level.",
+          "meaning": "Its supplied circuit is implicated.",
+          "next": "Reinstall that fuse, repeat the required settling period and record the result. Use Cell 13 before claiming a particular downstream-feed relationship. [Main-fuse confirmation](#/document/G1692357)"
+        },
+        {
+          "finding": "Removing a passenger-panel fuse reduces excessive current.",
+          "meaning": "The fuse’s listed circuit group is involved; the reading does not select a failed component.",
+          "next": "Record the exact panel and position, then obtain the implicated system’s component-access and input-test instructions. [Subsystem isolation](#/document/G1692357) · [Passenger circuit assignments](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "The permitted fuse tests do not explain excessive draw.",
+          "meaning": "Untested high-current circuits, other battery feeds, component inputs or a generator fault may remain.",
+          "next": "Preserve the test log and continue with the exact wiring and safe isolation procedures for those branches. Do not improvise a live high-current or generator disconnection. [Remaining-feed diagnosis](#/document/G1692357) · [High-current safety](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The measurement conditions are recorded",
+          "body": "The log identifies settled current and units, elapsed time, vehicle equipment, accessories-off status, key distance, battery configuration and every removed fuse. Confirm any auxiliary batteries were disconnected during measurement. Interpret the result against the equipment-dependent reference. [Valid test conditions](#/document/G1692357)"
+        },
+        {
+          "title": "Every test alteration is restored",
+          "body": "Match the fuse log to both panels. Confirm the power distribution box cover, key code card, footwell trim and normal hood/door latch operation are restored. [Fuse-access restoration](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539642&Uid=G1634780&ProcUid=G1642790&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) · [Latch setup](#/document/G1692357)"
+        },
+        {
+          "title": "All batteries are ready for normal use",
+          "body": "The primary negative clamp is seated and tightened to 5 Nm (44 lb-in), the meter and jumper are removed, and the battery cover and three retainers are fitted. Any auxiliary batteries disconnected for testing or subsequent initialization have been reconnected and checked through their applicable battery-specific procedures. [Primary-battery reconnection](#/document/G1692356) · [Auxiliary-battery test requirement](#/document/G1692357)"
+        },
+        {
+          "title": "Applicable reconnection functions work",
+          "body": "Verify one-touch up and down after initialization where fitted. Complete settings and engine relearning after actual power interruption, with all inline equipment removed and all batteries restored before starting. [Window check](#/document/G1957566) · [Owner reconnection checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1405408&Uid=G1634800&ProcUid=G1611704&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "The conclusion matches what was tested",
+          "body": "A circuit finding completes this diagnostic stage. A repair claim requires a complete-vehicle retest after correction, with all fuses restored and the prescribed battery preparation, accessories-off setup and settling repeated. An intermittent fault absent once remains unconfirmed. [Drain confirmation](#/document/G1692357) · [Concern-present principle](#/document/G1693185)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang parasitic battery drain",
+        "Mustang resting current test",
+        "90-minute module sleep",
+        "30 A fused jumper",
+        "25–50 mA battery draw",
+        "auxiliary battery drain-test preparation",
+        "passenger footwell fuse access",
+        "Mustang fuse circuit isolation",
+        "module staying awake",
+        "one-touch window initialization"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "37376bd737bd39360c4d174113d0ed079a6fd85ac0cae620686921ca8a6783a9"
+      }
     },
     {
       "categoryId": "advanced",
@@ -11269,14 +11513,14 @@
         "checks"
       ],
       "id": "ac-performance-leak-testing",
-      "title": "A/C performance and leak testing: measure before adding refrigerant",
-      "summary": "Use ambient conditions, both pressure readings and targeted leak tests to find why cooling is weak.",
+      "title": "A/C performance and external UV leak checks at 70–100°F",
+      "summary": "Check a 2015 Mustang’s A/C under defined conditions, compare both pressures with its engine-specific charts, and inspect accessible areas using the factory-installed fluorescent dye.",
       "hero": {
         "documentId": "G1676873",
         "mediaId": "G1676873-m0001"
       },
-      "introduction": "Weak cooling has several possible paths: insufficient airflow through the condenser, a control or compressor problem, a restriction, or the wrong amount of refrigerant. Adding refrigerant before identifying the cause can create an overcharge without repairing anything. A useful test records how the system behaves under defined conditions, then follows the evidence to the appropriate repair.",
-      "why": "Pressure changes with outdoor temperature and operating conditions. A number from a single gauge means little without that context. The linked engine-specific tests use high- and low-side pressure charts together, so the result can guide diagnosis rather than guesswork.",
+      "introduction": "I start with measurements, because “probably needs refrigerant” is a damn flimsy diagnosis. Ford’s pressure tables also point toward airflow, overheating, restrictions and compressor or control trouble. This guide covers the 2015 2.3L, 3.7L and 5.0L at 21–38°C (70–100°F), with 30–60% relative humidity. It teaches the performance inspection and accessible external UV checks; refrigerant connections and measurements require a qualified A/C operator using the service unit’s instructions. Circuit opening, isolated compressor testing and repairs are follow-on work. [2.3L test](#/document/G1676871), [3.7L test](#/document/G1676873), [5.0L test](#/document/G1676875), [Factory dye](#/document/G1912330)",
+      "why": "Ford evaluates discharge pressure—the high side—and suction pressure—the low side—together, against ambient temperature. Their combined pattern helps choose the next investigation. The factory-installed fluorescent dye provides another clue: a UV inspection can identify accessible areas needing closer leak diagnosis without disconnecting refrigerant lines. Neither a pressure pattern nor an unexplained stain is an automatic parts order. [Pressure diagnosis](#/document/G1676873), [Fluorescent dye](#/document/G1912330)",
       "when": {
         "summary": "When cooling is weak, compressor operation is abnormal, or evidence suggests a refrigerant leak.",
         "notes": [
@@ -11286,87 +11530,153 @@
       },
       "prepare": [
         {
-          "title": "Choose the engine-specific test",
-          "detail": "Use the 2.3L, 3.7L or 5.0L refrigerant-system article that matches the vehicle. Record ambient temperature and the actual symptom."
+          "title": "Choose the engine and document the complaint",
+          "detail": "Identify the 2.3L EcoBoost, 3.7L Duratec or 5.0L Ti-VCT. Note when cooling becomes weak and whether compressor operation is absent or erratic. Keep that engine’s pressure charts available. [2.3L](#/document/G1676871), [3.7L](#/document/G1676873), [5.0L](#/document/G1676875)"
         },
         {
-          "title": "Use appropriate service equipment",
-          "detail": "The tests require an A/C service unit. Refrigerant identification, approved recovery/charging equipment and suitable leak-detection equipment are needed for the applicable follow-on work."
+          "title": "Arrange the measuring equipment and qualified operator",
+          "detail": "The performance test requires an A/C service unit, ambient-temperature measurement and confirmation of relative humidity. Have a qualified A/C operator identify both service gauge connections and operate the unit according to its manufacturer’s instructions. Ford specifies approved R-134a refrigerant-management equipment for refrigerant service and lists the 265-37887 Ritchie unit. The owner’s manual warns that pressurized refrigerant can cause injury and assigns refrigerant-system service to qualified personnel. [Service equipment](#/document/G1912323), [Ford owner warning](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1635371&Uid=G1689459&ProcUid=G1689461&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Protect eyes, skin and the work area",
-          "detail": "Liquid refrigerant can injure eyes or freeze skin. Wear the specified eye protection and follow the refrigerant/equipment precautions. Run the engine only in a well-ventilated area with the parking brake applied and Park or Neutral selected as appropriate; keep clear of moving fans and belts."
+          "title": "Bring a suitable UV light",
+          "detail": "Use a Rotunda-approved UV black light and its operating instructions for the external dye inspection. Ford adds fluorescent dye at the factory; additional dye is unnecessary before diagnosing leaks, even after significant refrigerant removal. No dye injector or line disconnection is needed for this inspection. [Factory dye and UV equipment](#/document/G1912330)"
+        },
+        {
+          "title": "Protect eyes, skin and breathing air",
+          "detail": "Wear safety goggles and the required ear protection. Liquid refrigerant can seriously injure eyes and freeze skin. Follow the refrigerant-container and equipment precautions. Keep refrigerant away from high-temperature flames, which can produce toxic gases, and prevent releases in confined spaces, where refrigerant can displace breathable air. [Refrigerant precautions](#/document/G1693184), [Personal protection](#/document/G1693189)"
+        },
+        {
+          "title": "Prepare for a stationary running-engine test",
+          "detail": "Use a well-ventilated work area to prevent carbon-monoxide exposure. Apply the parking brake; select Park with an automatic transmission or Neutral with a manual. Remove rings, watches and loose jewelry, secure loose clothing, and keep clear of hot surfaces, fans and belts. Do not smoke or allow flames or sparks near the battery. Keep the ignition off except when the test requires engine operation. [Running-engine precautions](#/document/wiring-003-005)"
         }
       ],
       "steps": [
         {
-          "title": "Establish the required operating conditions",
-          "body": "Bring the engine to normal operating temperature. Connect the service unit as directed, select the lowest temperature, disable dual operation if fitted, set high blower and fresh air, and request A/C operation. Use the prescribed open-window and hood setup for this vehicle."
+          "title": "Prevent an unexpected start and inspect the fans",
+          "body": "Disable remote start through Vehicle settings > Remote Start Setup before working around the car. With the ignition off, visually inspect the cooling fans for cracks, damage or separation without reaching into their path. Do not conduct an underhood running test with a damaged fan; it can break apart. Fans can operate with the ignition off, so hands-on work near them requires the appropriate fan-disabling procedure. Keep this inspection clear of them. [Unexpected-start and fan precautions](#/document/G1693189)"
         },
         {
-          "title": "Confirm the system can be tested",
-          "body": "Check that the compressor and cooling fans operate as directed. Allow high- and low-side readings to settle or repeat in a stable cycle. Record ambient temperature and both pressures; use the average where the procedure calls for it."
+          "title": "Inspect accessible external areas with UV light",
+          "body": "With the engine off and cool, use the approved UV black light according to its instructions to examine accessible external refrigerant lines, connections and compressor surfaces for fluorescent traces. Ford’s factory-installed dye is intended to assist leak diagnosis; do not add more dye simply to begin looking. [Factory dye inspection](#/document/G1912330)\n\nAs an observation aid, record or photograph the exact location of any fluorescence, visible residue or damaged-looking hose. Treat those observations as leads for confirmation. Inspect only what is safely visible from the open hood: do not loosen fittings, remove the compressor or reach behind a pulley to extend this check."
         },
         {
-          "title": "Read the correct pressure charts together",
-          "body": "Use the 21–38°C (70–100°F) chart set or the hotter-condition chart set as appropriate, including its humidity range. Compare high and low readings as a pair. The listed possibilities are diagnostic leads, not automatic orders for a compressor or a refrigerant top-up."
+          "title": "Confirm the temperature and humidity window",
+          "body": "Measure ambient air temperature at the test location and establish relative humidity. This guide uses Ford’s Procedure 1: 21–38°C (70–100°F), with charts specified for 30–60% relative humidity. At 38°C (100°F), the written procedure still places the test in Procedure 1. If conditions are outside this window, reschedule this test rather than extrapolating its charts. Ford has a separate hotter-condition procedure; see the notes. [2.3L conditions](#/document/G1676871), [3.7L conditions](#/document/G1676873), [5.0L conditions](#/document/G1676875)"
         },
         {
-          "title": "Follow the indicated cause",
-          "body": "Investigate airflow, engine overheating, control connections, restrictions or leakage as the test results require. Low charge and overcharge are different possible faults. A sensor, wiring or control problem can also interrupt compressor operation."
+          "title": "Warm the engine and have the service unit connected",
+          "body": "Run the engine until it reaches normal operating temperature. Have the qualified operator connect the A/C service unit using its manufacturer’s instructions and positively identified low-side and high-side service gauge connections. Secure equipment and hoses clear of moving parts and hot surfaces. This performance check uses service connections; it does not require disconnecting the compressor’s refrigerant lines. [2.3L setup](#/document/G1676871), [3.7L setup](#/document/G1676873), [5.0L setup](#/document/G1676875), [Service connections](#/document/G1912323), [Running-engine safety](#/document/wiring-003-005)"
         },
         {
-          "title": "Use a targeted leak test when justified",
-          "body": "If compressor-shaft leakage is suspected, use the dedicated compressor test. It requires recovery, disconnection and adapters before an isolated test charge, followed by electronic leak detection and recovery again. Its isolated test charge is a dedicated leak-test setup, not a recipe for recharging the whole vehicle."
+          "title": "Set the climate controls and openings",
+          "body": "Select the lowest available temperature. Disable dual-zone operation if fitted, set the blower manually to HI, select FRESH rather than recirculation where that control is provided, and switch A/C on. Open all vehicle windows and leave the hood open throughout the test. The source’s rear-door instruction applies only where rear doors exist. [2.3L settings](#/document/G1676871), [3.7L settings](#/document/G1676873), [5.0L settings](#/document/G1676875)"
         },
         {
-          "title": "Repair, service and verify the complete system",
-          "body": "For work that opens the circuit, follow refrigerant identification, recovery, evacuation, oil-accounting and charging instructions with the correct equipment. Use the actual vehicle charge specification, then repeat the applicable performance check to confirm the original concern is resolved."
+          "title": "Confirm compressor and cooling-fan operation",
+          "body": "Observe from clear of the moving parts that the compressor operates and the cooling fan or fans operate or engage. Let the engine idle until both pressures settle or fluctuate through a repeating range. If the compressor does not run, record that result and use the compressor-operation diagnostic entry below. If the required fan operation is absent, stop and investigate it before accepting the pressure readings as a valid performance result. Switch the engine off before hands-on investigation. [2.3L operating check](#/document/G1676871), [3.7L operating check](#/document/G1676873), [5.0L operating check](#/document/G1676875), [Fan safety](#/document/G1693189)"
+        },
+        {
+          "title": "Record the conditions and both pressures",
+          "body": "Record ambient temperature, discharge/high-side pressure and suction/low-side pressure. Where pressure fluctuates, record its average value as Ford directs. Keeping the observed range and relative humidity alongside the average is a useful recordkeeping addition. Use consistent units: the charts show kPa and psi for pressure, and °C and °F for temperature. [2.3L measurements](#/document/G1676871), [3.7L measurements](#/document/G1676873), [5.0L measurements](#/document/G1676875)"
+        },
+        {
+          "title": "2.3L only: select the EcoBoost chart pair",
+          "body": "Use these two identified charts in the [2.3L refrigerant test](#/document/G1676871):\n\n| Selection | Chart identifier | Conditions and units |\n| --- | --- | --- |\n| Discharge/high side | G1676871-m0001 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n| Suction/low side | G1676871-m0002 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n\nThese are the blue-band pressure charts for the 2.3L. Keep both selections together and continue to step 11; steps 9 and 10 belong to other engines. [2.3L chart source](#/document/G1676871)"
+        },
+        {
+          "title": "3.7L only: select the V6 chart pair",
+          "body": "Use these two identified charts in the [3.7L refrigerant test](#/document/G1676873):\n\n| Selection | Chart identifier | Conditions and units |\n| --- | --- | --- |\n| Discharge/high side | G1676873-m0001 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n| Suction/low side | G1676873-m0002 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n\nUse the V6 pair throughout the comparison, then continue to step 11. [3.7L chart source](#/document/G1676873)"
+        },
+        {
+          "title": "5.0L only: select the V8 chart pair",
+          "body": "Use these two identified charts in the [5.0L refrigerant test](#/document/G1676875):\n\n| Selection | Chart identifier | Conditions and units |\n| --- | --- | --- |\n| Discharge/high side | G1676875-m0001 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n| Suction/low side | G1676875-m0002 | 21–38°C (70–100°F), 30–60% relative humidity; kPa and psi |\n\nUse these V8 limits rather than borrowing another engine’s pressure band. [5.0L chart source](#/document/G1676875)"
+        },
+        {
+          "title": "Classify each reading against its actual curve",
+          "body": "On your engine’s discharge chart, locate measured ambient temperature along the bottom axis. Trace vertically to the blue band and read its lower and upper boundaries using the pressure units matching the gauge. Classify discharge pressure as below, within or above that band. Repeat independently on the suction chart, which has a different pressure scale.\n\nFollow the actual curved boundaries, including sections that fall before rising. Do not straighten a curve, extrapolate beyond the plotted range or substitute a universal pressure target. Keep the two classifications as a pair. [2.3L limits](#/document/G1676871), [3.7L limits](#/document/G1676873), [5.0L limits](#/document/G1676875)"
+        },
+        {
+          "title": "Choose the next investigation",
+          "body": "Match the paired classifications to the diagnostic entries below. The three engine tests share the diagnostic possibilities, although their normal-pressure bands differ. Some patterns overlap: record the possible causes and the next investigation instead of selecting a component solely from the table. A low-charge pattern does not identify the leaking location. Combine the pressure record with any external UV observations. [2.3L diagnosis](#/document/G1676871), [3.7L diagnosis](#/document/G1676873), [5.0L diagnosis](#/document/G1676875), [UV diagnostic aid](#/document/G1912330)"
+        },
+        {
+          "title": "Disconnect the equipment and restore the car",
+          "body": "Switch the engine and ignition off. Have the qualified operator complete the service unit’s prescribed disconnection procedure and restore the service connections according to the equipment instructions. Keep the parking brake applied while work continues. Remove all equipment and hoses from the engine bay, check clearance, close the hood and restore the windows and climate settings. [Ignition and parking precautions](#/document/wiring-003-005), [Service-unit instructions](#/document/G1912323), [Equipment precautions](#/document/G1693184)"
+        },
+        {
+          "title": "Finish the inspection record and route follow-on work",
+          "body": "Keep the engine identification, ambient temperature, humidity, both pressure readings, chart classifications, compressor/fan observations, UV locations and whether the original cooling complaint remains. The inspection is complete when those findings and the next action are recorded; it does not certify the whole system as leak-free.\n\nIf compressor-shaft leakage is specifically suspected, route it to Ford’s isolated compressor test, which requires recovery, compressor-line disconnection, adapters and subsequent system restoration. Keep that separate from this external inspection. After any corrective work, repeat the applicable performance test under valid conditions and compare the complaint and readings. [Targeted compressor test](#/document/G1912321), [2.3L recheck](#/document/G1676871), [3.7L recheck](#/document/G1676873), [5.0L recheck](#/document/G1676875)"
         }
       ],
       "watchFor": [
         {
-          "title": "A low-side gauge alone is being used to decide the charge",
-          "body": "The performance procedure evaluates both sides under specified conditions. A single reading does not establish a correct refrigerant quantity."
+          "title": "One gauge becoming a recharge recipe",
+          "body": "Ford evaluates both operating pressures under specified conditions. A low-side reading alone does not establish refrigerant quantity. I keep the parts-cannon bullshit out of this job by keeping measurements and conclusions separate. [Pressure-test basis](#/document/G1676873)"
         },
         {
-          "title": "Pressure suggests more than one possible cause",
-          "body": "Use the follow-on tests to distinguish the possibilities instead of replacing the first component named in the table."
+          "title": "A borrowed chart or flattened curve",
+          "body": "Use the discharge and suction pair for the actual engine. The acceptable boundaries vary with temperature and are not all straight or continuously rising. [2.3L charts](#/document/G1676871), [3.7L charts](#/document/G1676873), [5.0L charts](#/document/G1676875)"
         },
         {
-          "title": "Refrigerant purity is uncertain",
-          "body": "Identify it before recovery. Contamination requires the designated handling equipment and procedure rather than mixing it into ordinary recovery supplies."
+          "title": "Reaching toward a stopped fan",
+          "body": "A stationary fan can start with the ignition off. Keep observations clear of its path; disable the fans through the appropriate procedure before hands-on work nearby. [Fan precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Adding dye before looking",
+          "body": "The system already contains factory fluorescent dye. Ford says more is unnecessary before leak diagnosis, even following significant refrigerant removal. [Dye guidance](#/document/G1912330)"
+        },
+        {
+          "title": "Confusing an isolated test charge with a vehicle charge",
+          "body": "The compressor-shaft test uses 0.23 kg (8 oz) in an isolated adapter setup and requires recovery afterward. That quantity is specific to the test; it is not a full-system recharge specification. [Compressor leak test](#/document/G1912321)"
         }
       ],
       "notes": [
-        "The hotter-condition charts cover 38–49°C (100–120°F); do not extrapolate a plotted limit beyond its stated range.",
-        "The compressor leak test specifies an R-134a electronic detector certified to SAE J2791. Its test charge and adapter setup must not be used as a general recharge recipe.",
-        "Recovery/evacuation uses both service ports. The linked procedure specifically rules out recovering only through the low-side port."
+        "For ambient temperature above 38°C (100°F), Ford provides a separate procedure with charts covering 38–49°C (100–120°F) at 15–40% relative humidity. Use that complete procedure and its matching engine chart pair; do not extend this guide’s lower-temperature curves. [2.3L hotter test](#/document/G1676871), [3.7L hotter test](#/document/G1676873), [5.0L hotter test](#/document/G1676875)",
+        "If specifically indicated, Ford’s isolated compressor-shaft test uses the listed adapter kits, a 0.23 kg (8 oz) test charge and a Rotunda-approved R-134a electronic detector certified to SAE J2791. The test refrigerant must be recovered afterward; an external leak found by that test calls for compressor replacement. This is follow-on service, not an extension of the external UV scan. [Targeted shaft test](#/document/G1912321)",
+        "Refrigerant service after a repair requires purity identification before recovery, recovery through both service ports, accounting for removed oil, evacuation and controlled charging. Low-side-only recovery cannot fully recover the system because of its solenoid valves. Contaminated refrigerant needs designated recovery equipment and regulated hazardous-waste handling. [Recovery and restoration](#/document/G1912323)",
+        "The full-system charge is documented: 2.3L and 3.7L use 21 oz (0.6 kg); the 2015 5.0L owner specification is 24.0 oz (0.68 kg). These are service references, not instructions to add that quantity to a partially charged system. [Workshop capacities](#/document/G1676731), [2015 5.0L owner capacities](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G1635371&Uid=G1689460&ProcUid=G1689462&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+        "Oil restoration is also documented. Use clean Motorcraft PAG YN-12-D meeting WSH-M1C231-B and determine the addition from recovered oil and the actual repair performed. Full-system oil capacity is not an automatic addition to an existing system; compressor replacement requires oil balancing where specified. [Oil-adding procedure](#/document/G1912330), [Material specification](#/document/G1676731)"
       ],
       "procedures": [
         {
           "documentId": "G1676871",
-          "purpose": "Run the 2.3L performance test and use its pressure charts."
+          "purpose": "2.3L performance setup, operating conditions, chart selections and diagnostic interpretation."
         },
         {
           "documentId": "G1676873",
-          "purpose": "Run the 3.7L performance test and use its pressure charts."
+          "purpose": "3.7L performance setup, operating conditions, chart selections and shared diagnostic table."
         },
         {
           "documentId": "G1676875",
-          "purpose": "Run the 5.0L performance test and use its pressure charts."
+          "purpose": "5.0L performance setup, operating conditions and chart selections."
+        },
+        {
+          "documentId": "G1912330",
+          "purpose": "Factory fluorescent dye, approved UV-light diagnostic aid and follow-on oil restoration."
         },
         {
           "documentId": "G1912321",
-          "purpose": "Test a suspected external compressor-shaft leak with the specified isolated setup."
+          "purpose": "Explain and route the separate isolated compressor-shaft test."
         },
         {
           "documentId": "G1912323",
-          "purpose": "Identify, recover, evacuate and charge the system using the required service process."
+          "purpose": "Service equipment, manufacturer-controlled connections and follow-on recovery/restoration requirements."
+        },
+        {
+          "documentId": "G1676731",
+          "purpose": "Refrigerant capacities and approved lubricant/material specifications."
         },
         {
           "documentId": "G1693184",
-          "purpose": "Review refrigerant and climate-system safety precautions."
+          "purpose": "Refrigerant exposure, confined-space, flame and equipment precautions."
+        },
+        {
+          "documentId": "wiring-003-005",
+          "purpose": "Parking, transmission selection, ventilation, ignition and running-engine precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start disabling, personal protection and cooling-fan precautions."
         }
       ],
       "relatedGuideIds": [
@@ -11402,8 +11712,142 @@
         {
           "documentId": "wiring-003-005",
           "sourceHash": "37c835706b9d60d4ff5ac73b9d3354a6eb27eef42852e34f86ba62d4c61269af"
+        },
+        {
+          "documentId": "G1912330",
+          "sourceHash": "a007a962107638ddaae1f84811778ccef1c285be274f368dd8c2bcb80314165e"
+        },
+        {
+          "documentId": "G1676731",
+          "sourceHash": "2fc9dfe00d2757b9c5dfc79bfff9d744783ceb28f21fa41563fff49e1f2a2d1c"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "external-checks-and-conditions",
+          "title": "Inspect and establish conditions",
+          "summary": "Prevent unexpected operation, inspect accessible areas and confirm the weather window.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "operating-measurements",
+          "title": "Set up and measure",
+          "summary": "Use qualified equipment operation, prescribed settings and stable pressure readings.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "engine-chart-selection",
+          "title": "Select your engine’s charts",
+          "summary": "Follow only the chart-selection step matching the vehicle’s engine.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "interpretation-and-closeout",
+          "title": "Interpret and finish",
+          "summary": "Classify both pressures, choose the next investigation and clear the equipment.",
+          "start": 11,
+          "end": 14
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "High discharge pressure with normal-to-high suction pressure",
+          "meaning": "Possible causes are inadequate condenser airflow or engine overheating. [Diagnostic table](#/document/G1676873)",
+          "next": "Use the fan-operation observation and engine-temperature condition to direct airflow or cooling-system diagnosis. Stop the engine before hands-on investigation."
+        },
+        {
+          "finding": "Normal-to-high discharge pressure with normal suction pressure",
+          "meaning": "Ford lists refrigerant overcharge or air in the refrigerant. [Diagnostic table](#/document/G1676873)",
+          "next": "Arrange refrigerant identification and controlled charge verification. Adding refrigerant is not the indicated response."
+        },
+        {
+          "finding": "Normal-to-low discharge pressure with high suction pressure",
+          "meaning": "Low compressor performance is a possibility. This combination also overlaps the suction-line restriction category. [Diagnostic table](#/document/G1676873)",
+          "next": "Distinguish compressor performance from restriction before selecting a repair. This pressure pair does not establish a compressor-shaft leak."
+        },
+        {
+          "finding": "Normal-to-low discharge pressure with normal-to-high suction pressure",
+          "meaning": "A partially restricted or plugged suction line is possible. Ford explains that a restriction downstream of the service access valve can leave the suction reading normal to high. [Restriction distinction](#/document/G1676873)",
+          "next": "Route diagnosis toward the suction line and restriction location rather than changing refrigerant quantity from this reading alone."
+        },
+        {
+          "finding": "Normal-to-low discharge pressure with low suction pressure",
+          "meaning": "Possible causes are low refrigerant charge associated with leakage or a partially restricted/plugged suction line. A restriction upstream of the service access valve can produce a low suction reading. [Diagnostic table and footnote](#/document/G1676873)",
+          "next": "Distinguish leakage from restriction. Give the qualified operator the recorded UV locations; the pressure pattern itself does not locate a leak."
+        },
+        {
+          "finding": "Erratic compressor operation or no compressor operation",
+          "meaning": "Ford lists poor connections at the ambient-air-temperature sensor, pressure transducer or evaporator-temperature sensor, and low charge associated with leakage. Other possible contributors include a loose drive belt, slipping clutch, open or shorted clutch coil or loose mounting, faulty control-switch contacts, clutch-circuit resistance/open circuit/blown fuse, and interruption by the engine computer. [Compressor-operation diagnosis](#/document/G1676873)",
+          "next": "Record the operating behavior and arrange the appropriate connection, electrical, belt/clutch or refrigerant diagnosis. Do not treat a non-running compressor as proof that the compressor itself needs replacement."
+        },
+        {
+          "finding": "Further investigation identifies compressor damage",
+          "meaning": "Ford also lists incorrect clutch air gap, a plugged suction-accumulator refrigerant-oil bleed hose and refrigerant leakage as associated possibilities. [Additional diagnostic causes](#/document/G1676873)",
+          "next": "Include those possibilities in the repair investigation. Component testing, adjustment and replacement require their applicable procedures."
+        },
+        {
+          "finding": "Both pressures fall inside the correct bands",
+          "meaning": "The recorded operating pressures meet the chart limits for the engine and test conditions. [2.3L limits](#/document/G1676871), [3.7L limits](#/document/G1676873), [5.0L limits](#/document/G1676875)",
+          "next": "Record whether the cooling complaint remains. If it does, continue diagnosis rather than adding refrigerant or declaring the concern resolved."
+        },
+        {
+          "finding": "Fluorescence is visible at an accessible external location",
+          "meaning": "Factory dye is a leak-diagnosis aid. The observation provides a location for closer investigation. [Dye purpose](#/document/G1912330)",
+          "next": "Record the exact location and arrange confirmation before choosing a repair. Leave the connection assembled during this inspection."
+        },
+        {
+          "finding": "No fluorescent trace is found in accessible areas",
+          "meaning": "This records a negative external observation in the areas inspected; it does not assess every concealed location or reproduce Ford’s isolated shaft test. [UV diagnostic aid](#/document/G1912330), [Separate shaft test](#/document/G1912321)",
+          "next": "Retain the pressure findings and continue targeted diagnosis if the symptom remains."
+        }
+      ],
+      "verification": [
+        {
+          "title": "The pressure comparison used valid conditions",
+          "body": "Confirm 21–38°C (70–100°F), 30–60% relative humidity, normal engine operating temperature, the prescribed climate settings and openings, and compressor/fan operation. Both readings must be settled or repeat through a stable range, using averages where required. [2.3L basis](#/document/G1676871), [3.7L basis](#/document/G1676873), [5.0L basis](#/document/G1676875)"
+        },
+        {
+          "title": "The record contains both classifications",
+          "body": "Keep the measured pressures and units alongside the actual engine’s discharge and suction chart selections. Record each side separately as below, within or above its band, then retain the paired interpretation. [2.3L charts](#/document/G1676871), [3.7L charts](#/document/G1676873), [5.0L charts](#/document/G1676875)"
+        },
+        {
+          "title": "The UV result names the areas inspected",
+          "body": "Record the accessible locations examined and any fluorescence found. Keep the conclusion limited to those observations; no extra dye or refrigerant-line disconnection is part of this check. [Factory dye](#/document/G1912330)"
+        },
+        {
+          "title": "Equipment is removed and the car is restored",
+          "body": "With engine and ignition off, confirm that the operator completed the equipment’s disconnection sequence and restored its service connections. Check that hoses and tools are clear, the hood is closed, and windows and climate settings are restored. [Equipment instructions](#/document/G1912323), [Ignition precautions](#/document/wiring-003-005)"
+        },
+        {
+          "title": "The outcome and next action are explicit",
+          "body": "Record whether the complaint remains and which diagnostic lead will be investigated next. Following corrective work, repeat the engine-specific performance test under valid conditions and compare the results. [2.3L test](#/document/G1676871), [3.7L test](#/document/G1676873), [5.0L test](#/document/G1676875)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang weak A/C",
+        "Mustang A/C performance inspection",
+        "A/C high and low pressure charts",
+        "2.3L EcoBoost A/C pressure test",
+        "3.7L Mustang refrigerant pressures",
+        "5.0L Mustang A/C pressure charts",
+        "Mustang factory refrigerant dye",
+        "external UV refrigerant leak check",
+        "compressor shaft leak diagnosis"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "aff5f96ff2400cacfb5c70f0b3441ec366911326695f4a77c78817c44951fc83"
+      }
     },
     {
       "categoryId": "advanced",
