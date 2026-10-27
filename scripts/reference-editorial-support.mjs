@@ -23,7 +23,7 @@ export function buildSupportingPackage(primary,documents,{maxChars=40000,maxImag
   visit(primary,1);
   if(['repair','diagnosis','general'].includes(primary.kind)){
     const about=byId.get('G1693180'),general=byId.get('G1693189'),anchor=[primary,...selected].find(d=>d.related?.includes('G1693180'));
-    if(about&&general&&anchor&&add(about,anchor,1,{navigationOnly:true})&&add(general,about,1,{recurse:false})){
+    if(general&&(selected.some(d=>d.id===general.id)||(about&&anchor&&add(about,anchor,1,{navigationOnly:true})&&add(general,about,1,{recurse:false})))){
       const operationText=[primary,...selected.filter(d=>d.kind==='repair')].map(d=>d.text||'').join('\n');
       const operationSafety=/\bbrake[-\s]+booster\b/i.test(operationText)?'brake booster':'';
       const text=[primary.title,primary.section_title,...selected.map(d=>d.title),operationSafety].join(' ').toLowerCase();
