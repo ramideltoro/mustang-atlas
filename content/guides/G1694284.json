@@ -1,0 +1,276 @@
+{
+  "documentId": "G1694284",
+  "supportingSourceRefs": [],
+  "sourceHash": "d4104e8314a5a9cbe7573c3b64d938e1a8edf5b79ed38df9184d159768f900d2",
+  "title": "How the Automatic Transmission Selector Works",
+  "introduction": "The selector chooses a driving range; the transmission then works within that range. I start by separating those jobs, because choosing DRIVE and requesting a gear with a paddle are different conversations with the gearbox.\n\nThis overview explains range behavior, the brake-operated release from PARK, and the cable connecting the selector to the transmission. It describes normal operation and component relationships; adjustment, interlock bypass and fault testing need their own procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1694284-b00001",
+      "text": "How the transmission responds to the selector",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00002",
+      "text": "The transmission has 5 range positions: P, R, N, D and S. SelectShift™ paddle switches on the steering wheel let the driver request manual gear changes.",
+      "why": "A range sets the operating mode; the paddles provide a separate way to request gear changes."
+    },
+    {
+      "blockId": "G1694284-b00003",
+      "text": "PARK",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00004",
+      "text": "With the selector in PARK, the transmission behaves as follows:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00006",
+      "text": "The transmission does not transmit driving power through to its output.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00008",
+      "text": "The parking pawl mechanically locks the output shaft.",
+      "why": "The pawl is the mechanical catch that distinguishes this range from a freely turning output."
+    },
+    {
+      "blockId": "G1694284-b00010",
+      "text": "The engine can be started in this position.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00012",
+      "text": "For this pushbutton-equipped Mustang, PARK is the range used for normal stationary shutdown.",
+      "why": "The workshop uses generic key-removal terminology. The matching owner’s manual instead describes a stationary-stop sequence using PARK, the start/stop button and the parking brake; this car does not have a physical ignition key to remove from a lock cylinder. Use Starting and Stopping the Engine in the owner’s manual for the actual controls."
+    },
+    {
+      "blockId": "G1694284-b00014",
+      "text": "REVERSE",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00015",
+      "text": "With the selector in REVERSE:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00017",
+      "text": "The vehicle can travel backward through a reduced gear ratio.",
+      "why": "Gear reduction changes the relationship between engine speed and road speed while the transmission provides rearward drive."
+    },
+    {
+      "blockId": "G1694284-b00019",
+      "text": "Engine braking is available.",
+      "why": "Engine braking means the engine contributes resistance to vehicle motion through the driveline."
+    },
+    {
+      "blockId": "G1694284-b00021",
+      "text": "NEUTRAL",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00022",
+      "text": "With the selector in NEUTRAL:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00024",
+      "text": "The transmission does not transmit driving power through to its output.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00026",
+      "text": "The output shaft is unlocked and free to turn.",
+      "why": "No driving power does not mean a locked driveline. I keep that distinction in mind when comparing the stationary ranges."
+    },
+    {
+      "blockId": "G1694284-b00028",
+      "text": "The engine can also be started in this position.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00030",
+      "text": "DRIVE",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00031",
+      "text": "Use DRIVE as the normal range for most forward driving.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00032",
+      "text": "In DRIVE, the transmission provides:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00034",
+      "text": "Automatic gear changes from 1st through 6th gears.",
+      "why": "The transmission handles gear selection during normal operation."
+    },
+    {
+      "blockId": "G1694284-b00036",
+      "text": "Maximum fuel economy during normal operation.",
+      "why": "This describes the range's normal operating priority, rather than a guaranteed fuel-consumption figure."
+    },
+    {
+      "blockId": "G1694284-b00038",
+      "text": "Manual Operation in S",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00039",
+      "text": "With the selector in the manual S position:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00041",
+      "text": "The transmission provides maximum engine braking.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00043",
+      "text": "Gears 1 through 6 are available.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00045",
+      "text": "The driver can use the steering-wheel SelectShift™ paddle switches to manually request gears 1 through 6.",
+      "why": "The paddles put gear requests within reach without moving a hand to the selector."
+    },
+    {
+      "blockId": "G1694284-b00047",
+      "text": "Grade assist becomes active.",
+      "why": "This works with the engine-braking behavior described below."
+    },
+    {
+      "blockId": "G1694284-b00049",
+      "text": "Using vehicle inputs, the transmission selects gears to provide the desired engine braking. Engine rpm rises as it does so.",
+      "why": "The engine gets busier because it is helping resist motion. That rise in revs belongs to the described braking strategy."
+    },
+    {
+      "blockId": "G1694284-b00051",
+      "text": "How the Brake Shift Interlock Releases",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00052",
+      "text": "The brake shift interlock actuator keeps the selector in PARK by mechanically blocking the selector mechanism's detent pawl. With the ignition in ON (RUN) and the transmission in PARK, pressing the brake pedal closes the BPP switch. The BCM then energizes the actuator, allowing the selector to move out of PARK.",
+      "why": "BPP means brake pedal position. Think of the interlock as a gatekeeper at the lever: the brake signal and ignition state allow the mechanical gate to open. The owner’s manual also requires the intelligent access key to be inside the vehicle to shift out of PARK. Its Keyless Starting section explains how the pushbutton establishes ignition modes."
+    },
+    {
+      "blockId": "G1694284-b00053",
+      "text": "The brake shift interlock brings these components together:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00055",
+      "text": "A brake shift interlock actuator built into the selector lever assembly.",
+      "why": "The release mechanism is part of the selector assembly."
+    },
+    {
+      "blockId": "G1694284-b00057",
+      "text": "The ignition switch.",
+      "why": "Its state is part of the release conditions above. On this Mustang, the pushbutton ignition control establishes that state rather than a key turned in an ignition lock."
+    },
+    {
+      "blockId": "G1694284-b00059",
+      "text": "The BPP switch, which signals brake pedal position.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00061",
+      "text": "The BCM, which energizes the interlock actuator.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00063",
+      "text": "The Selector Cable Connection",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00064",
+      "text": "The selector lever cable arrangement includes:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00066",
+      "text": "A cable connecting the selector lever assembly to the transmission manual control lever.",
+      "why": "This is the mechanical link between the driver's range selection and the transmission's control lever."
+    },
+    {
+      "blockId": "G1694284-b00068",
+      "text": "A cable grommet secured to the floor pan.",
+      "why": "The grommet locates the cable's passage through the floor."
+    },
+    {
+      "blockId": "G1694284-b00070",
+      "text": "An adjuster locking tab at the transmission manual control lever.",
+      "why": "The tab identifies where the cable adjustment is locked."
+    },
+    {
+      "blockId": "G1694284-b00072",
+      "text": "The Selector Lever Assembly",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00073",
+      "text": "The selector lever assembly includes:",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00075",
+      "text": "The selector lever knob used to operate the lever.",
+      "why": ""
+    },
+    {
+      "blockId": "G1694284-b00077",
+      "text": "The brake shift interlock actuator, integrated into the selector lever assembly.",
+      "why": "The same assembly contains both the driver's control and the mechanism that restricts movement out of the parked range."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:45:10.154Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 45,
+    "receivedBlocks": 45,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "035ac481101f6bd4c4989a896885831a62f49ed650b0c308cf66b875fff3e83d",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 54,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bd2f2df8d59780692744f7b0470e1a39cc8180c1abf4d64c73545954d6d8a125",
+    "reviewedAt": "2026-10-27T19:43:02.881Z",
+    "editorialRevision": "Owner-backed keyless control reconciliation only; selector ranges and interlock mechanisms unchanged",
+    "supplementalOwnerEvidence": {
+      "pdfHash": "ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592",
+      "printedPages": [
+        121,
+        122,
+        123,
+        124
+      ],
+      "scope": "Exact actual control terminology reconciles generic keyed wording; no new bypass or diagnostic procedure."
+    }
+  }
+}

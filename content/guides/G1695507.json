@@ -1,0 +1,215 @@
+{
+  "documentId": "G1695507",
+  "supportingSourceRefs": [],
+  "sourceHash": "0c9400cdd5240f59ef08096e06c1b1ae63bb44246080821b89324872dc3f7c2e",
+  "title": "Front Seats: Movement, Memory and Climate Control",
+  "introduction": "A power seat is a small moving platform with its own chain of command. I start by checking whether the driver seat has memory: that determines whether the adjustment switch controls the motors directly or sends requests to a module. Remembering your favorite driving position takes more than a clever switch.\n\nThis overview explains the control arrangements, which motors belong to larger service assemblies, and how seat climate operation changes during remote start. Use it to understand expected behavior and identify the relevant system. Motor removal, electrical testing, PMI and memory-seat stop-setting procedures require their matching service instructions; memory programming and remote-start preference settings require the Owner's Literature.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1695507-b00001",
+      "text": "How the Front Seats Work",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00002",
+      "text": "Driver Power Seat Without Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00003",
+      "text": "Without memory, the seat control switch is wired directly to the adjustment motors. Its normally closed contacts connect to ground. Selecting an adjustment switches the corresponding circuit to supply voltage, and the polarity supplied by the switch determines which direction the motor turns.",
+      "why": "The switch carries out the motor-control job directly. Reversing polarity changes motor direction, allowing the same motor to move an adjustment either way."
+    },
+    {
+      "blockId": "G1695507-b00004",
+      "text": "The driver power seat uses the following motors, with these service arrangements:",
+      "why": "The service grouping matters: an individual motor function does not necessarily mean an individually replaceable motor."
+    },
+    {
+      "blockId": "G1695507-b00006",
+      "text": "Front height motor — serviced as part of the seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00008",
+      "text": "Rear height motor — serviced as part of the seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00010",
+      "text": "Horizontal motor — serviced separately from the seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00012",
+      "text": "Lumbar motor — serviced as part of the power lumbar assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00014",
+      "text": "Driver Power Seat With Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00015",
+      "text": "With memory, selecting an adjustment makes the seat control switch send a voltage signal to the DSM (driver front seat module). The DSM controls the driver power seat and is mounted on the driver seat track. Installing a new DSM requires PMI. Whenever a new DSM, driver seat track or horizontal motor is installed, the DSM hard stop/soft stops must be set/reset. The memory system can automatically move the driver seat to 1 of 3 programmable positions. Refer to the Owner's Literature for instructions on storing or recalling a memory position.",
+      "why": "Here the switch requests movement and the module manages it. The required programming and stop settings are part of replacement completion; this overview identifies those obligations but does not teach their procedures."
+    },
+    {
+      "blockId": "G1695507-b00016",
+      "text": "The memory-equipped driver seat uses the following motors and service groupings:",
+      "why": "Memory changes the control arrangement while retaining the motor functions listed here."
+    },
+    {
+      "blockId": "G1695507-b00018",
+      "text": "Front height motor — serviced with the complete seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00020",
+      "text": "Rear height motor — serviced with the complete seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00022",
+      "text": "Horizontal motor — a separate service item from the seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00024",
+      "text": "Lumbar motor — serviced with the power lumbar assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00026",
+      "text": "Passenger Power Seat Control",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00027",
+      "text": "The passenger seat control switch is wired directly to the applicable adjustment motors. Its normally closed contacts are grounded. Selecting an adjustment switches the relevant circuit to supply voltage; the polarity delivered by the switch determines the motor's direction.",
+      "why": "This is direct switch-to-motor control, matching the operating principle of the driver seat without memory."
+    },
+    {
+      "blockId": "G1695507-b00028",
+      "text": "The passenger power seat has the following motors, serviced in the groupings shown:",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00030",
+      "text": "Front height motor — included in seat track assembly service.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00032",
+      "text": "Rear height motor — included in seat track assembly service.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00034",
+      "text": "Horizontal motor — serviced independently of the seat track assembly.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00036",
+      "text": "Lumbar motor — included in power lumbar assembly service.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00038",
+      "text": "Climate-Controlled Front Seats",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00039",
+      "text": "The climate-controlled seat system provides electrical heating or cooling on demand, independently for each front seat.",
+      "why": "The occupants can have different comfort requests; the front seats do not have to share the same heating or cooling selection."
+    },
+    {
+      "blockId": "G1695507-b00040",
+      "text": "The seat climate system brings together the following controls, airflow components and seat materials:",
+      "why": "Comfort depends on more than the buttons: the system also includes components inside the cushion and backrest."
+    },
+    {
+      "blockId": "G1695507-b00042",
+      "text": "Blower motors inside each front seat's cushion and backrest.",
+      "why": "These are the seat's airflow motors, located within the seating structure."
+    },
+    {
+      "blockId": "G1695507-b00044",
+      "text": "An air filter integrated into each blower motor assembly; the filter is not serviceable.",
+      "why": "Do not treat the integrated filter as a separately serviceable maintenance item."
+    },
+    {
+      "blockId": "G1695507-b00046",
+      "text": "Seat climate buttons on the FDIM touchscreen.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00048",
+      "text": "Seat climate buttons on the FCIM.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00050",
+      "text": "The SCME (front seat climate control module), mounted underneath the front passenger seat.",
+      "why": "The module's mounting location is beneath the passenger seat even though the system serves both front seats."
+    },
+    {
+      "blockId": "G1695507-b00052",
+      "text": "Manifolds in the seat cushions and backrests.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00054",
+      "text": "Foam pads in the seat cushions and backrests.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00056",
+      "text": "Trim covers over the seat cushions and backrests.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00058",
+      "text": "Seat Climate During Remote Start",
+      "why": ""
+    },
+    {
+      "blockId": "G1695507-b00059",
+      "text": "Select remote-start climate modes and preferences through the message center; refer to the Owner's Literature for the setting instructions. During a remote start, a driver and/or passenger heated/climate-controlled seat set to AUTO operates at full heat when the outside temperature is less than 0° C (32° F). When the outside temperature is greater than 27° C (80° F), it operates at full cooling, on climate-controlled seats only. Seat heating/cooling adjustments are not recognized while remote start is operating. Once the ignition is cycled ON, the seats return to their settings from the last ignition ON cycle and accept adjustments normally. If that previous setting was off, the heated/climate-controlled seat turns off.",
+      "why": "I check the operating phase before judging a seat that ignores a button press. Remote start uses its automatic comfort strategy; switching the ignition on restores the previous settings and normal adjustment. The stated temperature thresholds do not define behavior between them or exactly at them."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:43:51.735Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 35,
+    "receivedBlocks": 35,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "c8c19b9181fa1a8546b67efa945b12b9fcaaa7c2fb1194c3ce2922e537f81ea1",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2bf6712aa50d4043cd837659b1015ccf800275858a3f048e47d3b9d4e82543fa",
+    "reviewedAt": "2026-10-27T19:43:51.735Z"
+  }
+}

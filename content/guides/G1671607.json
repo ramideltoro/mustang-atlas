@@ -1,0 +1,325 @@
+{
+  "documentId": "G1671607",
+  "sourceHash": "40ce0b4d12a68936e17248a7117b1a3f676115dfb602b73657d867380b66d9c8",
+  "title": "Fuel Tank and Lines: 5.0L 32V Ti-VCT Overview",
+  "introduction": "I read this system by separating fuel delivery, fuel-level reporting and vapor containment. Parts can live together without doing the same job: the sender counts the stock, while the pump gets it moving. A convincing fuel-gauge reading is no delivery-system health certificate.\n\nThis overview identifies the tank-and-line equipment, service boundaries and collision shut-off behavior. It supplies no access, pressure-test or replacement procedure. Before opening fuel plumbing, use the matching engine-specific safety and pressure-release instructions. The source uses both FPCM and FPDM labels; I keep those labels without assuming they identify separate replaceable modules. The fuel route below follows the matching line-and-rail procedures.",
+  "requirements": [
+    {
+      "category": "After a collision",
+      "items": [
+        {
+          "name": "Inspect the fuel system before any restart attempt",
+          "detail": "Fuel leaks after a collision must be inspected and repaired where necessary; failing to do so can increase the risk of fire and serious injury. Ford recommends inspection of the fuel system by an authorized dealer after any collision. Do not treat an ignition reset as permission to drive or as a substitute for that inspection."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1671607-b00001",
+      "text": "Fuel System Overview",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00002",
+      "text": "Tank and Line Components",
+      "why": "The following list identifies storage, tube connections, refueling equipment, controls and the functions housed in the pump-and-sender unit."
+    },
+    {
+      "blockId": "G1671607-b00004",
+      "text": "A saddle-type fuel tank provides fuel storage.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00006",
+      "text": "Fuel, vapor and brake tubes are grouped in an integrated bundle assembly.",
+      "why": "The shared bundle contains separate systems; proximity does not make the tubes interchangeable."
+    },
+    {
+      "blockId": "G1671607-b00008",
+      "text": "Quick connect couplings join the fuel and vapor tubes.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00010",
+      "text": "The Easy Fuel™ capless fuel tank filler pipe assembly must not be modified in any way. Service consists only of installing a new fuel tank filler pipe assembly.",
+      "why": "The complete assembly is the stated service item; internal modification is outside that service boundary."
+    },
+    {
+      "blockId": "G1671607-b00012",
+      "text": "A supplemental refueling adapter is stored in the spare tire compartment.",
+      "why": "This gives the more specific storage location within the luggage area identified later."
+    },
+    {
+      "blockId": "G1671607-b00014",
+      "text": "The component list includes a Fuel Pump Control Module (FPCM).",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00016",
+      "text": "The list also identifies a fuel pump driver module (FPDM).",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00018",
+      "text": "The fuel-system designation is Mechanical Returnless Fuel System (MRFS).",
+      "why": "Use this engine-specific designation when choosing related service information."
+    },
+    {
+      "blockId": "G1671607-b00020",
+      "text": "The Fuel Level Sensor reports fuel quantity in the tank.",
+      "why": "Quantity information does not establish delivery pressure."
+    },
+    {
+      "blockId": "G1671607-b00037",
+      "text": "The Fuel Pump (FP) and Sender Unit contains the following delivery, sensing, pressure-management and filtration components:",
+      "why": "A shared housing brings several functions together without making their symptoms or service decisions identical."
+    },
+    {
+      "blockId": "G1671607-b00023",
+      "text": "The electric FP module supplies pressurized fuel through the fuel line and jumper tube to the fuel rail.",
+      "why": "I follow the engine-matched fuel-line and rail procedures for this route: they identify the line-to-rail jumper coupling and show that supply tube connecting directly to the injector rail. The older overview names an additional high-pressure pump, but that conflicts with the matching plumbing evidence, so I do not use that phrase to describe this engine. See [Fuel Lines](#/document/G1671612) and [Fuel Rail](#/document/G1691995) for the source connections."
+    },
+    {
+      "blockId": "G1671607-b00026",
+      "text": "The Fuel Level Sender measures the level in the tank.",
+      "why": "Its measurement supplies fuel-gauge information rather than a pump-performance result."
+    },
+    {
+      "blockId": "G1671607-b00029",
+      "text": "A check valve retains system pressure after the pump shuts off.",
+      "why": "A stopped pump does not mean an unpressurized fuel system."
+    },
+    {
+      "blockId": "G1671607-b00032",
+      "text": "A pressure relief protects the system against overpressure if fluid flow is restricted.",
+      "why": "Pressure relief addresses excessive pressure; the check valve has the different job of retaining pressure after shutdown."
+    },
+    {
+      "blockId": "G1671607-b00035",
+      "text": "A lifetime fuel filter removes foreign material to protect the fuel injectors.",
+      "why": "Filtration helps keep contamination away from components that meter fuel."
+    },
+    {
+      "blockId": "G1671607-b00039",
+      "text": "The vehicle’s service features, refueling provisions and tube routing are as follows:",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00041",
+      "text": "A serviceable fuel level sender is attached to the fuel pump module.",
+      "why": "The sender has its own service identity despite being mounted on the module."
+    },
+    {
+      "blockId": "G1671607-b00043",
+      "text": "A restrictor plate inside the fuel tank filler pipe permits only unleaded fuel to be pumped into the fuel tank.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00045",
+      "text": "The Easy Fuel™ capless fuel tank filler pipe assembly must not be modified in any way.",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00047",
+      "text": "The supplemental refueling adapter is located in the luggage compartment.",
+      "why": "The earlier equipment list identifies its storage more specifically as the spare tire compartment."
+    },
+    {
+      "blockId": "G1671607-b00049",
+      "text": "The lifetime in-tank fuel filter is serviced as part of the fuel pump.",
+      "why": "The filter’s service boundary differs from the separately serviceable level sender."
+    },
+    {
+      "blockId": "G1671607-b00051",
+      "text": "Liquid-fuel and vapor tubes are bundled with the brake tubes beneath the floorpan, with a protective cover shield over the bundle.",
+      "why": "The shield protects a route shared by several systems; this is a location description, not an instruction to remove it."
+    },
+    {
+      "blockId": "G1671607-b00053",
+      "text": "Quick connect and spring lock couplings are used on the fuel tubes.",
+      "why": "Use the matching coupling service instructions before attempting disconnection."
+    },
+    {
+      "blockId": "G1671607-b00055",
+      "text": "The FPDM shuts off fuel in the event of a collision.",
+      "why": "This introduces the event-triggered control function explained below."
+    },
+    {
+      "blockId": "G1671607-b00057",
+      "text": "Collision-Triggered Fuel Pump Shut-off",
+      "why": ""
+    },
+    {
+      "blockId": "G1671607-b00058",
+      "text": "NOTE: For vehicles with Intelligent Access with Push Button Start, refer to Description and Operation, Intelligent Access with Push Button Start, in Section 419-01A for the procedures that establish ignition OFF, ignition in ACCESSORY, ignition ON and ignition START.",
+      "why": "I establish what each ignition state means before using the reset description; a button press alone does not explain the intended state."
+    },
+    {
+      "blockId": "G1671607-b00059",
+      "text": "An event notification signal initiates the Fuel Pump and Sender Shut-off Feature after a moderate to severe collision.",
+      "why": "A shutdown caused by this feature is a protective control response, not by itself a failed-pump diagnosis."
+    },
+    {
+      "blockId": "G1671607-b00060",
+      "text": "The restraints control module (RCM) provides the event notification signal to the fuel pump driver module (FPDM). Communication between the RCM and FPDM allows the PCM to shut off the Fuel Pump.",
+      "why": "This traces the collision notification through the named control modules to the shutdown result."
+    },
+    {
+      "blockId": "G1671607-b00061",
+      "text": "When collision shut-off has stopped the vehicle, the workshop overview describes an ignition OFF-to-ON reset. It notes that the initial attempt may not restart the vehicle and an additional ignition cycle may be needed.",
+      "why": "Complete the fuel-system inspection and any necessary leak repairs before attempting to restart. The matching owner’s manual, Roadside Emergencies — Fuel Shutoff, gives the actual pushbutton-control sequence and explains that the vehicle checks systems before allowing a restart. Use that sequence rather than interpreting this general OFF-to-ON description as a keyed-ignition or complete restart procedure."
+    }
+  ],
+  "uncertainties": [],
+  "coveredUnitIds": [
+    "G1671607:u1",
+    "G1671607:u2",
+    "G1671607:u3",
+    "G1671607:u4",
+    "G1671607:u5",
+    "G1671607:u6",
+    "G1671607:u7",
+    "G1671607:u8",
+    "G1671607:u9",
+    "G1671607:u10",
+    "G1671607:u11",
+    "G1671607:u12",
+    "G1671607:u13",
+    "G1671607:u14",
+    "G1671607:u15",
+    "G1671607:u16",
+    "G1671607:u17",
+    "G1671607:u18",
+    "G1671607:u19",
+    "G1671607:u20",
+    "G1671607:u21",
+    "G1671607:u22",
+    "G1671607:u23",
+    "G1671607:u24",
+    "G1671607:u25",
+    "G1671607:u26",
+    "G1671607:u27",
+    "G1671607:u28",
+    "G1671607:u29",
+    "G1671607:u30",
+    "G1671607:u31",
+    "G1671607:u32",
+    "G1671607:u33",
+    "G1671607:u34",
+    "G1671607:u35",
+    "G1671607:u36",
+    "G1671607:u37",
+    "G1671607:u38",
+    "G1671607:u39",
+    "supplement:G1691995:complete",
+    "supplement:G1671612:complete",
+    "supplement:owner:collision:complete"
+  ],
+  "readerOutcome": "Understand the exact 5.0L fuel architecture using the matching line/jumper/rail evidence and safe informational collision explanation, without a standalone repair or restart procedure.",
+  "teachingNotes": [
+    "Keeps headings concise and preserves every requested block.",
+    "Retains MRFS, FPCM and FPDM labels; replaces the conflicting downstream high-pressure-pump phrase with the exact engine-matched fuel-line, jumper and rail route, openly explaining the source reconciliation.",
+    "Explains the spare tire compartment as the more specific location within the luggage area, rather than manufacturing a location conflict.",
+    "Preserves all filler restrictions, filter service boundaries and the mandatory ignition-state referral.",
+    "Does not infer whether FPCM and FPDM represent separate hardware or alternative names."
+  ],
+  "supportingSourceRefs": [],
+  "sourceContextHash": "9df2cf0835cb698f69ac36f0562d11502bf131cf577c7677c2d7aa7bb6e89bad",
+  "status": "complete",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 31,
+    "receivedBlocks": 31,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 39,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d3df5b6c55abab2ce3e5ad06a3fa43c890de9db684e9e764f2b0c70d7de42bfc",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "resolvedHold": true,
+    "supplementalSourceCoverage": {
+      "unitIds": [
+        "supplement:G1691995:complete",
+        "supplement:G1671612:complete",
+        "supplement:owner:collision:complete"
+      ],
+      "sources": [
+        {
+          "id": "G1691995",
+          "hash": "042be81441c8b14b35cd44be20240f1e1af720fff89e673ecddc25308a6d7a25",
+          "source": {
+            "reference": "G1691998",
+            "pdfUrl": "/source/G1691995.pdf",
+            "revision": "12/5/2017"
+          }
+        },
+        {
+          "id": "G1671612",
+          "hash": "6b6ea056c866401ce5d140c0d512b5cc43112e8842e2abf294908b5c58d56068",
+          "source": {
+            "reference": "G1671630",
+            "pdfUrl": "/source/G1671612.pdf",
+            "revision": "06/26/2015"
+          }
+        }
+      ],
+      "ownerPdfHash": "ac87ae04eeac51835aa226f11ba963dafaf3d462f4e57fc6c2ff1b51a4fcb592"
+    },
+    "sourceReconciliation": {
+      "scope": "Independently assess documented source contradiction, not silent omission: older primary names downstream high-pressure pump. Complete exact5.0 Fuel Lines and Fuel Rail procedures and all19unique figures show supply-line/jumper-to-injector-rail plumbing; assess whether this supports rewritten route without additional pump. No cross-engine borrowing or new specification. All complete source texts and every media association are preserved; repeated figures point to identical attached bytes. Owner pages supply collision leak precaution and actual keyless-procedure referral. Do not force approval; hold if evidence insufficient.",
+      "primarySource": {
+        "reference": "G1671627",
+        "pdfUrl": "/source/G1671607.pdf",
+        "revision": "06/27/2014"
+      },
+      "matchingSources": [
+        {
+          "id": "G1691995",
+          "hash": "042be81441c8b14b35cd44be20240f1e1af720fff89e673ecddc25308a6d7a25",
+          "source": {
+            "reference": "G1691998",
+            "pdfUrl": "/source/G1691995.pdf",
+            "revision": "12/5/2017"
+          }
+        },
+        {
+          "id": "G1671612",
+          "hash": "6b6ea056c866401ce5d140c0d512b5cc43112e8842e2abf294908b5c58d56068",
+          "source": {
+            "reference": "G1671630",
+            "pdfUrl": "/source/G1671612.pdf",
+            "revision": "06/26/2015"
+          }
+        }
+      ],
+      "figureCoverage": {
+        "associations": 28,
+        "uniqueImages": 19
+      }
+    },
+    "reviewedAt": "2026-10-27T19:48:21.456Z",
+    "editorialRevision": "d8811af82bfaa3cd32c91e6d1c4a21856360125dd70c3cf52374296648b09b2d",
+    "minorIssueResolution": {
+      "originalReviewPassed": false,
+      "field": "draft.teachingNotes[1]",
+      "before": "Retains MRFS, FPCM, FPDM and the stated high pressure Fuel Pump destination without asserting direct injection or importing EcoBoost-specific architecture.",
+      "after": "Retains MRFS, FPCM and FPDM labels; replaces the conflicting downstream high-pressure-pump phrase with the exact engine-matched fuel-line, jumper and rail route, openly explaining the source reconciliation.",
+      "scope": "Private metadata only; every public field and complete independently reviewed technical source/figure coverage unchanged."
+    }
+  },
+  "checkedAt": "2026-10-27T19:48:21.456Z"
+}

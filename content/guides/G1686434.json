@@ -1,0 +1,101 @@
+{
+  "documentId": "G1686434",
+  "supportingSourceRefs": [],
+  "sourceHash": "ddc902761d31f8d28d68fe80aafae1cace1018fa99ffd6d9774c8630205d6337",
+  "title": "How the 6R80 Direct Clutch Applies and Releases",
+  "introduction": "The direct clutch is operated through a hydraulic chain of command. Think of it as a handshake: solenoid pressure makes the request, and the regulator meters the pressure that applies the clutch. I follow those separate jobs through the drawings so that a control passage does not get mistaken for the clutch's actual apply feed.\n\nThis overview covers the 6R80 automatic transmission. Match the cutaway and exploded-view callouts to the parts key, then compare the hydraulic drawings by their passage labels and flow arrows. Keep the separate selective retaining-ring entries and the model-dependent clutch quantity as shown; an illustrated plate count is not a specification. This is a component and circuit guide, without the measurements or procedures needed for pressure testing, selective-part choice or rebuilding.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686434-b00001",
+      "text": "Direct Clutch Location in Cutaway",
+      "why": "With the torque converter at the left, the highlighted clutch components sit farther into the transmission. I use the callouts to connect the installed arrangement to the separated components in the exploded drawing."
+    },
+    {
+      "blockId": "G1686434-b00004",
+      "text": "Direct Clutch Components in Exploded View",
+      "why": "The drawing separates the hub, plate stack, piston components and cylinder along an assembly axis. The shared key identifies the parts; their spacing in this illustration is for visibility."
+    },
+    {
+      "blockId": "G1686434-b00006",
+      "text": "How the Direct Clutch (B) Is Fed",
+      "why": "Follow the named passages and arrows to distinguish solenoid control pressure from the regulated pressure delivered to the clutch."
+    },
+    {
+      "blockId": "G1686434-b00007",
+      "text": "To supply the direct clutch (B) apply system, the manual valve can be in REVERSE, DRIVE, 3, 2 or 1. In those positions, line pressure reaches the clutch B regulator valve through the REV/DRIVE circuit.",
+      "why": "Having supply pressure available is the beginning of the hydraulic path; the regulator and solenoid control determine the clutch's apply state."
+    },
+    {
+      "blockId": "G1686434-b00008",
+      "text": "For reverse application of the direct clutch (B), shift solenoid B, labeled SSB, supplies regulated solenoid pressure from SREG through VFS2 to the clutch B regulator and latch valves.",
+      "why": "This is the control side of the hydraulic handshake: it positions the valves that manage clutch pressure."
+    },
+    {
+      "blockId": "G1686434-b00009",
+      "text": "The clutch B regulator valve sends regulated line pressure into CL B, applying the direct clutch (B).",
+      "why": "CL B is the clutch feed to follow from the regulator to the clutch symbol."
+    },
+    {
+      "blockId": "G1686434-b00010",
+      "text": "Direct (3, 5, R) Clutch Circuit: Applied in Reverse",
+      "why": "Start at the manual valve's supply path, then trace the solenoid control branch and the regulator's clutch feed. The arrows show how the branches reach their respective valves and the clutch."
+    },
+    {
+      "blockId": "G1686434-b00012",
+      "text": "The direct clutch applies in 3rd and 5th gear by the same basic route, with an added pressure-balancing path. VFS2 pressure passes through the Clutch D1 Latch valve into VFS2D. At the clutch B regulator valve, VFS2D pressure opposes VFS2 pressure, reducing the net VFS2 force on the regulator and producing a smooth shift.",
+      "why": "The opposing pressure acts like a counterweight on the valve. The important change is the balance of hydraulic forces, rather than simply the presence of supply pressure."
+    },
+    {
+      "blockId": "G1686434-b00013",
+      "text": "Direct (3, 5, R) Clutch Circuit: Applied in 3rd and 5th Gear",
+      "why": "Compare the added opposing-pressure branch with the reverse drawing. Its passage labels reveal the change more reliably than color alone."
+    },
+    {
+      "blockId": "G1686434-b00015",
+      "text": "In 1st, 2nd, 4th or 6th gear, the direct clutch (B) releases even though the manual valve still supplies line pressure to the clutch B regulator valve. SSB lowers control pressure to the clutch B regulator and clutch B latch valve, positioning them to reduce regulated line pressure in CL B and release the clutch.",
+      "why": "Supply pressure can remain available while the clutch releases. The valves control how much of that pressure reaches the clutch."
+    },
+    {
+      "blockId": "G1686434-b00016",
+      "text": "In 2nd, 3rd, 4th, 5th and 6th gear, the D2 Latch valve routes exhaust-circuit pressure from CL EXH to CL B. This provides a low-pressure fluid fill for the direct clutch (B) and its circuit, approximately 21 kPa (3 psi). Keeping air out of the Clutch B circuits helps the clutch apply smoothly in 3rd or 5th gear.",
+      "why": "The low-pressure fill is a readiness function, distinct from the regulated pressure that applies the clutch. Keeping the passages filled avoids asking the next application to take up an air-filled circuit first."
+    },
+    {
+      "blockId": "G1686434-b00017",
+      "text": "Direct Clutch (B): Released in 1st, 2nd, 4th and 6th Gear",
+      "why": "Trace the clutch exhaust and low-pressure fill paths as well as the supply. A fluid-filled clutch circuit does not, by itself, mean the clutch is applied."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:44:38.649Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 12,
+    "receivedBlocks": 12,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "76da60ce7523ac25803e2584ed1f82fe2d65d0b82edf23c7ca2ba4b8f0b3793d",
+    "reviewedAt": "2026-10-27T19:43:02.905Z",
+    "editorialRevision": "Intro-only inferred engine list removal; actual6R80 and all technical fields retained"
+  }
+}

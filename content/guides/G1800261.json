@@ -1,0 +1,225 @@
+{
+  "documentId": "G1800261",
+  "supportingSourceRefs": [],
+  "sourceHash": "cd88a6b2b57b43857f4c7d5e3746d98b3310c125d0c30714b34d7ecd4c9c3435",
+  "title": "Inside the 5.2L Engine: Identification, Oil Flow and Valve Timing",
+  "introduction": "I read this engine overview in layers: establish its identity, orient the cylinder map, then follow the oil supply and valve-control mechanisms. The crankshaft turns piston movement into rotation; the camshafts coordinate the valves. Oil keeps the loaded bearings supplied while the timing system coordinates the engine's breathing.\n\nThe label photograph and its table explain how to recognize the identification fields. Read the actual labels on your engine when selecting parts or checking calibrations; the pictured label is an example. Use the cylinder drawing as a position map in the view shown, without treating its numbering as a firing order or assigning vehicle-side orientation from the page alone.\n\nIn the oil-flow illustration, follow the red arrows between the sump pickup, pump, filter, external cooler and internal passages. I think of it as a delivery network: the pump moves the supply, passages distribute it, and the relief valve manages excess pressure. The exploded drawing spreads components apart so the routes are visible; that spacing is not a dismantling sequence.\n\nThis overview explains construction and operating principles for the stated engine. It does not supply part-selection decoding rules, timing setup, oil-pressure test values or repair instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1800261-b00001",
+      "text": "Engine Layout and Operating Principles",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00002",
+      "text": "The 5.2L (4V) V-8 combines the following construction and control features:",
+      "why": "These features establish the engine configuration to which the following identification and operating descriptions apply."
+    },
+    {
+      "blockId": "G1800261-b00004",
+      "text": "Dual overhead camshafts operate the valves.",
+      "why": "Camshaft lobes provide the timed motion that opens the valves."
+    },
+    {
+      "blockId": "G1800261-b00006",
+      "text": "Four valves serve each cylinder.",
+      "why": "The valves control entry of the fresh charge and exit of exhaust gases."
+    },
+    {
+      "blockId": "G1800261-b00008",
+      "text": "SFI (sequential multiport fuel injection) meters the fuel.",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00010",
+      "text": "The cylinder heads are aluminum.",
+      "why": "The heads contain the valves and form the upper portion of the combustion chambers."
+    },
+    {
+      "blockId": "G1800261-b00012",
+      "text": "An aluminum cylinder block arranges the cylinder banks in a 90-degree V.",
+      "why": "The block contains the cylinders and supports the crankshaft."
+    },
+    {
+      "blockId": "G1800261-b00014",
+      "text": "A flat plane crankshaft converts piston movement into rotation through the connecting rods.",
+      "why": "The connecting rods link the reciprocating pistons to the rotating crankshaft."
+    },
+    {
+      "blockId": "G1800261-b00016",
+      "text": "Twin independent VCT varies the intake and exhaust camshaft timing independently.",
+      "why": "VCT means variable camshaft timing: changing valve-event timing lets the engine adapt its breathing to operating conditions."
+    },
+    {
+      "blockId": "G1800261-b00018",
+      "text": "The camshafts are individually chain-driven, with a hydraulic timing chain tensioner on each timing chain.",
+      "why": "The chains coordinate crankshaft and camshaft movement; the tensioners control chain tension."
+    },
+    {
+      "blockId": "G1800261-b00020",
+      "text": "Identify the Engine Before Selecting Parts",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00021",
+      "text": "Always check the engine identification labels when new parts are needed or engine calibrations are being checked. Parts can differ within the same CID family, so verify the identification codes before obtaining replacements. The codes contain the relevant build-date, optional-equipment and revision information.",
+      "why": "A shared displacement family is not enough to establish part compatibility. I use the label as the engine's identity card rather than choosing by a familiar-looking casting."
+    },
+    {
+      "blockId": "G1800261-b00022",
+      "text": "Reading the Engine Code Label",
+      "why": "Match each bracketed field in the photograph to its description in the adjacent table. Keep the fields distinct, including the plant name, plant code, build-date field and sequential identifier; the example does not provide a general decoding method."
+    },
+    {
+      "blockId": "G1800261-b00025",
+      "text": "Locating the Cylinders",
+      "why": "Use the labels placed inside the cylinder bores to identify positions in the displayed view. This is a cylinder-location drawing, without a stated vehicle-side viewing direction or firing sequence."
+    },
+    {
+      "blockId": "G1800261-b00027",
+      "text": "Following the Engine Oil Paths",
+      "why": "The red arrows show circulation through the separated assemblies and internal routes. Follow their direction across the gaps between components; the exploded layout makes the connections readable without establishing a removal order."
+    },
+    {
+      "blockId": "G1800261-b00029",
+      "text": "How the Lubrication System Supplies Oil",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00030",
+      "text": "The engine uses force-feed lubrication: oil is delivered under full pressure to the following bearings and passages:",
+      "why": "Force-feed describes a pumped supply through dedicated routes to the listed locations."
+    },
+    {
+      "blockId": "G1800261-b00032",
+      "text": "The crankshaft main bearings.",
+      "why": "These bearings support the rotating crankshaft."
+    },
+    {
+      "blockId": "G1800261-b00034",
+      "text": "The crankshaft thrust main bearing.",
+      "why": "The thrust bearing controls movement along the crankshaft's axis."
+    },
+    {
+      "blockId": "G1800261-b00036",
+      "text": "The connecting rod bearings.",
+      "why": "These bearings allow the connecting rods to move at their crankshaft joints."
+    },
+    {
+      "blockId": "G1800261-b00038",
+      "text": "The oil galleries.",
+      "why": "Galleries are internal passages that distribute the oil supply."
+    },
+    {
+      "blockId": "G1800261-b00040",
+      "text": "All remaining parts receive splash lubrication from the oil.",
+      "why": "Splash lubrication describes oil reaching surfaces through movement and splashing within the engine, rather than the dedicated full-pressure feeds identified above."
+    },
+    {
+      "blockId": "G1800261-b00041",
+      "text": "The 5.2L (4V) lubrication system is designed to maintain the oil flow needed by critical engine components throughout the operating range. Its central component is a positive displacement internal gear oil pump using top seal rotors.",
+      "why": "The system must supply the engine across changing operating conditions, rather than meet the needs of only a single engine speed."
+    },
+    {
+      "blockId": "G1800261-b00042",
+      "text": "The positive displacement internal gear oil pump provides the system's pumped supply.",
+      "why": "Positive displacement describes a pump that moves oil by carrying it through changing enclosed spaces as its internal elements rotate."
+    },
+    {
+      "blockId": "G1800261-b00043",
+      "text": "This internal gear design is commonly called a gerotor pump. Its mounting, drive and pressure-control arrangement work as follows:",
+      "why": "The following points explain how the pump is driven and how its output is managed."
+    },
+    {
+      "blockId": "G1800261-b00045",
+      "text": "The oil pump mounts on the front face of the cylinder block.",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00047",
+      "text": "The inner rotor is centered on the crankshaft post and driven by flats on the crankshaft.",
+      "why": "“Piloted” describes how the rotor is located concentrically; the flats transmit the crankshaft's rotation to it."
+    },
+    {
+      "blockId": "G1800261-b00049",
+      "text": "An integral, internally vented relief valve limits system pressure by routing bypassed oil back to the pump's inlet side.",
+      "why": "The bypass gives excess pump output a return route within the system."
+    },
+    {
+      "blockId": "G1800261-b00051",
+      "text": "The pump's displacement is selected to deliver enough oil volume for correct oil pressure at both hot idle and maximum engine speed.",
+      "why": "The design must cover widely different operating conditions. This describes its intended capability, without supplying a pressure-test limit."
+    },
+    {
+      "blockId": "G1800261-b00053",
+      "text": "The relief valve's calibration protects the lubrication system against excessive pressure when oil viscosity is high.",
+      "why": "More viscous oil resists flow more strongly, making pressure control particularly important."
+    },
+    {
+      "blockId": "G1800261-b00055",
+      "text": "The relief valve is also designed to maintain adequate connecting rod bearing lubrication during high-temperature, high-speed operation.",
+      "why": "Pressure control must preserve the supply to loaded bearings across demanding operating conditions."
+    },
+    {
+      "blockId": "G1800261-b00057",
+      "text": "How the Valve Train Transfers Motion",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00058",
+      "text": "Hydraulic lash adjusters and roller followers work together to actuate the valves. This valve-actuating arrangement performs the following functions:",
+      "why": "The camshaft provides timed motion, while the lash-adjustment function controls clearance in the mechanism."
+    },
+    {
+      "blockId": "G1800261-b00060",
+      "text": "Provides hydraulic adjustment of valve clearance, known as lash.",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00062",
+      "text": "Follows the camshaft lobes to transmit their motion into valve operation.",
+      "why": "The lobes determine the timed motion passed through the valve-actuating arrangement."
+    },
+    {
+      "blockId": "G1800261-b00064",
+      "text": "How Twin Independent VCT Changes Valve Timing",
+      "why": ""
+    },
+    {
+      "blockId": "G1800261-b00065",
+      "text": "Twin independent VCT varies valve timing to suit operating conditions. At full load, it optimizes combustion to improve power and low-speed torque, broadening the torque curve. It also varies valve overlap to improve fuel economy and emissions, and optimizes cold-start operation for improved exhaust emissions.",
+      "why": "I think of cam timing as the engine's breathing schedule. Independent intake and exhaust timing lets that schedule change with the job, including the overlap period when intake and exhaust valve opening coincide."
+    }
+  ],
+  "checkedAt": "2026-10-27T19:44:12.909Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 37,
+    "receivedBlocks": 37,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f325ce6f982f6dab7ef3a7b64f36903160eff0b5c5b138fde107735427be7276",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 54,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "89e1fe7008cd728befdf403783bc4a2297d333a7988e53714003ea9c967f397c",
+    "reviewedAt": "2026-10-27T19:44:12.909Z"
+  }
+}
