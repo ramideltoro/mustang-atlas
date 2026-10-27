@@ -190,3 +190,5 @@ Reservation 15 supplies the complete exact-hash G1883856 diagnosis/testing chapt
 ### Removed rear-hub stud pressing scope
 
 Reservation 16 explicitly begins with the rear hub/bearing assembly already removed. Exact G1686659 text and all three original figures were independently inspected: flange support and bearing/stud clearance, threaded-end removal force, inverted head-force installation and head seating are visible. The prospective/enrolled scope constraint requires those actual contacts and stop conditions without invented press loads or fixture dimensions. Vehicle hub removal/refit and return to service remain separate required procedures. This screening is not technical approval; complete figure review and supervisory gating still apply.
+
+Column-switch source enrichment supplies complete checksum-bound owner control pages and matching shroud access for the two exact primaries. Enrollment preserves previous holds; additional external pages require serial complete reviews. Subset 17 reserves both switches; publication still requires exact supervisory approval.
