@@ -52192,89 +52192,234 @@
     },
     {
       "title": "Replace the fuel rail pressure sensor on the 2.3L EcoBoost",
-      "summary": "Release fuel-system pressure, isolate the battery, replace the fuel rail pressure sensor and restore its connector and engine cover.",
-      "introduction": "The fuel rail pressure (FRP) sensor supplies pressure information to the engine's electronic controls. The powertrain control module (PCM) uses sensor inputs to determine how it operates engine hardware. This job replaces the sensor after the required fuel-pressure release and battery isolation, with access through removal of the engine appearance cover.",
-      "why": "Pressure release and electrical isolation are separate prerequisites, and their order matters. Once the sensor is replaced, its electrical connector restores the signal path to the controller. The sensor and appearance-cover nuts also have different tightening requirements.",
+      "summary": "Release fuel pressure through the rear-seat fuel-pump connector, isolate the battery, replace the FRP sensor and check for leaks before and after starting.",
+      "introduction": "The fuel rail pressure sensor is the fuel rail’s tattletale: it reports pressure to the engine’s electronic controls. Replacing it starts under the rear seat, because apparently a small underhood sensor deserved a cabin detour. I’ll walk you through that detour, the sensor swap and the leak checks that finish the job properly.",
+      "why": "The fuel rail supplies fuel to the injectors, and the FRP sensor measures its pressure. The powertrain control module, or PCM—the engine’s computer—uses sensor information to control engine hardware. Before removing this sensor, fuel pressure must be reduced and battery power isolated, in that order. Disconnecting the battery alone does not release fuel pressure.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "2.3L EcoBoost fuel rail pressure sensor",
-        "FRP sensor replacement",
-        "fuel rail pressure sensor connector"
+        "2015 Mustang 2.3L EcoBoost FRP sensor replacement",
+        "fuel rail pressure sensor",
+        "fuel system pressure release",
+        "fuel pump driver module connector",
+        "rear seat cushion removal"
       ],
       "when": {
-        "summary": "After diagnosis identifies the fuel rail pressure sensor as requiring replacement.",
+        "summary": "Use this procedure after diagnosis has established that the fuel rail pressure sensor needs replacement.",
         "notes": [
-          "The engine controller uses many inputs; a general driveability complaint alone does not identify this sensor as the cause."
+          "A driveability complaint by itself does not identify the FRP sensor as the failed component; the PCM uses many different inputs.",
+          "The engine must be able to run for the prescribed fuel-pressure release."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare for fuel-system opening",
-          "detail": "Have the capability to perform the 2.3L Fuel System Pressure Release procedure and the Battery Disconnect and Connect procedure before removing the sensor."
+          "title": "Know the execution boundary",
+          "detail": "This is a replacement procedure, with no sensor pressure or electrical pass/fail limits. If the engine cannot run to a stall with the fuel pump driver module disconnected, stop and obtain an appropriate pressure-release procedure before opening the fuel system."
         },
         {
-          "title": "Arrange removal and tightening tools",
-          "detail": "Provide suitable tools for the sensor and cover nuts, plus torque tools capable of applying their separate specified values."
+          "title": "Arrange the replacement and tightening tools",
+          "detail": "Have the replacement FRP sensor and suitable tools for its hexagonal body, the engine-cover nuts, battery-cover retainers and negative-terminal clamp. Your torque tools must cover 24 lb.ft (33 Nm), 80 lb.in (9 Nm) and 44 lb.in (5 Nm). The last two values are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Prepare the work area and protection",
+          "detail": "Work in a well-ventilated area, with flames, sparks and burning materials kept away. Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Battery acid can injure skin and eyes; flush any contact with water for at least 15 minutes and obtain prompt medical attention. Wash your hands after handling battery terminals."
+        },
+        {
+          "title": "Keep the car on the ground",
+          "detail": "This job uses cabin and underhood access. Park on a hard, level surface, apply the parking brake and chock the wheels. No jack or hoist is needed. Begin with an automatic in Park or a manual in a parked gear. Select manual Neutral only for the deliberate engine-running stages. Never run the engine in an enclosed space."
+        },
+        {
+          "title": "Control fuel pressure, spills and ignition sources",
+          "detail": "Before opening a fuel component, complete pressure release and let the engine cool. Do not smoke or bring lighted tobacco, open flames or personal electronic devices such as phones into the fuel-work area. Be prepared to contain a spill and clean all fuel residue from the engine compartment before restarting; spilled fuel can ignite on hot components. Keep the battery ground disconnected during the physical sensor work. Running leak checks are visual only: avoid contact with fuel, and never touch or tighten a leaking connection while the engine is running or the system is pressurized. See [Gasoline and Gasoline-Ethanol Fuel Systems Health and Safety Precautions](#/document/G1693188)."
         }
       ],
       "steps": [
         {
-          "title": "Release pressure, then isolate the battery",
-          "body": "Perform the linked 2.3L fuel-pressure release procedure first. Then disconnect the battery cable through the battery procedure. Complete both prerequisites before opening the sensor connection."
+          "title": "Prevent unintended starting before beginning",
+          "body": "Before dismantling, disable remote start if fitted through Vehicle settings > Remote Start Setup. Complete any powered settings first, then switch ignition OFF and remove the key; if already OFF, leave it OFF. Return the valid intelligent key to the cabin only for the deliberate powered stages below.\n\nWith ignition OFF, open and securely support the hood, then visually check the cooling fans for damage, cracks or separation. Do not proceed with a damaged fan; it needs replacement first. Fans can operate with ignition OFF, so keep hands and tools away until battery power has been isolated. Keep clear of rotating parts whenever the engine is running. See [general service precautions](#/document/G1693189)."
         },
         {
-          "title": "Expose and remove the sensor",
-          "body": "Remove the appearance-cover nuts and lift off the cover. Disconnect the FRP sensor electrical connector, then remove the sensor. The illustration in the sensor procedure identifies the component."
+          "title": "Move both front seats fully forward",
+          "body": "Move the front seats to their full-forward positions to make room for rear-cushion removal. Do this before disconnecting the battery so electrically operated seats can still move. The rear cushion is the access cover for this particular detour. Complete any powered seat positioning before the final ignition-OFF/key-out state, and confirm that state again before disconnecting the FPDM."
         },
         {
-          "title": "Install and reconnect the replacement",
-          "body": "Install the FRP sensor and tighten it to 24 lb.ft (33 Nm). Reconnect its electrical connector to restore the pressure-signal connection."
+          "title": "Release and remove the rear seat cushion",
+          "body": "At the front edge of the rear cushion, locate the locking tabs on both sides. Press each tab inward to release it from the floor before lifting the cushion. Pulling upward against a locked tab can damage it.\n\nOnce both front locks are released, lift and release the cushion, then remove it from the cabin. The illustrated access points are near the two outer portions of the cushion’s front edge. See [rear seat cushion removal and installation](#/document/G1692168)."
         },
         {
-          "title": "Restore the cover and battery connection",
-          "body": "Install the engine appearance cover and tighten its nuts to 80 lb.in (9 Nm). Reconnect the battery cable using the linked battery procedure."
+          "title": "Disconnect the fuel pump driver module",
+          "body": "Find the fuel pump driver module, abbreviated FPDM, on the vehicle’s left-hand side beneath the removed cushion. It is the small floor-mounted module shown with an electrical plug between its two mounting points.\n\nRelease the electrical connector’s catch and unplug the connector from the module. Leave it disconnected throughout the sensor replacement. This is an electrical disconnection; removing the module’s mounting nuts is unnecessary. See [fuel-system pressure release](#/document/G1671508)."
+        },
+        {
+          "title": "Run the engine until it stalls, then switch everything off",
+          "body": "Keep the car on the ground with the parking brake applied, wheels chocked and everyone clear of the engine and moving parts. Bring the valid intelligent key into the cabin. For an automatic, select Park and fully depress the brake pedal; for a manual, select Neutral and fully depress the clutch pedal, keeping the service brake applied. Press the START/STOP button to start, then release the clutch on the manual while it remains in Neutral. Keep the vehicle restrained and use a well-ventilated area, never an enclosed space. Allow the engine to idle until it stalls with the FPDM disconnected.\n\nSwitch ignition OFF and remove the key again; restore a parked manual gear with the engine stopped. Let the engine cool before fuel-system work. On this direct-injection engine, the stall removes most pressure from both low- and high-pressure portions, but residual pressure remains possible. If the engine cannot run or does not stall as required, stop before opening the fuel system. The [2015 Owner’s Manual, pages 121–122](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf) explains the pushbutton starting controls."
+        },
+        {
+          "title": "Disconnect and position aside the negative battery cable",
+          "body": "Remove the three retainers securing the battery cover near the rear of the engine compartment, then remove the cover.\n\nLoosen the negative battery-terminal clamp nut, lift the negative cable clamp off its post and position the cable aside so it cannot reconnect accidentally. The positive cable stays connected for this job. Battery isolation now prevents powered operation while you work underhood.\n\nSee [battery disconnect and connect](#/document/G1692356) and [battery safety precautions](#/document/G1693181)."
+        },
+        {
+          "title": "Remove the engine appearance cover",
+          "body": "Remove the four nuts securing the top engine appearance cover, then lift off the cover. Retain all four nuts for refitting.\n\nThis is the broad cover over the top of the engine, with openings around the oil-filler area. Removing it exposes the sensor access shown in the [FRP sensor procedure](#/document/G1692143)."
+        },
+        {
+          "title": "Locate the FRP sensor and unplug its connector",
+          "body": "Look beneath the curved intake runners, beside the large grooved belt pulley and its supporting bracket. The FRP sensor is the short component with a hexagonal base and an electrical socket projecting outward from that base.\n\nRelease the locking catch on its electrical connector and unplug the connector. Move the plug clear so you can reach the sensor’s hexagonal body. The belt, pulley, bracket and intake runners remain fitted."
+        },
+        {
+          "title": "Remove the FRP sensor",
+          "body": "With pressure release complete and the engine cooled, the ignition off, the negative battery cable isolated and the sensor unplugged, use a suitable tool on the sensor’s hexagonal body to unscrew and remove it.\n\nKeep clear of any escaping fuel. If fuel continues to escape under pressure, stop work rather than treating that as a normal part of removal. This is the point where the earlier preparation earns its keep."
+        },
+        {
+          "title": "Install the replacement sensor and reconnect it",
+          "body": "Install the replacement FRP sensor in its mounting connection and tighten it to 24 lb.ft (33 Nm).\n\nReconnect the FRP electrical connector and make sure its locking catch engages. Confirm that the plug is seated on the sensor rather than merely resting against it."
+        },
+        {
+          "title": "Refit the engine appearance cover",
+          "body": "Position the appearance cover back over its mounting points, install its four nuts and tighten them to 80 lb.in (9 Nm).\n\nUse the inch-pound setting or the stated Newton-metre value. These small cover nuts have a very different tightening requirement from the sensor; enthusiasm is not a torque specification."
+        },
+        {
+          "title": "Reconnect the fuel pump driver module",
+          "body": "Back beneath the rear-seat opening, reconnect the electrical plug to the left-hand FPDM. Make sure the connector is fully seated and its catch has engaged before covering the module."
+        },
+        {
+          "title": "Refit the rear seat cushion",
+          "body": "Return the rear cushion to its installed position, reversing its removal. Arrange the seatbelt webbing so it is not twisted, and bring the belts and buckles into positions where occupants can reach them.\n\nLower the cushion into place and engage the front locking tabs with their floor retainers. Confirm that both sides are retained and that no belt or buckle has been trapped beneath the cushion."
+        },
+        {
+          "title": "Reconnect the negative battery cable and replace its cover",
+          "body": "Before restoring battery power, finish all associated work, remove tools and loose materials, clean any fuel residue from the engine compartment and make sure everyone is clear of the fans and moving mechanisms. Keep ignition OFF; fans can operate as soon as power returns.\n\nRefit the negative battery cable clamp to its post and tighten the clamp nut to 44 lb.in (5 Nm).\n\nReplace the battery cover and its three retainers. The positive terminal has remained connected throughout this procedure. Keep tools clear of the terminals and confirm that the negative cable is secured before restoring ignition power."
+        },
+        {
+          "title": "Pressurize the fuel system and check before starting",
+          "body": "Keep the car parked and restrained. With the valid intelligent key inside and ignition known OFF, press START/STOP without depressing the brake or clutch to select engine-off ignition ON. Wait 3 seconds to pressurize the fuel system; do not start yet.\n\nVisually check the serviced connection for escaping fuel or fresh wetness without touching it. If leakage is present, switch ignition OFF, remove the key and do not start. Any correction requires pressure release, cooling and battery-ground isolation before reopening the connection."
+        },
+        {
+          "title": "Start the engine and repeat the leak check",
+          "body": "Only after the pre-start check shows no leakage, use the same grounded starting controls from step 5: automatic in Park with brake fully depressed, or manual in Neutral with clutch fully depressed and service brake applied, valid key inside, then press START/STOP. Release the manual clutch in Neutral and keep the parking brake and chocks in use. Visually check the serviced connection while the engine runs, avoiding fuel contact and keeping clear of the belt, pulley and fans.\n\nIf fuel leaks, switch the engine OFF immediately. Do not loosen or tighten the sensor on a running, hot or pressurized system. Pressure release, cooling and negative-cable isolation are required before correction; if the normal release cannot safely be completed, stop for an appropriate service procedure."
+        },
+        {
+          "title": "Finish the reassembly check before moving the car",
+          "body": "After the running visual check, switch the engine and ignition OFF and remove the key. Keep the automatic in Park; with the manual engine stopped, select a parked gear. Keep the parking brake and chocks in place.\n\nConfirm that the FRP and FPDM connectors are attached, all four engine-cover nuts are fitted, the battery cable and cover are secure, and the rear cushion locks and accessible seatbelts are correctly restored. Return the front seats to suitable driving positions using their normal controls, then confirm ignition OFF/key out again.\n\nBattery disconnection can temporarily change how the engine drives while the PCM relearns its adaptive values—the adjustments it builds during use. Driving may be needed for that relearning, but only after the leak checks pass. Remove the wheel chocks when you are ready to move the car."
         }
       ],
       "watchFor": [
         {
-          "title": "Incomplete pressure release",
-          "body": "Battery disconnection does not replace the required fuel-pressure release. Follow the specified release procedure before removing the sensor."
+          "title": "Pressure release comes before battery isolation",
+          "body": "The prescribed release needs a running engine with the FPDM unplugged. Complete that controlled run first, switch the ignition off, then disconnect the negative battery cable before sensor access."
         },
         {
-          "title": "Different torque requirements",
-          "body": "Keep the sensor tightening value separate from the much smaller appearance-cover nut value."
+          "title": "Residual pressure remains possible",
+          "body": "Running to a stall removes most fuel pressure. Keep eye protection on and treat the sensor connection cautiously when opening it."
+        },
+        {
+          "title": "Release the cushion tabs before lifting",
+          "body": "The front cushion tabs must be pressed inward to unlock. If the cushion resists lifting at the front, check the releases instead of applying more force."
+        },
+        {
+          "title": "Keep the three torque values straight",
+          "body": "FRP sensor: 24 lb.ft (33 Nm). Engine-cover nuts: 80 lb.in (9 Nm). Negative battery clamp nut: 44 lb.in (5 Nm). The cover and battery values are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Ignition off does not by itself disable a cooling fan",
+          "body": "Keep clear of fans before battery isolation and whenever power is restored. A visibly damaged fan must be dealt with before running the engine."
         }
       ],
       "notes": [
-        "Use the pressure-release procedure for the 2.3L EcoBoost branch."
+        "This procedure covers the 2015 2.3L EcoBoost with a fitted rear cushion; it does not establish access for rear-seat-delete vehicles.",
+        "Only the negative battery cable needs disconnecting to interrupt vehicle electrical power for this repair.",
+        "The engine-control overview explains how the PCM uses sensor inputs. It does not turn a general running complaint into an FRP sensor diagnosis.",
+        "The final leak checks verify the opened fuel connection. They are separate from diagnosing whether the original sensor was faulty."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm sensor and connector installation",
-          "body": "Confirm that the sensor has received its specified tightening and its electrical connector is reattached."
+          "finding": "The engine cannot run to a stall with the FPDM disconnected.",
+          "meaning": "The required pressure-release stage has not been completed.",
+          "next": "Do not remove the FRP sensor. Obtain an appropriate pressure-release method for that condition before continuing."
         },
         {
-          "title": "Confirm final reassembly",
-          "body": "Check that the appearance cover and nuts are installed to specification and battery reconnection is complete."
+          "finding": "A cooling fan has visible damage, cracks or separation.",
+          "meaning": "Running it can cause parts of the fan to separate.",
+          "next": "Stop and have the damaged fan replaced before the engine-running stages."
+        },
+        {
+          "finding": "The rear cushion remains held at its front edge.",
+          "meaning": "A front locking tab may still be engaged with the floor.",
+          "next": "Press the locking tabs inward on both sides before lifting again. Do not force the cushion against the locks."
+        },
+        {
+          "finding": "Fuel leakage appears during the ignition-on check before starting.",
+          "meaning": "The serviced fuel connection has not passed its first completion check.",
+          "next": "Switch the ignition off and do not start the engine. Correct the connection using the pressure-release and isolation precautions before repeating the checks."
+        },
+        {
+          "finding": "Fuel leakage appears with the engine running.",
+          "meaning": "The connection is leaking under operating conditions.",
+          "next": "Switch the engine OFF immediately. Do not touch the leaking connection. Pressure release, cooling and negative-cable isolation must precede any correction; obtain suitable service help if the prescribed release cannot safely be completed. Repeat both visual leak checks only after correction."
+        },
+        {
+          "finding": "Driveability changes after battery reconnection, with both leak checks passed.",
+          "meaning": "The PCM may be relearning its adaptive values, so this alone does not prove that the replacement sensor is faulty.",
+          "next": "Allow for the battery-reconnection relearning behavior. Persistent concerns require diagnosis rather than another speculative sensor replacement; see the [engine-controls overview](#/document/G1692127) and [system-operation reference](#/document/G1692128)."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Verify the fuel connection in both required conditions",
+          "body": "After cycling the ignition and waiting 3 seconds, confirm no leakage before starting. Then start the engine and confirm no leakage while it runs."
+        },
+        {
+          "title": "Verify tightening and electrical restoration",
+          "body": "Confirm the sensor was tightened to 24 lb.ft (33 Nm), the four appearance-cover nuts to 80 lb.in (9 Nm), and the negative battery clamp nut to 44 lb.in (5 Nm). Confirm both the FRP and FPDM electrical connectors are fully attached."
+        },
+        {
+          "title": "Verify cabin and cover reassembly",
+          "body": "Confirm the battery cover and its three retainers are fitted, both front rear-cushion locks are engaged, and the seatbelts are untwisted with belts and buckles accessible."
+        },
+        {
+          "title": "Leave the completed car safely parked",
+          "body": "After both leak checks, switch engine and ignition OFF, remove the key and leave the automatic in Park or the stopped manual in a parked gear, with parking brake applied. Keep chocks until deliberately preparing to move."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692143",
-          "purpose": "2.3L EcoBoost FRP sensor removal, installation and component tightening specifications.",
+          "purpose": "Primary 2.3L FRP sensor replacement procedure, component location and sensor/engine-cover tightening values.",
           "mediaId": "G1692143-m0003"
         },
         {
           "documentId": "G1671508",
-          "purpose": "Required 2.3L fuel-system pressure release before sensor removal.",
+          "purpose": "Required FPDM disconnection, engine-stall pressure release, reconnection and pre-start/running leak checks.",
           "mediaId": "G1671508-m0002"
         },
         {
           "documentId": "G1692356",
-          "purpose": "Battery-cable disconnection and reconnection surrounding the sensor repair.",
+          "purpose": "Battery-cover access, negative-cable isolation, reverse-order reconnection and clamp tightening value.",
           "mediaId": "G1692356-m0002"
+        },
+        {
+          "documentId": "G1692168",
+          "purpose": "Front-seat positioning, rear-cushion locking-tab release and refitting with accessible, untwisted seatbelts."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup-prevention, cooling-fan and personal-protection precautions."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Battery ventilation, ignition-source control, acid-exposure response and terminal-handling precautions."
+        },
+        {
+          "documentId": "G1692127",
+          "purpose": "Context for the PCM, sensor inputs and electronic engine control."
+        },
+        {
+          "documentId": "G1692128",
+          "purpose": "System-operation cross-reference directing detailed engine-control description to the PC/ED manual."
+        },
+        {
+          "documentId": "G1693188",
+          "purpose": "Fuel pressure, cooling, ignition-source, spill and visual running-leak precautions."
         }
       ],
       "hero": {
@@ -52295,7 +52440,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the 2.3L EcoBoost gasoline turbocharged direct-injection engine and a fitted rear seat cushion. This access route does not cover rear-seat-delete configurations."
       },
       "relatedGuideIds": [
         "job-bf0f44181df10b2d",
@@ -52323,14 +52469,70 @@
         {
           "documentId": "G1692127",
           "sourceHash": "00b767809c9e01ed631db8fc629e291096ddaea1a88ef66f38596d181ed6b096"
+        },
+        {
+          "documentId": "G1692168",
+          "sourceHash": "e859a3d899f61bd64e7e6a410b02982447e4171ca473a4bb96e235abec7a09a7"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1693188",
+          "sourceHash": "8ab966daf1b76b4e72d63ee8564aae6f18be1fca559398fd41474c41a46492e6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "29aa8c726fd9030cb2b479f65ee82a7ee5ad59a26a5763ad3f2f93a0eec8386a"
-      }
+        "fingerprint": "29aa8c726fd9030cb2b479f65ee82a7ee5ad59a26a5763ad3f2f93a0eec8386a",
+        "editorialVersion": 2,
+        "editorialFingerprint": "a8ef839f324a42f641e7fbd51aeb6e597ef2b5f1ed2db1978902e0afc7259b2d",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-access",
+          "title": "Secure the car and uncover the FPDM",
+          "summary": "Prevent unintended starting and remove the rear cushion without damaging its locks.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "release-and-isolate",
+          "title": "Release pressure and isolate power",
+          "summary": "Disconnect the FPDM, idle to a stall, then disconnect the negative battery cable.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "replace-the-sensor",
+          "title": "Expose and replace the FRP sensor",
+          "summary": "Remove the engine cover, replace and reconnect the sensor, then refit the cover.",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "id": "restore-connections",
+          "title": "Restore the cabin and battery",
+          "summary": "Reconnect the FPDM, secure the rear cushion and reconnect battery power.",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "id": "check-and-finish",
+          "title": "Check for leaks and finish",
+          "summary": "Check before starting and while running, then confirm the car is fully reassembled.",
+          "start": 15,
+          "end": 17
+        }
+      ]
     },
     {
       "title": "Replace a heated oxygen sensor on 2.3L, 3.7L, 5.0L or 5.2L engines",
@@ -116037,160 +116239,280 @@
       }
     },
     {
-      "title": "Diagnose adaptive cruise control communication faults",
-      "summary": "Use Tests L–O to separate intermittent communication codes, network faults and module-specific adaptive cruise repair decisions.",
-      "introduction": "Adaptive cruise control relies on messages exchanged between the cruise control module (CCM) and other vehicle modules. Missing messages can produce a communication diagnostic trouble code (DTC) without proving which module failed. These tests establish whether the concern is present, check the communicating modules and compare which modules report the same loss.",
-      "why": "A historical code, incomplete module configuration or a wider network fault can mislead diagnosis. The replacement decisions become valid only after the symptom, network and self-test checks have passed.",
+      "title": "Understand recorded adaptive cruise communication tests",
+      "summary": "Read technician-recorded Tests L–O for U0151:00, U0155:00, U0158:00 and U0212:00, checking every gate before interpreting a repair destination.",
+      "introduction": "Adaptive cruise can lose a conversation without losing a controller. Buying modules until everybody starts talking again is an expensive way to play telephone. I’ll help you read an existing technician’s test report and see what its results actually support. This is a guide to recorded results, not instructions for operating a scan tool or replacing a module.",
+      "why": "The cruise control module, or CCM, depends on messages from other vehicle controllers. A lost-communication diagnostic trouble code (DTC) identifies a missing conversation; it does not, by itself, prove which controller needs replacing. These tests check the network and module self-tests before using the distribution of the returning code to choose the next repair path.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "adaptive cruise control communication fault",
-        "lost communication with instrument cluster",
-        "U0151:00",
-        "U0155:00",
-        "U0158:00",
-        "U0212:00"
+        "2015 Mustang adaptive cruise control diagnosis",
+        "U0151:00 RCM communication",
+        "U0155:00 instrument cluster communication",
+        "U0158:00 head up display communication",
+        "U0212:00 steering column control module",
+        "adaptive cruise CCM network test",
+        "Tests L M N O"
       ],
       "when": {
-        "summary": "When an observable adaptive cruise concern accompanies U0151:00, U0155:00, U0158:00 or U0212:00.",
+        "summary": "Use this guide with existing technician records for adaptive cruise Tests L–O and the exact communication code under investigation.",
         "notes": [
-          "Choose the branch for the recorded code and fitted module; do not infer equipment from a code list."
+          "Coverage is for 2015 Mustang vehicles with 2.3L, 3.7L, 5.0L or 5.2L engines and fitted adaptive cruise control.",
+          "Choose the test by the recorded code and the vehicle’s fitted equipment. A list of module names does not establish that every module is fitted.",
+          "If the complaint cannot be observed with ignition ON, each of these tests ends with the system operating normally at that time."
         ]
       },
       "prepare": [
         {
-          "title": "Scan-tool capability",
-          "detail": "Use a tool capable of network tests, individual-module self-tests, clearing codes and retrieving continuous-memory codes from all modules."
+          "title": "Bring complete existing test records",
+          "detail": "Use the technician’s recorded symptom observation, module network results, relevant gateway memory codes, paired self-tests, CCM retest and final all-module memory results. Continuous-memory codes (CMDTCs) are retained faults. The report must identify each controller and the test conditions/order. This article does not teach scan-tool connection, commands, code clearing, self-test execution or ignition operation."
         },
         {
-          "title": "Configuration and repair access",
-          "detail": "Have recent module-replacement history, the vehicle identification number (VIN), configuration support and the applicable installation procedures available. Restraints-module replacement requires the dedicated SRS procedure and suitable competence."
+          "title": "Have vehicle and module history ready",
+          "detail": "Keep the vehicle identification number (VIN) and recent module-replacement history handy. Programmable Module Installation (PMI) is the setup process associated with installing a module; an incomplete process or incorrect configuration can accompany these communication faults."
+        },
+        {
+          "title": "Keep interpretation separate from execution",
+          "detail": "No vehicle operation, disassembly or live testing is directed here. Missing, ambiguous or out-of-order results mean the decision is unresolved: ask for the required test to be completed under its proper procedure. Network diagnosis, other module tests, CCM Tests Q/R, the VIN-specific IPC guided routine and any replacement remain separate required work with their own complete safety, setup and completion instructions."
         }
       ],
       "steps": [
         {
-          "title": "Confirm an observable concern",
-          "body": "With ignition ON, verify the complaint before advancing through [Tests L–O](#/document/G1693153). If no symptom is present, the test ends with normal operation at this time; high network traffic or an intermittent condition may explain the stored code."
+          "title": "Identify the code and its matching module",
+          "body": "Open [Cruise Control Tests L–O](#/document/G1693153) and choose the branch matching the recorded code:\n\n• Test L — U0151:00: restraints control module (RCM), the restraints-system controller.\n• Test M — U0155:00: instrument panel cluster (IPC), the instrument display, with an additional gateway module (GWM) check. The gateway handles communication between networks.\n• Test N — U0158:00: head up display (HUD) module.\n• Test O — U0212:00: steering column control module (SCCM), the controller for steering-column electrical functions.\n\nI’ll call that controller the “matching module” below. Keep the full code, including its suffix, in your notes."
         },
         {
-          "title": "Check the relevant module on the network",
-          "body": "Run the network test for the module identified in the diagnostic entries below. A failure redirects to Communications Network diagnosis. For Test M, after the instrument cluster passes, retrieve gateway module (GWM) continuous-memory codes; any recorded code also redirects to network diagnosis."
+          "title": "Read the recorded concern check: L1, M1, N1 or O1",
+          "body": "Find the technician’s observation made with ignition ON. Confirm the report states whether the complaint was observable; do not infer a symptom from a stored code alone.\n\nIf a symptom was present, examine the recorded network test next. If no symptom was present, this branch ends with normal operation at that time; high network traffic or an intermittent condition can explain the code. That does not prove the earlier complaint never happened. If the observation or ignition condition is missing, stop interpreting the branch until it is documented."
         },
         {
-          "title": "Run both module self-tests",
-          "body": "Self-test the CCM and the affected module. If U3003:16 or U3003:17 is recorded in the CCM, follow Test Q or R respectively. For the other module, use its SRS, instrumentation, collision-warning or steering-column diagnostic procedure before continuing."
+          "title": "Read the matching module’s network result: L2, M2, N2 or O2",
+          "body": "Check the recorded ignition-ON network test for RCM (L), IPC (M), HUD (N) or SCCM (O). A failure ends this branch and requires separate [Communications Network diagnosis](#/document/G1813071).\n\nA pass lets you examine the next recorded gate: Test M needs the gateway result below; L, N and O go to the paired self-test results. If no matching-module result is available, leave the branch unresolved."
         },
         {
-          "title": "Check configuration and repeat the CCM test",
-          "body": "Recent module installation can leave incorrect configuration or incomplete programmable module installation (PMI). Review that history, clear the DTCs and repeat the CCM self-test. If the communication code disappears, record normal operation at this time. If it remains, continue."
+          "title": "For U0155:00, read gateway memory: M3",
+          "body": "Read the recorded GWM continuous-memory codes. Any recorded gateway DTC redirects Test M to separate [Communications Network diagnosis](#/document/G1813071); it need not be U0155:00.\n\nOnly an explicitly documented no-code result allows interpretation of the CCM/IPC self-tests next. Missing gateway results are not equivalent to no codes. L, N and O do not use this gate."
         },
         {
-          "title": "Determine whether other modules report the loss",
-          "body": "Clear all DTCs, switch ignition OFF and then ON, and wait 10 seconds. Retrieve continuous-memory diagnostic trouble codes from every module. Record whether the same communication code appears outside the CCM; that distinction controls the final branch."
+          "title": "Read both module self-test results: L3, M4, N3 or O3",
+          "body": "The report must contain both self-tests for the selected branch:\n\n• L: CCM and RCM.\n• M: CCM and IPC.\n• N: CCM and HUD.\n• O: CCM and SCCM.\n\nCheck each controller separately for U3003:16 or U3003:17. A code without its module name is only half a useful note. If either result or its identity is missing, stop here rather than assuming the pair passed."
         },
         {
-          "title": "Follow the matching repair decision",
-          "body": "Apply the code-specific decisions below only after completing the preceding checks. A code confined to the CCM directs CCM replacement. A shared code directs the named module's repair path, with the instrument cluster requiring a VIN-specific guided routine."
+          "title": "Resolve the U3003 branch before continuing",
+          "body": "If the CCM records U3003:16, stop this branch and continue with Pinpoint Test Q in [Cruise Control](#/document/G1693153). If the CCM records U3003:17, the destination is Pinpoint Test R.\n\nIf either code is recorded by the other controller, use its matching diagnostic destination:\n\n• RCM: [Airbag Supplemental Restraint System](#/document/G1696340).\n• IPC: [Instrumentation, Message Center and Warning Chimes](#/document/G1693940).\n• HUD: [Collision Warning and Collision Avoidance System](#/document/G1693174).\n• SCCM: [Steering Wheel and Column Electrical Components](#/document/G1693269).\n\nInterpret the recorded CCM recheck only when neither U3003:16 nor U3003:17 is recorded in the paired self-test results."
+        },
+        {
+          "title": "Review recent module installation history",
+          "body": "Before the CCM recheck, note whether a module was installed shortly before the communication code appeared. Incorrect configuration or unfinished PMI can be relevant.\n\nRecord that history alongside the scan results. Use [Module Configuration](#/document/G1813073) as the follow-up destination if configuration work is needed; this history check is not an instruction to reprogram a controller speculatively. Electronics already have enough ways to be a pain in the ass."
+        },
+        {
+          "title": "Read the recorded CCM retest: L4, M5, N4 or O4",
+          "body": "Confirm the record states that DTCs were cleared and the CCM self-test was then repeated. Look for the exact entry code: U0151:00, U0155:00, U0158:00 or U0212:00.\n\nIf that code disappeared, the branch ends with correct operation at that time; an intermittent condition or high network traffic may explain the earlier result. If the same code remained, examine the final all-module memory record. If the clear/retest sequence or result is undocumented, the decision remains unresolved."
+        },
+        {
+          "title": "Verify the recorded clear, ignition cycle and 10-second wait",
+          "body": "The final L5/M6/N5/O5 result is usable only if the technician’s record establishes this completed sequence:\n\n1. All DTCs were cleared.\n2. Ignition was switched OFF.\n3. Ignition was switched ON.\n4. A 10-second wait followed.\n5. Continuous-memory codes were retrieved from all modules.\n\nRead those existing results to determine whether the exact entry code appeared in a module other than the CCM. This list describes the required recorded conditions; it is not a request to carry out the test yourself. Missing timing, sequence or module coverage means stop interpretation and obtain the missing evidence."
+        },
+        {
+          "title": "Use the returning code’s distribution to select the repair destination",
+          "body": "Interpret the code-specific decisions in the diagnostic rows below. Their shared-versus-CCM-only split applies only when every preceding recorded gate supports reaching this point.\n\nFor Test L, a shared U0151:00 directs RCM replacement. For Test M, a shared U0155:00 directs the VIN-specific IPC guided routine. For Test N, a shared U0158:00 directs HUD module replacement. For Test O, a shared U0212:00 directs SCCM replacement.\n\nIf the selected communication code is not recorded in other modules, the applicable test directs CCM replacement. These are separate required repair destinations, not replacement instructions or proof a repair has been completed. The original stored code alone cannot justify them."
+        },
+        {
+          "title": "Save a useful diagnostic handoff",
+          "body": "Record the observed concern, selected test, network result, gateway results if Test M was used, both module self-tests, recent replacement history, CCM retest result and the all-module results after the 10-second ignition-ON wait.\n\nState the endpoint clearly: normal operation at this time, a diagnostic referral, the IPC guided routine or a named module replacement destination. Keep a replacement recommendation distinct from a completed repair. If a required result is missing, label that branch unresolved and name the missing record. Do not select the no-code or CCM-only outcome by default."
         }
       ],
       "watchFor": [
         {
-          "title": "Skipping the network referral",
-          "body": "A module that fails the network test requires network diagnosis before the later replacement decision."
+          "title": "An absent record is not a passing test",
+          "body": "Do not perform scan operations from this article. Interpret only documented technician results, with exact module identity and required conditions. Unknown results stop the branch."
         },
         {
-          "title": "Incomplete replacement setup",
-          "body": "Installing a module without completing its required configuration can create communication faults."
+          "title": "A failed network test ends the current branch",
+          "body": "Do not continue to the later module-replacement split after the matching module fails its network test. The next action is network diagnosis."
+        },
+        {
+          "title": "Test M has an extra gate",
+          "body": "An IPC network-test pass is not enough to advance directly to self-test interpretation. Read the recorded GWM continuous-memory results first; any recorded GWM DTC redirects the job to network diagnosis."
+        },
+        {
+          "title": "Keep self-test results attached to their controller",
+          "body": "CCM U3003:16 and U3003:17 lead to Tests Q and R respectively. Those codes in the matching module lead to that module’s diagnostic system instead."
+        },
+        {
+          "title": "Shared means the same code in another module",
+          "body": "At the final check, compare the exact communication code being investigated against every other module’s continuous-memory results. Unrelated codes do not establish the shared-code branch."
+        },
+        {
+          "title": "Restraints work requires its dedicated procedure",
+          "body": "An RCM replacement decision leads into supplemental-restraint-system work. Do not begin removing restraint components from the scan-test instructions here."
         }
       ],
       "notes": [
-        "Use the selected module's complete installation procedure for replacement and required setup."
+        "U0155:00 sets in the CCM when IPC messages over HS-CAN3 or GWM messages over HS-CAN2 are missing. U0158:00 concerns missing HUD messages over HS-CAN2; U0212:00 concerns missing SCCM messages over HS-CAN2. These network names identify vehicle communication paths, not separate replacement instructions.",
+        "The pedal-switch material is background outside this job: [G1693141](#/document/G1693141), [G1693159](#/document/G1693159) and [C2354](#/document/connector-C2354). Their illustrations show the switch in the opened driver footwell near the pedal mechanism, above the cross-car support. Tests L–O require no access there and do not direct switch replacement or terminal measurements.",
+        "A communication code that disappears during the prescribed CCM retest supports normal operation at that time. Preserve the original results so an intermittent concern has a useful history."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code U0151:00 is recorded.",
-          "meaning": "Test L investigates communication with the restraints control module (RCM).",
-          "next": "After L1–L4 pass, the same code in other modules directs RCM replacement; otherwise replace the CCM."
+          "finding": "No observable symptom at L1, M1, N1 or O1.",
+          "meaning": "The applicable test identifies normal operation at this time. High network traffic or an intermittent fault may account for the stored code.",
+          "next": "Record the complaint and current result, then end the branch without making a module-replacement decision."
         },
         {
-          "finding": "Diagnostic trouble code U0155:00 is recorded.",
-          "meaning": "Test M concerns missing instrument panel cluster (IPC) or gateway messages.",
-          "next": "After M1–M5 pass, a shared code requires the VIN-specific IPC guided routine; otherwise replace the CCM."
+          "finding": "The RCM, IPC, HUD or SCCM fails its branch’s network test.",
+          "meaning": "The test requires communication-network diagnosis before its later checks.",
+          "next": "Continue with [Communications Network](#/document/G1813071)."
         },
         {
-          "finding": "Diagnostic trouble code U0158:00 is recorded.",
-          "meaning": "Test N concerns missing head up display (HUD) module messages.",
-          "next": "After N1–N4 pass, a shared code directs HUD module replacement; otherwise replace the CCM."
+          "finding": "Test M: any GWM continuous-memory DTC is recorded.",
+          "meaning": "The gateway-code check redirects diagnosis even though the IPC passed its network test.",
+          "next": "Continue with [Communications Network](#/document/G1813071)."
         },
         {
-          "finding": "Diagnostic trouble code U0212:00 is recorded.",
-          "meaning": "Test O concerns missing steering column control module (SCCM) messages.",
-          "next": "After O1–O4 pass, a shared code directs SCCM replacement; otherwise replace the CCM."
+          "finding": "The CCM self-test records U3003:16.",
+          "meaning": "The selected L–O branch redirects to a separate CCM diagnostic test.",
+          "next": "Continue with Pinpoint Test Q in [Cruise Control](#/document/G1693153)."
         },
         {
-          "finding": "Diagnostic trouble code U3000:63 is recorded.",
-          "meaning": "The CCM detected too many collision-mitigation braking activation requests and recorded a circuit/component protection timeout.",
-          "next": "Use its separate diagnostic route. Possible sources include the front bumper cover, CCM bracket and CCM; Tests L–O do not determine that fault's cause."
+          "finding": "The CCM self-test records U3003:17.",
+          "meaning": "The selected L–O branch redirects to a separate CCM diagnostic test.",
+          "next": "Continue with Pinpoint Test R in [Cruise Control](#/document/G1693153)."
+        },
+        {
+          "finding": "The matching module records U3003:16 or U3003:17.",
+          "meaning": "The other controller needs its own system-specific diagnosis before the communication branch continues.",
+          "next": "Use [SRS](#/document/G1696340) for RCM, [Instrumentation](#/document/G1693940) for IPC, [Collision Warning](#/document/G1693174) for HUD or [Steering Wheel and Column Electrical Components](#/document/G1693269) for SCCM."
+        },
+        {
+          "finding": "The original communication code disappears after clearing DTCs and repeating the CCM self-test.",
+          "meaning": "The applicable test identifies correct operation at this time; the earlier record may have been intermittent or related to high network traffic.",
+          "next": "Save the result and end this branch."
+        },
+        {
+          "finding": "L5: U0151:00 is recorded in other modules after the prescribed clear, ignition cycle and wait.",
+          "meaning": "Completed Test L directs replacement of the RCM.",
+          "next": "Continue at [Restraints Control Module replacement](#/document/G1696307)."
+        },
+        {
+          "finding": "L5: U0151:00 is not recorded in other modules.",
+          "meaning": "Completed Test L directs replacement of the CCM.",
+          "next": "Continue at [Cruise Control Module replacement](#/document/G1693160)."
+        },
+        {
+          "finding": "M6: U0155:00 is recorded in other modules after the prescribed clear, ignition cycle and wait.",
+          "meaning": "The IPC branch requires a vehicle-specific guided routine; this is not a direct IPC replacement instruction.",
+          "next": "Use the vehicle’s VIN to access the IPC guided routine."
+        },
+        {
+          "finding": "M6: U0155:00 is not recorded in other modules.",
+          "meaning": "Completed Test M directs replacement of the CCM.",
+          "next": "Continue at [Cruise Control Module replacement](#/document/G1693160)."
+        },
+        {
+          "finding": "N5: U0158:00 is recorded in other modules after the prescribed clear, ignition cycle and wait.",
+          "meaning": "Completed Test N directs replacement of the HUD module.",
+          "next": "Continue at [Head Up Display Module replacement](#/document/G1693176)."
+        },
+        {
+          "finding": "N5: U0158:00 is not recorded in other modules.",
+          "meaning": "Completed Test N directs replacement of the CCM.",
+          "next": "Continue at [Cruise Control Module replacement](#/document/G1693160)."
+        },
+        {
+          "finding": "O5: U0212:00 is recorded in other modules after the prescribed clear, ignition cycle and wait.",
+          "meaning": "Completed Test O directs replacement of the SCCM.",
+          "next": "Continue at [Steering Column Control Module replacement](#/document/G1693270)."
+        },
+        {
+          "finding": "O5: U0212:00 is not recorded in other modules.",
+          "meaning": "Completed Test O directs replacement of the CCM.",
+          "next": "Continue at [Cruise Control Module replacement](#/document/G1693160)."
+        },
+        {
+          "finding": "U3000:63 is recorded.",
+          "meaning": "This circuit/component protection timeout is set as a continuous-memory and on-demand code when the CCM detects too many collision-mitigation braking activation requests. Listed possible sources are the front bumper cover, CCM mounting bracket and CCM.",
+          "next": "Obtain the diagnostic procedure specifically for U3000:63. Tests L–O do not isolate this fault, and the possible-source list does not justify replacing any of those parts."
         }
       ],
       "verification": [
         {
-          "title": "Preserve the diagnostic result",
-          "body": "Record the observed symptom, network results, both self-test results and which modules retained the communication code after the prescribed ignition cycle."
+          "title": "Confirm the branch was completed in order",
+          "body": "Check that the matching module passed the network test, Test M’s gateway check was completed when applicable, and the paired self-tests did not redirect the job before relying on a later replacement decision."
         },
         {
-          "title": "Distinguish diagnosis from completed repair",
-          "body": "A code that disappears during the CCM retest supports normal operation at that time. A replacement decision still requires completion of the selected installation procedure and its required checks."
+          "title": "Confirm the final comparison used the prescribed sequence",
+          "body": "For a final L5, M6, N5 or O5 decision, the record should show all DTCs cleared, ignition OFF then ON, a 10-second wait and retrieval of continuous-memory codes from all modules. The comparison must concern the same code that selected the test."
+        },
+        {
+          "title": "Label the outcome accurately",
+          "body": "A symptom absent at the opening check or a code absent at the CCM retest supports normal operation at that time. A referral or module-replacement destination completes this diagnostic branch; it does not establish that the subsequent repair has been performed or verified."
+        },
+        {
+          "title": "Preserve unresolved outcomes",
+          "body": "Confirm every conclusion has the required preceding recorded observations, module identities and test conditions. Missing evidence remains unresolved, not a negative result or a replacement recommendation."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693153",
-          "purpose": "Adaptive cruise Tests L–O, their Q/R referrals and U3000:63 fault information."
+          "purpose": "Source chart for interpreting recorded Tests L–O and their separate diagnostic/repair endpoints; not a scan-tool execution tutorial."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Failed network tests or gateway-code diagnosis."
+          "purpose": "Reference-only next-step destination for a failed network test or any Test M gateway memory code."
         },
         {
           "documentId": "G1813073",
-          "purpose": "Module configuration and PMI background."
+          "purpose": "Reference-only destination for configuration or PMI follow-up associated with recent module installation."
         },
         {
           "documentId": "G1696340",
-          "purpose": "RCM self-test fault referral."
+          "purpose": "Reference-only RCM diagnostic destination when its self-test records U3003:16 or U3003:17."
         },
         {
           "documentId": "G1693940",
-          "purpose": "IPC self-test fault referral."
+          "purpose": "Reference-only IPC diagnostic destination when its self-test records U3003:16 or U3003:17."
         },
         {
           "documentId": "G1693174",
-          "purpose": "HUD self-test fault referral."
+          "purpose": "Reference-only HUD diagnostic destination when its self-test records U3003:16 or U3003:17."
         },
         {
           "documentId": "G1693269",
-          "purpose": "SCCM self-test fault referral."
+          "purpose": "Reference-only SCCM diagnostic destination when its self-test records U3003:16 or U3003:17."
         },
         {
           "documentId": "G1696307",
-          "purpose": "RCM replacement when Test L directs it.",
+          "purpose": "Reference-only RCM replacement destination after the completed Test L shared-code decision.",
           "mediaId": "G1696307-m0003"
         },
         {
           "documentId": "G1693176",
-          "purpose": "HUD module replacement when Test N directs it.",
+          "purpose": "Reference-only HUD module replacement destination after the completed Test N shared-code decision.",
           "mediaId": "G1693176-m0001"
         },
         {
           "documentId": "G1693270",
-          "purpose": "SCCM replacement when Test O directs it.",
+          "purpose": "Reference-only SCCM replacement destination after the completed Test O shared-code decision.",
           "mediaId": "G1693270-m0003"
         },
         {
           "documentId": "G1693160",
-          "purpose": "Adaptive cruise CCM replacement when the completed test directs it.",
+          "purpose": "Reference-only adaptive cruise CCM replacement destination when the completed test finds the selected code absent from other modules.",
           "mediaId": "G1693160-m0001"
+        },
+        {
+          "documentId": "G1693141",
+          "purpose": "Background switch procedure and location illustration; not applicable to the assembled-vehicle scan checks in Tests L–O."
+        },
+        {
+          "documentId": "G1693159",
+          "purpose": "Background switch procedure and location illustration; not applicable to the assembled-vehicle scan checks in Tests L–O."
+        },
+        {
+          "documentId": "connector-C2354",
+          "purpose": "Background clutch top-of-travel switch connector identification; Tests L–O do not require terminal testing."
         }
       ],
       "hero": null,
@@ -116280,14 +116602,142 @@
         {
           "documentId": "connector-C2354",
           "sourceHash": "555b7886b921d1bc89034d3769fa4b64335b920bbc6d930baf01c14fe7c9c1c0"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1693156",
+          "sourceHash": "03e819f2a69724be56710daf7e9ba95986f93e66e907cffb4b9e215178dbd827"
+        },
+        {
+          "documentId": "G1721936",
+          "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
+        },
+        {
+          "documentId": "G1693266",
+          "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535"
+        },
+        {
+          "documentId": "G1693152",
+          "sourceHash": "ff172274f6b15cf77a8227b8f3d8934597bdd4bfffdc2768d49757f91779e8d9"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1694270",
+          "sourceHash": "d94e39ad001db14c16a06dee68bca2d2cc6d2fae991d774cb17b4d9bdacaa7ff"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1694231",
+          "sourceHash": "bc58f288e0d96dd84b92912b6b8521bd17b8931262a3b9c29d87c6c7d3cea3ad"
+        },
+        {
+          "documentId": "G1694129",
+          "sourceHash": "2dec9f65a8b0137a00184372eb3e44cba4b6a7bfbaa89829fad8cfaac93540dc"
+        },
+        {
+          "documentId": "G1693135",
+          "sourceHash": "d6b064655024c1e086feb5f2031aeda96ef6ce061c121f1a908e6faac724a099"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1692931",
+          "sourceHash": "6cb3e42eb5a5ff32c9656312e8b537e0543a587eb5573a3f3e25f5d1f55235f3"
+        },
+        {
+          "documentId": "G1692933",
+          "sourceHash": "b9912e84f438218d29633b80c3e2a12565729c974ca8e777ccc6745d610201d3"
+        },
+        {
+          "documentId": "G1692579",
+          "sourceHash": "b4160c552f7043cb7f8cf99e7073a1889de5ec449e7d1d37c4700b7fcc299f21"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1694213",
+          "sourceHash": "3ba02fddd34915c3b15f0d370976fe00f28cb75f9dc6e4e49a954deb34c5ab5d"
+        },
+        {
+          "documentId": "G1692965",
+          "sourceHash": "cff90b0c2c849fa0101771bbb732d7f7bb2948be70895d50acaa83f251a3b9e0"
+        },
+        {
+          "documentId": "G1692957",
+          "sourceHash": "5ea56f10545190c1d93c6c84ed9a24996088b7681f98fd3844f7dc316a380d89"
+        },
+        {
+          "documentId": "G1692362",
+          "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "d98dd29510330a05d82e2ef0544f401a83580f3385446bd5ae11ad2fe8dbc596"
-      }
+        "fingerprint": "d98dd29510330a05d82e2ef0544f401a83580f3385446bd5ae11ad2fe8dbc596",
+        "editorialVersion": 2,
+        "editorialFingerprint": "a0408f20fb9266c69a7f9209a47a60d92c3320d731a06ae1a781aac4c8228042",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "select-and-confirm",
+          "title": "Choose the branch and confirm the concern",
+          "summary": "Match the exact entry code to its module and the documented symptom observation.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "check-network",
+          "title": "Check network communication",
+          "summary": "Read the matching module’s network result and Test M’s additional gateway gate.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "evaluate-self-tests",
+          "title": "Interpret the paired self-test records",
+          "summary": "Keep each self-test code attached to its controller before selecting a referral.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "recheck-cruise-controller",
+          "title": "Review installation history and the CCM retest",
+          "summary": "Compare recent installation history with the documented clear-and-retest outcome.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "compare-and-route",
+          "title": "Compare module records and choose the next action",
+          "summary": "Verify the recorded ignition cycle and wait, then compare the same code across modules.",
+          "start": 9,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Diagnose adaptive cruise module, voltage and cluster-data faults",
