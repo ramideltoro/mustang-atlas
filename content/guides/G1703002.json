@@ -1,0 +1,156 @@
+{
+  "documentId": "G1703002",
+  "supportingSourceRefs": [],
+  "sourceHash": "788a12b1e6ad571e23df7e3e469804813a8fae2c267877a7f0474d5cc69308c8",
+  "title": "MT82 manual transmission powerflow",
+  "introduction": "The MT82 gives engine torque different routes through the gearbox. I follow each drawing from the input shaft at the bellhousing on the left to the output flange on the right. The black line traces the torque route; the shift-pattern inset marks the selected gear. The lower shaft is the counter shaft, where most of these routes take their detour.\n\nThe synchronizer brings rotating parts toward compatible speeds, and its sleeve couples the selected parts together. Watch which shaft the sleeve locks the gear to, as well as which way the rail and fork move: a pivoting fork can reverse the movement. These are operating illustrations, not disassembly instructions or a diagnosis of a reluctant shift. The direct-drive drawing is the lovely exception to the detour—a through train instead of a connecting service.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1703002-b00001",
+      "text": "How torque travels through the gearbox",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00002",
+      "text": "Reading the powerflow",
+      "why": "Compare the black torque route with the described sleeve engagement. The route identifies the drive path; it does not depict the travel of the shift mechanism."
+    },
+    {
+      "blockId": "G1703002-b00003",
+      "text": "First gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00005",
+      "text": "In first gear, the shift shaft assembly pulls the 1st/2nd shift rail and fork back. This slides the 1st/2nd synchronizer sleeve onto 1st gear, locking that gear to the output shaft. Torque travels from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through 1st gear.",
+      "why": "I trace the black line down to the lower shaft, along it and back up near the rear of the gearbox. Locking the selected gear to the output shaft completes that drive route."
+    },
+    {
+      "blockId": "G1703002-b00006",
+      "text": "Second gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00008",
+      "text": "In second gear, the shift shaft assembly pushes the 1st/2nd shift rail and fork forward. The movement slides the 1st/2nd synchronizer sleeve onto 2nd gear, locking that gear to the output shaft. Torque travels from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through 2nd gear.",
+      "why": "The same rail, fork and sleeve now move the other way to select the neighboring gear. In the drawing, the black route returns from the lower shaft at a different gear position."
+    },
+    {
+      "blockId": "G1703002-b00009",
+      "text": "Third gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00011",
+      "text": "In third gear, the shift shaft assembly pulls the 3rd/4th shift rail back. That movement pivots the 3rd/4th shift fork, sliding the 3rd/4th synchronizer sleeve forward onto 3rd gear and locking it to the counter shaft. Torque travels from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through 3rd gear.",
+      "why": "Here the fork pivots, so rearward rail movement produces forward sleeve movement. Notice that engagement locks the selected gear to the counter shaft; do not assume every selected gear locks to the output shaft."
+    },
+    {
+      "blockId": "G1703002-b00012",
+      "text": "Fourth gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00014",
+      "text": "In fourth gear, the shift shaft assembly pushes the 3rd/4th shift rail forward. That movement pivots the 3rd/4th shift fork, sliding the 3rd/4th synchronizer sleeve back onto 4th gear and locking it to the counter shaft. Torque travels from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through 4th gear.",
+      "why": "The pivoting mechanism again reverses rail and sleeve movement. Compare the return point of the black route with the previous drawing to see the different gear pair carrying drive."
+    },
+    {
+      "blockId": "G1703002-b00015",
+      "text": "Fifth gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00017",
+      "text": "In fifth gear, the shift shaft assembly pulls the 5th/6th shift rail back. This pivots the 5th/6th shift fork and slides the 5th/6th synchronizer sleeve forward onto the input shaft, locking it to the output shaft. Torque passes from the input shaft to the output shaft through the 5th/6th synchronizer sleeve, providing direct drive through the transmission.",
+      "why": "The straight black line makes this route easy to spot: the sleeve couples input and output directly. The illustrated drive path therefore has no detour through the lower shaft."
+    },
+    {
+      "blockId": "G1703002-b00018",
+      "text": "Sixth gear powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00020",
+      "text": "In sixth gear, the shift shaft assembly pushes the 5th/6th shift rail forward. This pivots the 5th/6th shift fork and slides the 5th/6th synchronizer sleeve back onto 6th gear, locking that gear to the output shaft. Torque travels from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through 6th gear.",
+      "why": "Moving this sleeve away from the direct-drive engagement selects another gear path. The black line drops to the counter shaft and returns to the output through the selected pair."
+    },
+    {
+      "blockId": "G1703002-b00021",
+      "text": "Reverse powerflow",
+      "why": ""
+    },
+    {
+      "blockId": "G1703002-b00023",
+      "text": "Selecting reverse makes the shift shaft assembly pull the reverse shift rail back. That movement pivots the reverse shift fork, sliding the reverse synchronizer sleeve forward onto reverse gear and locking that gear to the output shaft. Torque passes from the input shaft to the counter shaft through 5th gear, then from the counter shaft to the output shaft through the reverse gear and reverse idler gear. This gear path makes the output shaft rotate in the opposite direction.",
+      "why": "The fork acts like a seesaw: pulling the rail back can move the sleeve forward because the fork pivots. I trace the black torque path separately from that selection movement—the fork engages reverse, while the gear path changes the output’s direction."
+    },
+    {
+      "blockId": "G1703002-b00024",
+      "text": "I orient each drawing by the bellhousing and output flange before following its callouts—the next view turns the gearbox around. Match each callout to the table accompanying that drawing, because the numbering belongs to that view. These component maps explain how the parts relate; internal service work requires the applicable disassembly and assembly instructions.",
+      "why": "Recognizing the ends of the transmission prevents a change of drawing viewpoint from becoming a mistaken change in component location. Exploded spacing separates parts for identification and cannot establish working clearances or an installation sequence."
+    },
+    {
+      "blockId": "G1703002-b00025",
+      "text": "Inside the Gearshift Mechanism",
+      "why": "I follow the shift shaft toward the selected rail, then locate the fork and its pivot. This connects movement at the selector with movement of a synchronizer sleeve. The reverse description shows why the rail and sleeve can travel in opposite directions."
+    },
+    {
+      "blockId": "G1703002-b00028",
+      "text": "Exploded Transmission Components",
+      "why": "Follow each leader line to its endpoint, especially around the small rings and fasteners. The exploded axes help connect the shaft assemblies, center support and case halves. At the bellhousing end, the clutch slave cylinder uses hydraulic pressure to operate clutch release; gear selection is a separate function. OSS in the table means output shaft speed."
+    },
+    {
+      "blockId": "G1703002-b00031",
+      "text": "Transmission Case Components",
+      "why": "The bellhousing identifies the front case. Beside the rear case, the separated reverse idler gear, needle bearing, shaft and bracket reveal how the idler is supported. This is the idler involved in the reverse torque path described above."
+    },
+    {
+      "blockId": "G1703002-b00034",
+      "text": "Counter Shaft Components",
+      "why": "I use the separated gears, bearings and synchronizer parts to see what surrounds the counter shaft. A synchronizer brings rotating parts toward compatible speeds before engagement—think of getting moving dance partners into step before joining them. The snap ring serves a retaining role."
+    },
+    {
+      "blockId": "G1703002-b00037",
+      "text": "Output Shaft Components",
+      "why": "I use the drawing’s centerline to follow the parts from the synchronizer assembly toward the gear, bearing components and output shaft, matching each callout to the adjacent table. Notice that the synchronizer ring and cone are separate components, as are the pocket bearing’s inner race and its retainer. Those distinctions matter when identifying a part: nearby pieces do not necessarily share a name or a job. The output shaft carries the selected drive toward the driveline. These exploded drawings identify components and their relationship; they do not establish removal order, fit limits or reassembly checks."
+    },
+    {
+      "blockId": "G1703002-b00040",
+      "text": "Inside the Synchronizer Assembly",
+      "why": "A synchronizer provides the gearbox’s speed-matching handshake, bringing rotating parts toward compatible speeds before engagement. In this drawing, the hub has the splined central opening, the sleeve is the larger outer ring with an external groove, and the pressure pieces appear separately above the hub. I distinguish those pieces before reading the powerflow descriptions, where the shift fork moves the sleeve to connect the selected rotating members. The sleeve’s movement is part of engagement; the whole assembly helps make that engagement smooth. A reluctant shift alone does not identify which component is responsible."
+    }
+  ],
+  "checkedAt": "2026-10-27T22:42:16.160Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 23,
+    "receivedBlocks": 23,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "5fdf7d3de1881dc565760b00cba19567fe34530d2c1135e87ab849a39b06ca59",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 159,
+    "sourceChunkCount": 3,
+    "reviewedChunkCount": 3,
+    "fingerprint": "c1925f7d99c74fb6f7775777e9deceb2f27fd40efaba5a1b8ebc8f1743fa9cbd",
+    "reviewedAt": "2026-10-27T22:40:52.187Z",
+    "editorialRevision": "Intro-only deletion of inferred engine applications absent primary text; MT82 identity and all technical prose preserved."
+  }
+}
