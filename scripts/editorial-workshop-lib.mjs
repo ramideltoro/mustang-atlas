@@ -31,8 +31,9 @@ export function validateCandidate(g,contract,nodes){
  const sort=arr=>arr.map(s=>s.documentId+'|'+s.sectionId).sort();if(JSON.stringify(sort(g.coveredSections||[]))!==JSON.stringify(sort(contract.coveredSections)))errors.push('Source span coverage mismatch');
  const allowed=new Set(contract.sources.map(s=>s.documentId)),refs=new Set((g.procedures||[]).map(p=>p.documentId));for(const s of contract.coveredSections)if(!refs.has(s.documentId))errors.push('Missing primary reference '+s.documentId);for(const id of refs)if(!allowed.has(id))errors.push('Unknown reference '+id);if(refs.size!==(g.procedures||[]).length)errors.push('Duplicate procedure reference');
  const prose=JSON.stringify({...g,coveredSections:[],procedures:[],hero:{}});for(const m of prose.matchAll(/#\/document\/([A-Za-z0-9_-]+)/g))if(!allowed.has(m[1]))errors.push('Unknown inline link '+m[1]);
- const supported=normalizedQuantities([nodes.map(n=>n.text),contract.applicability,contract.sources.map(s=>s.engines),contract.reviewedEvidence]);for(const q of normalizedQuantities(prose))if(!supported.has(q))errors.push('Unsupported physical quantity '+q);
+ const supported=normalizedQuantities([nodes.map(n=>n.text?.replace(/\bHertz(?:\s*\(Hz\))?/gi,'Hz')),contract.applicability,contract.sources.map(s=>s.engines),contract.reviewedEvidence]);for(const q of normalizedQuantities(prose))if(!supported.has(q))errors.push('Unsupported physical quantity '+q);
  if(g.hero?.mediaId)errors.push('Do not publish original manual imagery');
+ if(/!\[[^\]]*\]\([^)]*\/media\/|\/media\/[a-f0-9]{32,}\.(?:png|jpe?g|webp|gif)/i.test(prose))errors.push('Original source image embed requires independently designed replacement artwork');
  return [...new Set(errors)];
 }
 export function curatedSpans(guide,doc){
@@ -56,4 +57,17 @@ export function spanMedia(doc,spans){
   if(b.mediaId&&spans.some(s=>cursor>=s.start&&cursor<s.end))selected.add(b.mediaId);
   visit(b.children);visit(b.items);for(const row of b.rows||[])for(const cell of row.cells||[])visit(cell.blocks);
  }};visit(doc.blocks);return(doc.media||[]).filter(m=>selected.has(m.id));
+}
+export function reviewCoverageErrors(review,packet,textContext=[]){
+ const expected=new Set(packet.map(n=>n.nodeId)),supplied=new Set([...expected,...textContext.map(n=>n.nodeId)]),actual=(review.coverage||[]).map(n=>n.nodeId),seen=new Set(actual),errors=[];
+ for(const id of expected)if(!seen.has(id))errors.push('Reviewer omitted source node '+id);
+ for(const id of seen)if(!supplied.has(id))errors.push('Reviewer claimed an unsupplied source node '+id);
+ if(seen.size!==actual.length)errors.push('Reviewer duplicated source nodes within one review');
+ return errors;
+}
+
+// Transparent line drawings need an opaque paper background for model image input.
+export async function renderEvidenceImage(input, mime) {
+ const {default:sharp}=await import('sharp');
+ return sharp(input,{density:mime==='image/svg+xml'?144:72}).flatten({background:'#ffffff'}).resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).png().toBuffer();
 }

@@ -62,3 +62,13 @@ node scripts/editorial-workshop-scope-audit.mjs
 ```
 
 The first published pilot also received an explicit editorial revision in `editorial-workshop-polish.mjs`: a more natural humorous opening, meaningful step groups, and an irrelevant tire-machine preparation paragraph moved to an optional note. That revision required a fresh independent review. A subsequent source-supported pilot-bore cleaning clarification is recorded as a supervising-editor correction in its staged record.
+
+## Continuous queue notes
+
+The full queue runs with `node scripts/editorial-workshop.mjs --run` and no limit. Diagnostic indexes and diagnostic repair endpoints remain hash-bound **reference-only destinations** rather than importing every linked replacement procedure. Otherwise a short DTC index expands into unrelated timing-chain and airbag work. Complete primary spans are retained, along with selected context and relevant lifting, wheel-removal, battery-disconnection, SRS-isolation and fuel-pressure prerequisites. Actual repair jobs retain execution-dependency expansion. A source-dependent diagnostic test can still be held if its necessary access instructions are missing; an endpoint link is not treated as proof of those instructions.
+
+New direct embeds of original `/media/` artwork are rejected. When a procedure relies on numbered connector geometry that prose cannot identify reliably, it remains held for independently designed diagrams. The G1939867 terminal-removal video was recovered from a PDF URI annotation at the official Ford service-content host; its private file, checksum and limited observations are recorded in `work/editorial-workshop/terminal-removal-video-evidence.json`. This supplements evidence, but does not establish all vehicle-specific isolation or reassembly steps.
+
+Expanded source spelling `Hertz (Hz)` is normalized for physical-quantity validation. This fixes a false rejection without relaxing cross-unit checks or inventing numbers. Values that exist only in a table's implied units still require explicit source-context confirmation.
+
+Private evidence rendering uses an opaque white background for transparent SVG line drawings. A transparent black-on-transparent diagram previously appeared blank on a dark image viewer and correctly caused a passenger-switch article to be held. Versioned raster filenames and rendered-image hashes now invalidate stale author/reviewer image checkpoints. The regression test checks both white paper and visible black ink. Original source artwork remains private evidence; this change does not publish those images.
