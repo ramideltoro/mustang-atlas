@@ -1,0 +1,380 @@
+{
+  "documentId": "G1695482",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1695896",
+      "sourceHash": "722613b9939c667faba1075bf478bd1b7459ebccb530cb5d1e94844935d45c8c",
+      "referencedBy": "G1695482",
+      "sourceReference": "G1695896",
+      "sourceUnitCount": 4,
+      "mediaCount": 0
+    },
+    {
+      "documentId": "G1672905",
+      "sourceHash": "3cfe468c7d29c970a5d7a5afdf77481ae308d2f641201fa735458a4279e7089a",
+      "referencedBy": "G1695482",
+      "sourceReference": "G1672905",
+      "sourceUnitCount": 42,
+      "mediaCount": 0
+    },
+    {
+      "documentId": "G1693185",
+      "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1",
+      "referencedBy": "G1672905",
+      "sourceReference": "G1693185",
+      "sourceUnitCount": 150,
+      "mediaCount": 0
+    }
+  ],
+  "sourceHash": "757c8dab519900810ef168bd1bdd42b29f1a9b321b8d3ee733bf6cc61a2fa28a",
+  "title": "Perimeter Alarm: How It Arms, Triggers and Disarms",
+  "introduction": "The perimeter alarm does more than watch for an open door. It distinguishes an authorized unlock from an unexpected opening, watches for cabin movement and vehicle tilt, and even guards access to the BCM through the diagnostic network. I think of the BCM as a doorman who checks both the entrance and the invitation before deciding whether to raise a racket.\n\nI use the labeled drawing to follow signals toward the BCM, then follow its outputs toward the horn, lamps and indicators. Match the numbered drawing to the accompanying table. Choose the dashed door-switch group that matches whether the vehicle has memory seats: that equipment changes how the switch request reaches the BCM. The DDM and PDM are the driver and passenger door modules; the RTM is the radio transceiver module. CAN means controller area network, and LIN means local interconnect network. Follow the network labels printed beside each connection rather than treating every line as a direct wire.\n\nThis is an operating and component overview. It explains what the alarm observes and what its responses mean; the drawings are not connector pinouts or electrical test instructions. Key programming, module replacement and interior-lighting service require their separate procedures.",
+  "requirements": [
+    {
+      "category": "Before moving from this overview to diagnostics",
+      "items": [
+        {
+          "name": "Understand the alarm's communication lockout",
+          "detail": "Disarm the alarm through an authorized method before attempting a scan-tool session with the BCM. An armed system can treat that session request as unauthorized access. If no valid programmed key is available, use the complete access branch in [Anti-Theft Key Programming - Scan Tool](#/document/G1672905); the timing explanation here is not a substitute for that procedure. If equipped with a keyless entry keypad, that procedure’s access branch uses the keypad code; vehicles without it require the full timed-access sequence."
+        },
+        {
+          "name": "Prepare the vehicle for electrical diagnosis",
+          "detail": "Use [Diagnostic Methods](#/document/G1693185) before beginning diagnostic work. Check related OASIS or TSB information and previous repairs, confirm correct battery and charging-system operation, and verify battery SOC is greater than 70%. Check network modules for relevant DTCs; diagnose circuit DTCs before system or performance DTCs, using wiring diagrams to identify shared power or ground causes when several circuit codes are present. Inspect relevant harnesses for damage, chafing and routing, and check fuses, circuits and connectors for continuity and correct installation using the prescribed test method."
+        },
+        {
+          "name": "Keep diagnosis tied to the actual concern",
+          "detail": "Unless the particular test states an exception, the concern must be present during diagnosis. Do not replace modules or other components on the strength of a test performed while the concern is absent. Use a diagnostic scan tool that supports the required functions; a basic code reader may not provide module self-tests, programming or initialization."
+        }
+      ]
+    },
+    {
+      "category": "Preparation for referred key programming",
+      "items": [
+        {
+          "name": "Check passive-key power",
+          "detail": "Before key programming, make sure each passive-key battery measures at least 2.5 volts. A depleted battery permits starting only from the backup starting location, and RKE remains inoperative until the key battery is replaced. Key programming programs the RKE transmitter and PATS portions together."
+        },
+        {
+          "name": "Prepare security access",
+          "detail": "Use a diagnostic scan tool that supports the required PATS functions. The diagnostic scan tool needs an active Internet connection for module security access; a hardwired connection is strongly recommended. Have valid Dealership or Aftermarket credentials available when prompted. Keep the technician service-publication session active and prevent scan-tool power saving from interrupting the timed access process."
+        },
+        {
+          "name": "Use the correct passive-key position",
+          "detail": "For vehicles with push-button start, consult the Owner Literature for the passive-key backup starting location and correct key orientation. Both are necessary for successful programming. Carry out the complete [Anti-Theft Key Programming - Scan Tool](#/document/G1672905) procedure, including its applicable alarm-access branch and completion checks."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1695482-b00001",
+      "text": "I start with the alarm's signal paths, then follow how it becomes armed, recognizes an intrusion and accepts an authorized disarm.",
+      "why": "Separating these states helps distinguish normal alarm behavior from an apparent fault."
+    },
+    {
+      "blockId": "G1695482-b00002",
+      "text": "Alarm System Diagram",
+      "why": "Read inputs on the left, the BCM in the center and outputs on the right. With memory seats, the door lock switches feed the PDM and DDM, whose requests travel through the illustrated CAN and GWM path. Without memory seats, the switch path goes directly to the BCM. The passive key communicates wirelessly with the RTM, and the RTM and intrusion sensor have LIN connections to the BCM. The IPC path passes through the GWM and the labeled CAN connections. The numbered version and its table identify the same drawing; the dashed boxes distinguish equipment configurations."
+    },
+    {
+      "blockId": "G1695482-b00006",
+      "text": "Alarm Network Messages",
+      "why": "These charts identify the sender, recipient and purpose of the listed messages. They describe information exchanged between modules, rather than connector terminals to probe."
+    },
+    {
+      "blockId": "G1695482-b00007",
+      "text": "Messages Received by the IPC",
+      "why": "Use the accompanying row to connect the alarm's audible delay warning with the message that requests it."
+    },
+    {
+      "blockId": "G1695482-b00009",
+      "text": "Messages Received by the BCM",
+      "why": "The accompanying rows distinguish RKE information from door-module switch requests. Keep the memory-seat qualifier attached to the door-module messages."
+    },
+    {
+      "blockId": "G1695482-b00011",
+      "text": "What the Perimeter Alarm Watches",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00012",
+      "text": "The BCM controls the perimeter alarm. To decide when to arm it, the BCM monitors remote keyless entry (RKE), passive entry, the power door locks, the passive anti-theft system (PATS) and ignition status.",
+      "why": "Arming is a decision based on vehicle state and access requests, rather than simply a consequence of a door being physically locked."
+    },
+    {
+      "blockId": "G1695482-b00013",
+      "text": "To recognize an intrusion, the BCM monitors every door ajar switch, the luggage compartment lid ajar input, the hood ajar switch, the intrusion sensor, the CAN and ignition status. When an input indicates unauthorized entry, the BCM sounds the horn and flashes all turn signals and interior courtesy lamps at regular intervals.",
+      "why": "The horn and flashing lamps are outputs of the alarm decision. The input that prompted that decision can come from an opening, a sensor or the vehicle network."
+    },
+    {
+      "blockId": "G1695482-b00014",
+      "text": "To decide when to disarm the alarm, the BCM monitors RKE, passive entry and PATS.",
+      "why": "These systems provide the authorized-access information the BCM needs to stand down."
+    },
+    {
+      "blockId": "G1695482-b00015",
+      "text": "The switch inhibit feature temporarily disables the door lock control switches and the interior luggage compartment lid release switch 20 seconds after the vehicle is electronically locked. For the switch inhibit details, refer to [Handles, Locks, Latches and Entry Systems - Overview](#/document/G1695896) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "An unresponsive interior switch after electronic locking can be deliberate security behavior. I check the locking state before treating the switch as faulty."
+    },
+    {
+      "blockId": "G1695482-b00016",
+      "text": "Each door window sill has a door lock LED indicator. It illuminates when that door is locked and goes out when the door is unlocked. For further information, refer to [Handles, Locks, Latches and Entry Systems - Overview](#/document/G1695896) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "The LED reports that door's lock status. It should not be treated as independent confirmation that every alarm entry point has finished arming."
+    },
+    {
+      "blockId": "G1695482-b00017",
+      "text": "Locking and unlocking also produce visual and audible feedback. For the feedback details, refer to [Handles, Locks, Latches and Entry Systems - Overview](#/document/G1695896) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "Keep ordinary lock/unlock feedback separate from an intrusion alarm. The linked overview introduces the entry systems but does not specify the detailed feedback patterns or switch-inhibit recovery behavior."
+    },
+    {
+      "blockId": "G1695482-b00018",
+      "text": "The perimeter alarm participates in the vehicle's electrical load-shedding strategy. For additional information, refer to Battery Load Shed (414-01).",
+      "why": "Alarm operation belongs within the vehicle's wider electrical-load management. This overview does not define the load-shedding conditions or their effects."
+    },
+    {
+      "blockId": "G1695482-b00019",
+      "text": "How the Perimeter Alarm Arms",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00020",
+      "text": "With the ignition off, the perimeter alarm is ready to arm. Any of the following actions puts it into its pre-armed state:",
+      "why": "Pre-armed means the arming process has begun; it does not mean every entry point is already protected."
+    },
+    {
+      "blockId": "G1695482-b00022",
+      "text": "Press the lock button on an RKE transmitter.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00024",
+      "text": "With a front door open, press a door lock control switch to the lock position, then close the door.",
+      "why": "The open-door condition and subsequent closure are part of this arming route."
+    },
+    {
+      "blockId": "G1695482-b00026",
+      "text": "Lock the vehicle through the passive entry feature.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00028",
+      "text": "Pre-arming starts a 20-second countdown before protection becomes armed. Each entry point—the hood, each door and the luggage compartment lid—arms separately and must be closed before its own 20-second countdown begins. If every entry point is closed, the turn signals flash when the vehicle is locked to show that all entry points are starting the 20-second countdown.",
+      "why": "I picture separate countdown clocks beside the openings. An opening that remains unclosed has not started its clock, even if the others have."
+    },
+    {
+      "blockId": "G1695482-b00029",
+      "text": "What Triggers the Perimeter Alarm",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00030",
+      "text": "If the driver front door is opened without first unlocking through a valid programmed RKE transmitter or passive key, the perimeter alarm gives a 12-second delay. A chime sounds during that delay. Disarm the alarm within the 12-second delay; otherwise, it activates.",
+      "why": "The chime is a chance to provide authorized disarming before the horn and flashing lamps begin. This delay is specific to the driver front door."
+    },
+    {
+      "blockId": "G1695482-b00031",
+      "text": "Once armed, the perimeter alarm activates under these conditions:",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00033",
+      "text": "The driver front door opens without a preceding unlock command from passive entry or a valid programmed RKE transmitter, and the 12-second delay expires.",
+      "why": "Opening the driver door alone starts the delay; expiration without disarming completes this trigger condition."
+    },
+    {
+      "blockId": "G1695482-b00035",
+      "text": "Any other door, the luggage compartment lid or the hood opens without a preceding electronic unlock command from passive entry or a valid programmed RKE transmitter.",
+      "why": "These openings do not receive the driver-door delay described above."
+    },
+    {
+      "blockId": "G1695482-b00037",
+      "text": "The ignition changes to RUN without the system receiving a valid PATS key read.",
+      "why": "Ignition state alone is insufficient authorization; the key must also be recognized."
+    },
+    {
+      "blockId": "G1695482-b00039",
+      "text": "The BCM detects a diagnostic scan tool attempting to establish communication on the CAN.",
+      "why": "The network is another guarded entrance. A legitimate workshop tool can trigger the protection if the alarm remains armed."
+    },
+    {
+      "blockId": "G1695482-b00041",
+      "text": "The perimeter alarm can activate only 10 times in an arming cycle. After that limit, it will not activate again in that cycle. To restore alarm activation, disarm the system and then arm it again.",
+      "why": "A system that stops responding after repeated activations may have reached its cycle limit; the required reset is a disarm followed by a fresh arm."
+    },
+    {
+      "blockId": "G1695482-b00042",
+      "text": "How the Perimeter Alarm Disarms",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00043",
+      "text": "The following events disarm the perimeter alarm, subject to the timing and entry-point limits stated for each:",
+      "why": "Some methods act only during pre-arming, and the transmitter's luggage-release command has a narrower effect than a full unlock."
+    },
+    {
+      "blockId": "G1695482-b00045",
+      "text": "Press the unlock button on a door lock control switch within the 20-second pre-arm period.",
+      "why": "This interior-switch route is limited to pre-arming."
+    },
+    {
+      "blockId": "G1695482-b00047",
+      "text": "The smart unlock feature activates within the initial 20-second pre-arm period.",
+      "why": "Smart unlock can cancel the developing armed state during this initial period."
+    },
+    {
+      "blockId": "G1695482-b00049",
+      "text": "Press the unlock button on a valid programmed RKE transmitter.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00051",
+      "text": "Press the luggage compartment lid release button on a programmed RKE transmitter. This disarms only the luggage compartment lid entry point; the rest of the vehicle remains armed.",
+      "why": "A remote luggage release is permission to access that compartment, rather than an all-clear for the rest of the car."
+    },
+    {
+      "blockId": "G1695482-b00053",
+      "text": "Use a valid programmed key to change the ignition to RUN.",
+      "why": "Recognition of the programmed key supplies the authorization missing from an unauthorized ignition transition."
+    },
+    {
+      "blockId": "G1695482-b00055",
+      "text": "Unlock a front door or open the luggage compartment lid through the passive entry feature.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00057",
+      "text": "How CAN Access Is Protected",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00058",
+      "text": "While the perimeter alarm is armed, the BCM monitors the CAN. Connecting a scan tool to the data link connector (DLC) and attempting to establish a session with the BCM activates the alarm.",
+      "why": "The trigger is the communication attempt while armed. I establish the alarm's state before interpreting an alarm during scan-tool connection as a malfunction."
+    },
+    {
+      "blockId": "G1695482-b00059",
+      "text": "Whenever the BCM detects unauthorized access and activates the alarm, it blocks all BCM programming, parameter ID (PID) monitoring and self-test sessions for 10 minutes. At the end of the 10 minute period, a horn chirp announces a 1 minute opportunity to communicate with the BCM and program keys if none are available.",
+      "why": "The horn chirp marks the access opportunity; it is not confirmation that key programming has succeeded. The linked programming procedure contains the required session setup, equipment-dependent branches and recovery sequence."
+    },
+    {
+      "blockId": "G1695482-b00060",
+      "text": "For the complete access and programming sequence, refer to [Anti-Theft Key Programming - Scan Tool](#/document/G1672905) (419-01B Passive Anti-Theft System (PATS), General Procedures).",
+      "why": "That procedure refers in turn to Diagnostic Methods for establishing a vehicle session. It distinguishes vehicles with a keyless entry keypad from those requiring timed access and includes push-button-start identification requirements, tool prompts, success indications and unsuccessful-programming branches. Use the full procedure rather than trying to build a programming method from this overview's timing description."
+    },
+    {
+      "blockId": "G1695482-b00061",
+      "text": "The component descriptions below connect the alarm's decisions to the switches, sensors and controller that supply or act on its information.",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00062",
+      "text": "Door Latch Components",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00063",
+      "text": "The door latch contains the door ajar switch, the lock/unlock solenoid and the lock/unlock status input switch. These parts cannot be serviced separately from the latch.",
+      "why": "They perform different jobs inside the same assembly. Identifying one function does not make its internal component a separately serviceable part."
+    },
+    {
+      "blockId": "G1695482-b00064",
+      "text": "The BCM monitors the door ajar switch, whose primary function serves the courtesy lamps. Refer to Interior Lighting - System Operation and Component Description (417-02 Interior Lighting, Description and Operation).",
+      "why": "The alarm shares door-open information with interior lighting. Keep the interior-lighting referral for its operating and service details."
+    },
+    {
+      "blockId": "G1695482-b00065",
+      "text": "The BCM controls the latch's lock/unlock solenoid to lock and unlock the door. Refer to [Handles, Locks, Latches and Entry Systems - Overview](#/document/G1695896) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "The solenoid performs the locking action; it has a different role from the switches reporting door and lock status."
+    },
+    {
+      "blockId": "G1695482-b00066",
+      "text": "The latch's lock/unlock status input switch supplies the information used to illuminate the door lock status indicator. Refer to [Handles, Locks, Latches and Entry Systems - Overview](#/document/G1695896) (501-14 Handles, Locks, Latches and Entry Systems, Description and Operation).",
+      "why": "The indicator reports lock status rather than merely showing that a lock command was requested."
+    },
+    {
+      "blockId": "G1695482-b00067",
+      "text": "Hood Latch Ajar Switch",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00068",
+      "text": "The hood ajar switch is a single-pole switch integrated into the hood latch. Its contacts are normally closed with the hood closed. Opening the hood opens the switch to report an open hood.",
+      "why": "Here, a closed hood corresponds to closed switch contacts. The mechanical opening and electrical opening describe related states, rather than interchangeable test instructions."
+    },
+    {
+      "blockId": "G1695482-b00069",
+      "text": "The BCM sends a signal to the hood ajar switch and uses the returned input to determine whether the hood is open or closed.",
+      "why": "This explains the signal's purpose without assigning an unsupported voltage or terminal test."
+    },
+    {
+      "blockId": "G1695482-b00070",
+      "text": "Intrusion and Inclination Sensing",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00071",
+      "text": "The BCM powers and monitors the intrusion sensor at all times. With the perimeter alarm armed, the sensor emits acoustic ultrasonic pulses to monitor movement inside the passenger compartment. If it detects movement, it signals the BCM.",
+      "why": "This watches the cabin itself, adding movement information beyond the opening switches. Continuous power and monitoring do not mean that armed intrusion surveillance is active in every alarm state."
+    },
+    {
+      "blockId": "G1695482-b00072",
+      "text": "The BCM powers and monitors the inclination sensor at all times. With the perimeter alarm armed, the sensor watches for vehicle tilt or inclination. Significant cargo removal or addition, jacking up a wheel assembly, loading onto a tow truck, or suspension changes that create significant front/rear ride-height differences can produce such movement. If sufficient tilt is detected, the sensor signals the BCM.",
+      "why": "The sensor sees a change in the car's attitude, not the reason for it. Ordinary handling or planned vehicle work can therefore resemble the movement it is watching for."
+    },
+    {
+      "blockId": "G1695482-b00073",
+      "text": "After replacing the intrusion/inclination sensor, use a diagnostic scan tool to carry out the LIN New Module Initialization procedure.",
+      "why": "Replacement includes a required initialization operation. This overview identifies that obligation but does not teach sensor removal, installation or the initialization sequence."
+    },
+    {
+      "blockId": "G1695482-b00074",
+      "text": "BCM Alarm Control",
+      "why": ""
+    },
+    {
+      "blockId": "G1695482-b00075",
+      "text": "The BCM manages the perimeter alarm. It uses the incoming information to arm, disarm, activate or deactivate the system.",
+      "why": "The controller makes the decision from its inputs. An unexpected response calls for understanding those inputs before blaming the BCM."
+    },
+    {
+      "blockId": "G1695482-b00076",
+      "text": "Replacing the BCM requires PMI. At least 2 keys must also be programmed, and the parameter reset procedure must be carried out.",
+      "why": "A replacement BCM is not ready merely because it is installed. PMI, key programming and parameter reset are required completion work; use the applicable replacement and programming procedures for their execution. This overview does not supply the BCM replacement or PMI sequence."
+    }
+  ],
+  "checkedAt": "2026-10-27T21:32:04.177Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 55,
+    "receivedBlocks": 55,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "17e6d34ed346ef55256d9c235b58f1db3c9c1407dcf600a5dcb5b9eae27ce5c9",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 3,
+    "supportingSourceUnitCount": 196,
+    "sourceUnitCount": 93,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "a0039a3d7032d541a7c5a96e6605370baa9b29d431a2be3a93230bf62537cdc2",
+    "reviewedAt": "2026-10-27T21:30:19.110Z",
+    "editorialRevision": {
+      "kind": "deduplicate-reviewed-preparation",
+      "scope": "Keep first two preparation groups, remove repeated later groups, retain unique later keypad-branch qualifier, joint RKE/PATS programming fact and PATS-capable scan-tool prerequisite in corresponding existing items. All primary edits/title/introduction/source refs unchanged.",
+      "reviewedAt": "2026-10-27T21:32:04.177Z"
+    }
+  }
+}
