@@ -9224,7 +9224,7 @@
     },
     {
       "id": "brake-pressure-bleeding",
-      "title": "Pressure-bleed the brake hydraulic system",
+      "title": "Pressure-bleed the Mustang’s brakes: two- or four-piston front calipers",
       "categoryId": "advanced",
       "ruleIds": [],
       "applicability": {
@@ -9237,13 +9237,13 @@
           2015
         ]
       },
-      "summary": "Remove air after hydraulic repairs, with the correct fluid, pressure equipment and wheel sequence. Includes the extra steps for a new ABS hydraulic unit.",
+      "summary": "Complete the pressure bleed after hydraulic repairs, including wheel access, both steering-layout sequences, applicable rear parking-brake cycling and the additional sequence for a new ABS hydraulic unit.",
       "hero": {
         "documentId": "G2361881",
         "mediaId": "G2361881-m0007"
       },
-      "introduction": "The brake pedal sends force through fluid to the calipers. Air compresses much more readily than brake fluid, so trapped air can use up pedal travel before the pads clamp firmly. Pressure bleeding feeds clean fluid into the reservoir and carries air out through the caliper bleeders. It belongs after the reason for air entry has been repaired.",
-      "why": "A low or spongy pedal can come from a leak or trapped air, but it can also have other causes. Bleeding cannot repair a leaking connection, a faulty master cylinder or a damaged hose. The brake diagnostic chart separates these faults; starting there avoids treating a temporarily improved pedal as proof that the car is repaired.",
+      "introduction": "I want the air leaving through the bleed hose, not leaving us guessing at the pedal. This guide covers the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine and documented two- or four-piston front brakes, with the applicable rear brakes. A pressure bleeder feeds clean fluid through the reservoir while you clear the calipers in the prescribed order. Six-piston brakes and replacement-master-cylinder priming/reconnection need separate, corrected instructions before this guide applies. [Pressure bleeding](#/document/G2361881) [Component bleeding](#/document/G1694693) [Brake specifications](#/document/G1694687)",
+      "why": "A low, spongy or sinking pedal can come from air or a leak, but Ford also lists master-cylinder, caliper, hose and hydraulic-control-unit faults. Repair the cause first: bleeding cannot persuade a faulty component to get its damn act together. Pressure bleeding is required whenever a hydraulic brake component has been disconnected. [Brake diagnosis](#/document/G1721936) [Component bleeding](#/document/G1694693)",
       "when": {
         "summary": "After a brake hydraulic component is disconnected, or when diagnosis identifies air after the leak or fault is repaired.",
         "notes": [
@@ -9253,85 +9253,146 @@
       },
       "prepare": [
         {
-          "title": "Confirm the repair and brake configuration",
-          "detail": "Identify the installed front caliper type, the rear parking-brake arrangement, and whether the car is left- or right-hand drive. Have the pressure-bleeding illustrations and the correct bleeder torque information available before opening a bleeder."
+          "title": "Confirm the supported brake configuration",
+          "detail": "Identify two- or four-piston front calipers, left-hand or right-hand drive, and whether the rear calipers contain the parking-brake mechanism. Six-piston front brakes are outside this procedure. Any required replacement-master-cylinder priming and tube reconnection must already be complete using resolved, vehicle-specific instructions. Ordinary pressure bleeding does not require opening those tube fittings. [Pressure bleeding](#/document/G2361881) [Component bleeding](#/document/G1694693) [Master cylinder](#/document/G1692560)"
         },
         {
-          "title": "Use the specified fluid and clean equipment",
-          "detail": "Use clean Motorcraft DOT 4 LV High Performance brake fluid, PM-20, meeting WSS-M6C65-A2. Prepare a brake/clutch pressure bleeder with a correctly fitting reservoir adapter, a clear bleed hose and a clean fluid container. Follow the equipment maker’s setup instructions."
+          "title": "Specified fluid and bleeding equipment",
+          "detail": "Have clean Motorcraft DOT 4 LV High Performance Motor Vehicle Brake Fluid, PM-20, meeting WSS-M6C65-A2; a brake/clutch pressure bleeder/filler; its correctly fitting reservoir adapter; a bleed hose through which you can observe bubbles; and a clean fluid container. The equipment must provide 207–345 kPa (30–50 psi). Have its manufacturer’s adapter-installation and operating instructions available, plus enough clean specified fluid to complete the operation. [Brake specifications](#/document/G1694687) [Pressure bleeding](#/document/G2361881)"
         },
         {
-          "title": "Plan access and any ABS service operation",
-          "detail": "Use the proper lifting and wheel-removal procedure. If a new hydraulic control unit has been installed, arrange a diagnostic scan tool capable of the ABS Service Bleed function before starting."
+          "title": "Wheel access and torque tools",
+          "detail": "Arrange a hoist rated for the vehicle’s weight, including cargo and modifications. Have tools matching the actual wheel nuts and bleeder screws, torque equipment suitable for the specified low bleeder torques and 204 Nm (150 lb-ft) wheel torque, and Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2. Locate the triangle-marked lifting points before raising the car. Have wheel blocks ready for ground-level restraint. [Service safety](#/document/G1693189) [Lifting points](#/document/G1663631) [Wheel installation](#/document/G1686507) [Bleeder specifications](#/document/G1694687)"
         },
         {
-          "title": "Protect nearby surfaces",
-          "detail": "Clean around the reservoir cap before removal. If fluid spills, wash the affected component immediately with cold water; keep dirt and foreign material out of the fluid supply."
+          "title": "Scan tool when the hydraulic unit is new",
+          "detail": "If a new ABS hydraulic control unit, or HCU, has been installed, arrange a diagnostic scan tool capable of ABS Service Bleed. Its guided instructions control that operation. The required vehicle workflow is an initial pressure bleed, ABS Service Bleed, then another complete pressure bleed. [New-HCU sequence](#/document/G2361881)"
+        },
+        {
+          "title": "Protect yourself and nearby surfaces",
+          "detail": "Wear eye and ear protection, use protective gloves when handling sharp-edged parts, and consult the safety information for the fluid and lubricant. Keep cold water available: wash brake-fluid spills from affected components or paintwork immediately. Keep dirt and foreign material out of the reservoir and fluid supply. [Service safety](#/document/G1693189) [Fluid handling](#/document/G1694693) [Pressure bleeding](#/document/G2361881)"
         }
       ],
       "steps": [
         {
-          "title": "Repair the cause and prime a new master cylinder",
-          "body": "Inspect for leaks and complete the hydraulic repair first. When the master cylinder is new, follow Component Bleeding to prime it with a master-cylinder bleeding set before bleeding the rest of the system. Do not use repeated bleeding to work around an unresolved leak."
+          "title": "Confirm the repair is ready for bleeding",
+          "body": "Inspect for hydraulic leaks and finish the underlying repair first. If the pedal is low, spongy or sinking without an established cause, use the brake diagnostic chart before treating bleeding as the cure. Pressure bleeding is required after a hydraulic component has been disconnected. [Brake diagnosis](#/document/G1721936) [Component bleeding](#/document/G1694693)\n\nProceed only with the supported two- or four-piston front brakes. If replacement-master-cylinder priming or reconnection remains unfinished, complete that separate work with corrected instructions before starting here. [Brake specifications](#/document/G1694687) [Component bleeding](#/document/G1694693) [Master cylinder](#/document/G1692560)"
         },
         {
-          "title": "Set up a clean, pressurized fluid supply",
-          "body": "Fill the reservoir with the specified fluid and attach the correct pressure-bleeder adapter. Make sure the tank holds enough clean fluid for the operation, then connect it as its manufacturer directs. The pressure-bleeding procedure specifies 207–345 kPa (30–50 psi)."
+          "title": "Prevent an unexpected start and prepare stable support",
+          "body": "If equipped, disable remote start through Vehicle settings > Remote Start Setup. Switch the ignition off and remove the key so another person cannot start the car during hands-on work. An unexpected start can cause serious injury. Set the parking brake and block the wheels while the car is on the ground. [Service safety](#/document/G1693189)\n\nPlan the hoist setup with the transmission in NEUTRAL, as required by the wheel-removal procedure. Use the triangle-stamped lifting locations and position the lift arms clear of suspension, exhaust, steering parts, brackets and the axle/rear cover. Incorrect support can let the car shift or fall. The emergency tire-change jack is unsuitable for this job; never work underneath a vehicle supported only by a jack or lift against a bumper. [Wheel removal](#/document/G1686507) [Lifting points](#/document/G1663631) [Service safety](#/document/G1693189)"
         },
         {
-          "title": "Use the wheel sequence for the car’s steering layout",
-          "body": "Remove the wheels as directed and use the left-hand-drive or right-hand-drive sequence illustration in Brake System Pressure Bleeding. The two sequences differ. Keep that diagram open rather than substituting a remembered “furthest wheel first” order."
+          "title": "Connect the clean pressure supply",
+          "body": "Clean around the brake-fluid reservoir cap before removing it. Fill the reservoir with clean specified fluid: Motorcraft DOT 4 LV High Performance Motor Vehicle Brake Fluid, PM-20, meeting WSS-M6C65-A2. [Pressure bleeding](#/document/G2361881) [Fluid specification](#/document/G1694687)\n\nInstall the correct reservoir adapter according to the pressure-equipment manufacturer’s instructions and connect the tank hose to its fitting. Confirm the tank contains enough clean specified fluid for the operation. Open the tank valve and apply 207–345 kPa (30–50 psi) to the brake system. Immediately wash any spilled fluid from components or paintwork with cold water. [Pressure setup](#/document/G2361881) [Component fluid handling](#/document/G1694693)"
         },
         {
-          "title": "Clear each caliper, including its additional bleeders",
-          "body": "Remove a bleeder cap if fitted. Partly fill a clean container with specified fluid, connect the hose and keep its outlet submerged. Open the bleeder 180 degrees and allow fluid to flow until it is clear and bubble-free, then close it to the confirmed specification. Four- and six-piston front calipers require the inner bleeder before the outer one. At rear calipers with an integral parking brake, apply and release the parking brake five times, then reopen the bleeder 180 degrees until clear fluid flows; repeat as necessary. Complete the remaining wheel ends in the prescribed order."
+          "title": "Raise the car and remove the wheels",
+          "body": "With the transmission in NEUTRAL and the hoist correctly positioned at the marked lifting points, raise the vehicle. Remove the wheel nuts and wheels to expose the caliper bleeders. Do not use heat to loosen a seized wheel nut; it can damage the wheel and wheel bearing. [Wheel removal](#/document/G1686507) [Lifting points](#/document/G1663631) [Pressure-bleeding access](#/document/G2361881)"
         },
         {
-          "title": "Complete the extra cycle when the hydraulic unit is new",
-          "body": "For a newly installed ABS hydraulic control unit, perform the diagnostic tool’s ABS Service Bleed operation and then repeat the complete pressure-bleeding procedure. The first pressure bleed alone does not finish this repair."
+          "title": "Select the steering-layout wheel order",
+          "body": "Use vehicle left and right as viewed from the driver’s seat.\n\nLeft-hand drive:\n\n1. Right rear.\n2. Left rear.\n3. Right front.\n4. Left front.\n\nRight-hand drive:\n\n1. Left rear.\n2. Right rear.\n3. Left front.\n4. Right front.\n\nThese are the separate orders in Ford’s wheel-order diagram. At each four-piston front caliper, bleed the inner screw before the outer screw. A remembered shortcut is a poor substitute for the actual order. [Wheel order and front-caliper sequence](#/document/G2361881)"
         },
         {
-          "title": "Release pressure, restore the level and verify operation",
-          "body": "Reinstall bleeder caps where fitted, lower the vehicle as directed, close the pressure-tank valve and release its pressure before removing the equipment. Fill the reservoir to the correct level and install its cap. Refit the wheels using their full installation instructions, inspect for leaks and confirm normal brake operation before the controlled road test required by the procedure."
+          "title": "Connect the collection hose",
+          "body": "At the first wheel, remove the protective bleeder cap if fitted. Partially fill a clean container with clean specified brake fluid. Connect the hose to the bleeder screw and keep the hose outlet submerged in the fluid in the container. The bleeder is the outlet opened for this operation; leave the brake hose and tube connections attached. [Hose setup](#/document/G2361881) [Specified fluid](#/document/G1694687)"
+        },
+        {
+          "title": "Clear the outlet and tighten its bleeder",
+          "body": "Open the bleeder screw 180 degrees—half a turn. Leave it open until the fluid runs clear and bubble-free, then close it. Disconnect the hose and finish tightening the screw to the applicable specification. [Bleeder operation](#/document/G2361881)\n\n- Two-piston front caliper: 11 Nm (97 lb-in).\n- Four-piston front caliper: 8 Nm (71 lb-in).\n- Rear caliper: 11 Nm (97 lb-in).\n\nThese imperial values are pound-inches, not pound-feet. [Bleeder torques](#/document/G1694687)\n\nOn a four-piston front caliper, complete the inner screw first, then repeat the hose connection, half-turn opening, bubble-free endpoint and final tightening at the outer screw. [Front-caliper sequence](#/document/G2361881)"
+        },
+        {
+          "title": "Complete the remaining wheel ends",
+          "body": "Repeat steps 6–7 at each remaining wheel in the order selected in step 5. At every outlet, wait for clear, bubble-free flow before closing and tightening the screw. Complete both inner and outer screws on each four-piston front caliper. [Complete wheel-end bleed](#/document/G2361881)"
+        },
+        {
+          "title": "Perform the integral rear parking-brake operation",
+          "body": "If the rear calipers contain the parking-brake mechanism, carry out this additional operation after the initial wheel-end bleed. Reconnect the collection hose at the applicable rear bleeder with its outlet submerged as in step 6. Apply and release the parking brake five times, then open the bleeder 180 degrees. Allow fluid to flow until clear and bubble-free, close the screw, disconnect the hose and tighten to 11 Nm (97 lb-in). Repeat the cycling and bleeding as necessary, completing the applicable rear calipers. [Integral parking-brake operation](#/document/G2361881) [Rear bleeder torque](#/document/G1694687)\n\nThe extra cycling addresses the fluid path inside the integral mechanism. It does not apply to the separate parking-shoe arrangement identified in the bleeding supplement. [Rear-brake applicability](#/document/G2361881)"
+        },
+        {
+          "title": "Restore the caps and reinstall the wheels",
+          "body": "Check that every opened bleeder has received its applicable final tightening. Remove the collection equipment and reinstall each protective bleeder cap where fitted. [Bleeding closeout](#/document/G2361881) [Bleeder torques](#/document/G1694687)\n\nRemove corrosion, dirt and foreign material from the wheel mounting faces and the corresponding hub/brake-disc mounting faces. Ensure any rotor-to-hub fasteners are secure and do not interfere with those faces. Poor seating can allow the wheel nuts to loosen and the wheel to detach, causing loss of control and serious injury. [Wheel installation](#/document/G1686507)\n\nApply a thin coat of Motorcraft XL-2 nickel anti-seize only where the wheel’s center pilot bore meets the hub pilot—the centering interface. Keep it off the flat mounting faces, wheel studs, wheel nuts, pads and disc friction surfaces to avoid component damage. Position each wheel and install its nuts finger-tight. [Wheel installation](#/document/G1686507)"
+        },
+        {
+          "title": "Restore restraint, lower and torque the wheels",
+          "body": "Reapply the parking brake before lowering, including after the five-cycle rear-caliper operation. Once the tires are on the ground, restore the wheel blocks before final wheel-nut tightening. Do not leave the car free to roll in NEUTRAL. [Vehicle restraint](#/document/G1693189) [Wheel-removal transmission position](#/document/G1686507)\n\nWith the car resting on its tires and the stud and nut threads clean and dry, tighten the wheel nuts in a star/cross pattern to 204 Nm (150 lb-ft). In the supplied five-nut drawing, the order is top, lower-left, upper-right, upper-left, lower-right; those positions describe the drawing. Tightening around the circle instead can increase brake-disc runout and contribute to roughness, shudder and vibration. [Wheel tightening](#/document/G1686507)"
+        },
+        {
+          "title": "Release pressure and restore the reservoir",
+          "body": "Close the pressure-tank valve and release the pressure before removing the pressure-bleeding equipment and reservoir adapter. Refill the reservoir with clean specified fluid and install its cap. [Pressure-bleed closeout](#/document/G2361881) [Fluid specification](#/document/G1694687)\n\nCheck the level against MIN and MAX. Ford identifies the range between those marks as normal. A level outside that range can compromise system performance and requires immediate service; topping up must not hide an unresolved fault. [Ford fluid-level guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1605311&Uid=G1642989&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Complete the additional sequence for a new HCU",
+          "body": "Skip this step unless a new ABS hydraulic control unit has been installed. After the initial pressure bleed and closeout, use the diagnostic scan tool’s ABS Service Bleed function and follow its guided instructions. Then repeat the complete pressure-bleeding cycle in steps 3–12, including wheel access, the correct wheel order, both screws on four-piston front calipers, applicable rear parking-brake cycling and full reassembly. [New-HCU sequence](#/document/G2361881)\n\nBefore returning to hands-on work, restore the ignition-off/key-removed precautions from step 2. Restore the parking brake and ground-level restraints again before lowering and final wheel torque. [Service safety](#/document/G1693189)\n\nThe required order is pressure bleed, ABS Service Bleed, then another complete pressure bleed. One pass does not finish a new-HCU installation. [New-HCU completion](#/document/G2361881)"
+        },
+        {
+          "title": "Check for leaks and unresolved pedal symptoms",
+          "body": "With the car stationary and restrained, inspect the repaired hydraulic connections and opened bleeders for leakage. Apply the brake pedal and check whether the original low, spongy or sinking behavior remains. A bubble-free collection bottle is useful evidence, but it is not a clean bill of health for every component. [Brake diagnosis](#/document/G1721936)\n\nIf a connection leaks, repair it and pressure-bleed again as required. If the pedal concern remains without an obvious leak, continue the appropriate master-cylinder, caliper, hose or HCU diagnosis. Do not begin the road test with an unresolved braking concern. [Brake diagnosis](#/document/G1721936) [Bleeding after hydraulic disconnection](#/document/G1694693)"
+        },
+        {
+          "title": "Road test and arrange the wheel-nut recheck",
+          "body": "Once the stationary checks are satisfactory—and the extra new-HCU sequence is complete where applicable—carry out the road test required by the pressure-bleeding procedure. As a practical precaution, choose a controlled setting for the initial braking check. If braking is abnormal, stop the test and diagnose the symptom. [Pressure-bleeding completion](#/document/G2361881) [Brake diagnosis](#/document/G1721936)\n\nRetighten the wheel nuts within 160 km (100 mi) of wheel reinstallation, using the star/cross pattern and 204 Nm (150 lb-ft) with clean, dry threads and the vehicle resting on its tires. Wheels can loosen after initial tightening; missing this recheck can lead to serious injury. [Wheel installation and recheck](#/document/G1686507)"
         }
       ],
       "watchFor": [
         {
-          "title": "The pedal still sinks or feels spongy",
-          "body": "Return to the brake diagnostic chart. It distinguishes leaks and air from master-cylinder, hose, caliper and hydraulic-control-unit faults; an unresolved pedal concern is not a completed bleed."
+          "title": "Enough clean fluid at the correct pressure",
+          "body": "The tank must contain enough clean specified fluid for the operation, with system pressure at 207–345 kPa (30–50 psi). Check the supply and equipment setup before opening a bleeder. [Pressure setup](#/document/G2361881)"
         },
         {
-          "title": "A six-piston torque discrepancy",
-          "body": "The available six-piston front-bleeder torque entry contains an inconsistent unit pair. Confirm the correct specification for the fitted caliper before tightening; do not choose one of the conflicting values by assumption."
+          "title": "An outlet or rear-caliper operation missed",
+          "body": "Four-piston front calipers require inner-before-outer bleeding. Integral rear parking-brake calipers require five parking-brake applications/releases and additional bleeding. Four completed wheel locations can still leave required work unfinished. [Bleeding branches](#/document/G2361881)"
         },
         {
-          "title": "Air introduced during setup",
-          "body": "An unprimed replacement master cylinder, a dirty connection or an inadequate fluid supply can undermine the work. Finish the required preparation before moving through the wheel sequence."
+          "title": "A released parking brake at closeout",
+          "body": "Rear-caliper cycling ends with the parking brake released. Reapply it before lowering and restore wheel blocks on the ground before final wheel torque, especially because wheel removal uses NEUTRAL. [Vehicle restraint](#/document/G1693189) [Wheel procedure](#/document/G1686507)"
+        },
+        {
+          "title": "Torque units",
+          "body": "The bleeder values use lb-in; wheel torque uses lb-ft. Match the tool’s units to the specification before tightening. [Bleeder specifications](#/document/G1694687) [Wheel torque](#/document/G1686507)"
+        },
+        {
+          "title": "Fluid spills and dirty connections",
+          "body": "Wash spilled brake fluid from components and paintwork immediately with cold water. Keep the reservoir-cap area and fluid supply clean throughout the job. [Fluid handling](#/document/G1694693) [Pressure bleeding](#/document/G2361881)"
         }
       ],
       "notes": [
-        "The rear parking-brake cycling instruction applies to calipers with the integral parking-brake arrangement described in the procedure."
+        "This is condition-based work after hydraulic disconnection or diagnosis and repair of an air/leak concern. These procedures do not establish a calendar or mileage fluid-flush interval. [Component bleeding](#/document/G1694693) [Pressure bleeding](#/document/G2361881)",
+        "Component replacement, master-cylinder priming/reconnection and any clutch bleeding required by preceding manual-transmission repair work remain separate operations. [Component bleeding](#/document/G1694693) [Master cylinder](#/document/G1692560)"
       ],
       "procedures": [
         {
           "documentId": "G2361881",
-          "purpose": "Complete pressure-bleeding sequence, illustrated wheel order and new-HCU finishing steps."
+          "purpose": "Pressure setup, wheel order, caliper bleeding, integral rear parking-brake cycling, new-HCU sequence and road-test completion."
         },
         {
           "documentId": "G1694693",
-          "purpose": "Prime a new master cylinder and identify when disconnected hydraulic components require pressure bleeding."
+          "purpose": "Pressure-bleeding requirement after hydraulic disconnection, fluid handling and separate new-master-cylinder prerequisite."
         },
         {
           "documentId": "G1721936",
-          "purpose": "Diagnose low, spongy or sinking brake-pedal symptoms before choosing bleeding as the repair."
+          "purpose": "Leak, pedal-symptom and warning-indicator decisions."
         },
         {
           "documentId": "G1694687",
-          "purpose": "Check the required fluid and fitted-brake specifications; note the six-piston torque discrepancy explained above."
+          "purpose": "Specified fluid and configuration-specific bleeder torques."
         },
         {
           "documentId": "G1686507",
-          "purpose": "Remove and reinstall wheels with the correct seating, tightening and recheck instructions."
+          "purpose": "Wheel access, seating, restricted anti-seize application, final tightening and recheck."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Marked lifting locations and support precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Unexpected-start prevention, personal protection, hoist capacity and vehicle restraint."
+        },
+        {
+          "documentId": "G1692560",
+          "purpose": "Separate master-cylinder repair requirements and explanation of the excluded fitting-torque conflict."
         }
       ],
       "relatedGuideIds": [
@@ -9362,8 +9423,126 @@
         {
           "documentId": "G1686507",
           "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1692560",
+          "sourceHash": "d254bffe43754521e6766400d6b3704013c49974d9cad14e08f9193763f29f52"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "confirm-and-secure",
+          "title": "Confirm the repair and secure the car",
+          "summary": "Check configuration, repair readiness and safe support.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "supply-and-access",
+          "title": "Set up pressure and wheel access",
+          "summary": "Connect clean fluid, expose the bleeders and select the correct order.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "clear-the-calipers",
+          "title": "Bleed the calipers",
+          "summary": "Clear every required outlet and complete applicable rear parking-brake cycling.",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "id": "reassemble-and-close",
+          "title": "Reassemble and release pressure",
+          "summary": "Restore caps, wheels, vehicle restraint and reservoir level.",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "id": "finish-and-verify",
+          "title": "Complete conditional work and verify",
+          "summary": "Finish the new-HCU sequence when needed, check braking and arrange the wheel-nut recheck.",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Bubbles remain in fluid leaving an open bleeder.",
+          "meaning": "That outlet has not reached the required bleeding endpoint.",
+          "next": "Continue the prescribed operation until flow is clear and bubble-free, then close and tighten the screw. Repeat integral rear parking-brake cycling and bleeding as necessary where applicable. [Bleeding endpoint](#/document/G2361881)"
+        },
+        {
+          "finding": "A hydraulic connection or bleeder leaks.",
+          "meaning": "The hydraulic repair remains incomplete.",
+          "next": "Repair the leak and repeat the required pressure bleeding before completion checks or driving. [Brake diagnosis](#/document/G1721936) [Component bleeding](#/document/G1694693)"
+        },
+        {
+          "finding": "The pedal remains low or spongy after bleeding.",
+          "meaning": "Air or leaks are possible, but Ford also lists master-cylinder, caliper/guide-pin and flexible-hose faults.",
+          "next": "Recheck for leakage and continue symptom-based brake diagnosis. Further component testing or replacement is separate work. [Brake diagnosis](#/document/G1721936)"
+        },
+        {
+          "finding": "The pedal drops quickly or gradually sinks.",
+          "meaning": "Possible causes include leaks or air, a master-cylinder fault, an HCU fault or a pedal concern.",
+          "next": "Keep the car out of the road test and diagnose the active symptom rather than assuming another bleed will cure it. [Brake diagnosis](#/document/G1721936)"
+        },
+        {
+          "finding": "Both the red brake warning and yellow ABS warning indicators are illuminated.",
+          "meaning": "Ford directs diagnosis toward ABS diagnostic trouble codes.",
+          "next": "Read and diagnose the ABS codes before declaring the braking concern resolved. [Brake warning diagnosis](#/document/G1721936)"
+        },
+        {
+          "finding": "A new HCU has received only the initial pressure bleed.",
+          "meaning": "Its required finishing sequence is incomplete.",
+          "next": "Run the scan tool’s ABS Service Bleed operation, then repeat the complete pressure-bleeding cycle and closeout. [New-HCU sequence](#/document/G2361881)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "Every required bleeding operation completed",
+          "body": "Confirm the appropriate LHD or RHD order, clear bubble-free flow at every required outlet, inner-before-outer bleeding on four-piston fronts, and rear parking-brake cycling where applicable. All opened bleeders must be tightened to their configuration-specific values and protective caps restored where fitted. [Pressure bleeding](#/document/G2361881) [Bleeder specifications](#/document/G1694687)"
+        },
+        {
+          "title": "Vehicle and wheels secure",
+          "body": "Confirm the parking brake and ground-level restraints were restored, wheel seating faces are clean, anti-seize is confined to the pilot interface, and nuts received star-pattern tightening to 204 Nm (150 lb-ft) on clean, dry threads with the car resting on its tires. Arrange the recheck within 160 km (100 mi). [Vehicle restraint](#/document/G1693189) [Wheel installation](#/document/G1686507)"
+        },
+        {
+          "title": "Fluid system closed",
+          "body": "Confirm pressure was released before equipment removal, the reservoir cap is installed and the fluid level is between MIN and MAX. [Pressure closeout](#/document/G2361881) [Ford fluid-level guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1605311&Uid=G1642989&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Braking concern checked",
+          "body": "Confirm no unresolved leakage or low, spongy or sinking pedal concern before the required road test. For a new HCU, verify that ABS Service Bleed and the second complete pressure bleed preceded that test. Abnormal braking requires diagnosis rather than a completion claim. [Brake diagnosis](#/document/G1721936) [Pressure-bleeding completion](#/document/G2361881)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang brake pressure bleeding",
+        "two-piston Mustang brake bleeding",
+        "four-piston Mustang brake bleeding",
+        "LHD RHD brake bleeding order",
+        "DOT 4 LV PM-20 WSS-M6C65-A2",
+        "Mustang bleeder torque",
+        "inner outer front bleeders",
+        "integral rear parking brake bleeding",
+        "ABS Service Bleed new HCU",
+        "Mustang spongy brake pedal"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "71d7fb8ab972078ee695530ad433f049854287858dda63cac421ab2cd4751459"
+      }
     },
     {
       "categoryId": "advanced",
@@ -10595,7 +10774,7 @@
     },
     {
       "id": "brake-pulsation-runout",
-      "title": "Diagnose brake pulsation and disc runout",
+      "title": "Brake pulsation: symptom checks, disc-seating inspection and limit reference",
       "categoryId": "advanced",
       "ruleIds": [],
       "applicability": {
@@ -10608,13 +10787,13 @@
           2015
         ]
       },
-      "summary": "Separate normal ABS feedback from brake roughness, inspect disc and hub seating, and use the correct runout and thickness limits before choosing a repair.",
+      "summary": "Sort ABS feedback from brake shudder, inspect disc seating when warranted, and identify the next diagnostic action using the correct brake-package limits.",
       "hero": {
         "documentId": "G1693784",
         "mediaId": "G1693784-m0004"
       },
-      "introduction": "Runout is the side-to-side movement of an installed brake disc as it rotates. A disc, its mating surfaces and the way the wheel is tightened all contribute to the assembled result. Pulsation is a symptom rather than proof that a disc needs replacing: normal ABS operation, brake condition and suspension faults must be distinguished first.",
-      "why": "Replacing or machining a disc without checking how it seats can leave the underlying problem in place. The wheel-installation instructions specifically warn that incorrect tightening order can produce high disc runout and accelerate brake roughness. Measuring the installed assembly and checking its mounting surfaces makes the repair decision more useful than judging the disc by appearance alone.",
+      "introduction": "A pulsing pedal is a symptom, not a signed confession from the rotors. I start with when the vibration happens before buying a damn parts lottery ticket. This guide covers the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine and the actual fitted brake package. Completion means recording the symptom outcome, finishing any selected visual or disc-seating inspection and identifying the next action. Standalone runout and thickness measurements, comprehensive suspension assessment, machining and replacement are follow-on work; this checklist does not certify those unperformed tests. [Brake vibration diagnosis](#/document/G1721936)",
+      "why": "Runout is the disc's side-to-side movement as it rotates. The installed assembly matters: Ford warns that incorrect wheel-nut tightening order can increase disc runout and accelerate brake roughness. Clean seating surfaces and correct wheel installation therefore belong in this investigation. A shiny disc is persuasive advertising, but it does not establish the cause of a shudder. [Installed-disc limit](#/document/G1694687) · [Wheel installation](#/document/G1686507)",
       "when": {
         "summary": "When braking repeatedly causes speed-related pedal pulsation, steering-wheel nibble or shudder outside normal ABS operation.",
         "notes": [
@@ -10624,94 +10803,179 @@
       },
       "prepare": [
         {
-          "title": "Record the symptom before disassembly",
-          "detail": "Note whether vibration appears under braking or continues with the pedal released, and whether it is felt in the pedal, steering wheel or seat. Use the brake diagnostic chart to select the correct path and safe test conditions."
+          "title": "Record the complaint and previous work",
+          "detail": "Note whether vibration occurs with the pedal applied or released, where you feel it, and whether its frequency changes with vehicle speed. Record recent brake, wheel or suspension work. Confirm the concern and check previous repairs before choosing components to replace. [Brake symptoms](#/document/G1721936) · [Diagnostic methods](#/document/G1693185)"
         },
         {
-          "title": "Identify the fitted brake package",
-          "detail": "Select the actual front caliper and rear disc type before using thickness limits or removing parts. The specification table has different minimum disc thicknesses for the two-, four- and six-piston front systems and for solid versus vented rear discs."
+          "title": "Identify the fitted brakes",
+          "detail": "Establish whether the front calipers have two, four or six pistons and whether the rear discs are solid or vented. Match limits and replacement parts to that configuration. Establish the parking-brake type before considering the moving isolation test. [Brake specifications](#/document/G1694687) · [Isolation-test applicability](#/document/G1721936)"
         },
         {
-          "title": "Prepare measuring and support equipment",
-          "detail": "Arrange a reliable installed-disc runout measurement with appropriate dial-indicator equipment and a disc-thickness measurement. Have proper lifting equipment, a torque wrench and a way to support a removed caliper without loading its hose."
+          "title": "Choose a suitable test location",
+          "detail": "Ford's diagnostic road tests include highway speeds, heavier braking and an equipment-dependent parking-brake maneuver. I recommend a qualified technician and controlled test area for those portions. Use them only where space, traffic, surface conditions and permitted speeds allow the specified maneuver safely. [Brake vibration tests](#/document/G1721936)"
         },
         {
-          "title": "Plan the measurement boundary",
-          "detail": "The linked specifications give an installed-disc runout limit. They do not provide a separate hub-flange runout setup or tolerance, so do not condemn a hub by applying the disc limit to the bare hub."
+          "title": "Gather equipment for the selected access work",
+          "detail": "For wheel or disc access, have lifting equipment rated for the vehicle's weight, including cargo or modifications; wheel blocks; hand tools matched to the actual fasteners; and a torque wrench covering the listed mounting and wheel torques. A service-jack setup also requires stands. The emergency tire-changing jack is unsuitable for this work. [Support precautions](#/document/G1693189) · [Lifting restrictions](#/document/G1663631)"
+        },
+        {
+          "title": "Prepare materials for optional disc-seating work",
+          "detail": "Have mechanic's wire to support the displaced caliper assembly, a wire brush, Motorcraft Brake Parts Cleaner PM-4-A or PM-4-B, and two new disc-access mounting bolts for each assembly removed. Renew these mounting bolts on all three front-caliper variants, including the two-piston anchor bolts marked for disposal in the illustration, and on the rear. Have Motorcraft High Temperature Nickel Anti-Seize XL-2 for the wheel pilot interface. [Caliper support](#/document/G1694691) · [Front disc](#/document/G1693784) · [Rear disc](#/document/G1693754) · [Wheel materials](#/document/G1686507)"
+        },
+        {
+          "title": "Prepare for stationary service",
+          "detail": "Before working around or underneath the car, disable remote start if equipped through Vehicle settings > Remote Start Setup, switch the ignition off and remove the key to prevent an unexpected start. Wear eye and ear protection, plus gloves when handling sharp edges. Read the cleaner's safety information and keep solvents away from ignition sources to prevent exposure injuries and fire. [Service precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Check equipment-dependent service precautions",
+          "detail": "If the actual vehicle has an electronic parking brake, its applicable service mode is required before rear brake-component service, followed by deactivation afterward; unexpected application can injure hands or fingers. An electric brake booster requires brake-system service mode to prevent unexpected hydraulic application or false leak detection that can substantially reduce braking performance. Obtain the applicable activation and deactivation instructions before servicing either system. These are conditional precautions, not claims that every scoped 2015 Mustang has this equipment. [Equipment-dependent precautions](#/document/G1694691)"
         }
       ],
       "steps": [
         {
-          "title": "Confirm that the symptom needs brake diagnosis",
-          "body": "Follow the Brake System vibration pinpoint test. Normal ABS operation can cause hydraulic-unit noise and pedal pulsation during heavy braking or on low-grip surfaces. A repeatable speed-related nibble or shudder can involve brake or suspension components and needs the corresponding inspection."
+          "title": "Select the correct symptom path",
+          "body": "Vibration while braking follows the brake-vibration path below. Shudder with the pedal released follows brake-drag diagnosis instead: record that finding and select the drag diagnostic path. A low, spongy or sinking pedal needs its own brake-system diagnosis before road testing. If both the red brake and yellow ABS indicators are illuminated, check ABS diagnostic trouble codes before proceeding. [Brake symptom chart](#/document/G1721936)\n\nCheck recent repairs and obvious concerns related to the complaint. If the symptom is absent during testing, record the conditions rather than replacing components based on a fault that has not been demonstrated. [Diagnostic methods](#/document/G1693185)"
         },
         {
-          "title": "Inspect the mountings before blaming the disc",
-          "body": "Check the relevant suspension components and wheel installation. If a disc is removed, clean its mating surfaces with the specified brake-cleaning material and a wire brush as directed. Keep the caliper supported; never let it hang by its hose. Corrosion, dirt and incorrect seating must be addressed before relying on an assembled measurement."
+          "title": "Check for vibration under light braking",
+          "body": "For A1, warm the brakes by slowing from 80 to 32 km/h (50 to 20 mph) using light brake force. Then, at 89–97 km/h (55–60 mph), apply light pedal force and note vibration in the steering wheel, seat or pedal. Use only a location that safely accommodates the specified maneuver. [A1 light-braking test](#/document/G1721936)\n\nIf vibration occurs, continue to step 4. If it does not, continue to step 3. Neither result automatically calls for wheel removal."
         },
         {
-          "title": "Record installed-disc runout against its own limit",
-          "body": "Have the installed disc measured with a repeatable, correctly secured gauge setup and record the indicated lateral movement. The listed maximum installed brake-disc runout is 0.05 mm (0.002 in). Treat that as an assembled-disc criterion, not a separate hub-flange tolerance. If the result is excessive, investigate seating and component condition rather than automatically replacing the hub."
+          "title": "Separate heavier-braking shudder from ABS feedback",
+          "body": "If light braking produced no vibration, A2 applies moderate to heavy pedal force at 89–97 km/h (55–60 mph). If there is no shudder, record that the concern was not reproduced and end the current vibration investigation. Do not proceed into disc work or parts replacement for this result alone. [A2 test](#/document/G1721936) · [Diagnostic assumptions](#/document/G1693185)\n\nIf shudder occurs, A3 compares braking on a dry, firm surface with braking on a wet, snowy or loose surface. I recommend having this comparison performed under controlled conditions rather than seeking out a slippery public road. Vibration occurring only on the wet, snowy or loose surface is classified as normal ABS operation: record that outcome and end the disc-correction path for that finding alone. Hydraulic control unit noise with pedal pulsation during heavy braking or on low-grip or bumpy surfaces can be normal ABS feedback. [A3 ABS comparison](#/document/G1721936)\n\nVibration also present on the dry, firm surface proceeds to the front-suspension branch in step 5. Pedal pulsation or steering-wheel nibble whose frequency follows vehicle speed warrants brake or suspension investigation. [Vibration interpretation](#/document/G1721936)"
         },
         {
-          "title": "Check thickness and whether machining is permitted",
-          "body": "Measure disc thickness and compare it with the exact fitted-brake specification. Machining is not allowed for discs with cross-drilled friction surfaces. A disc must not be machined when its thickness is less than the minimum thickness plus 0.6 mm (0.0236 in). This machining allowance is separate from the final minimum-thickness limit."
+          "title": "Use parking-brake isolation only on applicable equipment",
+          "body": "A4 follows vibration during the light-braking test. With a drum-in-hat parking brake or an electronic parking brake, skip this maneuver and select the front-suspension branch in step 5. If the parking-brake type is uncertain, establish it before attempting the maneuver. [A4 applicability](#/document/G1721936)\n\nFor an applicable conventional parking brake, Ford specifies lightly applying it at 89–97 km/h (55–60 mph) until the vehicle slows, then releasing it immediately after the test. Shudder selects the rear-suspension branch; no shudder selects the front-suspension branch. I recommend leaving this maneuver to a qualified technician in a controlled test area. [A4 isolation test](#/document/G1721936)"
         },
         {
-          "title": "Choose a repair that addresses the measured condition",
-          "body": "Use the brake diagnosis and disc condition to decide whether cleaning and correct installation, disc replacement or permitted machining is appropriate. Where machining is selected, the procedure requires an on-vehicle lathe rather than a bench lathe; follow its complete setup, runout adjustment and post-cut thickness checks. Do not machine simply to treat squeal or other brake noise."
+          "title": "Record the indicated axle and select the next action",
+          "body": "On the front branch, A5 assesses the front suspension before disc correction. A suspension fault requires repair and a test for normal operation; satisfactory suspension leads to front-disc inspection. If vibration persists after front-disc correction, A6 moves to the rear suspension. A positive parking-brake isolation test also selects the rear branch. At A7, satisfactory rear suspension leads to rear-disc inspection; a suspension fault requires repair and retesting. Arrange the assessment indicated by your result. [A5–A7 routing](#/document/G1721936)\n\nYou can finish this checklist here by recording the symptom outcome, indicated axle and next action. Enter the wheel-off branch only when further investigation warrants visual disc inspection or seating work at the relevant axle. Normal ABS feedback or an unreproduced complaint alone does not justify disassembly. [Diagnostic sequence](#/document/G1721936) · [Front disc access](#/document/G1693784) · [Rear disc access](#/document/G1693754)"
         },
         {
-          "title": "Reassemble correctly and verify the original complaint",
-          "body": "Use the correct front or rear disc procedure, including fasteners that must be replaced. Clean the wheel and hub mating surfaces and tighten wheel nuts in the prescribed star pattern with clean, dry threads. Apply the brake pedal several times after disc work to verify operation, then complete the appropriate controlled road test. Recheck wheel-nut tightness within 100 mi (160 km) after wheel installation."
+          "title": "For selected wheel-off work, raise and support the Mustang",
+          "body": "The wheel-removal procedure positions the vehicle on a hoist with the transmission in NEUTRAL. Use adequate hoist capacity and locate the stamped triangles identifying the designated lifting points. Position adapters to clear suspension, steering, exhaust and mounting brackets. Incorrect support can damage components or allow the vehicle to shift or fall. [Wheel-removal setup](#/document/G1686507) · [Lifting points](#/document/G1663631) · [Hoist precautions](#/document/G1693189)\n\nFor a service-jack setup, use a hard, level surface, adequate jack capacity, the designated lifting points and stands. Set the parking brake and block all wheels remaining on the ground before raising. Never get underneath a vehicle supported only by a jack. Do not use the emergency tire-changing jack or apply jack pressure to either bumper. Rear caliper access requires a later parking-brake release, after support and restraint are established; that transition is in step 11. [Jacking precautions](#/document/G1693189) · [Lifting restrictions](#/document/G1663631) · [Rear parking-brake mechanism](#/document/G1693756)"
+        },
+        {
+          "title": "Remove the relevant wheel",
+          "body": "At the corner selected for inspection, remove the wheel nuts and wheel. Do not heat a seized wheel nut: heat can damage the wheel and wheel bearing. The tire stays on its rim for this access work. [Wheel removal](#/document/G1686507)"
+        },
+        {
+          "title": "Inspect the accessible disc surfaces",
+          "body": "Look for damage and substantial corrosion, rust or pitting on the disc's braking surfaces. Identify any cross-drilled friction surfaces before considering machining. Continuous grinding or moaning calls for inspection of pads, discs and attaching hardware for damage and compliance with specifications; it does not automatically justify cutting the disc. [Condition diagnosis](#/document/G1721936) · [Machining restrictions](#/document/G1694691)\n\nRecord which surfaces you could inspect and what you found. An accessible outer face alone does not establish the condition of the complete disc. If seating inspection is unnecessary, leave the caliper and disc installed and continue to step 13."
+        },
+        {
+          "title": "Match thickness results to the fitted brakes",
+          "body": "Record the brake configuration beside any follow-on thickness measurement and compare it with the corresponding minimum.\n\n| Fitted brake | Minimum disc thickness |\n| --- | --- |\n| Front, two-piston caliper | 28.5 mm (1.122 in) |\n| Front, four-piston caliper | 30.5 mm (1.201 in) |\n| Front, six-piston caliper | 31.6 mm (1.244 in) |\n| Rear, solid disc | 9.9 mm (0.390 in) |\n| Rear, vented disc | 23.5 mm (0.925 in) |\n\nMachining has a separate starting-thickness restriction described in step 13. [Disc thickness specifications](#/document/G1694687) · [Machining restriction](#/document/G1694691)"
+        },
+        {
+          "title": "Interpret installed-disc runout without blaming the hub",
+          "body": "The maximum installed brake-disc runout is 0.05 mm (0.002 in). Record any valid measurement against its individual corner. This limit applies to the installed disc, not a bare hub flange. [Installed-disc limit](#/document/G1694687)\n\nArrange a standalone runout measurement using an applicable disc-retention and gauge procedure when needed. Leave unmeasured results open. The dial-indicator adjustment in the machining procedure concerns the on-vehicle lathe and must not be substituted for that test. [Lathe adjustment](#/document/G1694691)"
+        },
+        {
+          "title": "Release the rear parking brake when needed, then support the caliper",
+          "body": "Use this step only when disc removal is needed for the selected seating inspection. If the disc will remain installed, skip to step 13.\n\nBefore rear access, confirm that the vehicle is securely supported on the hoist or stands and restrained against movement. Keep appropriate wheel blocks in place at every wheel remaining on the ground. With support and restraint established, release the parking brake before displacing the rear caliper assembly or removing the disc. The rear caliper contains an internal parking-brake mechanism; releasing it is part of preparing that assembly for access. Do not rely on the applied parking brake as the restraint while servicing it. Restore it after reassembly and before lowering, as directed in step 16. [Support and restraints](#/document/G1693189) · [Lifting points](#/document/G1663631) · [Rear parking-brake mechanism](#/document/G1693756) · [Rear disc access](#/document/G1693754)\n\nFor a front disc, select the actual two-, four- or six-piston branch. Remove the two disc-access mounting bolts and position the caliper-and-pad assembly aside. Discard both bolts on all three variants. On the two-piston system these are the anchor-to-knuckle bolts, not the separate guide-pin bolts used during pad service. [Front disc access and disposal markings](#/document/G1693784) · [Two-piston pad-service fasteners](#/document/G1693786)\n\nFor a rear disc, remove and discard the two mounting bolts and position the caliper-and-anchor-plate assembly aside. [Rear disc access](#/document/G1693754)\n\nSupport the displaced assembly with mechanic's wire. Never let its weight hang from the brake hose, which can damage the hose. Leave the hose connected; disconnection is unnecessary for this work. [Caliper support](#/document/G1694691)"
+        },
+        {
+          "title": "Inspect and clean the seating surfaces, then refit the disc",
+          "body": "With the caliper assembly supported clear, remove the disc. Inspect its mating surfaces, then clean them with a wire brush and Motorcraft Brake Parts Cleaner PM-4-A or PM-4-B. Position the disc back on the cleaned mating surfaces. [Front disc cleaning and installation](#/document/G1693784) · [Rear disc cleaning and installation](#/document/G1693754)\n\nRecord the condition found and the cleaning performed. Any subsequent installed-disc runout measurement must meet the 0.05 mm (0.002 in) maximum. Leave that result open until measured. [Installed-disc specification](#/document/G1694687)"
+        },
+        {
+          "title": "Choose the follow-on action from the findings",
+          "body": "Bring together the symptom route, suspension findings, disc observations and any valid measurements. A damaged or out-of-specification disc needs the appropriate disc-service decision. A disc below its fitted-package minimum requires replacement. Arrange the indicated disc or suspension work. [Diagnostic decisions](#/document/G1721936) · [Thickness limits](#/document/G1694687) · [Disc service decisions](#/document/G1694691)\n\nFor machining eligibility, reject discs with cross-drilled friction surfaces. Do not machine when starting thickness is less than the applicable minimum plus 0.6 mm (0.0236 in). Meeting that starting threshold does not guarantee acceptable finished thickness. Excessive braking-surface corrosion, rust or pitting calls for machining subject to these restrictions. Noise alone is not a machining justification. [Machining eligibility](#/document/G1694691)\n\nIf machining is selected, Ford requires an on-vehicle lathe and prohibits a bench lathe. The operator must read the lathe's entire operating manual and/or view its supplied video before installing, operating or repairing it. Automatic runout adjustment is preferred. Manual adjustment uses a dial indicator, targeting 0.000 mm (0.000 in) total indicated runout with no more than 0.050 mm (0.002 in) permitted. These are lathe-adjustment conditions, not a hub test. [Lathe requirements](#/document/G1694691)\n\nCorrect lathe adjustment removes the requirement for separate lateral-runout and thickness-variation measurements in that machining workflow, including a separate post-machining runout reading. Removing shavings and measuring final disc thickness remain required; a finished disc below minimum must be replaced. [Machining verification](#/document/G1694691)\n\nIf you removed a wheel, complete the applicable reassembly steps below before ending this checklist."
+        },
+        {
+          "title": "Secure any displaced caliper assembly",
+          "body": "If no caliper assembly was displaced, continue to step 15.\n\nFor any of the three front-caliper variants, position the caliper-and-pad assembly over the installed disc, fit two new disc-access mounting bolts and tighten them to 115 Nm (85 lb-ft). [Front disc reassembly](#/document/G1693784)\n\nFor the rear, position the caliper-and-anchor-plate assembly over the disc, fit two new mounting bolts and tighten them to 175 Nm (129 lb-ft). Remove the temporary wire support after securing the assembly. Confirm that the brake hose is no longer carrying its weight. [Rear disc reassembly](#/document/G1693754) · [Hose protection](#/document/G1694691)"
+        },
+        {
+          "title": "Prepare the wheel's seating and pilot surfaces",
+          "body": "Remove corrosion, dirt and debris from the wheel mounting surface and its mating hub or disc surface. Any fasteners securing the disc to the hub must be secure and must not interfere with wheel seating. Trapped material or interference can allow the nuts to loosen and the wheel to detach, causing loss of control. [Wheel-seating requirements](#/document/G1686507)\n\nApply a thin coat of Motorcraft High Temperature Nickel Anti-Seize XL-2 only between the wheel pilot bore and hub pilot—the locating surfaces around the center opening. Keep it off the flat wheel-to-disc mounting faces, studs, nuts, pads and disc friction surfaces to avoid contamination and component damage. [Pilot lubrication](#/document/G1686507)"
+        },
+        {
+          "title": "Install the wheel, restore restraints and tighten in sequence",
+          "body": "Position the wheel and install all five nuts finger tight. [Initial wheel installation](#/document/G1686507)\n\nWith the brake assemblies secured, set the parking brake before lowering. This explicitly restores the brake released for rear disc access. Keep wheels already on the ground blocked and arrange wheel blocks to restrain the vehicle when it reaches the hard, level surface. Do not leave the car free to roll in NEUTRAL during lowering or ground-level tightening. [Vehicle restraint precautions](#/document/G1693189) · [Rear parking-brake mechanism](#/document/G1693756)\n\nWith the vehicle resting on its tires, tighten the nuts to 204 Nm (150 lb-ft) using clean, dry stud and nut threads. Follow the illustrated five-nut star sequence: with one nut at the top, tighten top → lower left → upper right → upper left → lower right. Incorrect order can increase disc runout and accelerate shudder and vibration. [Final wheel torque and sequence](#/document/G1686507)"
+        },
+        {
+          "title": "Check brake operation and retest the complaint",
+          "body": "After disc work, apply the brake pedal several times and verify correct brake-system operation before moving the car. A low, spongy or sinking pedal requires its corresponding diagnosis; do not proceed into a speed test with that unresolved. [Front completion check](#/document/G1693784) · [Rear completion check](#/document/G1693754) · [Pedal-fault routing](#/document/G1721936)\n\nWhen the car is ready to move and stationary restraints have been cleared, use the applicable controlled test conditions from steps 2–4. If front-disc correction removes the vibration, A6 identifies the concern as repaired. If vibration remains, continue through rear-suspension and rear-disc diagnosis. Record the actual test outcome. [Post-repair routing](#/document/G1721936)"
+        },
+        {
+          "title": "Record the outcome and complete any wheel-nut recheck",
+          "body": "Record the symptom conditions and outcome, indicated axle, surfaces inspected, seating work performed and next diagnostic action. The point is to give the next step evidence, not another round of parts-guessing bullshit.\n\nIf a wheel was reinstalled, retighten its nuts within 160 km (100 mi), because they can loosen after initial tightening. Use the same star sequence and 204 Nm (150 lb-ft) torque, with clean, dry threads and the vehicle resting on its tires. Keep the vehicle restrained during this check. If no wheel was removed, this recheck is not triggered by the symptom checklist alone. [Wheel-nut recheck](#/document/G1686507) · [Restraint precautions](#/document/G1693189)"
         }
       ],
       "watchFor": [
         {
-          "title": "Runout and thickness are different measurements",
-          "body": "A disc can meet one requirement and fail another. Keep the installed runout result, measured thickness and correct package-specific minimum together in the job record."
+          "title": "A symptom check does not automatically require disassembly",
+          "body": "An unreproduced concern ends the current investigation without prescribing parts. Normal ABS operation ends the disc-correction path for that finding alone. Enter wheel-off inspection only for a separately warranted concern. [Diagnostic exits](#/document/G1721936) · [Absent-concern decisions](#/document/G1693185)"
         },
         {
-          "title": "Loose or damaged suspension parts",
-          "body": "The brake vibration pinpoint test checks suspension condition as well as discs. Correct the identified fault instead of repeatedly machining rotors."
+          "title": "Thickness and runout answer different questions",
+          "body": "Acceptable installed runout does not establish adequate thickness. Keep the package-specific thickness result and installed-runout result separate. [Brake specifications](#/document/G1694687)"
         },
         {
-          "title": "The wrong brake-package limit is used",
-          "body": "Match the front caliper and rear disc configuration before using thickness limits or choosing parts. Two-, four- and six-piston front brakes and solid versus vented rear discs do not all share the same minimum thickness."
+          "title": "Rear access changes the parking-brake restraint",
+          "body": "Establish secure support and vehicle restraint before releasing the parking brake for rear caliper and disc access. Retain appropriate wheel blocks, then restore the parking brake after reassembly and before lowering. The rear caliper's internal parking-brake mechanism is part of this handling sequence. [Rear mechanism](#/document/G1693756) · [Rear disc access](#/document/G1693754) · [Support precautions](#/document/G1693189)"
         },
         {
-          "title": "A hub is blamed without an applicable test",
-          "body": "No separate hub-flange runout limit is established by the linked material. Investigate seating and use an appropriate hub-specific diagnostic reference before condemning the hub."
+          "title": "Two different pairs of front fasteners",
+          "body": "On the two-piston front brake, disc access uses renewed anchor mounting bolts tightened to 115 Nm (85 lb-ft). The separate caliper guide-pin bolts used for pad service are 32 Nm (24 lb-ft). Identify the actual fasteners before applying torque. [Disc-access bolts](#/document/G1693784) · [Guide-pin bolts](#/document/G1693786)"
+        },
+        {
+          "title": "Grinding becomes an automatic machining order",
+          "body": "Continuous grinding warrants inspection of pads, discs and hardware for damage and compliance with specifications. Ford nevertheless prohibits machining solely for a noise complaint. Establish the condition before selecting the repair. [Noise diagnosis](#/document/G1721936) · [Machining restriction](#/document/G1694691)"
         }
       ],
       "notes": [
-        "The 0.05 mm (0.002 in) value is the installed-disc limit; it must not be reused as a bare-hub tolerance. The machining article separately specifies the lathe’s adjustment conditions.",
-        "Use a suitably equipped brake shop for a reliable installed-disc measurement, and follow the complete linked procedure when carrying out the repair."
+        "This is a condition-based checklist and reference, not a new machining or disc-replacement interval. The existing maintenance schedule remains separate.",
+        "Machining does not automatically require new pads when their friction material remains within specification. Pad replacement is a separate task. [Machining completion](#/document/G1694691)",
+        "The installed-disc limit and maximum lathe-adjustment value serve different setups. Neither establishes a bare-hub tolerance. [Disc limit](#/document/G1694687) · [Lathe adjustment](#/document/G1694691)"
       ],
       "procedures": [
         {
           "documentId": "G1721936",
-          "purpose": "Separate normal ABS feedback from brake vibration and follow the suspension/disc diagnostic path."
+          "purpose": "Symptom selection, diagnostic exits, ABS comparison, parking-brake isolation and suspension/disc routing."
         },
         {
           "documentId": "G1694687",
-          "purpose": "Installed-disc runout and fitted-brake minimum-thickness specifications."
+          "purpose": "Installed-disc runout limit and fitted-brake minimum thickness reference."
         },
         {
           "documentId": "G1693784",
-          "purpose": "Front-disc access, caliper support, mating-surface cleaning and reassembly."
+          "purpose": "Optional front-disc access, mounting-bolt renewal, cleaning, reassembly and pedal checks."
         },
         {
           "documentId": "G1693754",
-          "purpose": "Rear-disc access, mating-surface cleaning and reassembly."
+          "purpose": "Optional rear-disc access, mounting-bolt renewal, cleaning, reassembly and pedal checks."
+        },
+        {
+          "documentId": "G1693756",
+          "purpose": "Identify the rear caliper's internal parking-brake mechanism for the rear-access handling sequence."
         },
         {
           "documentId": "G1694691",
-          "purpose": "Machining eligibility, on-vehicle lathe requirements and final thickness checks."
+          "purpose": "Caliper support, conditional service-mode precautions, machining eligibility and lathe requirements."
         },
         {
           "documentId": "G1686507",
-          "purpose": "Correct wheel/hub seating, star-pattern tightening and wheel-nut recheck."
+          "purpose": "Wheel access, seating preparation, pilot lubrication, tightening sequence, torque and recheck."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Designated lifting points and service-jack restrictions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Service preparation, personal protection, lifting support and vehicle restraints."
+        },
+        {
+          "documentId": "G1693185",
+          "purpose": "Previous-repair checks and decisions when the complaint is absent."
+        },
+        {
+          "documentId": "G1693786",
+          "purpose": "Distinguish two-piston guide-pin bolts from disc-access anchor mounting bolts."
         }
       ],
       "relatedGuideIds": [
@@ -10746,8 +11010,153 @@
         {
           "documentId": "G1686507",
           "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1693756",
+          "sourceHash": "338c06c1e57ba55ac08a0034acd4309c801570ed4f16e8018e452a7da638f752"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1693786",
+          "sourceHash": "1822f65a1f429d8809618bd1f816c2f398ccd69bd39b36a1907b6610f6236a96"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "trace-the-symptom",
+          "title": "Trace the symptom and choose an exit",
+          "summary": "Distinguish ABS feedback from a continuing concern, record the indicated axle and select any further inspection.",
+          "start": 1,
+          "end": 5
+        },
+        {
+          "id": "selected-wheel-off-inspection",
+          "title": "Perform the selected wheel-off inspection",
+          "summary": "Enter only when warranted; inspect accessible surfaces and use the limits to interpret follow-on measurements.",
+          "start": 6,
+          "end": 10
+        },
+        {
+          "id": "selected-seating-inspection",
+          "title": "Inspect disc seating when selected",
+          "summary": "Establish support and restraints, release the parking brake for rear access, support the caliper and clean the disc's mating surfaces.",
+          "start": 11,
+          "end": 12
+        },
+        {
+          "id": "decide-and-secure",
+          "title": "Choose the next action and secure the brakes",
+          "summary": "Apply repair restrictions and reinstall any displaced assembly with new mounting bolts.",
+          "start": 13,
+          "end": 14
+        },
+        {
+          "id": "finish-selected-work",
+          "title": "Finish the selected work",
+          "summary": "Reinstall any removed wheel, restore the parking brake and restraints, check operation and record the outcome.",
+          "start": 15,
+          "end": 18
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Neither light nor moderate-to-heavy braking reproduces the shudder.",
+          "meaning": "The concern is not present under those test conditions. [A1–A2 outcomes](#/document/G1721936)",
+          "next": "Record the conditions and end the current vibration investigation. Do not prescribe parts or enter disc access for this result alone. [Diagnostic assumptions](#/document/G1693185)"
+        },
+        {
+          "finding": "The A3 comparison produces vibration only on wet, snowy or loose surfaces.",
+          "meaning": "That branch identifies normal ABS operation. [ABS comparison](#/document/G1721936)",
+          "next": "Record the outcome and end the disc-correction path for this finding alone."
+        },
+        {
+          "finding": "Repeatable pedal pulsation or steering-wheel nibble follows vehicle speed during braking.",
+          "meaning": "The brake-vibration path calls for brake and suspension investigation. [Vibration diagnosis](#/document/G1721936)",
+          "next": "Use the applicable isolation branch, record the indicated axle and arrange its suspension and disc assessments."
+        },
+        {
+          "finding": "Shudder occurs with the brake pedal released.",
+          "meaning": "The symptom chart directs diagnosis toward brake drag. [Brake-drag routing](#/document/G1721936)",
+          "next": "End this vibration checklist and select the drag diagnostic path."
+        },
+        {
+          "finding": "A valid installed-disc reading exceeds 0.05 mm (0.002 in).",
+          "meaning": "The installed assembly exceeds the disc limit; this does not establish a failed bare hub. [Installed-disc specification](#/document/G1694687)",
+          "next": "Investigate seating and component condition, then repeat the applicable installed-disc test after correction. A hub decision requires its own procedure and limit."
+        },
+        {
+          "finding": "A valid thickness measurement is below the fitted brake package's minimum.",
+          "meaning": "The disc is below its permitted thickness. [Thickness specifications](#/document/G1694687)",
+          "next": "Select the replacement path. Machining cannot restore lost thickness. [Machining thickness requirements](#/document/G1694691)"
+        },
+        {
+          "finding": "Starting thickness is less than minimum plus 0.6 mm (0.0236 in), or the friction surface is cross-drilled.",
+          "meaning": "The disc is ineligible for machining under this procedure. [Machining exclusions](#/document/G1694691)",
+          "next": "If its condition requires disc correction, select the appropriate replacement path."
+        },
+        {
+          "finding": "Vibration persists after front-disc correction.",
+          "meaning": "A6 continues diagnosis at the rear suspension and rear discs. [Front-to-rear routing](#/document/G1721936)",
+          "next": "Complete that branch instead of repeatedly machining or replacing front discs."
+        }
+      ],
+      "verification": [
+        {
+          "title": "The checklist has a recorded outcome",
+          "body": "Record whether the concern was reproduced, matched the normal-ABS branch or needs further investigation. Identify the next action and indicated axle where applicable. An unreproduced concern does not justify replacing components. [Diagnostic outcomes](#/document/G1721936) · [Diagnostic assumptions](#/document/G1693185)"
+        },
+        {
+          "title": "Selected inspection work is accounted for",
+          "body": "Record the surfaces inspected, any disc-seating cleaning performed and the follow-on assessment selected from the diagnostic branch. [Diagnostic sequence](#/document/G1721936) · [Front seating work](#/document/G1693784) · [Rear seating work](#/document/G1693754)"
+        },
+        {
+          "title": "Any displaced brake assembly is secured",
+          "body": "Confirm two new disc-access mounting bolts at each displaced assembly: front 115 Nm (85 lb-ft), rear 175 Nm (129 lb-ft). Remove temporary wire supports after fastening and confirm the hose is not supporting the assembly. [Front reassembly](#/document/G1693784) · [Rear reassembly](#/document/G1693754) · [Caliper handling](#/document/G1694691)"
+        },
+        {
+          "title": "The parking brake and restraints are restored",
+          "body": "After rear access, confirm the brake assemblies are secured and the parking brake is reapplied before lowering. Keep appropriate wheel blocks in place to prevent movement during lowering and final wheel tightening. [Rear parking-brake mechanism](#/document/G1693756) · [Vehicle restraint precautions](#/document/G1693189)"
+        },
+        {
+          "title": "Any removed wheel is correctly installed",
+          "body": "Confirm clean seating faces, anti-seize confined to the pilot interface and star-pattern tightening to 204 Nm (150 lb-ft) on clean, dry threads with the car resting on its tires. Complete the wheel-nut recheck within 160 km (100 mi) after wheel installation. [Wheel requirements](#/document/G1686507)"
+        },
+        {
+          "title": "Brake operation is checked after disc work",
+          "body": "Apply the pedal several times and verify operation before moving. An unresolved low, spongy or sinking pedal requires its own diagnosis before a road test. Record the post-work symptom-test outcome and continue the diagnostic branch when required. [Front completion](#/document/G1693784) · [Rear completion](#/document/G1693754) · [Complaint verification](#/document/G1721936)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang brake pulsation",
+        "brake shudder symptom checks",
+        "steering wheel nibble under braking",
+        "normal ABS pedal feedback",
+        "installed brake disc runout limit",
+        "rotor minimum thickness",
+        "two piston four piston six piston brakes",
+        "disc seating corrosion",
+        "rear disc parking brake release",
+        "wheel nut star sequence",
+        "on vehicle brake lathe eligibility"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "8632d4fb98fb14e14e82f0e3eedcdaefea2ab68f0f20a2c2ffd956491a05ce3b"
+      }
     },
     {
       "id": "wheel-tire-runout-matching",

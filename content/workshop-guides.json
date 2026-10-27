@@ -48187,79 +48187,107 @@
       }
     },
     {
-      "title": "Replace the combined MAF/IAT sensor on the 5.0L or 5.2L",
-      "summary": "Disconnect and remove the combined intake-air sensor, then refit it using the procedure for the correct engine.",
-      "introduction": "The mass air flow (MAF) and intake air temperature (IAT) sensor provides the engine controls with information about the air entering the engine. This job removes the combined sensor assembly from its mounting and restores its electrical connection afterward. Use it once the need for removal or replacement has been established through engine-control diagnosis.",
-      "why": "The electrical connector must come off before the sensor is released from its retainers, so the wiring does not restrain the removed component. Engine identification also matters: the 5.2L procedure specifies a retainer torque that must not be carried across to the 5.0L.",
+      "title": "Replace the MAF/IAT sensor on a 2015 Mustang 5.0L or 5.2L",
+      "summary": "Locate the combined intake-air sensor, disconnect its wiring, remove its two retainers and refit it following the applicable engine-specific installation instructions.",
+      "introduction": "The intake has a little numbers nerd keeping track of incoming air, and thankfully it takes only two retainers to evict it. The combined mass air flow (MAF) and intake air temperature (IAT) sensor provides information about how much air is entering the engine and its temperature. I’ll walk you through its removal and refitting, keeping the wiring out of the wrestling match and the engine-specific tightening details straight.",
+      "why": "Disconnecting the electrical plug before removing the sensor keeps its wiring from restraining the loose component. During installation, the sensor is secured before the plug goes back on. Both engines use this sequence, but only the 5.2L procedure provides a numerical retainer torque.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "MAF IAT sensor replacement",
-        "5.0L mass air flow sensor",
-        "5.2L intake air temperature sensor"
+        "2015 Mustang MAF IAT sensor replacement",
+        "5.0L mass air flow sensor removal",
+        "5.2L intake air temperature sensor replacement",
+        "combined MAF IAT sensor retainers"
       ],
       "when": {
-        "summary": "When an established engine-control repair requires removal or replacement of the combined MAF/IAT sensor.",
-        "notes": []
+        "summary": "Use this procedure when an established repair requires removal or replacement of the combined MAF/IAT sensor.",
+        "notes": [
+          "This is a removal and installation job; it does not establish whether the sensor is faulty.",
+          "For engine-control diagnosis, the [5.0L system-operation reference](#/document/G1692302) and [5.2L system-operation reference](#/document/G1802177) direct you to the Powertrain Control/Emissions Diagnosis (PC/ED) Manual, Section 1, Description and Operation. Those references do not provide a sensor test here."
+        ]
       },
       "prepare": [
         {
-          "title": "Choose the engine-specific procedure",
-          "detail": "Identify whether the engine is the 5.0L or 5.2L before selecting installation details. The attached illustration shows the 5.0L installation beside the flexible intake duct."
+          "title": "Confirm the engine and tightening information",
+          "detail": "Choose the [5.0L procedure](#/document/G1834541) or [5.2L procedure](#/document/G1991990) before starting. Ford specifies reverse-order installation for the 5.0L without giving a numerical sensor-retainer torque. The 5.2L value of 18 lb.in (2 Nm) applies only to the 5.2L; do not substitute it for the 5.0L."
         },
         {
-          "title": "Prepare for the retainers",
-          "detail": "Have a suitable retainer driver available. For the 5.2L, use torque equipment capable of accurately applying the specified small tightening value."
+          "title": "Have the fastening tools and sensor ready",
+          "detail": "Have a driver that fits the sensor retainers. For the 5.2L, use torque equipment capable of accurately applying 18 lb.in (2 Nm). If replacing the sensor, have the replacement appropriate to the fitted engine ready. Keep the removed retainers for refitting."
         }
       ],
       "steps": [
         {
-          "title": "Disconnect the sensor",
-          "body": "Locate the combined MAF/IAT sensor using the appropriate engine procedure and disconnect its electrical connector. Complete this separation before loosening the sensor mounting."
+          "title": "Locate the sensor on the intake tube",
+          "body": "Before reaching into the engine compartment, switch the ignition off and remove the key from the vehicle. If remote start is fitted, disable it in the vehicle’s Central Display under Vehicle settings > Remote Start Setup before starting the work. This prevents someone else or a remote command from starting the engine during service. See [Health and Safety Precautions](#/document/G1693189).\n\nWorking at the engine intake, find the large ribbed flexible duct and follow it to the adjoining smooth intake tube. The sensor mounts on the smooth tube close to that junction, beside the large housing shown in the illustration.\n\nIn both engine illustrations, the sensor body is blue and its electrical connector is magenta, with the wiring extending downward. These are illustration highlights, not colors to expect on the car. The depicted removal goes directly to the connector and sensor; no intake-duct or housing removal is called for."
         },
         {
-          "title": "Remove the retainers and sensor",
-          "body": "Remove the retainers, then remove the sensor assembly. Keep the retainers available for refitting; neither procedure directs that they be discarded."
+          "title": "Disconnect the electrical connector first",
+          "body": "Release the sensor’s electrical connector and separate the plug from the sensor. Handle the connector body rather than pulling on its wires.\n\nMove the disconnected plug and its wiring clear of the sensor’s removal path. Leave the sensor retainers installed until the electrical connection is separated. The little plug gets to leave first; it does not need to come along for the ride."
         },
         {
-          "title": "Refit the sensor and retainers",
-          "body": "Reverse the mechanical removal sequence. On the 5.2L, tighten the retainers to 18 lb.in (2 Nm). No retainer torque is specified here for the 5.0L; do not substitute the 5.2L setting."
+          "title": "Remove both retainers and lift out the sensor",
+          "body": "Note how the sensor sits in its mounting so you can restore the same orientation. Remove the two sensor retainers; the illustration marks their removal with an “x2” callout.\n\nWith the connector disconnected and both retainers removed, remove the sensor from the intake tube. Keep the retainers together for installation."
         },
         {
-          "title": "Restore the electrical connection",
-          "body": "Reconnect the sensor after securing its mounting. This completes the reverse-removal sequence and restores the connection through which the engine controls receive its measurements."
+          "title": "Return the sensor to its mounting",
+          "body": "Place the sensor being installed into the intake-tube mounting in the same orientation as the removed unit. Refit both retainers. Keep the electrical connector disconnected while you secure the sensor."
+        },
+        {
+          "title": "Secure the retainers for the correct engine",
+          "body": "For the 5.2L, tighten the sensor retainers to 18 lb.in (2 Nm).\n\nFor the 5.0L, secure both refitted retainers to complete the reverse installation sequence. Its procedure does not give a numerical torque; do not borrow the 5.2L value.\n\nThe 5.2L measurement is in pound-inches, not pound-feet. Check the tool’s units before applying torque."
+        },
+        {
+          "title": "Reconnect the sensor",
+          "body": "After securing the sensor, bring the electrical plug back to its connection and reconnect it. Return the wiring to its original route without trapping it beneath the sensor or retainers.\n\nCheck that the connector is fully engaged and that both retainers are installed. That completes the reverse of the removal sequence."
         }
       ],
       "watchFor": [
         {
-          "title": "Wiring still attached",
-          "body": "If the connector remains attached, complete its disconnection before removing the sensor from the intake."
+          "title": "A connector still tethering the sensor",
+          "body": "If the wiring remains attached, stop lifting the sensor and finish disconnecting the plug. Do not use the sensor’s movement to pull the connector apart."
         },
         {
-          "title": "Engine-specific tightening",
-          "body": "A shared component name does not make the installation specifications interchangeable between these engines."
+          "title": "Pound-inches versus pound-feet",
+          "body": "The 5.2L specification is 18 lb.in (2 Nm). Use pound-inches, not pound-feet, when setting the tool."
         }
       ],
       "notes": [
-        "These removal and installation procedures do not prescribe an additional learning or initialization operation."
+        "The removal and installation procedures do not call for a separate learning or initialization operation. Mechanical completion alone does not prove that an earlier engine-control complaint has been resolved."
       ],
       "diagnostics": [],
       "verification": [
         {
-          "title": "Check the completed installation",
-          "body": "Confirm that the sensor and retainers are installed and the electrical connector is reconnected. For the 5.2L, confirm completion of the specified retainer tightening."
+          "title": "Confirm mechanical assembly",
+          "body": "Check that the sensor is back in its original mounting orientation and both retainers are installed and secured. On the 5.2L, confirm that they were tightened to 18 lb.in (2 Nm). Keep that numerical specification specific to the 5.2L installation."
+        },
+        {
+          "title": "Confirm the electrical connection and wiring position",
+          "body": "Check that the sensor connector is fully engaged and its wiring is clear of the mounting. These are assembly checks, not a sensor-performance test."
         }
       ],
       "procedures": [
         {
           "documentId": "G1834541",
-          "purpose": "5.0L combined MAF/IAT sensor removal and installation.",
+          "purpose": "5.0L MAF/IAT sensor connector disconnection, two-retainer removal and reverse-order installation.",
           "mediaId": "G1834541-m0001"
         },
         {
           "documentId": "G1991990",
-          "purpose": "5.2L combined MAF/IAT sensor removal and installation, including retainer torque.",
+          "purpose": "5.2L MAF/IAT sensor removal and installation, including the 18 lb.in (2 Nm) retainer torque.",
           "mediaId": "G1991990-m0001"
+        },
+        {
+          "documentId": "G1692302",
+          "purpose": "5.0L engine-control reference directing further system-operation reading to PC/ED Section 1; no diagnostic test is reproduced."
+        },
+        {
+          "documentId": "G1802177",
+          "purpose": "5.2L engine-control reference directing further system-operation reading to PC/ED Section 1; no diagnostic test is reproduced."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Ignition-off, key-removal and remote-start-disable precautions before underhood service."
         }
       ],
       "hero": {
@@ -48282,7 +48310,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with a 5.0L or 5.2L engine and combined MAF/IAT sensor."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -48301,14 +48330,44 @@
         {
           "documentId": "G1802177",
           "sourceHash": "db218522357690c58c3770a9d599c4ba46be78a61e64a4fcb7ef7bee6a356a99"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "66f6807e8ad1298682d38dd7271195006a397f235af72b32a48f32126150872b"
-      }
+        "fingerprint": "66f6807e8ad1298682d38dd7271195006a397f235af72b32a48f32126150872b",
+        "editorialVersion": 2,
+        "editorialFingerprint": "f676d0155826d0420a660d0e5694a0d98fd219c01b04686bf5326c450ba28bb8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Locate and disconnect",
+          "summary": "Find the intake-mounted sensor and separate its electrical connection.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "replacement",
+          "title": "Remove and refit",
+          "summary": "Remove the two retainers, exchange or return the sensor, and secure it for the fitted engine.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "reconnect",
+          "title": "Restore the connection",
+          "summary": "Reconnect the plug and check the completed assembly.",
+          "start": 6,
+          "end": 6
+        }
+      ]
     },
     {
       "title": "Replace the 5.2L fuel rail pressure and temperature sensor",
@@ -69849,77 +69908,127 @@
       }
     },
     {
-      "title": "Replace the Climate-Control Air Inlet Door Actuator",
-      "summary": "Access the air inlet door actuator behind the right-hand lower instrument panel insulator, replace it and restore its connector and trim.",
-      "introduction": "The air inlet door actuator provides movement for the door controlling air entry into the climate-control unit. It is an electrically connected component mounted behind the right-hand lower instrument panel insulator. Replacing it means removing that access panel, disconnecting the actuator and releasing its retainers. The heating and cooling system also controls temperature, air distribution and blower speed, so an inlet-door concern needs to be identified before choosing this component for replacement.",
-      "why": "The access insulator and the actuator have separate retainers. Removing them in the stated order exposes the component and frees it from both the wiring and its mounting. Reverse-order installation restores the actuator first, then the electrical connection and finally the lower panel. This sequence keeps the connector accessible until the actuator is secured.",
+      "title": "Replace the Air Inlet Door Actuator",
+      "summary": "Reach the actuator beneath the right-hand instrument panel, remove its connector and two retainers, then refit the actuator and lower insulator.",
+      "introduction": "The air inlet door actuator is a small motor with a talent for making you work beneath the dashboard. Its job is to move the door controlling air entry into the climate-control unit. I’ll walk you through removing the right-hand lower instrument panel insulator, unplugging the actuator and replacing it without letting the wiring join the wrestling match. This procedure applies to 2015 Mustangs with the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "The lower insulator covers the access area, while a separate pair of retainers holds the actuator to the climate-control housing. Removing the insulator first exposes the actuator and its electrical connection. On reassembly, securing and reconnecting the actuator before replacing the insulator leaves room to check your work.",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "air inlet door actuator replacement",
-        "air inlet door not moving",
-        "climate control inlet actuator",
-        "right lower instrument panel actuator"
+        "2015 Mustang air inlet door actuator replacement",
+        "Mustang climate control inlet actuator",
+        "right-hand lower instrument panel insulator",
+        "HVAC air inlet door actuator removal"
       ],
       "when": {
-        "summary": "When the air inlet door actuator has been identified for removal or replacement.",
+        "summary": "Use this procedure when the air inlet door actuator has already been identified for removal or replacement.",
         "notes": [
-          "A general heating or cooling complaint does not by itself identify the air inlet actuator as the cause."
+          "A general heating, cooling, airflow or blower complaint does not establish that this actuator needs replacement.",
+          "The removal and refitting sequence is shared across the listed engines; no separate EMTC or DATC removal branch is identified."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange right-hand lower-panel access",
-          "detail": "Be ready to work beneath the right-hand instrument panel and remove its lower insulator. Use tools suitable for the panel and actuator retainers."
+          "title": "Arrange access beneath the right-hand dashboard",
+          "detail": "Work beneath the right-hand instrument panel—the dashboard—and identify its lower insulator panel. The first illustration shows the broad panel beneath the dashboard, secured by two retainers. Keep room to support and lower it as those retainers come out."
         },
         {
-          "title": "Identify the component before removal",
-          "detail": "Use the actuator location illustration to identify its mounting retainers and electrical connector. Keep the panel retainers distinguishable from those securing the actuator."
+          "title": "Have the replacement and suitable retainer tools ready",
+          "detail": "If replacing the actuator, have the correct replacement for the vehicle ready. Match your removal tools to the actual panel and actuator retainers. Keep the two panel retainers separate from the two actuator retainers so each returns to its original location."
+        },
+        {
+          "title": "Understand the endpoint before starting",
+          "detail": "This walkthrough covers physical removal, refitting and reconnection. Retainer tool sizes and tightening torques, electrical fault tests, and any required calibration or initialization need separate service information matching the vehicle and replacement part."
         }
       ],
       "steps": [
         {
-          "title": "Remove the lower insulator",
-          "body": "Remove the retainers securing the right-hand lower instrument panel insulator, then remove the insulator. This provides the access used by the actuator replacement procedure."
+          "title": "Remove the right-hand lower instrument panel insulator",
+          "body": "From beneath the right-hand dashboard, locate the lower insulator shown in the access illustration. Support the panel, remove its two retainers and lower the insulator out of the work area. Set the panel and its retainers aside together.\n\nThis opens the access used by the [air inlet door actuator removal and installation procedure](#/document/G1676755)."
         },
         {
-          "title": "Disconnect and remove the actuator",
-          "body": "Disconnect the air inlet door actuator electrical connector. Remove the actuator retainers and take out the actuator. Disconnecting first frees the component from the harness before it leaves its mounting."
+          "title": "Identify the actuator and clear its immediate working space",
+          "body": "Look into the exposed area for the small actuator mounted low beside the tall, ribbed climate-control housing. Match its outline, electrical connector and two mounting retainers to the actuator illustration before releasing anything.\n\nThe illustration highlights adjacent wiring in yellow for positioning aside. Move that wiring aside only enough to reach the connector and retainers, without stretching it. I like to identify both retainers now; discovering the second one while tugging on the component is a particularly dull dashboard game."
         },
         {
-          "title": "Install and reconnect the actuator",
-          "body": "Reverse the actuator removal operations: position the actuator at its mounting, install its retainers and reconnect the electrical connector. Complete these connections while the lower access area remains open."
+          "title": "Disconnect the actuator electrical connector",
+          "body": "Release the actuator connector and unplug it from the actuator before removing the mounting retainers. Handle the connector body rather than pulling on its wires. Leave the disconnected wiring clear of the actuator’s removal path."
         },
         {
-          "title": "Restore the instrument panel insulator",
-          "body": "Refit the right-hand lower insulator and its retainers. This completes the reverse-order installation specified for the job."
+          "title": "Remove the two actuator retainers and the actuator",
+          "body": "Support the actuator while removing its two mounting retainers. The enlarged actuator detail identifies both attachment points with the ×2 callout.\n\nWith the connector disconnected and both retainers removed, take the actuator off its mounting. Keep its retainers together and note the installed orientation for refitting. If it remains held in place, check that both retainers and the connector have been released before applying more force."
+        },
+        {
+          "title": "Position and secure the actuator",
+          "body": "Place the replacement actuator—or the removed actuator if it is being refitted—at the original mounting location in the same orientation. Install the two actuator retainers. This begins the reverse of removal: the actuator is secured before its electrical connector is restored."
+        },
+        {
+          "title": "Reconnect the actuator and restore the wiring position",
+          "body": "Reconnect the actuator electrical connector and confirm it is seated and retained. Return the wiring moved aside during access to its previous position.\n\nWhile the opening is still clear, check that both actuator retainers are installed and that the wiring will remain clear of the lower insulator. This is the pleasant moment to catch an overlooked plug, before the dashboard gets its trousers back on."
+        },
+        {
+          "title": "Refit the lower instrument panel insulator",
+          "body": "Return the right-hand lower insulator to its original position beneath the dashboard. Keep the actuator wiring clear as you position the panel, then reinstall its two retainers. Confirm that the panel is supported at both attachment points."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing different climate-control functions",
-          "body": "Temperature selection, blower speed and air distribution are separate system functions. A complaint involving one of them needs diagnosis before an inlet actuator is selected."
+          "title": "Two separate pairs of retainers",
+          "body": "The lower insulator and actuator each have two retainers. Keep the pairs separate, and check the actuator’s attachment points before assuming it is free to remove."
         },
         {
-          "title": "An overlooked connector",
-          "body": "The actuator’s electrical connector must be restored before the lower insulator closes the access area."
+          "title": "Wiring caught during removal or refitting",
+          "body": "Disconnect the actuator before taking it off its mounting. When closing the access area, look along the panel’s seating area to ensure the wiring has not become trapped behind an edge or retainer location."
+        },
+        {
+          "title": "Parts guessing from a broad climate-control complaint",
+          "body": "The inlet actuator moves an air-entry door. Temperature selection, air distribution and blower operation involve other climate-control functions, so an unsatisfactory cabin temperature alone is not a reason to condemn this component."
         }
       ],
       "notes": [
-        "Electronic manual temperature control and dual automatic temperature control both manage cabin heating and cooling; this repair concerns the air inlet door actuator."
+        "With [Electronic Manual Temperature Control](#/document/G1681091), the panel selections determine heating or cooling and air distribution, the temperature setting determines outlet-air temperature, and the blower switch varies fan speed.",
+        "With [Dual Automatic Temperature Control](#/document/G1676851), the system works toward the selected cabin temperature. Driver and passenger temperatures can be set separately, and the driver can override automatic operation and blower speed. These distinctions help describe a complaint accurately; they do not change the actuator access sequence here."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The only established concern is poor heating, cooling or blower operation.",
+          "meaning": "That complaint does not isolate the air inlet door actuator. The climate-control system manages several separate functions.",
+          "next": "Establish which function is failing before selecting this actuator for replacement. Use the overview matching the fitted controls to distinguish the functions: [EMTC](#/document/G1681091) or [DATC](#/document/G1676851)."
+        },
+        {
+          "finding": "The exposed component does not match the illustrated actuator location, connector and two mounting points.",
+          "meaning": "The intended actuator has not yet been positively identified.",
+          "next": "Stop removal and compare the exposed area with the [actuator procedure](#/document/G1676755). Identify the matching component before unplugging or unfastening it."
+        },
+        {
+          "finding": "The actuator remains attached after an attempted removal.",
+          "meaning": "A mounting retainer or the electrical connection may still be engaged.",
+          "next": "Check the two illustrated mounting points and confirm the connector is fully disconnected. Do not pull against the wiring or use force to compensate for an unreleased attachment."
+        }
+      ],
       "verification": [
         {
-          "title": "Check reverse-order installation",
-          "body": "Confirm the actuator retainers are installed, its connector is reconnected and the right-hand lower instrument panel insulator is secured with its retainers."
+          "title": "Confirm actuator attachment and connection",
+          "body": "Before closing the access area, visually confirm that both actuator retainers are installed, the actuator is in its original mounting position and its electrical connector is fully reconnected."
+        },
+        {
+          "title": "Confirm the access area is restored",
+          "body": "Check that the wiring moved aside has been returned clear of the panel, the lower insulator is back in position and both panel retainers are installed. These are assembly-completion checks; they do not establish whether the original climate-control fault has been resolved."
         }
       ],
       "procedures": [
         {
           "documentId": "G1676755",
-          "purpose": "Air inlet door actuator removal and installation through the right-hand lower instrument panel insulator opening.",
+          "purpose": "Physical removal and installation of the air inlet door actuator, including lower-insulator access, connector disconnection and both pairs of retainers.",
           "mediaId": "G1676755-m0002"
+        },
+        {
+          "documentId": "G1681091",
+          "purpose": "Explain the fitted EMTC system’s temperature, distribution and blower functions when distinguishing an inlet-door concern."
+        },
+        {
+          "documentId": "G1676851",
+          "purpose": "Explain the fitted DATC system’s automatic temperature control, separate temperature settings and manual overrides."
         }
       ],
       "hero": {
@@ -69943,7 +70052,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Electronic Manual Temperature Control (EMTC) or Dual Automatic Temperature Control (DATC)."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -69964,8 +70074,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "ce5f0fd99584c51f486733637709f594fef508bbd6043faeba7fae2ef8c78056"
-      }
+        "fingerprint": "ce5f0fd99584c51f486733637709f594fef508bbd6043faeba7fae2ef8c78056",
+        "editorialVersion": 2,
+        "editorialFingerprint": "0c5bfe8b69e0d8a7773c904924880c563327d1878f090a45eda4cda9db110d53",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Open the access area",
+          "summary": "Remove the lower insulator, identify the actuator and position adjacent wiring aside.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "remove",
+          "title": "Disconnect and remove",
+          "summary": "Unplug the actuator, release its two retainers and remove it.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "refit",
+          "title": "Refit and close",
+          "summary": "Secure and reconnect the actuator, restore the wiring and reinstall the lower insulator.",
+          "start": 5,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Replace the ambient air temperature sensor",
@@ -70369,72 +70505,118 @@
       }
     },
     {
-      "title": "Replace the cabin air filter on the 5.2L Mustang",
-      "summary": "Replace the cabin air filter through the right-hand lower instrument-panel access, then reinstall its cover and insulator.",
-      "introduction": "The cabin air filter collects airborne material in the ventilation air path. Changing it renews the filter element without opening the refrigerant circuit. Access is through the right-hand lower instrument panel: the lower insulator comes away first, followed by the filter cover and then the filter itself.",
-      "why": "A restricted filter can reduce the air available to the cabin, but airflow and temperature control are different functions. The blower controls air movement, while the climate settings determine heating, cooling and distribution. Filter replacement is therefore justified by the filter’s condition; it does not by itself establish the cause of every heating or cooling complaint.",
-      "taskType": "repair",
+      "title": "Replace the cabin air filter on a 2015 5.2L Mustang",
+      "summary": "Reach the cabin air filter from beneath the right-hand dashboard, remove the lower insulator and filter cover, then replace the element and secure both panels.",
+      "introduction": "The cabin air filter is the ventilation system’s little doorman: airborne crud should have to get past it before joining you inside. I’ll walk you through the short access route beneath the right-hand dashboard—two insulator retainers, one filter-cover retainer, and the element itself. The trick is keeping those simple pieces in order so a filter change doesn’t become a trim-panel wrestling match.",
+      "why": "The filter collects airborne material in the cabin ventilation air path. Replacing it renews that element without opening the air-conditioning refrigerant circuit. I keep this job separate from diagnosing heating or cooling complaints: the climate controls also govern temperature, air distribution and blower operation, so a new filter alone does not establish that those functions are working correctly.",
+      "taskType": "maintenance",
       "difficulty": "basic",
       "searchTerms": [
-        "5.2L cabin air filter replacement",
-        "cabin filter behind lower instrument panel",
-        "restricted cabin ventilation airflow"
+        "2015 Mustang 5.2L cabin air filter replacement",
+        "right-hand lower instrument panel insulator",
+        "Mustang cabin filter cover retainer"
       ],
       "when": {
-        "summary": "When inspection shows the cabin air filter needs replacement, or it must be removed for related work.",
+        "summary": "Use this procedure when replacing the cabin air filter or removing it for related work.",
         "notes": [
-          "Use a condition-based decision for this repair; no replacement interval is specified here."
+          "No mileage or time interval is established here; use the vehicle’s applicable maintenance schedule to decide when routine replacement is due."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange lower-panel access",
-          "detail": "Provide access to the right-hand lower instrument-panel insulator and its retainers. Keep the insulator retainers separate from the filter-cover retainer."
+          "title": "Arrange access beneath the right-hand dashboard",
+          "detail": "RH means the vehicle’s right-hand side. Locate the lower instrument-panel insulator—the panel beneath that side of the dashboard—and make room to support it while removing its two retainers. Keep those retainers separate from the single filter-cover retainer."
         },
         {
-          "title": "Have the replacement ready",
-          "detail": "Use a filter suitable for the housing so the element, cover and surrounding insulator can all be restored during the same operation."
+          "title": "Confirm the replacement and its direction",
+          "detail": "Have a replacement filter confirmed for the 2015 5.2L application. Check its installation instructions before dismantling. The access illustrations do not establish an airflow-arrow direction; if the correct direction cannot be confirmed from the installed element and replacement instructions, resolve that before fitting the new filter."
+        },
+        {
+          "title": "Identify the access parts",
+          "detail": "The lower insulator comes off first. Behind it, look for the long, narrow filter cover with a honeycomb-patterned face beside the round blower housing. Its single retainer is on the projecting tab near the middle of the cover. The removal and installation sequence is shown in the [cabin air filter procedure](#/document/G1676759)."
         }
       ],
       "steps": [
         {
-          "title": "Remove the lower insulator",
-          "body": "Remove the retainers and the right-hand lower instrument-panel insulator. This exposes the area needed to reach the cabin-filter cover."
+          "title": "Remove the lower instrument-panel insulator",
+          "body": "Support the right-hand lower insulator, remove its two retainers, then lower the insulator away from its installed position. Set it and both retainers aside together. This opens the route to the filter cover; the insulator is the first layer, not the filter housing itself."
         },
         {
-          "title": "Open the filter housing",
-          "body": "Remove the filter-cover retainer, then remove the cover. Keep these parts together; they close and retain the access opening after the element is installed."
+          "title": "Remove the filter-cover retainer and cover",
+          "body": "Locate the long, narrow honeycomb-patterned cover beside the round blower housing. Remove the single retainer on its projecting tab, then remove the cover to expose the filter opening. Keep the cover and its retainer together. I’d give this little fastener its own safe spot—dashboard cavities are enthusiastic collectors."
         },
         {
-          "title": "Withdraw the filter",
-          "body": "Remove the cabin air filter through the exposed opening. The illustration shows the rectangular element at the housing beside the blower assembly."
+          "title": "Note the installed position and withdraw the filter",
+          "body": "Before moving the element, observe how it sits in the opening and record any visible orientation markings. Withdraw the cabin air filter through the exposed opening. The element occupies the narrow rectangular slot beside the blower housing; remove the filter itself after the cover is out of the way."
         },
         {
-          "title": "Install and close the access",
-          "body": "Reverse the removal sequence: install the replacement filter, refit its cover and retainer, then reinstall the lower instrument-panel insulator and its retainers."
+          "title": "Install the replacement filter",
+          "body": "Compare the replacement with the removed element to confirm that its shape and dimensions match the housing application. Insert it into the same opening using the confirmed installation direction. Check that it is seated within the housing and leaves the cover’s seating area clear before proceeding."
+        },
+        {
+          "title": "Refit the filter cover and its retainer",
+          "body": "Position the cover over the filter opening, align it with its mounting points and refit the single retainer. Check that the cover sits properly against the housing and remains secured. If it will not seat, stop and check the element’s position and cover alignment before trying again; the retainer should not be used to force a misplaced filter into submission."
+        },
+        {
+          "title": "Refit the lower insulator",
+          "body": "Return the right-hand lower instrument-panel insulator to its original position. Align its attachment points and reinstall both retainers. Check that the insulator is supported and secure, then account for the removed parts: one filter installed, one cover secured by its retainer, and one insulator secured by its two retainers."
         }
       ],
       "watchFor": [
         {
-          "title": "Cover or insulator will not seat",
-          "body": "Recheck the filter and removed parts before securing the retainers. The job is not finished with the access cover or lower insulator loose."
+          "title": "Keep the two layers of access distinct",
+          "body": "The lower insulator uses two retainers; the filter cover uses one. Reassemble the filter and cover before returning the insulator to its position."
+        },
+        {
+          "title": "Do not guess filter direction",
+          "body": "The element’s visible position identifies its location, but does not establish the direction of airflow. Resolve unclear directional markings before installing the replacement."
         }
       ],
       "notes": [
-        "Manual climate controls use a blower switch; dual automatic controls provide blower override buttons. Neither changes the physical filter-access sequence."
+        "With [Electronic Manual Temperature Control](#/document/G1681091), the blower switch changes fan speed, while the control selections govern heating, cooling and air distribution.",
+        "With [Dual Automatic Temperature Control](#/document/G1676851), the system maintains the selected cabin temperature, allows separate driver and passenger temperature settings, and provides blower-speed override buttons. The filter-access sequence is the same.",
+        "Air conditioning also reduces cabin-air humidity. Replacing the filter is not a test of that function."
       ],
-      "diagnostics": [],
+      "diagnostics": [
+        {
+          "finding": "The replacement does not match the removed element’s shape or dimensions.",
+          "meaning": "The replacement’s fitment needs to be resolved before installation.",
+          "next": "Confirm the correct filter for the vehicle and housing before continuing."
+        },
+        {
+          "finding": "The filter cover will not sit against the housing after the replacement is inserted.",
+          "meaning": "The filter position or cover alignment needs another check.",
+          "next": "Remove the cover again, check that the element is seated within the opening, then realign the cover before securing its retainer."
+        },
+        {
+          "finding": "A heating, cooling or airflow complaint remains after replacement.",
+          "meaning": "Completing this replacement does not identify the cause of the remaining complaint.",
+          "next": "Treat it as a separate climate-control diagnosis. The EMTC and DATC overview links explain their control functions but do not provide diagnostic tests."
+        }
+      ],
       "verification": [
         {
-          "title": "Confirm complete reassembly",
-          "body": "Check that the filter is installed, the cover is secured by its retainer, and the lower insulator has been refitted with its retainers."
+          "title": "Confirm the housing is closed",
+          "body": "Before reinstalling the insulator, confirm that the filter is installed, the cover is seated against the housing and its single retainer is secured. This is a reassembly check, not an airflow test."
+        },
+        {
+          "title": "Confirm the lower panel is secured",
+          "body": "Check that the right-hand lower insulator is back in position with both retainers installed and that no removed cover or fastener remains unaccounted for."
         }
       ],
       "procedures": [
         {
           "documentId": "G1676759",
-          "purpose": "Cabin air filter removal and installation through the right-hand lower instrument panel.",
+          "purpose": "Cabin air filter access, removal and installation, including the two lower-insulator retainers and single filter-cover retainer.",
           "mediaId": "G1676759-m0003"
+        },
+        {
+          "documentId": "G1681091",
+          "purpose": "Explain manual climate-control and blower functions separately from filter replacement."
+        },
+        {
+          "documentId": "G1676851",
+          "purpose": "Explain automatic climate-control settings and blower overrides separately from filter replacement."
         }
       ],
       "hero": {
@@ -70455,7 +70637,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Electronic Manual Temperature Control (EMTC) or Dual Automatic Temperature Control (DATC), as fitted."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -70476,8 +70659,34 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "e6c8cf782fd67d1ed33eb814ffb591ebe8c55c4116a30301da42c24af79e79fe"
-      }
+        "fingerprint": "e6c8cf782fd67d1ed33eb814ffb591ebe8c55c4116a30301da42c24af79e79fe",
+        "editorialVersion": 2,
+        "editorialFingerprint": "667c05ae3093445c5c7627fc823d11de4e96252b40ba9f84ebfd5009112aac84",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "access",
+          "title": "Open the filter access",
+          "summary": "Remove the lower insulator, then the filter cover.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "replace",
+          "title": "Exchange the filter",
+          "summary": "Record the installed position, remove the element and fit its replacement.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "reassemble",
+          "title": "Close and secure the access",
+          "summary": "Refit the cover and insulator with their respective retainers.",
+          "start": 5,
+          "end": 6
+        }
+      ]
     },
     {
       "title": "Replace the center register air discharge temperature sensor",
