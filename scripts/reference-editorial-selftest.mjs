@@ -112,3 +112,14 @@ test('publication startup check rejects missed variants without mutating reviewe
  }
  assert.deepEqual(startupReadinessIssues({kind:'repair'},make('If equipped, disable remote start through the display. Switch off the ignition and remove the key.')),[]);
 });
+
+test('supervisory readiness is exact-artifact and cannot borrow another document approval',async()=>{
+ const {supervisoryReadinessIssues}=await import('./reference-editorial-readiness.mjs');
+ const map={clearances:{a:{'reviewed-sha':{evidence:'actual-approval.json'}}}};
+ const before=JSON.stringify(map);
+ assert.deepEqual(supervisoryReadinessIssues('a','reviewed-sha',map),[]);
+ assert.equal(supervisoryReadinessIssues('a','changed-sha',map).length,1);
+ assert.equal(supervisoryReadinessIssues('b','reviewed-sha',map).length,1);
+ assert.equal(supervisoryReadinessIssues('a','reviewed-sha',{}).length,1);
+ assert.equal(JSON.stringify(map),before);
+});
