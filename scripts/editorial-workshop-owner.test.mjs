@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import {needsOwnerControls,enrollOwnerControls,loadOwnerControls,ownerEvidence,pairExternalAllowed,OWNER_ID,OWNER_PDF,OWNER_TEXT} from './editorial-workshop-owner.mjs';
+import {needsOwnerControls,enrollOwnerControls,enrollServicePrerequisites,loadOwnerControls,ownerEvidence,pairExternalAllowed,OWNER_ID,OWNER_PDF,OWNER_TEXT} from './editorial-workshop-owner.mjs';
 import {reviewCoverageErrors} from './editorial-workshop-lib.mjs';
 test('owner controls select explicit 2015 physical tasks, never bench or unknown year',()=>{
  assert.equal(needsOwnerControls(['G1694275'],[2015]),true);
@@ -26,3 +26,5 @@ test('private complete owner text and both figures retain exact pair coverage',{
 });
 
 test('owner enrollment does not mass-retry old holds and remains stable for enriched holds',()=>{assert.equal(enrollOwnerControls({status:'needs-review'}),false);assert.equal(enrollOwnerControls({status:'reviewed'}),false);assert.equal(enrollOwnerControls({status:'failed'},true),true);assert.equal(enrollOwnerControls({status:'needs-review',ownerControlsEvidence:true}),true);assert.equal(enrollOwnerControls(undefined),true);});
+
+test('service prerequisite enrollment includes reservations and fallback without mass retry',()=>{for(const p of [undefined,{status:'reserved'},{status:'pair-fallback'},{status:'needs-review',servicePrerequisiteEvidence:true}])assert.equal(enrollServicePrerequisites(p),true);for(const status of ['needs-review','reviewed','failed']){assert.equal(enrollServicePrerequisites({status}),false);assert.equal(enrollServicePrerequisites({status},true),true);}});
