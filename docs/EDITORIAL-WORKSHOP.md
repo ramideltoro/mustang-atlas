@@ -91,7 +91,7 @@ references. The guide cites the publication and physical pages in prose. Private
 figure paths are restricted to the work directory. This narrow recovery does not
 change database contents or broaden model-year applicability.
 
-### Two-guide pilot (not enabled for the full queue)
+### Two-guide authoring: pilot and bounded queue mode
 
 `editorial-workshop-pair.mjs` runs exactly two independently scoped, complete one-packet repairs through a shared author and a separate shared reviewer. Exact duplicate evidence is supplied once, but each guide retains its own allowed nodes, source hashes, base hash, numeric/reference validation, coverage verdict and full catalog validation. Conflicting identities, missing result IDs, incomplete review coverage and cross-guide quantities/references fail closed. Failed shared results fall back to isolated calls in the same CLI slot; no guide inherits another guide's approval.
 
@@ -102,3 +102,9 @@ node scripts/editorial-workshop.mjs --prepare-pair --ids FIRST,SECOND --director
 ```
 
 After the main worker finishes its current guide and exits, run `node scripts/editorial-workshop-pair.mjs work/editorial-workshop-pair-pilot` in its freed slot. Never overlap it with that main worker. Resume the main queue afterward with `--exclude-ids FIRST,SECOND` until the pilot outputs receive supervisory review. Pilot records remain in a separate private directory, carry `publicationHeld: true`, and are not collected by the publisher. `pilot-report.json` records actual calls, timing, deduplicated source size and individual outcomes. No broader rollout is implied by a successful pilot.
+
+The two-guide pilot completed on2026-10-27: both guides passed independent source/figure review and full catalog checks in two CLI calls (4m45s total). Exact source text fell from18,278 to11,370characters through deduplication; all15figures remained. Supervisory review then added a rear-seat-fitted qualifier and an explicit stationary window completion check, preserving the original reviews.
+
+Approved bounded queue mode is opt-in with `--pairs`. It retains a maximum of two guides per call and the same complete evidence/coverage gates, rejects shared-primary or likely same-component variants, and falls back to the isolated pipeline when no eligible pair exists or shared execution fails. Per-guide revisions remain isolated. The parent worker starts the pair subprocess in its existing slot, never alongside another call of its own; parent PID verification enforces that handoff. Successful records still pass the ordinary source/base/full-catalog gates before primary staging. Each pair has its own complete private report under `work/editorial-workshop/pairs/`.
+
+Main-worker reservation manifests are explicit assignments to the secondary worker. They are recorded as `reserved` in the main ledger, not treated as completed. Already-reviewed staged records with an exact current base and valid source hashes are reused, including records imported by the secondary coordinator, avoiding duplicate authoring while publication is pending.

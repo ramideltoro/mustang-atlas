@@ -3,6 +3,11 @@ import {packNodes,validateCandidate,reviewCoverageErrors} from './editorial-work
 export function buildPair(jobs){
  if(jobs.length!==2||new Set(jobs.map(j=>j.baseGuide.id)).size!==2)throw Error('Exactly two distinct guides required');
  const scope=JSON.stringify(jobs[0].contract.applicability.engines);
+ const primary=jobs.map(j=>new Set(j.baseGuide.primaryDocumentIds||[]));
+ if([...primary[0]].some(id=>primary[1].has(id)))throw Error('Shared primary procedure needs isolated review');
+ const stop=new Set('remove replace refit install check inspect adjust complete setup front rear left right side driver passenger coupe convertible mustang engine with without and the a an on in for to of or its how from'.split(' '));
+ const nouns=jobs.map(j=>new Set((j.baseGuide.title||'').toLowerCase().match(/[a-z]{4,}/g)?.filter(w=>!stop.has(w))||[]));
+ if([...nouns[0]].filter(w=>nouns[1].has(w)).length>=2)throw Error('Potential same-component variants need isolated review');
  const nodes=new Map();
  for(const j of jobs){
   if(j.baseGuide.taskType!=='repair'||j.packets!==1||j.contract.unresolvedDependencies.length||j.contract.externalSources?.length)throw Error('Pair requires complete bounded repair evidence');

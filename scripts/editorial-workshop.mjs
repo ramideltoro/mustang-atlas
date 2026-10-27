@@ -107,10 +107,38 @@ const costs=new Map(inventory.map(g=>[g.id,g]));
 const excludedIds=new Set(opt('--exclude-ids','').split(',').filter(Boolean));
 const selected=base.filter(g=>(!ids.length||ids.includes(g.id))&&!excludedIds.has(g.id));
 if(!ids.length)selected.sort((a,b)=>costs.get(a.id).packets-costs.get(b.id).packets||costs.get(a.id).sourceCharacters-costs.get(b.id).sourceCharacters);
+const pairedThisRun=new Set();
+const reservedIds=new Set();
+if(dir===path.resolve('work/editorial-workshop'))for(const name of fs.readdirSync(dir).filter(n=>/^care-reserved-subset.*\.json$/.test(n)))for(const id of read(path.join(dir,name)).ids||[])reservedIds.add(id);
+async function processPair(pair){
+ const pairDir=path.join(dir,'pairs',pair.fingerprint.slice(0,20));fs.mkdirSync(pairDir,{recursive:true});atomic(path.join(pairDir,'pair-input.json'),pair);
+ const pairIds=pair.jobs.map(j=>j.baseGuide.id);for(const j of pair.jobs)save(j.baseGuide.id,{status:'pair-authoring',fingerprint:j.fingerprint,folder:pairDir});
+ const code=await new Promise((resolve,reject)=>{child=spawn(process.execPath,['scripts/editorial-workshop-pair.mjs',pairDir,'--queue-mode','--parent-pid',String(process.pid)],{cwd:root,env,stdio:'inherit'});child.on('error',reject);child.on('exit',code=>{child=null;resolve(code);});});
+ if(code!==0){for(const id of pairIds)save(id,{status:'pair-fallback',error:'Shared pair failed; isolated queue handling retained.'});return false;}
+ const report=read(path.join(pairDir,'pilot-report.json'));
+ for(const j of pair.jobs){const id=j.baseGuide.id,result=report.results.find(r=>r.id===id);if(!result)throw Error('Missing pair outcome '+id);
+  if(result.accepted){const record=read(path.join(pairDir,'reviewed',id+'.json'));const validation=validateStagedCatalog(db,[record],{directory:dir});if(!validation.valid)throw Error('Pair catalog changed before staging');atomic(path.join(dir,'reviewed',id+'.json'),record);save(id,{status:'reviewed',fingerprint:j.fingerprint,folder:pairDir,errors:[],issues:[],reviewedPackets:1,pairFingerprint:pair.fingerprint});}
+  else save(id,{status:'needs-review',fingerprint:j.fingerprint,folder:pairDir,errors:result.errors,issues:[{severity:'major',problem:'Independent paired review did not approve; see complete per-guide result.'}],reviewedPackets:1,pairFingerprint:pair.fingerprint});
+  pairedThisRun.add(id);
+ }
+ return true;
+}
 for(const baseGuide of selected){
+ if(pairedThisRun.has(baseGuide.id))continue;
  if(stopped||fs.existsSync(path.join(dir,'stop-after-current'))||limit&&count>=limit)break;
- const e=evidenceFor(baseGuide),id=baseGuide.id;const stagedPath=path.join(dir,'reviewed',id+'.json');if(fs.existsSync(stagedPath)){const staged=read(stagedPath);if(staged.guide.authoring?.editorialVersion===VERSION&&JSON.stringify(staged.guide)===JSON.stringify(baseGuide)&&staged.guide.sourceRefs.every(r=>byId.get(r.documentId)?.source_hash===r.sourceHash)){save(id,{status:'reviewed',published:true,fingerprint:e.fingerprint});continue;}}const textContext=e.nodes.reduce((n,v)=>n+v.text.length,0)<=90000?e.nodes.filter(n=>n.text&&n.images.length===0):[];if(ledger[id]?.fingerprint===e.fingerprint&&ledger[id]?.status==='reviewed')continue;
+ const e=evidenceFor(baseGuide),id=baseGuide.id;const stagedPath=path.join(dir,'reviewed',id+'.json');if(fs.existsSync(stagedPath)){const staged=read(stagedPath);if(staged.guide.authoring?.editorialVersion===VERSION&&JSON.stringify(staged.guide)===JSON.stringify(baseGuide)&&staged.guide.sourceRefs.every(r=>byId.get(r.documentId)?.source_hash===r.sourceHash)){save(id,{status:'reviewed',published:true,fingerprint:e.fingerprint});continue;}}const textContext=e.nodes.reduce((n,v)=>n+v.text.length,0)<=90000?e.nodes.filter(n=>n.text&&n.images.length===0):[];if(fs.existsSync(stagedPath)){const r=read(stagedPath);if(!r.incrementalOnly&&!r.supplementalReview?.incrementalOnly&&r.guide.authoring?.editorialVersion===VERSION&&r.guide.authoring.independentSourceReview===true&&r.baseHash===hash(JSON.stringify(baseGuide))&&r.guide.sourceRefs.every(ref=>byId.get(ref.documentId)?.source_hash===ref.sourceHash)){save(id,{status:'reviewed',published:false,fingerprint:e.fingerprint,folder:r.reviewFolder});continue;}}
+ if(reservedIds.has(id)){save(id,{status:'reserved',assignedTo:'care_guides',fingerprint:e.fingerprint});continue;}
+ if(ledger[id]?.fingerprint===e.fingerprint&&ledger[id]?.status==='reviewed')continue;
  if(!args.includes('--retry')&&ledger[id]?.fingerprint===e.fingerprint&&['needs-review','failed'].includes(ledger[id]?.status))continue;
+ if(args.includes('--pairs')&&(!limit||count+2<=limit)&&e.packets.length===1&&baseGuide.taskType==='repair'&&!e.contract.unresolvedDependencies.length&&!e.contract.externalSources?.length){
+  const first={baseGuide,baseHash:hash(JSON.stringify(baseGuide)),contract:e.contract,nodes:e.nodes,fingerprint:e.fingerprint,packets:e.packets.length};let pair=null;
+  for(const other of selected.slice(selected.indexOf(baseGuide)+1,selected.indexOf(baseGuide)+31)){
+   if(pairedThisRun.has(other.id)||reservedIds.has(other.id)||ledger[other.id]&&ledger[other.id].status!=='pair-fallback'||fs.existsSync(path.join(dir,'reviewed',other.id+'.json')))continue;
+   const cost=costs.get(other.id);if(other.taskType!=='repair'||cost.packets!==1||cost.unresolvedDependencies)continue;
+   const oe=evidenceFor(other);try{pair=buildPair([first,{baseGuide:other,baseHash:hash(JSON.stringify(other)),contract:oe.contract,nodes:oe.nodes,fingerprint:oe.fingerprint,packets:oe.packets.length}]);break;}catch{}
+  }
+  if(pair){try{if(await processPair(pair)){count+=2;continue;}}catch(error){console.error('Pair failed, returning to isolated handling: '+error.message);}}
+ }
  count++;const folder=path.join(dir,'jobs',id,e.fingerprint.slice(0,16));fs.mkdirSync(folder,{recursive:true});atomic(path.join(folder,'manifest.json'),{id,fingerprint:e.fingerprint,baseHash:hash(JSON.stringify(baseGuide)),contract:e.contract,nodes:e.nodes});save(id,{status:'authoring',fingerprint:e.fingerprint,folder});
  try{
   let candidate=null;const imageLists=[];
