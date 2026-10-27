@@ -39,8 +39,8 @@ function evidenceFor(g){
   }frontier=next;
  }
  for(const d of frontier)for(const id of d.related||[])if(!docs.has(id)&&byId.has(id)&&id!=='G1693180')unresolved.push({from:d.id,documentId:id,title:byId.get(id).title,reason:'Deeper dependency not supplied: identify an explicit boundary if essential.'});
- // Lifting execution needs the source's parking, chocking and support precautions.
- if(docs.has('G1686507')||docs.has('G1663631'))docs.set('G1693189',byId.get('G1693189'));
+ // Physical repairs and switch access need relevant general startup/support precautions.
+ if(job.kind==='repair'||switchAccess||docs.has('G1686507')||docs.has('G1663631'))docs.set('G1693189',byId.get('G1693189'));
  const nodes=[];for(const d of docs.values()){
   const spans=primary.has(d.id)?job.spans.filter(s=>s.documentId===d.id):[{id:'dependency',start:0,end:d.text.length,title:d.title}];
   for(const s of spans)for(const piece of splitSpan(d.text,s.start,s.end))nodes.push({nodeId:`${d.id}:${s.id}:${piece.start}-${piece.end}`,documentId:d.id,sourceHash:d.source_hash,sectionId:s.id,title:d.title,role:primary.has(d.id)?'primary':'dependency',engines:scopeEngines(d),start:piece.start,end:piece.end,text:piece.text,images:[]});
@@ -55,7 +55,7 @@ function evidenceFor(g){
  ];
  const observations=diagramFindings.filter(f=>{const d=docs.get(f.documentId),m=d?.media?.find(m=>m.id===f.mediaId);if(d?.source_hash!==f.sourceHash||!m)return false;const file=path.join(root,'data',m.url.replace(/^\//,''));return fs.existsSync(file)&&hash(fs.readFileSync(file))===f.fileHash;});
  const sources=[...new Map([...referenceOnly,...docs]).values()].map(d=>({documentId:d.id,sourceHash:d.source_hash,title:d.title,engines:scopeEngines(d),role:docs.has(d.id)?'supplied-evidence':'reference-only'}));
- const contract={jobId:g.id,title:job.title,applicability:{...g.applicability,engines:job.engines},scopeConstraints:[...(job.scopeConstraints||[]),'Sources marked reference-only are known diagnostic or repair destinations, not supplied execution evidence. Use them as next-step links only; do not teach their internal procedures or claim their contents were reviewed.'],coveredSections:job.spans.map(s=>({documentId:s.documentId,sectionId:s.id})),sources,unresolvedDependencies:unresolved,reviewedEvidence:[...(job.evidenceSupplements||[]),...observations],relatedGuides:job.documents.some(d=>d.id==='G1692537')?[{id:'job-dc7f65eee891660d',title:'SVT Performance Package front hub: separate bolt-on assembly for5.2L'}]:[]};
+ const contract={jobId:g.id,title:job.title,applicability:{...g.applicability,engines:job.engines},scopeConstraints:[...(job.scopeConstraints||[]),...(docs.has('G1693189')?['Select the general safety precautions relevant to this actual task, including startup prevention for underhood work and parking/chock/support/restoration for lifting. Put those actions before the affected work. Do not dump unrelated general warning boilerplate.']:[]),'Sources marked reference-only are known diagnostic or repair destinations, not supplied execution evidence. Use them as next-step links only; do not teach their internal procedures or claim their contents were reviewed.'],coveredSections:job.spans.map(s=>({documentId:s.documentId,sectionId:s.id})),sources,unresolvedDependencies:unresolved,reviewedEvidence:[...(job.evidenceSupplements||[]),...observations],relatedGuides:job.documents.some(d=>d.id==='G1692537')?[{id:'job-dc7f65eee891660d',title:'SVT Performance Package front hub: separate bolt-on assembly for5.2L'}]:[]};
  const fingerprint=hash(JSON.stringify({version:VERSION,guide:g,contract,nodes}));
  return{job,contract,nodes,fingerprint,packets:packNodes(nodes)};
 }
