@@ -76,3 +76,7 @@ test('startup wording requires exact reviewed safety evidence and leaves actions
 test('body closures include complete applicable body safety evidence without fuel-system assumptions',async()=>{
  const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const make=(id,title,related=[])=>({id,title,related,media:[],engines:[],blocks:[],text:'Complete precautions.',source_hash:id+'-hash'});const primary={...make('door','Fuel Filler Door',['G1693180']),kind:'repair',section_title:'Body Closures'},bridge=make('G1693180','About this Manual',['G1693189']),general=make('G1693189','General Safety',['G1693182','G1693188']),body=make('G1693182','Body Repair Health and Safety'),fuel=make('G1693188','Gasoline Fuel Safety');const p=buildSupportingPackage(primary,[primary,bridge,general,body,fuel]);assert.deepEqual(p.documents.map(d=>d.id),['G1693189','G1693182']);assert.equal(p.unavailableSupportingReferences.length,0);
 });
+
+test('brake-dust staging refuses unrelated documents before reading private artifacts',async()=>{
+ const {spawnSync}=await import('node:child_process');const result=spawnSync(process.execPath,[new URL('./reference-editorial-stage-brake-dust.mjs',import.meta.url).pathname,'G1693782'],{cwd:'/tmp',encoding:'utf8'});assert.notEqual(result.status,0);assert.match(result.stderr,/restricted to the two reviewed shield targets/);assert.doesNotMatch(result.stderr,/ENOENT/);
+});
