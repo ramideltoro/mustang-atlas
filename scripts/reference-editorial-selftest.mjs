@@ -80,3 +80,19 @@ test('body closures include complete applicable body safety evidence without fue
 test('brake-dust staging refuses unrelated documents before reading private artifacts',async()=>{
  const {spawnSync}=await import('node:child_process');const result=spawnSync(process.execPath,[new URL('./reference-editorial-stage-brake-dust.mjs',import.meta.url).pathname,'G1693782'],{cwd:'/tmp',encoding:'utf8'});assert.notEqual(result.status,0);assert.match(result.stderr,/restricted to the two reviewed shield targets/);assert.doesNotMatch(result.stderr,/ENOENT/);
 });
+
+test('startup normalization handles mid-sentence key removal and separate equipment conditions',async()=>{
+ const {clarifyStartupPreparation,GENERAL_SAFETY_HASH}=await import('./reference-editorial-startup.mjs');
+ const context={kind:'repair',supportingSourceRefs:[{documentId:'G1693189',sourceHash:GENERAL_SAFETY_HASH}]};
+ const draft={requirements:[{category:'Setup',items:[
+  {name:'Starting',detail:'Once seat access is arranged, remove the key from the vehicle.'},
+  {name:'Starting',detail:'Disable remote start through the display. Switch the ignition OFF and remove the key from the vehicle. If equipped with engine auto start-stop, keep ignition off.'},
+  {name:'Starting',detail:'If equipped, disable remote start through the display. Switch the ignition OFF and remove the key from the vehicle.'}
+ ]}],edits:[]};
+ assert.equal(clarifyStartupPreparation(draft,context).length,2);
+ assert.match(draft.requirements[0].items[0].detail,/arranged, switch the ignition OFF and remove/);
+ assert.match(draft.requirements[0].items[1].detail,/^Disable remote start, if equipped, through/);
+ assert.equal((draft.requirements[0].items[1].detail.match(/ignition OFF/g)||[]).length,1);
+ assert.match(draft.requirements[0].items[2].detail,/^If equipped, disable remote start through/);
+ assert.equal(clarifyStartupPreparation(draft,context).length,0);
+});
