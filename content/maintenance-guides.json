@@ -527,7 +527,9 @@
         "tire-check"
       ],
       "notes": [
-        "A tire-pressure warning system does not replace physical checks. Never work beneath a car supported only by a jack."
+        "Scope remains the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine.",
+        "The executable rotation route uses a hoist and compatible non-directional wheel/tire assemblies. The vehicle's emergency jack is not used for this maintenance procedure. [Lifting restrictions](#/document/G1663631)",
+        "Tire dismounting, bead seating, valve/sensor replacement, alignment adjustment, balancing and runout correction are separate jobs. New tire or wheel installation requires a new valve stem; those replacement requirements do not turn ordinary assembly rotation into valve replacement. [Tire service](#/document/G1686509)"
       ],
       "relatedGuideIds": [
         "wheel-hubs",
@@ -536,15 +538,15 @@
         "wheel-alignment"
       ],
       "id": "tires",
-      "title": "Tires: pressure, tread and the right rotation",
+      "title": "Tires: cold pressure, tread checks and non-directional rotation",
       "categoryId": "chassis",
       "hero": {
         "documentId": "G1686509",
         "mediaId": "G1686509-m0001"
       },
-      "summary": "Check the tire’s condition and pressure first, then rotate only in a pattern allowed by its size and construction.",
-      "introduction": "Tires are the car’s contact with the road, so small changes here can make the whole car feel different. Pressure supports the load; tread and casing condition affect how the tire works. Rotation can help manage wear, but a Mustang’s front and rear wheel sizes may differ, and directional tires add another constraint.",
-      "why": "An uneven wear pattern can reveal an inflation, alignment or suspension concern. Rotating the tires without addressing the cause merely moves the evidence to another corner.",
+      "summary": "Check pressure and condition, measure tread, choose the supported non-directional rotation pattern, and finish with correct wheel tightening and TPMS location calibration.",
+      "introduction": "I start with the gauge before reaching for the wheel wrench. Moving a worn tire to another corner can relocate the problem beautifully while fixing absolutely damn nothing. This guide covers the 2015 Mustang with the 2.3L, 3.7L or 5.0L engine: cold-pressure checks, tire and wheel inspection, and rotation of compatible non-directional assemblies using a hoist. Directional tires get inspected here; their rotation arrangement goes to a tire professional rather than borrowing a pattern that does not apply. Tire dismounting, replacement, alignment and vibration measurements are separate jobs. [Tire inspection](#/document/G1686502) [Ford rotation guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+      "why": "Correct inflation supports tire performance and wear; underinflation can build heat and damage a tire internally. Tread should wear evenly across its width and around its circumference. Uneven wear can point toward alignment, inflation, balance or suspension concerns, so rotation belongs after the cause is assessed. The tire pressure monitoring system, or TPMS, uses battery-powered sensors attached to the valve stems. Its warning can indicate low pressure or a system fault, but it cannot inspect rubber for you. [Wear diagnosis](#/document/G1686502) [TPMS operation](#/document/G1686515) [Ford tire care](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
       "when": {
         "summary": "Check pressure and wear monthly. At every oil service, inspect wear, measure tread depth and rotate where the fitted tire arrangement permits.",
         "notes": [
@@ -553,50 +555,166 @@
       },
       "prepare": [
         {
-          "title": "Read the vehicle label",
-          "detail": "Use the correct cold pressures and approved tire sizes for the car, rather than the maximum pressure molded into the tire."
+          "title": "Pressure and tread equipment",
+          "detail": "Have a digital tire-pressure gauge, an air source, a tread-depth gauge and a way to record results by wheel position. Ford's workshop procedure requires a digital gauge whenever pressure is measured. Find the tire/certification label on the driver door or door pillar before starting. [Pressure equipment](#/document/G1686509) [Tread measurement](#/document/G1686502)"
         },
         {
-          "title": "Identify rotation limits",
-          "detail": "Compare front and rear sizes and check directional markings before choosing a rotation pattern."
+          "title": "Cold tires",
+          "detail": "Plan the pressure check after the vehicle has stood out of direct sunlight for at least one hour and before driving. The tires must be cool, not heated by driving even a mile. This guide uses the cold-pressure route throughout. [Ford cold-pressure conditions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "For wheel rotation",
+          "detail": "Arrange access to a suitable hoist and someone competent to operate it. Its capacity must cover the car, cargo and modifications. Have a wheel-nut tool matched to the fitted fasteners, a torque wrench capable of 150 lb-ft (204 Nm), suitable mounting-surface cleaning tools, and Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2. The supported removal route places the transmission in Neutral on a hoist; the emergency jack is not a maintenance lift. [Wheel service](#/document/G1686507) [Lifting locations](#/document/G1663631) [Hoist precautions](#/document/G1693189)"
+        },
+        {
+          "title": "For TPMS location calibration",
+          "detail": "Have Ford TPMS tool 204-D081A (204-D081). Location calibration can be entered manually with the start/stop switch, so a scan tool is not essential for the route taught below. Read the activation tool's operating instructions before use. [Sensor location calibration](#/document/G1686523)"
+        },
+        {
+          "title": "Protection and handling",
+          "detail": "Wear eye and ear protection during service and gloves when handling sharp damage. Read the lubricant's material safety information before using it. Never inflate a tire that has been driven flat until it has been removed from the wheel and inspected internally; hidden damage can cause failure during inflation. [Service protection](#/document/G1693189) [Run-flat damage precaution](#/document/G1693193)"
         }
       ],
       "steps": [
         {
-          "title": "Inspect all tires",
-          "body": "Look across the tread and around visible sidewalls. Compare the wear pattern between corners rather than checking just the easiest tire to reach."
+          "title": "Secure the car and prevent an unexpected start",
+          "body": "Park on a hard, level surface, set the parking brake and turn the engine off. Put an automatic transmission in Park (P); with a manual transmission, select Reverse (R) after shutting the engine off. Keep this secured ground setup for the inspection. Neutral is used later for the supported hoist operation. [Ground setup](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Service setup precautions](#/document/G1693189)\n\nKeep the key under your control so nobody starts the car during inspection. If remote start is fitted, disable it through Vehicle settings > Remote Start Setup before working around the vehicle. An unexpected start can injure someone working nearby. Keep the ignition off during physical wheel work; ignition-on TPMS work comes after the car is back on its tires and secured again. [Starting precautions](#/document/G1693189)"
         },
         {
-          "title": "Measure and record",
-          "body": "Check cold pressure and tread depth. Consistent records make developing uneven wear easier to spot."
+          "title": "Identify what is fitted at each corner",
+          "body": "Make a record for left front, right front, left rear and right rear. Copy the applicable cold pressure and tire size from the vehicle label, then compare the actual tires with it. Note directional markings and any difference between front and rear tire or wheel specifications. Ford requires the recommended tire size, speed rating, load range and construction, with wheel size and offset matching the original specification for that tire. A matching tire diameter alone does not establish wheel interchangeability. [Fitment requirements](#/document/G1686502)\n\nIdentify the spare separately, if fitted. A dissimilar spare—different in brand, size or appearance from the road assemblies—is for temporary use and stays out of the rotation. [Ford spare and rotation restrictions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         },
         {
-          "title": "Rotate and recheck appropriately",
-          "body": "Use the correct wheel/tire procedure and permitted pattern. Complete any pressure-monitoring steps required for the fitted system."
+          "title": "Measure and set cold pressure",
+          "body": "Confirm the tires are cool after at least an hour stationary out of direct sunlight, before driving. Remove one valve cap, press the digital gauge firmly onto the valve and record the reading. Reseat it if the connection leaks or the reading is inconsistent. Add air to reach that position's vehicle-label pressure. If you overfill a cold tire, release air through the valve's center pin, then measure again. Refit the cap and repeat at every corner. Use the vehicle label, not the maximum pressure molded into the tire. [Digital-gauge requirement](#/document/G1686509) [Ford pressure-check procedure](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nDo not bleed a hot tire down to the cold label value: pressure normally rises with driving. Return to the cold condition for this guide's final adjustment. Underinflation can produce heat, internal damage and tire failure even when the tire does not look flat. [Ford inflation precautions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Include the spare or check the mobility kit",
+          "body": "Inspect and measure the spare if fitted. Ford specifies storage pressure of 60 psi (4.15 bar) for a T-type mini-spare; full-size and dissimilar spares are maintained at the higher of the front and rear pressures on the tire label. Identify the spare type before choosing its setting. Refit its valve cap. [Ford spare-pressure guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nIf the car has a temporary mobility kit instead, check the sealant canister's Use By date and replace expired sealant. [Ford owner checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1614692&Uid=G1661539&buildtype=web&countryCode=USA&div=f&languageCode=en&userMarket=usa&vFilteringEnabled=False&variantid=3259)"
+        },
+        {
+          "title": "Inspect rubber, valves, wheels and tire age",
+          "body": "Look across the tread and around accessible sidewalls for cuts, bruises, abrasions, cracking, blisters, bulges, separation and embedded objects. Examine valve stems for cracks or cuts; damaged stems require replacement. Check wheels for bends, cracks, dents, heavy corrosion or leakage. Ford also requires replacement for established elongated wheel-bolt holes or excessive runout, although measuring runout is outside this inspection. [Tire and wheel inspection](#/document/G1686502)\n\nDamaged tires need professional assessment before further use. Do not reinflate one that has been driven flat without an internal inspection. A cracked wheel's tire must be deflated before wheel removal; arrange qualified handling rather than proceeding with ordinary rotation. Do not weld or peen a damaged wheel back into service. [Wheel and tire hazards](#/document/G1693193)\n\nRecord the DOT date code: its last four digits give the manufacturing week and year, so 2501 means week 25 of 2001. Ford generally calls for tire replacement after six years regardless of tread, potentially sooner with severe heat or loading; the spare is replaced with the road tires or after six years even if unused. [Ford damage and age guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Measure tread across the width and around the tire",
+          "body": "Use the tread-depth gauge to compare the inner shoulder, center ribs and outer shoulder. Shoulders are the tread's edges; ribs are the strips between grooves. Seat the gauge on the tread with its probe reaching the groove bottom, avoiding a raised wear bar when measuring groove depth. Repeat around the circumference and at visibly worn areas. Record the lowest readings rather than averaging readings across the tire. Ford's wear tests specifically measure the affected shoulder or wear pattern. [Tread measurement and wear tests](#/document/G1686502)\n\nFind the molded wear bars across the groove bottoms. Replace a tire when its tread is level with them, or when the affected tread measures 1.6 mm (0.0629 in) or less. A deeper center does not clear a worn shoulder. [Wear limits](#/document/G1686502)\n\nAs a practical inspection method, reposition the car normally to expose tread previously resting on the ground. Keep clear while it moves. Before resuming inspection, shut the engine off, set the parking brake and select Park (P) for an automatic or Reverse (R) for a manual transmission. [Ground securing sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nDo not crawl underneath to reach a hidden patch; complete inaccessible areas during the supported hoist inspection or have them checked. Never get beneath a vehicle held only by a jack. [Support precautions](#/document/G1663631)"
+        },
+        {
+          "title": "Decide whether rotation should proceed",
+          "body": "Compare the readings and wear patterns using the diagnostic decisions below. Even wear across and around the tire is normal. Abnormal wear may remain serviceable only with tread greater than 1.6 mm (0.0629 in), no noise/vibration concern and no other disqualifying damage. [Wear assessment](#/document/G1686502)\n\nHave uneven wear assessed and its alignment, balance or mechanical cause corrected before rotation. Rotation manages wear; it is not permission to keep using a damaged tire. If inspection is today's whole job, continue to the applicable TPMS check in step 18 and the record in step 19 without removing wheels. [Ford pre-rotation guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Choose the non-directional rotation pattern",
+          "body": "Use left and right as viewed from the driver's seat. Confirm that the actual assemblies meet the fitment requirements before assigning destinations. [Wheel and tire compatibility](#/document/G1686502)\n\nFor compatible, same-size non-directional assemblies, Ford's rear-wheel-drive diagram moves the rear tires straight forward and crosses the fronts to the rear: left rear → left front; right rear → right front; left front → right rear; right front → left rear. [Ford rear-wheel-drive rotation diagram](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nFor non-directional tires with different front and rear sizes, the separate diagram keeps each size on its axle: left front ↔ right front and left rear ↔ right rear. Do not move these assemblies between axles. [Ford different-size rotation diagram](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nThese are the non-directional branches. If directional markings or an unusual wheel arrangement prevent applying one, leave the assemblies in their existing positions and have a tire professional establish the appropriate service. Keep every dissimilar spare out of the pattern. Write down each original position and destination before lifting. [Ford rotation restrictions](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Position and raise the car on the hoist",
+          "body": "Have the competent hoist operator position the car and change from the secured ground setup to the supported lifting setup. Keep the engine off, set the parking brake and place the transmission in Neutral for the hoist operation. Neutral is the wheel-removal setup; restore Park or Reverse after lowering, as directed in step 14. [Wheel-removal setup](#/document/G1686507) [Parking-brake precaution](#/document/G1693189)\n\nVerify adequate hoist capacity for the car's actual weight, including cargo and modifications. Locate the four side-body lifting locations identified by stamped triangles: behind the front wheels and ahead of the rear wheels, as shown in Ford's lifting illustration. Position the hoist adapters at those designated locations. Lifting elsewhere can let the car shift or fall. [Mustang lifting locations](#/document/G1663631) [Capacity precautions](#/document/G1693189)\n\nBefore raising, check that the arms and adapters clear suspension, steering and exhaust parts, brackets, the axle and rear cover. Do not lift against either bumper. Keep the engine off throughout this wheel work. Use the hoist according to its operating instructions; the supplied emergency jack is reserved for an emergency flat-tire change. Never get beneath a car supported only by a jack. [Lift placement precautions](#/document/G1663631)"
+        },
+        {
+          "title": "Remove and identify the wheel assemblies",
+          "body": "Remove the wheel nuts and lift each assembly off its hub, keeping its original position and planned destination clear in your record. Do not use heat on a seized nut: it can damage the wheel and wheel bearing. Stop that removal if the nut cannot be released with the supported method. [Wheel removal](#/document/G1686507)\n\nFinish inspecting the inner sidewalls, wheel surfaces and tread areas that were hidden on the ground. Damage overrides the rotation plan. Do not pull valve stems or dismantle tires during rotation: each stem is connected to a TPMS sensor, which can be damaged by pulling it from the wheel. [Condition inspection](#/document/G1686502) [Sensor handling](#/document/G1686509)"
+        },
+        {
+          "title": "Clean the wheel and hub mounting faces",
+          "body": "Remove corrosion, dirt and foreign material from the wheel's mounting face and the mating hub or brake-disc face. Make sure any rotor-to-hub retaining fasteners are secure and do not obstruct the wheel's seating surface. Contamination or interference can keep the wheel from seating properly, allowing nuts to loosen and the wheel to separate while driving. [Mounting-face preparation](#/document/G1686507)"
+        },
+        {
+          "title": "Lubricate only the centering interface",
+          "body": "Apply a thin coat of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only between the wheel pilot bore and hub pilot—the central bore and the hub's matching centering projection. Keep it off the flat wheel-to-disc mounting faces, studs, wheel nuts, brake pads and brake-disc friction surfaces. Lubricant in those excluded areas can damage components and invalidate the clean, dry thread condition required for wheel-nut tightening. [Lubricant and application limits](#/document/G1686507)"
+        },
+        {
+          "title": "Install each assembly at its planned destination",
+          "body": "Check the destination against your written rotation map, position the wheel on the hub and start the wheel nuts by hand. Tighten them finger-tight only at this stage. Wheel-stud and wheel-nut threads must remain clean and dry because the specified torque depends on that condition. [Initial wheel installation](#/document/G1686507)"
+        },
+        {
+          "title": "Lower, secure the car and complete tightening",
+          "body": "Lower the vehicle until it rests on its tires. Before ground-level tightening, keep the engine off, set the parking brake and restore the transmission from Neutral to Park (P) for an automatic or Reverse (R) for a manual. Keep this secured setup through the pressure checks and TPMS work that follow. [Ground securing sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nWith the vehicle resting on its tires, use the torque wrench to tighten every wheel's nuts to 150 lb-ft (204 Nm) in a star/cross pattern: move across the wheel between nuts rather than tightening neighboring nuts around a circle. The wrong sequence can contribute to brake-disc runout, brake roughness, shudder and vibration. This specification is for clean, dry threads. [Final wheel tightening](#/document/G1686507)"
+        },
+        {
+          "title": "Verify pressure at the final wheel positions",
+          "body": "With the car on the ground and secured as described in step 14, use the digital gauge to check each tire against the label setting for its new position. Complete any adjustment while the tires meet the cold condition established earlier; if they have become hot from driving, do not bleed them down to the cold value. Refit every valve cap. Ford explicitly requires pressure to be checked and adjusted after rotation. [Digital-gauge requirement](#/document/G1686509) [Ford post-rotation pressure check](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Enter TPMS location-calibration mode",
+          "body": "After moving the assemblies, use Ford's sensor location-calibration procedure below to register the sensors at their final corners. Physical wheel work must be finished. Keep the engine off, the parking brake set and the transmission in Park (automatic) or Reverse (manual) while cycling the ignition. [Ground securing sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nWith the ignition OFF, press and release the brake pedal. Using the start/stop switch, cycle ignition OFF → RUN three times, ending in RUN. Press and release the brake pedal, switch ignition OFF, then cycle OFF → RUN three more times, again ending in RUN. [Manual training-mode entry](#/document/G1686523)\n\nSuccessful entry produces one horn sound and a flashing TPMS indicator; the message center, if equipped, displays TRAIN LF TIRE. If that confirmation does not occur, training mode has not been established. Recheck the entry sequence before attempting to train sensors. [Mode-entry confirmation](#/document/G1686523)"
+        },
+        {
+          "title": "Train the four final sensor locations",
+          "body": "Keep the grounded car secured throughout training. Within two minutes of the entry horn, hold tool 204-D081A (204-D081) against the left-front tire sidewall at the valve stem. Press and release its test button. Keep it in place while the sensor activates; this can take up to six seconds. A brief vehicle horn sound confirms that the body control module, or BCM, recognized that sensor. [Sensor training](#/document/G1686523)\n\nContinue in this exact order: left front → right front → right rear → left rear. At each next corner, position the tool at the valve stem and press and release its test button within two minutes of the preceding horn sound. [Training order and timing](#/document/G1686523)\n\nAfter the last tire, an equipped message center displays TIRE TRAINING COMPLETE. Without a message center, turn ignition OFF: successful completion produces no horn sound. Two horn sounds when switching OFF mean training failed. Record completion only when the appropriate confirmation occurs; a failed sequence needs correction or TPMS diagnosis. [Calibration completion checks](#/document/G1686523)"
+        },
+        {
+          "title": "Wake sensors if a pressure warning remains after correction",
+          "body": "Use this activation check when pressures have been corrected but the warning remains, including an inspection where no wheels moved. Activation wakes sleeping sensors so they can transmit current pressure; location calibration in steps 16–17 assigns their corners. They are different operations. [Sensor activation](#/document/G1686522) [Location calibration](#/document/G1686523)\n\nBefore switching the ignition ON, confirm the grounded car has its parking brake set and its transmission in Park (automatic) or Reverse (manual). Keep the engine off. [Ground securing sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nTurn ignition ON. Hold tool 204-D081A (204-D081) against the left-front sidewall at the valve stem and press its test button to activate that sensor at least twice. Repeat at the remaining tires. The tool may flash green and beep, but its own feedback does not prove the vehicle received the sensor. [Activation procedure and feedback](#/document/G1686522)\n\nIf a sensor does not respond, move the grounded vehicle enough to rotate the wheels at least one-quarter turn. Before retrying, shut the engine off, set the parking brake and select Park (automatic) or Reverse (manual), then turn ignition ON with the engine remaining off. [Activation repositioning](#/document/G1686522) [Secure the repositioned car](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)\n\nRetry the same sensor. Ford then specifies trying the customer activation tool if available; if it still fails to train, try training with the doors open. A warning remaining after correct inflation and activation requires TPMS diagnosis. Do not keep adding air to chase a warning. [Activation retry and diagnostic route](#/document/G1686522)"
+        },
+        {
+          "title": "Record the result and arrange the wheel-nut recheck",
+          "body": "Record cold pressures, lowest tread readings, wear patterns, damage, tire dates and any outstanding action. For a rotation, also record original and final positions, completed wheel torque and the TPMS calibration result. An inspection record is a set of findings, not a guarantee against hidden damage. [Inspection criteria](#/document/G1686502) [Location verification](#/document/G1686523)\n\nWhenever a wheel has been reinstalled, retighten its nuts within 160 km (100 mi). Initial tightening can be followed by loosening, potentially allowing wheel separation. Use the specified 150 lb-ft (204 Nm), star/cross pattern and clean, dry threads, with the car resting on its tires and secured as in step 14. [Required recheck and torque](#/document/G1686507)"
         }
       ],
       "watchFor": [
         {
-          "title": "One edge wears faster",
-          "body": "Have the cause assessed; pressure, alignment and worn components can produce different patterns."
+          "title": "A tire that has been driven flat",
+          "body": "Do not simply refill it. Have it demounted and inspected internally first because hidden damage can cause failure during inflation. [Inflation hazard](#/document/G1693193)"
         },
         {
-          "title": "Damage or continuing pressure loss",
-          "body": "Have the tire evaluated rather than repeatedly adding air and assuming it is safe."
+          "title": "Pressure that repeatedly falls",
+          "body": "Have the tire, valve and wheel evaluated for leakage or damage. Repeated top-ups do not establish that the assembly is sound. [Condition checks](#/document/G1686502)"
+        },
+        {
+          "title": "A good center hiding a worn shoulder",
+          "body": "Measure the affected area. A shoulder or wear pattern at 1.6 mm (0.0629 in) or less requires replacement even when another part is deeper. [Wear tests](#/document/G1686502)"
+        },
+        {
+          "title": "Cracked wheels or contaminated mounting faces",
+          "body": "A cracked wheel requires controlled deflation before removal and replacement, not welding or peening. A serviceable wheel still needs clean mating faces to avoid loosening after installation. [Cracked-wheel precautions](#/document/G1693193) [Mounting preparation](#/document/G1686507)"
+        },
+        {
+          "title": "Tool beeps being mistaken for vehicle confirmation",
+          "body": "Activation-tool feedback alone does not prove the BCM heard a sensor. During location training, use the vehicle horn responses and the specified completion check. [Activation feedback](#/document/G1686522) [Training confirmation](#/document/G1686523)"
+        },
+        {
+          "title": "A sudden vibration while driving",
+          "body": "Reduce speed and pull off safely to inspect. If the cause cannot be found, Ford directs towing for inspection. Do not use a high-speed test to investigate an assembly already suspected of damage. [Ford highway-hazard guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
         }
       ],
       "procedures": [
         {
-          "documentId": "G1686509",
-          "purpose": "Follow wheel and tire service instructions."
+          "documentId": "G1686502",
+          "purpose": "Inspect tire and wheel condition, measure tread, identify wear patterns and route further diagnosis."
         },
         {
-          "documentId": "G1686502",
-          "purpose": "Investigate tire or wheel concerns."
+          "documentId": "G1686509",
+          "purpose": "Apply the digital-gauge requirement, vehicle-label pressure reference and valve-mounted sensor precautions."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Remove and refit assemblies, prepare mounting surfaces, apply XL-2 correctly and complete wheel tightening."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Identify the Mustang's triangle-marked lifting locations and apply lifting restrictions."
         },
         {
           "documentId": "G1686515",
-          "purpose": "Understand the tire-pressure monitoring system."
+          "purpose": "Explain pressure monitoring and the distinction between low-pressure and fault indications."
+        },
+        {
+          "documentId": "G1686523",
+          "purpose": "Enter training mode, calibrate final sensor locations and verify completion."
+        },
+        {
+          "documentId": "G1686522",
+          "purpose": "Wake sensors after pressure correction and route a remaining warning to diagnosis."
+        },
+        {
+          "documentId": "G1693193",
+          "purpose": "Handle driven-flat tires and cracked wheels safely and retain the wheel-nut recheck requirement."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply remote-start, personal-protection, parking-brake and hoist-capacity precautions."
         }
       ],
       "sourceRefs": [
@@ -611,8 +729,163 @@
         {
           "documentId": "G1686515",
           "sourceHash": "0bcdc73d101b64395bae33bdabe1073924a58842a604fca399a8020e13cfe946"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1686523",
+          "sourceHash": "e873b5073214b6c0dd38c00bfb1edb3ea3f1f09be21b86d86613dc4a572dc5e6"
+        },
+        {
+          "documentId": "G1686522",
+          "sourceHash": "ccc611e704a8b51142056e4074539d26c26cb94e4532872422a660c10c292df3"
+        },
+        {
+          "documentId": "G1693193",
+          "sourceHash": "b6595acbaf5a90a8f1ebad6ee421b396717797e29b8e00e7ae645a06e6d145ed"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
-      ]
+      ],
+      "stepGroups": [
+        {
+          "id": "pressure-and-fitment",
+          "title": "Set up and check cold pressure",
+          "summary": "Secure the car, identify the fitted assemblies and measure all applicable pressures.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "condition-and-rotation-plan",
+          "title": "Inspect, measure and choose destinations",
+          "summary": "Find damage and wear before selecting a supported non-directional pattern.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "lift-and-refit",
+          "title": "Raise, rotate and refit",
+          "summary": "Use the marked hoist locations, prepare the mating surfaces, lower and secure the car, then complete wheel tightening.",
+          "start": 9,
+          "end": 14
+        },
+        {
+          "id": "pressure-and-sensor-locations",
+          "title": "Verify pressure and calibrate TPMS locations",
+          "summary": "Check final settings and obtain the vehicle's training confirmation.",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "id": "warnings-and-record",
+          "title": "Resolve warnings and close the record",
+          "summary": "Activate sensors when needed and arrange the required wheel-nut recheck.",
+          "start": 18,
+          "end": 19
+        }
+      ],
+      "diagnostics": [
+        {
+          "finding": "Wear is even across the width and around the circumference.",
+          "meaning": "This matches normal wear, but does not establish remaining life or rule out damage. Ford gives no guaranteed mileage for normal tire life. [Normal wear](#/document/G1686502)",
+          "next": "Compare the lowest tread reading with the wear limit and complete the damage and age checks before retaining the tire. [Wear assessment](#/document/G1686502) [Ford age guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "finding": "Outer-shoulder tread depth is at least 50% greater than inner-shoulder depth.",
+          "meaning": "This meets Ford's inner-edge/shoulder wear definition. Excessive toe-out or negative camber are usual associations; rotation history and high-speed cornering are also possible contributors. Appearance does not measure an alignment angle. [Inner-edge wear](#/document/G1686502)",
+          "next": "Measure the inner shoulder. Replace the tire at 1.6 mm (0.0629 in) or less. Above that limit, arrange alignment assessment and correction before permitted rotation. Use the separate [wheel-alignment guide](#/maintenance/wheel-alignment) for the follow-on job. [Inner-shoulder test](#/document/G1686502)"
+        },
+        {
+          "finding": "Inner-shoulder tread depth is at least 50% greater than outer-shoulder depth.",
+          "meaning": "This meets Ford's outer-edge/shoulder wear definition. Excessive toe-in or positive camber are usual associations, alongside rotation history and high-speed cornering. [Outer-edge wear](#/document/G1686502)",
+          "next": "Measure the outer shoulder. Replace the tire at 1.6 mm (0.0629 in) or less; otherwise arrange alignment assessment and correction before using the applicable rotation pattern. [Outer-shoulder test](#/document/G1686502)"
+        },
+        {
+          "finding": "Shoulder tread blocks differ in height between their leading and trailing edges.",
+          "meaning": "This is heel/toe wear, also called feathering. Ford lists excessive toe-in/out and incorrect rotation intervals as possible causes. [Heel/toe identification](#/document/G1686502)",
+          "next": "Measure the worn pattern. At 1.6 mm (0.0629 in) or less, replace the tire and arrange alignment correction. Above the limit, correct pressure and have suspension condition and alignment assessed before rotation. The [suspension guide](#/maintenance/suspension) covers the related inspection. [Heel/toe test](#/document/G1686502)"
+        },
+        {
+          "finding": "Wear bands run diagonally across the tread and repeat around the tire.",
+          "meaning": "This matches diagonal wear, for which Ford lists toe and rotation history among possible causes. [Diagonal wear](#/document/G1686502)",
+          "next": "Measure the worn bands. Replace at 1.6 mm (0.0629 in) or less. Above the limit, continued service depends on no noise/vibration concern and no other disqualifying damage. Correct pressure and arrange suspension/alignment assessment before permitted rotation. [Diagonal-wear test](#/document/G1686502)"
+        },
+        {
+          "finding": "Cuts, bulges, separation, embedded objects or valve-stem damage are present.",
+          "meaning": "Tread depth alone cannot clear these conditions. A cracked or cut valve stem requires replacement, and suspected internal tire damage requires a demounted inspection. [Damage checks](#/document/G1686502) [Ford internal-inspection guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+          "next": "Take the affected assembly out of the rotation plan and arrange professional evaluation or replacement before further use. Valve replacement is separate work involving the attached TPMS sensor. [Valve and sensor precautions](#/document/G1686509)"
+        },
+        {
+          "finding": "The car wobbles or shimmies.",
+          "meaning": "Ford's diagnostic sequence checks loose wheel nuts first, then bent wheels and damaged tires. Vibration is a symptom, not a shopping list. [Wobble diagnosis](#/document/G1686502)",
+          "next": "Check wheel-nut torque and physical condition before further driving tests. If those checks do not resolve it, arrange pressure, suspension, alignment and permitted-rotation assessment. [Diagnostic sequence](#/document/G1686502) [Wheel torque](#/document/G1686507)"
+        },
+        {
+          "finding": "High-speed shake or vibration persists after basic condition checks.",
+          "meaning": "Wheel/tire runout or other wheel, tire and suspension concerns may need measurement. Rotation alone does not confirm the cause. [Vibration diagnosis](#/document/G1686502)",
+          "next": "Use the separate [wheel/tire runout guide](#/maintenance/wheel-tire-runout-matching) or arrange professional diagnosis. Do not mark balancing, runout or alignment as checked merely because this inspection is finished. [Runout diagnostic route](#/document/G1686502)"
+        },
+        {
+          "finding": "The TPMS warning remains after correct pressure and sensor activation.",
+          "meaning": "The indicator can report a system fault as well as low pressure. A flashing indicator indicates malfunction in Ford's owner guidance. [TPMS overview](#/document/G1686515) [Ford warning interpretation](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)",
+          "next": "Arrange TPMS diagnosis. If location training failed, do not record it as complete; use the specified mode-entry, order, timing and completion checks when repeating it. [Activation diagnostic route](#/document/G1686522) [Location calibration](#/document/G1686523)"
+        }
+      ],
+      "verification": [
+        {
+          "title": "The grounded car is secured",
+          "body": "After lowering or any repositioning, confirm the engine is off, the parking brake is set and the transmission is in Park for an automatic or Reverse for a manual before continuing ground-level work. Neutral is confined to the hoist operation. Finish TPMS work with the ignition OFF. [Ground securing sequence](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539673&Uid=G1635855&ProcUid=G1638646&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web) [Hoist setup](#/document/G1686507)"
+        },
+        {
+          "title": "Pressure readings are cold and position-specific",
+          "body": "Every road tire has a recorded digital-gauge reading matching its final position's label value, with caps refitted. Include the identified spare type at its applicable setting. A hot reading has not been bled down to the cold specification. [Pressure equipment](#/document/G1686509) [Ford inflation checks](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Inspection findings have a clear disposition",
+          "body": "Confirm tread was checked across the width and around the circumference, with the lowest readings recorded. No tire at the wear bars or at 1.6 mm (0.0629 in) or less is marked acceptable. Damage, age concerns and inaccessible areas have a stated next action. [Inspection and wear limits](#/document/G1686502) [Ford age and damage guidance](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Rotated assemblies match the chosen branch",
+          "body": "Compare final positions against the written same-size or different-size non-directional map. Different front/rear sizes remain on their original axles, and no dissimilar spare entered the rotation. [Ford rotation patterns](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?variantid=3259&languageCode=en&countryCode=USA&moidRef=G539674&Uid=G1635847&ProcUid=G1638644&userMarket=usa&div=f&vFilteringEnabled=False&buildtype=web)"
+        },
+        {
+          "title": "Every removed wheel has a completed torque check",
+          "body": "Confirm clean mating faces, XL-2 confined to the pilot interface, clean dry threads and star/cross tightening to 150 lb-ft (204 Nm) with the vehicle resting on its tires. Arrange the retightening within 160 km (100 mi). [Wheel installation checks](#/document/G1686507)"
+        },
+        {
+          "title": "TPMS completion is demonstrated",
+          "body": "For location calibration, record TIRE TRAINING COMPLETE when displayed, or the successful ignition-OFF/no-horn check on a vehicle without a message center. Two horn sounds on switching OFF mean failure. Any warning remaining after correct pressure and activation stays an open diagnostic concern. Switch ignition OFF when finished. [Training verification](#/document/G1686523) [Remaining-warning diagnosis](#/document/G1686522)"
+        }
+      ],
+      "searchTerms": [
+        "2015 Mustang cold tire pressure",
+        "Mustang tread depth",
+        "non-directional tire rotation",
+        "staggered tire rotation",
+        "Mustang lifting triangles",
+        "inner shoulder wear",
+        "outer shoulder wear",
+        "heel toe feathering",
+        "diagonal tire wear",
+        "Mustang wheel nut torque",
+        "TPMS location calibration",
+        "TPMS sensor activation"
+      ],
+      "authoring": {
+        "method": "Codex CLI",
+        "humanReviewed": false,
+        "independentTechnicalReview": true,
+        "version": 2,
+        "fingerprint": "95044a944733d56100687bcd7ff351d623297c2986a6430722970b3073350134"
+      }
     },
     {
       "applicability": {

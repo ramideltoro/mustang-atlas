@@ -1,0 +1,50 @@
+{
+  "documentId": "G1688050",
+  "sourceHash": "98d0e65d2084517ec527023c358e86e5a36ddb982173fbf01d706f77b7fa0693",
+  "title": "Evaporative Emissions: Where Diagnosis Starts",
+  "introduction": "The evaporative emissions system (EVAP) contains fuel vapor and manages its later use by the engine. That is a different job from delivering liquid fuel, so a vapor-system code is not an automatic guilty verdict for the fuel pump.\n\nI use this page as a diagnostic signpost: whether a diagnostic trouble code is present determines which reference to open. The linked diagnostic procedures are required to continue; this page supplies the routing, without the equipment setup, tests or repair decisions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688050-b00001",
+      "text": "Choose the Diagnostic Starting Point",
+      "why": "The next reference depends on whether the complaint comes with a diagnostic trouble code."
+    },
+    {
+      "blockId": "G1688050-b00002",
+      "text": "If a PCM DTC—a diagnostic trouble code from the powertrain control module—is present, refer to Electronic Engine Controls (303-14C Electronic Engine Controls - 5.0L 32V Ti-VCT, Diagnosis and Testing).",
+      "why": "A code directs you to the engine-control diagnostic information; it does not, by itself, establish which component needs replacement. The referenced procedure is needed for the actual test sequence."
+    },
+    {
+      "blockId": "G1688050-b00003",
+      "text": "If the vehicle has driveability symptoms without a DTC, refer to the Powertrain Control/Emissions Diagnosis (PC/ED) manual. Open Section 3, Symptom Charts, for the symptom-based diagnostic route.",
+      "why": "The absence of a code does not make a driveability complaint disappear. This branch starts with the observed symptom instead of a code."
+    }
+  ],
+  "checkedAt": "2026-10-27T11:15:51.103Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "cee5836c320d80f9fbcefd6142085a0ce8361e968cc7e1559b06bfb25cc4ff6f",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 4,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f37d9396670e40282b2bf75a46dd1df55475f559fc5b6d98c4fbe87e946cabb0",
+    "reviewedAt": "2026-10-27T11:15:51.103Z"
+  }
+}

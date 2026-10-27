@@ -1,0 +1,50 @@
+{
+  "documentId": "G1694658",
+  "sourceHash": "3c33315bb1079d16344e4359c3729ac9e61f440dd77b1f4283e150f16076cbed",
+  "title": "Passive Anti-Theft System (PATS): Start Permission",
+  "introduction": "I think of the passive anti-theft system (PATS) as the doorman for starting the car: it checks for a valid programmed key when you request a start. The useful distinction here is between permission to start and what happens once the vehicle is running. This overview explains that boundary; it does not provide key-programming or fault-diagnosis instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1694658-b00001",
+      "text": "How PATS Controls Starting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694658-b00002",
+      "text": "When you press the START/STOP button, the passive anti-theft system (PATS) must detect a valid programmed key inside the vehicle before it permits starting. Preventing a start without that key is how PATS deters theft.",
+      "why": "Both the key’s programmed validity and its presence inside the vehicle matter. This describes the anti-theft permission check; detecting the key does not establish that every other condition needed to start has been met."
+    },
+    {
+      "blockId": "G1694658-b00003",
+      "text": "PATS does not disable a vehicle that is already running.",
+      "why": "I keep this boundary in mind when interpreting a complaint: the starting restriction described here does not explain a shutdown after the vehicle is running."
+    }
+  ],
+  "checkedAt": "2026-10-27T11:09:26.506Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 2,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 2
+  },
+  "sourceContextHash": "62e90fbc5e2f88349da857b5ec415d0165628dea179bf19d08536ced247a73c1",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "sourceUnitCount": 4,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "906f3c18bb88caa099b7fc2629966005a17ea69503d36e59bf1e9553bc04c122",
+    "reviewedAt": "2026-10-27T11:09:26.506Z"
+  }
+}
