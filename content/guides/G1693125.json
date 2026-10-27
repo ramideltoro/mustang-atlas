@@ -1,0 +1,80 @@
+{
+  "documentId": "G1693125",
+  "supportingSourceRefs": [],
+  "sourceHash": "33dce9973035b5eca3f9c21ab464c4854899f794079c88a8958c33ff1e332e32",
+  "title": "How Mustang Modules Share Messages",
+  "introduction": "Your Mustang’s electronic modules share information instead of each demanding a private wire for every message. I picture a shared conversation: commands, status reports and data travel between modules, while a gateway helps messages reach the diagnostic scan tool.\n\nThis overview explains which networks connect to the diagnostic connector and which communicate through the gateway. It is a map of communication paths, without electrical test instructions or fault limits.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693125-b00001",
+      "text": "How the Networks Connect",
+      "why": "Separate the shared-message principle from the route a diagnostic tool uses to reach each network."
+    },
+    {
+      "blockId": "G1693125-b00002",
+      "text": "Multiplexing sends 2 or more signals simultaneously over a single circuit. It lets 2 or more electronic modules, called nodes, exchange messages over a twisted wire pair identified as data (+) and data (-). Those messages carry commands, status or data. Sharing the wiring reduces redundant components and electrical wiring, helping reduce vehicle weight.",
+      "why": "Think of a shared conversation rather than a separate telephone line for every message. The modules can exchange information without duplicating every sensor or wiring route."
+    },
+    {
+      "blockId": "G1693125-b00003",
+      "text": "The vehicle has 2 module communication networks connected to the data link connector (DLC), located under the instrument panel. These networks are:",
+      "why": "The connector is the diagnostic tool’s connection point. This identifies its general location without implying a terminal layout or probing method."
+    },
+    {
+      "blockId": "G1693125-b00005",
+      "text": "HS-CAN1 — high-speed controller area network 1",
+      "why": "This network belongs to the group connected to the diagnostic connector."
+    },
+    {
+      "blockId": "G1693125-b00007",
+      "text": "HS-CAN2 — high-speed controller area network 2",
+      "why": "This network also carries translated messages from networks reached through the gateway."
+    },
+    {
+      "blockId": "G1693125-b00009",
+      "text": "The vehicle also has 2 module communication networks that exchange messages but do not communicate directly with the diagnostic scan tool. The GWM translates messages from these 2 networks and transfers their signals to HS-CAN2 so they can communicate with the diagnostic scan tool. These networks are:",
+      "why": "I read this as a connection through an interpreter: communication with the tool depends on the gateway route as well as the network carrying the original message."
+    },
+    {
+      "blockId": "G1693125-b00011",
+      "text": "HS-CAN3 — high-speed controller area network 3",
+      "why": "Diagnostic communication from this network passes through the gateway."
+    },
+    {
+      "blockId": "G1693125-b00013",
+      "text": "MS-CAN — medium speed-controller area network",
+      "why": "This network also reaches the diagnostic scan tool through the gateway rather than communicating with it directly."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:31:58.839Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 8,
+    "receivedBlocks": 8,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "0f053243384c73d0f139ec3dac48814379205a6ef9f49c62db6ab40f9e1b0abf",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 11,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0f64a1aec10f732bdc25e2f6cfebf32d04e72c84b1e5628f8189308d52630862",
+    "reviewedAt": "2026-10-27T18:31:58.839Z"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "documentId": "G1688023",
+  "supportingSourceRefs": [],
+  "sourceHash": "247f3cc13fe4e4f3ea0fa789494443352a59300eb8302974b66c5156a690abac",
+  "title": "Reading the 3.7L Evaporative Emissions Diagram",
+  "introduction": "The EVAP system contains fuel vapor and manages its later use by the engine. I think of the canister as a temporary parking place for vapor: the purge valve meters its route toward the intake, while the vent solenoid controls the outside-air connection. Those valves have different jobs despite sharing the EVAP name.\n\nThis reference applies to the 3.7L Duratec. Match each diagram callout to the adjacent Item and Description table, then trace the heavy connection lines. The thin leader lines identify components. This is a schematic of relationships, not a physical hose-routing, electrical-probing or diagnostic-test guide; the detailed operating description remains in the referred manual.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688023-b00001",
+      "text": "Understanding EVAP system operation",
+      "why": "Vapor storage and controlled purging serve a different purpose from pumping liquid fuel or measuring fuel level, even though those components appear together in the diagram."
+    },
+    {
+      "blockId": "G1688023-b00002",
+      "text": "For the system's operating description, refer to the PC/ED manual, section 1, Description and Operation.",
+      "why": "PC/ED means powertrain control/emissions diagnosis. That referral remains necessary for the detailed operating strategy; the diagram here supports component identification and connection reading."
+    },
+    {
+      "blockId": "G1688023-b00003",
+      "text": "Reading the EVAP System Diagram",
+      "why": "I start at the fuel tank on the right and trace the drawn connection through the Fuel Tank Pressure (FTP) sensor and tube toward the EVAP canister, then follow the canister connection to the purge valve at the upper intake manifold. Below the canister, the vent solenoid connects to the fresh air hose. The valve-cover and PCV branches occupy the left side; PCV means positive crankcase ventilation. The drawing has no flow arrows, so tracing a connection does not establish flow direction in every operating state. Fuel level sensors report level, while the fuel pump moves fuel; their presence in the same tank does not make those functions interchangeable."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:41:33.059Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "c2f0260b685f02fbbd0345813b9a1191931b46cb9a5b5d2d4679f534df09726d",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 21,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9308078a8a1fe68b1a86ca53b1ac4255022b41be76a7540e854484681ea4638b",
+    "reviewedAt": "2026-10-27T18:37:38.875Z",
+    "editorialRevision": "Remove inconsistent inherited power label only; retain 3.7L Duratec scope and all diagram interpretation."
+  }
+}

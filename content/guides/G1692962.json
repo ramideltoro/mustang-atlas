@@ -1,0 +1,180 @@
+{
+  "documentId": "G1692962",
+  "supportingSourceRefs": [],
+  "sourceHash": "dfb556c7c8b5c0b2e364c629118d68c62cf262814a2c742fac0d65ac92e48e98",
+  "title": "Which Body Module Controls What?",
+  "introduction": "I use these lists as a responsibility map for the Mustang's body electronics. The BCM and BCM-B have separate desks on the same switchboard, so the module names are worth keeping straight—especially when several lighting functions appear together.\n\nFind the function under its named controller, and retain the convertible qualifications. This overview identifies control responsibilities. A symptom under a module's heading does not, by itself, establish that the module has failed; power, connections and shared information can also matter.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1692962-b00001",
+      "text": "Functions of the Body Control Module (BCM)",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00002",
+      "text": "The BCM coordinates the functions below. I use this list to identify its responsibilities before looking for a function-specific explanation or diagnostic test.",
+      "why": "A controller can coordinate a function using information from elsewhere in the vehicle; ownership of the function is not proof of a faulty controller."
+    },
+    {
+      "blockId": "G1692962-b00004",
+      "text": "Battery saver function control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00006",
+      "text": "Brake shift interlock control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00008",
+      "text": "Delayed accessory function control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00010",
+      "text": "Control of dimmable backlighting",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00012",
+      "text": "Exterior lighting control",
+      "why": "Keep this broad entry alongside the separately named rear-lamp responsibilities under the other controller."
+    },
+    {
+      "blockId": "G1692962-b00014",
+      "text": "Heated rear windows control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00016",
+      "text": "Heated exterior mirrors control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00018",
+      "text": "Horn control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00020",
+      "text": "Messaging of the ignition state",
+      "why": "This responsibility concerns information about ignition state, rather than simply naming a switched electrical load."
+    },
+    {
+      "blockId": "G1692962-b00022",
+      "text": "Interior lighting control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00024",
+      "text": "PATS control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00026",
+      "text": "Perimeter alarm control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00028",
+      "text": "Post crash alert function control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00030",
+      "text": "Power door locks control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00032",
+      "text": "Remote keyless entry: RKE system control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00034",
+      "text": "Tire pressure monitoring: TPMS control",
+      "why": "Wheel-mounted sensors transmit by radio to a radio transceiver module, which passes information to the body controller. This illustrates how control responsibility can include information gathered by other components."
+    },
+    {
+      "blockId": "G1692962-b00036",
+      "text": "Transport mode function control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00038",
+      "text": "Wipers and washers control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00040",
+      "text": "Functions of Body Control Module B (BCM-B)",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00041",
+      "text": "Body Control Module B (BCM-B) coordinates the functions below. Read these as its own responsibilities, including the entries specifically qualified for convertible vehicles.",
+      "why": "The similar controller names should not blur the division of functions."
+    },
+    {
+      "blockId": "G1692962-b00043",
+      "text": "Ambient lighting control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00045",
+      "text": "Convertible top control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00047",
+      "text": "Inhibition of window function (convertible)",
+      "why": "Inhibit means preventing the function from operating. This entry identifies responsibility without specifying the conditions that trigger inhibition."
+    },
+    {
+      "blockId": "G1692962-b00049",
+      "text": "Inhibition of luggage compartment lid release (convertible)",
+      "why": "The convertible qualification belongs to this release-inhibit function."
+    },
+    {
+      "blockId": "G1692962-b00051",
+      "text": "Reverse lamps control",
+      "why": ""
+    },
+    {
+      "blockId": "G1692962-b00053",
+      "text": "Rear stop/turn lamps control",
+      "why": ""
+    }
+  ],
+  "checkedAt": "2026-10-27T18:37:38.855Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 28,
+    "receivedBlocks": 28,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "da6ac2cc8952bf50561a608314e0bd2e958ddb23b5edf3514e1f786c580ab49e",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "86b3182a6d683d93a612270d448545eae81a3a762a61ae857db963115395e84e",
+    "reviewedAt": "2026-10-27T18:37:38.855Z"
+  }
+}

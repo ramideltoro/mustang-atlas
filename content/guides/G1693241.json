@@ -1,0 +1,110 @@
+{
+  "documentId": "G1693241",
+  "supportingSourceRefs": [],
+  "sourceHash": "9c00726e0d16db504b25d4943532366ee1a2596059568ab0ddedea4d2664ad6e",
+  "title": "Active Grille Shutters: Airflow on Command",
+  "introduction": "When equipped, active grille shutters act like movable blinds in the grille. Their position helps manage aerodynamic drag and engine warm-up; the engine controller decides where they belong.\n\nI pay attention to the startup sweep because it has a purpose: the shutters travel through their end positions before taking their commanded position. This overview explains that behavior and the information involved in control. A resting position alone is not a diagnosis.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693241-b00001",
+      "text": "What the Shutters Do",
+      "why": "Understanding the normal startup movement helps distinguish calibration behavior from an unexplained change in position."
+    },
+    {
+      "blockId": "G1693241-b00002",
+      "text": "When equipped, the active grille shutter system consists of the grille shutter assembly and its actuator. Its main purpose is to improve fuel economy by reducing aerodynamic drag. It also shortens engine warm-up time, helping engine efficiency and bringing heat to the occupants sooner. The actuator receives position commands from the engine controller, the PCM. Whenever the engine starts, the system calibrates by fully opening and closing the shutters, then moves them to the programmed position requested by the PCM.",
+      "why": "The startup sweep is the system checking its travel before settling into its working position—rather like blinds finding their stops before choosing how much light to admit. Movement during this sequence has a different meaning from the position commanded afterward."
+    },
+    {
+      "blockId": "G1693241-b00003",
+      "text": "The following PCM inputs and outputs may be used to control grille-shutter position:",
+      "why": "The wording matters: these are possible control inputs and outputs, not a claim that every listed item is fitted or used in every operating condition."
+    },
+    {
+      "blockId": "G1693241-b00005",
+      "text": "ECT sensor — engine coolant temperature",
+      "why": "Coolant temperature gives the controller information about the engine’s thermal condition."
+    },
+    {
+      "blockId": "G1693241-b00007",
+      "text": "IAT sensor — intake air temperature",
+      "why": "This identifies incoming-air temperature information among the possible control inputs."
+    },
+    {
+      "blockId": "G1693241-b00009",
+      "text": "A/C pressure transducer — air-conditioning pressure information",
+      "why": "The shutter strategy can consider air-conditioning pressure as well as engine-related information."
+    },
+    {
+      "blockId": "G1693241-b00011",
+      "text": "APP sensor — accelerator pedal position",
+      "why": "Pedal position supplies information about the driver’s demand."
+    },
+    {
+      "blockId": "G1693241-b00013",
+      "text": "ABS module — communicates through the HS-CAN",
+      "why": "This entry identifies information shared over the high-speed controller area network rather than a dedicated grille-shutter sensor."
+    },
+    {
+      "blockId": "G1693241-b00015",
+      "text": "AAT sensor — ambient air temperature",
+      "why": "Ambient temperature describes the air surrounding the vehicle."
+    },
+    {
+      "blockId": "G1693241-b00017",
+      "text": "TCT sensor — turbo charge temperature",
+      "why": "Keep this equipment-specific input distinct from the other air-temperature entries; the list does not make it applicable to every engine."
+    },
+    {
+      "blockId": "G1693241-b00019",
+      "text": "MCT sensor — manifold charge temperature",
+      "why": "This identifies charge-temperature information associated with the manifold."
+    },
+    {
+      "blockId": "G1693241-b00021",
+      "text": "TOT sensor — transmission oil temperature",
+      "why": "The possible temperature inputs extend beyond the engine itself."
+    },
+    {
+      "blockId": "G1693241-b00023",
+      "text": "Engine cooling fan motor — a possible control output",
+      "why": "The list includes outputs as well as sensor inputs. The cooling fan moves air through the cooling heat exchangers."
+    },
+    {
+      "blockId": "G1693241-b00025",
+      "text": "Engine oil temperature — another possible temperature input",
+      "why": "Keep oil temperature distinct from coolant temperature when reading the control-information list."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:31:58.849Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 14,
+    "receivedBlocks": 14,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "481f791e343e5715c06fed2c823b542c9a4e4149ed186157f689910bdce707f8",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 16,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2c6fd361b62d0c6c2206b7fab1c5dcb30559a6c3e992e91c3d34668bb5cccd3d",
+    "reviewedAt": "2026-10-27T18:31:58.849Z"
+  }
+}

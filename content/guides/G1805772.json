@@ -1,0 +1,55 @@
+{
+  "documentId": "G1805772",
+  "supportingSourceRefs": [],
+  "sourceHash": "50c6fc5d04ea68c111544e50ca7543472092cfa7d5ff9e7be978bd3725ba9419",
+  "title": "5.2L EVAP System: Reading the Component Map",
+  "introduction": "Fuel vapor has a managed route rather than a free pass into the atmosphere. The evaporative emissions system stores vapor in its canister, and the purge valve controls the route toward the engine intake. I use that storage-and-metering distinction to keep similar-sounding parts straight.\n\nFor this 5.2L reference, match the drawing’s callouts to the adjacent table, then follow the connecting lines. The intake and valve-cover connections occupy the left side; the tank and canister occupy the right. Crankcase ventilation appears alongside the fuel-vapor system because both connect with the intake. Treat this as a schematic connection map; it does not establish physical hose routing, flow direction or a diagnostic method.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1805772-b00001",
+      "text": "Understanding System Operation",
+      "why": "I separate the vapor-storage job from the purge-control job before identifying parts. The canister is the holding area; the purge valve is the metered doorway toward the intake. Crankcase ventilation handles gases from inside the engine."
+    },
+    {
+      "blockId": "G1805772-b00002",
+      "text": "For the operating description, refer to the powertrain control/emissions diagnosis (PC/ED) manual, section 1, Description and Operation.",
+      "why": "That required reference supplies the operating description beyond this component map. Identification here does not establish control commands, test conditions or fault conclusions."
+    },
+    {
+      "blockId": "G1805772-b00003",
+      "text": "System Connection Diagram",
+      "why": "Trace the purge connection between the intake and canister, then distinguish it from the branch joining the intake and valve-cover plumbing. Use the table for component identity; page position does not establish a component’s physical location on the vehicle."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:31:58.864Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "394071e2cee506831c48bd47331b10c3654c88c48ffe4b2ce2430a0e36f5f07d",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 17,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0c2cdf698565ee7fb547182d687d0a1d4e3d91997527842c35d43e788c930991",
+    "reviewedAt": "2026-10-27T18:31:58.864Z"
+  }
+}

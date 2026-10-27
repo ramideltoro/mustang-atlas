@@ -1,0 +1,71 @@
+{
+  "documentId": "G1686443",
+  "supportingSourceRefs": [],
+  "sourceHash": "32af9dff9bbfe0a216f439e55d56172ae3a764c1fd341f72b0df5a817eb9c98a",
+  "title": "6R80 Torque Converter: Released and Applied Flow",
+  "introduction": "The torque converter is the fluid coupling between the engine and automatic transmission. Its internal clutch reduces fluid-coupling slip when applied; releasing that clutch does not mean the converter stops transmitting drive. I keep those jobs separate before tracing the hydraulics.\n\nThis overview covers the 6R80 torque converter. Compare the released and applied drawings using their circuit labels and arrowheads. The solenoid’s control pressure positions valves; the regulated supply then takes the route those valves open. Think of a railway signal changing the points: the command selects the route, while the main flow does the heavy work. These drawings explain operation without supplying pressure-test values or a repair procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1686443-b00001",
+      "text": "With the TCC released, line pressure reaches the converter release regulator valve from the lubrication control valve through CREL F. The converter release regulator valve sends fluid into the torque converter through CREL. Fluid leaves the converter through CAPLY and enters the bypass clutch control regulator valve, which routes it back to the converter release regulator valve through CAPLY EX. From there, fluid enters DBACK and supplies lubrication through LUBE.",
+      "why": "I trace this as a continuous route into the converter, out through the other passage, and onward to lubrication. A circuit’s name alone does not tell you its flow direction in every operating state; the released-state arrows matter."
+    },
+    {
+      "blockId": "G1686443-b00002",
+      "text": "Torque Converter Hydraulic Circuits: Torque Converter Clutch (TCC) Released",
+      "why": "Use this drawing for the released-state route. Follow arrowheads and named passages rather than treating line color or pattern as a pressure specification."
+    },
+    {
+      "blockId": "G1686443-b00004",
+      "text": "When the TCC is applied, the TCC solenoid supplies hydraulic pressure through VFS6 to position both the bypass clutch control regulator valve and the converter release regulator valve.",
+      "why": "This is the control-pressure part of the sequence: positioning the valves establishes the routes used during clutch application."
+    },
+    {
+      "blockId": "G1686443-b00005",
+      "text": "The main regulator valve supplies line pressure to the bypass clutch control regulator valve. That valve regulates the pressure and directs it through CAPLY to apply the TCC.",
+      "why": "Distinguish the pressure that positions the control valves from the regulated pressure that actually applies the clutch."
+    },
+    {
+      "blockId": "G1686443-b00006",
+      "text": "During application, fluid leaves the torque converter through CREL and flows to the converter release regulator valve.",
+      "why": "Compare the arrow direction at the converter with the released drawing. This passage becomes the outlet during application, which is why following the arrows beats guessing from the name."
+    },
+    {
+      "blockId": "G1686443-b00007",
+      "text": "Torque Converter Hydraulic Circuits: Torque Converter Clutch (TCC) Applied",
+      "why": "Use this view to connect solenoid control, valve positioning and clutch-apply flow. The drawings also show cooler and lubrication connections, but they do not establish service measurements."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:42:01.494Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "7d42642784cfb78458c74875ee177d7804fdea4e2366c8ad45309c868c8ecdca",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 9,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6f1d8ec22f82083464b9c2ad3b741162dae5e18c7cb84be80b69b94df59b06a2",
+    "reviewedAt": "2026-10-27T18:31:58.876Z",
+    "editorialRevision": "Intro-only removal of inferred engine list absent primary text; 6R80 transmission scope and hydraulic instructions preserved."
+  }
+}

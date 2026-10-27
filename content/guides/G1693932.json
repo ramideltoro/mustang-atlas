@@ -1,0 +1,60 @@
+{
+  "documentId": "G1693932",
+  "supportingSourceRefs": [],
+  "sourceHash": "8cc85eb4e958875bcca1f05537491dd8302704b1370b4492a6056c4969653aa1",
+  "title": "How the Message Center Handles Warnings",
+  "introduction": "I read the message center alongside the gauges and warning indicators: it adds words to what the instrument display is telling you. Think of a warning as an announcement interrupting your selected display. Acknowledging the announcement clears its display; it does not establish that the underlying concern has been corrected.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693932-b00001",
+      "text": "Understanding the Message Center",
+      "why": ""
+    },
+    {
+      "blockId": "G1693932-b00002",
+      "text": "The message center is built into the IPC and shares much of the information used by its gauges, informational indicators and warning indicators. Information reaches it through both hardwired connections and vehicle-network messages. Operate its functions with the message center switch in the LH steering wheel switch assembly.",
+      "why": "The display brings together information from different paths. Its location in the IPC does not mean every message originates there."
+    },
+    {
+      "blockId": "G1693932-b00003",
+      "text": "When a condition requires a warning, the message center interrupts your last selected display with the warning message. After that message is reset or cleared, the selected display returns. When several warnings are present, the display cycles through them, showing each for approximately 4 seconds. Look at the accompanying IPC gauges, informational indicators and Reconfigurable Telltale [RTT] indicators as well. For example, when the BCM detects low brake fluid, it sends requests through the GWM for the IPC to illuminate the brake warning indicator and display LOW BRAKE FLUID. The written message adds detail to the indicator rather than replacing it.",
+      "why": "GWM means gateway module A. The brake-fluid example shows how a detected condition elsewhere reaches the instrument display through a gateway. Cycling messages can represent several simultaneous warnings."
+    },
+    {
+      "blockId": "G1693932-b00004",
+      "text": "System warning messages alert you to possible concerns or malfunctions in vehicle operating systems. A message may appear on its own or alongside a gauge reading or indicator. Press the OK button to acknowledge and clear a displayed warning so full message center functionality becomes available again. If no additional warnings remain, the message center shows your last selected feature. For the complete warning-message list, refer to the message center section of the Owner's Literature.",
+      "why": "I distinguish acknowledging the display from resolving the condition it reports. The Owner's Literature remains the reference for the complete set of messages."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:37:38.835Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "157673fd3fffd2f87844c67014fb3386262c34d46d626da1effe60c99d173809",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 5,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9060f259cf1373b771de99286ab3fb3a38921731527adfee3dc31b77ddccd807",
+    "reviewedAt": "2026-10-27T18:37:38.835Z"
+  }
+}

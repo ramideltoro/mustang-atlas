@@ -1,0 +1,55 @@
+{
+  "documentId": "G1688048",
+  "supportingSourceRefs": [],
+  "sourceHash": "8148f8a7e853b05693773fe9b570c0c0257ce8467eae548edc5831799c824c22",
+  "title": "5.0L EVAP System: Reading the Component Map",
+  "introduction": "The evaporative emissions system contains fuel vapor so it can later be used by the engine. I think of the canister as a vapor pantry: it stores vapor, while the purge valve meters the route toward the intake when purging occurs.\n\nFor the 5.0L engine, use this schematic by matching a component’s callout to the adjacent table, then tracing its connecting line. The intake and valve-cover connections are grouped on the left; the fuel tank and canister are on the right. The drawing also includes crankcase ventilation connections, so a shared intake connection does not make every line an EVAP line. This is a connection map, not a physical hose-routing, flow-direction or diagnostic procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1688048-b00001",
+      "text": "Understanding System Operation",
+      "why": "Fuel-vapor storage and purge are related jobs: the canister holds vapor, and the purge valve controls its route toward the engine. Crankcase ventilation serves a separate purpose even though both systems connect with the intake."
+    },
+    {
+      "blockId": "G1688048-b00002",
+      "text": "For the operating description, refer to the powertrain control/emissions diagnosis (PC/ED) manual, section 1, Description and Operation.",
+      "why": "Use that required reference for the operating strategy. The component map here identifies connections but does not supply the detailed control sequence or a diagnostic test."
+    },
+    {
+      "blockId": "G1688048-b00003",
+      "text": "System Connection Diagram",
+      "why": "I start at the intake connection and trace the purge route toward the canister, using the table to identify each callout. The separate valve-cover branch helps distinguish crankcase ventilation from fuel-vapor plumbing. The schematic’s left-to-right arrangement is not a vehicle-side or access instruction."
+    }
+  ],
+  "checkedAt": "2026-10-27T18:31:58.857Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "394071e2cee506831c48bd47331b10c3654c88c48ffe4b2ce2430a0e36f5f07d",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 17,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6834f5e5cc8508c324b3569ba0e14223462711bad667966d72ead9ea5b7f30fb",
+    "reviewedAt": "2026-10-27T18:31:58.857Z"
+  }
+}
