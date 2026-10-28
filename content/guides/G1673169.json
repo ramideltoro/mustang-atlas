@@ -1,0 +1,49 @@
+{
+  "documentId": "G1673169",
+  "supportingSourceRefs": [],
+  "sourceHash": "64efb159941c571919cc914af32d05c8741316a83ae292e5a1e3a3553f70d221",
+  "title": "Starting System Specifications — 2.3L EcoBoost",
+  "introduction": "I read these specifications as effort and result: current draw describes the starter’s electrical demand, while cranking speed describes how quickly the engine turns. Match the measurement to the correct row and its printed units. No-load, normal-load and maximum-load current figures describe different conditions; the maximum is not a target to chase.\n\nKeep every qualifier with its value. The cranking-speed, no-load-current and normal-load-current rows are marked as averages. The starting-circuit voltage-drop row is also marked as an average and specifies an engine at normal operating temperature. Voltage drop is voltage used across part of a circuit while current flows; excessive drop can reveal resistance that a no-load check misses.\n\nThis table supplies comparison figures, not equipment connections, measurement timing or fault-isolation branches. Use the matching engine diagnostic instructions to obtain and interpret measurements; a number on this page alone is no verdict on the starter.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1673169-b00001",
+      "text": "Cranking Speed and Starter Electrical Specifications",
+      "why": "The row conditions determine which comparisons are meaningful. Retain the average labels and the temperature condition, and distinguish normal current demand from the maximum-load specification."
+    }
+  ],
+  "checkedAt": "2026-10-28T09:01:03.903Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 1,
+    "receivedBlocks": 1,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "146a01a6defede2dcbbb4e664635d708c43de3c61ae5c4d09899db510d8c8ed0",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 9,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "57cc29f49337c9ba143c32a401810c8350a1977ca4c94773e29c815254991928",
+    "reviewedAt": "2026-10-28T05:19:23.762Z",
+    "editorialRevision": {
+      "kind": "bounded-inherited-power-label-cleanup",
+      "scope": "Only inherited power parenthetical removed from title; engine identity and all other public fields unchanged."
+    }
+  }
+}
