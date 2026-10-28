@@ -1,0 +1,99 @@
+{
+  "documentId": "connector-C4333",
+  "sourceHash": "f420b4bbb6064b425dad8a8be9cc7846a9d60ff8e106757d7a556543da8c40ab",
+  "title": "C4333 — Luggage Compartment Lid Rear Control Switch",
+  "introduction": "I use this reference as a connector address book: the drawing locates the cavity labels, and each matching table row identifies the associated circuit. Start with the connector identity table, then use the face drawing and pin assignments together. The harness information and pigtail service-parts table provide separate identification details.\n\nThe luggage-lid component title and the glass-release wording in the circuit table need reconciliation before using this sheet to identify the actual switch. Both are retained here.\n\nThis is a reading guide, not an access, probing or replacement procedure. The physical viewing direction, gauge convention and meanings of the Size and Used codes are unspecified; those fields remain reference data rather than instructions for choosing wire or connecting test equipment.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4333-b00002",
+      "text": "Connector Face for Harness 13412",
+      "why": "I match the printed cavity labels to the Cavity column below. As drawn, the cavities are stacked vertically beneath a projecting housing feature. The outline helps relate the labels to the housing, but it does not establish a physical viewing direction or identify a release mechanism."
+    },
+    {
+      "blockId": "connector-C4333-b00005",
+      "text": "Read the Pin Assignment Map",
+      "why": "Read across a single cavity row to connect its Circuit Number, Color, Gauge and Function with its Terminal Part Number. The rows distinguish the release-switch circuit from the ground circuit. Keep each row together: a wire color is a useful clue, but the cavity and circuit identity give that clue its address. The component-title mismatch remains unresolved."
+    },
+    {
+      "blockId": "connector-C4333-b00007",
+      "text": "Identify the Pigtail Service Parts",
+      "why": "The pigtail table separates the service assembly identifier from the engineering shell identifier and records its lead and cavity information. I keep its Gauge field separate from the harness-wire Gauge entries above; these describe different items. This is a parts reference, with no replacement, splicing or wire-selection method supplied."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:31:02.564Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "93db08e4dd98d755b91993c7d0d34f6b2fefdd9332da08ea00a25937fb8a4536",
+    "reviewedAt": "2026-10-28T23:30:46.262Z",
+    "coveredUnitIds": [
+      "connector-C4333:u1",
+      "connector-C4333:u2",
+      "connector-C4333:u3",
+      "connector-C4333:u4",
+      "connector-C4333:u5",
+      "connector-C4333:u6",
+      "connector-C4333:u7",
+      "connector-C4333:u8",
+      "connector-C4333:u9",
+      "connector-C4333:u10",
+      "connector-C4333:u11",
+      "connector-C4333:u12",
+      "connector-C4333:u13",
+      "connector-C4333:u14",
+      "connector-C4333:u15",
+      "connector-C4333:u16",
+      "connector-C4333:u17",
+      "connector-C4333:u18",
+      "connector-C4333:u19",
+      "connector-C4333:u20",
+      "connector-C4333:u21",
+      "connector-C4333:u22",
+      "connector-C4333:u23",
+      "connector-C4333:u24",
+      "connector-C4333:u25",
+      "connector-C4333:u26",
+      "connector-C4333:u27",
+      "connector-C4333:u28",
+      "connector-C4333:u29",
+      "connector-C4333:u30"
+    ],
+    "originalAuthorHold": [
+      "The component title identifies a luggage compartment lid rear control switch, while the pin table identifies the switch function as liftgate glass release. The supplied evidence does not reconcile these component descriptions; confirm the intended application before publishing the component identification."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all30 primary units, both complete source pages and sole figure, and3 edits. Luggage-lid component title versus liftgate-glass Function ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "3917850ddf75721a388bb8219773ef5dbee97ca8eb4917392c894d9e63ea6468"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "documentId": "connector-C4398",
+  "sourceHash": "8b8f666c011547715dca274e36d1ca3f65ec20f3a8a61b9532e131990f01d5f0",
+  "title": "C4398 — Noise suppression capacitor",
+  "introduction": "I start with the identity table, use the drawing to locate the cavity label, then read across the matching pin row. The pigtail table provides a separate cross-check for the listed service assembly. Think of the housing drawing as a connector's silhouette in a parts lineup: useful identification evidence, provided the labels agree.\n\nHere they need attention. The component is named as a noise suppression capacitor, while the pin-table Function entry describes a high-mounted stop control module. Keep both descriptions visible and obtain corroborating wiring information before treating that function as verified for the capacitor.\n\nThis sheet supports identification and table reading. It does not establish physical viewing direction, access, electrical tests or replacement steps. Gauge convention and the Size and Used codes are unspecified; I leave those fields uninterpreted.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4398-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "The drawing shows a rectangular housing outline, projections above and below it, and a labeled circular cavity mark among internal rectangular outlines. I use those visible features to recognize the illustration without assigning release or locking functions to them."
+    },
+    {
+      "blockId": "connector-C4398-b00005",
+      "text": "Read the cavity and circuit record",
+      "why": "Read across the cavity row to associate Circuit Number, Color, Gauge and Terminal Part Number. Treat Function as the recorded label pending resolution of the component-name discrepancy described above."
+    },
+    {
+      "blockId": "connector-C4398-b00007",
+      "text": "Identify the listed service pigtail",
+      "why": "I match Kit List in the identity table with Number here, and compare Hard Shell with Engineering Shell. Service Part identifies the listed assembly. The pigtail and circuit Gauge fields describe separate entries; neither authorizes a wire substitution."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:25:36.019Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "9242c402b9dcad404daa0d49a8dbedafc1e0704c9833be58847c1484dd717b1d",
+    "reviewedAt": "2026-10-28T23:25:01.353Z",
+    "coveredUnitIds": [
+      "connector-C4398:u1",
+      "connector-C4398:u2",
+      "connector-C4398:u3",
+      "connector-C4398:u4",
+      "connector-C4398:u5",
+      "connector-C4398:u6",
+      "connector-C4398:u7",
+      "connector-C4398:u8",
+      "connector-C4398:u9",
+      "connector-C4398:u10",
+      "connector-C4398:u11",
+      "connector-C4398:u12",
+      "connector-C4398:u13",
+      "connector-C4398:u14",
+      "connector-C4398:u15",
+      "connector-C4398:u16",
+      "connector-C4398:u17",
+      "connector-C4398:u18",
+      "connector-C4398:u19",
+      "connector-C4398:u20",
+      "connector-C4398:u21",
+      "connector-C4398:u22",
+      "connector-C4398:u23",
+      "connector-C4398:u24",
+      "connector-C4398:u25",
+      "connector-C4398:u26",
+      "connector-C4398:u27",
+      "connector-C4398:u28",
+      "connector-C4398:u29"
+    ],
+    "originalAuthorHold": [
+      "The component description is NOISE SUPPRESSION CAPACITOR, but the Function entry for cavity 1 is CTRL MOD. - STOP HIGH MOUNT. The supplied evidence does not reconcile these labels. Corroborating wiring information is required before accepting that function as verified for the capacitor."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all29 primary units, both complete source pages and sole figure, and3 edits. Capacitor component title versus stop-module Function ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "85f511fec8249302283c06feb797aea1d94e3766ab4926a66590bb04d80c8705"
+    }
+  }
+}

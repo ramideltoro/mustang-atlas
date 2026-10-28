@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C169",
+  "sourceHash": "96672f8a4512dee49a58e32760db92e22635f53ca9dcf642a64764404a2b7870",
+  "title": "C169 — Reversing lamp switch",
+  "introduction": "I read this reversing-lamp-switch reference like a seating chart: a cavity label gives a circuit its place, and the row explains its job. Start with the connector identity table, compare the housing drawing, then match each drawn label to the Cavity column. Read across for the circuit identity, color, gauge, function and terminal information.\n\nThe drawing has a broad housing projection above the cavity circles and an asymmetric outer housing. Those are useful landmarks within the illustration, but they do not establish a physical viewing direction or a release movement. The pigtail table adds service-part and engineering-shell references; it does not teach a replacement.\n\nThere is a real snag here: the identity table’s pin count disagrees with the drawing and pigtail cavity count, and a cavity label appears in different circuit rows without an applicability qualifier. Keep those discrepancies visible rather than guessing a wiring arrangement or choosing a part. Access, probing, test values, gauge conventions and the Box, Cols, Size and Used codes are outside this reference’s explanation.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C169-b00002",
+      "text": "Connector face — Harness 14B060",
+      "why": "The housing outline helps distinguish the drawing’s left and right while reading the cavity labels. Its shape is a diagram landmark, not an instruction to pull, press or disconnect anything. The visible cavity layout must remain distinct from the conflicting pin-count entry."
+    },
+    {
+      "blockId": "connector-C169-b00005",
+      "text": "Read the pin assignments",
+      "why": "The Function entries distinguish the reverse-switch connection from the transmission-related signal-return descriptions. The repeated cavity label carries different circuit, color and terminal information, with blank qualifiers. That does not establish a splice, simultaneous connections or selectable variants; the intended relationship needs clarification."
+    },
+    {
+      "blockId": "connector-C169-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail is a connector with attached wire leads. This table separates its service-part reference from the engineering-shell identifier and includes its own gauge, material and cavity fields. Those fields describe the listed service item; they do not resolve the conflicting connector count or supply wire-matching and installation instructions. The Image entry is a filename, not another illustrated procedure on this page."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:40:42.226Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "b685c45130ec143e347d930174a56f3131c2c4a50bae9879552a3f0e768ff52b",
+    "reviewedAt": "2026-10-28T23:40:31.840Z",
+    "coveredUnitIds": [
+      "connector-C169:u1",
+      "connector-C169:u2",
+      "connector-C169:u3",
+      "connector-C169:u4",
+      "connector-C169:u5",
+      "connector-C169:u6",
+      "connector-C169:u7",
+      "connector-C169:u8",
+      "connector-C169:u9",
+      "connector-C169:u10",
+      "connector-C169:u11",
+      "connector-C169:u12",
+      "connector-C169:u13",
+      "connector-C169:u14",
+      "connector-C169:u15",
+      "connector-C169:u16",
+      "connector-C169:u17",
+      "connector-C169:u18",
+      "connector-C169:u19",
+      "connector-C169:u20",
+      "connector-C169:u21",
+      "connector-C169:u22",
+      "connector-C169:u23",
+      "connector-C169:u24",
+      "connector-C169:u25",
+      "connector-C169:u26",
+      "connector-C169:u27",
+      "connector-C169:u28",
+      "connector-C169:u29",
+      "connector-C169:u30",
+      "connector-C169:u31"
+    ],
+    "originalAuthorHold": [
+      "The identity table gives Pin Count as 3, but the connector drawing shows cavities 1 and 2, and the pigtail table gives Cavities as 2. The supplied evidence does not resolve the discrepancy.",
+      "Cavity 2 is assigned both RE406, GY-VT, terminal 10737242 and RET24, BN-BU, terminal 97BG-14474-ADA. Both Qualifier cells are blank, so the evidence does not establish their applicability or intended relationship."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all31 primary units, both complete source pages and sole figure, and3 edits. Pin-count and duplicated-signal-return-row ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "88e4f9c9183969c210ca07bf481ff5316a77854297ebdfe6c472f086657ef972"
+    }
+  }
+}

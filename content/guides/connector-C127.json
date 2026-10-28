@@ -1,0 +1,100 @@
+{
+  "documentId": "connector-C127",
+  "sourceHash": "4d6b502def16d29aa37e0d513438109bfee24b5a4edd587186f210de62db8b8a",
+  "title": "C127 — Hood switch connector reference",
+  "introduction": "The hood switch connector sheet is a seating chart for its wiring: cavity labels locate the connections, and table rows explain their identities. I start with the metadata, find the corresponding labels in the drawing, then read each matching row across rather than hopping between columns.\n\nRepeated cavity entries deserve attention. Different row details do not automatically mean extra physical cavities or establish which entries apply together. The metadata’s Pin Count also disagrees with the illustrated cavity count and pigtail cavity listing; that discrepancy remains open.\n\nUse this page to understand the reference. It supplies no access, connector-release, probing, switch-state test or replacement sequence. Physical viewing direction, gauge conventions and the Size and Used codes remain unspecified.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C127-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "The printed view places the labeled cavities side by side beneath a broad housing projection. I use those features to keep my place on the page. Their shapes do not establish a latch function, release movement or physical viewing side."
+    },
+    {
+      "blockId": "connector-C127-b00005",
+      "text": "Cavity and circuit map",
+      "why": "Match each printed cavity label to the table, then keep circuit identity, color, gauge, function and terminal part number together within that row. The repeated ground-circuit entries differ in gauge and terminal details. Their blank Qualifier cells do not explain whether they describe different configurations or connections present together, so preserve both entries without choosing or combining them."
+    },
+    {
+      "blockId": "connector-C127-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail row connects a kit entry with its service part, engineering shell and construction details. Its gauge belongs to the listed pigtail; it does not resolve the differing circuit-row gauges or authorize a wire choice. The image filename is a reference to a separate image, and the table contains no splicing or installation instructions."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:37:22.073Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "873598905d65ab28ec9da217a0f1a66c14046aeb8aa4bfe7625995279c663dcb",
+    "reviewedAt": "2026-10-28T23:37:10.072Z",
+    "coveredUnitIds": [
+      "connector-C127:u1",
+      "connector-C127:u2",
+      "connector-C127:u3",
+      "connector-C127:u4",
+      "connector-C127:u5",
+      "connector-C127:u6",
+      "connector-C127:u7",
+      "connector-C127:u8",
+      "connector-C127:u9",
+      "connector-C127:u10",
+      "connector-C127:u11",
+      "connector-C127:u12",
+      "connector-C127:u13",
+      "connector-C127:u14",
+      "connector-C127:u15",
+      "connector-C127:u16",
+      "connector-C127:u17",
+      "connector-C127:u18",
+      "connector-C127:u19",
+      "connector-C127:u20",
+      "connector-C127:u21",
+      "connector-C127:u22",
+      "connector-C127:u23",
+      "connector-C127:u24",
+      "connector-C127:u25",
+      "connector-C127:u26",
+      "connector-C127:u27",
+      "connector-C127:u28",
+      "connector-C127:u29",
+      "connector-C127:u30",
+      "connector-C127:u31"
+    ],
+    "originalAuthorHold": [
+      "The metadata Pin Count disagrees with the cavity count shown in the connector drawing and pigtail table. Keep the original entries unchanged pending review; do not interpret the number of assignment rows as the physical pin count."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all31 primary units, both complete source pages and sole figure, and3 edits. Pin-count and duplicated-ground-row ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "29c78893ca6058dccf2fe7c531dad91fc2d17ce2e00cc451d460b6c1abb836aa"
+    }
+  }
+}
