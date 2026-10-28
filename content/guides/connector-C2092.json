@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C2092",
+  "supportingSourceRefs": [],
+  "sourceHash": "835affe464c270f5adf3a12f911939e4225aedabdc10857b3e9c8139fb8be7da",
+  "title": "C2092 — Temperature door actuator RH",
+  "introduction": "RH identifies the right-hand temperature door actuator. I check CNumber and Description first, then use the drawing and table together: the drawing locates a cavity, and the row explains its electrical job. The motor and position-sensor circuits are the mover and the reporter; sharing a connector does not make their jobs interchangeable.\n\nFollow a printed cavity label into its row and read all the way across before moving to another entry. The pigtail section then provides service identifiers. This page is a connector reference, not a hands-on test or replacement procedure. Access, terminal-side versus wire-side orientation, gauge convention, Size/Used code definitions and test conditions need separate service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2092-b00002",
+      "text": "Connector face for harness 18B574",
+      "why": "The housing feature sits above the cavity row in the printed drawing. I use it with the housing outline to navigate the cavity labels, then find the matching table row. The grey cavity corresponds to the row without a circuit or function assignment. None of these printed landmarks establishes the physical viewing side."
+    },
+    {
+      "blockId": "connector-C2092-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Keep each cavity’s circuit identifier, color code, gauge, function and terminal identifier together by reading horizontally. The right-temperature position-sensor, voltage-reference and reference-return entries have roles distinct from the motor entries. For each motor row, take the coil role and conditional opening or closing description from that same row, retaining '(IF PLUS)'. Cavity order is not a shortcut to motor direction, and these labels are not an instruction to apply power."
+    },
+    {
+      "blockId": "connector-C2092-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I read Service Part as the service identifier and Engineering Shell as the housing identifier within this listing. The pigtail’s Gauge entry and the circuit table’s Gauge entries describe their respective listings; they are not a wire-substitution rule. This section supplies identification, while terminal release, splicing and replacement require a separate procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:08:42.477Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "191e124b8ad6647f10b880cab1b8ba78d1ee4bcac20e43855e2267b7ba1e5bb6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2f63b12e69b4f5cc9ff3f5d66efb4189b336cfc882937c9d35f0bde91c3d6a5b",
+    "reviewedAt": "2026-10-28T02:50:56.761Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Read all34 source units/full raw/table/context/full author/final prose and independent verdict. Original complete page2/solefigure directly viewed. Only unsupported latch function label replaced with neutral housing feature; prior full review retained. RH-specific VH441WH,CH212BU closeIFPLUS at5 and CH213BN openIFPLUS at6 preserved, no borrowing opposite-side direction pattern."
+    }
+  }
+}

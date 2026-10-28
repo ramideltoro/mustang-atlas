@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C232",
+  "supportingSourceRefs": [],
+  "sourceHash": "f80b37373a00eab28c09dffe9689ce60ad5d9c30287e879f621e36bbc054c564",
+  "title": "C232 — Defrost vent/register door actuator",
+  "introduction": "I start with CNumber and Description to confirm this is the defrost vent/register door actuator reference. Its circuit map separates the motor’s job from the position sensor’s job: moving the door and reporting its position are different conversations at the same connector. The table gives each conversation its own address, which is handy when a bundle of wires otherwise looks like dashboard spaghetti.\n\nUse a printed cavity label to find its row, then read across for the circuit details. The pigtail section supplies the corresponding service listing. This is a connector-reading guide; access, terminal-side versus wire-side orientation, gauge convention, Size/Used code definitions, electrical tests and replacement methods require information beyond this sheet.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C232-b00002",
+      "text": "Connector face for harness 18B574",
+      "why": "The housing feature above the cavity row and the housing outline help me navigate the drawing as printed. Match the printed cavity label to its table row; the grey cavity aligns with the row carrying no circuit or function assignment. The illustration’s layout alone does not identify the physical viewing side."
+    },
+    {
+      "blockId": "connector-C232-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Each row ties a cavity to its circuit identifier, color code, gauge, function and terminal identifier. Follow the defrost-position sensor, voltage-reference and reference-return entries separately from the motor entries. Keep each motor’s opening or closing description attached to its '(IF PLUS)' condition. These labels explain circuit roles without supplying a power-application method or a pass/fail test."
+    },
+    {
+      "blockId": "connector-C232-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Use the column headings to distinguish the pigtail’s Service Part identifier from its Engineering Shell identifier. Its Gauge entry belongs to the pigtail listing, while the circuit table describes individual circuit rows. I use this section to understand the listed service option; terminal removal, wire selection and splicing need their own service instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:02:02.828Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "aca656ce33469dc443ba84e282d9ee6fa282e04dd512cbdefa15dae56a89ac07",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9cccab7539706ebfbc0e4e8119d406fb4fc02deed4a7568333f4493d3c214fb1",
+    "reviewedAt": "2026-10-28T02:47:41.947Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "All34 source units/full raw/table/context/full author/final prose and independent verdict read. Original complete page2/solefigure directly viewed. Only unsupported latch function label replaced with neutral housing feature; prior full review retained. Defrost VH436YE,CH229WH openIFPLUS,CH228YE closeIFPLUS preserved; no powered-test inference."
+    }
+  }
+}

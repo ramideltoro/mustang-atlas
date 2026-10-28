@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C2091",
+  "supportingSourceRefs": [],
+  "sourceHash": "d021bba69dfdff6f37ae803e2508f41b242a2ebfb3a7754ce326f81f504b01f4",
+  "title": "C2091 — Temperature door actuator LH",
+  "introduction": "LH identifies the left-hand temperature door actuator. I confirm that identity in CNumber and Description before following any cavity row. The motor entries describe movement, while the position-sensor entry describes feedback about door position—a little like the difference between turning a knob and checking where it landed.\n\nUse the drawing’s printed cavity labels as the bridge into the circuit table. Read across the selected row to keep its identifiers and function together, then use the pigtail listing for service-part information. This reference explains the map; physical access, terminal-side versus wire-side orientation, gauge convention, Size/Used code definitions, electrical test conditions and replacement methods are outside its scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2091-b00002",
+      "text": "Connector face for harness 18B574",
+      "why": "I use the housing feature above the row and the housing outline to locate the printed cavity labels. The grey cavity matches the table row with no circuit or function assignment. These are landmarks on the supplied drawing, not confirmation of the side from which to view the actual connector."
+    },
+    {
+      "blockId": "connector-C2091-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Read each cavity row horizontally through its circuit identifier, color code, gauge, function and terminal identifier. The left-temperature position-sensor entry is distinct from the voltage-reference, reference-return and motor entries. Read the motor coil roles and opening or closing descriptions with their '(IF PLUS)' condition intact. Function labels identify roles; they do not establish test voltages or prove that the door reaches a commanded position."
+    },
+    {
+      "blockId": "connector-C2091-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The Service Part and Engineering Shell columns identify different aspects of the listed pigtail. I also keep this table’s Gauge entry separate from the individual circuit gauges above. That distinction helps the reader understand the listing without turning it into unsupported instructions for choosing replacement wire, releasing terminals or making splices."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:05:21.951Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3b3645ca0fa2fee43e2c5cbaa46a8793c88dda8de6bad7b55194bde44c5c7c03",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "057380fcd4748626e7f9035c7226d50dab55dc6fafd2dec84702ace15fc13d60",
+    "reviewedAt": "2026-10-28T02:47:41.954Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Read all34 source units/full raw/table/context/full author/final prose and independent verdict. Original complete page2/solefigure directly viewed. Only unsupported latch function label replaced with neutral housing feature; prior full review retained. LH-specific VH440BU,CH239WH openIFPLUS,CH238OG closeIFPLUS preserved without test inference."
+    }
+  }
+}

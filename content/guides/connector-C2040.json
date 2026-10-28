@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2040",
+  "supportingSourceRefs": [],
+  "sourceHash": "0b0bbf684355245a7df2fbf289dfba7ef2dea46ad69beb0e369a62e27dda1a1a",
+  "title": "C2040 — Accelerator Pedal Position (APP) Sensor",
+  "introduction": "The accelerator pedal position connector table separates pedal-sensor functions into reference, signal and return paths for distinct channels. I read those as labeled conversations sharing a plug: keeping the participants straight matters more than noticing that the wires all arrive at the same housing.\n\nBegin with the connector identification table. Use the drawing's cavity labels to find the matching Cavity row, then read across to Circuit Number, Color and Function. The function suffixes distinguish the channels and their roles; their positions in the table are not a reason to assume that adjacent cavities perform matching jobs.\n\nThis reference teaches identification and table reading. Physical viewing direction, access, probing, expected readings and replacement methods belong to the applicable service procedure. Box, Cols and Size are unexplained reference fields, and the Gauge entries are retained as recorded without assuming a measurement convention or prescribing replacement wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2040-b00002",
+      "text": "Reading the connector face · Harness 14290",
+      "why": "In the displayed illustration, cavity labels run down a vertical column inside the rounded housing, with a prominent rectangular structure on the left. I use these visible features to stay oriented within the drawing while moving between it and the table. They do not establish which side of the physical connector faces the viewer or how its lock releases."
+    },
+    {
+      "blockId": "connector-C2040-b00005",
+      "text": "Reading the pedal-sensor circuit assignments",
+      "why": "Cavity supplies the link to the drawing, while Circuit Number identifies the recorded electrical path. In Function, VREF denotes the reference role, RTN the return role, and the pedal-position entries identify the signal roles; retain each channel suffix when reading them together. Color and Terminal Part Number provide additional row-specific identification. These labels describe connections, not expected voltage, signal relationships or a pass/fail test."
+    },
+    {
+      "blockId": "connector-C2040-b00007",
+      "text": "Understanding the pedal pigtail listing",
+      "why": "A pigtail combines the connector with attached wire leads. The service table distinguishes its kit entry, Service Part and Engineering Shell, with the shell identifier matching the connector record above. Gauge, Material and Cavities describe the listed service assembly; Image names its illustration file. The circuit table and pigtail table describe different entries, so their gauge fields should not be turned into an unsupported wire-substitution rule. This is an identification listing, not a replacement or splice procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:50:56.780Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "9ee595ad4b36df1717012d27d9bddd63268bd765adf2cf47361caa8751b383f1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "132b565b7ebc08d8b37e523cf1f0457ff9fc70a6bc84f97e9ac910f919e5b2b7",
+    "reviewedAt": "2026-10-28T02:50:56.780Z"
+  }
+}

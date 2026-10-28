@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C3238",
+  "supportingSourceRefs": [],
+  "sourceHash": "6ab0dd29a87daed37a38b0cc85869b8ec416deb1b28e19f992a88dd91298ab3d",
+  "title": "C3238 — Passenger Safety Belt Buckle",
+  "introduction": "The passenger buckle connector carries more information than its name might suggest: the assignment table distinguishes belt-tension sensing, buckle-reminder sensing and restraint ground functions. I treat the connector name as the book cover, then read the Function column for the contents.\n\nStart with the identification table, match the illustrated cavity labels to the Cavity column, and read each assignment across to its circuit, color and terminal information. The shaded position corresponds to the unassigned row; it is not an invitation to fill an apparently empty space. Separate ground entries retain their own cavity positions even when their circuit labels match.\n\nThis is a connector-reading guide. It does not establish physical viewing direction, connector release movements, electrical test values or a repair method. Box, Cols and Size remain unexplained reference fields. The pigtail listing identifies recorded service information without teaching wire selection or replacement.",
+  "requirements": [
+    {
+      "category": "Scope of any subsequent restraint-system work",
+      "items": [
+        {
+          "name": "Qualified pyrotechnic service",
+          "detail": "If subsequent work involves airbags or pretensioners, pyrotechnic-component service is restricted to qualified personnel. This connector reference does not supply the required depowering, handling or restoration procedure."
+        },
+        {
+          "name": "Restraint-specific testing",
+          "detail": "For subsequent airbag or pretensioner diagnosis, use the prescribed restraint-specific method and equipment. Do not substitute a generic jumper or resistance test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C3238-b00002",
+      "text": "Reading the connector face · Harness 14D230",
+      "why": "The displayed drawing arranges the cavity labels in a vertical column, with a broad housing structure above and a projecting feature on the right. I use that outline to keep my place in the illustration. The shaded position agrees with the table's unassigned cavity entry. Neither the outline nor the shading supplies a physical viewing direction or a connector-release instruction."
+    },
+    {
+      "blockId": "connector-C3238-b00005",
+      "text": "Reading the restraint circuit assignments",
+      "why": "Follow each Cavity row through Circuit Number, Color, Gauge, Function and Terminal Part Number. The tension-sensor function, its positively marked control-module entry, the buckle-reminder function and the restraint ground entries describe different roles; their labels alone do not establish test voltages or continuity limits. The unassigned row has no circuit details and is marked unused, consistent with the shaded drawing position. Matching ground circuit names do not erase their separate cavity locations."
+    },
+    {
+      "blockId": "connector-C3238-b00007",
+      "text": "Understanding the buckle pigtail listing",
+      "why": "The pigtail is the connector-and-lead service assembly. Its table distinguishes the kit entry, Service Part and Engineering Shell; the shell identifier ties the listing to the connector identification above. Material, Gauge and Cavities describe that service entry, and Image names its illustration file. I keep the pigtail and circuit-row descriptions separate: this listing does not explain how to select replacement wire, splice leads or service restraint components."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:50:56.771Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "dd7fc19bcc2f051745a90180d676f199498673b762bfd7b3ae6093ddb8c0f427",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a04e97cbbf9877de4f33d89675bff8111a4e864ddeb8dc69693a32f48049b405",
+    "reviewedAt": "2026-10-28T02:50:56.771Z"
+  }
+}

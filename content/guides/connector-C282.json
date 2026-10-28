@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C282",
+  "supportingSourceRefs": [],
+  "sourceHash": "360469eae887fdb00d01db70d3c9fb22db0a831dd0104f4069c0fbcd420438bb",
+  "title": "C282 — Air inlet door actuator",
+  "introduction": "I use this reference to connect the air inlet door actuator’s identity with its cavity drawing, circuit functions and pigtail listing. The recirculation motor and position-sensor entries tell different parts of the story: moving the door and reporting its position are separate jobs. Think of the connector table as an address book—each cavity has a location, but its Function entry tells you who lives there.\n\nStart with CNumber and Description, find the printed cavity label in the drawing, then follow that cavity’s table row across. Finish at the pigtail listing if you need its service identifiers. This page teaches reference reading; physical access, terminal-side versus wire-side orientation, gauge convention, Size/Used code definitions, testing and replacement methods are outside its scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C282-b00002",
+      "text": "Connector face for harness 18B574",
+      "why": "I use the upper housing feature and the housing outline as landmarks within the printed drawing, then match its cavity labels to the table. The grey cavity corresponds to the row without a circuit or function assignment. These landmarks explain the illustration’s layout; they do not establish which side of a physical connector to view."
+    },
+    {
+      "blockId": "connector-C282-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Read across a single cavity row to keep its circuit identifier, color code, gauge, function and terminal identifier together. The functions distinguish the recirculation-position sensor, voltage reference and reference return, and door-motor circuits. The motor descriptions retain their '(IF PLUS)' condition; those conditional direction labels are not instructions to energize a terminal or evidence that the actuator works."
+    },
+    {
+      "blockId": "connector-C282-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I keep the Service Part identifier distinct from the Engineering Shell identifier so the service listing and housing identity do not get muddled. Gauge in this table describes the listed pigtail, while the earlier Gauge column belongs to individual circuit rows. The listing identifies a service option; it does not establish a wire-substitution, terminal-release or splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:58:34.559Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "67986492c3ef112a480790c166fd9f25de73452d55c3af1d2f6e124bafc3adf8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6b6b25b585796f073f67657c895a26fe3086726a8313146830c650f553c677bb",
+    "reviewedAt": "2026-10-28T02:47:41.939Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Read all34 source units/full raw text/all table cells/electrical context/full author/final prose and full independent verdict; original complete page2/solefigure directly viewed. Only unsupported upper latch function label replaced with upper housing feature; prior full review retained. Horizontal6–1 labels with4shaded agree; motor IF PLUS qualifiers preserved, no energizing instruction."
+    }
+  }
+}
