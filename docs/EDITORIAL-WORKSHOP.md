@@ -196,3 +196,7 @@ Column-switch source enrichment supplies complete checksum-bound owner control p
 ### Accessible steering-wheel leather repair evidence
 
 The exact G1693260 primary may receive complete checksum-bound Ford TA-19-C safety data (17 February 2025, all eight pages). This is current product-safety evidence, separately dated from the workshop method; the workshop remains authority for application and setting times. Enrollment covers new/reserved tasks and explicit retries, preserves prior held/reviewed fingerprints, and excludes this external package from pair mode. The bounded task keeps the steering wheel installed and stops if wheel or SRS access is needed. Full independent review and exact supervisory clearance remain mandatory. Reservation 18 contains this one task.
+
+### Standard hood source completion
+
+Reservation 19 extends the exact primary G1693249 package with the existing complete front-panel alignment span, matching battery isolation/safety evidence and complete owner washer page. It preserves standard-engine scope, literal front-panel tolerances and the distinction between an arithmetic zero-offset target and a source-stated nominal. Old held/reviewed packages remain unenrolled unless explicitly retried. The washer check requires an already filled reservoir and restored assembly; external evidence remains excluded from pairs. Full source/figure review and exact supervisory approval remain required.
