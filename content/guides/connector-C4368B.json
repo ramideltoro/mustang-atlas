@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C4368B",
+  "supportingSourceRefs": [],
+  "sourceHash": "60a94a92358be398365e8daae818f985d382c61f1338ee7bb9631a00b3692c4b",
+  "title": "C4368B — Body Control Module B connector",
+  "introduction": "I use this reference to connect a cavity in the drawing with its circuit assignment in the table. Think of the cavity label as a street address and the Circuit Number as the route passing through it: nearby addresses need not serve related functions.\n\nStart with the connector identification table, then match a printed cavity label in the face drawing to the Cavity column under the assignments. Read across that same row for the circuit, wire color, gauge, function and terminal identification. The functions distinguish rear-window down control from ambient-lighting color channels; keep the lighting-zone or non-zone wording and polarity marks attached to their respective rows.\n\nThis page teaches identification, not access, probing or repair. The physical viewing direction, gauge convention and meaning of Size are not defined here. Use the drawing as presented, leave unexplained catalog codes uninterpreted, and use a matching workshop procedure for any electrical test or repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4368B-b00002",
+      "text": "Harness 14A005 · Connector face",
+      "why": "I use the asymmetric housing outline to keep the drawing oriented on the page, then read the printed cavity labels rather than count circles. The large side projection is on the left as drawn. White, black-outlined cavities correspond to rows carrying circuit assignments; shaded cavities correspond to rows with blank circuit and function entries. The shading distinguishes those entries, not an electrical test result."
+    },
+    {
+      "blockId": "connector-C4368B-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity links the drawing to the table; Circuit Number identifies the circuit, while Function explains its assigned role. Color describes the wire identification separately from the ambient-lighting color named in Function. Read Gauge, Used and Terminal Part Number within that same row, without treating a blank assignment as a fault or a listed function as proof that the circuit operates correctly."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:24:07.159Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6bb5cc52bcc0b80d227cb5c9a78190c9dd0639f3c120e5b24e2cab0114614398",
+  "sourcePdfHash": "fa231ef924ae108f0b58af553e0a4417fd82f9b139b3e98a899372a818a84df8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 47,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "abb7dd577552e4224339b26633f140667a45471b608097a6dc5a38e279f6fa9f",
+    "reviewedAt": "2026-10-28T04:24:07.160Z"
+  }
+}
