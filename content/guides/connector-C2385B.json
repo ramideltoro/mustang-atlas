@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2385B",
+  "supportingSourceRefs": [],
+  "sourceHash": "06e83b9950176f84784cd09f7489a120f997b9e770227a015db8e7ccd33a9a52",
+  "title": "C2385B — Audio digital signal processing (DSP) module connector",
+  "introduction": "I read this connector reference like an audio patch-bay legend: each connection has a particular sound path or control role. Keeping those roles straight makes the table useful before anyone starts blaming the speakers.\n\nBegin with the harness heading and connector identity table. Use each printed cavity label to find its row under Cavity, then read across for circuit identity, wire description, function and terminal identifier. Function distinguishes subwoofer/amplifier audio, amplifier enable and woofer connections by vehicle location and polarity. A negative audio designation identifies the listed audio polarity; it is not an instruction to connect that circuit to chassis ground.\n\nThe shaded drawing positions correspond to table entries with no assigned circuit. Undefined color symbols, function suffixes, Size codes and gauge conventions remain uninterpreted. The physical viewing direction is also unspecified. This is a circuit-identification guide; connector access, probing, wire selection, test conditions and fault decisions require separate task instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2385B-b00002",
+      "text": "Connector cavity layout · Harness 14A005",
+      "why": "Read each column downward and use the printed cavity labels to reach the assignment table. The projecting housing feature on the drawing's left and the stepped outline on its right help distinguish the illustrated layout. They do not establish which physical side to approach with a probe."
+    },
+    {
+      "blockId": "connector-C2385B-b00005",
+      "text": "Audio circuit and cavity assignments",
+      "why": "I group the woofer entries by the location and polarity stated in Function, then keep amplifier enable separate from the audio connections. Read each row intact rather than pairing wires by color alone. Unexplained symbols or suffixes do not justify assigning an extra electrical role, and an assignment record does not prove that its circuit is working."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:50:09.661Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "6b14dd0bd084d938a739bacf596dd8a906063098a872f6bc28a02af04ba44984",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 37,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8830e25931666b72066907868c2c6244964244d7e123117b3c458aa0b14f00ec",
+    "reviewedAt": "2026-10-28T03:50:09.662Z"
+  }
+}

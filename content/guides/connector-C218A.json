@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C218A",
+  "supportingSourceRefs": [],
+  "sourceHash": "0cb9b69e05b6e51e26c59d3b59bcf0c75b6d173367d26ec0ebbcfb91a8b2a31e",
+  "title": "C218A — Clockspring",
+  "introduction": "I read this clockspring reference like a seating plan: the cavity label tells you where an entry belongs, and the Function column tells you its role. The table brings together switch illumination, an instrument-panel ground and driver airbag circuits. Identifying those roles is the useful result here; a populated position is not evidence that its circuit works.\n\nStart with the connector identification, find a cavity label in the drawing, then read its complete assignment row. The gray positions correspond to rows without circuit assignments. For the airbag entries, keep the driver designation and polarity attached to the same row rather than grouping them loosely as airbag wiring.\n\nThis is an identification guide. Physical viewing direction, the gauge convention and the meaning of Size are unspecified; Used remains as printed. It does not teach connector access, airbag depowering or handling, probing, wire selection, replacement or diagnostic testing.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C218A-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "In this drawing, cavity labels run downward through the left column before continuing at the top of the right column. I use the projecting housing features on the left as a page landmark. This explains the illustrated layout without assuming the viewing side of an actual connector."
+    },
+    {
+      "blockId": "connector-C218A-b00005",
+      "text": "Pin-to-circuit assignments",
+      "why": "Read across from Cavity to Circuit Number, Color, Gauge, Function and Terminal Part Number. Circuit identity and function belong together; a color entry alone is not a complete circuit description. The airbag polarity marks distinguish the listed connections and are not instructions to apply power or perform a measurement."
+    },
+    {
+      "blockId": "connector-C218A-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I match Engineering Shell with Hard Shell and Fpn to connect this service-pigtail entry to the identified connector. Its Service Part reference is distinct from the individual terminal references above. The listed pigtail properties identify the service item; they do not establish an airbag-wiring repair method."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:36:08.561Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2d6913d8bd5baf199c1f299c51967b81c1c61d839b03e391a51c365b4dd69589",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b197ae15533c6b8d33ea8e424b224e0b7e3d99c12229823c1c7cb31345998c81",
+    "reviewedAt": "2026-10-28T03:36:08.562Z"
+  }
+}

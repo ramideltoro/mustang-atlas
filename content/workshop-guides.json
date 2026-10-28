@@ -157877,135 +157877,254 @@
       }
     },
     {
-      "title": "Diagnose passenger belt-tension sensor faults B00C2:11 and B00C2:12",
-      "summary": "Trace passenger belt-tension reference-voltage faults through the buckle, wiring and occupant-classification system, then verify the complete restraint system.",
-      "introduction": "The belt tension sensor (BTS), incorporated into the passenger safety-belt buckle, works with the occupant classification system (OCS). The occupant classification system module (OCSM) supplies a reference voltage that changes with belt tension. This diagnosis separates a grounded or powered reference circuit from a buckle-sensor fault or an OCS fault before replacement is considered.",
-      "why": "Connector and wiring defects cause many of these faults. Controlled disconnection and retesting help establish whether the module recognizes a changed circuit condition. Because this work also involves airbag connections, the prescribed supplemental restraint system (SRS) power transitions protect against accidental deployment.",
+      "title": "Interpret recorded passenger belt-tension fault results",
+      "summary": "Compare existing technician records for B00C2:11 and B00C2:12 with the complete A1–A7 decision path, including power-state, circuit and final restraint-system gates.",
+      "introduction": "I’ll use existing technician records to distinguish an active belt-tension reference-circuit fault from an intermittent event and to identify the chart’s next destination. Missing connector identity, power-state, measurement or follow-up evidence leaves the branch unresolved. This article does not teach scan operation, inspection, connector handling, probing, fuse or battery work, wiring repair or restraint-component replacement.\n\nThe source’s A5 conditional sentence names C3049, while A4 disconnects C219, A5 immediately reconnects C219 and A7 again names C219. This article uses an explicitly editorial reading of that A5 condition as referring to C219 disconnected at A4, supported by those surrounding steps and the C219 passenger-airbag circuit record. This is not a manufacturer-issued erratum or a claim that C3049 and C219 are interchangeable. Require the actual connector identity and sequence in the technician records; uncertainty blocks the affected conclusion.",
+      "why": "The belt tension sensor, or BTS, is part of the right-hand front passenger safety-belt buckle. It works with the occupant classification system, or OCS, which assesses the passenger-seat occupant. The occupant classification system module, or OCSM, supplies a reference voltage to the sensor; the voltage changes with belt tension. B00C2:11 means the module detects that reference circuit shorted to ground. B00C2:12 means it detects a short to voltage. The OCSM reports the fault to the restraints control module, or RCM, over the HS-CAN2 vehicle network. The RCM then records B00A0:09 and asks the instrument cluster to illuminate the airbag warning light. Wiring and connector faults are common causes, so this test checks their behavior before directing replacement.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "B00C2:11",
-        "B00C2:12",
-        "passenger belt tension sensor fault",
-        "airbag warning light",
-        "B00A0:09 occupant classification fault"
+        "2015 Mustang B00C2:11",
+        "2015 Mustang B00C2:12",
+        "B00A0:09",
+        "passenger belt tension sensor",
+        "OCSM reference voltage",
+        "C3238 pin 2",
+        "C219 passenger airbag connector",
+        "Pinpoint Test AL"
       ],
       "when": {
-        "summary": "When B00C2:11 or B00C2:12 is retrieved from the occupant classification module.",
+        "summary": "Use existing technician records for OCSM B00C2:11 or B00C2:12 on a vehicle matching the listed applicability.",
         "notes": [
-          "Distinguish a current on-demand fault from a continuous-memory-only record before choosing the test branch."
+          "An on-demand code is present during the self-test. A continuous-memory diagnostic trouble code, or CMDTC, records a fault that may no longer be present. Those findings take different branches.",
+          "Match wiring and connector information to the actual engine, body style and fitted equipment. Coupe/convertible distinctions in the C219 connector record do not establish every engine/body combination.",
+          "An airbag warning light or accompanying B00A0:09 alone does not select either belt-tension test branch."
         ]
       },
       "prepare": [
         {
-          "title": "Use restraint-system diagnostic capability",
-          "detail": "Read the health and safety precautions. Have an appropriate scan tool, multimeter, correct probe adapters and Wiring Diagrams Cells 46 and 5 available. Disconnect or reconnect SRS components only when the pinpoint step directs it."
+          "title": "Require documented preliminary inspection",
+          "detail": "Require actual inspection and verification of the passenger buckle/BTS, passenger seat-cushion harness, loose or damaged OCSM/BTS connectors and the OCSM. Most faults are wiring or connector concerns; absent inspection records cannot be replaced by an assumption that those parts look sound. Require vehicle identity, technician provenance and applicable system-safety prerequisites."
         },
         {
-          "title": "Plan the required power transitions",
-          "detail": "For fault-present depowering, follow the complete routine: remove the applicable restraint supply fuse, verify the affected restraint modules do not respond to the network test, switch ignition off, disconnect the battery and wait at least one minute. Apply only fitted-equipment branches. During repowering, follow the specified upright driver-seat position, with the seat rearmost and no objects between the occupant and a pyrotechnic device."
+          "title": "Require exact connector and measurement identity",
+          "detail": "Records must identify C3238, C3043 and any C219 operation for the actual fitted vehicle, including body-specific circuit context and the correct probe-adapter method. C3238 pin 2 and ground below label recorded measurement endpoints only; no terminal location, orientation or probe instruction is supplied. Do not probe C219 or infer its mapping from repeated cavity rows."
+        },
+        {
+          "title": "Require complete power-control records",
+          "detail": "Require the relevant initial fault-status determination, applicable depower/repower branch and every specified ignition state and discharge wait. Fault-present records must establish the actual fuse identities/positions, conditional shared-fuse handling, Network Test isolation and battery interruption/restoration. The missing physical methods are not supplied by this interpretation. Intermediate A4/A5/A7 repowering must defer prove-out as specified."
+        },
+        {
+          "title": "Resolve the limited A5 editorial reading",
+          "detail": "Use the disclosed A5 interpretation only when records positively identify C219 as the passenger-side inline connector disconnected at A4 and restored at A5. Do not treat a C3049-only or unidentified record as equivalent. A5 always requires repowering without prove-out before the self-test, including paths arriving from A3; the conditional disconnection does not make that transition optional."
+        },
+        {
+          "title": "Keep repair and release decisions separate",
+          "detail": "Buckle, OCS sensor, circuit and other SRS repairs remain separate required procedures. Require documented correct replacement-part identity, completed corrections and final system results before interpreting completion. The SRS must be fully operational and free of faults before vehicle release; this article cannot certify that condition from incomplete records."
         }
       ],
       "steps": [
         {
-          "title": "Inspect and establish whether the fault is active",
-          "body": "Inspect the passenger buckle and sensor, cushion harness, OCSM and connectors for damage or looseness. With ignition on, perform the OCSM self-test at A1. An on-demand B00C2:11 follows A2; B00C2:12 follows A4. A continuous-memory-only fault follows A6. An active fault cannot be cleared successfully until corrected."
+          "title": "Identify the fault and prerequisite records",
+          "body": "B00C2:11 means the OCSM detects the BTS reference circuit shorted to ground; B00C2:12 means shorted to voltage. The BTS is part of the RH passenger buckle. The OCSM’s fault message causes RCM B00A0:09 and the warning indication; that accompanying code alone does not condemn the RCM.\n\nRequire all preliminary inspection and identity evidence in preparation. Interpret [Test AL’s A1–A7 chart](#/document/G1696407) from the records only. A missing observation, test state or measurement is unknown, not a passing result."
         },
         {
-          "title": "Follow the short-to-ground branch",
-          "body": "At A2, switch ignition off, disconnect buckle connector C3238 and repeat the specified self-test. If B00C2:11 disappears, the test directs passenger buckle replacement and A7. If it remains, A3 requires ignition off and a one-minute wait before disconnecting OCSM C3043. Measure C3238 pin 2 to ground: greater than 10,000 ohms leads to A5; otherwise repair the circuit and proceed to A7."
+          "title": "Verify the recorded power-control branch",
+          "body": "Where a stage required depowering, require its fault-status assessment: ignition OFF for 10 seconds, ON with approximately 6 seconds of steady indicator illumination followed by extinction, and observation through approximately 30 seconds. Failure to illuminate, continued illumination or flashing is abnormal; an inoperative indicator may accompany five sets of five beeps or an SRS message. Incomplete observation cannot establish a no-fault branch.\n\nFor no fault, require ignition OFF and the full one-minute discharge wait, with the state maintained except for explicit pinpoint-test transitions. For fault present, require ignition OFF, documented correct RCM/BECMB fuse isolation, any fitted three-blade BECMB/GWM arrangement’s two-blade 10A GWM substitution, ignition ON Network Test proving RCM/fitted BECMB nonresponse, correction/repeat if a module responded, then OFF, battery disconnection and at least one minute waiting. These are required record conditions, not instructions to operate the vehicle.\n\nWhere repowering was directed, require the applicable restoration record: OFF, removal of the temporary GWM fuse if fitted, correct restraint fuse restoration, battery reconnection if disconnected, and the prescribed protected driver position for the fault-present branch. Battery evidence must identify negative-only interruption and restoration, the 5 Nm clamp and cover refit. A4/A5/A7 defer prove-out during intermediate repowering. Missing state or branch provenance stops interpretation."
         },
         {
-          "title": "Follow the short-to-voltage branch",
-          "body": "At A4, switch ignition off and depower the SRS fully. Disconnect passenger airbag inline connector C219, buckle C3238 and OCSM C3043. Repower without proving out the SRS, then switch ignition on and measure C3238 pin 2 to ground. Any voltage requires circuit repair followed by A7; no voltage leads to A5. This measurement is on the belt-sensor circuit."
+          "title": "A1: interpret the OCSM self-test",
+          "body": "Require ignition ON and the OCSM on-demand self-test record, distinguished from continuous-memory codes. On-demand B00C2:11 leads to A2 in step 4; B00C2:12 leads to A4 in step 6. A relevant code only in continuous memory follows the intermittent path A6 in step 9. An active fault cannot be cleared until corrected and no longer retrieved on demand. A missing self-test is not a memory-only result."
         },
         {
-          "title": "Reconfirm before choosing the OCS replacement path",
-          "body": "At A5, switch ignition off and inspect disconnected connectors, inline connections and wiring; repair spread, pushed-out or loose terminals and damaged wires. Reconnect the OCSM and buckle as directed. If C219 was disconnected at A4, depower before reconnecting it, then repower without prove-out. With all required restraint connections restored, repeat the OCSM self-test. If the original code remains, check technical service bulletins; without an applicable bulletin, follow the directed OCS sensor replacement. If it disappears, continue to A6 without replacing components."
+          "title": "A2: interpret the changed-circuit test",
+          "body": "Require ignition OFF before recorded passenger buckle C3238 disconnection and the subsequent OCSM self-test. This stage intentionally changes the circuit fault. An open-circuit fault is normally expected with the BTS disconnected; the shared buckle-switch connection also produces a buckle-switch circuit fault in the RCM. Keep those test-induced results distinct from unrelated failures.\n\nIf B00C2:11 still returns on demand, proceed to A3 in step 5. If it does not, the changed fault indicates that the OCSM recognizes the changed condition; the chart directs separate [passenger buckle replacement](#/document/G1692229), followed by A7. Require actual completed replacement records before interpreting that completion path."
         },
         {
-          "title": "Investigate an intermittent connection",
-          "body": "At A6, switch ignition off, disconnect C3238, inspect and repair its connections and harness, then reconnect and self-test. A returning on-demand code sends diagnosis back to its ground or voltage branch. Otherwise attempt to reproduce the fault by flexing the harness, cycling ignition and operating other systems sharing that harness. Repair discovered faults; a memory record alone does not justify new SRS parts."
+          "title": "A3: interpret the recorded resistance",
+          "body": "Require C3238 disconnected from A2, ignition OFF and a full one-minute backup-power wait before recorded C3043 disconnection. Require an actual resistance measurement with positive endpoint C3238 pin 2 and negative endpoint ground, using the correct adapter.\n\nGreater than 10,000 ohms permits A5 in step 7. A reading of 10,000 ohms or less directs separate circuit repair using Cell 5, then A7. Missing endpoint identity, disconnection state, wait or value leaves the branch unresolved. No physical measurement is taught here."
         },
         {
-          "title": "Restore connections and test all restraints",
-          "body": "At A7, switch ignition off. If C219 was disconnected, depower before restoring it and all other disconnected SRS components. Repower as required without prove-out, then perform the scan tool's Restraints self-test. Diagnose every on-demand restraint fault before clearing codes. Only when none remain should you clear the restraints control module (RCM) and OCSM codes and proceed to final prove-out."
+          "title": "A4: interpret the recorded short-to-voltage test",
+          "body": "For B00C2:12, require ignition OFF and completed SRS depowering, then documented disconnections in source order: passenger-side inline C219, passenger buckle C3238, OCSM C3043. Require repowering with prove-out deferred, ignition ON, and the voltage record for C3238 pin 2 positive to ground negative.\n\nAny voltage directs separate circuit repair using Cell 5, then A7. No voltage permits A5. The source supplies no numerical voltage threshold to substitute for “any voltage.” Missing connector identity, isolation/restoration evidence or measurement conditions blocks both conclusions. These records concern the BTS reference circuit, not an airbag deployment-circuit measurement."
+        },
+        {
+          "title": "A5: verify inspection, reconnection and unconditional repowering",
+          "body": "Require ignition OFF before documented inspection of all previously disconnected connectors, including inline connections, for pushed-out, loose or spread terminals and loose/frayed wire connections. Require harness inspection for damaged, pinched, cut or pierced wires and documented correction of any concern through the separate Cell 5 repair procedure.\n\nRequire C3043 reconnection if disconnected and C3238 reconnection. Apply the disclosed limited editorial reading only to positively identified C219 records: if disconnected at A4, SRS depowering precedes its reconnection. An unidentified or C3049-only record does not establish this sequence.\n\nEvery incoming A5 path then requires recorded repowering without prove-out, including the path from A3. Before the next test, all OCS components, restraint-system sensor connectors and RCM connectors must be documented connected; otherwise additional codes invalidate that confirmation. Require ignition ON and the OCSM self-test before step 8."
+        },
+        {
+          "title": "A5: interpret confirmation and bulletin routing",
+          "body": "If the original code returns on demand after the complete A5 sequence, require the OASIS/TSB assessment. An applicable bulletin stops this test for that separate procedure. Only no applicable bulletin directs separate [OCS sensor replacement](#/document/G1696305), then A7; this is not a generic OCSM replacement instruction.\n\nIf the original code does not return, the fault became intermittent during diagnosis. No new SRS component is selected at this point; continue to A6 in step 9. Missing retest or bulletin evidence is not a negative finding."
+        },
+        {
+          "title": "A6: interpret intermittent-fault records",
+          "body": "Require ignition OFF, recorded C3238 disconnection, inspection of connectors/inline connections for loose or spread terminals and loose/frayed wire terminations, harness inspection for damaged/pinched/cut/pierced wires, and completed correction of concerns. Require C3238 reconnection, ignition ON and the OCSM self-test.\n\nOn-demand B00C2:11 returns to A2; B00C2:12 returns to A4. If neither returns, require documented investigation of intermittent causes, including the source’s attempts to reproduce the fault by harness flexing, frequent ignition cycles and activation of other systems in the same harness. Those are technician-record requirements, not operations to perform here. Required intermittent repairs precede A7. Do not select new SRS components unless a chart result directs them; absence of an attempt record does not prove no intermittent concern."
+        },
+        {
+          "title": "A7: interpret restoration and the complete Restraints self-test",
+          "body": "Require ignition OFF. If C219 was previously disconnected, require SRS depowering before restoration; require every disconnected SRS component reconnected. If depowering was directed, require repowering with prove-out still deferred. Require ignition ON and the full Restraints self-test record covering RCM, OCSM and fitted BECMB. The source identifies the Restraints selection in the Self Test menu; this article does not direct menu operation.\n\nAny on-demand code means no code clearing until all faults are resolved through separate [SRS diagnosis and repair](#/document/G1696340). An OCSM-only pass does not complete A7. Only no on-demand faults in all applicable modules permits the documented RCM and OCSM clearing followed by final prove-out in step 11."
+        },
+        {
+          "title": "Interpret final prove-out and branch-specific clearing",
+          "body": "Require all airbags documented installed and connected, ignition OFF, a 10-second wait, then ON; approximately 6 seconds of steady indicator illumination followed by extinction and observation through approximately 30 seconds, with no warning chime or SRS message. Failure to illuminate, persistent illumination or flashing requires further diagnosis; flashing can begin late in the observation. The inoperative-indicator warning may be five sets of five beeps or an SRS message. Missing or abnormal evidence prevents completion.\n\nA7’s RCM/OCSM code clearing occurs before final prove-out when no on-demand faults remain. Separately, the repowering source requires all-module continuous-memory clearing in its SRS-fault-present-at-beginning branch. Require that additional record when that branch applies; do not impose it as a universal no-fault-branch requirement or permit it during intermediate repowering.\n\nRetain initial codes, inspections, exact states/measurements, repairs, restored supply/connector records and final results. Battery-related adaptive relearning is not a substitute for SRS completion. Record-only interpretation does not perform repairs or authorize release of a vehicle with an unresolved restraint fault."
         }
       ],
       "watchFor": [
         {
-          "title": "Expected faults during deliberate disconnection",
-          "body": "With C3238 disconnected, an open-circuit fault is normally reported. Its shared buckle-switch connection also produces an RCM fault; these test-induced findings must be interpreted in context."
+          "title": "Preserve the A5 source discrepancy",
+          "body": "The isolated C3049 conditional is read editorially against A4/A5/A7 C219 and its circuit record. This is not an official erratum or connector equivalence. Actual identity and sequence must be explicit; uncertainty stops the affected conclusion."
         },
         {
-          "title": "Airbag circuits at C219",
-          "body": "C219 includes passenger airbag deployment circuits. Identify the connector correctly and preserve the depower/reconnect sequence; do not probe an airbag igniter."
+          "title": "Endpoint labels are not probing instructions",
+          "body": "C3238 pin 2 to ground identifies recorded resistance/voltage endpoints. C219 includes passenger airbag deployment circuits and body-dependent entries; no measurement here is at C219. Missing location, adapter or state provenance cannot be solved by guessing a cavity."
+        },
+        {
+          "title": "Intermediate repowering is not final prove-out",
+          "body": "A4, A5 and A7 defer prove-out during their repowering transitions. A5’s repowering requirement applies on every incoming path. Preserve A7’s full-module on-demand check before RCM/OCSM clearing and final prove-out."
+        },
+        {
+          "title": "No component replacement from a memory code alone",
+          "body": "Preserve A1/A6 routing, A2 induced faults and the A5 bulletin gate. A physically similar replacement may be incompatible; any actual replacement record must identify the correct vehicle-specific part."
         }
       ],
       "notes": [
-        "Confirm replacement SRS part numbers in the Ford parts catalog. Similar-looking parts from another vehicle may be incompatible."
+        "This article interprets existing records only. Physical access, fuse identification, connector release, probing, repair and programming remain separate procedures.",
+        "Incorrect SRS work can cause accidental deployment and serious injury or death. No component disconnection, reconnection or powered test is directed by this article.",
+        "An accompanying RCM B00A0:09 does not itself establish a defective RCM."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code B00C2:11 is retrieved on demand.",
-          "meaning": "The OCSM detects its belt-tension reference-voltage circuit shorted to ground.",
-          "next": "Use A2–A3 to distinguish the buckle sensor from wiring before A5 confirmation."
+          "finding": "Recorded result: A1 returns B00C2:11 on demand.",
+          "meaning": "The OCSM detects a short to ground on the BTS reference-voltage circuit.",
+          "next": "Interpret the recorded A2 sequence in step 4."
         },
         {
-          "finding": "Diagnostic trouble code B00C2:12 is retrieved on demand.",
-          "meaning": "The OCSM detects voltage on the belt-tension reference circuit indicating a short to battery.",
-          "next": "Follow A4's depowered disconnection and controlled voltage test."
+          "finding": "Recorded result: A1 returns B00C2:12 on demand.",
+          "meaning": "The OCSM detects a short to voltage on the BTS reference-voltage circuit.",
+          "next": "Interpret the complete recorded A4 power/connector/voltage sequence in step 6."
         },
         {
-          "finding": "Diagnostic trouble code B00A0:09 accompanies the occupant-classification fault.",
-          "meaning": "The RCM has received an OCS fault message and requests the airbag warning indicator.",
-          "next": "Diagnose the underlying OCSM codes; this accompanying code does not prove the RCM is defective."
+          "finding": "Recorded result: B00C2:11 or B00C2:12 is present only in continuous memory.",
+          "meaning": "The fault is intermittent rather than present during this self-test.",
+          "next": "Interpret A6 inspection, retest and intermittent-investigation records; no replacement from memory alone."
+        },
+        {
+          "finding": "Recorded result: At A2, B00C2:11 no longer returns with C3238 disconnected.",
+          "meaning": "The reported fault changed when the buckle sensor was isolated, showing that the OCSM recognizes the changed circuit condition.",
+          "next": "Separate required passenger buckle replacement, followed by documented A7 completion."
+        },
+        {
+          "finding": "Recorded result: At A2, B00C2:11 still returns with C3238 disconnected.",
+          "meaning": "Disconnecting the buckle did not remove the reported short-to-ground fault.",
+          "next": "Interpret the A3 OFF/one-minute/C3043-disconnected resistance record."
+        },
+        {
+          "finding": "Recorded result: At A3, resistance is greater than 10,000 ohms.",
+          "meaning": "The circuit passes this test’s resistance-to-ground threshold.",
+          "next": "Interpret A5 with exact identity and unconditional repower-without-prove-out evidence."
+        },
+        {
+          "finding": "Recorded result: At A3, resistance is 10,000 ohms or less.",
+          "meaning": "The circuit fails the resistance-to-ground check.",
+          "next": "Separate required Cell 5 circuit repair, then documented A7."
+        },
+        {
+          "finding": "Recorded result: At A4, any voltage is present between C3238 pin 2 and ground.",
+          "meaning": "The isolated reference circuit has unwanted voltage.",
+          "next": "Separate required Cell 5 circuit repair, then documented A7."
+        },
+        {
+          "finding": "Recorded result: At A4, no voltage is present between C3238 pin 2 and ground.",
+          "meaning": "The isolated circuit passes this short-to-voltage check.",
+          "next": "Interpret A5 restoration and confirmation records, including unconditional repowering."
+        },
+        {
+          "finding": "Recorded result: At A5, the original code returns on demand after reconnection.",
+          "meaning": "The original fault remains after the directed circuit checks and reconnection.",
+          "next": "Require documented OASIS/TSB result: applicable bulletin stops this test; no applicable bulletin directs separate OCS sensor replacement then A7."
+        },
+        {
+          "finding": "Recorded result: At A5, the original code does not return on demand.",
+          "meaning": "The fault has become intermittent during diagnosis.",
+          "next": "No new SRS component is selected; interpret A6 records."
+        },
+        {
+          "finding": "Recorded result: At A6, a relevant code returns on demand.",
+          "meaning": "The intermittent fault is now present.",
+          "next": "Interpret the matching A2 (:11) or A4 (:12) record sequence."
+        },
+        {
+          "finding": "Recorded result: At A7, any RCM, OCSM or fitted BECMB code returns on demand.",
+          "meaning": "The restraint system still has an active fault, even if the original belt-tension code is gone.",
+          "next": "No code clearing until every on-demand fault is resolved through separate SRS diagnosis/repair; require full completion records."
+        },
+        {
+          "finding": "Recorded result: B00A0:09 accompanies the OCSM fault.",
+          "meaning": "The RCM received an occupant-classification fault message and requested the airbag warning light.",
+          "next": "Interpret the underlying OCSM codes. This alone does not select RCM replacement."
+        },
+        {
+          "finding": "Required identity, preliminary inspection, state, measurement, repair or final test evidence is missing or ambiguous.",
+          "meaning": "The affected chart conclusion is not established.",
+          "next": "Stop as unresolved. Do not perform missing SRS operations from this article."
         }
       ],
       "verification": [
         {
-          "title": "Complete the SRS prove-out",
-          "body": "With airbags installed and connected, switch ignition off, wait 10 seconds, then switch it on. The warning indicator should illuminate for approximately 6 seconds and turn off. Monitor for approximately 30 seconds. Failure to light, continued illumination, flashing, a fault chime or an SRS message requires further diagnosis."
+          "title": "Require complete evidence for the selected path",
+          "body": "Retain preliminary inspection and actual vehicle/connector identity, branch-specific power states, exact measurements and induced-fault context. Disclose the limited A5 editorial reading and stop if the actual connector record is uncertain."
         },
         {
-          "title": "Record a fault-free completion",
-          "body": "Record the original codes, repair and final self-test result. Complete the repowering routine's continuous-memory code clearing after faults are resolved. Release the vehicle only with no on-demand restraint faults and a successful prove-out."
+          "title": "Preserve A5 and A7 transitions",
+          "body": "Require unconditional A5 repower-without-prove-out, complete connected-system self-test evidence and the appropriate bulletin/retest outcome. A7 needs the full RCM/OCSM/fitted-BECMB result, not an OCSM-only pass."
+        },
+        {
+          "title": "Keep clearing and release conditions distinct",
+          "body": "Require A7 no-on-demand-fault evidence before RCM/OCSM clearing and final prove-out. Require all-module continuous-memory clearing only when the fault-present-at-beginning repowering branch applies. Unresolved faults or missing completion records prevent a completed chart conclusion."
         }
       ],
       "procedures": [
         {
           "documentId": "G1696407",
-          "purpose": "Pinpoint Test AL, steps A1–A7, for passenger belt-tension reference faults B00C2:11 and B00C2:12."
-        },
-        {
-          "documentId": "G1693189",
-          "purpose": "Required health and safety precautions before restraint-system service."
+          "purpose": "Complete A1–A7 chart for existing-record interpretation, including literal A5 discrepancy and disclosed editorial reading."
         },
         {
           "documentId": "G1696297",
-          "purpose": "Complete SRS depowering, including fault-present supply isolation and backup-power depletion."
+          "purpose": "Required documented depowering branches and states; no fuse, battery or scan execution."
         },
         {
           "documentId": "G1696298",
-          "purpose": "SRS repowering and final prove-out; defer prove-out during the intermediate diagnostic transitions."
+          "purpose": "Required documented repowering/prove-out and fault-present-only all-module clearing; no physical execution."
         },
         {
           "documentId": "connector-C219",
-          "purpose": "Identify the passenger airbag inline connector and its equipment-dependent circuits."
+          "purpose": "Exact connector circuit context supporting the limited A5 reading; no physical mapping, selection or probing."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Prior battery-isolation/restoration record context only, including negative-only method and 5 Nm; no battery work taught."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Safety context for separately performed battery work; no battery handling instructed."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Required general health and safety reading; reference-only destination."
         },
         {
           "documentId": "G1692229",
-          "purpose": "Passenger front seatbelt buckle replacement when A2 directs it.",
+          "purpose": "Reference-only passenger front buckle replacement destination when A2 directs replacement; replacement operations are outside this article.",
           "mediaId": "G1692229-m0001"
         },
         {
           "documentId": "G1696305",
-          "purpose": "OCS sensor replacement only after A5 reconfirms the original fault and the bulletin check is completed.",
+          "purpose": "Reference-only OCS sensor replacement destination after A5 confirmation and the applicable-bulletin check.",
           "mediaId": "G1696305-m0008"
         },
         {
           "documentId": "G1696340",
-          "purpose": "Diagnosis of additional restraint-system faults retrieved during the final self-test."
+          "purpose": "Reference-only diagnosis destination for additional on-demand restraint-system faults found at A7."
         }
       ],
       "hero": null,
@@ -158026,7 +158145,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Passenger front buckle with belt tension sensor and occupant classification system. Existing technician-record interpretation only. Vehicle/body-specific connector identity and fitted BECMB/shared-fuse configuration must be documented; no physical connector mapping or service execution is taught."
       },
       "relatedGuideIds": [
         "job-38b0944ab85fda1f",
@@ -158067,14 +158187,55 @@
         {
           "documentId": "G1696340",
           "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "38a0b4167f13d7541fa8e872d1ace76f8b9323331b3b87d9591a54a864e797ef"
-      }
+        "fingerprint": "38a0b4167f13d7541fa8e872d1ace76f8b9323331b3b87d9591a54a864e797ef",
+        "editorialVersion": 2,
+        "editorialFingerprint": "dc39058c71676e260d2a9dd91ea4b8ac3567b359dbdef0e69d7c19b394ee2511",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "records",
+          "title": "Identify records and power provenance",
+          "summary": "Require the preliminary inspection and correct documented state branch.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "circuit",
+          "title": "Interpret A1–A4 circuit findings",
+          "summary": "Keep on-demand routing, induced faults and exact measurement conditions distinct.",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "id": "confirmation",
+          "title": "Interpret A5 and A6 follow-up",
+          "summary": "Require identified reconnections, unconditional repowering, bulletin gates and intermittent records.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "completion",
+          "title": "Interpret complete SRS completion records",
+          "summary": "Preserve all-module on-demand results, final prove-out and branch-specific clearing.",
+          "start": 10,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Diagnose convertible driver upper side airbag faults",

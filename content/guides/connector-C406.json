@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C406",
+  "supportingSourceRefs": [],
+  "sourceHash": "41794d6bc16c2f5c3373ac9379b90f08bd794846c374b4eaf57990b3f90fd795",
+  "title": "C406 — Inline connector reference",
+  "introduction": "I use this reference as a connector address book: the housing drawing locates a cavity, and its table identifies the circuit recorded there. Start with the connector identity table, then choose the male or female section by its harness label. Keep that face drawing and its accompanying tables together; the drawings place corresponding cavities on opposite sides of the page.\n\nRead from Cavity across to Circuit Number, Color, Gauge and Function, then check the terminal information for that same face. The populated entries distinguish the fuse/circuit-breaker supply from the powertrain-control connection associated with the canister vent solenoid. That tells you what the connections are labelled to serve, without proving that either circuit works.\n\nThis page supports identification and part-number cross-reference. It does not define the gauge convention, Size or Used code legend, or physical viewing direction. It supplies no vehicle access, probing, electrical-test or replacement procedure. Keep those limits in mind before turning a useful map into an invitation to poke around.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C406-b00002",
+      "text": "Male connector face · Harness 14A411",
+      "why": "I match the harness label before reading the drawing. As displayed, the male housing has a small rectangular feature on the left and projecting features on the right. These details help distinguish this illustration from the female illustration; they do not establish which way to hold a connector on the car."
+    },
+    {
+      "blockId": "connector-C406-b00005",
+      "text": "Male cavity and circuit map",
+      "why": "Use each cavity label to find its table row, then read across rather than identifying a circuit by wire color alone. The outlined white positions correspond to populated entries, while the grey positions align with blank circuit entries and unavailable terminal information. The terminal part number here belongs to the male face."
+    },
+    {
+      "blockId": "connector-C406-b00007",
+      "text": "Female connector face · Harness 14A005",
+      "why": "The female drawing has a prominent loop-shaped feature on the right, and its cavity labels occupy different page positions from the male drawing. Follow the printed labels instead of carrying a left-or-right position across from the other face. Think matching addresses, not matching seats."
+    },
+    {
+      "blockId": "connector-C406-b00010",
+      "text": "Female cavity and circuit map",
+      "why": "The female table records the same circuit identities and functions as the male table, but its terminal part number differs. Read the terminal information from this face's own row. Blank circuit fields and N/A entries are not instructions to add a wire or terminal."
+    },
+    {
+      "blockId": "connector-C406-b00012",
+      "text": "Pigtail service-part cross-reference",
+      "why": "Compare Engineering Shell with the selected face's Fpn entry to find the associated service-part records. More than one record shares a shell identifier, so a shell match alone does not distinguish the alternatives or prove interchangeability. The Image entries are filenames; this page does not display those pigtail images or teach installation."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:53:26.109Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3baa963cd6ec4a10050e86b3370ee2eb44ad1498a5874161a1167343703917bb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 45,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "536a2aa127e99bf2d23b338cd78fcd6ed6bdad8d2a61c60ec42b88e4389bd6ef",
+    "reviewedAt": "2026-10-28T03:53:26.110Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C226A",
+  "supportingSourceRefs": [],
+  "sourceHash": "aa4d2f002b7d3eadfc1bc9d685ff8b47ab66f152bacac42d7d84e87a28bd9236",
+  "title": "C226A — Steering column control module (SCCM)",
+  "introduction": "The steering column control module is the electrical interface for controls on and around the steering wheel. I read its connector reference like a tiny switchboard directory: the drawing locates a cavity, and the matching table row explains the connection’s job. Sharing a housing does not make the wires interchangeable—switch signals, communication links, supply and ground each have their own role.\n\nStart with the connector identification table, match the harness heading to the drawing, then follow a cavity label into the assignment table. The parts section connects the shell identification with a pigtail service reference.\n\nThis guide supports reading and identifying connections. Access, disconnection, probing, electrical tests and repairs require the matching workshop procedure. Gauge and Size conventions and the physical viewing direction are not defined here; the Used field is a reference entry, not a test result.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C226A-b00002",
+      "text": "Connector face for Harness 14401",
+      "why": "I use the projecting housing feature on the left to recognize this drawing’s layout. The cavity labels run downward in parallel columns, with shaded positions at the bottom. Those shaded positions correspond to rows without circuit or terminal assignments. These are landmarks within the illustration; they do not establish which side of a physical connector to approach."
+    },
+    {
+      "blockId": "connector-C226A-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Match a cavity label in the drawing to the Cavity column, then read across that same row for Circuit Number, Color, Gauge, Function and Terminal Part Number. The circuit identifier names the connection; Function explains its role. Communication lines carry messages, so their presence should not be interpreted as an ordinary switched power feed. Blank assignment fields do not provide a test instruction or a fault conclusion."
+    },
+    {
+      "blockId": "connector-C226A-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Compare Engineering Shell with the connector’s Fpn and Hard Shell fields to connect the pigtail entry with this housing. Service Part identifies the pigtail service reference, while Terminal Part Number in the assignment table refers to an individual terminal. Keep the pigtail’s Gauge entry separate from the original circuit entries; this table is a parts cross-reference, not a wire-selection or installation procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:41:46.734Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bf2504fe4a88f3934757b9d91889d7d8b1c86f691a004d4d9008affec45ba9c7",
+  "sourcePdfHash": "2f45f1bd91709dde1261017dacea6e941d5f94b07b0a23a7226132c1a1090764",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "43e421e50f8095fb305fb49e8b88615cda802c58459c1586c6aaa5439d077856",
+    "reviewedAt": "2026-10-28T03:41:46.735Z"
+  }
+}

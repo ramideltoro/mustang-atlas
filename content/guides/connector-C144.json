@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C144",
+  "supportingSourceRefs": [],
+  "sourceHash": "a39433f53c5e20b44d4e5881ad6ecb80057c87b4a73ab525d7e5c5ff6b5ff592",
+  "title": "C144 — Inline connector reference",
+  "introduction": "I use this reference to connect the cooling-fan circuit labels with the correct connector half. Start with the connector identity table, choose the male or female section, then match a cavity label in that drawing to its row in the table below. Read across the row for the circuit, wire color, gauge, function and terminal identification.\n\nThe paired drawings are seating charts for the wiring: the positions change across the page, but the circuit identities remain paired. I check the drawn housing features before comparing cavities, rather than carrying a left-or-right assumption from one half to the other. The function labels distinguish the fan relay connections from the ground connection; they do not describe the complete fan-control strategy.\n\nThis guide supports reading the drawings and tracing their table entries. Physical viewing direction, access, probing, wire selection and replacement methods are outside its scope. Gauge notation and the Size and Used codes remain as printed, without assumed units or dimensions. Use the pigtail table to trace the engineering-shell and service-part relationship, then obtain the applicable procedure before doing electrical or repair work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C144-b00002",
+      "text": "MALE connector face · Harness 14290",
+      "why": "I use the projecting housing feature on the left of this drawing as a visual landmark. The identification table beneath it belongs to this male half; keeping that association prevents the female half’s mirrored layout from steering the lookup."
+    },
+    {
+      "blockId": "connector-C144-b00005",
+      "text": "Male cavity and circuit map",
+      "why": "The cavity label connects each drawn position to its table row. Reading across that row ties the circuit identity to its wire description, relay or ground function, and male terminal part number. A relay is an electrically controlled switch; the function label alone does not establish a separate plug-in relay or an expected electrical reading."
+    },
+    {
+      "blockId": "connector-C144-b00007",
+      "text": "FEMALE connector face · Harness 8C290",
+      "why": "The projecting housing feature is on the right in this drawing. I use this half’s own cavity labels and identification table, because its horizontal arrangement differs from the male drawing."
+    },
+    {
+      "blockId": "connector-C144-b00010",
+      "text": "Female cavity and circuit map",
+      "why": "Matching cavity labels across the tables shows the same circuit, color, gauge and function assignments on the mating halves. The terminal part number changes with the connector half, so a matching circuit name does not make the male and female terminal entries interchangeable."
+    },
+    {
+      "blockId": "connector-C144-b00012",
+      "text": "Pigtail parts by engineering shell",
+      "why": "The Engineering Shell column connects each pigtail entry to the corresponding connector identification above. Read the service part, material, gauge and cavity information within that same row. The Image entry is an illustration filename, while Service Part is the service identifier; this lookup does not establish a splice method or replacement-wire choice."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:38:43.037Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "c730d9ea4c69c20bab8db62253767e87b72ee6c5e18095af4c6f558eee7f4aa7",
+  "sourcePdfHash": "874d18b80eaf69c2488636b05b47c7794f99fdc39800ce17e6a47e74ee93819b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 43,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bcc1cbd6088dc35bf86909deb1066d1f417884f8e669ce2e2014dc40c640fee8",
+    "reviewedAt": "2026-10-28T03:38:43.038Z"
+  }
+}

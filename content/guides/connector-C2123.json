@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2123",
+  "supportingSourceRefs": [],
+  "sourceHash": "f63c9639941ff04728f2ff45591bf35ad1ca8544861a97aac28f30451aff16de",
+  "title": "C2123 — Front Control/Display Interface Module (FCDIM)",
+  "introduction": "This display connector brings together several different jobs: electrical supply, ground, network communication and rear-camera video. I think of it as the display’s reception desk—power, messages and pictures arrive through distinct connections, even though they share a housing.\n\nUse the identification table to establish which connector the page describes. Then match a cavity label in the drawing to its assignment row and read across to the circuit identity and function. Keep the network high/low labels and camera polarity marks with their respective rows. Different functions share a color entry here, so color alone cannot identify the connection.\n\nThis reference teaches the map, not a diagnostic verdict. Physical viewing direction, the gauge convention and the meaning of Size are unspecified; Used remains as printed. Access, probing, wire selection, replacement and electrical test conditions are outside this guide.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2123-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "The labels progress from left to right across the upper row, then continue across the lower row. I use the broad flange drawn on the left and the clipped corners on the right to keep the page layout straight. Gray positions correspond to rows without assigned circuits; these landmarks do not establish the physical viewing side."
+    },
+    {
+      "blockId": "connector-C2123-b00005",
+      "text": "Pin-to-circuit assignments",
+      "why": "Cavity links the drawing to the table, and Circuit Number distinguishes connections that may share a color. Function separates supply and ground from the network and camera entries. High/low and positive/negative labels retain their circuit meanings; they are not measured values or evidence of a fault."
+    },
+    {
+      "blockId": "connector-C2123-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I cross-check Engineering Shell against Hard Shell and Fpn before associating the pigtail entry with this connector. Service Part identifies the listed service item, while Terminal Part Number identifies the terminals in the assignment table. The pigtail’s material description records its supplied specification; it does not instruct the reader to add grease or select substitute wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:38:43.024Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "5a1556bdb928224101bda0a7f3407971045b68e959c10fb077f3eb13b3588a0f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "acab409d8e5f38b7b827975151bffd777f7264299daec881b04fca46df584536",
+    "reviewedAt": "2026-10-28T03:38:43.025Z"
+  }
+}

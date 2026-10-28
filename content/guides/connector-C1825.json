@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C1825",
+  "supportingSourceRefs": [],
+  "sourceHash": "89ec0f4d1b8cc9fd1485a66c91b44b38c7a1c956ab6c94b8378f055bc5c6e6a8",
+  "title": "C1825 — Inline connector reference",
+  "introduction": "I use this page to connect each cavity label with the circuit information for the correct harness half. Start at the MALE or FEMALE heading, find the label in its drawing, then read across the matching Cavity row. The drawings look related, but matching housings do not promise matching guest lists.\n\nThat distinction matters here: the male table includes front-right damper-control, brake-pad-sensor and temporary-label entries, while the female table gives damper-control information and leaves the remaining circuit fields blank. Read each half on its own terms. For corresponding circuits, compare Circuit Number and Function before looking at Color and Gauge, because the wire details differ between halves.\n\nThe illustrations provide cavity positions as drawn. Compare shading with the associated table, preserving its Used, blank and N/A entries without treating them as test results. The pigtail table separately relates service parts to engineering shells.\n\nThis reference teaches identification and table reading, not access, probing, diagnosis or replacement. It leaves the physical viewing-direction convention, gauge convention and meanings of Size and Used undefined. The temporary label also does not explain a component function. Those limits should stay visible rather than becoming guesses about the car.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1825-b00002",
+      "text": "MALE connector face — Harness 14290",
+      "why": "The male drawing shows outlined cavity positions throughout, with no shaded positions. I use its labels to navigate the male table; the outline alone does not establish the circuit details or viewing direction of an installed connector."
+    },
+    {
+      "blockId": "connector-C1825-b00005",
+      "text": "MALE cavity and circuit map",
+      "why": "Read each cavity row across to distinguish the damper-control entries from the brake-pad-sensor and temporary-label entries. The plus and minus signs belong to the damper function labels; they do not supply test conditions or authorize treating the minus-labelled circuit as a chassis ground. The temporary label alone does not explain its circuit's purpose."
+    },
+    {
+      "blockId": "connector-C1825-b00007",
+      "text": "FEMALE connector face — Harness 13A840",
+      "why": "Both positions on the left are shaded in the female drawing, while the right-hand positions are outlined. Read the labels directly in this view rather than transferring left and right positions from the male illustration."
+    },
+    {
+      "blockId": "connector-C1825-b00010",
+      "text": "FEMALE cavity and circuit map",
+      "why": "This table provides the female half's damper-control wire and terminal information. Its remaining circuit fields are blank, so do not carry the male half's additional circuit descriptions into them. Compare matching circuit identifiers while retaining each side's own color and gauge entries."
+    },
+    {
+      "blockId": "connector-C1825-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "Compare Fpn with Engineering Shell to understand the shell association of each service-part record. Shared shell identifiers do not explain the differences between the listed kits or establish interchangeability. The pigtail Gauge column describes a separate record from the cavity wire details; it is not an instruction to choose replacement wire or change terminal population."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:50:09.640Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "44326c8f147f98bc1cc6607ebeb981e75e55fe9aaa603e3ef450e6f1d87e1ba6",
+  "sourcePdfHash": "74e9b49f3e4d5e96d52ccf92a678c120fad8c1e9ddb2d18789338851c09e6f4a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b2ef29017c0539a1176d8a605ac2d38822494bbd0b470e3afafcf838f5b72b2b",
+    "reviewedAt": "2026-10-28T03:50:09.641Z"
+  }
+}

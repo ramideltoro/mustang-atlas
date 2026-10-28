@@ -1,0 +1,70 @@
+{
+  "documentId": "connector-C214",
+  "supportingSourceRefs": [],
+  "sourceHash": "f86a7cfc4b5a12a9600b0aac7b79e5fc8c25ab66b69492f9280f9718102c0c6a",
+  "title": "C214 — Inline connector reference",
+  "introduction": "This inline connection gives the clutch-pedal circuits a meeting point between harnesses. Its mating halves have separate face drawings, identification rows and terminal tables. I treat them like the two hands in a handshake: they meet, but their left-to-right layouts differ. Choose the labeled half before following any cavity across its table.\n\nUse the drawing to locate a cavity, then read that half’s row for the circuit identifier, wire description, function and terminal reference. Compare the circuit identifiers across the halves to follow the connection; keep each half’s gauge and terminal entries attached to its own table. The pigtail section then provides shell-to-service-part references.\n\nThis is a connector-reading guide. Physical access, disconnection, probing, test conditions and replacement work require the matching workshop procedure. Gauge and Size conventions and the physical viewing direction are not defined here; Used entries do not establish electrical condition.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C214-b00002",
+      "text": "MALE connector face · Harness 14290",
+      "why": "Choose this labeled half before reading its identification and pin tables. In the illustration, the broad projecting housing feature is on the left and the shaded cavity is at the upper right. I use those features to recognize the drawing’s layout, without assuming a physical probing direction."
+    },
+    {
+      "blockId": "connector-C214-b00005",
+      "text": "Male-face circuit assignments",
+      "why": "Follow a cavity label into the Cavity column, then read across the row to its circuit, color, gauge, function and terminal reference. The clutch-travel descriptions identify the circuits’ roles; they do not prescribe a voltage or switch state. The shaded position corresponds to the row without a circuit assignment. Use this half’s terminal entries when reading this half’s connections."
+    },
+    {
+      "blockId": "connector-C214-b00007",
+      "text": "FEMALE connector face · Harness 12638",
+      "why": "This illustration places the projecting housing features on the right and the shaded cavity at the upper left. Its cavity layout differs from the male drawing, so follow the printed cavity labels rather than carrying a left-or-right position across from the other face. The identification row below belongs to this half."
+    },
+    {
+      "blockId": "connector-C214-b00010",
+      "text": "Female-face circuit assignments",
+      "why": "Match the cavity label to this table, then use Circuit Number to trace the corresponding connection in the male table. Matching circuit identity does not make all the other entries interchangeable: the ground row has different Gauge entries across the halves, and the terminal references are specific to each half. Preserve those distinctions without assuming that the difference indicates a fault."
+    },
+    {
+      "blockId": "connector-C214-b00012",
+      "text": "Pigtail parts by shell",
+      "why": "Match Engineering Shell to the Fpn of the chosen mating half before reading its Service Part entry. This keeps the pigtail reference associated with the intended housing. The pigtail’s gauge and material entries describe that service reference; they do not replace the original circuit data or supply instructions for selecting wire, splicing or fitting terminals."
+    },
+    {
+      "blockId": "connector-C214-b00014",
+      "text": "European pigtail reference",
+      "why": "The Product Id provides a separate European parts reference. It is not assigned to a particular mating half in this section, so keep that association open rather than treating it as an established substitute for either shell-specific service entry."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:44:52.125Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "6cf870c9ebfa921543fd256f9cb67d4e3359dc540b4082597267bfd934c01759",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 47,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "27fc40b774e0650ec478f1d3e6f309821fe961573892151b4a94eae79430bea6",
+    "reviewedAt": "2026-10-28T03:44:52.127Z"
+  }
+}

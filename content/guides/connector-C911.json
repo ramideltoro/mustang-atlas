@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C911",
+  "supportingSourceRefs": [],
+  "sourceHash": "7e68b40c6dcafa0b682a4f8bf611975a3cee4ccd33d9ade6cb6fed37720fa103",
+  "title": "C911 — Auto-dimming interior mirror connector",
+  "introduction": "I use this reference as the mirror connector’s address book. The drawing locates a cavity; the matching table row explains its electrical role. Keeping those jobs separate makes the diagram much friendlier than a handful of mysterious dots.\n\nStart with the identification table, then find a printed cavity label in the connector drawing and match it to the Cavity column. Read across that same row for its circuit identifier, wire information, function and terminal identification. The assigned functions distinguish the supply-related connection, the ground path and the reverse-related control-module connection; they do not describe the mirror’s internal dimming logic.\n\nThe tall connector outline and projecting side features help you recognize the drawing. White, black-outlined circles correspond to rows with assigned functions, while gray circles correspond to rows without assignments. Use the printed labels rather than counting positions. This is a reading guide: physical viewing direction, access, probing, test conditions and replacement methods are outside its scope. Keep Size and Used codes as printed, and do not assume a gauge convention or select replacement wire from this sheet alone.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C911-b00002",
+      "text": "Connector-face map · Harness 14B242",
+      "why": "I check the harness label before using the cavity map. The outline helps identify the illustrated connector, but its position on the page does not establish whether a physical connector should be viewed from the terminal side or the wire side."
+    },
+    {
+      "blockId": "connector-C911-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "The cavity label connects the drawing to a table row; the circuit identifier connects that row to wiring information. A function describes the connection’s assigned role, not a measured result. Blank assignment fields and N/A entries are not evidence of a fault, and this map alone cannot establish whether the mirror receives usable power, has a sound ground or receives the expected signal."
+    },
+    {
+      "blockId": "connector-C911-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "A pigtail is a connector with attached wire leads. I use the service-parts row to distinguish its service ordering identifier from the engineering shell identifier. The pigtail’s Gauge entry and the individual circuit Gauge entries belong to different records; their presence does not supply a wire-selection or splice procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:57:30.356Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "e9c127bf8f0c6cd0e007dfcdd596d2fe014e77e71baefcf840aad0cc87bcc0f3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "91329468b89094789a6c743d4736e41045b7e802d449dbd26b9f16dc36115cdb",
+    "reviewedAt": "2026-10-28T03:57:30.357Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C1824",
+  "supportingSourceRefs": [],
+  "sourceHash": "1f277058a8ace6db079c2d59a7583c29100fd966a9cf757ee725a8cab67848ed",
+  "title": "C1824 — Inline connector reference",
+  "introduction": "I use this reference to follow circuit identity across the male and female halves of an inline connection. Think of it as a harness handoff: the circuit identity is the baton, while wire color and gauge can change across the connection.\n\nStart with Gender and Harness Id to choose the correct section. Match a printed cavity label in that drawing to Cavity in its table, then read across for Circuit Number, Color, Gauge, Function and Terminal Part Number. Compare circuit identities across the halves rather than assuming that matching colors or positions mean matching functions. The male assignments include damper and brake-pad sensor functions; the female assignments cover the damper connection and leave the shaded positions unused.\n\nRead each drawing independently: their printed layouts differ. The physical viewing direction, gauge convention and meaning of Size codes are unspecified here. This page teaches reference reading and catalog cross-referencing; physical access, probing, wire selection, electrical testing and replacement require their own task instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1824-b00002",
+      "text": "MALE connector face · Harness 14290",
+      "why": "I use the housing outline and printed cavity labels together to distinguish this drawing from the female view. Each cavity label is a lookup key for this half's assignment table, rather than a position to carry across to the other drawing."
+    },
+    {
+      "blockId": "connector-C1824-b00005",
+      "text": "MALE cavity and circuit map",
+      "why": "Read each row as a complete record linking a cavity to its circuit, wire description, function and terminal identifier. The Function column separates the front-left damper polarity connections from the front brake-pad sensor connections; sharing a housing does not make them the same electrical job."
+    },
+    {
+      "blockId": "connector-C1824-b00007",
+      "text": "FEMALE connector face · Harness 13A840",
+      "why": "The shaded positions in this drawing correspond to unused entries in the female table. Their presence in the housing drawing does not mean that every assignment on the male side continues through this harness."
+    },
+    {
+      "blockId": "connector-C1824-b00010",
+      "text": "FEMALE cavity and circuit map",
+      "why": "Matching Circuit Number entries connect the listed damper functions across the halves even though their wire descriptions differ. The unused female entries have no assigned circuit or terminal; the male brake-pad sensor entries are not grounds for inventing female counterparts."
+    },
+    {
+      "blockId": "connector-C1824-b00012",
+      "text": "Pigtail service-part cross-reference",
+      "why": "The Engineering Shell column connects these catalog entries to the Fpn identity beside the relevant connector face; Service Part provides the associated service identifier. Multiple entries share a shell, but this page gives no rule for choosing between them or treating them as interchangeable. The catalog Gauge entry is not an instruction to change the harness wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:50:09.652Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "44326c8f147f98bc1cc6607ebeb981e75e55fe9aaa603e3ef450e6f1d87e1ba6",
+  "sourcePdfHash": "3db7ca233af540f261e69bbbf3ddf724d9a1a4b238ff96d1741003ced153c80b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "dd47efac43d42f625260030fccbec20ac56d8bf3f0b2702a005e61fe730a3a3c",
+    "reviewedAt": "2026-10-28T03:50:09.652Z"
+  }
+}

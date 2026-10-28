@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C930",
+  "supportingSourceRefs": [],
+  "sourceHash": "1178987382fb922ae4fa8aba6ce417b63c5bc3588e5ed4c541a71957c5f270a9",
+  "title": "C930 — Overhead console",
+  "introduction": "The overhead console’s connector brings lighting, communication and microphone-related connections together. There is more going on above your head than a lamp switch suggests: this reference is the address book that keeps those jobs distinct.\n\nI begin with the identification table, then match a cavity label in the drawing to its Cavity row. Reading across ties that position to its circuit identifier, color, gauge, function and terminal information. The assignments continue through the microphone-related rows before the pigtail table, so keep reading beyond the shaded positions. The LIN bus is a local communication link carrying messages; it has a different role from a lamp supply or ground connection.\n\nUse this page to understand and identify the connections. Physical viewing direction, access, probing, test limits and repair steps require the matching service procedure. Gauge convention, Size and Used code definitions, and the unusual microphone color, gauge and suffix markings are not explained here; retain those entries as printed without turning them into wire-selection or test advice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C930-b00002",
+      "text": "Connector-face map · Harness 14334/14335",
+      "why": "The drawing has a projecting housing feature on its right, and the cavity labels descend within each column. I follow the printed labels rather than assuming a familiar numbering pattern. The shaded positions are at the bottom of the left column and correspond to rows without assigned circuits or functions. These are page landmarks, not confirmation of the physical viewing side."
+    },
+    {
+      "blockId": "connector-C930-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Cavity provides the link to the illustration; Circuit Number identifies the electrical assignment. Reading the complete Function wording separates lighting control, communication, ground and microphone roles. The battery-saver relay description identifies a circuit function without establishing a separately replaceable relay. Microphone suffixes remain literal labels, and none of these assignments supplies an expected measurement or proves circuit health."
+    },
+    {
+      "blockId": "connector-C930-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "Number links this service record to Kit List in the identification table. Service Part identifies the listed service item, while Engineering Shell identifies its housing. I keep the pigtail’s gauge and material entries separate from the cavity table’s wire and terminal entries: their different purposes matter, and this reference does not establish a substitution or splicing rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:31:47.612Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ca61605b87cce306543a4c42af66e2d5ab0b56fe6a317ad9e3ead1bcaae21df1",
+  "sourcePdfHash": "6f51a436417d37663df3d6887181fd249601c490f1722ca78f55a9bef927156a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bbdfe6a2e49fb6c62235b178b15b5d5e9b7f38de5fdb763c2dfbae2eee8c3d6a",
+    "reviewedAt": "2026-10-28T03:31:47.613Z"
+  }
+}

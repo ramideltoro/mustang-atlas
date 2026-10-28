@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C345",
+  "supportingSourceRefs": [],
+  "sourceHash": "4c89f1e75c41210cfb272ef1bc155cb1322b7c1e65b1bb0c5679fadd34c375a2",
+  "title": "C345 — Inline connector reference",
+  "introduction": "I read this connector reference by choosing the MALE or FEMALE harness section first, finding a cavity label in its drawing, then reading the matching Cavity row beneath it. The outline and projecting features help distinguish the drawings; the cavity labels connect each illustration to its table.\n\nThe circuit map brings together fuse-or-circuit-breaker-related, active-exhaust-control and ground information. Read across a row to connect Circuit Number with Color, Gauge, Function and Terminal Part Number. When comparing the connector halves, use circuit identity rather than wire color alone: the color and gauge entries can differ across the connection. Think of color as the wire's jacket, not its passport.\n\nShaded positions need to be read alongside their own table entries. Keep Used, blank fields, N/A and the blocked marker distinct rather than turning them into a diagnosis. The pigtail table provides a separate relationship between service parts and engineering shells.\n\nThis page supports reading the drawings and tables. It does not teach physical access, connector probing, electrical testing or replacement. The physical viewing-direction convention, gauge convention and meanings of the Size and Used codes are not defined here; retain those entries as printed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C345-b00002",
+      "text": "MALE connector face — Harness 14B102",
+      "why": "I use the harness heading to choose the correct connector half before consulting its cavity map. As drawn, the male face has shaded positions at upper left and lower right; those are visual features to compare with the table, not electrical test results."
+    },
+    {
+      "blockId": "connector-C345-b00005",
+      "text": "MALE cavity and circuit map",
+      "why": "Match a drawing label to Cavity, then read across that row. The active-exhaust-control row contains circuit information despite its Used entry differing from the corresponding female row. Preserve that distinction; a named circuit alone does not establish terminal population or continuity."
+    },
+    {
+      "blockId": "connector-C345-b00007",
+      "text": "FEMALE connector face — Harness 14A411",
+      "why": "The female drawing has its own cavity layout and a shaded lower-left position. Read its labels directly rather than carrying left and right positions across from the male drawing."
+    },
+    {
+      "blockId": "connector-C345-b00010",
+      "text": "FEMALE cavity and circuit map",
+      "why": "Use this half's Color, Gauge and Terminal Part Number entries when interpreting its rows. Matching circuit identifiers connect the tables, while differences in wire details remain meaningful. A blank circuit field or N/A entry does not establish an electrical fault."
+    },
+    {
+      "blockId": "connector-C345-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "Compare the connector's Fpn entry with Engineering Shell to understand which service-part rows refer to that shell. Separate rows share shell identifiers, so a shell match alone does not explain the differences between kits or establish interchangeability. The pigtail Gauge column is separate from the face-pin Gauge column; this table is not a wire-selection or splice procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:37:41.626Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "97e257c2e721d075ab94c5966841820a2886e55a87796d5a3d2e0b034d4c3262",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "340015cf5cb72a8899dfaab5cfcc0d0cdc04c1dd6121d0d520748f584d995388",
+    "reviewedAt": "2026-10-28T03:44:52.137Z",
+    "editorialRevision": {
+      "kind": "literal-protection-alternative",
+      "scope": "Sole introduction phrase restores the literal fuse-or-circuit-breaker alternative. Prior full independent review preserved; all44 units/raw/table/context/author/verdict/final prose and original complete pages1/2/bothfigures directly read by reference supervisor. No new physical action or parts mapping."
+    }
+  }
+}

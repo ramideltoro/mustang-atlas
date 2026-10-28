@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C2600",
+  "supportingSourceRefs": [],
+  "sourceHash": "ddf42214bf8e8910bf2401d3c921197378134269f5f5a498f26a0c3cbcf1e6ba",
+  "title": "C2600 — Inline connector circuit guide",
+  "introduction": "This inline connector reference brings the male and female harness faces onto the same page. Their assignment tables identify the passenger knee air-bag circuits and an instrument-panel structure ground. I read each drawing with its own identity and pin table, then compare matching circuit identifiers across the join.\n\nCircuit identity is the thread to follow here: wire colors, gauges and terminal references differ between the faces even where circuit identifiers match. Color alone makes a lousy tour guide at this handoff. In both drawings, the cavity labels run vertically and the shaded position corresponds to the unused row. The separate ground assignment should not be confused with the air-bag circuit marked with a minus sign.\n\nUse this page to understand the documented connection and locate its parts references. Physical viewing direction, access, restraint-system preparation, disconnecting, probing, testing and replacement are outside its scope. The gauge convention and general Size and Used coding are also undefined, and the pigtail entries give no selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2600-b00002",
+      "text": "MALE connector face · Harness 14B242",
+      "why": "I pair this rectangular housing drawing with the identity table immediately below it before reading the assignments. The long outlined feature on the left distinguishes this illustration from the other face; it does not establish the physical viewing direction."
+    },
+    {
+      "blockId": "connector-C2600-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read from the drawing's cavity label across the corresponding row to its circuit identifier, function and wiring details. The passenger knee air-bag functions and structure-ground function are separate entries. The shaded position has no assigned circuit in this table; the drawing is a map of assignments, not evidence of an electrical test result."
+    },
+    {
+      "blockId": "connector-C2600-b00007",
+      "text": "FEMALE connector face · Harness 14401",
+      "why": "This face has a different housing outline, including a projection on the right. Keep its identity table and assignments together when comparing the connection: matching circuit identifiers do not make the wire descriptions or terminal references interchangeable between faces."
+    },
+    {
+      "blockId": "connector-C2600-b00010",
+      "text": "Cavity and circuit assignments",
+      "why": "Compare circuit identifiers and functions with the preceding face, then read this face's own Color, Gauge and Terminal Part Number entries. That comparison shows the documented relationship across the join despite changes in wiring details; it does not verify continuity or authorize a probe or jumper."
+    },
+    {
+      "blockId": "connector-C2600-b00012",
+      "text": "Pigtail service-part references",
+      "why": "The kit numbers link the identification table to separate service-part entries. A shared engineering-shell entry does not explain which kit to choose or establish interchangeability. Keep the entries distinct and use them as parts references, without treating them as a replacement procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:36:08.553Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "769cbf914cfc4980b762a188ba6351921dc5f9df019b795443d05dc7e582d60e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 43,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "dae36352d4f5ba8ca7df7ebae1e90bab35b32fde15649a5c45f1705a61d2bbbd",
+    "reviewedAt": "2026-10-28T03:36:08.553Z"
+  }
+}

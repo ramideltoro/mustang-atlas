@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C1656",
+  "supportingSourceRefs": [],
+  "sourceHash": "d97e0f015ca5693f7918600e32f0edbef1018aeda41b9125863550dcc5ab5111",
+  "title": "C1656 — Windshield wiper motor connector reference",
+  "introduction": "I read this connector as a map of the wiper motor’s electrical relationships. The function labels cover wiper control, washer control, a relay connection, ground and a LIN bus connection. LIN is a local communication link: that connection carries messages, so the plug has more to say than simply “move the blades.”\n\nStart with the identity table, then use the cavity labels in the tall connector drawing to find the matching assignment rows. Read across each row to connect its circuit identity with the wire description, function and terminal part number. The gray-filled positions correspond to unassigned rows; their presence in the drawing is no reason by itself to conclude that wiring is missing.\n\nThis is a guide to the connector reference. Physical viewing direction, access, probing, electrical test values and replacement methods are outside its scope. Size and gauge notation remain as printed, without assumed dimensions or wire-selection rules. The pigtail sections provide identification relationships; they do not turn this page into a repair procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1656-b00002",
+      "text": "Harness 14290 · Connector face",
+      "why": "I use the tall rounded outline and the projecting feature on the left as landmarks within the drawing. Its cavity labels lead to the assignment table, while the identification row below the illustration ties this face to its harness and shell."
+    },
+    {
+      "blockId": "connector-C1656-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The outlined cavities correspond to rows with circuit assignments; the gray-filled cavities correspond to blank assignments marked unused in the table. Read each assigned row as a complete entry, including its terminal part number, because the assigned rows do not all use the same terminal. The LIN bus function identifies a communication connection, while the relay label identifies a switching relationship without establishing where or how that relay is packaged."
+    },
+    {
+      "blockId": "connector-C1656-b00007",
+      "text": "Pigtail identification",
+      "why": "The Engineering Shell entry connects the pigtail row to the connector identification above. Read the service part, material, gauge notation and cavity information together within that row. The Image field names an illustration file; it is separate from the service-part identifier. This relationship supports identification without establishing how the pigtail wires should be selected or joined."
+    },
+    {
+      "blockId": "connector-C1656-b00009",
+      "text": "European pigtail identification",
+      "why": "This separate table provides a European product identifier. I keep it distinct from the preceding service-part entry because no equivalence, interchangeability or installation instruction is stated here."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:41:46.721Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bfa72b8b0734013e3f1bb61891147ee92fe90bb18ae62cd5646b0d4a5a160141",
+  "sourcePdfHash": "e19a5de9e260384afc403ccd00a076c86d7bf1aeee8c0b6341e9493e7d8e622b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 43,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3319a0ce6cdbdbfe7db115553269e4127d0ced90263dedde2be4b4c4b6de48f2",
+    "reviewedAt": "2026-10-28T03:41:46.722Z"
+  }
+}
