@@ -200,3 +200,7 @@ The exact G1693260 primary may receive complete checksum-bound Ford TA-19-C safe
 ### Standard hood source completion
 
 Reservation 19 extends the exact primary G1693249 package with the existing complete front-panel alignment span, matching battery isolation/safety evidence and complete owner washer page. It preserves standard-engine scope, literal front-panel tolerances and the distinction between an arithmetic zero-offset target and a source-stated nominal. Old held/reviewed packages remain unenrolled unless explicitly retried. The washer check requires an already filled reservoir and restored assembly; external evidence remains excluded from pairs. Full source/figure review and exact supervisory approval remain required.
+
+### Coupe high-mounted stoplamp access recovery
+
+The exact G1694146 primary is matched to the supplied 2015 book pages 419–420. Its missing Headliner–Lowering dependency now uses the complete private 2015 pages 2422–2424 and hash-bound A-pillar, quarter-panel, loadspace and rear-cushion sources. Enrollment is prospective, persisted or explicit-retry only; existing held/reviewed packages remain unchanged. The constraint preserves pre-shutdown seat positioning, complete trim restoration, the once-only shared C/D-pillar operation, sealing preparation and stationary lamp verification. External evidence remains excluded from pair mode and public artwork. Fresh full source/figure review and exact supervisory approval are still required before publication.
