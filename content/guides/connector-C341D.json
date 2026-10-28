@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C341D",
+  "supportingSourceRefs": [],
+  "sourceHash": "98b19ca57f349fa5f72bceb6cb9feff6339b2de7adcdcf0554f6ebf20a2c554f",
+  "title": "C341D — Driver Seat Module (DSM)",
+  "introduction": "This reference maps the driver seat module connector’s medium-speed CAN low and high connections. I use the drawing like a seating chart—rather fitting for a seat module. The cavity label tells you where an entry belongs; the circuit and function columns tell you what that connection does.\n\nStart with the connector identity table, then find a cavity label in the drawing and match it to the Cavity column. Read across that same row for the circuit identifier, wire color, gauge entry, function and terminal part number. The outlined white positions correspond to populated circuit rows here; the shaded positions correspond to rows without circuit assignments. Those blank rows are part of this reference, not evidence of missing wires on a particular car.\n\nThe pigtail section provides a separate parts cross-reference. This page supports identification and circuit-map reading, not electrical testing or replacement. Physical viewing direction, access, probe placement and test limits are unspecified. Size and Used have no supplied legend, and Gauge has no stated convention; keep those entries as printed without turning them into tool or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C341D-b00002",
+      "text": "Connector face map · Harness 14D231",
+      "why": "I use the housing outline to keep my place on the page: the projections are drawn to the left, and the cavity labels descend through the left column and then the right. That is the drawing’s arrangement; it does not confirm which side of a physical connector to view. The table beneath ties the illustration to its harness and shell record."
+    },
+    {
+      "blockId": "connector-C341D-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The assigned rows distinguish the medium-speed CAN low connection from the high connection. These are network designations, not pass/fail readings. Matching the drawing’s cavity label to a complete table row keeps circuit identity, wire information and terminal identification together. A blank Qualifier adds no condition, and an unassigned row supplies no electrical function to infer."
+    },
+    {
+      "blockId": "connector-C341D-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "The service-parts row connects the kit listing with its Service Part and Engineering Shell entries. Terminal Part Number belongs to the individual circuit rows above. Keeping those fields distinct prevents a shell identifier from being mistaken for a terminal or service-part identifier."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:15:38.706Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "0e77f03f400849ecf30dcf8dd0f62af833d59dc88d8031a9cbadeac842e366c8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 48,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d76bbea36b4d6b0dbe823634771dcc8950365dfef3980338514333f65addfbfa",
+    "reviewedAt": "2026-10-28T04:15:38.706Z"
+  }
+}

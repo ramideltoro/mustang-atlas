@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C501B",
+  "supportingSourceRefs": [],
+  "sourceHash": "019fb9683c3d9b8c8f82d2c5498d0e5c5c2db45cb7b7f4a692a9298d02e24c72",
+  "title": "C501B — Driver Door Module (DDM)",
+  "introduction": "The driver door connector is a busy little switchboard. Its assignments include driver-memory switch selections, left-mirror position sensing and movement-related connections, a mirror-motor common connection, driver-window movement, the driver door-lock trim switch and left-mirror heating. Sharing a housing does not make those jobs interchangeable.\n\nI begin with the connector identity table, then use the drawing’s printed cavity labels as addresses into the assignment table. Read across the matching row for the circuit identifier, wire color, gauge entry, complete function label and terminal part number. Memory-switch selection labels deserve particular attention: their sequence must be read as printed, not guessed from cavity order. Outlined white positions correspond to assigned circuit rows here; shaded positions correspond to rows without assignments, which alone does not diagnose a missing wire.\n\nThe pigtail table is a separate parts cross-reference. This page teaches identification, not physical access, probing, replacement or diagnosis. Physical viewing direction and test limits are unspecified. Size and Used lack a supplied legend, and Gauge has no stated convention; keep those entries as printed without converting them into dimensions, test conclusions or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C501B-b00002",
+      "text": "Connector face map · Harness 14631",
+      "why": "The housing projections are drawn to the left, and the cavity labels run downward through the left column and then the right. That gives the reader a consistent way to navigate the page. It does not establish whether a physical connector should be viewed from its mating face or wire side. The record below associates the illustration with its harness and shell."
+    },
+    {
+      "blockId": "connector-C501B-b00005",
+      "text": "Driver door circuit assignments",
+      "why": "The table distinguishes memory-switch selections, mirror sensing, mirror movement-related functions, the common connection for left and right mirror motors, and the window, lock-switch and heater connections. The movement labels retain the exact condition “(IF PLUS)”; its meaning is not defined here, so I leave that condition literal rather than infer a polarity or equipment package. Sensor positive and negative labels likewise provide no test voltage."
+    },
+    {
+      "blockId": "connector-C501B-b00007",
+      "text": "Pigtail and shell cross-reference",
+      "why": "The kit record separates the service-part identifier from the engineering-shell identifier; terminal identification remains in the circuit rows above. Its Gauge entry differs from those circuit rows. These are separate records to preserve, not grounds for silently changing a value or choosing replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:16:15.195Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3f083ddfbc05741b79ebe931fa95e71e1d2518c28f6743235e2c859b40c7ab79",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 48,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ef4cc1002f2a24c383cbc8dfa86bbf6866f7d773e87a8c69d3101986789253a1",
+    "reviewedAt": "2026-10-28T04:16:15.196Z"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C218B",
+  "supportingSourceRefs": [],
+  "sourceHash": "3a84a8142940be45fb7c061c437f6cd01fa0572935dc9e0e09027f2c965bfce8",
+  "title": "C218B — Clockspring connector guide",
+  "introduction": "The steering wheel has a busy switchboard: horn, transmission select-shift controls, steering-wheel control channels and illumination all appear in this clockspring connector’s function table. I use the cavity drawing as the seating chart, then read the matching function row to see which job belongs at that position.\n\nStart with the connector identity table, move to the face drawing and pin assignments, then use the pigtail table to understand the separate service-part listings. This lets you connect the labels without turning a shared shell into a guess about which repair part the car needs.\n\nThis is a reference-reading guide. Asterisks and catalog codes remain as printed because their meanings are not defined here; physical viewing direction, electrical tests, wire selection and replacement require separate service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C218B-b00002",
+      "text": "Connector face for Harness PIA",
+      "why": "I read the illustration with its projecting housing structure on the left. The cavity labels descend in vertical columns, so use each printed label to find its table row rather than counting horizontally across the drawing. Gray positions correspond to blank-function rows. This gives you a way to move between the picture and the assignment table without treating the shading as an electrical finding."
+    },
+    {
+      "blockId": "connector-C218B-b00005",
+      "text": "Read the cavity functions",
+      "why": "The Function column provides the useful detail here: it distinguishes the horn, select-shift directions, illumination, steering-wheel A/D channels and return paths. Keep the SST designation with the select-shift entries and preserve the separate left, right and powertrain return descriptions. I use those labels to understand the assignments without treating every return as the same connection. The asterisk entries remain unchanged."
+    },
+    {
+      "blockId": "connector-C218B-b00007",
+      "text": "Compare the pigtail service listings",
+      "why": "Read each listing across Number, Gauge, Material, Cavities, Image, Service Part and Engineering Shell. The rows share a shell entry but differ in gauge and service-part identity, so the shell alone cannot choose between them. I use this table to distinguish the catalog entries; it gives no applicability rule for choosing a replacement. The Image column contains filenames, not additional pigtail views shown on this page."
+    }
+  ],
+  "checkedAt": "2026-10-28T07:08:56.984Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "9fbfc077b78031e3b38ed9e494d606dc1a606f94348a33ec5530542ffdfddb92",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 46,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a0591605e71c40d2c162f7a8c1d18c3f3744cb508a20298647f75ff2c8fe6fcd",
+    "reviewedAt": "2026-10-28T04:15:38.699Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Sole public change projecting latch structure to projecting housing structure in firstwhy. Complete46 units/raw/tables/context, both author/review attempts, final prose and original completepage2 solefigure read; failed first tone review and passed second full review retained."
+    }
+  }
+}

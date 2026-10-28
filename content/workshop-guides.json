@@ -95379,147 +95379,313 @@
       }
     },
     {
-      "title": "Diagnose 5.0L battery-saver messages, sensor connections and generator-clutch faults",
-      "summary": "Trace battery-saver messages, inspect the battery-current-sensor circuit and identify supported mechanical faults in the 5.0L generator clutch.",
-      "introduction": "The belt-driven generator supplies regulated electrical power, while the battery current sensor on the negative cable helps the Body Control Module (BCM) monitor battery charge and manage electrical loads. The generator clutch, where fitted, lets its rotor continue spinning as the accessory drive slows. Test H investigates load-shed messages, Test I checks sensor connections and isolated cross-shorts, and Test J separately examines the removed generator's clutch.",
-      "why": "Message location, stored faults and reported battery charge determine the diagnostic route. Connector damage can interrupt sensor information, while clutch heat damage can originate in the belt drive. Keeping these branches separate prevents an unsupported replacement decision.",
+      "title": "Interpret recorded 5.0L battery-saver, sensor and clutch findings",
+      "summary": "Interpret existing Test H, I1–I4 and supported J findings, with a hard stop before the excluded sensor tests and no generator-replacement inference from normal clutch movement.",
+      "introduction": "I separate a recorded battery-saver message, battery-current-sensor circuit concern and removed-generator clutch finding before interpreting their different repair destinations. A passing partial check is not a complete diagnosis.\n\nThis article reads existing technician records only. It directs no scan operation, electrical inspection, resistance measurement, generator removal, clutch handling or repair. Actual prerequisite, identity, state and restoration records are mandatory; missing evidence leaves the affected conclusion unresolved.",
+      "why": "The belt-driven generator supplies regulated electrical power and charges the battery. The Body Control Module, or BCM, uses the battery current sensor on the negative battery cable to monitor charge with the engine off. A different sensor on the generator’s positive battery cable reports generator current to the Powertrain Control Module, or PCM, for idle and engine-torque control. A screen message, a battery-sensor circuit fault and a mechanical clutch fault therefore need different diagnostic routes. Keeping those routes straight saves good parts from an early retirement.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "5.0L battery saver message",
-        "battery saver warning with engine running",
-        "5.0L B130C:12",
-        "5.0L B130C:14",
-        "5.0L B1438:03",
-        "generator clutch rough rotation"
+        "2015 Mustang 5.0L battery saver message",
+        "Mustang load shed message",
+        "BCM BAT_ST_CHRG",
+        "battery current sensor C1646",
+        "inline connector C1046",
+        "B130C:12",
+        "B130C:14",
+        "B1438:03",
+        "5.0L generator clutch test"
       ],
       "when": {
-        "summary": "When a 5.0L displays a battery-saver message, records battery-current-sensor faults or needs generator-clutch inspection.",
+        "summary": "Use existing technician records for a present 2015 5.0L battery-saver complaint, battery-current-sensor fault or fitted generator-clutch assessment.",
         "notes": [
-          "Choose the branch matching the concern; a battery-saver message does not automatically require generator removal.",
-          "Replacement decisions require the relevant concern to be present."
+          "Test H requires actual complete charging-system Inspection and Verification provenance; a generic checklist does not establish that prerequisite.",
+          "Test I stops after I4. I5–I10 are excluded and no downstream sensor or BCM replacement conclusion is available here.",
+          "Test J requires actual completed generator removal and recorded clutch observations; a normal direction result does not authorize generator replacement.",
+          "Require the relevant complaint present during diagnosis and the actual equipment fitted."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare for scan and circuit testing",
-          "detail": "Use a scan tool supporting network tests, module self-tests and live data, a digital multimeter, Rotunda Flex Probes and Wiring Diagrams Cell 12. Follow Diagnostic Methods, including battery state of charge above 70%, and inspect fuses, wiring and previous repairs."
+          "title": "Require completed inspection and electrical prerequisites",
+          "detail": "Require the technician’s actual complete charging-system Inspection and Verification procedure identity, findings and completion record for H1. Its full method is not supplied here; missing or unverified provenance stops H. Also require documented battery/charging checks, initial state of charge greater than 70%, symptom-relevant fuses/circuits/connectors checked for continuity and correct installation, harness condition, repair/bulletin history and network-wide code review with circuit-code priority."
         },
         {
-          "title": "Observe Test I and bench-test prerequisites",
-          "detail": "Battery voltage must remain greater than 12.2 volts before and during Test I, with no charger attached. Test J requires generator-removal capability, a small screwdriver, a 17 mm hex bit, a socket wrench and a new pulley cap."
+          "title": "Require actual identity and state records",
+          "detail": "Require the actual connector locations, Cell 12 views and cavity identities used by the technician, access/release/restoration provenance and each test’s ignition/isolation state. C1046, C1646 and C2280F labels below identify records, not physical probing instructions. Require actual scan results and individual measured values; an undocumented pass label is insufficient."
+        },
+        {
+          "title": "Keep the charge thresholds distinct",
+          "detail": "Initial battery state of charge greater than 70% is a diagnostic prerequisite. Test I separately requires battery voltage greater than 12.2 volts before and throughout testing, without a connected charger. H6/H7 use the BCM BAT_ST_CHRG estimate at a 50% threshold. None substitutes for another."
+        },
+        {
+          "title": "Require actual clutch-service provenance",
+          "detail": "For J require a fitted clutch, completed matching 5.0L generator removal, actual heat/rotation observations with the outer pulley held and shaft tested using a 17 mm hex bit, and actual cap removal/discard. Require completed separate clutch service if directed, installation of a new cap and matching generator refitting before any return-to-service conclusion. No generic service method is substituted."
+        },
+        {
+          "title": "Require actual repair and completion records",
+          "detail": "Require connector defect correction, all disturbed connectors fully seated/latched and access restored before recorded operation. Retain actual OASIS/TSB results and separately completed repair/configuration where directed. Missing records do not establish no bulletin, no fault or completed repair."
         }
       ],
       "steps": [
         {
-          "title": "Identify where the battery-saver message appears",
-          "body": "Begin Test H with Inspection and Verification in the 5.0L charging procedure and correct an obvious cause. Operate the charging system to establish the complaint. A message appearing only in the centerstack with the engine running leads to SYNC information-and-entertainment diagnosis, using the appropriate touchscreen or non-touchscreen route."
+          "title": "H1: Interpret completed preliminary inspection",
+          "body": "Require the actual complete charging-system Inspection and Verification record and the preparation evidence. A generic Diagnostic Methods checklist does not prove this separate prerequisite complete. Unknown procedure identity or incomplete findings stops H.\n\nAn obvious cause related to the observed/reported concern directs separate correction and verification. No obvious cause permits H2. Require symptom-relevant fuse/circuit/connector continuity and correct installation records, not merely visible inspection or the later I4 cross-short check."
         },
         {
-          "title": "Establish communication and follow charging-related codes",
-          "body": "With ignition on, run the Network Test. The accessory protocol interface module (APIM), BCM and Powertrain Control Module (PCM) must pass; otherwise follow communications-network diagnosis. Next perform the PCM self-test and address battery or charging codes through its chart. Then retrieve all continuous-memory diagnostic trouble codes (DTCs). Route BCM codes to the charging procedure's BCM chart, APIM or audio control module (ACM) codes to information-and-entertainment diagnosis, and other relevant codes to the general DTC charts."
+          "title": "H2: Interpret the actual display and operating condition",
+          "body": "Require the recorded charging-system operating observation and customer concern. Battery-saver message only in the centerstack with the engine running directs separate information-and-entertainment diagnosis for the actual touchscreen/non-touchscreen equipment. The source repeats the same SYNC chapter link for both labels; do not infer a different system’s applicability from that duplication.\n\nIf that specific combination does not apply, proceed to H3. Missing display or engine-state evidence cannot select either branch."
         },
         {
-          "title": "Evaluate the BCM's charge estimate",
-          "body": "With no relevant codes, read BCM BAT_ST_CHRG parameter identification (PID) with ignition on. At 50% or more, proceed to H8. Below 50%, remove accessories from the lighter, power outlets and any fitted direct-current/alternating-current inverter. Store the key securely away from the vehicle and leave it undisturbed for at least 6 hours. Recheck with ignition on. A reading of 50% or more supports low charge as the possible cause; review energy-management operation with the owner. A lower reading leads to H8."
+          "title": "H3: Interpret the Network Test",
+          "body": "Require ignition ON and an actual Network Test. APIM, BCM and PCM must all pass to reach H4. Any failure directs separate Communications Network diagnosis, section 418-00. Missing module results are not a pass."
         },
         {
-          "title": "Finish the message branch at H8–H9",
-          "body": "Inspect C1046 for secure connection, then disconnect it to examine terminals and repair defects. If no concern is found, switch ignition off and inspect every BCM connector. Replace damaged, corroded or displaced terminals as required, clean module pins and reconnect securely. Operate the system. If the concern persists, check applicable technical service bulletins through OASIS. Follow an applicable bulletin; only when none addresses the continuing concern does H9 direct BCM replacement through the appropriate service procedure."
+          "title": "H4–H5: Interpret self-test and continuous-memory results",
+          "body": "Require ignition ON and an actual PCM self-test. Any battery/charging-related code directs the charging section’s PCM DTC chart. Only no relevant PCM code permits actual all-module continuous-memory retrieval with ignition ON.\n\nRelevant BCM codes direct the charging BCM chart; APIM or ACM codes direct the appropriate Group 415 procedure; other battery/charging-related codes direct Diagnostic Trouble Code Charts. No relevant codes permits H6. Preserve module identity and distinguish these two retrieval stages."
         },
         {
-          "title": "Check sensor connections and code recurrence",
-          "body": "For Test I, inspect the battery current sensor, disconnect C1646 and check its pins and the battery terminals. Repair damage or corrosion and reconnect C1646. With ignition on, clear all modules' DTCs and perform the BCM self-test. If the target code does not return, address any connector root cause and follow charts for other BCM codes. If it returns, switch ignition off and inspect disconnected C1046 for loose pins, damage, corrosion and water intrusion."
+          "title": "H6: Interpret the BCM charge estimate",
+          "body": "Require ignition ON and the actual BCM BAT_ST_CHRG PID value. At least 50% directs H8. Below 50% requires H7 before any later conclusion. Missing or substituted battery-voltage evidence does not answer this PID question."
         },
         {
-          "title": "Perform the isolated cross-short check, then stop if it passes",
-          "body": "For I4, keep ignition off and disconnect BCM C2280F, inline C1046 and sensor C1646. Using proper circuit isolation, measure C1046 pin 12 to every other pin on each connector half, testing male and female sides separately. A reading below 10,000 ohms directs repair of the identified shorted wires. If none is below that threshold, further applicable electrical diagnosis is required; these checks do not establish a sensor or BCM replacement decision."
+          "title": "H7: Interpret the relearn record",
+          "body": "Require all lighter/power-outlet/inverter accessories removed, key stored securely away from the vehicle, and the vehicle actually left undisturbed for at least six hours. Require documented valid shutdown/rest conditions and subsequent ignition ON BCM BAT_ST_CHRG reading.\n\nAt least 50% supports low state of charge as a possible cause and reaches the source energy-management explanation/return-to-customer endpoint, requiring that actual explanation and completion record. Below 50% reaches H8. A missing rest duration or disturbed rest cannot establish either result. This is not a substitute for the initial diagnostic prerequisites."
         },
         {
-          "title": "Inspect the removed generator clutch for overheating",
-          "body": "For Test J, remove the generator using the [5.0L removal procedure](#/document/G1692122). Heat damage directs clutch replacement and inspection of the front end accessory drive (FEAD). A loose belt or weak or binding tensioner can overheat the pulley, so investigate that cause as well."
+          "title": "H8: Interpret the inline connector findings",
+          "body": "Require actual C1046 secure-connection observation before disconnection and documented valid safe access/isolation. The source does not repeat an OFF instruction at H8 after the ON PID readings; this article supplies no physical transition and requires independent valid isolation provenance.\n\nRequire inspection for corrosion, damaged/bent pins and pushed-out pins. Defects direct separate appropriate connector/terminal/pin replacement or module-pin cleaning and root-cause correction. No defects permits H9. Missing identity or inspection cannot be treated as no defect."
         },
         {
-          "title": "Check clutch rotation in both directions",
-          "body": "Without heat damage, pry the cap off through its central rubber button and discard it. Insert the 17 mm hex bit into the clutch shaft. Hold the pulley firmly and turn the shaft clockwise: roughness or seizure directs clutch replacement. Counterclockwise movement should have spring-like resistance; no resistance directs replacement. If resistance is present, check whether the shaft nevertheless rotates freely counterclockwise; that also directs replacement. Fit a new cap using the applicable pulley procedure."
+          "title": "H9: Interpret BCM connector correction and restoration",
+          "body": "Require ignition OFF, actual inspection of all BCM connectors and source-directed correction of corrosion, damaged/bent pins and pushed-out pins. Require all BCM connectors reconnected fully seated and latched, C1046 restored and applicable access reassembled before actual operation.\n\nMissing defect correction or restoration evidence stops the operating conclusion; a reseat alone is not proof that a damaged terminal was repaired."
+        },
+        {
+          "title": "H9: Interpret actual operation and the bulletin gate",
+          "body": "Require actual operation after full restoration. Concern absent means operating correctly at that time; connector/pin root causes still require correction. Concern remaining requires actual OASIS/TSB evidence. An applicable TSB takes priority through its separate complete method. None applicable directs separate BCM replacement through section 419-10, including actual VIN-dependent service requirements.\n\nThis endpoint belongs only to the completed H route. It cannot complete I or establish a module fault from missing records."
+        },
+        {
+          "title": "I1: Interpret battery-current-sensor connection records",
+          "body": "Require the actual negative-battery-cable sensor identity, voltage greater than 12.2 volts before and throughout I, no charger, sensor/connector preinspection and valid safe access/isolation provenance. Require C1646 disconnection, actual pin security/damage/corrosion and battery-terminal-connector checks, followed by C1646 reconnection.\n\nClean and correctly connected permits I2. Damage/corrosion directs separate appropriate sensor/pin/connector repair or replacement. Do not confuse this sensor with the generator B+ cable sensor."
+        },
+        {
+          "title": "I2: Interpret code clearing and recurrence",
+          "body": "Require ignition ON, actual clearing of DTCs in all modules and subsequent BCM self-test. Target DTC returning reaches I3. Target absent may reflect a loose/corroded connector; require root-cause correction and route any other BCM code through the charging BCM chart.\n\nA single unspecified clear or missing target-code result does not establish this branch."
+        },
+        {
+          "title": "I3: Interpret inline connector condition",
+          "body": "Require ignition OFF and actual C1046 disconnection/inspection for pin security, damage, corrosion and water intrusion. Secure/undamaged/corrosion-free connectors and pins permit I4. Defects direct separate correction/replacement and root-cause assessment. Missing inspection is not a passing result."
+        },
+        {
+          "title": "I4: Verify the recorded isolated circuit",
+          "body": "Require ignition OFF, BCM C2280F disconnected, both C1046 halves separated and C1646 disconnected. Require actual verified cavity identities and valid unpowered isolation. The records must identify each connector half and the specific terminal pair; pin numbers here do not teach physical location.\n\nRequire appropriate terminal-protection equipment and valid resistance-measurement method. Voltage present or inconsistent results invalidate interpretation; no physical probing or isolation method is supplied here."
+        },
+        {
+          "title": "I4: Interpret each cross-short measurement and stop",
+          "body": "Require positive-lead C1046 pin 12 to every other pin on the same male half, and the same pin-12-to-every-other-pin measurements on the female half, individually recorded.\n\nAny resistance below 10,000 ohms directs separate repair of the shorted wires associated with the identified pins and underlying/adjacent damage. If no reading is below 10,000 ohms, the source continues to I5, where this article stops. Equality is not below. Missing pairs or either half prevent a valid no-short result.\n\nI5–I10 remain excluded. Do not jump to sensor/BCM replacement, borrow H9 or call this complete sensor diagnosis."
+        },
+        {
+          "title": "J1: Interpret the removed-generator heat assessment",
+          "body": "Require actual completed matching 5.0L generator removal and a fitted clutch. Actual heat damage directs separate clutch replacement through Generator Pulley and FEAD inspection through the matching 5.0L Accessory Drive procedure. A loose belt or weak/binding tensioner can overheat the pulley.\n\nNo heat damage permits J2. The supplied figures do not establish a numerical or discoloration acceptance rule; uncertain heat findings stop rather than guess."
+        },
+        {
+          "title": "J2: Verify cap and tool provenance",
+          "body": "Require actual removal of the old pulley cap through the central rubber button with screwdriver leverage, discard of that cap and 17 mm hex-bit engagement in the clutch shaft. The original figures show cap lifting/discard and central shaft-bit placement. They do not provide vehicle removal or new-cap fitting methods.\n\nThese describe the required existing service record, not instructions to perform bench work. A new cap is mandatory in the later restoration record even if the clutch findings are normal."
+        },
+        {
+          "title": "J2: Interpret clockwise shaft rotation",
+          "body": "Require the outer pulley held firmly and the shaft rotated clockwise with the 17 mm bit, viewed at the exposed pulley end. Rough or seized shaft movement directs separate clutch replacement. Smooth/free movement permits J3.\n\nUnknown viewpoint or reversing which member was held invalidates the directional conclusion."
+        },
+        {
+          "title": "J3: Interpret counterclockwise spring resistance",
+          "body": "Require the same held outer pulley and counterclockwise shaft observation from the same exposed-end viewpoint. Some spring-like resistance permits J4; none directs separate clutch replacement. The source supplies no numerical force or angle, so an invented threshold cannot determine the result."
+        },
+        {
+          "title": "J4: Interpret free reverse rotation and completion limits",
+          "body": "Actual free counterclockwise shaft rotation with the pulley held directs separate clutch replacement. If it does not rotate freely, record only that supported finding: this article supplies no normal-result generator-replacement conclusion.\n\nBefore any return-to-service conclusion require actual new-cap installation, completed indicated clutch/FEAD work, matching generator refitting, applicable connector restoration and final operating records. Missing service evidence leaves completion unresolved. Normal direction checks alone do not finish charging-system diagnosis."
         }
       ],
       "watchFor": [
         {
-          "title": "A normal direction check has a limited meaning",
-          "body": "Normal clutch movement alone does not authorize generator replacement or complete charging diagnosis. Continue applicable generator fault diagnosis if the concern remains."
+          "title": "Keep sensor identity distinct",
+          "body": "Battery current sensing is on the negative battery cable for BCM charge monitoring; generator current sensing is on generator B+ for PCM idle/torque control."
         },
         {
-          "title": "Repair the cause of connector trouble",
-          "body": "Secure reconnection may restore operation temporarily. Address corrosion, water intrusion and damaged or pushed-out terminals rather than treating a disappearing code as a complete repair."
+          "title": "Keep three thresholds distinct",
+          "body": "Initial charge greater than 70%, Test I voltage greater than 12.2 V without a charger, and H PID at least 50% are separate requirements. The six-hour rest has its own actual duration and undisturbed-state evidence."
+        },
+        {
+          "title": "Do not infer a physical transition",
+          "body": "H8 follows ON PID readings without a repeated OFF instruction. Valid independent safe isolation provenance is required; this records article does not invent a Ford transition or teach connector work."
+        },
+        {
+          "title": "Stop incomplete sensor diagnosis",
+          "body": "A complete I4 result with no value below 10,000 ohms stops before I5–I10. Neither H9 nor normal clutch movement supplies a sensor or generator replacement conclusion."
+        },
+        {
+          "title": "Keep shaft and pulley roles fixed",
+          "body": "J2–J4 records must show the outer pulley held and shaft turned from the exposed-end viewpoint. Unknown member/viewpoint means unresolved directional evidence."
         }
       ],
       "notes": [
-        "The battery sensor on the negative cable is distinct from the generator current sensor on the generator's positive cable.",
-        "The 50% BAT_ST_CHRG branch threshold is separate from the preliminary battery-condition prerequisite.",
-        "A passing I4 ends these sensor checks. H9's BCM replacement decision belongs only to the completed load-shed-message branch."
+        "This article retains only H, I1–I4 and the supported J outcomes for the 2015 5.0L application. Other engine support text does not expand applicability.",
+        "H1 requires the actual complete Inspection and Verification record; general electrical prerequisites do not replace it.",
+        "No physical inspection, scan, generator access, cap fitting, replacement or driving method is supplied. Each repair destination remains a separate required procedure."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code B130C:12 is recorded.",
-          "meaning": "The BCM has flagged the battery-current-sensor control circuit for a short to battery.",
-          "next": "Follow I1–I4; the code alone does not condemn the sensor."
+          "finding": "Recorded result: The battery-saver message appears only in the centerstack while the engine is running.",
+          "meaning": "H2 selects the SYNC information-and-entertainment diagnostic route.",
+          "next": "Separate information-and-entertainment diagnosis for actual fitted equipment."
         },
         {
-          "finding": "Diagnostic trouble code B130C:14 is recorded.",
-          "meaning": "The BCM detects an open or ground in the battery-current-sensor control circuit.",
-          "next": "Inspect connections and perform the isolated checks. Passing the cross-short check does not rule out an open."
+          "finding": "Recorded result: APIM, BCM or PCM fails the Network Test.",
+          "meaning": "The communication prerequisite for the remaining H checks has not been met.",
+          "next": "Separate Communications Network diagnosis before further H interpretation."
         },
         {
-          "finding": "Diagnostic trouble code B1438:03 is recorded.",
-          "meaning": "The BCM has no battery-current indication; this code identifies a frequency-modulated or pulse-width-modulated signal failure.",
-          "next": "Check connections, code recurrence and cross-shorts before further applicable sensor diagnosis."
+          "finding": "Recorded result: PCM self-test or continuous-memory retrieval produces battery- or charging-related codes.",
+          "meaning": "The code-specific route takes priority over continuing directly to the charge-estimate check.",
+          "next": "Separate applicable PCM/BCM chart, Group 415 or DTC Chart diagnosis."
+        },
+        {
+          "finding": "Recorded result: BAT_ST_CHRG is below 50% at H6.",
+          "meaning": "The BCM’s battery-charge estimate requires the H7 relearn route.",
+          "next": "Require actual completed H7 rest/accessory/key/state record and later PID result."
+        },
+        {
+          "finding": "Recorded result: BAT_ST_CHRG reaches at least 50% after H7.",
+          "meaning": "A low charge estimate may have caused the message.",
+          "next": "Require actual energy-management explanation and source endpoint completion record."
+        },
+        {
+          "finding": "Recorded result: BAT_ST_CHRG is at least 50% initially, or remains below 50% after H7.",
+          "meaning": "H8 connector inspection is the next branch.",
+          "next": "Interpret actual H8 C1046 inspection with valid access/isolation provenance."
+        },
+        {
+          "finding": "Recorded result: The message disappears after H9 connector work.",
+          "meaning": "The system operates correctly at this time, and disturbed connections may have contributed.",
+          "next": "Require connector root-cause correction and actual operating outcome."
+        },
+        {
+          "finding": "Recorded result: The message remains after H9 reconnection and retesting.",
+          "meaning": "H9 requires an applicable-bulletin check before its BCM replacement endpoint.",
+          "next": "Require actual OASIS/TSB result; applicable bulletin takes priority, none permits the separate H9 BCM replacement destination."
+        },
+        {
+          "finding": "Recorded result: B130C:12 is recorded.",
+          "meaning": "The BCM detected a short to battery in the battery-current-sensor control circuit.",
+          "next": "Interpret actual I1–I4 records only; code alone does not identify the sensor."
+        },
+        {
+          "finding": "Recorded result: B130C:14 is recorded.",
+          "meaning": "The BCM detected an open or short to ground in the battery-current-sensor control circuit.",
+          "next": "Interpret connection/recurrence/cross-short records; an I4 result cannot rule out an open or finish I."
+        },
+        {
+          "finding": "Recorded result: B1438:03 is recorded.",
+          "meaning": "The BCM is not receiving a battery-current indication; the code identifies a frequency-modulated or pulse-width-modulated signal failure.",
+          "next": "Interpret actual connection and all-module-clear/BCM-self-test records before I3/I4."
+        },
+        {
+          "finding": "Recorded result: The target code does not return during I2.",
+          "meaning": "A loose or corroded connector may have caused the fault.",
+          "next": "Require root-cause correction and separate BCM-chart handling of other codes."
+        },
+        {
+          "finding": "Recorded result: Any I4 pin-12-to-other-pin reading is below 10,000 ohms.",
+          "meaning": "The test identifies an unintended connection between the measured circuits.",
+          "next": "Separate affected shorted-wire repair with actual identified pins and root cause."
+        },
+        {
+          "finding": "Recorded result: No I4 reading is below 10,000 ohms.",
+          "meaning": "The prescribed cross-short check has not identified the fault. The next electrical step is I5.",
+          "next": "Stop before I5–I10; no sensor/BCM replacement conclusion."
+        },
+        {
+          "finding": "Recorded result: The generator clutch has heat damage.",
+          "meaning": "J1 directs clutch replacement and investigation of the accessory drive.",
+          "next": "Separate clutch replacement and 5.0L FEAD diagnosis."
+        },
+        {
+          "finding": "Recorded result: The shaft feels rough or seized during clockwise rotation with the pulley held.",
+          "meaning": "J2 identifies abnormal clutch movement.",
+          "next": "Separate clutch replacement through the complete pulley procedure."
+        },
+        {
+          "finding": "Recorded result: Counterclockwise shaft movement has no spring-like resistance.",
+          "meaning": "J3 identifies an abnormal clutch result.",
+          "next": "Separate clutch replacement through the complete pulley procedure."
+        },
+        {
+          "finding": "Recorded result: The shaft rotates freely counterclockwise with the pulley held.",
+          "meaning": "J4 identifies an abnormal free-reverse-rotation result.",
+          "next": "Separate clutch replacement through the complete pulley procedure."
+        },
+        {
+          "finding": "Recorded result: Clockwise movement is smooth, counterclockwise spring resistance is present, and the shaft does not rotate freely counterclockwise.",
+          "meaning": "Those direction checks have not produced a supported clutch-replacement finding.",
+          "next": "Record only the supported direction findings; no generator-replacement inference. Require actual new-cap/refitting/completion records."
+        },
+        {
+          "finding": "Required inspection, identity, electrical state, individual result, service or restoration provenance is missing or ambiguous.",
+          "meaning": "The affected diagnostic branch or completion conclusion is not established.",
+          "next": "Stop the affected interpretation; do not replace absent evidence with a generic service referral or hypothetical result."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the applicable branch result",
-          "body": "After H9 connection work, operate the system and determine whether the original message concern remains. For Test I, retain the BCM self-test result after I2's code clearing."
+          "title": "Require each branch prerequisite",
+          "body": "Retain H1 complete inspection provenance and H display/network/code/PID/rest evidence, or I voltage/charger/connector/isolation/individual-pair evidence, or J actual removal/tool/member/viewpoint findings."
         },
         {
-          "title": "Record measurements and remaining work",
-          "body": "Record message location, network results, codes, BAT_ST_CHRG before and after any relearn, I4 readings and clutch observations. Identify any required follow-on diagnosis explicitly."
+          "title": "Preserve explicit unresolved endpoints",
+          "body": "I4 cannot establish I5–I10 outcomes. Normal clutch checks cannot authorize generator replacement. Missing data never establishes a pass."
+        },
+        {
+          "title": "Require actual completed restoration and repair",
+          "body": "Require all disturbed connections/access restored, actual root-cause repair and operating reassessment; for J require a new cap and completed matching generator refitting. Missing completion evidence remains unresolved."
         }
       ],
       "procedures": [
         {
           "documentId": "G2560183",
-          "purpose": "5.0L Test H, I1–I4 and supported abnormal-clutch decisions in Test J."
+          "purpose": "Complete supplied H/I1–I4/supported-J decision spans for existing-record interpretation; original physical prerequisite and excluded-test boundaries retained."
         },
         {
           "documentId": "G1693185",
-          "purpose": "Electrical prerequisites, probe handling and isolation methods."
+          "purpose": "Required documented diagnostic preliminaries and valid measurement provenance, not live testing instructions."
+        },
+        {
+          "documentId": "G1692950",
+          "purpose": "Explain generator operation and distinguish the negative-cable battery current sensor from the positive-cable generator current sensor."
         },
         {
           "documentId": "G1692891",
-          "purpose": "SYNC diagnosis for centerstack-only battery-saver messages."
+          "purpose": "Reference-only next destination for centerstack-only battery-saver messages with the engine running and relevant APIM/ACM faults."
         },
         {
           "documentId": "G1693178",
-          "purpose": "Routing other charging-related diagnostic codes."
+          "purpose": "Reference-only next destination for other battery- or charging-related diagnostic trouble codes."
         },
         {
           "documentId": "G1692951",
-          "purpose": "Charging and energy-management operation."
+          "purpose": "Reference-only destination for energy-management and charging-system operating explanations at the H7 handoff."
         },
         {
           "documentId": "G1692122",
-          "purpose": "5.0L generator removal and installation for clutch access.",
+          "purpose": "Reference-only required generator removal and installation route for access to the 5.0L clutch bench checks.",
           "mediaId": "G1692122-m0002"
         },
         {
           "documentId": "G1827428",
-          "purpose": "Generator pulley/clutch service and cap installation.",
+          "purpose": "Reference-only clutch replacement and new pulley-cap installation destination after the relevant Test J findings.",
           "mediaId": "G1827428-m0003"
         },
         {
           "documentId": "G1688130",
-          "purpose": "5.0L accessory-drive diagnosis following clutch heat damage.",
+          "purpose": "Reference-only 5.0L accessory-drive diagnostic destination when J1 identifies clutch heat damage.",
           "mediaId": "G1688130-m0001"
         }
       ],
@@ -95587,14 +95753,70 @@
         {
           "documentId": "G1692950",
           "sourceHash": "23ffaad42776d63b7f88a58abdcfa4cfa3ba564d3f72fea6674e8f2db12f1bdc"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1692357",
+          "sourceHash": "e78769a2087a9eb11dace99442357b7cbc4ec964308aad039166b6fc03c7ec62"
+        },
+        {
+          "documentId": "G1692366",
+          "sourceHash": "ae2c68c278282fdf8dbb54abe819d1e1e64390c772247b6304bb5e0a27cb0d2f"
+        },
+        {
+          "documentId": "G1692362",
+          "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "ac855b4442efd9737341d070dd9a60894317dcc6ad6890c3995600718a50bf22"
-      }
+        "fingerprint": "ac855b4442efd9737341d070dd9a60894317dcc6ad6890c3995600718a50bf22",
+        "editorialVersion": 2,
+        "editorialFingerprint": "e1f46380e51adb48e3f1fcf9953837e62fdb60a0b2b68c0898706ade649a984f",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "message",
+          "title": "Interpret message and module records",
+          "summary": "Require complete inspection, actual display state and network/code gates.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "charge",
+          "title": "Interpret the charge-estimate records",
+          "summary": "Keep the 50% threshold and actual six-hour relearn evidence distinct.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "connections",
+          "title": "Interpret H connector and bulletin outcomes",
+          "summary": "Require actual correction/restoration and the branch-specific OASIS gate.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "sensor",
+          "title": "Interpret the bounded sensor records",
+          "summary": "Require exact isolation and both connector halves; stop before I5.",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "id": "clutch",
+          "title": "Interpret removed-generator findings",
+          "summary": "Retain actual tool/member/viewpoint and mandatory new-cap/restoration evidence.",
+          "start": 15,
+          "end": 19
+        }
+      ]
     },
     {
       "title": "Diagnose high voltage, battery discharge or generator noise on the 5.2L",

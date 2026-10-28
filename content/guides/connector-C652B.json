@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C652B",
+  "supportingSourceRefs": [],
+  "sourceHash": "1b165b004d2a763568a8abb93c066842f96c3b3299d686074d56e09ddb1f7d46",
+  "title": "C652B — Passenger Door Module (PDM)",
+  "introduction": "The passenger door connector brings several jobs together: right-mirror position sensing, mirror movement and heating, passenger-window movement, and the passenger door-lock trim switch. A mirror reporting where it is and a mirror being told to move are different jobs. I read the Function column first so those neighbors in the housing do not get mistaken for the same circuit.\n\nUse the identity table to establish which connector this entry describes. Then match a printed cavity label in the drawing to the Cavity column and read across for the circuit identifier, color, gauge entry, function and terminal part number. In this drawing, outlined white positions correspond to assigned circuit rows; shaded positions correspond to rows without assignments. A blank row is not, by itself, a missing-wire diagnosis.\n\nThe final table cross-references the pigtail service parts. This is an identification guide, with no access, probing, replacement or diagnostic-test procedure. Physical viewing direction and test limits are unspecified. Size and Used have no supplied legend, and Gauge has no stated convention; their printed entries should not become assumed dimensions, test results or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C652B-b00002",
+      "text": "Connector face map · Harness 14630",
+      "why": "The drawing places the projecting housing features to the left, with cavity labels descending through the left column and then the right. I use that arrangement to navigate the illustration, without assuming a physical mating-face or wire-side view. The accompanying record associates the drawing with its harness and shell."
+    },
+    {
+      "blockId": "connector-C652B-b00005",
+      "text": "Passenger door circuit assignments",
+      "why": "The function labels separate mirror-position sensor connections from mirror movement and return, mirror heating, window up and down, and the door-lock trim-switch connection. Horizontal and vertical position labels describe sensing functions; they should not be collapsed into movement labels. Reading across a single cavity row preserves the relationship between that function, its circuit identifier, wire information and terminal entry."
+    },
+    {
+      "blockId": "connector-C652B-b00007",
+      "text": "Pigtail service-part lookup",
+      "why": "Service Part and Engineering Shell identify different items, while the circuit table has its own Terminal Part Number field. The pigtail Gauge entry differs from the circuit-row entries; I keep each attached to its own record rather than treating either as a correction or an instruction to change wire size."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:16:15.186Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "e4b40fac340e1da3adf2b490ec5153c0605281916e3c11bec01ecc6a7a63fba6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 48,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "801ed8e552f1781b29505b50c3643cc424abd96271b098c259223dd43fcc1440",
+    "reviewedAt": "2026-10-28T04:16:15.187Z"
+  }
+}
