@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1468",
+  "supportingSourceRefs": [],
+  "sourceHash": "d184ec4412e00c9515313c60790e1c980f91e6a22d8a037c3a41a6f1e74df523",
+  "title": "C1468 — Transmission temperature sensor",
+  "introduction": "This reference identifies the transmission-temperature sensor connection and maps its temperature-sensing circuit and signal return. I read those as the conversation and its return path: the return has a specific circuit identity, so calling every return wire “ground” would throw away useful information.\n\nBegin with the connector identity and description. Next, match the drawing’s cavity labels to the pin table and read each row across to Circuit Number, Color and Function. Finish with the pigtail table to trace the listed service item back to the shell. The sheet identifies connections; it cannot tell you the fluid’s temperature or whether the sensor is healthy. Physical viewing direction, access, probing, test limits and replacement methods need separate procedures. Box, Size and Used codes and the gauge convention are not decoded here, and transmission applicability must not be guessed from the connector’s name.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1468-b00002",
+      "text": "Harness 14B060 connector face",
+      "why": "The drawing shows a large latch structure on the left, closely stacked cavity labels in the inner opening and a curved housing extending toward the right-hand projection. I use those landmarks to navigate the illustration and its table. Their page positions do not establish a physical viewing side or a latch-release direction. The identification row connects the shell drawing with its harness."
+    },
+    {
+      "blockId": "connector-C1468-b00005",
+      "text": "Read the sensor and return assignments",
+      "why": "Match each illustrated cavity label to its Cavity row, then follow Circuit Number, Color and Function across the table. One function identifies transmission-fluid temperature sensing; the other identifies the transmission signal return associated with the powertrain controller. That return designation does not establish a chassis-ground connection. Gauge and Terminal Part Number identify the listed wiring and contact, while a blank Qualifier adds no condition. These roles are a map for later diagnosis, not a sensor test."
+    },
+    {
+      "blockId": "connector-C1468-b00007",
+      "text": "Identify the sensor pigtail service item",
+      "why": "The pigtail is the connector with attached wire leads. I follow Number back to Kit List and compare Engineering Shell with Hard Shell and Fpn to understand the listing’s relationships. Service Part identifies the service item; Image names its illustration file. The pigtail’s Gauge entry describes that item separately from the circuit wiring and does not authorize a wire change or explain how to splice it."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:21:21.133Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": "f111e9e98ec3d62c895d930b2c0a18c59c6ea704a21fb8c5dad3d0a36479f93b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "37beab013ee2ef714b0cf100d8b03a71e33ae902a47ce0819718d63464b41c66",
+    "reviewedAt": "2026-10-28T00:21:21.133Z"
+  }
+}

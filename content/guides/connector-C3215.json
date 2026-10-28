@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3215",
+  "supportingSourceRefs": [],
+  "sourceHash": "89993aeea933f54c8e8dca9c31270871b5e95ad9c18f8d2f73edf8558fbd87ff",
+  "title": "C3215 — LH Front Seat Power Lumbar Assembly Connector",
+  "introduction": "The lumbar connector’s lettered cavities are a useful reminder that table order and drawing position are different things. I use the cavity marks as addresses, rather than assuming the top table row belongs to the top hole. That keeps the pump connection and the upper-cell deflate connection from swapping seats on paper.\n\nStart with the component identity table, match each drawing letter to the Cavity column, then read across its circuit row. The function descriptions distinguish the driver lumbar pump from the upper-cell deflate solenoid connection. The housing identifiers lead onward to the associated pigtail listing.\n\nThis reference explains identification and circuit labels. It supplies no seat-access, connector-release, probing, test-value or replacement procedure. The physical viewing direction, gauge convention and meanings of Box, Size and Used are unspecified; the printed entries are reference data, not instructions for choosing wire or performing a repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3215-b00002",
+      "text": "Harness 14D232 connector face",
+      "why": "The illustration shows vertically arranged lettered cavities in a rectangular face, with a notched projection to the left and an outer outline to the right. I match the letters directly to the table because its row order runs opposite to their top-to-bottom arrangement in the drawing. This establishes the page layout, not the physical side from which to view or release the connector."
+    },
+    {
+      "blockId": "connector-C3215-b00005",
+      "text": "Lettered cavity-to-circuit guide",
+      "why": "Read the row selected by the cavity letter all the way across: its circuit identifier, color, gauge, function and terminal entry belong together. The pump and upper-cell deflate descriptions distinguish the listed connections’ roles. They do not specify switch behavior, applied voltage or an operating test, so a function label alone cannot diagnose a lumbar complaint."
+    },
+    {
+      "blockId": "connector-C3215-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "I compare Engineering Shell here with Hard Shell in the identity table and Fpn beneath the drawing to keep the pigtail listing tied to the same housing reference. Service Part identifies the listed service item, and Image names its illustration file. Keep the pigtail gauge separate from the pin-assignment gauges; this table does not explain wire substitution, splicing or connector replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:23.195Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "7dabcef6e26ab74a607130ef6d7b2902e2067b2355ee4275ef10666f6b495139",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "60dc19e421aa5bd54f0f1ed4486724b54792572e905b345b1ddc20a68d9d21d8",
+    "reviewedAt": "2026-10-28T00:10:23.196Z"
+  }
+}

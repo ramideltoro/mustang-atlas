@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1452",
+  "supportingSourceRefs": [],
+  "sourceHash": "35db9b8ee2484c91ba77313076ca41f271d3bee325f975503411fc4591e090d1",
+  "title": "C1452 — Variable Camshaft Timing Bank 2 Solenoid 1 (VCT21)",
+  "introduction": "Variable camshaft timing changes when the valves open or close while the engine runs. Its control solenoids work with oil-controlled actuators and the engine controller. I use this connector reference to separate the electrical supply role from the control role—a wiring cast list, with each cavity assigned its own part.\n\nRead the component title alongside the Function wording exactly as printed; this sheet does not explain how those naming labels relate. The reference supports connector identification and circuit reading, with no engine-applicability assignment, physical access route, viewing-direction instruction or diagnostic test. Gauge conventions and the Size and Used codes remain undefined.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1452-b00002",
+      "text": "Connector face and harness 12C508",
+      "why": "I locate the oval cavity area beside the rectangular structure on the drawing’s left, then use the upper and lower cavity labels to navigate the pin table. The outline provides useful drawing landmarks without establishing a release movement or the direction from which to view the connector on the car."
+    },
+    {
+      "blockId": "connector-C1452-b00005",
+      "text": "Read the supply and control circuit map",
+      "why": "Follow each cavity’s row across Circuit Number, Color, Gauge, Function and Terminal Part Number. The function descriptions distinguish the protected supply connection from the powertrain controller’s camshaft-timing connection. That identifies circuit roles; it does not establish a switching strategy, expected measurement or fault conclusion. The fuse wording carries no current unit here, so it cannot support a fuse-rating choice."
+    },
+    {
+      "blockId": "connector-C1452-b00007",
+      "text": "Camshaft-timing pigtail parts reference",
+      "why": "Cross-reference the Engineering Shell entry with Hard Shell and Fpn before reading the kit and Service Part fields. This ties the parts row to the connector reference rather than relying on the component description alone. Harness Gauge and pigtail Gauge belong to separate records and provide no wire-selection, substitution or installation rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:16:09.781Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "73db6a545c4f66106fc575c2fa66ce04a73acd66dbb9a5966b0f21c775e60688",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ddf0904b15cb3b4785262377090a77926cb6d5367508ee14e5a3523655a35e11",
+    "reviewedAt": "2026-10-28T00:16:09.781Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C906",
+  "supportingSourceRefs": [],
+  "sourceHash": "cc5ebb66d67927613463157b3da6c6df5c9e9598f4df65dd92370f72bb050094",
+  "title": "C906 — Right-hand vanity mirror lamp connector",
+  "introduction": "I read this reference as a small address book for the right-hand vanity mirror lamp: the drawing locates the cavities, and the pin table tells you which electrical job belongs at each address. Start with the connector identity table, then match each drawn cavity label to the Cavity column and read across its row.\n\nThe function descriptions distinguish the battery-saver lighting circuit from the ground return. The pigtail table separately identifies the listed service assembly and its engineering shell; a shell identifier and a service part number serve different lookup purposes.\n\nThis is a connector-reading guide. It does not establish access, a physical terminal-side or wire-side viewing direction, probing methods, test values or replacement steps. Gauge conventions and the Size and Used codes are not defined here, so keep those entries as reference data without treating them as wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C906-b00002",
+      "text": "Connector face map · Harness 14334/14335",
+      "why": "I use the upper housing detail, the small rectangular feature above the cavities and the unequal side projections as landmarks. The numbered cavities sit side by side in the drawing. Matching their labels to the table keeps the illustration and circuit descriptions connected without assuming how a physical connector is being viewed."
+    },
+    {
+      "blockId": "connector-C906-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Read across a single cavity row to keep its circuit identifier, color, gauge, function and terminal entry together. The battery-saver relay description concerns switching interior lighting off; a relay is an electrically controlled switch, and that label alone does not identify a separate plug-in relay. The ground description identifies the return connection. These roles explain the wiring map without establishing that either circuit is operating correctly."
+    },
+    {
+      "blockId": "connector-C906-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "A pigtail is a connector with attached wire leads. I connect the identity table’s Kit List entry to the pigtail table’s Number entry, then distinguish Service Part from Engineering Shell. The pigtail and pin-assignment Gauge columns describe separate entries; their differing values are not instructions to alter the vehicle wiring."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:15:20.840Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "572fe75168e8fb2e4e8ea86d3a212216e0ea6a734c76143611dffa23f2f0fde8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a4510cd998044b8679f95d0eb84454dfc50c4bae72eda362067e74586fb7577f",
+    "reviewedAt": "2026-10-28T00:15:20.840Z"
+  }
+}

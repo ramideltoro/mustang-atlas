@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C303",
+  "supportingSourceRefs": [],
+  "sourceHash": "329df4fcfab81e99a7367459a71221dc00ccf267174e3ac0d8c9dfebf201df16",
+  "title": "C303 — Passenger Safety Belt Pretensioner",
+  "introduction": "The passenger safety belt pretensioner belongs to the restraint system that manages occupant movement in a collision. I use this reference like a seating chart for its wiring: the housing drawing locates the cavity labels, and each label leads to a circuit row. The polarity markings describe the connections; they do not prescribe an electrical test.\n\nThis page explains identification and parts information. It provides no depowering, disconnection, probing or replacement sequence. The physical viewing direction, gauge convention and meanings of Size and Used are also unspecified. Any hands-on service belongs within the qualified, restraint-specific procedures described below.",
+  "requirements": [
+    {
+      "category": "Before any pretensioner service",
+      "items": [
+        {
+          "name": "Qualified personnel",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Retain that restriction when moving from reading this reference to work on the pretensioner. See [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191)."
+        },
+        {
+          "name": "Restraint-specific preparation and testing",
+          "detail": "Use the selected restraint procedure’s depowering, handling, specified test equipment and restoration sequence. Do not substitute a generic jumper or resistance test. Connector-position-assurance tabs and shorting bars affect the electrical configuration, so an apparently attached connector does not establish correct engagement. See the [SRS overview](#/document/G1696290); this connector sheet supplies no connection or verification sequence."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C303-b00002",
+      "text": "Connector face and harness 14A005",
+      "why": "The drawing places the circular cavity area at the right of a broad housing extension. I use that outline and the inward projection at the circle’s right edge to keep the illustrated upper and lower cavity labels straight. These landmarks describe the drawing, without establishing how to orient or release the physical connector."
+    },
+    {
+      "blockId": "connector-C303-b00005",
+      "text": "Read the pretensioner circuit map",
+      "why": "Match each drawn cavity label to Cavity, then read across its row for circuit identity, color code, gauge and function. The function wording distinguishes the positive and negative connections. The terminal-part fields contain no usable terminal identifier, so they cannot support an individual-terminal parts choice."
+    },
+    {
+      "blockId": "connector-C303-b00007",
+      "text": "Pretensioner pigtail parts reference",
+      "why": "Cross-reference Engineering Shell with the connector’s Hard Shell and Fpn entries to understand which pigtail row belongs to this reference. Number identifies the kit entry, while Service Part supplies its service identifier. The separate harness and pigtail Gauge fields do not establish wire interchangeability, a repair method or permission to service the restraint connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:16:09.772Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "e37da9e15a50a993b125c8f171b0b5b3bedd1eca84a0f904928e199534b6e856",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7093378eec32d45809232b0045b0c62c12f02bcda02d957d563450807a0a871b",
+    "reviewedAt": "2026-10-28T00:16:09.773Z"
+  }
+}

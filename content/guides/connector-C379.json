@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C379",
+  "supportingSourceRefs": [],
+  "sourceHash": "9b7f4bde52e4f4abe557609adc66ab93b9ae846016f288c0cc26f10fb5fc782f",
+  "title": "C379 — Differential Oil Temperature Sensor",
+  "introduction": "The differential lets the rear wheels turn at different speeds through a corner. This reference focuses on its oil-temperature sensor connection. I read it like a small wiring address book: identify the connector, find a cavity label in the drawing, then follow that cavity’s row across the pin-assignment table.\n\nThe drawing supplies shape and label relationships; the tables supply circuit and parts information. This page supports identification and wiring-reference reading. Physical access, the viewing direction at the vehicle, electrical tests and replacement methods need their own procedures. Gauge conventions and the Size and Used codes are not defined here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C379-b00002",
+      "text": "Connector face and harness 14B102",
+      "why": "I use the oval housing outline and the projecting structure above the vertically stacked cavities as landmarks. Match the cavity labels to the table below. These are positions within the displayed drawing; connector gender alone does not establish the physical viewing direction."
+    },
+    {
+      "blockId": "connector-C379-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Start in Cavity, then read across the same row through Circuit Number, Color, Gauge, Function and Terminal Part Number. The functions distinguish the oil-temperature sensor’s positive connection from the powertrain signal return. A signal-return description does not establish a chassis-ground connection, and these assignments alone cannot establish sensor accuracy."
+    },
+    {
+      "blockId": "connector-C379-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is the connector-and-lead service assembly. Cross-reference Engineering Shell with Hard Shell and Fpn, then use the service-parts row to distinguish the kit reference from the Service Part identifier. The harness and pigtail Gauge fields describe separate entries; their values do not establish a wire-substitution or splicing method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:16:09.760Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f7af97e888b0249e2a37cc9e22ba2a41f55a9bb32fd0f6fe4d7a430cd3db5086",
+  "sourcePdfHash": "a7c9924451aaa397d859651ee186a4eb2ff5067313222cffd1d62ad3c610f568",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ba307f1f054fba44e70bb98c2e9ebbdb01329d8d73c3e17a05986934648539ed",
+    "reviewedAt": "2026-10-28T00:16:09.761Z"
+  }
+}

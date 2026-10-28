@@ -6717,103 +6717,253 @@
     },
     {
       "title": "Replace the rear wheel bearing and hub",
-      "summary": "Replace the rear bearing-and-hub assembly using new mounting bolts and a new spindle nut tightened in the prescribed sequence.",
-      "introduction": "The rear hub carries the wheel, while its bearing lets the wheel rotate within the suspension knuckle. The halfshaft passes through the hub to transmit drive. This job removes the complete bearing-and-hub assembly after separating the halfshaft and removing the rear brake disc; it does not involve dismantling the bearing itself.",
-      "why": "The hub mounting bolts and spindle nut secure heavily loaded connections. Their replacement and tightening requirements are part of the repair, not optional finishing details. The spindle nut uses a staged tightening sequence that includes loosening, so simply tightening it to a single final torque would not reproduce the specified installation.",
+      "summary": "Remove the rear wheel, separate the halfshaft and move the correct brake assembly aside, then replace the hub with new bolts and a new spindle nut.",
+      "introduction": "The rear hub has a simple brief: hold the wheel, let it turn, and avoid making the whole arrangement interesting. I’ll take you through replacing the complete bearing-and-hub assembly, including the brake-access branches and the spindle nut’s tighten–loosen–tighten routine. That last routine looks fussy because it is; this is one place where “good and tight” can take the afternoon off.",
+      "why": "The hub carries the wheel studs, and its bearing lets the wheel rotate within the suspension knuckle—the substantial carrier at the wheel end of the suspension. The halfshaft passes through the hub to deliver drive. Replacement removes the complete hub-and-bearing unit rather than dismantling its bearing. Four new mounting bolts secure it to the knuckle, and a new spindle nut secures the shaft connection using a prescribed four-stage sequence.",
       "taskType": "repair",
       "difficulty": "advanced",
       "searchTerms": [
-        "rear wheel bearing replacement",
-        "rear wheel hub replacement",
-        "rear hub spindle nut",
-        "halfshaft removal from rear hub"
+        "Mustang rear wheel bearing replacement",
+        "rear wheel hub assembly",
+        "rear hub spindle nut torque sequence",
+        "SVT Performance Package rear hub"
       ],
       "when": {
-        "summary": "When replacement of the rear bearing-and-hub assembly has been established as necessary.",
+        "summary": "Use this procedure when replacement of the rear bearing-and-hub assembly has already been established as necessary.",
         "notes": [
-          "Use the rear brake-disc procedure appropriate to the fitted brakes, including the separate SVT Performance Package procedure where applicable.",
-          "The replacement procedure does not establish the cause of a wheel or suspension complaint."
+          "Choose the brake-access branch from the actual fitted equipment before dismantling.",
+          "The 5.2L brake instructions here specifically require SVT Performance Package. A 5.2L car without that equipment needs matching brake-access instructions; do not substitute the standard branch.",
+          "This replacement procedure does not provide a bearing-noise, wheel-play or runout diagnosis."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange wheel and brake access",
-          "detail": "Be equipped to support the vehicle and complete the linked wheel-and-tire and rear brake-disc procedures before starting hub removal."
+          "title": "Match the brake branch to the car",
+          "detail": "For 2.3L, 3.7L and 5.0L applications covered by the standard rear-disc procedure, the caliper and anchor plate move aside together. For 5.2L with SVT Performance Package, disconnect the separate parking-brake cable at its shoe lever and bracket before moving the caliper and removing the disc. Do not transfer either branch's bolt torque to the other."
         },
         {
-          "title": "Have the specified remover and tightening equipment",
-          "detail": "Use hub remover 205-D070 (D93P-1175-B) to press the halfshaft from the hub. Have torque and angle-measuring equipment suitable for the prescribed installation sequence."
+          "title": "Arrange the shaft remover and tightening equipment",
+          "detail": "Have hub remover 205-D070 (D93P-1175-B), officially named Front Wheel Hub Remover even though this rear-hub job calls for it. Have torque equipment covering the stated values, angle-measuring equipment for 90° and 30°, and a suitable hook or support for the brake caliper."
         },
         {
-          "title": "Obtain replacement fasteners",
-          "detail": "Have a new spindle nut and four new bearing-and-hub bolts ready. Suspension fasteners must be the same or equivalent quality and design."
+          "title": "Obtain the replacement assembly and discarded hardware",
+          "detail": "Have the replacement bearing-and-hub assembly, four new hub mounting bolts, a new spindle nut and two new brake mounting bolts for the fitted brake branch. Suspension fasteners must be the same or equivalent quality and design; do not substitute lower-quality or differently designed hardware."
+        },
+        {
+          "title": "Prepare the cleaning materials",
+          "detail": "Have a wire brush and Motorcraft Brake Parts Cleaner—VOC Compliant or Metal Brake Parts Cleaner, PM-4-A or PM-4-B—for the brake-disc mating surfaces. Have Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 for the wheel pilot interface. Read the materials' safety information; keep flammable solvents away from ignition sources."
+        },
+        {
+          "title": "Arrange safe lifting and personal protection",
+          "detail": "Use a hoist rated for the vehicle's actual weight, including cargo and modifications, and have wheel chocks ready. Wear eye and ear protection, plus gloves for sharp-edged parts. The emergency wheel-changing jack is unsuitable for this repair, and no one goes underneath a vehicle supported only by a jack."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
+        },
+        {
+          "title": "Arrange floor-standing brake control",
+          "detail": "Plan a securely supported hoist height with all four wheels clear at which a helper standing on the floor can safely reach the parking-brake lever and service-brake pedal without entering or climbing onto the raised car. The service brake must be held during spindle-nut tightening. If safe reachable control cannot be established, stop and use a workshop setup that permits it. Never unload the vehicle while a wheel is removed."
         }
       ],
       "steps": [
         {
-          "title": "Remove the wheel and release the halfshaft",
-          "body": "Follow the wheel-and-tire procedure. Remove and discard the spindle nut, then use the specified remover to press the halfshaft from the hub. This separates the drive connection before the hub assembly is released."
+          "title": "Prevent starting and restrain the vehicle",
+          "body": "On hard, level ground, apply the parking brake and chock the wheels. Disable remote start if fitted through Vehicle settings > Remote Start Setup before servicing. For an automatic, establish engine-off ignition ON: leave it ON if already in that state; from confirmed OFF, keep the valid key inside and press START/STOP without pressing either pedal. Then hold the service brake and select Neutral. For a manual, select Neutral with the engine OFF and restraints maintained.\n\nIf ignition is ON, release the pedals and press the button to return to OFF; if already OFF, leave it OFF. Confirm OFF and remove the key before lifting. These ground controls follow the 2015 Ford Mustang Owner’s Manual, printed pages 121–122; maintain the relevant [service precautions](#/document/G1693189)."
         },
         {
-          "title": "Remove the brake disc",
-          "body": "Follow the applicable rear brake-disc procedure. The standard rear disc and SVT Performance Package disc have separate instructions; complete the correct access procedure before reaching the hub mounting bolts."
+          "title": "Position the hoist at the marked lifting points",
+          "body": "Find the triangles stamped into the body structure at the four lifting locations, behind the front wheels and ahead of the rear wheels. Position the hoist adapters at the indicated points.\n\nBefore lifting, check that the arms and adapters clear the suspension, mounting brackets, exhaust, steering components, axle and differential rear cover. Do not lift against a bumper or use a convenient suspension component as a substitute lifting point. See [Jacking and Lifting](#/document/G1663631)."
         },
         {
-          "title": "Remove the bearing-and-hub assembly",
-          "body": "Remove and discard all four mounting bolts, then remove the assembly from the knuckle. The illustration identifies these bolts behind the hub and marks them for disposal."
+          "title": "Raise fully before releasing the parking brake",
+          "body": "Raise on the correctly positioned hoist only to a secure height where all four wheels are fully clear and the helper can safely reach the parking-brake lever while standing on the floor. Confirm support before the helper releases the parking brake. Never enter or climb onto the raised car. If needed afterward, move everyone clear and raise to the mechanical working height on the same supports.\n\nDo not release the parking brake while any wheel remains grounded. Its connections must be restored and it must be applied before final lowering."
         },
         {
-          "title": "Mount the replacement hub",
-          "body": "Position the bearing-and-hub assembly and install four new bolts. Tighten them in a cross pattern to 98 lb.ft (133 Nm), then reinstall the brake disc using its applicable procedure."
+          "title": "Remove the wheel and tire",
+          "body": "Remove the five wheel nuts and lift off the wheel and tire. Do not use heat to free a seized wheel nut; it can damage both the wheel and bearing. Keep the nuts ready for reinstallation. See [Wheel and Tire](#/document/G1686507)."
         },
         {
-          "title": "Complete the drive connection and wheel installation",
-          "body": "Apply the brake to prevent halfshaft rotation and install a new spindle nut. Tighten to 184 lb.ft (250 Nm), loosen 90°, tighten to 85 lb.ft (115 Nm), then tighten a further 30°. Complete every stage in order, then reinstall the wheel and tire."
+          "title": "Discard the spindle nut and press the shaft out of the hub",
+          "body": "Remove the large spindle nut from the center of the hub and discard it.\n\nFit remover 205-D070 (D93P-1175-B) to the wheel-stud face of the hub, with its center screw aligned with the halfshaft end. The illustrated arrangement attaches the tool across three wheel studs. Operate the center screw to press the halfshaft out of the hub, separating its splined drive connection before releasing the hub assembly. Use the specified tool rather than improvising the separation. See [Wheel Bearing and Wheel Hub](#/document/G1686657)."
+        },
+        {
+          "title": "Standard brakes: support the caliper and remove the disc",
+          "body": "Complete the brake-dust controls in preparation before handling either brake branch. Do not blow or dry-brush friction dust.\n\nUse this branch for the covered 2.3L, 3.7L and 5.0L applications. Support the brake caliper and its anchor plate—the mounting bracket—before releasing them.\n\nRemove the two bolts securing the caliper-and-anchor-plate assembly, discard those bolts and move the complete assembly aside. Hang or support it with a suitable hook so its weight is carried independently of the brake hose. Do not let it hang from the hose.\n\nSlide the brake disc off the wheel studs. The disc removal direction is outward from the hub. Continue at the hub-removal step. See [Brake Disc](#/document/G1693754)."
+        },
+        {
+          "title": "5.2L with SVT Performance Package: disconnect the parking-brake cable first",
+          "body": "Complete the same preparation dust controls before this alternative brake branch.\n\nUse this branch only for the 5.2L application with SVT Performance Package. With the parking brake released and the car fully supported, disconnect the cable end from the parking-brake shoe actuation lever behind the disc. The cable end sits at the lower lever beside the exposed cable spring.\n\nAt the cable's bracket entry above that spring, press the three retaining tabs inward and withdraw the cable fitting from the bracket. This cable release comes before removing the caliper bracket. See [Brake Disc — SVT Performance Package](#/document/G1716401)."
+        },
+        {
+          "title": "5.2L with SVT Performance Package: support the caliper and remove the disc",
+          "body": "Support the caliper with a suitable hook. Remove and discard the two bracket bolts, remove the bracket and position the caliper aside. Keep the caliper's weight off the brake hose throughout.\n\nWith the parking-brake cable detached and the caliper clear, slide the disc outward over the wheel studs. Keep the supported caliper clear while working on the hub. No brake-hose disconnection is part of this access sequence."
+        },
+        {
+          "title": "Remove the four hub bolts and the bearing-and-hub assembly",
+          "body": "Work from behind the hub at the knuckle. Locate the four mounting bolt heads around the back of the hub mounting flange; these are separate from the wheel studs on the outer face.\n\nRemove all four mounting bolts and discard them. Remove the complete bearing-and-hub assembly from the knuckle. The [Rear Suspension Overview](#/document/G1686641) identifies the hub and knuckle as parts of the independent rear suspension; this operation replaces their bearing-and-hub unit without dismantling the bearing itself."
+        },
+        {
+          "title": "Position the replacement hub and tighten four new bolts in a cross pattern",
+          "body": "Guide the halfshaft through the replacement hub as you position the bearing-and-hub assembly in the knuckle. Install four new mounting bolts.\n\nTighten the bolts in a cross pattern: one bolt, its diagonally opposite partner, then the remaining diagonal pair. Tighten all four to 98 lb.ft (133 Nm). Record that this cross-pattern tightening is complete before the brake hardware conceals the work."
+        },
+        {
+          "title": "Clean the disc mating surfaces and refit the disc",
+          "body": "Control friction dust first using the preparation guidance. The following mating-surface cleaning is not permission to disperse brake dust.\n\nUse a wire brush and Motorcraft PM-4-A or PM-4-B brake parts cleaner to remove contamination from the brake-disc mating surfaces. The disc must sit against its mating surface without dirt or corrosion trapped between them.\n\nPosition the disc over the wheel studs and against the hub. Keep cleaner and wheel-pilot anti-seize out of the subsequent fastening joints and off braking friction surfaces as applicable; the anti-seize is reserved for the wheel pilot later."
+        },
+        {
+          "title": "Standard brakes: reinstall the caliper and anchor plate",
+          "body": "For the standard 2.3L, 3.7L and 5.0L branch, bring the supported caliper-and-anchor-plate assembly back over the disc. Install two new mounting bolts and tighten them to 129 lb.ft (175 Nm).\n\nRemove the temporary caliper support after the assembly is secured. Check that the brake hose is not trapped or carrying the assembly's weight."
+        },
+        {
+          "title": "5.2L with SVT Performance Package: restore the bracket, caliper and cable",
+          "body": "Return the caliper to position and reinstall its bracket. Use two new bracket bolts and tighten them to 81 lb.ft (110 Nm).\n\nReverse the cable access actions: seat the cable fitting back in its bracket so the retaining tabs secure it, then reconnect the cable end to the parking-brake shoe actuation lever. Check that both the bracket retention and lever connection are engaged. Remove the temporary caliper support once the assembly is secured. Keep the brake hose free of trapped or loaded positions."
+        },
+        {
+          "title": "Apply the service brake and complete every spindle-nut stage",
+          "body": "With the disc and the appropriate brake assembly fully installed, clear everyone and loose equipment from beneath the car and bring the hoist to the securely supported, floor-reachable control height planned in preparation. All four wheels must remain clear; never unload the wheel-less vehicle. Have the helper stand on the floor and hold the service-brake pedal to prevent the halfshaft rotating, without entering the raised cabin. Keep ignition OFF. Stop if that safe pedal access cannot be established. Install a new spindle nut.\n\nComplete these stages in order:\n1. Tighten to 184 lb.ft (250 Nm).\n2. Loosen the nut by 90°.\n3. Tighten to 85 lb.ft (115 Nm).\n4. Tighten a further 30°.\n\nThe loosening stage is intentional. Mark off each completed stage; the final angle is an additional turn after the third-stage torque, not a replacement for it."
+        },
+        {
+          "title": "Check brake operation before fitting the wheel",
+          "body": "At the same securely supported floor-reachable control height, with all brake components installed and ignition OFF, have the floor-standing helper apply the brake pedal several times to verify correct brake-system operation, as required by both brake-disc branches. This is a completion check after reassembly.\n\nConfirm that the caliper support has been removed, the brake hose is clear and, on the SVT branch, the parking-brake cable is retained in its bracket and connected at the lever. Do not return the car to service if the brake operation is incorrect."
+        },
+        {
+          "title": "Clean the wheel mounting faces and the central locating bore",
+          "body": "Keep friction dust controlled as described in preparation before the following wheel-mating cleaning.\n\nRemove corrosion, dirt and foreign material from the wheel's flat mounting face and the corresponding hub or brake-disc mounting face. Check that any fasteners retaining the disc to the hub are secure and do not interfere with the wheel seating flat.\n\nClean the central pilot bore inside the wheel as well. This is the locating hole that fits over the raised pilot at the hub center. Apply a thin film of Motorcraft XL-2 only at the bore-to-pilot interface. Keep it off the flat wheel mounting surfaces, studs, nuts, pads and disc friction surfaces. Wheel stud and nut threads must remain clean and dry."
+        },
+        {
+          "title": "Fit the wheel, restore the parking brake and lower with restraints",
+          "body": "Position the wheel and install all five nuts finger-tight only.\n\nWith the wheel fitted and all four wheels still clear on secure support, have the floor-standing helper apply the parking-brake lever at the safely reachable height without entering the cabin. On the SVT branch its cable must already be fully reconnected. Have everyone move clear before lowering. Lower the vehicle in a controlled manner and restore wheel chocks as the tires reach the ground, before removing the hoist support. Do not postpone the chocks until after lowering is complete."
+        },
+        {
+          "title": "Tighten the wheel nuts on the tires and schedule their recheck",
+          "body": "With the vehicle resting on its tires, tighten the five wheel nuts in a star pattern to 150 lb.ft (204 Nm). For the illustrated five-stud wheel, the order is top, lower left, upper right, upper left and lower right, viewed from outside the wheel.\n\nRetighten the wheel nuts within 160 km (100 mi) after reinstallation. Skipping the cross pattern can contribute to disc runout—side-to-side wobble as the disc turns—and subsequent brake roughness or vibration.\n\nOnce fully grounded and chocked, finish in automatic Park or a parked manual gear. For an automatic, use the valid key from known OFF, press START/STOP without pedals for engine-off ON, hold the brake and select Park, then release the pedals and switch OFF. A manual selects its parked gear with the engine OFF. Leave ignition OFF and the key outside, parking brake applied and chocks retained."
         }
       ],
       "watchFor": [
         {
-          "title": "Reused retaining hardware",
-          "body": "The removed spindle nut and all four hub bolts are discarded parts. Do not return them to service."
+          "title": "Brake bolts that look interchangeable",
+          "body": "The standard caliper-and-anchor-plate bolts tighten to 129 lb.ft (175 Nm). The 5.2L SVT Performance Package bracket bolts tighten to 81 lb.ft (110 Nm). Both pairs are replaced, and their values stay with their own branch."
         },
         {
-          "title": "Incomplete spindle-nut sequence",
-          "body": "The loosening stage is intentional. A torque-only installation omits part of the specified fastening process."
+          "title": "A caliper hanging from its hose",
+          "body": "Support the caliper before removing its mounting bolts and retain that support while it is aside. The brake hose must never carry the assembly's weight."
+        },
+        {
+          "title": "Reused hub hardware",
+          "body": "Discard the spindle nut and all four hub mounting bolts. Use the specified replacement quality and design."
+        },
+        {
+          "title": "An abbreviated spindle-nut sequence",
+          "body": "The sequence includes an initial torque, a 90° loosening stage, a second torque and an additional 30° tightening stage. A single final torque does not complete this installation."
+        },
+        {
+          "title": "A wheel that cannot sit flat",
+          "body": "Dirt, corrosion or an interfering disc-retaining fastener can prevent proper mounting. Correct the seating condition before tightening the wheel nuts."
         }
       ],
       "notes": [
-        "Although the specified tool is named a front wheel hub remover, this rear-hub procedure expressly calls for it."
+        "The specified 205-D070 tool is named Front Wheel Hub Remover; it is expressly used for pressing the halfshaft from this rear hub.",
+        "The standard and SVT brake instructions are alternatives. Perform only the branch matching the car.",
+        "The suspension overview provides component context. Spring, shock absorber, suspension-arm and stabilizer removal are outside this hub replacement sequence.",
+        "This job removes the wheel and tire as one assembly. Tire-changing and wheel-balancing machine requirements do not apply unless separate tire service is undertaken."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm assembly completion",
-          "body": "Check that the hub has four new mounting bolts, the correct brake-disc installation is complete, and the wheel-and-tire procedure has been completed."
+          "finding": "The car is a 5.2L application without SVT Performance Package, or its fitted brakes do not match either described branch.",
+          "meaning": "The brake access and fastening instructions here do not establish that configuration.",
+          "next": "Obtain matching brake-disc removal and installation instructions before teardown. Do not borrow the other branch's bolt torque."
         },
         {
-          "title": "Record the critical tightening",
-          "body": "Record completion of the cross-pattern hub tightening and every stage of the new spindle-nut sequence."
+          "finding": "The caliper cannot remain aside without pulling on the hose.",
+          "meaning": "Its support or position is unsuitable.",
+          "next": "Stop and reposition the caliper support so it carries the assembly independently of the hose before continuing."
+        },
+        {
+          "finding": "A replacement spindle nut, hub bolt or brake mounting bolt is unavailable.",
+          "meaning": "Required discarded hardware cannot be replaced as specified.",
+          "next": "Obtain the correct new hardware before reassembly; do not reuse the removed fastener."
+        },
+        {
+          "finding": "Corrosion, dirt or a retaining fastener holds the disc or wheel away from its mating face.",
+          "meaning": "The mounting joint is not ready to be fastened.",
+          "next": "Remove the affected part, clean the mating surfaces and correct the interference, then refit and perform the specified tightening."
+        },
+        {
+          "finding": "Brake operation is incorrect when the pedal is applied several times after reassembly.",
+          "meaning": "The required brake completion check has failed; hub replacement alone has not made the vehicle ready for service.",
+          "next": "Keep the vehicle out of service and resolve the brake assembly or system problem before driving."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Account for the replacement fasteners",
+          "body": "Confirm four new hub mounting bolts tightened in a cross pattern to 98 lb.ft (133 Nm), two new brake mounting bolts tightened to the value for the fitted branch, and a new spindle nut."
+        },
+        {
+          "title": "Confirm the complete spindle-nut sequence",
+          "body": "Check the recorded sequence: 184 lb.ft (250 Nm), loosen 90°, tighten to 85 lb.ft (115 Nm), then tighten an additional 30°. Confirm the service brake prevented shaft rotation during tightening. The helper operated the pedal from floor-standing reach while the car remained securely supported with all four wheels clear; no raised-cabin entry was required."
+        },
+        {
+          "title": "Confirm the brake reassembly",
+          "body": "Confirm the disc and caliper are installed, temporary supports are removed, the hose is clear and the repeated brake-pedal operation check is satisfactory. On the SVT branch, confirm both parking-brake cable connections are restored."
+        },
+        {
+          "title": "Confirm wheel installation and safe lowering",
+          "body": "Confirm the wheel seats flat, its pilot bore was cleaned, anti-seize is confined to the pilot interface and the threads remain clean and dry. Confirm the parking brake was applied before lowering and ground-wheel chocks were restored as the tires reached the ground."
+        },
+        {
+          "title": "Confirm final wheel torque and the follow-up",
+          "body": "Confirm final wheel-nut tightening was performed on the tires in a star pattern at 150 lb.ft (204 Nm). Retighten within 160 km (100 mi). These checks establish completion of the replacement; they are not a new bearing diagnostic test. Finish fully grounded and chocked in automatic Park or a parked manual gear, with engine and ignition OFF and the key outside."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686657",
-          "purpose": "Rear wheel bearing-and-hub removal and installation, including the specified remover, discarded fasteners and staged spindle-nut tightening.",
+          "purpose": "Primary rear bearing-and-hub replacement, halfshaft pressing tool, four new hub bolts and complete new-spindle-nut tightening sequence.",
           "mediaId": "G1686657-m0004"
         },
         {
           "documentId": "G1686507",
-          "purpose": "Wheel-and-tire removal for access and installation after hub replacement."
+          "purpose": "Wheel removal, mounting-face and pilot-bore cleaning, restricted XL-2 application, star-pattern tightening and retightening interval."
         },
         {
           "documentId": "G1693754",
-          "purpose": "Standard rear brake-disc removal and installation for the listed 2.3L, 3.7L and 5.0L applications.",
+          "purpose": "Standard rear-disc access for 2.3L, 3.7L and 5.0L: support the caliper-and-anchor-plate assembly, replace its two bolts, clean mating surfaces and check brake operation.",
           "mediaId": "G1693754-m0002"
         },
         {
           "documentId": "G1716401",
-          "purpose": "Rear brake-disc removal and installation for the listed 5.2L application with SVT Performance Package.",
+          "purpose": "5.2L with SVT Performance Package rear-disc access: release the parking-brake cable, support the caliper, replace bracket bolts, restore the cable and check brake operation.",
           "mediaId": "G1716401-m0004"
+        },
+        {
+          "documentId": "G1686641",
+          "purpose": "Rear independent-suspension context and identification of the hub and knuckle; other suspension components are outside the replacement sequence."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Marked lifting locations, hoist positioning and clearance precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant startup prevention, personal protection, lifting capacity and vehicle-restraint precautions."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Relevant friction-dust controls before brake handling and mating-surface cleaning."
         }
       ],
       "hero": {
@@ -6837,7 +6987,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Independent rear suspension. Brake access covered here: 2015 Mustang 2.3L, 3.7L and 5.0L using the standard rear-disc procedure; 5.2L with SVT Performance Package using its separate rear-disc procedure."
       },
       "relatedGuideIds": [
         "job-f7fbc18cba975fc3",
@@ -6864,14 +7015,66 @@
         {
           "documentId": "G1686641",
           "sourceHash": "03ab1c369f2f6448913ee43d9d80faff39a7720623f871665eab19f4897aae65"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "f925061d6bb296ec392e89faa89575b677874ef1ef6034ca9c25bb7b69752c94"
-      }
+        "fingerprint": "f925061d6bb296ec392e89faa89575b677874ef1ef6034ca9c25bb7b69752c94",
+        "editorialVersion": 2,
+        "editorialFingerprint": "db3e644c2fd0b213a299fc39dcf5baa02bbfc3dd6299e0029bb88ef3fc8c79e0",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-raise",
+          "title": "Secure the car and remove the wheel",
+          "summary": "Prevent starting, use the marked hoist points and release the parking brake only after full support.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "shaft-and-brake-access",
+          "title": "Separate the shaft and clear the brakes",
+          "summary": "Press out the halfshaft and perform the brake branch matching the fitted equipment.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "replace-hub-unit",
+          "title": "Replace the hub assembly",
+          "summary": "Remove four discarded bolts and secure the replacement with four new bolts in a cross pattern.",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "id": "restore-brakes-and-shaft",
+          "title": "Restore the brakes and shaft fastening",
+          "summary": "Refit the disc and correct brake assembly, complete the spindle-nut sequence and check brake operation.",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "id": "wheel-and-ground-restraints",
+          "title": "Refit the wheel and lower safely",
+          "summary": "Clean the mounting interfaces, restore restraints and finish the wheel tightening on the tires.",
+          "start": 16,
+          "end": 18
+        }
+      ]
     },
     {
       "title": "Replace a rear wheel knuckle",
@@ -25714,95 +25917,220 @@
     },
     {
       "title": "Replace the Right Steering-Column Wiper and Washer Switch",
-      "summary": "Remove the steering-column shrouds and replace the right multifunction switch while protecting its electrical terminals.",
-      "introduction": "The right multifunction switch controls the windshield wipers and washer. It mounts on the right side of the steering column control module, which provides the interface between the column switches and other vehicle systems. Replacement renews this driver control and its electrical connection; reaching it requires careful removal of the surrounding column trim.",
-      "why": "The shrouds use several tabs and clips, some reached by rotating the steering wheel. Releasing them in sequence gives access without forcing the trim. At the switch, the key precaution is protecting the component terminals: bent or damaged terminals can compromise the connection even when the replacement switch is mechanically secure.",
+      "summary": "Remove the column covers, replace the right wiper and washer stalk, tighten its retainers to 1 Nm, and check the fitted controls while parked with the engine off.",
+      "introduction": "I’ll start with the column trim, release its concealed attachments, protect the electrical contacts and tighten the replacement switch to its specified torque. The steering wheel stays installed throughout.",
+      "why": "The right multifunction switch controls windshield wiping and washing. It mounts on the right side of the steering column control module, or SCCM—the electronic go-between that passes the column controls’ requests to other vehicle systems. Replacing the stalk renews that control and its mating electrical connection. Careful access matters: the upper column cover has tabs reached at opposite steering-wheel positions, plus clips along its sides.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "right multifunction switch replacement",
-        "wiper stalk replacement",
-        "windshield wiper controls not responding",
-        "washer switch problem"
+        "2015 Mustang right multifunction switch",
+        "Mustang wiper stalk replacement",
+        "steering column shroud removal",
+        "RH windshield washer switch",
+        "wiper switch retainer torque"
       ],
       "when": {
-        "summary": "When the right multifunction switch has been identified as requiring replacement.",
+        "summary": "Use this procedure when the right multifunction switch has been identified as requiring replacement.",
         "notes": [
-          "Left-hand-drive illustrations are used; right-hand-drive work is similar.",
-          "Leave the steering wheel installed; it is removed from the switch illustration for clarity."
+          "A wiper or washer complaint alone does not establish that the stalk is defective.",
+          "The right stalk controls wiping and washing. Turn signals, high-beam selection and flash-to-pass belong to the left multifunction switch.",
+          "Keep the car on the ground and the engine off. This job leaves the steering wheel installed."
         ]
       },
       "prepare": [
         {
-          "title": "Gather the trim and fastening tools",
-          "detail": "Have an interior trim remover, a flat-bladed screwdriver, suitable retainer tools and a torque tool capable of the switch's specified low tightening value."
+          "title": "Gather tools and the correct replacement",
+          "detail": "Have an interior trim remover, a flat-bladed screwdriver, drivers that fit the shroud screws and switch retainers, and a low-range torque tool capable of 1 Nm (9 lb.in). Obtain the correct RH switch for the fitted wiper controls. Organize removed fasteners by component."
         },
         {
-          "title": "Arrange column access",
-          "detail": "Allow room to fully extend and lower the steering column and rotate the steering wheel as required by the shroud procedure."
+          "title": "Arrange stationary access and key control",
+          "detail": "With the engine OFF, select automatic Park or a parked manual gear and keep it selected throughout. Apply the parking brake and chock the wheels. Keep a valid intelligent access key available for the required mechanical steering-wheel rotations. Ignition stays OFF during access and refitting; the key leaves the vehicle before you handle the exposed switch or terminals. Wear eye and hearing protection, and protective gloves when handling sharp edges."
+        },
+        {
+          "title": "Prepare for the wet-screen completion check",
+          "detail": "Begin with the washer reservoir already adequately filled for the completion check, a fully defrosted windshield and a way to keep the glass wet. Reservoir replenishment is separate preparation, not an underhood operation taught by this switch-only procedure. If adequate fluid is unavailable, stop the washer check and arrange replenishment using the applicable complete instructions before continuing. Do not run the washer pump dry."
+        },
+        {
+          "title": "Know when to stop",
+          "detail": "This is switch replacement rather than an electrical fault-isolation procedure. If the steering wheel cannot make the required rotations with ignition OFF and a valid key inside, stop for the applicable steering-lock instructions. Do not force the wheel or energize exposed switch work. The 2015 Ford Mustang Owner’s Manual, printed page 122, explains that entering with the intelligent access key unlocks an equipped steering lock."
         }
       ],
       "steps": [
         {
-          "title": "Release the upper gap hider",
-          "body": "Follow [Steering Column Shrouds](#/document/G1692617). Fully extend and lower the column. Use the interior trim remover to release the tabs, disconnect the upper gap hider from the upper shroud and position it aside."
+          "title": "Secure the car and establish ignition OFF",
+          "body": "Keep the car grounded, parking brake applied and wheels chocked throughout. With the engine OFF, select automatic Park or a parked manual gear and maintain that gear throughout.\n\nIf remote start is fitted, disable it through Vehicle settings > Remote Start Setup before servicing the car. Complete this settings work while the column is assembled. If ignition power is needed, check its current state first. If already ON with the engine stopped, leave it ON. From confirmed OFF, bring the valid key inside and press and release START/STOP without pressing the brake or clutch to select engine-off ON. When settings are complete, return ON to OFF without pressing a pedal. If settings were unnecessary and ignition is already OFF, leave it OFF.\n\nKeep the engine off. Retain the valid key inside for the upcoming column positioning and wheel rotations, keeping hands clear of the ignition and stalk controls. The keyless controls are described in the 2015 Ford Mustang Owner’s Manual, printed pages 121–122. Apply the relevant [service precautions](#/document/G1693189)."
         },
         {
-          "title": "Release the upper shroud",
-          "body": "Release the upper shroud tabs. Rotate the steering wheel 90 degrees and release the accessible shroud tab with the flat-bladed screwdriver, then rotate the wheel 180 degrees and release the next tab. Release the outer clips on each side and remove the upper shroud."
+          "title": "Fully extend and lower the steering column",
+          "body": "Release the column adjustment lever beneath the column, draw the steering wheel fully toward you and lower the column fully. Secure the adjustment lever again so the column does not shift while you work.\n\nLeave the steering wheel installed. Its absence in the [RH switch procedure](#/document/G1693272) is for illustration clarity."
         },
         {
-          "title": "Remove the lower shroud",
-          "body": "Remove the lower shroud screws and lift away the lower shroud. This completes the specified access work before handling the switch."
+          "title": "Release and position aside the upper gap hider",
+          "body": "Find the flexible panel bridging the gap between the instrument panel and the upper column cover. Use the interior trim remover to release the tabs where it joins the upper shroud. Disconnect that edge from the shroud and position the gap hider aside.\n\nFree the attachments before moving the panel away. This is the first trim release in [Steering Column Shrouds](#/document/G1692617); the upper cover still has its own attachments."
         },
         {
-          "title": "Remove the right multifunction switch",
-          "body": "Follow the [right multifunction switch procedure](#/document/G1693272). Remove its retainers and withdraw the switch, making sure the component terminals are not bent or damaged."
+          "title": "Rotate the wheel 90 degrees and release the first tab",
+          "body": "With ignition OFF and the valid key inside, rotate the steering wheel 90 degrees from its starting position to reach one upper-shroud tab beside the steering-wheel hub.\n\nUse the flat-bladed screwdriver to release that tab. Keep the tool at the attachment rather than levering against the surrounding trim."
         },
         {
-          "title": "Install the switch and restore the trim",
-          "body": "Reverse the removal procedure, maintaining terminal alignment while installing the switch. Tighten its retainers to 9 lb.in (1 Nm). Reinstall the lower and upper shrouds and reconnect the upper gap hider by reversing their access sequence."
+          "title": "Rotate to the opposite access position and release the second tab",
+          "body": "Rotate the steering wheel 180 degrees from the first release position to reach the corresponding tab on the opposite side of the hub. Release it with the flat-bladed screwdriver.\n\nThe second movement is 180 degrees from the first access position. Both tabs must be released before lifting away the upper cover."
+        },
+        {
+          "title": "Release the side clips and remove the upper shroud",
+          "body": "Release the outer clips on each side of the upper column cover, then lift the upper shroud away.\n\nIf it remains attached, find the retaining point that is still engaged before pulling farther. The gap-hider tabs, the two wheel-accessed tabs and the outer side clips are separate attachments."
+        },
+        {
+          "title": "Remove the lower shroud, then remove the key",
+          "body": "Remove the two screws accessible from underneath the lower column cover. Support the cover as the screws come out, then remove the lower shroud.\n\nFinish any necessary mechanical wheel positioning now, keeping hands clear of exposed switches and terminals. Confirm ignition OFF and remove the intelligent access key from the vehicle before touching the RH switch or its connection. Prevent anyone else from operating the car."
+        },
+        {
+          "title": "Remove the RH switch retainers and withdraw the switch",
+          "body": "Identify the wiper/washer stalk and its mounting base on the right side of the SCCM. Remove the two retainers at the mounting ears at opposite ends of the base.\n\nSupport the switch and withdraw it carefully from its mounting and mating electrical connection. Keep the contacts aligned as they separate; do not twist or lever against them. Protecting these terminals from bending or damage is the key precaution in the [RH multifunction switch procedure](#/document/G1693272).\n\nLeave the steering wheel and SCCM in place."
+        },
+        {
+          "title": "Examine the mating terminals and alignment",
+          "body": "Look directly at the accessible terminals on the removed switch and its receiving connection. Check for bent or visibly damaged contacts, and establish how the replacement base aligns with the mounting and electrical interface.\n\nIf a terminal is damaged, stop and resolve the affected connection before assembly. Tightening the screws cannot rescue a contact folded out of the way."
+        },
+        {
+          "title": "Seat the replacement and tighten its retainers",
+          "body": "With ignition OFF and the key outside the vehicle, align the replacement switch with its mounting and mating terminals. Seat it carefully without bending the contacts. Complete terminal engagement before fastening the switch; do not use the screws to draw a misaligned connection together.\n\nInstall both retainers and tighten them to 1 Nm (9 lb.in). Use a suitable low-range torque tool. The imperial unit is inch-pounds, not foot-pounds.\n\nConfirm that the switch base is seated and secured before bringing the key back inside."
+        },
+        {
+          "title": "Refit the lower shroud",
+          "body": "Position the lower cover around the underside of the column and the stalk openings, then reinstall its two screws. Check that the cover sits correctly without trapping an edge against the switch.\n\nThe [shroud procedure](#/document/G1692617) uses reverse-order installation. Keep the switch’s 1 Nm tightening value associated with its retainers; it does not apply to the trim screws."
+        },
+        {
+          "title": "Refit the upper shroud and engage its attachments",
+          "body": "With switch mounting and terminal seating complete, bring the valid key inside for the mechanical wheel rotations. Keep ignition OFF and leave the electrical connection undisturbed.\n\nPosition the upper cover over the column and engage its outer side clips. Rotate the wheel through the opposite access positions used during removal and engage both upper-shroud tabs. Check that every attachment is seated, even if the seam appears even."
+        },
+        {
+          "title": "Reconnect the gap hider and lock the column adjustment",
+          "body": "Reconnect the gap hider’s released edge to the upper shroud and engage its tabs. Check that both covers meet properly and clear the stalk.\n\nReturn the wheel from the access positions. Release the column adjustment lever, move the column to a comfortable position and lock the lever securely. Confirm that the column stays in the selected position. This checks the adjustment lock; deliberately engaging the electronic theft lock is unnecessary.\n\nRemove tools from the cabin work area. Confirm ignition OFF and take the key out until ready for the assembled functional check."
+        },
+        {
+          "title": "Prepare for an assembled, engine-off control check",
+          "body": "Keep the parking brake applied and wheel chocks in place. Confirm full trim installation and a locked column adjustment. Fully defrost and wet the windshield, and confirm that the washer reservoir contains fluid. Keep people, hands and loose objects clear of the wiper sweep.\n\nBring the valid key inside. From known OFF, press and release START/STOP without pressing either the brake or clutch pedal. This selects ignition ON with the engine off. Do not start the engine. These keyless ignition actions are described in the 2015 Ford Mustang Owner’s Manual, printed page 121."
+        },
+        {
+          "title": "Check the fitted wiper and washer controls",
+          "body": "Move the RH lever downward from OFF to request a single wipe and confirm that function. The first upward position selects intermittent wiping on a conventional system, or automatic wiping when fitted autowipers are enabled in the information display. The next upward positions select normal wipe and then high-speed wipe. Select normal and high speed in turn and observe their operation, keeping the windshield wet. Return the control to OFF between checks as needed.\n\nFor conventional intermittent wiping, select the first upward position and turn the rotary control between shorter and longer intervals. Confirm that the pause between wipes changes. Speed-dependent shortening of the interval cannot be assessed while parked.\n\nIf autowipers are fitted, keep the car stationary with engine-off ignition ON and the wiper lever OFF while checking the setting. Use the steering-wheel information-display controls: up/down arrows scroll and highlight, the right arrow enters a submenu, the left arrow goes back, and holding left returns to the main menu. Select Settings > Vehicle > Wipers > Rain Sensing and use OK to choose and confirm that its checkbox is checked (enabled). An unchecked box disables it. The 2015 Ford Mustang Owner’s Manual, printed pages 83 and 89–90, supplies these controls and menu. Some options may not appear; if fitted equipment or the setting cannot be established, stop the automatic-response check and obtain the applicable configuration instructions rather than diagnosing the switch from an unknown setting.\n\nWith autowipers enabled, select the first upward position. The rotary control changes rain-sensor sensitivity through six settings: the lowest requires more moisture to trigger wiping, while the highest responds to less. Observe ordinary operation on the wet screen without treating a pause at one setting as proof of a defective switch. This check does not establish rain-sensor calibration or full performance.\n\nPull the lever toward you to request washer spray and confirm fluid reaches the windshield. Stop if the reservoir runs empty.\n\nThe lever positions, rotary controls and operating precautions are described in the 2015 Ford Mustang Owner’s Manual, printed pages 66–67."
+        },
+        {
+          "title": "Park the wipers and finish with ignition OFF",
+          "body": "Return the wiper control to OFF, release the washer lever and let the wipers finish and park. Turn any other operated controls off. Press and release START/STOP to return from engine-off ON to ignition OFF, then remove the key from the vehicle.\n\nFinish in this state whether the checks passed or exposed a problem. Before reopening the trim or touching the switch connection again, confirm ignition OFF and key out. Keep the vehicle parked and restrained; no driving test is needed."
         }
       ],
       "watchFor": [
         {
-          "title": "A shroud that remains attached",
-          "body": "Check the specified tabs and outer clips before applying more force; several separate retention points must be released."
+          "title": "Key control during access and refitting",
+          "body": "Use the valid key for the required ignition-OFF mechanical wheel rotations. Keep hands clear of controls and terminals during access, then remove the key before switch work. Finish switch mounting and terminal engagement before returning the key for refitting rotations."
         },
         {
-          "title": "Terminal damage",
-          "body": "Bent or damaged component terminals must not be overlooked during removal or installation."
+          "title": "A cover that resists removal",
+          "body": "Check the gap-hider attachments, both tabs reached at opposite wheel positions and the outer side clips. More pulling force with an attachment still engaged can damage the trim."
+        },
+        {
+          "title": "Terminal alignment",
+          "body": "Watch the mating contacts as the switch separates and seats. Stop for bent or damaged contacts or a connection that prevents proper seating. Fastening pressure cannot substitute for alignment."
+        },
+        {
+          "title": "Low switch-retainer torque",
+          "body": "Tighten both switch retainers to 1 Nm (9 lb.in), using a tool suitable for that low value. Keep this specification separate from the shroud screws."
+        },
+        {
+          "title": "Ice, dry glass and an empty washer reservoir",
+          "body": "Fully defrost and wet the windshield before wiping. Dry wiping can damage the glass, blades or motor. Running the washer without fluid can overheat its pump."
+        },
+        {
+          "title": "Autowipers fitted but switched off",
+          "body": "An autowiper-equipped car can have automatic wiping disabled in its information display. Confirm that setting is enabled before assessing automatic response. Equipment fitment alone does not establish that automatic wiping is active."
         }
       ],
       "notes": [
-        "The right switch operates the wipers and washer. Turn-signal and headlamp selection belong to the left multifunction switch."
+        "The [column-switch overview](#/document/G1693265) identifies the RH stalk as the wiper/washer control and explains its interface through the SCCM.",
+        "Key programming and steering-lock-module configuration belong to different repairs. Replacing this stalk does not include replacing the lock module, programming keys or changing anti-theft settings.",
+        "Autowipers use a rain sensor near the interior mirror. Keep the outside of the windshield clean, especially around that area. Dirt, mist or insects can affect automatic wiping.",
+        "For unexpected automatic wiping or smearing in wet or wintry conditions, the 2015 Ford Mustang Owner’s Manual, printed page 67, advises reducing sensitivity, selecting normal or high-speed wiping, or switching autowipers off.",
+        "With both autolamps and autowipers enabled, low-beam headlamps can illuminate when the rain sensor calls for normal-speed wiping. This is described in the 2015 Ford Mustang Owner’s Manual, printed page 67.",
+        "For streaks or smears, clean the windshield and blades; replace the blades if cleaning does not resolve the problem. Switch the wipers off before entering a car wash. See the 2015 Ford Mustang Owner’s Manual, printed pages 66–67."
       ],
       "diagnostics": [
         {
-          "finding": "The wipers or washer do not respond as expected.",
-          "meaning": "The right switch supplies the driver's request through the column module; the symptom alone does not establish switch failure.",
-          "next": "Establish the cause through wiper and washer diagnosis before choosing replacement."
+          "finding": "The original complaint is that the wipers or washer do not work.",
+          "meaning": "The stalk supplies the driver’s request through the SCCM. The complaint alone does not identify which component has failed.",
+          "next": "Establish the cause through appropriate wiper/washer diagnosis before replacing the stalk. This article teaches access and replacement rather than terminal-by-terminal electrical testing."
+        },
+        {
+          "finding": "A terminal is bent or damaged, or the replacement will not seat.",
+          "meaning": "The electrical interface may fail to engage correctly even when the mounting holes align.",
+          "next": "Keep ignition OFF and the key outside the vehicle. Resolve the damaged connection or alignment before seating and fastening the switch."
+        },
+        {
+          "finding": "The upper cover remains attached after one tab is released.",
+          "meaning": "The opposite wheel-accessed tab or outer side clips may still be engaged.",
+          "next": "Release the second tab at the opposite wheel position and check both side clips before lifting the cover away."
+        },
+        {
+          "finding": "Normal and high-speed wiping work, but automatic wiping does not respond or seems inconsistent.",
+          "meaning": "On an autowiper-equipped car, the information-display setting can disable automatic wiping. When enabled, moisture, sensitivity and windshield contamination affect the response. The rotary control adjusts sensitivity rather than a fixed delay.",
+          "next": "Use the stationary Settings > Vehicle > Wipers > Rain Sensing controls in step 15 to confirm enabled status before evaluating automatic response. If the setting or fitted configuration is unknown, stop that check for applicable setup instructions. Then confirm the first upward lever position and selected sensitivity and use the owner’s operating guidance for the sensor area. Avoid judging the new stalk solely from an automatic-setting pause."
+        },
+        {
+          "finding": "Wiping works but leaves streaks or smears.",
+          "meaning": "Poor clearing does not by itself establish a switch fault.",
+          "next": "Clean the windshield and wiper blades. If clearing remains poor, replace the blades as advised in the 2015 Ford Mustang Owner’s Manual, printed pages 66–67."
+        },
+        {
+          "finding": "One or more functions still fail after reassembly.",
+          "meaning": "Replacement has not established a successful repair. The connection or another part of the wiper/washer system may require attention.",
+          "next": "Finish with controls OFF, wipers parked where possible, ignition OFF and key out. Before any renewed connector work, maintain that shutdown state. Recheck switch seating and terminal condition; if installation is correct, continue system diagnosis instead of guessing at another part."
+        },
+        {
+          "finding": "A Steering Malfunction message appears.",
+          "meaning": "The [column-system description](#/document/G1693266) identifies this as an electronic steering-column-lock fault requiring diagnosis.",
+          "next": "Stop this replacement workflow and have the lock fault diagnosed. Do not add key programming or lock-module replacement to the wiper-stalk job."
         }
       ],
       "verification": [
         {
-          "title": "Confirm switch installation",
-          "body": "Confirm the terminals remain undamaged and the switch retainers are tightened to specification."
+          "title": "Switch mounting and connection",
+          "body": "Before covering the switch, confirm undamaged, fully engaged terminals, a seated mounting base and both retainers tightened to 1 Nm (9 lb.in)."
         },
         {
-          "title": "Confirm trim restoration",
-          "body": "Verify the lower shroud screws, upper shroud tabs and side clips, and upper gap hider have all been restored."
+          "title": "Trim and column restoration",
+          "body": "Confirm installation of both lower screws, both upper-shroud tabs, the outer side clips and the gap-hider attachments. Check that the covers clear the stalk and the column adjustment locks securely."
+        },
+        {
+          "title": "Stationary operation",
+          "body": "After full reassembly, verify single, normal and high-speed wiping and washer spray with the engine off, the windshield wet and defrosted, and fluid in the reservoir. Check conventional intermittent adjustment where fitted. Before checking automatic response on an autowiper-equipped car, confirm that autowipers are enabled in the information display; distinguish sensitivity adjustment from a fixed intermittent delay."
+        },
+        {
+          "title": "Final shutdown",
+          "body": "Leave controls OFF, the washer lever released, wipers parked, ignition OFF and key outside the vehicle. Keep the parking brake and wheel chocks in place throughout the work and any subsequent reinspection."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693272",
-          "purpose": "Remove and install the right steering-column multifunction switch, preserving terminal condition and the specified retainer torque."
+          "purpose": "Primary RH multifunction-switch removal and reverse-order installation, including terminal protection and retainer tightening to 1 Nm (9 lb.in)."
         },
         {
           "documentId": "G1692617",
-          "purpose": "Remove and reinstall the upper and lower steering-column shrouds and gap hider for switch access.",
+          "purpose": "Required column-cover access and refitting: column positioning, gap-hider release, opposite-position tab releases, outer clips and lower-cover screws.",
           "mediaId": "G1692617-m0004"
+        },
+        {
+          "documentId": "G1693265",
+          "purpose": "Identify the RH switch’s wiper/washer function, mounting on the SCCM and relationship to the other column controls."
+        },
+        {
+          "documentId": "G1693266",
+          "purpose": "Explain engine-off ignition control, valid-key recognition and the separate function and fault messages of an equipped electronic steering-column lock."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply relevant remote-start prevention, key control and personal-protection precautions."
         }
       ],
       "hero": {
@@ -25826,7 +26154,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the RH windshield-wiper/washer multifunction switch; 2.3L, 3.7L, 5.0L or 5.2L. Left-hand-drive arrangement illustrated; right-hand-drive work is similar. Account for autowipers, remote start and an electronic steering-column lock where fitted."
       },
       "relatedGuideIds": [
         "job-26fd24f75a55cf78"
@@ -25847,14 +26176,62 @@
         {
           "documentId": "G1693266",
           "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535"
+        },
+        {
+          "documentId": "G1672905",
+          "sourceHash": "3cfe468c7d29c970a5d7a5afdf77481ae308d2f641201fa735458a4279e7089a"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "aee9b6d26795b56fa52fc080a75255c40ed0ecbeda01c1464642270fb1626fc8"
-      }
+        "fingerprint": "aee9b6d26795b56fa52fc080a75255c40ed0ecbeda01c1464642270fb1626fc8",
+        "editorialVersion": 2,
+        "editorialFingerprint": "b0d96d7edda7efd36867c9beabd0c9688b61f15b0c19ef8955291475ef32b03a",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-position",
+          "title": "Secure the car and position the column",
+          "summary": "Prevent unintended starting and establish working room with ignition OFF.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "uncover-the-column",
+          "title": "Release the column trim",
+          "summary": "Free the gap hider, opposite-position tabs, side clips and lower screws.",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "id": "replace-the-stalk",
+          "title": "Replace and secure the RH switch",
+          "summary": "Protect the terminals, seat the replacement and apply the specified torque.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "restore-the-covers",
+          "title": "Restore the covers and column adjustment",
+          "summary": "Complete reassembly and lock the column adjustment before applying ignition power.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "check-and-shut-down",
+          "title": "Check the controls and shut down",
+          "summary": "Check wet-screen operation while parked with the engine off, then park the wipers and remove the key.",
+          "start": 14,
+          "end": 16
+        }
+      ]
     },
     {
       "title": "Replace the steering wheel multifunction switches",

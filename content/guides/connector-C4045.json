@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4045",
+  "supportingSourceRefs": [],
+  "sourceHash": "69ae118b09d316f1c891509648c7f1cea54f05ad1f3fc8e144626fd44a3380cc",
+  "title": "C4045 — Right rear damper solenoid",
+  "introduction": "This reference puts an electrical identity to the right rear damper solenoid's connector. I start with CNumber and Description, use the illustrated housing landmarks to find the cavity labels, then read across the corresponding Cavity row. Think of the pin table as the solenoid's seating chart: each connection has an assigned place and function.\n\nCircuit Number identifies the circuit, Color records its wire-color code, and Function distinguishes the labeled sides of the damper-valve connection. The pigtail table then ties the catalog listing to a service part and engineering shell; it does not diagnose the solenoid or prescribe replacement.\n\nUse this page for identification and table reading. Physical viewing direction, access, probing, test conditions and repairs require separate applicable instructions. Gauge conventions and the Box, Size and Used codes are undefined here; keep those fields separate rather than assuming they describe the same thing. COMPLETE is the record's status, not a verdict on the installed connector.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4045-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "The drawing has nested upright oval outlines with a rectangular extension on the left. I use those features to keep the upper and lower cavity labels in context while reading the table. Their position on the page does not establish a physical viewing direction or a connector-release movement."
+    },
+    {
+      "blockId": "connector-C4045-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Read each row across from Cavity through the circuit identity, color, gauge, function and terminal reference. The positive and negative marks belong to the stated damper-valve functions; they do not establish a direct battery feed or chassis ground. A matching row identifies the connection without proving that it carries current correctly."
+    },
+    {
+      "blockId": "connector-C4045-b00007",
+      "text": "Pigtail catalog references",
+      "why": "I connect Kit List to Number and compare the connector's Hard Shell and Fpn entries with Engineering Shell. Service Part identifies the cataloged pigtail, while Material, Gauge and Cavities describe that listing. These fields support a reference lookup, without supplying terminal installation or splice instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:56.431Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3df640346fcce1b33b52afe1ab6d1618bb28ba3e07503f1f34e2dcf58df49bca",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8ad2df324e113bfbaf6fdc533f5fa4400a41e008d6a44281b42978c9d702d3ce",
+    "reviewedAt": "2026-10-28T00:10:56.431Z"
+  }
+}

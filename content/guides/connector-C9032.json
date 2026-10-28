@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C9032",
+  "supportingSourceRefs": [],
+  "sourceHash": "49060fcc77619c5f848833a52f4eb4fa8c659a00001efde2f82034aafe1fe915",
+  "title": "C9032 — RH side air curtain",
+  "introduction": "I read this air-curtain connector reference from identity to shape to circuit: check CNumber and Description, find the cavity labels in the drawing, then follow the matching Cavity row across the pin table. The housing outline is the street map; the cavity labels are the addresses. Wire color helps identify a row, while Function explains the connection's assigned role.\n\nThe final table connects the pigtail listing to its service-part and engineering-shell references. Keep its Gauge entry separate from the circuit table's Gauge entries; this page does not explain the gauge convention or authorize a wire substitution.\n\nThis is an identification and reading guide. Physical viewing direction, access, restraint-system preparation, electrical test conditions and repair methods need separate applicable service instructions. Box, Size and Used are undefined reference fields here, and COMPLETE describes the reference record rather than proving the vehicle's connector is healthy.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9032-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I use the circular recess on the right, its inward rectangular feature and the broad housing extension on the left as landmarks within the drawing. The upper and lower cavity labels connect the illustration to the table. These are drawing positions; they do not establish which side of a physical connector to view."
+    },
+    {
+      "blockId": "connector-C9032-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Follow each Cavity row through Circuit Number, Color, Gauge and Function to keep the connection's identity together. The function labels distinguish the positive and negative sides of the curtain circuit; they are not instructions to apply power or assume a chassis-ground connection. Read Terminal Part Number as recorded without treating every entry as an individually orderable terminal."
+    },
+    {
+      "blockId": "connector-C9032-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I cross-reference Kit List with Number, then compare Hard Shell and Fpn with Engineering Shell. That connects the connector record to the listed pigtail and service part. Image names the associated illustration file; the listing alone neither establishes a repair method nor calls for replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:56.421Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "816a383ffb87aeb8cf31a60b1dd5dea41c5708d64b49f48cb6d8e3f30ed0ff07",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9c0a0719efdabdfb8947eaed4db48b29214a9fd1b08897207af23862a83c8813",
+    "reviewedAt": "2026-10-28T00:10:56.422Z"
+  }
+}

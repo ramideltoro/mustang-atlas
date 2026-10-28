@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1611",
+  "supportingSourceRefs": [],
+  "sourceHash": "4214234f9748a94fa78079f2a62025a409b2995f37af30a95eea8eabf8d5775a",
+  "title": "C1611 — Variable camshaft timing bank 2 solenoid 2 (VCT22)",
+  "introduction": "This solenoid belongs to the system that changes the engine’s valve timing through oil-controlled actuators. Its connector reference gives the electrical addresses for that job. I start with identity, because a familiar-looking plug is a poor substitute for the right address on the envelope.\n\nRead the connector description first, use the drawing’s cavity labels to enter the pin table, and follow each row across to its circuit and function. That reveals which connection supplies power and which belongs to the powertrain controller. The final table links the connector shell with its listed pigtail service item. This is an identification guide: physical viewing direction, access, probing, test limits and replacement methods need separate procedures. Size and Used codes and the gauge convention remain undecoded reference labels, not a basis for wire selection.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1611-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "The drawing places the latch structure on the left and a small inner-wall projection beside the upper cavity. I use those visible landmarks to keep the illustrated labels aligned with the table. They establish positions on the page, not a physical viewing side or latch-release movement. The identification row associates this particular shell drawing with its harness."
+    },
+    {
+      "blockId": "connector-C1611-b00005",
+      "text": "Read the pin and circuit assignments",
+      "why": "Match the illustrated cavity label to Cavity, then read across Circuit Number, Color and Function to distinguish the supply from the controller connection. Keep the bank/solenoid wording in the title and the valve wording in Function as written; this sheet does not explain their numbering conventions. Gauge and Terminal Part Number identify the listed wiring and contact, while a blank Qualifier adds no stated condition. Circuit identification alone cannot establish electrical health."
+    },
+    {
+      "blockId": "connector-C1611-b00007",
+      "text": "Match the pigtail service listing",
+      "why": "The pigtail is the connector assembly with attached leads. Number connects this listing with Kit List; Engineering Shell connects it with Hard Shell and the drawing’s Fpn entry. I use Service Part for the listed service-item identity and Image for the associated illustration filename. The pigtail’s Gauge entry describes that catalog item separately from the circuit wiring; it is not a splicing or wire-selection instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:21:21.119Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "668023b4041b888dd41127273b43278a514c3233947447dfae48a47671ea6dcc",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7d629a136c0321ac567244ee127ccce3bcd4c354fc1db3535804f7d498c7b8ea",
+    "reviewedAt": "2026-10-28T00:21:21.119Z"
+  }
+}

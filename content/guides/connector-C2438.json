@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2438",
+  "supportingSourceRefs": [],
+  "sourceHash": "5f696f39de18411340e90cea18da2a34dffd1f50d9a386d4c6810df2aa9f0e2e",
+  "title": "C2438 — Driver-side center register air discharge temperature sensor connector",
+  "introduction": "This reference maps the connector for the driver-side center register air discharge temperature sensor. I treat the cavity labels like names on a tiny seating chart: their position in the drawing gets you to the right table row, and that row explains the circuit’s role.\n\nStart with the connector identity table, use the drawing’s cavity labels to read the pin assignments, then use the pigtail table for the listed service-assembly identifiers. The function descriptions distinguish the climate module’s reference return from the discharge-temperature sensor circuit. They describe connections, not a measured air temperature or a verdict on the sensor.\n\nThis page supports reference reading. Access, physical terminal-side or wire-side viewing direction, probing, sensor test values and replacement methods are outside its scope. Gauge conventions and the Size and Used codes are undefined here; retain them as reference entries without turning them into wire-selection or diagnostic rules.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2438-b00002",
+      "text": "Connector face map · Harness 18B574",
+      "why": "The cavities are stacked vertically in the drawing. I use the rounded left outline, the rectangular projection on the right and the lower projecting lip to keep that layout recognizable. These are illustration landmarks, not connector-release instructions."
+    },
+    {
+      "blockId": "connector-C2438-b00005",
+      "text": "Read the sensor circuit map",
+      "why": "Match a drawn cavity label to the Cavity column, then read across for its circuit identifier, color, gauge, function and terminal entry. Keep the reference-return role distinct from the sensor-circuit role; the return wording is not a basis for treating it as an interchangeable chassis ground. The map identifies the connections but supplies no pass-or-fail sensor reading."
+    },
+    {
+      "blockId": "connector-C2438-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "The pigtail is the connector-and-lead service assembly. Match Kit List in the identity table to Number in this table, then read Service Part and Engineering Shell as separate identifiers. The pin-assignment and pigtail Gauge entries differ; each belongs to its own table and does not establish a wire-substitution rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:15:20.849Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "1be466c2dd4219d736df19d2e548aedc85ae7cf4fe47abfaeb57cb6f180382e3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0318fba155becf89d2eb5dfa7856036dd14fe8a7914a78f5742921a1ebc49a46",
+    "reviewedAt": "2026-10-28T00:15:20.849Z"
+  }
+}

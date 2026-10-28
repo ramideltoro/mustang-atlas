@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1369",
+  "supportingSourceRefs": [],
+  "sourceHash": "4016f75fb3a499cf0941ec22cf6616bbdb65298b58de40e50d01f7f8446deff6",
+  "title": "C1369 — Variable camshaft timing bank 1 solenoid 2 (VCT12)",
+  "introduction": "Variable camshaft timing adjusts when the engine’s valves open and close. I think of it as editing the valve timetable while the engine runs; the control solenoid helps the oil-operated timing system make those changes. This reference identifies the solenoid’s electrical connection and links the drawing’s cavity labels to the circuit table.\n\nStart with the connector identity and description, then read the drawing alongside the Cavity and Function columns. The map distinguishes the power supply from the powertrain-controller connection; it does not demonstrate that either circuit works. Finish with the pigtail table to understand the listed service-part relationship. Physical viewing direction, access, probing, test limits and replacement methods are outside this reference. Size and Used codes and the gauge convention are not decoded here, so they cannot establish wire selection.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1369-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "I use the large latch structure on the drawing’s left and the small projection midway along the inner left wall as landmarks for reading the vertically arranged cavity labels. Those features help register the illustration with the table; they do not establish which side of a physical connector to view or how to release its latch. The identification row beneath the drawing ties the depicted shell to its harness."
+    },
+    {
+      "blockId": "connector-C1369-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Follow each drawing label into the matching Cavity row, then read across to Circuit Number, Color and Function. This separates the supply connection from the controller connection without treating wire color alone as an address. Gauge and Terminal Part Number describe the listed wiring and contact; a blank Qualifier supplies no additional condition. These assignments identify circuit roles, not passing test results."
+    },
+    {
+      "blockId": "connector-C1369-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "A pigtail is the connector with attached wire leads. I read Number alongside Kit List, then compare Engineering Shell with Hard Shell and Fpn to follow the catalog relationship. Service Part identifies the listed service item, while Image names its illustration file. The pigtail and circuit tables describe different items, so their Gauge entries are not an instruction to change the vehicle wiring. Identification comes before any separate repair decision."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:21:21.110Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "fbdaa95fadd194bf069238f22b78f3c8485a900d5f45fdf3b05a12c34923abf0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "60f7c905ca1de60cda6bc911adbdd15f94950d1bea2dbb8c191ad8cf696a38d8",
+    "reviewedAt": "2026-10-28T00:21:21.111Z"
+  }
+}

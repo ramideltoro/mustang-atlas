@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1610",
+  "supportingSourceRefs": [],
+  "sourceHash": "ccf2dad5d57494b98c94d31e46a82274e3efc98b9890d819662cf65338e61225",
+  "title": "C1610 — Variable camshaft timing bank 1 solenoid 2 (VCT12)",
+  "introduction": "The camshaft-timing solenoid helps an oil-controlled system change the engine’s valve schedule. This sheet maps its electrical connection: connector identity, illustrated cavities, circuit functions and the listed pigtail service item. I treat the housing drawing like a key’s cut pattern—the outline and locating features deserve attention alongside the label.\n\nStart with the identity table, use the cavity labels in the drawing to find the corresponding pin-table rows, then read across to the circuit and function. The supply and controller connections have different jobs; identifying them does not prove either works. Use the final table to trace the service-item relationship. Physical viewing direction, access, probing, test limits and replacement methods are outside this reference. Box, Size and Used remain separately named reference fields with unexplained codes, and the gauge convention is not established for wire selection.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1610-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "I orient my reading around the broad outer housing, the latch structure on the drawing’s left and the rectangular features flanking the inner opening. The cavity labels run vertically inside that opening. These landmarks locate information within the illustration; they do not specify a physical viewing side or release method. The row beneath the drawing associates the shell with its harness."
+    },
+    {
+      "blockId": "connector-C1610-b00005",
+      "text": "Trace the cavity and circuit assignments",
+      "why": "Enter the table through the Cavity label from the drawing, then read Circuit Number, Color and Function together. The functions distinguish a power-supply connection from the powertrain-controller connection for camshaft timing. Terminal Part Number identifies the listed contact, and Gauge describes the circuit entry. A blank Qualifier contributes no stated condition. This map supports identification; it supplies neither a measurement setup nor a fault verdict."
+    },
+    {
+      "blockId": "connector-C1610-b00007",
+      "text": "Read the pigtail service identification",
+      "why": "A pigtail combines the connector with attached leads. I connect Number to Kit List and Engineering Shell to Hard Shell and Fpn, keeping the service-item identity separate from the shell identity. Image is an illustration filename. The Gauge entries in the pigtail and circuit tables describe their respective items; their difference is not permission to substitute wiring. Any installation or splice needs its own applicable repair instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:21:21.126Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "fc218a98f513e5e1f45eedcba0509941de542de9225f0f0a9c573ff2a34e779c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "386f82ea997bf4ee27065957214e2f9d7649eb24a16cfd3e11a8881a0e6a9da4",
+    "reviewedAt": "2026-10-28T00:21:21.126Z"
+  }
+}

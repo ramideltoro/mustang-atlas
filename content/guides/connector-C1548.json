@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1548",
+  "supportingSourceRefs": [],
+  "sourceHash": "6640b3ce74c30af0c5b9c8e2840a5876a8a2e02915a617dbefe210903c972561",
+  "title": "C1548 — Variable Camshaft Timing Bank 2 Solenoid 2 (VCT22)",
+  "introduction": "Variable camshaft timing changes when the engine’s valves open and close. The control solenoid helps the engine controller manage that timing through the oil-operated system. I use this reference as the connector’s address book: the drawing locates cavity labels, the pin table connects those labels to circuits, and the service-parts table identifies the listed pigtail.\n\nStart with the connector identity and description, then match the drawing and read across the corresponding Cavity row. The power-feed and powertrain-control functions explain the connection’s roles; they do not prove that either circuit is working. An address book can tell you where the command belongs without proving it arrived.\n\nThis is an identification guide. Physical viewing direction, gauge convention and the meanings of Box, Cols, Size and Used are not defined here. Access, probing, test limits, wire selection and replacement require the applicable service information; this page does not teach those operations.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1548-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the vertically arranged cavity labels and the housing’s asymmetric outline to navigate the drawing. The broad latch structure appears on the left as drawn; that is a feature of this illustration, not a statement about its installed direction. Match Hard Shell with Fpn and check Harness Id to keep the drawing tied to its identity record."
+    },
+    {
+      "blockId": "connector-C1548-b00005",
+      "text": "Read the pin and circuit assignments",
+      "why": "Find a cavity label in the illustration, then follow its Cavity row across Circuit Number, Color, Gauge and Function. The feed function and the powertrain-module control function serve different roles, so I read the full Function wording rather than judging a wire by color alone. Qualifier, Used and Terminal Part Number remain part of that same row; an empty qualifier supplies no additional applicability condition."
+    },
+    {
+      "blockId": "connector-C1548-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "I connect Kit List to the pigtail table’s Number, read Service Part for the listed service identifier, and cross-check Engineering Shell against Hard Shell and Fpn. Terminal Part Number belongs to the contact record in the pin table. The harness and pigtail Gauge entries describe separate records; their presence is not an instruction to substitute wire or splice in a replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:20:48.852Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "6d652067c602080b0fa9082d4bcc6eb36b216f1a4f265b906539ee0511bb675a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9a8f9ec6acbaea207503ce12f034c8147699951a0e0bf86860f0067ffc6a246f",
+    "reviewedAt": "2026-10-28T00:20:48.853Z"
+  }
+}

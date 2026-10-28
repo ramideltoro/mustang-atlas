@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C3459",
+  "supportingSourceRefs": [],
+  "sourceHash": "7baee3e75319ad1e964a2c41a8df7c27eecb512196517b0fe2ca2223ab3fd828",
+  "title": "C3459 — Passenger Side Airbag",
+  "introduction": "The Function descriptions identify this connection more specifically as the seat-mounted, outboard front-passenger side airbag connection. I start there because “passenger side” alone leaves too much room for confusion. The restraints controller commands deployable components as part of the supplemental restraint system; this page maps the connector’s circuit identities.\n\nRead the identity record, locate the cavity labels in the circular face, then follow the matching Cavity rows across the pin table. The positive and negative function labels distinguish the controller’s circuit pair. They are identification labels, not instructions to apply power or perform a resistance check. Think of the drawing as a seating chart for the connections, with every label kept in its assigned place.\n\nThis is a reading guide, not a depowering, disconnection, testing or replacement procedure. Physical viewing direction, gauge convention and the Box, Cols, Size and Used codes are unspecified. The separate restraint-service instructions are required before hands-on work.",
+  "requirements": [
+    {
+      "category": "Before hands-on restraint-system work",
+      "items": [
+        {
+          "name": "Qualified personnel and restraint-specific procedures",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Use the applicable depowering, handling, specified test equipment and restoration instructions before servicing this connection. Consult the [pyrotechnic-device precautions](#/document/G1693191) and [supplemental restraint system overview](#/document/G1696290); this connector reference does not contain the service sequence. Do not substitute a generic jumper or resistance test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C3459-b00002",
+      "text": "Connector-face map · Harness 14C687/14D233",
+      "why": "The illustration shows cavity labels side by side within a circular face, beneath an upper key feature and inside an elongated housing. I use that arrangement to navigate the page, then cross-check Hard Shell, Fpn and Harness Id. Those visible features identify the drawing; they do not establish the installed viewing side or explain how any locking feature releases."
+    },
+    {
+      "blockId": "connector-C3459-b00005",
+      "text": "Read the airbag circuit assignments",
+      "why": "Match each illustrated cavity label to its Cavity row, then read the circuit identifier, Color, Gauge and complete Function together. The function wording preserves both the airbag’s specific location and the circuit’s polarity label. Terminal Part Number contains no usable terminal identifier here; that is not permission to select a generic contact. The rows describe connections without establishing test points or service actions."
+    },
+    {
+      "blockId": "connector-C3459-b00007",
+      "text": "Identify the airbag pigtail listing",
+      "why": "I follow Kit List to Number and read Service Part alongside Engineering Shell, cross-checking the latter against Hard Shell and Fpn. Material and Gauge remain attributes of the listed pigtail record. The presence of a service listing does not teach replacement or override the qualified-personnel restriction and restraint-specific handling requirements."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:20:48.879Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "207b7d79290c8d537471ccb52df00ee5a9189fccffcdea6a5a60922b3151d739",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "14864bf228a0d47708f015be0a20f26ea87b514559f533646e45c842c8d1fe70",
+    "reviewedAt": "2026-10-28T00:20:48.879Z"
+  }
+}

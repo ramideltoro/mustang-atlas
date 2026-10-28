@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1370",
+  "supportingSourceRefs": [],
+  "sourceHash": "ecede78c706d85802ed833d419ae4c15560d93ee12d642f1283bfa28e9066854",
+  "title": "C1370 — Variable Camshaft Timing Bank 1 Solenoid 1 (VCT11)",
+  "introduction": "Variable camshaft timing lets the engine change when its valves open and close. The control solenoid helps the engine controller manage the oil-operated timing system. I use this page to understand its electrical connection by moving from connector identity to the drawing, then from cavity labels to circuit records.\n\nThe useful trick is keeping shape and function together. The housing outline is the plug’s silhouette; the table is its address book. Read the full circuit row to distinguish the power feed from the controller’s timing-solenoid connection, then use the separate service listing to find the recorded pigtail identifiers.\n\nThis reference identifies connections and parts records. It does not specify physical viewing direction, access, probing, diagnostic limits or replacement steps. Gauge convention and the Box, Cols, Size and Used codes are undefined here, so they cannot independently establish wire choice, dimensions or interchangeability.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1370-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the oval central face, vertically stacked cavity labels and rectangular latch structure on the left as drawn to navigate this illustration. The small projection on the opposite side is another visible landmark. Cross-check Hard Shell, Fpn and Harness Id before using the map; these landmarks describe the drawing rather than an access route or release movement."
+    },
+    {
+      "blockId": "connector-C1370-b00005",
+      "text": "Read each pin’s circuit assignment",
+      "why": "Choose the Cavity row that matches the illustrated label and read across Circuit Number, Color, Gauge and Function. The feed entry identifies the supply role, while the powertrain-module entry identifies the timing-valve control connection. Neither entry is a measurement or proof of operation. Keep the terminal identifier with its row, and leave Qualifier and Used uninterpreted beyond their printed entries."
+    },
+    {
+      "blockId": "connector-C1370-b00007",
+      "text": "Identify the listed service pigtail",
+      "why": "Follow Kit List to Number, then use Service Part for the listed service identifier and Engineering Shell to cross-check the housing record. The pin table’s Terminal Part Number identifies a different part category. I keep the harness-wire Gauge and service-pigtail Gauge entries separate: a parts listing supplies identification, not permission to choose substitute wire or invent a splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:20:48.871Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "0920a4e67106a0c258717cfad94eeb7205b50df63603ca2c39433e803c2e636d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "87d85fd282d08834dd720bc8b0f392363b521d729cfa3a8740a8723a28678ca3",
+    "reviewedAt": "2026-10-28T00:20:48.871Z"
+  }
+}

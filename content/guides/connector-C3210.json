@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3210",
+  "supportingSourceRefs": [],
+  "sourceHash": "933176955caa5e77021ce0605552de5bd54269945967e5c45d0bfc34845ae045",
+  "title": "C3210 — LH B-pillar side impact sensor",
+  "introduction": "This reference identifies the left-hand B-pillar side impact sensor connector and maps its cavities to the driver-side circuit descriptions. I check CNumber and Description before reading the drawing, then carry each cavity label across its matching table row. It's a small connector with a very specific mailing address: keeping the driver-side identity attached to the circuit matters more than recognizing a familiar plastic outline.\n\nUse Circuit Number, Color and Function together to understand each assignment. Keep the printed negative designation where it appears, without adding positive polarity to the unmarked sensor function. The final table connects the pigtail catalog entry to its service part and engineering shell; its Gauge field remains separate from the circuit table's Gauge field.\n\nThis is a reference-reading guide. Physical viewing direction, gauge convention and the Box, Size and Used codes remain undefined. Access, restraint-system preparation, testing and repairs need their own applicable service instructions. COMPLETE is a record status, not confirmation that the vehicle's sensor or connector works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3210-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I use the broad rectangular section on the left, the rounded cavity area on the right and the shaped upper and lower projections to navigate this illustration. The vertically arranged cavity labels lead into the table. Drawing position alone does not establish the viewing side of the physical connector."
+    },
+    {
+      "blockId": "connector-C3210-b00005",
+      "text": "Driver-side circuit assignments",
+      "why": "Read across each Cavity row so the circuit identity, color, gauge, driver-side function and terminal reference stay together. The control-module function includes a negative designation, while the sensor function has no positive mark. That distinction is part of the reference; it does not supply test polarity, a voltage target or a chassis-ground conclusion."
+    },
+    {
+      "blockId": "connector-C3210-b00007",
+      "text": "Pigtail service references",
+      "why": "I link Kit List with Number, then compare Hard Shell and Fpn with Engineering Shell to follow the catalog relationship. Service Part names the listed pigtail, and Image identifies its illustration file. This is enough to navigate the parts reference, without deciding that replacement is needed or explaining how to install it."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:56.446Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "d250256e4689f5d59ba01bf1fad082e477833cbd98d7af1f82c56865fd78edb9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3332ef1ea3e00c7b2ea0de620ac8c005b2de09ae4207fffcce7807bf8dd12f9f",
+    "reviewedAt": "2026-10-28T00:10:56.447Z"
+  }
+}

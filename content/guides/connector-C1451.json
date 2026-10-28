@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1451",
+  "supportingSourceRefs": [],
+  "sourceHash": "3255152dab306cf7312aac7b6ff481aa1aac60e1f9063a34b19d7a6d77c67a28",
+  "title": "C1451 — Variable Camshaft Timing Bank 1 Solenoid 1 (VCT11)",
+  "introduction": "Variable camshaft timing adjusts when the engine’s valves open and close, with control solenoids helping the engine controller direct the oil-operated timing system. Here, I trace the electrical connection on paper: identify the connector, find its cavity labels in the drawing, then follow the matching rows into the circuit and service-parts tables.\n\nThink of the housing outline as the envelope and the cavity labels as the addresses inside it. The outline helps you navigate this particular drawing; the circuit records tell you what each connection serves. The feed and controller-command functions explain the electrical roles without establishing whether the solenoid or wiring is healthy.\n\nThis page supports identification, not access, probing, wire selection or replacement. It leaves the physical viewing direction, gauge convention and Box, Cols, Size and Used codes undefined. Use the applicable service procedure for hands-on work and diagnostic decisions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1451-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "The drawing places the cavity labels vertically inside an elongated central opening, with a broad latch structure on the left as drawn. I use those visible features to keep my place on the page. Hard Shell, Fpn and Harness Id provide the identity cross-check; the drawing’s page orientation does not establish an installed viewing direction."
+    },
+    {
+      "blockId": "connector-C1451-b00005",
+      "text": "Match pins to their circuit records",
+      "why": "Use the illustration’s cavity label to choose a Cavity row, then read across the circuit identifier, wire description and Function. The power-feed entry and the powertrain-controller entry identify different electrical jobs. Color helps identify a record, but Function explains its role. Read Terminal Part Number with the selected row, and retain the Qualifier and Used fields without assigning them an unstated meaning."
+    },
+    {
+      "blockId": "connector-C1451-b00007",
+      "text": "Read the pigtail service listing",
+      "why": "Kit List points to Number in the service table. I then read Service Part and compare Engineering Shell with the connector’s Hard Shell and Fpn entries. This separates the service-pigtail identifier from the shell and individual terminal identifiers. Gauge appears in both the circuit and pigtail records; those entries do not by themselves establish a wire-selection or replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:20:48.862Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "30e17452fac60400c629e23759921cfb8f3f89349b8ec0a106776405d5149a9f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e7e547a6ccabb8dfedb30725e213e68fde467a5ce5218115b96c63353aebffe1",
+    "reviewedAt": "2026-10-28T00:20:48.863Z"
+  }
+}

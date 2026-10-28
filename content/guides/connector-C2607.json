@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C2607",
+  "supportingSourceRefs": [],
+  "sourceHash": "be7507d1730df0c306af0a238e8894b3735ddac5d95540f2524b2ee4fe68d5c3",
+  "title": "C2607 — Passenger Knee Airbag Connector",
+  "introduction": "I read this passenger knee airbag reference as a circuit address book: the connector drawing provides cavity marks, and the adjacent table connects those marks to the restraint-control circuit descriptions. Start with the component identity, find a cavity mark in the drawing, then read its entire pin-assignment row. Keep the positive and negative function labels attached to their respective rows.\n\nThe housing and pigtail tables provide identification information. They do not explain connector release, individual-terminal repair or airbag testing. The physical viewing direction, gauge convention and meanings of Box, Size and Used remain unspecified. The differently named Box and Size fields should not be assumed to describe the same property.\n\nThis page teaches reference reading only. Airbag service requires qualified personnel and the prescribed restraint-system procedures; the circuit labels are not instructions to apply power or make a generic resistance check.",
+  "requirements": [
+    {
+      "category": "Airbag service boundary",
+      "items": [
+        {
+          "name": "Qualified personnel",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel."
+        },
+        {
+          "name": "Restraint-specific preparation and testing",
+          "detail": "Any service requires the selected restraint procedure’s depowering, handling, specified test equipment and restoration sequence. Do not substitute a generic jumper or resistance test. Those procedures are not taught by this connector reference."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C2607-b00002",
+      "text": "Harness 14B242 connector face",
+      "why": "In the drawing as printed, the cavity marks are stacked inside a circular face, the larger housing extends to the left, and a rectangular feature projects inward from the right. I use these features to keep the illustration aligned while reading its labels. They do not establish a physical viewing side, a release movement or the state of the connector’s assurance and shorting features."
+    },
+    {
+      "blockId": "connector-C2607-b00005",
+      "text": "Cavity and restraint-circuit labels",
+      "why": "Read from each drawing mark to the matching Cavity row, then across to its circuit identifier, color and signed Function description. The positive and negative labels identify the stated circuit roles, not test points for an improvised check. The text in Terminal Part Number is a printed entry whose code is undefined here; it supplies no individual-terminal repair instructions."
+    },
+    {
+      "blockId": "connector-C2607-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "The Hard Shell, Fpn and Engineering Shell entries connect the component identity, drawing and pigtail listing. I use Service Part to locate the listed service item and Image to recognize the named illustration file. A pigtail listing does not establish an approved repair method or replace the restraint-specific handling and connection-verification procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:23.179Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "7e8f1e2a47c76d0c2b8d62416ecc6754dfbb694941d75f2ad69578335ba34178",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0abfd8ebefd8a06c8ce0440c0eb6c3e978680b5ef0efd3ae374e51f80141bbc0",
+    "reviewedAt": "2026-10-28T00:10:23.180Z"
+  }
+}

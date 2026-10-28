@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2436",
+  "supportingSourceRefs": [],
+  "sourceHash": "d46d57beeb8f16d7428d935e910e82c2fb1d5a5b49c17a605ac65cb2390b76dd",
+  "title": "C2436 — LH Footwell Air Discharge Temperature Sensor Connector",
+  "introduction": "I use this reference to connect the left-hand footwell temperature sensor’s cavity labels with its circuit descriptions. Think of it as an address book for the sensor’s wiring: the drawing locates the entries, and the table explains who each connection belongs to.\n\nStart with the component identity table, match the drawing’s cavity marks to the Cavity column, then read across the corresponding row. The functions distinguish the discharge-temperature sensor circuit from the climate module’s reference-return circuit. The final table identifies the listed pigtail service part.\n\nThis is a connector-reading guide. It supplies no access, disconnection, probing, test-value or replacement procedure. The physical viewing direction, gauge convention and meanings of the Box, Size and Used codes are unspecified; keep those entries as printed without treating them as service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2436-b00002",
+      "text": "Harness 14401 connector face",
+      "why": "I use the vertically stacked cavity marks and the housing outline together to navigate the drawing. As printed, the outline has a rectangular projection on the right and a rounded lower-left corner. These features help distinguish the drawing’s orientation on the page; they do not establish which side of a physical connector to view or how its latch releases."
+    },
+    {
+      "blockId": "connector-C2436-b00005",
+      "text": "Cavity-to-circuit guide",
+      "why": "The Cavity column is the bridge between the illustration and the wiring information. Reading across the same row keeps the circuit identifier, color code, gauge, function and terminal entry together. The sensor and reference-return descriptions explain the connections’ stated roles; neither description supplies a measurement or proves that the circuit is working."
+    },
+    {
+      "blockId": "connector-C2436-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "I compare the identity table’s Hard Shell entry with Fpn beneath the drawing and Engineering Shell in this table to connect the housing reference with its pigtail listing. Service Part identifies the listed service item, while Image names its illustration file. The pigtail gauge and pin-assignment gauges belong to separate entries; this listing alone is not a wire-selection or splice instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:10:23.169Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "b9483d9467f57936428aff4a14bce819c168c4629e5014b9ae92fb43a4f15672",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3cecb480fef5d97d107f5f501a73b649a2beaa893a8a47e08f66fbc2cd369ce4",
+    "reviewedAt": "2026-10-28T00:10:23.170Z"
+  }
+}
