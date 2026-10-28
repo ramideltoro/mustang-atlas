@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C265",
+  "supportingSourceRefs": [],
+  "sourceHash": "e8c815fb0058897e93b38fe59ffea73c7d071975596091c3e89e850cdfbfbf52",
+  "title": "C265 — Inline connector reference",
+  "introduction": "An inline connector joins harness sections while keeping each circuit identifiable across the connection. I read this reference like a seating chart: the cavity tells me where a circuit belongs, and the circuit number tells me who is sitting there. Wire color helps, but it is only part of the identification.\n\nStart with the MALE or FEMALE heading and its Harness Id, then use that section’s drawing and table together. Find a cavity label in the drawing and read its table row across Circuit Number, Color, Gauge, Function and Terminal Part Number. The functions cover fuse-or-circuit-breaker circuits, fuel-tank pressure and vent circuits, fuel-pump command and monitoring, and network communication. When comparing the mating sections, match cavity and circuit identity, then read each section’s own gauge and terminal entries; those details differ across the connection.\n\nThis is a map-reading reference. It identifies the documented connections and service-part entries, but does not teach physical access, disconnection, probing, wire selection or replacement. The physical viewing direction, gauge convention and meanings of the Size codes are not defined here. Keep those entries as printed rather than turning them into dimensions or repair specifications.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C265-b00002",
+      "text": "MALE connector face · Harness 14A005",
+      "why": "I use the housing outline to keep the printed drawing oriented: the broad side projection is on the left and the rounded outer wall is on the right. Both columns of cavity labels descend from top to bottom. The accompanying Gender, Fpn and Harness Id fields identify the section to which this drawing belongs."
+    },
+    {
+      "blockId": "connector-C265-b00005",
+      "text": "Male cavity and circuit map",
+      "why": "Cavity connects the drawing to the table; Circuit Number identifies the circuit, while Function explains its documented role. Keep the fuel-pump command and monitor entries distinct: they describe different jobs, not interchangeable names for the pump. Read Gauge and Terminal Part Number from this male section rather than carrying them over from the mating section."
+    },
+    {
+      "blockId": "connector-C265-b00007",
+      "text": "FEMALE connector face · Harness 14290",
+      "why": "The female drawing places the projecting housing features on the right, and its cavity columns reverse left-to-right relative to the male drawing. I use its own printed labels rather than mentally copying the neighboring face. That visible reversal describes the drawings; it does not establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C265-b00010",
+      "text": "Female cavity and circuit map",
+      "why": "The matching cavity and circuit entries let you compare the connection across the harness sections. Matching circuit identity does not make the gauge or terminal entries identical. For the network circuits, retain the complete bus description and its HIGH or LOW designation; those words identify the documented circuit role, not a measured test result."
+    },
+    {
+      "blockId": "connector-C265-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "Number connects this entry with Kit List; Service Part and Engineering Shell identify different items and should remain distinct. The Image field names a separate kit illustration rather than the connector-face drawing above. The pigtail Cavities entry differs from the connector Pin Count, and the sheet does not explain that difference. Preserve both entries without assuming the kit is a fully populated replacement or using its Gauge entry as a wire-selection instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T08:32:49.463Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "9fb007ef83202ee8e350d20d3bd639e6ba6d8bd4aad93f768fa117f9fbcea5fa",
+  "sourcePdfHash": "b3920bc93cfef1bcc6368aa08f40fc47bef068604eeff129c81175f851521e0d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 54,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f3457bcd35051e15d865b71ebb564d57122b5bea2ed47746db44e20ee498af01",
+    "reviewedAt": "2026-10-28T04:25:33.956Z",
+    "editorialRevision": {
+      "kind": "literal-protection-alternative",
+      "scope": "Complete54sourceunits/raw/table/context/author/fullverdict/final prose read; original complete figure pages1/3 directly viewed. Sole introductory fused circuits phrase restored to literal fuse-or-circuit-breaker alternative; other public fields unchanged. Prior full review retained; bounded coordinator approval pending."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "documentId": "connector-C2402A",
+  "supportingSourceRefs": [],
+  "sourceHash": "bb2f5feb6fd92e63898abd16b065beba47f0c19d8f8243be5ebe18b8302f5637",
+  "title": "C2402A — Front Controls Interface Module (FCIM) connector",
+  "introduction": "I use this reference to untangle the connections behind the cabin controls. Its function labels cover climate control, illumination, keyless start/stop, power, ground and network communication. Think of the connector as a labeled backstage patch panel: neighboring connections can support very different parts of the show.\n\nMatch a printed cavity label in the drawing to Cavity in the table, then read across that row for its circuit identity, color, gauge, function and terminal identifier. Within the climate entries, door means the temperature, defrost or recirculation airflow door named in that row. Motor-control entries and position-sensor entries describe different roles. Likewise, the blower moves cabin air, while the A/C evaporator cools and dries it; their labels point to different jobs.\n\nThis is a map-reading reference. The physical viewing side, gauge convention and metadata codes are not defined here. It provides no access, live-test, wire-selection or replacement method; those actions require their applicable procedures. Function wording, including polarity and conditional descriptions, must stay attached to its original row.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2402A-b00002",
+      "text": "Connector face map · Harness 14401",
+      "why": "As drawn, the connector has horizontal cavity rows, housing features above them and a broad projecting structure on the right. The printed labels decrease from left to right in each row, so I use the labels rather than assuming reading order equals ascending cavity order. Gray-filled positions correspond to unassigned table rows. These are landmarks within the illustration, not an established mating-side or wire-entry view."
+    },
+    {
+      "blockId": "connector-C2402A-b00005",
+      "text": "Read the pin assignments",
+      "why": "Cavity locates the connection; Circuit Number identifies its electrical path. Read Function closely enough to distinguish the reference supply from its return, network high from low, blower relay control from blower motor control, and airflow-door motor connections from position feedback. Keep the open/close wording and its IF PLUS condition together; neither is an instruction to apply power. Color alone cannot identify the circuit because colors recur. The result of this lookup is a circuit identification to carry into the applicable wiring or diagnostic procedure, not a fault verdict."
+    }
+  ],
+  "checkedAt": "2026-10-28T08:32:11.232Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "efb56dfa7c0b74d2b0ffae8e49cc82befbca0af318b723f3ac15727c774c6077",
+  "sourcePdfHash": "e6ccf29087b715ab7261c2a8e3d671cdb61ec12b17a4de7ebd6e7f564c3fc6af",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 47,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6ff0bf17d1ebc5df85f8d8b90c74db2dbd4025a5a86989abbeff7bb75d53ec49",
+    "reviewedAt": "2026-10-28T04:25:04.658Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Complete47sourceunits/raw/table/context/author/fullverdict/final prose read; original complete figure page1 directly viewed. Only firstwhy latch features above becomes housing features above; source does not label latch function. Prior full review retained; bounded coordinator approval pending."
+    }
+  }
+}

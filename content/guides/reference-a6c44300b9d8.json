@@ -1,19 +1,57 @@
 {
   "documentId": "reference-a6c44300b9d8",
+  "supportingSourceRefs": [],
   "sourceHash": "ca0ce780fce5238e97273472eef07e28bc1e2a5c2be23fc10416408e6b116088",
   "title": "Half Moon Wrench Right",
-  "introduction": "A half-moon wrench helps you reach a fastener around an obstruction. Its shape and the way it sits on the torque wrench affect the setting needed at the handle. Match the left or right arrangement in the original illustration before choosing the supported wrench and adapter combination below.\n\nThe calculator adjusts the wrench setting for that arrangement. The fastener specification still comes from the repair you are doing; this page does not choose a torque for the car.",
-  "requirements": [],
+  "introduction": "I match the adapter’s shape to the drawing before entering anything: this right-hand layout arches above the torque wrench. Think of the letters as measuring landmarks. A runs from the drive center to the handle center, B runs between the adapter’s drive and fastener centers, and C measures from their centerline to the top of the arch. Measure between the indicated endpoints rather than following the curved metal with the tape.\n\nIn the calculator above, select the fastener torque specified by the applicable Workshop Manual operation, choose the supported torque-wrench length, and select the matching half-moon adapter. The calculator displays the adapter length and arch height for that selection; compare them with your actual tool. Use only a listed combination that matches your setup, then select Calculate wrench setting.\n\nThe result tells you what to set on the torque wrench. Read the output in the unit matching your wrench’s scale; the alternative output rows express the setting in different units. This reference explains calculator entry and reading. The applicable Workshop Manual operation still supplies the fastening procedure and its required conditions.",
+  "requirements": [
+    {
+      "category": "Before using the calculator",
+      "items": [
+        {
+          "name": "Applicable fastener specification",
+          "detail": "Have the torque specification from the Workshop Manual operation for the fastener being tightened. Select the corresponding form entry."
+        },
+        {
+          "name": "Matching tools and dimensions",
+          "detail": "Identify the moon-wrench brand and measure the actual torque wrench and adapter using the centers and arch endpoint shown in this drawing."
+        }
+      ]
+    }
+  ],
   "edits": [],
-  "checkedAt": "2026-10-11T16:44:12.019Z",
-  "model": "Codex",
+  "checkedAt": "2026-10-28T09:04:49.785Z",
+  "model": "Codex configured model",
   "editorialVersion": 1,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
+    "errors": [],
     "expectedBlocks": 0,
     "receivedBlocks": 0,
     "humanReviewed": false,
-    "notes": "Calculator UI preserves and verifies original mathematical behavior; all source illustrations retained."
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ee4ce9e9f864f194b5a814ecb3a002ae969112e8331e6b565b5e5bccca6c0a7f",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 17,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b2117fb7dab76049659fa4be1674f06e552516bea550a100ae43e7376fb3fc6b",
+    "reviewedAt": "2026-10-28T05:38:41.269Z",
+    "editorialRevision": {
+      "kind": "bounded-reader-calculator-ui-clarification",
+      "scope": "Only calculator entry paragraph changed to match current UI supported selectors and displayed adapter dimensions. Original geometry, source tables, tool prerequisites and fastening-procedure referral unchanged; complete original review retained. Focused independent UI/source comparison pending."
+    }
   }
 }

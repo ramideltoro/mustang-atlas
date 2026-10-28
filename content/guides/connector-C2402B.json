@@ -1,0 +1,54 @@
+{
+  "documentId": "connector-C2402B",
+  "supportingSourceRefs": [],
+  "sourceHash": "d2bbfaddc188eeda579ded4a7657cfdff9cdbe4e02bcfdfd3ab5f3e394ac4c78",
+  "title": "C2402B — Front Controls Interface Module (FCIM)",
+  "introduction": "I use this reference as a seating chart for the FCIM’s connections: the drawing locates a cavity, and the assignment table explains the circuit at that address. The functions cover climate sensors, the right temperature-door motor, the aspirator motor and the hazard switch. That last connection is a useful reminder that the front controls have more on their guest list than cabin temperature.\n\nStart with the connector identity table, then match a printed cavity label in the drawing to the Cavity column below. Read across that row for its Circuit Number, Color, Gauge, Function, Qualifier, Used and Terminal Part Number. The separate Fpn and harness table supplies additional identification fields. A blank function entry supplies no circuit function to interpret.\n\nThis is a connector-reading guide. The physical viewing side, gauge convention and meanings of the Box, Cols, Size and Used codes are not defined here. Keep those entries as printed; they do not establish replacement-wire specifications or connector condition. Access, probing, electrical test values and repair instructions require the relevant service procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2402B-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "I use the long horizontal housing, the central housing feature drawn above it and the separated end sections as landmarks within the illustration. Cavity spacing changes across the face, so the printed labels are the reliable way to navigate. The outlined and gray-filled circles distinguish positions visually; neither appearance establishes an electrical fault or a physical viewing side."
+    },
+    {
+      "blockId": "connector-C2402B-b00005",
+      "text": "Read the pin assignments",
+      "why": "The cavity label joins the drawing to the table; the circuit identifier and function then explain what that position relates to. For the right temperature-door motor, keep the coil designation, close/open wording and “IF PLUS” condition together. Those details qualify the function rather than instructing you to energize it. The temperature-door position, humidity, sun-load and cabin-temperature entries identify different sensor functions, so a shared climate-control theme does not make their circuits interchangeable. Once the relevant row is identified, carry its exact labels into the matching wiring or diagnostic reference."
+    }
+  ],
+  "checkedAt": "2026-10-28T08:34:08.170Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "31ec4803b9f2da00504988f151e05b76b20420af57721d09c7a850dbd8567373",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 51,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "268cfbc22bc6b2dce9ccdf5372d75fd0368e3aca290b985a362ad2144081fbe5",
+    "reviewedAt": "2026-10-28T04:32:24.133Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Complete51sourceunits/raw/table/context/author/fullverdict/final prose read; original complete figure page1 directly viewed. Sole firstwhy central latch drawn becomes central housing feature drawn; no source latch label. Prior full review retained; bounded coordinator approval pending."
+    }
+  }
+}

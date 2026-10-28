@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C652A",
+  "supportingSourceRefs": [],
+  "sourceHash": "eadee4792a6719865042f0bbcb486c6a16647912fbb3a21bfc278abd50d037ec",
+  "title": "C652A — Passenger Door Module (PDM) connector",
+  "introduction": "The passenger door connector brings together supply, ground, mirror indication, window and lock switch circuits, illumination and network communication. I read its table like a small switchboard directory: the circuit description tells us what a connection serves, without proving that the connection is doing its job.\n\nBegin with the passenger-module identity and harness heading. Find a cavity label in the drawing, match it to Cavity in the table, then read across for Circuit Number, Color, Gauge, Function and Terminal Part Number. The window up and down entries, lock and unlock entries, and switch return have separate descriptions worth keeping separate. Similar-looking door hardware is no substitute for matching the actual reference.\n\nThis guide teaches identification and table reading. The physical viewing side, gauge convention and metadata codes are not defined here. Use the entries as reference information; access, probing, wire selection and replacement need their applicable procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C652A-b00002",
+      "text": "Connector face map · Harness 14630",
+      "why": "The projecting housing outline and separated upper cavities help me keep my place in the drawing. The cavity labels, rather than a guessed counting pattern, connect each position to its table row. Gray-filled positions align with unassigned rows; outlined positions align with assigned rows. Neither appearance is an electrical test result."
+    },
+    {
+      "blockId": "connector-C652A-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read each assignment across its own row so the circuit identity, color and function stay together. Network high and low are distinct descriptions, and a switch return should not automatically be treated as the listed ground. The lock-status-indicator function contains DRIVER wording on this passenger-module sheet; that wording is retained without assuming it should be changed or that it establishes the indicator’s physical location. Once the relevant circuit is identified, its applicable wiring or diagnostic procedure supplies the next action."
+    },
+    {
+      "blockId": "connector-C652A-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I use the column headings to distinguish the service-part listing from its engineering-shell identifier and from the terminal identifiers in the pin table. These are different lookup roles, even when they describe the same connector assembly. Gauge, Material and the image filename are catalog information; they do not provide a terminal repair or pigtail installation method."
+    }
+  ],
+  "checkedAt": "2026-10-28T08:31:19.918Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c88c14f0e9828cc874828bb6e516c983512cfda25efd3ebe08f23a81e336361e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 51,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1fe01bffce8d0d6a1b16b00ec7dd540cd6a3fbf52c989271976f26fac0b2b9e7",
+    "reviewedAt": "2026-10-28T04:25:04.650Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Complete51sourceunits/raw/table/context/author/fullverdict/final prose read; original complete figure page2 directly viewed. Only firstwhy projecting latch outline becomes projecting housing outline; no source label establishes latch function. Prior full review retained; bounded coordinator approval pending."
+    }
+  }
+}

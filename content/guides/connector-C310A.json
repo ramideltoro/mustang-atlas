@@ -1,0 +1,68 @@
+{
+  "documentId": "connector-C310A",
+  "supportingSourceRefs": [],
+  "sourceHash": "11f26eb79121ed4ff5ea462f52d008a5ceb283ef9df8720b6059e7a5c9d40e01",
+  "title": "C310A — Restraints Control Module (RCM)",
+  "introduction": "The RCM monitors restraint-system information and commands the appropriate deployable components when required. I read this connector reference as its circuit address book: each cavity label leads to an assignment, while the function explains which part of the restraint system that connection serves.\n\nCheck the identity table first, then use the drawing’s printed labels to find the matching Cavity row. Read across for Circuit Number, Color, Gauge, Function, Qualifier, Used and Terminal Part Number. The functions distinguish knee airbags, front airbags, adaptive venting, the pyrotechnic steering column, front impact sensors, the passenger-airbag deactivation indicator and a fuse or circuit-breaker connection. Preserve each function’s polarity and other identifying wording; similar names do not make the connections interchangeable.\n\nThis page explains the map. It does not establish the physical viewing side, gauge convention, meanings of the Box, Cols, Size or Used codes, or how to interpret PREASSY for service. Gray shading alone does not mean that a row has no circuit description. Connector access, depowering, probing, measurements and restoration belong to the restraint-specific service instructions.",
+  "requirements": [
+    {
+      "category": "Restraint-system service boundary",
+      "items": [
+        {
+          "name": "Qualified pyrotechnic service",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Use the selected task’s prescribed depowering, handling, test equipment and restoration instructions before undertaking service; this reference does not supply that sequence."
+        },
+        {
+          "name": "Restraint-specific diagnosis",
+          "detail": "For a restraint fault, record the fault information and use the prescribed restraint diagnostic path. Do not substitute a generic jumper or resistance test for the specified method."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C310A-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "The illustration is tall, with housing features drawn above the cavity field and labels arranged in horizontal bands separated by gaps. I navigate by the printed cavity labels rather than treating the gaps as missing positions. These are landmarks within the drawing, not proof of which physical side faces the reader. Consult the corresponding table row even for a shaded position, because shading does not erase its recorded information."
+    },
+    {
+      "blockId": "connector-C310A-b00005",
+      "text": "Read the restraint-circuit assignments",
+      "why": "The function column separates deployment circuits, sensor connections and indicator connections; the polarity marks are part of those identities. Read each row through the Used and Terminal Part Number fields rather than assuming that a circuit description proves the position is populated. In particular, the passenger-airbag deactivation indicator’s positive connection has circuit information despite its shaded depiction and differing Used entry. Preserve those distinctions without deciding vehicle applicability from this sheet. An identified circuit is the starting point for the matching restraint reference, not a finding that the component or connection works."
+    }
+  ],
+  "checkedAt": "2026-10-28T08:34:52.602Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4ec9847fb769931765e050cebfd64383e92686713b91179874ef5cca626474f5",
+  "sourcePdfHash": "b68a311b83e7f1edf975ae99735b9a3b9a6ad350969a11e7bf1da93360d6fc72",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 51,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "67b549f498b4f04fd251c44e8f46b305328a3817e18a6a8c6f90b887241a8a3c",
+    "reviewedAt": "2026-10-28T04:32:24.140Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Complete51sourceunits/raw/table/context/author/fullverdict/final prose read; original complete figure page1 directly viewed. Sole firstwhy a latch arrangement drawn becomes housing features drawn; no source latch label. Shaded13 recorded assignment and qualified restraint-service boundary intact. Prior full review retained; bounded coordinator approval pending."
+    }
+  }
+}
