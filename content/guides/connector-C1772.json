@@ -1,0 +1,88 @@
+{
+  "documentId": "connector-C1772",
+  "sourceHash": "34396ca8c80a67346225684cadc1745418e6816bb8a21d85d4582549672b1286",
+  "title": "C1772 — Reading the IMRC2 Connector Reference",
+  "introduction": "I read this sheet as a connector reference with unresolved details, not a verified wiring map. Its title names the Intake Manifold Runner Control Bank 2 (IMRC2) solenoid, while one assignment names a manifold-heater control. The intake manifold distributes air to the cylinders; that background does not settle which conflicting circuit entry belongs on a particular car.\n\nThink of the drawing and table as an address book with an awkward duplicate entry. Keep each cavity, circuit, color, gauge, function and terminal field together, and leave the disagreement visible. The supply entry expressly says fuse or circuit breaker; it does not select the protection device.\n\nThis page teaches how to read the record. Pin Count, repeated assignments, gauge convention and physical viewing direction cannot establish wire selection, probing orientation, release motion or a test method. No physical connection or replacement should be selected from these unresolved entries alone.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1772-b00002",
+      "text": "Connector Face for Harness 12C508",
+      "why": "In the drawing, label 1 sits above label 2. The identity table nevertheless says Pin Count 3. I retain that mismatch rather than invent a third cavity. The surrounding projections are unlabeled housing features, not demonstrated release mechanisms. The record identifies a female connector and harness 12C508; its Fpn entry DU5T-14A464-CAA differs from the terminal part number DU5T-14474-XA in the assignment rows. A housing entry and a terminal entry are different identifiers, not interchangeable repair instructions."
+    },
+    {
+      "blockId": "connector-C1772-b00005",
+      "text": "Reading the Pin Assignments",
+      "why": "Read across each complete row. Cavity 1 pairs CBK02 with GN, gauge 20, and the literal FUSE - 2 OR CIRCUIT BREAKER (VPWR 2) function. Cavity 2 appears twice: CE315 with BU and powertrain/IMRC control, then CE511 with WH and manifold-heater control. Both qualifier cells are blank; they do not identify alternate configurations or establish that both wires share a termination. All rows list DU5T-14474-XA and Used 1. I keep those source values separate without assigning a meaning to unspecified internal fields or a gauge convention. The repeated number is a reason to seek matching circuit evidence, not permission to pick a wire by color."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:03:28.045Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ad36626a1fa7ccfc5b2e44ed0659367b67cd2c9718f7540b4537716305cab811",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 23,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "5f447cdd677bd1611d84a58ca0f277a424d9e4a2484033332c0baa0fc009afae",
+    "reviewedAt": "2026-10-28T23:03:02.201Z",
+    "coveredUnitIds": [
+      "connector-C1772:u1",
+      "connector-C1772:u2",
+      "connector-C1772:u3",
+      "connector-C1772:u4",
+      "connector-C1772:u5",
+      "connector-C1772:u6",
+      "connector-C1772:u7",
+      "connector-C1772:u8",
+      "connector-C1772:u9",
+      "connector-C1772:u10",
+      "connector-C1772:u11",
+      "connector-C1772:u12",
+      "connector-C1772:u13",
+      "connector-C1772:u14",
+      "connector-C1772:u15",
+      "connector-C1772:u16",
+      "connector-C1772:u17",
+      "connector-C1772:u18",
+      "connector-C1772:u19",
+      "connector-C1772:u20",
+      "connector-C1772:u21",
+      "connector-C1772:u22",
+      "connector-C1772:u23"
+    ],
+    "originalAuthorHold": [
+      "The identity table states Pin Count 3, but the connector-face illustration labels only cavities 1 and 2. The supplied full-page image and raw text confirm the mismatch. Resolve the physical terminal count before treating the metadata as a verified connector layout.",
+      "Cavity 2 appears with CE315, BU and a powertrain/IMRC control function, and again with CE511, WH and a manifold-heater control function. Both qualifier cells are blank. The supplied evidence does not distinguish configurations or establish which assignment applies to this solenoid."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all23 primary units, both complete source pages and sole figure, and2 edits. Count and duplicated assignment ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "f05f575cc6d0f9e6285851574514b3eca460b66959fa3e456ded6e0e6c8dbbfd"
+    }
+  }
+}

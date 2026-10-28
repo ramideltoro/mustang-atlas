@@ -1,0 +1,548 @@
+{
+  "documentId": "G1945074",
+  "sourceHash": "0013e024812d1beb471d02d4cf3d9be0809799538cbb275fa1a3f2bf2cf1d180",
+  "title": "Rear View Mirrors: System Operation and Components",
+  "introduction": "I start by matching the drawing to the car’s equipment: power mirrors with or without memory, then the applicable heated-mirror system. LH means left-hand and RH means right-hand. Each labelled drawing has a numbered companion; use the adjacent table to match its callouts to component names.\n\nFollow the arrows from the control toward the mirror, and notice the position-sensor arrows returning to the door modules on the memory system. Memory adjustment works like a delivery with a receipt: the modules command movement, and sensor feedback tells them where the glass has reached. Heating follows a separate control path through rear window defrost. These diagrams explain operation and expected responses; electrical testing, physical access and replacement require their matching service procedures.\n\nThe manual disagrees with itself about the hand-operated day/night tab: one passage describes a rearward pull for night, while another describes pulling forward or pushing rearward. I retain those descriptions below as source claims, not a verified operating direction. Automatic dimming is a separate system, so its sensor behavior cannot settle that lever question.",
+  "requirements": [
+    {
+      "category": "Read this as a system guide",
+      "items": [
+        {
+          "name": "Adjust mirrors only while stationary",
+          "detail": "The matching owner manual warns against adjusting exterior or interior mirrors while the vehicle is moving. Keep that restriction in place when using the actual fitted controls. See [Mirrors — matching owner instructions](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf). Those owner pages do not specify the disputed manual-tab direction; this article does not resolve it."
+        },
+        {
+          "name": "Keep operation separate from diagnosis",
+          "detail": "The diagrams explain which control and module handles each function. Memory programming, electrical checks and physical access require their complete matching procedures; these overview descriptions are not a standalone test or repair."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1945074-b00001",
+      "text": "Follow the control request to understand how each mirror function works.",
+      "why": "Reading from the control toward the mirror makes the differences between direct switching, module-controlled movement and heating easier to follow."
+    },
+    {
+      "blockId": "G1945074-b00002",
+      "text": "Power Exterior Mirror Diagram — Without Memory",
+      "why": "The exterior mirror control switch is shown within the LH front window control switch assembly, with outgoing paths to both exterior mirrors."
+    },
+    {
+      "blockId": "G1945074-b00006",
+      "text": "Power Exterior Mirror Operation — Without Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00007",
+      "text": "With the ignition on, the exterior mirror control switch receives voltage through BCM fuse 23 (10A). When the driver selects LH or RH and presses the directional control left, right, up or down, the switch supplies voltage and ground to the appropriate mirror motor to move the selected glass in that direction.",
+      "why": "The selection switch chooses which mirror responds; the directional control chooses its movement. In this configuration, the control switch supplies the motor’s operating voltage and ground."
+    },
+    {
+      "blockId": "G1945074-b00008",
+      "text": "Within each exterior mirror, left, right, up and down movement share a common ground circuit.",
+      "why": "Ground is the electrical return path that completes the circuit back to the power source. This shared path connects the directional functions within each mirror."
+    },
+    {
+      "blockId": "G1945074-b00009",
+      "text": "Power Exterior Mirror Diagram — With Memory",
+      "why": "I follow the exterior mirror control switch request along LIN, the local interconnect network, to the DDM, or driver door module. The DDM communicates with the PDM, or passenger door module, over MS-CAN. Each door module drives its mirror motor and receives feedback from that mirror’s position sensors. The memory set switch also feeds the DDM."
+    },
+    {
+      "blockId": "G1945074-b00013",
+      "text": "Network Message Chart",
+      "why": "Use the chart to understand what information travels between modules. It describes communication rather than connector terminals or electrical test points."
+    },
+    {
+      "blockId": "G1945074-b00014",
+      "text": "PDM Network Input Messages",
+      "why": "Read across the table from the incoming message to its originating module and then its purpose."
+    },
+    {
+      "blockId": "G1945074-b00016",
+      "text": "Power Exterior Mirror Operation — With Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00017",
+      "text": "When a memory save or recall begins, the DDM sends the memory command message to the PDM over MS-CAN. For a save, the DDM and PDM store the current mirror positions against the requested preset. For a recall, they retrieve the requested positions from internal memory, then supply voltage and ground to the appropriate exterior mirror motors. Feedback from the mirror motor sensors lets the modules move the glass to the stored positions.\n\nPressing the exterior mirror control switch in any direction during recall gives manual control priority. The DDM sends the manual mirror override message to the PDM; after that message is received, the DDM and PDM abort the recall and respond to the exterior mirror control switch inputs. Activating the driver seat control switch in any direction during a memory recall also aborts that recall.",
+      "why": "Sensor feedback gives the modules a position to work toward, rather than simply running the motors for a guessed duration. A recall interrupted by either specified control input has a deliberate cancellation path; that interruption alone is not evidence of a failed mirror."
+    },
+    {
+      "blockId": "G1945074-b00018",
+      "text": "The DDM stores the LH exterior mirror glass position presets. The PDM stores the RH exterior mirror glass position presets.",
+      "why": "Each door module keeps the saved positions for its own mirror, even though the memory request coordinates both sides."
+    },
+    {
+      "blockId": "G1945074-b00019",
+      "text": "A memory save or recall can be initiated through the memory set switch, the RKE transmitter, the Intelligent Access (IA) key if equipped, or the keyless entry keypad. For the operating and programming details of memory save and recall, refer to the Owner’s Literature.",
+      "why": "RKE means remote keyless entry. I use the Owner’s Literature for the actual button sequences and key associations, so the system explanation does not become a guessed programming recipe."
+    },
+    {
+      "blockId": "G1945074-b00020",
+      "text": "For more about the shared memory feature, refer to [Front Seats - System Operation and Component Description](#/document/G1695508) (501-10A Front Seats, Description and Operation).",
+      "why": "The linked overview explains that the memory set switch is hard-wired to the DDM, which sends the seat memory request to the DSM, or driver front seat module. It also explains how an exterior mirror control switch input can cancel the seat’s easy entry/exit movement. Those connections help explain why the seat and mirror controls participate in coordinated memory behavior."
+    },
+    {
+      "blockId": "G1945074-b00021",
+      "text": "Heated Exterior Mirror Diagram — Without Memory",
+      "why": "Follow the drawing from the FCIM through the rear window defrost relay to the heated glass on both sides. A relay is an electrically controlled switch; its presence in this diagram does not establish a separately replaceable plug-in part."
+    },
+    {
+      "blockId": "G1945074-b00025",
+      "text": "Heated Exterior Mirror Operation — Without Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00026",
+      "text": "The rear window defrost system controls the heated exterior mirror glass. Mirror heating operates only while rear window defrost is active, and it switches off when rear window defrost switches off.",
+      "why": "I look at rear window defrost status when interpreting whether mirror heating should be active. The glass heating follows that system’s on/off state."
+    },
+    {
+      "blockId": "G1945074-b00027",
+      "text": "The rear window defrost relay inside the BJB supplies voltage to the heated mirror glass. The LH and RH heated mirror glass use separate ground circuits.",
+      "why": "Both heaters receive voltage through the defrost relay, while each side has its own electrical return path. The common supply and separate returns are different parts of the circuit."
+    },
+    {
+      "blockId": "G1945074-b00028",
+      "text": "Heated Exterior Mirror Diagram — With Memory",
+      "why": "Use the following drawing for the memory-equipped heating configuration; keep its control path distinct from the without-memory heating system."
+    },
+    {
+      "blockId": "G1945074-b00032",
+      "text": "Mirror Heat Network Messages",
+      "why": "The chart identifies the request that controls heated mirror glass."
+    },
+    {
+      "blockId": "G1945074-b00033",
+      "text": "DDM and PDM Network Inputs",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00035",
+      "text": "Heated Exterior Mirrors With Memory",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00036",
+      "text": "The rear window defrost system also controls the heated exterior mirror glass. Mirror heating operates only while rear window defrost is active and switches off when rear window defrost switches off.",
+      "why": "I start with rear defrost status when interpreting mirror heating: an inactive defrost system means the mirror heaters are not being commanded to operate."
+    },
+    {
+      "blockId": "G1945074-b00037",
+      "text": "The FCIM sends the mirror heat request over MS-CAN. The DDM uses that request to control the LH heated exterior mirror glass, while the PDM controls the RH heated exterior mirror glass.",
+      "why": "I follow the patterned network path from the request sender to the door modules, then the solid arrows to their respective mirrors. Think of the message as the order slip: each door module handles the heater on its own side. These drawings show control relationships, not connector pins or an electrical test."
+    },
+    {
+      "blockId": "G1945074-b00038",
+      "text": "Interior Mirror Manual Dimming",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00039",
+      "text": "Manual dimming uses the day/night tab on the bottom of the interior mirror to reduce headlamp glare from behind. This operating passage describes pulling the tab rearward toward the driver for night and pushing it forward away from the driver for day.",
+      "why": "That is the direction stated here, but the component passage below describes pulling forward or pushing rearward. I cannot reconcile those descriptions from the supplied evidence. Treat them as attributed source wording, not an instruction to move an unidentified fitted lever."
+    },
+    {
+      "blockId": "G1945074-b00040",
+      "text": "Interior Mirror Automatic Dimming",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00041",
+      "text": "The auto-dimming interior mirror uses 2 built-in photoelectric sensors to judge lighting conditions. In daylight, the forward-facing sensor keeps the rearward-facing sensor inactive and the glass stays in high-reflectance mode. At night, the rearward-facing sensor becomes active; when it detects bright lights from behind, the glass darkens electronically. Selecting reverse always returns the mirror to high-reflectance mode for better visibility while backing up, regardless of exterior lighting.",
+      "why": "The sensors divide the job between ambient light and glare from behind. A mirror that clears its dimming when reverse is selected is showing the intended override."
+    },
+    {
+      "blockId": "G1945074-b00042",
+      "text": "Mirror Components",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00043",
+      "text": "Exterior Mirror Adjustment Switch",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00044",
+      "text": "The exterior mirror control switch is a momentary-contact switch built into the LH front window control switch. It lets the driver move the selected LH or RH exterior mirror glass left, right, up or down. The LED on the corresponding mirror selection button lights to show which mirror is selected.",
+      "why": "I check the selection LED first: it identifies which mirror the adjustment command is intended to move."
+    },
+    {
+      "blockId": "G1945074-b00045",
+      "text": "On vehicles with memory mirrors, the exterior mirror control switch communicates with the DDM through a LIN circuit.",
+      "why": "LIN means local interconnect network. In this configuration, the switch communicates the driver's request to the driver door module."
+    },
+    {
+      "blockId": "G1945074-b00046",
+      "text": "On vehicles without memory mirrors, the exterior mirror control switch supplies voltage and ground directly to the selected mirror motor to move the glass to the requested position.",
+      "why": "Ground is the electrical return path. Here, the switch controls the motor's electrical supply rather than sending the adjustment request to a door module."
+    },
+    {
+      "blockId": "G1945074-b00047",
+      "text": "Memory Position Switch",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00048",
+      "text": "The memory set switch contains 3 momentary-contact switches and is hard-wired to the DDM. It can recall 1 of 3 memory seat positions stored in the DSM. For more about this switch, see [Front Seats - System Operation and Component Description](#/document/G1695508) (501-10A Front Seats, Description and Operation).",
+      "why": "The linked seat overview shows the driver door module forwarding the switch request to the driver front seat module. The DSM stores seat positions; the mirror-operation description separately assigns mirror preset storage to the respective door modules. Sharing a memory button does not mean every position is stored in the same controller."
+    },
+    {
+      "blockId": "G1945074-b00049",
+      "text": "Exterior Mirror Assembly",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00050",
+      "text": "Each exterior mirror uses 2 bi-directional motors to position the glass. The sensors that monitor glass position are built into the motors.",
+      "why": "Bi-directional means the motors can run in either direction. Position feedback lets the memory system relate motor movement to the requested glass position."
+    },
+    {
+      "blockId": "G1945074-b00051",
+      "text": "If heated mirrors are fitted, their heating elements are built into the exterior mirror glass.",
+      "why": "The heating element belongs to the glass, while the positioning motors perform a separate job."
+    },
+    {
+      "blockId": "G1945074-b00052",
+      "text": "If the exterior mirrors include turn signal indicators and/or puddle lamps, see [Exterior Lighting - System Operation and Component Description](#/document/G1694243) (417-01 Exterior Lighting, Description and Operation).",
+      "why": "Those lighting functions have their own system description; this mirror overview does not teach their operation or repair."
+    },
+    {
+      "blockId": "G1945074-b00053",
+      "text": "If the exterior mirrors include blind spot monitoring (BLIS), see [Blind Spot Information System - System Operation and Component Description](#/document/G1694013) (419-04 Side and Rear Vision, Description and Operation).",
+      "why": "Use the dedicated reference for the monitoring function rather than treating its behavior as part of mirror adjustment or heating."
+    },
+    {
+      "blockId": "G1945074-b00054",
+      "text": "A jumper harness built into each exterior mirror connects the vehicle wiring harness to the mirror motors and heated glass. Before replacement of an exterior mirror or motor, the manual requires inspection of this jumper harness for open circuits, short circuits, damaged pins and pins pushed out of position, with an attempt to repair a faulty jumper harness.",
+      "why": "I consider this electrical bridge before blaming the assembly it feeds: a wiring fault can interrupt an otherwise working motor or heater. That required diagnostic-and-repair branch needs the matching complete access, electrical-testing and harness-repair procedures; the overview does not provide their execution."
+    },
+    {
+      "blockId": "G1945074-b00055",
+      "text": "DDM — Driver Door Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00056",
+      "text": "On vehicles with memory mirrors, the DDM monitors the exterior mirror control switch through LIN. It supplies voltage and ground to the LH exterior mirror motors, their position sensors and the LH mirror glass heating element.",
+      "why": "The driver door module handles both the driver's adjustment request and the electrical supplies for the mirror on its side."
+    },
+    {
+      "blockId": "G1945074-b00057",
+      "text": "For RH exterior mirror movement, the DDM sends the request to the PDM over MS-CAN.",
+      "why": "The driver's switch can command the opposite mirror because the door modules exchange the request over the network."
+    },
+    {
+      "blockId": "G1945074-b00058",
+      "text": "PDM — Passenger Door Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00059",
+      "text": "On vehicles with memory mirrors, the PDM supplies voltage and ground to the RH exterior mirror motors, their position sensors and the RH mirror glass heating element.",
+      "why": "The passenger door module provides the local electrical supplies for the passenger-side mirror."
+    },
+    {
+      "blockId": "G1945074-b00060",
+      "text": "Manual-Dimming Interior Mirror",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00061",
+      "text": "The component passage describes a lever at the back of the manual-dimming mirror and says the driver pulls it forward or pushes it rearward to operate dimming. The driver controls this function entirely.",
+      "why": "This pull/push wording differs from the earlier day/night operation passage. The source mismatch remains visible; no corrected direction or viewing position is inferred. The matching owner pages do not resolve it."
+    },
+    {
+      "blockId": "G1945074-b00062",
+      "text": "Auto-Dimming Interior Mirror",
+      "why": ""
+    },
+    {
+      "blockId": "G1945074-b00063",
+      "text": "The auto-dimming rear view mirror has 2 photoelectric sensors: one on the front facing the windshield, and one on the rear at the top of the mirror glass. Their inputs vary the glass reflectance to eliminate unwanted glare. The amount of dimming depends on glare from behind relative to the ambient light in front of the mirror.",
+      "why": "Automatic dimming is a comparison, not simply a response to darkness. The mirror weighs the light behind you against the light ahead, then adjusts how much light the glass reflects."
+    }
+  ],
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1695508",
+      "sourceHash": "cd3b13baae6a94fc4d40e18ba3b5507f0b11477a9617b0072b4f7e4159a1cfd2",
+      "referencedBy": "G1945074",
+      "sourceReference": "G1695508",
+      "sourceUnitCount": 122,
+      "mediaCount": 4
+    }
+  ],
+  "checkedAt": "2026-10-28T22:49:41.067Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 49,
+    "receivedBlocks": 49,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "11ec7c8cf22a00ede754e0f7c497beae0af81dc03959407a1803aeffad863331",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 1,
+    "supportingSourceUnitCount": 122,
+    "sourceUnitCount": 99,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 2,
+    "fingerprint": "1f6b74b7b2f0303c891bb092d532b0d11d04e069446773ef1cae3a1118f72d96",
+    "reviewedAt": "2026-10-28T22:49:20.274Z",
+    "coveredUnitIds": [
+      "G1945074:u1",
+      "G1945074:u2",
+      "G1945074:u3",
+      "G1945074:u4",
+      "G1945074:u5",
+      "G1945074:u6",
+      "G1945074:u7",
+      "G1945074:u8",
+      "G1945074:u9",
+      "G1945074:u10",
+      "G1945074:u11",
+      "G1945074:u12",
+      "G1945074:u13",
+      "G1945074:u14",
+      "G1945074:u15",
+      "G1945074:u16",
+      "G1945074:u17",
+      "G1945074:u18",
+      "G1945074:u19",
+      "G1945074:u20",
+      "G1945074:u21",
+      "G1945074:u22",
+      "G1945074:u23",
+      "G1945074:u24",
+      "G1945074:u25",
+      "G1945074:u26",
+      "G1945074:u27",
+      "G1945074:u28",
+      "G1945074:u29",
+      "G1945074:u30",
+      "G1945074:u31",
+      "G1945074:u32",
+      "G1945074:u33",
+      "G1945074:u34",
+      "G1945074:u35",
+      "G1945074:u36",
+      "G1945074:u37",
+      "G1945074:u38",
+      "G1945074:u39",
+      "G1945074:u40",
+      "G1945074:u41",
+      "G1945074:u42",
+      "G1945074:u43",
+      "G1945074:u44",
+      "G1945074:u45",
+      "G1945074:u46",
+      "G1945074:u47",
+      "G1945074:u48",
+      "G1945074:u49",
+      "G1945074:u50",
+      "G1945074:u51",
+      "G1945074:u52",
+      "G1945074:u53",
+      "G1945074:u54",
+      "G1945074:u55",
+      "G1945074:u56",
+      "G1945074:u57",
+      "G1945074:u58",
+      "G1945074:u59",
+      "G1945074:u60",
+      "G1945074:u61",
+      "G1945074:u62",
+      "G1945074:u63",
+      "G1945074:u64",
+      "G1945074:u65",
+      "G1945074:u66",
+      "G1945074:u67",
+      "G1945074:u68",
+      "G1945074:u69",
+      "G1945074:u70",
+      "G1945074:u71",
+      "G1945074:u72",
+      "G1945074:u73",
+      "G1945074:u74",
+      "G1945074:u75",
+      "G1945074:u76",
+      "G1945074:u77",
+      "G1945074:u78",
+      "G1945074:u79",
+      "G1945074:u80",
+      "G1945074:u81",
+      "G1945074:u82",
+      "G1945074:u83",
+      "G1945074:u84",
+      "G1945074:u85",
+      "G1945074:u86",
+      "G1945074:u87",
+      "G1945074:u88",
+      "G1945074:u89",
+      "G1945074:u90",
+      "G1945074:u91",
+      "G1945074:u92",
+      "G1945074:u93",
+      "G1945074:u94",
+      "G1945074:u95",
+      "G1945074:u96",
+      "G1945074:u97",
+      "G1945074:u98",
+      "G1945074:u99",
+      "G1695508:u1",
+      "G1695508:u2",
+      "G1695508:u3",
+      "G1695508:u4",
+      "G1695508:u5",
+      "G1695508:u6",
+      "G1695508:u7",
+      "G1695508:u8",
+      "G1695508:u9",
+      "G1695508:u10",
+      "G1695508:u11",
+      "G1695508:u12",
+      "G1695508:u13",
+      "G1695508:u14",
+      "G1695508:u15",
+      "G1695508:u16",
+      "G1695508:u17",
+      "G1695508:u18",
+      "G1695508:u19",
+      "G1695508:u20",
+      "G1695508:u21",
+      "G1695508:u22",
+      "G1695508:u23",
+      "G1695508:u24",
+      "G1695508:u25",
+      "G1695508:u26",
+      "G1695508:u27",
+      "G1695508:u28",
+      "G1695508:u29",
+      "G1695508:u30",
+      "G1695508:u31",
+      "G1695508:u32",
+      "G1695508:u33",
+      "G1695508:u34",
+      "G1695508:u35",
+      "G1695508:u36",
+      "G1695508:u37",
+      "G1695508:u38",
+      "G1695508:u39",
+      "G1695508:u40",
+      "G1695508:u41",
+      "G1695508:u42",
+      "G1695508:u43",
+      "G1695508:u44",
+      "G1695508:u45",
+      "G1695508:u46",
+      "G1695508:u47",
+      "G1695508:u48",
+      "G1695508:u49",
+      "G1695508:u50",
+      "G1695508:u51",
+      "G1695508:u52",
+      "G1695508:u53",
+      "G1695508:u54",
+      "G1695508:u55",
+      "G1695508:u56",
+      "G1695508:u57",
+      "G1695508:u58",
+      "G1695508:u59",
+      "G1695508:u60",
+      "G1695508:u61",
+      "G1695508:u62",
+      "G1695508:u63",
+      "G1695508:u64",
+      "G1695508:u65",
+      "G1695508:u66",
+      "G1695508:u67",
+      "G1695508:u68",
+      "G1695508:u69",
+      "G1695508:u70",
+      "G1695508:u71",
+      "G1695508:u72",
+      "G1695508:u73",
+      "G1695508:u74",
+      "G1695508:u75",
+      "G1695508:u76",
+      "G1695508:u77",
+      "G1695508:u78",
+      "G1695508:u79",
+      "G1695508:u80",
+      "G1695508:u81",
+      "G1695508:u82",
+      "G1695508:u83",
+      "G1695508:u84",
+      "G1695508:u85",
+      "G1695508:u86",
+      "G1695508:u87",
+      "G1695508:u88",
+      "G1695508:u89",
+      "G1695508:u90",
+      "G1695508:u91",
+      "G1695508:u92",
+      "G1695508:u93",
+      "G1695508:u94",
+      "G1695508:u95",
+      "G1695508:u96",
+      "G1695508:u97",
+      "G1695508:u98",
+      "G1695508:u99",
+      "G1695508:u100",
+      "G1695508:u101",
+      "G1695508:u102",
+      "G1695508:u103",
+      "G1695508:u104",
+      "G1695508:u105",
+      "G1695508:u106",
+      "G1695508:u107",
+      "G1695508:u108",
+      "G1695508:u109",
+      "G1695508:u110",
+      "G1695508:u111",
+      "G1695508:u112",
+      "G1695508:u113",
+      "G1695508:u114",
+      "G1695508:u115",
+      "G1695508:u116",
+      "G1695508:u117",
+      "G1695508:u118",
+      "G1695508:u119",
+      "G1695508:u120",
+      "G1695508:u121",
+      "G1695508:u122"
+    ],
+    "originalAuthorHold": [
+      "The manual-dimming lever wording needs confirmation: G1945074-b00039 specifies pulling rearward toward the driver for night and pushing forward away from the driver for day, while G1945074-b00061 describes pulling forward or pushing rearward. Both descriptions are retained pending review of the intended pull/push directions."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent source/figure/prose review of99primary+122support units,49edits and12figures. Manual-tab direction remains explicitly unresolved; system overview only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "752b64bc2cc2782ca397385600bfbbbc601d4605eee15679e331c3e22b7a1324"
+    },
+    "supplementalEvidence": {
+      "path": "owner-source.json",
+      "sha256": "ff9d47c4ee9a9b245b2325d226ea4cced00fd7521ceb25583551083546814d83",
+      "scope": "Complete matching owner printed74–76 text and sourcePDFchecksum; stationary mirror-adjustment warning. Does not establish disputed manual-tab direction; no expanded numeric trust."
+    }
+  }
+}
