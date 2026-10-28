@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C135",
+  "supportingSourceRefs": [],
+  "sourceHash": "a360384e1407eb360488c9015f98fbcd5b5d499ecc6079e600b5c74e129c2a3a",
+  "title": "C135 — Anti-Lock Brake System (ABS) module connector",
+  "introduction": "The ABS module’s connector table separates wheel-speed connections, electrical feeds, a ground connection and a brake-vacuum signal. I use the wheel-position wording as the corner labels on a race engineer’s clipboard: getting the right signal attached to the wrong corner still leaves you with the wrong story.\n\nStart with the harness identification beneath the face heading. The drawing has central horizontal rows and separated end cavities, so use each printed cavity label rather than counting circles from an edge. Match that label to the Cavity column, then read across Circuit Number, Color, Gauge, Function, Qualifier, Used and Terminal Part Number. Gray positions correspond to blank circuit entries where matching rows are supplied; the drawing has no separate shading legend. Nearby cavities need not share a function.\n\nThis page identifies documented connections. It does not define physical viewing direction, connector access, test conditions, expected readings, the gauge convention or the Size and Used codes. The pigtail and housing metadata provide reference identities, without teaching replacement or establishing a repair choice. After identifying a circuit, use the matching diagnostic procedure to establish what its behavior means.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C135-b00002",
+      "text": "Connector face and identity · Harness 14290",
+      "why": "I check the harness and housing identity before using the cavity drawing. The separated end positions and central rows are useful landmarks within this view, but the illustration does not establish the physical side from which to view or probe the connector."
+    },
+    {
+      "blockId": "connector-C135-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Read the complete row, keeping the wheel-position wording with its circuit. The wheel-speed entries distinguish sensor functions from control-module sensor connections; those labels alone do not establish signal polarity or a test method. Feed and ground entries describe different roles, and their presence in the table does not confirm that either path works under load. The lookup supplies circuit identity for the next diagnostic step."
+    },
+    {
+      "blockId": "connector-C135-b00007",
+      "text": "Pigtail identification and service parts",
+      "why": "A pigtail is the connector with attached wire leads used for a wiring repair. I use this table as a parts-counter cross-check: it keeps the listed service item, engineering shell, material, cavity count and gauge entries together. The service-part and engineering-shell fields identify different things, so keep their labels attached. The gauge list does not map replacement leads to individual cavities or authorize wire substitution; identifying a listed part is separate from carrying out a splice or terminal repair."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:51:46.379Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d5809c0adf0466230b3b2f3ef0e61a05186afa43a162f20dcf11b31b3ee333e1",
+  "sourcePdfHash": "5431d411f67db70d3fe2ca151f69bea7e32f2d88c8e67ba8d14ebb95156c5153",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 73,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "8cb568a62caf4d8ec224e25cae81b60c4bb6cf575f7e1e13872fae16152f8296",
+    "reviewedAt": "2026-10-28T04:51:46.380Z"
+  }
+}

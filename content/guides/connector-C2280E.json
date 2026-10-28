@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2280E",
+  "supportingSourceRefs": [],
+  "sourceHash": "54481c40397e165cc5a537aacb8274e0c95857d0ac28c13d5fec2b6761931464",
+  "title": "C2280E — Body control module (BCM) connector reference",
+  "introduction": "This body control module connector reference brings switch, lighting-control and communication connections into the same directory. I read it like a front desk’s extension list: sharing a connector does not mean every wire has the same job. In particular, LIN links carry messages rather than serving as simple on/off power feeds.\n\nStart with the harness-face heading and the identification row beneath the drawing. The illustration has an upper pair and a lower pair of cavity rows, separated by rectangular openings. Within each row, the labels descend from left to right as drawn. Use those labels to find the corresponding Cavity entry in the assignment table.\n\nThe drawing mixes white, black-outlined circles with gray-filled circles. Read the table for the recorded circuit assignment rather than treating shading as an electrical condition or test result. Follow the selected row across to its circuit identifier, wire details, function, applicability and terminal reference. Keep generic feature names exactly as recorded; a name alone does not confirm that equipment is fitted to your car.\n\nThis is an identification and wiring-reading guide. The physical viewing direction, access and release procedure, electrical test setup, and definitions of the Size and Used codes are not established here. The recorded Gauge entries are retained without assuming a wire-selection convention.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280E-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I pair this illustration with its Fpn and Harness Id row before reading an assignment. The housing outline and separated row groups are landmarks on the page; they do not establish which side of a physical connector the reader would be facing."
+    },
+    {
+      "blockId": "connector-C2280E-b00005",
+      "text": "Read the pin assignments",
+      "why": "Cavity is the bridge from drawing to table. Circuit Number identifies the recorded path, Color and Gauge describe the wire, Function names the connection’s role, and Qualifier carries any stated applicability. Keep Used and Terminal Part Number with that same row. A row with blank circuit and function fields supplies no named electrical role to infer or test."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:54:05.007Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "255d78034526e8b600be57130031ba1a7efd8905220e011e12c39b7a5c1fc274",
+  "sourcePdfHash": "72726bbad26ce3493af74d7cc98f6036f4daeb49bab42dd58a9877d0bda7fe6a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 73,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "3f2e17c3e70ae9a37d8acd60b77e8f4cf20bb3e5823f179633734266c4153e09",
+    "reviewedAt": "2026-10-28T04:54:05.008Z"
+  }
+}

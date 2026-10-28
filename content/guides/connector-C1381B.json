@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1381B",
+  "supportingSourceRefs": [],
+  "sourceHash": "960a3445e5e857c2277c70646e2c03b09b56e029c8ff07581a2f685555be81c7",
+  "title": "C1381B — Powertrain Control Module (PCM)",
+  "introduction": "I use this reference to connect a cavity in the drawing with its circuit assignment in the table. The PCM receives information and sends commands to manage powertrain functions; this connector map is its switchboard directory. Knowing which line carries a command and which carries feedback makes the wiring much less of an alphabet soup.\n\nStart with the connector identity table, then use the harness identification table beside the drawing to check the reference you are reading. Find the desired function in the assignment table, read across that same row, and match its Cavity label to the drawing. Circuit Number identifies the circuit; Color and Gauge record wire information; Terminal Part Number identifies the listed terminal. Keep any Qualifier with its assignment.\n\nThis guide explains the reference, without selecting replacement wire or teaching an electrical test. Physical viewing side, access, disconnection, probing methods, test values and vehicle applicability need the matching service information. The gauge convention and the Size and Used code definitions are unspecified here; keep those entries as printed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1381B-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "I use the separate cavity bank on the right as a landmark within this drawing. The main rows increase from left to right, with higher-numbered rows above lower-numbered rows. Match the printed cavity label rather than counting circles from an edge. Gray-filled and outlined circles provide visual distinctions, but the assignment table supplies the circuit information; shading is not evidence of electrical condition."
+    },
+    {
+      "blockId": "connector-C1381B-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read each assignment horizontally so the cavity, circuit, wire information, function and terminal stay together. Command and monitor labels describe different jobs: a request to operate a device and information about its operation are separate clues. Rows with blank circuit and function fields record no assignment here; they do not establish that a vehicle has a missing wire. After identifying a circuit, carry its exact identifier into the applicable wiring or diagnostic information."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:13:21.771Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "7b4323d2f5f6c3d799c3f1c2b23702d2f37083bd65460dd79c6e39947f5da2e0",
+  "sourcePdfHash": "be8f2cf05bc4ce0e14a32b2c7d52e1927aac9f881e68073842c1c55359c348ee",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 123,
+    "sourceChunkCount": 3,
+    "reviewedChunkCount": 3,
+    "fingerprint": "ac42930bd4f758819b379df98998661ce24f16d32a85bfe98b08476e8b7e19a3",
+    "reviewedAt": "2026-10-28T05:13:21.772Z"
+  }
+}

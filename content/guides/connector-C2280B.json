@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2280B",
+  "supportingSourceRefs": [],
+  "sourceHash": "097adee73185efab1a1852bc1f3332efd4b58cf6a0177c7fe1a83203b1dbece8",
+  "title": "C2280B — Body control module (BCM) connector",
+  "introduction": "The body control module (BCM) coordinates many body electrical functions. I use this connector reference like a seating chart for its electrical conversations: the drawing locates a cavity, and the matching table row identifies the circuit assigned to it. A switch connection, a sensor connection and a LIN communication link have different jobs, even when their wires arrive at the same housing.\n\nRead the drawing in its printed orientation. The cavities form an upper pair of rows and a lower pair, separated by rectangular openings in the housing. Within each row, cavity numbers decrease from left to right. Find the printed cavity label, then find that label in the Cavity column; counting circles across the central gap is an easy way to lose your place. The housing outline helps you keep your place on the page, but it does not establish which physical side of the connector you would be looking at on the car.\n\nRead across the matching row to connect Circuit Number, Color and Gauge with Function and any Qualifier. Keep Terminal Part Number associated with that same row. The drawing uses white, black-outlined circles and gray-filled circles; check the table’s circuit and function entries rather than treating shading as an electrical test result. A blank assignment is not evidence of a missing wire or a fault.\n\nThis is an identification reference. It does not define the gauge convention or decode the Size and Used fields, and it supplies no access, release, probing, repair or electrical-test procedure. Once you have identified the connection, use the relevant service or diagnostic procedure for any hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280B-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I check the harness identity before matching the drawing to the assignment table. The face illustration is a cavity-location map; its printed layout alone does not establish a physical viewing direction or a latch-release movement."
+    },
+    {
+      "blockId": "connector-C2280B-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The cavity label joins the drawing to the table. Read the whole row so that the circuit identity, wire details, function, qualifier and terminal identifier stay together. A function label identifies the connection’s role; it does not specify an expected reading or prove that the connected device is faulty."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:01:12.509Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "255d78034526e8b600be57130031ba1a7efd8905220e011e12c39b7a5c1fc274",
+  "sourcePdfHash": "c4d07cf6c573d6ef1994dd213c0ea045b9db20b575a62ddc7a876a7519e20583",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 73,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "7565e97236d91c7d1e32a67075067b783457a9be4a52539dff19d52990a4f16f",
+    "reviewedAt": "2026-10-28T05:01:12.510Z"
+  }
+}
