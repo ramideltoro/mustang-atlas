@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1181",
+  "supportingSourceRefs": [],
+  "sourceHash": "46a2711b1656217d3532d7c4d2f2cf89be7bb0e1ef9740d900beb5774c0bdefd",
+  "title": "C1181 — Fuel injector 1",
+  "introduction": "A fuel injector is an electrically controlled metering valve. Its connector reference lets you follow the electrical labels without getting lost in the alphabet soup under the hood. I use the identity table first, the face drawing second, and the circuit rows to learn what each connection represents.\n\nMatch CNumber and Description before comparing the housing and cavity labels. The final table identifies the recorded pigtail service item. This page teaches reference reading rather than access, electrical testing or replacement. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified; do not interpret them as workshop instructions. Continue with matching vehicle and engine service information for hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1181-b00002",
+      "text": "Harness 12C508 · Connector face",
+      "why": "I use the latch structure at the top of the drawing to keep the vertically arranged cavity labels in context. Each label leads to the matching Cavity row. Comparing Hard Shell with Fpn links the housing identity to the illustration. The visible layout does not establish a physical viewing side or show how to release the connector."
+    },
+    {
+      "blockId": "connector-C1181-b00005",
+      "text": "Read the pin assignments",
+      "why": "Treat each Cavity row as a complete record: Circuit Number identifies the circuit, Color and Gauge describe its listed wire, Function names its role, and Terminal Part Number identifies its listed terminal. The functions separate the powertrain injector-driver connection from the fuse-or-circuit-breaker supply connection. They do not prove electrical operation or specify switching polarity. A blank Qualifier adds no stated condition."
+    },
+    {
+      "blockId": "connector-C1181-b00007",
+      "text": "Look up pigtail service parts",
+      "why": "The opening Kit List points to Number in this service table. Read Service Part with Engineering Shell to connect the listed service item to its housing record. Keep service-parts Material separate from housing Color, and keep the Gauge entries in their respective tables. The Image filename identifies a catalog image; it does not supply a repair sequence. This lookup identifies the item without deciding that it needs replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:44:24.095Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "22b576394797881214c903bed6c92a7cf11419d76f0450e09043c0f52af646eb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "14df2e2eb40782e7fd398669c95a64d2038d395c2b14dcfba8c315430fc7807d",
+    "reviewedAt": "2026-10-28T00:44:24.095Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1688",
+  "supportingSourceRefs": [],
+  "sourceHash": "89534f48baffe7d411d0a2e9673652749b1ad11dd5b4bdd7aff02f21f89ece1e",
+  "title": "C1688 — Right front brake pad wear sensor connector",
+  "introduction": "Brake pads provide the friction that slows the wheel; this reference maps the connector for the right front pad-wear sensor. I use it to keep the sensor connection and its ground connection straight. A connector map can tell you where a circuit belongs, but it cannot tell you how much pad is left—there is no thickness ruler hiding in this plug drawing.\n\nBegin with the connector identification table, match the drawing’s cavity labels to the pin-assignment rows, and read across each row for its circuit identity and function. Use the separate pigtail table to look up the listed service assembly and compare its engineering shell with the housing information.\n\nThis is an identification guide, not a pad inspection, electrical test or replacement procedure. Physical access, connector viewing direction and test criteria need matching service information. Gauge, Size and Used are retained reference fields whose conventions are unspecified here, so they do not establish wire selection or repair instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1688-b00002",
+      "text": "Connector face for harness 13A840",
+      "why": "I orient the illustration by its elongated oval outline, top tab and projections on the left edge. The cavity labels are vertically separated, with an unlabelled symbol between them; use the actual cavity labels to find the table rows. These visible features orient the page without establishing whether a physical connector is viewed from the wire side or terminal side. Check Fpn and Harness Id alongside the drawing for reference identity."
+    },
+    {
+      "blockId": "connector-C1688-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Read each cavity row across to keep its circuit identifier, color code, gauge entry and function together. The functions distinguish the right-front pad sensor circuit from the specified right-front fender ground destination. That destination label is not an access map. The terminal-part entries supply no individual terminal number, so this table cannot identify an individual replacement terminal."
+    },
+    {
+      "blockId": "connector-C1688-b00007",
+      "text": "Identify the listed pigtail service assembly",
+      "why": "Number connects the service entry to the Kit List above; Service Part identifies the listed pigtail assembly, and Engineering Shell provides the housing comparison. The material description belongs to the service-part record, not an instruction to apply lubricant. Keep the pigtail’s gauge entry separate from the circuit-table entries: the reference supplies identification data, not a wire substitution, splice or installation method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:35:29.085Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "3b8bd8ec054b19ed383e752996c0844a8893e56c6f33652a04130c07f0f03c18",
+  "sourcePdfHash": "07394d35446a0d73060f0c30e31d3b2207611720ae0f210d6c8bb006e2b8b9c8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b0e0ace78f4562ee5c52cf05624daf229876344b1a6a5e4a2ad71b41f790c72e",
+    "reviewedAt": "2026-10-28T00:35:29.085Z"
+  }
+}

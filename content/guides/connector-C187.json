@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C187",
+  "supportingSourceRefs": [],
+  "sourceHash": "7ecc7d154b4434ebdbb17af726e740b9d11acb5d78f6f25cde7abef9b286973f",
+  "title": "C187 — Fuel injector 7 connector reference",
+  "introduction": "An injector is an electrically controlled fuel-metering valve. I use this page to connect its electrical identity to the drawing and circuit table. Think of the cavity labels as seats on a tiny seating chart: their numbers lead to the circuit assignments, while the housing outline helps you follow the picture.\n\nFirst check the component description and housing details in the identity table. Next, match a printed cavity label to its row and read across for circuit identification, wire information, function and terminal reference. The pigtail table provides a separate lookup for the documented connector-and-lead assembly.\n\nThis reference leaves engine applicability, physical viewing direction, access and electrical test criteria unspecified. It also leaves the Gauge convention and Size and Used codes undefined. Keep those entries as reference data; use the matching vehicle and engine procedure for wire selection, physical testing or replacement.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C187-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The illustration places the latch outline above the vertically stacked cavities. The upper cavity is nearest that outline as drawn. I use the printed labels to find the corresponding circuit rows, without turning the page’s orientation into an assumption about the installed connector. The adjacent identification table associates the view with its shell and harness entries."
+    },
+    {
+      "blockId": "connector-C187-b00005",
+      "text": "Match cavities to their circuits",
+      "why": "Read each Cavity row as a connected set: Circuit Number, Color, Gauge, Function and Terminal Part Number all describe that assignment. The function descriptions distinguish the powertrain controller’s injector-driver connection from the fuse-or-circuit-breaker power connection. These are circuit identities and roles, not confirmation of voltage, injector operation or a fault. Blank Qualifier cells add no further condition."
+    },
+    {
+      "blockId": "connector-C187-b00007",
+      "text": "Pigtail service-assembly reference",
+      "why": "I use Number to connect this entry with the identity table’s Kit List, then distinguish the Service Part reference from the Engineering Shell reference. A pigtail includes the connector and wire leads, so its Gauge field belongs to that assembly rather than replacing the circuit-table entries. The listing supports parts identification; choosing a repair and carrying out a splice need separate instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:40:04.452Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "2dbd08ca93b23adb384987d7197e1d77b78b632ab9dc1080f3ec42155597055c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3a6cf80cfc8b118ed4d873c99b018494e916290a3eb017724e2acdf81fd9dad4",
+    "reviewedAt": "2026-10-28T00:40:04.453Z"
+  }
+}

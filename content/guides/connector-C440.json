@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C440",
+  "supportingSourceRefs": [],
+  "sourceHash": "b0ffc4be64b446cf96bf93553f03f402ba02833be83fda1586cff7d13524e149",
+  "title": "C440 — Left rear wheel speed sensor connector",
+  "introduction": "The wheel-speed sensor reports how quickly its wheel is rotating. I use this reference to identify the left rear sensor’s connector and follow its cavity labels into the circuit table. Think of it as the wiring’s address book: it tells you which connection belongs to which circuit, while an actual fault diagnosis still needs evidence.\n\nStart with the connector identification fields, compare the drawing’s outline and cavity labels, then read each matching pin-assignment row across. Pay particular attention to Function: the sensor-related and control-module-related descriptions distinguish the connections without assigning electrical polarity. The pigtail table provides a separate service-assembly lookup.\n\nThis is a connector-reading guide. Physical access, viewing direction, probing conditions, test limits and replacement steps need matching service information. Gauge, Size and Used remain reference fields here; their conventions are not defined for choosing wire or equipment.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C440-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "The drawing has a latch outline above the stacked cavity labels and projections along its left edge. I use those visible landmarks to keep the page orientation consistent while matching cavity labels to table rows. The Fpn and Harness Id fields alongside the drawing provide identity checks; the illustration does not establish a terminal-side or wire-side physical view."
+    },
+    {
+      "blockId": "connector-C440-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Follow each cavity row through Circuit Number, Color, Gauge, Function and Terminal Part Number. The function descriptions distinguish the wheel-speed sensor connection from the control-module-related connection. Keep those descriptions intact: neither the wire color nor the presence of a control-module label establishes supply polarity, a ground connection or a test result."
+    },
+    {
+      "blockId": "connector-C440-b00007",
+      "text": "Identify the listed pigtail service assembly",
+      "why": "Use Number to connect the pigtail entry with the Kit List, Service Part to identify the listed assembly, and Engineering Shell to compare housing identity. The pigtail and vehicle-circuit gauge entries belong to separate records; their presence does not establish a substitution or splice method. This table supports a lookup, not a decision that the connector or sensor needs replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:35:29.077Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4b3c72be238d58b0bb329c75f3cc63bd81c6e3fc887cb144e7f6e8cf54f00666",
+  "sourcePdfHash": "fdcfcc619b9da24c8b361bf66f6cf0337f01d33b5d1413598af6853835498620",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "823dca42087748d5a5490dca7a241ae67e1a0cf1b6bdc7a01bd62447e1dc3e4b",
+    "reviewedAt": "2026-10-28T00:35:29.078Z"
+  }
+}

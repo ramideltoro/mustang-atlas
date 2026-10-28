@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C185",
+  "supportingSourceRefs": [],
+  "sourceHash": "708ece300108bd0170bc93a35995a82677eee3187fa57d7ccf6914c1445f780d",
+  "title": "C185 — Fuel injector 5 connector reference",
+  "introduction": "The injector meters fuel, and its electrical connection links that valve to the circuits identified here. I read this page like a seating chart: the cavity label tells me which row belongs to which connection, while Function tells me its job. A familiar connector outline alone cannot do all that identifying work.\n\nBegin with the identity table. Match the drawing's cavity labels to the Cavity column, then read each row across without separating its circuit identifier from its color, gauge, function or terminal entry. The driver and fused-power descriptions explain the assigned electrical roles. The final table provides the associated pigtail service-parts reference.\n\nThis is a guide to those labels and relationships. Engine applicability, physical viewing direction, gauge convention and Size/Used code meanings are unspecified; hands-on access, probing, wire selection, testing and replacement need separate applicable instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C185-b00002",
+      "text": "Connector face map · Harness 12C508",
+      "why": "With the drawing displayed as supplied, the latch-shaped feature sits above the vertically arranged cavities. I use that visible feature to understand the page layout without assuming a physical viewing side. The Fpn and Hard Shell entries provide an additional identity cross-check beyond the outline."
+    },
+    {
+      "blockId": "connector-C185-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Each cavity label leads to a complete circuit record. I read Function to distinguish the injector-driver connection from the fused-power connection, retaining the full wording and suffix. Those descriptions identify roles; they do not specify a measured voltage or confirm injector operation. The blank Qualifier cells add no stated condition."
+    },
+    {
+      "blockId": "connector-C185-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is the connector and its attached wire leads. Number relates this service-parts row to Kit List, while Service Part and Engineering Shell distinguish the service assembly entry from its shell identifier. Terminal Part Number belongs to the individual circuit rows. I keep these categories separate, and use neither Gauge column alone to choose replacement wire or a splice."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:39:36.088Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "d40d4ff8833fffaf851e54beb2c347a63182775297cbc1bb8b2505d0c97766b5",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e459f14840acc2c1267c15f56ed948986049bdf44a37cb6fbd04bf614b3df92c",
+    "reviewedAt": "2026-10-28T00:39:36.089Z"
+  }
+}

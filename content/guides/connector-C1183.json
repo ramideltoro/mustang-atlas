@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1183",
+  "supportingSourceRefs": [],
+  "sourceHash": "8e605202517cfba71b0d623d10885e74e9a750c9ba893ff9ad483fea4c865073",
+  "title": "C1183 — Fuel injector 3",
+  "introduction": "An injector meters fuel under electrical control. I use this page to connect its housing identity, drawn cavity labels and circuit descriptions—the wiring equivalent of putting names to faces.\n\nStart with CNumber and Description in the identity table. Compare the housing information with the face drawing, then follow each cavity's row across the pin table. Use the final table to identify the recorded pigtail service item. This is a reference-reading guide, not an access, probing or replacement procedure. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here; leave those open and use matching vehicle and engine service information for hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1183-b00002",
+      "text": "Harness 12C508 · Connector face",
+      "why": "I use the latch structure above the vertically arranged cavity labels as a landmark within the drawing. The labels connect the illustration to Cavity in the pin table, while Hard Shell and Fpn link the housing records. These features explain how to read this view; they do not establish a physical viewing side or a connector-release direction."
+    },
+    {
+      "blockId": "connector-C1183-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read each Cavity row across its Circuit Number, Color, Gauge, Function and Terminal Part Number. Function separates the powertrain injector-driver connection from the fuse-or-circuit-breaker supply connection. This tells you which recorded job belongs to each connection, without establishing switching polarity or proving that the circuit operates correctly. A blank Qualifier adds no stated condition."
+    },
+    {
+      "blockId": "connector-C1183-b00007",
+      "text": "Look up pigtail service parts",
+      "why": "Follow Kit List in the opening table to Number here, then read Service Part and Engineering Shell together to identify the listed service item and its housing association. Material belongs to this entry rather than housing Color. Keep its Gauge separate from the pin-table Gauge, and treat Image as a catalog filename. The listing supplies identification, not a reason to replace the connector or instructions for doing so."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:44:24.108Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "993fa0d082a3c3b462400f4e94fc789e1d9753eeceb1384c707cd434f426f832",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8c336bd16f0f9be4458cd00426872eab779a04594c4720f89ffa4e81295f802b",
+    "reviewedAt": "2026-10-28T00:44:24.109Z"
+  }
+}

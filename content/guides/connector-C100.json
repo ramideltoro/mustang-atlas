@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C100",
+  "supportingSourceRefs": [],
+  "sourceHash": "eab1780ce3ef726cd00a28a8e2e9559d52d1d11de0f3e9b3c680ba2720764b7f",
+  "title": "C100 — A/C clutch and A/C clutch field coil",
+  "introduction": "I use this reference as the A/C clutch connector’s address book: the drawing locates the cavities, and the tables connect those locations to circuits and service-part records. Start with the connector identity table, find the printed cavity label in the drawing, then read across its matching Cavity row.\n\nThe circuit functions distinguish the clutch-relay connection from the ground return. A relay is an electrically controlled switch; its appearance in a circuit description does not establish that it is a separate plug-in component.\n\nRead the illustration as printed. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here. This reference supports identification and table reading; access, electrical testing and replacement need the matching service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C100-b00002",
+      "text": "Connector-face map · Harness 14B060",
+      "why": "The drawing places a rectangular latch feature above vertically stacked cavities inside a rounded shell. I use those visible features to navigate the printed drawing, then match its cavity labels to the table. The Fpn and Harness Id fields tie the illustration to its connector record; the drawing’s position on the page does not establish how to view an installed connector."
+    },
+    {
+      "blockId": "connector-C100-b00005",
+      "text": "Cavity-to-circuit guide",
+      "why": "Read across each Cavity row to keep its Circuit Number, Color, Gauge, Function and Terminal Part Number together. Function explains the connection’s role, while Circuit Number identifies the circuit. A blank Qualifier adds no stated condition. This map identifies connections; confirming their electrical condition requires the matching diagnostic test."
+    },
+    {
+      "blockId": "connector-C100-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Number, Service Part and Engineering Shell identify different parts of the service record. I compare Engineering Shell with the connector’s Hard Shell and Fpn fields to relate the pigtail entry to this connector. Keep the pigtail’s Gauge entry separate from the Gauge entries for the original circuits; the parts listing supplies no instruction to substitute wire sizes."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:45:13.272Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "df42ad107a94465e082ac8d44e7afc0fbbc7e42ef6bad3eaa6d98c73c10316fe",
+  "sourcePdfHash": "7940ac30adc4ca76a36216f0a1956509131dbd4e19746571b3f7fe8d75c4ed6c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4504edfd4b6a5075a74f52c536eeee33dc73c881cbc0e9ea527ec57618f4cf23",
+    "reviewedAt": "2026-10-28T00:45:13.273Z"
+  }
+}

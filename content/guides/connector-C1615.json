@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1615",
+  "supportingSourceRefs": [],
+  "sourceHash": "8b566790c3cd2cdc159d685a91373e3241d8280e1e67e33547e7ca6f6bfa07ac",
+  "title": "C1615 — Knock sensor 2 (KS2) connector reference",
+  "introduction": "I use this page to connect the knock-sensor connector's identity with its illustrated cavities and circuit descriptions. The drawing is a seating chart for the connections: match a printed cavity label to the Cavity column, then read across that row so its circuit identifier, color, gauge and function stay together.\n\nPay attention to the plus and minus suffixes in Function and keep the bank and order wording intact. Those labels distinguish the documented connections; the minus suffix alone does not establish a chassis-ground connection. The parts table separately identifies the associated pigtail record. An unavailable individual terminal entry does not cancel that pigtail listing.\n\nThis is a reference-reading guide. Physical viewing direction, engine applicability, gauge convention and Size/Used code meanings are unspecified. The bank wording is not an access route, and this sheet supplies no probing, wire-selection, test or replacement procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1615-b00002",
+      "text": "Connector face map · Harness 14B485",
+      "why": "In the supplied view, the latch-shaped feature is above the vertically stacked cavities. The outline also has projections along the left side and a downward extension toward the right. I use these as landmarks within the illustration, without assuming its physical viewing side or a release movement. Fpn can be compared with Hard Shell to cross-check the identity record."
+    },
+    {
+      "blockId": "connector-C1615-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "The matching cavity row identifies each circuit and preserves its sensor or powertrain-control-module function wording. I keep the plus and minus suffixes with their respective descriptions, without turning either into a battery connection or a prescribed test. The bank and order wording remains an identifying label rather than an inferred engine location. Blank Qualifier cells add no stated condition, and the terminal entries provide no individual terminal part identifier."
+    },
+    {
+      "blockId": "connector-C1615-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is the connector with attached wire leads. Number connects this row to Kit List; Service Part identifies the service-parts entry, while Engineering Shell ties it to the shell record. This remains useful even though individual terminal part identifiers are unavailable above. The pigtail and circuit Gauge entries describe separate records and do not establish replacement-wire suitability or a splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:39:36.104Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "8c7351b8aa43503c07336901a86b8478010c6c7f7cdebdcc784fb35e0b85fb8e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8cd5b11cbe2682fbc7fd500be3a90b1f4002a57f45647abb2f9026991248e00e",
+    "reviewedAt": "2026-10-28T00:39:36.105Z"
+  }
+}

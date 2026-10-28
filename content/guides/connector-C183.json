@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C183",
+  "supportingSourceRefs": [],
+  "sourceHash": "df9897d48e3fc9a6c93d414ee445be8da3c34eb197ca9e234bfd33cdf2dbdcba",
+  "title": "C183 — Fuel injector 3 connector reference",
+  "introduction": "The injector is an electrically controlled fuel-metering valve, and this page maps its documented electrical connections. I start with the identity table, use the drawing's cavity labels to find the corresponding circuit rows, and read each row across. Keeping those entries together saves a game of electrical mix-and-match.\n\nCircuit Number identifies the path; Color and Gauge describe its wiring entry; Function distinguishes the injector-driver connection from the fused-power connection. Terminal Part Number and the separate pigtail table identify different service items. These relationships explain the reference, without establishing whether fuel delivery or injector operation is correct.\n\nEngine applicability, physical viewing direction, gauge convention and Size/Used code meanings are unspecified here. This guide supports reading the connector record; access, probing, wire selection, diagnostic tests and replacement need separate applicable instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C183-b00002",
+      "text": "Connector face map · Harness 12C508",
+      "why": "The latch-shaped feature appears at the top of the supplied illustration, above the vertically stacked cavities. I use it to keep the depicted arrangement clear, without assuming which side of the real connector is being viewed. The accompanying Fpn and the main table's Hard Shell entry provide a further identity cross-check."
+    },
+    {
+      "blockId": "connector-C183-b00005",
+      "text": "Cavities and circuit functions",
+      "why": "Matching the printed cavity label to Cavity gives the correct circuit row. Read its identifier, color, gauge, function and terminal entry as one record. The complete function descriptions, including their suffixes, identify driver and fused-power roles; they supply neither a measured voltage nor proof of operation. A blank Qualifier adds no stated condition."
+    },
+    {
+      "blockId": "connector-C183-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I relate Number to Kit List, then distinguish Service Part from Engineering Shell and the individual terminal entries above. That keeps an assembly identifier from being mistaken for a terminal identifier. The separate Gauge entries remain descriptions of their respective records, without establishing a wire-selection or splice specification."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:39:36.111Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "9dcc94c73ed2d15c8fba9a986a57428a7eba59b2944a5ce7686e0bb9d1697d93",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1488480d5fe6484fa6d2b43926527f62974118e0ca4f9fb0e7719621f62406e1",
+    "reviewedAt": "2026-10-28T00:39:36.112Z"
+  }
+}
