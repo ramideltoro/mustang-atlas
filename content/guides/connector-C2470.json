@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C2470",
+  "supportingSourceRefs": [],
+  "sourceHash": "8600ac4f0da41d93d77e8d73e09ba1225d2f264700f367438176e9b928f1489c",
+  "title": "C2470 — Audio Amplifier",
+  "introduction": "An amplifier connector is a busy little mixing desk: audio channels, active noise cancellation and network communication all have their own labels. I start with the function description, then keep its circuit identifier and polarity attached as I read across the row. A familiar wire color alone is a poor roadie for this many connections.\n\nUse the identification table to establish which connector reference you are reading. Next, find a cavity label in the drawing and match it to the assignment table. Read the complete function wording, including its channel, position and parenthetical labels. The final table provides a separate pigtail service-part reference.\n\nThis page explains the map rather than an electrical test or repair. Physical viewing direction, access, test conditions and replacement methods are outside its scope. Size and Used codes remain reference labels, and gauge entries are preserved without assigning a wire-size convention or selecting replacement wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2470-b00002",
+      "text": "Connector layout · Harness 14401",
+      "why": "The illustration has a large projecting housing structure on its left and a stepped housing profile along its right. I use those features to keep my place on the page while following the cavity labels downward through each column. The drawing supplies a cavity arrangement, but its caption does not establish a mating-side or wire-entry-side view. Its outlines also do not teach a latch-release movement."
+    },
+    {
+      "blockId": "connector-C2470-b00005",
+      "text": "Read the pin assignments",
+      "why": "Use Cavity to connect the drawing to a row, then read Circuit Number, Color, Gauge, Function and Terminal Part Number together. The function wording separates radio channel connections, active noise cancellation outputs and network communication. Keep positive/negative labels with their named audio or noise-cancellation channel, and high/low labels with their network description. Repeated colors do not make circuits interchangeable. Terminal references also vary within this connector, so read the relevant row instead of assuming every contact is identical."
+    },
+    {
+      "blockId": "connector-C2470-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail row identifies a connector assembly with wire leads and records its material, cavity count, service-part reference and engineering shell. Individual terminal references belong to the assignment table. These are different levels of the same hardware family, so I check which category an identifier belongs to before carrying it into a parts discussion. The pigtail gauge entry does not replace the individual circuit entries or establish a splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:53:05.093Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "fc8b895e83270c3eb35c55c1cbbf3329d2e45d87e46890b58d5984a70577a1d3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 42,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "cd454d913a7f3467e37ed815f4602530eb3e00a320fce0086d2f72777c1548d0",
+    "reviewedAt": "2026-10-28T04:00:14.511Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Sole public change replaces unsupported projecting latch structure with neutral projecting housing structure in first why. Full42-unit/raw/context/author/verdict/final prose read; original complete pages1 and2 directly viewed including sole figure. Original full independent review retained."
+    }
+  }
+}

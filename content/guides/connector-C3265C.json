@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3265C",
+  "supportingSourceRefs": [],
+  "sourceHash": "cb8b4ea8b0a16507a78debbef3ad312bdee1cfe015195c7dcdc4df847bb7d070",
+  "title": "C3265C — Front Seat Climate Control Module [SCME]",
+  "introduction": "I read this connector reference like a seating chart for the seat’s electrical connections: the drawing gives each cavity an address, and the assignment table explains its job. Here, those jobs include seat-fan connections, blower-speed controls, an indicator connection and network communication. Keep the driver/passenger and cushion/back descriptions attached to their own rows; “seat comfort” covers several different jobs.\n\nStart with the identification table, find the cavity label in the drawing, then read across its matching assignment row. Use the service-parts table afterward to understand the separately listed pigtail and shell references.\n\nThis is a guide to reading the reference. Physical viewing direction, access, electrical testing and replacement methods are outside its scope. Size and Used codes are not decoded here, and the gauge entries do not establish a wire-size convention or authorize wire selection.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3265C-b00002",
+      "text": "Connector layout · Harness 14D230",
+      "why": "I use the projecting housing structure on the drawing’s left and the smaller rectangular features on its right as landmarks within this illustration. The cavity labels run downward in each column. Gray-filled positions correspond to assignment rows with blank circuit details and no applicable terminal part number; shading alone does not establish what is physically fitted to a vehicle. Keep the drawing’s arrangement intact when reading it, without assuming whether it depicts the mating side or wire-entry side."
+    },
+    {
+      "blockId": "connector-C3265C-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match a drawing label to Cavity, then read Circuit Number, Color, Gauge and Function together. The circuit identifier distinguishes connections even when wire colors repeat. The function descriptions separate network communication, blower-speed control, fan polarity and the passenger indicator connection. Those labels identify each connection’s role; they do not specify a voltage, waveform or fault verdict. After identifying the relevant row, use the matching diagnostic procedure if testing is needed."
+    },
+    {
+      "blockId": "connector-C3265C-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is the connector with attached wire leads. Its service-parts row describes the listed assembly, while Terminal Part Number in the assignment table refers to individual contacts and Engineering Shell identifies the housing reference. I keep those categories separate so a housing identifier does not accidentally become a shopping instruction for a complete repair assembly. The pigtail gauge entry and individual circuit gauge entries describe different records; this reference does not teach how to splice or select replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:49:55.661Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "80ff3f2ddfee79ab5d9cbfde518c5a664ef0de470dae8a2aa2a76e713309c83b",
+  "sourcePdfHash": "a6afcd3353a2ed736aef890e19297087b63da5752daf88df2ed41606863d1a0c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "592d2df972f74ab97b187e178d8d38ba7e22c9f70586b13bfb9d37de6c24e2af",
+    "reviewedAt": "2026-10-28T04:00:14.502Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Sole public change replaces unsupported projecting latch structure with neutral projecting housing structure in first why. Full44-unit/raw/context/prose/verdict and original complete page2/solefigure read by reference supervisor; original full independent review retained."
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C220",
+  "supportingSourceRefs": [],
+  "sourceHash": "ce426a15d731bf6e047def341190f862760ddecdcef0a270d56b771dd17132a3",
+  "title": "C220 — Instrument panel cluster (IPC) connector reference",
+  "introduction": "The instrument panel cluster brings gauges, warnings and vehicle information into the driver’s view. Its connector map shows the variety of connections behind that display: fuel-level functions, an instrument-panel ground, transmission park detection, a fuse-or-circuit-breaker connection and network lines. I treat it like the address book behind the dashboard’s noticeboard: it identifies connections, but a warning on the display does not by itself identify the faulty component.\n\nStart with the connector identity table, then use the housing drawing and its printed cavity labels to find the matching Pin assignments row. Follow that row across to the circuit identifier, color, gauge, function and terminal reference. Gray positions correspond to rows without circuit assignments; their appearance alone is not evidence of a fault.\n\nThis page supports identification and circuit-map reading. Physical access, the physical viewing-side convention, test conditions and replacement methods require separate service information. The gauge convention and the meanings of Size and Used are not defined here, so those entries remain recorded reference data rather than instructions for probing or selecting wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C220-b00002",
+      "text": "Harness 14401 connector face",
+      "why": "As drawn, the large loop-shaped housing feature is on the left and the stepped inner edge is on the right. I use those landmarks to keep the illustration oriented while locating a printed cavity label. The Fpn and Harness Id entries tie the drawing to its recorded connector identity; the outline alone does not establish the physical viewing side."
+    },
+    {
+      "blockId": "connector-C220-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity locates a position in the drawing, while Circuit Number identifies its electrical circuit. Read the complete Function entry: the fuel-level control-module and sensor descriptions remain distinct, and the network entries retain their HIGH and LOW labels and network qualifiers. Color alone cannot distinguish every function. Rows without circuit assignments align with gray positions; neither a populated row nor a terminal reference proves electrical health."
+    },
+    {
+      "blockId": "connector-C220-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "Engineering Shell connects the pigtail catalog row to the connector’s Hard Shell and Fpn identity. Service Part supplies the service identifier, while Number and Image identify the kit entry and its illustration filename. The pigtail’s Gauge, Material and Cavities describe that catalog entry; they do not override the individual circuit rows or explain how to splice or replace the connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:00:14.490Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8ec07a6bb47c4795989e324fa9b687a54aff56302a143fcf3bf41cc7a32af7d8",
+  "sourcePdfHash": "3bfe46ab69a84693c76205998175e90b125e9af045d1610f8323c25a476ebd8a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "cf32f0bc50a0a68af26f51e02e3e6f0dacecb8d73170e53d33c1b93fdddca2c5",
+    "reviewedAt": "2026-10-28T04:00:14.491Z"
+  }
+}

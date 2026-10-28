@@ -89521,136 +89521,238 @@
       }
     },
     {
-      "title": "Diagnose missing warning and seat-memory chimes",
-      "summary": "Trace missing collision, headlamps-on, ignition-engine-on and memory-stored chimes through sound, input and module checks to the appropriate diagnostic path.",
-      "introduction": "The instrument panel cluster (IPC) controls warning chimes from requests sent by other modules. Most warnings sound through the front audio speakers, with the cluster providing backup for required chimes. These tests determine whether investigation should follow the common chime function, an operating input, network communications or the system requesting the warning.",
-      "why": "A silent warning does not identify a failed speaker or cluster. The warning request and its operating conditions must be checked alongside the ability to produce sound.",
+      "title": "Interpret recorded warning and seat-memory chime results",
+      "summary": "Compare existing technician records with Tests BE–BH, preserving the shared chime check, complaint-specific inputs and distinct module-code destinations.",
+      "introduction": "I’ll interpret existing technician records for missing collision-warning, headlamps-on, ignition-engine-on or memory-stored chimes. Each branch requires its actual observations and test conditions; absent records are unknown, not passing results. This article does not teach vehicle-control operation, scan-tool setup, memory programming, fuse or electrical testing, diagnosis at the referred destinations, or repair.",
+      "why": "The instrument panel cluster, or IPC, coordinates warning sounds using requests from other electronic modules. A silent warning can therefore involve the system requesting it, an operating input, network communication or sound production. The message center is the display within the cluster; it receives information through wiring and the vehicle’s communications network. The recorded sequence distinguishes a missing sound from a missing request or operating input.",
       "taskType": "diagnostics",
       "difficulty": "intermediate",
       "searchTerms": [
-        "forward collision warning chime not working",
-        "headlights left on no warning chime",
-        "engine on warning chime missing",
-        "seat memory saves without confirmation chime"
+        "Mustang forward collision warning chime inoperative",
+        "Mustang headlamps on warning chime missing",
+        "Mustang ignition engine on chime not working",
+        "Mustang memory seat confirmation chime missing",
+        "IPC self-test warning chimes",
+        "GWM continuous memory trouble codes"
       ],
       "when": {
-        "summary": "When a fitted warning or memory-stored feedback chime fails under its normal operating conditions.",
+        "summary": "Use when existing technician records document one of these four chime complaints present under its normal operating conditions.",
         "notes": [
-          "Confirm the concern is currently present before drawing component-replacement conclusions."
+          "Test BE addresses the forward collision warning chime; Test BF addresses the headlamps-on warning chime; Test BG addresses the ignition-engine-on warning chime; Test BH addresses memory-stored feedback.",
+          "The complaint must have been present during the diagnostic testing unless the applicable test states otherwise. An absent or uncertain complaint does not justify component replacement.",
+          "The parking-aid complaint mentioned at the end belongs to a separate diagnostic path."
         ]
       },
       "prepare": [
         {
-          "title": "Scan-tool and vehicle information",
-          "detail": "Have a scan tool capable of IPC self-testing and reading relevant module codes. The vehicle identification number (VIN) is needed if testing directs you to the IPC guided routine."
+          "title": "Require identified, complete technician records",
+          "detail": "Require vehicle identity, fitted equipment, complaint, test date/provenance and the actual normal operating conditions under which the sound was missing. BE, BF, BG and BH are separate paths. Missing or ambiguous observations stop the affected interpretation; do not perform missing tests from this article."
         },
         {
-          "title": "Establish valid conditions",
-          "detail": "Check battery and charging operation, with battery state of charge above 70%. Review previous repairs and use the warning-chime operation description to establish the complaint's operating conditions."
+          "title": "Require the electrical preliminary records",
+          "detail": "Require documented correct battery and charging-system operation and battery state of charge greater than 70% before diagnosis. Require relevant repair history and available OASIS/TSB information, wiring inspection for damage/chafing/routing, and checks of relevant fuses, electrical circuits and connectors for continuity and correct installation using the applicable circuit procedure. Missing preliminary records leave the diagnosis unresolved; no fuse identifiers or testing method are supplied here."
+        },
+        {
+          "title": "Require actual code and operating-input evidence",
+          "detail": "Require a network-module survey, exact reporting module/code identities, the IPC self-test and GWM continuous-memory results at their proper chart stages. BG requires actual door-ajar and automatic range-display observations; manual BG remains unresolved. BH requires evidence that the applicable memory-set procedure successfully changed preferences, not merely that a seat moved or a button was pressed."
+        },
+        {
+          "title": "Keep subsequent procedures separate",
+          "detail": "The VIN-specific IPC guided routine, IPC DTC chart, AJ, V, network, collision-warning, BCM and Front Seats destinations remain separate diagnostic work. Any resulting repair and confirmation of the original complaint need their own complete records. This interpretation neither operates the vehicle nor authorizes module replacement."
         }
       ],
       "steps": [
         {
-          "title": "Check the shared chime function",
-          "body": "All four tests begin with the driver safety-belt warning. With the belt unbuckled, transition ignition from OFF to RUN and listen for approximately 6 seconds. If the chime does not operate, use the VIN-specific IPC guided routine. Otherwise continue the selected complaint's checks."
+          "title": "Identify the recorded complaint and prerequisites",
+          "body": "Select the recorded complaint: BE forward collision warning, BF headlamps-on warning, BG ignition-engine-on warning, or BH memory-stored feedback. Require the matching fitted equipment and documented normal complaint conditions. Do not combine all four paths.\n\nRequire the preliminary records in preparation, including relevant fuse/circuit/connector checks. A manual-transmission BG case cannot bypass the PRNDL checkpoint; its continuation remains unresolved. The [BE–BH chart](#/document/G1693940) supplies the decision paths."
         },
         {
-          "title": "Check ignition-engine-on warning inputs",
-          "body": "For Test BG, open the driver door and observe the door-ajar indicator or message. No indication leads to Test AJ. On a vehicle fitted with an automatic transmission, shift through its ranges while observing the range display (PRNDL). A mismatch leads to Test V; matching indications allow IPC testing. This range-display branch does not apply to a manual-transmission vehicle; do not use it as a substitute for the matching warning conditions."
+          "title": "Interpret the preliminary network survey",
+          "body": "Require the recorded survey of network modules for system or symptom DTCs related to the complaint, with exact module identities. Circuit-related DTCs require separate diagnosis before system/performance codes. Multiple circuit codes require assessment of possible shared wiring causes using the matching diagrams; no common cause may be assumed. Require records of the applicable resolution before treating later results as reliable."
         },
         {
-          "title": "Check whether memory actually stores",
-          "body": "For Test BH, verify that the memory-set procedure successfully changes the stored preferences. If it cannot, continue with front-seat diagnosis. Successful storage permits the chime investigation to continue to the IPC self-test."
+          "title": "Interpret the shared safety-belt chime record",
+          "body": "BE1, BF1, BG1 and BH1 require a documented ignition OFF-to-ON/RUN transition, driver belt unbuckled for the observation, and monitoring during the first 6 seconds. Require the actual duration/result rather than a generic statement that some chime worked.\n\nA chime operating for approximately 6 seconds permits the selected path to continue: BE/BF to the IPC self-test, BG to the door indication, BH to memory setting. Failure directs the separate VIN-specific IPC guided routine. Missing state, belt condition or timed observation does not establish either outcome. No ignition or belt operation is directed here."
         },
         {
-          "title": "Run the cluster self-test",
-          "body": "Tests BE and BF reach this stage directly after a successful safety-belt chime check; BG and BH first require their input checks. Run the IPC self-test. Recorded diagnostic trouble codes (DTCs) lead to the IPC DTC chart in the [diagnostic article](#/document/G1693940)."
+          "title": "BG2: interpret the recorded door-ajar indication",
+          "body": "Require the recorded driver-door-open condition and the corresponding door-ajar indicator or message-center warning. An indication that turns on permits BG3. No indication directs separate Pinpoint Test AJ in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940). An observation with uncertain door state cannot pass the check."
         },
         {
-          "title": "Check gateway codes and follow the complaint",
-          "body": "If the IPC self-test records no codes, read Gateway Module A (GWM) continuous-memory DTCs. Any recorded codes lead to communications-network diagnosis. With none recorded, follow the complaint-specific destination below. This is a diagnostic handoff, not an instruction to replace a module."
+          "title": "BG3: interpret the automatic range-display comparison",
+          "body": "Require the actual selected transmission ranges and corresponding PRNDL indications from the technician’s range check. If every indication matches the selected range, continue to BG4. A mismatch directs separate Pinpoint Test V in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940).\n\nA single Park indication is not a complete through-the-ranges record. No range shifting is taught here. Missing comparisons or a manual-transmission case leave this path unresolved."
+        },
+        {
+          "title": "BH2: interpret actual memory-setting success",
+          "body": "Require evidence that the applicable memory-set procedure successfully changed the memory preferences. Mere seat movement, a pressed button or missing confirmation sound does not establish that result.\n\nSuccessful preference change permits BH3. A documented unsuccessful change directs separate [Front Seats diagnosis](#/document/G1695509). Missing procedure/result provenance is unknown rather than a failed memory feature; this article supplies no memory-setting operation."
+        },
+        {
+          "title": "Interpret the IPC self-test at the correct stage",
+          "body": "Require the recorded IPC self-test at BE2/BF2 after the shared chime passes, BG4 after both operating inputs pass, or BH3 after memory setting succeeds. Require the actual report, not an inference from an unlit warning indicator.\n\nAny recorded DTC directs the IPC DTC chart in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940). Only no recorded DTCs permits the gateway stage. Missing reports cannot take the no-code branch."
+        },
+        {
+          "title": "Interpret GWM continuous-memory codes",
+          "body": "Require Gateway Module A continuous-memory DTC results at BE3, BF3, BG5 or BH4, distinguished from the IPC self-test and other code categories. Any recorded GWM CMDTC directs separate [Communications Network diagnosis](#/document/G1813071). Only no recorded GWM CMDTCs permits the complaint-specific endpoint. No retrieval or clearing is directed here."
+        },
+        {
+          "title": "Preserve the distinct no-code destinations",
+          "body": "After the shared chime and applicable input checks pass, with no IPC self-test codes and no GWM continuous-memory codes:\n\nBE directs separate [Collision Warning and Collision Avoidance System diagnosis](#/document/G1693174).\n\nBF directs diagnosis of all BCM DTCs through [BCM diagnosis](#/document/G1692965).\n\nBG directs diagnosis of any BCM DTCs through [BCM diagnosis](#/document/G1692965).\n\nBH directs diagnosis of any DSM DTCs through [Front Seats diagnosis](#/document/G1695509).\n\nThese are subsequent diagnostic requirements, not component replacement verdicts or procedures taught by this article."
+        },
+        {
+          "title": "Record the conclusion and unresolved evidence",
+          "body": "Retain the original complaint and equipment, preliminary inspection/code survey, timed shared-chime result, applicable door/range/memory evidence, IPC report, GWM report and exact destination. Record missing evidence as unresolved at its actual checkpoint.\n\nA directed investigation does not establish a repaired chime. Any later claim of repair requires the separate diagnostic/repair record and confirmation under the original normal complaint conditions. No driving, collision provocation, scan operation, control restoration or repair is directed here."
         }
       ],
       "watchFor": [
         {
-          "title": "Chime priority",
-          "body": "A higher-priority warning can replace or delay another chime. Account for competing warnings when confirming the complaint."
+          "title": "A higher-priority chime can interrupt another",
+          "body": "The IPC gives warning requests a programmed priority. A more important request can replace or delay a lower-priority sound. Account for competing warnings when confirming the complaint; an interrupted sound is not automatically a failed sound system."
         },
         {
-          "title": "A partial pass",
-          "body": "A working safety-belt chime establishes sound operation for that check; it does not prove that another system's warning request reaches the cluster."
+          "title": "Sound location matters, but is not a component verdict",
+          "body": "The four chimes covered here normally use the front audio speakers. Parking-aid and Blind Spot Information System/Cross Traffic Alert chimes use the rear speakers. The turn-signal tick-tock is generated by the IPC itself, and the IPC also provides backup for required chimes if audio-system chime output fails. A working turn signal or safety-belt chime therefore does not prove every other warning request and sound path."
+        },
+        {
+          "title": "A cleared message is not a repaired condition",
+          "body": "The message center uses the left steering-wheel controls and can rotate multiple warnings at approximately 4-second intervals. A recorded OK acknowledgement clears the display so normal operation can resume; it does not establish repair. Ensure the recorded observation accounts for competing messages rather than treating an acknowledged display as a resolved condition."
+        },
+        {
+          "title": "No electrical execution from this interpretation",
+          "body": "This article requires existing records. It does not direct jumper-wire stimulation, terminal probing, continuity testing, module outputs or fuse work. A later physical procedure must establish the actual circuit, method and required protection; generic diagnostic methods do not supply a chime-specific test."
         }
       ],
-      "notes": [],
+      "notes": [
+        "These tests concern four warning-chime complaints; no dashboard, seat, steering-wheel or module work is taught.",
+        "Subsequent circuit testing, module configuration, software assessment and repair require separate complete procedures and records.",
+        "The message center replaces the selected display with a warning and returns when the warning is cleared and no other warning takes precedence.",
+        "Parking-aid chime diagnosis is a separate path. The supplied trailing complaint context does not establish its test sequence."
+      ],
       "diagnostics": [
         {
-          "finding": "The forward collision warning chime is inoperative.",
-          "meaning": "Test BE applies to the fitted collision-warning system.",
-          "next": "After passing the common chime check and finding no IPC or GWM codes, diagnose collision warning and collision avoidance."
+          "finding": "Recorded result: The safety-belt warning does not sound for approximately 6 seconds after OFF-to-RUN with the driver belt unbuckled.",
+          "meaning": "The shared starting check has failed; the selected complaint path cannot advance.",
+          "next": "Separate required VIN-specific IPC guided routine; do not jump to the gateway or select the complaint-associated module."
         },
         {
-          "finding": "The headlamps-on warning chime is inoperative.",
-          "meaning": "Test BF investigates the cluster, gateway and body-control path.",
-          "next": "After the common checks pass without IPC or GWM codes, diagnose all body control module (BCM) DTCs."
+          "finding": "Recorded result: The safety-belt warning sounds for approximately 6 seconds.",
+          "meaning": "Sound operation is demonstrated for this check, without proving that another system requests its warning correctly.",
+          "next": "Interpret the recorded IPC self-test for BE/BF, door-ajar indication for BG, or actual memory-setting result for BH."
         },
         {
-          "finding": "The ignition-engine-on warning chime is inoperative.",
-          "meaning": "Test BG also checks door-ajar indication and, on an automatic-transmission vehicle, transmission-range indication.",
-          "next": "After those checks pass and no IPC or GWM codes are recorded, diagnose any BCM DTCs."
+          "finding": "Recorded result: BG: opening the driver door produces no door-ajar indicator or message.",
+          "meaning": "The required door-ajar indication has failed.",
+          "next": "Separate required Pinpoint Test AJ in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940)."
         },
         {
-          "finding": "Memory preferences store successfully but the feedback chime is missing.",
-          "meaning": "Test BH can proceed beyond the memory-set function check.",
-          "next": "If IPC and GWM checks record no codes, diagnose any driver seat module (DSM) DTCs through Front Seats."
+          "finding": "Recorded result: BG: the door-ajar indication appears, but the automatic PRNDL display disagrees with a selected range.",
+          "meaning": "The transmission-range indication checkpoint has failed.",
+          "next": "Separate required Pinpoint Test V in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940)."
         },
         {
-          "finding": "The parking-aid chime is inoperative.",
-          "meaning": "This separate complaint can involve parking-aid operation, communications, the gateway or cluster; it normally sounds through rear speakers.",
-          "next": "Follow the parking-aid chime diagnostic path rather than assuming the front-speaker warning checks resolve it."
+          "finding": "Recorded result: BG: the driver-door indication operates and every automatic range indication matches.",
+          "meaning": "Both operating-input checkpoints have passed.",
+          "next": "Interpret the recorded IPC self-test at BG4."
+        },
+        {
+          "finding": "Recorded result: BH: the memory-setting operation cannot successfully change the preferences.",
+          "meaning": "The memory feature itself needs investigation before treating the complaint as missing feedback alone.",
+          "next": "Separate required [Front Seats diagnosis](#/document/G1695509)."
+        },
+        {
+          "finding": "Recorded result: BH: memory setting successfully changes preferences, but the feedback chime is missing.",
+          "meaning": "The memory-setting checkpoint has passed.",
+          "next": "Interpret the recorded IPC self-test at BH3."
+        },
+        {
+          "finding": "Recorded result: The applicable IPC self-test records one or more DTCs.",
+          "meaning": "The path directs diagnosis by the cluster’s recorded code or codes.",
+          "next": "Separate required IPC DTC chart in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940); no no-code continuation."
+        },
+        {
+          "finding": "Recorded result: The IPC self-test records no DTCs, but GWM continuous-memory DTCs are present.",
+          "meaning": "The gateway-code branch directs investigation toward network diagnosis.",
+          "next": "Separate required [Communications Network diagnosis](#/document/G1813071)."
+        },
+        {
+          "finding": "Recorded result: BE: the applicable checks pass with no IPC or GWM codes.",
+          "meaning": "The next investigation is the fitted collision-warning system.",
+          "next": "Separate required [Collision Warning and Collision Avoidance System diagnosis](#/document/G1693174)."
+        },
+        {
+          "finding": "Recorded result: BF or BG: the applicable checks pass with no IPC or GWM codes.",
+          "meaning": "The remaining destination is BCM code diagnosis, not an automatic BCM replacement.",
+          "next": "Separate required BF diagnosis of all BCM DTCs, or BG diagnosis of any BCM DTCs, through [BCM diagnosis](#/document/G1692965)."
+        },
+        {
+          "finding": "Recorded result: BH: memory setting works and neither IPC nor GWM checks records codes.",
+          "meaning": "The path now directs attention to driver-seat-module codes.",
+          "next": "Separate required DSM DTC diagnosis through [Front Seats](#/document/G1695509)."
+        },
+        {
+          "finding": "Recorded result: The missing sound is the parking-aid warning.",
+          "meaning": "This is a separate complaint, normally using rear-speaker output. The BE–BH sequence does not establish its cause.",
+          "next": "Separate parking-aid diagnostic procedure is required; BE–BH cannot establish its cause."
+        },
+        {
+          "finding": "Required preliminary, timing/state, door/range/memory or module-report evidence is absent or ambiguous.",
+          "meaning": "The affected branch is unresolved, not a passing or failed test.",
+          "next": "Stop interpretation at the missing evidence. No active tests are supplied here; manual BG has no established continuation."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the applicable preliminary checks",
-          "body": "Confirm the approximately 6-second safety-belt chime and, where applicable, correct door-ajar and range indications or successful memory storage."
+          "title": "Require evidence for every selected gate",
+          "body": "Verify actual complaint/equipment and electrical preliminaries, including fuse/circuit/connector checks, before interpreting the shared approximately 6-second observation and applicable door/PRNDL/memory gates. Missing BH preference-change evidence or manual BG cannot be skipped."
         },
         {
-          "title": "Record the diagnostic handoff",
-          "body": "Record IPC self-test results, GWM codes and the selected next procedure. These results direct further diagnosis; they do not establish a completed repair."
+          "title": "Keep code categories and destinations distinct",
+          "body": "Require the IPC self-test before GWM continuous-memory results. Any code takes its chart destination; only explicit no-code reports permit the distinct collision-warning, all-BCM, any-BCM or DSM endpoint."
+        },
+        {
+          "title": "Do not equate a destination with repair",
+          "body": "Retain unresolved conditions and the required separate diagnostic destination. No module replacement or restored-chime claim follows from this interpretation alone."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693940",
-          "purpose": "Tests BE–BH, IPC DTC chart, and referenced door-ajar, range-display and parking-chime diagnostic paths."
-        },
-        {
-          "documentId": "G1693933",
-          "purpose": "Operating conditions for each warning and memory-stored chime."
-        },
-        {
-          "documentId": "G1813071",
-          "purpose": "Network diagnosis when GWM codes are recorded."
-        },
-        {
-          "documentId": "G1693174",
-          "purpose": "Collision-warning diagnosis after Test BE preliminary checks pass."
-        },
-        {
-          "documentId": "G1692965",
-          "purpose": "BCM code diagnosis reached through Tests BF and BG."
-        },
-        {
-          "documentId": "G1695509",
-          "purpose": "Memory-set feature or DSM code diagnosis reached through Test BH."
-        },
-        {
-          "documentId": "G1693946",
-          "purpose": "Related system diagnosis for vehicles with rear parking aid."
+          "purpose": "Complete BE–BH decision paths for existing-record interpretation, with separate IPC chart, AJ and V destinations."
         },
         {
           "documentId": "G1693185",
-          "purpose": "Electrical diagnostic prerequisites and interpretation of current concerns."
+          "purpose": "Required documented preliminary checks, present-fault assumption and code priority; no active electrical methods taught."
+        },
+        {
+          "documentId": "G1693934",
+          "purpose": "Chime purpose, priority, speaker routing and IPC backup operation."
+        },
+        {
+          "documentId": "G1693932",
+          "purpose": "Message-center controls, warning-display rotation and acknowledgement behavior."
+        },
+        {
+          "documentId": "G1693933",
+          "purpose": "Reference-only destination for the operating conditions of the individual warning chimes; internal procedures are not taught here."
+        },
+        {
+          "documentId": "G1813071",
+          "purpose": "Reference-only next diagnostic destination when GWM continuous-memory DTCs are recorded."
+        },
+        {
+          "documentId": "G1693174",
+          "purpose": "Reference-only collision-warning diagnostic destination after BE reaches its no-code endpoint."
+        },
+        {
+          "documentId": "G1692965",
+          "purpose": "Reference-only BCM code-diagnosis destination for the BF and BG no-code endpoints."
+        },
+        {
+          "documentId": "G1695509",
+          "purpose": "Reference-only destination for unsuccessful memory setting or DSM code diagnosis at the BH endpoint."
+        },
+        {
+          "documentId": "G1693946",
+          "purpose": "Reference-only related system-diagnosis destination for the separate parking-aid complaint."
         }
       ],
       "hero": null,
@@ -89672,7 +89774,7 @@
         "years": [
           2015
         ],
-        "equipment": "Forward collision warning or memory seats for their respective tests; automatic transmission for the transmission-range display check"
+        "equipment": "Existing technician records for an applicable 2015 Mustang. BE requires fitted forward collision warning; BH requires fitted memory seats. BG requires documented automatic-transmission range/PRNDL results. A manual-transmission BG continuation is not established here. Equipment is not inferred from engine or body style."
       },
       "relatedGuideIds": [
         "job-36ae21c51a8c7550",
@@ -89724,6 +89826,190 @@
         {
           "documentId": "G1693932",
           "sourceHash": "8cc85eb4e958875bcca1f05537491dd8302704b1370b4492a6056c4969653aa1"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1813073",
+          "sourceHash": "123d0f3bb8b253821b4ed14b2b7413fbbe56db2dd33e550e4b1820650e8a37f1"
+        },
+        {
+          "documentId": "G1703370",
+          "sourceHash": "fe7c788fefe9ab6db255bb8b8b238b8c1365ff1a06d14f6583202c91c0cca0fd"
+        },
+        {
+          "documentId": "G1702418",
+          "sourceHash": "d90384a664422f90becaae232d31b8f3766f002997ff467f17953173db28abb9"
+        },
+        {
+          "documentId": "G1693153",
+          "sourceHash": "4faf114d26afa918bc3a307e179bd3cc641eed03cc24f63c2c4c86653e727630"
+        },
+        {
+          "documentId": "G1694004",
+          "sourceHash": "a144500c599a6679ba1db8a77fa0337cdcce8c087c9d25611c32a3047e518bcf"
+        },
+        {
+          "documentId": "G1766370",
+          "sourceHash": "f794bf068d231feff11c9da29b7a45eb59ae5977213ea5c7b14ac6cf1421e82d"
+        },
+        {
+          "documentId": "G1766371",
+          "sourceHash": "86013b2d9fb11657e8d53330b2daafc58e42baa3c5053021dc2957844a1f4624"
+        },
+        {
+          "documentId": "G1695898",
+          "sourceHash": "0811611298c04a983451d5174040b80cb7346ad694b84cd95f26b48ea5cc7c89"
+        },
+        {
+          "documentId": "G1694660",
+          "sourceHash": "b2d8705cb3a06aff54c3b8243db68c4277995771db8d7f2b5236c0a5fa5cbee5"
+        },
+        {
+          "documentId": "G1695483",
+          "sourceHash": "f4494b3535cfcb50ced907d9ce725880f7bd1295b70ab19d77e451f67fd5a2c4"
+        },
+        {
+          "documentId": "G1757488",
+          "sourceHash": "bc9fcc768a9bf7cabbb5f6b00f43eaa9593e80651255616440f7350cb98b29cb"
+        },
+        {
+          "documentId": "G1686520",
+          "sourceHash": "31b5b3a3e7ed2449b8d806c73922c44f4db6dd916a2487d16a817416780ceaaf"
+        },
+        {
+          "documentId": "G1686523",
+          "sourceHash": "e873b5073214b6c0dd38c00bfb1edb3ea3f1f09be21b86d86613dc4a572dc5e6"
+        },
+        {
+          "documentId": "G1693931",
+          "sourceHash": "019eff93ce3dc928cb202f270b65568dfcb384566464b8f0ef76f4ffee5995f8"
+        },
+        {
+          "documentId": "G1663651",
+          "sourceHash": "c83df253825e0908a7bd26e5bac350dd5868649d4293edf5eb4839e272421e44"
+        },
+        {
+          "documentId": "G1693123",
+          "sourceHash": "e25e83f43cd82e49ee9a1d9d2b1249e8f05c72b9885093db4a680758c4930cf0"
+        },
+        {
+          "documentId": "G1692579",
+          "sourceHash": "b4160c552f7043cb7f8cf99e7073a1889de5ec449e7d1d37c4700b7fcc299f21"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
+        },
+        {
+          "documentId": "G1692560",
+          "sourceHash": "d254bffe43754521e6766400d6b3704013c49974d9cad14e08f9193763f29f52"
+        },
+        {
+          "documentId": "G1694228",
+          "sourceHash": "e732b1ade0240a9d1d593ec36c656e3a1c9b9a9ee80acbf26ef5c9f83abbab7c"
+        },
+        {
+          "documentId": "G1694227",
+          "sourceHash": "53354fc867867dce877f65824d24cf49cd7fd21681a96c1b3ad8d2b6d48e9213"
+        },
+        {
+          "documentId": "G1694232",
+          "sourceHash": "e76a9b5fab2c6dd7881dd10a567ceffb8504492f6be64036df4bcda3aaa81ee4"
+        },
+        {
+          "documentId": "G1694229",
+          "sourceHash": "a24dcebf08351cff939c8cb3858bb0af30975a56a558b58228486084af8895ef"
+        },
+        {
+          "documentId": "G1694272",
+          "sourceHash": "7bdeb272ba265e89c520453dc014e22cff659a113c59d2fa7cc78bdfedbaeafc"
+        },
+        {
+          "documentId": "G1692229",
+          "sourceHash": "53b4b55413f2df2c3f4cc42a9da729f8505281649510e85901180b41a90ce9c9"
+        },
+        {
+          "documentId": "G1696140",
+          "sourceHash": "5513aa4e85a0d6ff701c18e5ae48cd4f4f91a1490f5dfdfd4e613e464f851a4d"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1693270",
+          "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+        },
+        {
+          "documentId": "G1676816",
+          "sourceHash": "9417dc43e78963f9b557ece95bb82a5d2bf741ee80fa7084c9591e65dc42340d"
+        },
+        {
+          "documentId": "G1693176",
+          "sourceHash": "4dd6205faedae6b4e0e072275bc0e3f90f0bf7c40e63be06c022f0abf3730c27"
+        },
+        {
+          "documentId": "G1694266",
+          "sourceHash": "2c74b882af82713327ad86e2df88ea458b922c4a550820452375fd88ad12f23d"
+        },
+        {
+          "documentId": "G1695910",
+          "sourceHash": "defc652824c8286113e3cf93f087a59bdcca199841392f1bde20b2b857a08ddf"
+        },
+        {
+          "documentId": "G1694674",
+          "sourceHash": "e70ac0a1931200301d8f1e705e8cb262691841d82132f970f41ac92fb4463857"
+        },
+        {
+          "documentId": "G1694230",
+          "sourceHash": "dfa90f318e1dc8572343555237cfb6d27dce2c71dc32e725c0a21bff1a613bdd"
+        },
+        {
+          "documentId": "G1692891",
+          "sourceHash": "f5b9e20f3a9a60341d86da10afe753087196009eadda45374b8d4e4b36bb79b2"
+        },
+        {
+          "documentId": "G1704002",
+          "sourceHash": "35c416b2cfacf1e873c806f53b71c82e4e7036bda2c9dd6a5105bf48f06e53f1"
+        },
+        {
+          "documentId": "G1704006",
+          "sourceHash": "cad035fcc3ec5f8bd1590a48f88dc4af716d8d748aa718c606a92390f622f484"
+        },
+        {
+          "documentId": "G1704005",
+          "sourceHash": "4792bfb7872a003543a4a4330825e929e9cf80598ec3d293d5a63b0b8c3fb379"
+        },
+        {
+          "documentId": "G1693942",
+          "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319"
+        },
+        {
+          "documentId": "G1693160",
+          "sourceHash": "16542ec23525e93006629b084619ac60450b4c0617df7f5d5d693c9fcd709241"
+        },
+        {
+          "documentId": "G1694182",
+          "sourceHash": "1531b3fbbad617116bae20dcb9b32d2b69980d216de74dc4e77189318c6b388c"
         }
       ],
       "authoring": {
@@ -89742,8 +90028,48 @@
               "end": 247131
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "6d70f7c31f3be995821c24475276638509d816f9c10d8fcd376cc0b45e24ab2a",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "records",
+          "title": "Identify the complaint and preliminary records",
+          "summary": "Require actual equipment, present complaint and electrical survey evidence.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "shared",
+          "title": "Interpret the shared timed chime observation",
+          "summary": "Keep the six-second result and VIN-specific failure destination explicit.",
+          "start": 3,
+          "end": 3
+        },
+        {
+          "id": "inputs",
+          "title": "Interpret BG and BH input records",
+          "summary": "Require actual door, automatic range and memory-preference results where applicable.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "codes",
+          "title": "Interpret the paired module reports",
+          "summary": "Distinguish IPC self-test codes from GWM continuous-memory codes.",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "destination",
+          "title": "Retain the exact next destination",
+          "summary": "Separate the four endpoint requirements and record unresolved evidence.",
+          "start": 9,
+          "end": 10
         }
-      }
+      ]
     },
     {
       "title": "Diagnose missing parking-aid, parking-brake, alarm and seatbelt chimes",
@@ -198724,172 +199050,326 @@
       }
     },
     {
-      "title": "Diagnose radio interference and generator control faults on the 2.3L EcoBoost",
-      "summary": "Trace radio interference and charging-control faults through generator isolation, loaded supply checks and circuit tests, with current-sensor diagnosis limited to initial inspection.",
-      "introduction": "The generator supplies electrical current while the engine runs. The powertrain control module (PCM) requests output through the generator command circuit (GENCOM) and reads regulator feedback through the generator monitor circuit (GENMON). A separate Hall-effect current sensor surrounds the generator’s main positive output cable, called B+. It receives a 5 volt reference and ground from the PCM, which interprets its feedback voltage as current flow.",
-      "why": "A fault code identifies a detected condition, not necessarily a failed generator. Loose connections can carry voltage without carrying current properly, so loaded voltage-drop checks matter. Lost control or feedback can also leave the generator producing a default output while the charging warning remains on.",
+      "title": "Interpret recorded 2.3L charging and generator-control results",
+      "summary": "Interpret existing Test D, bounded E1/E2 and complete F/G records, preserving circuit identity, test conditions, measurement limits and separate repair destinations.",
+      "introduction": "I’ll compare existing technician records with the 2.3L charging chart. The records must establish actual circuit identity, safe connection handling and restoration, operating states, test loads and measured results. Missing evidence stops the affected conclusion. This article does not teach access, connector or battery handling, probing, running-engine tests, scan commands, jumper installation, repair or programming.\n\nF7 names PCM C1551B pin 21, while the supplied 2.3L wiring diagram traces command circuit CDC10 to pin 59. This interpretation uses the diagram-supported circuit identity, with that source discrepancy explicitly retained. It is an editorial reading, not a manufacturer erratum or permission to substitute an unidentified terminal. Require records positively identifying the actual CDC10 endpoints; a pin-21-only or uncertain record cannot establish this result.",
+      "why": "A connector can show battery voltage yet struggle to carry current. That is why these checks progress from connection inspection to loaded voltage measurements, isolated wiring tests and finally signal comparisons. Lost command or feedback can also leave the generator producing a fallback voltage while the charging warning stays on. A plausible voltage reading alone does not give the system a clean bill of health.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "radio interference with engine running",
-        "charging system warning indicator",
-        "P0620 generator control circuit",
-        "P065B generator regulator fault",
-        "P0625 P0626 generator monitor",
+        "2015 Mustang 2.3L charging diagnosis",
+        "alternator radio interference",
+        "P0620 P065B",
+        "P0625 P0626",
         "P0A5A P0A5B P0A5C",
-        "system off to save battery message"
+        "C102A generator B+",
+        "C102B generator control",
+        "GENMON GENCMD",
+        "battery saver message"
       ],
       "when": {
-        "summary": "When radio interference, charging warnings, generator-related codes or battery-saving messages require diagnosis.",
+        "summary": "Use existing technician records for reproducible radio interference, the listed charging codes or the specified load-shed message behavior.",
         "notes": [
-          "Radio diagnosis follows the applicable SYNC audio-system route, with or without touchscreen controls."
+          "Test D isolates radio interference that is present with the engine idling.",
+          "Test E is limited to recorded E1 codes and E2 inspection findings; no further sensor terminal diagnosis or sensor/PCM replacement conclusion is supplied.",
+          "Test F addresses P0620 and P065B; Test G addresses P0625 and P0626.",
+          "An engine-off battery-saving message can be normal protection and does not, by itself, identify a failed generator."
         ]
       },
       "prepare": [
         {
-          "title": "Electrical diagnostic capability",
-          "detail": "Use a diagnostic scan tool capable of PCM self-tests, live parameter identifications (PIDs) and active commands, a suitable meter, and a fused jumper. Running-engine measurements and safe handling of the high-current B+ connection require appropriate competence."
+          "title": "Require actual test provenance and prerequisites",
+          "detail": "Require vehicle/engine/equipment identity, complaint conditions, technician provenance and relevant precheck records. These include BJB connection condition for F/G, abnormal ignition-off drain assessment for G where indicated, and battery/generator/ground/inline connection concerns where applicable. Missing access, identification or safe-handling provenance is not supplied by this article."
         },
         {
-          "title": "Battery and test conditions",
-          "detail": "Tests E and F require battery voltage greater than 12.2 volts before and during testing, with no battery charger attached. Establish battery condition before F or G; charge or replace a failed battery as indicated before continuing."
+          "title": "Require battery conditions and baseline values",
+          "detail": "Tests E and F require battery voltage greater than 12.2 volts before and throughout testing, with no charger attached. F1/G1 require the actual battery-condition and state-of-charge result and recorded battery voltage for comparisons. A failed battery requires a separate charging/replacement procedure and subsequent valid prerequisite result; do not treat an unknown battery as passed."
         },
         {
-          "title": "Correct circuit-loading equipment",
-          "detail": "The A-sense load test requires the specified 250–350 mA incandescent 12-volt test lamp and Flex Probe Kit. An LED lamp will not load the circuit correctly. Never insert the test-lamp probe directly into connector terminals."
+          "title": "Require safe B+ handling and restoration records",
+          "detail": "C102A is hot at all times. Require documented matching access, electrical isolation/removal/restoration and specified fastening for every disturbed B+ connection. Ignition OFF alone is not proof of safe handling. Require correctly restored C102A before running F8 or G10, including after G8 disconnection, and full restoration at completion. No torque or physical method is invented here."
+        },
+        {
+          "title": "Require exact endpoint, load and state records",
+          "detail": "Require actual harness versus component identity, cavity identification, disconnected/reconnected states, ignition/engine state and wiring-movement observations. A-sense loading requires the specified 250–350 mA 12-volt incandescent lamp and Flex Probe Kit; an LED lamp or direct terminal insertion does not establish the prescribed test. PID comparisons require the recorded fused-jumper configuration and removal; G10 additionally requires the 14-volt GENVDSD command."
+        },
+        {
+          "title": "Keep topology reconciliation and later repairs bounded",
+          "detail": "Use the disclosed F7 diagram-based reading only with positively identified CDC10 endpoints. No pin-21-only result or assumed cavity orientation is accepted. Further E testing, generator/PCM replacement, circuit repair and service-bulletin procedures remain separate work. Records must establish those procedures and required confirmation before any completion conclusion."
         }
       ],
       "steps": [
         {
-          "title": "Establish the complaint and inspect the supply connections",
-          "body": "Record the warning, message or radio symptom and any diagnostic trouble codes (DTCs). Inspect the battery junction box (BJB), battery, generator, C1046 and battery/engine grounds for loose or corroded connections. For Test G, also investigate abnormal ignition-off current drain. Use the code-specific branches below rather than assuming every battery-saving message indicates generator failure."
+          "title": "Identify the complaint and documented topology",
+          "body": "Choose D for radio interference, bounded E for current-sensor codes, F for P0620/P065B, or G for P0625/P0626. These are alternatives. Require the preliminary records in preparation.\n\nFor this 2.3L, C102A1 is red SBF01 B+ through the 275A MEGA fuse. C102B1 is violet CDC15 feedback, C102B2 blue/orange CDC10 command, and C102B3 green/red SBB36 A-sense through fuse 36, 10A. C1645 is the current-sensor connector; C1046 is inline. These labels describe records and topology, not physical access or cavity-location instructions."
         },
         {
-          "title": "Test D: isolate engine-running radio interference",
-          "body": "Idle the engine and tune to a station where interference is present. Switch the ignition off, disconnect generator C102B, then C102A, and restart at idle. If interference remains, continue with the applicable Information and Entertainment System diagnosis. If it disappears with the generator disconnected, Test D directs installation of a new generator through its removal and installation procedure."
+          "title": "D1: interpret the radio-interference comparison",
+          "body": "Require initial engine-idle operation at a station exhibiting interference, then ignition OFF and documented C102B-before-C102A disconnection under the matching safe B+ procedure. Require protected connection handling and the subsequent engine-idle observation at the same station. Missing conditions or safe handling provenance blocks the conclusion.\n\nInterference remaining directs separate equipment-matched SYNC audio diagnosis, touchscreen or non-touchscreen. Interference disappearing directs separate 2.3L generator replacement. Require documented OFF/restoration after the comparison; no engine operation or disconnection is taught here."
         },
         {
-          "title": "Test E: record codes and inspect current-sensor routing",
-          "body": "With ignition on, perform the PCM self-test. If P0562 is present, route first to charging Test B. For P0A5A, switch ignition off and inspect the current sensor for damage, corrosion, a disconnected connector, debris between sensor and cable, and correct routing of the B+ cable through the sensor. Record and address visible connection or routing issues as appropriate. This branch ends after E1/E2: P0A5B, P0A5C or unexplained P0A5A requires further current-sensor diagnosis before terminal testing or sensor/PCM replacement decisions."
+          "title": "E1: interpret the PCM code priority",
+          "body": "Require greater-than-12.2-volt/no-charger conditions and the ignition-ON PCM self-test record. P0562 directs separate Test B first; later shared supply records here are not all of Test B. Without P0562, P0A5A leads to recorded E2, P0A5B to separate E3 and P0A5C to separate E5.\n\nP0A5A means no detected generator current without current-sensor circuit codes; P0A5B indicates low feedback/open or ground short; P0A5C indicates high feedback/voltage short. Codes alone do not identify a failed part."
         },
         {
-          "title": "Tests F and G: establish generator B+ supply",
-          "body": "After the battery passes, switch ignition off and inspect all generator connectors for corrosion, bent or damaged terminals and pushed-out pins. Repair the applicable terminals or connectors, clean module pins where specified, then seat and latch the connectors. Record battery voltage and measure C102A pin 1 to ground; it must be within 0.5 volt of battery voltage. If it fails, address the B+ nut and verify the 275A MEGA fuse. Repair the circuit if the fuse is sound; investigate the short’s cause if it is not."
+          "title": "E2: interpret inspection findings only",
+          "body": "Require ignition OFF and actual inspection records for damage, corrosion, disconnected sensor connector, whether B+ passes through the sensor opening, and debris between sensor and cable. The Hall-effect sensor uses PCM 5-volt reference and ground to report current.\n\nPreserve the raw chart destinations: findings direct repair as necessary or sensor replacement through its separate procedure; no findings directs E9. This article’s deliberately bounded E scope stops at documented findings and further diagnosis, and does not authorize sensor or PCM replacement or teach E3–E10. An absent inspection cannot be recorded as normal."
         },
         {
-          "title": "Measure the loaded positive-cable voltage drop",
-          "body": "For F3/G3, use the same-engine B4 measurement: positive meter lead at C102A pin 1 and negative meter lead at battery POSITIVE. Idle the engine with headlamps on and blower on high, and wiggle the wiring and connections while measuring. The drop must be less than 0.5 volt. Repair corrosion or poor connections in the generator B+ circuit or positive battery cable if it fails. A passing F result advances to F4; in G, P0625 advances to G4 and P0626 to G5."
+          "title": "F1/G1: interpret battery eligibility",
+          "body": "A documented passing battery-condition and state-of-charge assessment permits F2/G2. A failed assessment directs separate charging or replacement as appropriate. Require the recorded battery voltage and, for F, continued voltage greater than 12.2 volts without a charger. Missing prerequisite evidence cannot be bypassed."
         },
         {
-          "title": "Load-test A-sense where the branch requires it",
-          "body": "At F4 or G4, switch ignition off and disconnect C102B. With ignition on, use the specified lamp and probe adapters between C102B pin 3 and ground. Measure that circuit while wiggling the harness; voltage must remain within ±0.5 volt of recorded battery voltage. If it fails, check BJB fuse 36 (10A), repair the circuit if the fuse is sound, or investigate the short if it has failed. This loaded check exposes resistance that an unloaded reading can miss."
+          "title": "F2/G2: interpret connections and supply voltage",
+          "body": "Require ignition OFF, documented generator-connector inspection and correction of corrosion, damaged/bent terminals and pushed-out pins, then seated/latched connections and correct B+ restoration. Corrosion remedies distinguish new connector/terminals and cleaned module pins; damaged/bent/pushed-out pins require the specified replacement as necessary.\n\nRequire positive endpoint C102A1 and negative ground, compared with recorded battery voltage. Within 0.5 volt permits F3/G3. Outside 0.5 volt directs separate B+ nut tightening/replacement through the Generator procedure and checking the 275A MEGA fuse: sound fuse leads to circuit repair; failed fuse requires wiring-diagram investigation of the possible short. No fastening method is supplied here."
         },
         {
-          "title": "Separate command-circuit faults from monitor-circuit faults",
-          "body": "F5–F7 test GENCOM at C102B pin 2; G5–G7 test GENMON at C102B pin 1. Follow each test’s connector isolation and ignition states: check for unwanted voltage with ignition on, then switch ignition off for resistance tests. Any voltage indicates a short to voltage; resistance to ground must exceed 10,000 ohms, and end-to-end resistance must be less than 3 ohms. At F7, leave generator C102B and PCM C1551B disconnected with ignition off, and measure C1551B pin 59 to C102B pin 2 while wiggling the wiring. Less than 3 ohms continues to F8; otherwise repair the circuit. GENMON continuity uses the separate PCM C1551B pin 26 and remains unchanged."
+          "title": "F3/G3: interpret the loaded positive-cable drop",
+          "body": "Require the complete same-engine B4 arrangement: positive meter endpoint C102A1 and negative endpoint battery POSITIVE, engine idling, headlamps ON, blower HIGH, and wiring/connection movement during measurement. F3/G3’s incomplete cells do not independently supply that negative endpoint; the disclosed same-chapter B4 evidence does.\n\nLess than 0.5 volt passes. At least 0.5 volt directs separate corrosion inspection/repair of generator B+ or positive battery connections. A pass leads F to F4; G P0625 to G4, but P0626 skips G4 and goes to G5. Unknown load/endpoints cannot pass."
         },
         {
-          "title": "Test G: check generator internal resistance",
-          "body": "After the external monitor circuit passes, G8 disconnects C102B and C102A and measures generator B+ terminal to generator case. Resistance must exceed 25K ohms. G9 then checks each of the three regulator component-side pins to the case; every reading must exceed 10,000 ohms. A failed internal-resistance check directs a new generator; passing results advance to G10."
+          "title": "F4/G4: interpret A-sense loading",
+          "body": "Require ignition OFF before C102B disconnection, then ON, the 250–350 mA incandescent 12-volt lamp connected through Flex Probe adapters between harness C102B3 and ground, and voltage measured at those same endpoints during wiring movement. Require lamp removal and safe state afterward.\n\nWithin ±0.5 volt of recorded battery voltage permits F5/G5. Outside that range directs separate checking of BJB fuse 36, 10A: sound fuse leads to circuit repair; failed fuse requires investigation of the short. P0626 does not require G4."
         },
         {
-          "title": "Compare commanded and monitored signals",
-          "body": "After all preceding checks pass, follow the branch-specific connector setup for F8 or G10. Reconnect PCM C1551B and fit the fused jumper between C102B pins 1 and 2. Start the engine, watch GENMON and GENCMD on the scan tool, and wiggle the wiring. G10 additionally requires commanding GENVDSD to 14 volts. Readings within 5% of each other direct generator replacement; otherwise continue to PCM connection checks. Remove the fused jumper for either result."
+          "title": "F5–F7: interpret isolated command-circuit records",
+          "body": "Require C102B disconnected and OFF before C1551B disconnection. F5 requires ON and C102B2-to-ground voltage during wiring movement: any voltage directs circuit repair; none permits F6. F6 requires OFF and the same disconnected harness endpoints: greater than 10,000 ohms permits F7; at or below directs circuit repair.\n\nF7 requires OFF, both connectors disconnected and end-to-end resistance during wiring movement. Literal F7 names C1551B21, but the 2.3L diagram traces CDC10 from C102B2 through C1046 inline pin 2 to C1551B59. The connector record also assigns CDC10 to 59 and leaves 21 unassigned. Under this explicitly editorial interpretation, require actual CDC10 endpoint identification at C1551B59 and C102B2. An unidentified or pin-21-only record stops here. Less than 3 ohms permits F8; 3 ohms or more directs separate circuit repair. No terminal probing is instructed."
         },
         {
-          "title": "Complete the PCM decision only after circuit testing",
-          "body": "At F9 or G11, switch ignition off, inspect and repair PCM connector corrosion, damaged terminals or pushed-out pins, then reconnect securely and operate the system. If the concern disappears, address the underlying connection problem. If it persists, check applicable service articles and campaigns and follow any relevant instructions. Only when none addresses the concern does the branch direct PCM replacement and clearing DTCs in all modules."
+          "title": "F8: interpret the command/feedback comparison",
+          "body": "Require OFF before PCM C1551B reconnection, C102B still disconnected, correctly restored C102A, and a documented fused jumper between harness C102B1 and 2. Require engine-running GENMON/GENCMD comparison with wiring movement.\n\nWithin 5% directs separate generator replacement; outside 5% leads to F9 in step 15. Require documented OFF and jumper removal for either result. Missing configuration or removal evidence blocks a completed interpretation."
+        },
+        {
+          "title": "G5–G7: interpret isolated monitor-circuit records",
+          "body": "Require OFF and both C102B and PCM C1551B disconnected, including the P0626 path that skipped G4. G5 requires ON and harness C102B1-to-ground voltage during wiring movement: any voltage directs circuit repair; none permits G6.\n\nG6 requires OFF and disconnected endpoints: C102B1-to-ground resistance greater than 10,000 ohms permits G7; at or below directs circuit repair. G7 requires OFF and resistance between harness C1551B26 and C102B1 during wiring movement. This is CDC15 through inline C1046 pin 3. Less than 3 ohms permits G8; at least 3 ohms directs separate circuit repair."
+        },
+        {
+          "title": "G8: interpret generator B+ internal resistance",
+          "body": "Require ignition OFF, C102B and C102A disconnected through documented safe B+ handling, and measurement on the generator’s own B+ terminal to its case, not the cable lug. Greater than 25,000 ohms permits G9. At or below 25,000 ohms directs separate generator replacement. Missing component identity or isolation records is unresolved."
+        },
+        {
+          "title": "G9: interpret all three regulator measurements",
+          "body": "Require the generator still disconnected and ignition OFF. Require three separate component-side measurements: generator regulator pin 1 to case, pin 2 to case and pin 3 to case. Every reading must exceed 10,000 ohms to permit G10. Any reading at or below directs separate generator replacement; a missing reading does not pass."
+        },
+        {
+          "title": "G10: interpret the 14-volt commanded comparison",
+          "body": "Require documented safe, correctly fastened C102A restoration after G8 before engine operation. The chart’s transition alone is not evidence that this occurred. Require OFF before PCM reconnection, C102B disconnected, and fused jumper between harness C102B1 and 2.\n\nRequire engine-running records, GENVDSD actively commanded to 14 volts, and GENMON/GENCMD observed during wiring movement. Within 5% directs separate generator replacement; outside 5% leads to G11 in step 15. Require OFF and jumper removal for either result. A passive PID display or missing restoration/command evidence cannot establish the test."
+        },
+        {
+          "title": "F9/G11: interpret connection correction and service-information gates",
+          "body": "Require OFF before inspection of all PCM connectors, documented corrosion/terminal/pin corrections, seated/latched reconnections and restored generator connections, followed by actual system operation to determine whether the original concern remains.\n\nIf absent, the system operates correctly at that time and the root cause of connector/pin issues still requires attention. If present, require applicable TSB/GSB/SSM/FSA assessment; F9 explicitly names OASIS. An applicable article stops this test for its separate procedure. Only no applicable article directs separate PCM replacement and all-module DTC clearing. Preserve the source’s VIN-dependent RVC requirement and single-step-view limitation where that workflow is used; no VIN/tool operation, replacement or programming is taught here."
+        },
+        {
+          "title": "Interpret load-shed messages in their actual context",
+          "body": "With engine OFF and ignition ON or accessory, BCM battery state of charge below 50% OR 45 minutes elapsed can cause normal audio/navigation shutdown. Exact listed messages are “System Off to Save Battery Turn Ignition Off” on FCDIM without touchscreen, “SYSTEM OFF TO SAVE BATTERY PLEASE TURN IGNITION OFF OR START ENGINE” on touchscreen FDIM, and “Battery Saver - System Off” on FDIM with SYNC.\n\nThe source directs the audio fault route when these load-shed messages appear with the engine running, or only on the FCDIM or FDIM with touchscreen controls. Do not broaden that into any audio-display fault. Require the exact message, equipment and engine/ignition state; missing context is unresolved. Further audio diagnosis is separate."
+        },
+        {
+          "title": "Interpret restoration and final confirmation records",
+          "body": "Require documented removal of temporary jumper/lamp/adapters/leads with ignition OFF and secure generator/PCM reconnections, including the correct B+ restoration procedure. Require the failed branch’s repeat measurement under its original conditions and confirmation of the original complaint after separate repair. Radio confirmation uses the same station at idle; F9/G11 PCM replacement requires prescribed all-module DTC clearing.\n\nE1/E2 remains an inspection/code record only. No completed physical repair or unrestricted vehicle release follows from incomplete records. Retain all original values, states, disclosed source interpretations and unresolved conditions."
         }
       ],
       "watchFor": [
         {
-          "title": "Confusing two different B+ measurements",
-          "body": "The supply check measures C102A pin 1 to ground. The loaded cable-drop check measures it to battery positive; these tests establish different things."
+          "title": "Hot B+ handling is a required record boundary",
+          "body": "Ignition OFF does not de-energize the always-live C102A feed. Actual isolation, fastening and restoration evidence is required; this article supplies no physical handling method."
         },
         {
-          "title": "Intermittent connector faults",
-          "body": "A reading that changes during a wiggle test points toward a connection or wiring problem that must be addressed before component decisions."
+          "title": "Supply and loaded-drop endpoints differ",
+          "body": "F2/G2 uses C102A1 to ground; the same-engine B4-based F3/G3 arrangement uses C102A1 to battery positive. Confusing them invalidates the conclusion."
+        },
+        {
+          "title": "Keep F7 identity explicit",
+          "body": "The literal pin-21 text and diagram pin-59 evidence are not identical. The disclosed editorial reading requires actual CDC10 identity; ambiguous records stop before any continuity conclusion."
+        },
+        {
+          "title": "Preserve isolation, loading and command provenance",
+          "body": "Harness and generator-side readings are distinct. LED loading, unidentified probes, absent wiring-movement evidence or missing G10 14-volt command cannot substitute for the specified conditions."
+        },
+        {
+          "title": "Fallback voltage is not a new test",
+          "body": "The described command/A-sense or monitor faults can produce 13.5-volt fallback above 2,000 rpm and a warning request. This explains recorded behavior; it is no instruction to run or rev the engine."
+        },
+        {
+          "title": "Fuse replacement alone does not resolve the fault",
+          "body": "Failed-fuse branches require investigation of possible shorts. An unexplained replacement is not documented completion."
         }
       ],
       "notes": [
-        "C1645 identifies the generator current-sensor connector. C1046 is a separate harness connection, not the sensor connector.",
-        "On the 2.3L, C102A pin 1 is the main B+ connection. C102B pin 1 carries regulator feedback, pin 2 carries command, and pin 3 receives the fused A-sense supply."
+        "The 2.3L circuit map is the applicable variant here. The diagram’s 3.7L and 5.0L/5.2L connector columns do not extend this article to those engines.",
+        "As topology only, C1645 pin 1 carries green/violet LE423 to PCM C1551B pin 11, VREF; pin 2 carries gray/violet RE406 to pin 18, SIGRTN; pin 3 carries violet/green VDC61 to pin 94, BATT MONITOR. This identifies the sensor circuit and does not add terminal tests to the bounded E branch.",
+        "C102B pin 1 is feedback, not the main B+ feed. The diagram calls that line GENLI; the diagnostic discussion calls the monitored signal GENMON. C102B pin 2 is GENRC in the diagram and the command circuit in the diagnostic tests.",
+        "The loaded positive-cable measurement uses the complete same-engine B4 endpoint definition. Its battery-positive endpoint is not reconstructed from the incomplete F3/G3 measurement cells.",
+        "C102B service-part listings are identification context only; no connector repair, terminal selection or replacement is taught here.",
+        "For further explanation of battery-protection behavior, use [Charging System Operation and Component Description](#/document/G1692951).",
+        "No active scan retrieval, control operation, probing, jumper installation, repair or retesting is directed. All test actions described are required provenance of existing technician records."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code P0A5A is recorded.",
-          "meaning": "The PCM detects no generator current while no current-sensor circuit DTC is set. Possible causes include the sensor, generator clutch, wiring or PCM.",
-          "next": "Perform E1/E2 and record physical findings. A normal inspection requires further diagnosis, not automatic sensor replacement."
+          "finding": "Recorded result: Radio interference remains with C102B and C102A disconnected.",
+          "meaning": "Test D has not isolated the generator as the interference source.",
+          "next": "Separate equipment-matched SYNC audio diagnosis."
         },
         {
-          "finding": "Diagnostic trouble code P0A5B is recorded.",
-          "meaning": "Current-sensor feedback voltage is lower than expected, indicating an open circuit or short to ground.",
-          "next": "Resolve any P0562 priority first, then obtain the remaining current-sensor electrical diagnosis beyond this inspection branch."
+          "finding": "Recorded result: Radio interference disappears with the generator disconnected.",
+          "meaning": "Test D identifies the generator as the interference source.",
+          "next": "Separate 2.3L generator replacement, with documented restoration/confirmation."
         },
         {
-          "finding": "Diagnostic trouble code P0A5C is recorded.",
+          "finding": "Recorded result: P0562 accompanies a current-sensor code.",
+          "meaning": "E1 gives the low-voltage condition priority.",
+          "next": "Separate Test B; this article does not supply its complete procedure."
+        },
+        {
+          "finding": "Recorded result: P0A5A is present without P0562.",
+          "meaning": "The PCM detects no generator current while no current-sensor circuit DTC is set. Possible causes include the current sensor, generator clutch, wiring/connectors or PCM.",
+          "next": "Interpret existing E2 inspection records only; normal findings lead to separate E9. No sensor/PCM replacement authorization in this bounded E branch."
+        },
+        {
+          "finding": "Recorded result: P0A5B is present without P0562.",
+          "meaning": "Current-sensor feedback voltage is lower than expected, indicating an open circuit or a short to ground.",
+          "next": "Separate E3 diagnosis outside this bounded interpretation."
+        },
+        {
+          "finding": "Recorded result: P0A5C is present without P0562.",
           "meaning": "Current-sensor feedback voltage is higher than expected, indicating a short to voltage.",
-          "next": "Continue through the applicable current-sensor electrical diagnosis; the code alone does not authorize replacement."
+          "next": "Separate E5 diagnosis outside this bounded interpretation."
         },
         {
-          "finding": "Diagnostic trouble code P0620 or P065B is recorded.",
-          "meaning": "P0620 identifies an open or ground fault involving GENCOM, A-sense or B+. P065B means the generator reports an internal regulator failure.",
-          "next": "Use Test F, beginning with battery, connections and supply checks. Complete command-circuit testing before its generator or PCM decision."
+          "finding": "Recorded result: P0620 is present.",
+          "meaning": "The PCM detects an open or ground fault involving the command circuit, A-sense circuit or B+ circuit.",
+          "next": "Interpret complete F records; recorded GENCMD_LF YES is the described command-line fault indication."
         },
         {
-          "finding": "Diagnostic trouble code P0625 or P0626 is recorded.",
-          "meaning": "P0625 concerns low GENMON feedback and can also arise from an open A-sense or B+ circuit. P0626 concerns an open GENMON circuit or short to voltage. Generator or PCM faults can also set either code.",
-          "next": "Use Test G. After the B+ drop check, P0625 includes the A-sense load test; P0626 advances to monitor-circuit testing."
+          "finding": "Recorded result: P065B is present.",
+          "meaning": "The generator reports an internal regulator failure.",
+          "next": "Interpret complete F records without bypassing prerequisites."
         },
         {
-          "finding": "A System Off to Save Battery or Battery Saver message appears.",
-          "meaning": "With the engine off and ignition on or in accessory mode, the body control module can shut down audio/navigation when battery charge falls below 50% or 45 minutes elapse. This can be normal battery protection.",
-          "next": "Distinguish normal engine-off operation from messages occurring with the engine running or confined to the audio display, which require audio-system diagnosis. Do not condemn the generator from the message alone."
+          "finding": "Recorded result: P0625 is present or GENMON duty cycle is 3% or less.",
+          "meaning": "Low monitor feedback is associated with a short to ground. P0625 can also result from an open A-sense or B+ circuit, or a generator or PCM fault.",
+          "next": "Interpret G records including G4 after passing supply checks."
+        },
+        {
+          "finding": "Recorded result: P0626 is present or GENMON duty cycle is 98% or more.",
+          "meaning": "High monitor feedback is associated with an open circuit or short to voltage. A generator or PCM fault can also set P0626.",
+          "next": "Interpret G records bypassing G4 after passing drop check; require C102B disconnected before G5."
+        },
+        {
+          "finding": "Recorded result: B+ supply is not within 0.5 volt of recorded battery voltage.",
+          "meaning": "The main supply path or its fastening needs attention before control-circuit diagnosis.",
+          "next": "Separate B+ nut/fuse/circuit work; require the 275A sound-fuse versus failed-fuse short-investigation branch."
+        },
+        {
+          "finding": "Recorded result: Loaded B+ cable drop is 0.5 volt or more.",
+          "meaning": "The positive output path fails the loaded voltage-drop limit.",
+          "next": "Separate corrosion repair and documented repeated loaded-drop result."
+        },
+        {
+          "finding": "Recorded result: Loaded A-sense voltage falls outside ±0.5 volt of battery voltage.",
+          "meaning": "The regulator’s fused battery-sense supply does not meet the loaded comparison limit.",
+          "next": "Separate fuse 36 10A/circuit work, retaining failed-fuse short investigation."
+        },
+        {
+          "finding": "Recorded result: An isolated command or monitor wire shows voltage, resistance to ground at or below 10,000 ohms, or continuity resistance of 3 ohms or more.",
+          "meaning": "The applicable check indicates a short to voltage, a ground path, or excessive end-to-end resistance.",
+          "next": "Separate circuit repair only when actual applicable endpoints and conditions are established; uncertain F7 identity stops interpretation."
+        },
+        {
+          "finding": "Recorded result: G8 measures 25,000 ohms or less from generator B+ terminal to case.",
+          "meaning": "The generator fails its internal B+ resistance check.",
+          "next": "Separate generator replacement."
+        },
+        {
+          "finding": "Recorded result: Any G9 regulator-terminal-to-case reading is 10,000 ohms or less.",
+          "meaning": "The generator fails the regulator internal-circuit resistance check.",
+          "next": "Separate generator replacement."
+        },
+        {
+          "finding": "Recorded result: GENMON and GENCMD compare within 5% during the applicable fused-jumper test.",
+          "meaning": "After the preceding checks pass, F8 or G10 reaches its generator-replacement decision.",
+          "next": "Require recorded jumper removal; separate generator replacement. G10 additionally requires 14-volt GENVDSD command."
+        },
+        {
+          "finding": "Recorded result: GENMON and GENCMD do not compare within 5% during that test.",
+          "meaning": "The branch advances to PCM connection and operation checks rather than immediately condemning the generator.",
+          "next": "Require recorded jumper removal and full F9/G11 inspection, retest and applicable service-information gate."
+        },
+        {
+          "finding": "Recorded result: The concern disappears after PCM connector correction.",
+          "meaning": "A module connection may have caused the fault.",
+          "next": "Require root-cause correction and documented confirmation, not merely a transient symptom disappearance."
+        },
+        {
+          "finding": "Recorded result: A battery-saving message appears with the engine off and ignition on or in accessory mode.",
+          "meaning": "The body control module can turn off audio/navigation when battery state of charge falls below 50% or 45 minutes have elapsed. This can be normal battery protection.",
+          "next": "Interpret exact equipment-specific message and engine/ignition/SOC or elapsed-time records in step 16."
+        },
+        {
+          "finding": "Recorded load-shed messages appear with the engine running, or only on the FCDIM or FDIM with touchscreen controls.",
+          "meaning": "The charging chapter identifies this behavior as an audio-system fault indication.",
+          "next": "Separate equipment-matched audio diagnosis only for the specifically recorded load-shed-message conditions."
+        },
+        {
+          "finding": "Required identity, preliminary condition, isolation/restoration, load, command, measurement or completion record is absent or ambiguous.",
+          "meaning": "The affected result is unresolved, not a pass or a component verdict.",
+          "next": "Stop interpretation; no missing physical procedure is supplied here."
         }
       ],
       "verification": [
         {
-          "title": "Repeat the relevant operating check",
-          "body": "After the indicated repair and proper reconnection, operate the system under the conditions that produced the concern. Confirm that temporary jumpers are removed and connectors latch securely. Complete the branch’s required DTC clearing after PCM replacement."
+          "title": "Verify complete branch provenance",
+          "body": "Require applicable battery/precheck conditions and every endpoint, disconnected state, load, wiring-movement and measured result. Keep F7’s disclosed editorial identity reading and actual-circuit stop explicit."
         },
         {
-          "title": "Record results and unfinished decisions",
-          "body": "Record battery voltage, B+ supply and loaded drop, applicable A-sense and circuit readings, PID comparison and the radio-isolation result. For Test E, record codes and physical findings without claiming electrical diagnosis is complete."
+          "title": "Verify running transitions and restoration",
+          "body": "Require correctly restored C102A before running F8/G10, fused-jumper removal for either outcome, and complete restored connections after testing. Missing physical-method records cannot be replaced by a topology diagram."
+        },
+        {
+          "title": "Preserve separate repair and service gates",
+          "body": "Require applicable service-information results before PCM replacement decisions, prescribed clearing and original-complaint confirmation after actual repair. E stops at its bounded code/inspection endpoint."
         }
       ],
       "procedures": [
         {
           "documentId": "G2560182",
-          "purpose": "2.3L charging diagnosis: Test D, bounded E1/E2 inspection, Tests F/G, and same-engine B3/B4 supply and cable-drop checks."
+          "purpose": "Recorded D, bounded E1/E2 and complete F/G chart interpretation, with same-engine B4 endpoint provenance."
         },
         {
           "documentId": "wiring-012-002",
-          "purpose": "Identify the 2.3L generator supply, command and feedback conductors and their exact connectors."
+          "purpose": "Verified 2.3L B+, command, feedback, A-sense and current-sensor topology; supports command conductor identification at PCM pin 59."
         },
         {
           "documentId": "connector-C102A",
-          "purpose": "Identify the 2.3L generator main B+ connection."
+          "purpose": "Recorded B+ circuit identity only; no physical handling or fastening method."
         },
         {
           "documentId": "connector-C102B",
-          "purpose": "Identify regulator feedback, command and A-sense connector cavities."
+          "purpose": "Recorded regulator circuit identity only; no connector repair or probing."
         },
         {
           "documentId": "G1692891",
-          "purpose": "SYNC audio diagnosis when radio interference remains with the generator disconnected."
+          "purpose": "Reference-only next destination for equipment-matched audio diagnosis after the radio-isolation result or abnormal load-shed behavior."
         },
         {
           "documentId": "G1692357",
-          "purpose": "Investigate abnormal ignition-off battery drain identified during prechecks."
+          "purpose": "Reference-only next destination for abnormal ignition-off battery drain; its internal test procedure is not taught here."
         },
         {
           "documentId": "G1692362",
-          "purpose": "Battery removal and installation if condition testing requires replacement.",
+          "purpose": "Reference-only battery-condition prerequisite and charging/replacement destination.",
           "mediaId": "G1692362-m0001"
         },
         {
+          "documentId": "G1692366",
+          "purpose": "Reference-only current-sensor repair destination after further diagnosis; does not authorize replacement from E1/E2."
+        },
+        {
           "documentId": "G1692951",
-          "purpose": "Charging-system operation and interpretation of battery-protection behavior."
+          "purpose": "Reference-only next destination for charging-system operation and battery-protection behavior."
+        },
+        {
+          "documentId": "connector-C1551B",
+          "purpose": "Actual CDC10/C1551B59 versus literal F7 pin21 identity context only; no physical cavity identification or probing."
         }
       ],
       "hero": {
@@ -198910,7 +199390,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang 2.3L EcoBoost with PCM-controlled generator and generator current sensor. Existing technician-record interpretation only. Other engine columns are excluded. Equipment-matched SYNC audio destinations remain separate procedures."
       },
       "relatedGuideIds": [
         "job-e5bcf5e2728bf847",
@@ -198962,6 +199443,26 @@
         {
           "documentId": "connector-C1551B",
           "sourceHash": "6ecde35af28858a8194f7e797e59e126a86f6c3119c50184ccc3c6e860ccf2b5"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1673162",
+          "sourceHash": "1db5ffa270407479b94aa4b70a9bc448799b6167b95c9a896505d11471f9f7a2"
+        },
+        {
+          "documentId": "G1692366",
+          "sourceHash": "ae2c68c278282fdf8dbb54abe819d1e1e64390c772247b6304bb5e0a27cb0d2f"
+        },
+        {
+          "documentId": "G1693178",
+          "sourceHash": "e5d8a3362a9cd261d5b2e43768d693a4549a3b1499e059d608ac25e849ec599e"
         }
       ],
       "authoring": {
@@ -199005,8 +199506,55 @@
               "end": 45774
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "ef577b67d2f6a4795f2431213a319c1b2d01d3c97763b00e8bb17a04f3cda41c",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "scope",
+          "title": "Identify records and radio comparison",
+          "summary": "Require actual equipment and safe test provenance before interpreting D.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "sensor",
+          "title": "Interpret bounded current-sensor records",
+          "summary": "Preserve E1 priority and E2 findings without further terminal or replacement conclusions.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "supply",
+          "title": "Interpret battery and supply results",
+          "summary": "Require correct baseline, endpoints and loaded A-sense conditions.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "command",
+          "title": "Interpret command-circuit results",
+          "summary": "Retain the F7 identity discrepancy and F8 configuration evidence.",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "id": "monitor",
+          "title": "Interpret monitor and generator results",
+          "summary": "Separate harness/component readings and require G10 restoration and command.",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "id": "finish",
+          "title": "Interpret service gates and completion",
+          "summary": "Keep PCM decisions, exact load-shed behavior and restored-state records distinct.",
+          "start": 15,
+          "end": 17
         }
-      }
+      ]
     },
     {
       "title": "Diagnose DATC compressor performance and climate-control signals",

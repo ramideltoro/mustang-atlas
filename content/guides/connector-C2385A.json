@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2385A",
+  "supportingSourceRefs": [],
+  "sourceHash": "f95af64d4929ce9b731ff4250bf0d90f8bc11aab7d4455c1b03bdfef94ddc1df",
+  "title": "C2385A — Audio digital signal processing (DSP) module connector",
+  "introduction": "I read this connector like an audio patch panel: radio channel pairs, active noise cancellation outputs and network communication share a housing, but they have different jobs. The Function column tells you which conversation each circuit belongs to; the cavity label tells you where to find its entry.\n\nStart with the connector identification table, use the face drawing to locate a cavity label, then read across its matching assignment row. Keep channel names and positive/negative labels together. This page explains the reference, without teaching connector access, probing, wire selection or replacement. The physical viewing side, Size codes and gauge convention are not defined here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2385A-b00002",
+      "text": "Harness 14401 connector face",
+      "why": "I use the projecting housing on the drawing's left and the stepped outline on its right as landmarks. The cavity labels run downward in separate columns; read the printed labels rather than assuming they continue across each horizontal pair. These landmarks orient the illustration on the page, without establishing whether a physical connector is being viewed from its terminal side or wire side. The identification row beneath the drawing connects that illustration to its harness and shell entry."
+    },
+    {
+      "blockId": "connector-C2385A-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Cavity identifies a position in the drawing; Circuit Number identifies the electrical circuit assigned to it. Read across the same row for Color, Gauge, Function, Qualifier, Used and Terminal Part Number. The functions distinguish radio channels, active noise cancellation outputs and the high/low network circuits. Similar colors appear in different roles, so color alone is a poor address label. Preserve the complete function, including polarity and parenthetical labels, when carrying an identification into a separate wiring or diagnostic procedure. A blank Qualifier is not evidence of universal equipment applicability."
+    },
+    {
+      "blockId": "connector-C2385A-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is a connector with attached wire leads. This entry keeps its kit identification, listed gauge, material, cavity count, image filename, service part and engineering shell together. I compare Engineering Shell with the connector's Hard Shell entry to understand the documented association. The pigtail gauge and the individual circuit gauges describe different entries; their difference is not a wire-substitution instruction. The listing identifies service information without teaching terminal removal or splicing."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:07:42.632Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "f86f0b8115516c5a371d666a19a9334de80ce961672772af4fd2ceeede8f342c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "97f7216a0753e90751b3a0eec7896e8388ee412170f36fe1eb1378e8a02f3c05",
+    "reviewedAt": "2026-10-28T04:07:42.633Z"
+  }
+}

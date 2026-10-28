@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C1026",
+  "supportingSourceRefs": [],
+  "sourceHash": "8479d36753796c1be4a430d62f6dc9bfdb22225e70b8958afff4d7a9fff160d5",
+  "title": "C1026 — Inline connector reference",
+  "introduction": "This inline connection carries knock-sensor circuits between harnesses. I read its drawings like a seating chart: the cavity label locates the seat, while the matching table row explains who belongs there. Start with the connector gender and harness identity, then follow the cavity row across to its circuit identifier, color, gauge and function.\n\nKeep the connector halves separate as you read. Their drawings reverse the left-to-right placement of the cavity columns, and their harness and service-part details are not interchangeable. Gray circles correspond to rows without circuit assignments; they are not a diagnosis of missing wiring.\n\nThis is a connector-reading guide. Physical access, the physical viewing-side convention, electrical test conditions and replacement methods require separate service information. The gauge convention and the meanings of Size and Used are not defined here; retain those entries as recorded rather than treating them as wire-selection or testing instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1026-b00002",
+      "text": "MALE connector face · Harness 12C508",
+      "why": "I use the housing outline to keep this drawing distinct from the mating half: as drawn, the small rectangular feature is on the left and the projecting tabs are on the right. The gray cavities occupy opposite corners. These are landmarks within the illustration, not confirmation of which physical side to approach with a probe."
+    },
+    {
+      "blockId": "connector-C1026-b00005",
+      "text": "Male pin and circuit assignments",
+      "why": "Match a cavity label in the drawing to its row, then read across rather than guessing from position or color alone. Circuit Number identifies the circuit; Function describes its recorded knock-sensor or powertrain-control-module association. Keep the bank, sensor and bracketed signal labels intact. Blank circuit and function entries align with the gray cavities, while the terminal column provides the separate terminal reference."
+    },
+    {
+      "blockId": "connector-C1026-b00007",
+      "text": "FEMALE connector face · Harness 14B485",
+      "why": "The prominent loop-shaped housing feature sits on the right in this drawing, and the cavity columns appear on opposite sides compared with the male illustration. I follow the printed cavity labels instead of carrying a remembered left-or-right position across the connection. That avoids turning a useful connector map into a little shell game."
+    },
+    {
+      "blockId": "connector-C1026-b00010",
+      "text": "Female pin and circuit assignments",
+      "why": "Use this half’s own rows even where its circuit identifiers, colors and functions match the male table. The gauge and terminal entries differ between the halves. A terminal entry marked N/A supplies no terminal part reference; it does not establish a repair decision. The shared function abbreviations also do not establish an electrical test or justify inferring signal polarity."
+    },
+    {
+      "blockId": "connector-C1026-b00012",
+      "text": "Pigtail parts cross-reference",
+      "why": "Read Engineering Shell against the appropriate connector half’s Fpn entry to connect the housing identity with its pigtail catalog row. Number identifies the kit entry, Service Part gives its service identifier, and Image names its associated illustration file. Gauge, Material and Cavities describe that pigtail entry; they do not replace the harness-specific pin table or supply installation instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:59:23.696Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "1cd4989f491f590fff06ad5b2784d459cc6fe2acb1c6d50b639b8707eab7e8c0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 47,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "50648cdd4993e26e726f80ba92badd1c9782af49e586b926b323fb01bd15da38",
+    "reviewedAt": "2026-10-28T03:59:23.696Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C251",
+  "supportingSourceRefs": [],
+  "sourceHash": "a8d84b9a214afa9671bab06a55c2d09c647fb77bec5a2c7766f9018d36bc5fdc",
+  "title": "C251 — Data link connector (DLC)",
+  "introduction": "The data link connector brings diagnostic network connections, grounds and a supply-related connection into the same reference. I read its function labels like names on a switchboard: sharing a housing does not make every connection do the same job.\n\nStart with the connector identification table. In the drawing, use the sloped ends of the cavity area and the surrounding housing outline to recognize the illustrated shape, then match a printed cavity label to the Cavity column. White, black-outlined circles correspond to assigned function rows; gray circles correspond to rows without assignments. Read the full function wording so the separately named CAN bus connections and ground points stay distinct. HIGH and LOW are connection labels here, not test limits.\n\nThe asterisks in Circuit Number, Color and Gauge are not specifications you can fill in from habit. Retain them as printed. Size and Used codes and the gauge convention are not explained here, and the drawing does not establish a physical viewing direction. This guide supports reading the map and parts record; access, connector probing, electrical tests, wire selection and replacement require their own instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C251-b00002",
+      "text": "Connector-face map · Harness PIA",
+      "why": "I keep the harness label attached to this drawing so the map stays tied to its identification record. The housing shape helps recognize the illustration; neither that shape nor the Gender entry establishes which side of a physical connector the reader is looking at."
+    },
+    {
+      "blockId": "connector-C251-b00005",
+      "text": "Cavities and diagnostic connection functions",
+      "why": "Matching a cavity label to its complete row preserves the distinction between the separately named CAN bus connections, the grounds and the supply-related function. N/A terminal entries do not erase the assigned functions. The map identifies connections; it cannot show whether a network is communicating or whether a supply or ground works under load. Use the applicable diagnostic instructions for those conclusions."
+    },
+    {
+      "blockId": "connector-C251-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "The pigtail record identifies the connector-and-lead service assembly. I distinguish the Service Part field from Engineering Shell because they identify different things. The accompanying material, gauge and cavity fields describe that record; they do not define a terminal repair, replacement-wire choice or splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:57:30.364Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "9a598cc220377e6ef3e415442f3ea0c41fccfe032fcababb9ea713cbaa053b9d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 45,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4fa8c95738e7178a82fc9cf1750a8390defea2ef9a95f28977f969650e1a6efa",
+    "reviewedAt": "2026-10-28T03:57:30.365Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C205",
+  "supportingSourceRefs": [],
+  "sourceHash": "bcfe8cbd868800e3ea9e82c9e4c2647cad10bc79fecbefec96c719d9dbfb0ee0",
+  "title": "C205 — Headlamp switch connector",
+  "introduction": "The headlamp switch connector map gathers lighting selections, dimmer functions, illumination, leveling, grounds and a supply-related connection in one place. I treat it as the lighting desk’s address book: a function label tells you which job a connection belongs to, without telling you how much current it carries or proving that it works.\n\nBegin with the identification table, then match a printed cavity label in the drawing to the Cavity column. Read across the same row for the circuit identifier, wire information, function and terminal identification. Keep front and rear fog-lamp functions distinct, and notice that dimming and switch illumination have separate entries. Those distinctions help you carry the correct connection into a wiring diagram or a matching diagnostic procedure.\n\nIn the tall face drawing, white, black-outlined circles correspond to assigned function rows; gray circles correspond to rows without assignments. Use the printed labels and housing features to navigate the illustration. Physical viewing direction, access, probing, electrical test conditions and replacement methods are outside this guide. Size and Used codes and the gauge convention are not explained here; retain their entries without turning them into dimensions, test results or replacement-wire instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C205-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "I check the harness label before matching cavity positions. The projecting side features help distinguish the illustrated housing, but their page orientation does not establish a terminal-side or wire-side physical view."
+    },
+    {
+      "blockId": "connector-C205-b00005",
+      "text": "Cavities and lighting-control functions",
+      "why": "The cavity label identifies a position, while the circuit identifier and full function wording identify its assigned connection. Matching the whole row keeps similar lighting functions from becoming interchangeable. A switch or control-module label does not establish a direct lamp-power path, and a ground label does not prove a healthy return path. This reference prepares the lookup; a matching diagnostic procedure supplies the test and its next branch."
+    },
+    {
+      "blockId": "connector-C205-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "A pigtail combines the connector with attached wire leads. I read its Service Part and Engineering Shell fields separately, and keep that assembly record distinct from the Terminal Part Number in each circuit row. The pigtail’s gauge entry does not replace the individual circuit entries or provide instructions for choosing wire and making a splice."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:59:23.687Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "e96a5e3bef457c18ca90b1efed55795eed1db2a6a72acde65bc351d359fff2fa",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "26e293254eb028e98c9499f28a2b79dad0e87d81a983a869f07c6d37084d0f2c",
+    "reviewedAt": "2026-10-28T03:59:23.687Z"
+  }
+}
