@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C573",
+  "supportingSourceRefs": [],
+  "sourceHash": "c7b2ecf1284b97610c18f06c6616aa9f033dfd7cad6e2ee9f8d16824c6f60522",
+  "title": "C573 — LH interior front door handle ambient lighting lamp connector",
+  "introduction": "I use this page to connect the left-hand door-handle lamp’s identity, cavity drawing and circuit descriptions. Start with the identification table, find the cavity label in the illustration, then read across its matching row in the pin table. That gives each connection an address and a job description.\n\nThere is more behind this little glow than mood lighting. The function descriptions distinguish ambient-lighting channels from latch-unlock and lock-status indicator connections—a miniature lighting desk sharing its plug with the door-lock crew. Read the circuit identifier and function together; wire colour alone is not the connection’s identity.\n\nThis reference supports connector identification, circuit-map reading and service-part lookup. Access, connector release, physical viewing side, probing, test conditions and replacement methods need a separate procedure. Gauge conventions and the catalogue codes under Box, Cols, Size and Used are not defined here; keep those entries as recorded rather than turning them into dimensions, wire-selection advice or test results.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C573-b00002",
+      "text": "Connector layout · Harness 14631",
+      "why": "The drawing places the cavity labels in paired columns, with the housing projection on the right of the page. I use that outline to keep the illustration oriented while matching labels to table rows. Its page orientation does not establish which side of the physical connector to view."
+    },
+    {
+      "blockId": "connector-C573-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Cavity links the drawing to a row; Circuit Number identifies the circuit, and Function explains its assigned role. The ambient-lighting entries distinguish colour-channel positive connections from the LED negative connection, while the latch-unlock and lock-status entries serve separate functions. Keep the zone or non-zone qualifier with the lighting descriptions. A function label identifies a connection; it does not establish a test voltage or prove the component works."
+    },
+    {
+      "blockId": "connector-C573-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. This table associates the kit entry with its service part and engineering shell; the terminal identifiers remain in the pin table. I keep the pigtail lead specification separate from the vehicle-wire specifications because they describe different items. These entries support a parts lookup, not a splice method or a decision to replace the connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:17:30.615Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "03840a4472dc47b6455e28e59e52e80653f0183040ff7bb7159338cf6e830cd3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fe2d0aff7bb2c9b73d9df480fd4683d25979d55a4850c3edf96b7488519f963e",
+    "reviewedAt": "2026-10-28T02:58:12.822Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full 34-unit/raw/table/context/author/verdict/public prose supervisory read and original complete page2 solefigure view. Removed unsupported latch function label only; no physical view or action inferred. Prior full review retained."
+    }
+  }
+}

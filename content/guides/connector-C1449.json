@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C1449",
+  "supportingSourceRefs": [],
+  "sourceHash": "e9da4e538034df4a6e0caeaeca8c3fe591758b65850a3497b9fcfc558766083c",
+  "title": "C1449 — Throttle Position (TP) Sensor",
+  "introduction": "I read this connector reference as a seating chart for the throttle wiring: the drawing locates each cavity, and the matching table row explains its electrical job. Despite the sensor title, the map includes throttle-actuator motor connections alongside position-sensing and electronic throttle-control connections. Moving the throttle and reporting its position are different jobs sharing the same connector.\n\nStart with the identification table, then use the connector drawing and Cavity column together. Read across the matching row for its circuit label, color, gauge, function and terminal entry. The positive- and negative-slope descriptions distinguish position-signal functions; they are not test readings or pass/fail limits. The service tables below provide pigtail catalog references.\n\nThis is a connection-reading guide. Physical viewing direction, access, probing, electrical test conditions and replacement methods require a separate procedure. Gauge conventions and catalog codes are left as printed; they are not instructions for selecting replacement wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1449-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the vertical cavity column and the housing projection on the drawing’s left to keep my place on the page. Match a cavity label to the table before reading its circuit details. These visible features orient the illustration; they do not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C1449-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Cavity identifies the position in the drawing; Circuit Number identifies the electrical circuit. Read the whole row so a motor connection is not confused with a position signal or electronic throttle-control reference or return. A function label explains the connection’s assigned job, not whether that circuit is currently healthy."
+    },
+    {
+      "blockId": "connector-C1449-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is a connector with attached repair leads. This table brings its catalog entry, material, cavity information, service part and engineering shell together. I keep the service-part and shell fields distinct: they identify different things, and the listing itself does not teach a splice or connector replacement."
+    },
+    {
+      "blockId": "connector-C1449-b00009",
+      "text": "European pigtail product reference",
+      "why": "Use this section for the European product identifier. Keep it in its regional context; this entry alone does not establish interchangeability with the service-part listing above."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:05:52.072Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c1ec59e131b65bcecbd103d71810b7e9018dc77e1bf1b3eb0f402e3aa64f716c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a7706fc831dfea03dd4b15942af939a9885a2f1672a72a36371e8ca7c25344ba",
+    "reviewedAt": "2026-10-28T03:05:52.073Z"
+  }
+}

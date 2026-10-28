@@ -1,0 +1,64 @@
+{
+  "documentId": "connector-C128",
+  "supportingSourceRefs": [],
+  "sourceHash": "a5205926329653f7c865bc38abbcd7b332cd102654bf39dc5d563b8a44eb7ef3",
+  "title": "C128 — Mass airflow/intake air temperature (MAF/IAT) sensor connector",
+  "introduction": "This reference maps the mass airflow/intake air temperature sensor connector. I start with the identification table, use the cavity labels in the drawing to find the matching pin-table rows, then read each circuit identifier with its function. The table separates the air-temperature connection, fuse-or-circuit-breaker connection, airflow signal return and airflow-sensor connection.\n\nThe shaded end positions are especially useful landmarks. Their corresponding rows have no assigned circuit or function, so the housing’s cavity count is not a promise that every position carries a wire. Think of it as a seating plan: an unused seat is not automatically a missing passenger.\n\nUse the page for connector identification, circuit-map reading and parts lookup. It does not teach access, connector release, physical viewing direction, probing, test conditions or replacement. Gauge conventions and catalogue codes under Box, Cols, Size and Used are not defined here. Keep the bank and configuration qualifiers attached to their individual function descriptions; this sheet does not establish engine-wide applicability or fault limits.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C128-b00002",
+      "text": "Connector layout · Harness 14290",
+      "why": "The drawing shows a vertical column of cavity labels inside a rounded housing, with the projecting housing structure on the left of the page and shaded positions at the ends. I use these features to navigate the illustration. They do not identify the physical viewing side or explain how to release the connector."
+    },
+    {
+      "blockId": "connector-C128-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Cavity provides the link between drawing and table. Read Circuit Number with Function before using colour as a supporting clue. The shaded end positions align with rows lacking circuit assignments, rather than establishing a missing-wire fault. SIGRTN means signal return; its label does not make it interchangeable with chassis ground. Keep each bank or configuration qualifier with its row, and retain the fuse-or-circuit-breaker alternative without choosing an unsupported configuration."
+    },
+    {
+      "blockId": "connector-C128-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector supplied with wire leads. Its table connects the kit entry to a service part and engineering shell, while the pin table identifies the terminals for assigned circuits. The pigtail’s lead specification and the vehicle-wire specifications describe different items, so I do not use either as a substitute for a wire-selection or splice procedure."
+    },
+    {
+      "blockId": "connector-C128-b00009",
+      "text": "European pigtail reference",
+      "why": "This regional entry provides a Product Id for parts lookup. It does not explain interchangeability with the other service entry or establish vehicle-specific fitment; those questions need confirmation before choosing a replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:18:51.525Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "d5d19c0b84d609b718b63c85d004d0c74ab15208381e7fca6569716e3a739695",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "695e4c58d7c2b210430b88b04aa9d96414679790dc85451050c13d78296e2ece",
+    "reviewedAt": "2026-10-28T02:58:53.375Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full38 units/raw/table/context/author/verdict/final prose supervised and complete original page2/solefigure directly viewed. Neutral housing geometry and connector-release limitation replace unlabeled latch function only. All primary values and full prior independent review retained; page3 parts data fully read in source units, no additional page3 visual claim."
+    }
+  }
+}

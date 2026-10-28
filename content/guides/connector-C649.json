@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C649",
+  "supportingSourceRefs": [],
+  "sourceHash": "bac4747bf34f86e743c6e988a7d967430912ad4ac3da0140f5ab3742d15677b1",
+  "title": "C649 — RH interior front door handle ambient lighting lamp connector",
+  "introduction": "I read this right-hand door-handle lamp reference from identity to location to purpose. Check the identification table, locate a cavity label in the drawing, then follow that label into the pin-assignment table. Read the circuit identifier alongside its function and colour entry so a familiar-looking wire does not send you down the wrong path.\n\nThe lamp name tells only part of the story: the table also includes passenger-latch unlock and lock-status indicator functions. Think of the connector as a small shared doorway for lighting and lock-related connections. Sharing the doorway does not make their jobs interchangeable.\n\nUse this page for connector identification, circuit-map reading and service-part lookup. Physical access, release, viewing side, probing, electrical test conditions and replacement require a separate procedure. Gauge conventions and the catalogue codes under Box, Cols, Size and Used are undefined here; preserve them without treating them as dimensions, wire-selection instructions or evidence of a fault.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C649-b00002",
+      "text": "Connector layout · Harness 14630",
+      "why": "The cavity labels occupy paired columns, and the housing projection sits on the right of the illustrated housing. I use those visible features as landmarks when moving between drawing and table. They orient the page without establishing a terminal-side or wire-side view of the actual connector."
+    },
+    {
+      "blockId": "connector-C649-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Each Cavity entry ties a position in the drawing to its circuit identifier, colour, gauge, function and terminal reference. The lighting descriptions separate colour-channel positive connections from the LED negative connection; passenger-latch unlock and lock-status indication have their own rows. Retain the lighting zone or non-zone wording when interpreting a row. The LED negative label alone is not permission to treat that connection as chassis ground."
+    },
+    {
+      "blockId": "connector-C649-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail combines a connector with attached wire leads. The kit, service-part and engineering-shell fields identify related service items, while individual terminal references appear in the pin table. I keep the pigtail lead specification distinct from the vehicle-wire specifications. A catalogue match helps identify a candidate part; it does not supply replacement, splicing or verification instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:18:01.635Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "6febc64ebf4256f3ce78530e11a2291eafe180824e524d4b2f839c47609a4e11",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e5042d643cea02700548928d6c660bf9da8f782edf7978f967fc7639d5aa2e29",
+    "reviewedAt": "2026-10-28T02:58:12.832Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full34 units/raw/table/context/author/verdict/final prose supervised; directly viewed complete original page2 solefigure including pigtail table. Only unsupported latch-shaped label replaced with neutral housing projection; original full review retained. Actual RH CPL35 BU unlock and RLN44 BU-BN negative distinct from LH, literal DRIVER lock-status label unchanged."
+    }
+  }
+}

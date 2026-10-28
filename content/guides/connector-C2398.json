@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2398",
+  "supportingSourceRefs": [],
+  "sourceHash": "17a106e01c78b15a9594ef8bf375cac486663588ac389d50da62fe8fe8ebfd0e",
+  "title": "C2398 — Global Positioning System Module (GPSM)",
+  "introduction": "Even a module concerned with position needs its own electrical address book. I use this reference to separate its supply, ground and medium-speed network connections, then match each connection to a cavity in the drawing. Knowing where a message travels is useful; it does not prove that the message arrived.\n\nStart with the connector identification table. In the drawing, the cavities form a vertical column above the broader lower housing outline. Match each cavity label to the Cavity column, then read across for the circuit, color, gauge, function and terminal entry. The shaded positions correspond to rows without assigned circuit details, so do not mistake every drawn cavity for a wired connection. The pigtail table follows the circuit map.\n\nThis page explains the connection reference, not module access, physical viewing direction, probing, electrical testing or replacement. Gauge conventions and catalog codes remain as printed. The pigtail listings identify available entries without establishing which entry to fit.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2398-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I use the broader lower housing outline and the features along the drawing’s right edge to keep the illustration oriented on the page. Shading distinguishes positions that have no assigned circuits in the table. Neither the heading nor these shapes establishes the physical side from which to view a connector."
+    },
+    {
+      "blockId": "connector-C2398-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Cavity column links the drawing to the row; Circuit Number names the circuit rather than its position. Read the supply, ground and network functions separately. The network’s high and low labels identify different connections, not good and bad test results. Blank circuit rows describe unused positions in this reference, not evidence of missing wires or a fault."
+    },
+    {
+      "blockId": "connector-C2398-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail combines a connector with attached repair leads. Read each catalog row as a complete entry, keeping its material, gauge, service-part and engineering-shell fields together. A shared shell entry does not by itself establish that the listed pigtails are interchangeable or tell you which to install."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:05:52.083Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "7419225dc3ca6697d016a7243b8e3d5482283bb42fd8af51f0bed9ec26f35125",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a486bb542cbf34c5d4e3e735ccc50a9d8bf712a333d7a1ea8084eaad1dfab1d9",
+    "reviewedAt": "2026-10-28T03:05:52.084Z"
+  }
+}

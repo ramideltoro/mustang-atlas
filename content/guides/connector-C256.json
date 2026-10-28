@@ -1,0 +1,73 @@
+{
+  "documentId": "connector-C256",
+  "supportingSourceRefs": [],
+  "sourceHash": "7a97f4ddd5e9bc5584e9eb9e1bd353f90bc942e144dd1cf5772bb714acdfb3c0",
+  "title": "C256 — Passenger airbag connector",
+  "introduction": "I start with the cavity label, then read across its circuit row. That matters here because a wire color can appear on more than one assigned circuit: color is a useful clue, but a poor name tag on its own.\n\nThe identification table establishes which connector this sheet describes. The drawing links cavity locations to the assignment table, whose Function entries distinguish the signed passenger-airbag connections and adaptive-venting connections. Preserve each function’s positive or negative designation when reading. Shaded drawing positions correspond to rows without circuit assignments; they are not, by themselves, evidence of missing wiring.\n\nThe final table is a pigtail catalog reference. Physical viewing direction, gauge convention and the meanings of Box, Cols and Size are unspecified. Neither the drawing nor the catalog supplies access, terminal-release, repair or test instructions. This guide supports understanding the labels; hands-on restraint work requires the separate safety and service procedures.",
+  "requirements": [
+    {
+      "category": "Restraint-system service boundary",
+      "items": [
+        {
+          "name": "Qualified personnel and prescribed procedures",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Hands-on work requires the matching restraint-specific depowering, handling, specified test equipment and restoration sequence, which this connector reference does not teach. See [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191)."
+        },
+        {
+          "name": "No improvised electrical tests",
+          "detail": "Do not substitute a generic jumper or resistance test for the prescribed restraint diagnostic method. Connector assignments alone do not establish a permitted test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C256-b00002",
+      "text": "Connector layout · Harness 14401",
+      "why": "The displayed drawing has a vertical line of cavities with the projecting housing structure on the left. Those features help locate labels within the illustration. They do not establish the physical viewing side or show how to release the connector or its assurance mechanism."
+    },
+    {
+      "blockId": "connector-C256-b00005",
+      "text": "Cavity and restraint-circuit assignments",
+      "why": "I keep Cavity, Circuit Number and Function together so similar colors cannot blur distinct airbag and adaptive-venting connections. The signs belong to the named functions; they are not instructions to apply power. The adaptive-venting negative row lacks a usable terminal part number. Leave that catalog gap unresolved rather than copying an adjacent terminal entry."
+    },
+    {
+      "blockId": "connector-C256-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "The pigtail is the connector-and-lead service assembly. Match Kit List to Number and compare Hard Shell with Engineering Shell to understand the catalog relationship. Service Part and Terminal Part Number refer to different items. A pigtail listing does not authorize a restraint-wiring repair or supply the required connection and verification sequence."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:24:06.805Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "3f248f4c1332665edf3f6c2d4d26846d1f5c2290d7f726840fb99a63e4f41f38",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7f937ee0e6aa48c52d86ea4cef3a51cf03e1c876795d0050f783e85c00613641",
+    "reviewedAt": "2026-10-28T03:12:54.166Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full35 units/raw/alltablecells/complete restraint context/author/verdict/final prose read and original complete page2 solefigure directly viewed. Only unlabeled latch assembly replaced by neutral housing structure. Restraint qualified-service/no improvised tests referral unchanged, signed airbag and adaptive-venting circuits distinct, NULL terminal remains unresolved. No physical view/release/testing inferred. Full prior review retained."
+    }
+  }
+}

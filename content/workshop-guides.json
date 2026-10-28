@@ -178072,84 +178072,282 @@
     },
     {
       "title": "Replace a Two-Piston Front Brake Caliper",
-      "summary": "Disconnect and replace the two-piston front caliper, renew the brake-hose sealing washers and pressure bleed the brake system.",
-      "introduction": "The front brake caliper uses hydraulic pressure to press the brake pads against the disc. This procedure covers the two-piston caliper fitted to the listed 2.3L and 3.7L applications. Replacement involves opening the brake-hose connection and removing the guide-pin bolts, followed by reassembly and pressure bleeding.",
-      "why": "Opening the hose connection creates a route for fluid loss, contamination and air entry. The openings must remain sealed while disconnected, and the removed sealing washers must be discarded. Installing the replacement caliper restores the hardware; pressure bleeding completes the hydraulic part of the repair.",
+      "summary": "Replace the standard two-piston front caliper on a 2015 2.3L or 3.7L Mustang, renew the hose sealing washers, pressure bleed all four matching standard brakes and reinstall the wheels.",
+      "introduction": "I’ll work through the standard two-piston front caliper replacement, then pressure bleed all four matching brakes and restore the wheels. Correctly securing the caliper is only part of the repair: the opened hydraulic circuit must also be free of air before the car returns to use.",
+      "why": "Disconnecting the brake hose lets air and contamination enter the hydraulic circuit. New sealing washers restore the hose joint, correctly tightened guide-pin bolts secure the caliper, and pressure bleeding carries air out through the wheel-end bleeder screws. This article starts after the caliper has been identified as needing replacement.",
       "taskType": "repair",
-      "difficulty": "intermediate",
+      "difficulty": "advanced",
       "searchTerms": [
-        "two piston front brake caliper replacement",
-        "front caliper brake hose washers",
-        "pressure bleeding after caliper replacement"
+        "2015 Mustang 2.3L front brake caliper replacement",
+        "2015 Mustang 3.7L two piston caliper",
+        "front caliper flow bolt sealing washers",
+        "Mustang pressure brake bleeding order",
+        "rear integral parking brake caliper bleeding"
       ],
       "when": {
-        "summary": "When a two-piston front brake caliper has been identified as requiring removal or replacement.",
+        "summary": "Use this procedure when a matching standard two-piston front caliper has already been identified for removal or replacement.",
         "notes": [
-          "Confirm the fitted caliper type before using this procedure."
+          "Confirm the fitted brakes at all four wheels. Engine size does not establish the rear brake equipment.",
+          "Opening the brake-hose connection requires pressure bleeding afterward.",
+          "Remove the complete wheel-and-tire assemblies from the car. Tire dismounting and TPMS work are not part of this repair."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange wheel access and hydraulic equipment",
-          "detail": "Have the capability to remove and reinstall the wheel safely, suitable means to seal hydraulic openings, new hose-connection washers and equipment for the referenced pressure-bleeding procedure."
+          "title": "Confirm the configuration and execution boundaries",
+          "detail": "Before hydraulic disconnection, confirm standard two-piston brakes at both front wheels and standard rear calipers with integral parking brakes at both rear wheels. Unknown, mixed, modified or SVT equipment requires matching instructions before proceeding. A newly installed hydraulic control unit, or HCU—the ABS hydraulic valve assembly—requires a separate scan-tool ABS Service Bleed, another complete pressure bleed and a road test. Arrange that work separately. After the work, restore automatic Park or manual first (1) gear while grounded, with the parking brake fully applied and chocks retained. The manual parking instruction is in the 2015 owner manual, printed page 135; service Neutral is not the final parked state."
         },
         {
-          "title": "Prepare for controlled tightening",
-          "detail": "Have suitable tools for the flow bolt and guide-pin bolts, including a torque wrench. Follow the wheel procedure for its separate installation requirements."
+          "title": "Gather the replacement parts and clean hydraulic materials",
+          "detail": "Have a matching ready-to-install caliper, two new brake-hose sealing washers, clean plugs or caps for the opened hydraulic ports, and clean Motorcraft DOT 4 LV High Performance Motor Vehicle Brake Fluid, PM-20, meeting WSS-M6C65-A2. Never reuse drained brake fluid. Keep cold water available for immediate cleanup of brake fluid on paint."
+        },
+        {
+          "title": "Prepare pressure-bleeding equipment",
+          "detail": "Use a Brake/Clutch System Pressure Bleeder/Filler, its correctly fitted reservoir adapter, enough clean specified fluid for the entire operation, a clean collection container and a hose that fits the bleeder screws. The required pressure is 207–345 kPa (30–50 psi). Install and operate the adapter and apparatus according to their manufacturer’s instructions."
+        },
+        {
+          "title": "Arrange a hoist, restraints and floor-standing access",
+          "detail": "Use a correctly rated hoist that supports the vehicle with all four wheels removed. Have wheel chocks and a helper. Plan a securely supported working height at which all four tires clear the floor while the brakes, reservoir, pressure apparatus and parking-brake lever remain reachable by people standing on the floor. Nobody may enter the raised cabin or lean body weight into the car to operate the lever. If that arrangement is impractical, arrange an equipped workshop before opening the hydraulics."
+        },
+        {
+          "title": "Prepare tools, lubricant and personal protection",
+          "detail": "Have suitable hand tools and torque wrenches for the caliper fasteners, wheel nuts and the bleeder screws’ 11 Nm (97 lb-in) setting. Obtain Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, for the wheel pilot interface only. Wear eye and ear protection, use protective gloves when handling sharp components, and read the safety information for the chemicals being used."
+        },
+        {
+          "title": "Choose brake-dust control before disassembly",
+          "detail": "Brake material cannot be identified as asbestos-free by appearance. Consider professional service when its composition is uncertain. For home work, prepare a spray bottle delivering a low-pressure fine mist of water, or water with detergent, and cloths for wet wiping. Keep bystanders, food and drinks away. The [EPA brake and clutch dust guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) describes this home-mechanic option and its precautions."
         }
       ],
       "steps": [
         {
-          "title": "Remove the wheel and tire",
-          "body": "Follow [Wheel and Tire](#/document/G1686507) to expose the front caliper. Use the [two-piston caliper procedure](#/document/G1693776) to identify the hose connection and guide-pin fasteners."
+          "title": "Position and restrain the car on its tires",
+          "body": "Position the Mustang on a hard, level surface at the hoist. Apply the parking brake and chock the wheels before selecting Neutral or releasing the service-brake pedal.\n\nComplete any powered positioning and disable remote start, if equipped, through Vehicle settings > Remote Start Setup before service. For display access, keep a valid key inside and both pedals released: press START/STOP once only if ignition is known OFF, for engine-off ON. If already ON with the engine stopped, leave it ON. Operate the cabin controls while the vehicle is grounded."
         },
         {
-          "title": "Disconnect and remove the caliper",
-          "body": "Remove the brake-caliper flow bolt and disconnect the hose. Discard the washers and seal all openings. Then remove the two guide-pin bolts and the caliper, preserving the specified order of hydraulic disconnection before caliper removal."
+          "title": "Select Neutral, establish ignition OFF and remove the key",
+          "body": "The 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122, distinguishes engine-off ignition ON from starting the engine. Establish the actual ignition state after the preceding settings. Do not press the button blindly.\n\nFor an automatic, leave an already-ON engine-off ignition ON. If ignition is OFF, bring the valid key inside, release both pedals and press START/STOP once for engine-off ON. Hold the service brake and select Neutral while the parking brake and chocks remain applied. Release the brake while those restraints hold the car, then press START/STOP once to switch OFF.\n\nFor a manual, if the engine-off ignition is ON after settings, release both pedals and press START/STOP once to switch OFF; if already OFF, leave it OFF. With the engine stopped and the vehicle restrained, select Neutral.\n\nConfirm ignition OFF, remove the intelligent access key from the vehicle and prevent anyone else from starting it. This caliper replacement and ordinary pressure bleed do not require the engine to run."
         },
         {
-          "title": "Install the replacement caliper",
-          "body": "Reverse removal. Tighten the guide-pin bolts to 24 lb.ft (32 Nm). Reconnect the hose using new washers and tighten the flow bolt to 30 lb.ft (40 Nm). Restore the wheel and tire according to their procedure."
+          "title": "Establish safe reservoir access",
+          "body": "With ignition OFF, open and securely support the hood. From a clear position without reaching into the fans, inspect the cooling fans from a safe position for damage, cracks or separation. A damaged fan must be replaced before underhood service; do not operate it as a test.\n\nFans can operate with ignition OFF. Keep reservoir access and pressure-bleeder hose routing entirely outside their operating area. Work at the reservoir toward the rear of the engine compartment near the bulkhead. If reaching or routing equipment would put you near a fan, stop and arrange the actual fan-isolation procedure before continuing. Ignition OFF alone does not isolate a fan. See [general service precautions](#/document/G1693189)."
         },
         {
-          "title": "Pressure bleed the brake system",
-          "body": "Complete the referenced Brake System Pressure Bleeding procedure after installation. Tightening the connections does not remove air introduced while the hydraulic circuit was open."
+          "title": "Position the hoist and raise the vehicle securely",
+          "body": "Check that the hoist capacity covers the vehicle, cargo and modifications. Locate the triangles stamped into the body sheet metal at the lifting areas behind the front wheels and ahead of the rear wheels. Position the adapters at those marked areas and check that the arms and pads clear suspension, steering, exhaust, mounting brackets and the rear axle cover.\n\nRaise and securely support the car according to the hoist’s operating instructions at the planned floor-reachable working height. All four wheels must be fully clear of the ground before any parking-brake release. Leave the parking brake applied for now.\n\nSee [Jacking and Lifting](#/document/G1663631). Never work beneath a car supported only by a jack, and do not use the emergency tire-change jack for this job."
+        },
+        {
+          "title": "Remove all four wheel-and-tire assemblies",
+          "body": "With the vehicle securely supported and all four tires clear of the floor, remove each wheel’s five nuts and lift off the complete wheel-and-tire assembly. Keep the assemblies identified by their positions. Do not use heat on a seized wheel nut.\n\nAll four brakes must be accessible for bleeding. Keep the wheel-less car supported on the hoist throughout the hydraulic work; never lower it onto bare hubs or brake discs. The applicable access procedure is [Wheel and Tire removal and installation](#/document/G1686507)."
+        },
+        {
+          "title": "Wet-wipe the brakes before disturbing dusty parts",
+          "body": "Gently wet the dusty brake parts with a low-pressure fine mist of water, or water with detergent, then wipe them with a wet cloth before further disassembly.\n\nDo not use compressed air, a dry rag, any brush, a garden hose or an ordinary vacuum without HEPA filtration. Keep dust off clothing and out of the house. These precautions follow the [EPA home-mechanic guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0)."
+        },
+        {
+          "title": "Disconnect the brake hose and seal both openings",
+          "body": "Find the flexible brake hose’s flattened eye fitting where the flow bolt secures it to the caliper. Place a suitable fluid-catching container beneath the connection.\n\nRemove the flow bolt and separate the hose fitting from the caliper. Discard both sealing washers: one sits on each side of the hose eye. Immediately seal the hose opening and caliper port with clean suitable plugs or caps. Position the disconnected hose clear of the caliper’s removal path, keeping all hydraulic openings sealed.\n\nImmediately wash any brake fluid on paint with cold water. See the [two-piston caliper procedure](#/document/G1693776) for the connection and removal arrangement."
+        },
+        {
+          "title": "Remove the guide-pin bolts and the caliper",
+          "body": "Support the caliper while removing its two guide-pin bolts, one at the upper end and one at the lower end. Lift the caliper away from its mounting position at the brake disc.\n\nKeep the disconnected hydraulic ports sealed while moving the old unit. This operation does not require removing the brake disc, dismounting the tire or disturbing the TPMS sensor."
+        },
+        {
+          "title": "Fit the replacement caliper",
+          "body": "Position the matching replacement caliper where the old unit was mounted. Install its two guide-pin bolts and tighten them to 32 Nm (24 lb-ft).\n\nConfirm that the caliper sits correctly and allows the hose to return to its original arrangement. If it does not fit, resolve the part or fitment problem before proceeding. Do not force it into place or add unplanned pad-service or caliper-rebuilding operations."
+        },
+        {
+          "title": "Reconnect the hose with new sealing washers",
+          "body": "Remove the temporary seals only when ready to assemble the joint. Fit one new sealing washer on each side of the hose eye and install the flow bolt, preserving the original hose orientation.\n\nTighten the flow bolt to 40 Nm (30 lb-ft). Confirm that the hose is neither twisted nor trapped and that no temporary plug remains in the assembled connection. The hardware is fitted; the air still needs an exit."
+        },
+        {
+          "title": "Clean around the reservoir cap and fill the reservoir",
+          "body": "Working from the floor, clean around the master-cylinder reservoir cap so foreign material cannot fall inside. Remove the cap and fill the reservoir to its proper marked level with clean PM-20 brake fluid meeting WSS-M6C65-A2, using the molded MIN and MAX marks as the level reference.\n\nKeep the cap and filling equipment clean. Never return collected fluid to the reservoir. See [fluid specifications](#/document/G1694687) and [brake-system safety](#/document/G1693183)."
+        },
+        {
+          "title": "Connect the pressure bleeder and apply pressure",
+          "body": "Install the reservoir adapter according to its manufacturer’s instructions, then attach the bleeder-tank hose to the adapter fitting. Confirm that the tank contains enough clean specified fluid for the complete bleed.\n\nRoute the hose clear of cooling fans, hoist arms and the lowering path. It must have enough allowance for the vehicle to be lowered while the apparatus remains connected. Keep the apparatus and reservoir accessible from the floor.\n\nOpen the tank valve and apply 207–345 kPa (30–50 psi). See [Brake System Pressure Bleeding](#/document/G2361881)."
+        },
+        {
+          "title": "Select the correct four-wheel bleeding order",
+          "body": "Use the vehicle’s physical left and right sides, rather than driver/passenger descriptions.\n\nLeft-hand drive: right rear → left rear → right front → left front.\n\nRight-hand drive: left rear → right rear → left front → right front.\n\nFollow the applicable order for the initial four-wheel pass. The matching standard two-piston front and standard rear bleeder screws both tighten to 11 Nm (97 lb-in). Read that carefully: inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Release the parking brake with all four wheels clear",
+          "body": "Reconfirm that all four wheels are fully clear of the ground and that the vehicle is securely supported on the correctly positioned hoist. Only then have the helper release the parking brake, reaching its lever from the floor through the open door.\n\nThe helper must not enter the raised cabin or load the car with their body weight. Keep the transmission in Neutral, ignition OFF and the key outside the vehicle. If the lever cannot be reached safely, stop and arrange a suitable working setup."
+        },
+        {
+          "title": "Pressure bleed all four wheel ends",
+          "body": "At the first wheel in the selected order, remove the bleeder screw’s protective cap if fitted. Partially fill a clean collection container with clean specified brake fluid. Connect the hose to the bleeder screw and keep its outlet submerged in the fluid in the container.\n\nOpen the screw 180°, or half a turn. Watch the discharge and leave the screw open until clear, bubble-free brake fluid flows. Close the screw, disconnect the hose and tighten the screw to 11 Nm (97 lb-in).\n\nRepeat the complete operation at the other three wheels in the selected order. Maintain the specified pressure and adequate clean-fluid supply. Bubbles mean that outlet has not reached the endpoint."
+        },
+        {
+          "title": "Cycle and rebleed the first rear parking-brake caliper",
+          "body": "After the initial four-wheel pass, return to the first rear wheel in the applicable order: right rear for left-hand drive, left rear for right-hand drive. Reconnect the collection hose with its outlet submerged in clean specified fluid. Keep the bleeder closed while cycling the parking brake.\n\nWith the car still securely supported and all four wheel positions clear of the floor, have the floor-standing helper apply and release the parking brake five times, ending released. Open that rear bleeder 180°, allow clear, bubble-free fluid to flow, then close it and tighten to 11 Nm (97 lb-in).\n\nRepeat the cycling and bleeding as necessary to reach that endpoint. The parking mechanism complicates the rear caliper’s internal fluid path, which is why this extra operation matters."
+        },
+        {
+          "title": "Repeat the cycling and bleeding at the other rear caliper",
+          "body": "Move the submerged-hose collection setup to the other rear caliper. With its bleeder closed, have the helper apply and release the parking brake five times, ending released.\n\nOpen the bleeder 180°, wait for clear, bubble-free fluid, then close it and tighten to 11 Nm (97 lb-in). Repeat as necessary. Complete this operation at both rear calipers; a clear discharge at one does not establish the condition of the other."
+        },
+        {
+          "title": "Close and check every bleeding point",
+          "body": "Disconnect the collection hose and remove the collection container. Confirm that all used bleeder screws are closed and tightened to 11 Nm (97 lb-in). Restore each protective cap that was fitted.\n\nWhile the system remains pressurized, look for visible fluid escape at the restored hose joint and closed bleeders. A leaking joint prevents completion. Follow the correction branch below before reopening a hydraulic connection. This checks the work just performed; it is not a diagnosis of unrelated brake faults."
+        },
+        {
+          "title": "Clean the wheel mounting faces and pilot bores",
+          "body": "Remove corrosion, dirt and foreign material from each wheel’s flat mounting face and the matching hub or brake-disc mounting face. Also clean the wheel’s central pilot bore—the center hole that locates the wheel on the hub’s raised central lip. Keep brake-dust handling wet and controlled.\n\nCheck that any fasteners securing the disc to the hub are secure and do not interfere with the wheel’s mating surfaces. Each wheel must seat flat. Trapped debris can let the nuts loosen later."
+        },
+        {
+          "title": "Lubricate only the wheel pilot interface",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant, XL-2, only where the cleaned wheel pilot bore meets the hub pilot.\n\nKeep it off the flat wheel-to-disc mounting surfaces, wheel studs, wheel nuts, brake pads and disc friction surfaces. Stud and nut threads must be clean and dry for the specified torque."
+        },
+        {
+          "title": "Refit all four wheels before lowering",
+          "body": "Position each complete wheel-and-tire assembly on its hub and install all five wheel nuts finger tight. Confirm that every wheel sits against its clean mounting face.\n\nKeep the car supported on the hoist until all four wheels are installed. Final wheel-nut tightening must be performed with the vehicle resting on its tires."
+        },
+        {
+          "title": "Apply the parking brake, lower and restore ground restraints",
+          "body": "Before lowering begins, have the helper apply the parking brake from the floor. Confirm that it remains applied. Check that collection equipment is removed, the pressure-bleeder hose has enough allowance and nothing lies in the hoist’s lowering path.\n\nLower the car with all four wheels installed. As the tires reach the ground, restore the wheel chocks before releasing the hoist’s support or making further control changes. Keep the parking brake applied throughout. Do not leave chocking until after lowering is finished.\n\nKeep the pressure apparatus connected and pressurized until the vehicle has been lowered."
+        },
+        {
+          "title": "Release pressure after lowering",
+          "body": "With the car on its tires, parking brake applied and wheels chocked, close the bleeder-tank valve and release its pressure according to the equipment manufacturer’s instructions.\n\nOnly after pressure is released should you disconnect and remove the pressure-bleeding equipment and reservoir adapter. Preserve this order: lower first, depressurize afterward."
+        },
+        {
+          "title": "Finish the reservoir",
+          "body": "Fill the reservoir to its proper marked level with clean PM-20 fluid meeting WSS-M6C65-A2. Use the molded MIN and MAX marks as the reference, then reinstall the reservoir cap securely.\n\nRemove loose equipment and check that filling has not left dirt around the reservoir. Immediately wash brake fluid from painted surfaces with cold water."
+        },
+        {
+          "title": "Torque every wheel on the tires",
+          "body": "With the vehicle resting on its tires, parking brake applied and wheels chocked, tighten each wheel’s five nuts in a star/cross pattern to 204 Nm (150 lb-ft). The stud and nut threads must be clean and dry.\n\nFor an orientation with one nut at the top, cross the wheel in this order: top → lower left → upper right → upper left → lower right. Preserve that crossing relationship if the wheel is rotated. Do not tighten by simply walking around adjacent nuts."
+        },
+        {
+          "title": "Complete the grounded checks and restore the parked state",
+          "body": "After all hydraulic connections, the reservoir cap and wheels are fully reassembled, confirm that the service-brake pedal operates normally before considering the car ready to move. Visible leakage or an abnormal pedal means the repair is unfinished: keep the car restrained and resolve the problem before driving. This is a practical completion check, not a numeric pedal test.\n\nFor an automatic, keep the grounded car restrained by the parking brake and chocks. Bring the valid key inside, switch from known OFF to engine-off ignition ON without depressing either pedal, then hold the service brake and select Park. With the parking brake and chocks holding the car, release the pedal, switch ignition OFF and remove the key.\n\nFor a manual, keep the engine and ignition OFF, the parking brake fully applied and the wheels chocked. While grounded, hold the service brake, fully depress the clutch and shift from service Neutral into first (1), then release the clutch before leaving the controls. Maintain the parking brake and chocks. This follows the manual parking requirement on owner printed page 135; leave an already-OFF ignition OFF. Service Neutral is not the finished parked state.\n\nFinish with ignition OFF and the key removed."
+        },
+        {
+          "title": "Clean up and arrange the wheel-nut recheck",
+          "body": "For home work, double-bag brake-dust waste and wet wiping cloths, then dispose of them according to appropriate local requirements. Change into clean clothing before entering the home and wash work clothes separately. Dispose of collected brake fluid through the appropriate local waste route; never return it to the fresh-fluid supply.\n\nRetighten the wheel nuts within 160 km (100 mi) after reinstallation, using clean, dry threads, the star pattern and 204 Nm (150 lb-ft). Record the caliper replacement, new sealing washers and completed pressure bleeding."
         }
       ],
       "watchFor": [
         {
-          "title": "Unsealed hydraulic openings",
-          "body": "Keep all openings sealed while the hose and caliper are disconnected."
+          "title": "Brake equipment that does not match",
+          "body": "Verify both front and both rear brake assemblies before disconnecting the hose. A 2.3L or 3.7L engine does not prove that the rear brakes or replacement brake hardware match this procedure."
         },
         {
-          "title": "Fluid on paintwork",
-          "body": "Immediately wash affected paintwork with cold water if brake fluid is spilled."
+          "title": "Exposed or contaminated hydraulic openings",
+          "body": "Seal the disconnected hose and caliper ports immediately. Use only clean specified fluid and never reuse collected fluid."
+        },
+        {
+          "title": "Bleeder torque units",
+          "body": "The matching standard two-piston front and standard rear bleeder screws use 11 Nm (97 lb-in). Check the wrench’s units before tightening."
+        },
+        {
+          "title": "Restraint during parking-brake operation",
+          "body": "Release or cycle the parking brake only with all four wheels fully clear of the floor and the car securely supported on correctly positioned hoist arms. Apply it before lowering and restore chocks as the tires reach the ground."
+        },
+        {
+          "title": "Pressure equipment in the lowering path",
+          "body": "Arrange hose clearance before applying pressure. The apparatus remains connected and pressurized while the vehicle is lowered."
+        },
+        {
+          "title": "Brake fluid on paint",
+          "body": "Immediately wash affected painted surfaces with cold water."
         }
       ],
       "notes": [
-        "The discarded parts specified here are the hose-connection washers.",
-        "Use the full pressure-bleeding procedure for its equipment, fluid and completion requirements."
+        "Installation values: guide-pin bolts 32 Nm (24 lb-ft); caliper flow bolt 40 Nm (30 lb-ft); matching front and rear bleeder screws 11 Nm (97 lb-in); wheel nuts 204 Nm (150 lb-ft).",
+        "Wheel access uses complete assembly removal and installation under G1686507. The tire-machine and valve-mounted TPMS operations in G1686509 are not applicable to this caliper replacement.",
+        "This article covers the 2015 2.3L and 3.7L applications with the stated brake equipment. Shared wheel, lifting and bleeding procedures do not expand that engine coverage.",
+        "The EPA home-mechanic precautions described here are distinct from employer-specific asbestos-work requirements."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm the installation details",
-          "body": "Verify new sealing washers were fitted and the flow bolt and guide-pin bolts were tightened to their respective specifications."
+          "finding": "Any wheel has unknown, mixed, modified or SVT brake equipment.",
+          "meaning": "The standard-brake method and fastening values cannot be assumed to match every wheel that must be bled.",
+          "next": "Stop before hydraulic disconnection and obtain instructions matching all fitted brake assemblies."
         },
         {
-          "title": "Record hydraulic completion",
-          "body": "Record completion of the required pressure-bleeding procedure after caliper installation."
+          "finding": "The replacement caliper does not fit the original mounting or hose arrangement.",
+          "meaning": "Correct part fitment has not been established.",
+          "next": "Resolve the fitment before connecting or pressurizing the circuit. Do not force the part into position."
+        },
+        {
+          "finding": "Bubbles remain in a wheel’s discharged fluid.",
+          "meaning": "That outlet has not reached the pressure-bleeding endpoint.",
+          "next": "Maintain the specified pressure and clean-fluid supply and continue until clear, bubble-free fluid flows. Complete the parking-brake cycling and repeat bleeding as necessary at both rear calipers."
+        },
+        {
+          "finding": "Fluid escapes from the restored hose joint or a closed bleeder.",
+          "meaning": "The joint is not sealed and the repair is incomplete.",
+          "next": "Keep the car out of use. Refit all wheels, apply the parking brake before lowering, restore chocks as the tires reach the ground, then close the tank valve and release pressure. Correct the joint only after depressurization. Repeat the required lifting and complete pressure-bleeding sequence afterward."
+        },
+        {
+          "finding": "A new HCU has also been installed.",
+          "meaning": "Ordinary caliper pressure bleeding does not complete the HCU replacement branch.",
+          "next": "Arrange the diagnostic scan-tool ABS Service Bleed using its actual instructions, followed by another complete pressure bleed and the required road test. Do not record that branch as completed by this article."
+        },
+        {
+          "finding": "The service-brake pedal remains abnormal after reassembly and bleeding.",
+          "meaning": "The vehicle has not passed the practical completion check.",
+          "next": "Keep it restrained and out of road use until the brake problem is resolved. This replacement procedure does not establish the underlying diagnosis."
+        },
+        {
+          "finding": "The final parked gear cannot be selected or confirmed.",
+          "meaning": "The grounded handover is incomplete despite retained restraints.",
+          "next": "Keep the parking brake fully applied, wheels chocked and engine/ignition OFF. Do not leave the car as a completed repair in service Neutral; arrange correction of the selection problem before handover."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Caliper and hose installation",
+          "body": "Confirm the matching caliper is seated, both guide-pin bolts are tightened to 32 Nm (24 lb-ft), two new sealing washers are fitted and the flow bolt is tightened to 40 Nm (30 lb-ft). Confirm correct hose routing without twisting or trapping."
+        },
+        {
+          "title": "Complete hydraulic bleeding",
+          "body": "Confirm all four wheels were bled in the applicable LHD or RHD order, both rear calipers received the five parking-brake cycles and subsequent bleeding, and every outlet reached clear, bubble-free flow. Confirm all used bleeders are tightened to 11 Nm (97 lb-in) and their fitted caps are restored."
+        },
+        {
+          "title": "Reservoir and pressure apparatus",
+          "body": "Confirm the vehicle was lowered before pressure release, the apparatus and adapter are removed, the specified fluid is at the proper marked level and the reservoir cap is installed."
+        },
+        {
+          "title": "Wheels and restraints",
+          "body": "Confirm clean wheel mating surfaces and pilot bores, pilot-only lubricant application and all wheel nuts tightened on the tires in a star pattern to 204 Nm (150 lb-ft). Confirm the parking brake was applied before lowering and chocks were restored as the tires reached the ground."
+        },
+        {
+          "title": "Grounded completion and handover",
+          "body": "Confirm no visible fluid escape and normal service-brake pedal operation. Finish with ignition OFF and the key removed. Confirm automatic Park or manual first (1) gear, with the parking brake fully applied and chocks retained. Arrange wheel-nut retightening within 160 km (100 mi)."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693776",
-          "purpose": "Remove and install the two-piston front brake caliper on the listed 2.3L and 3.7L applications, then pressure bleed.",
+          "purpose": "Primary two-piston front-caliper removal and reverse-order installation, sealing-washer renewal and caliper fastening values.",
           "mediaId": "G1693776-m0002"
         },
         {
           "documentId": "G1686507",
-          "purpose": "Remove the wheel and tire assembly from the vehicle and reinstall it after caliper service."
+          "purpose": "Complete wheel assembly removal and installation, mounting-face and pilot-bore preparation, grounded star-pattern tightening and wheel-nut retightening."
+        },
+        {
+          "documentId": "G2361881",
+          "purpose": "Pressure-bleeding setup, LHD/RHD order, rear integral-parking-brake cycling, bubble-free endpoint and lower-before-depressurize sequence."
+        },
+        {
+          "documentId": "G1694687",
+          "purpose": "PM-20/WSS-M6C65-A2 fluid requirement and matching standard front and rear bleeder-screw torque."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Brake-fluid cleanliness, hazardous brake-dust precautions and cold-water cleanup of fluid on paint."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Triangle-marked lifting locations and hoist-positioning precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start prevention, ignition and key control, cooling-fan precautions, personal protection and vehicle restraint."
         }
       ],
       "hero": {
@@ -178172,7 +178370,7 @@
         "years": [
           2015
         ],
-        "equipment": "2-piston front brake calipers"
+        "equipment": "2015 Mustang with 2.3L or 3.7L engine, matching standard two-piston front brake calipers and standard rear calipers with integral parking brakes; left-hand-drive or right-hand-drive configuration"
       },
       "relatedGuideIds": [
         "job-f7fbc18cba975fc3"
@@ -178185,6 +178383,30 @@
         {
           "documentId": "G1686507",
           "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1686509",
+          "sourceHash": "ff5bae7c82e2993ffd093eb1732346a91a6e083cefe439514d078d61cc09ef22"
+        },
+        {
+          "documentId": "G2361881",
+          "sourceHash": "6caefdfcf40a04bf00a284f1f6fcde50d9579096fca81b19d2badfe70e3a8b57"
+        },
+        {
+          "documentId": "G1694687",
+          "sourceHash": "c1909f2c4ff8ca77cb33862bb9d20b51fa06642cb1c6c22c7b1c36f1148188e6"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
@@ -178203,8 +178425,69 @@
               "end": 672
             }
           ]
+        },
+        "editorialVersion": 2,
+        "editorialFingerprint": "be8f18ac54afbbc7491e2a8c76854febcb5bda841ab6784be180c459dbc20848",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-prepare",
+          "title": "Restrain the car and prevent startup",
+          "summary": "Establish grounded controls, safe reservoir access and secure hoist support.",
+          "start": 1,
+          "end": 4
+        },
+        {
+          "id": "expose-and-remove",
+          "title": "Expose and remove the caliper",
+          "summary": "Remove the wheels, control dust and seal the disconnected hydraulic ports.",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "id": "fit-the-caliper",
+          "title": "Install the replacement",
+          "summary": "Secure the caliper and reconnect the hose with new washers.",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "id": "charge-and-plan",
+          "title": "Prepare pressure bleeding",
+          "summary": "Fill the reservoir, connect the apparatus and establish the wheel order.",
+          "start": 11,
+          "end": 14
+        },
+        {
+          "id": "bleed-all-four",
+          "title": "Bleed the complete system",
+          "summary": "Reach bubble-free flow and complete both rear parking-brake cycling operations.",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "id": "restore-the-wheels",
+          "title": "Prepare and install the wheels",
+          "summary": "Clean the mounting interfaces, lubricate only the pilots and fit every wheel.",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "id": "lower-and-close",
+          "title": "Lower and finish the hydraulics",
+          "summary": "Restore restraints, lower before depressurizing and finish the reservoir.",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "id": "torque-and-handover",
+          "title": "Tighten and complete the checks",
+          "summary": "Torque the wheels, complete grounded checks and arrange the recheck.",
+          "start": 25,
+          "end": 27
         }
-      }
+      ]
     },
     {
       "title": "Replace a front brake disc with 2-, 4- or 6-piston calipers",

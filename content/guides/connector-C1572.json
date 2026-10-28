@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1572",
+  "supportingSourceRefs": [],
+  "sourceHash": "e4f71f7a68d515b2f08e889da8a0240c19c71f5e5f2d9fefb3d2d36a9e098172",
+  "title": "C1572 — Universal heated oxygen sensor (HO2S) #21 connector",
+  "introduction": "This reference maps the named universal heated oxygen sensor’s connector to its power, heater, sensing, voltage-reference and pumping-current circuit labels. I read those as different jobs sharing a small switchboard: a heater connection and a sensing connection are not interchangeable just because they live in the same housing.\n\nBegin with the identification table, use the housing landmarks to navigate the drawing, then match a cavity label to its assignment row. Read across that row before moving to the pigtail cross-reference. The shaded drawing position corresponds to the assignment row marked unused.\n\nThis page identifies connections and service references. It does not establish the sensor’s physical location, connector viewing side, access method, electrical test conditions or replacement steps. Gauge entries and unexplained metadata codes remain reference data, not wire-selection instructions or dimensions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1572-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I recognize the illustrated housing by its rounded outline, rectangular projection on the left, angled tabs at the upper and lower left, and projections along the right edge. The cavity labels run vertically in each column, with the shaded position at the upper left. Use those landmarks to read the displayed arrangement; neither the connector name nor its Gender entry establishes a physical viewing side. The Fpn entry beneath the drawing cross-references the summary’s Hard Shell entry."
+    },
+    {
+      "blockId": "connector-C1572-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Cavity links a table row to a drawing position. Circuit Number is the circuit identifier; Color and Gauge record wire information; Function distinguishes the supply, pre-catalyst heater control, sensor, voltage-reference and pumping-current connections. Keep the second-sensor qualifiers attached to their functions rather than assigning a vehicle location from the title. The shaded position has blank circuit details and is marked unused in the table, so it is not an omitted circuit to fill in. Terminal Part Number is a terminal reference. These assignments describe connection roles, not expected voltage, resistance or current readings."
+    },
+    {
+      "blockId": "connector-C1572-b00007",
+      "text": "Pigtail and engineering-shell references",
+      "why": "I use Number to connect this row with the summary’s Kit List, Service Part to identify the listed pigtail assembly, and Engineering Shell to cross-reference its housing. A pigtail includes attached wire leads; it is distinct from the individual terminals named in the assignment table. Material, Gauge and Cavities describe the service assembly, while Image names its illustration file. Keep the assembly’s gauge entry separate from the circuit-wire entries; this table supplies neither a wire-substitution rule nor a splicing procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:58:12.797Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "bf96d367f4da7f4e6268ddb6ff1e6fe995fa32f4933a2ce8e590a1f8e1282187",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "52b73fde0ee280789aae2bdbfe6dce8782ca925042a881e1a729f8cbfec8fa02",
+    "reviewedAt": "2026-10-28T02:58:12.798Z"
+  }
+}

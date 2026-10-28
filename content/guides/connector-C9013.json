@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C9013",
+  "supportingSourceRefs": [],
+  "sourceHash": "fe887f24e334e601a828d430249e7c9544dda9370a702a5d4573148ac6109a17",
+  "title": "C9013 — Convertible top switch connector",
+  "introduction": "The roof switch has more to say than “up” and “down”: this reference also identifies ground and switch-illumination connections. I read it like a small switchboard directory, keeping the roof-command entries separate from the circuit that lights the switch.\n\nBegin with the connector identification table. Find a cavity label in the drawing, then read across the matching Cavity row for its circuit identifier, color, gauge, function and terminal entry. Shaded positions correspond to rows without circuit assignments. The repeated ground circuit identifier is worth noticing: separate cavity locations can share a listed circuit identity.\n\nFinish with the pigtail table to understand the relationship between the listed kit, engineering shell and service assembly. This is a connector-reading guide, not a roof-operation test or replacement procedure. Physical viewing direction, gauge convention and the meanings of Box, Cols and Size are unspecified. No switch contact states, test values, access steps or terminal-release method are supplied; use the matching service information before moving from this map to hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9013-b00002",
+      "text": "Connector layout · Harness 14335",
+      "why": "As displayed, the drawing places the projecting housing structure on the left and the cavity field to its right. I use that outline to keep the illustrated columns straight. The page does not identify a terminal-side or wire-side physical view, so this layout is not a probing orientation."
+    },
+    {
+      "blockId": "connector-C9013-b00005",
+      "text": "Cavity and switch-circuit assignments",
+      "why": "Function distinguishes roof-up, roof-down, ground and illumination entries. Cavity locates the entry in the drawing, while Circuit Number identifies the associated circuit. Shared ground labels do not establish the switch’s internal contact arrangement or which contacts close during operation; those conclusions require separate circuit or test information."
+    },
+    {
+      "blockId": "connector-C9013-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "I use Kit List and Number to connect the identification table with the pigtail record, then compare Hard Shell with Engineering Shell. A pigtail includes the connector and attached leads; its Service Part is distinct from an individual Terminal Part Number. The catalog describes the listed assembly without teaching wire selection, splicing or installation."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:24:48.134Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "e0b57d6dec56d95ace6f6e00d6e6d87a59160b31c87b55bcff2f2672f4021d10",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "eb8c02a8c13d598688089ea37c9acbe32d869fcca00ea529abd1683374e44103",
+    "reviewedAt": "2026-10-28T03:12:54.175Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full36 units/raw/alltablecells/context/author/verdict/finalprose read, actual complete page2 solefigure directly viewed. Only unsupported latch function replaced by neutral housing geometry; no internal contact state or physical release inferred. Roofup/down, repeated ground and illumination distinct; original full review retained."
+    }
+  }
+}

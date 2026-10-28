@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4357",
+  "supportingSourceRefs": [],
+  "sourceHash": "69c5d0ae2520b7e3a7e93d7dc0bd0b5f2a5e616d5d28915db592d04d544526a4",
+  "title": "C4357 — Rear parking aid camera connector guide",
+  "introduction": "The rear camera connector carries more than the picture. Its assignment table distinguishes a supply connection, a communication connection and separate video functions. I think of it as a little mailroom: power keeps the office open, while messages and video have their own routes. Those roles matter when reading the map, but the map alone cannot tell you why an image has disappeared.\n\nStart with the connector identity table, find a cavity label in the face drawing and follow its matching assignment row. The shaded bottom position agrees with the table's unused entry. The pigtail section then provides separate catalog references; a shared engineering shell does not by itself establish interchangeability.\n\nThis guide explains the drawing and labels. It does not teach access, connector probing, electrical diagnosis or replacement. The physical probing viewpoint, gauge convention, metadata-code meanings and pigtail selection criteria are not established here. Preserve the entries without turning them into test limits or fitment decisions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4357-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I navigate the printed drawing by its vertical column of cavity labels and the projecting housing structure on the left. The shaded bottom position corresponds to the unused assignment row, so it is not evidence of a missing circuit description. This visual relationship helps read the page without claiming a physical probing direction."
+    },
+    {
+      "blockId": "connector-C4357-b00005",
+      "text": "Read the camera circuit assignments",
+      "why": "Keep each cavity's circuit identifier, color, gauge, function and terminal reference together. The communication entry identifies a local interconnect network, a data link that carries messages rather than acting as a simple switched-power wire. The video polarity marks belong to the video functions; they are not battery-connection instructions. The remaining abbreviated video label is not expanded here, and its wire color alone does not establish a ground function."
+    },
+    {
+      "blockId": "connector-C4357-b00007",
+      "text": "Compare the pigtail catalog entries",
+      "why": "Read each catalog row as a complete record linking its Number, Service Part and Engineering Shell fields. The entries share an engineering-shell reference but have distinct service-part references. That relationship supports catalog comparison without establishing which item fits a particular vehicle or whether the items are interchangeable."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:20:04.069Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "9b6b89f308225eec4cedf03bdacfb4fd208732b7d7ae84fde2c052942c344210",
+  "sourcePdfHash": "33d98c4f254e0eee05b602b2b1a57972316c77fc7b8de7b7d48be93a6149f9c1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8be546a912dabcedc02d701c986694a1c989a028e610c988a2db13ca8b480990",
+    "reviewedAt": "2026-10-28T02:58:53.393Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full34 units/raw/table/context including LIN term/author/verdict/final prose read; actual complete page2 solefigure directly viewed. Only unsupported latch function replaced by neutral projecting housing structure. D label remains unexpanded, no ground/fitment/test inference. Continued pigtail row fully read in units/raw; no page3 visual claim. Original full review retained."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C1510",
+  "supportingSourceRefs": [],
+  "sourceHash": "174911a53547600b0c17e70fa754aab084f45ca4eacc6dd94f6b159f59ca1668",
+  "title": "C1510 — Universal heated oxygen sensor (HO2S) #11 connector guide",
+  "introduction": "I use this reference as a seating chart for the oxygen-sensor wiring: the drawing locates a cavity label, and the matching table row explains that connection's job. Start with the connector identity table, then move through the face drawing, pin assignments and pigtail catalog entry.\n\nThe useful distinction here is between the sensor's measurement, reference and heater connections. Sharing a housing does not make those connections interchangeable. Follow each cavity's row across the table rather than identifying a circuit by wire color alone.\n\nThis is a connector-reading guide. Physical access, the viewing side needed for probing, electrical test conditions and repair instructions are outside its scope. Gauge conventions and metadata codes such as Box, Cols and Size are not defined here; retain them as reference entries rather than interpreting them as dimensions or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1510-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "I use the paired columns of cavity labels and the housing outline to navigate the drawing as printed. The broad projecting housing structure appears on the left, providing a useful visual landmark within this illustration. Match a drawn cavity label to the Cavity column below; the page does not identify a physical probing viewpoint."
+    },
+    {
+      "blockId": "connector-C1510-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Each row connects a cavity to its circuit identifier, color, gauge, function and terminal reference. The pumping-current, measured-current, voltage-reference and heater descriptions distinguish separate electrical roles. Matching colors alone cannot identify the connection. Keep each complete row together, including its function qualifiers; the table identifies connections without demonstrating that they work."
+    },
+    {
+      "blockId": "connector-C1510-b00007",
+      "text": "Pigtail catalog reference",
+      "why": "The pigtail entry connects the catalog number with its service-part and engineering-shell references. Those fields serve different lookup purposes, so I keep their labels attached when comparing records. This entry identifies the listed service item; it does not teach terminal release, splicing or connector replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:19:25.812Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "99b339182b72a7128d511d6bab6fc90804b67386bf0a7f57ea05f01665a67fbc",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "236fde744482a04333e8dfb8d80197522d1b5a8da1a01dd8c310e15ba495c78c",
+    "reviewedAt": "2026-10-28T02:58:53.385Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full34 units/raw/table/context/author/verdict/final prose read and actual complete page2 solefigure directly viewed. Neutral broad housing geometry replaces unsupported latch function only. Original full review retained; no physical release/viewpoint inferred."
+    }
+  }
+}

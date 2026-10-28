@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C541",
+  "supportingSourceRefs": [],
+  "sourceHash": "0fef374af52b31044f315d563515ccffca3a080f6b72cab59e81b686f37173e8",
+  "title": "C541 — Front door lock switch LH connector",
+  "introduction": "LH means left-hand. Although this reference is named for the front door lock switch, its assignment table also includes illumination, a switch return and memory-control functions. It is a little door-control switchboard, with more on the guest list than the lock button alone suggests.\n\nI start with the connector identity, then match the drawing’s cavity labels to the assignment table. Read the circuit identifier together with its function rather than relying on wire color alone. This is a guide to the listed configuration, not an access, probing, diagnosis or replacement procedure. The physical viewing side, gauge convention and definitions of the Size and Used codes are unspecified here; those limits do not prevent reading the map, but they prevent turning it into a hands-on test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C541-b00002",
+      "text": "Harness 14631 connector face",
+      "why": "The printed drawing places the cavities in a vertical column, with the projecting housing features to the left and a shaded position at the bottom. I use those features to keep my place on the page. The shaded position corresponds to the assignment row without a circuit, not an illustrated fault. The drawing’s layout does not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C541-b00005",
+      "text": "Read the switch circuit assignments",
+      "why": "Cavity connects each drawing label to its table row. Read across for Circuit Number, Color, Gauge, Function and Terminal Part Number, keeping each entry with its original row. Some wire colors recur under different functions, so color alone cannot identify the circuit. The return, illumination, lock, unlock and memory entries also show why the connector’s name is only a starting point. Their labels describe assigned roles; they do not specify switch behavior, expected measurements or which equipment every vehicle carries."
+    },
+    {
+      "blockId": "connector-C541-b00007",
+      "text": "Pigtail catalog cross-reference",
+      "why": "I connect Kit List in the identity table to Number in this catalog row, then compare Engineering Shell with Hard Shell and Fpn. The pigtail is the connector with attached leads; its Service Part is separate from the individual terminal references in the circuit table. Image is a catalog filename. Keep the pigtail’s Gauge and Material information attached to this record rather than using it to reinterpret the circuit rows or devise a wiring repair."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:27:56.441Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "03edfbd48a6729dfb02e91b8f534900f80fd0b56058d51c64fa448036181c6b0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d76a733b1ba372dda2a8e41c5f6659bb7fd2a94d27f36088e73b5fe9c1f9a4df",
+    "reviewedAt": "2026-10-28T03:13:29.002Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete 36 units/raw tables/context/author/full independent verdict/final public prose read, original full page 2 directly viewed. Sole neutral housing phrase correction; all original circuit/pigtail values retained, no release/viewing-side inference. Full prior review preserved."
+    }
+  }
+}

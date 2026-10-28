@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4033",
+  "supportingSourceRefs": [],
+  "sourceHash": "5534d20ba74e8195c54f91f117352d5f4312fb5c7bb58d791a5c9a8089b0a4b0",
+  "title": "C4033 — Fuel pump control module connector",
+  "introduction": "The fuel pump control module’s connections have different jobs: supplying power, carrying commands, monitoring operation and connecting the pump driver. I read this reference like a switchboard directory—finding the right line matters before deciding what a conversation on it means.\n\nStart with the connector identity table, use the drawing’s cavity labels to find the matching assignment rows, then consult the pigtail reference if you need its catalog information. This page explains that map. It does not teach connector access, probing, electrical diagnosis or replacement. Physical viewing direction, gauge convention and the meanings of the Size and Used codes are not defined here; leave those entries literal and use a separate procedure for any hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4033-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I use the housing outline as a landmark within the drawing: the housing projection is on the right, and the shaded cavities sit above the bottom row. Their corresponding table rows have no circuit assignments. Shading is therefore a useful cross-check, not evidence of connector damage. These landmarks describe the printed view; they do not establish which physical side of the plug to view."
+    },
+    {
+      "blockId": "connector-C4033-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Match a drawing label to Cavity, then read across that same row. Circuit Number identifies the circuit; Color and Gauge describe its listed wiring; Function explains its role; Terminal Part Number identifies the listed terminal. Keep the relay supply, module ground, command, monitor and pump-driver paths distinct. In particular, the pump-driver return and the separately labeled ground are different entries, so this reference gives no basis for treating them as interchangeable. A function label supplies neither a test value nor a verdict on component health."
+    },
+    {
+      "blockId": "connector-C4033-b00007",
+      "text": "Pigtail service-part cross-reference",
+      "why": "Kit List in the identity table connects to Number here, while Engineering Shell can be compared with Hard Shell and the drawing table’s Fpn entry. A pigtail is the connector with attached wire leads. Its Service Part identifies a different item from an individual Terminal Part Number in the assignment table. Image names a catalog image file. The pigtail’s Gauge and Material entries describe that catalog record; they do not supply wire-selection, splicing or installation instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:27:22.919Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "da09d7baf1f27a7132e440f0e362f37b21b9cf345f8d9cb5498df6fb15752ba6",
+  "sourcePdfHash": "c845a5c68b7ab0cc4cf349d603ef5fae1b93ad717dacc0f1600ca13e5885f18e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "22b56ab12dc47e10cbd5c178d2e973999ce0beaf2691f8c1bd0070ccc61bf315",
+    "reviewedAt": "2026-10-28T03:13:28.988Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete original source units, raw tables, context, author, independent verdict and final prose read; actual complete source page 2 directly viewed. Sole public phrase removes unsupported latch function; preserves housing geometry, cavity assignments, values and no physical viewing-side or release inference. Prior full review retained; exact successor awaits independent bounded approval."
+    }
+  }
+}

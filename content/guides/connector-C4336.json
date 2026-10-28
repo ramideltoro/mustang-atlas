@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4336",
+  "supportingSourceRefs": [],
+  "sourceHash": "932676f051a8cf472387cf18d2f25702912d69253d0cbf84d6acbef5d91b911b",
+  "title": "C4336 — Fuel pump control module connector",
+  "introduction": "I use this reference as a seating chart for the fuel pump’s electrical conversation. The relay, ground, command, monitor and motor-drive entries have distinct roles; sharing a connector does not make them interchangeable.\n\nStart with the identification table, then use the drawing’s cavity labels to find the matching Cavity row under the circuit assignments. Read across that row to connect its circuit identifier, color, gauge, function and terminal entry. Shaded positions in the drawing correspond to rows without circuit assignments. An unassigned position is not evidence of a missing wire.\n\nThe parts table connects the listed pigtail with its engineering shell and service-part entry. This page teaches that lookup, not access, probing, wire selection or replacement. Physical viewing direction, gauge convention and the meanings of Box, Cols and Size are unspecified; keep those labels as reference data. The assignments provide no test conditions or pass/fail values, so use a matching diagnostic procedure before drawing a fault conclusion.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4336-b00002",
+      "text": "Connector layout · Harness 14A005",
+      "why": "In the drawing as displayed, the housing feature sits on the right and the cavities form parallel vertical columns. I use those visible features to keep my place on the page. They do not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C4336-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity identifies a location in the drawing; Circuit Number identifies the associated circuit. Function separates the pump relay, ground, controller command, monitor and signed motor-drive connections. Keep the positive and negative designations attached to their own rows. Color alone cannot explain a circuit’s job, and a blank Qualifier is not an added applicability claim."
+    },
+    {
+      "blockId": "connector-C4336-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "A pigtail is a connector with attached wire leads. I cross-reference Kit List with Number and Hard Shell with Engineering Shell; Service Part identifies the listed service assembly. The pigtail Gauge entry and individual circuit Gauge entries describe different records. Their presence does not establish wire substitutions, splice methods or installation approval."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:23:19.443Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "da09d7baf1f27a7132e440f0e362f37b21b9cf345f8d9cb5498df6fb15752ba6",
+  "sourcePdfHash": "ad317942919ef6a25d6689b39fe300e39229eb2d124062d6ef593168da5d3775",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "806fcf49cf28e9fe14c47475af1f0d4472021494f72c2b1f74e9b7e66815f2c6",
+    "reviewedAt": "2026-10-28T03:12:54.157Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full35 units/raw/all table cells/complete fuel and relay context/author/verdict/final prose read; actual fullpage2 solefigure directly viewed. Only unlabeled latch function replaced by neutral housing feature. Pump2 command/monitor/signed driver and relay/ground remain distinct, no engine scope or physical action inferred. Full prior review retained; pigtail data fully read as units/raw, no page3 visual claim."
+    }
+  }
+}

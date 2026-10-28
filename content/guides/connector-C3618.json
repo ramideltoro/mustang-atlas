@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3618",
+  "supportingSourceRefs": [],
+  "sourceHash": "9095cff1a9868af5263d6400d11194fb96d91e49d594641bd077f89dc9409889",
+  "title": "C3618 — Media hub connector",
+  "introduction": "This media hub reference puts power, ground and audio-related connections on the same map. I keep their jobs separate: a connector can carry the music and the means to run the equipment, but those lines are not interchangeable. Think of the assignment table as the labels behind a stereo cabinet, minus the tangled-cable archaeology.\n\nUse the identity table to establish which connector the page describes, then match the drawing’s cavity labels to the assignment rows. The pigtail table supplies a separate catalog cross-reference. This guide does not teach access, probing, wire selection or replacement. Physical viewing direction, gauge convention and Size and Used code definitions remain unspecified; unusual entries and unexplained abbreviations stay literal rather than becoming guessed wiring instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3618-b00002",
+      "text": "Harness 14401 connector face",
+      "why": "The drawing shows paired vertical columns inside a rectangular housing, with projecting housing features to the left. The shaded cavity is in the left column below its top position, matching the table row without a circuit assignment. I use these landmarks to navigate the printed reference. They do not establish the physical viewing side or tell the reader how to release the connector."
+    },
+    {
+      "blockId": "connector-C3618-b00005",
+      "text": "Read the media hub circuit assignments",
+      "why": "Match Cavity to the drawing, then keep Circuit Number, Color, Gauge, Function and Terminal Part Number together across the row. Preserve the left/right channel labels and their polarity signs when reading the audio entries; a minus sign in an audio label is not permission to substitute the separately identified ground. The audio-related row with an asterisk in Color also has an unexplained function suffix. Neither entry is expanded here, and its Gauge value is left literal. These descriptions identify connections without establishing signal levels, cable construction or test results."
+    },
+    {
+      "blockId": "connector-C3618-b00007",
+      "text": "Pigtail identification reference",
+      "why": "Kit List points to Number in this catalog table. Engineering Shell can then be compared with Hard Shell in the identity table and Fpn beside the drawing. I keep the pigtail Service Part separate from the individual Terminal Part Number entries: they describe different service items. Image names a catalog file, while Gauge and Material belong to the pigtail record. None of those fields supplies a splice method or changes the original circuit assignments."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:28:24.596Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bbd1f120f3e0cc67344eeeadfcbe4df112257c8f3cff50e713ed3d60fb8b799b",
+  "sourcePdfHash": "4acf9a8417b5d35fc34f43ddc4350346e04d5c81d96611afd1947379322931e4",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a079363443086a7d2a42841c30e371a12a72740b95e1dd72b3c7c8b9a00f375e",
+    "reviewedAt": "2026-10-28T03:13:29.010Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete 36 units/raw tables/context/author/full independent verdict/final public prose read, original full page 2 directly viewed. Sole neutral housing phrase correction; all original circuit/pigtail values and explicit unexplained asterisk/gauge/suffix limits retained, no release/viewing-side inference. Full prior review preserved."
+    }
+  }
+}

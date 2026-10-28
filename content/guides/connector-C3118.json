@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3118",
+  "supportingSourceRefs": [],
+  "sourceHash": "0bcc3d8c44d07743cbb9265f53680d82bf976a2d50bc1394375d2e397c8538e8",
+  "title": "C3118 — Left rear power window motor connector",
+  "introduction": "A window motor needs power, a return path and instructions about when to move. This reference names those connections for the left rear motor, including switch commands and module control functions. I treat it like a backstage cue sheet: supplying the machinery and telling it when to move are different jobs.\n\nI start with the identity table, use the drawing to locate a cavity label on the page, then find that label in the pin-assignment table. Reading across the matching row connects the cavity to its circuit identifier, wire description, function and terminal reference. The pigtail table provides a separate service-parts lookup.\n\nThis is a guide to reading the reference. Physical viewing direction, access, electrical test conditions and replacement methods are outside its scope. Gauge conventions and the meanings of the Box, Cols, Size and Used codes are not explained here; I leave those entries uninterpreted rather than turn them into wire-selection or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3118-b00002",
+      "text": "Connector-face map · Harness 14A411",
+      "why": "I use the housing outline as a landmark within the drawing: the broad housing feature is above the cavity field, with a long vertical stack of cavities beside a shorter, widely spaced column. The labels connect the picture to the table below. This describes the page layout; it does not establish which side of a physical connector to view. The accompanying Fpn and Harness Id fields associate the drawing with its housing and harness record."
+    },
+    {
+      "blockId": "connector-C3118-b00005",
+      "text": "Read the pin assignments",
+      "why": "Cavity is the lookup key from the drawing. Circuit Number identifies the electrical path; Color and Gauge describe the listed wire; Function distinguishes supply, ground, switch and module-control roles. Terminal Part Number belongs to that individual row. I read the entire row together so a familiar wire color does not become a shortcut around checking the circuit and function. These labels identify connections without establishing whether any connection is electrically healthy."
+    },
+    {
+      "blockId": "connector-C3118-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The service-parts table links the kit entry to its Service Part and Engineering Shell fields, alongside the recorded material, gauge, cavity information and image filename. I keep this lookup separate from the pin map: a service-part identifier and a terminal identifier answer different questions. The listing does not supply a connector replacement or wire-splicing procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:22:44.050Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "79ce121b2889981e9b4fa8ae42491204e74be0166e3ae1226c59a8d6f317236a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fc0c49e2a4e10aaa29b0ac54f452a83579042b44a6534e3e5c0c0603532b7fb5",
+    "reviewedAt": "2026-10-28T03:06:16.755Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Full35 units/raw/all table cells/context/author/verdict/final prose read and actual complete page2 solefigure directly viewed. Only unsupported broad latch label replaced with broad housing feature. Left window functions and literal fuse29 ORbreaker SBP30 unchanged; no physical release or viewpoint inferred. Original full review retained."
+    }
+  }
+}
