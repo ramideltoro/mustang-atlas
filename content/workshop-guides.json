@@ -100006,170 +100006,399 @@
       }
     },
     {
-      "title": "Diagnose SYNC controls, display faults and active-noise-control microphone codes",
-      "summary": "Trace failed SYNC controls and display responses through switch inputs, module communication and isolated microphone circuits.",
-      "introduction": "On these SYNC vehicles, the front controls interface module (FCIM) receives dashboard button inputs, while the front control/display interface module (FCDIM) presents information. Steering-wheel inputs pass through the steering column control module (SCCM). Active noise control (ANC) uses separate microphones to monitor cabin sound. A failed button, blank screen and microphone circuit code therefore require different tests.",
-      "why": "Live switch data separates an input problem from a downstream response problem. Network tests establish whether modules can exchange commands. Circuit isolation then distinguishes damaged wiring from a microphone or module fault, avoiding replacement based on the complaint alone.",
+      "title": "Interpret recorded SYNC button, display and ANC microphone results",
+      "summary": "Compare existing technician records with Tests Y, Z, AA and AB, preserving exact circuit sections, module gates and the unresolved Y3-to-Y4 power-state omission.",
+      "introduction": "I’ll interpret existing technician records for upper-right steering-wheel controls, dashboard audio controls, the small SYNC display and overhead ANC microphone code B116A:01. Missing test conditions, connector identity, inspection or completion evidence leaves the affected branch unresolved. This article does not teach live controls, scan operation, access, SRS work, probing, repair or programming.\n\nThe source ends Y3 with an ignition-ON voltage test, then begins Y4 resistance testing without defining the intervening de-energization and isolation. That omission remains unresolved here. Y4–Y12 conclusions require independently documented valid de-energization/isolation provenance from the technician’s applicable complete procedure. No Ford transition is invented, and the preceding powered state must not be presumed suitable for resistance measurement.",
+      "why": "The chart separates switch-input reports, network communication, display response and circuit sections. Connector-state records determine whether the same endpoints represent the airbag switch harness, steering-wheel harness or clockspring. Keeping those distinctions prevents a reading from being assigned to the wrong assembly.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "right steering wheel buttons not working",
-        "SYNC dashboard controls not responding",
-        "SYNC display blank",
-        "display segments missing",
+        "2015 Mustang SYNC buttons not working",
+        "upper right steering wheel switches",
+        "SCCM R_CURS_UP R_CURS_OK",
+        "FCIM audio controls inoperative",
+        "FCDIM blank display",
+        "LCD_SEG",
+        "U0212:00",
         "B116A:01",
-        "B117A:01"
+        "B117A:01",
+        "ANC overhead microphone"
       ],
       "when": {
-        "summary": "When SYNC controls or the display malfunction, or an applicable ANC microphone circuit code is recorded.",
+        "summary": "Use complete existing records for the specific Y, Z, AA or applicable AB complaint.",
         "notes": [
-          "The left rear quarter-panel microphone concern applies to convertibles only."
+          "Test Y addresses upper-right steering-wheel switches that fail or respond incorrectly.",
+          "Test Z addresses audio functions that do not respond correctly to the dashboard FCIM controls.",
+          "Test AA addresses an inoperative or incorrectly operating FCDIM display.",
+          "Test AB addresses B116A:01 in the DACMC on an ANC-equipped 2.3L vehicle.",
+          "B117A:01 identifies a different microphone circuit on an ANC-equipped convertible; the overhead-microphone measurements below do not apply to that circuit."
         ]
       },
       "prepare": [
         {
-          "title": "Provide the necessary diagnostic capability",
-          "detail": "Use a scan tool supporting network tests, module self-tests, live parameter identifications (PIDs), display commands and module configuration. Circuit work requires voltage and resistance measurement with the exact connector information."
+          "title": "Require identity, provenance and the actual complaint",
+          "detail": "Require vehicle/equipment identity, technician provenance, the original complaint and actual test observations. Y concerns upper-right switches, Z dashboard FCIM controls, AA FCDIM display and AB overhead ANC B116A:01. Do not substitute the B117A:01 rear-quarter microphone route or infer ANC from DACMC presence."
         },
         {
-          "title": "Plan airbag access correctly",
-          "detail": "Steering-wheel circuit diagnosis requires competent supplemental restraint system work. Before driver-airbag removal, turn ignition off and wait one minute for backup power to deplete, then follow the complete airbag procedure. Test only the identified switch circuits, never airbag deployment circuits."
+          "title": "Require complete physical-service records",
+          "detail": "Require actual applicable access, cavity identification, SRS safeguards, connector isolation and restoration records before interpreting affected measurements or powered retests. The one-minute OFF warning is mandatory but is not a complete SRS procedure. Switch-circuit endpoints must be positively distinguished from deployment terminals. Missing methods are not supplied here; accidental deployment can cause serious injury or death."
         },
         {
-          "title": "Capture configuration before removal",
-          "detail": "Start a vehicle-identified scan session before removing modules so configuration can be retrieved for Programmable Module Installation (PMI). Follow each replacement procedure's programming requirements."
+          "title": "Preserve the Y3-to-Y4 state omission",
+          "detail": "Require independently documented valid de-energization and isolation under an applicable complete procedure before any Y4–Y12 resistance result. Literal Y3 ignition ON followed by Y4 alone does not establish that prerequisite. Unknown or energized-state resistance readings cannot support either passing or failed component conclusions. This interpretation does not prescribe the missing transition."
+        },
+        {
+          "title": "Require complete module and measurement records",
+          "detail": "Require actual PID-to-button comparisons, network/self-test reports, timed ignition sequences, commanded LCD_SEG result and exact harness endpoint/state/value records. A missing report is not a no-code or passing result. Approximate 5 volts has no narrower supplied tolerance; resistance comparisons remain strictly greater than 10,000 ohms or less than 3 ohms."
+        },
+        {
+          "title": "Require configuration and completion provenance",
+          "detail": "For a directed module replacement, require configuration captured before original removal, or the actual tool-directed VIN-specific As-Built/parameter fallback, a communicating replacement and completed PMI. Changed customer preferences are not retained by As-Built and require subsequent programmable-parameter restoration. Repairs, guided routines and programming remain separate procedures."
         }
       ],
       "steps": [
         {
-          "title": "Y: Compare every upper-right switch with live data",
-          "body": "With ignition on, monitor the SCCM's Up, Left, Down, Right and OK PIDs while pressing each button. Some incorrect responses direct right-hand upper-switch replacement. If all are incorrect, clear instrument panel cluster (IPC) codes, cycle ignition off and on, wait at least 10 seconds and self-test the IPC. Follow its diagnostic chart if U0212:00 returns. Correct responses lead directly to Y13."
+          "title": "Identify the existing records and applicable path",
+          "body": "Select Y, Z, AA or AB from the documented complaint and fitted equipment. Require all applicable preparation evidence. No live operation, inspection or test is directed by this article. Missing evidence stops the affected conclusion rather than selecting the next branch.\n\nY1’s pass can reach Y13 directly without the circuit tests; preserve that separate entry. AB applies only to the overhead ANC circuit on equipped 2.3L vehicles."
         },
         {
-          "title": "Y: Check supply, then isolate the switch wiring",
-          "body": "After the prescribed airbag removal, disconnect both upper steering-wheel switches. Y3 checks for approximately 5 volts between C2999 pins 2 and 3 with ignition on; that result directs right-hand switch replacement. Otherwise, follow Y4–Y12's exact disconnections and measurements: test the airbag switch harness, steering-wheel harness and clockspring in sequence for ground shorts, opens and wires shorted together. A failed stage directs replacement of its corresponding airbag, steering wheel or clockspring assembly."
+          "title": "Y1: interpret all five switch-input reports",
+          "body": "Require ignition ON and actual button/PID pairs: Up R_CURS_UP, Left R_CURS_LFT, Down R_CURS_DWN, Right R_CURS_RGT and OK R_CURS_OK.\n\nAll values agreeing with pressed positions leads directly to Y13 in step 8. One or more but not all incorrect or stuck values directs separate RH upper switch replacement. All incorrect or stuck values leads to Y2. A partial observation cannot be classified as an all-input failure."
         },
         {
-          "title": "Y: Check the SCCM connection endpoint",
-          "body": "At Y13, switch ignition off, inspect SCCM connectors and repair corrosion, damaged or bent pins and pushed-out terminals. Reconnect securely and operate the system. If the complaint remains, check applicable Technical Service Bulletins (TSBs); follow an applicable bulletin, otherwise replace the SCCM. If operation returns, address the underlying connector defect."
+          "title": "Y2: interpret the timed IPC code recheck",
+          "body": "Require ignition ON IPC-code clearing, ignition OFF then ON, at least 10 seconds waiting, and the IPC self-test. U0212:00 present directs the IPC DTC chart in [Instrumentation](#/document/G1693940). Absent permits Y3. Missing clearing, timing or self-test evidence cannot establish absence."
         },
         {
-          "title": "Z: Diagnose dashboard audio controls",
-          "body": "Network-test the audio front control module (ACM), accessory protocol interface module (APIM) and FCIM. A failure leads to communications diagnosis. If all pass, self-test all three and follow their diagnostic trouble code (DTC) charts. With no codes, inspect and repair the FCIM connector with ignition off, reconnect and retest. A remaining concern leads to applicable TSB instructions or the VIN-dependent FCIM guided routine."
+          "title": "Y3: interpret the recorded voltage and stop at the unresolved transition",
+          "body": "Require complete driver-airbag service provenance, including ignition OFF and the full one-minute backup-power wait before removal, actual applicable handling/access safeguards, then C2999 RH-upper and C2998 LH-upper switch disconnection and ignition ON. Require positive C2999 pin 2 to negative pin 3 voltage.\n\nApproximately 5 volts directs separate RH upper switch replacement. Otherwise the chart points toward Y4, but the source does not define the safe transition from this ON state to resistance testing. Stop the affected interpretation unless independent records establish valid de-energization/isolation under the applicable complete procedure. This article cannot supply that transition or treat missing provenance as a failed harness."
         },
         {
-          "title": "AA: Establish what the display can still do",
-          "body": "With ignition and audio on, check every FCIM button; incorrect button operation returns to Z. Next network-test the FCDIM. A communication failure follows network diagnosis. A completely blank display goes to AA6 connector inspection. Otherwise, command all liquid-crystal display segments on with LCD_SEG. Missing segments also lead to AA6; if all illuminate, check stored lost-communication codes before proceeding. At AA6, repair and reseat the connector, retest, check applicable TSBs and replace the FCDIM only if directed."
+          "title": "Y4–Y6: interpret airbag switch-harness resistance records",
+          "body": "Only with the valid resistance-state provenance required in step 4, require C2606 disconnected. Y4 requires separate C2999 pin 2-to-ground and pin 3-to-ground readings: both greater than 10,000 ohms permits Y5; either at or below directs separate driver-airbag assembly replacement.\n\nY5 requires C2999 pin 2 to C2606 pin 2 and C2999 pin 3 to C2606 pin 4: both less than 3 ohms permits Y6; either at least 3 directs separate driver-airbag assembly replacement. Y6 requires C2999 pin 2 to pin 3 greater than 10,000 ohms to permit Y7; at or below directs the same separate assembly replacement. These are positively identified switch-harness records, not deployment-circuit probing instructions."
         },
         {
-          "title": "AB: Isolate the overhead ANC microphone circuits",
-          "body": "For B116A:01, follow AB1–AB4 in order. Disconnect ACM C240B with ignition off, then perform the specified ignition-on voltage check. Switch ignition off for resistance checks, disconnecting microphone C9222 where directed. Check for voltage shorts, ground shorts, opens and wires shorted together. Repair any failed circuit before moving to component replacement."
+          "title": "Y7–Y9: interpret steering-wheel harness records",
+          "body": "Require documented C2606 reconnection followed by C218B disconnection and continued valid resistance-state provenance. Y7 requires C2999 pin 2-to-ground and pin 3-to-ground each greater than 10,000 ohms to permit Y8.\n\nY8 requires C2999 pin 2 to C218B pin 14 and C2999 pin 3 to C218B pin 16 each less than 3 ohms to permit Y9. Y9 requires C2999 pin 2 to pin 3 greater than 10,000 ohms to permit Y10. A failed threshold at any of Y7–Y9 directs separate steering-wheel replacement. Missing isolation, endpoint or value evidence remains unresolved."
         },
         {
-          "title": "AB: Use the microphone replacement as a controlled test",
-          "body": "After the circuits pass, reconnect C240B and install a new overhead ANC microphone. Clear codes from digital audio control module C (DACMC), cycle ignition off and on, wait at least 5 seconds and self-test it. If B116A:01 returns, inspect and repair all ACM connectors, reconnect and retest. A persistent concern requires the TSB check before ACM replacement; DACMC is integrated into that assembly."
+          "title": "Y10–Y12: interpret clockspring-path records",
+          "body": "Require C218B reconnected then C218C disconnected, with valid resistance-state provenance retained. Y10 requires C2999 pin 2-to-ground and pin 3-to-ground each greater than 10,000 ohms to permit Y11.\n\nY11 requires C2999 pin 2 to C218C pin 6 and C2999 pin 3 to C218C pin 10 each less than 3 ohms to permit Y12. Y12 requires C2999 pin 2 to pin 3 greater than 10,000 ohms to permit Y13. A failed threshold at any of Y10–Y12 directs separate clockspring replacement. The identical endpoint names do not make these earlier harness tests interchangeable."
+        },
+        {
+          "title": "Y13: interpret complete restoration and the SCCM decision",
+          "body": "This stage can follow a direct Y1 pass or valid passing Y4–Y12 records. Require ignition OFF before all-SCCM-connector inspection, documented corrosion/terminal/pin correction, seated/latched reconnections and complete restoration of any previously disturbed switch/clockspring/SRS items under their proper procedures before the powered operational check.\n\nIf the concern remains, require OASIS applicable-TSB assessment. An applicable bulletin stops this test for its procedure; no applicable bulletin directs separate SCCM replacement. If operation returns, the system works at that time and the underlying connector/pin defect still requires correction. No actual restoration or replacement method is taught here."
+        },
+        {
+          "title": "Z1/Z2: interpret communication and self-test reports",
+          "body": "Require network-test results for all three ACM, APIM and FCIM. Any failure directs separate [Communications Network diagnosis](#/document/G1813071); only all passing permits Z2.\n\nRequire each module’s self-test. Any DTC directs that module’s DTC chart in [Information and Entertainment System](#/document/G1692891). Only no codes in all three permits Z3. A missing module report cannot count as a pass."
+        },
+        {
+          "title": "Z3: interpret the FCIM connector and guided-routine gate",
+          "body": "Require OFF, actual FCIM connector inspection, corrosion/terminal/pin correction, fully seated/latched reconnection and the subsequent control-operation result.\n\nPersistent concern requires OASIS/TSB assessment: an applicable bulletin stops this route; none directs a VIN-dependent FCIM Guided Routine, not automatic FCIM replacement. Restored operation requires root-cause attention to any connector defect."
+        },
+        {
+          "title": "AA1–AA3: interpret controls, communication and blank-screen routing",
+          "body": "Require ignition ON, audio ON and results for every FCIM button. Any incorrect function directs Z; all correct permits AA2. Require FCDIM network-test result: failure directs the FCDIM-does-not-respond network branch, pass permits AA3.\n\nRequire the recorded display behavior during various FCIM operations. Completely blank/inoperative goes directly to AA6 in step 13. A display that is not completely blank proceeds to AA4. Unknown display observation cannot choose either branch."
+        },
+        {
+          "title": "AA4/AA5: interpret the commanded segments and stored codes",
+          "body": "Require an actual FCDIM LCD_SEG command for All LCD Segments and the observed response. Any segment failing to illuminate directs AA6; all illuminating permits AA5. Ordinary screen appearance is not the commanded result.\n\nAA5 requires ignition ON and all continuous-memory DTC retrieval, specifically whether FCDIM lost-communication U-codes are present. Any such code directs the FCDIM DTC chart. No such codes permits AA6; a missing report is not negative evidence."
+        },
+        {
+          "title": "AA6: interpret the display connector and bulletin gate",
+          "body": "Require OFF, FCDIM connector inspection, corrosion/terminal/pin correction and seated/latched reconnection, then the actual original-concern retest.\n\nPersistent concern requires OASIS/TSB assessment. An applicable bulletin takes priority; no applicable bulletin directs separate FCDIM replacement. If operation returns, retain the root-cause requirement for connector/pin concerns."
+        },
+        {
+          "title": "AB1–AB4: interpret overhead ANC circuit results",
+          "body": "For applicable B116A:01, require OFF before ACM C240B disconnection, then ON and separate voltage records C240B pin 1-to-ground and pin 14-to-ground. Any voltage directs separate repair of the affected circuit; neither permits AB2.\n\nAB2 requires OFF and C240B disconnected: both pin-to-ground resistances must exceed 10,000 ohms to permit AB3, otherwise separate circuit repair. AB3 additionally requires overhead microphone C9222 disconnected: C240B1 to C9222 pin 1 and C240B14 to C9222 pin 2 must each be less than 3 ohms to permit AB4, otherwise repair the affected path. AB4 retains both disconnected and requires C240B1-to-C240B14 resistance greater than 10,000 ohms to permit AB5; at or below directs circuit repair. Missing identity, state or readings stops interpretation."
+        },
+        {
+          "title": "AB5: interpret microphone substitution and timed confirmation",
+          "body": "Require valid preceding circuit results, documented C240B reconnection and completed separate new overhead ANC microphone installation. Then require DACMC DTC clearing, ignition OFF then ON, at least 5 seconds waiting and the DACMC self-test.\n\nB116A:01 absent identifies the original overhead microphone as the cause within this test. Code remaining leads to AB6. Missing replacement, restoration, clearing or timing evidence cannot establish the conclusion; no microphone installation is taught here."
+        },
+        {
+          "title": "AB6: interpret ACM connector correction and final gate",
+          "body": "Require OFF before inspection of all ACM connectors, documented corrosion/terminal/pin correction, seated/latched reconnections and actual system-operation result. Persistent concern requires OASIS applicable-TSB assessment. Follow a documented applicable bulletin as a separate procedure; only none directs separate ACM replacement, which contains DACMC.\n\nIf operation returns, the system works at that time and connector/pin root cause still requires attention. B117A:01 instead concerns a convertible left rear quarter-panel microphone; the supplied trailing context does not provide its diagnostic branch and cannot use AB’s pin map."
+        },
+        {
+          "title": "Interpret configuration and final-completion records",
+          "body": "For a directed module replacement, require the original configuration captured by a vehicle-identified scan session before removal, or actual tool-directed VIN-specific As-Built/parameter fallback, plus replacement communication and completed PMI. As-Built does not retain preferences changed from defaults: require those restored through programmable parameters afterward. SCCM courtesy-wipe enable/disable is the relevant listed parameter; the other listed modules have none.\n\nRelevant chart addresses are SCCM 724, ACM 727, DACMC 7D5, FCIM 7A7, FCDIM 7A5 and APIM 7D0. All support PMI/reprogramming, with no separate adaptive learning/calibration in this chart. PMI may apply a later calibration. Deliberate reprogramming outside PMI is limited to published TSB recommendation; identical software does not repair hardware. Require compliance with coordinated IDS key cycles and clearing of network communication DTCs created during programming.\n\nRequire documented complete physical reassembly/restoration and original-function confirmation, plus the specific timed AB5 result where applicable. Retain source-state uncertainty and missing records. This interpretation performs no programming, SRS work, live test or vehicle-release certification."
         }
       ],
       "watchFor": [
         {
-          "title": "A latched connector can still have poor terminal contact",
-          "body": "Corrosion and displaced pins can interrupt operation. Restored function after reconnection still requires correction of the underlying defect."
+          "title": "The Y3-to-Y4 transition remains unresolved",
+          "body": "Y3 ends powered; Y4 begins resistance testing without the intervening method. Actual independently documented valid de-energization/isolation is mandatory for Y4–Y12 conclusions. No safe transition is inferred from adjacent rows."
         },
         {
-          "title": "Engine equipment changes the microphone branch",
-          "body": "This SYNC configuration lists ANC for the 2.3L only. DACMC presence on a 5.2L does not establish ANC microphone applicability."
+          "title": "Connector changes select the circuit section",
+          "body": "Y4 isolates C2606; Y7 restores C2606 and isolates C218B; Y10 restores C218B and isolates C218C. Missing state changes invalidate section-specific conclusions."
+        },
+        {
+          "title": "Keep strict comparisons and timed waits",
+          "body": "Isolation requires greater than 10,000 ohms; continuity requires less than 3 ohms. Y3 remains approximately 5 volts. Preserve Y2 at least 10 seconds, the pre-airbag full minute and AB5 at least 5 seconds."
+        },
+        {
+          "title": "A code destination is not a repair method",
+          "body": "All assembly replacements, wiring/terminal corrections, TSBs and VIN-guided routines are separate procedures. No pin label here teaches cavity location or probing."
+        },
+        {
+          "title": "Microphone identity and equipment matter",
+          "body": "B116A:01 concerns overhead ANC on equipped 2.3L despite its Handset description. B117A:01 concerns convertible rear-quarter ANC and has no supplied branch here. Shared DACMC on 5.2L does not establish ANC."
+        },
+        {
+          "title": "As-Built does not restore changed preferences",
+          "body": "Require actual post-configuration programmable-parameter restoration when preferences had changed from defaults, including applicable SCCM courtesy-wipe setting."
         }
       ],
       "notes": [
-        "Reinstalling the same software level does not repair hardware. Limit reprogramming to the prescribed PMI process or an applicable published TSB."
+        "The system overview lists six speakers, the 4.2-inch non-touchscreen display, ACM, APIM, FCIM, AM/FM antenna, audio input jack, front and rear USB connections, GPSM, right-hand audio steering-wheel switches and a SYNC microphone.",
+        "ANC is listed for the 2.3L only. Enhanced sound equipment is listed for 2.3L and 5.2L, and DACMC is integrated into the ACM on those engines; those facts do not broaden ANC microphone applicability.",
+        "The only body-style-specific microphone condition here is the convertible-only left rear quarter-panel circuit associated with B117A:01. It does not establish every engine and body-style combination.",
+        "Reference links identify separate destinations. No internal access, installation, live diagnosis or programming is supplied by this existing-record interpretation.",
+        "The broader configuration material’s transmission strategy, suspension, window and unrelated module calibration entries do not apply to these control, display and ANC diagnostic branches."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code U0212:00 returns in the IPC during Y2.",
-          "meaning": "The switch test requires the IPC diagnostic branch before further switch-circuit testing.",
-          "next": "Use the IPC DTC chart; this result alone does not establish a failed switch."
+          "finding": "Recorded result: Y1: All five SCCM switch readings agree with the buttons pressed.",
+          "meaning": "The live input comparison passes.",
+          "next": "Interpret Y13 records in step 8 directly; do not require unused Y2–Y12 tests."
         },
         {
-          "finding": "Diagnostic trouble code B116A:01 is recorded.",
-          "meaning": "Although labeled Handset Microphone: General Electrical Failure, this test assigns it to the overhead ANC microphone circuits monitored by DACMC.",
-          "next": "Follow AB's wiring checks before microphone isolation and ACM assessment."
+          "finding": "Recorded result: Y1: One or more, but not all, readings are incorrect or remain at one switch position.",
+          "meaning": "The test directs replacement of the right upper steering-wheel switch.",
+          "next": "Separate RH upper switch replacement."
         },
         {
-          "finding": "Diagnostic trouble code B117A:01 is recorded on an ANC-equipped convertible.",
-          "meaning": "Backup Microphone: General Electrical Failure identifies a detected fault in the left rear quarter-panel ANC microphone circuits.",
-          "next": "Use diagnosis for that microphone location; the overhead microphone pin tests are a different circuit."
+          "finding": "Recorded result: Y1: All switch readings are incorrect or remain at one switch position.",
+          "meaning": "The entire input set needs the IPC check before circuit isolation.",
+          "next": "Interpret the complete Y2 recorded clearing/cycle/wait/self-test."
+        },
+        {
+          "finding": "Recorded result: Y2: U0212:00 returns after clearing IPC codes, cycling ignition and waiting at least 10 seconds.",
+          "meaning": "The IPC DTC branch takes priority.",
+          "next": "Separate IPC DTC chart if present; absence permits recorded Y3."
+        },
+        {
+          "finding": "Recorded result: Y3: Approximately 5 volts is present between C2999 pins 2 and 3.",
+          "meaning": "The voltage check directs right upper switch replacement.",
+          "next": "Separate RH upper switch replacement if approximately 5 V; otherwise Y4 conclusions remain blocked without independently valid isolation provenance."
+        },
+        {
+          "finding": "Recorded result: Y4: Either C2999 pin 2-to-ground or pin 3-to-ground reading is not greater than 10,000 ohms with C2606 disconnected.",
+          "meaning": "The airbag switch-harness ground-isolation check fails.",
+          "next": "Separate driver-airbag assembly replacement only from valid identified/de-energized test evidence; both passing permits Y5."
+        },
+        {
+          "finding": "Recorded result: Y5: Either C2999 pin 2 to C2606 pin 2 or C2999 pin 3 to C2606 pin 4 is not less than 3 ohms.",
+          "meaning": "The airbag switch-harness continuity check fails.",
+          "next": "Separate driver-airbag assembly replacement only from valid records; both passing permits Y6."
+        },
+        {
+          "finding": "Recorded result: Y6: Resistance between C2999 pins 2 and 3 is not greater than 10,000 ohms.",
+          "meaning": "The isolated airbag switch-harness paths fail the short-together check.",
+          "next": "Separate driver-airbag assembly replacement only from valid records; passing permits Y7."
+        },
+        {
+          "finding": "Recorded result: Y7: Either switch-circuit ground-isolation reading fails with C2606 connected and C218B disconnected.",
+          "meaning": "The steering-wheel harness stage fails its greater-than-10,000-ohm requirement.",
+          "next": "Separate steering-wheel replacement only from valid records; both passing permits Y8."
+        },
+        {
+          "finding": "Recorded result: Y8: Either C2999 pin 2 to C218B pin 14 or C2999 pin 3 to C218B pin 16 is not less than 3 ohms.",
+          "meaning": "The steering-wheel harness continuity check fails.",
+          "next": "Separate steering-wheel replacement only from valid records; both passing permits Y9."
+        },
+        {
+          "finding": "Recorded result: Y9: Resistance between C2999 pins 2 and 3 is not greater than 10,000 ohms with C218B disconnected.",
+          "meaning": "The steering-wheel harness stage fails its short-together check.",
+          "next": "Separate steering-wheel replacement only from valid records; passing permits Y10."
+        },
+        {
+          "finding": "Recorded result: Y10: Either switch-circuit ground-isolation reading fails with C218B connected and C218C disconnected.",
+          "meaning": "The clockspring stage fails its greater-than-10,000-ohm requirement.",
+          "next": "Separate clockspring replacement only from valid records; both passing permits Y11."
+        },
+        {
+          "finding": "Recorded result: Y11: Either C2999 pin 2 to C218C pin 6 or C2999 pin 3 to C218C pin 10 is not less than 3 ohms.",
+          "meaning": "The clockspring continuity check fails.",
+          "next": "Separate clockspring replacement only from valid records; both passing permits Y12."
+        },
+        {
+          "finding": "Recorded result: Y12: Resistance between C2999 pins 2 and 3 is not greater than 10,000 ohms with C218C disconnected.",
+          "meaning": "The clockspring stage fails its short-together check.",
+          "next": "Separate clockspring replacement only from valid records; passing permits Y13."
+        },
+        {
+          "finding": "Recorded result: Y13: The concern remains after SCCM connector inspection, repairs and reconnection.",
+          "meaning": "The connector checkpoint has not restored correct operation.",
+          "next": "Require recorded TSB gate: applicable bulletin takes priority; none directs separate SCCM replacement. If operation returns, retain connector-root-cause requirement."
+        },
+        {
+          "finding": "Recorded result: Z1: The ACM, APIM or FCIM fails the network test.",
+          "meaning": "The communication prerequisite for the dashboard-control branch fails.",
+          "next": "Separate network diagnosis for any failure; all passing permits Z2."
+        },
+        {
+          "finding": "Recorded result: Z2: Any ACM, APIM or FCIM self-test produces a DTC.",
+          "meaning": "The module-specific code determines the next diagnostic branch.",
+          "next": "Separate appropriate module DTC chart for any code; none permits Z3."
+        },
+        {
+          "finding": "Recorded result: Z3: Dashboard-control operation remains incorrect after FCIM connector work.",
+          "meaning": "The branch requires a bulletin check or guided diagnosis.",
+          "next": "Require actual TSB result; applicable bulletin takes priority, none directs separate VIN-dependent FCIM Guided Routine, not automatic replacement."
+        },
+        {
+          "finding": "Recorded result: AA1: A dashboard FCIM button does not perform the correct operation.",
+          "meaning": "Display diagnosis must first resolve the dashboard-control fault.",
+          "next": "Interpret Z records for any incorrect button; all correct permits AA2."
+        },
+        {
+          "finding": "Recorded result: AA2: The FCDIM fails the network test.",
+          "meaning": "The display is not passing its communication check.",
+          "next": "Separate FCDIM nonresponse network branch; passing permits AA3."
+        },
+        {
+          "finding": "Recorded result: AA3: The display is completely blank or inoperative.",
+          "meaning": "This branch bypasses the segment command and stored-code checks.",
+          "next": "Interpret AA6 records directly if blank; otherwise AA4."
+        },
+        {
+          "finding": "Recorded result: AA4: One or more segments fail to illuminate under LCD_SEG.",
+          "meaning": "The commanded all-segments check fails.",
+          "next": "Interpret AA6 for any failed segment; all lit permits AA5."
+        },
+        {
+          "finding": "Recorded result: AA5: The FCDIM contains stored lost-communication U-codes.",
+          "meaning": "The stored communication fault requires its code-specific branch.",
+          "next": "Separate FCDIM DTC chart for any U-code; none permits AA6."
+        },
+        {
+          "finding": "Recorded result: AA6: The display concern remains after connector inspection, repair and reconnection.",
+          "meaning": "The display connector checkpoint has not resolved the fault.",
+          "next": "Require TSB result; applicable bulletin takes priority, none directs separate FCDIM replacement."
+        },
+        {
+          "finding": "Recorded result: AB1: Any voltage is present from C240B pin 1 or pin 14 to ground with C240B disconnected and ignition on.",
+          "meaning": "The overhead ANC microphone circuit fails the short-to-voltage check.",
+          "next": "Separate affected-circuit repair; neither permits recorded OFF-state AB2."
+        },
+        {
+          "finding": "Recorded result: AB2: Either C240B pin-to-ground resistance is not greater than 10,000 ohms.",
+          "meaning": "The overhead microphone circuit fails ground isolation.",
+          "next": "Separate affected-circuit repair; both passing permits AB3 with C9222 disconnection documented."
+        },
+        {
+          "finding": "Recorded result: AB3: Either C240B pin 1 to C9222 pin 1 or C240B pin 14 to C9222 pin 2 is not less than 3 ohms.",
+          "meaning": "The corresponding microphone wire fails continuity.",
+          "next": "Separate affected-circuit repair; both passing permits AB4."
+        },
+        {
+          "finding": "Recorded result: AB4: Resistance between C240B pins 1 and 14 is not greater than 10,000 ohms.",
+          "meaning": "The isolated microphone wires fail the short-together check.",
+          "next": "Separate circuit repair; passing permits recorded AB5 substitution and confirmation."
+        },
+        {
+          "finding": "Recorded result: AB5: B116A:01 is absent after microphone replacement, DACMC code clearing, an ignition cycle and the self-test following a wait of at least 5 seconds.",
+          "meaning": "The isolation test identifies the original overhead ANC microphone as the cause.",
+          "next": "Record the result only with complete replacement/clearing/cycle/wait evidence; code remaining permits AB6."
+        },
+        {
+          "finding": "Recorded result: AB6: The concern remains after all ACM connectors have been inspected, repaired and reconnected.",
+          "meaning": "The final connector checkpoint has not resolved the ANC concern.",
+          "next": "Require TSB result; applicable bulletin takes priority, none directs separate ACM replacement."
+        },
+        {
+          "finding": "Recorded result: B117A:01 is recorded on an ANC-equipped convertible.",
+          "meaning": "DACMC detected a failure in the left rear quarter-panel ANC microphone circuits, described as Backup Microphone: General Electrical Failure.",
+          "next": "Separate matching B117A:01 diagnostic branch required; AB overhead measurements cannot substitute."
+        },
+        {
+          "finding": "Required identity, isolation, operating state, test result, timed wait, repair or configuration evidence is missing or ambiguous.",
+          "meaning": "The affected branch is unresolved, not a valid component verdict.",
+          "next": "Stop interpretation. In particular, no Y4–Y12 result is usable without independently valid de-energization/isolation provenance."
         }
       ],
       "verification": [
         {
-          "title": "Confirm operation at the connector checkpoints",
-          "body": "Operate the affected controls or display after reconnecting the SCCM, FCIM or FCDIM. Record whether the original complaint remains before taking a replacement branch."
+          "title": "Require the selected chart path in full",
+          "body": "Keep Y1 partial/all/pass branches, Y2 timed clearing, AA blank-screen bypass, Z3 VIN routine and AB5 substitution/timing distinct. Missing records never establish no codes or a pass."
         },
         {
-          "title": "Record the microphone isolation result",
-          "body": "Record whether B116A:01 returns after the replacement microphone, code clearing, ignition cycle and timed self-test. No return identifies the original microphone as the cause."
+          "title": "Preserve the power-state limitation",
+          "body": "Disclose Y3-to-Y4 omission and require independently valid isolation evidence for every affected resistance conclusion. Also require complete restoration before powered retests, especially Y13."
         },
         {
-          "title": "Complete module configuration",
-          "body": "Carry out required PMI and follow scan-tool key-cycle instructions. After reprogramming, clear communication codes generated in other modules during the process."
+          "title": "Require actual completion evidence",
+          "body": "Retain connector corrections, proper reassembly, applicable TSB decisions, completed separate repair and original-function result. Module replacement records require pre-removal data/fallback, communicating PMI, preference restoration and programming-related communication-code clearing."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692891",
-          "purpose": "SYNC Pinpoint Tests Y, Z, AA and AB, including exact circuit connections and decision limits."
+          "purpose": "Complete Y/Z/AA/AB chart for existing-record interpretation with explicit unresolved Y3-to-Y4 state omission; no physical execution."
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "System equipment overview, 4.2-inch display configuration, DACMC integration and engine-specific ANC applicability."
+        },
+        {
+          "documentId": "G1813073",
+          "purpose": "Required recorded configuration capture, PMI/fallback, preference restoration and programming completion; no tool operation."
         },
         {
           "documentId": "G1696301",
-          "purpose": "Driver-airbag removal and installation for switch access or the directed harness replacement.",
+          "purpose": "Reference-only next-step destination for driver-airbag access, refitting and directed assembly replacement; internal service actions are not included.",
           "mediaId": "G1696301-m0004"
         },
         {
+          "documentId": "G1696340",
+          "purpose": "Reference-only next-step destination for complete SRS service safeguards."
+        },
+        {
           "documentId": "G1693273",
-          "purpose": "Right-hand upper steering-wheel switch removal and installation.",
+          "purpose": "Reference-only next-step destination for right upper steering-wheel switch replacement after Y1 or Y3.",
           "mediaId": "G1693273-m0002"
         },
         {
           "documentId": "G1693262",
-          "purpose": "Steering-wheel replacement when its harness fails isolation tests.",
+          "purpose": "Reference-only next-step destination for steering-wheel replacement after a failed Y7–Y9 harness check.",
           "mediaId": "G1693262-m0001"
         },
         {
           "documentId": "G1696300",
-          "purpose": "Clockspring removal and installation at the Y replacement endpoint.",
+          "purpose": "Reference-only next-step destination for clockspring replacement after a failed Y10–Y12 check.",
           "mediaId": "G1696300-m0003"
         },
         {
           "documentId": "G1693270",
-          "purpose": "SCCM removal and installation after Y13.",
+          "purpose": "Reference-only next-step destination for SCCM replacement after Y13 and the required TSB check.",
           "mediaId": "G1693270-m0003"
         },
         {
           "documentId": "G1693940",
-          "purpose": "IPC DTC-chart diagnosis when U0212:00 returns."
+          "purpose": "Reference-only next-step destination for the IPC U0212:00 DTC branch."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Diagnosis of modules that fail network communication tests."
+          "purpose": "Reference-only next-step destination when an audio or display module fails the network test."
         },
         {
           "documentId": "G1704851",
-          "purpose": "SYNC FCDIM removal and installation after AA6.",
+          "purpose": "Reference-only next-step destination for FCDIM replacement after AA6 and the required TSB check.",
           "mediaId": "G1704851-m0001"
         },
         {
           "documentId": "G1694053",
-          "purpose": "ANC microphone removal and installation for AB5 isolation.",
+          "purpose": "Reference-only next-step destination for overhead ANC microphone replacement during AB5 isolation.",
           "mediaId": "G1694053-m0001"
         },
         {
           "documentId": "G1704002",
-          "purpose": "SYNC ACM removal and installation after the AB6 checks.",
+          "purpose": "Reference-only next-step destination for ACM replacement after AB6 and the required TSB check.",
           "mediaId": "G1704002-m0001"
-        },
-        {
-          "documentId": "G1813073",
-          "purpose": "Configuration capture, PMI and post-programming requirements."
         }
       ],
       "hero": null,
@@ -100191,7 +100420,7 @@
         "years": [
           2015
         ],
-        "equipment": "SYNC with 4.2-inch non-touchscreen display; ANC tests apply to equipped 2.3L vehicles"
+        "equipment": "Existing technician records for applicable SYNC with 4.2-inch (107 mm) non-touchscreen display. AB requires ANC-equipped 2.3L; shared 5.2L DACMC/ESE equipment does not establish ANC. B117A:01 is separate convertible-only left rear quarter-panel microphone context, not the overhead AB procedure."
       },
       "relatedGuideIds": [
         "job-5f63fbcd10cb0efc",
@@ -100255,14 +100484,228 @@
         {
           "documentId": "G1692884",
           "sourceHash": "54224601ccf734d2ea4edd4c12f1c27fe53e097555ddfc4fff9f510959b36aad"
+        },
+        {
+          "documentId": "G1692965",
+          "sourceHash": "cff90b0c2c849fa0101771bbb732d7f7bb2948be70895d50acaa83f251a3b9e0"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1692895",
+          "sourceHash": "ed2f6d067e94a369fa5f208dacee8d37349e0e75090c8f3702f6cb7294c165f5"
+        },
+        {
+          "documentId": "G1695509",
+          "sourceHash": "eb2e69d681bac3c4ce5370cd451b575d20aeca15a189c4fdb311afc550da8b04"
+        },
+        {
+          "documentId": "G1681095",
+          "sourceHash": "cbae19a4bc5095b8d58daefb649eedcfa2e2c693621b5716b74505c3fcec3686"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1692931",
+          "sourceHash": "6cb3e42eb5a5ff32c9656312e8b537e0543a587eb5573a3f3e25f5d1f55235f3"
+        },
+        {
+          "documentId": "G1692933",
+          "sourceHash": "b9912e84f438218d29633b80c3e2a12565729c974ca8e777ccc6745d610201d3"
+        },
+        {
+          "documentId": "G1807235",
+          "sourceHash": "cbdd8e5fa44eac6bd2951bbea48df64ed4279aca4fd469c7b035da61ed2303a2"
+        },
+        {
+          "documentId": "G1694051",
+          "sourceHash": "f5eef22f51710f2ce2d5ae5cd2250ffea2d68ed21c5277ac3f7aeb7446c44fb0"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1692867",
+          "sourceHash": "a6a1195bb9e831dfe2d8bd6e13141880391ae4474a3a8699114c0c72828fa63c"
+        },
+        {
+          "documentId": "G1813259",
+          "sourceHash": "feada71578e9594a03efbd882ab41bb6387a8c33ff1093fec290cf0063573404"
+        },
+        {
+          "documentId": "G1692885",
+          "sourceHash": "15a7e53f8d98f2b80af7d899bae99c9aaa6673ff85ac6049d292fef1e23837ab"
+        },
+        {
+          "documentId": "G1692120",
+          "sourceHash": "86682574769b7e3306c26913e676f8c5b4c895d288436db1d78d956e19109bf2"
+        },
+        {
+          "documentId": "G1692122",
+          "sourceHash": "8581035e0738df87b2e1713716f6c72597dd163ceacebba274d5d19fe2b990b0"
+        },
+        {
+          "documentId": "G1804021",
+          "sourceHash": "b4e020d5b1546be37d004d263f446c023653ef8f987540819898cbd9b97fad01"
+        },
+        {
+          "documentId": "G1695933",
+          "sourceHash": "e846b58e3c8b6808ef79d461089c9d3d2e9366417727237b979a8aeda9624b57"
+        },
+        {
+          "documentId": "G1693973",
+          "sourceHash": "36c14c44137c4198f71290fc4990b2abccda5e0c0a0be29c27ce96f75f3e2265"
+        },
+        {
+          "documentId": "G1694048",
+          "sourceHash": "c2a0af8fb95cefd997eda6996b786c9fb47125dc4bc7ebb240fc3e33b32b09b9"
+        },
+        {
+          "documentId": "G1694047",
+          "sourceHash": "dac2332cab84d8f26e4f1ff720605c09632499f91e8c93eea6b53eac5e45449a"
+        },
+        {
+          "documentId": "G1694046",
+          "sourceHash": "206609457fbabc35285bc11d60a1000d7e105599a7596960dc387f556302eee8"
+        },
+        {
+          "documentId": "G1673174",
+          "sourceHash": "d489d22ac7d68944f72a27944a51f1b26910204d8fe0c7ba16278732e142d4f0"
+        },
+        {
+          "documentId": "G1692835",
+          "sourceHash": "9b41e76a365a3e42715074595faba651082555aa60bd50ef14cd04ae90f43400"
+        },
+        {
+          "documentId": "G1692944",
+          "sourceHash": "223d21087ea05c3855269cd5dbdcb2397b0fb431339b8f92d2e54e75dac55e08"
+        },
+        {
+          "documentId": "G1804809",
+          "sourceHash": "fd8bc0d4c68459d1d4949c3df642d0adbcb6141a41535837ac6f9dc2ecaaae91"
+        },
+        {
+          "documentId": "G1694049",
+          "sourceHash": "0e9444bb1b40ffe8772389a10d8f16d6d70995d3545af2c67725d4d41e8d8944"
+        },
+        {
+          "documentId": "G1694045",
+          "sourceHash": "f18c1d7bc4702e3b62d5766fe2d2259af7021284790ef5a3a2eac4d7b74ed47e"
+        },
+        {
+          "documentId": "G1694050",
+          "sourceHash": "f5ecdb39a7ccecda25ba9d00d72b011ff6f8afdee0aca2e5d1a9e0c7e57898a2"
+        },
+        {
+          "documentId": "G1694055",
+          "sourceHash": "7dca6aa392209b0dad45f1a69e14d2d7b28e90ce7fdfc7b24b45bacfbf9211e5"
+        },
+        {
+          "documentId": "G1694054",
+          "sourceHash": "c74e574413caa3b72909faefff0f7ee278e67de9b31129f570d2176158df6daf"
+        },
+        {
+          "documentId": "G1694052",
+          "sourceHash": "c1f9a151734a90b6a4c98b79a2360eca0031de65e81f829ba6d2b91d7f64b5e2"
+        },
+        {
+          "documentId": "G1704850",
+          "sourceHash": "ca4bb239942c282ce51161a5ed38cf403301bc96d26e044c38ad55f65d97474e"
+        },
+        {
+          "documentId": "G1704004",
+          "sourceHash": "f7b313947445368a988b26692911d6b1adabe1812728cb5de45ff82906c8b897"
+        },
+        {
+          "documentId": "G1694056",
+          "sourceHash": "6bdda01946448e9920c98f78585bd5c24982cb46b1ade2f628ff80f2415edde3"
+        },
+        {
+          "documentId": "G1692957",
+          "sourceHash": "5ea56f10545190c1d93c6c84ed9a24996088b7681f98fd3844f7dc316a380d89"
+        },
+        {
+          "documentId": "G1807237",
+          "sourceHash": "3c999b27a9a7d0d1351d0ceed1b35eec5537fd738bbbc00efd0613e5a854a162"
+        },
+        {
+          "documentId": "G1704140",
+          "sourceHash": "c97830c2877f46ec3bd733c2ceae64db05007d40c45ee590a144fdf7d6eb83dd"
+        },
+        {
+          "documentId": "G1703548",
+          "sourceHash": "846082b18e904056238eec9c3452d3b978a508cc39a8e58e713f2e60bc4d5455"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "57d112e4bd3a18872ca524c99f08e8d15e341c29e3dbb17a4b2267b56b6ef6ae"
-      }
+        "fingerprint": "57d112e4bd3a18872ca524c99f08e8d15e341c29e3dbb17a4b2267b56b6ef6ae",
+        "editorialVersion": 2,
+        "editorialFingerprint": "197897d6c2c4a9e55f4a0aab4ab54cdc05cdde6661118ffe3ec5097eab9ed9f8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "records",
+          "title": "Identify records and initial switch gates",
+          "summary": "Require actual equipment, PID comparisons and timed IPC results.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "switch-circuits",
+          "title": "Interpret circuit sections with the state limitation",
+          "summary": "Require independent isolation provenance and exact connector transitions.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "sccm",
+          "title": "Interpret the SCCM endpoint",
+          "summary": "Require restored-state operation and the bulletin gate.",
+          "start": 8,
+          "end": 8
+        },
+        {
+          "id": "dashboard",
+          "title": "Interpret dashboard control records",
+          "summary": "Preserve three-module reports and the VIN-guided endpoint.",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "id": "display",
+          "title": "Interpret display records",
+          "summary": "Distinguish blank-screen bypass, commanded segments and stored U-codes.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "microphone",
+          "title": "Interpret overhead ANC records",
+          "summary": "Retain each circuit threshold and timed microphone-substitution result.",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "id": "completion",
+          "title": "Interpret configuration and completion",
+          "summary": "Require correct replacement provenance and restored preferences.",
+          "start": 17,
+          "end": 17
+        }
+      ]
     },
     {
       "title": "Diagnose SYNC noise-control microphones and lost module communication",

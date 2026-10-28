@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1582",
+  "supportingSourceRefs": [],
+  "sourceHash": "7c8655e44c91b77a07c326b66593bfc8589facfe06d889338aa2e33830979c7c",
+  "title": "C1582 — Proximity warning radar unit connector",
+  "introduction": "The radar unit’s connector reference separates a fuse/circuit-breaker connection, a ground connection and network connections. I think of these as the unit’s electrical support and conversation lines: knowing where a message travels is different from knowing whether the speaker has power. The table identifies those roles without diagnosing any of them.\n\nStart with the identification table, find the cavity label in the drawing, then read across the matching assignment row. The network entries distinguish CAN bus high and low; those are signal labels, not instructions to apply high or low voltage. The pigtail table then provides catalog cross-references for the connector assembly.\n\nThis is a map-reading guide, not a radar access, probing, replacement or calibration procedure. Physical viewing direction, gauge convention, Size/Used code definitions and test conditions are not established here. Once the connection’s listed role is understood, actual service work needs its applicable procedure rather than an improvised test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1582-b00002",
+      "text": "Cavity map · Harness 14290",
+      "why": "The rounded housing outline and projecting features on the left provide landmarks within the drawing. I use its cavity labels to find the corresponding table rows. Black-ringed positions match rows with circuit details, while gray positions match rows without them. These visible relationships explain the illustration without declaring which side of a physical connector the reader would be facing."
+    },
+    {
+      "blockId": "connector-C1582-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity links the row to the drawing, Circuit Number names the circuit, and Function distinguishes the ground, network and fuse/circuit-breaker roles. Keep the network’s high/low labels and its full bus designation attached to their original rows. Color, Gauge and Terminal Part Number provide the associated reference details. Blank fields add no hidden specification, and a function label alone establishes no electrical pass or fail result."
+    },
+    {
+      "blockId": "connector-C1582-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail is a connector with attached wire leads. These catalog entries associate the listed gauge, material and cavity count with an image filename, service part and engineering shell. Their shared shell identity does not settle interchangeability or which assembly suits a particular repair. The image filenames are catalog references; wire selection, splicing and installation are outside this page."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:08:25.186Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "b92c48fa1de53fc7d8ee72d230523f9da64dbdb07334d53c2553b40d6baf150e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 47,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "62eadb4b63a1445f3fc8548cd2261c7d5d317d51569abc21a9f3a1008defe3b3",
+    "reviewedAt": "2026-10-28T04:08:25.187Z"
+  }
+}

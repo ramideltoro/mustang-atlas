@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C312",
+  "supportingSourceRefs": [],
+  "sourceHash": "e7184971ae4bc4afa35eb2f7089584d8ea68bd36c7d3bfe7a420f4a2afa70980",
+  "title": "C312 — Inline connector reference",
+  "introduction": "An inline connector is a meeting point between harnesses. Here, the male and female drawings each have their own identity and circuit table. I treat them like facing pages in an address book: choose the correct side before looking up a cavity, or a perfectly accurate row can still be the wrong address.\n\nMatch the MALE or FEMALE heading and harness identity first. Find the cavity label in that side’s drawing, then read its row for the circuit, wire description, function and terminal identifier. Circuit identifiers, colors and terminal parts can differ between the supplied sides; keep each entry with its own face. The shaded position corresponds to a row without an assigned circuit or function.\n\nThis page supports identification and table reading. Access, physical viewing direction for probing, test conditions and repair steps need a separate applicable procedure. Gauge conventions and the Size and Used codes have no supplied legend, so these remain reference fields rather than instructions for choosing wire or performing a test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C312-b00002",
+      "text": "MALE connector face · Harness 14A005",
+      "why": "I use the MALE label and harness identity to select this face before consulting its table. As drawn, the broad housing structure is on the left and the smaller projections are on the right. These visible landmarks help distinguish this picture from the female view; they do not establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C312-b00005",
+      "text": "Male-face cavity assignments",
+      "why": "Match a cavity label in the male drawing to Cavity, then read across for Circuit Number, Color, Gauge, Function and Terminal Part Number, retaining any qualifier. The functions distinguish fuse or circuit-breaker connections, rear-window switch commands, global-down control, rear-left motor-down control and left-side ground. The shaded position matches the row with blank circuit/function fields and N/A for its terminal; do not invent a circuit for that blank position."
+    },
+    {
+      "blockId": "connector-C312-b00007",
+      "text": "FEMALE connector face · Harness 14A411",
+      "why": "The female drawing places the broad housing structure on the right, reversing the visual arrangement seen in the male picture. I follow the printed cavity labels in this view rather than carrying a left-or-right position over from the other face. The adjacent identity table belongs to this female harness connection."
+    },
+    {
+      "blockId": "connector-C312-b00010",
+      "text": "Female-face cavity assignments",
+      "why": "Use the female table for the female drawing, even where a function sounds familiar from the male table. Some circuit identifiers, wire colors and terminal identifiers differ between sides; matching function wording does not make those fields interchangeable. Read the full row and preserve its rear-left and left-side descriptions. The shaded drawing position again corresponds to blank circuit/function fields and N/A for the terminal, rather than a documented spare circuit."
+    },
+    {
+      "blockId": "connector-C312-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail combines a connector with attached wire leads. The kit number, Service Part and Engineering Shell provide separate identifiers, while the other columns describe the recorded kit attributes. I compare the Engineering Shell with the female identity information to understand which shell the entry names. This cross-reference does not establish a replacement decision, splice method or installation procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T06:17:38.165Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "24fb58bbeaa75570e37989a0e3275edddc4ffef4f60c425d405bdd2a7c04dcd6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 50,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "645c8c86a271f3cde3855fb6192ea59e8584c0a79d06610b904fb1da84a33f8b",
+    "reviewedAt": "2026-10-28T04:08:25.198Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Only public changes replace broad latch structure with broad housing structure in male and female drawing explanations. Complete50-unit/raw/table/context/author/verdict/final prose and both original completepages1/2 figures read; original full independent review retained."
+    }
+  }
+}
