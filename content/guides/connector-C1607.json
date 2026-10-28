@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1607",
+  "supportingSourceRefs": [],
+  "sourceHash": "5b6b87904ec48498da46dbaff352178e6b0f18f4f098c54c96d0c1796cd19a8b",
+  "title": "C1607 — Ignition Coil-on-Plug 7",
+  "introduction": "An ignition coil transforms electrical energy into the high voltage needed at the spark plug; in a coil-on-plug arrangement, it sits at that plug. I use this connector reference to separate the coil’s control-module connection from its supply connection. Think of the map as identifying the cue and the electrical groceries—the coil needs more than a familiar-looking plug to tell its story.\n\nStart with the identity table, follow the drawing’s cavity labels into the assignment table, then consult the pigtail listing for service-part identification. This is a reading guide, with no engine applicability, access, connector-release, physical viewing-direction, test or replacement procedure supplied. Gauge conventions and Box and Size codes remain undefined reference entries, not wire-selection or tool-sizing guidance.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1607-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the rounded housing outline and the projection on the drawing’s left to keep the illustration oriented on the page. The cavities form a vertical column, with the middle position shaded. That position matches the row with no assigned circuit. The drawing provides a label map; its outline alone does not establish an installed viewing direction or a latch-release movement."
+    },
+    {
+      "blockId": "connector-C1607-b00005",
+      "text": "Read the control and supply assignments",
+      "why": "Match each illustrated cavity label to Cavity, then read across the same row for Circuit Number, Color, Gauge, Function and Terminal Part Number. Function distinguishes the powertrain control-module connection from the fuse-or-circuit-breaker supply connection. The blank middle row and its Used entry identify the unused position. These roles explain the connections but provide no expected voltage, switching pattern or conclusion about a misfire."
+    },
+    {
+      "blockId": "connector-C1607-b00007",
+      "text": "Identify the pigtail service assembly",
+      "why": "A pigtail combines the connector with attached wire leads. I compare Kit List with the service table’s Number and Hard Shell with Engineering Shell, then use Service Part to identify the listed assembly. Material and Gauge describe that service entry, while Image names its asset. The circuit and pigtail gauge entries are separate specifications; their difference is not permission to improvise a splice or select replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:24:34.143Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "95d200fc12fd3ab6830b7677d4981b932430f63fd9677faf62e9268dca5f3195",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ccc33e1583e783e675e1a387e965fe81abb4326e4a8b4da494750412d2100204",
+    "reviewedAt": "2026-10-28T01:24:34.143Z"
+  }
+}

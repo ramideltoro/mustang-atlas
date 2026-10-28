@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1643",
+  "supportingSourceRefs": [],
+  "sourceHash": "f98399274c05ab9342c362a303c88f0afdb66e063bfc275e50f6a1cf37a7f920",
+  "title": "C1643 — Fuel pressure sensor",
+  "introduction": "This reference maps the fuel-pressure sensor’s electrical connections. I start with the connector identity, then use the drawing’s cavity labels to find the corresponding table rows. Think of the drawing as the seating plan and the Function column as the job description: shape tells you where a label sits; the row tells you what that connection is called.\n\nRead across each cavity row to keep its circuit, color, gauge, function and terminal reference together. The functions distinguish the fuel-low-pressure sensor connection, signal return and reference voltage. Preserve the descriptions carefully: the reference-voltage row uses fuel-tank-pressure-transducer wording, which alone does not establish that this connector belongs to a different sensor. The pigtail table supplies a separate service-part cross-reference.\n\nThis page teaches reference reading, without opening fuel plumbing, selecting replacement wire, probing the connector or testing fuel pressure. Physical viewing direction, access, test conditions, gauge conventions and the Box, Cols, Size and Used codes are not established here. Any later hands-on work needs the matching engine and task instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1643-b00002",
+      "text": "Connector face — Harness 12C508",
+      "why": "The broad structure on the drawing’s left and projecting housing feature on its right provide useful page landmarks around the vertical cavity layout. I use those shapes to follow the labels, without interpreting them as release instructions or claiming a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1643-b00005",
+      "text": "Read the pin assignments",
+      "why": "The cavity label is the link between the illustration and each circuit row. Signal return and reference voltage describe electrical roles, not pressure readings or permission to connect either path to chassis ground. The fuel-low-pressure sensor description and fuel-tank-pressure-transducer reference description remain distinct labels here; this sheet does not explain their naming relationship. Keep the terminal entry with its own row rather than assuming the connector uses a common terminal throughout."
+    },
+    {
+      "blockId": "connector-C1643-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail combines the connector with attached wire leads. Its table distinguishes the service-part reference from the engineering shell and records the listed assembly’s gauge, material and cavity information. Those entries support cross-reference reading without establishing installation, splicing or substitution rules. The Image entry names a file rather than supplying another procedure illustration on this page."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:34:45.790Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "0283ca7f132b6455d2a55ffc3f9653dbf01befeb1b00b5232075f9d025de1ac5",
+  "sourcePdfHash": "bd830320de75b7afa4e991c49740dd2231e63d431100c6672dbb27ff7cf6e88d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "5faea84455ec51d55dcee39893c2508a55678c3eabd2bbe9e9b47bf87c1ee0c0",
+    "reviewedAt": "2026-10-28T01:34:45.791Z"
+  }
+}

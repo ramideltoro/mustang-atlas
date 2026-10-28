@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C156",
+  "supportingSourceRefs": [],
+  "sourceHash": "dc26b236199b4f19d224cc7400c7a33842dfc751ca19b8e3a0b5cc974fd813ab",
+  "title": "C156 — Side turn signal lamp LH connector",
+  "introduction": "This left-hand lamp connector's circuit table distinguishes parking-lamp control, turn-lamp control and ground. I keep those roles separate while reading: sharing a connector does not make the parking light and the flashing signal the same electrical job. Think of the housing as a shared driveway serving different addresses.\n\nBegin with the identity table, then match the drawing's cavity labels to their circuit rows. The housing Color entry describes the connector; the pin table's Color entries describe wires. This guide covers identification and catalogue references. Physical viewing side, access, testing, wire selection and replacement require separate instructions, and the gauge convention and Size and Used codes remain undefined.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C156-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "The cavities form a vertical stack inside an elongated rounded opening, with the latch detail below it in the supplied page view. I use that visible outline and the printed cavity labels to navigate the table. The adjacent shell-and-harness record identifies the view; the drawing does not label which physical side of a connector the reader would face."
+    },
+    {
+      "blockId": "connector-C156-b00005",
+      "text": "Ground, parking and turn-signal circuits",
+      "why": "Use the illustrated cavity label to find a row, then read across for its circuit identifier, wire color, gauge, function and terminal reference. Preserve the parking function's alternative wording rather than selecting a vehicle configuration. The ground row's right-front fender wording belongs to the named ground function; it is not an access location for the left-hand lamp. The sheet does not trace the route between them."
+    },
+    {
+      "blockId": "connector-C156-b00007",
+      "text": "Pigtail kit cross-reference",
+      "why": "The kit Number connects to the listed Service Part and Engineering Shell. Its gauge and material describe that service entry, while the pin table retains the circuit-wire gauges and individual terminal references. I use this as a catalogue cross-reference, keeping recognition of the listed assembly separate from deciding how to replace or splice it."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:29:54.107Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ff9aba25d53f3d64b8a3eea7328c0eb342e6dde66be41ed9f65e080a71cb2a5c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c95b8bcb987c60fb7c522c27bf7002a92f778cc3d8105c904a331b9b1b3ff25d",
+    "reviewedAt": "2026-10-28T01:29:54.107Z"
+  }
+}

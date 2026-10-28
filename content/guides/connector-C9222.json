@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C9222",
+  "supportingSourceRefs": [],
+  "sourceHash": "b9318bc99dae328e2efc556b075c7c568aa5bd163bedf953023861ec9001c032",
+  "title": "C9222 — Front Active Noise Control Microphone Connector",
+  "introduction": "I start with the connector identity and harness heading, then use the drawing’s cavity labels to find the corresponding assignment rows. Reading across an assigned row ties its circuit identifier and wire description to the microphone function and terminal reference. The positive and negative labels distinguish the ambient-noise microphone connections; the shaded bottom position is unused.\n\nThe cavity label is the address and the circuit identifier is the name on the mailbox: together they make this little microphone connection much easier to follow. This is a reference-reading guide. Access, confirmed physical viewing direction, signal measurements and repairs need separate instructions. The gauge fields and metadata codes retain their printed conventions; they are not instructions for choosing replacement wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9222-b00002",
+      "text": "Connector face for harness 14334/14335",
+      "why": "The printed drawing places the cavities vertically beside the large rectangular feature on the left. Its upper and middle positions have microphone assignments; the shaded bottom position corresponds to the unused table row. I use those visible landmarks to navigate the page, without assuming a mating-side or wire-side physical view."
+    },
+    {
+      "blockId": "connector-C9222-b00005",
+      "text": "Read the microphone pin assignments",
+      "why": "Read across each cavity row to keep its circuit, wire description, microphone polarity label and terminal reference together. The negative microphone function is not, by itself, an instruction to connect that terminal to chassis ground. An assignment identifies a connection’s role; it does not establish that the microphone or its wiring is working."
+    },
+    {
+      "blockId": "connector-C9222-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail table describes the listed connector-and-lead service assembly and links it to an engineering shell. Its gauge entry and the circuit-table gauge entries belong to different records; I preserve both without treating them as permission to substitute wire. This table does not establish a repair method or a reason to replace the microphone connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:22:37.627Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ccaf9e555ed290e123f8a290bd718cb4a75954ed850d29cfd57b1fd8dc61a287",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4f7c378210a11d13718ca5b1c094a0f696af894b6c90dcdf5882c431b87dcfa0",
+    "reviewedAt": "2026-10-28T01:22:37.627Z"
+  }
+}

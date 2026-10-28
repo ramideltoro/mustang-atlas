@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4829",
+  "supportingSourceRefs": [],
+  "sourceHash": "b3475c29296cd127f94da6b54f87737f217abdc4c0982e0f36d24ed86477ad4a",
+  "title": "C4829 — Active Noise Control Microphone Right Rear",
+  "introduction": "The right-rear active noise control microphone reference gives each connection an address and a job description. I start with the connector identity table, use the drawing’s cavity labels to find the matching rows, then read across for the circuit, wire description, function and terminal information. It is a small seating plan with an electrical purpose: keeping the microphone’s positive and negative connections straight without guessing from the housing shape.\n\nUse this page for identification and circuit-map reading. It does not teach access, connector release, physical viewing direction, testing or replacement. The microphone polarity labels do not establish a chassis-ground connection, and the undefined gauge conventions and Box and Size codes are not a basis for choosing wire or tools.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4829-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "The cavity labels are the bridge between the housing drawing and the assignment table. In the illustrated layout, they run vertically, with a shaded position at the bottom. Its matching row has no assigned circuit. I use those features to navigate the reference, without assuming that the illustration establishes the installed connector’s physical viewing direction."
+    },
+    {
+      "blockId": "connector-C4829-b00005",
+      "text": "Match cavities to circuit functions",
+      "why": "Follow a Cavity entry across its own row: Circuit Number identifies the path, Color and Gauge describe the wire entry, and Function distinguishes the microphone’s positive and negative connections. Terminal Part Number identifies the listed terminal. The blank circuit row and its Used entry distinguish the unused position. An assignment tells you what belongs there; it supplies no measurement or verdict on microphone health."
+    },
+    {
+      "blockId": "connector-C4829-b00007",
+      "text": "Cross-reference the pigtail service parts",
+      "why": "The pigtail is the connector supplied with attached wire leads. I connect the overview’s Kit List to Number in this table and compare Hard Shell with Engineering Shell; Service Part identifies the listed service assembly. Image is an asset filename. Keep the circuit and pigtail Gauge entries in their respective contexts: this listing gives no instruction to substitute wire, splice leads or replace the connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:24:34.134Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "f2dcf200d335dff16ad505f7db4a38cc50befb7253b2c8e60b36cf876874b3c2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a2bd9cd38226c7c17afd9ec16bc7ff6713b28b4528bcb2c3b0b3bef2f02a3b44",
+    "reviewedAt": "2026-10-28T01:24:34.134Z"
+  }
+}

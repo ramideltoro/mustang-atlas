@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C914",
+  "supportingSourceRefs": [],
+  "sourceHash": "6ae954b9c5cc250e06d5f25069d33e2ca48fe49b310e09fd5a0804d086971b0e",
+  "title": "C914 — Rain sensor connector",
+  "introduction": "The rain sensor's connector brings electrical supply, communication and ground into the same housing. I read those roles separately: the communication connection carries messages, rather like a conversation sharing the room with the power socket. LIN means local interconnect network, a data link between a controller and nearby electronic devices.\n\nStart with the identity table, match the drawing's cavity labels to the pin rows, then consult the service-parts table for catalogue references. This is a connector-reading guide. Physical viewing direction, access, test conditions, wire selection and replacement need separate instructions; gauge conventions and Size and Used codes are not decoded here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C914-b00002",
+      "text": "Connector face for harness 14B242",
+      "why": "The drawing shows a vertical cavity stack beside a tall projecting rib, with a smaller projection on the left side of the outline. I use those visible features to keep the page view oriented, then follow the printed cavity labels into the table. The shell-and-harness row identifies the record associated with this illustration."
+    },
+    {
+      "blockId": "connector-C914-b00005",
+      "text": "Supply, communication and ground connections",
+      "why": "Match each illustrated cavity label to its row and read through to Terminal Part Number. The function descriptions distinguish supply, LIN messages and ground return. The supply wording retains a fuse-or-circuit-breaker alternative without choosing between them. Read the terminal column individually: the communication row has a different terminal listing from the other circuit roles. These descriptions identify connections, not expected test results."
+    },
+    {
+      "blockId": "connector-C914-b00007",
+      "text": "Pigtail service reference",
+      "why": "The kit row links Number with Service Part and Engineering Shell, alongside its own gauge, material and cavity information. I keep that service-assembly record separate from the circuit-wire gauges and individual terminal references above. The Image entry names a catalogue image; it is not an additional installation illustration on this page."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:27:28.543Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "9b6b89f308225eec4cedf03bdacfb4fd208732b7d7ae84fde2c052942c344210",
+  "sourcePdfHash": "ee6808ff4aa57a8d0eea8e2bf944ea652ce39859e420cf6d3c79b135c95d90bf",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9368740b34c0e56d7b84ef1dc728e1f48ff6e1ef738f1d8e37fa0c70bb27e6f3",
+    "reviewedAt": "2026-10-28T01:27:28.543Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C613",
+  "supportingSourceRefs": [],
+  "sourceHash": "ababd817f4c2533ec29dc47d04dab493c80debf726548bb60111976c7b26b9e3",
+  "title": "C613 — Front Door Midwoofer Speaker RH Connector",
+  "introduction": "I use this reference to connect the right-hand front door midwoofer’s connector drawing with its circuit assignments. Start with the identity table, find the harness heading, then match each drawing label to the Cavity column. Read across that row to connect the circuit identifier, wire description, function and terminal reference.\n\nThe speaker’s positive and negative connections form the assigned pair; the shaded middle position is unused. Think of it as an empty seat in the connector, not a missing member of the band. This page explains the map. Physical access, confirmed viewing side, electrical tests and repair methods require separate instructions. Gauge conventions and metadata codes are not defined here, so I keep them as reference entries rather than wire or tool selection advice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C613-b00002",
+      "text": "Connector face for harness 14630",
+      "why": "In the drawing as printed, the cavities form a vertical column beside the large rectangular feature on the left. The shaded middle position agrees with the unused entry in the assignment table. These landmarks help navigate the illustration without assuming whether the physical connector is being viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C613-b00005",
+      "text": "Read the pin assignments",
+      "why": "I read each assigned row across before comparing it with another: the upper position carries the positive speaker function and the lower position carries the negative function. Those signs identify the speaker pair; the negative label alone is not a chassis-ground instruction. The blank circuit fields in the unused row do not describe an electrical fault."
+    },
+    {
+      "blockId": "connector-C613-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. This table links the listed kit with its service part and engineering shell, while keeping its material, gauge and cavity information together. I use it to understand the catalog relationship; it does not teach splicing, terminal replacement or a decision to replace the connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:22:37.618Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c075bee853a3277ce1cb80841479695f068f41cbe90bddfbdd1d401de420ec26",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6deef1b7795049da594594ba7d176367da107789a745ffab028987a3927da43f",
+    "reviewedAt": "2026-10-28T01:22:37.619Z"
+  }
+}

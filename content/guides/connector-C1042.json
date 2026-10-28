@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1042",
+  "supportingSourceRefs": [],
+  "sourceHash": "74cbd3dba34b5aff50b320aed9cc719992b97842a09fe3169b6eb88a6f6aa4cb",
+  "title": "C1042 — Right-hand side turn signal lamp connector",
+  "introduction": "I read this reference as the lamp’s little switchboard: the housing drawing locates each cavity, and the pin table explains the circuit assigned to it. Start with the connector identity table, use the face drawing to locate a cavity on the page, then follow its matching row across the pin assignments. This keeps the ground, parking-lamp control and turn-lamp control roles distinct even though they share a housing.\n\nThe final table connects the pigtail listing to its service-part and engineering-shell information. This page supports reference reading; access, electrical testing and replacement require a separate procedure. The physical viewing direction and the conventions behind Gauge, Size and Used are not defined here, so I leave those fields as printed without turning them into probing or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1042-b00002",
+      "text": "Connector face map · Harness 14290",
+      "why": "I use the tall housing outline, the small projection above it and the broad detail below the cavity opening as landmarks within the drawing. The cavity labels increase from bottom to top. Matching each drawn label to the Cavity column connects a position on the page to its circuit row; these landmarks do not establish an installed viewing direction or a latch-release movement."
+    },
+    {
+      "blockId": "connector-C1042-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read across a single cavity row so its circuit identifier, wire-color code, gauge entry, function and terminal reference stay together. The function descriptions distinguish the ground return from the parking and turn controls, including the parking entry’s front-right or front/rear-right alternative. A circuit’s assigned role tells you what the connection serves; it does not show whether that circuit is working."
+    },
+    {
+      "blockId": "connector-C1042-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is the connector with attached wire leads. I cross-reference Kit List with Number, then Engineering Shell with Hard Shell to follow the listing between tables. Service Part identifies the pigtail entry, while Terminal Part Number belongs to the individual pin rows. Keep the pigtail and circuit gauge entries separate; this listing supplies no wire-substitution or splice instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:29:54.115Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "96ee7bbb4c2c3bfe08741ae93bf063ca2b765c0f8b75b47a900b875ad4acfc65",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c75fea2aa16d360afb3cb1a39e53ed9d9e56e5bfa2e2bdec72522350962df5d6",
+    "reviewedAt": "2026-10-28T01:29:54.115Z"
+  }
+}

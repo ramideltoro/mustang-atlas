@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C297",
+  "supportingSourceRefs": [],
+  "sourceHash": "d4a6b1c746b7184ea1bc2d5517f0659f13a546da1aa74163d743f5fda8df579a",
+  "title": "C297 — Blower motor control module",
+  "introduction": "The blower moves air through the cabin heating and air-conditioning unit. I use this reference to connect the control module’s drawing to its circuit descriptions—an address book for the cabin breeze, rather than a verdict on why it has gone missing.\n\nStart with the connector identity table, then use the housing outline and cavity labels to navigate the drawing. Match a drawing label to the Cavity column and read across that same row. The Function column distinguishes the ground, climate-control command, front blower relay and blower-motor negative connection. The shaded drawing positions correspond to rows with blank circuit details; they are not additional connections to invent.\n\nThis page supports reference reading. It does not establish physical viewing direction, access, probe placement, test conditions or replacement instructions. Gauge conventions and the Box, Cols, Size and Used codes are not defined here; retain those entries without converting them into wire-selection or testing advice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C297-b00002",
+      "text": "Connector face — Harness 18B574",
+      "why": "I use the tabs and stepped outline along the drawing’s left edge to keep the diagram aligned while reading its cavity labels. These features establish the layout on the page, not which side of a physical connector should face the reader."
+    },
+    {
+      "blockId": "connector-C297-b00005",
+      "text": "Read the pin assignments",
+      "why": "Cavity links the illustration to the table; Circuit Number identifies the electrical path, and Function explains its assigned role. Read Color, Gauge and Terminal Part Number within that same row so details from neighboring circuits do not get mixed together. A relay label identifies a circuit role and does not, by itself, promise a separate plug-in relay. These assignments provide context for a matching diagnostic procedure, not evidence that any connection or component has passed a test."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:34:45.771Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "46dd2419a7a83efa51fae966261ccceb873753c087d0d59719ce83d25a2db995",
+  "sourcePdfHash": "6e1e4fbdcf1d70156400ae8fd31cc940cf220a529c721fe1bdf98e27bed7d04d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 27,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3f34331779b86765c10ae15dc55440fe6513dd51862131d502393f9861ee1cf2",
+    "reviewedAt": "2026-10-28T01:34:45.772Z"
+  }
+}

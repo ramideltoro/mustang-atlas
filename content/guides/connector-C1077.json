@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1077",
+  "supportingSourceRefs": [],
+  "sourceHash": "8e7d20cb87c4d431402120d4474771a9227515704f634a310b575110d7da1b78",
+  "title": "C1077 — Cooling Fan Motor 1 Connector",
+  "introduction": "The cooling fan supplies airflow through the cooling heat exchangers when road speed alone is not enough—an electrically powered breeze on demand. I use this connector reference to connect the motor’s drawing labels with its relay-related circuit assignments, beginning with the identity table and harness heading.\n\nMatch a drawing label to the Cavity column, then read across for the circuit identifier, wire description, function and terminal reference. This map identifies connections; it does not explain the complete relay strategy or diagnose fan operation. Physical access, confirmed viewing side, test conditions and repairs need separate instructions. Gauge conventions and metadata codes remain reference entries, not wire sizes or tool dimensions to infer.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1077-b00002",
+      "text": "Connector face for harness 8C290",
+      "why": "As printed, the labelled cavities sit vertically inside the central opening, with a detailed rectangular feature to the right. Read the labels themselves rather than assuming numbering increases from top to bottom. These are drawing landmarks; they do not establish the physical viewing side or explain how the connector releases."
+    },
+    {
+      "blockId": "connector-C1077-b00005",
+      "text": "Read the fan circuit assignments",
+      "why": "Both cavity rows carry relay-related fan functions. A relay is an electrically controlled switch, but these labels alone do not establish a separate plug-in relay, a speed sequence, polarity or a ground terminal. I keep each function attached to its own circuit row so the map remains useful without turning a label into an invented operating strategy."
+    },
+    {
+      "blockId": "connector-C1077-b00007",
+      "text": "Compare the pigtail records",
+      "why": "Read each service-parts row as a complete record, keeping its material description, service part and engineering shell together. The entries describe different listed pigtails, but no application rule here selects between them. Their gauge entries also differ from the circuit entries; this reference does not authorize wire substitution or teach connector replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:22:37.635Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e3090991326e22199b8b429dbcdd0b537d6fef3ff47f1260c64a1537a713f2b5",
+  "sourcePdfHash": "3de364430e742386aaf2d1bce91726776dea65c888652da13aa4668e2c3e86f1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "66ea4963b8b2dd1b78c12a43d7de71cbb8ce3c91926ac5ff058b9449066c6e69",
+    "reviewedAt": "2026-10-28T01:22:37.635Z"
+  }
+}

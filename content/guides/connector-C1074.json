@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1074",
+  "supportingSourceRefs": [],
+  "sourceHash": "527525f81ba2d296abf774885e8814524497caab3149346caf078ea1f6742b6a",
+  "title": "C1074 — Cooling Fan Motor 2 Connector",
+  "introduction": "I use this reference as the cooling fan connector’s address book: identify the housing first, then let the cavity labels lead you to the matching circuit rows. The fan moves air through the cooling heat exchangers when road speed alone is not enough. Knowing which connection serves which function helps you read that system without asking the connector drawing to diagnose the whole cooling problem.\n\nStart with the connector identity table, compare the illustrated housing features, then match the drawing’s cavity labels to the pin-assignment table. The pigtail table provides separate service-part information.\n\nThis page teaches identification and reference reading. Physical access, the viewing direction relative to the installed connector, electrical test conditions and replacement instructions are outside its scope. The Size codes and Gauge convention are unexplained; the Gauge entries in the circuit and pigtail tables do not establish replacement-wire selection or kit interchangeability.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1074-b00002",
+      "text": "Connector Face for Harness 8C290",
+      "why": "I compare the illustrated outline, the broad feature on the right and the vertically arranged cavity labels before reading the circuit rows. Those features help distinguish the drawing’s arrangement; they do not establish how the installed connector faces you. Use the adjacent identification row to connect this drawing with its harness and shell reference."
+    },
+    {
+      "blockId": "connector-C1074-b00005",
+      "text": "Read the Cavity-to-Circuit Map",
+      "why": "Match a cavity label in the illustration to the Cavity column, then read across that same row for the circuit identifier, color, gauge, function and terminal reference. The function descriptions distinguish the relay-related connection from the ground connection. A relay is an electrically controlled switch; its appearance in a function label does not prove there is a separate plug-in relay to replace. These rows identify connections, but supply no pass-or-fail test."
+    },
+    {
+      "blockId": "connector-C1074-b00007",
+      "text": "Pigtail Service-Part Reference",
+      "why": "Read each service-part entry as a complete row so its material description, cavity count and engineering shell stay associated with the correct catalog reference. The entries distinguish material treatments despite sharing a shell reference. That shared shell does not establish that the kits are interchangeable, and these catalog details do not teach a splice or replacement procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:24:34.159Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e3090991326e22199b8b429dbcdd0b537d6fef3ff47f1260c64a1537a713f2b5",
+  "sourcePdfHash": "c223eebbd23c5466226e700935039922787b5c8d855a4a0f6a9173d1ecc81847",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "72dbbcda9c9fc25ea29e5bbf5f8d22e727ca7fd15983bf443f21a6110c65e5d9",
+    "reviewedAt": "2026-10-28T01:24:34.159Z"
+  }
+}

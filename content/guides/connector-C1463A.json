@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1463A",
+  "supportingSourceRefs": [],
+  "sourceHash": "548ac00d55472e5730622daa74d252891e824e077d7d71a758ac3e50b4803d04",
+  "title": "C1463A — Power steering control module (PSCM) connector",
+  "introduction": "The power steering control module calculates steering assistance and commands the assist motor. Its connections help explain how that controller fits into the car's electrical conversation. I read this page like a seating chart: the cavity identifies the seat, while the circuit row identifies its assigned connection.\n\nStart with the connector identity table, match the drawing's cavity labels to the assignment table, then read across each complete row. The functions distinguish a fuse-or-circuit-breaker connection from paired network communication connections. The pigtail table provides the associated service-part and shell information.\n\nThis is an identification and wiring-reading reference. It supplies no physical viewing direction, code definitions, gauge convention, access instructions, electrical test limits or replacement method. The map alone cannot establish whether steering assistance or communication is working correctly.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1463A-b00002",
+      "text": "Harness 14B060 connector face",
+      "why": "The supplied drawing places the labeled cavities in a vertical stack, with the rectangular housing extension on the left. I use those visible features to follow the drawing into the Cavity column. They describe the illustration's arrangement without establishing the viewing side of an actual connector."
+    },
+    {
+      "blockId": "connector-C1463A-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Read each cavity's circuit, color, gauge, function and terminal entry as a connected record. Keep the full network designation attached to each communication path; a shortened description can lose which bus the connection belongs to. The high and low labels identify the paired paths, rather than test results. Blank Qualifier cells and undefined Used codes supply no additional selection instructions."
+    },
+    {
+      "blockId": "connector-C1463A-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "The pigtail entry describes a connector with attached wire leads. Its Engineering Shell can be compared with the Hard Shell and Fpn entries to trace the recorded association. I keep the pigtail's gauge and material separate from the assignment table's wire details: this reference does not authorize substituting wire or explain how to install the service part."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:34:45.798Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "9e6e502a2cf601774c112d7c3550d3a8391f33b942f2dd155ce692c787f1f4e4",
+  "sourcePdfHash": "bdfc4e185bb74f846d7823701c562068b986be8e373b075f7551e289fc478c37",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2187d2eea984a3bb5b6df1063b9a5494f077889588aed7a74b6ab9a357f012d1",
+    "reviewedAt": "2026-10-28T01:34:45.799Z"
+  }
+}

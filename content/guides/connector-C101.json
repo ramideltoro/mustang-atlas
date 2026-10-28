@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C101",
+  "supportingSourceRefs": [],
+  "sourceHash": "fff332958b65e9395cfabcb9f0b22609ad441a3ba552e8ac35cd3c4fd4efd6f1",
+  "title": "C101 — Crankshaft position (CKP) sensor",
+  "introduction": "The crankshaft turns the pistons’ up-and-down movement into rotation. This page maps the position sensor’s electrical connections. I read the circuit functions as a small conversation: a reference supply, the sensor’s signal and a signal-return path each have a distinct role. Giving them separate names helps keep that conversation from becoming electrical alphabet soup.\n\nBegin with the connector identity table, then match the drawing’s cavity labels to the Cavity column. Read across each row for its circuit identity, color, gauge, function and terminal reference. The pigtail table provides a separate service-part cross-reference linked by the engineering-shell information.\n\nThe drawing establishes the layout shown on the page, not physical viewing direction or access to the sensor. This is a connection-reading guide, without probe instructions, expected voltage or waveform, fault conclusions or replacement steps. Gauge conventions and the Box, Cols, Size and Used codes are not defined here; neither those codes nor the pigtail gauge establish a wire-selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C101-b00002",
+      "text": "Connector face — Harness 12C508",
+      "why": "I use the latch-shaped structure on the drawing’s left and the vertical stack of cavity circles as page landmarks. They keep the labels aligned with the illustration without assuming a wire-entry view, a mating-face view or a latch-release direction."
+    },
+    {
+      "blockId": "connector-C101-b00005",
+      "text": "Read the pin assignments",
+      "why": "The Function column separates the engine voltage reference, crankshaft-position sensor connection and engine signal return. A signal-return label should not be casually substituted for a chassis-ground instruction. Circuit Number tracks the named electrical path, while the remaining fields describe that row’s wire and terminal information. These roles help orient the reader before a matching diagnostic procedure; they do not establish acceptable readings or prove sensor condition."
+    },
+    {
+      "blockId": "connector-C101-b00007",
+      "text": "Pigtail service-part references",
+      "why": "The pigtail is the connector-and-lead service assembly. Its Service Part and Engineering Shell fields are separate references, and its gauge and material entries describe the listed assembly rather than rewriting the original circuit rows. The Image field names a file; it does not provide an additional installation illustration here. Use this section for cross-reference reading, with installation and wire matching left to the matching repair instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:34:45.782Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "40f664e3f3ab0b45aee89c2779bd43b06e3f0e86d26f0c3d5eba3d7c9c1569d5",
+  "sourcePdfHash": "a67d451ca3917ae7604fec3ebf0cd478a1a329e983339724bbe8c9d7a3df2995",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3d29d6e1372675b7129fac6c9d5060888c40a3114870c4d957414718f6488929",
+    "reviewedAt": "2026-10-28T01:34:45.783Z"
+  }
+}

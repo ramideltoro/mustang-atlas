@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1024",
+  "supportingSourceRefs": [],
+  "sourceHash": "89a11f9007d7256926e779986f53221a6b94ec3c5354f49b464fe13f3a59ab8e",
+  "title": "C1024 — Left-hand headlamp control module connector",
+  "introduction": "I use this page as the headlamp-leveling connections’ address book. The identity table establishes which connector the reference describes, the face drawing places its cavity labels, and the pin table ties those labels to the fuse-or-circuit-breaker connection, leveling signal and ground return. Keeping those roles separate makes the wiring easier to understand before any diagnostic work begins.\n\nStart with the identity, locate the cavity label in the drawing, then read its complete pin-table row. The pigtail table provides a separate parts cross-reference. This is a connector-reading guide: physical access, viewing direction on the vehicle, testing and replacement are outside its scope. Gauge conventions and the Size and Used codes are undefined here; their printed entries are not wire-selection or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1024-b00002",
+      "text": "Connector face map · Harness 14290",
+      "why": "The drawing has a prominent rectangular feature on the left and shaped projections above and below the cavity opening. I use those features to keep the page orientation consistent while matching cavity labels to table rows. The labels decrease from top to bottom. The illustration alone does not identify the physical viewing side or show how to release the connector."
+    },
+    {
+      "blockId": "connector-C1024-b00005",
+      "text": "Read the pin assignments",
+      "why": "Follow each cavity row across its circuit identifier, color code, gauge entry, function and terminal reference. The descriptions separate the fuse-or-circuit-breaker connection, the headlamp-leveling command and the front-left fender ground. Notice that the ground row has a different terminal reference from the other rows. These assignments explain connection roles without establishing a voltage, signal waveform or fault conclusion."
+    },
+    {
+      "blockId": "connector-C1024-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail listing describes a connector with attached wire leads. I link Number to Kit List and Engineering Shell to Hard Shell to navigate the entries. Keep the assembly’s Service Part separate from the pin table’s terminal references. Its gauge and material fields describe the listed pigtail; they do not supply a repair method or establish that its leads substitute directly for every circuit wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:29:54.122Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "dedebcbb6aba01d81ebfb438439be9a537dba8e50db810f97251087aaac3cab4",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3b4ca234efb908f76b627e9b555b3a5edf0b05de33f41f447c9bf6296080d597",
+    "reviewedAt": "2026-10-28T01:29:54.122Z"
+  }
+}

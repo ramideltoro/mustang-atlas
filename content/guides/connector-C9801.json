@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C9801",
+  "supportingSourceRefs": [],
+  "sourceHash": "dc43e7a4d590b9bfcfde57ed60a012b67d4aea4eccc134462e55e1fe7a6d88df",
+  "title": "C9801 — Passenger airbag deactivation (PAD) indicator connector",
+  "introduction": "This reference maps the passenger airbag deactivation indicator's electrical connections. I start with the connector identity, then use the drawing's cavity labels to find the matching circuit rows. Each row keeps its function, wire details and terminal entry together.\n\nThink of this as the wiring label behind a dashboard message: it helps identify the indicator's connections, while the message's meaning depends on the restraint system's operating and diagnostic information. The map alone cannot establish airbag availability. Pay particular attention to the shaded cavity and the differing Used entries, without assigning them an undocumented meaning.\n\nThe pigtail table supplies a service-part reference. Physical viewing direction, shading and code definitions, gauge convention, access and test values are outside this sheet's scope. Hands-on restraint-system work requires the matching handling, depowering, testing and restoration procedures; those steps are not taught here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9801-b00002",
+      "text": "Harness 14334/14335 connector face",
+      "why": "The drawing shows a vertical stack of labeled cavities beside the broad housing extension on the left. Its upper cavity is shaded, but there is no legend defining that shading. I use the labels to navigate the table and leave physical terminal population unresolved by the artwork alone. The drawing also leaves the physical viewing side unspecified."
+    },
+    {
+      "blockId": "connector-C9801-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Function column distinguishes the positive and negative indicator-control labels from the fuse-or-circuit-breaker connection. Keep those signs attached to their respective rows. The Used entry differs for the upper cavity's row, but the code has no supplied definition; it cannot independently establish an absent terminal or justify omitting that circuit. These labels also supply no measurement method or expected electrical readings."
+    },
+    {
+      "blockId": "connector-C9801-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "The pigtail is the connector with attached wire leads. Its Engineering Shell entry links the service listing to the shell identification elsewhere on this page. The service-part listing records an association; it does not establish that replacement is needed or supply a restraint-system wiring repair method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:37:43.962Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "fd2f1547c6de43462929a784d00bfb8c6583d8c34e1fbd8abbf1572db2b02695",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "cc693e726e1e17f34e28eaf2a4a7be9cae8e5481df88f2471919d0c273bd3453",
+    "reviewedAt": "2026-10-28T01:37:43.963Z"
+  }
+}
