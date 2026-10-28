@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4850",
+  "supportingSourceRefs": [],
+  "sourceHash": "d3e0fd896e1898e4f3af74bf299284edfea3b18218e404e3d3e8af05b467120c",
+  "title": "C4850 — Left-hand convertible top sensor connector",
+  "introduction": "This reference maps the left-hand convertible top sensor’s connector cavities to their circuit assignments and pigtail records. I start with the connector identity, then use the drawing and table together. The housing is the seating chart; the function column tells you each assigned cavity’s job.\n\nMatch the drawing’s labels to the cavity rows before consulting the service-part section. The page supports identification, while access, physical viewing direction, electrical test conditions, gauge convention and the meaning of the Size code remain outside its scope. Probing and repair require the applicable service procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4850-b00002",
+      "text": "Harness 14A005 · Connector face",
+      "why": "The drawing places the cavity labels in a vertical stack beside the housing’s right-side features. I use that arrangement to locate the corresponding table rows. The shaded bottom position agrees with the unassigned row, rather than indicating a failed connection. The image arrangement alone does not establish which side of the physical connector you are viewing."
+    },
+    {
+      "blockId": "connector-C4850-b00005",
+      "text": "Cavity functions and circuit details",
+      "why": "Read across each matching cavity row to connect its circuit identifier and wire details with its function and terminal entry. The assigned functions separate the sensor signal from the supply labeled VPWR. This is a map of circuit roles, not a measurement of their condition. The blank circuit fields in the unassigned row should not be treated as a wiring omission."
+    },
+    {
+      "blockId": "connector-C4850-b00007",
+      "text": "Pigtail records and service identification",
+      "why": "Kit List connects to Number in this table, while Hard Shell connects to Engineering Shell. I use those relationships to keep the connector identity and service-item identity straight. The pigtail gauge and circuit-wire gauges belong to different records; their entries do not establish a substitution rule. Replacement methods and acceptance checks require a separate repair procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:01:50.016Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2129a8d65fd5dbdf75be09a657d7d132999d4471d4dee0f70435c8111f65ec7c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1f2a1ce2173c54d1e99d67b1ffe7d2ab85d3839236567a12a2799bf47752838e",
+    "reviewedAt": "2026-10-28T01:00:23.342Z",
+    "editorialRevision": {
+      "kind": "bounded-inferred-engine-list-removal",
+      "scope": "Only introduction inferred engine list removed. Explicit LH/RH sensor identity and all technical body/figures/tables preserved. Full source/figure/public prose supervisory read and independent review retained; same bounded pattern authorized by release coordinator.",
+      "originalAcceptedSha": "dfcd46cc02c9399dcf79992434ad020c80c82f61995ef39e47675927a469d7b6"
+    }
+  }
+}

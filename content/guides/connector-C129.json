@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C129",
+  "supportingSourceRefs": [],
+  "sourceHash": "cea2da617fb5a3f86a65cb4f07b843d21f41f822b0643e784f1991477b50cfa2",
+  "title": "C129 — Intake air temperature (IAT) sensor",
+  "introduction": "This reference maps the intake air temperature sensor’s electrical connection. I read it as the address card for the engine’s incoming-air thermometer: the useful lesson is which cavity belongs to which circuit, rather than whether the temperature reading is correct.\n\nStart with the component description and connector details. Use the drawing’s printed cavity labels to find the matching pin-assignment row, then read across to its circuit, wire information, function and terminal reference. The function entries distinguish the sensor circuit from the powertrain controller’s signal-return circuit. A signal-return designation is not permission to substitute a body-ground connection. The pigtail table identifies the listed service assembly separately from its shell.\n\nThis is a connector-reading guide, with no engine applicability stated. It does not establish physical access, release movements, viewing side, sensor test values or replacement methods. Gauge convention and the Size and Used codes are undefined here. The circuit-wire and service-pigtail gauge entries describe their respective items; this page does not turn them into a replacement-wire specification.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C129-b00002",
+      "text": "Connector-face map · Harness 14290",
+      "why": "I recognize this drawing by the large rectangular extension on the left and the projections above and below the central cavity surround. The round cavities are vertically stacked. Read their labels directly before consulting the table; assuming a top-to-bottom numbering pattern can send you to the wrong row. These page features do not establish a physical viewing side."
+    },
+    {
+      "blockId": "connector-C129-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read horizontally from Cavity through the circuit and wire details to Function. Keep the controller return entry’s bank qualifier with that entry; it does not establish this page’s engine applicability. The terminal column identifies the listed contact. This map identifies the connections but supplies no temperature-to-resistance relationship or other criterion for judging sensor health."
+    },
+    {
+      "blockId": "connector-C129-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail combines the connector with attached leads. Service Part identifies that service assembly, while Engineering Shell identifies its housing. The material description belongs to the listed part; it is not an instruction to add grease. Likewise, the pigtail’s gauge entry is descriptive, not a splicing or wire-selection procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:53:26.051Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "19397bcd75eeb6760b0b73965ceee93a8fc012da2b5a463c5cb704961b78b6e5",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d83ed6311d98c57c8a3ad4e11de267d5a402b8c80d00f50ad7e20c73969d7b86",
+    "reviewedAt": "2026-10-28T00:53:26.051Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1670",
+  "supportingSourceRefs": [],
+  "sourceHash": "e2da5950935bb6a17c3637c3da0725029fdf29632894b4afd60e28c5550234fb",
+  "title": "C1670 — Variable camshaft timing bank 1 solenoid 1 (VCT11)",
+  "introduction": "Variable camshaft timing adjusts when the engine’s valves open and close. The solenoid helps control the oil-operated timing mechanism; this page maps its electrical connection. Think of it as the timing department’s address card: it identifies the connection, without proving that a command reached its destination.\n\nI start with the component description and connector details, then match the drawing’s cavity labels to the pin-assignment rows. Read across each row to connect a cavity with its circuit, wire identification, function and terminal. Here, the function column distinguishes the power supply from the powertrain controller’s solenoid-control connection. The final table provides the pigtail service-part reference.\n\nThis is an identification and wiring-reading guide. Vehicle access, connector release, physical viewing direction, electrical test conditions and replacement methods require separate instructions. The gauge convention and the meanings of the Size and Used codes are not defined here; those entries are not wire-selection or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1670-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the broad rectangular extension on the left and the small loop-shaped feature on the right to recognize the drawing’s arrangement. The round cavities are stacked vertically; their printed labels connect the illustration to the table. These visible features orient the page, but do not establish whether a physical connector must be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C1670-b00005",
+      "text": "Read the pin assignments",
+      "why": "Follow the Cavity column across the same row instead of matching by wire appearance alone. Circuit Number identifies the circuit, while Function explains its role. The supply and controller-control entries describe different jobs; neither entry proves that the circuit is working. The terminal reference identifies the listed contact separately from the housing."
+    },
+    {
+      "blockId": "connector-C1670-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is a connector with attached leads. I read Service Part separately from Engineering Shell: the service assembly and its housing have different identification roles. The material, gauge and cavity entries describe the listed pigtail; they do not provide a splicing method or authorize a replacement-wire choice."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:53:26.036Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e6b8ceef548ef398bf423296d6558401f251a55cdfd97db8d706a8ee2fa0f019",
+  "sourcePdfHash": "132a77a78bf4ec710b4d929ed608095494a8ac167abf9a4ef59699da7a8df9e9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1ddaf24e7c0f656fae80ddfed016262df8ba6044af7d1b6361e6f610d8b15735",
+    "reviewedAt": "2026-10-28T00:53:26.036Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4116",
+  "supportingSourceRefs": [],
+  "sourceHash": "4bd322807c3cecaa1d0d6af2d043c00cdb2d382df69b91b3de24bee05029846e",
+  "title": "C4116 — Evaporative emission canister vent solenoid connector",
+  "introduction": "The evaporative-emissions canister captures fuel vapor, and its vent solenoid controls the connection to outside air. I think of the vent valve as the canister's air door; the purge valve has a separate job routing stored vapor toward the engine. This reference identifies the vent solenoid's electrical connection so those jobs stay straight.\n\nUse the identity table to establish the connector, match the drawing's cavity labels to the pin-assignment rows, then consult the pigtail listing for its service reference. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified. This guide covers identification; access, electrical testing and replacement need the applicable separate procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4116-b00002",
+      "text": "Connector face for harness 14A411",
+      "why": "The large latch structure is on the left of this drawing, and the cavities are stacked vertically. I use those visible features to keep the page orientation straight, then match the printed cavity labels to the Cavity column. The harness and shell fields provide an additional identity cross-check without establishing which physical side to view."
+    },
+    {
+      "blockId": "connector-C4116-b00005",
+      "text": "Read the vent-solenoid pin assignments",
+      "why": "Follow each cavity row across its circuit identifier, wire-color code, gauge entry, function and terminal listing. The function entries distinguish the fuse-or-circuit-breaker supply route from the powertrain module's vent-solenoid control connection. They identify the wiring roles without establishing a switching method, valve position or successful electrical operation."
+    },
+    {
+      "blockId": "connector-C4116-b00007",
+      "text": "Find the pigtail service listing",
+      "why": "I match Engineering Shell to Hard Shell before reading the associated Service Part entry. This keeps the connector-and-lead service assembly separate from the individual terminals listed in the pin table. Gauge and Material describe the listed pigtail; the material description is not an instruction to apply lubricant. Use the listing for identification, with a separate procedure governing any replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:50:46.963Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "add6f37afb217393a66b15be453f31f3701cdaac32a00708f4ccb91ea4a95211",
+  "sourcePdfHash": "6ebb5e2038c73b7785c3fe1ce3ba7b99f9da7c198c22579aa055150c43386a25",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9561efd49de21e5b6ff8e2498561c507d80e1066b1339fd376e4e365fde673fb",
+    "reviewedAt": "2026-10-28T00:50:46.963Z"
+  }
+}

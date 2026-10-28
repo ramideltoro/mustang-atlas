@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1514",
+  "supportingSourceRefs": [],
+  "sourceHash": "2e7b86b0122c24eebf0e8699cdb4096ce16449b1a16be1e5a77971b8a524fa52",
+  "title": "C1514 — Knock sensor 2 (KS2) connector",
+  "introduction": "This reference maps the knock-sensor connection from housing identification to cavity assignments and pigtail service parts. I pay particular attention to the polarity signs in the Function column—electrical punctuation earns its keep here. Keeping each sign with its circuit description prevents a small label from becoming a large assumption.\n\nStart with the identity table, follow the drawing’s printed cavity labels into the assignment rows, then consult the pigtail listing. Read each circuit row horizontally so its wire description, function and terminal identifier stay together.\n\nThis is an identification and circuit-reading guide. Physical viewing direction, component location, access, tests and repairs require matching vehicle documentation. Engine applicability and the Gauge, Size and Used conventions are unspecified here; the reference does not establish repair-wire selection or expected electrical readings.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1514-b00002",
+      "text": "Connector-face map · Harness 14B485",
+      "why": "The drawing shows stacked cavities inside the rounded opening, with a broad shell projection to the left. I use those visible landmarks to navigate the illustration and follow its printed cavity labels into the table. The shell-and-harness row links the picture to the identity details above. These landmarks describe the printed view, not a confirmed terminal-side or wire-side viewing direction."
+    },
+    {
+      "blockId": "connector-C1514-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Use Cavity to connect a drawing label to its row, then read Circuit Number, Color, Gauge, Function and Terminal Part Number across that same row. Keep the polarity signs and bank-and-position wording attached to their respective Function entries. They identify the described connections; they do not establish a physical sensor location or authorize treating either connection as chassis ground or battery supply."
+    },
+    {
+      "blockId": "connector-C1514-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Follow Kit List in the identity table to Number here. Service Part identifies the catalogued connector-and-wire assembly, while Engineering Shell links the assembly to the housing identification. Material records the listed pigtail description; it is not a separate instruction to apply grease. The pigtail and circuit Gauge entries retain their own meanings and do not establish a wire-substitution method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:50:46.947Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ce96120aeb5cfe01c807de7a767ff2b450aa6d77b91f60117fcc119130cf0130",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "83d23f7e614a4ba2deefa36b925b6756200a73981e31ea429e0942237f3e5f25",
+    "reviewedAt": "2026-10-28T00:50:46.947Z"
+  }
+}

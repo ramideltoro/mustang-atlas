@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1614",
+  "supportingSourceRefs": [],
+  "sourceHash": "17e954a53267472c73edc77809ca2f82b455dfb966d1ff017a1a0d355992e0cb",
+  "title": "C1614 — Knock Sensor 1 (KS1)",
+  "introduction": "I read this reference from the connector identity table to the face drawing, then across the matching cavity rows. The drawing supplies the cavity addresses; the circuit table tells you what lives at each address. That distinction matters here: the paired knock-sensor connections are not an invitation to treat every connector as a simple power-and-ground plug.\n\nStart with the connector description, shell identification and harness label. Use the drawing’s cavity labels to find the corresponding circuit, wire identification and function. The final table identifies the listed service pigtail, meaning the connector assembly with attached repair leads.\n\nThis page teaches reference reading, not connector access, probing, diagnosis or replacement. Physical viewing direction, test conditions and acceptable readings are outside its scope. Size and Used codes and the gauge convention are not explained here; retain them as reference entries rather than treating them as dimensions, test results or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1614-b00002",
+      "text": "Connector-face reference · Harness 14B485",
+      "why": "I use the housing outline and the rectangular feature above the vertically stacked cavities to keep the drawing recognizable. Upper and lower describe the illustration on this page, not an established installed orientation. The harness label and the identification row beneath the drawing tie this view to its connector record; appearance alone does not establish the electrical assignment."
+    },
+    {
+      "blockId": "connector-C1614-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read horizontally from the drawing’s cavity label through Circuit Number, Color, Gauge and Function. This keeps each wire’s identity attached to its intended connection. The positive and negative knock-signal designations distinguish the sensor pair; the negative designation alone does not identify a chassis-ground connection. A circuit map identifies connections, but it cannot tell you whether the sensor or wiring is working. Terminal entries marked unavailable supply no terminal replacement identifier."
+    },
+    {
+      "blockId": "connector-C1614-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The service-part entry identifies the listed repair assembly, while Engineering Shell ties it back to the housing identification. I keep the pigtail’s gauge and material entries separate from the vehicle-wire entries above: they describe different records, and the gauge values differ. This table is a parts reference, not a splicing method or permission to choose replacement wire from a single column."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:49:09.903Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "0cf114ec5b36d4825d8ba7c44811d784e634c0cfd55bd809360d3ff9ac5a9d50",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a6fe262ead410fb07f586d3f3b2d4233ba184802f50476d57d21deb95369736f",
+    "reviewedAt": "2026-10-28T00:49:09.903Z"
+  }
+}

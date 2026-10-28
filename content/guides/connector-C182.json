@@ -3,7 +3,7 @@
   "supportingSourceRefs": [],
   "sourceHash": "7ed588bfd4f10fe0c1cc5fe1a5de4fb2769f63d8d73e2a4ceb4cbfcb150a8a23",
   "title": "C182 — Fuel injector 2 connector reference",
-  "introduction": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as the address book for its electrical connection: the identity table names the connector, the drawing locates its cavity labels, and the circuit table explains each connection's assigned job.\n\nStart with the identity table, then match a cavity label in the drawing to the Cavity column below. Read across that row to keep its circuit, color, gauge, function and terminal entry together. The injector-driver and fused-power descriptions distinguish the circuit roles; they do not demonstrate that the injector is operating correctly.\n\nThis guide covers reading the reference. Engine applicability, physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here. Access, probing, wire selection, testing and replacement require separate applicable instructions.",
+  "introduction": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as the address book for its electrical connection: the identity table names the connector, the drawing locates its cavity labels, and the circuit table explains each connection's assigned job.\n\nStart with the identity table, then match a cavity label in the drawing to the Cavity column below. Read across that row to keep its circuit, color, gauge, function and terminal entry together. The injector-driver and fuse-or-circuit-breaker power descriptions distinguish the circuit roles; they do not demonstrate that the injector is operating correctly.\n\nThis guide covers reading the reference. Engine applicability, physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here. Access, probing, wire selection, testing and replacement require separate applicable instructions.",
   "requirements": [],
   "edits": [
     {
@@ -14,7 +14,7 @@
     {
       "blockId": "connector-C182-b00005",
       "text": "Cavities and circuit functions",
-      "why": "The cavity label joins the drawing to its table row; the circuit identifier then distinguishes that electrical path. Color and Gauge describe the same row, while Function identifies the injector-driver or fused-power role. I keep the complete function wording, including its suffix, without treating it as a voltage measurement or a test instruction. A blank Qualifier supplies no additional condition."
+      "why": "The cavity label joins the drawing to its table row; the circuit identifier then distinguishes that electrical path. Color and Gauge describe the same row, while Function identifies the injector-driver or fuse-or-circuit-breaker power role. I keep the complete function wording, including its suffix, without treating it as a voltage measurement or a test instruction. A blank Qualifier supplies no additional condition."
     },
     {
       "blockId": "connector-C182-b00007",
@@ -22,7 +22,7 @@
       "why": "A pigtail is the connector with attached wire leads. I read Number alongside Kit List, then distinguish the Service Part entry from Engineering Shell and the pin table's Terminal Part Number. These identify different service items. The pigtail and circuit tables describe separate records; their Gauge entries alone do not establish replacement-wire suitability or a splice method."
     }
   ],
-  "checkedAt": "2026-10-28T00:39:36.079Z",
+  "checkedAt": "2026-10-28T00:46:36.546Z",
   "model": "Codex configured model",
   "editorialVersion": 1,
   "validationVersion": 5,
@@ -50,6 +50,24 @@
     "sourceChunkCount": 1,
     "reviewedChunkCount": 1,
     "fingerprint": "ff1191c0dda8fb9afad8976dc8e87174b59762348c40c09e41701eeea39ff397",
-    "reviewedAt": "2026-10-28T00:39:36.079Z"
+    "reviewedAt": "2026-10-28T00:39:36.079Z",
+    "editorialRevision": {
+      "kind": "supply-alternative-wording-only",
+      "sourceHash": "7ed588bfd4f10fe0c1cc5fe1a5de4fb2769f63d8d73e2a4ceb4cbfcb150a8a23",
+      "scope": "Replace fused shorthand with literal fuse-or-circuit-breaker alternative. All action/table/figure content unchanged.",
+      "priorReviewPath": "work/editorial-references/documents/connector-C182/ff1191c0dda8fb9afad8976dc8e87174b59762348c40c09e41701eeea39ff397/0000/attempt-1/review/output.json",
+      "diff": [
+        {
+          "path": "introduction",
+          "before": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as the address book for its electrical connection: the identity table names the connector, the drawing locates its cavity labels, and the circuit table explains each connection's assigned job.\n\nStart with the identity table, then match a cavity label in the drawing to the Cavity column below. Read across that row to keep its circuit, color, gauge, function and terminal entry together. The injector-driver and fused-power descriptions distinguish the circuit roles; they do not demonstrate that the injector is operating correctly.\n\nThis guide covers reading the reference. Engine applicability, physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here. Access, probing, wire selection, testing and replacement require separate applicable instructions.",
+          "after": "A fuel injector is an electrically controlled valve that meters fuel into the engine. I use this reference as the address book for its electrical connection: the identity table names the connector, the drawing locates its cavity labels, and the circuit table explains each connection's assigned job.\n\nStart with the identity table, then match a cavity label in the drawing to the Cavity column below. Read across that row to keep its circuit, color, gauge, function and terminal entry together. The injector-driver and fuse-or-circuit-breaker power descriptions distinguish the circuit roles; they do not demonstrate that the injector is operating correctly.\n\nThis guide covers reading the reference. Engine applicability, physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here. Access, probing, wire selection, testing and replacement require separate applicable instructions."
+        },
+        {
+          "path": "edits[1].why",
+          "before": "The cavity label joins the drawing to its table row; the circuit identifier then distinguishes that electrical path. Color and Gauge describe the same row, while Function identifies the injector-driver or fused-power role. I keep the complete function wording, including its suffix, without treating it as a voltage measurement or a test instruction. A blank Qualifier supplies no additional condition.",
+          "after": "The cavity label joins the drawing to its table row; the circuit identifier then distinguishes that electrical path. Color and Gauge describe the same row, while Function identifies the injector-driver or fuse-or-circuit-breaker power role. I keep the complete function wording, including its suffix, without treating it as a voltage measurement or a test instruction. A blank Qualifier supplies no additional condition."
+        }
+      ]
+    }
   }
 }

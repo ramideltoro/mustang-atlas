@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1624",
+  "supportingSourceRefs": [],
+  "sourceHash": "677e4c653b002ea473ac7284b7a4e4b77e97b68cd5f5223adda1db7a9732131a",
+  "title": "C1624 — Camshaft Position Bank 1 Sensor 2 (CMP12)",
+  "introduction": "I begin with the sensor description in the identification table, then use the drawing’s cavity labels to find the corresponding circuit rows. The connector outline gets you oriented on the page; Circuit Number and Function tell you which electrical connection you are reading. The shell is the envelope—the circuit row supplies the address.\n\nThis is a connector identification and reading guide. Physical access, probing, wire selection and replacement need separate procedures. Viewing side, test conditions, gauge convention and the meanings of Size and Used are unspecified here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1624-b00002",
+      "text": "Connector face map · Harness 12C508",
+      "why": "The drawing shows vertically stacked cavity labels beside a rectangular feature on its right. I use those visible landmarks to navigate the illustration, then read the Fpn and Harness Id entries beneath it alongside the identification table. This connects the face drawing to the connector record."
+    },
+    {
+      "blockId": "connector-C1624-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Find the drawing’s cavity label in the Cavity column and follow that row across. Color and Circuit Number help identify the wire entry, while Function distinguishes the camshaft sensor connection from the variable-reluctance sensor return associated with the powertrain controller. Terminal Part Number refers to the contact part, giving it a different job from the circuit identifier."
+    },
+    {
+      "blockId": "connector-C1624-b00007",
+      "text": "Read the pigtail parts listing",
+      "why": "Kit List leads to Number in the pigtail table. I then read Service Part for the service reference and Engineering Shell for its connection to Hard Shell and Fpn above. Image names the associated illustration file; Gauge, Material and Cavities describe the pigtail entry. Reading by column keeps the service assembly, shell and terminal references distinct."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:00:54.925Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "cc3ca915a99a010451d7debe37cdda50fd2858bb4f143c7062ebe20ba1ced4fd",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1d2b722bf0b04a0b67c8da33b5297366393f96cace0fa5be977eaa789984fb18",
+    "reviewedAt": "2026-10-28T01:00:54.925Z"
+  }
+}

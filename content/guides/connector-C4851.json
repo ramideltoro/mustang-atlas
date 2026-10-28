@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4851",
+  "supportingSourceRefs": [],
+  "sourceHash": "99e50d267b1ff2b66ca2c1c72e2d9efd15f350f244b6e6c1782f4b19ad1b7c69",
+  "title": "C4851 — Right-hand convertible top sensor connector",
+  "introduction": "I use this reference to connect the right-hand convertible top sensor’s connector drawing with its circuit and service-part records. Think of the cavity labels as addresses: the drawing locates an address, and the matching table row explains what belongs there.\n\nStart with the connector identity, match the drawing’s cavity labels to the pin table, then consult the pigtail records if you need a parts reference. This is an identification guide. Access, physical viewing direction, electrical test conditions, gauge convention and the meaning of the Size code are outside its scope; use the applicable service procedure before probing or repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4851-b00002",
+      "text": "Harness 14A005 · Connector face",
+      "why": "I use the housing outline and the vertical stack of cavity labels to navigate this drawing. The shaded bottom cavity corresponds to the unassigned row in the pin table; its shading is not a fault indication. These positions describe the image, not a confirmed viewing direction on the vehicle."
+    },
+    {
+      "blockId": "connector-C4851-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Match a cavity label to its row, then read across the circuit identifier, color, gauge, function and terminal fields together. The function column distinguishes the sensor signal from the supply labeled VPWR. Those labels explain the assigned roles, but they do not establish a normal voltage or prove that the sensor works. The unassigned row is not evidence of a missing wire."
+    },
+    {
+      "blockId": "connector-C4851-b00007",
+      "text": "Pigtail identification and service parts",
+      "why": "I cross-reference Kit List with Number, and Hard Shell with Engineering Shell, to connect the connector record to the pigtail entry. Service Part identifies the listed service item. Keep the pigtail’s gauge entry separate from the circuit-wire gauge entries: this reference does not authorize a wire substitution or teach terminal removal, splicing or replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:01:50.019Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3002ddac29c117f209d234108e4573254b661df81cf73748bbd940ba27df57eb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "21b9ff9a0d6cc7365d9d295fc4b82424f360e34a5a73f364580ecd215fb3f065",
+    "reviewedAt": "2026-10-28T01:00:23.334Z",
+    "editorialRevision": {
+      "kind": "bounded-inferred-engine-list-removal",
+      "scope": "Only introduction inferred engine list removed. Explicit LH/RH sensor identity and all technical body/figures/tables preserved. Full source/figure/public prose supervisory read and independent review retained; same bounded pattern authorized by release coordinator.",
+      "originalAcceptedSha": "b207baed9c957a0d93bec5fda9626eee944cd2a386464c806d70c1fbd5171019"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1110",
+  "supportingSourceRefs": [],
+  "sourceHash": "d117b145fc1ce99eeb8ed55ee9c3ca9c2221d25a28f3260aadc6b7a35f75cd1c",
+  "title": "C1110 — A/C compressor control solenoid connector",
+  "introduction": "The compressor circulates refrigerant through the air-conditioning system. This reference maps its control-solenoid electrical connection. I use it like an address book for the compressor's command wiring: identify the connector, find a cavity in the drawing, then read across the matching table row to learn its circuit role.\n\nStart with the identity table, continue through the face drawing and pin assignments, and finish with the pigtail listing if you need its service reference. This is an identification guide. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified; access, probing, operating checks and replacement require the applicable separate procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1110-b00002",
+      "text": "Connector face for harness 14B060",
+      "why": "I use the latch outline above the cavities and the keyed projection below them to keep the drawing oriented on the page. Match each printed cavity label to the Cavity column, and cross-check the harness and shell fields. These features help you read the illustration without assuming a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1110-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read across the same cavity row to connect its circuit identifier, wire-color code, gauge entry, function and terminal listing. The functions distinguish the compressor-valve control connection from the fuse-or-circuit-breaker supply route. That identifies each connection's job; it does not confirm that power is present or that the valve operates correctly."
+    },
+    {
+      "blockId": "connector-C1110-b00007",
+      "text": "Find the pigtail service listing",
+      "why": "A pigtail is the connector-and-lead assembly represented by this service listing. I cross-check Engineering Shell against Hard Shell, then read Service Part for the associated service reference. Keep the pigtail's Gauge and Material entries with this listing, separate from the individual circuit rows and their terminal part numbers. The listing identifies service hardware without teaching wire selection, splicing or replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:50:46.955Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "b18708b4db70ce526c2caa4e5bc3f4a49e91bbb5e697366586702c46c078362e",
+  "sourcePdfHash": "35089f3e38731ec643a1bafbe0fe35d21279057545f8982a23647daae2ec1ff6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2e65a78a55cf798e9b799a1f4fc23ae53d735e46b7875ce3f5934bcf65ab76f5",
+    "reviewedAt": "2026-10-28T00:50:46.956Z"
+  }
+}

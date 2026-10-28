@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C319",
+  "supportingSourceRefs": [],
+  "sourceHash": "c5555060ffb2c953cd48bed85039ab10df749e45b1e5b0079914cb8deafe859e",
+  "title": "C319 — Auxiliary power point connector",
+  "introduction": "This reference links the auxiliary power point’s connector drawing to its feed, ground and pigtail records. I read the cavity labels before following the housing shape: the layout is not a simple row, and the shaded position has no assigned circuit. An empty parking space on the drawing is not automatically a missing wire.\n\nUse the connector identity to select this reference, match cavity labels to table rows, and then consult the service-part record. The feed description retains its fuse-or-circuit-breaker alternative without choosing the vehicle’s configuration. This is an identification guide; access, physical viewing direction, test conditions, gauge convention and the meaning of the Size code require other service information before testing or repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C319-b00002",
+      "text": "Harness 14401 · Connector face",
+      "why": "The drawing places an unshaded cavity at the left, another at the lower right and a shaded cavity above it. I match their printed labels to the table rather than assuming a left-to-right sequence. The shaded position corresponds to the unassigned row. These locations describe the illustration, not a confirmed terminal-side or wire-side viewing direction."
+    },
+    {
+      "blockId": "connector-C319-b00005",
+      "text": "Power feed, ground and cavity assignments",
+      "why": "Read each cavity row across to connect its circuit identifier and wire details with the function and terminal entry. The assigned rows distinguish the protected feed from the instrument-panel-structure ground. Keep the feed’s fuse-or-circuit-breaker alternative and the ground’s specific point designation as written in the table. Those descriptions identify connections; they do not prove that power or ground is present and usable."
+    },
+    {
+      "blockId": "connector-C319-b00007",
+      "text": "Pigtail identification and service parts",
+      "why": "I match Kit List to Number and Hard Shell to Engineering Shell to connect the connector record with its pigtail entry. Service Part identifies the listed service item. The pigtail’s gauge entry remains separate from the circuit-wire entries; this catalog relationship does not specify replacement wire, splice construction or a completed-repair check."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:00:23.355Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "702cda274b4276a66ede26d8a103b9a944895a95685557493dd3adeb2fcb8046",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "507b4b5e6b70a1016bcde40f12695e86d10a7a1d875a2d2a2eae9945e9ae3445",
+    "reviewedAt": "2026-10-28T01:00:23.355Z"
+  }
+}

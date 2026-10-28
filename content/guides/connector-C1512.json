@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1512",
+  "supportingSourceRefs": [],
+  "sourceHash": "5987e507e5cf430efe5f2483c04d010995eedacce74c362761e9a33cef51a84d",
+  "title": "C1512 — Knock sensor 1 (KS1) connector",
+  "introduction": "I read this knock-sensor reference as a matched pair of connections. The cavity labels lead to separate circuit rows, and the full Function wording keeps each connection's identity intact. Those small suffixes earn their space: treating the pair as anonymous wires would throw away useful information before any diagnosis begins.\n\nStart with the connector identity table, use the face drawing to find the matching cavity row, then consult the terminal and pigtail references for their respective hardware listings. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified. This is a wiring-reading guide; sensor access, probing, operating checks and replacement require the applicable separate procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1512-b00002",
+      "text": "Connector face for harness 14B485",
+      "why": "I use the broad rectangular projection on the left and the rounded tabs above and below the housing to orient this drawing on the page. The cavities are stacked vertically. Match their printed labels to the Cavity column, then cross-check the harness and shell fields; the drawing's layout does not establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C1512-b00005",
+      "text": "Read the sensor pin assignments",
+      "why": "Read each cavity row across its circuit identifier, wire-color code, gauge entry, full function and terminal listing. Keep the bank-or-unique wording and the minus or plus suffix attached to the corresponding row. Those suffixes distinguish the paired sensor connections; a minus label alone does not establish a chassis-ground connection, and neither row supplies a test voltage or a sensor-health conclusion."
+    },
+    {
+      "blockId": "connector-C1512-b00007",
+      "text": "Find the pigtail service listing",
+      "why": "I cross-check Engineering Shell against Hard Shell to connect this service listing with the identified housing. Service Part refers to the listed connector-and-lead assembly, while the pin table separately identifies its terminals. Keep each table's Gauge entry in its own context. Material describes the listed assembly rather than directing lubricant application, and this reference does not teach splicing or replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:53:26.027Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2a24d13b2ea1cce90653842b7e19f43d03c95b486ff962d31c55adb211e84150",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9a4f925f421926b246f6095ac460b5db1563e049e0e3d1d9472a243153161ff3",
+    "reviewedAt": "2026-10-28T00:53:26.028Z"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2359",
+  "supportingSourceRefs": [],
+  "sourceHash": "016789e39cb19376441debaba11297f51f1f9b99fef0d6db6de2ce72db7861ca",
+  "title": "C2359 — Instrument panel center speaker connector",
+  "introduction": "I use this page to trace the center speaker’s connector labels into the audio circuit table and then into the pigtail records. The useful distinction here is speaker polarity: the plus and minus labels give the connections different roles even though they share a housing. It is a tiny seating plan with an audio assignment for each seat.\n\nStart with the connector identity, locate a cavity in the drawing, and read its complete table row. The final sections provide standard and European service-part references. This page does not teach speaker access, probing or replacement; physical viewing direction, electrical test values, gauge convention and the meaning of the Size code are also outside its identification scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2359-b00002",
+      "text": "Harness 14401 · Connector face",
+      "why": "I use the prominent upper housing feature to keep the drawing’s orientation consistent while matching its side-by-side cavity labels to the table. Left and right here describe the image only. The drawing is not explicitly identified as a terminal-side or wire-side view, so it cannot by itself establish a physical probing orientation."
+    },
+    {
+      "blockId": "connector-C2359-b00005",
+      "text": "Speaker polarity and circuit assignments",
+      "why": "Match the cavity label first, then read across the circuit identifier, color, gauge, function and terminal fields. The plus and minus function labels distinguish the center speaker’s audio connections. I keep that polarity distinction intact: a speaker-minus label is not an instruction to connect the wire to chassis ground. The assignments alone cannot establish speaker or audio-module condition."
+    },
+    {
+      "blockId": "connector-C2359-b00007",
+      "text": "Pigtail identification and service record",
+      "why": "Cross-reference Kit List with Number and Hard Shell with Engineering Shell to connect the connector identity to this pigtail entry. Service Part is the service-item reference; the image filename is a catalog reference. The pigtail and circuit tables have separate gauge entries, which should not be converted into a wire-substitution instruction."
+    },
+    {
+      "blockId": "connector-C2359-b00009",
+      "text": "European pigtail product reference",
+      "why": "This section provides a European Product Id separately from the preceding service-part record. I retain that distinction when reading the catalog information. The identifier alone does not establish interchangeability or a replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:00:23.348Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "13a10510f77db7f342be89e3345ca9c185132ce9114923eca1b238f5b58d74ab",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c816c9c1a2a625f1a6810e4f1e7ac4bd83d7ec4dfe332a97aa84d24111d67f5d",
+    "reviewedAt": "2026-10-28T01:00:23.348Z"
+  }
+}

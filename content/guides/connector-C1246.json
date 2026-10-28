@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1246",
+  "supportingSourceRefs": [],
+  "sourceHash": "b09af04fd95cac3b125863549e6930b39409a59e55ade857be0398e0c6c07858",
+  "title": "C1246 — Turbocharger (TC) Wastegate Regulating Valve Solenoid",
+  "introduction": "I read this connector sheet by separating the solenoid’s supply reference from its powertrain-controller connection. The cavity drawing leads to the matching table rows, where Function explains each connection’s role. That distinction is useful: a solenoid needs its electrical cast in the right roles before the boost-control story makes sense.\n\nUse this page to identify connections and distinguish parts references. Physical access, probing, wire selection and replacement require separate procedures. Viewing side, operating and test conditions, gauge convention and the meanings of Size and Used are unspecified here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1246-b00002",
+      "text": "Connector face map · Harness 12C508",
+      "why": "I navigate the drawing using its vertically stacked cavity labels, the stepped inner outline on the left and the small feature between the cavities. The Fpn and Harness Id table associates this face drawing with the connector record. These landmarks help you follow the illustration and its labels consistently."
+    },
+    {
+      "blockId": "connector-C1246-b00005",
+      "text": "Read the solenoid circuit assignments",
+      "why": "Match a drawn cavity label to the Cavity column and read across the same row. Function distinguishes the powertrain-controller wastegate-solenoid connection from the supply entry described with fuse-or-circuit-breaker wording. Keep that alternative wording when following the supply reference. Circuit Number identifies the electrical path, Color identifies its recorded wire color, and Terminal Part Number identifies the contact part."
+    },
+    {
+      "blockId": "connector-C1246-b00007",
+      "text": "Read the pigtail parts listing",
+      "why": "I follow Kit List to Number in the pigtail table, then distinguish Service Part from Engineering Shell. The shell entry links back to Hard Shell and Fpn above; the terminal reference belongs to the separate pin-assignment table. Gauge, Material and Cavities describe the listed pigtail, while Image names its associated illustration file. Those column headings keep similar-looking parts references in their proper lanes."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:00:54.934Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "009907081f5b0ab494c4ee74b22861d34cd0d027c2b853773b4b92b0f30822ed",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "5305be7e2d6f3d40efa1e200be6dcf2403530d0ba7fa72188f7a147a7e4cc446",
+    "reviewedAt": "2026-10-28T01:00:54.934Z"
+  }
+}

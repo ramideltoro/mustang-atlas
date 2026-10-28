@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C123",
+  "supportingSourceRefs": [],
+  "sourceHash": "8acf96ac089f6f2c176a495dd362c54fde037bbbeac2813abe27163febb5beb9",
+  "title": "C123 — Evaporative emission (EVAP) purge valve connector",
+  "introduction": "The purge valve meters stored fuel vapor toward the engine intake—think of it as the vapor system’s admission gate. This page maps its electrical connection; it cannot tell us whether that gate actually opens or seals.\n\nI start with the identity table, use the drawing’s cavity labels to find the corresponding circuit rows, then consult the pigtail listing for service-part identification. Read across each row to keep the circuit, wire description, function and terminal together.\n\nThis is a connector-reading reference. Physical viewing direction, access, test conditions and repair instructions require matching vehicle documentation. Engine applicability and the conventions behind Gauge, Size and Used are not defined here; keep those entries as printed rather than treating them as wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C123-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the latch drawn at the top and the side-by-side cavities as landmarks within this illustration. Follow the printed cavity labels rather than assuming numbering increases from left to right. The identity table and the shell-and-harness row identify the depicted connector; the drawing does not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C123-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Match a cavity label in the drawing to its Cavity row, then read horizontally. The Function entries distinguish the powertrain-control connection from the supply connection described with fuse or circuit-breaker alternatives. Circuit Number identifies the circuit; Color describes the wire, while Terminal Part Number identifies the listed terminal. These relationships explain the map without establishing a test result or declaring the valve faulty."
+    },
+    {
+      "blockId": "connector-C123-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is the connector-and-wire service assembly. Follow Kit List in the identity table to Number here, then distinguish Service Part from Engineering Shell. The shell identifier ties the listing back to the connector drawing; it serves a different purpose from the service-part identifier. The pigtail and circuit Gauge fields describe separate entries, so their values alone are not a repair-wire specification."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:49:09.921Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "fb5a4357af31ce29beecbf773b96b32cab3ab413c4dd0f80dd8e0dcb11407fed",
+  "sourcePdfHash": "b0d6476c6f979dbb2eea4856adb4a7deb188c617ac088cfe1bca729e77efe98f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "da0b6c9a3dc3be47fd3668377e94728c75e9548e21fe3934fce781c31cfb874f",
+    "reviewedAt": "2026-10-28T00:49:09.921Z"
+  }
+}
