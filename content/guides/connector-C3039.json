@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3039",
+  "supportingSourceRefs": [],
+  "sourceHash": "81ee9d667278c0e3ab18ae1590d365d9aff65a9308c77a74494e4655023f9e31",
+  "title": "C3039 — RH front-seat backrest blower motor connector",
+  "introduction": "I use this reference to connect the right-hand front-seat backrest blower motor’s identity with its cavity drawing, circuit assignments and pigtail parts listing. Start with the identity table, then use the drawing’s cavity labels to find the corresponding rows in the pin table. The connector number identifies the connection; a circuit number identifies the electrical path assigned to a cavity.\n\nThere is more going through this connector than the blower’s name might suggest. The function column distinguishes backrest heater connections, fan connections, temperature sensing and blower speed control. Think of it as the seat’s little switchboard: sharing a housing does not give every wire the same job. Keep each function’s polarity or control wording attached to its own row.\n\nThis is an identification and circuit-reading reference. Physical access, confirmation of the connector’s viewing side, electrical test conditions and repair instructions fall outside its scope. Gauge and Size conventions are not defined here; retain those entries as reference data without converting them into wire-selection advice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3039-b00002",
+      "text": "Connector-face map · Harness 14D233",
+      "why": "I use the printed housing outline and cavity labels together. The projecting housing features appear on the right of this drawing, with the shaded cavity in the left column. These are landmarks within the illustration, not confirmation of which side of a physical connector to view. The table beneath associates the drawing with its harness and shell identifiers."
+    },
+    {
+      "blockId": "connector-C3039-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Follow a cavity label into its table row, then read across for circuit identity, color, gauge, function and terminal part number. The shaded cavity corresponds to the row without an assigned circuit or terminal; that agreement identifies an unused position in this reference, not evidence of a missing wire. Heater polarity, fan polarity, temperature sensing and speed control remain distinct functions even though they share the housing."
+    },
+    {
+      "blockId": "connector-C3039-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. This table connects the kit listing to its service part and engineering shell, while also retaining the catalog’s gauge, material, cavity and image fields. I keep the kit, service part and shell identifiers in their separate lookup roles; the listing alone does not teach terminal replacement or splicing."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:38:09.042Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "71fb1d97363181a6d66ec3dc78564155cd7ea4e6d9f70798b98c67eb29c01b22",
+  "sourcePdfHash": "94aacc4d2928dadf06750eb70304ed901a5d97d2e11d2bac6355cbd78b738ad2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ed76fa544ec764fcca0efbdac0bdc85b0ac607ae18f51fea66e0a361b0906554",
+    "reviewedAt": "2026-10-28T03:21:20.374Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete36 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public neutral housing wording removes unsupported latch function. Original heater/fan polarities, temperature/speed-control functions, part and gauge data retained; no release/viewing-side inference. Full prior review retained."
+    }
+  }
+}

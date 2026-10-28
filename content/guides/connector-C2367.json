@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2367",
+  "supportingSourceRefs": [],
+  "sourceHash": "d5ef49d9000c170a29a3acb373c8e8ee91a7996832ff83497abd8a3f5aa166aa",
+  "title": "C2367 — Right-hand steering wheel multifunction switch",
+  "introduction": "I use this reference as an address book for the right-hand steering-wheel controls: the drawing locates a cavity, and the matching table row identifies its circuit and function. Start with the connector identity table, compare the illustrated housing features, then carry the cavity label into the pin-assignment table.\n\nThis is a reading guide, not an access or electrical testing procedure. The physical viewing side and test conditions are not established here. Size and Used coding are undefined; asterisks, blanks and unavailable part entries must not become guessed wire specifications or fault conclusions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2367-b00002",
+      "text": "Connector layout · Harness 14672",
+      "why": "I use the long column on the right, the separated cavity groups on the left and the stepped central recess to navigate this drawing. Those housing features help keep the cavity labels in context. The gray-filled circles correspond to rows without assigned circuits or functions; shading alone does not tell you the condition of a real connector. The drawing's page orientation does not establish which physical side to view."
+    },
+    {
+      "blockId": "connector-C2367-b00005",
+      "text": "Reading the pin assignments",
+      "why": "Match a drawing label to the Cavity column, then read across that same row for the circuit identifier and stated function. Ground, return, channel and illumination labels distinguish the assignments; keep ground and return separate rather than assuming they are interchangeable. The table identifies connections, but it supplies no expected measurements or pass/fail decision. Once you have found the relevant assignment, any hands-on diagnosis needs the matching diagnostic procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:13:44.927Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "67b29e973c3d828d7b8d84757fe83b48d31edffe4b4caaa5834c63b33953deb3",
+  "sourcePdfHash": "bd10cca7059024316552401678459695af2f5b2a31e5906a813332a2c18ddb3b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "26d8e900114d7009be15f75c60d33df4c6aece63a4ef6a62dca858443156eff0",
+    "reviewedAt": "2026-10-28T03:13:44.928Z"
+  }
+}

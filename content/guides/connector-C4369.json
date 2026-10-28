@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4369",
+  "supportingSourceRefs": [],
+  "sourceHash": "7ca23c24c12dae85a72cd15707ef92d82924c56f790827a6f68b43006d6cfd4b",
+  "title": "C4369 — LH side obstacle detection control module (SODL) connector",
+  "introduction": "I read this left-hand side obstacle detection control module connector reference as a map of the module’s electrical relationships. Start with the identity table, find a cavity label in the drawing, then read its matching assignment row. The circuit number identifies the path, while the function column explains its listed role.\n\nThose roles include the left or driver mirror warning indicator, a fuse-or-circuit-breaker connection, the medium-speed CAN high and low network paths, and ground. Think of the network paths as the module’s conversation with the car: they have a different job from its supply and ground connections. The map helps distinguish those jobs; it cannot tell you whether the module or a circuit is healthy.\n\nThis page covers identification and table reading. Physical access, confirmation of viewing side, electrical test conditions and repairs need information beyond this reference. Gauge and Size conventions are undefined here. The pigtail listing also gives no applicability rule for choosing among its entries, so it supports catalog reading without establishing a replacement choice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4369-b00002",
+      "text": "Connector-face map · Harness 14A005",
+      "why": "The drawing arranges the cavity labels in a vertical column, with shaded positions at the top and a prominent projecting housing structure to the left. I use the labels to move between the illustration and the assignment table. These landmarks describe the printed view without establishing whether a physical connector should be viewed from its terminals or wires. The adjacent row identifies the associated harness and shell."
+    },
+    {
+      "blockId": "connector-C4369-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Read across each assigned cavity row to keep its circuit, color, gauge, function and terminal identifier together. The shaded positions correspond to rows without circuit assignments or terminal parts, identifying unused positions in this reference. The CAN high and low labels distinguish network paths; they are not test readings. Retain the mirror’s left-or-driver wording, the fuse-or-circuit-breaker alternative and the ground-location wording without choosing an unsupported configuration."
+    },
+    {
+      "blockId": "connector-C4369-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail combines the connector with attached wire leads. The listed assemblies have distinct service identifiers while sharing an engineering shell identifier. That shared shell explains the catalog relationship, but it does not establish interchangeability or which assembly a particular vehicle needs. I keep each kit’s service part and attributes together when reading the table."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:48:48.229Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "dc35270a3a36aa88b09f1d8fb6b0b1062941ef1e7e97baebfa43d9d716a8ddf0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4391b789e129d60eeffed3f362f1c1cb8defa795732896458da22c18c00ea599",
+    "reviewedAt": "2026-10-28T03:21:20.399Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete36 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public neutral housing wording removes unsupported latch function. Literal fuse-or-breaker alternative, CAN high/low, left-or-driver mirror wording, distinct pigtail records preserved. No release/viewing-side or kit interchangeability inference. Full prior review retained."
+    }
+  }
+}

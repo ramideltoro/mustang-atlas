@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3040",
+  "supportingSourceRefs": [],
+  "sourceHash": "8a1dc85ed5737eca8dc7eddedaf10c6d42a1e5e51366908b2e506af532cc56ec",
+  "title": "C3040 — RH front-seat cushion blower motor connector",
+  "introduction": "I start this right-hand front-seat cushion blower motor reference with the identity table, then move from the cavity drawing to the matching pin-assignment row. Read across that row to connect the cavity with its circuit number, color, gauge, function and terminal identifier. This keeps the drawing and the electrical description working together.\n\nThe useful surprise is in the function column: this connector groups cushion heating, fan connections, cushion temperature sensing and blower speed control. It is a small seating chart for several electrical jobs, and the function column tells you who belongs where. A heater connection and a speed-control connection deserve different labels even when their wires arrive in the same plug.\n\nUse this page for identification and understanding the listed connections. It supplies neither physical access instructions nor a confirmed terminal-side or wire-side viewing direction, test setup or repair sequence. Gauge and Size conventions are undefined here, so the entries stay as printed reference data rather than a basis for selecting replacement wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3040-b00002",
+      "text": "Connector-face map · Harness 14D230",
+      "why": "In the drawing as printed, the projecting housing features sit on the left and the shaded cavity sits in the right column. I use those landmarks to keep my place while matching cavity labels to table rows. Their position describes the illustration; it does not establish a physical viewing side. The adjacent identification row ties the drawing to its harness and shell."
+    },
+    {
+      "blockId": "connector-C3040-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Each row keeps a cavity’s circuit identity, color, gauge, function and terminal identifier together. Read the heater and fan polarity markings as part of their respective function labels, and distinguish temperature sensing from blower speed control. The shaded cavity agrees with the unassigned row, so that position is unused in this reference; it is not, by itself, a fault finding."
+    },
+    {
+      "blockId": "connector-C3040-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail listing describes a connector-and-lead service assembly through its kit number, service part, engineering shell and catalog attributes. I use these columns to understand which identifier describes the listed assembly and which describes its shell. The pigtail gauge field and the individual circuit gauge fields retain their separate contexts; this page gives no conversion or replacement-wire selection rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:43:26.072Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "71fb1d97363181a6d66ec3dc78564155cd7ea4e6d9f70798b98c67eb29c01b22",
+  "sourcePdfHash": "d4f7418e936e5b065ab881ce81d24f91c4a125dba1074a52b785b56d04c1feb3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "22819e2d8717b6e5839e014f58978cb53c972bed775a3beb0f179396019d971c",
+    "reviewedAt": "2026-10-28T03:21:20.386Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete36 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public neutral housing wording removes unsupported latch function. Male RH cushion identity, literal heater gauge4 and fan/sensor values, kit1034 retained; no wire-gauge conversion, release or viewing-side inference. Full prior review retained."
+    }
+  }
+}
