@@ -146,3 +146,7 @@ Keep the exact edition of supplemental owner evidence attached to the review. A 
 ### Preserve protection alternatives
 
 Author and reviewer prompts explicitly preserve a literal “FUSE OR CIRCUIT BREAKER” function as an alternative. Describing it only as a fused supply narrows the source without evidence. This prospective prompt clarification does not restart an active writer, regenerate earlier records, change source tables or weaken exact-artifact review. Existing accepted wording corrections retain their original artifacts and independent verdicts alongside the exact supervisory-approved successor.
+
+### Describe unlabeled connector geometry neutrally
+
+Author and reviewer prompts require neutral housing-feature or projection wording when a connector drawing does not explicitly identify a latch, release or locking function. A recognizable outline alone does not establish that function or a physical viewing side. Exact bounded corrections preserve the original full reviews and all circuit and parts data, with direct figure comparison and final-artifact approval. This prospective wording takes effect on a future normal runner start; it does not interrupt the active writer or regenerate existing records.
