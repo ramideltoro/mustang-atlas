@@ -1,0 +1,230 @@
+{
+  "documentId": "G1673189",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1673188",
+      "sourceHash": "6a87f5ff0e0d1a6457a7f7970dfcc988064083eeb8c075d940e57c802a9f566b",
+      "referencedBy": "G1673189",
+      "sourceReference": "G1673188",
+      "sourceUnitCount": 31,
+      "mediaCount": 7
+    },
+    {
+      "documentId": "G1692356",
+      "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc",
+      "referencedBy": "G1673188",
+      "sourceReference": "G1692356",
+      "sourceUnitCount": 12,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1673189",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693181",
+      "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693181",
+      "sourceUnitCount": 14,
+      "mediaCount": 6
+    }
+  ],
+  "sourceHash": "3ef5733f3cead5aa5193994641379e3ec78114eba53edead47f1b57e34fe47e0",
+  "title": "Spark Plug Removal and Installation — 2.3L EcoBoost",
+  "introduction": "Each ignition coil supplies the voltage; the spark plug delivers the spark inside the combustion chamber. I think of them as the delivery service and the doorstep: removing the coil gives you access to where the spark actually happens.\n\nThis procedure covers removing and refitting the plugs, including battery isolation, coil access and reassembly. Engine temperature, clean plug wells and careful handling matter as much as tightening torque. Replacement-plug selection and gap setting require the specifications for this exact engine; this article does not supply those specifications or diagnose a misfire.",
+  "requirements": [
+    {
+      "category": "Equipment and preparation",
+      "items": [
+        {
+          "name": "Confirm applicability",
+          "detail": "Use this procedure for the article’s 2.3L EcoBoost configuration. Review the removal notes before beginning because they also contain installation instructions."
+        },
+        {
+          "name": "Have the equipment ready",
+          "detail": "Have compressed air, hand tools and a torque wrench capable of the specified inch-pound settings. The spark-plug illustration prohibits an impact wrench."
+        }
+      ]
+    },
+    {
+      "category": "Prevent unexpected starting and fan operation",
+      "items": [
+        {
+          "name": "Disable remote start",
+          "detail": "Park on a hard, level surface with the parking brake applied, wheels chocked and an automatic in Park or a manual in a parked gear. Before service, disable remote start, if equipped, through the Central Display at Vehicle settings > Remote Start Setup. If the menu needs ignition ON, keep a valid key inside and the engine OFF: from known ignition OFF, release the pedals and press the start button once; if already ON, leave it ON instead of pressing again. After the setting, with the pedals released, switch the known ON ignition OFF. Confirm ignition OFF before continuing. Unexpected remote starting during work can cause personal injury or death."
+        },
+        {
+          "name": "Switch off and remove the key",
+          "detail": "With the ignition OFF, remove the key from the vehicle to prevent another person starting it during service. Unexpected starting can cause serious personal injury. Keep the engine and ignition OFF throughout disassembly; the ordinary completion check below occurs only after full reassembly."
+        },
+        {
+          "name": "Open and support the hood",
+          "detail": "Before fan inspection or battery access, pull the hood-release handle under the left-hand side of the instrument panel. At the front of the car, push the secondary release lever toward your left, then lift the hood until its lift cylinders hold it open. Confirm it is held open before reaching underneath. Keep the ignition OFF and key outside during this access."
+        },
+        {
+          "name": "Check cooling fans before underhood work",
+          "detail": "With the ignition OFF, check all cooling fans for damage, cracks or separation. Do not proceed with underhood work if a fan is damaged; have it replaced with a new fan first because it can separate during operation and cause serious personal injury. Fans can run with the ignition off. Complete the negative-battery-cable isolation described below before working near them, then keep that cable positioned aside through the repair. See [Health and Safety Precautions](#/document/G1693189)."
+        }
+      ]
+    },
+    {
+      "category": "Personal protection and battery safety",
+      "items": [
+        {
+          "name": "Protect eyes, ears and hands",
+          "detail": "Wear eye and ear protection during service, including compressed-air cleaning. Wear protective gloves when handling pointed or sharp-edged parts. Failure to use the required protection can cause serious personal injury."
+        },
+        {
+          "name": "Prevent acid exposure and gas ignition",
+          "detail": "Review [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181) before disconnecting the battery. Work in a well-ventilated area, keep flames, sparks and burning substances away, shield your eyes and avoid acid contact with skin, eyes or clothing. Batteries contain sulfuric acid and produce explosive gases; mishandling can cause serious personal injury."
+        },
+        {
+          "name": "Respond immediately to acid contact",
+          "detail": "If acid contacts skin or eyes, flush immediately with water for a minimum of 15 minutes, then obtain prompt medical attention. If swallowed, call a physician immediately."
+        },
+        {
+          "name": "Wash after handling terminals",
+          "detail": "Battery posts, terminals and related accessories contain lead and lead components. Wash your hands after handling them; failure to do so can result in serious personal injury."
+        }
+      ]
+    },
+    {
+      "category": "Battery isolation and restoration",
+      "items": [
+        {
+          "name": "Disconnect before removing the engine cover",
+          "detail": "Use [Battery Disconnect and Connect](#/document/G1692356) (414-01 Battery, Mounting and Cables, General Procedures). The battery cover is beside the strut tower near the cowl. Remove its perimeter retainers and the cover, loosen the negative cable clamp nut, disconnect the clamp from the post and position the cable aside. Disconnecting the negative cable interrupts vehicle electrical power; disconnecting the positive cable is unnecessary for this job."
+        },
+        {
+          "name": "Reconnect the negative cable last",
+          "detail": "After the coils, wiring and engine appearance cover have been refitted, remove loose tools and keep everyone and all clothing clear of the fans, belts and other moving parts before restoring electrical power. With the ignition still OFF and key outside, reconnect the negative cable and tighten its clamp nut to 44 lb.in (5 Nm). Refit the battery cover and its retainers."
+        },
+        {
+          "name": "If the positive cable is also disconnected",
+          "detail": "After disconnecting the negative cable, swing open the positive-terminal protective cover, loosen the positive clamp nut and disconnect and position that cable aside. Reverse this sequence on connection: reconnect the positive cable before the negative cable, tighten the positive clamp nut to 44 lb.in (5 Nm), and restore its protective cover."
+        },
+        {
+          "name": "Allow for adaptive relearning",
+          "detail": "Battery disconnection and reconnection can produce abnormal drive symptoms while the PCM relearns its adaptive strategy. Driving may be needed to relearn the adaptive values."
+        }
+      ]
+    },
+    {
+      "category": "Access hardware and refit specifications",
+      "items": [
+        {
+          "name": "Ignition coil mounting bolts",
+          "detail": "After installing the ignition coil-on-plugs, install their mounting bolts and tighten to 89 lb.in (10 Nm). See [Ignition Coil-On-Plug](#/document/G1673188)."
+        },
+        {
+          "name": "Engine appearance cover fasteners",
+          "detail": "Refit the engine appearance cover, then install and tighten its retaining nuts and bolts to 80 lb.in (9 Nm). Reconnect the battery afterward."
+        }
+      ]
+    },
+    {
+      "category": "Ordinary completion after full reassembly",
+      "items": [
+        {
+          "name": "Prepare a stationary running check",
+          "detail": "This checks ordinary engine operation after reassembly; it is not a misfire diagnosis or proof that an earlier fault is fixed. Do not start in a closed garage or enclosed area, and do not park or idle over dry grass or other combustible ground cover. Open the garage door before starting. Keep people, tools and clothing clear of moving or hot engine parts. If exhaust fumes enter the cabin, stop and have the vehicle checked; do not drive it."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1673189-b00001",
+      "text": "Remove the Spark Plugs",
+      "why": ""
+    },
+    {
+      "blockId": "G1673189-b00002",
+      "text": "NOTE: Read the removal steps before starting; they may also contain details needed during installation.",
+      "why": "I check the whole sequence first so an installation requirement does not arrive as a surprise halfway through reassembly."
+    },
+    {
+      "blockId": "G1673189-b00004",
+      "text": "Remove all 4 ignition coil-on-plugs. Refer to: [Ignition Coil-On-Plug](#/document/G1673188) (303-07A Engine Ignition - 2.3L EcoBoost (231kW/314PS), Removal and Installation).",
+      "why": "Each coil sits at its spark plug and must come off to expose the plug well. Begin by disconnecting the battery as described in the preparation requirements. The appearance cover fasteners are around the central EcoBoost panel. Remove its retaining nuts, then its retaining bolts, and lift off the cover. The harness retainers attach at the outer ends of the coil row; detach these before unplugging the coil connectors. If a connector has a sliding cover over its locking tab, slide the cover back to expose the tab, depress the tab and disconnect the connector. Blow foreign material off the coils and surrounding area before removing their mounting bolts. Remove the coils with a slight twisting motion to break the seals and ease removal."
+    },
+    {
+      "blockId": "G1673189-b00005",
+      "text": "NOTICE: Remove spark plugs only when the engine is warm to hand touch after cooling down. Do not remove them while the engine is hot or cold soaked: spark plug threads or the cylinder head can be damaged.",
+      "why": "Warm is the required working condition here. Both temperature extremes are excluded, so a fully cold engine is not automatically ready for plug removal."
+    },
+    {
+      "blockId": "G1673189-b00006",
+      "text": "NOTICE: Discard any spark plug that is dropped. A fall can cause internal damage, and using the damaged plug can cause a cylinder misfire that results in engine damage.",
+      "why": "A plug can look intact while hiding damage inside. A visual once-over cannot cancel the discard requirement."
+    },
+    {
+      "blockId": "G1673189-b00007",
+      "text": "NOTE: Before removing the spark plugs, use compressed air to clear foreign material from the spark plug wells.",
+      "why": "I treat each well like the area around a bottle cap: clear the grit before opening it. Coil-area cleaning happens earlier; this second cleaning addresses material down in the wells before the plugs come out."
+    },
+    {
+      "blockId": "G1673189-b00008",
+      "text": "Remove the spark plugs using hand tools. Do not use an impact wrench.\nInstallation torque: 106 lb.in (12 Nm)",
+      "why": "The crossed-out impact wrench in the illustration is a tool restriction. The torque shown here applies when installing the plugs, not when loosening them."
+    },
+    {
+      "blockId": "G1673189-b00011",
+      "text": "Install the Spark Plugs",
+      "why": ""
+    },
+    {
+      "blockId": "G1673189-b00013",
+      "text": "Install by reversing the removal procedure: refit the spark plugs, then the ignition coil-on-plugs, wiring and engine appearance cover, and finally reconnect the battery.",
+      "why": "Use the plug installation torque given above. Before reinstalling the coils, inspect their assemblies for cracks, rips or tears and replace any damaged assembly. Install the coils before their mounting bolts, using the refit torque in the requirements. Reconnect the coil electrical connectors and press their locking tabs; where fitted, slide the tab covers back to gain access. Reattach the harness retainers afterward. Install the appearance cover before tightening its retaining nuts and bolts to the specified refit torque. Restore battery power only after this reassembly is complete and loose tools, people and clothing are clear of the fans, belts and other moving parts. I use that sequence as the final assembly check: coils secured, connectors locked, harness retained and cover fastened.\n\nAfter full reassembly and battery reconnection, clear the engine bay and close the hood. With the car fully grounded, wheels chocked and parking brake applied, enter with the valid key and fasten your seatbelt. Turn headlamps and electrical accessories off. Keep an automatic in Park; for a manual, select Neutral for starting. Without touching the accelerator, hold the brake pedal for an automatic or fully depress the clutch for a manual and press the start button. Observe ordinary engine operation from the cabin. If it will not start or runs abnormally, stop and use the matching diagnostic procedure; do not treat reassembly as a fault cure or keep trying repeatedly. With the vehicle stationary, release the pedals and press the button once to switch the running engine OFF. If it never started but ignition is ON, switch that known ON state OFF; if already OFF, leave it OFF. Keep the parking brake applied, restore a parked gear on a manual, confirm ignition OFF and remove the key before any underhood reinspection. The [Ford owner manual](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf) supplies the actual starting controls; this check adds no plug-gap setting or replacement-part choice."
+    }
+  ],
+  "checkedAt": "2026-10-28T11:44:21.804Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 9,
+    "receivedBlocks": 9,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "05e1ca9852824786a3f720545c274cb091e196fa6bf1941103df67ba6eaa2036",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 4,
+    "supportingSourceUnitCount": 105,
+    "sourceUnitCount": 12,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "22dd4009cd9383fc27a76a264935cb0cce4a680105d86156471ff6758b295c3d",
+    "reviewedAt": "2026-10-28T11:28:48.115Z",
+    "editorialRevision": {
+      "kind": "bounded-owner-controls-access-completion",
+      "scope": "Known-state parked setup, explicit existing negative-cable isolation before fan proximity, physical cover fastener locations and ordinary owner-backed engine completion. No primary action text/specification or plug selection scope changed. Prior complete independent review preserved; bounded increment assessed separately.",
+      "previousArtifactSha": "2a818e881ece5132e6cf87f3151c58d27e8603dd36b62033f0df2555566e6b3d",
+      "reviewedAt": "2026-10-28T11:35:37.527Z"
+    }
+  }
+}

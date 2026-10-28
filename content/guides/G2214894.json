@@ -1,0 +1,152 @@
+{
+  "documentId": "G2214894",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1663631",
+      "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237",
+      "referencedBy": "G2214894",
+      "sourceReference": "G1663631",
+      "sourceUnitCount": 12,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G2214894",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    }
+  ],
+  "sourceHash": "7a54ba966fd3b7b04ee6b0eb376a0657c21d59f7f19abe6d895501bd7537d8e4",
+  "title": "Differential Fluid Level Check and Top-Up",
+  "introduction": "The differential sends drive to both rear wheels while allowing them to turn at different speeds in a corner. This check uses its fill opening as the reference for the lubricant surface. I treat that opening like a measuring mark on a jug: its position matters more than a guess about how much oil ought to be inside.\n\nThe job is to identify the fill plug, compare the lubricant level with the illustrated limit, add the specified clean lubricant if needed, and tighten the plug. It is a level check and top-up, not a fluid-change procedure or a diagnosis of leaks, noise or internal wear.",
+  "requirements": [
+    {
+      "category": "Preparation and personal protection",
+      "items": [
+        {
+          "name": "Prevent an unexpected start",
+          "detail": "Begin on a hard, level surface with the vehicle safely parked, the parking brake applied and the wheels chocked. Complete remote-start disabling first, if fitted, through Vehicle settings > Remote Start Setup. If the menu needs ignition ON, keep a valid key inside and the engine OFF: from ignition OFF, release the pedals and press the start button once; if already ON, leave it ON rather than pressing again.\n\nFor an automatic, establish engine-off ignition ON in the same way if it is not already ON, then hold the service brake and select Neutral in the ground-level cabin. With the parking brake and chocks maintaining restraint, release the brake pedal and press the button once to switch ignition OFF. For a manual, switch ignition OFF if it is ON, then select Neutral with the engine OFF while maintaining those restraints. Confirm ignition OFF and remove the key before hands-on service. Keep the parking brake applied throughout the job.\n\nThe ignition controls follow the Ford Mustang owner manual; service precautions are in [Health and Safety Precautions](#/document/G1693189). A remote or accidental engine start during service can cause serious personal injury or death."
+        },
+        {
+          "name": "Protect eyes, ears and hands",
+          "detail": "Wear eye and ear protection during service. Wear protective gloves when handling parts with sharp or pointed edges. Failure to use the required protection can cause serious personal injury."
+        },
+        {
+          "name": "Lubricant and equipment",
+          "detail": "Have clean lubricant matching the materials table, suitable means to add it through the fill opening and equipment capable of applying the specified fill-plug torque. Read the lubricant's material safety information sheet before use; improper use of specified chemicals or materials can cause serious personal injury. No particular fill-plug drive size or level-measuring tool is specified here."
+        }
+      ]
+    },
+    {
+      "category": "Hoist setup",
+      "items": [
+        {
+          "name": "Capacity and correct support points",
+          "detail": "Confirm that the hoist can support the vehicle's weight, including cargo and modifications. Position the arms at the locations in [Jacking and Lifting - Overview](#/document/G1663631). Locate the triangles stamped into the body or frame at the sill lifting locations. Using other locations can let the vehicle shift or fall, causing serious injury or death."
+        },
+        {
+          "name": "Protect surrounding components",
+          "detail": "Position hoist adapters clear of suspension, exhaust and steering linkage. With a two-column hoist, keep the forks clear of suspension components, mounting brackets and stabilizer mounting brackets, if equipped. Avoid contact that could damage the axle or rear cover. Check for underbody interference before driving onto a drive-on lift."
+        },
+        {
+          "name": "Jack precautions during any setup",
+          "detail": "If a jack is used during setup, check its capacity against the vehicle's weight, cargo and modifications. Use a hard, level surface, set the parking brake and block wheels remaining on the ground. Always support a jacked vehicle with floor stands; never work underneath with only the jack supporting it, because it can lower unexpectedly. Incorrect support can cause unintended movement and serious injury or death. The vehicle's emergency jack is only for changing a deflated tire. Do not apply jack pressure to either bumper; vehicle or bumper-cover damage can result."
+        },
+        {
+          "name": "Powered wheels",
+          "detail": "Do not use the engine to power the drive wheels unless all drive wheels are elevated. Drive wheels contacting the ground, or incorrectly positioned lift arms, can cause unintended movement and serious injury or death."
+        }
+      ]
+    },
+    {
+      "category": "Lowering and returning to the parked state",
+      "items": [
+        {
+          "name": "Finish the check before lowering",
+          "detail": "After the fill plug is installed and tightened, remove the tools and clear everyone from underneath the vehicle. Keep the parking brake applied while lowering and restore ground-wheel restraints as the tires meet the ground."
+        },
+        {
+          "name": "Restore the grounded parked state",
+          "detail": "With the vehicle fully grounded, chocked and the parking brake still applied, restore its parked gear. For an automatic, enter the ground-level cabin with the valid key, release the pedals and press the button once from known ignition OFF for engine-off ON. Hold the service brake, select Park, then release the brake and press the button once for OFF. For a manual, keep the engine and ignition OFF and select a parked gear. Confirm ignition OFF and remove the key before leaving."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G2214894-b00001",
+      "text": "Specified lubricant",
+      "why": "Use the table's lubricant identity and specification together when selecting material. The table remains the reference; this check does not supply a drain-and-refill quantity."
+    },
+    {
+      "blockId": "G2214894-b00003",
+      "text": "Check and top up the level",
+      "why": ""
+    },
+    {
+      "blockId": "G2214894-b00005",
+      "text": "With the vehicle in NEUTRAL, position it on a hoist. Refer to: [Jacking and Lifting - Overview](#/document/G1663631) (100-02 Jacking and Lifting, Description and Operation).",
+      "why": "Hoisting provides access to the differential housing. Complete the support-point, capacity and clearance checks above before working underneath."
+    },
+    {
+      "blockId": "G2214894-b00007",
+      "text": "Remove the differential fluid fill plug highlighted in the drawing.",
+      "why": "I use the arrow to identify the upper plug on the right side of the pictured housing, above the lower central plug. This opens the reference point for checking and adding lubricant; the lower plug remains installed."
+    },
+    {
+      "blockId": "G2214894-b00010",
+      "text": "Check the differential gear-lubricant level against the lower edge of the fill-plug opening. The lubricant surface should be no more than 9mm (0.354 in.) below the opening. If it is lower, add clean differential gear lubricant and recheck until the level is within that limit. Refer to: Specifications (205-02). Material: Motorcraft® SAE 75W-85 Premium Synthetic Hypoid Gear Lubricant / XY-75W85-QL (WSS-M2C942-A).",
+      "why": "The drawing places the lubricant surface below the opening and shows the permitted separation. A surface farther below the opening needs topping up; a surface within the stated limit satisfies this level check. The opening is a measuring reference, so do not substitute an assumed fill quantity or treat overflow as the instructed target."
+    },
+    {
+      "blockId": "G2214894-b00013",
+      "text": "Reinstall the differential fluid fill plug and tighten it to 25 lb.ft (34 Nm).",
+      "why": "Once the lubricant level is within the specified limit, the tightened fill plug closes the opening and completes the check. This result establishes the level at the time of checking; it does not identify why lubricant was low."
+    }
+  ],
+  "checkedAt": "2026-10-28T11:55:19.560Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "f7af97e888b0249e2a37cc9e22ba2a41f55a9bb32fd0f6fe4d7a430cd3db5086",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 60,
+    "sourceUnitCount": 13,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6924cbe71b5750a432eeeee2991e9be37b1e0d1efb26e3ff35da82d141fb8a31",
+    "reviewedAt": "2026-10-28T11:50:03.358Z",
+    "editorialRevision": {
+      "kind": "source-bound-operational-controls-increment",
+      "scope": "Preparation-only known-state ignition/Neutral, continuous restraint, clear-underbody lowering and grounded parked state. Original level/top-up mechanics, values, figures, title and introduction remain unchanged.",
+      "baseSha": "0e0ed12d50c77c47f682a4bda09db8928c43d44b392e6db86e6203c062f02378",
+      "priorFullReviewPreserved": true
+    }
+  }
+}

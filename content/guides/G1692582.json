@@ -1,0 +1,247 @@
+{
+  "documentId": "G1692582",
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1686507",
+      "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454",
+      "referencedBy": "G1692582",
+      "sourceReference": "G1686507",
+      "sourceUnitCount": 37,
+      "mediaCount": 6
+    },
+    {
+      "documentId": "G1663631",
+      "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237",
+      "referencedBy": "G1686507",
+      "sourceReference": "G1663631",
+      "sourceUnitCount": 12,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1693180",
+      "sourceHash": "82a2a9947a393820e067c252d2e9a06335648efae493326b0caea6dcc7b29008",
+      "referencedBy": "G1692582",
+      "sourceReference": "G1693180",
+      "navigationOnly": true
+    },
+    {
+      "documentId": "G1693189",
+      "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a",
+      "referencedBy": "G1693180",
+      "sourceReference": "G1693189",
+      "sourceUnitCount": 48,
+      "mediaCount": 17
+    },
+    {
+      "documentId": "G1693183",
+      "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693183",
+      "sourceUnitCount": 6,
+      "mediaCount": 2
+    },
+    {
+      "documentId": "G1693193",
+      "sourceHash": "b6595acbaf5a90a8f1ebad6ee421b396717797e29b8e00e7ae645a06e6d145ed",
+      "referencedBy": "G1693189",
+      "sourceReference": "G1693193",
+      "sourceUnitCount": 13,
+      "mediaCount": 6
+    }
+  ],
+  "sourceHash": "d532f8491349b6280903df32488cec44a2d2174247327ba3a1c8cc6a0b968e3f",
+  "title": "Rear Wheel Speed Sensor Removal and Refitting",
+  "introduction": "The rear wheel speed sensor reports wheel rotation to ABS and stability control. This guide covers removing and refitting that sensor, with wheel removal and safe lifting as essential preparation. It does not diagnose a warning lamp: wiring and the sensor’s signal target can also cause wheel-speed faults.\n\nI use the drawings to trace the lead from its electrical connector, through its harness retainers, to the sensor beside the brake disc. Those retainers are cable management with a serious job—this is no place for a loose headphone-cord impression. Keep the original harness route when refitting. Mechanical completion here means a clean sensor cavity, the sensor secured, the harness reattached and connected, and the wheel correctly installed; signal testing is outside this procedure.",
+  "requirements": [
+    {
+      "category": "Prevent unexpected starting and protect yourself",
+      "items": [
+        {
+          "name": "Disable remote start and remove the key",
+          "detail": "Begin on a hard, level surface with the vehicle safely parked, the parking brake applied and the wheels chocked. Complete remote-start disabling first, if fitted, through Vehicle settings > Remote Start Setup. If the menu needs ignition ON, keep a valid key inside and the engine OFF: from ignition OFF, release the pedals and press the start button once; if already ON, leave it ON rather than pressing again.\n\nFor an automatic, establish engine-off ignition ON in the same way if it is not already ON, then hold the service brake and select Neutral in the ground-level cabin. With the parking brake and chocks maintaining restraint, release the brake pedal and press the button once to switch ignition OFF. For a manual, switch ignition OFF if it is ON, then select Neutral with the engine OFF while maintaining those restraints. Confirm ignition OFF and remove the key before hands-on service. Keep the parking brake applied throughout the job.\n\nThe ignition controls follow the Ford Mustang owner manual; service precautions are in [Health and Safety Precautions](#/document/G1693189). A remote or accidental engine start during service can cause serious personal injury or death."
+        },
+        {
+          "name": "Protection and material handling",
+          "detail": "Wear eye and ear protection while servicing the vehicle, and protective gloves when handling sharp-edged parts; failure to do so can cause serious personal injury. Consult the material safety information sheet before using the specified wheel-installation lubricant or other service materials. Improper chemical use can create a health hazard and cause serious personal injury."
+        },
+        {
+          "name": "Equipment",
+          "detail": "Have a suitable hoist, compressed-air equipment, a cleaning cloth, tools for the wheel nuts and sensor bolt, and torque tools suitable for both fasteners. Have Motorcraft® High Temperature Nickel Anti-Seize Lubricant / XL-2, specified in [Wheel and Tire](#/document/G1686507), for the wheel-pilot/hub-pilot interface only."
+        }
+      ]
+    },
+    {
+      "category": "Lift the vehicle safely",
+      "items": [
+        {
+          "name": "Hoist setup",
+          "detail": "Keep the parking brake applied and restrain wheels remaining on the ground while positioning the vehicle. The wheel-removal procedure requires the vehicle in NEUTRAL on a hoist. Check that the hoist capacity accommodates the vehicle, including cargo and modifications. Position the lift arms at the locations in [Jacking and Lifting - Overview (100-02 Jacking and Lifting, Description and Operation)](#/document/G1663631). The drawing identifies reinforced lifting locations along the sides of the underbody near the front and rear wheels; locate the triangles stamped into the body sheet metal or frame to identify the actual points. Lifting elsewhere can let the vehicle shift or fall and cause serious personal injury. Incorrect hoist-arm positioning can cause unintended movement, serious personal injury or death."
+        },
+        {
+          "name": "Check lift clearance",
+          "detail": "Position hoist adapters clear of suspension, exhaust and steering-linkage components to prevent damage. On a two-column hoist, keep the forks clear of suspension components, mounting brackets and stabilizer mounting brackets, if equipped, and avoid damaging the axle or rear cover. If using a drive-on lift, check for underbody interference before driving onto it. Do not use the engine to power the drive wheels unless all drive wheels are off the ground; ground contact can cause unintended vehicle movement, serious personal injury or death."
+        },
+        {
+          "name": "Jack restrictions",
+          "detail": "Never get underneath a vehicle supported only by a jack: it can lower unexpectedly and cause serious personal injury. A jacked vehicle requires floor stands. The vehicle’s emergency jack is only for changing a deflated tire; using it for other service can damage the vehicle. Never apply jack pressure to either bumper, because the bumper covers will be damaged. These restrictions do not replace the hoist setup required for this job."
+        }
+      ]
+    },
+    {
+      "category": "Brake-dust control before disassembly",
+      "items": [
+        {
+          "name": "Brake dust precaution",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing residue; it can present serious respiratory and other health hazards. Review [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183). Control dust before disturbing dusty components or beginning mounting-face preparation."
+        },
+        {
+          "name": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "name": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "name": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
+        }
+      ]
+    },
+    {
+      "category": "Keep sensor cleaning separate from brake-dust removal",
+      "items": [
+        {
+          "name": "Compressed-air boundary",
+          "detail": "Use compressed air only for the specified cleaning around the sensor. Do not breathe friction-component dust or blow it from brake friction components or storage containers with compressed air. Remove friction dust using government-approved techniques. Such dust can present cancer and lung-disease hazards, irritate skin, eyes and the respiratory tract, cause allergic reactions or other chronic health effects, and cause serious personal injury. Seek medical attention or advice if irritation persists. Review [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) before cleaning near the brake assembly."
+        }
+      ]
+    },
+    {
+      "category": "Remove and refit the wheel correctly",
+      "items": [
+        {
+          "name": "Wheel removal",
+          "detail": "After the required hoist setup, remove the wheel nuts and lift off the wheel-and-tire assembly. Do not use heat on a seized wheel nut: it can damage the wheel and wheel bearing. If the wheel is cracked, deflate its tire before removing the wheel from the vehicle; failing to do so can cause serious personal injury. See [Wheel and Tire](#/document/G1686507) and [Wheel and Tire Health and Safety Precautions](#/document/G1693193)."
+        },
+        {
+          "name": "Prepare the wheel mounting surfaces",
+          "detail": "Before refitting, remove corrosion, dirt and foreign material from the wheel mounting face and the mating hub, brake-disc or brake-drum mounting face. Make sure any rotor-to-hub fasteners are secured and do not interfere with those faces. Contamination or interference can let the wheel nuts loosen and the wheel come off while driving, causing loss of control, serious injury or death."
+        },
+        {
+          "name": "Apply lubricant only at the pilot",
+          "detail": "Apply a thin coat of the specified anti-seize only where the wheel’s central pilot bore fits over the hub pilot. The wheel illustration highlights this central bore, not the broad mounting face. Keep anti-seize off the wheel-to-disc/drum mounting surfaces, studs, nuts, brake pads and disc friction surfaces; contamination can damage components."
+        },
+        {
+          "name": "Install and tighten the wheel nuts",
+          "detail": "Position the wheel and install the nuts finger tight initially. Keep stud and nut threads clean and dry: the torque specification depends on that condition. With the vehicle resting on its tires, tighten the nuts in the illustrated star/cross pattern to 150 lb.ft (204 Nm). The drawing progresses from the top nut to the lower-left, upper-right, upper-left and lower-right nuts. Failing to use the star/cross pattern can create high brake-disc runout and accelerate brake roughness, shudder and vibration."
+        },
+        {
+          "name": "Required wheel-nut recheck",
+          "detail": "Retighten the wheel nuts within 160 km (100 mi) after reinstalling the wheel. Wheels can loosen after their initial tightening; failing to retighten them can cause serious injury to vehicle occupants."
+        }
+      ]
+    },
+    {
+      "category": "Lowering and returning to the parked state",
+      "items": [
+        {
+          "name": "Keep restraint continuous",
+          "detail": "After the wheels are seated and their nuts initially finger tight, keep the parking brake applied while lowering. Restore ground-wheel restraints as the tires meet the ground, then perform the final wheel-nut tightening below with the car resting on its tires."
+        },
+        {
+          "name": "Restore the grounded parked state",
+          "detail": "After tightening, with the vehicle fully grounded, chocked and the parking brake still applied, restore its parked gear. For an automatic, enter the ground-level cabin with the valid key, release the pedals and press the button once from known ignition OFF for engine-off ON. Hold the service brake, select Park, then release the brake and press the button once for OFF. For a manual, keep the engine and ignition OFF and select a parked gear. Confirm ignition OFF and remove the key before leaving."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1692582-b00001",
+      "text": "Remove the Rear Wheel Speed Sensor",
+      "why": ""
+    },
+    {
+      "blockId": "G1692582-b00002",
+      "text": "NOTE: The removal instructions also include details needed during installation.",
+      "why": "I check the whole sequence before starting so the bolt-tightening detail is ready when the sensor goes back in."
+    },
+    {
+      "blockId": "G1692582-b00004",
+      "text": "Remove the rear wheel-and-tire assembly using [Wheel and Tire (204-04A Wheels and Tires, Removal and Installation)](#/document/G1686507).",
+      "why": "Removing the wheel exposes the sensor mounting area beside the rear brake disc. The linked procedure supplies the required NEUTRAL-and-hoist setup, wheel-nut removal and wheel-refitting precautions; those are part of this job, not optional background reading."
+    },
+    {
+      "blockId": "G1692582-b00006",
+      "text": "Use compressed air to clean the area surrounding the rear wheel speed sensor before removing it.",
+      "why": "The highlighted area is the sensor’s mounting location beside the brake disc. Cleaning outside first helps keep loose material from entering the cavity when the sensor comes out. Keep this operation confined to the sensor area and observe the brake-dust precautions above."
+    },
+    {
+      "blockId": "G1692582-b00009",
+      "text": "Disconnect the rear wheel speed sensor’s electrical connector. Separate the sensor-lead plug from its mating connector in the direction shown by the connector inset arrow.",
+      "why": "The connector sits at the body-side end of the highlighted lead, away from the sensor’s bolted mounting point. I trace the lead to that connection first so the sensor can be removed without leaving its wiring tethered to the vehicle."
+    },
+    {
+      "blockId": "G1692582-b00011",
+      "text": "Detach the 2 sensor-harness retainers. Pull the body-side retainer away from the body panel, and release the upper retainer from its bracket in the arrowed direction.",
+      "why": "The body-side attachment is beside the electrical connector; the other sits above the suspension arm where the lead crosses toward the sensor. Freeing these attachments releases the harness with the sensor. Their original mounting positions also establish where the lead must return during installation."
+    },
+    {
+      "blockId": "G1692582-b00013",
+      "text": "Remove the retaining bolt, then remove the rear wheel speed sensor from its housing.\nDuring installation, tighten the sensor bolt to 80 lb.in (9 Nm).",
+      "why": "The bolt secures the sensor’s mounting tab beside the brake disc. The torque belongs to refitting, not removal; keep the inch-pound unit in view when setting the torque tool."
+    },
+    {
+      "blockId": "G1692582-b00016",
+      "text": "Refit the Rear Wheel Speed Sensor",
+      "why": ""
+    },
+    {
+      "blockId": "G1692582-b00018",
+      "text": "Install in reverse removal order, completing the new-sensor cavity check below before inserting the sensor. Fit the sensor into its housing and install the retaining bolt, tightening it to the value given in the removal instructions. Reattach the harness retainers at their original mounting points, reconnect the electrical connector, and reinstall the wheel-and-tire assembly using the linked Wheel and Tire procedure.",
+      "why": "Reverse order restores both the sensor mounting and the harness route. Before finishing, I check that the retainers are attached and the connector is joined, then complete wheel tightening and the required wheel-nut recheck. The supplied procedure gives no electrical signal test or warning-lamp verification, so mechanical refitting alone does not establish that an earlier ABS or stability-control fault is resolved."
+    },
+    {
+      "blockId": "G1692582-b00020",
+      "text": "Before installing a new sensor, wipe the sensor housing’s mounting face clean and inspect the sensor cavity. Make sure the cavity is clean and free of foreign material before fitting the new sensor.",
+      "why": "The illustration pairs a wiping symbol with a visual-inspection symbol at the exposed mounting area. A clean outer face does not by itself confirm a clean cavity: look into the opening as well. Although this check appears after the reverse-order instruction, its timing is explicit—it comes before the new sensor goes in."
+    }
+  ],
+  "checkedAt": "2026-10-28T11:37:39.380Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 10,
+    "receivedBlocks": 10,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bac9b170f0fa07aeeb7510f5144bdbcd5c20bfb23c0acc3e90aeb86c327f4442",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 1,
+    "supportingSourceDocumentCount": 5,
+    "supportingSourceUnitCount": 116,
+    "sourceUnitCount": 15,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ececd9e32c39471b6eb8c049e229045cce7b9ac8429a8448b0ed04c2bd5fa11e",
+    "reviewedAt": "2026-10-28T11:33:03.512Z",
+    "editorialRevision": {
+      "kind": "bounded-owner-controls-dust",
+      "scope": "Preparation-only known-state Neutral/grounded parking transitions, actual existing XL-2 material and separately identified EPA dust controls before mounting-face cleaning. Primary sensor-only compressed-air boundary, all actions/torques and limited mechanical completion preserved. Prior complete review retained; increment assessed separately.",
+      "previousArtifactSha": "34e035764b72b4f1d556ecb19123a745e873b364469984289d4daa204bc15f74",
+      "reviewedAt": "2026-10-28T11:37:39.380Z"
+    }
+  }
+}
