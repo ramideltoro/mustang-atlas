@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C341A",
+  "supportingSourceRefs": [],
+  "sourceHash": "225a3715c35bd7af0c58e63284103aadc39ad334eecf551424e27c2808967117",
+  "title": "C341A — Driver seat module (DSM) connector guide",
+  "introduction": "A powered seat needs a path for current to arrive and a path for it to return. I use this driver seat module connector reference to keep those jobs straight before the module alphabet soup takes over. The power and ground function labels give the cavity map its meaning.\n\nBegin with the identification table, then match each circled label in the drawing to the Cavity column below it. Read across that row for the circuit identifier, wire color, gauge, function and terminal reference. The housing Color field describes the connector; the pin table's Color column describes the wires. The pigtail tables provide parts references separately from the circuit assignments.\n\nThis page teaches how to read the reference. Physical access, connector probing, electrical tests and replacement require their own applicable instructions. The physical viewing direction, gauge convention and meanings of Box, Size and Used are unspecified; I keep those fields separate and leave their codes uninterpreted. Identifying a power or ground connection does not verify its condition.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C341A-b00002",
+      "text": "Connector face for harness 14D231",
+      "why": "The drawing places the cavity labels vertically beside an asymmetric housing detail. I match those labels to the Cavity entries, using the outline to navigate the illustration without assuming a physical viewing direction. The table beneath it associates the face with its Fpn, Size and harness reference."
+    },
+    {
+      "blockId": "connector-C341A-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Keep each cavity's details together by reading horizontally across its row. The function descriptions identify the seat-power connection and the driver-seat ground connection, including their seat-switch associations. Those labels distinguish supply and return roles; they do not establish that either path can carry its working load."
+    },
+    {
+      "blockId": "connector-C341A-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail combines a connector with attached wire leads. Each row groups its kit number, lead gauge, material, cavity count, image filename, service part and engineering shell. I treat these as complete catalog entries: a shared shell reference does not settle wire selection or make the kits interchangeable."
+    },
+    {
+      "blockId": "connector-C341A-b00009",
+      "text": "European pigtail reference",
+      "why": "Use the Product Id as the European pigtail lookup reference. Its relationship to an individual kit in the preceding table is unspecified, so this entry supports identification without choosing a replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:42:04.998Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "baacc1077581a27b3b7ea33846bae7d3e8b7922a33bf73db3ebb329d17c1e911",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "281d2055b3ed7f492d6ab5d0956209fc2ea6d940fc04a58654435d70d092de2a",
+    "reviewedAt": "2026-10-28T01:42:04.998Z"
+  }
+}

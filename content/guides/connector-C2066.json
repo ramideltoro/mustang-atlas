@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2066",
+  "supportingSourceRefs": [],
+  "sourceHash": "d4dc798a8e12b93710c6a435b7b59e2764ebeb475f9f39bda40b3cb98e61199d",
+  "title": "C2066 — Blower motor connector guide",
+  "introduction": "The blower motor moves air through the cabin heating and air-conditioning unit. It gives the vents their puff; other components determine how warm or cold that air becomes. I use this reference as an address book for the blower wiring, connecting each cavity label in the drawing to its circuit assignment.\n\nStart with the identification table, then compare the connector drawing with the Cavity column in the pin table. Read across the matching row to connect the circuit identifier, wire color, gauge, function and terminal reference. The housing Color field and the wire Color column describe different things. The parts tables below provide separate pigtail and shell references.\n\nThis is a reading guide, with no physical access, probing, testing or replacement procedure. The drawing's physical viewing direction, gauge convention and meanings of the Size and Used codes are unspecified. Keep those limits in mind when using this map alongside the applicable service instructions; a circuit assignment alone cannot tell you whether the blower works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2066-b00002",
+      "text": "Connector face for harness 18B574",
+      "why": "I use the asymmetric housing outline and vertically stacked cavity labels to navigate the drawing, then match each label to the Cavity column below. Their position on the page does not establish which side of the physical connector to view. The accompanying table associates the drawing with its Fpn, Size and harness reference."
+    },
+    {
+      "blockId": "connector-C2066-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Read each row horizontally so the cavity, circuit, wire details and terminal reference stay together. The function descriptions distinguish the variable-speed blower control module connection from the front-blower relay connection. A relay is an electrically controlled switch; its appearance in a function label does not establish that it is a separate plug-in component."
+    },
+    {
+      "blockId": "connector-C2066-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I keep each listed kit's gauge, material, cavity count, image filename, service part and engineering shell together. The Service Part and Engineering Shell columns serve different identification purposes, and a shared shell reference alone does not establish that the listed kits are interchangeable."
+    },
+    {
+      "blockId": "connector-C2066-b00009",
+      "text": "European pigtail reference",
+      "why": "The Product Id provides the European pigtail lookup reference. This entry does not assign it to a particular row in the preceding parts table or provide installation instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:42:04.990Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "46dd2419a7a83efa51fae966261ccceb873753c087d0d59719ce83d25a2db995",
+  "sourcePdfHash": "85eafcd702feb88534590450ffde6643b4d1b3254a77cc0f08f4f1af8d933ccf",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a04757c7de91d99d2ee039945d4a400f6f0c6e56074975107d55211885a7e150",
+    "reviewedAt": "2026-10-28T01:42:04.990Z"
+  }
+}

@@ -58862,143 +58862,195 @@
       }
     },
     {
-      "title": "Diagnose forward-clutch engagement faults in the 6R80 automatic",
-      "summary": "Trace missing, continuous, slipping or harsh forward-clutch application through transmission strategy, solenoid, valve-body and internal hydraulic checks.",
-      "introduction": "The forward clutch, also called clutch A, carries torque in first through fourth gears. It releases in fifth and sixth, and in Park, Reverse and Neutral. Shift solenoid A (SSA) controls pressure acting on the clutch regulator and latch valves. Those valves control the hydraulic pressure that applies the clutch plates, so an engagement complaint can originate well upstream of the plates themselves.",
-      "why": "Programming, sticking valves and blocked or leaking passages can produce similar symptoms. Classifying the complaint helps select the right inspection route and avoids treating every engagement problem as a worn clutch pack.",
+      "title": "Interpret recorded 6R80 forward-clutch diagnostic results",
+      "summary": "Use existing technician records to distinguish four forward-clutch complaints and interpret the source chart’s calibration, solenoid, valve-body and internal-transmission repair destinations.",
+      "introduction": "I use this guide to interpret completed diagnostic records for the 6R80 forward clutch. It explains normal clutch operation and preserves the different decisions for non-application, continuous application, delayed or slipping application, and harsh application. Missing findings remain unresolved; the worksheet does not perform fault isolation or establish that a repair is complete.",
+      "why": "The forward clutch, also called clutch A, uses hydraulic pressure to press friction plates together and transmit torque in first through fourth gears. Shift solenoid A controls the valves that deliver that pressure. A programming mismatch, sticking valve or obstructed passage can therefore resemble trouble inside the clutch itself. I start by separating those possibilities so an expensive internal repair has a reason behind it.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "6R80 forward clutch does not apply",
-        "6R80 forward clutch stays applied",
-        "delayed forward clutch engagement",
-        "forward clutch slipping",
-        "harsh forward clutch apply"
+        "2015 Mustang 6R80 forward clutch",
+        "6R80 clutch A does not apply",
+        "6R80 forward clutch always applied",
+        "6R80 delayed soft slipping forward clutch",
+        "6R80 harsh forward clutch apply",
+        "6R80 SSA solenoid strategy"
       ],
       "when": {
-        "summary": "Use when forward-clutch application is absent, continuous, delayed, soft, slipping or harsh.",
+        "summary": "Use only with existing, attributable technician records for a forward-clutch investigation.",
         "notes": [
-          "These symptoms identify diagnostic routes; none proves that the clutch assembly itself needs replacement."
+          "Applies to 2015 Mustangs with the 2.3L, 3.7L or 5.0L engine and the 6R80 six-speed automatic transmission.",
+          "The four complaint groups are failure to apply, continuous application, delayed/soft/slipping application and harsh application.",
+          "Clutch A normally releases in fifth and sixth gear.",
+          "A complaint identifies possible causes; it does not establish which part needs replacement.",
+          "This article does not retrieve scan data, expose identifiers, select or replace parts, program a controller, inspect internal components or perform road tests. Those operations require their separate complete procedures."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange the appropriate repair capability",
-          "detail": "Have access to scan-tool transmission strategy programming and the linked solenoid, valve-body and transmission-overhaul procedures. Internal inspections require transmission bench-work capability; this symptom chart does not provide teardown instructions."
+          "title": "Require existing diagnostic records",
+          "detail": "Have the vehicle and 6R80 identification, recorded complaint and actual gear behavior, dates and technician findings with their diagnostic method and result. Symptoms identify possible causes; they do not establish mechanical SSA sticking, a regulator or latch-valve fault, hydraulic leakage or blockage, or internal damage. If the required finding or its provenance is missing or ambiguous, leave that branch unresolved."
         },
         {
-          "title": "Identify calibration and replacement parts",
-          "detail": "Compare the strategy etched on the main control with the scan-tool display. Any replacement solenoid must match the original injector nozzle and band number."
+          "title": "Use recorded identifiers and comparisons only",
+          "detail": "Require existing photographs or transcriptions of the vehicle transmission code, transmission case identity, 13-digit numeric solenoid strategy and separate 12-character body ID. For a strategy branch, require the recorded programmed strategy and actual etched main-control identification with a documented comparison. Do not reach a tag, expose the main control or operate a scan tool from this article."
+        },
+        {
+          "title": "Distinguish repair requirements from completed work",
+          "detail": "The linked repair destinations are separate procedures. A chart instruction to disassemble, inspect, clean, replace or program remains required work until a completion record establishes it. Existing solenoid-replacement records must identify matching injector nozzle and calibration band, and the required strategy download. New-solenoid-body records must include its new strategy download and replacement tag over the original."
+        },
+        {
+          "title": "Retain the source’s selection limits",
+          "detail": "Solenoid bands are 1, 2, 3, 4 or 5; an illustrated example does not select the vehicle’s part. Clutch plate quantity is model dependent and the retaining snap ring is selective. The exploded arrangement does not establish either selection or a dismantling method."
         }
       ],
       "steps": [
         {
-          "title": "Classify application and release behavior",
-          "body": "Use the clutch operation description to distinguish failure to apply from failure to release. Remember that release in fifth and sixth is normal. Select the matching symptom-chart branch before choosing an invasive inspection."
+          "title": "Read the recorded transmission identity",
+          "body": "Use the existing vehicle and transmission records to confirm the 6R80 application. The Vehicle Certification Label TR field identifies the transmission code; the transmission case tag supplies part number, build date and serial number. Read those three fields from the existing photograph or transcription. A missing or ambiguous identity blocks interpretation.\n\nThe source locates the case tag above the fluid-pan joint near the bellhousing end. That description helps recognize an existing record; it is not an instruction to access the transmission. [Transmission overview and identification](#/document/G1686444)."
         },
         {
-          "title": "Check strategy for soft or harsh application",
-          "body": "Incorrect strategy in the powertrain control module (PCM) is a listed cause of delayed, soft, slipping or harsh application. If the main-control strategy and scan-tool display disagree, perform the Transmission Strategy Download. A mismatch can create harsh shifts without proving internal clutch damage."
+          "title": "Separate the recorded strategy and body identifiers",
+          "body": "Read the existing solenoid-body tag record into two distinct fields: the 13-digit numeric strategy and the separate 12-character body identification. The strategy contains numbers only; the illustrated body ID includes letters. Do not copy the source’s example values into a vehicle record.\n\nThe original case label and replacement service label identify the strategy and body ID separately. If either required record is absent or illegible, leave the comparison unresolved."
         },
         {
-          "title": "Follow the solenoid route when mechanical sticking is identified",
-          "body": "SSA stuck OFF can prevent application; stuck ON can hold the clutch applied. Intermittent sticking is also listed for soft or harsh application. Use the shift-solenoid replacement procedure when this cause is established, match the replacement calibration, and perform the required strategy download."
+          "title": "Get acquainted with the internal clutch assembly",
+          "body": "The cutaway places the forward clutch toward the front of the transmission, behind the torque converter. The exploded view separates its cylinder, apply piston, piston return spring, balance piston, wave spring, plate assembly and retaining snap ring. The apply piston presses the plates together; the return spring helps the mechanism release.\n\nThe neighboring gear components are the front planetary carrier, rear planetary No. 3 sun-gear hub and shaft assembly, and rear planetary No. 3 sun gear. I use these views to locate the clutch within the transmission and distinguish its parts from the hydraulic controls that operate it. [Forward-clutch construction and operation](#/document/G1686435)."
         },
         {
-          "title": "Inspect the regulating valves",
-          "body": "Disassemble, clean and inspect the clutch A regulator valve for the relevant stuck or sticking condition. Delayed, soft or slipping application also includes the latch valve. If a valve or bore is damaged, the prescribed repair is a new main control valve body."
+          "title": "Follow the pressure route that applies clutch A",
+          "body": "I follow two pressure routes here: the fluid that does the work and the solenoid-controlled pressure that positions the valves.\n\nWith the manual valve in DRIVE, 3, 2 or 1, pump-generated line pressure reaches the clutch A regulator valve through the DRIVE circuit. Shift solenoid A, abbreviated SSA, controls regulated solenoid pressure from SREG through VFS1 to position the clutch A regulator and latch valves. The regulator then delivers controlled line pressure through CL A to apply the clutch.\n\nClutch A is applied in first, second, third and fourth gears. DRIVE, SREG, VFS1 and CL A are hydraulic-circuit names. This is a description of fluid routing, not a selector-moving exercise."
         },
         {
-          "title": "Inspect the hydraulic passages",
-          "body": "All four complaint branches include blocked or leaking CLA, DRIVE and VFS1 circuits. Follow valve-body removal and bench-overhaul procedures to inspect the valve body and separator-plate passages for debris or blockage, cleaning as necessary."
+          "title": "Understand normal release and low-pressure filling",
+          "body": "Clutch A releases in Park, Reverse and Neutral. It also releases in Drive when the transmission reaches fifth or sixth gear. SSA lowers pressure to the regulator and latch valves, which blocks the regulated line-pressure supply through CL A.\n\nThere is a useful wrinkle: in second through sixth gears, the D2 latch valve routes fluid from CL EXH into CL A at approximately 21 kPa (3 psi). This low-pressure fill keeps air out of the circuit and helps make a downshift into fourth smooth.\n\nI keep that distinction clear: a circuit containing fluid is not necessarily applying the clutch. Approximately 21 kPa (3 psi) describes the fill function, not a service pressure-test target."
         },
         {
-          "title": "Choose the applicable internal inspection",
-          "body": "For non-application, inspect the input shaft, Teflon seals, drum, friction plates and piston seals for wear or damage. Continuous application also lists plates and piston seals. Delayed/soft/slipping routes include the center support and forward-clutch hub/direct-clutch drum; harsh-apply routes include the input shaft, seals, drum and piston return spring. Both also list plates and piston seals and direct transmission-passage inspection for debris or blockage. Use the overhaul procedure for execution."
+          "title": "Choose the complaint branch from the recorded behavior",
+          "body": "Sort the existing complaint into one of four groups: the clutch does not apply; it stays applied when it should release; its application is delayed, soft or slipping; or its application is harsh.\n\nKeep selected range and actual gear separate. Drive includes fifth and sixth, where clutch A normally releases. A general report of poor shifting without the required recorded range and gear behavior leaves classification unresolved.\n\nI then use the decision rows below to keep every relevant possibility in play. [Forward-clutch symptom chart](#/document/G1686451)."
+        },
+        {
+          "title": "Interpret the documented strategy comparison",
+          "body": "Incorrect PCM transmission strategy is a listed possible cause of delayed, soft, slipping and harsh application. Require the existing technician comparison of the programmed strategy with the strategy etched on the actual main control. The source marks a narrow identification strip near the middle of that assembly; no physical inspection is performed here.\n\nA recorded mismatch directs the separate [Transmission Strategy Download](#/document/G1692055), because an incorrect strategy can cause harsh shifts. A documented match answers only the calibration question and does not eliminate the other causes. Missing comparison evidence is neither a match nor a mismatch."
+        },
+        {
+          "title": "Interpret established SSA findings and matching requirements",
+          "body": "A documented mechanical SSA fault routes to separate [Shift Solenoids](#/document/G1692059) replacement followed by [Transmission Strategy Download](#/document/G1692055). Stuck OFF belongs to non-application; stuck ON belongs to continuous application; mechanical sticking also appears in delayed/soft/slipping and harsh application. Without an attributable fault-isolation finding, retain SSA as a possible cause only.\n\nFor any recorded replacement, verify that the record documents matching injector nozzle and calibration band against the original solenoid. The band is beside its matrix barcode and is 1, 2, 3, 4 or 5. This is a review of existing records, not an instruction to expose the solenoid or select a part from the illustration. Missing matching or programming evidence leaves that repair requirement outstanding."
+        },
+        {
+          "title": "Record supported conclusions and outstanding work",
+          "body": "Record the complaint branch, identified transmission, actual comparison results and findings established by the documented diagnostic method. Keep untested possibilities separate from confirmed findings. Use the decision rows to identify the prescribed separate repair route; they do not execute that repair.\n\nWhen the record reports a new solenoid body, require evidence of its new strategy file download and replacement identification tag over the original, with the new strategy and body ID retained. Missing documentation leaves those requirements outstanding.\n\nConclude with the supported interpretation and each unresolved item. A completed worksheet does not certify successful repair or vehicle return to service."
         }
       ],
       "watchFor": [
         {
-          "title": "Similar-looking solenoids",
-          "body": "Solenoids are individually calibrated. Physical similarity does not replace matching the nozzle and band number."
+          "title": "Cleaning has a definite limit",
+          "body": "For the regulator and relevant latch-valve branches, damage to a valve or its bore changes the prescribed repair to replacement of the main control valve body. Cleaning away debris does not resolve that damage."
         },
         {
-          "title": "Damage that cleaning cannot correct",
-          "body": "A damaged regulator valve or bore requires valve-body replacement; cleaning is not the specified endpoint."
+          "title": "Fail-safe operation can complicate the complaint",
+          "body": "With total electrical or control-power loss, the hydraulic system retains basic Park, Reverse, Neutral and Drive functions and either third or fifth gear, depending on the gear selected when the failure occurred. A restricted gear pattern therefore calls for broader transmission-control investigation before attributing it to clutch A."
+        },
+        {
+          "title": "A matched strategy is one finding",
+          "body": "Matching calibration information addresses the strategy question. It does not clear a sticking SSA, a regulator/latch-valve problem, blocked or leaking passages, or internal clutch faults."
         }
       ],
       "notes": [
-        "Low-pressure fluid filling helps keep air out of the clutch circuit; fluid in the circuit does not by itself mean the clutch is applied.",
-        "This diagnostic route ends with an identified repair path. Removal, reassembly and programming must follow the linked procedures."
+        "The 6R80 uses electronic solenoids to direct hydraulic pressure, so engagement quality depends on both calibration and fluid routing.",
+        "CLA in the symptom chart and CL A in the hydraulic drawings name the forward-clutch pressure circuit.",
+        "For delayed/soft/slipping and harsh application, the internal-component branches direct transmission disassembly and passage inspection for debris or blockage, with cleaning as necessary. Keep that prescribed action attached to those branches rather than turning the component list into a shopping list."
       ],
       "diagnostics": [
         {
-          "finding": "The forward clutch does not apply.",
-          "meaning": "Pressure control, hydraulic integrity or internal clutch components may be responsible.",
-          "next": "Follow the OFF-solenoid/regulator, passage and wear-inspection branches."
+          "finding": "The forward clutch does not apply when it should.",
+          "meaning": "Possible causes are SSA mechanically stuck OFF; the clutch A regulator valve stuck OFF; blocked or leaking CLA, DRIVE or VFS1 circuits; wear or damage involving the input shaft, its Teflon seals or forward-clutch drum; or wear or damage involving the friction plates or piston seals.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. For an established SSA fault, the repair destination is [Shift Solenoids](#/document/G1692059), followed by [Transmission Strategy Download](#/document/G1692055).\n\nFor the regulator route, downstream work requires disassembling, cleaning and inspecting the regulator valve. A damaged valve or bore calls for a new main control valve body. The destinations are [valve-body removal and installation](#/document/G1692056) and [valve-body overhaul](#/document/G1692065).\n\nFor the CLA, DRIVE or VFS1 circuit route, downstream work requires disassembling the main control valve body, inspecting its passages and the separator-plate passages for debris or blockage, and cleaning as necessary. Use those valve-body destinations. Blockage and leakage remain distinct possible causes.\n\nFor the internal route, inspection targets are the input shaft, input-shaft Teflon seals, clutch drum, friction plates and piston seals for wear or damage, with cleaning or replacement as necessary. The destinations are [Transmission overhaul](#/document/G1692066), the valve-body procedures and [Fluid Pan, Gasket and Filter](#/document/G1692033)."
         },
         {
-          "finding": "The forward clutch remains applied.",
-          "meaning": "Pressure may remain commanded hydraulically, or internal components may prevent normal release.",
-          "next": "Follow the ON-solenoid/regulator, passage, plate and piston-seal branches."
+          "finding": "The forward clutch stays applied when it should release.",
+          "meaning": "Possible causes are SSA mechanically stuck ON; the clutch A regulator valve stuck ON; blocked or leaking CLA, DRIVE or VFS1 circuits; or faults involving the forward-clutch friction plates or piston seals.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. An established stuck-ON SSA fault leads to [solenoid replacement](#/document/G1692059) and the required [strategy download](#/document/G1692055).\n\nThe regulator route requires downstream disassembly, cleaning and inspection of the regulator valve. Replace the main control valve body if the valve or bore is damaged. The destinations are [valve-body removal and installation](#/document/G1692056) and [valve-body overhaul](#/document/G1692065).\n\nFor the CLA, DRIVE or VFS1 circuit route, downstream work requires disassembling the main control valve body, inspecting its passages and the separator-plate passages for debris or blockage, and cleaning as necessary. Use those valve-body destinations.\n\nThe internal route calls for examination of the friction plates and piston seals for wear or damage, followed by the applicable cleaning or replacement decision. The destinations are [Transmission overhaul](#/document/G1692066), the valve-body procedures and [Fluid Pan, Gasket and Filter](#/document/G1692033)."
         },
         {
-          "finding": "Application is delayed, soft or slipping.",
-          "meaning": "Strategy, sticking control valves or internal hydraulic faults are possible.",
-          "next": "Include the latch valve and center-support/hub passage routes."
+          "finding": "Forward-clutch application is delayed, soft or slipping.",
+          "meaning": "Possible causes include incorrect PCM transmission strategy; mechanical SSA sticking; a sticking clutch A regulator or latch valve; blocked or leaking CLA, DRIVE or VFS1 circuits; and internal faults associated with the center support, forward-clutch hub/direct-clutch drum, friction plates or piston seals.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. An established calibration problem leads to [Transmission Strategy Download](#/document/G1692055). Established mechanical SSA sticking leads to [Shift Solenoids](#/document/G1692059), followed by the strategy download.\n\nThe valve route includes both the clutch A regulator and latch valves. Downstream work requires disassembling, cleaning and inspecting those valves; valve or bore damage calls for a new main control valve body. The destinations are [valve-body removal and installation](#/document/G1692056) and [valve-body overhaul](#/document/G1692065).\n\nFor the CLA, DRIVE or VFS1 circuit route, downstream work requires disassembling the main control valve body, inspecting its passages and the separator-plate passages for debris or blockage, and cleaning as necessary. Use those valve-body destinations.\n\nFor the center-support, hub/drum, friction-plate and piston-seal branches, the prescribed downstream action is transmission disassembly and inspection of transmission passages for debris or blockage, with cleaning as necessary. The destinations are [Transmission overhaul](#/document/G1692066), the valve-body procedures and [Fluid Pan, Gasket and Filter](#/document/G1692033). A listed internal component is a possible source, not an automatic replacement decision."
         },
         {
-          "finding": "Application is harsh.",
-          "meaning": "Calibration and pressure-control faults remain possible alongside internal causes.",
-          "next": "Check strategy and the regulator route, then the listed internal passage inspections."
+          "finding": "Forward-clutch application is harsh.",
+          "meaning": "Possible causes include incorrect PCM strategy; mechanical SSA sticking; a sticking clutch A regulator valve; blocked or leaking CLA, DRIVE or VFS1 circuits; and internal faults associated with the input shaft, its Teflon seals, forward-clutch drum, friction plates, piston seals or piston return spring.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. An established strategy problem leads to [Transmission Strategy Download](#/document/G1692055). Established mechanical SSA sticking leads to [Shift Solenoids](#/document/G1692059), followed by the strategy download.\n\nThe regulator route requires downstream disassembly, cleaning and inspection of the regulator valve. A damaged valve or bore requires a new main control valve body. The destinations are [valve-body removal and installation](#/document/G1692056) and [valve-body overhaul](#/document/G1692065).\n\nFor the CLA, DRIVE or VFS1 circuit route, downstream work requires disassembling the main control valve body, inspecting its passages and the separator-plate passages for debris or blockage, and cleaning as necessary. Use those valve-body destinations.\n\nFor the listed internal components, including the piston return spring, the prescribed downstream action is transmission disassembly and inspection of transmission passages for debris or blockage, with cleaning as necessary. The destinations are [Transmission overhaul](#/document/G1692066), the valve-body procedures and [Fluid Pan, Gasket and Filter](#/document/G1692033)."
+        },
+        {
+          "finding": "The strategy etched on the main control differs from the scan-tool display.",
+          "meaning": "The programmed strategy does not match the main-control identification. This mismatch can cause harsh shifts.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. The correction route is [Transmission Strategy Download](#/document/G1692055). Record the 13-digit numeric strategy separately from the solenoid-body ID."
+        },
+        {
+          "finding": "The appropriate inspection identifies damage to a regulator valve, relevant latch valve or its bore.",
+          "meaning": "The prescribed repair changes from cleaning alone to replacement of the main control valve body.",
+          "next": "Recorded-results interpretation only; all physical inspection, disassembly, cleaning, replacement and programming below are separate required procedures, not actions performed here. The destinations are [Main Control Valve Body removal and installation](#/document/G1692056) for replacement and [valve-body overhaul](#/document/G1692065) for the inspection route. If replacement includes a new solenoid body, its new strategy file must be downloaded into the PCM and its replacement identification tag placed over the original tag."
         }
       ],
       "verification": [
         {
-          "title": "Confirm calibration completion",
-          "body": "Verify that the main-control strategy matches the scan-tool display and that the required strategy download follows solenoid replacement."
+          "title": "Confirm complaint and record provenance",
+          "body": "Check vehicle identity, actual range/gear behavior and the recorded finding/method supporting each conclusion. Missing evidence remains unresolved rather than a presumed normal result."
         },
         {
-          "title": "Record the inspection decision",
-          "body": "Record whether inspection found contamination, valve/bore damage or internal wear, and identify the corresponding cleaning or replacement procedure."
+          "title": "Retain every chart distinction",
+          "body": "Keep stuck OFF versus ON, regulator-only versus regulator-and-latch branches, and wear/damage inspection versus transmission-passage inspection distinct. Confirm the hydraulic-circuit routes retain valve-body disassembly before passage inspection and cleaning."
+        },
+        {
+          "title": "Review conditional repair completion records",
+          "body": "For a recorded individual-solenoid replacement, require matching nozzle/band and strategy-download evidence. For a new solenoid body, require download and tag-overlay evidence. Mark missing completion records outstanding without executing those operations."
+        },
+        {
+          "title": "Keep the outcome bounded",
+          "body": "Identify supported causes, remaining possibilities, missing records and separate repair destinations. This interpretation performs no new tests or physical work and does not establish successful clutch operation."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686451",
-          "purpose": "6R80 forward-clutch symptom chart and repair-path selection."
+          "purpose": "Primary forward-clutch symptom chart: four complaint groups, possible causes and prescribed repair decisions."
         },
         {
           "documentId": "G1686435",
-          "purpose": "Understand forward-clutch application, release and hydraulic control."
+          "purpose": "Forward-clutch construction, normal application and release, and hydraulic-circuit operation."
+        },
+        {
+          "documentId": "G1686444",
+          "purpose": "Transmission and solenoid-body identification, strategy matching, replacement-solenoid calibration and fail-safe context."
         },
         {
           "documentId": "G1692059",
-          "purpose": "Remove and install the identified faulty shift solenoid.",
+          "purpose": "Reference-only next-step destination for shift-solenoid replacement after the fault is established.",
           "mediaId": "G1692059-m0005"
         },
         {
           "documentId": "G1692055",
-          "purpose": "Correct transmission strategy and complete required post-solenoid programming.",
+          "purpose": "Reference-only next-step destination for strategy correction and programming required after solenoid replacement.",
           "mediaId": "G1692055-m0001"
         },
         {
           "documentId": "G1692056",
-          "purpose": "Remove and reinstall the main control valve body."
+          "purpose": "Reference-only next-step destination for main control valve-body removal and installation."
         },
         {
           "documentId": "G1692065",
-          "purpose": "Bench-disassemble, clean and inspect valves and hydraulic passages.",
+          "purpose": "Reference-only next-step destination for valve-body disassembly, valve/bore inspection and hydraulic-passage cleaning.",
           "mediaId": "G1692065-m0003"
         },
         {
           "documentId": "G1692066",
-          "purpose": "Perform the applicable internal transmission-overhaul inspections.",
+          "purpose": "Reference-only next-step destination for internal transmission disassembly and component or passage investigation.",
           "mediaId": "G1692066-m0030"
         },
         {
           "documentId": "G1692033",
-          "purpose": "Follow the referenced fluid-pan, gasket and filter access procedure."
+          "purpose": "Reference-only fluid-pan, gasket and filter access destination associated with the internal investigation routes."
         }
       ],
       "hero": null,
@@ -59070,8 +59122,41 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "da9f3a45270b51213e3520da7d3d754c554f64536f4d5e3ff87a537c109265d7"
-      }
+        "fingerprint": "da9f3a45270b51213e3520da7d3d754c554f64536f4d5e3ff87a537c109265d7",
+        "editorialVersion": 2,
+        "editorialFingerprint": "3ffebd7a5b155f79548de36be811dea87235b6dd9dfe474f9dab45789a8191dd",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identify-the-unit",
+          "title": "Read transmission and calibration records",
+          "summary": "Identify the unit and distinguish its recorded strategy and body ID.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "follow-clutch-operation",
+          "title": "Understand the clutch and its pressure paths",
+          "summary": "Learn what applies clutch A, when it releases and why low-pressure fluid remains in its circuit.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "select-the-investigation",
+          "title": "Interpret complaint and calibration findings",
+          "summary": "Match existing findings to the chart while retaining unresolved causes and separate repair requirements.",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": "record-the-next-action",
+          "title": "Document the interpretation",
+          "summary": "Record supported conclusions and outstanding evidence or repair work.",
+          "start": 9,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Interpret recorded 6R80 intermediate-clutch findings",
@@ -77945,106 +78030,209 @@
       }
     },
     {
-      "title": "Diagnose cabin temperature and humidity sensor circuit faults with EMTC",
-      "summary": "Check the sensor wiring and connectors before deciding whether the cabin sensor or its control-module path needs further work.",
-      "introduction": "Electronic Manual Temperature Control (EMTC) uses the panel selections to control outlet temperature, air distribution and blower operation. The cabin temperature and humidity sensor measures conditions inside the vehicle. Test P checks its electrical paths to the front controls interface module (FCIM) and its fused supply before directing sensor replacement or further module diagnosis.",
-      "why": "An unwanted connection to power, ground or another wire can corrupt a sensor circuit, while an open prevents the intended connection. Checking these faults separately avoids replacing a sensor for a wiring problem. Correct probe adapters also prevent the test itself from damaging terminals.",
+      "title": "Interpret recorded EMTC cabin-sensor circuit test results",
+      "summary": "Interpret existing Test P records for the six cabin temperature/humidity sensor codes, preserving every circuit endpoint, strict resistance limit and sensor/FCIM decision.",
+      "introduction": "I use this guide to read completed technician records for EMTC Test P. The sequence distinguishes unwanted voltage, ground connections, open paths and connections between circuits before considering sensor replacement. Missing measurements or unverified test states leave a branch unresolved. This article does not provide physical access, terminal location, probing, battery service or active diagnostic instructions.",
+      "why": "A short is an unwanted connection to power, ground or another circuit; an open interrupts an intended path. Test P separates these wiring findings from connector concerns and only then reaches the sensor decision. The meaning of a reading depends on the recorded connector, ignition and isolation states, as well as its value.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "EMTC temperature sensor circuit fault",
-        "cabin humidity sensor fault",
+        "2015 Mustang EMTC",
+        "in-vehicle temperature and humidity sensor",
+        "Test P",
         "B105A:12",
+        "B105A:14",
+        "B1A61:11",
         "B1A61:15",
+        "B1A69:12",
         "B1A69:14",
-        "heater barely warm",
-        "heater not hot",
-        "weak cabin heat"
+        "C233",
+        "FCIM"
       ],
       "when": {
-        "summary": "When a current sensor-circuit concern and one of Test P's listed diagnostic codes direct this investigation.",
+        "summary": "Use only with existing technician records identifying the vehicle, EMTC system, present concern and applicable Test P code.",
         "notes": [
-          "Do not follow a component replacement decision when the concern is absent."
+          "Applicable codes are B105A:12, B105A:14, B1A61:11, B1A61:15, B1A69:12 and B1A69:14.",
+          "Coverage remains the listed 2015 Mustang EMTC engine applications; DATC features are not substituted for this test.",
+          "The concern must have been present during the documented investigation. An absent concern does not support a component-replacement conclusion.",
+          "Connector and pin designations below label existing records only. They do not tell a reader how to find or probe a physical contact."
         ]
       },
       "prepare": [
         {
-          "title": "Establish valid electrical conditions",
-          "detail": "Check battery and charging operation, verify battery state of charge above 70%, and retrieve relevant diagnostic trouble codes. Inspect previous repairs, harness routing and obvious connector damage."
+          "title": "Require complete, attributable preliminary records",
+          "detail": "Require vehicle/system identity, concern and entry codes, technician/date/method, battery and charging checks, battery state of charge greater than 70%, all-network DTC findings and circuit-code priority, prior repair/service-information review, wiring condition and routing, and fuse/circuit/connector continuity and installation findings. Multiple circuit codes require documented consideration of shared power/ground causes. Missing or unresolved prerequisites block interpretation."
         },
         {
-          "title": "Arrange access and test capability",
-          "detail": "Use a digital multimeter, correct terminal probe adapters and connector information for Test P. Access is needed to the listed actuators, sensor, FCIM connectors and body control module (BCM) fuse. Follow the ignition sequence exactly."
+          "title": "Require test-state and contact identity evidence",
+          "detail": "Records must identify each circuit endpoint and actual contact orientation, including the component-side fuse contact; each relevant disconnection/reconnection, ignition state, correct probe adapters, circuit isolation and battery-disconnected resistance-test condition must be documented. The F21 layout drawing does not establish vehicle access or cavity orientation. An uncertain identity or state makes the reading unusable, not a pass."
+        },
+        {
+          "title": "Read recorded measurements rather than performing them",
+          "detail": "Have the six P1 voltages, six P2 ground resistances, six P3 path resistances and all 15 P4 pair resistances with units and their respective states. Correct adapter evidence refers to Rotunda Flex Probes NUD105-R025F or Terminal Probe Kit 418-S035. A back-probed result is not substituted for the required disconnected-connector measurement. This article directs no meter, scan, connector or ignition operation."
+        },
+        {
+          "title": "Keep repairs and retests separate",
+          "detail": "Require existing connector inspection/repair and seating/latching records, restored fuse/battery/access records, and actual system-operation results for P5/P6. Sensor replacement, circuit repair, TSB work and the VIN-dependent FCIM routine remain separate procedures. Missing required results stop the branch; no FCIM replacement is inferred from these codes."
         }
       ],
       "steps": [
         {
-          "title": "P1: isolate the circuits and check for unwanted voltage",
-          "body": "Follow [Test P](#/document/G1681095): with ignition off, disconnect the air distribution, driver-side temperature, passenger-side temperature and air inlet actuators, then sensor C233 and BCM fuse 21 (5A). Switch ignition on, then disconnect FCIM C2402A and C2402B. Check every C233 terminal to ground. Any voltage requires circuit repair; no voltage permits P2."
+          "title": "Confirm the recorded Test P entry",
+          "body": "Require a recorded current concern and one or more of B105A:12, B105A:14, B1A61:11, B1A61:15, B1A69:12 or B1A69:14, with the preliminary evidence in preparation. The complete sensor-harness inspection must address damage or chafing. If the concern was absent, or entry and prerequisites cannot be verified, stop unresolved rather than applying a replacement decision. [EMTC Test P](#/document/G1681095)."
         },
         {
-          "title": "P2: check for shorts to ground",
-          "body": "Reconnect FCIM C2402A, switch ignition off, then disconnect C2402A again as directed. Measure each sensor circuit to ground. Every resistance must exceed 10,000 ohms. Repair a circuit that fails this isolation check before continuing."
+          "title": "P1: verify the documented disconnection sequence",
+          "body": "The record must show ignition OFF followed by disconnection of C232 air-distribution actuator, C2091 driver temperature actuator, C2092 passenger temperature actuator, C282 air-inlet actuator and C233 cabin sensor, then removal of BCM fuse 21 (5A). It must then show ignition ON followed by FCIM C2402A and C2402B disconnection. Preserve the passenger-side actuator entry even for this EMTC test.\n\nThese are required historical test states, not instructions to disconnect anything now. If any state, contact identity or sequence is undocumented, the following measurement branch remains unresolved."
         },
         {
-          "title": "P3: prove each intended connection",
-          "body": "Use the exact pin pairs to check continuity from C233 to both FCIM connectors and to the component side of the BCM fuse 21 cavity. Each path must measure less than 3 ohms. A failed path requires wiring or terminal repair, rather than a sensor replacement."
+          "title": "P1: interpret all six recorded voltage checks",
+          "body": "Read the six separate results identified as C233 pins 1, 2, 3, 4, 5 and 6, each positive lead to its named pin and negative lead to ground, in the documented P1 state.\n\nAny recorded voltage directs separate repair of the affected circuit. Only no voltage at all six points leads to P2. A missing reading, uncertain probe contact or inappropriate back-probing is not a zero result."
         },
         {
-          "title": "P4: check the circuits against one another",
-          "body": "Measure every listed combination of sensor terminals, not just neighboring terminals. Each pair must exceed 10,000 ohms. This establishes that wires intended to remain separate have not become connected through harness damage or connector faults."
+          "title": "P2: verify the changed state and ground-isolation results",
+          "body": "Require the documented sequence: FCIM C2402A reconnected, ignition OFF, then C2402A disconnected again. C2402B and the other P1 connections remain disconnected, with fuse 21 removed. Also require documented battery disconnection and isolated, unpowered circuits for valid resistance-to-ground results under [Diagnostic Methods](#/document/G1693185).\n\nRead six results: C233 pins 1, 2, 3, 4, 5 and 6 separately to ground. Every resistance must be greater than 10,000 ohms. Any value of 10,000 ohms or less directs separate circuit repair. Only six valid passing values lead to P3. Missing state or value means unresolved."
         },
         {
-          "title": "P5: restore connections and evaluate the sensor",
-          "body": "Inspect disconnected connectors. Replace damaged, bent or pushed-out terminals; address corrosion with new connectors or terminals and clean module pins as directed. Restore the fuse and connections, ensuring connectors latch, then operate the system. If the concern remains, follow [sensor removal and installation](#/document/G1676817), install a new sensor and test again. Continue to P6 only if the concern persists."
+          "title": "P3: interpret the six exact continuity paths",
+          "body": "Require continued isolation/unpowered state and these six identified recorded paths, positive lead at C233 and negative at the named destination:\n\n- C233 pin 3 to C2402A pin 3.\n- C233 pin 5 to C2402A pin 2.\n- C233 pin 1 to C2402B pin 27.\n- C233 pin 2 to C2402B pin 29.\n- C233 pin 4 to C2402B pin 19.\n- C233 pin 6 to BCM fuse 21 cavity, component-side contact.\n\nEvery resistance must be less than 3 ohms. A value of 3 ohms or more directs separate circuit repair. Only all six valid passes lead to P4. An unidentified fuse contact or other uncertain endpoint blocks interpretation; do not infer the component side from the layout picture."
         },
         {
-          "title": "P6: investigate the FCIM connection path",
-          "body": "With ignition off, inspect all FCIM connectors and repair terminal faults. Reconnect and retest. If the concern remains, check applicable technical service bulletins and follow any relevant instructions. Otherwise, continue with the FCIM guided routine, which requires the vehicle identification number. This branch does not establish an immediate FCIM replacement decision."
+          "title": "P4: interpret all 15 circuit-pair results",
+          "body": "Read each separate C233 pair result in the documented isolated, unpowered state. The first pin is the positive-lead endpoint and the second is the negative-lead endpoint:\n\n- 1–2, 1–3, 1–4, 1–5, 1–6.\n- 2–3, 2–4, 2–5, 2–6.\n- 3–4, 3–5, 3–6.\n- 4–5, 4–6.\n- 5–6.\n\nEvery resistance must be greater than 10,000 ohms. Any value of 10,000 ohms or less directs separate circuit repair. Only all 15 valid passing results lead to P5. A partial set cannot establish a pass."
+        },
+        {
+          "title": "P5: read the connector inspection and repair records",
+          "body": "Require the disconnected-connector inspection findings for corrosion, damaged or bent pins and pushed-out pins. The source repair destinations are new connectors or terminals as needed and cleaning module pins for corrosion, new terminals/pins for damage or bending, and new pins as necessary for push-out. These are separate repair requirements, not work directed here.\n\nIf terminal-fit findings were used, the record must distinguish mating-pin separation force from connector-housing drag; a very weak grip indicates damage. Missing or ambiguous inspection/repair evidence leaves P5 incomplete."
+        },
+        {
+          "title": "Require restoration evidence before reading the P5 operation result",
+          "body": "Require records that C232, C2091, C2092, C282, C233, C2402A and C2402B were fully seated and latched, BCM fuse 21 (5A) was restored, battery isolation was properly reversed and required access refit was complete before system operation.\n\nRead the actual recorded result against the original concern. A statement that connections were restored does not substitute for an operation result. No connector, fuse or battery operation is performed from this article."
+        },
+        {
+          "title": "P5: interpret the sensor-replacement and retest gate",
+          "body": "If the recorded concern disappeared after P5 reconnection, the source reports correct operation at that time and requires the underlying connector/pin cause to be addressed; it does not require sensor replacement.\n\nIf the concern remained after valid circuit checks and completed connector work, P5 directs separate [In-Vehicle Temperature and Humidity Sensor replacement](#/document/G1676817). Require the completed replacement record and subsequent normal-operation test result. Only a concern still present after that retest leads to P6. Missing replacement or retest evidence leaves the branch outstanding."
+        },
+        {
+          "title": "P6: read the FCIM connection and operation records",
+          "body": "Require documented ignition OFF, disconnection and inspection of all FCIM connectors, the applicable corrosion/damaged/bent/pushed-out-pin repairs, and reconnection with correct seating and latching. The repair rules are the same as P5: new connectors/terminals and cleaning module pins for corrosion, new terminals/pins for damage or bending, and new pins as necessary for push-out.\n\nRead the recorded system-operation result after restoration. If the concern disappeared, the source reports correct operation at that time and requires the root cause of connector or pin issues to be addressed. Missing restoration or operation evidence leaves P6 unresolved."
+        },
+        {
+          "title": "P6: retain the service-information and VIN-dependent destinations",
+          "body": "If the concern remained after P6, require the recorded OASIS/TSB check. An applicable bulletin directs discontinuing Test P and following that separate bulletin. A documented absence of an applicable bulletin directs the separate VIN-dependent FCIM guided routine. An unknown bulletin result is not the no-bulletin branch.\n\nRecord the measured results, verified states, repairs and retests that support the destination. Keep missing evidence and outstanding work explicit. This interpretation does not retrieve OASIS information, run a guided routine or authorize FCIM replacement."
         }
       ],
       "watchFor": [
         {
-          "title": "Resistance measurements on energized wiring",
-          "body": "Residual circuit voltage invalidates resistance readings. Preserve the specified isolation and ignition states when changing from voltage to resistance tests."
+          "title": "Unverified state invalidates a conclusion",
+          "body": "A named pin and plausible value do not establish a valid test. Require documented contact identity, correct adapters and the specified connector/ignition/isolation state. Missing evidence stops the branch."
         },
         {
-          "title": "A fault that disappears after reconnection",
-          "body": "Loose or corroded terminals may explain the recovery. Find and correct the connection defect before closing the job."
+          "title": "Resistance results must be valid",
+          "body": "Diagnostic Methods warns that voltage corrupts resistance readings and recommends a lead-reversal validity check. If existing records show changed resistance on these isolated wire paths after lead reversal, resolve the invalid result before applying thresholds; this is not an instruction to repeat a measurement."
+        },
+        {
+          "title": "Strict limits remain strict",
+          "body": "P2/P4 require greater than 10,000 ohms (10 kilohms); equality fails. P3 requires less than 3 ohms; equality fails. General wiring-resistance guidance does not replace these Test P limits."
+        },
+        {
+          "title": "Physical repair remains separate",
+          "body": "Circuit repair must address the actual cause and adjacent damage. An undocumented parallel wire or direct-power/ground experiment does not establish a repaired circuit. Test P results do not supply a splice or module replacement method."
         }
       ],
       "notes": [
-        "This is an EMTC electrical diagnostic path; separate automatic driver and passenger temperature regulation belongs to the dual automatic system."
+        "The EMTC overview explains panel-selected outlet temperature, airflow and blower control; it does not establish automatic maintenance of a selected cabin temperature.",
+        "The dual automatic climate-control overview is context for a different fitted system and is not used to change this EMTC test.",
+        "The fuse drawing supports identification of the F21 position only. Its large connector drawing does not establish the C233 or FCIM cavity numbering.",
+        "The circuit-repair outcomes require repair of the identified wiring or terminal fault before further component decisions; they do not establish a particular splice method."
       ],
       "diagnostics": [
         {
-          "finding": "One or more of B105A:12, B105A:14, B1A61:11, B1A61:15, B1A69:12 or B1A69:14 is recorded.",
-          "meaning": "These codes direct Test P's in-vehicle temperature and humidity sensor circuit investigation.",
-          "next": "Establish circuit condition first, then follow the connector, sensor and FCIM decisions in order."
+          "finding": "The concern is absent when testing begins.",
+          "meaning": "The diagnostic assumption needed for component-replacement decisions is not satisfied.",
+          "next": "Do not infer a sensor or module replacement. The required present-concern evidence is absent, so interpretation stops unresolved."
+        },
+        {
+          "finding": "P1 finds any voltage at any C233 pin 1–6 to ground.",
+          "meaning": "The isolated sensor circuit has an unwanted connection to voltage.",
+          "next": "Record separate repair of the affected circuit as required; no sensor decision follows this failed P1 result."
+        },
+        {
+          "finding": "P2 finds 10,000 ohms or less from any C233 pin 1–6 to ground.",
+          "meaning": "That circuit fails the short-to-ground isolation requirement.",
+          "next": "Record separate circuit repair as required. P3 eligibility requires six valid recorded values greater than 10,000 ohms."
+        },
+        {
+          "finding": "P3 finds 3 ohms or more on any specified endpoint pair.",
+          "meaning": "That intended connection fails the continuity requirement.",
+          "next": "Record separate circuit/terminal repair as required. P4 eligibility requires all six valid recorded paths below 3 ohms."
+        },
+        {
+          "finding": "P4 finds 10,000 ohms or less between any listed C233 pin pair.",
+          "meaning": "The circuits fail the required isolation from one another.",
+          "next": "Record separate circuit repair as required. P5 eligibility requires all 15 valid recorded pairs above 10,000 ohms."
+        },
+        {
+          "finding": "P5 connector inspection finds corrosion, bent/damaged pins or pushed-out pins.",
+          "meaning": "A connection defect may be responsible even when the isolated wiring measurements pass.",
+          "next": "Require records of the specified connector/terminal/pin repairs and module-pin cleaning, secure reconnection and subsequent operation result; otherwise P5 remains incomplete."
+        },
+        {
+          "finding": "The concern disappears after P5 reconnection.",
+          "meaning": "The system operates correctly at this time; a loose or corroded connection may have caused the concern.",
+          "next": "Retain the requirement to address the actual connector/pin cause; do not infer sensor replacement."
+        },
+        {
+          "finding": "The concern remains after P5 circuit checks and connector repairs.",
+          "meaning": "Test P now directs sensor replacement.",
+          "next": "Record separate sensor replacement as required, followed by a documented normal-operation test. P6 is reached only if that retest still found the concern."
+        },
+        {
+          "finding": "The concern disappears after P6 FCIM connector work.",
+          "meaning": "A loose or corroded FCIM connection may have caused the concern.",
+          "next": "Retain the requirement to address the underlying connector or pin issue; require its completion evidence."
+        },
+        {
+          "finding": "The concern remains after P6 and an applicable TSB exists.",
+          "meaning": "The bulletin supersedes further progress through this test.",
+          "next": "Record the separate applicable bulletin as the next destination; Test P stops here."
+        },
+        {
+          "finding": "The concern remains after P6 and no applicable TSB addresses it.",
+          "meaning": "The next decision belongs to the VIN-dependent FCIM guided routine.",
+          "next": "Record the VIN-dependent FCIM guided routine as the separate destination. No FCIM replacement conclusion is supplied."
         }
       ],
       "verification": [
         {
-          "title": "Confirm operation after each repair stage",
-          "body": "Operate the climate system after connector repairs and after sensor replacement. A remaining concern must proceed to the next specified stage."
+          "title": "Account for every value and state",
+          "body": "Confirm six P1 voltages, six P2 ground resistances, six P3 endpoint paths and all 15 P4 pair results with units, identities and required connection/power/isolation states. Missing or ambiguous records remain unresolved."
         },
         {
-          "title": "Record the findings and stopping point",
-          "body": "Record the entry codes, failed circuit or passing measurements, connector repairs and functional result. If FCIM guided diagnosis remains necessary, record that handoff rather than declaring the concern resolved."
+          "title": "Keep P5 and P6 retests distinct",
+          "body": "Require connector repair/restoration and operation records, sensor replacement plus retest only when directed, and the later FCIM connector result if P6 was reached."
+        },
+        {
+          "title": "Preserve the final gates",
+          "body": "Require the actual service-information result before distinguishing applicable-TSB from no-applicable-TSB/VIN-routine destinations. Record outstanding work without claiming a new physical test or successful repair."
         }
       ],
       "procedures": [
         {
           "documentId": "G1681095",
-          "purpose": "EMTC Test P: sensor circuit isolation, voltage and resistance checks, sensor evaluation and FCIM handoff."
+          "purpose": "Primary Test P: exact disconnection sequence, six voltage checks, resistance limits and pin pairs, connector repairs, sensor decision and FCIM handoff."
         },
         {
           "documentId": "G1693185",
-          "purpose": "Electrical prerequisites, safe terminal probing and valid circuit measurement methods."
+          "purpose": "Diagnostic prerequisites, battery state of charge, correct terminal probes, valid resistance measurements, terminal-fit checks and wiring-repair cautions."
+        },
+        {
+          "documentId": "G1681091",
+          "purpose": "Explain EMTC panel selections, outlet temperature, blower operation and A/C humidity reduction."
         },
         {
           "documentId": "G1676817",
-          "purpose": "In-vehicle temperature and humidity sensor removal and installation when P5 directs replacement.",
+          "purpose": "Reference-only next-step destination for sensor removal and installation when P5 directs replacement; its internal repair actions are not taught here.",
           "mediaId": "G1676817-m0002"
         }
       ],
@@ -78099,14 +78287,162 @@
         {
           "documentId": "G1676851",
           "sourceHash": "f50354d3648437cb8090ebef6caf1cd9e789a5456aa49546d8ac5bf0bff19b78"
+        },
+        {
+          "documentId": "G1676810",
+          "sourceHash": "f5e8fd9905a7e1912e34057ff844dcf269ff552782a02901f8cfa635b28e6563"
+        },
+        {
+          "documentId": "G1676755",
+          "sourceHash": "66401ded7d8e51485045ece0e95755fefbb73ec8a5e863f81f05bb7f49d8aa7e"
+        },
+        {
+          "documentId": "G1676754",
+          "sourceHash": "0f0b5dd77a9e0b2d0b6661c76b869052dc0a4d981a75e8ef4a587aeb8166794b"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1692931",
+          "sourceHash": "6cb3e42eb5a5ff32c9656312e8b537e0543a587eb5573a3f3e25f5d1f55235f3"
+        },
+        {
+          "documentId": "G1692933",
+          "sourceHash": "b9912e84f438218d29633b80c3e2a12565729c974ca8e777ccc6745d610201d3"
+        },
+        {
+          "documentId": "G1807235",
+          "sourceHash": "cbdd8e5fa44eac6bd2951bbea48df64ed4279aca4fd469c7b035da61ed2303a2"
+        },
+        {
+          "documentId": "G1813071",
+          "sourceHash": "45f3b53dd28e766d92924e944c68e0a740c843efced2d8bf704c99548fa32e46"
+        },
+        {
+          "documentId": "G1676759",
+          "sourceHash": "a1d08faa307cc9b1eb8497bac2ceac57e865b1757faa54f98431aca5fc38bc2e"
+        },
+        {
+          "documentId": "G1676871",
+          "sourceHash": "92fb96b56cebfebd86955f3bcfb1209c1efd848f99c2380ebce3528d576f8801"
+        },
+        {
+          "documentId": "G1676873",
+          "sourceHash": "c931cb2b0f00700fa8d1dc754b56771b4513b008b38c1822f533e2eb95fe1849"
+        },
+        {
+          "documentId": "G1676875",
+          "sourceHash": "46be1600c2955c66c8afd817d66da37f4767d004efaebe3ef696197eb2330213"
+        },
+        {
+          "documentId": "G1727492",
+          "sourceHash": "7907fd8ba912bb3364382a656a03943c96284f64c85ee6eb35b59402b2512dbd"
+        },
+        {
+          "documentId": "G1676731",
+          "sourceHash": "2fc9dfe00d2757b9c5dfc79bfff9d744783ceb28f21fa41563fff49e1f2a2d1c"
+        },
+        {
+          "documentId": "G1681093",
+          "sourceHash": "568c54540de01ccc3db7249c306d50cef7c9e38914ed36e77eea2269bf31baac"
+        },
+        {
+          "documentId": "G1890643",
+          "sourceHash": "2b7b757334dbd079278c048dfe4fe885317968d558fe0d9f2977fcac6a3aef1b"
+        },
+        {
+          "documentId": "G1676752",
+          "sourceHash": "771b91826e8296cf21d56eabbe87bc7cfd992d0fbfca91d7d36b514b6f7bf0d4"
+        },
+        {
+          "documentId": "G1676815",
+          "sourceHash": "dd30c2a93c6826e17629885d4df819f3617c99c36428b4f63fea40e9c1c9fc3c"
+        },
+        {
+          "documentId": "G1912325",
+          "sourceHash": "01e5b0da1773fe8f65be4e8903e9d318b967054112520599abbb96bbcdd662bc"
+        },
+        {
+          "documentId": "G1912327",
+          "sourceHash": "37ef22f135badf052ce74c64a275ed995d0bdc614701bc4d28dc58380fb9d1f9"
+        },
+        {
+          "documentId": "G1912323",
+          "sourceHash": "07dba0707a3bca214f3c4175d27ef2979125ab6a8d7ceaef64eb8ac1d9e1421d"
+        },
+        {
+          "documentId": "G1676813",
+          "sourceHash": "b5272e01e364754a847d5906542cdefa66ced66a6f2c5f636fd0fb0b8a1ce77b"
+        },
+        {
+          "documentId": "G1693243",
+          "sourceHash": "1c78d896d49faab6192ea689997319de7d6bdf7297e5eead01c4b400971bd3ff"
+        },
+        {
+          "documentId": "G1890620",
+          "sourceHash": "a5b1dd1ee3403d7f7e476fe56112e362a0e6f281bc6583864dc4d2142c1461fb"
+        },
+        {
+          "documentId": "G1676757",
+          "sourceHash": "3b56efeb2de8153c984fad7b3455f8345b387608e6f3727b9b528d9525591944"
+        },
+        {
+          "documentId": "G1676758",
+          "sourceHash": "0d0f4f3a865a462f3cc87eb71afe4e172a48180a8e75e4172f86a764dd9debd0"
+        },
+        {
+          "documentId": "G1676736",
+          "sourceHash": "b05c9ae60a664a15f6c7adcee0172288882f3e3200675884569ae45ff8d7a506"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "a6374233c9185008db924a87eb699c315d8e059b5b742a0759c09fcedbb54b49"
-      }
+        "fingerprint": "a6374233c9185008db924a87eb699c315d8e059b5b742a0759c09fcedbb54b49",
+        "editorialVersion": 2,
+        "editorialFingerprint": "72f1437d75585d6b0894214576ea1d7caaf7cfd78fd96b9269b8bd7febb32b73",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "confirm-test-entry",
+          "title": "Read the diagnostic prerequisites",
+          "summary": "Verify recorded concern, codes and preliminary conditions.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "voltage-records",
+          "title": "Interpret P1 voltage records",
+          "summary": "Require the complete disconnection sequence before reading six voltage results.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "resistance-records",
+          "title": "Interpret P2–P4 resistance records",
+          "summary": "Preserve exact states, endpoints and all strict threshold decisions.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "sensor-records",
+          "title": "Interpret P5 repair and retest records",
+          "summary": "Separate connector restoration from sensor replacement and its required retest.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "fcim-records",
+          "title": "Interpret P6 and the next destination",
+          "summary": "Read FCIM restoration/results and retain the TSB or VIN-dependent handoff.",
+          "start": 10,
+          "end": 11
+        }
+      ]
     },
     {
       "title": "Measure and adjust the A/C compressor clutch air gap",
@@ -152990,90 +153326,316 @@
     },
     {
       "title": "Replace a coupe rear seatbelt retractor",
-      "summary": "Remove the rear seatbelt retractor through the cushion and parcel-shelf access, reinstall it with untwisted webbing and check the seatbelt system.",
-      "introduction": "The rear seatbelt retractor stores the webbing and allows it to extend for an occupant. Its emergency locking function restrains webbing movement during demanding vehicle motion. Passenger belts also have an automatic locking mode used for child-seat installation. Replacing the coupe retractor involves removing interior access components and restoring both the retractor mounting and the separate belt attachment.",
-      "why": "Correct mounting, webbing routing and buckle access all contribute to a usable restraint. A twist can remain hidden during trim installation, so check the belt as the interior goes back together. Understanding the normal locking modes also helps avoid replacing a retractor simply because it has entered its child-seat locking mode.",
+      "summary": "Remove the rear cushion, side trim and parcel shelf to replace the retractor, tighten its restraint fasteners correctly, then check buckle operation, belt travel and both locking modes.",
+      "introduction": "I’ll work through the coupe interior access, retractor replacement and the actual checks needed afterward. Correct fastener torque and smooth belt travel are essential, but they do not prove that both locking modes operate. This procedure includes the stationary checks and the separate controlled emergency-locking road inspection.",
+      "why": "The retractor gathers unused webbing onto a spring-loaded spool. Its Emergency Locking Retractor, or ELR, function locks the belt in response to vehicle motion such as hard braking. Its Automatic Locking Retractor, or ALR, function holds the passenger belt at a fixed length for child-seat installation after full extension. These are separate functions. Smooth travel and correct mounting torque matter, but neither proves that both locking modes work. Understanding the difference also helps avoid replacing a healthy retractor because the belt is twisted, trapped by trim or simply in child-seat mode.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "coupe rear seatbelt retractor replacement",
-        "rear seatbelt locked after full extension",
-        "rear seatbelt clicking while retracting"
+        "2015 Mustang coupe rear seatbelt retractor replacement",
+        "Mustang rear belt will not extend",
+        "rear seatbelt automatic locking retractor check",
+        "Mustang parcel shelf seatbelt access",
+        "rear seatbelt retractor mounting torque"
       ],
       "when": {
-        "summary": "When seatbelt diagnosis establishes a retractor fault or the assembly must be removed for related work.",
+        "summary": "Use this procedure when a rear retractor fault has been established or the assembly needs removal for related work.",
         "notes": [
-          "The right-hand side is illustrated; the left-hand side uses a similar procedure."
+          "Inspect webbing integrity and buckle-and-tongue operation before choosing replacement.",
+          "Clicking and resistance to further extraction after full extension can be normal ALR operation.",
+          "A belt that locks after retracting rapidly may release when a little webbing is fed back onto its spool.",
+          "Correct twisted routing and trim interference before condemning the retractor.",
+          "The right-hand replacement is illustrated; the left uses a similar sequence."
         ]
       },
       "prepare": [
         {
-          "title": "Plan interior access",
-          "detail": "Have the rear cushion and coupe parcel-shelf procedures available, together with suitable trim and fastener tools."
+          "title": "Arrange the replacement and its completion checks",
+          "detail": "Have the appropriate rear retractor, tools that fit the actual fasteners and trim retainers, and a torque wrench capable of 30 lb.ft (40 Nm). Arrange a safe road-test area with dry concrete or an equivalent hard surface, a driver and a separate belted rear-seat tester. Keep the repaired seating position out of ordinary use until the buckle, belt-travel, ALR and ELR road checks pass. If the controlled road inspection cannot be performed, completion remains pending."
         },
         {
-          "title": "Prepare for mounting and testing",
-          "detail": "Use a torque wrench suitable for the belt and retractor fasteners. Have the Seatbelt Systems diagnostic procedure available for the required functional checks."
+          "title": "Park and restrain the vehicle",
+          "detail": "Work on a firm, level surface with the parking brake applied and wheels chocked. Leave an automatic in P and an engine-off manual in a parked gear. Cushion, trim and retractor access are performed with the vehicle on the ground; lifting and underhood work are unnecessary."
+        },
+        {
+          "title": "Finish powered setup before taking trim apart",
+          "detail": "Both front seats must move fully forward. Complete powered positioning and disable fitted remote start through Vehicle settings > Remote Start Setup before the final ignition OFF and key removal. The 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122, provides the keyless controls used below."
+        },
+        {
+          "title": "Protect yourself and the restraint",
+          "detail": "Wear eye and ear protection during service and protective gloves around sharp-edged panels or supports. Keep tools and fasteners clear of the webbing. Cleaning and tongue or guide adjustments are separate procedures; complete any needed correction and its checks before returning the affected restraint to use. Never bleach or re-dye seatbelt webbing. See [Health and Safety Precautions](#/document/G1693189)."
         }
       ],
       "steps": [
         {
-          "title": "Expose the retractor",
-          "body": "Remove the [rear seat cushion](#/document/G1692168), followed by the [coupe parcel shelf](#/document/G1692602). This provides access to the belt attachment and retractor mounting."
+          "title": "Position the seats, disable remote start and establish OFF",
+          "body": "Keep the vehicle stationary with the parking brake applied and wheels chocked. Select P on an automatic. If a manual’s engine is already running, hold the service brake, depress the clutch and select Neutral; keep the clutch depressed until shutdown.\n\nIf the ignition is ON or the engine is running, establish the parking and wheel restraints before releasing the brake pedal. Without applying the brake, press and release the start button once to switch OFF. Once a manual’s engine has stopped, put it in a parked gear.\n\nFor powered positioning or display access, put a valid intelligent access key inside. From known OFF, leave both brake and clutch pedals untouched and press and release the button once for engine-off ignition ON. Disable fitted remote start under Vehicle settings > Remote Start Setup. Move both front seats fully forward.\n\nWhen setup is finished, press and release the button without applying either pedal to switch OFF. Remove the key from the vehicle. Leave the automatic in P or the engine-off manual in a parked gear. These controls are described in the 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122."
         },
         {
-          "title": "Release the belt and retractor",
-          "body": "Follow the [retractor procedure](#/document/G1692232): remove the separate seatbelt attachment bolt and position the belt aside, then remove the retractor bolts and assembly."
+          "title": "Inspect the webbing, buckle and tongue before repair",
+          "body": "Examine the accessible webbing for tears, fraying, cuts or stretching. Trace its route for twists and places where trim traps it. Inspect the buckle and its matching metal tongue.\n\nInsert the tongue into the buckle: it should enter without excessive effort and latch with an audible click. Pull forcefully on the webbing to verify retention. Fully press the release button, remove the tongue and allow the belt to retract. Button effort should not be excessive, and the tongue should come out easily. Perform the sequence, then repeat it 3 times.\n\nA concern during this test calls for a new buckle or retractor as required by the fault. Damaged webbing is not repaired by cleaning or untwisting; resolve the affected restraint component before returning that seat to use.\n\nIf a child safety seat was in use during a collision, its mounting areas also require inspection and restoration to the original production configuration. See [Seatbelt Systems](#/document/G1883856) and [system operation and component description](#/document/G1692176)."
         },
         {
-          "title": "Install and restore the interior",
-          "body": "Reverse removal. Tighten both the retractor mounting bolts and the separate belt attachment bolt to 30 lb.ft (40 Nm). During reassembly, keep the webbing untwisted and leave the belts and buckles accessible to occupants."
+          "title": "For a belt locked at rest, try the rear non-removal release sequence",
+          "body": "Use this branch when the belt will not extract from its stowed position, particularly after rapid retraction. Only a few millimeters returning to the spool may release a normal web-sensing lock.\n\nSlowly pull the rear belt out as far as possible. Compress the backrest foam and, only if a reclining adjustment is fitted, recline the backrest to create slack. Slowly feed that slack into the retractor, then check extraction.\n\nIf it still will not extract, pull firmly to obtain as much webbing as possible. Slowly feed the slack back onto the spool, then slowly try extraction again.\n\nIf it releases and replacement is otherwise unnecessary, skip removal and continue with steps 14–22. If it remains locked, continue through access and perform the detached-anchor check in step 8 before condemning the retractor. See the rear-belt branch of [Locked Seatbelt Retractor Releasing](#/document/G1883858)."
         },
         {
-          "title": "Check seatbelt operation",
-          "body": "Complete the applicable checks in [Seatbelt Systems](#/document/G1883856). The operation information directs retractor testing to the automatic locking mode test and emergency locking road-test inspection; follow those controlled test instructions."
+          "title": "Release and remove the rear cushion",
+          "body": "With both front seats fully forward, locate the two locking tabs at the cushion’s front edge, one toward each side. Press the tabs inward to release the cushion from the floor. Lift and release the cushion, then remove it while keeping the belts and buckles clear.\n\nPress the tabs before lifting. Pulling against engaged tabs can damage them. See [Rear Seat Cushion](#/document/G1692168)."
+        },
+        {
+          "title": "Remove both loadspace side trim panels",
+          "body": "At each door opening, position the weatherstrip aside along the sill and rear edge where it overlaps the trim. Release the scuff plate upward at its clip locations and remove it. Its attachments include five spring-type clips and two additional retaining clips; work through the attachments rather than bending the plate against a clip that is still engaged.\n\nThe rear cushion is already out. Release the rear backrest latch near its outer upper corner and lower the backrest.\n\nPosition the safety belt guide aside, then release the loadspace trim panel’s attachments and remove the panel. The panel back has five spring-type clips, two pin-style clips and a separate attachment at its lower end. Keep the webbing clear as the panel comes away.\n\nRepeat on the other side: removing the parcel shelf requires both loadspace panels out. Remember the belt’s route through the guide so it can return flat. See [Loadspace Trim Panel - Coupe](#/document/G1692601)."
+        },
+        {
+          "title": "Remove both tethered D-pillar trim panels",
+          "body": "The D-pillar trim is the sloping panel beside the rear window, above the rear shoulder area. On each side, release its two retaining clips, disconnect its separate tether clip and remove the panel.\n\nOnce the panel clips release, attend to the tether before pulling the panel farther away. The tether is still an attachment, even when the trim feels loose. See [Parcel Shelf - Coupe](#/document/G1692602)."
+        },
+        {
+          "title": "Remove the parcel shelf",
+          "body": "Remove the two pin-type retainers, one near each outer end of the parcel shelf’s forward face. Remove the shelf panel spanning the area below the rear window, keeping the rear belt webbing free as it comes away.\n\nThis exposes the separate belt attachment and the retractor beneath the shelf area. See [Parcel Shelf - Coupe](#/document/G1692602)."
+        },
+        {
+          "title": "Detach the belt anchor and finish any locked-belt check",
+          "body": "Remove the single bolt securing the belt’s lower end to the body beside the rear seating area. Position the belt aside. This bolt is tightened to 30 lb.ft (40 Nm) during installation.\n\nIf investigating a locked belt, leave the retractor mounted for this check. With the lower anchor detached, slowly feed the newly available slack back into the spool, then try extracting the webbing.\n\nIf it now extracts and replacement is unnecessary, reinstall the anchor bolt at 30 lb.ft (40 Nm), restore the interior using steps 11–13 and perform the functional checks. If it still will not extract, replace the retractor using the next steps.\n\nThe general unlocking procedure also covers inflatable-belt unions where fitted. This coupe sequence covers the bolted belt anchor, not that separate equipment branch. See [Rear Seatbelt Retractor - Coupe](#/document/G1692232) and [Locked Seatbelt Retractor Releasing](#/document/G1883858)."
+        },
+        {
+          "title": "Remove the retractor assembly",
+          "body": "Support the retractor beneath the parcel-shelf area and remove its three mounting bolts: two at the upper bracket and one lower fastener. Remove the assembly and its webbing.\n\nNote the mounting arrangement and belt route before fitting the replacement. This is a mechanical removal of the belt anchor and retractor; no electrical connector needs to be unplugged for this operation. See [Rear Seatbelt Retractor - Coupe](#/document/G1692232)."
+        },
+        {
+          "title": "Install the replacement and torque the restraint fasteners",
+          "body": "Position the replacement retractor in its original location and install its three mounting bolts. Tighten the retractor mounting bolts to 30 lb.ft (40 Nm).\n\nRoute the webbing without twists, return the belt’s lower attachment to the body and install its separate bolt. Tighten that bolt to 30 lb.ft (40 Nm).\n\nBefore covering the assembly, trace the exposed webbing from the spool toward the occupant. Keep the belt and buckle available at the seating position. Both the retractor bolts and separate belt attachment use the stated torque in [Rear Seatbelt Retractor - Coupe](#/document/G1692232)."
+        },
+        {
+          "title": "Refit the shelf and tethered pillar panels",
+          "body": "Position the parcel shelf with the belts routed freely and reinstall its two pin-type retainers.\n\nReconnect each D-pillar panel’s tether clip, align its retaining clips and seat the panel. Check that neither the shelf nor the pillar trim traps the belt. See [Parcel Shelf - Coupe](#/document/G1692602)."
+        },
+        {
+          "title": "Restore the side trim, guides and backrests",
+          "body": "On both sides, position the loadspace panel, align its attachments and engage its clips. Return the safety belt guide to its working position with the webbing flat through it.\n\nRaise the backrest from its access position and make sure its latch holds. Refit each scuff plate by engaging its clips, then return the door weatherstrip to its original edge.\n\nCheck routing while each panel goes back, when correcting a trapped belt is still easy. See [Loadspace Trim Panel - Coupe](#/document/G1692601)."
+        },
+        {
+          "title": "Refit the cushion and leave the buckles accessible",
+          "body": "Position the cushion while keeping the webbing untwisted and bringing the belts and buckles above it into occupant reach. Reverse the removal and engage the cushion’s floor locking tabs.\n\nConfirm that the cushion is retained and that each belt and buckle can be reached and used. Check for webbing trapped beneath the cushion or adjacent trim. These are assembly checks; restraint performance is checked next. See [Rear Seat Cushion](#/document/G1692168)."
+        },
+        {
+          "title": "Repeat the complete buckle-and-tongue test",
+          "body": "Insert the tongue into its matching buckle. It should enter without excessive effort and latch with an audible click. Pull forcefully on the webbing to verify that the tongue remains secured.\n\nFully press the release button and allow the tongue to release and the belt to retract. Button effort should not be excessive, and the tongue should leave the buckle easily.\n\nPerform that sequence, then repeat it 3 times. If any part reveals a concern, install a new buckle or retractor as required by the fault. Resolve an insecure latch before road testing. See [Seatbelt Systems](#/document/G1883856)."
+        },
+        {
+          "title": "Check travel between full extension and full stowage",
+          "body": "Extract the webbing fully, then allow it to retract to its normal fully stowed position in the assembled vehicle. Check the entire travel for excessive effort or binding.\n\nCorrect visible trim interference or twisted routing. If the retractor has a concern or its original complaint is verified, the functional test calls for a new retractor. See [Seatbelt Systems](#/document/G1883856)."
+        },
+        {
+          "title": "Activate ALR and verify that it stays locked",
+          "body": "Position the backrest fully upright if adjustable. If a shoulder-height adjuster is fitted at the position being tested, set it fully down or fully up.\n\nFasten the belt. Pull the webbing to full extension to activate Automatic Locking Retractor mode, then allow it to retract until it stops. Audible clicking during retraction is the described ALR behavior.\n\nPull on the webbing to verify that the retractor remains locked against further extraction. If it does not remain locked, install a new retractor. See [Seatbelt Systems](#/document/G1883856)."
+        },
+        {
+          "title": "Verify automatic release from ALR",
+          "body": "Unfasten the belt and allow the webbing to retract completely to its stowed position. Pull it out and retract it again to verify that the retractor has automatically left ALR mode.\n\nIf it remains locked in ALR after complete stowage, install a new retractor. It must both hold when selected and release when fully stowed. See [Seatbelt Systems](#/document/G1883856)."
+        },
+        {
+          "title": "Restore normal seat positions after full reassembly",
+          "body": "With the interior fully assembled, parking brake applied and wheels chocked, return the front seats to usable driving and passenger positions. Keep the automatic in P or the engine-off manual in a parked gear.\n\nIf power is needed, bring the valid key inside. From known OFF, leave both pedals untouched and press the start button once for engine-off ignition ON. Complete the positioning, then switch OFF.\n\nIf ignition is already OFF because powered adjustment was unnecessary, leave it OFF. Finish with ignition OFF and the key removed. Any renewed connector work begins from OFF."
+        },
+        {
+          "title": "Prepare the separate ELR road inspection",
+          "body": "All rear retractors have Emergency Locking Retractor operation. The [component description](#/document/G1692176) directs its check to the [Seatbelt Systems road inspection](#/document/G1883856). The stationary travel and ALR checks do not establish emergency locking performance after replacement.\n\nArrange a safe area where maximum braking can be applied without a skid, on dry concrete or an equivalent hard surface. Never perform this test on wet pavement or gravel. Use a driver and a separate tester occupying the rear position being checked. All occupants must be belted, with no excessive webbing slack across the torso.\n\nFully reassemble the vehicle before departure. Keep the parking brake applied and the automatic in P or engine-off manual in a parked gear while removing the wheel chocks immediately before departure."
+        },
+        {
+          "title": "Start using the actual keyless controls",
+          "body": "Start outdoors or with the garage door open and adequate ventilation. Never start in a closed garage or another enclosed area. Do not drive if exhaust fumes are smelled inside the vehicle. Avoid dry grass and other combustible ground cover.\n\nHave a valid intelligent access key inside, all occupants belted, headlamps and electrical accessories off, and the parking brake applied. With an automatic, select P, fully press the brake and press the start button. With a manual, hold the service brake while selecting Neutral, fully depress the clutch and press the start button. Do not press the accelerator for an ordinary start.\n\nMaintain vehicle restraint during setup. Release the parking brake only when ready to depart under the driver’s control. These starting controls and prerequisites come from the 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122."
+        },
+        {
+          "title": "Perform the 24 km/h emergency-locking road test",
+          "body": "In the prepared safe area, reach 24 km/h (14.9 mph). The rear-seat tester grasps the shoulder harness and leans forward while the driver makes a maximum braking application without a skid. Do not jerk the webbing. Keep excessive slack out of the belt across the tester’s torso.\n\nApply maximum brake force only on dry concrete or an equivalent hard surface. The belt should lock with minimum additional webbing extension. Every retractor being tested must lock to pass.\n\nIf any tested retractor fails to lock, install a new retractor and repeat the required checks. Keep that seating position out of ordinary use until repair and successful retesting. A stationary tug is not a substitute for this inspection. See [Seatbelt Systems](#/document/G1883856)."
+        },
+        {
+          "title": "Park, shut down and record the actual results",
+          "body": "Stop on a firm, level surface, hold the service brake and apply the parking brake. Select P on an automatic. On a manual, depress the clutch, select Neutral and keep the clutch depressed until the engine stops.\n\nOnce the parking brake is holding the vehicle, release the brake pedal and press and release the start button once to switch OFF. Put the engine-off manual into a parked gear. Restore wheel chocks before further stationary work.\n\nIf restoring a previously enabled remote-start setting, do so only after full reassembly and with all work finished. From known OFF, use one button press with neither pedal applied for engine-off ignition ON, restore the setting and switch OFF again. Finish unconditionally with ignition OFF and the key removed from the vehicle.\n\nRecord the 30 lb.ft (40 Nm) restraint-fastener torque, correct routing, accessible buckles and actual buckle, belt-travel, ALR hold/release and ELR road-test results."
         }
       ],
       "watchFor": [
         {
-          "title": "Twisted webbing or inaccessible buckles",
-          "body": "Check routing and occupant access as the parcel shelf and cushion are restored, then check again with the interior assembled."
+          "title": "Release cushion tabs before lifting",
+          "body": "Press both front locking tabs inward. Pulling upward against engaged tabs can damage them."
+        },
+        {
+          "title": "Trim has several kinds of attachment",
+          "body": "Release the scuff plate’s five spring-type clips and two additional clips. The loadspace panel also has spring clips, pin-style clips and a lower attachment; do not bend it against an attachment that remains engaged."
+        },
+        {
+          "title": "Released pillar trim is still tethered",
+          "body": "Disconnect each D-pillar tether after releasing the trim clips. Reconnect the tether before seating the panel during installation."
+        },
+        {
+          "title": "A twist can hide beneath restored trim",
+          "body": "Check the belt at the spool, shelf, guide and cushion during assembly, then check full travel with the interior fitted."
+        },
+        {
+          "title": "ALR clicking can be normal",
+          "body": "Full extension selects the child-seat locking mode. Clicking during retraction is expected in that mode, but complete stowage must release it automatically."
+        },
+        {
+          "title": "Road-test conditions are literal",
+          "body": "Use the stated speed, a safe area and a dry hard surface. Apply maximum braking without a skid; do not jerk the belt or leave excessive slack across the torso."
         }
       ],
       "notes": [
-        "If a child seat was in use during a collision, inspect its mounting areas and restore them to the original production configuration."
+        "The listed engine applications retain coupe and fitted-rear-seat restrictions. This access sequence does not cover convertibles or rear-seat-delete cars.",
+        "Ordinary retractor access does not require removal of the child-seat anchor assembly. [Child Safety Seat Tether Anchor](#/document/G1692228) is a separate service destination. Lower LATCH anchors at the cushion/backrest junction are distinct from the upper tether anchorage in the parcel-shelf sheet metal.",
+        "Belt-Minder concerns the driver and front passenger reminder functions. Changing its programming is outside rear retractor replacement.",
+        "The front-row unlocking branch concerns front-belt equipment and is unnecessary for this rear-coupe job."
       ],
       "diagnostics": [
         {
-          "finding": "After full extension, the belt clicks while retracting and cannot be pulled out again.",
-          "meaning": "This is the described behavior of Automatic Locking Retractor (ALR) mode and can be normal.",
-          "next": "Allow the webbing to retract fully to disengage ALR mode, then assess operation through the prescribed tests."
+          "finding": "The webbing is torn, frayed, cut or stretched.",
+          "meaning": "The preliminary inspection has found physical damage rather than a simple locking-mode or trim problem.",
+          "next": "Keep the affected seating position out of use and resolve the damaged restraint component. Cleaning or untwisting does not repair damaged webbing."
+        },
+        {
+          "finding": "The tongue inserts poorly, fails to latch securely or is difficult to release.",
+          "meaning": "The buckle-and-tongue functional test has identified a concern.",
+          "next": "Perform the full insertion, click, forceful retention pull and release sequence, then repeat it 3 times. Install a new buckle or retractor as required by the fault. Resolve an insecure latch before road testing."
+        },
+        {
+          "finding": "A stowed belt refuses to extend after rapid retraction.",
+          "meaning": "A normal web-sensing lock may be holding the spool.",
+          "next": "Use step 3’s rear release sequence. If necessary, continue through access and the detached-anchor check in step 8. Replace the retractor if it still will not extract. Reinstall removed restraint fasteners at 30 lb.ft (40 Nm), restore the interior and perform the functional checks. See [Locked Seatbelt Retractor Releasing](#/document/G1883858)."
+        },
+        {
+          "finding": "The belt will not extend or presses excessively on the occupant.",
+          "meaning": "Possible causes include web-sensing lock, incorrectly installed trim, ALR operation or internal retractor binding.",
+          "next": "Use the unlocking branch for a stowed lock, correct interfering trim and allow full stowage to release ALR. Perform the belt-travel, ALR and applicable road tests. Replace the retractor when a functional test directs it."
+        },
+        {
+          "finding": "The belt does not retract or leaves excessive slack.",
+          "meaning": "The webbing may be twisted or incorrectly routed, trim may interfere, or the retractor may bind internally.",
+          "next": "Check the exposed belt path and trim first. Use the separate tongue or guide correction procedure where applicable, then repeat full-extension-to-stowage testing. A verified retractor concern requires replacement."
+        },
+        {
+          "finding": "The tongue is rotated on intact webbing.",
+          "meaning": "The tongue’s orientation is creating a routing problem.",
+          "next": "Complete the separate [Seatbelt Tongue Rotated On Belt](#/document/G1692226) adjustment before returning the affected restraint to use, then verify flat routing and repeat its operation checks. This replacement procedure does not teach that separate adjustment."
+        },
+        {
+          "finding": "The webbing is twisted at a D-ring guide.",
+          "meaning": "The twist is at the guide rather than necessarily inside the spool.",
+          "next": "Complete the separate [Seatbelt Twisted at the Seatbelt Guide](#/document/G1726475) correction, including any required access and restoration, then check belt travel. Keep the affected restraint out of use while the twist remains unresolved; do not assume every rear coupe guide has a D-ring shape."
+        },
+        {
+          "finding": "The belt clicks during retraction after full extension and then will not extend.",
+          "meaning": "That is the described ALR behavior used for child-seat installation.",
+          "next": "Allow complete retraction to stowage and verify free extraction again. During the deliberate ALR test, replace the retractor if it fails to remain locked or fails to leave ALR automatically after full stowage."
+        },
+        {
+          "finding": "The belt is dirty or soiled.",
+          "meaning": "Cleaning is a separate service decision, not proof of a failed retractor.",
+          "next": "Use the complete separate [Seatbelt Cleaning](#/document/G1692223) procedure and applicable owner care instructions before cleaning. This replacement procedure does not supply the cleaning method or product selection. Never bleach or re-dye webbing. Resolve the condition and repeat the appropriate operation checks before returning the restraint to use."
+        },
+        {
+          "finding": "A retractor fails to lock during the controlled road inspection.",
+          "meaning": "It has failed the ELR road-test criterion even if stationary travel and ALR checks passed.",
+          "next": "Install a new retractor and repeat the required checks. Every retractor being tested must lock with minimum webbing extension."
+        },
+        {
+          "finding": "The seatbelt warning indicator does not operate.",
+          "meaning": "Possible sources include the indicator, wiring, terminals, connectors, instrument cluster or restraints control module. This symptom does not establish a rear mechanical retractor fault.",
+          "next": "When the airbag warning indicator is not illuminated, use Instrumentation, Message Center and Warning Chimes diagnosis as the separate diagnostic destination."
+        },
+        {
+          "finding": "The seatbelt warning chime does not operate.",
+          "meaning": "Possible sources include wiring, terminals, connectors, the seatbelt switch, instrument cluster or restraints control module.",
+          "next": "If the airbag warning indicator is illuminated, use Airbag Supplemental Restraint System diagnosis. If it is not illuminated, use Instrumentation, Message Center and Warning Chimes diagnosis. Do not replace the rear retractor on this symptom alone."
+        },
+        {
+          "finding": "Belt-Minder is inoperative.",
+          "meaning": "The front-seat reminder may be deactivated or have a wiring, terminal or connector concern.",
+          "next": "Treat this as a separate reminder-system concern. [Seatbelt Minder Deactivating/Activating](#/document/G1693942) is the configuration destination; if already activated, use Instrumentation, Message Center and Warning Chimes diagnosis. Do not change its programming during this repair."
+        },
+        {
+          "finding": "A child safety seat was in use during a collision.",
+          "meaning": "The child-seat mounting areas require inspection in addition to retractor work.",
+          "next": "Have the mounting areas inspected and restored to the original production configuration. The [component description](#/document/G1692176) identifies the upper tether anchorage at the parcel-shelf sheet metal and lower LATCH anchors where the rear cushion meets the backrest."
         }
       ],
       "verification": [
         {
-          "title": "Record the installed-system checks",
-          "body": "Record correct mounting torque, untwisted webbing, accessible belts and buckles, and the outcome of the prescribed seatbelt functional checks."
+          "title": "Restraint fasteners and interior are restored",
+          "body": "Confirm the three retractor mounting bolts and separate lower belt attachment bolt were tightened to 30 lb.ft (40 Nm). Confirm the shelf and its two retainers, both tethered D-pillar panels, loadspace panels, belt guides, scuff plates, weatherstrips and cushion are refitted."
+        },
+        {
+          "title": "The occupant can reach and use the belt",
+          "body": "Confirm untwisted webbing, accessible belts and buckles, a retained cushion and latched backrests. These establish correct assembly, not locking performance."
+        },
+        {
+          "title": "Stationary functional checks pass",
+          "body": "Record the complete buckle-and-tongue sequence and repetitions, free travel between full extension and stowage, ALR engagement and hold, and automatic ALR release after complete stowage."
+        },
+        {
+          "title": "Emergency locking has actually been checked",
+          "body": "Record the controlled 24 km/h (14.9 mph) road-inspection result for each tested retractor. A stationary pull or ALR result does not substitute for the ELR road inspection."
+        },
+        {
+          "title": "The vehicle is parked and OFF",
+          "body": "Finish with the parking brake applied, automatic in P or engine-off manual in a parked gear, ignition OFF and key removed. Restore wheel chocks before further stationary work."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692232",
-          "purpose": "Coupe rear seatbelt retractor removal and installation, including belt attachment torque and routing requirements.",
+          "purpose": "Primary coupe rear retractor removal, installation, restraint-fastener torque and required operation check.",
           "mediaId": "G1692232-m0002"
         },
         {
           "documentId": "G1692168",
-          "purpose": "Rear seat cushion removal and installation for access.",
+          "purpose": "Front-seat positioning, rear cushion locking-tab release and cushion refitting.",
           "mediaId": "G1692168-m0003"
         },
         {
+          "documentId": "G1692601",
+          "purpose": "Both-side weatherstrip, scuff plate, backrest, belt-guide and loadspace trim access and restoration."
+        },
+        {
           "documentId": "G1692602",
-          "purpose": "Coupe parcel-shelf removal and installation for retractor access."
+          "purpose": "Both D-pillar panels, their clips and tethers, and parcel-shelf removal and refitting."
         },
         {
           "documentId": "G1883856",
-          "purpose": "Seatbelt diagnosis and required post-installation functional testing."
+          "purpose": "Preliminary inspection, symptom distinctions and complete buckle, travel, ALR and ELR road checks."
+        },
+        {
+          "documentId": "G1692176",
+          "purpose": "ELR and ALR operation, front-reminder context and collision-related child-seat mounting inspection."
+        },
+        {
+          "documentId": "G1883858",
+          "purpose": "Rear locked-retractor release sequence, including the conditional detached-anchor check."
+        },
+        {
+          "documentId": "G1692226",
+          "purpose": "Separate correction destination for a tongue rotated on intact webbing."
+        },
+        {
+          "documentId": "G1726475",
+          "purpose": "Separate correction destination for webbing twisted through a D-ring guide."
+        },
+        {
+          "documentId": "G1692223",
+          "purpose": "Separate cleaning destination; cleaning method and product selection are outside this replacement procedure."
+        },
+        {
+          "documentId": "G1693942",
+          "purpose": "Separate front Belt-Minder configuration destination; programming is outside this repair."
+        },
+        {
+          "documentId": "G1692228",
+          "purpose": "Separate child-seat anchor service destination; removal is unnecessary for ordinary retractor access."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, key removal, protective equipment and material-handling precautions."
         }
       ],
       "hero": {
@@ -153098,7 +153660,7 @@
         "years": [
           2015
         ],
-        "equipment": "Coupe"
+        "equipment": "2015 Mustang coupe with a fitted rear seat, covering 2.3L, 3.7L, 5.0L and 5.2L applications. Right-hand and left-hand rear retractors; left-hand-drive and right-hand-drive loadspace trim access. Excludes convertibles and rear-seat-delete configurations."
       },
       "relatedGuideIds": [
         "job-7b4004c8d23a60ed",
@@ -153125,14 +153687,93 @@
         {
           "documentId": "G1692176",
           "sourceHash": "fec09d2364c1354e26f7f4bd570aa62e6cc0da2d7747a877fdcd680a1d4595cb"
+        },
+        {
+          "documentId": "G1883858",
+          "sourceHash": "b8de8a0f384ae7d9ce74ca49a9d7589c0ef7c295c7d2a527e40c2b8251ffdbc4"
+        },
+        {
+          "documentId": "G1692226",
+          "sourceHash": "03ce0b57c02c96f239aca4b4cfa820d987fde3cfdb53de58d49fc653bcea61fc"
+        },
+        {
+          "documentId": "G1726475",
+          "sourceHash": "e527864f3538e3d2cd505b65b1f6130a06101d24994bc026100f31eb16738ab9"
+        },
+        {
+          "documentId": "G1693942",
+          "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319"
+        },
+        {
+          "documentId": "G1692223",
+          "sourceHash": "7f5217365c38023eb95c6d672899db975434889287ba559d133e33bf4dceb380"
+        },
+        {
+          "documentId": "G1692228",
+          "sourceHash": "f44c9d3fd563a1a6fa1d22e9596691ee4787d54f0dfdabb6c98e53f0fedd4fd6"
+        },
+        {
+          "documentId": "G1692601",
+          "sourceHash": "2847e9563c9a229f73ddf693fcd4289c603a27e762b0465c20cb38f06815fff9"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "43f99016d04247a10507815f2db5b17c1c30e2e0be209a27d71d7931ac10697e"
-      }
+        "fingerprint": "43f99016d04247a10507815f2db5b17c1c30e2e0be209a27d71d7931ac10697e",
+        "editorialVersion": 2,
+        "editorialFingerprint": "1a889adf47b03c0d482f83153f9f9213e6ef76fddf5770ef44ef9a56cfef717e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-assess",
+          "title": "Secure the car and assess the belt",
+          "summary": "Position the seats, establish OFF, inspect the restraint and try the applicable unlocking sequence.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "open-rear-trim",
+          "title": "Open the rear interior",
+          "summary": "Remove the cushion, both side panels, tethered pillar panels and parcel shelf.",
+          "start": 4,
+          "end": 7
+        },
+        {
+          "id": "release-and-replace",
+          "title": "Release and replace the retractor",
+          "summary": "Detach the belt, finish any unlocking check and install the assembly at the specified torque.",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "restore-rear-interior",
+          "title": "Restore the rear interior",
+          "summary": "Refit trim, guides, backrests and cushion with flat webbing and accessible buckles.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "prove-stationary-functions",
+          "title": "Check stationary belt functions",
+          "summary": "Test the buckle, full belt travel and ALR hold and release, then restore seat positions.",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "id": "verify-emergency-locking",
+          "title": "Verify emergency locking and finish",
+          "summary": "Perform the controlled road inspection, then park, shut down and record the results.",
+          "start": 19,
+          "end": 22
+        }
+      ]
     },
     {
       "title": "Diagnose airbag warnings and supplemental restraint fault codes",
