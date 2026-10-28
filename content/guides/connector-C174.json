@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C174",
+  "supportingSourceRefs": [],
+  "sourceHash": "4c76c9fdb76c366cffbd44e476381236d67c3f1cf02613619189db4fba460a3c",
+  "title": "C174 — Ignition transformer capacitor 1",
+  "introduction": "The useful trick with this ignition-capacitor reference is keeping the electrical address and the parts address together. I start with the connector identity, use the drawing to recognize its shape, then follow the cavity label into the circuit table. The plug’s silhouette is a useful introduction; the identifiers do the proper handshake.\n\nRead across the pin-assignment row to keep its circuit, wire details, fuse-or-circuit-breaker function and terminal reference together. For the pigtail listing, use Kit List to find Number, then compare Engineering Shell with the connector’s Hard Shell and Fpn fields. Service Part and Terminal Part Number identify different entries.\n\nThis page supports connector and catalog reading, not live testing, physical access or replacement. Viewing direction, engine applicability, gauge convention and the meanings of Size and Used are unspecified. The separate circuit-wire and pigtail Gauge entries do not authorize wire substitution, and a supply-function label alone cannot prove that power is present.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C174-b00002",
+      "text": "Connector-face drawing · Harness 12C508",
+      "why": "I use the tall rectangular upper structure and rounded lower housing around the cavity label to recognize this drawing. These are page landmarks, not a confirmed vehicle orientation or release sequence. The identification row beneath the image ties it to its harness and connector reference."
+    },
+    {
+      "blockId": "connector-C174-b00005",
+      "text": "Cavity-to-circuit assignment",
+      "why": "The cavity label is the bridge from the illustration to the circuit row. Read the complete Function entry with its circuit identifier; retain its fuse-or-circuit-breaker wording. This is a documented supply association, with no measurement or fault conclusion attached."
+    },
+    {
+      "blockId": "connector-C174-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Read the pigtail entry across so its wire details, material description, cavity count, image filename, service part and shell remain associated. The material’s parenthetical finish detail is part of the listing, not an instruction to apply grease. The parts reference does not supply a splice method or installation sequence."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:55:50.554Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "eb268967089891a83aa2967e1c24170bddae531f63e0a4c0f9a7f64c40f01721",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "93d205fedee96572e0990411e5182dd0b177e9d1bf75e475a3c8ca13c124dfb0",
+    "reviewedAt": "2026-10-27T23:55:50.554Z"
+  }
+}

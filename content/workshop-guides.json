@@ -7649,90 +7649,178 @@
       }
     },
     {
-      "title": "Minimize wheel-to-hub runout on the 5.2L Mustang",
-      "summary": "Position the measured wheel-and-tire high spot at the bottom, then tighten the wheel under light suspension loading to use available hub clearance.",
-      "introduction": "A wheel can have a small amount of clearance around the hub before its nuts are fully tightened. This procedure uses that clearance to offset a known high spot in the wheel-and-tire assembly. Radial runout describes the assembly's high-and-low variation as it rotates. Road Force is also influenced by tire stiffness, so a small change in mounting position can affect the result.",
-      "why": "The prescribed position and loading work together. Placing the high spot at the bottom establishes the intended orientation, while slight ground contact loads the assembly before final tightening. Allowing the vehicle's full weight onto the tires at that stage breaks the specified method. This is a targeted mounting adjustment following identification of a high spot.",
+      "title": "Minimize wheel-to-hub runout on a 2015 5.2L Mustang",
+      "summary": "Use the clearance between wheel and hub to offset an identified tire-and-wheel high spot, then tighten the wheel nuts under slight suspension loading.",
+      "introduction": "I’ll use the wheel-to-hub clearance to help offset an already identified high spot in the wheel-and-tire assembly through deliberate positioning and controlled loading.",
+      "why": "The hub supports and locates the wheel through its raised central pilot, which fits inside the wheel’s center bore. Small clearance at that fit allows a slight change in mounting position. Radial runout is the assembly’s high-and-low variation as it rotates; Road Force also reflects tire stiffness. For every 0.001 inch of wheel-to-hub clearance, Road Force can change by 1–3 pounds, depending on tire stiffness. Putting the identified high spot at the bottom and tightening under slight suspension loading uses that clearance in the intended direction.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "wheel and tire radial runout",
-        "wheel-to-hub optimization",
-        "Road Force high spot",
-        "wheel vibration investigation"
+        "2015 5.2L Mustang wheel hub runout",
+        "wheel to hub optimization",
+        "radial runout high spot",
+        "Road Force wheel positioning",
+        "Mustang wheel nut torque"
       ],
       "when": {
-        "summary": "When a radial-runout or Road Force high spot has been identified and wheel-to-hub optimization is appropriate.",
+        "summary": "Use this mounting adjustment after the radial-runout or Road Force high spot has been identified.",
         "notes": [
-          "A vibration complaint alone does not identify the high spot or establish that this adjustment will resolve it."
+          "A vibration complaint alone does not identify the high spot or establish that this adjustment will cure it.",
+          "The amount of improvement depends on available wheel-to-hub clearance and tire stiffness."
         ]
       },
       "prepare": [
         {
-          "title": "Have a known high-spot location",
-          "detail": "Use the identified radial-runout or Road Force high spot from wheel-and-tire assessment. The mounting procedure begins with that location already established."
+          "title": "Start with an identified high spot",
+          "detail": "Have the high-spot location established and recognizable before removing the assembly. This article begins at mounting adjustment; it does not establish a method for finding that spot or a numerical runout acceptance limit."
         },
         {
-          "title": "Arrange controlled lifting and tightening",
-          "detail": "Provide vehicle lifting capability that allows the tires to touch the ground without taking full vehicle weight, and torque equipment for the Mustang wheel installation procedure."
+          "title": "Arrange controlled lifting and torque equipment",
+          "detail": "Use a suitably rated hoist that supports the vehicle with all four wheels clear and allows controlled lowering until the tires just touch. Have wheel-nut removal equipment, a torque wrench capable of 150 lb-ft (204 Nm), and wheel chocks. The emergency tire-changing jack is not suitable for this workshop operation."
         },
         {
-          "title": "Protect the tire and wheel",
-          "detail": "Before tire servicing, ask whether sealant has been injected; it may be flammable. If additional tire-machine work is needed on carbon-fiber or alloy wheels, use a center-clamp tire changer and a balancer that does not contact the wheel face."
+          "title": "Have the specified lubricant and cleaning materials",
+          "detail": "Use Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 and suitable cleaning materials. Read the lubricant’s safety information. Do not clean aluminum wheels with steel wool, abrasive cleaners or strong detergents."
+        },
+        {
+          "title": "Prevent an unexpected start and protect yourself",
+          "detail": "On the grounded restrained vehicle, complete any remote-start settings first if fitted (Vehicle settings > Remote Start Setup). Confirm ignition OFF and remove the key before wheel or underbody work. Wear eye and ear protection, and protective gloves when handling sharp edges. Maintain the established OFF/key-out state throughout this manual-transmission operation."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
         }
       ],
       "steps": [
         {
-          "title": "Prepare the wheel for positioning",
-          "body": "Use the [Mustang wheel and tire procedure](#/document/G1686507) for the required removal and handling. Keep the identified high spot recognizable when positioning the assembly on the vehicle."
+          "title": "Restrain the car and position the hoist",
+          "body": "On a hard, level surface, apply the parking brake and chock the wheels. With the engine OFF and those restraints maintained, select Neutral in the ground-level cabin for this 5.2L manual-transmission wheel service. Complete any remote-start settings if fitted, then confirm ignition OFF and remove the key before lifting.\n\nConfirm that the hoist capacity covers the vehicle, cargo and modifications. Locate the stamped triangles in the underbody sheet metal: the lifting locations are along both sides, behind the front wheels and ahead of the rear wheels. Position the hoist adapters at those marked locations. Check that the arms and pads clear suspension parts, mounting brackets, stabilizer brackets, exhaust, steering components and the axle/rear cover.\n\nUse the [lifting overview](#/document/G1663631) and [service safety precautions](#/document/G1693189) for these preparations. Do not lift against either bumper or work beneath a vehicle supported only by a jack."
         },
         {
-          "title": "Place the high spot at the bottom",
-          "body": "Position the assembly with its radial-runout or Road Force high spot at the 6 o'clock position. Install the wheel nuts by hand until snug, as directed by the [optimization procedure](#/document/G1686504)."
+          "title": "Raise securely before releasing the parking brake",
+          "body": "Raise the vehicle only to a securely supported height at which all four wheels are fully clear and a helper standing on the floor can reach the parking-brake lever without entering or climbing onto the raised car. Confirm correct hoist support before the helper releases the parking brake to permit wheel positioning. Do not release it while any wheel remains on the ground. Ground-wheel chocks may be removed once all wheels are clear.\n\nKeep ignition OFF. If more working height is needed afterward, raise on the same correctly placed supports with everyone clear. If floor-standing lever access cannot be arranged with all four wheels clear, stop and use a workshop setup that permits this coordination; do not enter the raised cabin."
         },
         {
-          "title": "Apply only slight loading",
-          "body": "Lower the vehicle until the tires contact the ground and the suspension is slightly loaded. Do not allow the full vehicle weight to rest on the tires while tightening the nuts."
+          "title": "Remove the wheel-and-tire assembly",
+          "body": "Keep track of the identified high spot. Remove the five wheel nuts, support the assembly and take it off the hub. This exposes the wheel’s rear mounting face and center bore, and the hub/brake-disc mounting face.\n\nDo not use heat on a seized wheel nut: it can damage the wheel and wheel bearing. A nut that cannot be removed without heat needs a separate removal solution before this adjustment can continue. The access and refitting requirements are in [Wheel and Tire](#/document/G1686507)."
         },
         {
-          "title": "Complete wheel fastening",
-          "body": "Tighten the wheel nuts according to the Mustang Wheel and Tire procedure while maintaining the specified light loading. Use its fastening requirements for the fitted wheel."
+          "title": "Clean the mating faces and the central pilot bore",
+          "body": "Complete the brake-dust controls in preparation before cleaning the wheel and brake-disc mounting area. Do not blow or dry-brush friction dust. The following mating-surface cleaning does not authorize dispersing brake dust.\n\nRemove corrosion, dirt and foreign material from the flat mounting face on the back of the wheel and the corresponding hub/brake-disc face. Check that any fasteners retaining the brake disc to the hub are secure and do not stand between those mating faces.\n\nAlso clean the wheel’s central pilot bore—the circular opening that fits over the raised center of the hub. Clean the pilot bore as well as the flat wheel face before applying the specified lubricant.\n\nInspect the cleaned faces for remaining material or interference. Do not refit until the wheel can sit directly against the mounting face."
+        },
+        {
+          "title": "Lubricate only the pilot fit",
+          "body": "Apply a thin coat of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between the wheel pilot bore and the hub pilot.\n\nKeep it off the flat wheel-to-brake-disc mounting faces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. The wheel-nut torque requires clean, dry stud and nut threads. Remove unintended lubricant contamination before proceeding."
+        },
+        {
+          "title": "Put the identified high spot at six o’clock",
+          "body": "Refit the assembly with its identified radial-runout or Road Force high spot at the bottom, in the six o’clock position. Install all five wheel nuts by hand until snug; do not perform final tightening yet.\n\nCheck that the wheel is seated against the mounting face and that the high spot remains at the bottom. This is the positioning action in [Wheel to Hub Runout Minimization](#/document/G1686504)."
+        },
+        {
+          "title": "Restore restraints, then apply only slight tire loading",
+          "body": "With the wheel refitted and all five nuts hand-snug, bring the securely supported vehicle to a height where all wheels remain clear and the floor-standing helper can reach the parking-brake lever. Have the helper apply the parking brake without entering the raised cabin; then have everyone move clear.\n\nLower slowly until the tires contact the ground and the suspension is only slightly loaded. Restore ground-wheel chocks as the wheels reach the ground while the hoist still supports the vehicle. Stop at this lightly loaded position: do not allow full vehicle weight on the tires during final tightening. This task-specific loading condition governs the adjustment."
+        },
+        {
+          "title": "Tighten the five nuts in a star pattern",
+          "body": "While maintaining slight suspension loading, tighten the wheel nuts to 150 lb-ft (204 Nm), using clean, dry stud and nut threads.\n\nWork across the wheel in a star pattern. On the illustrated five-nut layout, the order is top, lower left, upper right, upper left, then lower right. Use the same crossing relationship if the wheel is rotated relative to that layout.\n\nThe cross pattern matters: uneven tightening can increase brake-disc runout and contribute to roughness, shudder and vibration. Check that all five nuts have received the specified torque."
+        },
+        {
+          "title": "Finish lowering and arrange the torque recheck",
+          "body": "After final tightening, lower the vehicle completely. Leave the parking brake applied and the ground-wheel chocks in place while removing the hoist arms and equipment. Only once fully grounded and chocked, select a parked manual gear from the ground-level cabin, keeping the engine and ignition OFF. Finish with the key removed.\n\nArrange to retighten the wheel nuts within 160 km (100 miles) after reinstallation. Wheels can loosen after their initial tightening."
         }
       ],
       "watchFor": [
         {
-          "title": "Wrong orientation or excessive loading",
-          "body": "Both the bottom-positioned high spot and slight suspension loading are required parts of the optimization."
+          "title": "A wheel that cannot sit flat",
+          "body": "Dirt, corrosion or an interfering brake-disc retaining fastener can prevent proper seating. Correct the obstruction before tightening; torque is not a substitute for clean mating faces."
+        },
+        {
+          "title": "Lubricant escaping the pilot area",
+          "body": "Only the pilot-bore-to-hub-pilot interface receives XL-2. Keep the mounting faces, threads and braking surfaces free of it."
+        },
+        {
+          "title": "Too much vehicle weight during optimization",
+          "body": "Tire contact and slight suspension loading are required. Full vehicle weight during tightening defeats the prescribed mounting method."
         }
       ],
       "notes": [
-        "The shared procedure also references Super Duty wheel installation; that branch does not apply to this Mustang job.",
-        "The amount of improvement depends on available wheel-to-hub clearance and tire stiffness."
+        "This adjustment keeps the tire mounted on its wheel. Tire demounting, balance-weight removal, alignment and tire rotation are separate jobs.",
+        "Before any additional tire servicing, ask whether sealant has been injected; it may be flammable. For carbon-fiber or alloy wheels, tire-machine work requires a center-clamp changer and balancing equipment that does not contact the wheel face. See the [wheel and tire precautions](#/document/G1686500).",
+        "The Super Duty wheel-installation reference in the shared optimization procedure does not apply to this Mustang."
       ],
-      "diagnostics": [],
-      "verification": [
+      "diagnostics": [
         {
-          "title": "Confirm the mounting conditions",
-          "body": "Confirm the identified high spot was at the bottom and final tightening occurred with only slight suspension loading."
+          "finding": "The high-spot location has not been identified.",
+          "meaning": "There is no established orientation for this mounting adjustment.",
+          "next": "Have the wheel-and-tire assessment identify the high spot before beginning."
         },
         {
-          "title": "Confirm wheel installation completion",
-          "body": "Verify the wheel nuts were tightened according to the applicable Mustang wheel installation requirements."
+          "finding": "Material or a retaining fastener prevents direct contact between the wheel and its mounting face.",
+          "meaning": "The wheel cannot seat correctly.",
+          "next": "Remove the contamination or correct the interference before refitting and tightening."
+        },
+        {
+          "finding": "The full vehicle weight was applied before the nuts received final torque.",
+          "meaning": "The required optimization loading condition was missed.",
+          "next": "Repeat the supported positioning and lightly loaded tightening sequence."
+        },
+        {
+          "finding": "The mounting sequence is complete, but vibration remains.",
+          "meaning": "Completing this adjustment does not prove that the original vibration has been resolved.",
+          "next": "Return to the wheel-and-tire assessment rather than assuming another mounting adjustment or replacement part is the answer."
+        }
+      ],
+      "verification": [
+        {
+          "title": "Confirm positioning and loading",
+          "body": "Confirm that the identified high spot was at six o’clock and that final tightening occurred with tire contact and only slight suspension loading."
+        },
+        {
+          "title": "Confirm wheel fastening and seating",
+          "body": "Check that all five nuts received 150 lb-ft (204 Nm) in a star pattern on clean, dry threads, with clean mating faces and lubricant confined to the pilot interface."
+        },
+        {
+          "title": "Confirm safe completion and follow-up",
+          "body": "Confirm that the vehicle is fully lowered, the parking brake is applied, ground-wheel restraints are restored, a parked manual gear is selected only after full lowering with engine and ignition OFF/key out, and the wheel-nut retightening within 160 km (100 miles) is arranged. These checks confirm installation completion; they do not establish a measured runout result."
         }
       ],
       "procedures": [
         {
           "documentId": "G1686504",
-          "purpose": "Wheel-to-hub runout optimization through high-spot orientation and light loading.",
+          "purpose": "Primary optimization procedure: bottom-positioned high spot and final tightening under slight suspension loading.",
           "mediaId": "G1686504-m0001"
         },
         {
           "documentId": "G1686507",
-          "purpose": "Mustang wheel and tire removal, installation and wheel-nut fastening requirements."
+          "purpose": "Wheel removal, mounting-face and pilot-bore cleaning, XL-2 application, five-nut star tightening, torque and recheck."
         },
         {
           "documentId": "G1686500",
-          "purpose": "Tire-sealant precautions and equipment requirements protecting carbon-fiber and alloy wheels."
+          "purpose": "Relevant wheel-cleaning, tire-sealant and carbon-fiber/alloy wheel equipment precautions."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Triangle-marked lifting locations and hoist-positioning precautions."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, personal protection, lifting capacity and vehicle restraint precautions."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Relevant friction-dust controls before cleaning wheel and brake-disc mating surfaces."
         }
       ],
       "hero": null,
@@ -7750,7 +7838,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 5.2L engine and its fitted road wheels; carbon-fiber or alloy wheel precautions apply where fitted."
       },
       "relatedGuideIds": [
         "job-f7fbc18cba975fc3"
@@ -7767,14 +7856,52 @@
         {
           "documentId": "G1686500",
           "sourceHash": "3ee088b8edf84c1d4ef977447347f11f993e8961ed5ab49afde31c67a90a2281"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "798d3cbcfc587262a237dc8de17d5ee6c46346561f8f49cdc9a656418d2970f0"
-      }
+        "fingerprint": "798d3cbcfc587262a237dc8de17d5ee6c46346561f8f49cdc9a656418d2970f0",
+        "editorialVersion": 2,
+        "editorialFingerprint": "a353413092c22430cf044c29e8370ed8874c0da19df68f531225ae9a46d71c94",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-access",
+          "title": "Secure the Mustang and remove the wheel",
+          "summary": "Establish restraints, lift at the marked points and expose the mounting surfaces.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "clean-and-position",
+          "title": "Prepare the fit and position the high spot",
+          "summary": "Clean both mating faces and the pilot bore, lubricate the pilot fit and hand-snug the wheel.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "load-and-fasten",
+          "title": "Apply light loading and complete fastening",
+          "summary": "Restore restraints, torque in a star pattern and arrange the required recheck.",
+          "start": 7,
+          "end": 9
+        }
+      ]
     },
     {
       "title": "Match-mount a tire with the 180-degree runout test",
@@ -25291,97 +25418,198 @@
       }
     },
     {
-      "title": "Replace the left steering-column lighting switch",
-      "summary": "Remove the steering-column shrouds and replace the left multifunction switch while protecting its terminals and trim retainers.",
-      "introduction": "The left multifunction switch is the steering-column stalk used for the turn signals, low/high-beam selection and flash-to-pass. It mounts on the left side of the steering column control module (SCCM), through which the column switches communicate with other vehicle systems. Replacement changes the switch itself after the surrounding upper and lower shrouds have been removed.",
-      "why": "Most of the access work involves releasing concealed trim tabs in a particular order. Adjusting the column and rotating the steering wheel provide access to those tabs. At the switch, the main precaution is protecting the component terminals: bent or damaged terminals can compromise the connection even when the replacement is mechanically secure.",
+      "title": "Replace the left steering-column multifunction switch",
+      "summary": "Remove the column shrouds, replace the left lighting stalk without damaging its terminals, and tighten its two retainers to 1 Nm (9 lb.in).",
+      "introduction": "I’ll take you through the concealed shroud attachments, careful terminal connection and small tightening torque needed to replace the left lighting stalk. The steering wheel stays installed.",
+      "why": "The left multifunction switch controls the direction indicators, low/high-beam selection and flash-to-pass. It mounts on the left side of the steering column control module, or SCCM—the electronic meeting point through which the column controls communicate with the car. Replacement requires exposing that mounting without breaking the shroud attachments or bending the switch terminals. A lighting complaint alone does not prove the stalk has failed.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "left multifunction switch replacement",
-        "turn signals not working",
-        "high beams not switching",
-        "flash to pass not working",
-        "steering column lighting stalk"
+        "2015 Mustang left multifunction switch replacement",
+        "Mustang turn signal stalk",
+        "steering column lighting switch",
+        "high beam lever replacement",
+        "steering column shroud removal",
+        "LH multifunction switch 1 Nm"
       ],
       "when": {
-        "summary": "When diagnosis has established that the left steering-column multifunction switch needs replacement.",
+        "summary": "Use this procedure when diagnosis has established that the left multifunction switch needs replacement.",
         "notes": [
-          "A lighting complaint alone does not establish that the stalk has failed.",
-          "The procedures show left-hand drive; right-hand-drive access is similar."
+          "The LH stalk controls lighting functions. The RH wiper/washer stalk is a different component.",
+          "Perform this repair with the car parked on the ground and the steering wheel installed.",
+          "A steering-lock warning or a wheel that cannot rotate must be resolved before continuing with shroud access."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare trim and fastener tools",
-          "detail": "Use an interior trim remover and a flat-bladed screwdriver for the specified shroud releases. Have suitable tools for the shroud screws and a torque tool capable of the switch’s low setting."
+          "title": "Gather the trim and fastening tools",
+          "detail": "Have an interior trim remover, a flat-bladed screwdriver, suitable drivers for the shroud screws and switch retainers, and a torque tool capable of accurately applying 1 Nm (9 lb.in). Obtain the correct replacement LH switch for the vehicle."
         },
         {
-          "title": "Understand the access boundary",
-          "detail": "The switch procedure requires removal of the column shrouds. Its illustration omits the steering wheel for clarity; wheel removal is not a listed step."
+          "title": "Prepare yourself and the workspace",
+          "detail": "Wear eye and ear protection during service, and protective gloves when handling sharp-edged components. Keep the removed shroud screws and switch retainers separated so each returns to its original location."
+        },
+        {
+          "title": "Understand the working boundary",
+          "detail": "Leave the steering wheel, airbag and steering-lock module installed. If the wheel cannot rotate with ignition OFF and the valid key inside, stop for the applicable steering-lock instructions. Damaged electrical terminals and unresolved lighting faults need their own repair or diagnostic instructions."
+        },
+        {
+          "title": "Understand the push-button modes",
+          "detail": "The 2015 Ford Mustang Owner’s Manual, printed pages 121–122, distinguishes ignition ON from engine START. From known OFF, pressing and releasing START/STOP without pressing the brake or clutch selects engine-off ON. Pressing the button with the brake applied on an automatic, or the clutch depressed on a manual, requests an engine start. Keep the engine stopped throughout this job."
         }
       ],
       "steps": [
         {
-          "title": "Position the column and release the gap hider",
-          "body": "Fully extend and lower the steering column. Following [Steering Column Shrouds](#/document/G1692617), use the interior trim remover to release the upper gap-hider tabs, disconnect it from the upper shroud and position it aside."
+          "title": "Secure the parked car and disable remote start",
+          "body": "Park on a firm, level surface with all four wheels on the ground. Set the parking brake and chock the wheels; with the engine OFF, select P on an automatic or a parked gear on a manual. Keep that parked gear selected throughout.\nIf remote start is fitted, disable it through Vehicle settings > Remote Start Setup before dismantling anything. If the setting requires ignition power, first check the current mode. If already ON with the engine stopped, leave it ON; from confirmed OFF, press and release START/STOP with neither brake nor clutch pressed to select engine-off ON. After changing the setting, switch ON back to OFF without pressing a pedal. If no settings change was needed and ignition is already OFF, leave it OFF.\nKeep the parking brake and chocks in place throughout the work. See [Health and Safety Precautions](#/document/G1693189)."
         },
         {
-          "title": "Remove the upper and lower shrouds",
-          "body": "Release the upper-shroud tabs. Rotate the steering wheel 90 degrees and release the accessible tab with the flat-bladed screwdriver, then rotate it 180 degrees and release the other tab. Release the outer clips on both sides and remove the upper shroud. Remove the lower-shroud screws and lower shroud."
+          "title": "Establish OFF and retain the key for mechanical access",
+          "body": "Confirm that the engine is stopped and ignition is OFF; the ignition-mode light should be off. Keep the valid intelligent access key inside for column positioning and the required steering-wheel rotations.\nThe 2015 Ford Mustang Owner’s Manual, printed page 122, explains that entering with the intelligent access key unlocks an equipped steering-wheel lock. Keep hands clear of the controls and do not disturb the switch or its terminals while the key remains inside. Do not press START/STOP to obtain steering assistance."
         },
         {
-          "title": "Remove the left multifunction switch",
-          "body": "Remove the switch retainers and withdraw the left switch using [Steering Column Multifunction Switch LH](#/document/G1693271). Protect the component terminals throughout removal."
+          "title": "Fully extend and lower the steering column",
+          "body": "Release the column-adjustment lever beneath the column, draw the column fully toward you and lower it fully. Secure the adjustment lever again so the column remains in position while you release the trim.\nKeep the steering wheel installed. These positioning actions begin the required [Steering Column Shrouds](#/document/G1692617) access procedure."
         },
         {
-          "title": "Install the replacement switch",
-          "body": "Reverse the switch removal sequence, making sure its terminals are not bent or damaged as it is fitted. Tighten the retainers to 9 lb.in (1 Nm)."
+          "title": "Release the upper gap hider and position it aside",
+          "body": "Find the broad trim panel bridging the space beneath the instrument cluster and behind the upper column shroud. This is the upper gap hider.\nUse the interior trim remover to release its attachment tabs at the upper shroud. Disconnect that edge and position the gap hider aside. Work at the attachments rather than bending the middle of the panel."
         },
         {
-          "title": "Restore the column trim",
-          "body": "Reverse the shroud removal procedure. Refit the lower shroud and screws, engage the upper shroud’s clips and tabs, and reconnect the upper gap hider. Correct engagement restores the trim around the stalk."
+          "title": "Release the two concealed upper-shroud tabs",
+          "body": "Starting with the steering wheel centered, rotate it 90 degrees to expose the first upper-shroud tab behind the wheel. Release that tab with the flat-bladed screwdriver.\nRotate the wheel 180 degrees from that position to expose the tab on the opposite side, then release that tab with the screwdriver. These two opposite wheel positions provide access to the two tabs; there is no separate preliminary tab-release operation.\nKeep ignition OFF. If the wheel cannot make the required movements, stop rather than force it or switch the ignition on around exposed components."
+        },
+        {
+          "title": "Remove the upper shroud, then the lower shroud",
+          "body": "Release the upper shroud’s outer clips on both sides and lift the upper shell away from the column and stalk openings.\nRemove the two screws accessible underneath the lower shroud, supporting the lower shell as you remove it. Set both shells and their screws aside. Leave the steering wheel and surrounding electrical components installed."
+        },
+        {
+          "title": "Remove the key before touching the switch",
+          "body": "With shroud access complete, confirm ignition OFF and remove the intelligent access key from the vehicle. Keep it under your control to prevent another person from starting the car. Only now begin work on the switch mounting and electrical connection."
+        },
+        {
+          "title": "Remove the two retainers and withdraw the LH switch",
+          "body": "Locate the stalk assembly on the left side of the SCCM. Its mounting flange has two retainers, one above and one below the stalk mounting area.\nSupport the switch, remove both retainers and carefully withdraw the assembly from its mounting. Allow the mating terminals to disengage without twisting or side-loading them. Do not lever against the contacts.\n[Steering Column Multifunction Switch LH](#/document/G1693271) requires that the component terminals remain free of bending or damage."
+        },
+        {
+          "title": "Check the mating connection and install the replacement",
+          "body": "With the key still outside the car, examine the replacement switch terminals and accessible mating connection. Look specifically for bent contacts, visible damage or an obstruction that would prevent proper seating. This is a visual installation check, not an electrical test.\nAlign the switch with its mounting and mating connection, then seat it carefully. Do not use the retainers to pull a misaligned connection together. If it will not seat normally, withdraw it and resolve the alignment, damage or part mismatch before continuing.\nInstall both retainers and tighten them to 1 Nm (9 lb.in). That is inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Refit the lower shroud",
+          "body": "Before bringing the key back inside, confirm that the switch is fully seated, its terminal connection is complete and both retainers are tightened.\nPosition the lower shroud around the column and stalk openings. Reinstall its two original screws, reversing their removal. Make sure the shell sits correctly rather than using the screws to drag it into position."
+        },
+        {
+          "title": "Refit the upper shroud and gap hider",
+          "body": "Bring the valid key back inside only after switch mounting and terminal seating are complete. Keep ignition OFF and leave the electrical connection alone.\nPosition the upper shroud over the column and engage its outer clips on both sides. Use the same two opposite steering-wheel positions as needed to engage and check the concealed tabs: 90 degrees from center, then 180 degrees to the opposite position.\nReconnect the gap hider to the upper shroud and engage its attachment tabs. Check that the shells meet evenly and the stalk clears its opening. If a seam will not sit evenly, check the clip engagement before applying more force."
+        },
+        {
+          "title": "Restore and lock the column position",
+          "body": "Return the steering wheel to center. Release the column-adjustment lever, restore a comfortable driving position and secure the lever. Confirm that the column remains locked in its adjusted position and the trim does not interfere with the stalk.\nComplete all reassembly and remove tools from the column area before applying ignition power."
+        },
+        {
+          "title": "Select engine-off ON and check both direction indicators",
+          "body": "Keep the car parked, chocked and restrained by the parking brake. Keep people clear of the vehicle and headlamp beams.\nWith the valid key inside and neither brake nor clutch pressed, press and release START/STOP once from known OFF to select ignition ON without starting the engine. Warning lamps and indicators should illuminate.\nFollowing the 2015 Ford Mustang Owner’s Manual, printed page 71, move the LH lever up and down to operate the direction indicators. Check the corresponding exterior lamps and instrument indications for both directions, returning the lever to center between checks.\nBriefly tap the lever in each direction and confirm the three-flash lane-change action. Cancel the indicators when finished. No driving test is needed."
+        },
+        {
+          "title": "Check high/low selection and the headlamp flasher",
+          "body": "Rotate the separate dashboard lighting dial to the headlamp symbol, beyond the parking-lamp setting. This deliberately switches on the headlamps for the beam-selection check.\nFollowing the 2015 Ford Mustang Owner’s Manual, printed page 68, push the LH lever forward to select high beams. Confirm that the headlamps change to high beam. Push the lever forward again, or pull it toward you, to switch high beams off and return to low beam.\nPull the lever slightly toward you and release it to check the headlamp flasher. Confirm a brief flash and return to the previous beam state. Observe from a safe position outside the headlamp beams."
+        },
+        {
+          "title": "Finish with controls OFF, ignition OFF and the key removed",
+          "body": "Whether the checks pass or fail, center the direction-indicator lever, switch high beams and the dashboard lighting control OFF, and leave the wipers OFF with the blades parked.\nPress and release START/STOP without pressing a pedal to return engine-off ON to OFF. Remove the key from the vehicle.\nIf a function failed, record which action failed and use the decision rows below. Any renewed inspection of the switch or its connection begins with ignition OFF and the key outside the vehicle."
         }
       ],
       "watchFor": [
         {
-          "title": "Terminal damage",
-          "body": "Do not force the switch into position if its terminals are misaligned or damaged."
+          "title": "Keep the key’s role limited during access",
+          "body": "Retain it inside for mechanical column positioning and wheel rotations with ignition OFF. Remove it after shroud access before disturbing the switch. Return it for refitting rotations only after the switch and its terminals are fully installed."
         },
         {
-          "title": "A shroud that remains attached",
-          "body": "Check the specified tab and clip releases before pulling harder. The steering-wheel rotations are part of gaining access."
+          "title": "Protect the electrical contacts",
+          "body": "Do not twist the switch against its connection, pry on contacts or tighten the retainers to overcome seating resistance. Stop if terminals are bent, damaged or unable to mate correctly."
+        },
+        {
+          "title": "Measure the small torque accurately",
+          "body": "Both switch retainers require 1 Nm (9 lb.in). Use a torque tool that measures that low setting accurately."
+        },
+        {
+          "title": "Release each attachment before pulling",
+          "body": "The gap-hider tabs, two concealed upper-shroud tabs, outer side clips and lower screws are separate attachments. If a shell remains held, revisit its remaining attachment before applying more force."
         }
       ],
       "notes": [
-        "The attached illustration shows the upper-shroud access stage."
+        "The [column-switch overview](#/document/G1693265) identifies the LH stalk as the lighting control and the RH stalk as the wiper/washer control.",
+        "Key programming and steering-lock-module configuration are outside this stalk replacement; neither module is being replaced.",
+        "The [ignition and steering-lock description](#/document/G1693266) explains the access precautions. It does not establish that a lighting complaint originates in the stalk.",
+        "The owner-control instructions used here are in the 2015 Ford Mustang Owner’s Manual, printed pages 68 and 71; keyless ignition and steering-lock operation are on printed pages 121–122."
       ],
       "diagnostics": [
         {
-          "finding": "Turn signals, beam selection or flash-to-pass do not respond correctly.",
-          "meaning": "These functions use the left multifunction switch and its connection through the SCCM, but the symptom does not isolate the switch.",
-          "next": "Establish the fault before using this replacement procedure."
+          "finding": "A direction indicator, beam-selection function or flasher was faulty before replacement.",
+          "meaning": "The LH switch commands these functions through the SCCM, but the complaint alone does not identify the failed component.",
+          "next": "Establish the fault before replacing parts. This article covers replacement and ordinary completion checks rather than circuit testing."
+        },
+        {
+          "finding": "The steering wheel will not rotate for the concealed tab releases.",
+          "meaning": "The required shroud access cannot be completed; an equipped steering lock may still be engaged.",
+          "next": "Keep ignition OFF. Confirm the valid key is inside and try only gentle left/right movement as described in the 2015 Ford Mustang Owner’s Manual, printed page 122. If the wheel remains locked or a Steering Malfunction message appears, stop for applicable steering-lock diagnosis."
+        },
+        {
+          "finding": "A shroud lifts at one edge but remains attached elsewhere.",
+          "meaning": "A tab, side clip or lower screw may still be holding it.",
+          "next": "Revisit the release sequence: gap hider, two opposite-position upper tabs, outer side clips, then lower-shroud screws. Release the remaining attachment before withdrawing the shell."
+        },
+        {
+          "finding": "The replacement will not seat, or a terminal is visibly bent or damaged.",
+          "meaning": "Installing the retainers cannot establish a sound electrical connection.",
+          "next": "Leave ignition OFF and the key outside. Withdraw the unseated switch and resolve the connection damage, alignment or part mismatch before assembly. Do not draw the switch home with its retainers."
+        },
+        {
+          "finding": "A lighting function fails after full reassembly.",
+          "meaning": "The completion check has failed, but this does not establish that the replacement stalk is defective.",
+          "next": "Turn the controls and ignition OFF and remove the key before reinspection. Recheck switch seating and terminal condition using the access sequence above. If installation is correct and the fault remains, obtain exterior-lighting diagnosis before replacing more parts."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the mechanical installation",
-          "body": "Check the switch retainers, terminal condition and engagement of the shrouds and gap hider."
+          "title": "Switch mounting and connection",
+          "body": "Before covering the switch, confirm complete seating, undamaged accessible terminals and both retainers tightened to 1 Nm (9 lb.in)."
         },
         {
-          "title": "Check the switch functions",
-          "body": "Check turn-signal control, low/high-beam selection and flash-to-pass after reassembly."
+          "title": "Trim and column adjustment",
+          "body": "Confirm both lower screws are installed, the upper side clips and concealed tabs are engaged, the gap hider is attached and the seams sit evenly. The column adjustment must be locked and the stalk must clear its trim opening."
+        },
+        {
+          "title": "Stationary lighting operation",
+          "body": "After full reassembly, confirm both direction indicators, three-flash lane-change operation, high-beam selection, return to low beam and momentary headlamp flashing with ignition ON and the engine stopped."
+        },
+        {
+          "title": "Final shutdown",
+          "body": "Leave indicators, high beams and the lighting control OFF, wipers OFF and parked, ignition OFF and the key outside the vehicle. Keep the parking brake and chocks in place until the car is ready to leave the workspace."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693271",
-          "purpose": "Left multifunction switch removal and installation, including terminal protection and retainer torque."
+          "purpose": "Primary LH multifunction-switch removal and reverse-order installation, terminal protection and 1 Nm (9 lb.in) retainer torque."
         },
         {
           "documentId": "G1692617",
-          "purpose": "Required upper and lower steering-column shroud removal and refitting for switch access.",
+          "purpose": "Required column positioning, gap-hider release, opposite-position upper-tab access, side-clip release, lower-shroud removal and reverse-order refitting.",
           "mediaId": "G1692617-m0004"
+        },
+        {
+          "documentId": "G1693265",
+          "purpose": "Identify the LH lighting switch, its SCCM mounting and its distinction from the RH wiper/washer switch."
+        },
+        {
+          "documentId": "G1693266",
+          "purpose": "Engine-off ignition operation and equipped electronic steering-lock behavior relevant to mechanical access."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant remote-start prevention, personal protection and key-removal precautions."
         }
       ],
       "hero": {
@@ -25405,7 +25633,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the LH steering-column multifunction switch; engine coverage includes 2.3L, 3.7L, 5.0L and 5.2L. Left-hand-drive access is illustrated; right-hand-drive access is similar. Push-button ignition applies; electronic steering-column lock and remote-start precautions apply where fitted."
       },
       "relatedGuideIds": [
         "job-26fd24f75a55cf78"
@@ -25426,14 +25655,62 @@
         {
           "documentId": "G1693266",
           "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535"
+        },
+        {
+          "documentId": "G1672905",
+          "sourceHash": "3cfe468c7d29c970a5d7a5afdf77481ae308d2f641201fa735458a4279e7089a"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "2ba6ac8c3f8c5342a8530d83ecdf9a50e0a4aa659df510c6e065189e6235e50d"
-      }
+        "fingerprint": "2ba6ac8c3f8c5342a8530d83ecdf9a50e0a4aa659df510c6e065189e6235e50d",
+        "editorialVersion": 2,
+        "editorialFingerprint": "27738e6ce0df18d051a98ffa35b688d9fd71d250f3ffa5d68966f27eaf3568e0",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-position",
+          "title": "Secure the car and position the column",
+          "summary": "Prevent starting and establish engine-off mechanical access.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "open-column-trim",
+          "title": "Release the column trim",
+          "summary": "Move the gap hider aside and remove the shrouds in order.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "exchange-lighting-stalk",
+          "title": "Replace the LH switch",
+          "summary": "Remove the key, protect the terminal connection and secure the replacement.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "restore-column-trim",
+          "title": "Refit the trim and lock the adjustment",
+          "summary": "Complete switch seating and column reassembly before applying ignition power.",
+          "start": 10,
+          "end": 12
+        },
+        {
+          "id": "confirm-lighting-operation",
+          "title": "Check the lighting controls and shut down",
+          "summary": "Verify the stalk functions while stationary with the engine stopped.",
+          "start": 13,
+          "end": 15
+        }
+      ]
     },
     {
       "title": "Replace the Right Steering-Column Wiper and Washer Switch",
@@ -44706,100 +44983,264 @@
       }
     },
     {
-      "title": "Replace the 2.3L EcoBoost turbocharger oil return tube",
-      "summary": "Move the air-conditioning compressor aside, renew the turbocharger drain-tube sealing connection and restore the engine oil level.",
-      "introduction": "Engine oil lubricates the turbocharger bearings and helps cool its center housing. The return tube carries that oil back to the sump. This job restores the drain connection and its sealing surfaces; access requires removing the air-conditioning compressor belt and supporting the compressor aside.",
-      "why": "Old O-ring residue or damage at a sealing port can cause another leak after reassembly. The tube must also be fully seated before its bolts are tightened, so the fasteners secure an already positioned connection rather than draw it into place.",
+      "title": "Replace the 2015 2.3L EcoBoost turbocharger oil return tube",
+      "summary": "Remove the intake pipe and A/C compressor belt, support the compressor aside, renew the oil return tube connection, and restore both belts and the engine oil level.",
+      "introduction": "The turbo gets the glory; its oil return tube gets to take the oil home—and demands that you move the A/C compressor for the privilege. Lovely packaging. I’ll walk you through that access work, the small seals that deserve your attention, and the belt installation that closes the job.",
+      "why": "Engine oil lubricates the turbocharger bearings and helps cool its center housing. The return tube carries that oil back to the sump, the engine’s oil reservoir. Clean sealing surfaces and a fully seated tube are essential: leftover O-ring material or damage at a connection can leave you doing this whole access dance again.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "2.3L EcoBoost turbo oil return tube",
-        "turbocharger oil drain leak",
-        "oil leak at turbo drain tube",
-        "turbocharger return tube O-ring"
+        "2015 Mustang 2.3L turbocharger oil return tube",
+        "EcoBoost turbo oil drain tube replacement",
+        "turbocharger oil return O-ring",
+        "2.3L A/C compressor belt removal"
       ],
       "when": {
-        "summary": "When a confirmed drain-tube or sealing defect requires repair, or the tube must be removed for service.",
+        "summary": "Use this procedure when a confirmed return-tube or sealing defect calls for replacement, or when the tube must be removed during other service.",
         "notes": [
-          "Oil around the turbocharger does not by itself identify the return tube as the leaking connection."
+          "Oil around the turbocharger alone does not identify the return tube as the leaking connection.",
+          "This procedure covers the 2015 2.3L EcoBoost arrangement with A/C. It does not establish a separate body-style branch."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange safe underbody access",
-          "detail": "With the vehicle in NEUTRAL, use a hoist following the lifting procedure. Identify the marked lifting points and check adapter and underbody clearances. Never work beneath a vehicle supported only by a jack."
+          "title": "Arrange the working space and safe access",
+          "detail": "Use a hoist rated for the vehicle’s weight, including cargo and modifications. Have wheel chocks and suitable support for the displaced A/C compressor. Locate the four lifting areas along the body sides using the stamped triangles. The emergency tire-changing jack is unsuitable for this work; never enter beneath a vehicle supported only by a jack."
         },
         {
-          "title": "Prepare parts, oil and support",
-          "detail": "Have new drain-tube bolts, a new O-ring seal, suitable compressor support and a torque wrench. Use clean SAE 5W-30 synthetic blend engine oil, XO-5W30-Q1SP meeting WSS-M2C946-B1, for seal lubrication and any required top-up."
+          "title": "Gather the replacement parts and specified oil",
+          "detail": "Have the replacement return tube, a new tube O-ring seal and new return-tube bolts ready. Use clean SAE 5W-30 synthetic blend engine oil, XO-5W30-Q1SP meeting WSS-M2C946-B1, to lubricate the seal and top up the engine if necessary."
+        },
+        {
+          "title": "Gather the belt and fastening equipment",
+          "detail": "You need a stretchy-belt removal tool—the illustrated tool is 303-1419—cable ties at least 3 mm (0.12 in) wide, suitable hand tools for turning the crankshaft and operating the accessory-belt tensioner, and torque wrenches covering the listed inch-pound and foot-pound settings. Have clean covers for opened intake ports."
+        },
+        {
+          "title": "Set the practical boundaries before dismantling",
+          "detail": "Interrupt vehicle electrical power using the negative-cable procedure below before fan-area and belt work. Keep the positive cable connected and covered. Have a tool and torque wrench for the negative clamp nut, 44 lb.in (5 Nm). Repair of damaged sealing ports and diagnosis of the original leak remain separate jobs. Keep the A/C refrigerant lines connected throughout."
+        },
+        {
+          "title": "Protect yourself and the components",
+          "detail": "Wear eye and ear protection during service and protective gloves when handling sharp edges. Review the safety information for any cleaning materials you use, and keep flammable solvents away from ignition sources. Open intake ports need immediate protection: even small particles can damage the turbocharger compressor vanes."
+        },
+        {
+          "title": "Protect yourself while handling the battery connection",
+          "detail": "Work in a ventilated area, protect your eyes and keep flames, sparks and burning material away from the battery. Avoid acid contact with skin, eyes and clothing; flush skin or eye exposure with water for at least 15 minutes and obtain prompt medical attention. Wash hands after touching terminals. If a Li-ion battery is fitted, use insulated tools, remove metallic jewelry and keep tools off the battery; do not open its case or touch exposed material from a damaged battery. See [Battery and Battery Charging Health and Safety Precautions](#/document/G1693181). No battery lifting or removal is part of this job."
         }
       ],
       "steps": [
         {
-          "title": "Lift the vehicle and remove the belt",
-          "body": "Follow [Jacking and Lifting](#/document/G1663631), then remove the compressor belt using the [2.3L belt procedure](#/document/G1688221). Correct access lets the compressor be moved without working around its installed drive belt."
+          "title": "Prevent an unexpected start",
+          "body": "On hard, level ground, apply the parking brake and chock the wheels. Complete remote-start disabling if fitted under Vehicle settings > Remote Start Setup. For an automatic, establish engine-off ignition ON: if already ON leave it ON; if OFF, keep a valid key inside and press the ignition button without pressing either pedal. Then hold the service brake and select Neutral. For a manual, select Neutral with the engine OFF and restraints maintained. If ignition is ON, release the pedals and press the button to switch OFF; if already OFF, leave it OFF. Confirm OFF and remove the key. These controls follow the 2015 Owner’s Manual, printed pages 121–122.\n\nWith ignition OFF, open and securely support the hood. Visually inspect the fans from a clear position without reaching into their operating area. A fan with cracks, damage or separation must be replaced before underhood work. OFF alone does not prevent fan operation.\n\nRemove the three battery-cover retainers and lift off the cover. Loosen the negative terminal-clamp nut, lift the clamp from its post and position it away so it cannot reconnect accidentally. Leave the positive cable connected and covered. [Battery Disconnect and Connect](#/document/G1692356) identifies this negative disconnection as interruption of vehicle electrical power. Keep it disconnected throughout the work and hand rotation below."
         },
         {
-          "title": "Move and support the compressor",
-          "body": "Disconnect the air-conditioning compressor electrical connectors and release the wiring-harness retainers. Remove its mounting bolts, then position and support the compressor aside to expose the oil return tube."
+          "title": "Position the hoist while keeping upper access grounded",
+          "body": "Position the hoist adapters at the lifting areas identified by the stamped triangles in the body sheet metal. These are the four areas along the side sills, ahead of the rear wheels and behind the front wheels, shown in [Jacking and Lifting](#/document/G1663631).\nCheck that the arms and adapters clear suspension parts, exhaust, steering linkage, mounting brackets, stabilizer brackets and the axle or rear cover. Never lift against either bumper.\nKeep the vehicle grounded for the cover and intake work in steps 3–5. Leave the parking brake applied throughout; this job does not require its release. Do not begin underbody work until the supported lift in step 6."
         },
         {
-          "title": "Remove the drain tube and inspect its ports",
-          "body": "Remove and discard the drain-tube bolts, then remove the tube. Clean the sealing ports completely of O-ring residue and inspect the sealing surfaces and line for damage. Follow the [tube procedure](#/document/G1689384) for the connection arrangement."
+          "title": "Remove the engine appearance cover",
+          "body": "Remove the bolts and nuts securing the large cover over the engine, then lift the cover away. Retain its fasteners for installation. This is the first access action in the [A/C compressor belt procedure](#/document/G1688221)."
         },
         {
-          "title": "Lubricate, seat and secure the tube",
-          "body": "Lubricate the new O-ring with clean specified engine oil. Install the tube and make sure it is fully seated before running down the new bolts. Tighten the drain-tube bolts to 89 lb.in (10 Nm)."
+          "title": "Disconnect the two smaller tubes from the air cleaner outlet pipe",
+          "body": "Find the large curved air cleaner outlet pipe across the front of the engine. The smaller inverted-U-shaped hose above it is the charge-air-cooler bypass valve inlet tube; the charge-air cooler cools air compressed by the turbo.\nLoosen the clamp at that hose’s connection to the outlet pipe, disconnect the hose and position it aside. Next disconnect the crankcase ventilation tube from the outlet pipe and position that tube aside. The ventilation connection is the smaller upright connection beside the bypass hose. Keep debris out of each opening as it is exposed."
         },
         {
-          "title": "Restore the compressor and oil level",
-          "body": "Position the compressor and tighten its mounting bolts to 18 lb.ft (25 Nm). Reconnect its electrical connectors and harness retainers, reinstall the belt through its dedicated procedure, then check and top off the engine oil as necessary."
+          "title": "Remove the air cleaner outlet pipe and protect the openings",
+          "body": "Loosen the three outlet-pipe clamps, including the connections around the curved end and the large ribbed connection at the opposite end. Remove the pipe and cover the exposed intake ports immediately.\nKeep the removed pipe somewhere clean. Small grit entering this system can damage the turbocharger’s compressor blades, so I give the port covers the same attention as the expensive bits. See [Air Cleaner Outlet Pipe](#/document/G1675706)."
+        },
+        {
+          "title": "Remove the stretch-fit A/C compressor belt",
+          "body": "After completing the grounded upper access, clear everyone from the car and raise it on the correctly positioned hoist until all four wheels are clear and secure support is established. Keep the negative cable disconnected, ignition OFF and parking brake applied. Use a safely supported working height for the belt and underside compressor access; do not enter the raised cabin.\n\nIdentify the short belt running between the crankshaft pulley and the A/C compressor pulley. Use the stretchy-belt removal tool, illustrated as a strap around the compressor pulley.\nTurn the crankshaft pulley bolt clockwise while feeding the tool onto the A/C compressor pulley through approximately 180°. Fold the tool under the inside of the A/C belt, then pull the tool firmly in one quick motion to remove the belt.\nThe larger accessory drive belt stays in place at this stage. The [belt procedure](#/document/G1688221) shows the strap arrangement."
+        },
+        {
+          "title": "Free the compressor wiring",
+          "body": "Disconnect both A/C compressor electrical connectors and detach the two wiring-harness retainers from the compressor area. Move the freed harness clear so it will not be stretched or trapped when the compressor moves.\nThe compressor is the cylindrical unit with the multi-groove pulley at its front. Its wiring runs around the upper and lower mounting areas."
+        },
+        {
+          "title": "Support the A/C compressor aside",
+          "body": "Arrange support for the compressor, then remove its mounting bolts. The illustrated arrangement has two bolts near the pulley end and another toward the rear of the compressor.\nMove the compressor aside only far enough to reach the return tube and support it there, as shown by the hook support in the [return-tube procedure](#/document/G1689384). Keep the refrigerant lines connected and avoid loading them with the compressor’s weight."
+        },
+        {
+          "title": "Remove the return tube and discard its bolts",
+          "body": "Behind the displaced compressor, identify the nearly vertical metal tube with a small upper attachment and a two-bolt flange at its lower end. This is the turbocharger oil return tube.\nRemove and discard the tube bolts: the upper attachment bolt and the two lower flange bolts shown in the illustration. Remove the tube from its connections. Keep track of the old sealing material so none remains unnoticed in a port."
+        },
+        {
+          "title": "Clean and examine both sealing connections",
+          "body": "Examine the tube ends and their mating ports, including the upper O-ring contact area and the circular sealing area at the lower flange. Remove all old O-ring residue and contamination without damaging the sealing surfaces.\nThe ports must be completely clean, with undamaged sealing surfaces and an undamaged line. If residue remains, continue cleaning before assembly. If a port or mating surface is damaged, stop and resolve that damage before fitting the replacement. A fresh seal cannot compensate for a damaged connection.\nThe source applies the same cleanliness standard if separate work exposes oil-feed or coolant sealing ports. Do not open those additional connections for this return-tube job."
+        },
+        {
+          "title": "Lubricate the new seal and fully seat the tube",
+          "body": "Lubricate the new return-tube O-ring seal with clean specified engine oil. The removed-tube illustration shows the O-ring near the narrow upper end and the lower flange sealing area.\nPosition the tube in its connections and make sure it is fully seated before running down any fastener. If it will not seat, withdraw it and check alignment, seal position and cleanliness before trying again. Keep bolt tightening out of the seating process."
+        },
+        {
+          "title": "Install and tighten the new return-tube bolts",
+          "body": "With the tube fully seated, install new bolts at its upper attachment and lower flange. Tighten the return-tube bolts to 89 lb.in (10 Nm).\nUse an inch-pound torque setting for this connection. Check that the tube remains fully seated as the bolts are secured."
+        },
+        {
+          "title": "Reinstall the compressor and reconnect its wiring",
+          "body": "Return the supported A/C compressor to its mounting position. Install its mounting bolts and tighten them to 18 lb.ft (25 Nm), then remove the temporary compressor support.\nReconnect both electrical connectors and reattach both wiring-harness retainers. Check that the harness is clear of the pulley and belt path and has not been trapped behind the compressor."
+        },
+        {
+          "title": "Move the accessory drive belt clear of the crankshaft pulley",
+          "body": "Before upper tensioner work, clear people and tools from beneath the car and lower to a securely supported, floor-reachable working height, or fully to the ground with chocks restored. Keep the negative cable disconnected and parking brake applied. Reach the upper engagement from the floor, not from an elevated cabin or improvised platform.\n\nLooking at the belt and pulley faces, locate the tool-engagement point at the center of the upper spring-loaded tensioner pulley assembly. Seat a suitable tool securely there and rotate the complete tensioner counterclockwise to relieve belt tension; do not loosen the central pulley attachment. Slip the accessory belt off the tensioner pulley, then ease the tensioner back under control.\n\nPosition the belt away from the crankshaft pulley while preserving its routing around the other components. This creates room to roll the A/C belt into place. See [Accessory Drive Belt](#/document/G1688219)."
+        },
+        {
+          "title": "Position the A/C belt and attach the installation cable tie",
+          "body": "After the upper tensioner is released under control and the accessory belt is clear, move everyone and tools clear. If underside access is needed for the following crankshaft and A/C belt operations, raise again on the same correctly placed hoist supports and confirm secure support before working beneath. Keep the parking brake applied and negative cable disconnected.\n\nPlace the A/C compressor belt onto the compressor pulley. Lay the other part of the belt over the top of the crankshaft pulley.\nFeed a cable tie at least 3 mm (0.12 in) wide through the crankshaft pulley spokes, bring it up and over the belt, and tighten it to hold the belt against the pulley. The tie passes through the open spoke area; it does not wrap around the crankshaft bolt. See the arrangement in [A/C Compressor Belt](#/document/G1688221)."
+        },
+        {
+          "title": "Roll the A/C belt into place and check its seating",
+          "body": "Rotate the crankshaft by hand clockwise through 180° to install the A/C belt. Remove the cable tie completely, then rotate the crankshaft by hand through a further 360° to verify belt seating.\nLook along both the compressor and crankshaft pulleys. The belt ribs must sit in their matching grooves across the belt’s width, with no rib riding on a pulley edge. If seating is incorrect, correct the installation before proceeding. The cable tie’s brief career ends here—remove every piece."
+        },
+        {
+          "title": "Restore the accessory drive belt",
+          "body": "After the crankshaft rotations and A/C belt check, clear people and tools from underneath and lower again to securely supported floor-reachable height, or fully ground and chock the vehicle, for the upper tensioner. Maintain negative isolation and the parking brake.\n\nAt the same central engagement point, rotate the tensioner counterclockwise while looking at the pulley face, return the belt to the tensioner pulley and release the tensioner under control.\nCheck the accessory belt on every pulley in its route. Make sure its ribs sit in the grooved pulleys correctly and that it is properly positioned on the other pulleys. Recheck the A/C belt on both of its pulleys as well."
+        },
+        {
+          "title": "Inspect and reinstall the air cleaner outlet pipe",
+          "body": "After the compressor, tube, wiring and both belts are restored and checked, clear tools and people from beneath the vehicle. Keep the parking brake applied and the negative cable disconnected. If not already grounded, lower fully under control, restoring wheel chocks as the tires reach the ground before releasing hoist support. Perform the following upper intake work from ground level; do not reach it from beneath a fully raised vehicle.\n\nInspect the removed intake components and their openings for foreign material; clean them if necessary before assembly. Remove each protective port cover only as its connection is ready to be restored, and account for every cover.\nRefit the outlet pipe and tighten its three clamps to 48 lb.in (5.4 Nm). Reconnect the crankcase ventilation tube. Return the bypass valve inlet tube to its connection and secure its clamp, completing the reverse of removal.\nConfirm that all connections are seated and that no port remains uncovered. See [Air Cleaner Outlet Pipe](#/document/G1675706)."
+        },
+        {
+          "title": "Reinstall the engine appearance cover",
+          "body": "Position the appearance cover over the engine, install its bolts and nuts, and tighten them to 80 lb.in (9 Nm). Make a final check that the cover has not trapped a tube or disturbed a connection."
+        },
+        {
+          "title": "Check the completed assembly on the ground",
+          "body": "Confirm that the return tube is seated and secured with new bolts, the compressor is mounted securely, and both compressor connectors and harness retainers are restored.\nCheck both belt paths, remove the stretch-belt tool and all cable-tie remnants, and account for tools, port covers and the temporary compressor support. These are assembly checks; they do not establish the original cause of an oil leak."
+        },
+        {
+          "title": "Check the oil, restore power and finish parked",
+          "body": "With all intake openings closed, both belts and cover installed, tools and supports removed and everyone clear of fans and other electrically operated parts, reconnect the negative clamp to its post and tighten its nut to 44 lb.in (5 Nm). Refit the battery cover and its three retainers. If the vent tube was disturbed, reconnect it correctly. Keep the positive cable and cover undisturbed.\n\nOnly from the grounded cabin, finish in automatic Park or a parked manual gear. For the automatic, from confirmed ignition OFF use the valid key and button without pedals to establish engine-off ON, hold the brake and select Park, then release the pedals and switch OFF. A manual selects its parked gear with the engine OFF. Finish ignition OFF and key outside, parking brake applied and chocks retained. Battery reconnection can cause temporary drive changes while the PCM relearns adaptive values; no additional driving or engine-running test is directed here.\n\nKeep the vehicle level, fully grounded and chocked with parking brake applied. Keep the engine OFF. Before reading the oil level, allow at least 15 minutes after the last engine shutdown for oil to drain into the pan; the elapsed repair time may already satisfy this wait. Protect yourself from engine heat.\n\nThe 2.3L underhood overview in the 2015 Owner’s Manual, printed page 211, identifies the dipstick through the middle area of the engine cover and the oil-filler cap toward the rear of that cover, nearer the windshield. Identify the oil symbols and these locations before opening anything; do not confuse the oil cap with a separate fluid reservoir.\n\nFollowing the 2015 Owner’s Manual, printed pages 214–215, carefully remove the dipstick, wipe it clean, insert it fully and remove it again. A level between its lower and upper holes is acceptable: do not add oil. Below the lower hole, add enough specified SAE 5W-30 synthetic blend oil, XO-5W30-Q1SP meeting WSS-M2C946-B1, to bring the level within the holes. Use a funnel at the oil-filler opening and recheck; do not exceed MAX. Above the upper hole, stop and have an authorized dealer remove the excess. Never remove the dipstick or filler cap while the engine is running. Fully seat the dipstick and turn the filler cap clockwise until three clicks are heard or it is fully seated.\n\nDo not start the engine while oil is below the acceptable range or an oil-level problem remains unresolved. This is a normal grounded level check with engine and ignition OFF; do not reach into the fan operating area. Finish with ignition OFF and the key outside."
         }
       ],
       "watchFor": [
         {
-          "title": "A tube that will not seat",
-          "body": "Do not use bolt tightening to pull an unseated tube into its sealing port. Establish correct seating before fastener rundown."
+          "title": "An unseated tube",
+          "body": "The tube must be fully seated before fastener rundown. Stop if tightening would be needed to draw it into a port; recheck alignment, seal position and cleanliness first."
         },
         {
-          "title": "Contamination or damaged sealing surfaces",
-          "body": "Pay particular attention to oil-feed, drain and coolant sealing ports encountered during turbocharger work. Residue and damage can cause leaks and repeat repairs."
+          "title": "Residue or damaged sealing surfaces",
+          "body": "Examine the actual O-ring contact surfaces and lower flange connection. Remove every trace of old seal material and resolve damage before assembly."
+        },
+        {
+          "title": "Mixed torque units",
+          "body": "Return-tube bolts use 89 lb.in (10 Nm), outlet-pipe clamps use 48 lb.in (5.4 Nm), and cover fasteners use 80 lb.in (9 Nm). These are inch-pounds. Compressor mounting bolts use 18 lb.ft (25 Nm)."
+        },
+        {
+          "title": "Debris entering the intake",
+          "body": "Cover opened ports immediately and inspect components before reassembly. Even small particles can damage the turbocharger compressor vanes."
+        },
+        {
+          "title": "Compressor weight on connected lines",
+          "body": "Support the displaced compressor throughout tube access. Keep its refrigerant lines connected and avoid using them to carry its weight."
+        },
+        {
+          "title": "A belt rib riding outside its groove",
+          "body": "Check belt seating across the full width of each grooved pulley. Complete the prescribed hand rotations and remove the cable tie before restoring the accessory belt."
         }
       ],
       "notes": [
-        "If turbocharger air-intake components are opened during associated work, cover their ports to keep debris away from the compressor vanes."
+        "The turbocharger uses exhaust energy to compress intake air. Its oil return tube is part of the lubrication circuit, rather than an intake-air pipe. See [Turbocharger Overview](#/document/G1673152).",
+        "The separate [Turbocharger System Operation and Component Description](#/document/G1673153) points to PC/ED for system information; that diagnostic work is outside this tube-replacement job.",
+        "No refrigerant-line disconnection, coolant-line removal or complete engine-oil drain is part of this procedure."
       ],
       "diagnostics": [
         {
-          "finding": "O-ring residue or damage is present at a drain-tube sealing port.",
-          "meaning": "The connection cannot be relied on to seal correctly in that condition.",
-          "next": "Remove residue and resolve sealing-surface or line damage before installing the tube."
+          "finding": "Oil is present near the turbocharger, but the leaking connection has not been identified.",
+          "meaning": "The location alone does not establish a return-tube defect.",
+          "next": "Confirm the repair target before dismantling. This article provides replacement actions rather than a leak-localization test."
+        },
+        {
+          "finding": "Old O-ring material or contamination remains in either return-tube connection.",
+          "meaning": "The sealing surfaces are not ready for assembly.",
+          "next": "Remove the residue and recheck the contact surfaces before installing the lubricated new seal and tube."
+        },
+        {
+          "finding": "A sealing port, mating surface or tube is damaged.",
+          "meaning": "The connection cannot be relied upon to seal in that condition.",
+          "next": "Resolve the damage before proceeding. Port repair requires a separate repair decision."
+        },
+        {
+          "finding": "The replacement tube does not fully seat before the bolts are run down.",
+          "meaning": "Alignment, seal position or an obstruction still needs attention.",
+          "next": "Withdraw the tube, inspect those areas and refit it. Begin tightening only after full seating is established."
+        },
+        {
+          "finding": "The A/C belt is not correctly seated after the additional 360° hand rotation.",
+          "meaning": "Belt installation is incomplete.",
+          "next": "Correct its position on the compressor and crankshaft pulleys, then repeat the seating check before restoring the accessory belt."
+        },
+        {
+          "finding": "The final engine-oil check shows a low level.",
+          "meaning": "Oil replenishment is needed before returning the car to service.",
+          "next": "Top up as necessary with the specified SAE 5W-30 oil and confirm the level."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the restored connections",
-          "body": "Confirm full tube seating, installation of new bolts, correct fastener tightening and restoration of the compressor, belt, connectors and wiring retainers."
+          "title": "Tube and compressor fastening",
+          "body": "Confirm full tube seating, new tube bolts tightened to 89 lb.in (10 Nm), and compressor mounting bolts tightened to 18 lb.ft (25 Nm)."
         },
         {
-          "title": "Confirm engine oil level",
-          "body": "Check the engine oil after reassembly and top off as necessary with the specified oil."
+          "title": "Belt installation",
+          "body": "Confirm the A/C belt received the 180° installation rotation, complete cable-tie removal and additional 360° seating-check rotation. Confirm both belts are correctly seated on all their pulleys."
+        },
+        {
+          "title": "Intake and electrical connections",
+          "body": "Confirm all intake port covers are removed, the outlet pipe and both smaller tubes are connected, the three outlet-pipe clamps are tightened to 48 lb.in (5.4 Nm), and the compressor connectors and harness retainers are restored."
+        },
+        {
+          "title": "Cover and loose equipment",
+          "body": "Confirm the appearance-cover bolts and nuts are tightened to 80 lb.in (9 Nm), and all tools, temporary supports and cable-tie pieces are accounted for."
+        },
+        {
+          "title": "Restraints and oil level",
+          "body": "The parking brake remained applied throughout; chocks were restored during lowering. Upper intake/cover restoration and oil-level checking were completed grounded. Confirm the oil is within the dipstick holes, cap and dipstick fully seated, negative clamp restored to 44 lb.in (5 Nm), battery cover fitted, and automatic Park or a parked manual gear selected on the ground with engine/ignition OFF and key outside."
         }
       ],
       "procedures": [
         {
           "documentId": "G1689384",
-          "purpose": "2.3L EcoBoost turbocharger oil return tube removal, sealing and installation.",
+          "purpose": "Primary return-tube removal, sealing requirements, replacement bolts and installation torques.",
           "mediaId": "G1689384-m0003"
         },
         {
           "documentId": "G1663631",
-          "purpose": "Lifting-point identification and safe hoist positioning."
+          "purpose": "Marked lifting-point identification and hoist positioning precautions."
         },
         {
           "documentId": "G1688221",
-          "purpose": "2.3L air-conditioning compressor belt removal and installation.",
+          "purpose": "Required cover access, A/C stretch-belt removal and installation, accessory-belt handling and seating checks.",
           "mediaId": "G1688221-m0002"
+        },
+        {
+          "documentId": "G1675706",
+          "purpose": "Required outlet-pipe access, smaller tube disconnections, intake cleanliness and clamp tightening."
+        },
+        {
+          "documentId": "G1673152",
+          "purpose": "Turbocharger lubrication and oil-return explanation, plus intake contamination precautions."
+        },
+        {
+          "documentId": "G1673153",
+          "purpose": "Background referral to PC/ED for turbocharger system information; no additional replacement actions are used."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, fan precautions, personal protection and vehicle-restraint requirements."
+        },
+        {
+          "documentId": "G1688219",
+          "purpose": "Actual tensioner engagement, movement and belt seating."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Complete negative-only power interruption and restoration."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Relevant battery handling precautions."
         }
       ],
       "hero": {
@@ -44820,7 +45261,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with the 2.3L EcoBoost engine, air conditioning and a separate stretch-fit A/C compressor belt."
       },
       "relatedGuideIds": [
         "job-f01fd68cb017f1fb"
@@ -44845,14 +45287,88 @@
         {
           "documentId": "G1673152",
           "sourceHash": "d42e37affcdf2c90ae94c50a1a8315541c3280682e1a562c07a20b3ab0cc3afe"
+        },
+        {
+          "documentId": "G1675706",
+          "sourceHash": "1b98edd6d5abed66910276cdc71a5b60e53cf088e8c6207c41e84982e94a75db"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1688219",
+          "sourceHash": "d3cd82cb3f29f45dcdc112d036bf8d27e165c2302e7a1fa80a69251eb9edab84"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "ccdaaf13bde0d10dc300f6abb4ae005d0acfe958a8fd912b8aae3b1011e8cb8c"
-      }
+        "fingerprint": "ccdaaf13bde0d10dc300f6abb4ae005d0acfe958a8fd912b8aae3b1011e8cb8c",
+        "editorialVersion": 2,
+        "editorialFingerprint": "6497b3948738ecb41298039867e60f862bd6db36ff4b69e238b82198e0c80bbe",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Prevent starting and prepare grounded access",
+          "summary": "Set ground controls, interrupt electrical power and position the hoist without lifting yet.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "clear-intake-and-belt",
+          "title": "Open the access route",
+          "summary": "Remove the grounded upper cover and intake, then establish supported belt access.",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "id": "expose-and-remove-tube",
+          "title": "Move the compressor and remove the tube",
+          "summary": "Free the wiring, support the compressor aside and prepare clean sealing connections.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "seat-and-secure",
+          "title": "Install the tube and restore the compressor",
+          "summary": "Lubricate the new seal, seat the tube fully and tighten the correct fasteners.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "restore-belt-drives",
+          "title": "Install and check both belts",
+          "summary": "Clear the accessory belt, roll on the A/C belt and verify pulley seating.",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "id": "close-upper-access",
+          "title": "Restore the intake and cover",
+          "summary": "Lower with restraints maintained before restoring the upper intake and cover.",
+          "start": 18,
+          "end": 19
+        },
+        {
+          "id": "finish-and-lower",
+          "title": "Complete grounded checks and restore power",
+          "summary": "Account for equipment, restore the negative connection and parked gear, then check oil with the engine OFF.",
+          "start": 20,
+          "end": 21
+        }
+      ]
     },
     {
       "title": "Replace the 2.3L EcoBoost turbocharger oil supply tube",

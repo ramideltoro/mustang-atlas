@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2360",
+  "supportingSourceRefs": [],
+  "sourceHash": "d376b83370590709a3c03f4027dc91c728237050300d67d68772cdfa7eeae4e5",
+  "title": "C2360 — Deployable steering column",
+  "introduction": "The steering column carries steering-wheel rotation toward the steering gear; this reference identifies the electrical connection labeled for its deployable function. I use the housing drawing as a key to the circuit table: the cavity label chooses the row, and the row supplies the associated circuit details. Think of it as an address label for the connection, rather than an explanation of the whole steering system.\n\nBegin with the identity table, continue through the illustrated face and circuit map, then consult the pigtail cross-reference. This page teaches reference reading, not access, disconnection, electrical testing or replacement. Physical viewing side, gauge convention and the meanings of Box, Cols, Size and Used are unspecified. Keep those fields separate and literal.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2360-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "The printed drawing has vertically stacked cavities, a triangular detail on the left and a stepped profile on the right. I use that asymmetry to keep the drawing aligned while matching its cavity labels to the table. The Fpn and Harness Id entries identify the associated reference; these visible shapes do not establish a release movement or an installed viewing direction."
+    },
+    {
+      "blockId": "connector-C2360-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Read from the illustrated cavity label to its Cavity row, then across to the circuit identifier, color, gauge and Function. The function wording identifies positive and negative sides of the pyrotechnic steering-column connection. Keep NULL and PREASSY exactly as printed in Terminal Part Number; this reference does not define them as terminal-removal or replacement instructions."
+    },
+    {
+      "blockId": "connector-C2360-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The Kit List points to the pigtail entry. Its Service Part identifies the service catalog entry, while Engineering Shell provides the shell cross-reference. Keep the remaining attributes attached to that same row. I use this relationship to understand the catalog information; the listing alone does not teach how to replace the connection or service the deployable column."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:06:06.584Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "07fe8187f56bcfef518e9a76105ab96ffd9a20100b3f30bf2f4844dd9e6570fd",
+  "sourcePdfHash": "6be5f3adc365fb799c876da1114fa6fef1067cccd84cea77b76f2fabb146efde",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "31a9b312fc7072a7b51c9a681eb22c1e1f90b2e903eb39f43bfb3c94f0c7c48a",
+    "reviewedAt": "2026-10-28T00:06:06.585Z"
+  }
+}

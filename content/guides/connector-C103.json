@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C103",
+  "supportingSourceRefs": [],
+  "sourceHash": "3abb7ab713b28bad7c2027b6de5a332317a6812804ac09b8119828ac9fd5b51e",
+  "title": "C103 — Engine oil pressure switch connector",
+  "introduction": "I use this page to connect the oil pressure switch's electrical identity to its connector drawing and service-parts references. Confirm CNumber and Description first, with Gender and Color providing additional identification details. Then match the labeled cavity in the drawing to the assignment row and read across for the circuit identity, wire description, function and terminal reference.\n\nThink of this as the switch connection's address card. It tells you which connection you are reading about; it cannot tell you how much oil pressure the engine actually has. The pigtail table identifies the listed service assembly, and the European section supplies a separate Product Id lookup.\n\nThe guide ends at identification. Access, physical viewing direction, switch behavior, pressure thresholds, electrical tests and replacement methods require their applicable service instructions. Gauge convention and the meanings of Size and Used are unspecified here; retain those entries without turning them into wire-selection or test rules.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C103-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The illustration has a broad horizontal housing outline surrounding a smaller rounded rectangular recess with the labeled cavity inside it. I use the cavity label to navigate to the assignment row, rather than treating the other molded outlines as additional connections. This printed arrangement does not establish which side of the physical connector faces the viewer."
+    },
+    {
+      "blockId": "connector-C103-b00005",
+      "text": "Cavity and switch circuit map",
+      "why": "The Cavity field links the illustration to the circuit row. Read Circuit Number, Color, Gauge, Function and Terminal Part Number together to identify the switch connection. The oil-pressure function label describes what the circuit serves; it supplies neither a pressure reading nor the switch's open-or-closed behavior under particular conditions."
+    },
+    {
+      "blockId": "connector-C103-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I use Engineering Shell to connect the pigtail entry with the housing identity, while keeping Number and Service Part distinct. Gauge, Material and Cavities describe that service entry. Its gauge field and the circuit-row gauge field serve separate records; this lookup does not tell the reader how to select wire or install the pigtail."
+    },
+    {
+      "blockId": "connector-C103-b00009",
+      "text": "European pigtail parts reference",
+      "why": "Product Id provides the European pigtail lookup. Keep it as a separate regional reference: this entry alone does not establish vehicle applicability or interchangeability with the other service-parts entry."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:00:03.558Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "6130e9c7d5dcf04c9fd342de8fc1de97d39d343181ceb40d8ca3cb2b5048e734",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "af6f0ebffc98b32c20b807316795e6c456a74685dd80c504670f53b997afdb12",
+    "reviewedAt": "2026-10-28T00:00:03.558Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1323",
+  "supportingSourceRefs": [],
+  "sourceHash": "a26cd3d10097ac0a44352dc7348aa88e3a0453eb6330bb29916b9c8e4f27b5a1",
+  "title": "C1323 — Right-hand front fog lamp connector",
+  "introduction": "I start with the identity fields before admiring the plug's shape: a familiar-looking housing still needs the right circuit credentials. Confirm CNumber and Description, find the cavity labels in the drawing, then match those labels to the Cavity column. Each matching row carries the circuit's identity, color, gauge, function and terminal reference together.\n\nFor this right-hand fog lamp, pay attention to the control function's wording, including “RIGHT OR COMMON.” Keep that wording when tracing the circuit; it does not by itself explain which vehicle configuration uses a common connection. The ground row describes the return connection, while the pigtail section provides the service-parts cross-reference.\n\nUse this page for identification and map reading. It does not establish physical viewing direction, access, test conditions, replacement methods, gauge convention or the meanings of Size and Used. Preserve those entries as recorded and move to task-specific service instructions for electrical testing or repairs.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1323-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "The illustration shows an upright oval face with vertically stacked circular cavities, rectangular projections at the ends and features along the sides. I use that geometry to navigate the printed cavity labels. The drawing alone does not identify the mating-side or wire-side viewing direction of the physical connector."
+    },
+    {
+      "blockId": "connector-C1323-b00005",
+      "text": "Cavity and circuit map",
+      "why": "Match the drawing's cavity label to Cavity, then read across that same row. Function separates the control connection from the ground connection, and Circuit Number supplies the circuit identity. The control description retains its right-or-common qualification; a blank Qualifier field adds no explanation of that configuration. These assignments identify connections without demonstrating that either circuit works."
+    },
+    {
+      "blockId": "connector-C1323-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I use Engineering Shell to relate the pigtail entry to the housing reference, then distinguish the catalog Number from Service Part. Gauge, Material and Cavities belong to the pigtail record. Keep its gauge separate from the circuit-row gauge entries; this table supplies a parts lookup, without a wire-selection or installation procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:00:03.542Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "52e3d7380185ea44c51a75f79e18ca4a1c93405d0f03525db2857d444ee03408",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 28,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "75a0fc703284c27f4f3103896a1086fcd44982f94d3c78e8da361aed3ceb30f7",
+    "reviewedAt": "2026-10-28T00:00:03.542Z"
+  }
+}

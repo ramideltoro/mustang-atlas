@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3240",
+  "supportingSourceRefs": [],
+  "sourceHash": "e39ab8e535ed54c25cee2a98984696d592c18292f8a5de0e19d5c58296f720c1",
+  "title": "C3240 — Seat position sensor RH",
+  "introduction": "This reference identifies the right-hand seat-position-sensor connector and links its illustrated cavities to the passenger-seat circuit rows. I start with the identity table, use the housing drawing to find the cavity labels, then read the corresponding rows across. The drawing is the seating plan; the Function column tells us each connection's assigned job.\n\nThe circuit map distinguishes a ground function from the seat-track-position sensor function, while the pigtail section provides catalog information. This page does not teach access, probing, sensor diagnosis or replacement. Physical viewing side, gauge convention and the meanings of Box, Cols, Size and Used are unspecified, so those fields remain literal reference entries.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3240-b00002",
+      "text": "Connector face for harness 14D230",
+      "why": "In the drawing as printed, the cavities are stacked inside the rounded portion on the right, with a rectangular extension to the left. I use those housing features to keep the illustration aligned while reading the cavity labels. The Fpn and Harness Id table ties the drawing to its reference entries; the drawing does not establish which physical side to view or how the connector releases."
+    },
+    {
+      "blockId": "connector-C3240-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Use each illustrated cavity label to select its Cavity row, then read across for the circuit identifier, color, gauge, Function and Terminal Part Number. The Function entries distinguish the passenger-seat ground connection from the seat-track-position sensor connection. They identify circuit roles; they do not specify a sensor output, test threshold or fault conclusion. Keep the ground description intact without assigning extra meaning to its unusual wording."
+    },
+    {
+      "blockId": "connector-C3240-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Follow Kit List to the pigtail row and keep its attributes together. Service Part and Engineering Shell identify different catalog fields, while Material, Gauge and Cavities describe the listed entry. Image names an associated image file. This helps distinguish the service entry from the housing reference without turning the catalog listing into a replacement decision."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:06:06.593Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "a770b3ecd2cd9abbff2ebad9ea1a09c4fc186a8b9bad8adbf38d1977d3db9e41",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ae66fd869b0da4aaf20ab31f3b8082876a48d0f915b39998e13cc75a7efb4dbf",
+    "reviewedAt": "2026-10-28T00:06:06.593Z"
+  }
+}

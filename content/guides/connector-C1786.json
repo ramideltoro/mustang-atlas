@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1786",
+  "supportingSourceRefs": [],
+  "sourceHash": "c47ab2c0153a69b6f47af9a530f8fafd424c69ad5e30db58fb45ddcb7c3bfa47",
+  "title": "C1786 — Passenger-side hood hinge connector",
+  "introduction": "I start with the connector identity, then use the drawing’s cavity labels to find the corresponding rows in the pin table. The hinge name gets us to the right neighborhood; the circuit descriptions give each connection its electrical address. Here, those descriptions distinguish the positive and negative connections associated with the right-hand pedestrian-impact hood actuator.\n\nRead the housing outline, cavity map and parts tables together. This is an identification reference, with no access, probing, testing or replacement procedure. The physical viewing direction, gauge convention and meanings of the Box, Cols, Size and Used fields are not explained, so I leave those fields uninterpreted.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1786-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "I use the upper housing projection and the tab extending left as landmarks within this drawing. The circular cavities are stacked vertically; their printed labels connect the illustration to the Cavity column. These landmarks describe the image, not the connector’s installed orientation or a release movement."
+    },
+    {
+      "blockId": "connector-C1786-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read across the row matching the drawing’s cavity label. Circuit Number identifies the circuit, while Function distinguishes the actuator connections; Color, Gauge and Terminal Part Number supply separate reference details. The positive and negative wording identifies the listed roles, but supplies no test voltage, measurement setup or fault conclusion."
+    },
+    {
+      "blockId": "connector-C1786-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I keep its kit entry separate from the terminal information in the pin table: the Service Part and Engineering Shell columns describe different parts references. The circuit-wire and pigtail gauge entries differ; this sheet does not explain that difference or authorize a wire substitution."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:01:01.377Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "13bdf165981ac6162ea63ca5893e12244b7fb2d47e2e64249252490328e127dc",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 28,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "587e0bb96c483b584db06452966a82fb89edaf7b82d70b7112ae17d263dd5c61",
+    "reviewedAt": "2026-10-28T00:01:01.379Z"
+  }
+}

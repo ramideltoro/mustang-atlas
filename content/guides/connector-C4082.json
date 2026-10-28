@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4082",
+  "supportingSourceRefs": [],
+  "sourceHash": "79d587799d34e5639aeb9dc946c9c5b737f676ea66eda5da360f46392c96e4cd",
+  "title": "C4082 — Audio antenna connector",
+  "introduction": "An audio-antenna heading can have us thinking about music before we have even read the wire’s job description. I check Function first: this entry concerns antenna power at the rear window. The drawing and circuit row identify that connection; they do not describe an audio-signal path or diagnose reception quality.\n\nUse the printed cavity label to move from the illustration to the circuit table, then read the pigtail entries separately. This is an identification reference, with no access, probing, testing, wire-selection or replacement procedure. Physical viewing direction, gauge convention and the meanings of the Box, Cols, Size and Used fields remain unspecified.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4082-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "I use the circular cavity toward the right and the detailed housing features on the left to recognize the illustrated layout. Follow the cavity’s printed label into the pin table. The sloping outer housing outline supplies another visual landmark, but does not establish installed orientation or a latch-release direction."
+    },
+    {
+      "blockId": "connector-C4082-b00005",
+      "text": "Cavity and antenna-power reference",
+      "why": "Read across the matching Cavity row to connect the circuit identifier with its color, gauge, function and terminal reference. The function description identifies a power-related connection associated with a control module and the rear window. It does not specify when power should be present, what reading to expect or which component to blame for poor reception."
+    },
+    {
+      "blockId": "connector-C4082-b00007",
+      "text": "Pigtail parts references",
+      "why": "A pigtail is a connector with attached wire leads. Its listed assemblies share an engineering-shell reference but differ in gauge and service-part entries, and neither gauge entry matches the circuit row. I preserve those distinctions without treating a housing match as proof of interchangeability; choosing or installing a replacement needs information beyond this reference."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:01:01.396Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ff61040b63ae12297473aa4938a77ba42bbd04f9e06ff68c18207f10807e3b05",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9026f71c3b39b2f01bfd7d774e8698d94db6b78212faf3161fc05f5149c1877f",
+    "reviewedAt": "2026-10-28T00:01:01.397Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C9031",
+  "supportingSourceRefs": [],
+  "sourceHash": "3a033f6c765e6923d7889763a2ae3d170658d6e80edd1b12267b9849b76c317a",
+  "title": "C9031 — LH side air curtain",
+  "introduction": "This reference connects the left-hand side air-curtain identity to its illustrated cavities and circuit rows. I read it like a seating chart: each cavity label points to a particular row, and that row keeps the circuit's details together. Start with the identity table, find the matching housing illustration, then use Cavity to move from the picture into the circuit map.\n\nThe pigtail section provides a separate service-part cross-reference. This is a guide to reading the reference, not instructions to access, disconnect, probe or repair the restraint connection. Physical viewing side, gauge convention and the meanings of Box, Cols, Size and Used are unspecified; retain those entries literally rather than treating them as dimensions or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9031-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "In the drawing as printed, the labeled cavities are stacked inside the circular portion on the right, with a shaped extension to the left. I use those features to keep the illustration aligned while reading its labels. The Fpn and Harness Id table associates the housing with its reference entries; the illustration does not identify the physical viewing side."
+    },
+    {
+      "blockId": "connector-C9031-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Match each illustrated cavity label to the Cavity column, then read across for its circuit identifier, color, gauge and function. The Function entries distinguish the positive and negative sides of the driver-side inflatable-curtain connection. Those signs describe the printed circuit roles, not a testing method. NULL remains a literal Terminal Part Number entry, not a conclusion that a terminal is absent."
+    },
+    {
+      "blockId": "connector-C9031-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Use Kit List to find the pigtail row, then keep its Service Part and Engineering Shell entries distinct. Gauge, Material and Cavities describe that catalog entry, while Image names its associated image file. The pigtail gauge entry differs from the circuit-row entries; this reference preserves both without establishing a wire-selection or splice rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:06:06.574Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "55d9832d45e39db4c704b7495aa4f3624b221f1f05e6ac48f5dc4f90beef6082",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "99eafb8587b8e898219af5b3b19456c2f087784099813e5804a19f0e0ebe8d73",
+    "reviewedAt": "2026-10-28T00:06:06.575Z"
+  }
+}

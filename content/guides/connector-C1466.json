@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1466",
+  "supportingSourceRefs": [],
+  "sourceHash": "35c8af5447550becc4ae962a535ba12116b7f2810480916b81c5a5535071c561",
+  "title": "C1466 — RH front impact severity sensor connector",
+  "introduction": "This sheet identifies the right-hand front impact severity sensor connector and links its illustrated cavities to the circuit and service-parts tables. I check CNumber and Description first, then the harness association. A familiar-looking plug is only the cover of the book; its identification and circuit rows tell you which story you are reading.\n\nUse each cavity label in the drawing to find its row in the Cavity column. Read across that row for the circuit identifier, color code, gauge entry, function and terminal reference. The function descriptions identify the sensor and control-module connections. The pigtail listing then provides the associated service-assembly and engineering-shell references.\n\nThis page supports identification and circuit-map reading. Access, restraint-system preparation, disconnection, probing, testing and replacement require their own procedures. Physical viewing direction, the gauge convention and the meanings of Box, Size and Used are not defined here. Keep those entries as printed; they do not supply dimensions, wire-selection instructions or evidence that a circuit is healthy.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1466-b00002",
+      "text": "Connector face for Harness 14290",
+      "why": "Within the illustration, the rounded cavity area sits to the right of a rectangular feature, and the cavity labels are stacked vertically. I use those details to keep my place on the drawing before matching a label to its table row. This establishes the drawing-to-table relationship without assigning a physical probing direction."
+    },
+    {
+      "blockId": "connector-C1466-b00005",
+      "text": "Read the sensor circuit assignments",
+      "why": "Keep each Cavity entry together with the Circuit Number, Color and Function on its own row. The function descriptions distinguish the sensor connection from the control-module connection; they do not specify a measured value or a pass/fail result. Preserve the full function wording when referring to a circuit. A blank Qualifier cell supplies no additional condition."
+    },
+    {
+      "blockId": "connector-C1466-b00007",
+      "text": "Identify the pigtail service assembly",
+      "why": "I read Number as the pigtail listing reference, Service Part as the listed service-assembly identifier, and Engineering Shell as the associated housing reference. The circuit table’s Terminal Part Number belongs to the terminal listing instead. Keeping those fields separate makes the catalog useful without treating every part reference as an interchangeable ordering number. The table records an association, not a diagnosis or an installation method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:05:37.478Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "4a390d43a43eae4a7b53547493a8fca1b3575cb0e397c81fdbe7f47cc8ed9a3f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7b64aad5b911c053d6e13051c4a56d0965250c0b5dc23859c3406b7dc8474ebf",
+    "reviewedAt": "2026-10-28T00:05:37.479Z"
+  }
+}

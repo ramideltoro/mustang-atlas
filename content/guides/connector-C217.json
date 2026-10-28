@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C217",
+  "supportingSourceRefs": [],
+  "sourceHash": "0c00a7ac9bb0bad3d1a9e83c62981d972cdff53d8ac89710f7e2c1b7ba8678db",
+  "title": "C217 — Horn switch connector",
+  "introduction": "The horn’s vocabulary is tiny, but its connector labels still deserve a careful read. I use the face drawing to locate each cavity label, then read the matching table row to distinguish the horn-switch connection from the instrument-panel structure ground connection. That identifies their listed jobs without assuming how the switch operates internally.\n\nThe parts table completes the reference by separating pigtail information from the pin assignments. Asterisks and unavailable entries remain exactly as printed. This page covers identification, not access, testing or repair; it supplies no physical viewing direction, gauge convention or definitions for the Box, Cols, Size and Used fields.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C217-b00002",
+      "text": "Connector face for harness PIA",
+      "why": "I recognize this drawing by its vertically stacked circular cavities, the rectangular projection on the right and the rounded extension at the lower right. Match the printed cavity labels to the table rather than assigning a vehicle direction to the picture. The outline does not establish how to disconnect the housing."
+    },
+    {
+      "blockId": "connector-C217-b00005",
+      "text": "Cavity functions and reference fields",
+      "why": "The Function column distinguishes the switch connection from the structure-ground connection. The asterisks in Circuit Number, Color and Gauge have no supplied legend, so they cannot supply circuit identities, wire colors or wire sizes. Likewise, an unavailable terminal part entry is not evidence that a terminal is absent."
+    },
+    {
+      "blockId": "connector-C217-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail combines a connector with attached wire leads. Read its Service Part alongside Engineering Shell to distinguish the service assembly reference from the housing reference. Its gauge entry belongs to the pigtail row; it does not fill the unspecified gauge fields in the pin table or teach a replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:01:01.388Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "8f70e382712f4651905558ab7c0ddce8565fab29455c027a7e5ae29612abc9c7",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "31bf8165aed03076b363c13c6610cdb6465ae7f54a6125c6bf86c6486afa0a1f",
+    "reviewedAt": "2026-10-28T00:01:01.389Z"
+  }
+}

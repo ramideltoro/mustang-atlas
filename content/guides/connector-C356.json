@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C356",
+  "supportingSourceRefs": [],
+  "sourceHash": "6445350a76bb1cb42e00c2d5bebeeec6de73febd6317a03b6347ccfd2d38db27",
+  "title": "C356 — LH seat position sensor connector",
+  "introduction": "This reference connects the left-hand seat position sensor’s identity, connector drawing and circuit information. I start with CNumber and Description in the identification table, then use the harness heading to find the matching drawing. Think of the cavity labels as addresses: the housing gives you the neighborhood, but the cavity identifies the connection.\n\nRead from the drawing to the Cavity column, then across the same row for Circuit Number, Color and Function. Here, the function descriptions distinguish the driver-seat restraints ground connection from the driver’s seat-track-position sensor connection. The service-parts table provides a separate lookup for the pigtail and its associated shell.\n\nThis is a guide to reading the reference. It does not teach access, disconnection, probing, testing or replacement. The drawing’s physical viewing direction, gauge convention and meanings of the Box, Size and Used codes are not defined here; retain those entries as printed rather than turning them into dimensions, wire-selection advice or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C356-b00002",
+      "text": "Connector face for Harness 14D231",
+      "why": "I use the drawing’s rounded cavity area and rectangular feature to its left as landmarks within the illustration. The cavity labels are arranged vertically. Match those labels to the Cavity column to connect the picture with the circuit information; the drawing is a map of labeled positions, not an electrical health check."
+    },
+    {
+      "blockId": "connector-C356-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Each row keeps a cavity, circuit identifier, color code, gauge entry, function and terminal reference together. Read across a single row so a neighboring wire’s details do not wander into the description. The ground and seat-track-position functions explain the connections’ stated roles; they do not establish expected readings or prove that the sensor works. A blank Qualifier cell adds no further condition."
+    },
+    {
+      "blockId": "connector-C356-b00007",
+      "text": "Find the pigtail service listing",
+      "why": "The pigtail is the connector-and-wire service assembly represented by this listing. Number identifies its catalog entry, Service Part identifies the listed service assembly, and Engineering Shell associates it with the housing reference. Terminal Part Number in the circuit table is a separate field. I keep those identities separate: a shell reference and a service assembly are different entries in the parts conversation. The listing alone does not select a repair or teach installation."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:05:37.468Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ccb345f39d65bce241957bcbf59b87d98cdd08946e8aba6fad6a13636d9b594b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ff45e51bfae8aff36b3da1cc371c82483b0d32c6143f5b59b75ebb402e121bd0",
+    "reviewedAt": "2026-10-28T00:05:37.469Z"
+  }
+}

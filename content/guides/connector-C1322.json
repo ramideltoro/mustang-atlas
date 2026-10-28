@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1322",
+  "supportingSourceRefs": [],
+  "sourceHash": "d11e25c972158c1c751be05d0de10d63adab8c9b39440156a7694a7e7a0f60dc",
+  "title": "C1322 — Left-hand front fog lamp connector",
+  "introduction": "I read this connector drawing like a seating plan: the outline locates the cavities, and the assignment table tells me which circuit belongs where. Start with CNumber and Description to confirm the reference, then use the drawing's cavity labels to find the corresponding table rows. Read across each row to connect the circuit identity with its color, gauge, function and terminal part reference.\n\nNotice the distinction between lamp position and ground location. A left-hand lamp can have a ground described by a right-front-fender location; those labels describe different parts of the circuit. The pigtail section supplies a separate service-parts cross-reference, with Engineering Shell providing a connection back to the housing identity.\n\nThis page supports identification and circuit-map reading. Physical viewing direction, access, testing, replacement methods, gauge convention and the meanings of Size and Used are outside its scope. Keep those fields as recorded, and use task-specific service instructions before turning identification into hands-on work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1322-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "I use the tall oval outline, rectangular end projections and side features to recognize the drawing's arrangement. The labeled circular cavities are stacked vertically. Their positions describe the illustration as printed; they do not establish whether a physical connector should be viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C1322-b00005",
+      "text": "Cavity and circuit map",
+      "why": "Cavity is the lookup key between the drawing and this table. Function distinguishes the lamp-control connection from the ground connection; Circuit Number identifies the associated circuit. I keep each row's color, gauge and terminal reference together, because those details belong to that particular connection. A ground location label identifies its circuit role and location, without proving that the ground is electrically sound."
+    },
+    {
+      "blockId": "connector-C1322-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is a service connector with attached leads. I read its Number, Service Part and Engineering Shell as distinct references, while Gauge, Material and Cavities describe that pigtail entry. Its gauge field does not replace the individual circuit-row gauge fields. This lookup identifies the listed service option without teaching a splice or replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:00:03.532Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "a5070942bc888dcf5d77e293dc911d5b31941ab7321b5107440f3981f7ea5b2d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 28,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ad098d232586c93536799c295c583ad69e575a0539a534180a1f36f9c7369570",
+    "reviewedAt": "2026-10-28T00:00:03.533Z"
+  }
+}

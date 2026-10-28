@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1642",
+  "supportingSourceRefs": [],
+  "sourceHash": "58b2e492f25a6b3341950f0b50c683773fd026ff4d5587499e69d100c977129b",
+  "title": "C1642 — Engine oil pressure (EOP) sensor",
+  "introduction": "I use this page to trace the oil-pressure connector from its housing drawing to its circuit and pigtail references. It is the electrical address card, not a pressure gauge: identifying the connection tells you where the information belongs, not whether the engine has adequate oil pressure.\n\nStart with the connector identity table, compare the drawing’s housing landmarks, then match the cavity label to the pin-assignment row. Read across for the circuit, wire details, function and terminal reference. The title calls the component a sensor, while Function uses oil-pressure switch wording; retain both labels without assuming a switching threshold or signal behavior.\n\nThe pigtail table provides a separate parts reference. This page covers identification, not access, probing, pressure measurement or replacement. Viewing direction, engine applicability, gauge convention and the meanings of Size and Used are unspecified. Circuit-wire and pigtail Gauge entries are separate specifications, not an instruction to substitute wire.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1642-b00002",
+      "text": "Connector-face drawing · Harness 12C508",
+      "why": "I recognize this drawing by its horizontally elongated housing, central cavity label, broad internal feature on the left and shaped extension on the right. Those positions describe the image only. The row beneath it associates the illustration with its harness and connector reference."
+    },
+    {
+      "blockId": "connector-C1642-b00005",
+      "text": "Cavity-to-circuit assignment",
+      "why": "Match the drawing’s cavity label to the Cavity column, then keep the circuit identifier, wire details, function and terminal part together across the row. This establishes the documented electrical association; it supplies neither an oil-pressure reading nor a pass-or-fail test."
+    },
+    {
+      "blockId": "connector-C1642-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Use Kit List to find the pigtail Number entry, then compare Engineering Shell with the connector’s Hard Shell and Fpn fields. Service Part identifies the listed service item separately from the terminal reference. Keep material, wire details and cavity count attached to this entry; the listing does not teach installation or establish interchangeability."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:55:50.546Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "703c83b2f351c616323e93a2f8cf0259167c9ca61088c04ac9e1fa099c2e3733",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 29,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "29892c5c8c5d219fb8ea3233017162b672aecb81f631b71f23c230e534b4aedc",
+    "reviewedAt": "2026-10-27T23:55:50.546Z"
+  }
+}

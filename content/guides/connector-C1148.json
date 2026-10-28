@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C1148",
+  "supportingSourceRefs": [],
+  "sourceHash": "59f12498c03c729f4cfc9467cb93b8b68ca5d10026e074be5288f91fa17ebc3c",
+  "title": "C1148 — Fuel injector 8",
+  "introduction": "A fuel injector is an electrically controlled valve that meters fuel. I use this reference to connect the component’s identity with its harness drawing and circuit assignments. The cavity labels work like addresses: the drawing locates them, and the Function column explains the job assigned to each.\n\nStart with CNumber and Description, compare the illustrated housing, then follow each cavity into the assignment table. This page supports identification and circuit reading. Physical access, probing, wire selection and replacement require matching service information; the gauge convention and Size and Used codes are not explained here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1148-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "In the printed drawing, the latch structure sits above the rounded terminal area, and the cavity labels are stacked vertically. I compare those features together rather than trusting a similar-looking outline. The accompanying Fpn and Harness Id table ties the illustration to its listed connector record. The physical viewing side is unspecified, so page orientation alone cannot establish a probe position."
+    },
+    {
+      "blockId": "connector-C1148-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match each illustrated cavity label to the Cavity column, then read across for its circuit identity, wire description, function and terminal reference. The functions distinguish the powertrain injector-driver connection from the fused supply connection. The plus sign in the driver description remains part of that printed label; it supplies no measurement instruction. These assignments identify intended circuit roles, rather than proving that power or a command is present. For an operating complaint, carry the identities into the matching diagnostic procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:55:50.526Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d0791cad26f75f150861f7638814ed4a464d7b8680354f8759b66575db97349e",
+  "sourcePdfHash": "80f6582b6c854abc1aa68a7ccec84e52684f7356595b81ff8a4f895ec78ee2aa",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "33c38a3428358487eb375dd36573ea671af871e24c5115e10a6f8687cfbb4535",
+    "reviewedAt": "2026-10-27T23:55:50.526Z"
+  }
+}

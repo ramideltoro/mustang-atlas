@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C191",
+  "supportingSourceRefs": [],
+  "sourceHash": "6c75ea988d710d5da7618bfccebd8aa9b9336dff700fc6f3b51beb730843bfcd",
+  "title": "C191 — Intake manifold runner control bank 1 (IMRC1) solenoid",
+  "introduction": "This reference identifies the electrical connector for the intake-manifold runner-control solenoid. The intake manifold distributes incoming air to the cylinders; this sheet focuses on the solenoid’s electrical connections. I read its supply and controller assignments separately—sharing a housing does not mean the wires share a job.\n\nBegin with CNumber and Description, compare the housing illustration, then follow each cavity label across the assignment table. The result is a map of the intended connections, not a verdict on solenoid operation. Physical access, viewing-side confirmation, probing and replacement require matching service information. The gauge convention and Size and Used codes remain unexplained reference fields.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C191-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The printed illustration places the cavity labels vertically inside a central terminal area, with a broad latch structure to the left and a narrow rectangular feature to the right. I use those features together to distinguish the housing. The Fpn and Harness Id table associates the drawing with its listed record. These positions describe the page; the physical viewing side and release movement are unspecified."
+    },
+    {
+      "blockId": "connector-C191-b00005",
+      "text": "Read the pin assignments",
+      "why": "Use the Cavity column to join each illustrated label to its circuit, wire description, function and terminal reference. One assignment identifies the fused supply; the other identifies the powertrain controller’s runner-control connection. That distinction is the useful lesson here: the solenoid’s electrical map separates its supply from its control connection. Neither label establishes voltage, switching behavior or component condition. Use the mapped identities when consulting the matching diagnostic procedure."
+    }
+  ],
+  "checkedAt": "2026-10-27T23:55:50.537Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ad36626a1fa7ccfc5b2e44ed0659367b67cd2c9718f7540b4537716305cab811",
+  "sourcePdfHash": "2c4c4f822cc34efa9d7b87d2641ed4467ef711b98752918dfdee01609eb175f7",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 22,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7114a7c9c2cda813c42a86fb6fa9dcc5b8ff710140b2a91fd48336052fa62b35",
+    "reviewedAt": "2026-10-27T23:55:50.538Z"
+  }
+}
