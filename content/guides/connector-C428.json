@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C428",
+  "supportingSourceRefs": [],
+  "sourceHash": "49184b022d0e7444bbc527068d23f4e548ab5b693d64b82fcc57654d94a86d1b",
+  "title": "C428 — Luggage compartment lamp connector",
+  "introduction": "I use this reference to connect the luggage-compartment lamp's identity, cavity drawing and circuit assignments. Start with CNumber and Description, then match the drawing's cavity labels to the Cavity column. Think of the housing as a seating chart: an unoccupied position isn't automatically a missing wire.\n\nThis is an identification and circuit-reading guide. The drawing establishes positions as shown on the page, without defining the physical viewing direction. Access, electrical testing and replacement require their matching workshop instructions. Size coding and the gauge convention are unspecified here; the tables provide no diagnostic pass/fail readings.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C428-b00002",
+      "text": "Connector face on harness 14A005",
+      "why": "I use the large rectangular feature at the drawing's left and the projecting tabs at its right as visual landmarks within this illustration. The middle cavity is shaded gray and corresponds to the row without a circuit assignment; the upper and lower cavities correspond to populated rows. Pin Count describes the housing layout, so it should not be mistaken for the number of assigned circuits."
+    },
+    {
+      "blockId": "connector-C428-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read each Cavity row across to connect its Circuit Number, Color, Gauge, Function and Terminal Part Number. Read Used alongside the circuit fields and drawing rather than treating a blank row as a wiring fault. The populated functions distinguish the battery-saver relay connection from the trunk/cargo-lamp switch connection. A relay is an electrically controlled switch; that function label alone does not identify a separate removable relay or show whether the circuit works."
+    },
+    {
+      "blockId": "connector-C428-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I compare Hard Shell in the identity table with Engineering Shell in the pigtail table to keep the housing and service listing connected. Service Part identifies the listed pigtail service item, while Terminal Part Number belongs to the individual cavity assignments. Gauge and Material in this section describe the pigtail entry; keep them distinct from the circuit-row data."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:54.388Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "978db851d3ad99d490b63081802cdbd83a77c2b00485d71457fa37e72cec62bc",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3266d12105161f644d77a2f0d962f30bc05627465b4d3d738a3dee3a60e68482",
+    "reviewedAt": "2026-10-28T01:18:54.388Z"
+  }
+}

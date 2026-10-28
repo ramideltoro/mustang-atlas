@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2353",
+  "supportingSourceRefs": [],
+  "sourceHash": "831440efd3c8e267700f0caa317c2b325aaee3f83ea74c35e17844525c838ef0",
+  "title": "C2353 — Clutch pedal position (CPP) bottom of travel switch",
+  "introduction": "The bottom-of-travel name matters: this reference identifies the connector for that particular clutch-pedal switch. I keep that full name attached to the drawing so nearby pedal hardware does not become a game of electrical musical chairs.\n\nUse the identity table to establish which connector the page describes, match the drawing’s cavity labels to the circuit rows, then read the pigtail and European product records separately. The circuit map distinguishes the switch connection from its ground path; it does not describe contact behavior as the pedal moves. Access, physical viewing side, test conditions, gauge convention and administrative code definitions are outside this identification guide.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2353-b00002",
+      "text": "Harness 12638 connector face",
+      "why": "The drawing stacks the round cavity labels vertically, with rectangular features to their right and a curved housing feature to their left. I use that combination to stay oriented on the page before matching a label to its circuit row. The drawing does not identify the physical viewing side or establish a release movement."
+    },
+    {
+      "blockId": "connector-C2353-b00005",
+      "text": "Switch and ground circuit map",
+      "why": "Each row ties a cavity to its circuit number, color, gauge, function and terminal record. Keep the bottom-of-travel qualifier with the switch function and the front-left-fender location with the ground function. These labels describe circuit assignments; they do not establish when the switch opens or closes, or whether it passes a diagnostic check."
+    },
+    {
+      "blockId": "connector-C2353-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail record associates the kit with its service part and engineering shell, alongside its own gauge and material information. Those fields describe the service assembly separately from the harness circuit rows. They are not instructions for choosing replacement wire, joining leads or replacing the switch."
+    },
+    {
+      "blockId": "connector-C2353-b00009",
+      "text": "European pigtail product identifier",
+      "why": "This separate record supplies a European product identifier. Keep it under its regional heading; the page gives no additional fitment conditions or installation instructions for it."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:06:50.317Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": "554d35c0dff3120df0d808029f2f5ff98f78b537c4f778c2d0b9e0a9f13bf2ae",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ffb7d8dcd31b1291d213918cfb172f4b36234f936291cf042ed2c6bcfc5fcea5",
+    "reviewedAt": "2026-10-28T01:06:50.317Z"
+  }
+}

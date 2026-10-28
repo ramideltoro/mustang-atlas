@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4467",
+  "supportingSourceRefs": [],
+  "sourceHash": "4e64036e8e57bea15eb495cdef80676d0733ce3efe06018fccb3b129b5137c9d",
+  "title": "C4467 — Left exhaust valve solenoid",
+  "introduction": "This reference maps the left exhaust-valve solenoid connector. I start with the component identity, use the drawing’s cavity labels to find the corresponding circuit rows, then read the function descriptions. The useful story is the relationship between powertrain control, the fuse-or-circuit-breaker connection and the printed ground destination.\n\nThe physical viewing side, gauge convention and meanings of the Box, Size and Used codes are unspecified. This page supports connector and catalog identification; access, probing, test conditions, wire selection and replacement require separate service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4467-b00002",
+      "text": "Connector face on harness 14B102",
+      "why": "The drawing places the labeled cavities vertically inside an elongated face, with a broad rectangular housing feature to the left and a smaller projection to the right. I use those shapes as landmarks while matching each printed cavity label to its table row."
+    },
+    {
+      "blockId": "connector-C4467-b00005",
+      "text": "Reading the cavity-to-circuit map",
+      "why": "Every circuit row carries the same color entry, so color alone cannot distinguish their jobs—these wires are wearing matching jerseys. Read Cavity and Circuit Number together, then check Function. The rows distinguish powertrain control, the fuse-or-circuit-breaker connection and ground. Keep the ground description’s right-side pillar-or-quarter-panel destination separate from the solenoid’s left-side identity; a destination label is not an access route."
+    },
+    {
+      "blockId": "connector-C4467-b00007",
+      "text": "Pigtail catalog entry",
+      "why": "I read across the pigtail row as a single catalog record: Number identifies the entry, Service Part gives its service identifier, and Engineering Shell cross-references the housing. Gauge, Material and Cavities belong to that listed pigtail. Image names a catalog image file. The terminal column in the circuit table supplies no individual terminal service number, so it cannot fill that catalog gap."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:13:41.623Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": "3a049b45d9d211e3d73e0621136021ed904586320b2c606b719a99364d2926b2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9d963d1b5de0ff72643ddcf1b4a0e25dd6377d3d28d1a2824289a2c21a257923",
+    "reviewedAt": "2026-10-28T01:13:41.624Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C513",
+  "supportingSourceRefs": [],
+  "sourceHash": "29417289397cd2ca7f900c2325ed314b414c6e3803ae14ab187c9d05e3c9ffb3",
+  "title": "C513 — Front door midwoofer speaker LH connector",
+  "introduction": "I use this page to identify the left-hand front-door midwoofer connector and read the audio connections assigned to its cavities. Start with CNumber and Description, then match the drawing labels to the Cavity column. Pay attention to the positive and negative function marks: even a tiny connector deserves a more careful reading than a shuffled playlist.\n\nThis reference maps identities and circuit roles. It does not define physical viewing direction, access, electrical test conditions or replacement steps; hands-on work needs its matching workshop instructions. Size coding and the gauge convention are unspecified here. The audio polarity labels alone provide no chassis-ground assignment or diagnostic pass/fail result.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C513-b00002",
+      "text": "Connector face on harness 14631",
+      "why": "I use the large rectangular feature at the drawing's left and the projecting tabs at its right to navigate the illustration as printed. The upper and lower cavities correspond to populated audio circuit rows. The gray middle cavity corresponds to the row without a circuit assignment, explaining why housing capacity and assigned circuit count differ."
+    },
+    {
+      "blockId": "connector-C513-b00005",
+      "text": "Speaker cavity and polarity map",
+      "why": "Read from Cavity across to Circuit Number, Color, Gauge, Function and Terminal Part Number. The populated function rows distinguish the positive and negative audio connections; keep each polarity mark attached to its own row. Read Used alongside the circuit entries and drawing. This identifies the assigned connections without establishing speaker condition, output level or an electrical test method."
+    },
+    {
+      "blockId": "connector-C513-b00007",
+      "text": "Pigtail service reference",
+      "why": "Hard Shell in the identity table and Engineering Shell here connect the housing identity to the pigtail listing. Service Part identifies the listed pigtail service item, while Terminal Part Number in the cavity table identifies the listed terminals. Gauge and Material here describe the pigtail row. I keep those identifier roles separate so a housing reference does not get mistaken for the complete service item."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:54.414Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "5407744dd202054915391c505cfd72cee1d2123103559e0d4c6ef81eec229b0f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a85ce80652769d7856c246f22f7b0b90dbfcfa394603183b82446c5ec0d444e6",
+    "reviewedAt": "2026-10-28T01:18:54.414Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1538",
+  "supportingSourceRefs": [],
+  "sourceHash": "9b03c860011d94ae2395aa086a4f79f35add6667399844843867b57ad6564d98",
+  "title": "C1538 — Ignition coil-on-plug 1",
+  "introduction": "An ignition coil transforms electrical energy into the high voltage needed for a spark; in a coil-on-plug arrangement, it sits at its spark plug. I read this connector reference as the coil’s electrical address book: the drawing locates a cavity, and the corresponding table row explains its wiring role.\n\nStart with the connector identity, move from the drawing’s cavity labels to the pin table, then use the separate pigtail table for service-part identification. A matching outline alone does not establish vehicle or engine applicability. This guide covers reference reading, not access, probing, diagnosis or replacement. The physical viewing direction, gauge convention and meanings of Size and Used are unspecified here, so I leave those entries as printed rather than turning them into workshop instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1538-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the tall oval cavity area, the broad rectangular feature on its left and the projecting feature on its right as landmarks within the drawing. The cavity labels connect this illustration to the assignment table; the nearby identification table associates the drawing with its shell and harness."
+    },
+    {
+      "blockId": "connector-C1538-b00005",
+      "text": "Read the pin assignments",
+      "why": "Find a cavity label in the drawing, then read across its matching Cavity row to keep the circuit identity, color code, listed gauge, function and terminal part together. The function descriptions distinguish the powertrain-control connection, chassis/battery ground and power supply. That explains each connection’s assigned job; it does not demonstrate that the circuit or coil works. A misfire still requires diagnosis of spark, fuel and mechanical condition."
+    },
+    {
+      "blockId": "connector-C1538-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "I keep the kit Number, Service Part and Engineering Shell fields together when reading this entry: they connect the listed pigtail with its service identifier and housing identity. The Image field names a separate catalog illustration. The pin table’s Terminal Part Number identifies a terminal entry, whereas this table describes the pigtail assembly; those are different shopping-list jobs."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:13:13.745Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "2ea6d8229a4162bd3c2b68fe5361542a52dd1702557fbaeed146e0328074bfe8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7d47b203fd272e536f02a40f0de73811d882bfe44dd6dc2402b0cbe81df77178",
+    "reviewedAt": "2026-10-28T01:13:13.745Z"
+  }
+}

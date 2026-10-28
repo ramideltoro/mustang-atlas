@@ -1,0 +1,113 @@
+{
+  "documentId": "connector-C1650",
+  "supportingSourceRefs": [],
+  "sourceHash": "ac0f2efe59ad196029b2000a5bb000e3632f49a33a44aca64395e7b6d7f17533",
+  "title": "C1650 — Connector reference with conflicting valve labels",
+  "introduction": "I start this reference with a label check. The original title and identity table name a turbocharger bypass valve, while the controller-side Function entry names an engine coolant bypass valve. The drawing cannot referee that argument. Both descriptions remain visible: this page cannot reliably identify which controlled component the record belongs to.\n\nYou can still learn how the reference is arranged. Match the drawing’s cavity labels to the Cavity column, then read across each row to keep its circuit, wire, function and terminal information together. The pigtail record connects housing identification with service-part information.\n\nUse this as a reading guide to the preserved record, not as a basis for selecting a component, wire or replacement. Access, physical viewing direction, probing setup, test limits and repair steps require correctly identified service information. Gauge conventions and the Box, Size and Used codes are undefined here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1650-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "The printed drawing places a ribbed rectangular section on the left and an oval cavity area on the right, with cavity labels stacked vertically. I use those visible landmarks to navigate the illustration and find the corresponding table rows. These are positions on the page, not a confirmed physical viewing side."
+    },
+    {
+      "blockId": "connector-C1650-b00005",
+      "text": "Read the pin assignments",
+      "why": "Read each Cavity row horizontally so its circuit, wire details, Function and terminal reference stay together. The supply entry retains its fuse-or-circuit-breaker alternative. The other Function entry carries the disputed coolant-valve wording. Keep that label attached to its row rather than silently replacing it with the turbocharger-valve name from the identity table."
+    },
+    {
+      "blockId": "connector-C1650-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Hard Shell and Engineering Shell connect the housing record to the pigtail record. Service Part identifies the catalogue service item, while Terminal Part Number belongs to the individual circuit rows. These are different kinds of identifiers; a matching shell does not settle the valve-name disagreement or establish a replacement choice."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:21.510Z",
+  "model": "Signed-in Codex author and active-agent editorial revision; independent active-agent Codex review",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "dd416fbe8d76d1403ff0263dddd5cf0af383697a374121a65b58c26addd5ed7c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e562e69249ee386f57465e6e871df2f57f7ae403553d572e07f58de6f9cf9765",
+    "reviewedAt": "2026-10-28T01:17:17.323Z",
+    "coveredUnitIds": [
+      "connector-C1650:u1",
+      "connector-C1650:u2",
+      "connector-C1650:u3",
+      "connector-C1650:u4",
+      "connector-C1650:u5",
+      "connector-C1650:u6",
+      "connector-C1650:u7",
+      "connector-C1650:u8",
+      "connector-C1650:u9",
+      "connector-C1650:u10",
+      "connector-C1650:u11",
+      "connector-C1650:u12",
+      "connector-C1650:u13",
+      "connector-C1650:u14",
+      "connector-C1650:u15",
+      "connector-C1650:u16",
+      "connector-C1650:u17",
+      "connector-C1650:u18",
+      "connector-C1650:u19",
+      "connector-C1650:u20",
+      "connector-C1650:u21",
+      "connector-C1650:u22",
+      "connector-C1650:u23",
+      "connector-C1650:u24",
+      "connector-C1650:u25",
+      "connector-C1650:u26",
+      "connector-C1650:u27",
+      "connector-C1650:u28",
+      "connector-C1650:u29",
+      "connector-C1650:u30",
+      "connector-C1650:u31"
+    ],
+    "sourcePages": [
+      {
+        "path": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/documents/connector-C1650/e562e69249ee386f57465e6e871df2f57f7ae403553d572e07f58de6f9cf9765/0000/complete-source-1.png",
+        "sha256": "5c2d2ee1f07ddeacefb7406867bde9d9ef25cca4e1f3ed13aa900fab92b40952"
+      },
+      {
+        "path": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/documents/connector-C1650/e562e69249ee386f57465e6e871df2f57f7ae403553d572e07f58de6f9cf9765/0000/complete-source-2.png",
+        "sha256": "3d3366234da2a855e81a69107e248f13418442d2d1c6ce60cf277a639ca3436c"
+      }
+    ],
+    "sourceLimitations": [
+      "The title and Description identify TURBOCHARGER BYPASS VALVE (TCBY), but the controller-side Function entry identifies ENGINE COOLANT BYPASS VALVE. The supplied evidence cannot determine which component description is correct. Hold for focused technical review while retaining both original labels."
+    ],
+    "originalAuthorHold": "The title and Description identify TURBOCHARGER BYPASS VALVE (TCBY), but the controller-side Function entry identifies ENGINE COOLANT BYPASS VALVE. The supplied evidence cannot determine which component description is correct. Hold for focused technical review while retaining both original labels.",
+    "resolvedHold": {
+      "scope": "Bounded reference reading fully reviewed; actual component identity remains explicitly unresolved. No physical selection or service approval.",
+      "reviewArtifact": "active-agent-full-review.json",
+      "draftSha256": "030459f6aa4f53c66ecd0fa25a9c4bfab55af8f595d60e4e9fd4d1939a014ed1"
+    },
+    "editorialRevision": {
+      "kind": "bounded-identification-complete-active-agent-review",
+      "reviewedAt": "2026-10-28T01:17:17.323Z",
+      "scope": "Full31unit/twopage/solefigure independent active-agent review of revised transparent reference-reading prose; not CLI or identity resolution."
+    }
+  }
+}

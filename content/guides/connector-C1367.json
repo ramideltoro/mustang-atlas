@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1367",
+  "supportingSourceRefs": [],
+  "sourceHash": "34f93b3ced6bcb3411c47501c63e3ec3d666483675b61c1ce31c2d939f86fc51",
+  "title": "C1367 — Camshaft position Bank 2 Sensor 1 (CMP21) connector",
+  "introduction": "I read this camshaft-position connector by separating the jobs in its Function column: buffered sensor supply, camshaft-position signal and engine signal return. Think of the supply as keeping the conversation going and the signal as carrying the news. Giving each connection its own job makes the table much easier to follow.\n\nStart with the connector identity and housing information, then match the drawing's cavity labels to the circuit rows. Keep the title's sensor designation and the signal row's naming intact; this reference does not explain how those naming styles correspond to a physical camshaft location.\n\nThis guide teaches identification and circuit-map reading. It does not establish physical viewing direction, access, probing, expected electrical readings or replacement methods. Gauge conventions and the Box, Cols, Size and Used codes are undefined here and remain uninterpreted.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1367-b00002",
+      "text": "Face drawing · Harness 12C508",
+      "why": "The cavity labels form a horizontal row in the displayed drawing. The large rectangular feature on the left and the downward notch below the cavity area help me keep the illustration oriented on the page. Neither feature establishes an installed viewing direction or a release procedure."
+    },
+    {
+      "blockId": "connector-C1367-b00005",
+      "text": "Sensor cavity and circuit guide",
+      "why": "Read across each Cavity row to associate its drawing label with the circuit identifier, color, gauge, function and terminal information. The functions distinguish supply, sensor signal and signal return. I keep signal return identified that way rather than assuming it is interchangeable with chassis ground. These labels explain circuit roles, not whether the sensor or wiring is working."
+    },
+    {
+      "blockId": "connector-C1367-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail is the connector-and-lead assembly. I relate its Engineering Shell entry to the housing information above, then distinguish its Service Part from the individual terminal identifiers in the circuit table. The material description characterizes the listed part; it is not a separate instruction to apply grease or service the terminals."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:25.087Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "cd4ee29867d6f033e8f7eca8bfba003df64c94b7db9c9cc31734521127c61613",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1c3f1663209885a3e5bfed39df66e1b4f63f5eaa14e45ab27855419dd0a4f423",
+    "reviewedAt": "2026-10-28T01:18:25.087Z"
+  }
+}

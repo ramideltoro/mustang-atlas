@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C3066",
+  "supportingSourceRefs": [],
+  "sourceHash": "f36b971657bd138d9c472ca9387f533a8ebbbe9b09af7f64e9aa892fab598b2d",
+  "title": "C3066 — Front safety belt anchor and pretensioner RH",
+  "introduction": "This reference identifies the right-hand front safety-belt anchor and pretensioner connector. I treat the passenger-outboard wording in the circuit descriptions as the name on the luggage tag: it keeps the map tied to its intended restraint connection. Follow the cavity labels from the drawing into the assignment table, then use the pigtail table to understand the separate catalog entries.\n\nThe physical viewing side, gauge convention and meanings of the Size and Used codes are unspecified. This is an identification guide; physical access, probing, testing and replacement require the applicable service instructions.",
+  "requirements": [
+    {
+      "category": "Restraint-system precautions",
+      "items": [
+        {
+          "name": "Qualified service and preparation",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Any hands-on work requires the selected job’s depowering, handling, specified test equipment and restoration instructions. Consult the [SRS overview](#/document/G1696290) and [pyrotechnic-device precautions](#/document/G1693191) before service."
+        },
+        {
+          "name": "Connections and fault diagnosis",
+          "detail": "Connector-position-assurance tabs and shorting bars affect electrical configuration. A plug can look attached while an assurance tab remains improperly seated, producing a fault. Use the exact connection and verification instructions. For diagnosis, record the fault information and use the restraint-specific diagnostic path; do not substitute a generic jumper or resistance test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C3066-b00002",
+      "text": "Connector face on harness 14A005",
+      "why": "I use the circular face, vertically arranged cavity labels and broad housing extension to the left to navigate this drawing. Matching a printed cavity label to its assignment row connects the housing illustration to the passenger-outboard circuit descriptions."
+    },
+    {
+      "blockId": "connector-C3066-b00005",
+      "text": "Reading the cavity-to-circuit map",
+      "why": "Read across each cavity row to keep circuit identity, color, gauge and function together. The function descriptions distinguish the passenger-outboard pretensioner’s positive and negative connections; they are circuit labels, not instructions to apply power. The positive row carries a preassembly designation, while the negative row has a null terminal entry. That placeholder does not establish an empty cavity, an open circuit or a failed component."
+    },
+    {
+      "blockId": "connector-C3066-b00007",
+      "text": "Pigtail catalog entries",
+      "why": "The shared engineering-shell identity connects the pigtail entries to the housing, but their distinct service-part identities remain separate; this reference gives no rule for choosing between them. Keep each pigtail’s gauge with its own catalog row and the harness gauge with the circuit table, without turning either into a replacement-wire recommendation. Number identifies the catalog entry, Service Part identifies the service item, and Image names a catalog image file."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:13:41.633Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "3f89301a586eadab40cdce5f461ee9e1fbcde6a18c33829b787fee1387f2963a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "34d9d77dd98e3054c1ba8569597d0ff67d536670461dee743cc6a78fe5cd59e9",
+    "reviewedAt": "2026-10-28T01:13:41.633Z"
+  }
+}

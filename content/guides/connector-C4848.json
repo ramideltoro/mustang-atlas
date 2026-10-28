@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4848",
+  "supportingSourceRefs": [],
+  "sourceHash": "b13a71ec4f04bf22bb87f06fab8c76ba739f8903c5d00aaa7e545c7a6b5bac81",
+  "title": "C4848 — Convertible top sensor RH connector",
+  "introduction": "This is the right-hand convertible-top sensor connector reference. I begin with CNumber and Description, then use the drawing and Cavity column together. The signal connection carries the label for the sensor's message; the power connection has a separate role. Keeping those roles straight gives the roof's electrical vocabulary a useful translation.\n\nThe page supports connector identification and circuit-map reading. Physical viewing direction, access, probe setup, test readings and replacement require their matching workshop instructions. Size coding and the gauge convention are unspecified here; a function label does not establish an expected voltage or prove the sensor is healthy.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4848-b00002",
+      "text": "Connector face on harness 14A005",
+      "why": "Within this drawing, the large rectangular feature sits to the left of the cavity column and projecting tabs sit to its right. The upper and middle cavities align with populated circuit rows. The gray lower cavity aligns with the row lacking a circuit assignment. I read those features together so an unassigned housing position does not become an imagined missing wire."
+    },
+    {
+      "blockId": "connector-C4848-b00005",
+      "text": "Sensor cavity and circuit assignments",
+      "why": "Follow each Cavity row across its circuit identifier, color, gauge and function. The populated functions separate the sensor signal connection from the connection labeled VPWR. Used and the blank circuit fields help relate the table to the drawing's shading. No individual terminal part number is supplied for these assignments, so the table supports identifying circuit roles without specifying a replacement terminal."
+    },
+    {
+      "blockId": "connector-C4848-b00007",
+      "text": "Pigtail identification reference",
+      "why": "I connect the identity table's Hard Shell field to Engineering Shell in this listing, then distinguish the Service Part identifier from the housing identifier. Gauge, Material and Cavities describe the listed pigtail. Keeping the pigtail row separate from the circuit rows preserves what each table actually tells you."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:19:57.437Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "a3fb616754e327e57e388c9d0ece8ad735cd32fdb5bdf0b7d5ad9f5e28bffba1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8948cf6ecc1216abeca81597edd0eb7817dc7c24fa3edb2b5adb2d9c2e1075cb",
+    "reviewedAt": "2026-10-28T01:18:54.407Z",
+    "editorialRevision": {
+      "kind": "bounded-inferred-engine-list-removal",
+      "scope": "Only inferred engine list removed from introduction; explicit LH/RH identity, all technical body and tables unchanged. Full source/figure/prose read and independent review retained; authorized existing cleanup pattern.",
+      "originalAcceptedSha": "a66f5dfa1ca61546f50b89e206625811c85efb534f1a7d470cc37b8086ddb1f2"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1541",
+  "supportingSourceRefs": [],
+  "sourceHash": "30212866113308347af50b67e58b19b57debbf9fbc17c8525ca7ea32f0530d6a",
+  "title": "C1541 — Ignition coil-on-plug 4",
+  "introduction": "A coil-on-plug unit sits at its spark plug and produces the high voltage needed for ignition. I use this reference to untangle the wiring side of that job: the connector drawing supplies the addresses, and the pin table explains what belongs at each address. It turns an anonymous plastic plug into a readable map.\n\nCheck the connector identity first, follow each illustrated cavity label into its table row, then consult the pigtail listing for service-part identification. Housing resemblance alone does not establish vehicle or engine applicability. This guide teaches that reading sequence, not access, probing, diagnosis or replacement. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified here, so those entries stay as printed without extra interpretation.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1541-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I locate the cavity labels inside the tall oval portion of the drawing. Its broad rectangular feature on the left and projecting feature on the right provide visual landmarks on the page. The identification table beneath connects this drawing with its listed shell and harness."
+    },
+    {
+      "blockId": "connector-C1541-b00005",
+      "text": "Read the pin assignments",
+      "why": "Use the Cavity column as the bridge from picture to table, then keep the entire row together as you read Circuit Number, Color, Gauge, Function and Terminal Part Number. The function descriptions separate the powertrain-control connection from ground and power supply. This establishes the assigned wiring roles; it cannot establish that a spark occurs or identify the cause of a misfire."
+    },
+    {
+      "blockId": "connector-C1541-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "The pigtail row groups the kit identity, listed construction attributes, catalog-image filename, service identifier and engineering-shell identity. I read those fields together so the service part stays associated with the intended housing entry. Keep the assembly’s Service Part field separate from the pin table’s Terminal Part Number: a terminal and a pigtail are different entries."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:13:13.762Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "c657cab73859134d8e237c765413926349b4948cb43878941b9413ebad1f858e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3fbd73c00912cc3a4324e1dabcdd4dc4496c6eaa4a2ae94ba16c6e0bf225469b",
+    "reviewedAt": "2026-10-28T01:13:13.763Z"
+  }
+}

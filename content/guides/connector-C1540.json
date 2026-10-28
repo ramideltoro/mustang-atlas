@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1540",
+  "supportingSourceRefs": [],
+  "sourceHash": "2a95cab2b5176c0e2a361d221d44523178af70ac584a30afad351a4d59fecef3",
+  "title": "C1540 — Ignition coil-on-plug 3",
+  "introduction": "The coil supplies the high voltage that makes a spark possible, but its connector table is where the wiring becomes readable. I treat the cavity labels like addresses on a tiny electrical street: each leads to a row describing the connection’s identity and job.\n\nBegin with the connector identity, match the drawing’s cavity labels to the pin table, then consult the pigtail table for service-part identification. A familiar housing shape alone does not establish vehicle or engine applicability. This is a reference-reading guide, not an access, probing, diagnostic or replacement procedure. Physical viewing direction, the gauge convention and the meanings of Size and Used are unspecified here; retain those entries as printed without assigning unsupported meanings.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1540-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The supplied drawing places the cavity labels vertically inside a tall oval area, with a broad rectangular feature to the left and a projection to the right. I use those shapes to navigate the illustration, then use the adjacent identification table to associate it with the shell and harness."
+    },
+    {
+      "blockId": "connector-C1540-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match a drawing label to the Cavity column and read across that row. Circuit Number identifies the circuit, while Color, Gauge and Function describe the associated wiring entry; Terminal Part Number belongs to that same row. The functions distinguish powertrain control, chassis/battery ground and power supply. Identifying those roles helps explain the connector, but a wiring label is not a health certificate for the coil."
+    },
+    {
+      "blockId": "connector-C1540-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "Read the pigtail entry across rather than lifting a part number out of context. Number identifies the listed kit, Service Part gives its service identifier, and Engineering Shell connects the entry to the housing identity. Gauge, Material and Cavities remain attributes of that pigtail row. I keep this assembly listing distinct from the individual terminal listing in the pin table."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:13:13.754Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "a41dbd7e2797694aea4ef7a3108f2cbdccd180b63729de3361426cf7685ff21a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "06c1e27867c2cf3018a04238d46fa341753a247cc02e1c155eeee460594a6eeb",
+    "reviewedAt": "2026-10-28T01:13:13.754Z"
+  }
+}

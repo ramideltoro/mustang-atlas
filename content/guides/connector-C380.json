@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C380",
+  "supportingSourceRefs": [],
+  "sourceHash": "736c445adb8d78f46435f54454f0cdd34327a212379ccf206224bf18b460c0b2",
+  "title": "C380 — Front power outlet socket",
+  "introduction": "I read this connector reference like an address book: locate a cavity label in the drawing, then find its matching row in the circuit table. Here, that separates the outlet’s protected feed from its ground connection and reveals an unassigned housing position. An empty position is not automatically a missing wire.\n\nStart with the connector identity table, continue through the face drawing and circuit map, then use the pigtail table for its separate parts information. This guide teaches reference reading, not access, electrical testing or replacement. The physical viewing side, gauge convention and meanings of the administrative codes are unspecified; keep those fields as printed rather than turning them into workshop instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C380-b00002",
+      "text": "Harness 14401 connector face",
+      "why": "I use the central keyed outline and the housing extension to the left as landmarks within the drawing. The shaded cavity is above the lower right cavity, while the other outlined cavity sits to the left. These relationships help connect the drawing to its table without assuming which side of a physical connector you are viewing."
+    },
+    {
+      "blockId": "connector-C380-b00005",
+      "text": "Cavity and circuit map",
+      "why": "Read across a cavity’s row to connect its circuit identity, color, gauge, function and terminal information. The protected-feed description retains the fuse-or-circuit-breaker alternative; this sheet does not choose between them. The shaded cavity corresponds to the row with blank circuit fields and no assigned terminal. Housing capacity and populated connections therefore need separate attention."
+    },
+    {
+      "blockId": "connector-C380-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is the connector with attached wire leads. Its record links the kit information to a service part and engineering shell. Keep its Gauge field separate from the harness circuit Gauge fields: this parts reference supplies neither a wire-selection rule nor a splice or replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:06:50.307Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "bf9fc5273d16618b18b7fc3f74e273ce2f1378b2931e61a71567e4b9a05bc9de",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "33f1aff3c51649580290b6ec8ca27adf300c4b420a2b4c5331712722ce32892e",
+    "reviewedAt": "2026-10-28T01:06:50.307Z"
+  }
+}

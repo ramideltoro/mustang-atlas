@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4849",
+  "supportingSourceRefs": [],
+  "sourceHash": "36c23198d1be4ead58501d0c04664f68024585b5c3674f7f9135d58b97aef840",
+  "title": "C4849 — Convertible top sensor LH connector",
+  "introduction": "This reference identifies the left-hand convertible-top sensor connector. I check CNumber and Description first, then connect the face drawing to the Cavity rows. The roof's choreography becomes easier to read when the sensor's message connection and power connection each have their own place on the map.\n\nUse this page to identify connections and read their assigned roles. Physical viewing direction, access, probing, test readings and replacement need their matching workshop instructions. Size coding and the gauge convention are unspecified here, and the function labels alone cannot establish sensor condition or expected electrical values.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4849-b00002",
+      "text": "Connector face on harness 14A005",
+      "why": "I orient myself within the illustration using the large rectangular feature on the left and the projecting tabs on the right. The upper and middle cavities correspond to populated circuit rows. The lower cavity is gray and matches the row without a circuit assignment. That agreement explains why the housing's Pin Count and its assigned circuit count differ."
+    },
+    {
+      "blockId": "connector-C4849-b00005",
+      "text": "Sensor cavity and circuit map",
+      "why": "Match a drawing label to its Cavity row, then read across Circuit Number, Color, Gauge and Function. The populated functions distinguish the sensor signal from the connection labeled VPWR. Those are circuit roles, not voltage specifications. Read Used together with the circuit entries and shading. The terminal entries provide no individual terminal part number; they do not fill that gap with an interchangeable substitute."
+    },
+    {
+      "blockId": "connector-C4849-b00007",
+      "text": "Pigtail service listing",
+      "why": "Hard Shell and Engineering Shell connect the connector identity to the pigtail listing. Service Part identifies the listed service item, while Gauge, Material and Cavities describe that pigtail entry. I keep those fields attached to their own row rather than using them to overwrite the sensor circuit data or invent an individual terminal specification."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:19:57.436Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ae2f6ae666bd6ffbb323a2e93bd6208993ce043493e98a92d83f6e3d9136d819",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2e063107feac0848524945693938b33f4ba357f1087631f58cbe2f1cc467d5a0",
+    "reviewedAt": "2026-10-28T01:18:54.399Z",
+    "editorialRevision": {
+      "kind": "bounded-inferred-engine-list-removal",
+      "scope": "Only inferred engine list removed from introduction; explicit LH/RH identity, all technical body and tables unchanged. Full source/figure/prose read and independent review retained; authorized existing cleanup pattern.",
+      "originalAcceptedSha": "9bb1e360013382166b307e44335148da619ef092f1c68ae2812e8847152cf765"
+    }
+  }
+}

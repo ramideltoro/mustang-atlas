@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C1064",
+  "supportingSourceRefs": [],
+  "sourceHash": "f646cee60569d369f6766998310e12bbaedbd1a0068996aeb9ef42f51e239d35",
+  "title": "C1064 — Engine coolant temperature (ECT) sensor",
+  "introduction": "Coolant carries heat; this connector carries the conversation about temperature. I use this reference to keep the sensor circuit and the powertrain module’s signal-return circuit distinct, rather than treating every return wire as an ordinary body ground.\n\nBegin with the connector identity table, match the face drawing’s labels to the cavity rows, then consult the separate pigtail records. This is a circuit-identification guide, not a temperature test or sensor-replacement procedure. It supplies no physical viewing side, access route, test values, gauge convention or administrative code definitions, so those details cannot be inferred from the picture or parts data.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1064-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "The round cavity labels are stacked inside a central rectangular outline with clipped corners. A broad housing projection extends to the left, with additional features above and below the central face. Those visible landmarks help me relate the drawing to its rows without claiming a physical viewing direction or a connector-release method."
+    },
+    {
+      "blockId": "connector-C1064-b00005",
+      "text": "Sensor and signal-return circuit map",
+      "why": "Follow each cavity row across its circuit number, color, gauge, function and terminal information. The sensor function and the module signal-return function have different roles; retain the full return-circuit wording and its engine qualifier when tracing that label elsewhere. The qualifier identifies the listed function and does not establish this page’s engine applicability. No row supplies a temperature-to-resistance relationship or a pass/fail result."
+    },
+    {
+      "blockId": "connector-C1064-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail record connects the kit to a service part and engineering shell and includes its own gauge and material description. Its greased-material notation is descriptive, not an instruction to add grease. Keep the service-assembly fields separate from the harness circuit fields; neither provides a splice method or a replacement-wire rule here."
+    },
+    {
+      "blockId": "connector-C1064-b00009",
+      "text": "European pigtail product identifier",
+      "why": "The European record provides a separate product identifier for reference. Its presence does not add fitment conditions, establish interchangeability or supply an installation procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:06:50.329Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4f0fd40a5dad14332ebbbb62fe6daa2ba04a5c86d3c4e1eae29f5468027f52c4",
+  "sourcePdfHash": "076fbad97671e7e435e18d50bb22e2ab10a97f75ad7378bc42e75e862c57f4cd",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e396f216922c583c5ef8bf4817fdaedce555a00b6e69b5315338a0ea369441d7",
+    "reviewedAt": "2026-10-28T01:06:50.329Z"
+  }
+}

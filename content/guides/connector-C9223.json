@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C9223",
+  "supportingSourceRefs": [],
+  "sourceHash": "97da8d37f57dd6622091b1c95c212e49733e0103c98ccf6058e1e3d4b253c184",
+  "title": "C9223 — Rear active noise control microphone connector",
+  "introduction": "I start with the rear active noise control microphone's connector identity, then use the face drawing to find the corresponding rows in the circuit table. The microphone's positive and negative connection labels belong together—rather like the two ends of a telephone conversation. The negative label alone does not identify a chassis-ground connection.\n\nThe drawing shows assigned positions above a shaded position whose table row has no circuit assignment. Read the circuit identifier and Function together; the connector's shape cannot tell the whole electrical story.\n\nThis is an identification reference. Physical viewing direction, access, probing, test values and repair methods require other information. Gauge conventions and the Box, Cols, Size and Used codes are undefined here, so I preserve them without adding interpretations.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9223-b00002",
+      "text": "Face drawing · Harness 14334",
+      "why": "As displayed, the cavity labels run vertically beside the large rectangular feature on the left, with the shaded position at the bottom. I use those features to keep my place in the illustration. They do not establish an installed viewing direction or a latch-release movement."
+    },
+    {
+      "blockId": "connector-C9223-b00005",
+      "text": "Microphone cavity and circuit guide",
+      "why": "Follow each Cavity row across to its circuit identifier, color, gauge, microphone polarity label and terminal information. The assigned rows distinguish the microphone's positive and negative connections. The shaded position matches the row with blank circuit and function cells; that blank is not evidence of a wiring fault."
+    },
+    {
+      "blockId": "connector-C9223-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I use Engineering Shell to relate the listed pigtail—the connector and its attached wire leads—to the housing information above. Service Part identifies that assembly; the pin table identifies individual terminals. Keep the pigtail and circuit gauge entries in their respective contexts rather than treating the parts listing as a wire-substitution instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:25.078Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "5e9b801b4ad9277de23e147bb959a24f678ea83f9c69f3392e3d20110cc55e01",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "35b0979cbac3564896a4b3772618649d00c2274135dd85ed2110fcd76409e20b",
+    "reviewedAt": "2026-10-28T01:18:25.078Z"
+  }
+}

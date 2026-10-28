@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C496",
+  "supportingSourceRefs": [],
+  "sourceHash": "482314a17adde5117e5b7fe25c35a9173f52dad0e4016f14cd785ee423313a0a",
+  "title": "C496 — Reversing lamp connector",
+  "introduction": "I use this reference to connect the reversing lamp's identity, drawing and circuit information. Start with the connector description and housing information, then match the drawing's cavity labels to the pin table. Think of it as the lamp's address book: it identifies the connections without proving that electricity is reaching its destination.\n\nThe populated rows distinguish a ground connection from a reverse-control connection. The shaded position corresponds to a row without a circuit assignment; an empty space in the housing is not automatically a missing wire.\n\nThis guide covers identification and table reading. It does not establish physical viewing direction, access, probing, test limits or replacement methods. Gauge conventions and the Box, Cols, Size and Used codes are undefined here; retain those entries without assigning additional meanings.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C496-b00002",
+      "text": "Face drawing · Harness 13412",
+      "why": "I use the housing outline and cavity labels together to navigate the drawing. As displayed, the populated positions are above and below the shaded middle position. That describes the page, not the direction from which to view an installed connector."
+    },
+    {
+      "blockId": "connector-C496-b00005",
+      "text": "Cavity and circuit guide",
+      "why": "Read across each Cavity row to connect its drawing label with the circuit identifier, color, gauge, function and terminal information. The ground description names a pillar or quarter-panel ground point; it does not locate the lamp connector itself. The reverse-control description retains its left-or-common qualification, so this sheet alone does not establish a separate right-side assignment."
+    },
+    {
+      "blockId": "connector-C496-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I compare Engineering Shell with the housing information above to understand which assembly the service-parts row describes. Service Part identifies the assembly, while Terminal Part Number belongs to the individual populated cavity rows. The pigtail gauge is a separate listing, not an instruction to change the vehicle wiring."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:18:25.065Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "f207b73c322612925a8ba282ead6530ebf8f658a839e6446bbbbd305b5877087",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7c7c4c43d11605888c5b9a37e9957984301af0b8f873e2108495946d9c281f7d",
+    "reviewedAt": "2026-10-28T01:18:25.066Z"
+  }
+}

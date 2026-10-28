@@ -111002,81 +111002,145 @@
     },
     {
       "title": "Check front fog-lamp vertical aim",
-      "summary": "Check the top of each fog lamp's bright zone against a target 101.6 mm (4 in) below lamp-center height at approximately 7.6 m.",
-      "introduction": "Front fog-lamp aim determines where the bright part of the beam falls relative to the vehicle. This job establishes the vehicle's test position and checks that beam height on a wall or screen. It ends with a visual aim finding; mechanical adjustment is a separate task.",
-      "why": "Tire inflation, vehicle load and ground slope affect the lamp's position relative to the screen. Clean lenses make the bright zone easier to identify. Controlling these conditions helps distinguish an actual aim concern from a misleading setup.",
-      "taskType": "repair",
+      "summary": "Position the correctly loaded car on level ground approximately 7.6 m from a screen, then compare each fog lamp’s bright upper edge with a target 101.6 mm (4 in) below lamp-center height.",
+      "introduction": "I’ll walk you through checking the height of each front fog-lamp beam and recording the result. This check covers 2015 Mustangs with fitted front fog lamps and the 2.3L, 3.7L, 5.0L or 5.2L engine.",
+      "why": "Vertical aim controls where the brightest part of the fog-lamp beam lands. Tire inflation, vehicle load and ground slope all affect that position, so I settle those conditions before judging the lamps. The feature we want is the upper edge of the high-intensity zone—the concentrated bright patch on the screen.",
+      "taskType": "diagnostics",
       "difficulty": "basic",
       "searchTerms": [
-        "front fog lamp aim too high",
-        "front fog lamp aim too low",
-        "check fog light beam height"
+        "2015 Mustang front fog lamp aim check",
+        "fog light beam height",
+        "fog lamp 4 inch drop",
+        "fog lamp vertical aim screen"
       ],
       "when": {
-        "summary": "When front fog-lamp beam height needs checking or the lamps appear incorrectly aimed.",
+        "summary": "Use this check to assess front fog-lamp beam height.",
         "notes": [
-          "Consult the state vehicle inspection center for recommended visual-aim tolerance ranges."
+          "Ask your state vehicle inspection center for recommended visual-aim tolerance ranges before deciding whether a measured deviation requires correction.",
+          "Horizontal aim is neither required nor adjustable."
         ]
       },
       "prepare": [
         {
-          "title": "Provide a suitable checking area",
-          "detail": "Use level ground facing a vertical wall or screen, with a means of measuring vehicle distance, lamp-center height and vertical beam position."
+          "title": "Choose the checking area and measuring equipment",
+          "detail": "Use level ground facing a vertical wall or screen directly ahead, with room to position the vehicle approximately 7.6 m away. Have a measuring tape and suitable removable marking material for the height references."
         },
         {
-          "title": "Establish the specified vehicle condition",
-          "detail": "Check tire inflation. Remove other loads and leave a half tank of fuel. Clean fog lamps and headlamps; confirm the headlamps operate and are correctly aimed."
+          "title": "Establish the vehicle condition",
+          "detail": "Check tire inflation against the vehicle’s specified pressures. Remove other loads so the vehicle carries only a half tank of fuel. Clean the fog-lamp and headlamp lenses. The headlamps must operate and be correctly aimed before checking the fog lamps."
+        },
+        {
+          "title": "Keep the inspection on the ground",
+          "detail": "The vehicle stays fully assembled with its wheels on the ground; no lifting, unplugging or component removal is needed. This article ends with the visual aim finding. Mechanical adjustment requires the applicable adjustment instructions."
+        },
+        {
+          "title": "Prevent movement and unintended starting",
+          "detail": "Keep the parking brake applied, automatic Park or a manual parked gear selected, and wheel chocks in place during the engine-off inspection. Disable fitted remote start through Vehicle settings > Remote Start Setup before inspecting around the car. Wear eye protection. See [Health and Safety Precautions](#/document/G1693189). The lighting check uses ignition ON with the engine stopped."
         }
       ],
       "steps": [
         {
-          "title": "Position the vehicle",
-          "body": "Park on the level surface approximately 7.6 m from the vertical wall or screen directly ahead. Establish this distance before assessing the beam."
+          "title": "Position the vehicle and disable remote start",
+          "body": "Park on level ground directly facing the vertical wall or screen, approximately 7.6 m away. Apply the parking brake and select Park on an automatic transmission.\n\nBefore leaving the driving position to inspect around the car, disable remote start, if fitted, through Vehicle settings > Remote Start Setup. If settings require ignition ON, keep the engine stopped and a valid key inside: from OFF, release both pedals and press the start/stop button once; if already ON, leave it ON. Complete settings changes, then establish ignition OFF.\n\nThe 2015 Mustang owner manual, Starting and Stopping the Engine, printed pages 121–122, describes the keyless controls: from ignition ON, or with the engine running while the vehicle is stationary, press and release the start/stop button without pressing the pedals to switch OFF. If the ignition is already OFF, leave it OFF. For a manual transmission, select a parked gear with the engine OFF. Maintain Park or the manual parked gear throughout this engine-off check. Take the intelligent access key out of the vehicle, then chock the wheels. Keep the parking brake and chocks in place throughout the check."
         },
         {
-          "title": "Establish the height references",
-          "body": "Identify fog-lamp center height on the screen and use the vehicle centerline as the diagram's orientation reference. The target for the top of the high-intensity zone is 101.6 mm (4 in) below the lamp-center height."
+          "title": "Confirm the conditions that make the reading meaningful",
+          "body": "Check tire inflation against the vehicle’s specified pressures. Confirm that the fuel level is half a tank and remove other loads. Clean both fog-lamp lenses and both headlamp lenses.\n\nEstablish that the headlamps operate and are correctly aimed before proceeding. If their operation or aim needs attention, resolve that prerequisite first.\n\nKeep occupants out while measuring the lamp heights and reading the beams. Extra weight changes the car’s stance and can invalidate the reading."
         },
         {
-          "title": "Illuminate the front fog lamps",
-          "body": "Place ignition in RUN, turn the parking lamps on and keep high beams off. Operate the front fog-lamp switch integrated into the headlamp switch; these are the conditions that permit front fog-lamp operation."
+          "title": "Mark lamp-center height and the lower aim target",
+          "body": "Measure vertically from the level ground to the centers of the front fog lamps. Transfer the lamp-center height to a horizontal reference on the wall or screen. Mark a vertical reference aligned with the vehicle’s centerline, as shown in the [fog-lamp aim diagram](#/document/G1694166).\n\nMeasure downward from the lamp-center-height reference and mark the target exactly 101.6 mm (4 in) below it. Keep the reference and target lines level.\n\nThe diagram shows the concentrated bright zone below the lamp-center-height line. Its upper edge is the feature to compare with the lower target; the vertical vehicle-centerline reference is not a horizontal adjustment target."
         },
         {
-          "title": "Compare the bright-zone upper edge",
-          "body": "Follow the [visual aim check](#/document/G1694166), comparing the top edge of each high-intensity zone with the target. Use the bright zone's upper edge rather than its center or lower edge. Horizontal aim is neither required nor adjustable."
+          "title": "Illuminate the fog lamps without starting the engine",
+          "body": "Return the valid intelligent access key to the vehicle. With ignition known to be OFF, leave both the brake and clutch pedals released, then press and release the start/stop button once. This selects engine-off ignition ON, providing the RUN condition required for the fog lamps. The button indicator illuminates in ON, so that light alone does not mean the engine is running.\n\nTurn the lighting-control dial to its parking-lamp position, marked by the two opposing small-lamp symbols. Leave the high beams off; if they are on, pull the left steering-column lever toward you to switch them off. Press the front fog-lamp button beside the lighting dial to switch the fog lamps on. These normal controls are shown in the 2015 owner manual, printed pages 68 and 71. These operating conditions are described in the [exterior-lighting overview](#/document/G1694241).\n\nLeave the vehicle without disturbing the parking brake or chocks so no occupant load remains during the reading."
+        },
+        {
+          "title": "Compare each bright-zone upper edge with the target",
+          "body": "Look at each fog lamp’s pattern on the screen. Identify the top edge of the concentrated bright patch—the high-intensity zone. Ignore the patch’s center, its lower edge and faint scattered light above it.\n\nThe correct nominal position is for that upper edge to sit 101.6 mm (4 in) below fog-lamp center height at the approximately 7.6 m checking distance. Compare each lamp with the target and record whether its upper edge is above, on or below it. Measure any vertical difference.\n\nUse the recommended tolerance from your state vehicle inspection center to judge the result. Record the deviation; mechanical adjustment is a separate procedure."
+        },
+        {
+          "title": "Shut down and record the result",
+          "body": "Turn the fog lamps and parking lamps off. With the engine stopped and both pedals released, press and release the start/stop button once to change ignition ON to OFF. Remove the intelligent access key from the vehicle. Complete this shutdown whether the aim is satisfactory, outside tolerance or unreadable.\n\nRecord the checking distance, vehicle condition, each lamp’s upper-edge position relative to the target and the tolerance used. Keep the parking brake applied and the wheel chocks in place until you are ready to move the vehicle."
         }
       ],
       "watchFor": [
         {
-          "title": "A setup that changes the result",
-          "body": "Incorrect inflation, extra load, sloping ground or dirty lenses make the comparison unreliable. Correct these conditions before judging aim."
+          "title": "Vehicle stance changing the answer",
+          "body": "Extra cargo, an occupant left inside, incorrect tire inflation or sloping ground can alter the reading. Restore the specified conditions before judging the lamps."
+        },
+        {
+          "title": "Choosing the wrong beam feature",
+          "body": "Compare the upper edge of the concentrated bright zone with the target. Faint spill above it and the center of the bright patch are different references."
+        },
+        {
+          "title": "Starting the engine instead of selecting ON",
+          "body": "From known OFF, press and release the button with both pedals released. Pressing the brake on an automatic or the clutch on a manual while operating the button requests an engine start."
+        },
+        {
+          "title": "Mistaking another lighting mode for the check",
+          "body": "The fog-lamp assemblies can also serve as daytime running lamps where fitted. For this check, deliberately select ignition ON, parking lamps on, high beams off and the front fog-lamp switch."
         }
       ],
       "notes": [
-        "This check establishes beam position. It does not provide a mechanical adjustment method."
+        "Use 101.6 mm (4 in) for the vertical drop and approximately 7.6 m for the screen distance.",
+        "The illustrated bright-zone shape identifies the edge to read; it does not establish a required beam width or height.",
+        "Correct headlamp operation and aim are prerequisites, even though the measurement here concerns the front fog lamps."
       ],
       "diagnostics": [
         {
-          "finding": "The upper edge of a fog lamp's high-intensity zone differs from the target.",
-          "meaning": "The observed vertical aim differs from the specified reference position.",
-          "next": "Recheck setup and assess the difference against the recommended local tolerance. If correction is needed, continue with the applicable adjustment procedure."
+          "finding": "A bright-zone upper edge is above the target.",
+          "meaning": "The observed vertical aim is higher than the nominal reference.",
+          "next": "Recheck inflation, load, level ground, screen distance and reference marks. If the confirmed deviation exceeds the recommended tolerance, arrange vertical adjustment."
+        },
+        {
+          "finding": "A bright-zone upper edge is below the target.",
+          "meaning": "The observed vertical aim is lower than the nominal reference.",
+          "next": "Confirm the setup and measure the difference. Use the recommended visual-aim tolerance to decide whether correction is needed."
+        },
+        {
+          "finding": "A fog lamp does not illuminate.",
+          "meaning": "Its vertical aim cannot be assessed without a visible beam.",
+          "next": "Confirm engine-off ignition ON, parking lamps on, high beams off and operation of the front fog-lamp switch. If the lamp remains unlit, complete shutdown and have the operating fault resolved before repeating the check."
+        },
+        {
+          "finding": "The bright-zone upper edge cannot be identified clearly.",
+          "meaning": "There is no dependable visual reference for the comparison.",
+          "next": "Recheck lens cleanliness and the checking setup. Leave the result unresolved until the edge can be read reliably."
+        },
+        {
+          "finding": "Both bright-zone upper edges meet the target or fall within the recommended tolerance.",
+          "meaning": "The visual vertical-aim check is satisfactory under the recorded conditions.",
+          "next": "Record both readings and complete shutdown with the lamps off, ignition OFF and key removed."
         }
       ],
       "verification": [
         {
-          "title": "Record the visual result",
-          "body": "Record the test distance, setup condition and each lamp's upper-edge position relative to the target, including any remaining need for correction."
+          "title": "Confirm the checking conditions",
+          "body": "Confirm level ground, checked tire inflation, half a tank of fuel with no other loads, clean lenses, correctly operating and aimed headlamps, and an approximately 7.6 m screen distance."
+        },
+        {
+          "title": "Account for both lamps",
+          "body": "Record each bright-zone upper edge relative to the target 101.6 mm (4 in) below lamp-center height. Include the tolerance used and identify any result requiring correction or further attention."
+        },
+        {
+          "title": "Confirm final shutdown and restraints",
+          "body": "Leave the fog lamps and parking lamps off, ignition OFF and the intelligent access key outside the vehicle. Keep the parking brake applied and wheel chocks in place until ready to move the car. Maintain automatic Park or the manual parked gear throughout the engine-off check."
         }
       ],
       "procedures": [
         {
           "documentId": "G1694166",
-          "purpose": "Vehicle setup and front fog-lamp visual vertical-aim check.",
+          "purpose": "Vehicle preparation, screen distance, illustrated beam references and the visual vertical-aim check.",
           "mediaId": "G1694166-m0002"
         },
         {
           "documentId": "G1694241",
-          "purpose": "Front fog-lamp switch location and required operating conditions."
+          "purpose": "Front fog-lamp switch location, operating conditions and distinction from daytime running lamp operation."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Remote-start prevention and relevant inspection precautions."
         }
       ],
       "hero": {
@@ -111112,14 +111176,44 @@
         {
           "documentId": "G1694241",
           "sourceHash": "7e517f1bd6befb7b7645ce7b996ed37110d424c50e59206b42df524a5bc71892"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "3401a3cff2b86b2e045286158788acbf147efa0c9b756ee3f1462161e12b0792"
-      }
+        "fingerprint": "3401a3cff2b86b2e045286158788acbf147efa0c9b756ee3f1462161e12b0792",
+        "editorialVersion": 2,
+        "editorialFingerprint": "858b8a184fdf595fee18b6b0ce9c1578ad9c5fe56beb3da1d37a32a583cb0ba3",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "position-and-prepare",
+          "title": "Position and prepare",
+          "summary": "Secure the vehicle, prevent unintended starting and establish the required checking conditions.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "mark-and-illuminate",
+          "title": "Mark the target and illuminate the lamps",
+          "summary": "Transfer lamp-center height to the screen and select the correct lighting mode.",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "read-and-finish",
+          "title": "Read the beam and finish",
+          "summary": "Compare both bright-zone upper edges, record the findings and shut down.",
+          "start": 5,
+          "end": 6
+        }
+      ]
     },
     {
       "title": "Adjust vertical headlamp aim using the VOL or VOR cutoff",
