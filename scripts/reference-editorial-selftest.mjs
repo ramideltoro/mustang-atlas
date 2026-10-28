@@ -153,3 +153,17 @@ test('general safety primary is its own complete evidence without a self-referen
  const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');const primary={id:'G1693189',title:'Health and Safety Precautions',text:'Complete primary warnings.',source_hash:'safety',engines:[],related:[],kind:'general',blocks:[],media:[]};const result=buildSupportingPackage(primary,[primary]);assert.deepEqual(result.supportingSourceRefs,[]);assert.deepEqual(result.unavailableSupportingReferences,[]);
 });
 
+test('exterior trim and rocker access include authenticated body precautions only',async()=>{
+ const {buildSupportingPackage}=await import('./reference-editorial-support.mjs');
+ const make=(id,title,related=[])=>({id,title,text:'Complete source text.',source_hash:id,engines:[],related,kind:'general',blocks:[],media:[]});
+ const general=make('G1693189','General safety',['G1693182','G1693188']),body=make('G1693182','Body precautions'),fuel=make('G1693188','Fuel precautions');
+ for(const [title,section_title] of [['Rocker Panel Moulding','Exterior Trim'],['Rocker Molding','Trim'],['Door Applique','Exterior Trim']]){
+  const primary={...make('primary',title,['G1693189']),kind:'repair',section_title};
+  const result=buildSupportingPackage(primary,[primary,general,body,fuel]);
+  assert.deepEqual(result.documents.map(d=>d.id),['G1693189','G1693182']);
+  assert.deepEqual(result.unavailableSupportingReferences,[]);
+ }
+ const interior={...make('primary','Center Register',['G1693189']),kind:'repair',section_title:'Interior Trim'};
+ assert.deepEqual(buildSupportingPackage(interior,[interior,general,body,fuel]).documents.map(d=>d.id),['G1693189']);
+});
+
