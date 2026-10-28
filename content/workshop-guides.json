@@ -89113,120 +89113,238 @@
       }
     },
     {
-      "title": "Trace persistent message-center warnings and a missing adaptive-cruise chime",
-      "summary": "Diagnose persistent convertible-top, engine-on and hill-start-assist messages, or an inoperative adaptive-cruise warning chime, using tests AW–AZ.",
-      "introduction": "The message center belongs to the instrument panel cluster (IPC), which combines vehicle inputs into warnings and coordinates audible alerts. A persistent message can reflect a problem in the system supplying information. These tests first check a familiar display or chime function, then direct diagnosis toward the relevant module or feature.",
-      "why": "The door-ajar indicator and safety-belt chime provide useful checks of shared warning functions. Passing either check does not prove the roof, engine-status, hill-start or cruise-control system is working correctly.",
+      "title": "Interpret recorded persistent-message and adaptive-cruise chime tests",
+      "summary": "Interpret existing AW–AZ display, self-test and active-cruise observations while retaining each exact diagnostic destination and missing-evidence stop.",
+      "introduction": "I use the recorded door-warning or safety-belt-chime response to separate a shared cluster concern from the system requesting a persistent message or missing adaptive-cruise tone. A passing baseline is a direction for further diagnosis, not proof that the original complaint is repaired.\n\nThis article interprets existing technician records. It supplies no live ignition operation, warning clearing, scan session, guided routine, electrical inspection, cruise activation or driving procedure. Missing or ambiguous prerequisites, states or observations leave the affected branch unresolved.",
+      "why": "The instrument panel cluster, or IPC, contains the message center and coordinates warning chimes using information from other vehicle modules. Its display receives both direct electrical inputs and messages carried over the vehicle’s communication network. A warning on the cluster therefore does not automatically mean the cluster is faulty. These tests separate a basic display or chime problem from a concern involving the roof, engine-status information, hill-start assist or cruise control.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "convertible top warning always displayed",
-        "engine on message stays on",
-        "hill start assist warning stays on",
-        "adaptive cruise warning chime not working"
+        "2015 Mustang convertible top warning always displayed",
+        "Mustang engine on warning stays on push button start",
+        "Mustang hill start assist warning always displayed",
+        "Mustang adaptive cruise warning chime inoperative",
+        "IPC self-test GWM continuous memory codes",
+        "pinpoint tests AW AX AY AZ"
       ],
       "when": {
-        "summary": "When one of the named warnings remains displayed or the adaptive-cruise warning chime fails to sound.",
+        "summary": "Use existing technician records for the actual persistent convertible-top, engine-on or hill-start-assist message, or the missing adaptive-cruise warning chime.",
         "notes": [
-          "AW applies to the convertible top; AX applies only to push-button-start vehicles.",
-          "Select AY for hill-start-assist warnings and AZ for the adaptive-cruise warning chime."
+          "Engine coverage is 2015 Mustang 2.3L, 3.7L, 5.0L and 5.2L. Select the test by the equipment actually fitted; this engine list does not establish every engine/body/equipment combination.",
+          "AW applies to an actual convertible. AX applies only to push-button-start vehicles. AY concerns hill start assist, and AZ concerns the adaptive-cruise warning chime.",
+          "Require records showing the complaint present during the applicable test. A concern absent from the records does not authorize component replacement.",
+          "The Japan-only backup warning chime is a separate complaint and is outside AW–AZ."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare for module diagnosis",
-          "detail": "Use a scan tool supporting module self-tests and continuous-memory diagnostic trouble codes (DTCs). Arrange vehicle identification number (VIN) access for IPC guided routines."
+          "title": "Require actual complaint and equipment evidence",
+          "detail": "Require the vehicle identity, fitted equipment and original complaint. AW is convertible-top warning; AX is push-button-start engine-on warning; AY is hill-start assist; AZ is adaptive-cruise warning chime. Engine coverage does not establish every body/equipment combination."
         },
         {
-          "title": "Check the foundations",
-          "detail": "Verify the concern is present, review previous repairs, check battery and charging operation, and confirm battery state of charge exceeds 70%. Resolve relevant circuit codes first."
+          "title": "Require completed preliminary diagnostic records",
+          "detail": "Require battery and charging operation checked, battery state of charge greater than 70%, repair/bulletin history, symptom-relevant fuse/circuit/connector continuity and correct installation, and accessible harness damage/routing findings. Require network-wide symptom-code review, circuit-code priority and any shared power/ground concern addressed using the correct wiring information. These are documented technician prerequisites, not physical instructions here."
+        },
+        {
+          "title": "Require the exact observation and module records",
+          "detail": "Require technician provenance, ignition state, closure and individual OK-acknowledgment observations for AW/AX/AY, or the complete OFF-to-RUN and unbuckled-driver-belt chime observation for AZ. Require actual IPC self-test, AX BCM self-test and applicable GWM continuous-memory results. A missing result is not a no-code result."
+        },
+        {
+          "title": "Require actual active-cruise provenance for AZ4",
+          "detail": "Require a documented safe completed driving/activation procedure and an indicator observation while adaptive cruise was actually operating. A parked indicator, selected standby mode or unexplained lamp observation is insufficient. This article does not activate cruise or direct driving. Without valid operating provenance, AZ4 remains unresolved."
+        },
+        {
+          "title": "Keep subsequent diagnosis and completion separate",
+          "detail": "VIN-based IPC guided diagnosis, code charts, network/roof/engine/ABS/cruise diagnosis, Test AI and resulting repairs require their separate complete procedures. Require actual repair/restoration and original-complaint reassessment records before concluding the concern is resolved."
         }
       ],
       "steps": [
         {
-          "title": "Check display response for AW, AX or AY",
-          "body": "With ignition ON, close all doors, the hood and luggage compartment lid. Acknowledge each warning with OK. Observe the door-ajar reconfigurable telltale (RTT), open the driver door, clear the popup and observe again. It should be off with the door closed and on when open. An incorrect response leads to the VIN-based IPC guided routine."
+          "title": "Select the recorded complaint and route",
+          "body": "Match the actual complaint and equipment to AW, AX, AY or AZ. Require all applicable preparation evidence. AW/AX/AY begin with step 2; AZ begins with step 8. Missing complaint or equipment identity stops the affected interpretation."
         },
         {
-          "title": "Self-test the cluster",
-          "body": "After a correct display check, self-test the IPC. Diagnose recorded codes through its DTC chart before continuing. A clear result allows the complaint-specific route below."
+          "title": "AW1, AX1 or AY1: Interpret the recorded door-indicator response",
+          "body": "Require ignition ON, all doors/hood/luggage lid closed, each message-center warning acknowledged separately with OK, and a recorded door-ajar RTT observation. Then require the driver door opened, its popup acknowledged and the separate RTT observed again.\n\nOff when closed and on when open permits step 3. Either response incorrect directs the separate VIN-based IPC guided routine in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940). Missing states or either observation cannot establish a pass or failed cluster."
         },
         {
-          "title": "AW: Follow a persistent convertible-top message",
-          "body": "Check Gateway Module A (GWM) continuous-memory codes. Any codes lead to Communications Network diagnosis. With none recorded, diagnose all Moveable Roof Control Module-A (MRCMA) codes. The display check alone does not establish a roof-system repair."
+          "title": "AW2, AX2 or AY2: Interpret the IPC self-test",
+          "body": "Require an actual IPC self-test after the passing door-indicator check. Any recorded DTC directs the IPC DTC chart in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940), not the no-code branch.\n\nNo recorded IPC codes permits step 4 for AW, step 5 for AX or step 7 for AY. Unknown or incomplete self-test results stop interpretation."
         },
         {
-          "title": "AX: Follow a persistent engine-on message",
-          "body": "On push-button-start vehicles, self-test the body control module (BCM) first; recorded codes lead to BCM diagnosis. If clear, check GWM memory and diagnose any network codes. If that is also clear, diagnose all powertrain control module (PCM) codes using the appropriate engine procedure."
+          "title": "AW3: Interpret the gateway record",
+          "body": "Require actual GWM continuous-memory results after the clear IPC self-test. Any code directs separate [Communications Network diagnosis](#/document/G1813071). No codes directs diagnosis of all MRCMA DTCs through the separate roof-system procedure. Neither a passing door indicator nor a clear gateway proves the original roof complaint repaired. Continue to the record conclusion in step 12."
         },
         {
-          "title": "AY: Follow a persistent hill-start-assist message",
-          "body": "Check GWM continuous-memory codes and follow Communications Network diagnosis if any are recorded. Otherwise, diagnose the hill-start-assist feature through Anti-Lock Brake System (ABS) and Stability Control diagnosis."
+          "title": "AX3: Interpret the BCM self-test",
+          "body": "For the actual push-button-start engine-on complaint, require an actual BCM self-test after the passing display check and clear IPC self-test. Any BCM code directs separate [BCM diagnosis](#/document/G1692965). No codes permits step 6."
         },
         {
-          "title": "AZ: Establish the basic chime response",
-          "body": "Follow AZ1's ignition OFF/ON and driver-belt unbuckling sequence, monitoring the safety-belt chime during the OFF-to-RUN check. It should sound for approximately 6 seconds. If it does not, use the IPC guided routine. If it does, self-test the IPC, resolve its codes, then check GWM memory and resolve any network codes."
+          "title": "AX4: Interpret the gateway and engine-code destination",
+          "body": "Require actual GWM continuous-memory results. Any code directs separate [Communications Network diagnosis](#/document/G1813071). No codes directs diagnosis of all PCM DTCs using the appropriate fitted-engine procedure in Group 303. A clear BCM/gateway is not authorization to replace the IPC or PCM. Continue to step 12."
         },
         {
-          "title": "AZ: Compare the cruise indicator with operation",
-          "body": "With the preceding checks clear, verify whether the adaptive-cruise RTT illuminates while adaptive cruise is active. If it illuminates, continue cruise-control system diagnosis. If it does not, continue with Pinpoint Test AI in the instrumentation procedure. Neither result alone justifies replacing the cluster."
+          "title": "AY3: Interpret the gateway and hill-start destination",
+          "body": "Require actual GWM continuous-memory results. Any code directs separate [Communications Network diagnosis](#/document/G1813071). No codes directs diagnosis of the hill-start-assist feature through Anti-Lock Brake System and Stability Control, section 206-09. Continue to step 12."
+        },
+        {
+          "title": "AZ1: Interpret the complete safety-belt chime observation",
+          "body": "Require an actual recorded ignition OFF-to-ON/RUN transition, driver belt unbuckled and the approximately six-second chime observation associated with that transition. The source lists OFF, ON, unbuckle and monitoring the transition; a later observation without the required belt/transition provenance cannot establish this result.\n\nChime operation for approximately six seconds permits step 9. A valid observation showing it does not operate as specified directs the separate VIN-based IPC guided routine. An incomplete observation remains unresolved. A passing shared chime does not establish every audio path or the adaptive-cruise request."
+        },
+        {
+          "title": "AZ2: Interpret the IPC self-test",
+          "body": "After the passing chime result, require an actual IPC self-test. Any code directs the IPC DTC chart in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940). No codes permits step 10."
+        },
+        {
+          "title": "AZ3: Interpret the gateway record",
+          "body": "Require actual GWM continuous-memory results. Any code directs separate [Communications Network diagnosis](#/document/G1813071). No codes permits assessment of the active-operation record in step 11."
+        },
+        {
+          "title": "AZ4: Interpret the actual active-cruise indicator record",
+          "body": "Require the preparation evidence for a completed safe driving/activation procedure and actual adaptive-cruise operation. The recorded adaptive-cruise RTT illuminated during operation directs separate [Cruise Control diagnosis for adaptive cruise control](#/document/G1693153). A valid record showing it did not illuminate during active operation directs Pinpoint Test AI in [Instrumentation, Message Center and Warning Chimes](#/document/G1693940).\n\nNo active-operation proof means neither branch is established. A standby or parked lamp observation is not a substitute. The source repeats the same adaptive-cruise chapter under base/adaptive labels; AZ remains the adaptive-cruise chime complaint."
+        },
+        {
+          "title": "Distinguish the diagnostic destination from completed repair",
+          "body": "Retain the complaint/equipment, preliminary evidence, door or six-second chime observations, actual module results and exact destination reached. For AZ retain actual active-cruise provenance and RTT result.\n\nA destination is a separate required procedure, not a completed repair. Require actual resulting diagnosis/repair, restoration and original-condition reassessment records before concluding resolution. Missing completion evidence remains unresolved; absence of a code or acknowledgment of a popup does not establish success."
         }
       ],
       "watchFor": [
         {
-          "title": "Acknowledgment is not a repair",
-          "body": "Pressing OK clears the displayed warning so other functions can be checked; the condition requesting it may remain."
+          "title": "Acknowledging a warning does not remove its cause",
+          "body": "OK acknowledges and clears the displayed warning so the message center can be used. It does not establish that the condition requesting the warning has disappeared."
         },
         {
-          "title": "Chime priorities and backup operation",
-          "body": "A higher-priority warning can delay another chime. The IPC can also provide required chimes when audio-system chime output fails, so audible output does not prove every speaker path works."
+          "title": "Rotating messages can distract from the indicator check",
+          "body": "When several warnings are present, the message center normally rotates through them at approximately 4 seconds per message. For AW1, AX1 and AY1, acknowledge the popups and observe the separate door-ajar RTT."
+        },
+        {
+          "title": "One chime can take priority over another",
+          "body": "The IPC ranks chime requests. A higher-priority request can replace or delay a lower-priority chime. Record other warnings sounding during the complaint rather than assuming every missing tone means a failed speaker."
+        },
+        {
+          "title": "A sounding chime does not prove the whole audio path",
+          "body": "Most warning chimes use the front audio speakers. Parking-aid and blind-spot/cross-traffic warnings use the rear speakers, while the turn-signal tick-tock is produced by the IPC. The IPC also provides required backup chimes if audio-system chime output fails."
+        },
+        {
+          "title": "No live electrical or driving work is directed",
+          "body": "These stages compare existing records. Pin testing, direct power/ground, fuse inspection, scan operation, cruise activation and driving require their complete separate procedures. Missing prerequisite evidence cannot be replaced by a hypothetical check."
         }
       ],
       "notes": [
-        "Japan-only backup-chime complaints use a separate diagnostic path involving communications, reverse lamps, GWM and IPC; AZ does not resolve that complaint."
+        "The engine-on route considers IPC, BCM, GWM and PCM concerns. The hill-start route considers IPC, GWM, ABS and the hill-start feature. These are distinct diagnostic possibilities, not proof of component failure.",
+        "The AZ4 routing text gives the same adaptive-cruise-system diagnostic destination under both its base-cruise and adaptive-cruise labels. AZ remains a test for the adaptive-cruise warning-chime complaint.",
+        "General electrical measurement and jumper methods are not additional AW–AZ operations in this records-only article.",
+        "The Japan-only backup-chime discussion names communication, reversing-lamp, GWM and IPC concerns, but does not include its test sequence in this article’s scope."
       ],
       "diagnostics": [
         {
-          "finding": "The engine-on warning remains displayed.",
-          "meaning": "Its inputs include engine status, driver-door status, transmission gear-display mode and vehicle speed. Missing messages retain the last indication for less than 5 seconds; a loss lasting 5 seconds or longer switches the warning off.",
-          "next": "Follow AX's IPC, BCM, gateway and PCM decisions rather than assuming prolonged message loss explains the displayed warning."
+          "finding": "Recorded result: The door-ajar RTT does not turn off with the door closed and on with the driver door open.",
+          "meaning": "The shared message-center operation check has failed. The complaint-specific no-code route is not the next step.",
+          "next": "Separate VIN-based IPC guided diagnosis."
         },
         {
-          "finding": "The hill-start-assist warning remains displayed.",
-          "meaning": "A missing hill-start status message retains the previous indication for less than 5 seconds, then defaults the warning off at 5 seconds or longer.",
-          "next": "Follow AY to distinguish cluster or gateway faults from a hill-start-assist feature concern."
+          "finding": "Recorded result: The IPC self-test records one or more DTCs on any route.",
+          "meaning": "The cluster has reported a fault requiring code-specific diagnosis; this result alone does not prove the cluster needs replacement.",
+          "next": "Separate IPC DTC-chart diagnosis; do not take the clear-result route."
+        },
+        {
+          "finding": "Recorded result: Any GWM continuous-memory DTCs are recorded at AW3, AX4, AY3 or AZ3.",
+          "meaning": "The test directs diagnosis toward the communication network rather than its no-code endpoint.",
+          "next": "Separate Communications Network diagnosis."
+        },
+        {
+          "finding": "Recorded result: AW reaches a clear IPC self-test and no GWM continuous-memory codes.",
+          "meaning": "The next diagnostic destination is the roof-control system.",
+          "next": "Separate diagnosis of all MRCMA DTCs; a passing baseline does not resolve the roof complaint."
+        },
+        {
+          "finding": "Recorded result: AX records BCM self-test codes.",
+          "meaning": "The body-control branch requires code-specific diagnosis before AX can proceed along its clear-result route.",
+          "next": "Separate BCM diagnosis."
+        },
+        {
+          "finding": "Recorded result: AX reaches clear IPC and BCM self-tests and no GWM continuous-memory codes.",
+          "meaning": "The next destination is PCM code diagnosis for the fitted engine.",
+          "next": "Separate diagnosis of all PCM DTCs using the fitted-engine Group 303 procedure."
+        },
+        {
+          "finding": "Recorded result: The engine-on message stays displayed.",
+          "meaning": "The IPC uses engine status, driver-door status, transmission gear-display mode and vehicle-speed messages. If one of these messages is missing for less than 5 seconds, the warning retains its last indication. At 5 seconds or longer, the warning defaults off.",
+          "next": "Interpret the complete recorded AX sequence. Prolonged loss alone does not explain a persistently displayed warning."
+        },
+        {
+          "finding": "Recorded result: AY reaches a clear IPC self-test and no GWM continuous-memory codes.",
+          "meaning": "The next destination is diagnosis of the hill-start-assist feature.",
+          "next": "Separate hill-start-assist diagnosis through section 206-09."
+        },
+        {
+          "finding": "Recorded result: The hill-start-assist warning stays displayed.",
+          "meaning": "A missing hill-start-assist status message retains the last warning indication for less than 5 seconds. A loss lasting 5 seconds or longer makes the warning default off.",
+          "next": "Interpret the complete recorded AY sequence, retaining exact message-loss duration."
+        },
+        {
+          "finding": "Recorded result: The safety-belt chime does not sound for approximately 6 seconds during the AZ1 ignition transition.",
+          "meaning": "The initial shared-chime check has failed.",
+          "next": "Separate VIN-based IPC guided diagnosis."
+        },
+        {
+          "finding": "Recorded result: AZ reaches clear module checks and the adaptive-cruise RTT illuminates during active operation.",
+          "meaning": "The indicator check passes, but the missing adaptive-cruise chime still requires system diagnosis.",
+          "next": "Separate Cruise Control diagnosis for adaptive cruise control."
+        },
+        {
+          "finding": "Recorded result: AZ reaches clear module checks but the adaptive-cruise RTT does not illuminate during active operation.",
+          "meaning": "The indicator branch also requires investigation.",
+          "next": "Separate Pinpoint Test AI diagnosis."
+        },
+        {
+          "finding": "Required equipment, preliminary electrical evidence, state, self-test, gateway result or actual active-cruise provenance is missing or ambiguous.",
+          "meaning": "The affected branch cannot establish a valid pass, fault destination or completed repair.",
+          "next": "Stop the affected interpretation; retain the concern as unresolved."
         }
       ],
       "verification": [
         {
-          "title": "Verify the baseline and complaint separately",
-          "body": "Confirm the specified door-indicator or belt-chime response. Then complete the verification required by the system diagnosis reached; a passed baseline alone does not close the original complaint."
+          "title": "Retain the exact baseline and sequence",
+          "body": "Require actual closure/individual acknowledgment/door RTT observations for AW/AX/AY, or OFF-to-RUN, belt state and approximately six-second chime evidence for AZ, followed by the correct module results."
         },
         {
-          "title": "Record the handoff",
-          "body": "Record the selected test, observed warning behavior, module codes and final diagnostic destination, including the cruise RTT result for AZ."
+          "title": "Require actual AZ4 operation",
+          "body": "Only a documented RTT observation during actual adaptive-cruise operation answers AZ4. Missing driving/activation provenance leaves both indicator branches unresolved."
+        },
+        {
+          "title": "Require separate completed repair evidence",
+          "body": "Require actual destination procedure, resulting repair/restoration and original-condition reassessment before concluding resolution. Preserve every missing-record stop and distinct diagnostic handoff."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693940",
-          "purpose": "Exact AW–AZ tests, IPC DTC chart, guided-routine decisions and Test AI handoff."
+          "purpose": "Complete AW–AZ decision sequence and separate IPC guided/chart/Test AI destinations for existing-record interpretation only."
         },
         {
           "documentId": "G1693185",
-          "purpose": "Electrical diagnostic prerequisites and interpretation of module tests."
+          "purpose": "Required recorded diagnostic preliminaries, battery state of charge, symptom-relevant electrical inspection and code priority; no physical testing taught."
+        },
+        {
+          "documentId": "G1693932",
+          "purpose": "Message-center controls, warning acknowledgment, rotating messages and the relationship between messages and cluster indicators."
+        },
+        {
+          "documentId": "G1693934",
+          "purpose": "Warning-chime purpose, priority, speaker routing and IPC backup operation."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Network diagnosis when gateway continuous-memory codes are recorded."
+          "purpose": "Reference-only next-step destination when GWM continuous-memory DTCs are recorded."
         },
         {
           "documentId": "G1692965",
-          "purpose": "BCM diagnosis following AX self-test codes."
+          "purpose": "Reference-only next-step destination when AX records BCM self-test DTCs."
         },
         {
           "documentId": "G1693153",
-          "purpose": "Cruise-control diagnosis for vehicles with adaptive cruise control after the AZ indicator check."
+          "purpose": "Reference-only cruise-control diagnostic destination when the AZ4 adaptive-cruise indicator check passes."
         }
       ],
       "hero": null,
@@ -89248,7 +89366,7 @@
         "years": [
           2015
         ],
-        "equipment": "Convertible top, push-button start, hill start assist or adaptive cruise control, according to the complaint."
+        "equipment": "Convertible top for AW; push-button start for AX; hill start assist for AY; adaptive cruise control for AZ, according to the complaint."
       },
       "relatedGuideIds": [
         "job-36ae21c51a8c7550",
@@ -89288,14 +89406,264 @@
         {
           "documentId": "G1693932",
           "sourceHash": "8cc85eb4e958875bcca1f05537491dd8302704b1370b4492a6056c4969653aa1"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1813073",
+          "sourceHash": "123d0f3bb8b253821b4ed14b2b7413fbbe56db2dd33e550e4b1820650e8a37f1"
+        },
+        {
+          "documentId": "G1703370",
+          "sourceHash": "fe7c788fefe9ab6db255bb8b8b238b8c1365ff1a06d14f6583202c91c0cca0fd"
+        },
+        {
+          "documentId": "G1702418",
+          "sourceHash": "d90384a664422f90becaae232d31b8f3766f002997ff467f17953173db28abb9"
+        },
+        {
+          "documentId": "G1694004",
+          "sourceHash": "a144500c599a6679ba1db8a77fa0337cdcce8c087c9d25611c32a3047e518bcf"
+        },
+        {
+          "documentId": "G1766370",
+          "sourceHash": "f794bf068d231feff11c9da29b7a45eb59ae5977213ea5c7b14ac6cf1421e82d"
+        },
+        {
+          "documentId": "G1766371",
+          "sourceHash": "86013b2d9fb11657e8d53330b2daafc58e42baa3c5053021dc2957844a1f4624"
+        },
+        {
+          "documentId": "G1693174",
+          "sourceHash": "3287d653954a6f9c5245c02894bc8c4fb58aa0446abf283fd69da21d815cb3ae"
+        },
+        {
+          "documentId": "G1695509",
+          "sourceHash": "eb2e69d681bac3c4ce5370cd451b575d20aeca15a189c4fdb311afc550da8b04"
+        },
+        {
+          "documentId": "G1693946",
+          "sourceHash": "25b8f34bb13abf6819abdb618203e33b49eadb0da5d4b549660a0411d36563cd"
+        },
+        {
+          "documentId": "G1695898",
+          "sourceHash": "0811611298c04a983451d5174040b80cb7346ad694b84cd95f26b48ea5cc7c89"
+        },
+        {
+          "documentId": "G1694660",
+          "sourceHash": "b2d8705cb3a06aff54c3b8243db68c4277995771db8d7f2b5236c0a5fa5cbee5"
+        },
+        {
+          "documentId": "G1695483",
+          "sourceHash": "f4494b3535cfcb50ced907d9ce725880f7bd1295b70ab19d77e451f67fd5a2c4"
+        },
+        {
+          "documentId": "G1757488",
+          "sourceHash": "bc9fcc768a9bf7cabbb5f6b00f43eaa9593e80651255616440f7350cb98b29cb"
+        },
+        {
+          "documentId": "G1686520",
+          "sourceHash": "31b5b3a3e7ed2449b8d806c73922c44f4db6dd916a2487d16a817416780ceaaf"
+        },
+        {
+          "documentId": "G1686523",
+          "sourceHash": "e873b5073214b6c0dd38c00bfb1edb3ea3f1f09be21b86d86613dc4a572dc5e6"
+        },
+        {
+          "documentId": "G1693931",
+          "sourceHash": "019eff93ce3dc928cb202f270b65568dfcb384566464b8f0ef76f4ffee5995f8"
+        },
+        {
+          "documentId": "G1663651",
+          "sourceHash": "c83df253825e0908a7bd26e5bac350dd5868649d4293edf5eb4839e272421e44"
+        },
+        {
+          "documentId": "G1693123",
+          "sourceHash": "e25e83f43cd82e49ee9a1d9d2b1249e8f05c72b9885093db4a680758c4930cf0"
+        },
+        {
+          "documentId": "G1692579",
+          "sourceHash": "b4160c552f7043cb7f8cf99e7073a1889de5ec449e7d1d37c4700b7fcc299f21"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
+        },
+        {
+          "documentId": "G1692560",
+          "sourceHash": "d254bffe43754521e6766400d6b3704013c49974d9cad14e08f9193763f29f52"
+        },
+        {
+          "documentId": "G1694228",
+          "sourceHash": "e732b1ade0240a9d1d593ec36c656e3a1c9b9a9ee80acbf26ef5c9f83abbab7c"
+        },
+        {
+          "documentId": "G1694227",
+          "sourceHash": "53354fc867867dce877f65824d24cf49cd7fd21681a96c1b3ad8d2b6d48e9213"
+        },
+        {
+          "documentId": "G1694232",
+          "sourceHash": "e76a9b5fab2c6dd7881dd10a567ceffb8504492f6be64036df4bcda3aaa81ee4"
+        },
+        {
+          "documentId": "G1694229",
+          "sourceHash": "a24dcebf08351cff939c8cb3858bb0af30975a56a558b58228486084af8895ef"
+        },
+        {
+          "documentId": "G1694272",
+          "sourceHash": "7bdeb272ba265e89c520453dc014e22cff659a113c59d2fa7cc78bdfedbaeafc"
+        },
+        {
+          "documentId": "G1692229",
+          "sourceHash": "53b4b55413f2df2c3f4cc42a9da729f8505281649510e85901180b41a90ce9c9"
+        },
+        {
+          "documentId": "G1696140",
+          "sourceHash": "5513aa4e85a0d6ff701c18e5ae48cd4f4f91a1490f5dfdfd4e613e464f851a4d"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1693270",
+          "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+        },
+        {
+          "documentId": "G1676816",
+          "sourceHash": "9417dc43e78963f9b557ece95bb82a5d2bf741ee80fa7084c9591e65dc42340d"
+        },
+        {
+          "documentId": "G1693176",
+          "sourceHash": "4dd6205faedae6b4e0e072275bc0e3f90f0bf7c40e63be06c022f0abf3730c27"
+        },
+        {
+          "documentId": "G1694266",
+          "sourceHash": "2c74b882af82713327ad86e2df88ea458b922c4a550820452375fd88ad12f23d"
+        },
+        {
+          "documentId": "G1695910",
+          "sourceHash": "defc652824c8286113e3cf93f087a59bdcca199841392f1bde20b2b857a08ddf"
+        },
+        {
+          "documentId": "G1694674",
+          "sourceHash": "e70ac0a1931200301d8f1e705e8cb262691841d82132f970f41ac92fb4463857"
+        },
+        {
+          "documentId": "G1693933",
+          "sourceHash": "74be607874d0e07bb4ea160576ec4d20eb70c7d49d3196eb45e222960405912b"
+        },
+        {
+          "documentId": "G1694230",
+          "sourceHash": "dfa90f318e1dc8572343555237cfb6d27dce2c71dc32e725c0a21bff1a613bdd"
+        },
+        {
+          "documentId": "G1692891",
+          "sourceHash": "f5b9e20f3a9a60341d86da10afe753087196009eadda45374b8d4e4b36bb79b2"
+        },
+        {
+          "documentId": "G1704002",
+          "sourceHash": "35c416b2cfacf1e873c806f53b71c82e4e7036bda2c9dd6a5105bf48f06e53f1"
+        },
+        {
+          "documentId": "G1704006",
+          "sourceHash": "cad035fcc3ec5f8bd1590a48f88dc4af716d8d748aa718c606a92390f622f484"
+        },
+        {
+          "documentId": "G1704005",
+          "sourceHash": "4792bfb7872a003543a4a4330825e929e9cf80598ec3d293d5a63b0b8c3fb379"
+        },
+        {
+          "documentId": "G1693942",
+          "sourceHash": "f1267ced69346e547753e0074c1edb3a4be78d6f29d9cc067dedcf16833db319"
+        },
+        {
+          "documentId": "G1693160",
+          "sourceHash": "16542ec23525e93006629b084619ac60450b4c0617df7f5d5d693c9fcd709241"
+        },
+        {
+          "documentId": "G1694182",
+          "sourceHash": "1531b3fbbad617116bae20dcb9b32d2b69980d216de74dc4e77189318c6b388c"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "1c225a053915f7dc5ddd5f519dc3c93580885d1ea35322da7efddbf576190598"
-      }
+        "fingerprint": "1c225a053915f7dc5ddd5f519dc3c93580885d1ea35322da7efddbf576190598",
+        "editorialVersion": 2,
+        "editorialFingerprint": "d78452d755d8800a20aa7a4508a057ccab5a4874dbf1c4afd1d2ea8417fdaf83",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "choose-the-route",
+          "title": "Select the complaint",
+          "summary": "Match existing complaint and equipment records.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "check-warning-display",
+          "title": "Interpret shared display operation",
+          "summary": "Require actual display states and IPC self-test records.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "trace-roof-warning",
+          "title": "AW: Convertible-top warning",
+          "summary": "Interpret recorded GWM results and the roof-code destination.",
+          "start": 4,
+          "end": 4
+        },
+        {
+          "id": "trace-engine-warning",
+          "title": "AX: Engine-on warning",
+          "summary": "Interpret actual BCM and GWM results before the PCM destination.",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "trace-hill-warning",
+          "title": "AY: Hill-start-assist warning",
+          "summary": "Interpret gateway evidence and the hill-start destination.",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "id": "trace-cruise-chime",
+          "title": "AZ: Adaptive-cruise chime",
+          "summary": "Require actual belt-chime, module and active-cruise records.",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "id": "record-the-outcome",
+          "title": "Record the diagnostic outcome",
+          "summary": "Keep separate diagnosis, repair and unresolved evidence explicit.",
+          "start": 12,
+          "end": 12
+        }
+      ]
     },
     {
       "title": "Diagnose warning chimes that are missing, stay on or sound only from the cluster",
@@ -122438,176 +122806,297 @@
       }
     },
     {
-      "title": "Diagnose adaptive-cruise clutch signals, lost communication and radar alignment",
-      "summary": "Use clutch-switch data, ordered network tests and radar alignment checks to distinguish adaptive-cruise input, communication and mounting faults.",
-      "introduction": "Adaptive cruise control depends on reliable driver inputs, brake-system messages and correctly aligned radar. On a vehicle with a clutch pedal, the top-of-travel switch tells the powertrain control module (PCM) whether the pedal is released. The cruise control module (CCM) also needs messages from the anti-lock brake system (ABS). These checks separate those dependencies before reaching a repair decision.",
-      "why": "A stored communication code can reflect an intermittent interruption rather than a failed module. Clutch-switch adjustment and radar mounting also matter: an incorrectly installed switch can be damaged, while a misaligned sensor can produce a fault without an internal module failure.",
+      "title": "Interpret recorded adaptive-cruise clutch, network and alignment results",
+      "summary": "Compare existing D–G technician records with exact clutch thresholds, module-reporting gates and complete alignment outcomes, retaining unresolved routing and engine limits.",
+      "introduction": "I’ll interpret existing technician records for adaptive-cruise clutch signals, missing ABS or cruise-module messages and radar-alignment complaints. Missing state, identity, inspection or completion evidence leaves the affected branch unresolved. No live pedal operation, scan work, access, probing, lifting, repair or radar adjustment is directed here.\n\nA constant YES clutch reading remains a stop because the separate Test C routing is contradictory. D2/D3 circuit identities and their downstream replacement conclusions are established only for 2.3L, 3.7L and 5.0L, not 5.2L. Those limitations are not repaired by changing this article to recorded interpretation.",
+      "why": "The clutch top-of-travel switch tells the powertrain control module, or PCM, whether the clutch pedal is resting at the top of its travel. That input helps cruise control respond to the driver. The cruise control module, or CCM, also depends on anti-lock brake system, or ABS, messages and correctly aimed radar. A signal fault, interrupted communication and a crooked radar mount require different next steps; a trouble code alone does not settle the repair.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "adaptive cruise control not working",
-        "clutch pedal cruise deactivation fault",
-        "lost communication with cruise control module",
-        "adaptive cruise radar alignment fault"
+        "2015 Mustang adaptive cruise control diagnosis",
+        "P0833 P170A CPP_TOP",
+        "C2354 clutch top of travel switch",
+        "U0121 ABS communication",
+        "U0104 cruise control module communication",
+        "B142E:78 B1433:54 radar alignment"
       ],
       "when": {
-        "summary": "Use for the listed clutch-input, ABS/cruise communication or radar-alignment codes on an adaptive-cruise-equipped vehicle.",
+        "summary": "Use complete existing technician records for the matching D, E, F or G concern and actual fitted equipment.",
         "notes": [
-          "D2/D3 terminal checks and their replacement conclusions apply only to the identified 2.3L, 3.7L and 5.0L configurations.",
-          "For 5.2L clutch diagnosis, record pedal data and obtain confirmed engine-specific terminal and setup information before circuit-test or replacement decisions."
+          "Begin with the actual recorded code and reporting module. These are separate diagnostic routes, not a checklist that every car must complete.",
+          "Test E concerns U0121. Its U1021 heading is a copied-label error; the fault definitions and decision sequence consistently concern U0121.",
+          "A communication code without an observable symptom can represent an intermittent condition. Record that result without condemning a module.",
+          "C1A67:96 identifies an internal radar failure or invalid radar data, but its dedicated diagnostic test is outside this article."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange scan and circuit testing",
-          "detail": "Use a scan tool capable of PCM pedal data, network tests, module self-tests and continuous-memory code retrieval. Circuit testing requires a multimeter and exact connector identification."
+          "title": "Require identity and original observations",
+          "detail": "Require technician provenance, actual engine/adaptive-cruise equipment, clutch-pedal presence where relevant, original symptom and codes with reporting modules. Do not infer a body/engine combination. Test G access/alignment records must match actual equipment; the referenced bumper procedure does not establish 5.2L access."
         },
         {
-          "title": "Plan physical access only when needed",
-          "detail": "Switch access requires driver knee airbag removal using its applicable restraint-system precautions. Radar work requires safe hoist capability, lower-air-deflector access and the complete radar-alignment procedure; vertical alignment requires front bumper cover removal."
+          "title": "Require measurement and physical-service provenance",
+          "detail": "Require actual applicable PCM and C2354 connector access/release/cavity identification, valid OFF-state isolation, exact endpoints and measured resistance. D3 connector-only access is not automatically the switch-replacement airbag-removal route. A switch replacement separately requires the actual applicable driver-knee-airbag service and adaptive switch procedure. No missing method or cavity orientation is supplied here."
+        },
+        {
+          "title": "Require complete timed scan records",
+          "detail": "Require actual PCM PID-to-pedal pairs, network reports, self-tests, clearing scopes, ignition cycles and complete all-module continuous-memory results. Retain each separate ten-second sequence. A missing report is not a no-code or passing result. Prior replacement history and actual PMI status matter at E5."
+        },
+        {
+          "title": "Require actual radar inspection and alignment evidence",
+          "detail": "G requires documented vehicle Neutral/hoist support and applicable lower-deflector access before actual bracket inspection. Require matched bumper access before vertical alignment and actual completed vertical and horizontal procedures with their results. Missing access, valid setup or complete alignment is not failed calibration or a failed CCM verdict."
+        },
+        {
+          "title": "Require restoration and endpoint provenance",
+          "detail": "Require applicable startup prevention, electrical/SRS safeguards, full connector and access restoration, temporary connection removed, controlled ground return/restraints and actual concern recheck. Require OASIS/TSB decisions and completed separate repair/configuration where applicable. This interpretation does not prescribe hoist/cabin actions, module replacement or vehicle release."
         }
       ],
       "steps": [
         {
-          "title": "Observe clutch-switch behavior—Test D1",
-          "body": "For P0833 or P170A, turn ignition ON and monitor the PCM CPP_TOP parameter identification (PID) while pressing and releasing the clutch. The expected reading is NO pressed and YES released. Correct switching leads to D4. A constant NO leads to D2 on an identified engine configuration. A constant YES is a stopping point: record it and obtain confirmed diagnostic routing without inferring switch or PCM replacement."
+          "title": "Match the existing record to its branch",
+          "body": "D concerns P0833/P170A with an actual clutch pedal; E concerns CCM U0121:00 or PCM U0121; F concerns PCM U0104; G concerns B142E:78/B1433:54. Require all applicable preparation evidence. Missing or ambiguous records stop the affected interpretation.\n\nThe Test E heading literally includes U1021. The prior source assessment interprets that copied label as U0121 because the fault definitions and complete decisions consistently identify U0121; this is an editorial reading, not an official erratum. C1A67:96 has a supplied failure definition but no dedicated test here."
         },
         {
-          "title": "Follow the constant-NO circuit branch—D2/D3",
-          "body": "Turn ignition OFF and disconnect the appropriate PCM connector. Measure to ground at C1551B pin 6 for 2.3L, C1381B pin 8 for 3.7L, or C175B pin 8 for 5.0L. Resistance less than 3 ohms leads to D5. Otherwise, disconnect switch C2354, connect its harness pins 2 and 3, and repeat the same PCM-terminal measurement. Now less than 3 ohms selects switch replacement; otherwise repair the circuit. Do not transfer these terminals or conclusions to 5.2L."
+          "title": "D1: interpret both recorded CPP_TOP states",
+          "body": "Require ignition ON and actual PCM CPP_TOP observations with clutch pressed and released. NO pressed and YES released permits D4 in step 5. Constant NO permits D2 only for confirmed 2.3L/3.7L/5.0L setup. Constant YES, any referral to contradictory Test C, or another unexplained pattern remains a stop. No switch or PCM conclusion follows from that unresolved state. A 5.2L constant-NO circuit path cannot use these D2/D3 maps."
         },
         {
-          "title": "Recheck codes and connections—D4/D5",
-          "body": "When D1 switches correctly, clear codes and repeat the PCM self-test. P0833, P170A or no recorded codes lead to D5; other codes require the engine-specific PCM chart. At D5, switch ignition OFF, inspect PCM connectors, repair corrosion or damaged and pushed-out terminals, and reconnect securely. Retest operation. A persistent concern requires checking applicable technical service bulletins before the PCM replacement endpoint. If a switch is replaced through D3, follow the adaptive-cruise switch procedure and keep the clutch pedal at rest throughout installation."
+          "title": "D2: interpret the first signal-to-ground resistance",
+          "body": "Require valid ignition-OFF isolation, actual applicable access/endpoint identity and the correct PCM connector disconnected: 2.3L C1551B pin 6 to ground; 3.7L C1381B pin 8 to ground; 5.0L C175B pin 8 to ground.\n\nLess than 3 ohms leads to recorded D5 in step 6. Not less than 3, including exactly 3, leads to D3. Preserve this result even though the next setup uses the same numerical threshold differently. No 5.2L setup or downstream conclusion is established."
         },
         {
-          "title": "Establish the ABS communication fault—Test E",
-          "body": "For CCM U0121:00 or PCM U0121, verify an observable symptom with ignition ON. Without one, record normal operation at this time and a possible intermittent condition. With a symptom, network-test the ABS module; failure redirects to network diagnosis. If it passes, self-test the CCM, ABS and PCM and resolve low/high-voltage codes first. Then retrieve gateway module (GWM) continuous-memory codes; any recorded code redirects to network diagnosis."
+          "title": "D3: interpret the changed C2354 setup",
+          "body": "Require continued ignition OFF and the same PCM connector disconnected, actual confirmed connector-only access, C2354 disconnected and a recorded temporary connection between its harness cavities 2 and 3. The supplied identification is black female, four cavities; 2 is CE904 green/violet signal, 3 GD120 black/green ground, 1 and 4 unused. These labels do not teach cavity orientation or physical bridging.\n\nRequire the repeated engine-matched PCM-terminal-to-ground value from step 3. Less than 3 ohms directs separate CPP switch replacement; not less than 3 directs separate circuit repair. Missing temporary-connection or endpoint provenance cannot identify a failed switch. Require actual temporary-connection removal and wiring restoration before any powered retest. Do not impose replacement airbag teardown on D3 merely because both involve C2354."
         },
         {
-          "title": "Apply Test E's final communication decision",
-          "body": "After those prerequisites pass, clear codes and repeat CCM and PCM self-tests. If U0121:00 or U0121 persists, clear all codes, turn ignition OFF then ON, wait 10 seconds, perform the self-test and retrieve continuous-memory codes from all modules. Both CCM U0121:00 and PCM U0121 select the ABS-module replacement route. If only the CCM sets its code, select CCM replacement; if only the PCM sets its code, select the appropriate PCM replacement procedure. These decisions depend on completing the preceding checks."
+          "title": "D4: interpret the PCM recheck from a correctly changing PID",
+          "body": "This entry requires D1 NO pressed/YES released. Require code clearing and repeated PCM self-test records. P0833 or P170A returning leads to D5; no PCM codes also leads to D5. Other codes require the fitted-engine PCM DTC chart, with supplied destinations for [2.3L](#/document/G1692929), [3.7L](#/document/G1692931) and [5.0L](#/document/G1692933). Other 5.2L codes remain unresolved here without their matching chart. D5 may be independently reached from D4, but unsupported 5.2L D2/D3 conclusions cannot be imported."
         },
         {
-          "title": "Separate lost cruise-module communication—Test F",
-          "body": "For PCM U0104, first require an observable symptom, a passing CCM network test, no unresolved CCM battery-voltage codes and no GWM continuous-memory codes. Network failures or GWM codes redirect to network diagnosis. Clear all codes, cycle ignition OFF/ON, wait 10 seconds and repeat the PCM self-test. If U0104 remains, clear all codes again, repeat the ignition cycle and 10-second wait, then retrieve all modules' continuous-memory codes. U0104 in other modules selects CCM replacement; no U0104 in other modules selects PCM replacement."
+          "title": "D5: interpret actual PCM connector correction and operation",
+          "body": "Require supported D2 or D4 entry, ignition OFF and inspection of all PCM connectors. Records must cover corrosion, damaged/bent and pushed-out pins: affected connectors/terminals renewed and module pins cleaned for corrosion, damaged/bent terminals or pins replaced, pushed-out pins replaced as necessary under separate procedures.\n\nRequire seated/latched connectors, all D2/D3 wiring restored and temporary connection removed, applicable access fully restored and an actual original-concern operating check. Returned operation is correct at that time, with root-cause correction still required. Persistent concern requires actual OASIS/TSB evidence: applicable bulletin takes over; none directs separate engine-matched PCM replacement in Section 303-14. Missing records cannot authorize a module."
         },
         {
-          "title": "Inspect and align the radar—Test G",
-          "body": "For B142E:78 or B1433:54, place the vehicle in NEUTRAL and position it on a hoist using the lifting procedure. Remove the front lower air deflector and inspect the CCM bracket. Repair or replace a damaged bracket as directed. With an undamaged bracket, perform both vertical and horizontal alignment; remove the front bumper cover for vertical alignment. Successful alignment identifies misalignment as the cause. Failure to align through the complete procedure selects CCM replacement."
+          "title": "Retain the separate adaptive-switch repair requirements",
+          "body": "A D3 switch endpoint is a separate repair, not an operation performed here. Actual replacement records require completed applicable driver-knee-airbag service, then electrical disconnection before switch removal, reverse installation and proper airbag restoration. Throughout installation the clutch must remain at natural rest, without pressing, pulling or movement; another position causes incorrect adjustment and switch damage.\n\nThe standard-cruise procedure removes the switch before disconnecting it and is not an interchangeable sequence. The shared locating figure establishes no unique twist, release or cavity orientation. No assumption about replacement access is imposed on connector-only D3 testing."
+        },
+        {
+          "title": "E1–E4: interpret symptom, ABS network, voltage and gateway gates",
+          "body": "Require ignition ON and actual observable symptom. No symptom ends the source branch as operating normally at that time; intermittent conditions or network traffic remain possible. With a symptom, E2 requires ABS network-test results: failure directs separate [network diagnosis](#/document/G1813071); pass permits E3.\n\nE3 requires CCM, ABS and PCM self-test reports. CCM U3003:16 directs cruise Test Q, U3003:17 Test R. Other low/high-voltage codes direct the applicable PCM or ABS DTC chart named by the source. Only no voltage codes permits E4. E4 requires GWM continuous-memory records: any code directs network diagnosis, none permits E5. Missing reports cannot be classified as none."
+        },
+        {
+          "title": "E5–E6: interpret the exact paired-code comparison",
+          "body": "Require actual prior module-installation history and PMI status at E5; omitted or incorrect configuration is relevant and cannot be assumed corrected. Require code clearing and repeated CCM/PCM self-tests. Neither CCM U0121:00 nor PCM U0121 returning ends the source branch correctly at that time; either returning permits E6.\n\nE6 separately requires all-DTC clearing, ignition OFF then ON, a full ten-second wait, self-test and all-module continuous-memory retrieval. Both CCM U0121:00 and PCM U0121 direct separate ABS-module replacement. CCM-only directs separate CCM replacement; PCM-only directs separate engine-matched PCM replacement. Neither in this final record establishes no replacement from these outcomes. All earlier gates and actual reporting identities are mandatory; no module is chosen from the code alone."
+        },
+        {
+          "title": "F1–F4: interpret the CCM-message gates",
+          "body": "PCM U0104 describes missing CCM data over HS-CAN2 or GWM/HS-CAN1 for more than five seconds. Require ignition ON and actual symptom. No symptom ends the source branch normally at that time. With a symptom, F2 requires CCM network pass; failure directs network diagnosis.\n\nF3 requires the CCM self-test: U3003:16 directs Q and U3003:17 R; neither permits F4. This specific-code question differs from E3’s all-module voltage-code question. F4 requires actual GWM continuous-memory reports: any code directs network diagnosis; none permits F5."
+        },
+        {
+          "title": "F5–F6: interpret both distinct recurrence sequences",
+          "body": "F5 requires all-DTC clearing, ignition OFF then ON, ten seconds and PCM self-test. U0104 absent ends the source branch normally at that time; present permits F6.\n\nF6 is a second all-DTC clearing, OFF/ON and ten-second sequence, followed by continuous-memory retrieval from all modules. U0104 in other modules directs separate CCM replacement; not in other modules directs separate engine-matched PCM replacement. Preserve both full sequences and preceding gates. Missing all-module records are not evidence that other modules lack the code."
+        },
+        {
+          "title": "G1–G2: interpret actual bracket and complete alignment records",
+          "body": "Require actual Neutral/hoist setup and matched lower-deflector access before documented CCM-bracket inspection. Damage directs separate bracket repair/replacement through [CCM service](#/document/G1693160). An undamaged bracket permits G2. A code alone is not a bracket inspection, and no bend tolerance is supplied.\n\nG2 requires actual matched bumper-cover removal before vertical alignment and completed vertical and horizontal [radar alignment](#/document/G1693156). The referenced bumper route establishes 2.3L/3.7L/5.0L coverage, not 5.2L access. Correct alignment attributes the concern to misalignment and regards operation as correct at that time. Failure through the complete valid process directs separate CCM replacement. Missing access/setup, an incomplete attempt or an undocumented result cannot select that endpoint."
+        },
+        {
+          "title": "Interpret restoration and close the record",
+          "body": "Require actual removal of D3’s temporary connection, restored switch/PCM connectors and all applicable physical access/SRS/deflector/bumper restoration before powered observation or return to use. Require proper ground return/restraint records where lifting occurred; no raised-cabin brake operation is directed here.\n\nPreserve D5’s actual concern recheck, E’s paired-code result, both F recurrences and G’s complete alignment outcome separately. Require any subsequent module installation/configuration and repair through its complete applicable procedure. Constant YES, unconfirmed 5.2L circuits, missing access or incomplete alignment remains unresolved. This interpretation certifies neither physical testing nor vehicle release."
         }
       ],
       "watchFor": [
         {
-          "title": "Keep the clutch pedal still during switch installation",
-          "body": "Do not press, pull or otherwise move the pedal. Installing the switch away from the at-rest position causes incorrect adjustment and can damage the switch."
+          "title": "Constant YES and Test C remain blocked",
+          "body": "Preserve actual pressed/released observations. No correction to the contradictory Test C routing is supplied, so no switch or PCM conclusion follows from constant YES."
         },
         {
-          "title": "Check recent module installation",
-          "body": "Before Test E's final decision, consider whether programmable module installation was omitted or configured incorrectly after a recent module replacement."
+          "title": "D2 and D3 use different setups and outcomes",
+          "body": "D2 less than 3 ohms leads to D5. D3 less than 3 after C2354 disconnection and recorded harness 2-to-3 connection directs separate switch replacement. Neither map or outcome extends to 5.2L."
+        },
+        {
+          "title": "Connector access and replacement are distinct",
+          "body": "D3 requires actual confirmed connector-only access. Switch replacement separately requires the applicable airbag procedure and adaptive disconnect-before-remove order; no blanket teardown is inferred for testing."
+        },
+        {
+          "title": "Keep exact communication gates",
+          "body": "E6 requires both exact codes to select ABS, otherwise the actual single reporter. F5 and F6 require separate clearing/cycle/wait records. Any GWM code interrupts E4/F4."
+        },
+        {
+          "title": "Incomplete alignment cannot condemn the module",
+          "body": "Require actual bracket inspection and complete matched vertical/horizontal alignment including access/setup/restoration. No nominal code-clear or partial attempt substitutes."
         }
       ],
       "notes": [
-        "Communication faults that do not recur after the specified tests can reflect high network traffic or an intermittent condition; that outcome does not identify a failed module.",
-        "Module replacement is a handoff to the appropriate removal, installation and configuration procedures, not completion of those operations."
+        "Test E’s literal U1021 heading is interpreted as U0121 from its consistent definitions and decisions, preserving the prior limited editorial assessment rather than claiming an official correction.",
+        "D5 may be independently reached from D4; unsupported 5.2L D2/D3 results cannot support it. Other 5.2L PCM codes still need their actual matching destination.",
+        "C1A67:96 identifies internal radar failure or invalid data but supplies no dedicated diagnostic test here. No replacement follows from that definition alone.",
+        "Reference links identify separate diagnostic, repair, configuration and alignment procedures. This article does not execute them."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code P0833 or P170A is recorded.",
-          "meaning": "Test D calls for checking the clutch top-of-travel signal and its circuit; the code alone does not establish switch failure.",
-          "next": "Observe CPP_TOP first and respect the constant-YES and engine-specific stopping points."
+          "finding": "Recorded result: D1 shows NO pressed and YES released.",
+          "meaning": "The observed clutch top-of-travel signal changes as expected.",
+          "next": "Interpret recorded D4 clearing/self-test: target codes or none leads to D5; other codes require matching engine chart."
         },
         {
-          "finding": "The CCM records U0121:00 or the PCM records U0121.",
-          "meaning": "Expected ABS messages are missing. PCM communication can also depend on messages through the gateway.",
-          "next": "Complete Test E's symptom, network, voltage, gateway and recurrence checks before applying its module decision."
+          "finding": "Recorded result: D1 stays YES in both pedal positions.",
+          "meaning": "The routing remains unresolved; this observation does not establish which component is faulty.",
+          "next": "Stop affected interpretation; no guessed switch/PCM decision or conflicting Test C route."
         },
         {
-          "finding": "The PCM records U0104.",
-          "meaning": "The PCM has lost expected cruise-module messages, directly or through the gateway.",
-          "next": "Follow Test F, including its separate PCM retest and all-module recurrence check."
+          "finding": "Recorded result: D1 stays NO on a confirmed 2.3L, 3.7L or 5.0L setup.",
+          "meaning": "D2/D3 call for an ordered signal-circuit resistance check.",
+          "next": "Interpret valid recorded D2: less than 3 ohms leads to D5; otherwise D3. No 5.2 circuit inference."
         },
         {
-          "finding": "The CCM records U3003:16 or U3003:17.",
-          "meaning": "These are the low- and high-battery-voltage branches respectively.",
-          "next": "Follow cruise-control Test Q for U3003:16 or Test R for U3003:17 before continuing the communication decision."
+          "finding": "Recorded result: D3 is completed with C2354 disconnected and harness cavities 2 and 3 connected.",
+          "meaning": "This is a different circuit setup from D2, with a different decision attached to the threshold.",
+          "next": "Separate switch replacement only for valid less-than-3-ohm result; otherwise separate circuit repair. Preserve actual temporary-connection state."
         },
         {
-          "finding": "Diagnostic trouble code B142E:78 or B1433:54 is recorded.",
-          "meaning": "The radar horizontal alignment is outside its accepted range; the descriptions distinguish incorrect alignment from missing calibration.",
-          "next": "Inspect the bracket and perform the complete vertical and horizontal alignment procedures."
+          "finding": "Recorded result: The concern remains after D5 connector inspection, repair and reconnection.",
+          "meaning": "The connector check has not resolved the concern.",
+          "next": "Require actual OASIS result; applicable TSB takes priority, none directs separate engine-matched PCM replacement."
         },
         {
-          "finding": "Diagnostic trouble code C1A67:96 is recorded.",
-          "meaning": "The CCM detects an internal sensor failure or invalid radar data.",
-          "next": "Record the finding and obtain the dedicated sensor diagnostic procedure before making a replacement decision."
+          "finding": "Recorded result: D5 connector work removes the concern.",
+          "meaning": "The system operates correctly at this time; a module connection may have caused the concern.",
+          "next": "Require actual root-cause correction and restored operation records."
+        },
+        {
+          "finding": "Recorded result: CCM U0121:00 or PCM U0121 is recorded.",
+          "meaning": "Expected ABS messages are missing. CCM reception uses HS-CAN2; the PCM can miss ABS messages over HS-CAN2 or gateway messages over HS-CAN1. These are vehicle data networks.",
+          "next": "Interpret complete recorded E1–E5 gates before E6; no live network or scan operation."
+        },
+        {
+          "finding": "Recorded result: At E6, the CCM sets U0121:00 and the PCM sets U0121.",
+          "meaning": "Both exact reporting conditions are present after the preceding Test E checks and final clear/off/on/10-second/self-test sequence.",
+          "next": "Separate ABS-module replacement only with all recorded preceding gates and exact paired result."
+        },
+        {
+          "finding": "Recorded result: At E6, only the CCM sets U0121:00.",
+          "meaning": "The CCM reporting condition remains without the paired PCM U0121 condition.",
+          "next": "Separate CCM replacement only with complete preceding records."
+        },
+        {
+          "finding": "Recorded result: At E6, only the PCM sets U0121.",
+          "meaning": "The PCM reporting condition remains without the paired CCM U0121:00 condition.",
+          "next": "Separate engine-matched PCM replacement; neither final code establishes no replacement through these outcomes."
+        },
+        {
+          "finding": "Recorded result: PCM U0104 is recorded.",
+          "meaning": "Expected CCM data, directly over HS-CAN2 or through the gateway over HS-CAN1, has been missing for more than 5 seconds.",
+          "next": "Interpret all F gates and both separate recurrence records."
+        },
+        {
+          "finding": "Recorded result: F5 still records U0104, and F6 finds U0104 in other modules.",
+          "meaning": "The lost-CCM communication condition is also reported outside the PCM after the second clear/off/on/10-second sequence.",
+          "next": "Separate CCM replacement with complete F5/F6 and preceding provenance."
+        },
+        {
+          "finding": "Recorded result: F5 still records U0104, but F6 finds no U0104 in other modules.",
+          "meaning": "The final Test F comparison does not show the same code in other modules.",
+          "next": "Separate engine-matched PCM replacement with complete preceding provenance."
+        },
+        {
+          "finding": "Recorded result: CCM U3003:16 or U3003:17 is recorded during E3 or F3.",
+          "meaning": "The communication decision has reached a low- or high-battery-voltage branch.",
+          "next": "Separate Q for CCM U3003:16 or R for :17; E3 other voltage faults retain source PCM/ABS chart destinations."
+        },
+        {
+          "finding": "Recorded result: B142E:78 or B1433:54 is recorded.",
+          "meaning": "B142E:78 identifies incorrect horizontal alignment/adjustment; B1433:54 identifies missing horizontal-alignment calibration. Both are triggered by an out-of-range horizontal radar angle.",
+          "next": "Interpret actual G1 inspection and complete G2 alignment records. Missing setup or incomplete alignment cannot select CCM replacement."
+        },
+        {
+          "finding": "Recorded result: C1A67:96 is recorded.",
+          "meaning": "The CCM detects an internal radar failure or invalid radar data.",
+          "next": "Separate dedicated diagnostic procedure required; the definition alone is not a replacement test."
+        },
+        {
+          "finding": "Required identity, state, measurement, timing, inspection, alignment or restoration evidence is absent or ambiguous.",
+          "meaning": "The affected path remains unresolved rather than proving a component failure.",
+          "next": "Stop interpretation. Preserve the constant-YES/Test C and 5.2L circuit limits; do not invent missing access or alignment."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the branch-specific result",
-          "body": "Recheck operation after connector or switch work. For communication concerns, use the specified self-tests and recurrence checks. For alignment, confirm the CCM aligns correctly through the complete procedure."
+          "title": "Retain exact D provenance",
+          "body": "Require both CPP_TOP observations, permitted engine/terminal map, distinct D2/D3 setup and strict threshold, actual temporary-connection removal and valid D4/D5 entry. Constant YES and unsupported 5.2 circuits remain blocked."
         },
         {
-          "title": "Keep an actionable diagnostic record",
-          "body": "Record pedal readings in both positions, engine-specific measurements, reporting modules before and after code clearing, and the alignment outcome. Clearly retain any constant-YES or unconfirmed-terminal condition as an unresolved diagnosis."
+          "title": "Retain every communication gate",
+          "body": "Require symptom, actual network/self-test reports, voltage and any-GWM-code decisions, prior PMI history and the exact E6/F5/F6 clearing/cycle/ten-second results."
+        },
+        {
+          "title": "Require complete radar and restoration records",
+          "body": "Require actual bracket inspection, matched access, both completed alignment procedures and actual outcome/restoration. No incomplete attempt can establish failed CCM. All repairs and programming remain separate procedures."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693153",
-          "purpose": "Adaptive-cruise Tests D–G, including exact clutch, communication and alignment decision sequences."
+          "purpose": "Complete supported D–G source for existing-record interpretation with prior adjudications and unresolved gates preserved; no physical diagnosis."
         },
         {
           "documentId": "connector-C2354",
-          "purpose": "Identify the clutch top-of-travel switch signal and ground terminals for D3."
+          "purpose": "C2354 connector identity, signal/ground cavity assignments, wire colors and listed pigtail service part."
         },
         {
           "documentId": "G1693159",
-          "purpose": "Adaptive-cruise deactivator-switch removal and installation, including knee-airbag access and the pedal-at-rest requirement."
+          "purpose": "Required separate adaptive-switch replacement provenance and pedal-at-rest warning; not blanket connector-only D3 access."
+        },
+        {
+          "documentId": "G1693141",
+          "purpose": "Distinguish the standard-cruise switch removal order; not an executable substitute for the adaptive-cruise sequence."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Applicable actual-service safety/restoration provenance; no active physical operation directed."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Source lifting context for required actual G inspection provenance, not live hoist instructions."
         },
         {
           "documentId": "G1692929",
-          "purpose": "2.3L electronic-engine-control diagnosis for other PCM codes reached through D4."
+          "purpose": "Reference-only destination for other 2.3L PCM codes reached through D4."
         },
         {
           "documentId": "G1692931",
-          "purpose": "3.7L electronic-engine-control diagnosis for other PCM codes reached through D4."
+          "purpose": "Reference-only destination for other 3.7L PCM codes reached through D4."
         },
         {
           "documentId": "G1692933",
-          "purpose": "5.0L electronic-engine-control diagnosis for other PCM codes reached through D4."
+          "purpose": "Reference-only destination for other 5.0L PCM codes reached through D4."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Diagnose failed network tests or gateway communication codes before module decisions."
+          "purpose": "Reference-only network diagnostic destination after failed module network tests or recorded gateway codes."
         },
         {
           "documentId": "G1813073",
-          "purpose": "Understand module configuration when recent installation may explain communication faults."
+          "purpose": "Reference-only configuration destination when recent module installation raises a PMI concern."
         },
         {
           "documentId": "G1692579",
-          "purpose": "ABS-module removal and installation only after Test E reaches that endpoint.",
+          "purpose": "Reference-only ABS-module replacement destination after the exact paired E6 reporting condition.",
           "mediaId": "G1692579-m0001"
         },
         {
           "documentId": "G1693160",
-          "purpose": "Adaptive-cruise CCM or bracket service after the applicable communication or alignment decision.",
+          "purpose": "Reference-only CCM or bracket service destination after the appropriate diagnostic decision.",
           "mediaId": "G1693160-m0001"
         },
         {
           "documentId": "G1693156",
-          "purpose": "Complete adaptive-cruise radar vertical and horizontal alignment.",
+          "purpose": "Reference-only destination for complete vertical and horizontal radar alignment.",
           "mediaId": "G1693156-m0002"
         },
         {
-          "documentId": "G1663631",
-          "purpose": "Safe vehicle lifting for CCM bracket inspection."
-        },
-        {
           "documentId": "G1694213",
-          "purpose": "Front bumper cover removal and installation for vertical radar-alignment access.",
+          "purpose": "Reference-only 2.3L/3.7L/5.0L front bumper-cover service destination for vertical alignment access; no confirmed 5.2L execution coverage.",
           "mediaId": "G1694213-m0009"
         }
       ],
@@ -122633,7 +123122,7 @@
         "years": [
           2015
         ],
-        "equipment": "Adaptive cruise control; clutch-pedal checks apply to vehicles with a clutch pedal"
+        "equipment": "2015 Mustang with adaptive cruise control; coverage includes 2.3L, 3.7L, 5.0L and 5.2L. Clutch checks apply only with a clutch pedal. D2/D3 terminal testing is established only for 2.3L, 3.7L and 5.0L. No body-style-specific combinations are established; the front bumper-cover service destination covers 2.3L, 3.7L and 5.0L, not a confirmed 5.2L application."
       },
       "relatedGuideIds": [
         "job-f6b19cd94891c6dc",
@@ -122701,14 +123190,153 @@
         {
           "documentId": "G1693141",
           "sourceHash": "191c72e4ed57c8b731d5ddc4ea9d32250eb76dad5d725d19ee28c9d22e9db2b3"
+        },
+        {
+          "documentId": "G1693185",
+          "sourceHash": "3d4b376a94aa32851d83ec2d24580eb381f866ec2a438dde3d399dd35afe71f1"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1693174",
+          "sourceHash": "3287d653954a6f9c5245c02894bc8c4fb58aa0446abf283fd69da21d815cb3ae"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1721936",
+          "sourceHash": "2b84e9f8b31ff4264df2d8ab227087f7daff5bbf0a1d25d114771a1cda909864"
+        },
+        {
+          "documentId": "G1693266",
+          "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535"
+        },
+        {
+          "documentId": "G1693152",
+          "sourceHash": "ff172274f6b15cf77a8227b8f3d8934597bdd4bfffdc2768d49757f91779e8d9"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1694270",
+          "sourceHash": "d94e39ad001db14c16a06dee68bca2d2cc6d2fae991d774cb17b4d9bdacaa7ff"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1693270",
+          "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+        },
+        {
+          "documentId": "G1694231",
+          "sourceHash": "bc58f288e0d96dd84b92912b6b8521bd17b8931262a3b9c29d87c6c7d3cea3ad"
+        },
+        {
+          "documentId": "G1694129",
+          "sourceHash": "2dec9f65a8b0137a00184372eb3e44cba4b6a7bfbaa89829fad8cfaac93540dc"
+        },
+        {
+          "documentId": "G1693135",
+          "sourceHash": "d6b064655024c1e086feb5f2031aeda96ef6ce061c121f1a908e6faac724a099"
+        },
+        {
+          "documentId": "G1692965",
+          "sourceHash": "cff90b0c2c849fa0101771bbb732d7f7bb2948be70895d50acaa83f251a3b9e0"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
+        },
+        {
+          "documentId": "G1693176",
+          "sourceHash": "4dd6205faedae6b4e0e072275bc0e3f90f0bf7c40e63be06c022f0abf3730c27"
+        },
+        {
+          "documentId": "G1692957",
+          "sourceHash": "5ea56f10545190c1d93c6c84ed9a24996088b7681f98fd3844f7dc316a380d89"
+        },
+        {
+          "documentId": "G1692362",
+          "sourceHash": "2ac66457732fae26efadd50c39b29dcc854ab8f4d5bf3ef47684374f6b06eae0"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "253b9a860e985458a551e297d8a47967b0641f3b89c8f4009672a69331b2da31"
-      }
+        "fingerprint": "253b9a860e985458a551e297d8a47967b0641f3b89c8f4009672a69331b2da31",
+        "editorialVersion": 2,
+        "editorialFingerprint": "c00751d8339652227f53e06aaa07d511809f2f3728715760ceccd811fbb86b48",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identity",
+          "title": "Identify records and limitations",
+          "summary": "Require fitted equipment and preserve prior source adjudications.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "clutch",
+          "title": "Interpret clutch records",
+          "summary": "Keep actual states, engine maps and separate replacement provenance.",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "id": "abs",
+          "title": "Interpret missing ABS-message records",
+          "summary": "Require every gateway/voltage gate and the exact paired-code outcome.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "ccm",
+          "title": "Interpret missing CCM-message records",
+          "summary": "Retain distinct F5/F6 recurrence evidence.",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "id": "alignment",
+          "title": "Interpret bracket and alignment evidence",
+          "summary": "Require actual complete matched inspection and alignment.",
+          "start": 12,
+          "end": 12
+        },
+        {
+          "id": "completion",
+          "title": "Interpret restoration and outcome",
+          "summary": "Keep unresolved gates and separate repair requirements explicit.",
+          "start": 13,
+          "end": 13
+        }
+      ]
     },
     {
       "title": "Interpret recorded adaptive-cruise radar and communication results",

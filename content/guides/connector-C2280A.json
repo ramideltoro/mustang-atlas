@@ -1,0 +1,54 @@
+{
+  "documentId": "connector-C2280A",
+  "supportingSourceRefs": [],
+  "sourceHash": "0a71c64f3ae056a94a8cf6d604c2cd15c30c7f9b668795bf8467434fb6ddb996",
+  "title": "C2280A — Body control module connector",
+  "introduction": "The body control module coordinates many body electrical functions, but this reference focuses on a particular connector. Its assignment table is dominated by fuse-or-circuit-breaker descriptions, alongside a brake on/off switch entry. I read it like an electrical address book: the cavity tells me where an entry lives, while the circuit identifier tells me which connection it describes.\n\nStart with the identity table, use the drawing to locate the printed cavity label, then read the corresponding assignment row from left to right. A function label describes the connection’s role; it is not evidence that the circuit or module is working.\n\nThis page supports reference reading. It leaves the physical viewing side, catalog-code meanings and gauge convention undefined, and supplies no access, probing, wire-selection or replacement procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280A-b00002",
+      "text": "Connector face for Harness 14401",
+      "why": "I keep the large housing structure at the top of the printed drawing and use the long rounded opening across its middle as a landmark. The upper rows run from higher cavity labels on the left to lower labels on the right; the lower groups have different spacing. Follow the actual labels rather than extending an imagined grid. Gray positions align with blank-function rows in the table."
+    },
+    {
+      "blockId": "connector-C2280A-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match Cavity to the drawing, then keep Circuit Number, Color, Gauge, Function and Terminal Part Number together as a complete row. The brake-switch entry retains its “NORMAL OPEN” description; that wording is not a test result. Read fuse-or-circuit-breaker descriptions as written, without treating their numbers as cavity labels or fuse ratings. Terminal entries vary, so a similar function or repeated circuit identifier does not replace reading the rest of the row."
+    }
+  ],
+  "checkedAt": "2026-10-28T06:47:47.426Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6bb5cc52bcc0b80d227cb5c9a78190c9dd0639f3c120e5b24e2cab0114614398",
+  "sourcePdfHash": "c6440a612ab8858af90ca67beae90e0860260820c9d38305101fa3cc5181e9c2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 43,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "45263f8ab1b54d04bb74672f28f2ea9e58d98e64cb190f174f22cf4dfa2596c3",
+    "reviewedAt": "2026-10-28T04:15:38.691Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Sole public change large latch structure to large housing structure in firstwhy. Complete43 units/raw/tables/context/author/verdict/final prose and original completepage1 solefigure read. Full original independent review retained."
+    }
+  }
+}
