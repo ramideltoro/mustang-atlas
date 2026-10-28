@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4339",
+  "supportingSourceRefs": [],
+  "sourceHash": "842fca1713fbd7c218b2b0c6534f3e9c6a8aa757b64b6ad8a05ed06a25f0986d",
+  "title": "C4339 — Luggage compartment lid latch",
+  "introduction": "I read this latch reference like a miniature switchboard directory: match the connector identity, find a cavity label in the drawing, then read across its assignment row. The latch’s electrical connections have different jobs, so the connector’s shape alone cannot tell the whole story.\n\nStart with the identity table, use the face drawing and harness table together, then consult the circuit map. The pigtail table provides a separate parts cross-reference. This is a reading guide; access, physical viewing side, probing, test results and replacement methods require matching service information. The gauge convention and the Box, Cols, Size and Used codes are not defined here, so I leave those entries as recorded.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4339-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "I use the housing outline and its large rectangular feature on the left of the page to keep my place in the drawing. The cavity labels form a vertical column on the right. Match those labels to the assignment table, and use the adjacent Fpn and Harness Id fields to keep the drawing tied to its listed shell and harness. Page orientation does not establish whether a physical connector should be viewed from its terminals or wires."
+    },
+    {
+      "blockId": "connector-C4339-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Cavity connects the drawing to the table; Circuit Number identifies the electrical path, while Function describes its assigned job. Read Color, Gauge and Terminal Part Number across that same row rather than mixing details from neighboring entries. The function descriptions distinguish switch, release-relay and ground paths. A relay is an electrically controlled switch, but a relay label alone does not identify a separate plug-in component. These assignments identify connections; they do not prove that any circuit works."
+    },
+    {
+      "blockId": "connector-C4339-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "A pigtail is a connector with attached leads. I read each service-parts row as a complete catalog entry, keeping its Number, Service Part and Engineering Shell together. The listed entries share a shell identifier but have different service-part identifiers; the sheet gives no selection rule between them. Their lead-gauge entries also belong to the service assemblies, so they do not replace the individual circuit-gauge entries above. Use this table to carry the recorded part information into a separate repair or fitment lookup."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:37.721Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "b18cfeee1fe7d7f335e5638be42c5524ce8fd8879f3e6a4363d783bac6f7566c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "56219e89517c6c216723f0f56bbf13c2e442b8b23cb02c1843780cd5022b5727",
+    "reviewedAt": "2026-10-28T02:34:37.722Z"
+  }
+}

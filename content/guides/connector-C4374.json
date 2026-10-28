@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4374",
+  "supportingSourceRefs": [],
+  "sourceHash": "24f23927639079dda6958ab8e83c236ce08ba20740b70136bec12db370c58ead",
+  "title": "C4374 — Fuel level sensor connector",
+  "introduction": "The fuel level sender is the fuel gauge’s correspondent in the tank: it reports quantity, not whether the engine is receiving fuel correctly. I use this reference to connect the housing drawing with the cavity and circuit information below.\n\nStart with the connector identity table, match the harness heading, then use each drawing label to find its Cavity row. The shaded positions correspond to unused rows; a place in the housing does not automatically mean a working circuit lives there.\n\nThis is an identification and reading guide. It does not establish physical viewing direction, access, probing, test limits or replacement instructions. Gauge conventions and size codes are undefined here, and the pigtail listings alone do not establish which replacement to choose.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4374-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "I use the housing outline and its side features as landmarks within the drawing, then carry the cavity labels into the assignment table. The small table beneath the illustration ties the face to its harness and shell reference. These landmarks describe the pictured layout; they do not establish which side of a physical connector to view."
+    },
+    {
+      "blockId": "connector-C4374-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Read across a matching Cavity row to connect its circuit identifier, color code, gauge entry and function. The populated rows describe the fuel-level sensor connections. The shaded lower positions align with rows marked unused and without circuit assignments, so the housing’s capacity should not be mistaken for its populated wiring. Terminal Part Number identifies the recorded terminal; it is not an electrical test result."
+    },
+    {
+      "blockId": "connector-C4374-b00007",
+      "text": "Compare the listed pigtail parts",
+      "why": "A pigtail is a connector with attached wire leads. Read each row as a complete catalog entry: Number identifies the listing, Service Part identifies its service reference, and Engineering Shell connects it to the housing reference. The gauge and material entries differ between the listed pigtails. A shared shell reference alone does not establish interchangeability, and the Image entries are filenames rather than additional illustrations shown here."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:27:49.850Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "44cb066bee1b4ab3de6578fabcde19eb74ed4f7e8d24ea1ab2d6eddc60d01a6f",
+  "sourcePdfHash": "708fea9f76759a3d12f3a65928c7731a976c6564474edcc2af356594b4b94cf5",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1a0a1efa70dc46205191883b12b4fd17f7fcf63e30abd3d305bd6b8af1494b04",
+    "reviewedAt": "2026-10-28T02:27:49.850Z"
+  }
+}

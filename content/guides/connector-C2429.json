@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2429",
+  "supportingSourceRefs": [],
+  "sourceHash": "1a1b3cecb5fd6daab3f4466cdc37691ea753a0d68c76ab70f714f355cc3cfde0",
+  "title": "C2429 — Downshift paddle switch connector",
+  "introduction": "A pull on the downshift paddle feels like a simple request, but this connector’s map also includes illumination, ground and signal-return functions. I use the Function column to keep the shift request separate from the lighting: the paddle has more on its guest list than “change gear.”\n\nStart with the identity table and harness heading. Match each cavity label in the drawing to its assignment row, then read the function attached to that position. The asterisks leave circuit numbers, wire colors and gauges unspecified; they are not values to fill in by guesswork.\n\nThis reference identifies connections and catalog entries. It does not establish physical viewing direction, access, probing, switch-test results or replacement instructions. The harness abbreviation and size code are unexplained, and neither the pigtail listing nor the European product reference establishes installation details or interchangeability.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2429-b00002",
+      "text": "Connector face for harness PIA",
+      "why": "The supplied drawing places the labeled cavities in a vertical column, with a broad housing feature to their left. I use that arrangement to keep my place while moving between the illustration and the assignment table. The small table below links this face to its shell and harness reference; it does not establish how to approach the installed connector."
+    },
+    {
+      "blockId": "connector-C2429-b00005",
+      "text": "Read the paddle-switch circuit roles",
+      "why": "Match each drawing label to Cavity, then use Function to distinguish switch illumination, the cross-car-beam ground connection, the powertrain signal return at the cowl and the transmission downshift-switch connection. Ground and signal return have separate entries, so I keep their names separate when reading the map. All cavity rows are marked used, even though their circuit, color and gauge fields contain asterisks. An unavailable terminal part number does not make a cavity unused."
+    },
+    {
+      "blockId": "connector-C2429-b00007",
+      "text": "Read the pigtail parts reference",
+      "why": "A pigtail is the connector with attached wire leads. Read the catalog Number, Service Part and Engineering Shell together, keeping the gauge, material and cavity information attached to that same row. This records a service assembly reference; it does not supply the missing wire details in the circuit map or teach splicing. The Image entry names a catalog file rather than an additional illustration displayed here."
+    },
+    {
+      "blockId": "connector-C2429-b00009",
+      "text": "European pigtail product reference",
+      "why": "The European table provides a Product Id for catalog lookup. Keep that regional reference distinct from the preceding service-part entry: no comparison or selection rule is supplied to establish equivalence between them."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:27:49.867Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "d73dcf1e01b0a499487ba3b3fcac9dabce126bb6cc250ff573802b28639692e9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 37,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b5adcead6ef7063f5fd6f6dadc9a95b1ae9139028ac116786035bf5b33131fac",
+    "reviewedAt": "2026-10-28T02:27:49.867Z"
+  }
+}

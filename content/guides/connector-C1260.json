@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C1260",
+  "supportingSourceRefs": [],
+  "sourceHash": "f18e0e9f755f4c7c1b1feb632d3f7a41a2be19b1450ab368f2bef6c603fd844d",
+  "title": "C1260 — A/C pressure transducer connector",
+  "introduction": "I use this reference as the A/C pressure transducer’s seating plan: the drawing locates each cavity label, and the assignment table explains the electrical job at that position. Signal return, pressure signal and voltage reference share a connector, but they are not interchangeable seats.\n\nStart with the identity table, match the harness heading, then follow a cavity label into its table row. Read across that row before moving to another cavity; this keeps circuit identity, color and function together.\n\nThis page supports identification, not a cooling diagnosis or refrigerant-service operation. Physical viewing direction, access, probing, operating values and replacement methods are outside its scope. Gauge conventions and size codes are undefined here, and the pigtail listings do not establish which service option applies to a particular vehicle.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1260-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "The housing feature appears above the cavity row in the supplied drawing, and the cavity labels descend across the page from left to right. I use those visible landmarks to read this illustration consistently. The table below connects the drawing to its harness and shell reference; neither the female designation nor the drawing title establishes a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1260-b00005",
+      "text": "Read the transducer circuit map",
+      "why": "Match a drawing label to Cavity, then read across for circuit identity, color code, gauge entry, function and terminal reference. Function separates the pressure-transducer signal from its signal-return and engine-voltage-reference connections. Those names describe circuit roles; they do not supply an expected voltage, pressure conversion or pass/fail result. The transmission wording belongs to the signal-return description and should remain attached to that entry."
+    },
+    {
+      "blockId": "connector-C1260-b00007",
+      "text": "Compare the listed pigtail options",
+      "why": "A pigtail combines the connector housing with attached wire leads. Keep each catalog Number paired with its own Service Part, then compare the Engineering Shell and the remaining specifications across the complete row. The common shell reference does not by itself prove that the service options are interchangeable. The Image column names catalog image files; it does not add a replacement-selection procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:30:33.052Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "5b1db7452469a36d67fc1473cef58a925a8e3eed323b4cd21278f702d0a4d72d",
+  "sourcePdfHash": "781a3713a9f5392edc3e4c640e1b148f289caf832ea862457707cf9428336d92",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "69f3d048f18bb4f3230e912b7ac63068dc5e04af60474f8b6da95661afab0fea",
+    "reviewedAt": "2026-10-28T02:27:49.858Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Full32 source units/raw/all table cells/context/author/final prose and full independent verdict read; original complete page2 directly viewed. Only unsupported latch function label changed to housing feature; prior full review retained."
+    }
+  }
+}

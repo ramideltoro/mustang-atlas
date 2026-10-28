@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4010",
+  "supportingSourceRefs": [],
+  "sourceHash": "92c7e24bf14405cce999a69e31778d351503026065c87c3f40b2752b86744e7c",
+  "title": "C4010 — Rear inner parking aid sensor LH/CENTER connector",
+  "introduction": "This reference maps the rear inner parking aid sensor’s connector to its wiring and listed pigtail parts. I keep the LH/CENTER qualifier in view from the start: the circuit description allows a left-inner or middle position, so this page alone does not choose the fitted position for a particular vehicle.\n\nUse the connector description to establish the application, then move from the harness drawing’s cavity labels to matching rows in the pin table. Read each row across to keep the circuit identity, wire description, function and terminal entry together. The Function column separates the sensor connection from the control-module connections marked with opposite polarity signs. It is a small wiring address book for the parking aid—not a verdict on why the car is beeping.\n\nThis is an identification guide. Physical access, connector viewing direction, diagnostic conditions and repair methods require separate instructions. Gauge conventions and the Box, Size and Used codes are not explained here; preserve them as printed without inferring wire choices, dimensions or electrical condition.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4010-b00002",
+      "text": "Connector face for harness 13412",
+      "why": "The drawing places the housing detail above a horizontal cavity row. I use those visible landmarks to read the printed cavity labels and locate the matching table rows. Their order should be read directly rather than assumed from left to right. This explains the picture’s layout without assigning a physical viewing side; the table beneath it supplies the associated Fpn and harness entry."
+    },
+    {
+      "blockId": "connector-C4010-b00005",
+      "text": "Read the parking aid circuit map",
+      "why": "Follow a cavity’s row across Circuit Number, Color, Gauge, Function and Terminal Part Number. Keep the sensor-position alternative in the Function description rather than silently narrowing the application. Preserve the positive and negative signs on the control-module descriptions as circuit labels; they do not specify test connections or operating voltages. Blank Qualifier cells provide no additional configuration selection."
+    },
+    {
+      "blockId": "connector-C4010-b00007",
+      "text": "Pigtail parts lookup",
+      "why": "Each row ties a kit Number to its own Service Part, Image filename and Engineering Shell. Read the complete row instead of choosing by a familiar-looking shell entry alone. The alternatives have no supplied selection rule or installation sequence, and their Gauge entries should not be substituted for the separate circuit-table entries. This lookup helps identify listed parts without declaring them interchangeable."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:27:57.863Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "851c66f1317a6a4a6789cd35ad08d0248c33636a21bfb30702e4725b312fa260",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "694ad92c5139b0e7bf7db1870b009d2bb2885eea54376d7fd994e1c5ff2636df",
+    "reviewedAt": "2026-10-28T02:22:08.738Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Full 32 source units, raw text, all table cells, author/final prose and complete independent verdict read; original complete page 2 directly viewed. Only unsupported latch function label changed to housing detail. Prior full review preserved; bounded final approval pending."
+    }
+  }
+}

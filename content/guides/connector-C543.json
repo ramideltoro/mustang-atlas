@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C543",
+  "supportingSourceRefs": [],
+  "sourceHash": "8ae4619b803b36fe23a7192b7f57b3028d75b9f717df559021d0849dc8821e5f",
+  "title": "C543 — Exterior front door handle LH",
+  "introduction": "The left-hand exterior handle has more electrical business than its simple shape suggests. Its connector reference distinguishes the driver handle sensor connections from the keyless-entry antenna connections. I read it like an address book: the drawing locates a cavity, and the matching table row explains which circuit lives there.\n\nStart with the connector identity table, then use the face drawing and Cavity column together. Read across the matching row for circuit identification, wire color, gauge, function and terminal information. The final table provides pigtail service-part references.\n\nThis is a guide to reading the connection map. Access, physical viewing direction, electrical test conditions and replacement methods require separate service information. Gauge conventions and the Size and Used codes are not explained here; I leave those entries uninterpreted rather than using them to select wire or prescribe a test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C543-b00002",
+      "text": "Connector face for harness 14631",
+      "why": "I use the housing outline and vertical stack of cavity labels to navigate the displayed drawing. The table beneath it associates that drawing with a harness and shell. Positions on the page establish the illustrated layout, not which side of a physical connector to approach."
+    },
+    {
+      "blockId": "connector-C543-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "The cavity label connects the drawing to a table row; the circuit identifier then distinguishes that electrical path. Read Color as the wire-color entry and Function as its assigned role. The antenna polarity labels belong to the antenna connections—a minus sign here is not permission to assume a chassis-ground test. The remaining sensor function is less specific, so I keep that description at its stated scope."
+    },
+    {
+      "blockId": "connector-C543-b00007",
+      "text": "Pigtail service-part references",
+      "why": "The parts table connects each listed pigtail entry with its service part and engineering shell. I keep those fields together for lookup. Sharing a shell reference does not explain how to choose between the entries, and the separate pigtail and circuit gauge fields are not instructions for selecting replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:28:33.559Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "843c7cb36c942bc8395f5f7208c51209c1770805a7abda603e19c59eb9fdf621",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7121c941b146c343bffa04aeec8979042b6f59af3d2e70956bf657aa34e594b3",
+    "reviewedAt": "2026-10-28T02:28:33.560Z"
+  }
+}

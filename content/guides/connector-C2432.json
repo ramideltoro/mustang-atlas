@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C2432",
+  "supportingSourceRefs": [],
+  "sourceHash": "4e7336375837b4724aa4bac5be5e10604049f9dbf90317117d39543fb74ef4fb",
+  "title": "C2432 — Driver knee airbag connector",
+  "introduction": "The useful distinction on this page is between a cavity drawn in the housing and a cavity assigned an electrical circuit. I read the driver knee airbag reference by matching the connector illustration’s printed labels to the Cavity rows, then checking which rows actually contain circuit information.\n\nThe vertically arranged drawing includes shaded and unshaded positions. Compare that shading with the table’s blank circuit fields, Used entries and terminal information; shading alone is not an electrical test. For populated rows, read across to keep the circuit identity, wire description, polarity-marked function and terminal entry together. The pigtail table is a separate record of listed service parts.\n\nThis is a connector-reading guide. It does not teach airbag access, depowering, probing or replacement. Physical viewing direction, gauge conventions and the meanings of Box and Size codes are not established here. Any hands-on restraint work belongs with qualified personnel using the restraint-specific safety, diagnostic and restoration procedures.",
+  "requirements": [
+    {
+      "category": "Before hands-on restraint work",
+      "items": [
+        {
+          "name": "Qualified personnel and restraint procedures",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Before work extends beyond reading this reference, obtain the applicable depowering, handling, equipment and restoration instructions; this connector sheet cannot supply that preparation sequence."
+        },
+        {
+          "name": "Restraint-specific diagnosis",
+          "detail": "Record fault information and use the prescribed restraint diagnostic path. Do not substitute a generic jumper or resistance test for the specified method."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C2432-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I use the vertical cavity stack and the projecting feature on the drawing’s right as visual landmarks. Read the printed labels directly and compare the shaded lower positions with their table rows. These features establish the illustration’s layout without identifying a physical viewing side or explaining a connector-release movement. The table beneath the drawing supplies its associated Fpn and harness entry."
+    },
+    {
+      "blockId": "connector-C2432-b00005",
+      "text": "Read the cavity population and circuits",
+      "why": "The shaded positions correspond to rows with blank circuit descriptions, unused entries and no applicable terminal part. The populated rows carry the driver knee airbag circuit descriptions with opposite polarity signs. This distinguishes housing capacity from assigned circuits; it does not indicate missing wires or a fault. Read each populated row across to preserve its circuit, color, gauge and terminal association. Polarity labels are identification information, not instructions for attaching test equipment."
+    },
+    {
+      "blockId": "connector-C2432-b00007",
+      "text": "Pigtail service-parts reference",
+      "why": "Each kit row keeps its Number, Gauge, Material, Cavities, Image filename, Service Part and Engineering Shell together. These entries identify listed pigtail records without supplying an alternative-selection rule, installation method or authorization to repair restraint wiring. Keep their Gauge entries distinct from those in the circuit table; the differences do not establish a replacement-wire choice."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:22:08.754Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "af25be8a0b9a53ed10bb7e32545a8d42ffa665151ca8686ebc891ecdcde5a25e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1b7b6bd91f3b120effdbbb57abd45e965320d40cefb6ffad25712758aaea79ae",
+    "reviewedAt": "2026-10-28T02:22:08.755Z"
+  }
+}

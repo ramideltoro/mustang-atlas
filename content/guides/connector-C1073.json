@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1073",
+  "supportingSourceRefs": [],
+  "sourceHash": "23d6fdb594a35aec9a93b9c24c915a6fab1490a5d879d02dfbfb5f7210ac707f",
+  "title": "C1073 — Fuel rail pressure (FRP) sensor connector",
+  "introduction": "I read this reference by separating the sensor’s voltage reference, pressure signal and signal return. Those labels describe different electrical jobs. Think of the reference as the measuring system’s starting point, the pressure signal as its report, and the return as its electrical reference path. The connector map names those paths without establishing a healthy reading.\n\nStart with CNumber and Description in the identity table, then use the harness heading, Fpn row and drawing together. Match each drawing label to Cavity and read across for circuit identity and function. The upper group contains the assigned positions; the lower shaded positions agree with the unused table rows. Keep the printed labels as your guide rather than assuming the numbering follows ordinary reading order.\n\nThis is a connector-reading guide, without instructions for access, probing, wire selection, replacement or opening the fuel system. Physical viewing side, Gauge convention and Size-code meanings are unspecified, and no voltage or pressure test limits are given. Use the identified circuit in the matching diagnostic procedure when a measurement or repair is required.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1073-b00002",
+      "text": "Connector face for harness 14B485",
+      "why": "I use the broad feature above the cavity area as a landmark within the drawing. The assigned labels run across the upper group, with shaded unused positions below. Reading each printed label avoids inventing a sequence from its position. This describes the illustration’s layout without establishing the physical connector viewing side."
+    },
+    {
+      "blockId": "connector-C1073-b00005",
+      "text": "Read the sensor circuit assignments",
+      "why": "Cavity connects the drawing to its table row; Circuit Number and Function identify the electrical path. Color, Gauge and Terminal Part Number add identification within that same row. I keep signal return distinct from an assumed chassis ground, and voltage reference distinct from an assumed battery supply. The pressure-signal label identifies its role without telling us the expected reading. Blank assignment fields correspond to the shaded unused positions."
+    },
+    {
+      "blockId": "connector-C1073-b00007",
+      "text": "Read the listed pigtail entry",
+      "why": "Read the service entry across to connect its Number, Service Part and Engineering Shell with the listed gauge, material and cavity information. Image names the associated illustration. The pigtail gauge differs from the assigned-wire gauge, so I keep those records separate rather than interpreting the entry as a wire-substitution instruction. A listed service part is identification information, without a replacement or splicing method."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:06.706Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "aa56ddcb0e8e654572b95c2fd71ade838664694adec8c0d632185932266e8f0f",
+  "sourcePdfHash": "085a1981029c8ee9f1543936ec763e1b27f23bad5ca07ccb2fc6965ffbdfca70",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "093044d61bb6524df528d02561fefa3061753c74d3a651a7e427599c79d22345",
+    "reviewedAt": "2026-10-28T02:34:06.707Z"
+  }
+}

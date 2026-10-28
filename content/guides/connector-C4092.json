@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4092",
+  "supportingSourceRefs": [],
+  "sourceHash": "15620502f70bf57d0bcbc770fb229c0ee9e2bb3bb5547b84d4a0351daffaee81",
+  "title": "C4092 — Left rear height sensor connector",
+  "introduction": "I use this reference to connect the left rear height sensor’s identity with its connector drawing and circuit map. Think of the drawing as a seating chart: the cavity label tells you where to look in the table, and the Function column explains that circuit’s role.\n\nStart with the connector description, then find the harness heading and drawing. Match a printed cavity label to its Cavity row and read across that row. This keeps the suspension-position sensor connection distinct from the control-module connections marked with opposite polarity signs. The pigtail table provides a separate service-parts lookup.\n\nThis page teaches identification and reference reading. It does not establish the physical viewing direction, access method, electrical test conditions or replacement procedure. Gauge conventions and the meanings of Box, Size and Used codes are not defined here; retain those entries without turning them into tool sizes, wire-selection advice or test results.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4092-b00002",
+      "text": "Connector face for harness 14B102",
+      "why": "I use the housing detail above the horizontal cavity row as a landmark within the drawing. Read the printed cavity labels rather than assuming they increase from left to right. That establishes how to navigate this illustration without claiming which side of a physical connector you would be viewing. The table below associates the drawing with its Fpn and harness entry."
+    },
+    {
+      "blockId": "connector-C4092-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Cavity links the illustration to a table row; Circuit Number identifies the circuit, while Color, Gauge and Terminal Part Number describe that same row. Function distinguishes the rear-left suspension-position connection from the control-module connections. Keep the positive and negative signs with their respective descriptions: they are circuit labels, not instructions to apply power or attach a test lead. Blank Qualifier cells add no further configuration detail."
+    },
+    {
+      "blockId": "connector-C4092-b00007",
+      "text": "Pigtail parts reference",
+      "why": "Read each pigtail row across so its kit Number, Service Part and Engineering Shell remain associated. Image names identify referenced illustrations; they do not explain installation. The listed alternatives are lookup entries, with no selection rule or claim of interchangeability supplied here. Keep the pigtail Gauge entries separate from the circuit-table Gauge entries rather than treating either as permission to choose replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:24:57.734Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2c12ad9657b38c757843ec5817164a21dc0adc0930dc58b5d627a4c5d045175c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0eb31051d48ef551a12a7e906be812cb9aea9a33e28da8f315cd62b4395042fb",
+    "reviewedAt": "2026-10-28T02:22:08.727Z",
+    "editorialRevision": {
+      "scope": "Neutral feature label after complete32-unit/raw/table/prose/verdict and originalpage2figure review, no physicalrelease inference.",
+      "before": "I use the latch detail above the horizontal cavity row as a landmark within the drawing. Read the printed cavity labels rather than assuming they increase from left to right. That establishes how to navigate this illustration without claiming which side of a physical connector you would be viewing. The table below associates the drawing with its Fpn and harness entry.",
+      "after": "I use the housing detail above the horizontal cavity row as a landmark within the drawing. Read the printed cavity labels rather than assuming they increase from left to right. That establishes how to navigate this illustration without claiming which side of a physical connector you would be viewing. The table below associates the drawing with its Fpn and harness entry."
+    }
+  }
+}

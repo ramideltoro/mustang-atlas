@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2610",
+  "supportingSourceRefs": [],
+  "sourceHash": "16a4db878e528ceaa510f796a79a1c7da5c5519f6b1968ba4e045fed7e2f5d52",
+  "title": "C2610 — Luggage compartment lid release switch connector",
+  "introduction": "The luggage-release button has more going on behind it than its small face suggests. Its connector map separates the release-switch connection, switch illumination and ground. I read those jobs separately: a button that lights up has not thereby proved that its release connection works.\n\nStart with the connector identification, locate a cavity label in the drawing, then read across its matching assignment row. The service-parts table provides a separate pigtail cross-reference. This is a guide to the reference, not an access, probing, diagnosis or replacement procedure. Physical viewing direction, gauge convention and metadata-code definitions are unspecified; the drawing and tables do not supply test conditions or pass/fail values.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2610-b00002",
+      "text": "Connector layout · Harness 14401",
+      "why": "The drawing places the cavity grid on the left and the prominent projecting housing features on the right. Outlined and shaded positions are mixed within the grid, so position alone cannot tell you whether a cavity has an assignment. I use the printed cavity labels to reach the correct table rows without assuming a wire-side or mating-side physical view."
+    },
+    {
+      "blockId": "connector-C2610-b00005",
+      "text": "Read the cavity assignments",
+      "why": "Read each assigned row as a complete record: circuit identity, color, gauge, function and terminal identification belong together. The functions distinguish the instrument-panel ground, illumination connection and release-switch connection. Shaded positions correspond to blank circuit/function rows, consistent with their Used entries. These labels describe connection roles; they do not establish switch behavior, expected voltage or a fault conclusion."
+    },
+    {
+      "blockId": "connector-C2610-b00007",
+      "text": "Identify the listed service pigtail",
+      "why": "The Engineering Shell entry matches the housing identification above, linking this pigtail listing to the connector. Service Part identifies the listed service item, while Terminal Part Number identifies terminals in the individual circuit rows. The pigtail and circuit tables carry their own Gauge entries; neither table authorizes substituting one specification for the other or choosing replacement wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:42:35.854Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "b8cea77ebeaeb4f528239a911b5737d50c90a7e93ea761ae6e1b311c348ca4fb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a28d595906777b081ed23dc1898b2c326a85de071be097424b50819afa8e115c",
+    "reviewedAt": "2026-10-28T02:42:35.855Z"
+  }
+}

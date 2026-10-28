@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2395",
+  "supportingSourceRefs": [],
+  "sourceHash": "783f3e9b9c55adc8323c5356f67c276675982303464191f6f99a08d7fe4aea5e",
+  "title": "C2395 — Head up display (HUD) module",
+  "introduction": "The display may put information in your line of sight, but its connector reference starts with a quieter job: identifying the paths for power, ground and network communication. I read those as the module’s electricity and conversation channels. Knowing which is which makes the table useful without turning a label into a fault diagnosis.\n\nMatch the identity table to the face drawing and harness record, then follow cavity labels into the assignment table. Consult the pigtail table separately for catalog information. This guide teaches that lookup; access, physical viewing side, probing, test limits and replacement need matching service information. The gauge convention and the Box, Cols, Size and Used codes are not defined here.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2395-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "On the page, the cavity labels run vertically beside the housing’s broad feature on the left. The bottom labeled position is shaded. I match every label to its assignment row rather than treating all positions as populated connections. The shaded position corresponds to the row without an assigned circuit or function. The adjacent Fpn and Harness Id fields tie this illustration to the listed shell and harness; the page layout does not establish a terminal-side or wire-side physical view."
+    },
+    {
+      "blockId": "connector-C2395-b00005",
+      "text": "Read the power, ground and network map",
+      "why": "Cavity is the link back to the drawing. Read across its row to keep the circuit identifier, color, gauge, function and terminal part together. The network entries distinguish the low and high paths and retain their high-speed and upper designations. Those labels identify communication paths; they are not voltage readings or pass/fail limits. The blank circuit row has no assigned function to interpret. After identifying a connection here, use matching diagnostic information for any electrical test."
+    },
+    {
+      "blockId": "connector-C2395-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "I keep the catalog Number, Service Part and Engineering Shell together as the identity of the listed pigtail assembly. Gauge, Material and Cavities describe that service-parts entry; the Image field is a catalog filename rather than another inline illustration. The pigtail’s gauge entry does not overwrite the individual circuit gauges above. This reference supports a subsequent parts lookup, but it does not supply wire-selection, splicing or installation instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:37.733Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "4884c45a3ca1f955ebe8fedf806402eb4155e10593ccc038b49bd333a45ec96e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "598f234a01dd0d37c3bbed44b58f408545be2a1a044dbb131a8fca6e962dc510",
+    "reviewedAt": "2026-10-28T02:34:37.734Z"
+  }
+}

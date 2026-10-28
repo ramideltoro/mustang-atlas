@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1651",
+  "supportingSourceRefs": [],
+  "sourceHash": "c53f8129abe98ca35d1547aa0757f1f8ed3aeb4e5e08ca63a14613492bf7bc33",
+  "title": "C1651 — Active grille shutter connector",
+  "introduction": "I use this reference to connect the grille shutter’s electrical jobs with their places in the connector. Power supplies the device, ground provides a current-return path, and the local interconnect network (LIN) carries messages from the controller. Think of LIN as the shutter’s conversation line: having electricity available does not guarantee that the command gets through.\n\nStart with CNumber and Description in the identity table. Then use the harness heading, drawing and Fpn row to find the relevant connector reference. Match a drawing label to the Cavity column and read across that row to connect its circuit identity with its function. The pigtail table provides a separate service-parts cross-reference.\n\nThis guide explains the reference, without teaching physical access, probing, wire selection or replacement. The physical viewing side, Gauge convention and Size-code meanings are unspecified; the drawing’s page orientation alone cannot establish how to approach the installed connector. Take an identified circuit into the matching diagnostic procedure for test conditions, expected readings and the next decision.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1651-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "I use the housing outline and the large feature on the drawing’s left as landmarks while reading the illustration. The cavity labels run vertically, and the shaded bottom position corresponds to the unused table row. That agreement explains the shading here; it does not establish the physical viewing side or authorize probing."
+    },
+    {
+      "blockId": "connector-C1651-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Cavity links the illustration to a row; Circuit Number identifies the circuit, while Function explains its job. Color and Gauge describe the listed wire, and Terminal Part Number identifies the listed terminal. I keep the ground, controller-message and supply paths distinct: their presence in this map describes the connections, not whether those connections work. The unused row has no assigned circuit or terminal."
+    },
+    {
+      "blockId": "connector-C1651-b00007",
+      "text": "Compare the listed pigtail entries",
+      "why": "I read each service entry across as a complete record, keeping its Gauge, Material, Cavities, Service Part and Engineering Shell together. Image names identify associated illustrations rather than ordering numbers. The entries differ in listed gauge despite sharing a shell, so a matching housing alone does not establish which service entry suits a repair. This table supplies identification, without a selection or splicing procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:06.679Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "70cc4c399e8ee4f326adab65e7009e3c973f3d4fa6268ab7d2c4cd55eb0d91ae",
+  "sourcePdfHash": "95b3de58f9c8a68d1195f96af229020f4010089fdb16e8ff6b9b37c210c8930f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bcc9fc4395ad4ff77135f262ee72066903ff32dea5ac5f1f3f95b87801747a2b",
+    "reviewedAt": "2026-10-28T02:34:06.680Z"
+  }
+}

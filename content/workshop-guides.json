@@ -164296,103 +164296,196 @@
       }
     },
     {
-      "title": "Remove and refit the passenger knee airbag through the glove box assembly",
-      "summary": "Depower the restraint system, remove the passenger-side trim and glove box assembly, then refit and repower using the prescribed procedures.",
-      "introduction": "The passenger knee airbag is a deployable component of the Supplemental Restraint System (SRS). The restraints control module monitors crash-related inputs and supplies deployment current when appropriate. Access for this repair involves the instrument-panel trim, glove box damper and stops, electrical connections and complete glove box assembly. Correct electrical handling is as important as the physical removal.",
-      "why": "Incorrect restraint-system work can cause accidental deployment or prevent correct operation during a crash. Deployable-component connectors also use Connector Position Assurance (CPA) tabs. A connector can appear attached while its tab remains incompletely seated, leaving its internal shorting arrangement engaged and causing a restraint-system fault.",
+      "title": "Remove and refit the passenger knee airbag assembly after a passing SRS check",
+      "summary": "First establish the complete no-fault SRS check, then depower, remove and refit the glove box/airbag assembly and complete the final prove-out. Stop before removal if the initial check fails or is uncertain.",
+      "introduction": "I’ll establish that the restraint system passes its initial check before touching the trim or connectors. This procedure then follows the source’s no-fault depowering and repowering route for the complete glove box and passenger knee airbag assembly. A fault or uncertain result requires a separate diagnosis and isolation procedure.",
+      "why": "The passenger knee airbag is a deployable restraint for the front passenger’s knee area. The restraints control module, or RCM, monitors crash-related inputs and supplies deployment current when it determines that a restraint is needed. This removal procedure takes out the glove box assembly rather than dismantling the airbag inside it. Correct fastening and connector engagement matter both to avoiding accidental deployment during repair and to correct operation in a crash.",
       "taskType": "repair",
       "difficulty": "specialist",
       "searchTerms": [
-        "passenger knee airbag removal",
-        "glove box assembly removal",
-        "airbag warning after connector refitting",
-        "passenger airbag connector assurance tab"
+        "2015 Mustang passenger knee airbag removal",
+        "Mustang glove box airbag assembly",
+        "passenger knee airbag screw torque",
+        "Mustang SRS depowering",
+        "airbag connector CPA tab"
       ],
       "when": {
-        "summary": "When an established repair requires removal or refitting of the passenger knee airbag through the glove box assembly.",
+        "summary": "Use only when an established repair requires removal/refitting of the complete passenger knee airbag/glove box assembly and the complete initial SRS check below positively establishes the source’s no-fault condition.",
         "notes": [
-          "The illustrated arrangement is left-hand drive; the right-hand-drive procedure is similar.",
-          "The center finish-panel illustration includes an optional configuration; follow the actual fitted panel."
+          "Engine coverage is 2015 Mustang 2.3L, 3.7L, 5.0L and 5.2L. Body-style-specific combinations are not established here.",
+          "This is a removal and installation job, not a symptom-based test for deciding whether the airbag needs replacement.",
+          "Any initial fault indication, incomplete observation, uncertain warning-indicator behavior, chime or SRS message stops this procedure before trim removal or connector work. Fault-present fuse isolation, Network Test and fault diagnosis require separate complete procedures; this article does not teach that branch.",
+          "A passing indicator check does not replace collision-specific restraint inspections or repairs. This is not a post-collision restoration or deployed-airbag handling procedure; complete any applicable separate collision requirements first."
         ]
       },
       "prepare": [
         {
-          "title": "Provide restraint-system capability",
-          "detail": "Be equipped to complete the linked SRS depowering and repowering procedures exactly. Read their prerequisites before beginning; the component-removal steps do not replace those electrical safety procedures."
+          "title": "Establish the restricted starting condition",
+          "detail": "Begin with the dashboard and all restraints assembled, vehicle already safely parked, parking brake applied, automatic Park or an engine-off parked manual gear selected, and engine/ignition OFF. Maintain that gear and parking restraint throughout. Remote start, if fitted, must already be disabled before this repair begins. Complete the entire initial check before any trim or connector action; inability to establish a passing result means stop."
         },
         {
-          "title": "Prepare trim and fastener tools",
-          "detail": "Use an interior trim remover and suitable screw-removal and torque tools. Keep the upper and lower glove box screws identifiable because their tightening specifications differ."
+          "title": "Gather trim and torque tools",
+          "detail": "Have an interior trim remover, suitable screw-removal tools and a torque tool for 22 lb.in (2.5 Nm) and 42 lb.in (4.8 Nm). Keep the two upper screws separate from the two lower screws. These are inch-pounds, not foot-pounds. This no-fault route does not remove fuses or disconnect the battery."
+        },
+        {
+          "title": "Protect yourself and preserve the restraint-system precautions",
+          "detail": "Wear eye and ear protection and protective gloves when handling sharp-edged parts. Incorrect restraint-system repair can cause accidental deployment or compromise protection in a crash, resulting in serious injury or death. Follow every depowering wait and keep ignition OFF during removal and reconnection. Never reconnect the component without completing the applicable depowering procedure. No lifting or underhood work is part of this route."
+        },
+        {
+          "title": "Handle the live airbag assembly correctly",
+          "detail": "Pyrotechnic service and handling are restricted to qualified personnel; observe the applicable local qualification requirements. Carry the assembled live airbag with its deployment door, trim cover or tear seam pointed away from your body, and never set it down with that face downward. Never probe or back-probe its electrical connector. Do not tamper with, repair or modify the airbag or other SRS components, and do not paint the deployment door or trim cover. Do not repair restraint connector terminals; damaged terminals require a separate service-pigtail repair procedure. No internal airbag dismantling, deployment or connector-terminal repair is taught here. See [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191)."
         }
       ],
       "steps": [
         {
-          "title": "Depower the restraint system",
-          "body": "Complete [SRS depowering](#/document/G1696297) before working on the airbag connections. Maintain that depowered condition throughout removal and reconnection."
+          "title": "Check the SRS before taking anything apart",
+          "body": "With the vehicle in the established parked state and dashboard fully assembled, confirm engine and ignition OFF. Leave an already-OFF ignition OFF; do not toggle it unnecessarily. Wait 10 seconds. With the valid intelligent access key inside, release both brake and clutch pedals and press start/stop once for ignition ON with the engine off. Do not start the engine. These are the keyless controls in the 2015 owner manual, printed pages 121–122.\n\nWatch the airbag warning indicator. It must illuminate steadily for approximately 6 seconds and then go out. Continue observing through approximately 30 seconds after ignition ON, allowing the RCM to finish testing. A light that never illuminates, remains on or flashes fails the check; flashing can begin only after approximately 30 seconds. An inoperative indicator with an SRS fault may produce five sets of five beeps or an SRS message.\n\nIf the initial illumination did not occur, the indicator does not remain off after the full observation, or there is any chime, SRS message, uncertainty or incomplete observation, stop before touching trim or connectors. Switch the now-ON ignition OFF with pedals released and remove the key. Obtain the separate complete fault diagnosis and applicable fault-present depowering procedure; do not attempt fuse removal, a Network Test or physical repair from this article. See [SRS Depowering](#/document/G1696297). If the complete check passes, leave ignition ON and proceed directly to step 2 to switch it OFF and start the required wait."
         },
         {
-          "title": "Remove the surrounding trim",
-          "body": "Following the [passenger knee airbag procedure](#/document/G1696323), release the clips and remove the right-hand instrument-panel trim with the trim remover. Release the center finish-panel clips, remove the panel and disconnect its electrical connector."
+          "title": "Depower the normal, no-fault route",
+          "body": "Only after the complete initial check has passed, release the pedals and press start/stop once to switch the now-ON ignition OFF. Confirm OFF and remove the key. Wait one full minute for the backup power supply to deplete before any trim or connector work. Keep the ignition OFF until all mechanical repair and reconnection are complete.\n\nContinue to step 3. This is the source’s no-fault branch; do not add battery disconnection or fuse operations from the separate fault-present procedure."
         },
         {
-          "title": "Open the glove box beyond its stops",
-          "body": "Open the glove box and detach the door damper. Push each side of the door to disengage its stops, then open it beyond them. This exposes the connections and fasteners needed for assembly removal."
+          "title": "Release the right-hand dashboard end trim",
+          "body": "With the SRS depowered by the applicable route, use the interior trim remover to release the three clips securing the small right-hand instrument-panel trim panel beside the outer end of the glove box. Remove the panel. This exposes the end of the adjoining dashboard finish trim. The illustrated layout is left-hand drive; the right-hand-drive arrangement is similar. See the [passenger knee airbag procedure](#/document/G1696323)."
         },
         {
-          "title": "Disconnect and remove the assembly",
-          "body": "Disconnect and detach the indicated electrical connector and wire harness. Remove the upper screws, then the lower screws. Separate the glove box assembly from the instrument panel, disconnect the remaining electrical connector and remove the assembly."
+          "title": "Remove the broad instrument-panel finish panel",
+          "body": "Use the interior trim remover to release the 13 clips securing the broad horizontal finish panel that extends around the circular center vents and across the dashboard above the glove box. Support the released panel, disconnect its electrical connector at the rear and remove it.\nThe illustration includes optional ICM equipment, so work with the connector and panel actually fitted. Work through the clips without forcing the panel."
         },
         {
-          "title": "Refit while the SRS remains depowered",
-          "body": "Reverse the removal sequence, reconnecting and routing the wiring as prescribed. Fully seat applicable CPA tabs. Tighten the upper screws to 22 lb.in (2.5 Nm) and the lower screws to 42 lb.in (4.8 Nm). Restore the door stops, damper and trim."
+          "title": "Lower the glove box door beyond its normal stops",
+          "body": "Open the glove box. At the side of the open door, lift the damper attachment and then slide it sideways off its mounting point. The damper controls the door’s opening movement.\nPush inward on each side of the glove box door to move its side stops clear of the surrounding opening. Once both stops are disengaged, lower the door past its normal open position. This gives access to the assembly wiring and screws."
         },
         {
-          "title": "Repower through the prescribed sequence",
-          "body": "Complete [SRS repowering](#/document/G1696298) after assembly is complete. Follow that procedure's checks rather than treating reconnection alone as completion."
+          "title": "Disconnect and free the first connector and harness",
+          "body": "Facing the dashboard from inside the cabin on the left-hand-drive arrangement, at the exposed upper-left area of the glove box assembly, disconnect the electrical connector and detach the wire harness from its attachment. Free both the electrical connection and the harness attachment before moving the assembly; unplugging alone does not release the attached wiring."
+        },
+        {
+          "title": "Remove the upper and lower assembly screws",
+          "body": "Support the glove box assembly. Remove the two upper screws from the horizontal upper mounting strip, then remove the two lower screws at the sides of the opening. Keep the two sets identifiable because their installation torques differ.\nSeparate the glove box assembly from the instrument panel, moving it only far enough to reach the remaining electrical connector. Do not pull it away with that connection still attached."
+        },
+        {
+          "title": "Disconnect the remaining connector and remove the assembly",
+          "body": "With the assembly supported and drawn away from the dashboard, disconnect the remaining electrical connector at its upper-left area when facing the dashboard from inside the cabin on the left-hand-drive arrangement. Remove the complete glove box assembly.\nThe removal endpoint is the complete glove box and knee-airbag assembly clear of the instrument panel, with both electrical connections and the harness attachment freed. Keep the SRS depowered while the component is disconnected and throughout refitting. Carry and set down the complete assembly with the airbag deployment face oriented as described in preparation; never place that face downward. Do not probe the connector or dismantle the airbag from the assembly."
+        },
+        {
+          "title": "Reconnect the assembly while it remains supported",
+          "body": "Begin installation with the SRS still depowered. Bring the assembly close enough to reconnect the electrical connector that was disconnected last, then position the assembly back against the instrument panel.\nFully engage the connector and its Connector Position Assurance, or CPA, tab where fitted. The CPA is the secondary locking feature that secures the connector and releases its internal protective shorting arrangement. A connector can make electrical contact while its CPA remains incompletely seated, so check the lock itself rather than judging by appearance alone. See the [SRS overview](#/document/G1696290)."
+        },
+        {
+          "title": "Refit the assembly screws with their separate torques",
+          "body": "Following the reverse removal sequence, install the two lower screws and tighten them to 42 lb.in (4.8 Nm). Install the two upper screws and tighten them to 22 lb.in (2.5 Nm).\nUse the correct torque for each location. The upper and lower screw sets are not interchangeable tightening instructions."
+        },
+        {
+          "title": "Restore the first harness connection and attachment",
+          "body": "Reconnect the connector released before screw removal, then reattach its wire harness to the assembly. Check that the harness attachment is restored and that positioning the assembly has not trapped the wiring."
+        },
+        {
+          "title": "Restore the glove box stops and damper",
+          "body": "Raise the glove box door back toward its normal opening range. Press the door sides inward as needed to pass the stops back through the opening, then let the stops engage. Refit the damper attachment by reversing its removal movement: slide it sideways onto its mounting point, then lower it into its seated position. Confirm that the attachment is seated.\nOpen and close the glove box to confirm that both stops limit its travel and the damper connection remains attached. These are mechanical completion checks, not airbag tests."
+        },
+        {
+          "title": "Reconnect and refit the dashboard trim",
+          "body": "Reconnect the broad finish panel’s electrical connector before seating the panel. Align its clips and press the panel into place, checking that its edges sit correctly around the vents and above the glove box.\nRefit the right-hand end trim and engage its three clips. Check that neither panel is holding wiring against an edge."
+        },
+        {
+          "title": "Complete the no-fault SRS prove-out and shut down",
+          "body": "Before restoring ignition power, verify all airbags are fully installed and connected, the glove box assembly and trim are secured, harness attachments and applicable CPA locks are seated, and all tools are removed. Keep people and objects clear of the airbag deployment areas. Maintain the parked gear and parking brake.\n\nConfirm ignition OFF, then wait 10 seconds. With the valid key inside and both brake and clutch pedals released, press start/stop once for engine-off ignition ON. The airbag warning indicator must illuminate steadily for approximately 6 seconds and then go out. Continue monitoring through approximately 30 seconds after ignition ON. Passing requires the indicator to remain off after its initial illumination, without a chime or SRS message.\n\nA lamp that never illuminates, stays on or flashes, five sets of five beeps, an SRS message or an uncertain result means the job has not passed. Delayed flashing may begin at approximately 30 seconds. Do not use or release the vehicle until the fault is diagnosed and repaired and the full SRS completion checks pass. Do not reopen trim or correct a connector under this no-fault route; a newly present fault requires its separately complete applicable diagnosis and depowering procedure.\n\nWhether the check passes or fails, release the pedals and press start/stop once to turn the now-ON ignition OFF. Confirm engine and ignition OFF, remove the key and retain automatic Park or the engine-off parked manual gear and parking brake. The SRS must be fully operational and free of faults before release. See [SRS Repowering](#/document/G1696298)."
         }
       ],
       "watchFor": [
         {
-          "title": "Reconnecting a powered restraint component",
-          "body": "The SRS must be depowered before reconnection. Incorrect repair actions can cause accidental deployment and serious injury."
+          "title": "Powered restraint connections",
+          "body": "Complete the passing initial SRS check and full one-minute ignition-OFF wait before physical work. Keep OFF throughout removal and reconnection. Any initial uncertainty stops removal; a final fault does not permit reopening under this no-fault route."
         },
         {
-          "title": "A connector that looks seated",
-          "body": "Physical contact between connector pins does not establish that its CPA tab is fully engaged."
+          "title": "A CPA tab that is not fully seated",
+          "body": "A connector can be attached with its pins touching while the CPA tab remains incomplete. Its internal shorting bars can then remain applied, causing the RCM to detect circuit resistance below its threshold."
+        },
+        {
+          "title": "The last connector behind the assembly",
+          "body": "Removing the screws does not finish freeing the glove box. Support and separate the assembly enough to disconnect the remaining connector before taking it out."
+        },
+        {
+          "title": "Different upper and lower screw torques",
+          "body": "The two upper screws take 22 lb.in (2.5 Nm); the two lower screws take 42 lb.in (4.8 Nm). Use inch-pound torque capability and keep the screw locations identifiable."
         }
       ],
       "notes": [
-        "Follow every restraint-system warning and procedural step; correct installation affects protection during a crash."
+        "The separate fault-present source branch requires exact fuse identification and verified module isolation, followed by its own restoration and diagnostic completion. It is not taught here; do not substitute the no-fault waiting period for that branch.",
+        "The SRS self-check confirms the system’s reported status. It is not a deployment test or a substitute for correct assembly.",
+        "No separate internal airbag dismantling or bench test is part of this procedure."
       ],
       "diagnostics": [
         {
-          "finding": "A restraint-system fault appears after a deployable-component connector has been refitted.",
-          "meaning": "An incompletely seated CPA tab can leave shorting bars applied and produce a circuit-resistance-below-threshold fault.",
-          "next": "Use the prescribed SRS diagnostic and depowering approach before correcting connector engagement; the indication alone does not prove airbag failure."
+          "finding": "The warning indicator illuminates for approximately 6 seconds, then stays off through approximately 30 seconds, with no chime or SRS message.",
+          "meaning": "The initial SRS check indicates no fault.",
+          "next": "Use the normal depowering route: ignition off, wait one full minute and keep it off until repair is complete."
+        },
+        {
+          "finding": "The indicator never illuminates, remains illuminated or flashes during the initial check.",
+          "meaning": "The SRS check has failed. Delayed flashing can begin at approximately 30 seconds.",
+          "next": "Stop before removal. Switch ignition OFF and remove the key. Obtain complete fault diagnosis and the applicable fault-present depowering procedure; no fuse or connector work is authorized by this no-fault article."
+        },
+        {
+          "finding": "The indicator is inoperative and five sets of five beeps sound, or an SRS message is displayed.",
+          "meaning": "An SRS fault may be present together with an inoperative warning indicator.",
+          "next": "Stop before removal. Switch ignition OFF and remove the key. Obtain complete fault diagnosis and the applicable fault-present depowering procedure; no fuse or connector work is authorized by this no-fault article."
+        },
+        {
+          "finding": "A restraint fault appears after a deployable-component connector was refitted.",
+          "meaning": "An incompletely seated CPA tab can leave the connector’s shorting arrangement engaged and produce a below-threshold resistance fault. The warning alone does not establish that the airbag has failed.",
+          "next": "Stop use, finish ignition OFF/key out, and obtain separate fault diagnosis and the applicable depowering procedure before any connector reinspection. Do not reopen under the no-fault route."
+        },
+        {
+          "finding": "The final warning-indicator check fails or a chime or SRS message remains.",
+          "meaning": "The repair has not met the required SRS completion condition.",
+          "next": "Do not use or release the vehicle. Finish ignition OFF/key out and obtain separate complete fault diagnosis, repair and applicable depowering/repowering before any physical rework."
         }
       ],
       "verification": [
         {
-          "title": "Confirm mechanical restoration",
-          "body": "Check that the wiring is attached, upper and lower screws received their respective tightening values, and the glove box stops, damper and trim are restored."
+          "title": "Assembly and wiring restored",
+          "body": "Confirm both stages of electrical connection are restored, applicable CPA tabs are fully seated, the harness attachment is engaged and wiring is not trapped behind the assembly or trim."
         },
         {
-          "title": "Complete the restraint-system checks",
-          "body": "Complete the repowering procedure and resolve any reported restraint-system fault before considering the repair finished."
+          "title": "Fasteners correctly tightened",
+          "body": "Confirm two upper screws at 22 lb.in (2.5 Nm) and two lower screws at 42 lb.in (4.8 Nm)."
+        },
+        {
+          "title": "Glove box and trim complete",
+          "body": "Check that the glove box opens and closes, both side stops engage, the damper is attached and both removed trim panels are seated."
+        },
+        {
+          "title": "SRS passes its final prove-out",
+          "body": "The indicator must illuminate initially for approximately 6 seconds and then remain off through approximately 30 seconds, without a chime or SRS message. The restraint system must be fully operational and free of faults. Any failed or uncertain result blocks vehicle use and requires the separate fault-present procedure before rework. Finish ignition OFF/key removed, parked gear and parking brake retained regardless of result."
         }
       ],
       "procedures": [
         {
           "documentId": "G1696323",
-          "purpose": "Passenger knee airbag removal and installation through instrument-panel trim and glove box assembly removal."
+          "purpose": "Primary passenger knee airbag procedure: trim access, glove box assembly removal, reverse-order installation and upper/lower screw torques."
         },
         {
           "documentId": "G1696297",
-          "purpose": "Depower the SRS before removal or reconnection of the restraint component."
+          "purpose": "Complete initial fault determination and explicit no-fault OFF/one-minute depowering branch; separate fault-present branch retained as an excluded referral."
         },
         {
           "documentId": "G1696298",
-          "purpose": "Repower the SRS and perform the prescribed completion sequence."
+          "purpose": "Complete no-fault repowering/prove-out and fault-free release requirement; fault-present restoration is outside this article."
+        },
+        {
+          "documentId": "G1696290",
+          "purpose": "Restraint-system operation and the role of connector CPA tabs and internal shorting bars."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Maintained prior startup prevention, ignition/key control and personal protection for stationary cabin work."
+        },
+        {
+          "documentId": "G1693191",
+          "purpose": "Qualified handling, live-airbag carrying/storage orientation, no probing/tampering/painting and connector-terminal repair prohibition; no separate airbag dismantling."
         }
       ],
       "hero": null,
@@ -164413,7 +164506,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Passenger knee airbag/glove box assembly with a complete passing initial SRS indicator check and no chime or SRS message. LHD shown, RHD similar; center finish panel may have optional ICM. Fault-present isolation, diagnosis and internal airbag dismantling are excluded."
       },
       "relatedGuideIds": [
         "job-38b0944ab85fda1f",
@@ -164435,14 +164529,63 @@
         {
           "documentId": "G1696290",
           "sourceHash": "4a582037228bb45f2627310f63f4e8cf9003eb65cf18ed97ff805191c258ebd1"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1693191",
+          "sourceHash": "980e9272de960633dd44c48ebce0c6110c7cab26bd9e37ae17fc7bd7776faa49"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "4f79462a18bb8f87b2e3f8ac309ce98348e6e83a4f110a80afbfc4d7843fb5fd"
-      }
+        "fingerprint": "4f79462a18bb8f87b2e3f8ac309ce98348e6e83a4f110a80afbfc4d7843fb5fd",
+        "editorialVersion": 2,
+        "editorialFingerprint": "2b0a160beec16d849039cabced6a6277e7650c2696c9d4735234efc5cca2362d",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "check-and-depower",
+          "title": "Establish no-fault status and depower",
+          "summary": "Complete the initial check and stop on any uncertainty; only a passing result permits the full OFF wait.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "remove-assembly",
+          "title": "Open access and remove the assembly",
+          "summary": "Release the trim, door stops, harness and two screw groups while keeping the SRS depowered.",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "id": "refit-assembly",
+          "title": "Reconnect and refit while depowered",
+          "summary": "Restore both connections, torque each screw group and complete the glove box and trim.",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "id": "prove-out",
+          "title": "Prove out and finish safely parked",
+          "summary": "Restore ignition only after full assembly, complete the entire warning check and finish OFF; any fault blocks use.",
+          "start": 14,
+          "end": 14
+        }
+      ]
     },
     {
       "title": "Remove and replace the restraints control module",

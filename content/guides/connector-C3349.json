@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C3349",
+  "supportingSourceRefs": [],
+  "sourceHash": "38c2ee2e409613d19b00c550365857406326282fb8db5f2a106e5bf9d13e0230",
+  "title": "C3349 — Floor console cup holder ambient lighting lamp",
+  "introduction": "The cup holder's ambient lamp has a miniature lighting desk in its connector map: separate red, green and blue LED positive functions alongside an LED negative function. I keep the LED color names separate from the wire-color entries. A wire's jacket is its label, not a promise about the color the lamp produces.\n\nStart with the connector identity table, then use the cavity labels in the drawing to find matching rows in the circuit table. Read each row across for circuit identity, wire description, function and terminal information. Keep the Function column's zone or non-zone applicability wording attached to the connection. The following tables provide the pigtail and European product references.\n\nThis guide explains the reference, without teaching console access, connector probing, electrical diagnosis or part replacement. Physical viewing direction, gauge conventions and Size and Used code meanings require other information. The listed LED polarities alone do not establish a safe external power test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3349-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I navigate the displayed cavity grid using its printed labels and the housing's broad extension to the right as a visual landmark. That describes the illustration only. The adjacent table associates the drawing with its harness and shell, without establishing which side of a physical connector the reader would be viewing."
+    },
+    {
+      "blockId": "connector-C3349-b00005",
+      "text": "Read the lighting circuit map",
+      "why": "Match a drawing label to the Cavity column before reading across. Color describes the wire; the LED color named under Function describes the lighting channel. The negative LED function is identified separately, so I retain that wording rather than relabeling it as chassis ground. The zone or non-zone wording qualifies the functions and should stay with them."
+    },
+    {
+      "blockId": "connector-C3349-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Read the pigtail entry together with its service part and engineering shell for a coherent lookup. Its gauge field and the circuit-table gauge field describe separate entries; this page does not explain their relationship or authorize choosing replacement wire from either value."
+    },
+    {
+      "blockId": "connector-C3349-b00009",
+      "text": "European pigtail product reference",
+      "why": "This regional table provides a Product Id for lookup. It adds no installation method or interchange rule, so I keep it distinct from the preceding service-part reference."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:28:33.580Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "682c0de6a73805a3145396105b66e4f83c24a634df0c25cc1a80bed64f2295bd",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4b3c4f1ab2c2701f2ebfeb21854e1fc31f3072b743827e786fc931e960bda448",
+    "reviewedAt": "2026-10-28T02:28:33.580Z"
+  }
+}

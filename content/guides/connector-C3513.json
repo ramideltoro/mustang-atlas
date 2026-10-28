@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3513",
+  "supportingSourceRefs": [],
+  "sourceHash": "763c4dd320fb5aeb06f801d5fc18b3d6ae832b7deca3ff9be72c623612dd6825",
+  "title": "C3513 — Passive anti-theft system (PATS) front antenna connector",
+  "introduction": "I read this reference as a map of the front antenna’s connections to the keyless-vehicle controller. The assigned rows distinguish the antenna’s positive and negative connections. Keeping those labels with their respective circuits is the useful lesson here; they do not supply electrical test values.\n\nStart with CNumber and Description in the identity table, then connect the harness heading and Fpn row with the drawing. Follow each drawing label into the Cavity column and read across for the circuit’s identity and function. The shaded positions correspond to unused rows. A connector housing can have spare seats without any passengers missing.\n\nThis is an identification guide, without instructions for access, probing, wire selection or replacement. The physical viewing side, Gauge convention and Size-code meanings are unspecified, so the illustration’s layout cannot establish an installed probing direction. Use the identified circuit with the matching diagnostic procedure when actual testing is needed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3513-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "I use the drawing’s left-hand housing feature as a page landmark and follow the vertical cavity labels. The lower shaded positions agree with the unused rows in the assignment table. Those blanks are part of this reference’s configuration; the housing outline alone is not evidence of missing connections or a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C3513-b00005",
+      "text": "Read the antenna circuit assignments",
+      "why": "Cavity is the bridge from illustration to table. Circuit Number identifies each assigned path, and Function preserves the positive or negative antenna designation. Color, Gauge and Terminal Part Number provide additional identification within the same row. I keep the paired designations intact rather than treating the negative antenna label as proof of a chassis-ground connection. The map identifies connections without judging antenna or controller health."
+    },
+    {
+      "blockId": "connector-C3513-b00007",
+      "text": "Compare the listed pigtail entries",
+      "why": "The service table links each Number with its Service Part and Engineering Shell, alongside lead gauge, material and cavity information. I keep those fields together because the listed entries share a shell while differing in gauge. Image is an illustration filename field. These records help identify listed service options, but do not establish interchangeability or teach a wiring repair."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:06.690Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "3ecced783a4b4328031bc20ce47a65dff6d9e57d5ea19c4dece40dd7d3edd5e8",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fcb3a78341d7126c686d89c1558ca81b9e97fc7f7ffd2f5d42d43f41c0145020",
+    "reviewedAt": "2026-10-28T02:34:06.690Z"
+  }
+}

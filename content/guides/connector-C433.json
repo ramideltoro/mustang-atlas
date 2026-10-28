@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C433",
+  "supportingSourceRefs": [],
+  "sourceHash": "034759d4cec1ef2628f820f11153ba3b424baa102a9560cb83b04d65d06bdd0d",
+  "title": "C433 — Fuel pump (FP) module connector",
+  "introduction": "I use this connector map to separate fuel-level reporting from the pump’s electrical drive. They serve different jobs even though their connections appear in the same housing. The fuel gauge is a stockroom clerk, not a delivery receipt: knowing the tank’s quantity does not establish that fuel is reaching the engine correctly.\n\nBegin with CNumber and Description in the identity table. Use the harness heading and Fpn row to locate the associated drawing, then match a drawing label to Cavity and read across the assignment row. Function distinguishes the level-sensing connections from pump power and return. The service-parts table is a separate cross-reference for the listed pigtails.\n\nThis page teaches connector identification, without instructions for physical access, electrical testing, wire selection, replacement or opening the fuel system. The physical viewing side, Gauge convention and Size-code meanings are unspecified. Carry the identified circuit into the matching diagnostic procedure for test setup, acceptable results and subsequent action.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C433-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "The illustration places its cavity labels in a vertical column beside the housing features on the drawing’s left. Every drawn cavity has an assigned circuit row, with no shaded unused position shown. I use those features to navigate the page; they do not establish which side of the installed connector faces the observer."
+    },
+    {
+      "blockId": "connector-C433-b00005",
+      "text": "Read the level and pump circuit map",
+      "why": "Read across a single Cavity row to keep its Circuit Number, Color, Gauge, Function and Terminal Part Number connected. The level-sensing rows and pump-drive rows have different functions and terminal entries, so nearby cavities are not interchangeable. I also retain the pump return designation rather than assuming it is an ordinary chassis ground. These assignments identify paths; they provide no pressure, current or electrical pass/fail result."
+    },
+    {
+      "blockId": "connector-C433-b00007",
+      "text": "Compare the listed pigtail entries",
+      "why": "I keep each pigtail’s Number, Gauge, Material, Service Part and Engineering Shell together. The listed entries differ in gauge and material description despite sharing the shell, and their gauge entries also differ from the assignment table’s wire entries. These are separate records, without an instruction to substitute one gauge for another. The Image field names an associated illustration; a repair requires its own applicable selection and connection instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:34:06.698Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "58de84c41ca22f9310ee06c3a48c4ef2b4c744e7aac65791013da81c6e4ce7b8",
+  "sourcePdfHash": "6166cc6f6f3c30b2f38b579f663b994a0fb6941d03a62a7d140593268b27e476",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "19e583d79ac011ee89dd6b28cf346b1787e5e7d61f4ede36e512ba388959d608",
+    "reviewedAt": "2026-10-28T02:34:06.699Z"
+  }
+}
