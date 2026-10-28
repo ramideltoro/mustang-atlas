@@ -118854,86 +118854,154 @@
     },
     {
       "title": "Program a spare passive key using two programmed keys",
-      "summary": "Add a passive key through the backup starting location, then confirm that it operates the remote locking and starts the vehicle.",
-      "introduction": "The Passive Anti-Theft System (PATS) allows starting when it recognizes a programmed key inside the vehicle. Each passive key also contains the remote keyless entry (RKE) transmitter. This procedure teaches the body control module both functions of an additional key, using two keys the vehicle already recognizes.",
-      "why": "Programming depends on a precise sequence of key changes and START/STOP button presses. Correct positioning in the backup starting location lets the vehicle read each key directly through the PATS center antenna. Keeping the doors closed and meeting every timing requirement are conditions of this procedure. Checking both starting and remote operation establishes that both functions work.",
+      "summary": "Use two existing programmed keys and the rear cup-holder backup position to add a passive key, then check remote operation and starting.",
+      "introduction": "I’ll use the workshop two-key sequence to program a spare passive key, then check its remote operation and starting authorization. Have both programmed keys and the new key ready before beginning the timed sequence.\n\nThe timing and retry rotation below follow [Key Programming Using Two Programmed Keys](#/document/G1672906). The 2015 owner manual supplies the initial OFF state, four-key maximum, backup-slot orientation and normal vehicle controls. Its programming description omits the workshop’s extra wait before presenting the new key and its retry rotation; this guide retains the workshop requirements rather than treating the two descriptions as identical.",
+      "why": "The Passive Anti-Theft System, or PATS, prevents starting unless it recognizes a programmed key. Each passive key also contains the remote keyless entry transmitter, abbreviated RKE. This sequence teaches the body control module both functions of the new key. The antenna at the backup starting position reads the key there, including a programmed key whose internal battery is depleted. PATS controls permission to start; it does not stop an already running engine. See the [PATS overview](#/document/G1694658) and [system operation](#/document/G1694659).",
       "taskType": "repair",
       "difficulty": "basic",
       "searchTerms": [
-        "program spare passive key",
-        "add key using two programmed keys",
-        "new key will not start vehicle",
-        "No Key Detected"
+        "2015 Mustang spare key programming",
+        "program passive key with two programmed keys",
+        "Mustang rear cup holder backup starting location",
+        "PATS key programming",
+        "new passive key remote operation"
       ],
       "when": {
-        "summary": "When adding a spare passive key with two programmed keys available and spare-key programming enabled.",
+        "summary": "Use this method to add a passive key when you already have two previously programmed keys and spare-key programming is enabled.",
         "notes": [
-          "This method requires spare-key programming to be enabled.",
-          "Consult the Owner's Literature for the backup starting location, key orientation and maximum programmed-key allowance."
+          "Engine coverage is 2015 Mustang 2.3L, 3.7L, 5.0L and 5.2L with passive-key START/STOP ignition.",
+          "Body styles are not separately identified for this procedure; match the fitted ignition system and rear-cup-holder backup arrangement described here.",
+          "This is not an all-keys-lost procedure or a method for completing control-module replacement."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange the keys before starting",
-          "detail": "Have both previously programmed keys and the unprogrammed key ready. Identify them clearly so the timed sequence is easy to follow."
+          "title": "Have all three keys ready",
+          "detail": "Identify two previously programmed keys and the unprogrammed passive key. Both programmed keys must be inside for programming and the new key readily accessible. Spare-key programming must already be confirmed enabled; changing that setting is outside this procedure. If these conditions are missing or uncertain, stop and arrange key-programming service."
         },
         {
-          "title": "Prepare the cabin and timing",
-          "detail": "Locate the backup starting position before beginning. Close every door and keep them closed until programming is complete. Complete the entire programming sequence within 30 seconds."
+          "title": "Check the key allowance and placement",
+          "detail": "The 2015 owner manual, printed page 62, allows a maximum of four intelligent access keys. Confirm the allowance has not been exhausted before beginning. Use the shaped backup slot beneath the rear-cupholder rubber covering, initially with buttons facing up and keyring toward the front of the vehicle (owner page 122). The separate unsuccessful-programming retry in step 5 retains the workshop’s 180-degree rotation."
+        },
+        {
+          "title": "Keep the work inside the parked vehicle",
+          "detail": "Begin with the vehicle already safely parked on the ground, parking brake applied, automatic Park or an engine-off parked manual gear selected, and engine/ignition OFF. Maintain the parking brake throughout. Keep both pedals released during the programming button presses so the engine does not start. Only the final stationary starting check uses the starting pedals and, on a manual, Neutral. Nobody may service the engine or work near moving parts during ignition operation or the start check. Perform that check in a ventilated location, never in a closed garage or enclosed area; do not park or idle over dry grass or other combustible ground cover. If exhaust fumes enter the cabin, shut down, do not drive and have an authorized dealer check the vehicle immediately. This task needs no lifting or underhood access. See [Health and Safety Precautions](#/document/G1693189) and owner pages 121–124."
+        },
+        {
+          "title": "Read the timed sequence before touching START/STOP",
+          "detail": "Complete the programming sequence within 30 seconds. It includes three separate 5-second waits and a change to the second key within 10 seconds. Arrange the keys within reach and use a way of counting seconds that leaves your hands free. Close every door before beginning and keep them closed until programming is complete."
         }
       ],
       "steps": [
         {
+          "title": "Expose the backup position in the rear cup holder",
+          "body": "Confirm the established parked gear, parking brake and engine/ignition OFF state. Leave an already-OFF ignition OFF. Clear the floor-console cup holders, lift out the connected rubber covering and set it aside.\n\nUse the shaped backup slot in the rear cup holder, nearest the padded console armrest. Place the remote with its buttons facing up and its keyring toward the front of the vehicle, as specified on owner page 122. Establish the location before starting the clock.\n\nNo console trim or electrical connector needs removal. The location and function are described in [PATS system operation](#/document/G1694659)."
+        },
+        {
+          "title": "Arrange the keys and close every door",
+          "body": "Keep both programmed keys and the new key distinguishable and within reach inside the vehicle. Make sure you can exchange them without opening a door. Close all doors and leave them closed through the final programming button press.\n\nRead steps 3–5 together before starting. Begin from ignition OFF; keep brake and clutch pedals released throughout these programming presses. Maintain the parked gear and parking brake. The engine must remain off."
+        },
+        {
           "title": "Present the first programmed key",
-          "body": "Following the [programming procedure](#/document/G1672906), place the first programmed passive key in the backup starting location and press START/STOP. Wait 5 seconds, press START/STOP again, then remove that key."
+          "body": "Begin the 30-second programming sequence as you place the first previously programmed passive key in the backup position.\n\nPress START/STOP once. Wait 5 seconds, then press START/STOP again. Remove the first key from the backup position.\n\nThese button presses and waits follow the [two-programmed-key procedure](#/document/G1672906); keep the sequence moving."
         },
         {
-          "title": "Present the second programmed key",
-          "body": "Within 10 seconds, place the second programmed key in the backup starting location and press START/STOP. Wait 5 seconds, press START/STOP again, then remove the second key. Keep the overall 30-second limit in mind."
+          "title": "Exchange it for the second programmed key within 10 seconds",
+          "body": "Within 10 seconds of removing the first key, place the second previously programmed passive key in the same backup position and press START/STOP.\n\nWait 5 seconds, then press START/STOP again. Remove the second key. The overall 30-second limit still applies."
         },
         {
-          "title": "Present the new key",
-          "body": "Wait 5 seconds after removing the second key. Place the unprogrammed passive key in the backup starting location and press START/STOP. Keep the key correctly oriented and the doors closed through completion."
+          "title": "Wait 5 seconds, then present the new key",
+          "body": "After removing the second programmed key, wait 5 seconds.\n\nPlace the unprogrammed passive key in the backup position and press START/STOP, with both pedals released. Finish this action within the overall 30-second programming window. Keep every door closed through this final press. This extra 5-second wait is part of the workshop procedure.\n\nDistinguish the retry conditions. If an otherwise correctly sequenced attempt does not program the key, the workshop requires waiting at least 10 seconds and rotating the new key 180 degrees before repeating the entire sequence from the first programmed key. Before restarting, return an ON ignition to OFF with one button press and both pedals released; leave an already-OFF ignition OFF.\n\nIf you perform a step out of sequence, miss a timing window or cannot confirm the sequence was completed correctly, stop instead. The owner manual’s separate out-of-sequence instruction is to wait at least one minute before starting again. Confirm ignition OFF before the new attempt and do not shorten any specified wait. If programming remains unsuccessful, stop and arrange authorized key-programming service."
         },
         {
-          "title": "Verify the result or repeat the prescribed sequence",
-          "body": "Check that the new key operates the RKE transmitter functions and starts the vehicle. If programming fails, wait at least 10 seconds and rotate the key 180 degrees before repeating the procedure."
+          "title": "Verify the new key’s remote and starting functions",
+          "body": "After the timed sequence, establish ignition OFF: if it is ON, release both pedals and press START/STOP once; if already OFF, leave it OFF. Remove the new key from the backup slot. Take both original programmed keys out of the vehicle and away from it so they cannot authorize the following start. Keep the new key with you.\n\nWith the doors closed, press the new remote’s lock button to lock the doors, then its unlock button to unlock the driver door or all doors according to the configured unlock mode. In two-stage mode, a second unlock press within three seconds unlocks all doors. Observe the lock response; these are the normal controls on owner page 56, not a command to change the unlock mode.\n\nAllow the approximately 20-second keyless-restart grace period to expire after ignition shutdown before checking starting authorization. Bring only the new key inside. Keep it away from chargers and other coded keys. If passive entry/start is deliberately disabled, place it in the backup slot in the owner-specified orientation; that configuration requires the backup position.\n\nFor the stationary starting check, keep the parking brake applied, fasten occupants’ safety belts and switch headlamps and accessories off. Do not press the accelerator. On an automatic, retain Park, fully press the brake and press START/STOP. On a manual, hold the service brake, fully depress the clutch, select Neutral and press START/STOP with the clutch fully depressed. Keep the vehicle stationary and restrained. Confirm the engine starts using the new key, then shut down as in step 7; do not leave it running while checking another key.\n\nRemote operation and starting must both work. If either fails, do not count programming as successful. Finish with the shutdown in step 7, then use the applicable retry or service referral; do not repeatedly crank the engine or perform unrelated diagnosis here."
+        },
+        {
+          "title": "Restore the cup holders and finish",
+          "body": "Keep the vehicle stationary, parking brake applied and automatic Park or manual Neutral during engine shutdown. Press START/STOP once to stop the engine and switch ignition OFF. If no engine start occurred but ignition is ON, release both pedals and press once to switch OFF; leave an already-OFF ignition OFF. Confirm the engine has stopped and ignition is OFF. On a manual, select a parked gear only after engine shutdown, before releasing the controls and leaving the vehicle. Retain automatic Park and the parking brake.\n\nRemove the new key from the backup recess, refit the connected cup-holder covering and take the key out of the vehicle. Keep the original keys and the new key identified until both functional results have been confirmed. Finish in this parked/OFF state whether verification passes or fails."
         }
       ],
       "watchFor": [
         {
-          "title": "A missed timing window",
-          "body": "The individual waits and the overall time limit both apply. Arrange the keys beforehand so searching for the next key does not interrupt the sequence."
+          "title": "Both timing limits matter",
+          "body": "The complete programming sequence must fit within 30 seconds, and the second programmed key must be placed and its first button press made within the 10-second changeover window. Do not shorten the specified 5-second waits to recover lost time. If you miss a window or lose track of the sequence, use the separate at-least-one-minute out-of-sequence restart rule in step 5 rather than the ordinary unsuccessful-programming retry."
         },
         {
-          "title": "Interference near the key",
-          "body": "Some phone or laptop chargers can interfere with key detection. Move the key away from a nearby charger if a detection concern occurs."
+          "title": "Keep the doors closed during programming",
+          "body": "Close every door before beginning the timed sequence. Opening a door during it breaks a stated condition of the procedure."
+        },
+        {
+          "title": "Nearby chargers can interfere",
+          "body": "Some phone and laptop chargers can interfere with passive-key detection when the key is close to them. If a detection concern occurs, move the key away from the charger before trying again."
+        },
+        {
+          "title": "A running engine does not prove the new key is recognized",
+          "body": "PATS does not shut down an already running engine when the key leaves the vehicle. The system can also permit a restart without a key for approximately 20 seconds after switching off. Let that period expire and exclude the original keys when verifying the new one."
         }
       ],
       "notes": [
-        "The backup starting location can also recognize a programmed key when its battery is depleted."
+        "The backup position serves two purposes: programming passive keys and recognizing an already programmed key when its internal battery is depleted.",
+        "Passive entry/start being disabled is a separate condition from spare-key programming being disabled. A vehicle with passive entry/start disabled requires the backup position for starting.",
+        "If the body control module has been replaced, additional module programming and a parameter reset are required. Engine control module replacement also requires module programming and a parameter reset, but does not itself require programming the keys. Those operations are separate from this spare-key procedure."
       ],
       "diagnostics": [
         {
+          "finding": "You have fewer than two previously programmed keys, or spare-key programming is disabled.",
+          "meaning": "The prerequisites for this method are not met.",
+          "next": "Stop this sequence and arrange the appropriate key-programming service. Repeating the button presses cannot replace the missing authorization."
+        },
+        {
+          "finding": "A correctly sequenced attempt does not program the new key.",
+          "meaning": "The attempt has not produced a verified working key; this result alone does not identify a failed component.",
+          "next": "Confirm ignition OFF, wait at least 10 seconds, rotate the new key 180 degrees and repeat the complete workshop sequence with both programmed keys. Keep the doors closed and meet every timing requirement. If it still fails, arrange authorized key-programming service. An out-of-sequence or uncertain attempt instead follows the separate at-least-one-minute restart condition in step 5."
+        },
+        {
           "finding": "No Key Detected appears.",
-          "meaning": "The message does not by itself prove that the key is faulty or unprogrammed; position, interference or a depleted key battery can affect detection.",
-          "next": "Check positioning and orientation, use the backup starting location, and consult the supplied PATS operation information if the concern persists."
+          "meaning": "The vehicle has not recognized a programmed key in the required location. Position, orientation, a depleted key battery or nearby charger interference can affect detection; the message alone does not prove the key is defective.",
+          "next": "After shutdown, use the rear-cupholder backup slot with the owner-specified orientation for the stationary starting check in step 6. Move the key away from phone or laptop chargers if interference is suspected. A key at the far edge of the cabin, such as a door pocket or above a sun visor, should be moved farther inside. Persistent detection concerns require separate diagnosis; see [PATS operation](#/document/G1694659)."
+        },
+        {
+          "finding": "Remote operation works, but starting does not, or starting works but remote operation does not.",
+          "meaning": "The final verification is incomplete. Both functions are programmed into the body control module, and the systems share components.",
+          "next": "Do not count the job as successful. Recheck the prescribed programming conditions and retry as directed. If the split result persists, arrange diagnosis of the affected functions."
+        },
+        {
+          "finding": "Starting works only with the key in the backup position.",
+          "meaning": "The backup antenna can recognize a programmed key with a depleted internal battery. Deliberately disabled passive entry/start can also require this position.",
+          "next": "Check whether passive entry/start is disabled before treating backup-only operation as a programming failure. Separate a key-detection concern from whether the new key has been successfully programmed."
         }
       ],
       "verification": [
         {
-          "title": "Record both functional results",
-          "body": "Record successful remote operation and successful starting with the new key. A result for only one function leaves verification incomplete."
+          "title": "Remote transmitter operation",
+          "body": "Confirm the new remote locks and unlocks the doors using the buttons and configured unlock mode in step 6. Record this separately from starting authorization."
+        },
+        {
+          "title": "Starting authorization",
+          "body": "Confirm the vehicle starts using only the new key, with original keys away and the approximately 20-second keyless-restart grace period expired. Use automatic Park/brake or manual Neutral/clutch and the stationary controls in step 6. Use the backup slot if passive-start configuration requires it."
+        },
+        {
+          "title": "Cabin restored",
+          "body": "Finish whether checks pass or fail with engine/ignition OFF, automatic Park or an engine-off parked manual gear, parking brake applied, key removed and cup-holder covering refitted. No successful completion is claimed unless both required functions work."
         }
       ],
       "procedures": [
         {
           "documentId": "G1672906",
-          "purpose": "Exact two-programmed-key sequence, timing, retry instructions and final verification."
+          "purpose": "Primary programming sequence, prerequisites, timing limits, retry orientation and required functional checks."
         },
         {
           "documentId": "G1694659",
-          "purpose": "Passive-key operation, backup starting and distinctions between programming and key-detection concerns."
+          "purpose": "Backup-position access and placement, passive-key operation, four-key capacity, detection concerns and keyless-restart grace period."
+        },
+        {
+          "documentId": "G1694658",
+          "purpose": "Explain how PATS authorizes starting and why it does not stop an already running vehicle."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Apply startup precautions while operating the ignition and exclude simultaneous work near moving engine components."
         }
       ],
       "hero": null,
@@ -118955,7 +119023,7 @@
         "years": [
           2015
         ],
-        "equipment": "Passive key and START/STOP ignition"
+        "equipment": "Passive key and START/STOP ignition, with spare-key programming enabled"
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -118970,115 +119038,241 @@
         {
           "documentId": "G1694658",
           "sourceHash": "3c33315bb1079d16344e4359c3729ac9e61f440dd77b1f4283e150f16076cbed"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "bab6f23bb3c157d2fe8108fbf96672fe260a3dc3c57785eb66d06a8a123a0c11"
-      }
+        "fingerprint": "bab6f23bb3c157d2fe8108fbf96672fe260a3dc3c57785eb66d06a8a123a0c11",
+        "editorialVersion": 2,
+        "editorialFingerprint": "0c38b591ff341c0c0472132c9c400c9e71270321b7247beae242b1a6aaa92df3",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "prepare-backup-position",
+          "title": "Expose the backup position and get ready",
+          "summary": "Access the rear cup-holder recess, arrange the keys and close the doors.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "timed-key-sequence",
+          "title": "Run the timed programming sequence",
+          "summary": "Present both programmed keys, then the new key, within the required windows.",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "id": "confirm-and-restore",
+          "title": "Check both functions and restore the console",
+          "summary": "Verify remote operation and starting, then refit the cup-holder insert.",
+          "start": 6,
+          "end": 7
+        }
+      ]
     },
     {
       "title": "Replace the PATS center antenna beneath the floor console",
-      "summary": "Remove the console upper trim to replace the center antenna used for passive-key detection and backup starting.",
-      "introduction": "The Passive Anti-Theft System (PATS) allows starting when it recognizes a programmed key inside the vehicle. Its center antenna receives commands from the body control module and sends a low-frequency signal that activates the key. Mounted beneath the console trim, it also detects a key placed in the rear cup holder backup starting location, including when the key battery is depleted.",
-      "why": "A No Key Detected message does not establish that this antenna has failed. Key position, charger interference and other shared keyless-system components can affect recognition. Once diagnosis justifies antenna replacement, careful console removal protects the clips and wiring that must be released before the antenna becomes accessible.",
+      "summary": "Remove the console side panels, selector trim and upper panel to replace the passive-key antenna beneath the cup-holder area, then refit and check key recognition.",
+      "introduction": "I’ll work through the console access, antenna replacement and reverse-order refitting, then observe programmed-key recognition after the console is fully assembled.\n\nPATS means Passive Anti-Theft System. The center antenna sends a low-frequency signal that wakes the programmed key. The key replies through the car’s radio receiver, and the control modules decide whether starting is allowed. This antenna also serves the backup key position in the rear cup holder, where a programmed key can be recognized even with a depleted key battery.",
+      "why": "Replacing this antenna requires removing the console upper trim because the antenna mounts underneath it, beside the cup-holder assembly. A No Key Detected message alone does not identify a failed antenna: key position, charger interference, key condition and other shared keyless-system components can produce recognition concerns. Establish the fault before replacing the antenna.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "PATS center antenna replacement",
+        "2015 Mustang PATS center antenna replacement",
+        "passive anti-theft center antenna",
+        "Mustang floor console antenna",
         "No Key Detected",
-        "passive key not detected inside vehicle",
-        "backup starting rear cup holder"
+        "rear cup holder backup starting"
       ],
       "when": {
-        "summary": "When diagnosis identifies a faulty center antenna, or the antenna must be removed during console service.",
+        "summary": "Use this procedure when the center antenna requires replacement after fault identification, or when it must be removed from the console upper trim during related service.",
         "notes": [
-          "The illustrated access procedure uses an automatic transmission; manual-transmission access is similar."
+          "Engine coverage is 2015 Mustang 2.3L, 3.7L, 5.0L and 5.2L.",
+          "The access instructions cover the illustrated floor-console arrangement, with automatic transmission shown and manual transmission described as similar. Body-style applicability is not separately identified; confirm that the console matches before beginning."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange trim access",
-          "detail": "Have an interior trim remover and suitable tools for the console retainers. The upper panel has electrical connections that must be disconnected before removal."
+          "title": "Gather the trim and fastening tools",
+          "detail": "Have an interior trim remover, tools matching the fitted retainers and a low-range torque wrench capable of 18 lb.in (2 Nm). Keep the side-panel clips, bezel clips, upper-panel clips and threaded retainers organized by location."
         },
         {
-          "title": "Establish the starting concern",
-          "detail": "Have a programmed passive key available. Review the key-position and interference checks in the system-operation article before treating a recognition complaint as an antenna fault."
+          "title": "Have the replacement and programmed key ready",
+          "detail": "Use a replacement PATS center antenna matched to the vehicle. Keep a known programmed passive key available for the completion checks, but outside the vehicle during disassembly."
+        },
+        {
+          "title": "Set the practical boundary",
+          "detail": "This job covers antenna removal and reverse-order installation. Electrical circuit testing and key or control-module programming require separate diagnostic instructions. The antenna's two mounting retainers are refitted as part of the reverse procedure; the 18 lb.in (2 Nm) value applies specifically to the console front retainers."
+        },
+        {
+          "title": "Prepare for interior service",
+          "detail": "Begin with the vehicle already safely parked on the ground, parking brake applied, automatic Park or an engine-off parked manual gear selected, and engine/ignition OFF. Maintain that gear and parking restraint throughout. Remote start, if fitted, must already be disabled before this console repair begins. Wear eye and ear protection and protective gloves when handling sharp-edged parts. Right and left below mean the vehicle’s sides as viewed while seated facing forward."
         }
       ],
       "steps": [
         {
-          "title": "Release the console side trim",
-          "body": "Use the interior trim remover to release the clips and remove the right-hand side panel, then release the left-hand side panel. These panels provide access for the upper-trim removal sequence."
+          "title": "Prevent an unintended start",
+          "body": "Confirm the established parked gear, parking brake and engine/ignition OFF state before disassembly. Leave an already-OFF ignition OFF rather than pressing the button again. Remote start, if fitted, must already be disabled. Remove the passive key from the vehicle before connector work and keep it outside during disassembly. Maintain the parking brake and parked gear throughout; no shift out of Park is prescribed by this access sequence."
         },
         {
-          "title": "Free the selector boot",
-          "body": "Remove the selector-lever bezel with the trim remover. Disconnect its electrical connector and position the selector-lever boot aside so it can be accommodated as the upper trim is lifted."
+          "title": "Remove the right-hand console side panel",
+          "body": "Find the separate side trim panel below the console's upper trim, alongside the front seat. Use the interior trim remover at its perimeter to release the five retaining clips, working around the panel rather than pulling against clips that remain engaged. Remove the right-hand panel and keep its clips with it."
         },
         {
-          "title": "Remove the front retainers",
-          "body": "Open the console lid, then remove the right-hand and left-hand front retainers. Keep these identified for reassembly; their installation torque is 18 lb.in (2 Nm)."
+          "title": "Remove the left-hand console side panel",
+          "body": "Repeat on the left-hand side: use the trim remover to release the five clips and remove the side panel. With both panels off, the console's front retaining areas are accessible."
         },
         {
-          "title": "Lift away the upper trim",
-          "body": "Release the upper-panel clips, position the selector boot as required and disconnect the electrical connectors. Remove the panel only after these connections are free."
+          "title": "Release the selector-lever bezel",
+          "body": "Use the interior trim remover to release the bezel surrounding the selector lever. The illustrated automatic bezel has five clips around its perimeter, including clips along both sides and the rounded rear edge. Ease the bezel free while leaving enough support beneath it to reach the wiring; do not lift against an attached lead."
         },
         {
-          "title": "Exchange the antenna",
-          "body": "Remove the antenna retainers and lift the antenna from the underside of the upper trim. The illustration identifies its mounting beneath the cup-holder area. Fit the replacement by reversing this part of the procedure."
+          "title": "Unplug and position the selector boot aside",
+          "body": "Reach beneath the released selector trim and disconnect its electrical connector. The connection is directly beneath the trim beside the selector assembly. Release the connector's locking feature and separate the connector bodies without pulling on the wires.\n\nPosition the selector-lever boot aside so it can be accommodated when the console upper panel is lifted. The manual-transmission arrangement is similar; preserve the same sequence of freeing the trim, disconnecting its wiring and moving the boot aside."
         },
         {
-          "title": "Reassemble the console",
-          "body": "Follow [the complete removal and installation sequence](#/document/G2153308) in reverse. Reconnect the upper-panel wiring, position the boot, engage the clips and tighten the front retainers to their specified torque before completing the bezel and side-trim installation."
+          "title": "Open the console lid and remove the four front retainers",
+          "body": "Open the floor-console storage lid and leave it raised for upper-panel access.\n\nRemove the two right-hand front retainers exposed below the console's upper edge near the center stack. Then remove the two corresponding left-hand front retainers. Keep these four retainers identified: each is tightened to 18 lb.in (2 Nm) during installation."
+        },
+        {
+          "title": "Release, unplug and remove the console upper trim",
+          "body": "Use the interior trim remover to release the upper trim panel's eight clips. The panel runs from the storage-lid area, around the cup holders and selector opening, forward beneath the center stack.\n\nLift it only enough to manage the selector boot and reach underneath. Guide the panel clear of the raised parking-brake lever while keeping the brake applied. Reposition the selector boot as necessary for clearance.\n\nDisconnect the electrical connectors beneath the panel before taking it away. Connections are visible beneath the cup-holder area; support the panel while releasing them so its weight never hangs from the harness. Once all connections are free, remove the upper trim."
+        },
+        {
+          "title": "Remove the center antenna from the upper trim",
+          "body": "Support the removed upper trim so its underside is accessible without loading its clips. Locate the small rectangular antenna mounted beside the underside of the cup-holder assembly. It has two mounting retainers and an electrical connection at one end.\n\nConfirm that the antenna's electrical connection is free as part of the upper-panel disconnection. Remove the two antenna retainers and lift the antenna from its mounting position. Keep track of its orientation and the connector's position for refitting."
+        },
+        {
+          "title": "Fit the replacement antenna",
+          "body": "Place the replacement antenna in the same mounting position and orientation beneath the cup-holder area. Reinstall its two retainers to secure it, reversing removal. Keep its connector accessible for reconnection as the upper panel returns to the car."
+        },
+        {
+          "title": "Reconnect and seat the console upper panel",
+          "body": "Bring the upper trim back over the console while supporting it above the wiring. Reconnect every electrical connector disconnected beneath it, including the antenna connection, and make sure each connection is fully seated.\n\nPosition the selector boot for the panel to return around it, and guide the panel past the raised parking-brake lever. Check that wiring lies clear of the clip locations and panel edges. Align the eight upper-panel clips with their openings and press the panel into place at the clip locations. If an edge will not sit down, lift it enough to find the obstruction before applying more pressure."
+        },
+        {
+          "title": "Install and torque the front retainers",
+          "body": "Reverse the removal order: install the two left-hand front retainers, then the two right-hand front retainers. Tighten each to 18 lb.in (2 Nm).\n\nUse an inch-pound torque wrench. This value is in inch-pounds, not foot-pounds, and belongs to these four console retainers."
+        },
+        {
+          "title": "Restore the lid, selector boot and bezel",
+          "body": "Close the console storage lid after the upper panel and front retainers are secured. Return the selector boot to its fitted position and reconnect the electrical connector disconnected beneath the selector trim.\n\nAlign the selector bezel and seat its retaining clips; the illustrated automatic bezel uses five. Confirm that the boot is properly arranged and the trim sits evenly without trapped wiring."
+        },
+        {
+          "title": "Refit the side trim panels",
+          "body": "Install the left-hand console side panel first, then the right-hand panel. Align each panel's five clips with their receiving openings and press at the clip locations until the panel is seated. Check the panel edges against the adjacent console trim and correct any misplaced clip before pressing further."
+        },
+        {
+          "title": "Check assembly and programmed-key recognition",
+          "body": "Before operating the ignition, confirm all disconnected plugs are reconnected, all four front retainers are secured, the trim edges sit evenly and the boot, console lid and parking-brake lever are unobstructed. Remove tools and loose retainers. Maintain automatic Park or the engine-off parked manual gear and the parking brake.\n\nBring the known programmed passive key inside, away from chargers and the outer edges of the cabin. Confirm ignition OFF. With both brake and clutch pedals released, press START/STOP once to request ignition ON with the engine off. Do not start the engine. Observe whether ignition transitions to ON and whether No Key Detected or the original recognition concern appears. If ON was established, press the button once again with pedals released to return to OFF; if the request left ignition OFF, leave it OFF. Confirm OFF before changing the key position.\n\nFor the backup-location observation, lift the rubber covering in the cupholder. Place the programmed remote in the shaped backup slot in the rear cupholder with its buttons facing up and its keyring toward the front of the vehicle, as specified in the 2015 owner manual, printed page 122. Do not substitute an assumed orientation from the key’s shape. From confirmed OFF, release both pedals and press START/STOP once for an engine-off ignition-ON request. Record the response. A successful request with a working key battery does not by itself isolate backup-antenna performance or prove every PATS component; these are ordinary completion observations, not electrical diagnosis or key programming.\n\nFinish whether the observations pass or fail: if ignition is ON, release the pedals and press the button once to switch OFF; if already OFF, leave it OFF. Confirm engine/ignition OFF, remove the key and replace the cupholder covering. Retain parked gear and parking brake. If recognition remains abnormal, record it and use the separate diagnostic procedure. Before any connector reinspection, confirm OFF/key out; never reopen an energized console. Owner ignition controls are on printed pages 121–122."
         }
       ],
       "watchFor": [
         {
-          "title": "Wiring still attached",
-          "body": "The upper trim has electrical connections. Releasing its clips does not make it ready to lift away."
+          "title": "A free panel can still have live attachments",
+          "body": "The selector trim and console upper panel both have electrical connections. Support each released part until its connectors are disconnected; never use the harness as a tether."
         },
         {
-          "title": "Backup-key orientation",
-          "body": "The programmed key must be correctly oriented in the rear cup holder backup location for the backup-starting check."
+          "title": "Clip counts help you find the remaining attachment",
+          "body": "Each console side panel has five clips, the illustrated selector bezel has five, and the upper panel has eight. Resistance at one spot is a reason to locate the attachment and release it with the trim remover."
+        },
+        {
+          "title": "Keep the torque with its own fasteners",
+          "body": "Only the two front retainers on each side receive 18 lb.in (2 Nm). Do not transfer that value to the antenna's two mounting retainers."
+        },
+        {
+          "title": "Preserve parking-brake clearance",
+          "body": "The upper trim must clear the raised parking-brake lever. Keep the brake applied and guide the trim around it without forcing the panel or trapping wiring."
+        },
+        {
+          "title": "Backup-key placement matters",
+          "body": "Use the shaped rear-cupholder backup slot beneath the rubber covering. The owner manual specifies buttons facing up and keyring toward the front of the vehicle. Use the known-state engine-off ON/OFF sequence in step 14; ordinary recognition does not isolate antenna performance."
         }
       ],
       "notes": [
-        "PATS prevents unauthorized starting; it does not disable an already running vehicle.",
-        "Control-module replacement and its programming requirements are separate from this antenna replacement."
+        "The center antenna is wired to the body control module, or BCM. Its low-frequency signal has an approximate range of 1 m (3 ft); the key's reply is received through the radio transceiver module, or RTM.",
+        "PATS prevents unauthorized starting. It does not shut down an already running vehicle when the key is removed, so moving the key away is never a substitute for switching the ignition off during service.",
+        "The antenna replacement ends with reverse-order refitting. BCM or engine-control-module replacement brings separate programming requirements and is outside this job."
       ],
       "diagnostics": [
         {
-          "finding": "Recognition improves when the key is moved away from a door pocket, sun visor or nearby charger.",
-          "meaning": "Key location or interference can explain the concern without proving an antenna defect.",
-          "next": "Recheck recognition with the key in a suitable interior position before proceeding with replacement."
+          "finding": "No Key Detected occurs with the key in a door pocket, above a sun visor or at another outer edge of the interior.",
+          "meaning": "The key can be outside reliable antenna coverage even though it is physically inside the car.",
+          "next": "Move the programmed key to a more central position and use the stationary engine-off ON/OFF observation in step 14 before considering antenna replacement."
         },
         {
-          "finding": "Normal passive starting fails, but backup starting recognizes the programmed key.",
-          "meaning": "Backup recognition can work when the key battery is depleted; this result alone does not isolate the original fault.",
-          "next": "Continue the key and PATS diagnosis using the system-operation information."
+          "finding": "Recognition changes when the key is moved away from a phone or laptop charger.",
+          "meaning": "Some chargers can interfere with passive-key recognition when the key is nearby.",
+          "next": "Move the key away from the charger and repeat the stationary engine-off ON/OFF observation in step 14. If recognition returns, address the placement or interference before replacing parts."
+        },
+        {
+          "finding": "Normal passive recognition fails, but the programmed key is recognized in the rear cup-holder backup recess.",
+          "meaning": "Backup recognition can operate with a depleted key battery. This result does not isolate the original fault to the center antenna.",
+          "next": "Continue key and PATS fault identification using the [system-operation information](#/document/G1694659), retaining the result as a useful observation."
+        },
+        {
+          "finding": "Passive entry and passive starting are both unavailable, while backup-location starting works.",
+          "meaning": "Where the vehicle configuration offers the setting, disabled passive-start functionality can produce this behavior.",
+          "next": "Have the passive-start configuration checked through the appropriate diagnostic workflow. Do not replace the antenna solely on this combination of symptoms."
+        },
+        {
+          "finding": "Both PATS recognition and remote-keyless-entry functions have a concern.",
+          "meaning": "The systems share the passive keys, BCM and RTM, so the fault may involve a shared component.",
+          "next": "Broaden the diagnosis beyond the center antenna using the [component descriptions](#/document/G1694659)."
+        },
+        {
+          "finding": "Recognition still fails after assembly, with the programmed key correctly located and away from chargers.",
+          "meaning": "The completion check has not resolved the concern; it does not establish that the replacement antenna is defective.",
+          "next": "Recheck the connections disturbed during console work with the ignition off and key removed. If they are seated, continue PATS diagnosis using diagnostic trouble codes, or DTCs, together with live parameter readings. Do not continue replacing parts by guesswork."
+        },
+        {
+          "finding": "PATS live readings are being reviewed during further diagnosis.",
+          "meaning": "The BCM reading KEYS_PROGMD reports the number of programmed keys; MIN_KEYS_RQD reads 2. The engine-control-module reading PATSENABL must indicate enabled for the vehicle to be driven. These are system clues rather than an antenna-specific pass/fail test.",
+          "next": "Interpret the readings alongside DTCs and the [PATS operating description](#/document/G1694659). A minimum-key requirement is not an instruction to reprogram keys during this antenna replacement."
         }
       ],
       "verification": [
         {
-          "title": "Check recognition and record the result",
-          "body": "Check ignition operation with the programmed key inside the vehicle and correctly positioned in the backup location. Record whether the original recognition concern remains."
+          "title": "Console is fully assembled",
+          "body": "Both five-clip side panels, the selector bezel and the eight-clip upper panel are seated. The selector boot is correctly positioned, the lid operates, and no wiring is pinched or left disconnected."
         },
         {
-          "title": "Check console completion",
-          "body": "Confirm the disconnected wiring is reconnected, the boot is positioned correctly and the trim clips and retainers are secured."
+          "title": "Correct retainers received the specified torque",
+          "body": "The two left-hand and two right-hand console front retainers are tightened to 18 lb.in (2 Nm). The antenna is secured by its own two retainers."
+        },
+        {
+          "title": "Recognition results are clear",
+          "body": "Record the engine-off ignition response with the known programmed key normally positioned and then in the backup slot, buttons up/keyring forward. A working key battery can permit ordinary recognition, so this is not an isolated backup-antenna test. Persistent concerns require separate diagnosis."
+        },
+        {
+          "title": "Service setup is restored",
+          "body": "Confirm tools and loose retainers are removed, cupholder covering restored, engine and ignition OFF, key removed, automatic Park or engine-off parked manual gear and parking brake retained. Do not reopen connectors until this shutdown state is established."
         }
       ],
       "procedures": [
         {
           "documentId": "G2153308",
-          "purpose": "Complete center-antenna removal and installation, including automatic-transmission console access with manual-transmission access noted as similar.",
+          "purpose": "Primary center-antenna removal and reverse-order installation, including console access, clip and retainer locations, and the 18 lb.in (2 Nm) console-front-retainer torque.",
           "mediaId": "G2153308-m0009"
         },
         {
           "documentId": "G1694659",
-          "purpose": "Explain passive-key recognition, backup starting, interference and the distinction between antenna service and module programming."
+          "purpose": "Antenna function, key-recognition behavior, backup key location, interference checks and interpretation of relevant PATS live readings."
+        },
+        {
+          "documentId": "G1694658",
+          "purpose": "Explain PATS starting authorization and why removing a key does not stop an already running vehicle."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Relevant service precautions for remote-start disabling, unintended-start prevention and personal protection."
         }
       ],
       "hero": {
@@ -119102,7 +119296,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Passive-key system with START/STOP switch and a floor-console rear cup-holder backup key location. Automatic transmission illustrated; manual-transmission access is similar."
       },
       "relatedGuideIds": [],
       "sourceRefs": [
@@ -119117,14 +119312,58 @@
         {
           "documentId": "G1694658",
           "sourceHash": "3c33315bb1079d16344e4359c3729ac9e61f440dd77b1f4283e150f16076cbed"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "abebd6950e783d95f3b7598bc06de36c471a58cebad48ab73fcc2ac899745d2d"
-      }
+        "fingerprint": "abebd6950e783d95f3b7598bc06de36c471a58cebad48ab73fcc2ac899745d2d",
+        "editorialVersion": 2,
+        "editorialFingerprint": "a32d8769587ab8be720e517c859600b3ab0c45eeb1ee964db7998f8c992bbf2e",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-for-service",
+          "title": "Prepare the parked vehicle",
+          "summary": "Maintain the established parked and ignition-OFF state before console work.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "open-console-access",
+          "title": "Reach the antenna",
+          "summary": "Remove the side trim, free the selector boot and unplug the upper console panel.",
+          "start": 2,
+          "end": 7
+        },
+        {
+          "id": "exchange-center-antenna",
+          "title": "Replace the antenna",
+          "summary": "Remove the two antenna retainers and fit the replacement beneath the cup-holder area.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "restore-console-trim",
+          "title": "Reassemble the console",
+          "summary": "Reconnect the wiring, seat the trim and torque the four console front retainers.",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "id": "confirm-key-recognition",
+          "title": "Check the finished job",
+          "summary": "Check console completion and observe normal and backup-location key recognition.",
+          "start": 14,
+          "end": 14
+        }
+      ]
     },
     {
       "title": "Diagnose an inoperative sun-visor universal transmitter",

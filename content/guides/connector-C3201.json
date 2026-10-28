@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3201",
+  "supportingSourceRefs": [],
+  "sourceHash": "7e45d2a43e9bd92f5fb0ec4632772d5baaa66a1b0b2729da5a11a3e28ac06ef5",
+  "title": "C3201 — Driver safety belt buckle connector",
+  "introduction": "I start with the electrical job described here: the driver’s buckle-reminder sensor connection and its ground. The housing has room to spare, so its cavity count should not be mistaken for a count of active circuits. The drawing and assignment rows show which positions actually have listed connections.\n\nUse a cavity label to move from the illustration to its table row, then use the housing identification to understand the separate pigtail listing. This page explains the connector reference; it does not teach restraint servicing, disconnection, probing or replacement. Physical viewing direction, gauge convention and metadata-code definitions are unspecified. The buckle-reminder labels also do not establish that this is a pyrotechnic-device connector or supply instructions for testing one.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3201-b00002",
+      "text": "Connector layout · Harness 14D231",
+      "why": "The printed view has a broad housing feature at the top and a vertical line of cavity labels below it. The shaded positions occupy the upper portion of that line; the outlined positions are at the bottom. I use those features to navigate the illustration, without treating their page orientation as an established physical viewing direction or connector-release instruction."
+    },
+    {
+      "blockId": "connector-C3201-b00005",
+      "text": "Read the cavity assignments",
+      "why": "The outlined positions correspond to the assigned buckle-reminder sensor and ground rows; the shaded positions correspond to rows without circuit or function assignments. Read across each assigned row to keep its circuit, color, gauge and terminal identification together. The ground description names its circuit role, not a physical access route. These assignments do not establish switching logic, expected resistance or the buckle’s condition."
+    },
+    {
+      "blockId": "connector-C3201-b00007",
+      "text": "Identify the listed service pigtail",
+      "why": "The Engineering Shell entry matches the Hard Shell and Fpn identification, connecting the pigtail listing with this housing. Service Part refers to the listed service item; the assignment table’s Terminal Part Number entries refer to individual terminals. Keep each table’s Gauge entry in its own context. The listing identifies a service reference without teaching wire selection, terminal removal or a restraint repair."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:42:35.862Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "825289807c859b63ce7dc436184698694f3fd8d38f7d8dd7cb1dde4b76f078f1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "972c71b9960612c5031ccf65ceb61eab1029077ed81c93f65a4a861a7221e095",
+    "reviewedAt": "2026-10-28T02:42:35.863Z"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3245",
+  "supportingSourceRefs": [],
+  "sourceHash": "621d8c769bf3a72fa57d4f7e8a788fef3c1fb8f5d6450ac385d80059ff7db13c",
+  "title": "C3245 — Selector Lever Assembly",
+  "introduction": "The selector lever’s connector carries assignments for park detection, switch illumination, brake shift interlock and ground connections. I treat its drawing like a small switchboard directory: the cavity label gets you to the right entry, and the Function column tells you which job that connection handles. There is more going on beside the gear lever than lighting up your chosen letter.\n\nBegin with the connector identity table, then use the face drawing to find a cavity label and read its complete pin-assignment row. Notice the shaded position and its unused table entry: housing capacity and populated connections are different things. The pigtail table separately links the listed service assembly to its engineering shell.\n\nThis is an identification and wiring-reference guide. The drawing does not specify terminal-side versus wire-side viewing, and the catalog codes and gauge convention are not defined here. Access, disconnection, probing, test values and replacement methods are outside this page’s scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3245-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "The drawing arranges the cavity labels in paired vertical columns, with the projecting housing structure on the right. I read the printed labels rather than counting across the rows. The shaded upper-left position corresponds to the unused table entry; its presence in the housing is not evidence of a missing connection."
+    },
+    {
+      "blockId": "connector-C3245-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "Use Cavity to join the drawing to the table, then read Circuit Number, Color, Gauge, Function and Terminal Part Number together. The repeated ground assignment appears at separate cavity locations, so retain each row’s position. The unused row has no circuit assignment. These entries identify electrical roles; they do not diagnose a park-detection, illumination or interlock complaint."
+    },
+    {
+      "blockId": "connector-C3245-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "The pigtail is the connector-and-lead service assembly. Engineering Shell connects its listing to the housing identifiers, while Service Part identifies the listed service item. Individual cavity rows have their own terminal entries, so a common housing does not establish a common terminal. The pigtail Gauge field is separate from the circuit-row Gauge fields and supplies no wire-selection or splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:55:51.440Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "bc91cb49954612ac6b80450d790ffc424284206a8acdc2b08d18be12ba917540",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d3c6a2acb1b1a076e2dbe538ceaa327344862ef8aa9d2b25a8308914bd29263e",
+    "reviewedAt": "2026-10-28T02:47:41.930Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Full34 source units/raw/all table cells/electrical context/author/final prose and full independent verdict read; original complete page2/solefigure directly viewed. Only unsupported latch-shaped label replaced with neutral projecting housing structure; prior full review retained. Paired6/3,5/2,4/1 arrangement with6shaded agrees; repeated GD216 grounds remain separate; no interlock bypass or service inference."
+    }
+  }
+}

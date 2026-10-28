@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4331",
+  "supportingSourceRefs": [],
+  "sourceHash": "a7a0fb4a1bd71aee222071e8f951ec6b0f429db216863bfaed3e0dd60f1e9c3b",
+  "title": "C4331 — Fuel pump (FP) module connector",
+  "introduction": "I read this connector as a shared doorway for different jobs: the pump moves fuel, while the level-sensing circuits report quantity. Sharing a plug does not make those jobs interchangeable—a fuel gauge is no pressure gauge in disguise.\n\nStart with the identification table, then use the drawing’s cavity labels to find the matching Cavity row. Read across that row for the circuit, wire color, gauge, function and terminal reference. Keep the motor designation and polarity attached to the function; a plus or minus sign is meaningful here. The pigtail table provides a separate service-parts cross-reference.\n\nThis page teaches reference reading. It does not establish the physical viewing direction, access or release procedure, electrical test conditions, or replacement method. Gauge conventions and the Size and Used codes are not defined here; retain those entries as printed rather than turning them into wire-selection or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4331-b00002",
+      "text": "Connector layout · Harness 14A005",
+      "why": "I use the projecting housing feature on the left and the tabs above and below to keep the drawing oriented on the page. The cavity labels run down staggered columns, so read each label directly rather than assuming the opposing circles form matching rows. This describes the supplied drawing, without establishing which side of a physical connector faces the viewer."
+    },
+    {
+      "blockId": "connector-C4331-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The cavity label is the lookup key linking the illustration to the table. Read the entire matching row: color alone is insufficient because a color code recurs on circuits with different jobs. Motor-driver labels and polarity distinguish the pump paths, while the level-sensing descriptions identify quantity-related circuits. These assignments identify connections; they do not prove that a pump or sender works."
+    },
+    {
+      "blockId": "connector-C4331-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I connect the Kit List entry in the identification table to the Number entry here, then compare Hard Shell with Engineering Shell. Service Part identifies the listed service item, while Terminal Part Number belongs to an individual circuit row. Keep those references distinct; the pigtail Gauge entry is not a direction to change every circuit wire to that gauge."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:42:35.871Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "58de84c41ca22f9310ee06c3a48c4ef2b4c744e7aac65791013da81c6e4ce7b8",
+  "sourcePdfHash": "2bfc94eafd38de5cca4531eb033bb662db7c1163b589d147b426ad663680781e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "657344a47fa5fdb95c57e47649400ab7703524d40b2c985e4af5cd94a41a339a",
+    "reviewedAt": "2026-10-28T02:42:35.872Z"
+  }
+}

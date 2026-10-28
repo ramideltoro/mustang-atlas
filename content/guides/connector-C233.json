@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C233",
+  "supportingSourceRefs": [],
+  "sourceHash": "ccd2faab08a897c3ba60f6c8e4c549985a4dcf6c9e0f0cd21e5c523457479353",
+  "title": "C233 — In-vehicle temperature sensor connector",
+  "introduction": "The component name is only the headline: this connector’s function column also includes humidity sensing, an aspirator motor, reference voltage, a reference return and a protected supply description. I treat it as a little climate-control switchboard, with each connection carrying its own job rather than a bundle of interchangeable sensor wires.\n\nStart with the identification table. Use a label in the connector drawing to find the matching Cavity row, then read across for its circuit, wire color, gauge, function and terminal reference. The separate pigtail table connects the service-item listing to the shell information. Finding an assignment tells you what the reference calls that connection; it does not show that the sensor, motor or supply is operating correctly.\n\nThis guide teaches the map. Physical viewing direction, access, release movements, test setup, expected electrical values and replacement steps are outside it. The gauge convention and Size and Used codes are also undefined here, so their printed entries remain reference data rather than instructions for selecting wire or conducting a test.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C233-b00002",
+      "text": "Connector layout · Harness 14401",
+      "why": "The drawing shows a vertical column of labeled cavities, a broad projecting housing feature on the left and a narrow rounded edge on the right. I use those visible features to follow the labels down the page and then into the table. This establishes the illustration’s layout without identifying the physical viewing side or showing how the connector is released."
+    },
+    {
+      "blockId": "connector-C233-b00005",
+      "text": "Read the sensor circuit map",
+      "why": "Match each illustrated cavity label to its table row before reading its function. The aspirator-motor, temperature and humidity descriptions identify separate jobs. Reference voltage and reference return are distinct entries, so keep their labels separate rather than treating every return as an interchangeable ground. The fuse-or-circuit-breaker wording remains an alternative description, not enough information to select a protection device or establish a test value."
+    },
+    {
+      "blockId": "connector-C233-b00007",
+      "text": "Pigtail and shell cross-reference",
+      "why": "A pigtail is a connector supplied with attached wire leads. I match Kit List with Number, then compare Hard Shell with Engineering Shell to follow the service reference. The pin table’s Terminal Part Number applies to each circuit row, while Service Part identifies the listed pigtail item. Keep its Gauge entry separate from the individual wire entries; the listing alone does not prescribe wire substitution or a splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:45:07.193Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2155f237648918981ca3203983ae76280fc101051568a61eb7ddf273a52bc0cb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "026613d96cffe59f10d3a866563451d6b68b37952ff5343e511ab3c10da21918",
+    "reviewedAt": "2026-10-28T02:45:07.193Z"
+  }
+}

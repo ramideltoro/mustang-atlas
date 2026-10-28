@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C3043",
+  "supportingSourceRefs": [],
+  "sourceHash": "6d0082ce6b500cc8da41acd8700dd14637246f5913b8059e77ecf2e15bc23bea",
+  "title": "C3043 — Occupant Classification System Module (OCSM)",
+  "introduction": "The occupant classification module’s connector brings together power, ground, high-speed CAN communication and front-passenger outboard seat-belt-tension sensor connections. I use this reference as the module’s address book: the drawing locates a cavity, and the corresponding table row explains its electrical job. Sharing a housing gives these circuits a common front door, but each still has its own assignment.\n\nStart with the connector identity table, then move to the face drawing and cavity-to-circuit table. Read across the complete row to connect the cavity label with its circuit identifier, wire description, function and terminal entry. The pigtail table separately associates a service part with its engineering shell.\n\nThis guide teaches reference reading. The drawing does not identify terminal-side versus wire-side viewing, and the catalog codes and gauge convention are not defined here. Access, disconnection, probing, test values and replacement methods are outside this page’s scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3043-b00002",
+      "text": "Connector-face map · Harness 14D230",
+      "why": "I use the single vertical column of cavity labels to navigate this drawing. The projecting housing detail on the left is a useful landmark within the illustration. Match the printed cavity label to the table rather than treating the housing outline as a physical viewing-direction instruction."
+    },
+    {
+      "blockId": "connector-C3043-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "The Cavity column joins the drawing to the wiring information. Circuit Number identifies the circuit, while Function describes its role; read Color, Gauge, Qualifier, Used and Terminal Part Number within that same row. The CAN high and low descriptions identify distinct communication paths. These assignments explain connections, but they do not establish whether the module or circuit is working."
+    },
+    {
+      "blockId": "connector-C3043-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "The pigtail is the connector-and-lead service assembly. Its Engineering Shell entry links it to the housing identifiers elsewhere on the page, while Service Part identifies the listed service item. Keep the pigtail specifications separate from the individual circuit rows: this association does not supply wire-selection or splice instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:52:32.436Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "90e0719dbb841aa4258eeb9239033ce3a83cbce8bfcdd1f8184cea78e209e6cf",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2c74949a6bcc370788be993cf3ace98ad9f36f03910477e8aa03013c97c31aa6",
+    "reviewedAt": "2026-10-28T02:45:07.202Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-feature",
+      "scope": "Read all33 source units/full raw text/all table cells/electrical context/full author/final prose/full independent verdict. Directly viewed original complete page2/solefigure, vertical1–6 and left projecting housing. Only unsupported latch-shaped label replaced with neutral projecting housing detail; prior full review retained."
+    }
+  }
+}
