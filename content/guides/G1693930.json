@@ -1,0 +1,520 @@
+{
+  "documentId": "G1693930",
+  "sourceHash": "7e598e2b46857f8cb18befb9421865cf3422ce53cbe361857484c0e886a57862",
+  "title": "Instrument Panel Cluster (IPC): Reading the Displays",
+  "introduction": "The instrument panel cluster (IPC) brings gauges, status information and warnings into the driver's view. I think of it as the dashboard's newsroom: several vehicle systems send reports, and the cluster puts them on display. The place a warning appears does not, by itself, identify the component responsible.\n\nI start by choosing the Base IPC or SVT IPC drawing, then match a drawing callout to the Item column in its own legend. Callouts are local to that drawing; do not carry a position from one version into the other. The large dial faces surround a central screen whose outlined areas identify different display functions.\n\nRTT means reconfigurable telltale—an indicator displayed on the screen. This overview explains where information appears and which displays depend on equipment. It does not provide fault tests, normal operating limits or instructions for responding to individual warnings.\n\nOne source-label wrinkle stays visible: the manual describes direct inputs as coming from components outside CAN, then includes CAN itself in that list. I keep the original entry and explain the mismatch below. This overview cannot resolve that wiring classification or tell you where to probe.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "G1693930-b00001",
+      "text": "How the IPC Communicates",
+      "why": "Read the cluster as a combination of gauges, screen displays and audible alerts."
+    },
+    {
+      "blockId": "G1693930-b00002",
+      "text": "The IPC reports vehicle conditions and system operation through gauges, informational indicators, warning indicators, RTT indicators, warning messages and chimes. Its message center also contains menus for configuring supported vehicle features. For the complete feature list and descriptions of what those menus control, refer to the Owner's Literature.",
+      "why": "The cluster both presents information and provides access to settings. Identifying an indicator and changing a setting are different uses of the same assembly."
+    },
+    {
+      "blockId": "G1693930-b00003",
+      "text": "The IPC combines the message center, RTT indications and virtual gauges on a single display screen.",
+      "why": "Several functions share the central screen, so a screen-drawn indicator need not have a separate lamp beside the dial."
+    },
+    {
+      "blockId": "G1693930-b00004",
+      "text": "The available virtual gauges depend on the vehicle's option level. The possible displays are:",
+      "why": "Treat this as an equipment-dependent selection, rather than a promise that every cluster offers every gauge."
+    },
+    {
+      "blockId": "G1693930-b00006",
+      "text": "Accelerometer display",
+      "why": "An accelerometer describes acceleration—the vehicle's change in motion."
+    },
+    {
+      "blockId": "G1693930-b00008",
+      "text": "Air fuel ratio display",
+      "why": "This describes the balance of air and fuel in the engine's mixture."
+    },
+    {
+      "blockId": "G1693930-b00010",
+      "text": "Battery voltage display",
+      "why": "Voltage is an electrical measurement; the display name alone does not establish battery condition."
+    },
+    {
+      "blockId": "G1693930-b00012",
+      "text": "Vacuum boost gauge (non-SVT only)",
+      "why": "The non-SVT restriction belongs to this gauge and must remain part of equipment selection."
+    },
+    {
+      "blockId": "G1693930-b00014",
+      "text": "Cylinder head temperature display",
+      "why": "This identifies the engine component whose temperature the display represents."
+    },
+    {
+      "blockId": "G1693930-b00016",
+      "text": "Engine oil pressure display (SVT only)",
+      "why": "Oil pressure and oil temperature describe different properties; this pressure display is restricted to SVT."
+    },
+    {
+      "blockId": "G1693930-b00018",
+      "text": "Engine oil temperature display",
+      "why": "This reports oil temperature, rather than oil pressure."
+    },
+    {
+      "blockId": "G1693930-b00020",
+      "text": "Inlet air temperature display",
+      "why": "This identifies the temperature of the air entering the engine."
+    },
+    {
+      "blockId": "G1693930-b00022",
+      "text": "Transmission fluid temperature display",
+      "why": "Keep this reading separate from the engine's temperature displays."
+    },
+    {
+      "blockId": "G1693930-b00024",
+      "text": "Informational indicators report conditions present in the vehicle. Warning indicators call attention to conditions that could cause personal injury or alter vehicle performance.",
+      "why": "A status indication and a warning serve different purposes, even when both appear in the same cluster."
+    },
+    {
+      "blockId": "G1693930-b00025",
+      "text": "RTT indicators appear in the message center in place of conventional informational or warning indicators, while retaining the same recognizable symbols. A rotating RTT display area can present multiple indicators as needed; other indicators and displays occupy fixed locations.",
+      "why": "Think of the rotating area as a shared noticeboard. A familiar symbol can appear there without having its own permanent spot around the gauges."
+    },
+    {
+      "blockId": "G1693930-b00026",
+      "text": "NOTE: The metric IPC has a similar layout.",
+      "why": "Use the units actually shown on the vehicle's gauges; a similar layout does not make the scales interchangeable."
+    },
+    {
+      "blockId": "G1693930-b00027",
+      "text": "Base IPC Layout",
+      "why": "Use this drawing with the Base IPC legend below it. Trace the callout line to its endpoint to locate the indicated lamp, gauge or screen area."
+    },
+    {
+      "blockId": "G1693930-b00029",
+      "text": "Base IPC Legend",
+      "why": "Match each Item entry to the Base drawing. TPMS means tire pressure monitoring system; ABS means anti-lock brake system; LED means light emitting diode; MIL means malfunction indicator lamp; ACC means adaptive cruise control. LH and RH identify left and right. PRNDL identifies the gear-position display. Keep equipment qualifiers attached to their entries."
+    },
+    {
+      "blockId": "G1693930-b00049",
+      "text": "Shared rotating RTT display area",
+      "why": "The following entries identify the conditions represented in this shared screen area."
+    },
+    {
+      "blockId": "G1693930-b00032",
+      "text": "Engine over-temperature indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00035",
+      "text": "Hood-ajar indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00038",
+      "text": "Low-battery indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00041",
+      "text": "Low-fuel indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00044",
+      "text": "Low-oil-pressure indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00047",
+      "text": "Powertrain malfunction indication (wrench symbol)",
+      "why": "The wrench identifies the indication; it does not identify a particular failed powertrain part."
+    },
+    {
+      "blockId": "G1693930-b00064",
+      "text": "Drive mode indication in the RTT display",
+      "why": "These entries identify drive-mode indications, rather than instructions for selecting or using the modes."
+    },
+    {
+      "blockId": "G1693930-b00053",
+      "text": "Snow-wet mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00056",
+      "text": "Sport mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00059",
+      "text": "Sport plus mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00062",
+      "text": "Track mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00067",
+      "text": "SVT IPC Layout",
+      "why": "Use the SVT drawing with its own legend. Its dial scales and some indicator assignments differ from the Base IPC."
+    },
+    {
+      "blockId": "G1693930-b00069",
+      "text": "SVT IPC Legend",
+      "why": "Match the SVT callouts to this legend even when a symbol looks familiar from the Base drawing. An optional entry describes a feature only when the vehicle is equipped with it."
+    },
+    {
+      "blockId": "G1693930-b00089",
+      "text": "Shared rotating RTT display area",
+      "why": "The following condition indications use the SVT cluster's shared screen area."
+    },
+    {
+      "blockId": "G1693930-b00072",
+      "text": "Engine over-temperature indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00075",
+      "text": "Hood-ajar indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00078",
+      "text": "Low-battery indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00081",
+      "text": "Low-fuel indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00084",
+      "text": "Low-oil-pressure indication",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00087",
+      "text": "Powertrain malfunction indication (wrench symbol)",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00107",
+      "text": "Drive mode indication in the RTT display",
+      "why": "Read these as the SVT drive-mode labels, keeping them separate from the Base cluster's mode list."
+    },
+    {
+      "blockId": "G1693930-b00093",
+      "text": "Drag strip mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00096",
+      "text": "Normal mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00099",
+      "text": "Sport mode",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00102",
+      "text": "Track drive mode",
+      "why": "This is a drive-mode label in the SVT IPC reference, not an instruction or a description of its control strategy."
+    },
+    {
+      "blockId": "G1693930-b00105",
+      "text": "Weather drive mode",
+      "why": "Use this label to identify the displayed mode. The label alone does not explain how that mode changes vehicle behavior."
+    },
+    {
+      "blockId": "G1693930-b00110",
+      "text": "Upper half: steering feel RTT",
+      "why": "RTT means reconfigurable telltale. The upper-half qualifier distinguishes this indication from the damper indication below it."
+    },
+    {
+      "blockId": "G1693930-b00112",
+      "text": "Lower half: adjustable dampers",
+      "why": "This identifies the lower half of the shared display location; it does not specify damper settings or adjustment instructions."
+    },
+    {
+      "blockId": "G1693930-b00115",
+      "text": "Information Center Module (ICM)",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00116",
+      "text": "The ICM, mounted in the instrument panel, adds gauges alongside those in the IPC. Which gauges are fitted depends on the vehicle's option content; the following list identifies the possibilities.",
+      "why": "I read this as an equipment menu, not a promise that every Mustang gets the full instrument buffet. Keep these ICM options separate from the IPC's virtual-gauge list."
+    },
+    {
+      "blockId": "G1693930-b00118",
+      "text": "Engine oil pressure gauge",
+      "why": "This identifies an available ICM gauge. It supplies neither an acceptable pressure range nor a pressure-test procedure."
+    },
+    {
+      "blockId": "G1693930-b00120",
+      "text": "Engine oil temperature gauge (SVT only)",
+      "why": "The SVT qualifier applies to this ICM option; do not extend it to other gauge lists."
+    },
+    {
+      "blockId": "G1693930-b00122",
+      "text": "Vacuum-boost or vacuum gauge (non-SVT only)",
+      "why": "Retain both gauge alternatives and the non-SVT restriction. This overview does not select which alternative a particular vehicle has."
+    },
+    {
+      "blockId": "G1693930-b00124",
+      "text": "Inputs Received by Network Message",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00125",
+      "text": "Most inputs needed to operate the IPC arrive over the CAN (controller area network). Module messaging has become increasingly common and is the standard way for the cluster to send and receive operating information.",
+      "why": "I think of the IPC as the dashboard's news desk: much of what it displays arrives from elsewhere. A warning appearing here does not, by itself, identify the cluster as the faulty component."
+    },
+    {
+      "blockId": "G1693930-b00126",
+      "text": "Inputs Through Direct Wiring",
+      "why": ""
+    },
+    {
+      "blockId": "G1693930-b00127",
+      "text": "The manual describes specific IPC functions as needing hardwired inputs from components that are not on the CAN.",
+      "why": "That is the source distinction, but its following list includes CAN itself. Read the list as preserved source identification, not a verified separation of direct wires from network connections."
+    },
+    {
+      "blockId": "G1693930-b00128",
+      "text": "The source lists the following under hardwired inputs:",
+      "why": "CAN appears here despite the preceding distinction. I have retained that inconsistency rather than silently relabel a connection. Use the matched circuit documentation and diagnostic procedure for actual wiring identification."
+    },
+    {
+      "blockId": "G1693930-b00130",
+      "text": "CAN (controller area network)",
+      "why": "The name is retained where it appears, but its placement under hardwired inputs conflicts with the preceding distinction. Do not use that placement to infer a separate direct component input."
+    },
+    {
+      "blockId": "G1693930-b00132",
+      "text": "Fuel pump assembly input",
+      "why": "The assembly is named as an input source. That identification does not make a fuel-level indication a test of the pump's ability to deliver fuel."
+    },
+    {
+      "blockId": "G1693930-b00134",
+      "text": "Fuel level sensor input",
+      "why": "The sensor reports tank fuel level for the gauge. Measuring fuel level and delivering fuel are different jobs, even when the parts share an assembly."
+    },
+    {
+      "blockId": "G1693930-b00136",
+      "text": "Park detect switch input; the switch is part of the floor shifter assembly",
+      "why": "This identifies the switch and its assembly location without implying a removal method or an electrical test."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T22:04:42.772Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 61,
+    "receivedBlocks": 61,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6868277a1abe019de71d24121251621401ec4d47e50a3dd711378812c1b84c3b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 161,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 2,
+    "fingerprint": "d093b71287462136a6a138cc319b1c6b8e01038af59a728aa07ddbc6f215e85d",
+    "reviewedAt": "2026-10-28T22:04:20.023Z",
+    "coveredUnitIds": [
+      "G1693930:u1",
+      "G1693930:u2",
+      "G1693930:u3",
+      "G1693930:u4",
+      "G1693930:u5",
+      "G1693930:u6",
+      "G1693930:u7",
+      "G1693930:u8",
+      "G1693930:u9",
+      "G1693930:u10",
+      "G1693930:u11",
+      "G1693930:u12",
+      "G1693930:u13",
+      "G1693930:u14",
+      "G1693930:u15",
+      "G1693930:u16",
+      "G1693930:u17",
+      "G1693930:u18",
+      "G1693930:u19",
+      "G1693930:u20",
+      "G1693930:u21",
+      "G1693930:u22",
+      "G1693930:u23",
+      "G1693930:u24",
+      "G1693930:u25",
+      "G1693930:u26",
+      "G1693930:u27",
+      "G1693930:u28",
+      "G1693930:u29",
+      "G1693930:u30",
+      "G1693930:u31",
+      "G1693930:u32",
+      "G1693930:u33",
+      "G1693930:u34",
+      "G1693930:u35",
+      "G1693930:u36",
+      "G1693930:u37",
+      "G1693930:u38",
+      "G1693930:u39",
+      "G1693930:u40",
+      "G1693930:u41",
+      "G1693930:u42",
+      "G1693930:u43",
+      "G1693930:u44",
+      "G1693930:u45",
+      "G1693930:u46",
+      "G1693930:u47",
+      "G1693930:u48",
+      "G1693930:u49",
+      "G1693930:u50",
+      "G1693930:u51",
+      "G1693930:u52",
+      "G1693930:u53",
+      "G1693930:u54",
+      "G1693930:u55",
+      "G1693930:u56",
+      "G1693930:u57",
+      "G1693930:u58",
+      "G1693930:u59",
+      "G1693930:u60",
+      "G1693930:u61",
+      "G1693930:u62",
+      "G1693930:u63",
+      "G1693930:u64",
+      "G1693930:u65",
+      "G1693930:u66",
+      "G1693930:u67",
+      "G1693930:u68",
+      "G1693930:u69",
+      "G1693930:u70",
+      "G1693930:u71",
+      "G1693930:u72",
+      "G1693930:u73",
+      "G1693930:u74",
+      "G1693930:u75",
+      "G1693930:u76",
+      "G1693930:u77",
+      "G1693930:u78",
+      "G1693930:u79",
+      "G1693930:u80",
+      "G1693930:u81",
+      "G1693930:u82",
+      "G1693930:u83",
+      "G1693930:u84",
+      "G1693930:u85",
+      "G1693930:u86",
+      "G1693930:u87",
+      "G1693930:u88",
+      "G1693930:u89",
+      "G1693930:u90",
+      "G1693930:u91",
+      "G1693930:u92",
+      "G1693930:u93",
+      "G1693930:u94",
+      "G1693930:u95",
+      "G1693930:u96",
+      "G1693930:u97",
+      "G1693930:u98",
+      "G1693930:u99",
+      "G1693930:u100",
+      "G1693930:u101",
+      "G1693930:u102",
+      "G1693930:u103",
+      "G1693930:u104",
+      "G1693930:u105",
+      "G1693930:u106",
+      "G1693930:u107",
+      "G1693930:u108",
+      "G1693930:u109",
+      "G1693930:u110",
+      "G1693930:u111",
+      "G1693930:u112",
+      "G1693930:u113",
+      "G1693930:u114",
+      "G1693930:u115",
+      "G1693930:u116",
+      "G1693930:u117",
+      "G1693930:u118",
+      "G1693930:u119",
+      "G1693930:u120",
+      "G1693930:u121",
+      "G1693930:u122",
+      "G1693930:u123",
+      "G1693930:u124",
+      "G1693930:u125",
+      "G1693930:u126",
+      "G1693930:u127",
+      "G1693930:u128",
+      "G1693930:u129",
+      "G1693930:u130",
+      "G1693930:u131",
+      "G1693930:u132",
+      "G1693930:u133",
+      "G1693930:u134",
+      "G1693930:u135",
+      "G1693930:u136",
+      "G1693930:u137",
+      "G1693930:u138",
+      "G1693930:u139",
+      "G1693930:u140",
+      "G1693930:u141",
+      "G1693930:u142",
+      "G1693930:u143",
+      "G1693930:u144",
+      "G1693930:u145",
+      "G1693930:u146",
+      "G1693930:u147",
+      "G1693930:u148",
+      "G1693930:u149",
+      "G1693930:u150",
+      "G1693930:u151",
+      "G1693930:u152",
+      "G1693930:u153",
+      "G1693930:u154",
+      "G1693930:u155",
+      "G1693930:u156",
+      "G1693930:u157",
+      "G1693930:u158",
+      "G1693930:u159",
+      "G1693930:u160",
+      "G1693930:u161"
+    ],
+    "originalAuthorHold": [
+      "CAN is listed under hardwired inputs, while the preceding paragraph defines those inputs as coming from components not on CAN and the network section identifies CAN as the messaging path. Technical review must resolve whether CAN belongs in this list; the draft preserves the entry without choosing an unsupported correction."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all161 primary units, both figures and61 edits; CAN classification ambiguity retained explicitly for bounded display-identification overview.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "518a8cf369732ae888cd4d428c553907bba580e04e6176f3055d2b447d7fadae"
+    }
+  }
+}
