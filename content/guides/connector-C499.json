@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C499",
+  "supportingSourceRefs": [],
+  "sourceHash": "5e5d2e9e1ad3ef00bf16169e500decffc03a96d8fbcd665f764c8043728d1f65",
+  "title": "C499 — Right rear lamp connector reference",
+  "introduction": "I start with the connector identity, then follow a cavity label across its table row to connect position with circuit, wire description and function. Think of the housing as an address and the cavity label as the apartment number: recognizing the building gets you close, but the individual connection still matters. Here, the park, stop/turn and ground descriptions explain the listed connections at the right rear lamp.\n\nUse this page for identification and circuit lookup. Access, connector release, probing, test results and replacement require their own instructions. The physical viewing direction, gauge convention and meanings of the Size and Used codes are not defined here, so those fields remain reference data.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C499-b00002",
+      "text": "Connector view · Harness 14A005",
+      "why": "The drawing has a projecting housing feature on its left edge and smaller housing projections on the right. I use those visible landmarks to keep the illustrated sides straight, without treating them as instructions for positioning or releasing the installed connector. Shaded cavities align with rows that have blank circuit descriptions; the shading does not report a fault."
+    },
+    {
+      "blockId": "connector-C499-b00005",
+      "text": "Read the cavity and circuit rows",
+      "why": "Locate a cavity label in the drawing and find the same label in the Cavity column. Read across that row to associate circuit identity, wire description, function and terminal entry. The stop/turn descriptions distinguish outboard, middle and inboard functions. Preserve the park description’s alternatives, the ground location wording and the opposite-side turn-signal output label; the lamp’s side alone is no reason to rewrite them. These labels do not establish the physical wiring route."
+    },
+    {
+      "blockId": "connector-C499-b00007",
+      "text": "Pigtail service-parts lookup",
+      "why": "The Engineering Shell field ties the service-parts entry to the connector housing identified above. Read Number and Service Part under their own headings, and treat Image as a file reference. The row records service-part characteristics; it does not authorize substituting wire, selecting terminals or carrying out a splice or replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:21:29.232Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "17afabd666a99178d4b181e7c7e40fd301b5feea1c11b9e89d51b865986b2772",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4b10d74419bbfc1916eb4de66de46f8969d5b62f62fbaa5c361b1e325d1da3d5",
+    "reviewedAt": "2026-10-28T03:29:05.327Z",
+    "editorialRevision": {
+      "kind": "neutral-unlabeled-housing-geometry",
+      "scope": "Complete38 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public neutral geometry phrase removes unproven retention function. RH lamp identity, literal opposite-side output and left ground preserved without routing inference. Distinct right middle gauge26/terminalEA retained; all other fields unchanged. Full prior review retained."
+    }
+  }
+}
