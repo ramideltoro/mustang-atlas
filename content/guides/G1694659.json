@@ -1,0 +1,639 @@
+{
+  "documentId": "G1694659",
+  "sourceHash": "9ab30af7befbca3e02007ed9af91179e0dd089d40fdaad8ce98955062f01704a",
+  "title": "How Mustang PATS Recognizes Your Key and Authorizes Starting",
+  "introduction": "Pressing the start button rings the doorbell; it does not grant admission. The passive anti-theft system (PATS) must recognize a programmed key, locate it inside the car and complete an identification exchange between the BCM and PCM before starting is authorized.\n\nI use the diagrams to follow that conversation: antenna signals wake the key, the RTM receives its reply, and the modules exchange authorization messages. Compare the labeled drawing with the numbered drawing and its legend, then use the message charts to see who sends what. The backup-start illustration shows where the key goes when normal detection fails.\n\nThis overview explains normal operation, detection complaints and backup starting. The drawings show system relationships rather than connector pinouts or electrical test instructions. Key programming and module configuration require their separate procedures.\n\nOne naming wrinkle deserves daylight: the labeled system drawing says “PATS Front Antenna,” while its numbered legend and this operating text say “PATS Center Antenna.” I retain both source labels without claiming they prove the same physical part, connector or mounting position. Use the actual owner backup-slot instructions below for that ordinary check; do not select a replacement antenna or probe wiring from this naming mismatch.",
+  "requirements": [
+    {
+      "category": "Before an ordinary stationary key check",
+      "items": [
+        {
+          "name": "Park and make any engine start safe",
+          "detail": "Keep the vehicle stationary with the parking brake fully applied. For an engine-start attempt, hold the foot brake; select Park on an automatic, or Neutral with the clutch fully depressed on a manual. Keep occupants belted, headlamps and electrical accessories off, and leave the accelerator alone. Do not start in a closed garage or other enclosed area; open the garage door first. Avoid dry grass or other dry ground cover beneath the hot exhaust, and avoid extended high-speed idling. If you smell exhaust fumes inside, stop this check, have the vehicle checked by an authorized dealer and do not drive it. These are the matching owner-manual starting precautions, not an electrical diagnostic test."
+        },
+        {
+          "name": "Distinguish ignition ON from engine START",
+          "detail": "Keep a valid programmed key inside. For an engine-off detection retry, from confirmed OFF press and release START/STOP without applying the brake or clutch; if ignition is already ON, leave it ON rather than toggle it. For an engine-start attempt, use the parked transmission and held pedal conditions above and press START/STOP. If the engine does not start, do not keep improvising attempts: use the complete matching owner failed-start instructions and diagnostic procedure. A key-detection message alone does not identify a failed component."
+        },
+        {
+          "name": "Use the actual owner backup slot",
+          "detail": "With the vehicle parked and ignition OFF, lift out the rubber cup-holder covering. Place the programmed remote in the backup slot with its buttons facing up and its keyring toward the front of the vehicle. Keep it in that position for the starting request, using the transmission-specific pedal and stationary precautions above. The workshop image locates the rear cup-holder recess; the matching owner text supplies the actual orientation. See [Keyless Starting and Starting a Gasoline Engine — owner instructions](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf). This placement does not program a new key."
+        },
+        {
+          "name": "Finish with a known parked and OFF state",
+          "detail": "Keep the vehicle stationary with the parking brake fully applied. After any starting request, observe whether the engine is running and confirm the actual ignition state before choosing the following branch. If the engine started, hold the foot brake and keep Park on the automatic or Neutral on the manual with the clutch held; press and release START/STOP once to stop it. For the final manual-transmission parked state, keep the clutch depressed and select first gear with the parking brake fully applied; do not leave it parked in Neutral. If the engine never started and only ignition ON is selected, first secure the automatic in Park or the manual in first with the clutch held, then release the brake and clutch pedals before pressing and releasing START/STOP once to switch OFF; this avoids making another start request. If already OFF, leave it OFF. Confirm ignition OFF and the parked gear/brake state before releasing any remaining held pedals and removing the key. The owner stationary-shutdown instruction is used here; the supporting workshop table has a conflicting held-press row, explicitly discussed in the linked ignition reference. If the running/ignition state or secure parked condition is uncertain, keep the foot brake held, stop the check and obtain assistance; do not guess by pressing the button again."
+        }
+      ]
+    },
+    {
+      "category": "If key programming is required",
+      "items": [
+        {
+          "name": "Prepare the key and scan tool",
+          "detail": "Before programming, make sure the passive key batteries measure at least 2.5 volts. A depleted key battery permits starting only in the backup location; RKE remains inoperative until that battery is replaced. Module security access requires a diagnostic scan tool with an active Internet connection; a hardwired connection is strongly recommended."
+        },
+        {
+          "name": "Use the complete programming reference",
+          "detail": "Use [Anti-Theft Key Programming — Scan Tool](#/document/G1672905), including its required Diagnostic Methods referral for establishing the vehicle session. It programs the PATS and RKE portions together and contains the conditional alarm-access sequence, security sign-in, confirmation and unsuccessful-start branches. Those operations are outside this system overview."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1694659-b00001",
+      "text": "How the system authorizes a start",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00002",
+      "text": "PATS System Diagram",
+      "why": "I trace the antenna-to-key exchange first, then follow the RTM, BCM and PCM paths. The drawing labels the network routes separately from the direct connections; it is a map of system relationships, not a connector-probing guide. The labeled drawing calls the interior antenna Front; the numbered legend and prose call it Center. Those labels remain a source disagreement, not proof of a physical antenna or pin identity."
+    },
+    {
+      "blockId": "G1694659-b00006",
+      "text": "Network Message Charts",
+      "why": "Read each chart by destination: the heading identifies the receiving module, while the rows identify the sender, message and purpose."
+    },
+    {
+      "blockId": "G1694659-b00007",
+      "text": "Messages Received by the BCM",
+      "why": "These inputs bring the BCM both the key information received by the RTM and the identification challenge sent by the PCM."
+    },
+    {
+      "blockId": "G1694659-b00009",
+      "text": "Messages Received by the IPC",
+      "why": "These messages connect the authorization process to what you see: the No Key Detected message and the instrument cluster powering up or down."
+    },
+    {
+      "blockId": "G1694659-b00011",
+      "text": "Messages Received by the PCM",
+      "why": "This chart identifies the BCM response that the PCM checks before PATS permits starting."
+    },
+    {
+      "blockId": "G1694659-b00013",
+      "text": "PATS Start Authorization",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00014",
+      "text": "The BCM and PCM jointly control PATS. Recognizing the key and authorizing the engine to start are linked parts of that process.",
+      "why": "I think of this as checking a guest's credentials at the door, then getting approval to open it. The button begins the request; the modules decide whether it is authorized."
+    },
+    {
+      "blockId": "G1694659-b00015",
+      "text": "Pressing START/STOP sends a voltage signal to the BCM. The BCM begins key initialization by activating the PATS center antenna, the keyless entry rear antenna and both exterior door handle keyless entry antennas. Each transmits a low frequency signal with an approximate range of 1 m (3 ft), activating a passive key within range. Using the antenna inputs, the BCM determines whether the key is inside or outside the vehicle.",
+      "why": "Location matters as well as identity: a recognized key outside the car serves a different purpose from one detected inside it."
+    },
+    {
+      "blockId": "G1694659-b00016",
+      "text": "Once activated, the passive key sends its PATS identification code to the radio transceiver module (RTM) using a high frequency signal. The RTM interprets the reply and passes the information to the BCM over the local interconnect network (LIN)-based circuit.",
+      "why": "The key answers by radio; the RTM then carries that information into the vehicle's wired communication system."
+    },
+    {
+      "blockId": "G1694659-b00017",
+      "text": "When the BCM detects a valid programmed passive key inside the vehicle, it changes the ignition from off to an active ignition mode.",
+      "why": "This is the key-recognition stage. Engine-start authorization also requires the module identification exchange described next."
+    },
+    {
+      "blockId": "G1694659-b00018",
+      "text": "After the ignition leaves off and the modules initialize, the PCM sends an identification challenge to the BCM. The BCM replies. If the PCM receives the correct identification, PATS disables its starting restriction and allows the vehicle to start. If PATS prevents starting, a DTC is stored in one of the modules.",
+      "why": "Here, PATS disabling means that the starting restriction is released for an authorized start. A stored trouble code records a detected condition and guides diagnosis; it does not by itself identify a part to replace."
+    },
+    {
+      "blockId": "G1694659-b00019",
+      "text": "PATS and remote keyless entry (RKE) share several components, including the passive keys, BCM and RTM.",
+      "why": "The key's starting and remote-entry jobs share hardware, so their behavior can provide related clues."
+    },
+    {
+      "blockId": "G1694659-b00020",
+      "text": "A concern involving any of these shared components affects both PATS and RKE.",
+      "why": "I consider starting and remote-entry symptoms together before drawing conclusions about the shared components."
+    },
+    {
+      "blockId": "G1694659-b00021",
+      "text": "For a no-start caused by failed normal key detection, the backup starting location gives the system another way to recognize a programmed passive key. The source calls its activating antenna the PATS center antenna; it can activate the key at the backup location even with depleted key batteries.",
+      "why": "Use the complete parked backup-slot sequence in the preparation notes, including the owner orientation and correct pedal input. Recognition at this location does not prove every starting-system component works, and it does not enroll an unprogrammed key."
+    },
+    {
+      "blockId": "G1694659-b00022",
+      "text": "NOTE: If the scan tool offers the selection, passive start can be enabled or disabled as a programmable parameter. Disabling it makes passive entry and passive starting inoperative. With that feature disabled, place the passive key in the backup starting location to start the vehicle.",
+      "why": "A configured-off feature can resemble a detection fault. Its setting changes how the key must be presented to the vehicle."
+    },
+    {
+      "blockId": "G1694659-b00023",
+      "text": "The BCM controls the ignition modes and works with the PCM to control PATS.",
+      "why": "The ignition mode describes the vehicle's operating state; PATS supplies the authorization needed to leave off."
+    },
+    {
+      "blockId": "G1694659-b00024",
+      "text": "For ignition states and the actions used to select them, refer to [Steering Wheel and Column Electrical Components — System Operation and Component Description](#/document/G1693266) (211-05 Steering Wheel and Column Electrical Components, Description and Operation).",
+      "why": "That reference explains the START/STOP inputs, transmission-dependent starting actions and ignition indicator behavior. The BCM operates the run/start relay and communicates ignition status to other modules."
+    },
+    {
+      "blockId": "G1694659-b00025",
+      "text": "PATS Parameter Identifications (PIDs)",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00026",
+      "text": "Use PATS Parameter Identifications (PIDs) alongside Diagnostic Trouble Codes (DTCs) when investigating a PATS concern. PIDs are named module data values read with a suitable scan tool; DTCs record conditions detected by module monitoring.",
+      "why": "I read the data and codes together: the data describes a module's reported state, while a code adds a clue about the condition it detected. Neither turns the chart into a complete diagnostic test."
+    },
+    {
+      "blockId": "G1694659-b00027",
+      "text": "BCM PID Chart",
+      "why": "Use the descriptions to distinguish the reported programmed-key count from the minimum-key requirement. Keep each value tied to its named PID."
+    },
+    {
+      "blockId": "G1694659-b00029",
+      "text": "PCM PID Chart",
+      "why": "The listed status reports whether PATS permits vehicle operation. Read the required state in the chart without confusing it with the separate wording that describes release of the starting restriction."
+    },
+    {
+      "blockId": "G1694659-b00031",
+      "text": "Using Backup Starting",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00032",
+      "text": "NOTE: A passive key can be inside the cabin yet remain undetected near its outer edges, such as in a door map pocket or above a sun visor. If No Key Detected appears with the key in one of those areas, move it to another location and try turning the ignition on again.",
+      "why": "Being physically inside the car does not guarantee useful antenna coverage at every storage spot. Repositioning the key checks that simple possibility."
+    },
+    {
+      "blockId": "G1694659-b00033",
+      "text": "When a PATS detection condition occurs, pressing START/STOP brings up No Key Detected in the message center.",
+      "why": "Read the message as a report about key detection. The location, interference and backup-start checks below help interpret it."
+    },
+    {
+      "blockId": "G1694659-b00034",
+      "text": "For the described detection failures, place the programmed passive key in the floor-console rear cup-holder backup slot using the correct owner orientation. With the stationary starting prerequisites met, press START/STOP with the pedal input for your transmission. The source describes the PATS center antenna activating the key and sending its identification code to the BCM so starting can be authorized.",
+      "why": "Lift out the rubber cup-holder covering, then place the remote with buttons facing up and keyring toward the front of the vehicle, as specified by the owner manual. Keep it positioned there for the request. Follow the complete preparation and final OFF/parked sequence above; the workshop figure is a location aid, not a substitute for the owner orientation."
+    },
+    {
+      "blockId": "G1694659-b00035",
+      "text": "Passive Key Backup Location: Floor Console Rear Cup Holder",
+      "why": "The source illustration locates the rear cup-holder backup recess with its covering lifted. Use the owner text for button-face and keyring orientation, rather than guessing from the perspective view."
+    },
+    {
+      "blockId": "G1694659-b00037",
+      "text": "Understanding No Key Detected",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00038",
+      "text": "NOTE: Some mobile phone or laptop computer chargers can interfere with PATS when the passive key is close to the charger. If a detection concern occurs, move the key away from the charger and try turning the ignition on again.",
+      "why": "I separate the key from a nearby charger before treating a detection complaint as a failed component. Radio interference can interrupt the conversation without changing which key is programmed."
+    },
+    {
+      "blockId": "G1694659-b00039",
+      "text": "No Key Detected appears in the message center in 2 scenarios: when a starting request cannot find the key, and when the key leaves a vehicle whose ignition is already on.",
+      "why": "The ignition state helps distinguish a refused starting request from a warning that the key has left an operating car."
+    },
+    {
+      "blockId": "G1694659-b00040",
+      "text": "The first scenario begins with the ignition off: START/STOP is pressed, but no programmed passive key is detected inside the vehicle. If a component failure, such as a depleted passive key battery, causes the message, use the backup starting method.",
+      "why": "Backup starting presents the programmed key at its dedicated recognition location."
+    },
+    {
+      "blockId": "G1694659-b00041",
+      "text": "The second scenario occurs with the ignition on: the driver leaves the vehicle carrying the programmed passive key and closes the door.",
+      "why": "Here, the message warns that the operating vehicle and its key have become separated."
+    },
+    {
+      "blockId": "G1694659-b00042",
+      "text": "With the ignition on, the BCM searches for a passive key whenever a door is opened and then closed, and the first time during each drive cycle that vehicle speed exceeds 15 km/h (9 mph). It activates the PATS center antenna, keyless entry rear antenna and both exterior door handle keyless entry antennas. If no passive key is detected inside, the message center displays No Key Detected and the horn chirps twice.",
+      "why": "These searches provide reminders after a door event and early in the drive. The message and horn report the missing key; they do not mean the engine has been shut down."
+    },
+    {
+      "blockId": "G1694659-b00043",
+      "text": "This strategy discourages separating the passive key from an already running vehicle. If the key leaves, the ignition stays on and the vehicle continues operating. After START/STOP is pressed to turn the ignition off, it can be restarted without a passive key inside for approximately 20 seconds. Once 20 seconds have elapsed, a passive key must be present to move the ignition out of off.",
+      "why": "The brief restart allowance explains why an immediate restart can succeed after the key has left. Keep track of the key rather than treating that allowance as normal keyless operation."
+    },
+    {
+      "blockId": "G1694659-b00044",
+      "text": "Meet the components",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00045",
+      "text": "The Passive Key",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00046",
+      "text": "The passive key combines the PATS function and RKE transmitter in one device. For normal operation, it must be inside the vehicle to move the ignition out of off and outside for keyless entry features. Programming registers both functions in the BCM, using the passive key backup starting location. The vehicle accepts up to 4 programmed passive keys.",
+      "why": "One key carries both jobs, and programming enrolls them together. For the actual enrollment process, use [Anti-Theft Key Programming — Scan Tool](#/document/G1672905); placing a key in the backup location alone does not complete programming."
+    },
+    {
+      "blockId": "G1694659-b00047",
+      "text": "The passive key receives low frequency signals from the PATS center antenna and keyless entry rear antenna. When either signal activates it, the key transmits a high frequency reply to the RTM. It also contains a removable key blade for unlocking the driver door during an electrical failure, such as a drained battery.",
+      "why": "The radio exchange handles electronic recognition, while the removable blade provides mechanical access. Unlocking the door and authorizing a start remain separate functions."
+    },
+    {
+      "blockId": "G1694659-b00048",
+      "text": "PATS Center Antenna",
+      "why": "Center is the name used by this operating prose and numbered legend. The labeled system drawing instead says Front; that naming inconsistency remains unresolved for physical component selection."
+    },
+    {
+      "blockId": "G1694659-b00049",
+      "text": "NOTE: Some mobile phone or laptop computer chargers can interfere with PATS if the passive key is within a few inches of the charger, causing No Key Detected to appear. If this occurs, move the key away from the charger and try turning the ignition on again.",
+      "why": "This is a useful placement check before interpreting the message as evidence of an antenna fault."
+    },
+    {
+      "blockId": "G1694659-b00050",
+      "text": "The PATS center antenna is wired to the BCM. When the BCM activates it, the antenna transmits a low frequency signal to activate a passive key. It also detects a key in the backup starting location, which is used for key programming and for recognizing a programmed key whose battery has failed.",
+      "why": "This antenna serves both ordinary detection and the dedicated backup location. A successful backup start explains how the car can recognize the key even when its usual battery-powered operation is unavailable."
+    },
+    {
+      "blockId": "G1694659-b00051",
+      "text": "When activated, the PATS center antenna transmits a low frequency signal with an approximate range of 1 m (3 ft). A valid programmed passive key must be within range for PATS to recognize it and allow the ignition to leave off.",
+      "why": "Treat this as an approximate detection range, not a guaranteed boundary around every interior storage space."
+    },
+    {
+      "blockId": "G1694659-b00052",
+      "text": "A key stored near the cabin's outer edges, such as above a sun visor or in a door map pocket, can cause a PATS detection concern. Move it out of that area and try turning the ignition on again. If the key is outside the range of both the PATS center antenna and keyless entry rear antenna when START/STOP is pressed, the message center displays No Key Detected.",
+      "why": "Moving the key tests whether its storage position is preventing detection. It gives the antennas another chance to hear the same programmed key."
+    },
+    {
+      "blockId": "G1694659-b00053",
+      "text": "Keyless Entry Rear Antenna",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00054",
+      "text": "NOTE: Some mobile phone or laptop computer chargers can interfere with PATS if the passive key is within a few inches of the charger, causing No Key Detected to appear. Move the key away from the charger and try turning the ignition on again if this concern occurs.",
+      "why": "The rear antenna's detection can be affected by the same nearby interference, so key placement remains a useful first check."
+    },
+    {
+      "blockId": "G1694659-b00055",
+      "text": "The keyless entry rear antenna is wired to the BCM. When the BCM activates it, the antenna transmits a low frequency signal that activates a passive key.",
+      "why": "The antenna sends the wake-up signal; the key's high frequency reply is received by the RTM."
+    },
+    {
+      "blockId": "G1694659-b00056",
+      "text": "When activated, the keyless entry rear antenna transmits a low frequency signal with an approximate range of 1 m (3 ft). A programmed passive key must be within range for PATS to recognize it and allow the ignition to leave off.",
+      "why": "The rear antenna extends detection coverage, but placement still matters at the edges of the interior."
+    },
+    {
+      "blockId": "G1694659-b00057",
+      "text": "A key at the far edges of the interior, including the far corners of the luggage compartment, can cause a PATS detection concern. Move it out of that area and try turning the ignition on again. If it is outside the range of both the keyless entry rear antenna and PATS center antenna when START/STOP is pressed, No Key Detected appears in the message center.",
+      "why": "A key tucked into a luggage-compartment corner can be present yet unheard. Repositioning it checks coverage before you draw a fault conclusion."
+    },
+    {
+      "blockId": "G1694659-b00058",
+      "text": "Exterior Front Door Handle Antennas",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00059",
+      "text": "Each exterior front door handle contains a keyless entry antenna wired to the BCM. When activated by the BCM, each antenna sends a low frequency signal with an approximate range of 1 m (3 ft) to activate a passive key.",
+      "why": "These exterior antennas participate in the key-location process, helping the BCM distinguish an outside key from one inside the vehicle."
+    },
+    {
+      "blockId": "G1694659-b00060",
+      "text": "A key near the outer edges of the interior, including a far luggage-compartment corner, can cause a detection concern. Move it out of that area and retry ignition ON using the stationary controls above. If the BCM determines that the key is outside the vehicle, or the key is outside the range of the door-handle, rear and center antennas when START/STOP is pressed, No Key Detected appears.",
+      "why": "A simple placement retry tests whether the same programmed key can be heard at another location. It does not establish which antenna or circuit is faulty."
+    },
+    {
+      "blockId": "G1694659-b00061",
+      "text": "BCM Replacement Requirements",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00062",
+      "text": "Replacing the BCM requires programming at least 2 keys and performing the parameter-reset procedure.",
+      "why": "The key enrollment and module relationship must both be established. This component overview identifies that requirement; use the complete matched programming procedure rather than treating a backup start as enrollment."
+    },
+    {
+      "blockId": "G1694659-b00063",
+      "text": "Programmable module installation (PMI) is required when the BCM is replaced.",
+      "why": "Replacing the hardware is only part of that repair. PMI is a separate required service operation, outside this overview."
+    },
+    {
+      "blockId": "G1694659-b00064",
+      "text": "PCM Replacement Requirements",
+      "why": ""
+    },
+    {
+      "blockId": "G1694659-b00065",
+      "text": "When replacing the PCM, perform the parameter-reset procedure. The source does not require programming the keys again for this PCM replacement.",
+      "why": "Keep this separate from the BCM replacement branch: their key-programming requirements differ."
+    },
+    {
+      "blockId": "G1694659-b00066",
+      "text": "Programmable module installation (PMI) is required when the PCM is replaced.",
+      "why": "The parameter reset does not replace PMI. Both requirements belong to the complete matched replacement workflow."
+    }
+  ],
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1693266",
+      "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535",
+      "referencedBy": "G1694659",
+      "sourceReference": "G1693266",
+      "sourceUnitCount": 107,
+      "mediaCount": 4
+    },
+    {
+      "documentId": "G1672905",
+      "sourceHash": "3cfe468c7d29c970a5d7a5afdf77481ae308d2f641201fa735458a4279e7089a",
+      "referencedBy": "G1693266",
+      "sourceReference": "G1672905",
+      "sourceUnitCount": 42,
+      "mediaCount": 0
+    }
+  ],
+  "checkedAt": "2026-10-28T21:48:47.479Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 57,
+    "receivedBlocks": 57,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "fe09d3cde3fc2a3e48a50536ba9b9ff98488f46ec77308a5fc379f94ec179a8c",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 149,
+    "sourceUnitCount": 94,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 2,
+    "fingerprint": "308c6f7546d8194baebb45dafa2d165e324e8f4f3afa87347d9efb3329068f31",
+    "reviewedAt": "2026-10-28T21:48:29.016Z",
+    "coveredUnitIds": [
+      "G1694659:u1",
+      "G1694659:u2",
+      "G1694659:u3",
+      "G1694659:u4",
+      "G1694659:u5",
+      "G1694659:u6",
+      "G1694659:u7",
+      "G1694659:u8",
+      "G1694659:u9",
+      "G1694659:u10",
+      "G1694659:u11",
+      "G1694659:u12",
+      "G1694659:u13",
+      "G1694659:u14",
+      "G1694659:u15",
+      "G1694659:u16",
+      "G1694659:u17",
+      "G1694659:u18",
+      "G1694659:u19",
+      "G1694659:u20",
+      "G1694659:u21",
+      "G1694659:u22",
+      "G1694659:u23",
+      "G1694659:u24",
+      "G1694659:u25",
+      "G1694659:u26",
+      "G1694659:u27",
+      "G1694659:u28",
+      "G1694659:u29",
+      "G1694659:u30",
+      "G1694659:u31",
+      "G1694659:u32",
+      "G1694659:u33",
+      "G1694659:u34",
+      "G1694659:u35",
+      "G1694659:u36",
+      "G1694659:u37",
+      "G1694659:u38",
+      "G1694659:u39",
+      "G1694659:u40",
+      "G1694659:u41",
+      "G1694659:u42",
+      "G1694659:u43",
+      "G1694659:u44",
+      "G1694659:u45",
+      "G1694659:u46",
+      "G1694659:u47",
+      "G1694659:u48",
+      "G1694659:u49",
+      "G1694659:u50",
+      "G1694659:u51",
+      "G1694659:u52",
+      "G1694659:u53",
+      "G1694659:u54",
+      "G1694659:u55",
+      "G1694659:u56",
+      "G1694659:u57",
+      "G1694659:u58",
+      "G1694659:u59",
+      "G1694659:u60",
+      "G1694659:u61",
+      "G1694659:u62",
+      "G1694659:u63",
+      "G1694659:u64",
+      "G1694659:u65",
+      "G1694659:u66",
+      "G1694659:u67",
+      "G1694659:u68",
+      "G1694659:u69",
+      "G1694659:u70",
+      "G1694659:u71",
+      "G1694659:u72",
+      "G1694659:u73",
+      "G1694659:u74",
+      "G1694659:u75",
+      "G1694659:u76",
+      "G1694659:u77",
+      "G1694659:u78",
+      "G1694659:u79",
+      "G1694659:u80",
+      "G1694659:u81",
+      "G1694659:u82",
+      "G1694659:u83",
+      "G1694659:u84",
+      "G1694659:u85",
+      "G1694659:u86",
+      "G1694659:u87",
+      "G1694659:u88",
+      "G1694659:u89",
+      "G1694659:u90",
+      "G1694659:u91",
+      "G1694659:u92",
+      "G1694659:u93",
+      "G1694659:u94",
+      "G1693266:u1",
+      "G1693266:u2",
+      "G1693266:u3",
+      "G1693266:u4",
+      "G1693266:u5",
+      "G1693266:u6",
+      "G1693266:u7",
+      "G1693266:u8",
+      "G1693266:u9",
+      "G1693266:u10",
+      "G1693266:u11",
+      "G1693266:u12",
+      "G1693266:u13",
+      "G1693266:u14",
+      "G1693266:u15",
+      "G1693266:u16",
+      "G1693266:u17",
+      "G1693266:u18",
+      "G1693266:u19",
+      "G1693266:u20",
+      "G1693266:u21",
+      "G1693266:u22",
+      "G1693266:u23",
+      "G1693266:u24",
+      "G1693266:u25",
+      "G1693266:u26",
+      "G1693266:u27",
+      "G1693266:u28",
+      "G1693266:u29",
+      "G1693266:u30",
+      "G1693266:u31",
+      "G1693266:u32",
+      "G1693266:u33",
+      "G1693266:u34",
+      "G1693266:u35",
+      "G1693266:u36",
+      "G1693266:u37",
+      "G1693266:u38",
+      "G1693266:u39",
+      "G1693266:u40",
+      "G1693266:u41",
+      "G1693266:u42",
+      "G1693266:u43",
+      "G1693266:u44",
+      "G1693266:u45",
+      "G1693266:u46",
+      "G1693266:u47",
+      "G1693266:u48",
+      "G1693266:u49",
+      "G1693266:u50",
+      "G1693266:u51",
+      "G1693266:u52",
+      "G1693266:u53",
+      "G1693266:u54",
+      "G1693266:u55",
+      "G1693266:u56",
+      "G1693266:u57",
+      "G1693266:u58",
+      "G1693266:u59",
+      "G1693266:u60",
+      "G1693266:u61",
+      "G1693266:u62",
+      "G1693266:u63",
+      "G1693266:u64",
+      "G1693266:u65",
+      "G1693266:u66",
+      "G1693266:u67",
+      "G1693266:u68",
+      "G1693266:u69",
+      "G1693266:u70",
+      "G1693266:u71",
+      "G1693266:u72",
+      "G1693266:u73",
+      "G1693266:u74",
+      "G1693266:u75",
+      "G1693266:u76",
+      "G1693266:u77",
+      "G1693266:u78",
+      "G1693266:u79",
+      "G1693266:u80",
+      "G1693266:u81",
+      "G1693266:u82",
+      "G1693266:u83",
+      "G1693266:u84",
+      "G1693266:u85",
+      "G1693266:u86",
+      "G1693266:u87",
+      "G1693266:u88",
+      "G1693266:u89",
+      "G1693266:u90",
+      "G1693266:u91",
+      "G1693266:u92",
+      "G1693266:u93",
+      "G1693266:u94",
+      "G1693266:u95",
+      "G1693266:u96",
+      "G1693266:u97",
+      "G1693266:u98",
+      "G1693266:u99",
+      "G1693266:u100",
+      "G1693266:u101",
+      "G1693266:u102",
+      "G1693266:u103",
+      "G1693266:u104",
+      "G1693266:u105",
+      "G1693266:u106",
+      "G1693266:u107",
+      "G1672905:u1",
+      "G1672905:u2",
+      "G1672905:u3",
+      "G1672905:u4",
+      "G1672905:u5",
+      "G1672905:u6",
+      "G1672905:u7",
+      "G1672905:u8",
+      "G1672905:u9",
+      "G1672905:u10",
+      "G1672905:u11",
+      "G1672905:u12",
+      "G1672905:u13",
+      "G1672905:u14",
+      "G1672905:u15",
+      "G1672905:u16",
+      "G1672905:u17",
+      "G1672905:u18",
+      "G1672905:u19",
+      "G1672905:u20",
+      "G1672905:u21",
+      "G1672905:u22",
+      "G1672905:u23",
+      "G1672905:u24",
+      "G1672905:u25",
+      "G1672905:u26",
+      "G1672905:u27",
+      "G1672905:u28",
+      "G1672905:u29",
+      "G1672905:u30",
+      "G1672905:u31",
+      "G1672905:u32",
+      "G1672905:u33",
+      "G1672905:u34",
+      "G1672905:u35",
+      "G1672905:u36",
+      "G1672905:u37",
+      "G1672905:u38",
+      "G1672905:u39",
+      "G1672905:u40",
+      "G1672905:u41",
+      "G1672905:u42"
+    ],
+    "originalAuthorHold": [
+      "The system drawing labels the lower interior antenna “PATS Front Antenna,” while the numbered legend and operating prose call it “PATS Center Antenna.” Confirm whether these names identify the same antenna before publishing; the draft retains the terminology of each original block and leaves the illustration and table unchanged."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "PATS system reference and ordinary owner-supported stationary detection/backup-start check only. Front/Center physical identity remains unresolved; no component selection, probing, programming or module-replacement clearance.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "30236f5e2f02ae9489fc95b6d6e38408b5f3d82632cb57cc8983950d1aa91f9c"
+    },
+    "supplementalEvidence": {
+      "path": "owner-source.json",
+      "sha256": "7b5013506a0cdf989fb0cf933738756b4e3a2cd3e0d5aff46a4fde93a91c779f",
+      "scope": "Complete matching owner printed121–124 and135 plus original full renders; actual backup orientation and stationary parked controls, explicit unresolved Front/Center source identity. No expanded numeric trust."
+    }
+  }
+}

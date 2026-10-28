@@ -1,0 +1,648 @@
+{
+  "documentId": "G1693266",
+  "sourceHash": "82d86144db2c0196cc4daa2cdfcf6db205e42871f3cc6797d7ae9682d4ea8535",
+  "title": "Push-Button Ignition and Steering Column Lock",
+  "introduction": "That little START/STOP button has a surprisingly busy committee behind it. The button requests an ignition change, the body control module (BCM) manages ignition power, and the passive anti-theft system (PATS) checks the key and authorizes starting. Where fitted, the steering column lock adds a separate mechanical gate to that electronic permission system.\n\nI start with each labeled drawing, then use its numbered companion and matching legend to identify the components. Follow the button connections from the front controls interface module (FCIM) to the BCM and powertrain control module (PCM). In the steering-lock drawing, distinguish the relay power path from the local interconnect network (LIN) communication path. The gateway module A (GWM) connects the network paths shown.\n\nThis overview explains requests, permissions, indicator behavior and steering-lock messages. The tables retain the operating conditions and message details. These are system diagrams, not connector pinouts or electrical test instructions; component removal, fault isolation and programming require their matching procedures.\n\nThere is a real wording mismatch in the workshop shutdown table: its running-engine row calls for a held press, while the adjacent prose describes a single press and release. I keep that discrepancy visible and use the matching owner manual to explain stationary operation separately from emergency shutdown while moving. This is an editorial comparison of the publications, not an official correction from Ford.",
+  "requirements": [
+    {
+      "category": "Read the controls in their actual operating state",
+      "items": [
+        {
+          "name": "Stationary ignition controls",
+          "detail": "For ordinary controls, keep the vehicle stationary with the parking brake applied and a valid key inside. The matching owner manual describes ON without starting as a button press and release without applying the brake pedal; keep the clutch released too on a manual-transmission car so this is not a start request. Select ON only from confirmed OFF; if already ON, retain ON. From confirmed ON with the engine stopped, press and release once to switch OFF; if already OFF, leave it OFF. For stopping a running engine while stationary, the owner procedure selects Park for automatic transmission or Neutral for manual transmission, presses the button once, then applies the parking brake. See [Starting and Stopping the Engine — owner controls](https://www.fordservicecontent.com/Ford_Content/Catalog/owner_information/2015-Mustang-Owners-Manual-version-1_om_EN-US_07_2014.pdf)."
+        },
+        {
+          "name": "Moving shutdown is not an experiment",
+          "detail": "The owner manual warns that switching the engine off while moving removes brake and steering assistance, increases the effort required, and may turn off electrical circuits including airbags, warning lamps and indicators. Its moving-shutdown procedure first brings the vehicle to a safe stop using the brakes with Neutral selected, then selects Park on an automatic or Neutral on a manual before the held or repeated button action and parking-brake application. Read that complete owner procedure rather than trying the workshop timing description as a driving test. This overview does not diagnose a shutdown concern."
+        }
+      ]
+    },
+    {
+      "category": "Before interpreting a key-detection concern",
+      "items": [
+        {
+          "name": "Key position and interference",
+          "detail": "For normal passive starting, keep a valid programmed passive key inside the vehicle. If No Key Detected appears, move the key away from a door map pocket, above a sun visor or the far corners of the luggage compartment. Move it away from nearby phone or laptop chargers as well, then try switching the ignition on again. These locations and interference can affect detection. See [Passive Anti-Theft System (PATS) — System Operation and Component Description](#/document/G1694659)."
+        },
+        {
+          "name": "Backup starting and passive-start configuration",
+          "detail": "A depleted passive-key battery can require backup starting. If passive start has been disabled through an available scan-tool parameter, passive entry and passive starting are inoperative, and the key must use the backup starting location. The linked PATS reference identifies the floor-console rear cup holder; consult Owner Literature for the required key orientation before attempting backup starting or programming. A depleted key battery also leaves RKE inoperative until that battery is replaced."
+        }
+      ]
+    },
+    {
+      "category": "Preparation for required lock-module configuration",
+      "items": [
+        {
+          "name": "Complete programming reference",
+          "detail": "If the steering column lock module is replaced, the required BCM configuration/training uses [Anti-Theft Key Programming — Scan Tool](#/document/G1672905). Use that complete procedure, including its applicable security-access branches. Establishing the diagnostic scan-tool session also requires its referral to [Diagnostic Methods](#/document/G1693185), under 100-00 General Information, Description and Operation. This overview does not replace those procedures."
+        },
+        {
+          "name": "Scan tool and security access",
+          "detail": "Module security access requires a diagnostic scan tool with an active Internet connection; a hardwired connection is strongly recommended. Have valid credentials for the applicable Dealership or Aftermarket access choice. If the no-valid-key alarm branch applies, keep the scan tool from entering power-saving mode and keep the technician service-publication website session active throughout its timed access process."
+        },
+        {
+          "name": "Passive keys, if the selected procedure programs them",
+          "detail": "Before programming, make sure each passive-key battery measures at least 2.5 volts. The RKE transmitter and PATS portions are programmed together. Place the passive key in the backup starting location with the orientation required by Owner Literature. The complete programming procedure supplies the success indications, start verification and retry branches."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "G1693266-b00001",
+      "text": "How the System Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00002",
+      "text": "Push-Button Ignition System Diagram",
+      "why": "Follow the START/STOP button output toward the BCM and PCM, then the BCM-controlled return to the ignition mode indicator. The run/start relay is shown inside the BCM. Match the numbered companion drawing to its own legend."
+    },
+    {
+      "blockId": "G1693266-b00006",
+      "text": "Push-Button Ignition Network Messages",
+      "why": "Read these charts by receiving module, then use the originating-module and purpose columns to understand what information arrives."
+    },
+    {
+      "blockId": "G1693266-b00007",
+      "text": "GWM Network Input Messages",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00009",
+      "text": "PCM Network Input Messages",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00011",
+      "text": "How the Push-Button Ignition Switch Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00012",
+      "text": "The push-button ignition switch lets you request a change in the vehicle's ignition mode.",
+      "why": "The button sends a request into the control system; key recognition and the applicable operating conditions determine whether that request can proceed."
+    },
+    {
+      "blockId": "G1693266-b00013",
+      "text": "The BCM monitors 2 ignition-switch circuits: one for voltage and the other for a ground signal. Pressing START/STOP sends battery voltage to the BCM through one circuit while grounding the voltage signal supplied by the BCM on the other. Together, those signals request an ignition-state change. Under normal PATS operation, leaving OFF requires the BCM to recognize a valid programmed key. See [Passive Anti-Theft System (PATS) — System Operation and Component Description](#/document/G1694659), under 419-01B Passive Anti-Theft System (PATS), Description and Operation.",
+      "why": "The paired signals report the button press, while PATS supplies authorization. The linked description follows the key's response through the radio receiver to the BCM, then explains the PCM's identification challenge before starting is allowed."
+    },
+    {
+      "blockId": "G1693266-b00014",
+      "text": "Read the following table by current ignition condition and desired mode, including its transmission-specific pedal condition. Its engine-running OFF row conflicts with the single-press wording in the following paragraph; read the owner-manual comparison below before treating that row as an operating instruction.",
+      "why": "The table is retained as source evidence. A running engine and a moving vehicle are different conditions; the owner manual separates stationary shutdown from its moving-shutdown warning and procedure."
+    },
+    {
+      "blockId": "G1693266-b00016",
+      "text": "Ignition Mode LED Indicator",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00017",
+      "text": "The ignition mode LED shows the vehicle's ignition mode. The BCM controls the voltage supplied to this indicator. Compare its behavior with the corresponding ignition condition in the following table.",
+      "why": "I read this light as a mode indicator. It does not, by itself, verify every condition needed for the engine to start."
+    },
+    {
+      "blockId": "G1693266-b00019",
+      "text": "OFF",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00020",
+      "text": "The BCM controls the relays that supply voltage to the vehicle's electrical systems. From ON mode, a single press and release of START/STOP changes the ignition to OFF. A programmed key is not required to switch the ignition to OFF while the vehicle is running.",
+      "why": "The workshop table above calls for a held press when the engine is running, while this paragraph describes a single press and release. The matching owner manual explicitly gives a single press for stationary shutdown, with the automatic selector in Park or manual selector in Neutral and the parking brake applied afterward. I use that documented stationary distinction here without pretending the workshop publications agree. The moving-shutdown warning and complete owner sequence in the preparation notes remain separate."
+    },
+    {
+      "blockId": "G1693266-b00021",
+      "text": "The workshop describes a moving-vehicle safeguard: a momentary START/STOP press does not shut the vehicle off. Its stated condition above 15 km/h (9 mph) requires a hold longer than one second or 3 presses within 2 seconds to switch the ignition off.",
+      "why": "This explains the workshop control strategy, not a road-test instruction. The owner manual warns of lost brake and steering assistance and potentially disabled electrical safety systems, and gives a complete safe-stop sequence before its held or repeated button action. Keep that warning and sequence together; do not experiment with this timing while driving."
+    },
+    {
+      "blockId": "G1693266-b00022",
+      "text": "After changing the ignition state to OFF, the BCM sends an ignition-status message over the CAN so the other modules know the selected mode.",
+      "why": "The controller area network carries the status announcement; changing relay power and communicating that change are separate parts of the BCM's job."
+    },
+    {
+      "blockId": "G1693266-b00023",
+      "text": "ON",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00024",
+      "text": "For a normal transition out of OFF, the BCM must recognize a programmed key. Pressing START/STOP with the ignition off prompts the BCM to search for a valid programmed key as part of PATS. If it detects no valid programmed key, the ignition stays off. See [Passive Anti-Theft System (PATS) — System Operation and Component Description](#/document/G1694659), under 419-01B Passive Anti-Theft System (PATS), Description and Operation.",
+      "why": "The linked PATS description also explains a brief restart grace period after an already-running vehicle loses key presence and is switched off. That separate restart strategy qualifies the normal key-presence rule; it is not evidence that an unrecognized key can authorize an ordinary start."
+    },
+    {
+      "blockId": "G1693266-b00025",
+      "text": "In ON mode, the BCM activates the run/start relay to supply voltage to the vehicle's electrical systems. It also broadcasts the ignition mode to the other modules through an ignition-status message over the CAN.",
+      "why": "The relay switches electrical power, while the network message tells other modules which operating state has been selected."
+    },
+    {
+      "blockId": "G1693266-b00026",
+      "text": "When the vehicle enters ON mode, several indicators in the IPC illuminate for their prove-out check. The IPC also displays the selected gear and vehicle mileage.",
+      "why": "The instrument panel cluster's initial indicator display is a check of those indicators, so their brief appearance during this transition is expected."
+    },
+    {
+      "blockId": "G1693266-b00027",
+      "text": "START",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00028",
+      "text": "With the ignition off, pressing START/STOP while applying the brake pedal temporarily selects START, provided a valid programmed key is detected inside the vehicle.",
+      "why": "This is the automatic-transmission pedal branch. For a manual-transmission vehicle, use the clutch requirement retained in the ignition-state table."
+    },
+    {
+      "blockId": "G1693266-b00029",
+      "text": "During the start request, the BCM activates the run/start relay and sends an ignition-status message over the CAN to inform the other modules of the ignition mode.",
+      "why": "Starting involves both supplying electrical power and coordinating the modules that need to know the requested state."
+    },
+    {
+      "blockId": "G1693266-b00030",
+      "text": "Once the ignition enters START mode, the ignition mode indicator in the ignition switch illuminates.",
+      "why": "This is the visible indication of entering START; it is not a separate confirmation that the engine has begun running."
+    },
+    {
+      "blockId": "G1693266-b00031",
+      "text": "The engine can be started from any ignition mode, subject to the applicable pedal and key-authorization conditions described above.",
+      "why": "The current mode does not remove the other starting requirements."
+    },
+    {
+      "blockId": "G1693266-b00032",
+      "text": "Steering Column Lock System Diagram",
+      "why": "Trace the BCM's relay-control path through the BJB to the lock module separately from its LIN communication link. The PCM and ABS module supply operating information through the network paths shown. Use this drawing's own numbered legend."
+    },
+    {
+      "blockId": "G1693266-b00036",
+      "text": "Steering Column Lock Network Messages",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00037",
+      "text": "BCM Network Input Messages",
+      "why": "The sender and purpose columns explain how the BCM learns whether the engine is running and whether the vehicle is moving."
+    },
+    {
+      "blockId": "G1693266-b00039",
+      "text": "How the Steering Column Lock Works",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00040",
+      "text": "The electronically operated steering column lock deters theft by securing the steering column. With the lock engaged, the steering wheel cannot be rotated to turn the front wheels.",
+      "why": "This component secures the mechanical steering path. Its theft-deterrent job is separate from providing power-steering assistance."
+    },
+    {
+      "blockId": "G1693266-b00041",
+      "text": "The steering column unlocks in response to any of the following events:",
+      "why": "These are alternative unlock triggers, not a sequence to perform."
+    },
+    {
+      "blockId": "G1693266-b00043",
+      "text": "You use passive entry to open the driver door.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00045",
+      "text": "You open the driver door after unlocking the vehicle with an RKE transmitter.",
+      "why": "RKE means remote keyless entry."
+    },
+    {
+      "blockId": "G1693266-b00047",
+      "text": "You press START/STOP and the system detects a valid programmed passive key.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00049",
+      "text": "The remote start feature is activated.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00051",
+      "text": "The steering column locks after either of the following shutdown delays:",
+      "why": "Notice which event starts the delay; switching the ignition off and ending delayed accessory operation are distinct events."
+    },
+    {
+      "blockId": "G1693266-b00053",
+      "text": "The ignition is off and 45 seconds have passed since the delayed accessory feature switched off.",
+      "why": "The delay is measured from the end of delayed accessory operation."
+    },
+    {
+      "blockId": "G1693266-b00055",
+      "text": "45 seconds have passed since the remote feature switched the vehicle off.",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00057",
+      "text": "The BCM controls the steering column lock module's voltage supply through a relay in the BJB and exchanges commands with the module over a LIN. Using inputs from other systems, the BCM decides when to request locking or unlocking. The steering column lock module then moves the lock as commanded.",
+      "why": "The battery junction box contains the relay shown in the power path. Power availability and communication are separate requirements: the relay supplies voltage, while the network carries the lock or unlock command."
+    },
+    {
+      "blockId": "G1693266-b00058",
+      "text": "If the BCM detects a fault from the steering column lock module or a fault on the LIN, it prevents the vehicle from starting.",
+      "why": "A no-start can therefore involve the lock system or its communication path; it is not automatically evidence of a faulty START/STOP button."
+    },
+    {
+      "blockId": "G1693266-b00059",
+      "text": "The BCM withholds power from the steering column lock module whenever the vehicle is moving or the engine is running.",
+      "why": "Either operating condition is enough to withhold the lock module's power."
+    },
+    {
+      "blockId": "G1693266-b00060",
+      "text": "Understanding Steering Column Lock Messages",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00061",
+      "text": "When the BCM detects a fault from the steering column lock module, the message center displays a message.",
+      "why": "Read the actual wording before deciding whether the next action is fault diagnosis or the load-relief action described below."
+    },
+    {
+      "blockId": "G1693266-b00062",
+      "text": "Steering Malfunction means a fault is present in the electronic steering column lock system and must be diagnosed.",
+      "why": "The message identifies the system needing investigation; it does not identify a replacement part. This overview does not supply the fault-isolation tests."
+    },
+    {
+      "blockId": "G1693266-b00063",
+      "text": "Turn the wheel while starting means the steering column lock module cannot release the lock because excessive turning load is pressing against it. This can happen when the front wheels rest against a curb after shutdown. Relieving that load allows the steering column to unlock.",
+      "why": "I picture a door bolt held tight by pressure against the door: the release mechanism needs the load taken off before it can slide free. Here, steering-wheel movement is used to unload the column lock."
+    },
+    {
+      "blockId": "G1693266-b00064",
+      "text": "Switch the vehicle off. Rotate and hold the steering wheel in one direction while switching the vehicle on. If the message appears again, switch the vehicle off, then rotate and hold the wheel in the opposite direction while switching the vehicle on.",
+      "why": "For this ordinary stationary retry, use the confirmed OFF/ON controls in the preparation notes with the parking brake applied and without a start-request pedal input. The opposite-direction retry addresses a lock still loaded after the initial attempt. Return the ignition to OFF when finished. This relieves mechanical pressure; it is not a diagnostic test of the lock module."
+    },
+    {
+      "blockId": "G1693266-b00065",
+      "text": "What the Components Do",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00066",
+      "text": "Push-Button Ignition Switch",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00067",
+      "text": "The push-button ignition switch is a momentary, dual-contact switch with direct inputs to the BCM and PCM. Both sets of contacts are normally open. Pressing START/STOP closes the contacts: one set provides a ground signal to the BCM, while the other supplies voltage to the BCM and PCM.",
+      "why": "The switch reports the button press through separate contact paths. The BCM's relay control handles the ignition-power function described earlier."
+    },
+    {
+      "blockId": "G1693266-b00068",
+      "text": "The ignition mode LED indicator sits near the top of the START/STOP button, and the BCM controls it.",
+      "why": "Its position lets you compare the button's indication with the ignition mode table."
+    },
+    {
+      "blockId": "G1693266-b00069",
+      "text": "The ignition switch is built into the FCIM and cannot be serviced separately.",
+      "why": "The service boundary is the front controls interface module assembly. This component description does not provide its removal or replacement procedure."
+    },
+    {
+      "blockId": "G1693266-b00070",
+      "text": "Steering Column Lock Module",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00071",
+      "text": "The steering column lock module locks or unlocks the column when commanded by the BCM. It also monitors the lock's position and reports a detected fault to the BCM.",
+      "why": "The module provides feedback as well as movement, allowing the BCM to respond when the lock system reports a problem."
+    },
+    {
+      "blockId": "G1693266-b00072",
+      "text": "After replacing the steering column lock module, the BCM must be configured/trained to the new module so the lock operates correctly.",
+      "why": "Configuration is a required part of completing the replacement. See [Anti-Theft Key Programming — Scan Tool](#/document/G1672905) for the required workflow and its security-access conditions; the preparation requirements above explain what to have ready."
+    },
+    {
+      "blockId": "G1693266-b00073",
+      "text": "A detected steering-column-lock fault sets a DTC in the BCM. If the BCM has not been configured to the lock module, the column stays locked, a programming or configuration DTC is recorded, and the vehicle does not start. The specified configuration reference is [Anti-Theft Key Programming — Scan Tool](#/document/G1672905), under 419-01B Passive Anti-Theft System (PATS), General Procedures.",
+      "why": "A physically installed module is not automatically a configured module. This explains why configuration matters; the linked procedure and its prerequisites are required before attempting that work."
+    },
+    {
+      "blockId": "G1693266-b00074",
+      "text": "What the Body Control Module Does",
+      "why": ""
+    },
+    {
+      "blockId": "G1693266-b00075",
+      "text": "The BCM controls the run/start relays, selects the ignition mode from its inputs and announces that mode to other modules over CAN. It stores DTCs when it detects an ignition-switch-system fault.",
+      "why": "Think of the BCM as coordinating the power switches and the status announcement. A stored fault is a starting point for the matching diagnostic procedure, not a shopping list for replacement modules."
+    },
+    {
+      "blockId": "G1693266-b00076",
+      "text": "Replacing the BCM requires at least 2 programmed keys, programmable module installation (PMI), and the parameter-reset procedure. If the vehicle has a steering column lock module, BCM-to-Electronic Steering Column Lock (ESCL) configuration is also required.",
+      "why": "These are separate completion requirements, including the equipment-dependent lock configuration. This overview identifies them; it does not provide a substitute programming, installation or configuration procedure."
+    }
+  ],
+  "supportingSourceRefs": [
+    {
+      "documentId": "G1694659",
+      "sourceHash": "9ab30af7befbca3e02007ed9af91179e0dd089d40fdaad8ce98955062f01704a",
+      "referencedBy": "G1693266",
+      "sourceReference": "G1694659",
+      "sourceUnitCount": 94,
+      "mediaCount": 3
+    },
+    {
+      "documentId": "G1672905",
+      "sourceHash": "3cfe468c7d29c970a5d7a5afdf77481ae308d2f641201fa735458a4279e7089a",
+      "referencedBy": "G1693266",
+      "sourceReference": "G1672905",
+      "sourceUnitCount": 42,
+      "mediaCount": 0
+    }
+  ],
+  "checkedAt": "2026-10-28T21:42:28.124Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 57,
+    "receivedBlocks": 57,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "38fed94519cbf5184deb65e1f78ce234e2fc64e0eb9c43be3f7c2a34a52b7bda",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 2,
+    "supportingSourceUnitCount": 136,
+    "sourceUnitCount": 107,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 2,
+    "fingerprint": "c74528258d93fbe98a07d5765eeff5255f78dfac7e0d93200779a24e899b2114",
+    "reviewedAt": "2026-10-28T21:41:27.810Z",
+    "coveredUnitIds": [
+      "G1693266:u1",
+      "G1693266:u2",
+      "G1693266:u3",
+      "G1693266:u4",
+      "G1693266:u5",
+      "G1693266:u6",
+      "G1693266:u7",
+      "G1693266:u8",
+      "G1693266:u9",
+      "G1693266:u10",
+      "G1693266:u11",
+      "G1693266:u12",
+      "G1693266:u13",
+      "G1693266:u14",
+      "G1693266:u15",
+      "G1693266:u16",
+      "G1693266:u17",
+      "G1693266:u18",
+      "G1693266:u19",
+      "G1693266:u20",
+      "G1693266:u21",
+      "G1693266:u22",
+      "G1693266:u23",
+      "G1693266:u24",
+      "G1693266:u25",
+      "G1693266:u26",
+      "G1693266:u27",
+      "G1693266:u28",
+      "G1693266:u29",
+      "G1693266:u30",
+      "G1693266:u31",
+      "G1693266:u32",
+      "G1693266:u33",
+      "G1693266:u34",
+      "G1693266:u35",
+      "G1693266:u36",
+      "G1693266:u37",
+      "G1693266:u38",
+      "G1693266:u39",
+      "G1693266:u40",
+      "G1693266:u41",
+      "G1693266:u42",
+      "G1693266:u43",
+      "G1693266:u44",
+      "G1693266:u45",
+      "G1693266:u46",
+      "G1693266:u47",
+      "G1693266:u48",
+      "G1693266:u49",
+      "G1693266:u50",
+      "G1693266:u51",
+      "G1693266:u52",
+      "G1693266:u53",
+      "G1693266:u54",
+      "G1693266:u55",
+      "G1693266:u56",
+      "G1693266:u57",
+      "G1693266:u58",
+      "G1693266:u59",
+      "G1693266:u60",
+      "G1693266:u61",
+      "G1693266:u62",
+      "G1693266:u63",
+      "G1693266:u64",
+      "G1693266:u65",
+      "G1693266:u66",
+      "G1693266:u67",
+      "G1693266:u68",
+      "G1693266:u69",
+      "G1693266:u70",
+      "G1693266:u71",
+      "G1693266:u72",
+      "G1693266:u73",
+      "G1693266:u74",
+      "G1693266:u75",
+      "G1693266:u76",
+      "G1693266:u77",
+      "G1693266:u78",
+      "G1693266:u79",
+      "G1693266:u80",
+      "G1693266:u81",
+      "G1693266:u82",
+      "G1693266:u83",
+      "G1693266:u84",
+      "G1693266:u85",
+      "G1693266:u86",
+      "G1693266:u87",
+      "G1693266:u88",
+      "G1693266:u89",
+      "G1693266:u90",
+      "G1693266:u91",
+      "G1693266:u92",
+      "G1693266:u93",
+      "G1693266:u94",
+      "G1693266:u95",
+      "G1693266:u96",
+      "G1693266:u97",
+      "G1693266:u98",
+      "G1693266:u99",
+      "G1693266:u100",
+      "G1693266:u101",
+      "G1693266:u102",
+      "G1693266:u103",
+      "G1693266:u104",
+      "G1693266:u105",
+      "G1693266:u106",
+      "G1693266:u107",
+      "G1694659:u1",
+      "G1694659:u2",
+      "G1694659:u3",
+      "G1694659:u4",
+      "G1694659:u5",
+      "G1694659:u6",
+      "G1694659:u7",
+      "G1694659:u8",
+      "G1694659:u9",
+      "G1694659:u10",
+      "G1694659:u11",
+      "G1694659:u12",
+      "G1694659:u13",
+      "G1694659:u14",
+      "G1694659:u15",
+      "G1694659:u16",
+      "G1694659:u17",
+      "G1694659:u18",
+      "G1694659:u19",
+      "G1694659:u20",
+      "G1694659:u21",
+      "G1694659:u22",
+      "G1694659:u23",
+      "G1694659:u24",
+      "G1694659:u25",
+      "G1694659:u26",
+      "G1694659:u27",
+      "G1694659:u28",
+      "G1694659:u29",
+      "G1694659:u30",
+      "G1694659:u31",
+      "G1694659:u32",
+      "G1694659:u33",
+      "G1694659:u34",
+      "G1694659:u35",
+      "G1694659:u36",
+      "G1694659:u37",
+      "G1694659:u38",
+      "G1694659:u39",
+      "G1694659:u40",
+      "G1694659:u41",
+      "G1694659:u42",
+      "G1694659:u43",
+      "G1694659:u44",
+      "G1694659:u45",
+      "G1694659:u46",
+      "G1694659:u47",
+      "G1694659:u48",
+      "G1694659:u49",
+      "G1694659:u50",
+      "G1694659:u51",
+      "G1694659:u52",
+      "G1694659:u53",
+      "G1694659:u54",
+      "G1694659:u55",
+      "G1694659:u56",
+      "G1694659:u57",
+      "G1694659:u58",
+      "G1694659:u59",
+      "G1694659:u60",
+      "G1694659:u61",
+      "G1694659:u62",
+      "G1694659:u63",
+      "G1694659:u64",
+      "G1694659:u65",
+      "G1694659:u66",
+      "G1694659:u67",
+      "G1694659:u68",
+      "G1694659:u69",
+      "G1694659:u70",
+      "G1694659:u71",
+      "G1694659:u72",
+      "G1694659:u73",
+      "G1694659:u74",
+      "G1694659:u75",
+      "G1694659:u76",
+      "G1694659:u77",
+      "G1694659:u78",
+      "G1694659:u79",
+      "G1694659:u80",
+      "G1694659:u81",
+      "G1694659:u82",
+      "G1694659:u83",
+      "G1694659:u84",
+      "G1694659:u85",
+      "G1694659:u86",
+      "G1694659:u87",
+      "G1694659:u88",
+      "G1694659:u89",
+      "G1694659:u90",
+      "G1694659:u91",
+      "G1694659:u92",
+      "G1694659:u93",
+      "G1694659:u94",
+      "G1672905:u1",
+      "G1672905:u2",
+      "G1672905:u3",
+      "G1672905:u4",
+      "G1672905:u5",
+      "G1672905:u6",
+      "G1672905:u7",
+      "G1672905:u8",
+      "G1672905:u9",
+      "G1672905:u10",
+      "G1672905:u11",
+      "G1672905:u12",
+      "G1672905:u13",
+      "G1672905:u14",
+      "G1672905:u15",
+      "G1672905:u16",
+      "G1672905:u17",
+      "G1672905:u18",
+      "G1672905:u19",
+      "G1672905:u20",
+      "G1672905:u21",
+      "G1672905:u22",
+      "G1672905:u23",
+      "G1672905:u24",
+      "G1672905:u25",
+      "G1672905:u26",
+      "G1672905:u27",
+      "G1672905:u28",
+      "G1672905:u29",
+      "G1672905:u30",
+      "G1672905:u31",
+      "G1672905:u32",
+      "G1672905:u33",
+      "G1672905:u34",
+      "G1672905:u35",
+      "G1672905:u36",
+      "G1672905:u37",
+      "G1672905:u38",
+      "G1672905:u39",
+      "G1672905:u40",
+      "G1672905:u41",
+      "G1672905:u42"
+    ],
+    "originalAuthorHold": [
+      "Shutdown instructions conflict: G1693266-b00020 specifies a single press and release from ON, while the retained ignition-state table requires a held press when the engine is running. G1693266-b00021 separately prevents a momentary shutdown while moving. The stationary, engine-running shutdown instruction needs technical reconciliation; the draft preserves the supplied instructions without inventing a duration or choosing between them."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "System-operation reference with explicitly attributed owner-manual stationary ignition controls and ordinary stationary steering-lock load-relief retry. No component replacement, diagnostic testing, wiring probing, security-access execution or programming procedure clearance.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "4b0f43d1121bb87463831bed45f8198001a5fe1ee3dd0cfdbd506213e480b61e"
+    },
+    "supplementalEvidence": {
+      "path": "owner-source.json",
+      "sha256": "cde52e31efb472c20820a5e66714b47dddd34ec5be0644f59f32906a8d632046",
+      "scope": "Complete matching owner printed121–124 plus original full renders; explicitly attributed stationary/moving distinction, no official erratum claim or expanded numeric trust."
+    }
+  }
+}
