@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4109A",
+  "supportingSourceRefs": [],
+  "sourceHash": "057196c6058b263fdb01880596872bbdaef1b4aacdd0be6880b7e2f0a88a9d2a",
+  "title": "C4109A — Rear subwoofer amplifier connector",
+  "introduction": "I use this reference to connect the rear subwoofer amplifier’s cavity drawing with its circuit and parts information. The function labels separate the amplifier’s enable connection, ground, fuse-or-circuit-breaker supply connection and audio pair. Think of enable as the invitation to play; the audio connections carry the musical conversation.\n\nStart with the connector identity table, find a cavity label in the drawing, then read across its matching assignment row. Finish with the parts tables if you need to understand the listed service identifiers. This is a reading guide: physical viewing direction, access, electrical test conditions and replacement methods are outside its scope. Keep Gauge, Size and Used entries as printed without assigning an unsupported convention or meaning.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4109A-b00002",
+      "text": "Connector face for Harness 14A005",
+      "why": "I use the housing outline, staggered cavity positions and central rectangular feature to keep my place in this drawing. Gray-filled positions correspond to rows with blank circuit and function entries; outlined positions correspond to populated rows. That agreement helps cross-check the drawing against this table without establishing a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C4109A-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Cavity links each drawing label to a table row. Read across that row to connect the circuit identifier with its color, gauge, function and terminal part number. The function column distinguishes enable, supply, ground and audio roles; it does not show that any connection is electrically healthy. The fuse-or-circuit-breaker wording identifies a function, not a current rating."
+    },
+    {
+      "blockId": "connector-C4109A-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail table connects the listed kit with its service assembly and engineering shell. Its Gauge and Material fields describe the pigtail entry; the assignment table describes individual circuit rows. I keep those lookup purposes separate rather than treating the pigtail specification as a replacement specification for every wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:10:25.633Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "43be8129cf96d4e15be0370b4fbd455f0fe002ae96259e27512d53eb2021a054",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 37,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4f2b6ece7ff8773efff797ea59de896f539970f271b0668ad374d277ae2bfa37",
+    "reviewedAt": "2026-10-28T03:29:05.312Z",
+    "editorialRevision": {
+      "kind": "literal-protection-alternative",
+      "scope": "Complete37 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public introductory phrase restores literal FUSE5 OR CIRCUIT BREAKER alternative, already retained in second why. Enable/audio polarities/ground and kit667 data unchanged. Full prior review preserved."
+    }
+  }
+}

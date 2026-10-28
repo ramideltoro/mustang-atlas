@@ -1,0 +1,59 @@
+{
+  "documentId": "connector-C4370",
+  "supportingSourceRefs": [],
+  "sourceHash": "b7624bc362cfce1f3633e8f029937cca91769013ac4f85a13256a7693e0994e8",
+  "title": "C4370 — Side obstacle detection control module RH (SODR) connector",
+  "introduction": "This reference maps the connector for the right-hand side obstacle detection control module. I read its connections in functional groups: supply, ground paths, the mirror-warning connection and network communication. That makes this little connector feel less like alphabet soup and more like a useful map of the module’s electrical relationships.\n\nStart with the identification table, locate a cavity label in the face drawing, then read across its assignment row. The Function column explains the connection’s listed role; the remaining columns keep that role tied to its circuit and terminal details. The pigtail table provides catalog references for the connector’s repair leads.\n\nThis page teaches reference reading. It does not establish physical viewing direction, define the Size, Gauge or Used conventions, or provide access, probing, wire-selection or replacement instructions. Shared shell details also do not establish which pigtail is appropriate.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4370-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "The cavity labels form a vertical column within the rounded inner outline, with a broad projecting housing feature to the left. I use that distinctive silhouette to stay oriented within the illustration. The gray-filled positions align with blank-function rows, while the outlined positions align with assigned functions; shading is a navigation clue, not an electrical test result."
+    },
+    {
+      "blockId": "connector-C4370-b00005",
+      "text": "Cavity functions and circuit details",
+      "why": "Use the cavity label to join the drawing to a complete table row. The functions distinguish ground connections, a fuse-or-circuit-breaker supply, the mirror-warning connection and the high and low sides of the medium-speed communication bus. Those bus labels identify communication roles, not expected meter readings. Repeated ground circuit details remain separate cavity assignments, and a ground’s left-side location description does not rename the right-hand module."
+    },
+    {
+      "blockId": "connector-C4370-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail supplies a connector with attached wire leads for repair. I keep the kit number, service-part identifier and engineering-shell identifier distinct when reading these entries. The shared shell and matching listed attributes do not establish interchangeability or explain how to choose between the entries. This table supports a catalog lookup; it does not teach installation or authorize substituting its lead details for the circuit specifications."
+    }
+  ],
+  "checkedAt": "2026-10-28T05:04:03.936Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "a6cd6adb092129ce95e607d857a9d4151a4dc81ce4035d78b984253ab57d660b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "36d5b65b243ed5684b8452f846781f71ebea015caf35eeff7b79df1572052073",
+    "reviewedAt": "2026-10-28T03:21:51.564Z",
+    "editorialRevision": {
+      "kind": "literal-protection-alternative",
+      "scope": "Complete36 source units/raw tables/context/author/full independent verdict/final public prose read; original complete page2 directly viewed. Sole public phrase restores literal FUSE66 OR CIRCUIT BREAKER alternative. RH identity, repeated ground cavity assignments, CAN roles and distinct pigtail records retained; full prior review preserved."
+    }
+  }
+}

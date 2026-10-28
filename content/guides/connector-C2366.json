@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2366",
+  "supportingSourceRefs": [],
+  "sourceHash": "4d65fee56d69666d9373bb7781cd9259124e42cc2eb056251dc8365fd9ffee34",
+  "title": "C2366 — Steering wheel switch LH lower connector",
+  "introduction": "This reference maps the connector for the lower left-hand steering wheel switch. I read it like a seating chart: the drawing locates a cavity, and the matching table row explains that cavity’s job. The illumination connections and steering-control connections have different roles, even though they share a housing.\n\nStart with the connector identification table, then compare the face drawing with the cavity labels in the assignment table. Read across each matching row to connect position with function. Asterisks and blank fields leave identification details unspecified; they are not permission to fill in a likely wire specification.\n\nThis is a guide to reading the reference. The physical viewing side and the conventions behind the Size, Gauge and Used fields are not defined here. Access, electrical probing, wire selection and repair require additional instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2366-b00002",
+      "text": "Harness 14K147 connector face",
+      "why": "I use the stepped housing outline to keep my place in the drawing. The cavity labels occupy unequal columns around the central recess, so reading straight across as though every position had a partner would be misleading. Gray-filled positions correspond to rows without an assigned function; outlined positions correspond to named functions. That visual agreement helps navigate the reference, but it says nothing about electrical condition."
+    },
+    {
+      "blockId": "connector-C2366-b00005",
+      "text": "Cavity functions and circuit details",
+      "why": "Match the drawing’s cavity label to the Cavity column, then read across that same row. The Function column distinguishes lighting connections from steering-control signal channels and the left switch return. A return label alone does not authorize joining it to another ground. The incomplete circuit, color, gauge and terminal fields limit identification; they do not supply a basis for choosing replacement wiring."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:21:51.551Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "67b29e973c3d828d7b8d84757fe83b48d31edffe4b4caaa5834c63b33953deb3",
+  "sourcePdfHash": "3069f89052b10944ba42d488a7717bbd334f8933d1580b6a3955681b070fb8c9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f113a82117568ab8dd718f1d3697d8797c01e40d964ba9fdda27a701aaf5c716",
+    "reviewedAt": "2026-10-28T03:21:51.554Z"
+  }
+}
