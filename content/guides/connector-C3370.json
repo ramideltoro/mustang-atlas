@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3370",
+  "supportingSourceRefs": [],
+  "sourceHash": "9e7e82774525224c5e1d4ef86258d151cf7fdd33bd96cf2320e0239f33efe6c5",
+  "title": "C3370 — Passenger Scuff Plate Lamp",
+  "introduction": "The passenger scuff-plate lamp’s connector map reads a little like a miniature lighting desk: separate color-channel descriptions sit alongside a negative LED circuit description. I use those function labels to understand each connection’s recorded role before following its circuit reference elsewhere.\n\nBegin with the connector identity table and the illustrated cavity labels. Find the matching Cavity row, then read across for the circuit identifier, color code, gauge entry, function and terminal reference. Keep wire color and LED color separate in your thinking: the Color column identifies the wire’s recorded color code, while Function describes its lighting role. The pigtail table provides the associated service-part and shell cross-reference.\n\nThis page is a wiring-reference guide, with no trim-access, disconnection, probing, test or replacement procedure. The physical viewing side, gauge convention and meanings of Size and Used are unspecified. The lighting labels identify roles; they do not supply operating voltages, test conditions or a fault verdict.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3370-b00002",
+      "text": "Connector-face map · Harness 14A005",
+      "why": "The cavity column sits toward the right of the broad housing outline, and its labels decrease from top to bottom. The stepped outline on the left and projections on the right help distinguish the drawing’s arrangement. I follow the printed labels rather than assuming the sequence starts at the top; the physical viewing side remains unspecified."
+    },
+    {
+      "blockId": "connector-C3370-b00005",
+      "text": "Match cavities to lighting functions",
+      "why": "Read from the illustrated label into its Cavity row, then across to Function. Keep the positive color-channel descriptions distinct from the negative LED description, including their different zone wording. A wire’s color code is not a promise that its insulation matches the light it serves, and the negative description alone does not establish a direct chassis-ground connection."
+    },
+    {
+      "blockId": "connector-C3370-b00007",
+      "text": "Find the pigtail service references",
+      "why": "This section links the pigtail listing to its service-part and engineering-shell references. Its gauge and material entries belong to that service listing; the pin table describes individual circuit entries. I keep both records intact rather than treating the pigtail entry as permission to substitute wire or terminals."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:04:21.281Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "b880e21efaf61328fcb5bd31645c29334adedb848a24a7dea811d568bdb626ae",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b857f66f049b05e848f35d0b0eca0660bf9a9e44a2281fc1ba5cf87df0105749",
+    "reviewedAt": "2026-10-28T02:04:21.281Z"
+  }
+}

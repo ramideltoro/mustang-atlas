@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C287",
+  "supportingSourceRefs": [],
+  "sourceHash": "d846015faba82452b65b81c7217421e57d6c7c1963fcc3c7cd75628c3a4f9062",
+  "title": "C287 — Autolamp and rain sensor connector",
+  "introduction": "I read this reference like a seating chart for the wiring: the drawing locates each cavity, and the matching table row explains its assigned circuit. Start with CNumber and Description in the identification table, then compare the connector drawing, circuit assignments and service-part references.\n\nThe assembly title includes rain sensing, but the populated circuit descriptions here identify ambient-light sensing. This is a connector-reading guide: physical access, electrical testing and replacement need their applicable procedures. The drawing does not specify terminal-side versus wire-side viewing, and the sheet supplies no gauge convention or definitions for Size and Used. Keep those entries as printed without turning them into probe directions, wire-selection instructions or test limits.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C287-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I use the housing outline and its projecting features to keep the cavity labels tied to their positions in this drawing. The shaded circles correspond to table rows without circuit or function assignments; the outlined circles correspond to populated rows. This gives the illustration and table a useful cross-check without assuming how the physical connector faces you. Fpn and Harness Id below the drawing provide its identifying references."
+    },
+    {
+      "blockId": "connector-C287-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Match a drawing label to the Cavity column, then read across that same row for Circuit Number, Color, Gauge, Function and Terminal Part Number. The populated Function entries distinguish the positive and negative sides of the ambient-light sensor connection. Those signs identify the documented circuit roles; they do not establish a battery-feed or chassis-ground test. Blank assignments are not evidence that a wire has gone missing."
+    },
+    {
+      "blockId": "connector-C287-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "A pigtail is a connector with attached wire leads. I use Number to connect this entry with Kit List above, then read Service Part alongside Engineering Shell to distinguish the service assembly reference from the shell reference. Gauge and Material belong to the pigtail entry here and remain separate from the vehicle-circuit entries above. The Image field names a pigtail image file; the illustration on this page is the connector-face drawing."
+    },
+    {
+      "blockId": "connector-C287-b00009",
+      "text": "European pigtail product reference",
+      "why": "Product Id is the European pigtail lookup reference. Keep its grouping intact when recording it. This entry identifies the listed product without establishing interchangeability or a fitting procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:12:22.000Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c8cf52c1edd20a6c57f3ed842ba6a10972bec72e550eb8b54c27294cc4b11f95",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d10dcc9f1448386a071e17aba0e46ab7deee7a6e7d83216fd3e89601120fc3fc",
+    "reviewedAt": "2026-10-28T02:12:22.000Z"
+  }
+}

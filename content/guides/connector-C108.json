@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C108",
+  "supportingSourceRefs": [],
+  "sourceHash": "e3bedfbb59fdea1143aef694ae3ad3a3c9db4616b110ba0f28726e8cf584ba1a",
+  "title": "C108 — Knock Sensor (KS)",
+  "introduction": "I use this reference to connect a cavity in the knock-sensor drawing with its circuit description in the table. Think of the cavity label as a letterbox address: the housing shape gets you to the building, but the printed label gets you to the right connection.\n\nStart with the connector identity table, then compare the drawing’s outline and cavity labels. Find the corresponding Cavity row and read across for the circuit identifier, color code, gauge entry, function and terminal reference. The function descriptions distinguish the sensor banks and their paired positive and negative circuit legs. The pigtail table provides a separate service-parts cross-reference.\n\nThis page teaches reference reading; it supplies no access, disconnection, probing, electrical test or replacement procedure. The physical viewing side, gauge convention and meanings of Size and Used are unspecified. Keep those entries as reference data rather than turning them into wire-selection or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C108-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the rounded housing outline, the left-side arrow-shaped feature and the projections on the right to recognize the drawing’s arrangement. Its cavity labels increase from top to bottom in a single column. These are landmarks within the illustration; they do not establish the viewing side of a connector on the car."
+    },
+    {
+      "blockId": "connector-C108-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Cavity column joins the drawing to the electrical information. Read across the matching row rather than treating wire color as the whole identity. The positive and negative labels distinguish the paired knock-sensor circuits; a negative label alone does not establish a chassis-ground connection or a test method."
+    },
+    {
+      "blockId": "connector-C108-b00007",
+      "text": "Find the pigtail service references",
+      "why": "A pigtail is the connector’s short wiring lead assembly. This table connects its listing with the service-part and engineering-shell references. Keep its gauge entry separate from the circuit-wire entries above: the tables describe different items and provide no rule for substituting wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:01:12.782Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "f8980a032d5b82584195cecbfffe99a8ea77b512c5c6f295b5adea2589465c37",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4fc3c7c44e860c8e797dd05e09cfd7398cd3a6e554772ad2b6ea208207efb231",
+    "reviewedAt": "2026-10-28T02:01:12.782Z"
+  }
+}

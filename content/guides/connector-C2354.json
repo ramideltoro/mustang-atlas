@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2354",
+  "supportingSourceRefs": [],
+  "sourceHash": "555b7886b921d1bc89034d3769fa4b64335b920bbc6d930baf01c14fe7c9c1c0",
+  "title": "C2354 — Clutch pedal position (CPP) top of travel switch connector",
+  "introduction": "I treat this page as the clutch pedal switch’s electrical address book. It identifies the top-of-travel switch connection and its ground circuit. That is a different job from the hydraulics that release the clutch: knowing which wire belongs where does not tell us whether the clutch is releasing correctly.\n\nStart with the component identity table, match the drawing’s cavity labels to the assignment rows, then use the service-parts tables for pigtail identification. This reference does not define physical viewing direction, access, probing, switch-state testing, adjustment or replacement. Size and Used have no supplied code definitions, and the Gauge convention is unspecified; retain those entries without turning them into wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2354-b00002",
+      "text": "Connector face for Harness 12638",
+      "why": "I use the broad housing projection on the left of the displayed drawing and the vertical cavity labels on the right to navigate this view. The middle circles are outlined and the outer circles are gray-filled, corresponding respectively to populated and unassigned circuit rows. These are identification features, not instructions for releasing the connector."
+    },
+    {
+      "blockId": "connector-C2354-b00005",
+      "text": "Read the switch and ground assignments",
+      "why": "Match Cavity to the drawing, then read across for circuit identity, wire color code, gauge, function and terminal identification. Function separates the top-of-travel switch circuit from the ground circuit identified with the left front fender. That ground description identifies the circuit’s role, not a physical access route. The map alone does not establish when the switch should be open or closed."
+    },
+    {
+      "blockId": "connector-C2354-b00007",
+      "text": "Identify the switch pigtail service parts",
+      "why": "Engineering Shell connects this listing to Hard Shell in the component identity table. I use Service Part for the pigtail lookup and keep it separate from the cavity-specific Terminal Part Number. The pigtail and circuit tables carry their own Gauge entries; neither entry should be substituted for the other."
+    },
+    {
+      "blockId": "connector-C2354-b00009",
+      "text": "European switch pigtail identification",
+      "why": "Product Id provides the European pigtail lookup associated with this switch connector. Keeping the regional identifier under its own heading avoids confusing it with the Service Part or Engineering Shell identifiers."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:16:13.883Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "8d84d64e87896d7da681972c1a327937d6a0eaca8a7de6843a42d14303027751",
+  "sourcePdfHash": "ade7b2b9b9821b3b6bbed4185bfe351e825a58af4de58d29c08e2053372623b9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "0d62dfa2ab1b282e0a1f54f8d21ca1139db7ca1f6e0a69fab31f929829b66f87",
+    "reviewedAt": "2026-10-28T02:16:13.883Z"
+  }
+}

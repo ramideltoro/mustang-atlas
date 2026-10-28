@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3463",
+  "supportingSourceRefs": [],
+  "sourceHash": "b4d5548c45490e8b9ae90e83763992784b146b4b0845cee701132f7c1d21d288",
+  "title": "C3463 — Center Console Lock Assembly",
+  "introduction": "The center-console lock connector has a busier guest list than its name suggests: its table includes lock, battery-saver and ambient-lighting functions. I read each row’s function before deciding what a connection belongs to—the plug’s name is only the sign over the door.\n\nBegin with the identity table, then use the illustrated cavity labels to find the matching Cavity rows. Read across each row for the circuit identifier, color code, gauge entry, function and terminal reference. The service-parts table separately connects the pigtail listing with its service-part and shell references. A relay is an electrically controlled switch; a relay description here does not by itself identify a separate, removable relay.\n\nThis is a connector-reading reference, with no console-access, disconnection, probing, test or replacement procedure. The physical viewing side, gauge convention and meanings of Size and Used are unspecified. Those entries support reading the record, not selecting wire or inventing an electrical check.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3463-b00002",
+      "text": "Connector-face map · Harness 14A005",
+      "why": "The drawing places the circular cavities in a square arrangement, with long housing projections extending to the right and a hooked feature at the upper left. I follow the printed cavity labels rather than assuming they run across like words on a page. These landmarks establish the illustration’s layout, not its physical viewing side."
+    },
+    {
+      "blockId": "connector-C3463-b00005",
+      "text": "Match cavities to lock and lighting circuits",
+      "why": "The Cavity column is the bridge from the picture to the wiring record. Reading across keeps the lock-related, battery-saver and ambient-lighting descriptions distinct, including the lighting configuration qualifier. Keep the terminal reference attached to its own row; sharing a housing does not make every terminal or function equivalent."
+    },
+    {
+      "blockId": "connector-C3463-b00007",
+      "text": "Find the pigtail service references",
+      "why": "The pigtail listing identifies a connector lead assembly and its associated service-part and engineering-shell references. Its gauge entry describes that listing, while the pin table records individual circuit entries. Their relationship is a parts cross-reference, not a supplied instruction for changing wire sizes or replacing the assembly."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:01:12.790Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "d336a298048f39c445ab700fe2d3686a4fe519159c77861634a9eb303984c793",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7c2d1471e2b5b09592380327b4a771ec95ca61808ff81910dbf230a905436da4",
+    "reviewedAt": "2026-10-28T02:01:12.790Z"
+  }
+}

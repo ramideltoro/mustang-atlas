@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C192",
+  "supportingSourceRefs": [],
+  "sourceHash": "63bce738daf421bc94e335bc9c54db531ed7b50a48cd1961a3a26b3688b4977d",
+  "title": "C192 — Test connector",
+  "introduction": "I read this test-connector reference like an address book: the drawing locates a cavity, and its matching table row identifies the circuit and function. Start with the connector identity table, use the housing outline to navigate the drawing, then read the relevant pin-assignment row across. The network name and its high or low designation belong together; neither label is a test result.\n\nThis page supports reference reading, not physical access, probing, diagnosis or replacement. The physical viewing side, test conditions and pass/fail values are unspecified. The gauge convention and the meanings of Box, Cols, Size and Used are also undefined here; keep those fields as printed without assigning them extra meaning.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C192-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I use the broad left-hand projection and the hooked outline at the lower right as landmarks within the drawing. A printed cavity label connects that position to the Cavity column below. These landmarks describe the illustration as displayed; they do not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C192-b00005",
+      "text": "Read the pin assignments",
+      "why": "Cavity identifies a position in the drawing; Circuit Number identifies the electrical circuit. Read across the matching row to retain its wire Color, Gauge, complete Function and Terminal Part Number. The functions distinguish separate network pairs, so a shared high or low label alone is not enough to identify a circuit. This map establishes those associations without judging whether communication is healthy."
+    },
+    {
+      "blockId": "connector-C192-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The parts table connects the kit entry with its Service Part and Engineering Shell fields. I keep that cross-reference separate from the pin-assignment table: the pigtail Gauge describes the listed service item and must not replace the circuit-row Gauge. The Image entry is a filename reference, not an additional repair illustration or an installation instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:04:21.291Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "9898fb46e171712799c4b9def21e09f2eb0ca47d208796c4b67a99da9f007165",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1ca66d01b49d5de2a7d9399f87ac235747d3e3a81398a33ffc1e78dd2616cdd0",
+    "reviewedAt": "2026-10-28T02:04:21.291Z"
+  }
+}

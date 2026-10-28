@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2428",
+  "supportingSourceRefs": [],
+  "sourceHash": "46bf96c10f31e91fcb6817a8087d46ca06b4794cd09db769ce988814d3871bb1",
+  "title": "C2428 — Upshift Paddle Switch",
+  "introduction": "The paddle may deliver a simple upshift request, but its connector map also includes return, ground and illumination functions. It is a small switch with more on its address book than just “change gear.” I read the Function column to keep those jobs distinct rather than assuming every connection carries the shift request.\n\nStart with the connector identity table, then match each cavity label in the drawing to its row in the pin table. Reading across reveals the assigned function. Keep the signal-return entry separate from the cross-car-beam ground entry; this reference does not establish that they are interchangeable.\n\nAsterisks leave circuit identifiers, wire colors and harness gauges unspecified, and the terminal entries provide no individual part number. The service-pigtail listing does not fill those gaps. This page supports identification and map reading; physical viewing direction, access, probing, test results and replacement methods need their own applicable procedure. The Gauge convention and the Size and Used codes are also unexplained here, so I keep them as printed without assigning extra meaning.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2428-b00002",
+      "text": "Connector-face map · Harness PIA",
+      "why": "I use the broad rectangular feature on the left and the projecting features on the right to orient the printed illustration. Its cavity labels descend vertically and correspond to the Cavity column below. That establishes how to navigate this page; it does not identify the physical connector’s mating-side or wire-side viewing direction."
+    },
+    {
+      "blockId": "connector-C2428-b00005",
+      "text": "Read each cavity’s assigned function",
+      "why": "Function is the useful starting point because the circuit, color and harness-gauge fields contain placeholders. Read the shift-request, signal-return, ground and illumination roles independently. A blank Qualifier does not establish universal applicability, and a placeholder is not permission to guess a wire. The map identifies intended roles without proving switch operation or locating a fault."
+    },
+    {
+      "blockId": "connector-C2428-b00007",
+      "text": "Find the service-pigtail listing",
+      "why": "Engineering Shell links the service-pigtail record to Hard Shell and Fpn above. Service Part identifies the listed assembly even though the pin table supplies no individual terminal part number. The pigtail’s Gauge entry belongs to that assembly record; it cannot supply the missing harness-gauge information. Identification here does not establish an installation or splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:11:32.214Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "265115949fd8103a46278d93c59524c68e2a35ba24f6b08d7adef7ffd453a20d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b71739876b8454da4a05e9aa4cf404bf7e0286347f87c6bff5e6a2c087c188c2",
+    "reviewedAt": "2026-10-28T02:11:32.214Z"
+  }
+}

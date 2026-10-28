@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1140",
+  "supportingSourceRefs": [],
+  "sourceHash": "884cb87e6e611be19d94dc76e34e6634eeab34951994c1f150ee12d7464f201c",
+  "title": "C1140 — Manifold Absolute Pressure and Temperature (MAPT) Sensor",
+  "introduction": "The combined sensor puts pressure and temperature information in the same connector, but each connection still has its own job. Think of the housing as a shared mailbox: the address matters, and so does which slot you read.\n\nI start with the identity table, then use the drawing’s cavity labels to find the matching Cavity row in the pin-assignment table. Read across that row to connect the position with its circuit identifier, wire description, function and terminal part. The pressure and temperature entries identify the sensing functions; the voltage-reference and signal-return entries identify their supporting electrical connections. Signal return should not be casually treated as any convenient ground.\n\nThis page teaches that map and how its service-pigtail listing relates to the connector. Physical viewing direction, access, electrical test conditions and replacement methods are outside its scope. The Gauge convention and the Size and Used codes are not explained here; keep those entries as printed without turning them into dimensions, wire-selection advice or test instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1140-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the drawing’s rounded outline and rectangular feature on the left to keep the printed map aligned. Its cavity labels descend vertically; each label leads to the matching Cavity row below. These features orient the illustration on the page, but the attachment does not identify whether a physical connector is viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C1140-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Cavity locates the connection in the drawing; Circuit Number names the circuit, and Function describes its assigned role. Read across a complete row instead of using wire color alone. The reference supply and signal return have different jobs, while the sensing entries distinguish pressure from temperature. This identifies connections without establishing a voltage, a passing test result or a fault."
+    },
+    {
+      "blockId": "connector-C1140-b00007",
+      "text": "Find the service-pigtail listing",
+      "why": "The Engineering Shell entry connects this service listing to the Hard Shell and Fpn entries above. Service Part identifies the listed pigtail assembly, while Terminal Part Number in the pin table concerns the terminal. Keeping those labels distinct avoids confusing a connector assembly with an individual contact. The listing supplies identification information, not installation or splice instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:11:32.204Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "6cc50c0d6e5c3e974ddcc6519be2c87b17a2a1db65df0d2b2cbf86f106e1bd7d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3ac32fdf34799b20172e628223a544509ae39c4cc9dd11fb941b13ff16034839",
+    "reviewedAt": "2026-10-28T02:11:32.205Z"
+  }
+}

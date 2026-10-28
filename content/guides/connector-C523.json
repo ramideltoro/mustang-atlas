@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C523",
+  "supportingSourceRefs": [],
+  "sourceHash": "9428c46a27647cfd697160962d842e804812c1f6f75c03442085dda5a977394f",
+  "title": "C523 — Left-hand front-door woofer connector",
+  "introduction": "I read this reference like a seating chart for the left-hand front-door woofer: the drawing locates the cavities, and the assignment table tells you which circuit belongs in each place. Start with the component identity table, match the drawing’s cavity labels to the Cavity column, then read across the relevant row. The service-parts tables provide separate pigtail identification.\n\nThis is a connector-reading guide. Physical viewing direction, access, probing, electrical test conditions and replacement methods are outside its scope. Size and Used have no supplied code definitions, and the Gauge convention is unspecified; keep those entries as reference data rather than using them to choose wire or equipment.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C523-b00002",
+      "text": "Connector face for Harness 14631",
+      "why": "I use the housing projection on the left of the displayed drawing as a visual landmark. The cavity labels run vertically beside it. Gray-filled circles correspond to rows without circuit assignments, while outlined circles correspond to populated rows; the shading is a map-reading aid, not an electrical test result."
+    },
+    {
+      "blockId": "connector-C523-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "The Cavity column connects the drawing to the table. Read across the same row for circuit identity, wire color code, gauge, function and terminal identification. Function distinguishes the positive and negative woofer connections. A negative speaker label does not establish a chassis-ground connection, and an unassigned row is not evidence of a missing wire."
+    },
+    {
+      "blockId": "connector-C523-b00007",
+      "text": "Identify the pigtail service parts",
+      "why": "I compare Engineering Shell here with Hard Shell in the component identity table, then read Service Part for the pigtail listing. Keep the pigtail Gauge entry attached to this table rather than substituting it for the circuit-row entry. Terminal Part Number identifies the terminal listed for a cavity; it is a separate lookup from the pigtail service part."
+    },
+    {
+      "blockId": "connector-C523-b00009",
+      "text": "European pigtail identification",
+      "why": "Product Id supplies the European pigtail lookup associated with this connector. Keep that identifier under its regional heading so it remains distinct from the Service Part and Engineering Shell fields above."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:16:13.866Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "f8407a104ca2462727b79b32417a24249bb1bcd9db58b2c796aeceb87c12c4ae",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "1f547a2c5ea2ad83ba400af39c6db643fe394317427d48287791aee6f65cd318",
+    "reviewedAt": "2026-10-28T02:16:13.866Z"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C485",
+  "supportingSourceRefs": [],
+  "sourceHash": "c7447269fcba2dc6d1dd36be389810ba7d738b897847540c06d8329704f37496",
+  "title": "C485 — Right rear speaker connector",
+  "introduction": "This reference maps the right rear speaker connector, with the populated circuit descriptions identifying the woofer connection. I start with CNumber and Description, match the housing drawing, then follow each cavity label across its circuit row. Think of the labels as addresses for the audio wiring: a wire's destination matters more than its resemblance to its neighbor.\n\nUse this page to understand the documented connections and locate service-part references. Physical access, probing, electrical diagnosis and replacement need their applicable procedures. The drawing does not specify terminal-side versus wire-side viewing, and the sheet supplies no gauge convention or definitions for Size and Used. Preserve those entries without treating them as probe directions, wire-selection instructions or test limits.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C485-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "I use the housing outline, including the shaped projection at the left of the drawing, to keep the cavity labels tied to the illustrated positions. The outlined circles correspond to populated circuit rows; the shaded circles correspond to rows without circuit or function assignments. Fpn and Harness Id beneath the drawing identify the associated shell and harness references."
+    },
+    {
+      "blockId": "connector-C485-b00005",
+      "text": "Read the speaker circuit assignments",
+      "why": "Match each drawing label to the Cavity column and read across for Circuit Number, Color, Gauge, Function and Terminal Part Number. The populated Function entries distinguish the positive and negative sides of the audio-module connection to the right rear woofer. The negative designation alone does not identify a chassis-ground connection. Rows without assignments describe the unused positions in this reference, rather than proving that wires are missing."
+    },
+    {
+      "blockId": "connector-C485-b00007",
+      "text": "Identify the speaker pigtail service parts",
+      "why": "A pigtail is a connector with attached wire leads. I match Number with Kit List above, then use Service Part and Engineering Shell to distinguish the service assembly reference from the shell reference. Read this entry's Gauge and Material as pigtail information, keeping it separate from the vehicle-circuit data. The Image field names a pigtail image file; the displayed illustration shows the connector face."
+    },
+    {
+      "blockId": "connector-C485-b00009",
+      "text": "European pigtail product reference",
+      "why": "Use Product Id as the European pigtail lookup reference, preserving its printed grouping. The entry supplies a product identifier without establishing interchangeability or installation details."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:12:22.012Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "d74e1dabe90dde2fe41eb8d80371c0f5befc392d4d005f1f4f70d511c4518fb4",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "a5f2e1f4db0696c7959d2950b0796a97147ded8e5b3f57be3ae97f47170ef1fc",
+    "reviewedAt": "2026-10-28T02:12:22.012Z"
+  }
+}
