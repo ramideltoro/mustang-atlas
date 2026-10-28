@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C111",
+  "supportingSourceRefs": [],
+  "sourceHash": "ceb7c84e18591ae837790f55ac9d3abb68bdb92a4a1c7b55f263ce49cfee78fd",
+  "title": "C111 — Ignition coil-on-plug 1",
+  "introduction": "An ignition coil produces the high voltage needed for a spark; in a coil-on-plug arrangement, it sits at its spark plug. This reference maps the coil connector's cavities to their circuits and identifies the listed pigtail service parts.\n\nI read the drawing like an address map: the cavity label tells me which table row to visit, and the Function column tells me what that connection does. Start with the connector identity table, compare the drawing with the cavity rows, then use the parts table to distinguish kit numbers, service parts and engineering shells. An opening in the housing does not automatically mean a wire belongs there.\n\nThis is an identification and wiring-reading reference. Access, physical viewing direction, probing, wire selection and replacement need the matching vehicle service information. The Size code and gauge convention remain as printed; this page supplies no electrical test or fault verdict.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C111-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "I use the housing outline and cavity labels together to navigate the drawing. As printed, the labels form a vertical stack, with the middle circle shaded. Its shading agrees with the unused middle cavity in the table. These are positions on the drawing, not instructions for viewing the physical connector from a particular side."
+    },
+    {
+      "blockId": "connector-C111-b00005",
+      "text": "Pin-to-circuit map",
+      "why": "Read across each Cavity row to keep its Circuit Number, Color, Gauge, Function and Terminal Part Number together. The upper drawn cavity maps to the powertrain control connection, while the lower one maps to the fuse-or-circuit-breaker supply. The middle row has no assigned circuit. Housing capacity and occupied connections are different things; the nominal pin count is not a reason to invent a missing wire."
+    },
+    {
+      "blockId": "connector-C111-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Each row associates a kit Number with its Service Part, Engineering Shell and other listed attributes. I keep those identifiers in their own columns: a shell identifies the housing, while the service-part entry identifies the listed service item. A shared shell does not resolve which kit to choose or establish interchangeability, and the table does not teach a splice or replacement method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:42:38.501Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "11c7aa25e4bb080ca20ff4333b7e4f6b6510e93d93c5eb1fb4f1d53f66d633b1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d11656716bb918bc4b4dcb1f30baf31c9a93df7f88796c548ea31e796a006661",
+    "reviewedAt": "2026-10-28T01:42:38.502Z"
+  }
+}

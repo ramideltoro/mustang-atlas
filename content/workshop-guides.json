@@ -125201,109 +125201,302 @@
     },
     {
       "title": "Remove and replace the active grille shutter assembly",
-      "summary": "Remove the front bumper cover, disconnect the shutter assembly and refit it with its sensor, wiring and bridge link restored.",
-      "introduction": "The active grille shutter uses linked movable blinds to control airflow through the front of the vehicle. The powertrain control module (PCM) commands their position to reduce aerodynamic drag and help the engine warm up. This job removes the complete shutter assembly. Individual blinds are not serviceable, although the actuator can be serviced separately.",
-      "why": "The assembly carries both mechanical attachments and electrical connections, so it must be moved forward in stages. Detaching the ambient air temperature sensor and disconnecting the actuator at the specified points prevents the assembly from being pulled away with those connections still attached.",
+      "summary": "Remove the front wheels and bumper cover, replace the complete shutter assembly, then restore its wiring, temperature sensor, bridge link and body attachments.",
+      "introduction": "I’ll work through the standard-engine bumper access, shutter assembly replacement and complete reassembly before checking the startup calibration. The linked blades reduce drag and help the engine warm up. Moving the frame forward exposes its connector and bridge link; the radiator and condenser stay installed.",
+      "why": "The powertrain control module, or PCM—the computer managing the engine—commands a motor to move the linked shutter blades. Their travel spans 90 degrees, with 16 commanded positions roughly 6 degrees apart. The motor drives one blade, which moves the others through their links. Individual blades are not separately serviceable; the complete assembly includes the shutters, actuator, retainer, housing and jumper harness. The actuator can also be serviced separately, so establish which repair is needed before ordering the whole assembly. During removal, moving the frame forward creates access to its electrical connector and bridge link; pulling it straight away too early risks taking those connections along for the ride.",
       "taskType": "repair",
       "difficulty": "intermediate",
       "searchTerms": [
-        "active grille shutter replacement",
-        "grille shutter not moving",
-        "grille shutters stuck open",
-        "damaged grille shutter blinds"
+        "2015 Mustang active grille shutter replacement",
+        "active grille shutter assembly removal",
+        "Mustang grille shutter bumper access",
+        "grille shutter bridge link",
+        "active grille shutter startup calibration"
       ],
       "when": {
-        "summary": "When a shutter assembly requires replacement or removal for access after the repair scope has been established.",
+        "summary": "Use this procedure when removal or replacement of the complete active grille shutter assembly has been established as the required work.",
         "notes": [
-          "An open shutter with the engine stopped does not, by itself, establish a fault.",
-          "Decide whether the work concerns the complete assembly or the separately serviceable actuator."
+          "This guide covers only 2015 2.3L, 3.7L and 5.0L cars with active grille shutters. The required matching 5.2L bumper-access procedure is not established here; do not apply these attachments or torques to that branch.",
+          "Partly or fully open shutters with the engine stopped can be normal.",
+          "A stored shutter fault may have no accompanying warning to the driver. Position alone does not identify a failed assembly."
         ]
       },
       "prepare": [
         {
-          "title": "Plan bumper access",
-          "detail": "Arrange a hoist and the capability to remove the front wheels and bumper cover using the lifting and wheel procedures referenced in the bumper instructions."
+          "title": "Confirm the access branch before dismantling",
+          "detail": "Use the matching 2.3L, 3.7L or 5.0L bumper-access sequence below for a complete shutter assembly change. The 5.2L branch is excluded. Keep the radiator and A/C condenser installed. Individual-blade service and actuator-only disassembly are separate scopes."
         },
         {
-          "title": "Prepare for the fasteners",
-          "detail": "Have suitable tools for the retainers and bolts, with torque control for the different shutter-mounting and bridge-link settings."
+          "title": "Arrange lifting, support and a helper",
+          "detail": "Have a hoist rated for the car's actual weight, including cargo and modifications, plus wheel chocks. Plan for both front wheels to come off and for two people to lift away and refit the bumper cover. Locate the four lifting areas identified by triangles stamped into the body sheet metal. Review [jacking and lifting](#/document/G1663631) and [service safety](#/document/G1693189)."
+        },
+        {
+          "title": "Gather tools with the right torque ranges",
+          "detail": "Have suitable tools for push pins, screws, bolts and wheel nuts. Use torque equipment capable of the small body and shutter settings, from 13–71 lb.in (1.5–8 Nm), and a wheel-nut torque wrench capable of 150 lb.ft (204 Nm). The small attachment settings are inch-pounds, not foot-pounds."
+        },
+        {
+          "title": "Prepare the assembly and wheel-fitting material",
+          "detail": "Have the correct replacement shutter assembly if replacement is intended. Have Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 for the wheel pilot interfaces, along with cleaning materials. Read the lubricant's safety information before use. Keep removed fasteners grouped by location because their tightening values differ."
+        },
+        {
+          "title": "Protect yourself and prevent unexpected operation",
+          "detail": "Wear eye and ear protection, and protective gloves when handling sharp-edged parts. Read the safety information for cleaning products and XL-2; keep flammable solvents away from ignition sources. Disconnect the negative battery cable as described below before fan-area access, and leave it isolated until all bodywork and wheels are restored on the ground."
+        },
+        {
+          "title": "Use the battery handling precautions",
+          "detail": "Work in ventilation away from flames, sparks and burning materials. Shield your eyes, avoid battery acid contact and wash hands after handling terminals. If acid contacts skin or eyes, flush immediately with water for at least 15 minutes and get prompt medical attention. Battery removal, positive-cable removal and vent-tube handling are not part of this job. See [Battery precautions](#/document/G1693181)."
+        },
+        {
+          "title": "Control brake dust before disassembly",
+          "detail": "Do not breathe friction dust or blow it from brake components with compressed air. Use approved dust-control techniques and avoid dispersing the residue; the dust can present serious respiratory and other health hazards. Read [Brake and Clutch Systems Health and Safety Precautions](#/document/G1693183) and the home-garage guidance below before removing dusty parts."
+        },
+        {
+          "title": "Home-garage preparation",
+          "detail": "Do not judge asbestos content by appearance. EPA suggests professional servicing when the material is uncertain. If that is not possible and professional dust-control equipment is unavailable, its home-mechanic guidance describes wet wiping: use a low-pressure fine mist of water or detergent-amended water to wet the brake parts, then wipe them with a cloth. Keep bystanders, food and drinks away."
+        },
+        {
+          "title": "Contain dust and waste",
+          "detail": "Do not blow dust with compressed air or clean it with a dry rag, brush or garden hose. Do not use an ordinary vacuum lacking HEPA filtration. Keep contaminated clothing and dust out of the house; change clothes and wash soiled clothing separately. EPA recommends double-bagging asbestos waste and following local disposal rules. Read the full [EPA brake-and-clutch guidance](https://www.epa.gov/asbestos/current-best-practices-preventing-asbestos-exposure-among-brake-and-clutch-repair-0) before starting."
+        },
+        {
+          "title": "Keep the instructions distinct",
+          "detail": "This is EPA guidance for home mechanics, not a claim that every brake contains asbestos or that employer OSHA duties apply to your home garage."
         }
       ],
       "steps": [
         {
-          "title": "Remove the front bumper cover",
-          "body": "Follow the linked bumper procedure through wheel, lower air deflector and liner access, electrical disconnection and cover removal. Lift the cover off its alignment pins before drawing it forward. Inspect the fender bracket teeth as directed so damaged attachments are addressed before refitting."
+          "title": "Restrain the car and prevent an unexpected start",
+          "body": "On a hard, level surface, apply the parking brake and chock grounded wheels. Complete remote-start disabling if fitted through Vehicle settings > Remote Start Setup before final shutdown. For display access from known ignition OFF, keep the valid key inside and both pedals released, and press the start button once for engine-off ON; if already ON, leave it ON.\n\nArrange Neutral in the ground-level cabin while restraints remain applied. On an automatic, establish engine-off ignition ON as above if needed, hold the service brake and select Neutral, then release the pedal and switch OFF. On a manual, confirm engine and ignition OFF before selecting Neutral. Remove the key and maintain the parking brake throughout this front-end work. Do not enter the raised car. These keyless modes follow the 2015 owner manual, printed pages 121–122.\n\nOpen and securely support the hood. From a clear position with ignition OFF, visually check cooling fans for damage, cracks or separation without reaching into them. A damaged fan must be replaced before proceeding with underhood work; do not operate it as a test.\n\nAt the rear of the engine compartment beside the windshield, remove the three battery-cover retainers and cover. Loosen the negative battery clamp nut, lift the cable from its terminal and position it clear so it cannot reconnect. Keep tools clear of the positive terminal and leave the positive cable connected. Negative isolation interrupts vehicle power; keep it isolated through assembly and wheel restoration. See [Battery Disconnect and Connect](#/document/G1692356)."
         },
         {
-          "title": "Free the sensor and move the shutter forward",
-          "body": "Detach the ambient air temperature sensor. Remove the shutter retainers and bolts, then position the assembly forward. This creates access for the remaining connections; the assembly is not yet ready to lift away."
+          "title": "Position the hoist and establish secure support",
+          "body": "Position the hoist adapters at the four triangle-marked body lifting areas, behind the front wheels and ahead of the rear wheels. Check that arms and adapters clear suspension, steering, exhaust, mounting and stabilizer brackets, axle and rear cover. Use the rated hoist for the actual vehicle load. Raise and verify secure support before working beneath it.\n\nKeep the parking brake applied and the battery isolated throughout. No parking-brake release is needed for this work. Never work beneath a vehicle supported only by a jack. Clear people, tools and equipment before every height change."
         },
         {
-          "title": "Disconnect the actuator and bridge link",
-          "body": "Disconnect the active grille shutter actuator electrical connector. Then remove the retainers and bridge link in the order shown in the shutter procedure."
+          "title": "Remove both front wheels",
+          "body": "Remove the five wheel nuts from each front wheel, then remove each wheel-and-tire assembly. Do not use heat to loosen a seized nut; heat can damage the wheel and wheel bearing. Set the assemblies aside for refitting. The [wheel and tire procedure](#/document/G1686507) governs their cleaning and final tightening later."
         },
         {
-          "title": "Remove the assembly",
-          "body": "Withdraw the shutter assembly using the illustrated removal direction. Treat the frame and linked blinds as an assembly rather than attempting to replace an individual blind."
+          "title": "Remove the lower air deflector",
+          "body": "Under the nose, remove the lower air deflector's 16 screws and six push pins, then take the panel down. This is the broad panel spanning the underside of the front bumper. Keep its screws and push pins together for reassembly."
         },
         {
-          "title": "Refit in reverse order",
-          "body": "Install the shutter, restore the bridge link and actuator connection, and secure the assembly using the specified settings for each fastening point. Reattach the ambient temperature sensor and reinstall the bumper cover through its complete installation sequence."
+          "title": "Open access through both front wheel arches",
+          "body": "On each side, remove the two wheel-arch push pins: one high in the arch above the strut and one low on the inboard side beside the suspension. Then remove the three push pins along the forward edge of the inner fender liner and position that section of liner aside. This opens access behind each bumper corner; the liner is positioned aside rather than removed in its entirety."
+        },
+        {
+          "title": "Disconnect the bumper electrical connections on both sides",
+          "body": "Through the opened liner areas, disconnect the bumper electrical connectors on both sides before moving the cover away. Locate the three electrical connection points behind each bumper corner, where the harness meets the lamp connections. Release each fitted connector lock before separating its body; do not pull on the wires. Halogen foglamps are illustrated; LED foglamp access is handled similarly.\n\nKeep the disconnected wiring clear of the cover's removal path. The cover should leave with a helper, not with a wiring harness stretched behind it."
+        },
+        {
+          "title": "Release each bumper corner from its fender bracket",
+          "body": "On both sides, remove the bolt attaching the front bumper cover to the fender bracket. Separate the cover edge from the bracket. The bracket sits at the bumper-to-fender joint beneath the headlamp area.\n\nKeep these bolts separate: their installation setting is 15 lb.in (1.7 Nm)."
+        },
+        {
+          "title": "Remove the radiator sight shield and license plate bracket",
+          "body": "Before upper access, clear everyone and equipment from beneath the car and lower the hoist to a stable working height where you and your helper can stand on the ground and reach the top attachments. Keep the vehicle securely supported on the hoist and the battery isolated. The front wheels are removed: never unload the hoist onto the wheel-less car or let the hubs/body contact the floor. Do not climb into the raised vehicle.\n\nAt the top of the grille opening, remove the eight push pins and lift off the radiator sight shield—the broad plastic panel above the radiator support.\n\nIf a front license plate bracket is fitted, remove its two screws and take off the bracket. See [front bumper cover access](#/document/G1694213) for the complete attachment arrangement."
+        },
+        {
+          "title": "Expose and remove the bolts beneath the hood seal",
+          "body": "On each side, move aside the outer end of the hood seal to expose the bumper attachment bolt beneath it. Remove the bolt and leave the seal clear while the cover comes off.\n\nThese bolts also return to 15 lb.in (1.7 Nm)."
+        },
+        {
+          "title": "Lift the bumper cover off its alignment pins",
+          "body": "With a second person supporting the cover, remove the six screws along its upper mounting edge. Their installation setting is 48 lb.in (5.4 Nm).\n\nLift the cover upward to clear its alignment pins, then pull it forward and off the vehicle. Keep the cover supported while lifting it off the pins before pulling it forward. Place the cover where its painted surfaces are protected."
+        },
+        {
+          "title": "Inspect the fender bracket teeth",
+          "body": "With the cover removed, visually examine the teeth along each fender bracket where the bumper edge engages. Check specifically for damage to those engaging teeth.\n\nIf bracket replacement is required, remove its two bolts and take the bracket off. Keep the replacement ready for reassembly; its bolts tighten to 13 lb.in (1.5 Nm). An undamaged bracket can remain fitted."
+        },
+        {
+          "title": "Detach the ambient air temperature sensor",
+          "body": "Keep the wheel-less vehicle securely supported at the floor-reachable working height used for upper bumper removal. Arrange access to the lower sensor and full frame while standing on the floor; adjust only on the same hoist supports with everyone clear. Never unload the wheel-less car or climb onto it. Keep battery isolation and parking restraint maintained.\n\nLocate the small ambient air temperature sensor clipped near the lower side of the horizontal bumper reinforcement, beside the shutter frame. Release the sensor from its mounting and position it with its wiring clear of the assembly.\n\nThis sensor measures outside air temperature. Leave it with its wiring while the shutter frame is moved."
+        },
+        {
+          "title": "Release the shutter mounts and move the frame forward",
+          "body": "Support the shutter assembly. Remove its two upper retainers and four mounting bolts, then position the frame forward to reach the remaining connections. The frame includes upper and lower banks of linked blades around the horizontal bumper reinforcement.\n\nThe four mounting bolts tighten to 71 lb.in (8 Nm) during installation. At this stage the actuator connector and bridge link still need to be released. The radiator and A/C condenser stay in place."
+        },
+        {
+          "title": "Disconnect the actuator and remove the bridge link",
+          "body": "With the frame positioned forward, disconnect the grille shutter actuator electrical connector. Next remove the two retainers securing the long, narrow bridge link between the upper and lower shutter sections, then remove the link.\n\nThe bridge-link attachment setting is 27 lb.in (3 Nm). This ordering gives access to the connector before the frame is fully removed."
+        },
+        {
+          "title": "Remove the complete shutter assembly",
+          "body": "Withdraw the framed shutter assembly, freeing its center mounting straps from the horizontal bumper reinforcement as it comes away. Keep the detached sensor and disconnected wiring clear.\n\nHandle the frame as a complete unit. Individual blades are not separately serviceable. The [active grille shutter procedure](#/document/G1693244) covers this assembly removal and reverse-order installation."
+        },
+        {
+          "title": "Position the replacement frame and restore the bridge link",
+          "body": "Bring the shutter assembly into position, locating its center straps at the bumper reinforcement while leaving access to the rear connections.\n\nRefit the bridge link and its two retainers. Tighten the bridge-link attachments to 27 lb.in (3 Nm). Reconnect the actuator electrical connector before moving the frame back to its final mounting position."
+        },
+        {
+          "title": "Secure the shutter and reattach the temperature sensor",
+          "body": "Return the frame to its mounting position. Install its four mounting bolts and tighten them to 71 lb.in (8 Nm), then restore the two upper retainers.\n\nReattach the ambient air temperature sensor to its mounting. Check that its wiring and the actuator wiring are clear of the mounting straps and shutter blades."
+        },
+        {
+          "title": "Check the connections before covering them",
+          "body": "Confirm that the bridge link is installed, its two attachments are secured, the actuator connector is fully connected and the temperature sensor is clipped back into position. Account for all four shutter mounting bolts and both upper retainers.\n\nLook for wiring trapped between the frame and its mounts or crossing the blades' travel area. Correct the routing before refitting the bumper."
+        },
+        {
+          "title": "Refit any fender bracket removed for replacement",
+          "body": "Install each required replacement fender bracket and its two bolts. Tighten the bolts to 13 lb.in (1.5 Nm). Confirm that the bracket's engaging teeth are ready to receive the bumper edge. If both original brackets remained fitted and undamaged, continue to the cover."
+        },
+        {
+          "title": "Refit the bumper cover with a helper",
+          "body": "Keep the car securely supported at the floor-reachable height while both people restore the upper cover. The battery remains isolated and the front wheels remain off; never unload the hoist.\n\nWith two people supporting the cover, bring it rearward into place, align it with the locating pins and lower it onto them—the reverse of lifting it off during removal.\n\nRestore the six upper mounting screws and tighten them to 48 lb.in (5.4 Nm). Make sure the side edges are aligned with their fender brackets before securing the corner attachments."
+        },
+        {
+          "title": "Restore the hood seal, plate bracket and sight shield",
+          "body": "On both sides, install the bolt beneath the outer hood seal and tighten it to 15 lb.in (1.7 Nm). Return each seal end to position.\n\nIf removed, reinstall the license plate bracket with its two screws. Refit the radiator sight shield and its eight push pins."
+        },
+        {
+          "title": "Secure the bumper corners and reconnect the lighting",
+          "body": "With the upper screws and hood-seal bolts already secured, clear both people and all equipment, then raise and securely support the car for wheelhouse access again. Keep the parking brake applied and battery isolated.\n\nEngage each bumper corner with its fender bracket, restore its attachment bolt and tighten it to 15 lb.in (1.7 Nm).\n\nReconnect the bumper electrical connectors on both sides through the open liner areas. Restore the wiring to its original routing and keep it clear of the cover and liner fastening points."
+        },
+        {
+          "title": "Restore both inner fender liners",
+          "body": "Return the forward section of each inner fender liner to its original position and install its three push pins. Restore the two additional wheel-arch attachment push pins on each side. Check that the liner edges are seated and that wiring is not caught beneath them."
+        },
+        {
+          "title": "Refit the lower air deflector",
+          "body": "Position the lower air deflector beneath the bumper and restore its six push pins and 16 screws. Confirm that the panel is retained across its width and around its edges."
+        },
+        {
+          "title": "Clean the wheel mounting faces and pilot bores",
+          "body": "Complete the brake-dust controls in preparation before cleaning the wheel and brake-disc mounting area. Do not blow or dry-brush friction dust; the following mating-surface cleaning does not permit dust dispersal.\n\nBefore fitting either front wheel, remove corrosion, dirt and foreign material from the wheel's flat mounting face and the corresponding hub or brake-disc mounting face. Also clean the central wheel pilot bore—the center hole that locates over the hub's raised pilot.\n\nMake sure any fasteners holding the brake rotor to the hub are secure and do not stand between the mating faces. Contamination or an interfering fastener can prevent the wheel seating correctly and allow its nuts to loosen."
+        },
+        {
+          "title": "Lubricate only the pilot interface and fit the wheels",
+          "body": "Apply a thin film of Motorcraft High Temperature Nickel Anti-Seize Lubricant XL-2 only at the interface between each cleaned wheel pilot bore and hub pilot.\n\nKeep lubricant off the flat wheel-to-disc mounting faces, wheel studs, wheel nuts, brake pads and brake-disc friction surfaces. The wheel stud and nut threads must remain clean and dry.\n\nPosition each front wheel and install its five nuts finger tight at this stage."
+        },
+        {
+          "title": "Restore restraints, lower the car and torque the wheel nuts",
+          "body": "Maintain the parking brake applied throughout. Clear everyone and all equipment from beneath the car before lowering. Because the transmission has been in Neutral, restore wheel chocks as the tires reach the ground, before completing the lowering and unloading the hoist.\n\nWith the vehicle resting on its tires, tighten each wheel's nuts to 150 lb.ft (204 Nm) in a star/cross pattern. For the illustrated five-nut wheel, start at the top nut, cross to the lower-left nut, then upper-right, upper-left and lower-right. Continue to use a crossing pattern if the wheel's orientation differs.\n\nArrange to retighten the wheel nuts within 160 km (100 mi) after refitting. Keep the parking brake and ground-wheel restraints in place. Leave the battery isolated until all work and final wheel tightening are complete."
+        },
+        {
+          "title": "Check restored lighting and observe startup calibration",
+          "body": "With the vehicle fully grounded and chocked, confirm all shutter, bumper, lighting connections, panels and wheels are restored, final torques are complete and all tools accounted for. Keep everyone clear of fans, blades and moving parts before restoring power. Refit the negative battery cable, tighten its clamp nut to 44 lb.in (5 Nm), then refit the battery cover and its three retainers. The positive cable has remained connected. Battery reconnection may temporarily change driving behavior while the PCM relearns adaptive settings; this step does not direct an extra road test. See [Battery Disconnect and Connect](#/document/G1692356).\n\nRestore the parked state from the ground-level cabin. On an automatic, with valid key inside and ignition known OFF, keep both pedals released and press once for engine-off ON, hold the service brake and select P, then release the pedal and switch OFF. On a manual, select a parked gear while the engine and ignition remain OFF. Keep the parking brake and chocks applied.\n\nBefore starting the engine, check the bumper lighting with the car fully assembled, grounded and restrained, automatic in P or manual in a parked gear. Keep everyone clear. If ignition is OFF, with the valid key inside and both pedals released press once for engine-off ON; if already ON, leave it ON. Turn the lighting control to parking lamps and confirm both front parking and side-marker illumination. Push the direction-indicator lever up and down in turn to check each front signal, returning it to neutral afterward. Press the hazard flasher control on the instrument panel by the radio to check both front indicators, then press it again to switch them off.\n\nWith the parking lamps selected and high beams OFF, press the fitted front fog-lamp control and confirm illumination; press it again to turn the fog lamps off. This is an ordinary lighting check, not an aim-adjustment test. Switch all lamps OFF and switch ignition OFF from ON; if already OFF, leave it OFF. If any function remains absent, record it and use the established isolated-access sequence before physical reinspection. Lighting controls are described in the 2015 owner manual, printed pages 68, 71 and 192.\n\nFor the source-required startup calibration, start outdoors or with the garage door open and adequate ventilation; never run in a closed garage or enclosed area. Avoid dry grass and other combustible ground cover. If exhaust fumes enter the cabin, do not drive; obtain prompt dealer inspection. Keep the valid key inside, occupants belted, headlamps and electrical accessories off. The driver remains in the grounded cabin: automatic in P with brake fully pressed, or manual in Neutral with service brake held and clutch fully depressed, then press the start button without accelerator input. Maintain the parking brake and chocks. Once running, leave the manual in Neutral; no driving is needed.\n\nA helper may observe from a safe position clear of the engine bay, fans and shutter mechanism, without touching or reaching through the grille. The shutters seek both fully open and fully closed end positions, then move to the PCM-commanded position. Calibration typically takes 15–20 seconds, may begin in either direction and can pause for a long interval between movements. Record actual end-position travel and repeated attempts. If the movements cannot be seen safely after complete reassembly, stop this observation and use a workshop inspection; do not remove panels or approach moving parts while powered. A normal-looking cycle does not establish absence of stored faults.\n\nFinish with the stationary driver holding the service brake and parking brake applied; automatic remains P, manual remains Neutral with clutch depressed until shutdown. Once the parking brake holds, release the brake pedal and press the button once to switch OFF. Select a parked manual gear after the engine stops. Finish with all lamps and ignition OFF and key removed. Before any physical reinspection, repeat the established negative isolation and safe access sequence. Restore a previously enabled remote-start setting only after service is complete, then return to OFF/key out. The starting/shutdown controls are in the 2015 owner manual, printed pages 121–122."
         }
       ],
       "watchFor": [
         {
-          "title": "Illustration clearance",
-          "body": "The radiator and condenser are omitted from an illustration for clarity. Their removal is not part of this shutter procedure."
+          "title": "Small fasteners need small torque",
+          "body": "Shutter mounting bolts use 71 lb.in (8 Nm); bridge-link attachments use 27 lb.in (3 Nm). Bumper side and hood-seal bolts use 15 lb.in (1.7 Nm), upper cover screws use 48 lb.in (5.4 Nm), and replacement fender-bracket bolts use 13 lb.in (1.5 Nm). These are inch-pound settings."
         },
         {
-          "title": "No driver warning",
-          "body": "A shutter fault can be stored in the PCM without an indication to the driver."
+          "title": "Lift only at the correct body points",
+          "body": "Use the triangle-marked lifting areas and correctly positioned hoist adapters. Never lift by a bumper or use the emergency tire-changing jack for this job. Incorrect positioning can damage components or let the vehicle shift or fall."
+        },
+        {
+          "title": "The shutters can move after startup",
+          "body": "Startup triggers an automatic open-and-close calibration. Keep fingers, wiring and tools out of the linked blades and actuator mechanism."
+        },
+        {
+          "title": "Clean faces and dry wheel threads matter",
+          "body": "Apply XL-2 only as a thin film at the pilot bore-to-hub pilot interface. Dirty mounting faces, lubricant on the threads or an incorrect tightening pattern compromise correct wheel installation."
+        },
+        {
+          "title": "No dashboard warning does not prove normal operation",
+          "body": "The PCM can store a grille shutter diagnostic trouble code without giving the driver an indication."
         }
       ],
       "notes": [
-        "Startup calibration can begin in either direction and can pause between opening and closing."
+        "The PCM uses operating information such as vehicle speed, coolant and ambient temperatures, and A/C pressure to choose shutter position. Vehicle speed arrives from the ABS module through the high-speed vehicle network.",
+        "The actuator exchanges commands, position information and fault information with the PCM through the local interconnect network, or LIN—a two-way communications connection. See [system operation](#/document/G1693242).",
+        "The [system overview](#/document/G1693241) explains the fuel-economy and warm-up functions. A shutter's resting position is not a stand-alone replacement test.",
+        "This job removes complete wheel-and-tire assemblies. Tire demounting and wheel balancing are outside its scope."
       ],
       "diagnostics": [
         {
-          "finding": "Shutters remain partly or fully open with the engine off",
-          "meaning": "This can be normal and depends on ambient conditions.",
-          "next": "Consider operating conditions before treating their resting position as evidence of failure."
+          "finding": "The shutters are partly or fully open with the engine stopped.",
+          "meaning": "This can be normal, depending on ambient temperature.",
+          "next": "Do not choose a replacement from the parked position alone. Consider the startup calibration and the established reason for repair."
         },
         {
-          "finding": "Repeated calibration attempts or a persistent fully open position",
-          "meaning": "Blockage, actuator errors or local interconnect network (LIN) communication faults can affect operation.",
-          "next": "Establish the fault before choosing an actuator or complete assembly; position alone does not identify the failed part."
+          "finding": "Startup calibration begins by opening or by closing, or pauses between the two movements.",
+          "meaning": "Either starting direction and a long pause can be normal. Calibration typically takes 15–20 seconds.",
+          "next": "Observe the complete sequence from a safe position before judging an initial movement or pause."
+        },
+        {
+          "finding": "The system makes repeated calibration attempts.",
+          "meaning": "A blocked shutter or actuator error can prompt recalibration. Unresolved faults usually lead to a timer after three or four attempts; a diagnostic trouble code is set when the applicable time threshold is reached.",
+          "next": "End the observation from the grounded cabin and switch engine/ignition OFF, retain parking restraint and chocks, and remove the key. Before physical reinspection, repeat negative isolation and the supported access sequence. Check the restored connector, bridge link and wiring clearance only in that isolated state. Persistent trouble requires the separate system-specific diagnostic procedure; do not choose another part from repeated attempts alone."
+        },
+        {
+          "finding": "The shutters remain fully open.",
+          "meaning": "Normal control can request an open position. A continuous LIN communication failure lasting more than 10 seconds also causes the actuator to position the shutters fully open.",
+          "next": "Establish whether the position is commanded or associated with a communication fault. A fully open frame alone does not distinguish wiring trouble from an actuator or assembly problem."
+        },
+        {
+          "finding": "A fender bracket has damaged engaging teeth.",
+          "meaning": "The bumper-to-fender attachment requires attention before the cover is refitted.",
+          "next": "Remove the affected bracket's two bolts and replace the bracket as required. Tighten its installation bolts to 13 lb.in (1.5 Nm)."
+        },
+        {
+          "finding": "The repair concerns an individual shutter blade or only the actuator.",
+          "meaning": "Individual blades are serviced with the complete assembly; the actuator is separately serviceable.",
+          "next": "Use the assembly replacement route for blade-related assembly work. Establish the actuator-specific repair procedure before undertaking actuator-only disassembly."
         }
       ],
       "verification": [
         {
-          "title": "Check startup operation",
-          "body": "Observe the automatic calibration after engine start: the system seeks both end positions before moving to its commanded position."
+          "title": "Confirm hidden shutter attachments before bumper installation",
+          "body": "Check the bridge link and both attachments, connected actuator plug, four mounting bolts, two upper retainers and clipped-in ambient temperature sensor. Confirm wiring clears the frame mounts and blade travel."
         },
         {
-          "title": "Record the result",
-          "body": "Record the observed travel and any repeated calibration attempts. Confirm the sensor, connector, bridge link and bumper attachments have been restored."
+          "title": "Confirm complete bumper reassembly",
+          "body": "Account for upper cover screws, both hood-seal bolts, both side attachment bolts, any replaced fender brackets, bumper connectors, sight shield, license plate bracket if fitted, liner push pins and lower air-deflector fasteners. Check that the cover edges engage their brackets and the hood seal is returned to position. Check the restored parking/side-marker, turn/hazard and fitted fog-lamp functions using the stationary controls in step 28, then switch all lamps OFF."
+        },
+        {
+          "title": "Confirm wheel security and restraint restoration",
+          "body": "Both front wheels must sit flush on clean mounting faces, with clean, dry nut and stud threads. Complete the star-pattern tightening to 150 lb.ft (204 Nm) with the vehicle resting on its tires. Maintain the parking brake throughout lowering and restore chocks as the wheels reach the ground. Retighten the nuts within 160 km (100 mi)."
+        },
+        {
+          "title": "Record the startup observation",
+          "body": "From a safe position, observe the open-and-close calibration and subsequent commanded position. Allow for either starting direction and a pause. Record incomplete travel or repeated attempts for further diagnosis; this observation does not replace fault-code or electrical testing. Finish fully grounded in automatic P or an engine-off parked manual gear, parking brake and chocks applied, lamps and ignition OFF and key removed. No live physical reinspection is permitted."
         }
       ],
       "procedures": [
         {
           "documentId": "G1693244",
-          "purpose": "Complete active grille shutter removal and installation, including attachment torques.",
+          "purpose": "Primary shutter assembly removal and reverse-order installation, including mounting and bridge-link torques.",
           "mediaId": "G1693244-m0004"
         },
         {
           "documentId": "G1694213",
-          "purpose": "Front bumper cover removal and installation for shutter access.",
+          "purpose": "Required front bumper cover access and reassembly for 2.3L, 3.7L and 5.0L, including liner access, connectors, attachment inspection and torques.",
           "mediaId": "G1694213-m0009"
         },
         {
           "documentId": "G1693241",
-          "purpose": "Explain shutter purpose, PCM control and automatic startup calibration."
+          "purpose": "Explain the shutter system's purpose, PCM control and automatic startup calibration."
         },
         {
           "documentId": "G1693242",
-          "purpose": "Explain operating positions, calibration behavior, communication faults and assembly serviceability."
+          "purpose": "Explain operating positions, calibration behavior, communication-related behavior and component serviceability."
+        },
+        {
+          "documentId": "G1663631",
+          "purpose": "Identify lifting points and hoist-positioning precautions for wheel and bumper access."
+        },
+        {
+          "documentId": "G1686507",
+          "purpose": "Front wheel removal and installation, including pilot-bore cleaning, XL-2 application, tightening pattern, torque and retightening requirement."
+        },
+        {
+          "documentId": "G1693189",
+          "purpose": "Startup prevention, relevant fan precautions, personal protection and vehicle-restraint requirements."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Negative-only power interruption/restoration before fan-area and electrical work."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Relevant battery handling precautions for terminal isolation and reconnection."
+        },
+        {
+          "documentId": "G1693183",
+          "purpose": "Friction-dust controls before wheel/brake-disc mating-surface cleaning."
         }
       ],
       "hero": {
@@ -125322,13 +125515,12 @@
         "engines": [
           "2.3L",
           "3.7L",
-          "5.0L",
-          "5.2L"
+          "5.0L"
         ],
         "years": [
           2015
         ],
-        "equipment": "Active grille shutters"
+        "equipment": "2015 2.3L, 3.7L or 5.0L with active grille shutters; complete assembly replacement using the matching standard-engine bumper access. Excludes 5.2L."
       },
       "relatedGuideIds": [
         "job-a320b8db05a79c9d"
@@ -125349,14 +125541,92 @@
         {
           "documentId": "G1693242",
           "sourceHash": "dafdc35d4ca2122a6e41660603aeba88874c832585b196d2aa7b3b98082b99fa"
+        },
+        {
+          "documentId": "G1663631",
+          "sourceHash": "44be8fb37b01c27580ac037721525c7ce8d174dd069df0f85a0f776c78889237"
+        },
+        {
+          "documentId": "G1686507",
+          "sourceHash": "05bdc00833f259d6a8ccaacb05f1d7240193618e941b7779ee0612612b765454"
+        },
+        {
+          "documentId": "G1693189",
+          "sourceHash": "b8df890dc5cbc1d8cfa5ead5ac004d186b3cddeb6e6577248a2f269c41c69c6a"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
+        },
+        {
+          "documentId": "G1693183",
+          "sourceHash": "1a1b5afe351d2c0202670bea4b024e539aef676dc55c241f643956a9f5f33aab"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "bb7f0c39be9e145302399c32451cac17125e7e3bb2a1336d61f29b228f455c31"
-      }
+        "fingerprint": "bb7f0c39be9e145302399c32451cac17125e7e3bb2a1336d61f29b228f455c31",
+        "editorialVersion": 2,
+        "editorialFingerprint": "678b9443271d1e0f13fe61edd247cc9b3e255aece137150ea4173364a446d0db",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "secure-and-lift",
+          "title": "Secure the car and remove the front wheels",
+          "summary": "Prevent startup, establish safe hoist support and open wheel-arch access.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "bumper-access",
+          "title": "Remove the bumper cover",
+          "summary": "Remove shields and retainers, disconnect wiring and release the cover from its brackets and alignment pins.",
+          "start": 4,
+          "end": 11
+        },
+        {
+          "id": "free-the-shutter",
+          "title": "Release and remove the shutter assembly",
+          "summary": "Detach the temperature sensor, move the frame forward and release the actuator connector and bridge link.",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "id": "install-the-shutter",
+          "title": "Install and secure the shutter",
+          "summary": "Restore the bridge link, connector, mounting hardware and temperature sensor.",
+          "start": 16,
+          "end": 18
+        },
+        {
+          "id": "restore-the-bumper",
+          "title": "Reassemble the bumper and access panels",
+          "summary": "Restore brackets, cover attachments, electrical connections, liners and shields.",
+          "start": 19,
+          "end": 24
+        },
+        {
+          "id": "wheel-refit",
+          "title": "Refit the wheels and lower safely",
+          "summary": "Clean and lubricate the correct interfaces, restore restraints and torque the wheel nuts on the ground.",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "id": "startup-observation",
+          "title": "Observe automatic calibration",
+          "summary": "Restore power only after complete reassembly, observe startup calibration without contact, then shut down and secure the grounded vehicle.",
+          "start": 28,
+          "end": 28
+        }
+      ]
     },
     {
       "title": "Remove and refit the cowl panel grille",

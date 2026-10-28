@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C114",
+  "supportingSourceRefs": [],
+  "sourceHash": "8a0bbea6517b0f9385bcfa6c57ba97630edfbb7b2b10ea835a2491428fcda4a6",
+  "title": "C114 — Ignition coil-on-plug 4",
+  "introduction": "The ignition coil turns electrical energy into the high voltage needed for a spark. In a coil-on-plug arrangement, the coil sits at its spark plug. This reference concentrates on the connector's cavity map and the identifiers attached to its circuits and listed service parts.\n\nI check the connector identity table before reading the drawing, then match each cavity label to its table row. The housing is a small seating plan: having a place available does not mean that place is occupied. The circuit rows show which positions have assigned connections, and their Function entries distinguish the control connection from the supply. The pigtail table then keeps kit, service-part and shell identities together.\n\nUse this page to understand the reference. Physical access, viewing direction, probing, wire selection and replacement belong to matching vehicle service information. Size and gauge conventions remain undefined here; no test limits or fault conclusions are supplied.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C114-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "The cavity labels run vertically in the printed drawing, and the middle circle is shaded. That visual distinction agrees with the unused middle cavity in the table. I use the outline to keep my place on the drawing, without treating its top and bottom as vehicle locations or assuming which side of the physical connector is being viewed."
+    },
+    {
+      "blockId": "connector-C114-b00005",
+      "text": "Pin-to-circuit map",
+      "why": "Each row links a Cavity to its Circuit Number, Color, Gauge, Function and Terminal Part Number. Read across rather than separating a color from its circuit identity. The upper drawn cavity maps to powertrain control, the lower one to the fuse-or-circuit-breaker supply, and the middle cavity has no assigned circuit. The stated housing capacity therefore does not imply that every position contains a connection."
+    },
+    {
+      "blockId": "connector-C114-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I treat each row as a complete association between the kit Number, its Service Part, its Engineering Shell and the listed attributes. These columns are not alternate names for the same item. The common shell entry alone cannot choose between kits or establish interchangeability, and the reference contains no installation or splice procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:42:38.519Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "dc38daed126795371395cd5d9bb88a95289ae417a0f895345199c2926edf08a5",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f5ccf2f67a1bbe41d887145cc914804fdf16edcd7e0d17eaefda345c296931ef",
+    "reviewedAt": "2026-10-28T01:42:38.519Z"
+  }
+}
