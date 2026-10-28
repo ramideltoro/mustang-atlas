@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C1151",
+  "supportingSourceRefs": [],
+  "sourceHash": "bdf04a0ac359d2eba7dde09b3fe700e0ec22c9f6d01188aa2cb653fd5ef62351",
+  "title": "C1151 — Right-front height sensor connector",
+  "introduction": "I use this reference as a seating plan for the right-front height sensor's electrical connections: the drawing identifies each cavity, and the pin table tells you which circuit belongs there. Start with CNumber and Description in the identification table, then match the drawing's cavity labels to the Cavity column. Reading position and circuit identity together keeps similar-looking wires from becoming a guessing game.\n\nThe tables retain the original identifiers and function wording. This is a connector-reading guide, without physical access, disconnecting, probing, testing or replacement instructions. The drawing's terminal-side versus wire-side viewing direction is unspecified. Box, Cols, Size and Used have no supplied decoding key, and Gauge has no stated convention; use these as recorded fields rather than translating them into dimensions or wire-selection advice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1151-b00002",
+      "text": "Read the connector face · Harness 14290",
+      "why": "I orient the drawing on the page by the housing feature above the cavity row and the projecting features at either side. The printed cavity labels are the link to the pin table; their positions describe this drawing, without establishing which side of a physical connector you would be viewing. The adjacent Fpn and Harness Id fields associate the illustration with its listed shell and harness."
+    },
+    {
+      "blockId": "connector-C1151-b00005",
+      "text": "Match each cavity to its circuit",
+      "why": "Read across the row matching the drawing's cavity label. Circuit Number identifies the circuit; Color and Gauge record its wire information; Function describes its listed role; Terminal Part Number identifies the terminal entry. The suspension-position wording identifies the sensor-related connection. Keep the controller and USB diagnostic function wording literal: neither the plus/minus marks nor those names establish a voltage, a test method or permission to connect USB equipment. A blank Qualifier supplies no additional condition."
+    },
+    {
+      "blockId": "connector-C1151-b00007",
+      "text": "Read the pigtail service-part entries",
+      "why": "A pigtail is a connector with attached wire leads for harness repair. I read each row as a complete catalog entry, keeping Number, Service Part and Engineering Shell together. Gauge and Cavities describe that entry, Material retains its stated description, and Image names its associated file. Shared shell information alone does not explain how to choose among the listed kits or authorize a wire substitution."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:10:45.145Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "695ce93865137a68aea0d8abf5cc1859fbbd78f0f1db1721cd365a53c8d1a664",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "5c096fcaaba4254f3c15c98a6caa44027b7d183e5a86a33c38874d21fa72195d",
+    "reviewedAt": "2026-10-28T02:21:11.489Z",
+    "editorialRevision": {
+      "scope": "Narrow neutral feature-label correction after complete32unit/raw/table/fullprose/verdict and originalpage2figure read; unusual USB function remains literal without inferred voltage/protocol/probing.",
+      "before": "I orient the drawing on the page by the latch feature above the cavity row and the projecting features at either side. The printed cavity labels are the link to the pin table; their positions describe this drawing, without establishing which side of a physical connector you would be viewing. The adjacent Fpn and Harness Id fields associate the illustration with its listed shell and harness.",
+      "after": "I orient the drawing on the page by the housing feature above the cavity row and the projecting features at either side. The printed cavity labels are the link to the pin table; their positions describe this drawing, without establishing which side of a physical connector you would be viewing. The adjacent Fpn and Harness Id fields associate the illustration with its listed shell and harness."
+    }
+  }
+}

@@ -155306,127 +155306,246 @@
       }
     },
     {
-      "title": "Diagnose acceleration and rotation event codes in the restraints control module",
-      "summary": "Use a controlled road test, mounting inspection and directed self-tests to distinguish motion-related event codes from a persistent restraints-module fault.",
-      "introduction": "The restraints control module (RCM) helps control airbag and pretensioner deployment and supplies motion-sensor data to the stability and traction-control system. It also checks whether that data falls within its expected range. Acceleration and rotation event codes can follow rough roads or aggressive driving, but incorrect mounting or an RCM fault can also cause them. This diagnosis determines whether the event repeats before authorizing repair or replacement.",
-      "why": "The module needs a secure, clean mounting surface to assess vehicle motion reliably. These particular codes do not request illumination of the airbag warning indicator, so an unlit warning lamp cannot establish that the codes have cleared. Handling a powered restraints module also presents a deployment hazard.",
+      "title": "Interpret recorded RCM acceleration and rotation event-code results",
+      "summary": "Follow existing technician records through the C0061:68–C0065:68 A1–A6 chart, preserving the recurrence, mounting, intermittent-fault and final restraints-verification decisions.",
+      "introduction": "I’ll help you read an existing technician report for these motion-event codes and identify which chart conclusion the recorded evidence supports. This is a record review: it does not teach driving tests, scan-tool operation, restraint access, fuse work or repairs.",
+      "why": "The restraints control module, or RCM, helps decide when airbags and seatbelt pretensioners should deploy. It also sends vehicle-motion information to the stability and traction-control system over HS-CAN2, a vehicle communications network. These codes mean that particular motion readings fell outside the range the RCM expected. Rough roads, aggressive driving, incorrect mounting and an RCM fault are possible causes. These five codes do not themselves request the airbag warning light, so a dark dashboard light cannot tell you that they have cleared.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "C0061:68 lateral acceleration event",
-        "C0062:68 longitudinal acceleration event",
-        "C0063:68 yaw rate event",
-        "C0064:68 roll rate event",
-        "C0065:68 vertical acceleration event",
-        "restraints motion codes after rough road"
+        "2015 Mustang RCM event codes",
+        "C0061:68 lateral acceleration",
+        "C0062:68 longitudinal acceleration",
+        "C0063:68 yaw rate",
+        "C0064:68 roll rate",
+        "C0065:68 vertical acceleration",
+        "Mustang restraints module rough road codes",
+        "RCM mounting connector C310A C310B"
       ],
       "when": {
-        "summary": "When the RCM stores C0061:68, C0062:68, C0063:68, C0064:68 or C0065:68.",
+        "summary": "Use this interpretation when an existing technician report contains the required preliminary inspection and the applicable A1–A6 results for C0061:68–C0065:68.",
         "notes": [
-          "Diagnose any other RCM codes first; they change the starting point for this test."
+          "Other recorded RCM codes take priority over this event-code path.",
+          "Missing, ambiguous or incorrectly sequenced records leave the relevant branch unresolved; do not infer a pass.",
+          "A chart repair destination identifies separate required service, not an operation taught here."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange restraints-system capability",
-          "detail": "Use a diagnostic scan tool capable of RCM and complete Restraints self-tests. Have the linked supplemental restraint system (SRS) depowering, repowering and RCM installation procedures available, plus Wiring Diagrams Cell 5."
+          "title": "Require the documented starting inspection",
+          "detail": "Use a report identifying this vehicle, the affected RCM codes and the thorough preliminary connector/wiring inspection and concern verification required before the pinpoint test. If that inspection is absent, stop this interpretation before A1; do not treat the absence of a note as a passed inspection."
         },
         {
-          "title": "Plan the road test and inspection",
-          "detail": "Choose a route with left and right turns, avoiding rough roads and aggressive driving. Inspect for obvious wiring and connector concerns, but disconnect or reconnect SRS components only when the test instructs."
+          "title": "Collect the existing branch records",
+          "detail": "Have the complete initial and post-drive RCM self-test results, code-clearing record, qualifying drive description and, where reached, documented SRS isolation/restoration, mounting inspection, connector/harness findings, original-code confirmation, applicable OASIS/TSB result, repairs and final Restraints self-test/prove-out. Obtain missing records from the servicing technician rather than performing the work from this article."
+        },
+        {
+          "title": "Keep physical service separate",
+          "detail": "No live scanning, driving, fuse selection, terminal work, reconnection, mounting adjustment or RCM replacement is directed here. Physical execution requires the complete matching service information, including access, mounting specifications and fuse/connector identification. Those execution gaps remain unresolved by this interpretation."
         }
       ],
       "steps": [
         {
-          "title": "Establish which codes are present",
-          "body": "With ignition on, perform the RCM self-test and record its results. Continue with this path only when the listed motion-event codes are the only RCM codes retrieved. Otherwise, follow general SRS diagnosis for the other codes first."
+          "title": "Check that the report is eligible",
+          "body": "Identify the vehicle and recorded code group, and confirm the documented preliminary concern/connector/wiring inspection preceded A1. A dark airbag warning lamp does not establish that these motion-event codes are absent: the RCM does not request that lamp for this group. If the preliminary evidence or result identity is missing, the chart cannot yet support a conclusion."
         },
         {
-          "title": "Clear the events and check for recurrence",
-          "body": "Clear the RCM codes, drive the planned route gently and repeat the RCM self-test. If no codes return, rough roads or aggressive driving may explain the original events; explain this to the owner. Diagnose any different codes that appear. If only the original event-code group returns, continue to mounting inspection."
+          "title": "Read A1 and the code-priority gate",
+          "body": "Read the recorded ignition-ON RCM self-test. Only one or more of C0061:68, C0062:68, C0063:68, C0064:68 and C0065:68, with no other RCM codes, permits the A2 branch. The record must also show RCM code clearing before the recurrence drive. Other RCM codes, with or without event codes, require separate [SRS diagnosis](#/document/G1696340) first. A missing complete code list or clearing record leaves A2 eligibility unresolved."
         },
         {
-          "title": "Depower before checking the mounting",
-          "body": "Switch the ignition off and follow the complete SRS depowering procedure. Check that RCM hardware is fully seated and correctly tightened, and inspect its mounting surface for damage, corrosion or foreign material. Repair incorrect mounting or install new hardware as necessary, then proceed to the final system checks."
+          "title": "Interpret the recorded A2 recurrence drive",
+          "body": "Require a documented drive containing both left and right turns without rough roads or aggressive driving, followed by the RCM self-test. This is a requirement for the existing result, not an instruction to drive.\n\nNo RCM codes means the source allows the initial no-recurrence exit and explanation that aggressive driving or rough roads may have triggered the original events. It does not require progression through A3–A6 on that branch. Any other RCM code requires separate SRS diagnosis. Only the specified event-code group returning leads to A3. An unspecified route or incomplete post-drive results cannot establish any of those outcomes."
         },
         {
-          "title": "Confirm a fault when mounting is correct",
-          "body": "Before reconnecting anything previously disconnected, inspect terminals, wiring and the connector position assurance (CPA) lever/locks at C310A and C310B; repair defects. Connect the RCM and ensure all SRS components are connected. Repower without proving out yet, clear RCM codes and run its self-test. If the original code returns on demand, check applicable technical service bulletins before the test authorizes RCM replacement."
+          "title": "Check the documented isolation and A3 mounting findings",
+          "body": "For a returning-code branch, require the recorded ignition-OFF and completed applicable SRS depowering before the mounting inspection. The report must identify the actual mounting inspection against the matching installation requirements: hardware fully seated/correctly tightened, and mounting surface free of damage, corrosion or foreign material. A statement that the module looks secure without the required inspection evidence does not establish A3.\n\nIncorrect mounting or an unsuitable surface leads to separate mounting repair or new hardware as necessary, then A6 after the documented repair. Correct mounting and a clean, undamaged surface lead to A4. This article neither provides the missing access/torque method nor authorizes moving the RCM."
         },
         {
-          "title": "Investigate an intermittent result",
-          "body": "If the original code does not return, do not replace SRS components. Switch the ignition off, depower again and disconnect C310A and C310B as directed. Inspect locks, loose or spread terminals, frayed connections and damaged harnesses. Repair identified faults; if none are found, continue without speculative replacement."
+          "title": "Verify the recorded conditions before the A4 confirmation",
+          "body": "Before the A4 result is usable, require documentation of inspection before any previously disconnected SRS component was reconnected: connectors including inline connections, pushed-out/loose/spread terminals, loose/frayed wire connections, damaged/pinched/cut/pierced harnesses, and C310A/C310B CPA lever/lock operation. Any identified concerns require documented separate repair.\n\nThe record must show C310A/C310B and all SRS components connected, applicable repowering completed with prove-out postponed, then ignition ON, RCM codes cleared and the RCM self-test performed. Disconnected components can create additional codes. Missing inspection, connection or sequence evidence leaves the confirmation result unresolved."
         },
         {
-          "title": "Reconnect and check the complete restraints system",
-          "body": "Switch the ignition off and wait one minute for backup power to deplete before reconnecting disconnected SRS components. If previously depowered, follow the repowering procedure without proving out yet. Switch the ignition on and run the complete Restraints self-test, including the RCM, occupant classification system module (OCSM) and any additional module applicable to the fitted equipment."
+          "title": "Interpret the original-code and bulletin gates at A4",
+          "body": "Check whether the original code—not merely an unrelated or historical code—was retrieved on demand during the recorded self-test. If yes, require an existing OASIS result for applicable technical service bulletins. An applicable bulletin discontinues this chart in favor of that separate procedure. If no bulletin addresses the concern, the chart directs separate [RCM replacement](#/document/G1696307), then A6 after documented completion. Unknown bulletin applicability does not authorize replacement.\n\nIf the original code did not return, the chart treats the concern as intermittent, prohibits speculative SRS replacement and proceeds to A5."
         },
         {
-          "title": "Resolve remaining faults before proving out",
-          "body": "If the final self-test retrieves any on-demand restraints codes, retain them and follow SRS diagnosis until resolved. When none remain, clear RCM and OCSM continuous-memory codes and perform the prescribed SRS prove-out. Release requires a fully operational, fault-free restraints system."
+          "title": "Interpret the recorded A5 intermittent inspection",
+          "body": "Require documented ignition OFF, applicable SRS depowering and directed C310A/C310B disconnection before the A5 inspection. The report must cover both CPA lever/locks, pushed-out/loose/spread terminals, loose/frayed wire connections and damaged/pinched/cut/pierced harnesses.\n\nConcerns found require separate repair using the matching Cell 5 information, then A6. No concerns means the fault is absent and cannot be recreated at that stage; the chart directs A6 without new SRS components. An undocumented or partial inspection is not the no-concern branch."
+        },
+        {
+          "title": "Check the recorded A6 reconnection and complete self-test",
+          "body": "Require an explicit ignition-OFF interval of one minute to deplete backup power before recorded reconnection of previously disconnected SRS components. Require all components restored and, if previously depowered, applicable repowering with prove-out still postponed. This one-minute condition does not replace the complete earlier isolation procedure.\n\nThe subsequent ignition-ON Restraints self-test must include RCM, OCSM and BECMB if fitted; the source identifies Restraints in the Self Test menu as the combined test. This is identification of the recorded test, not scan-tool instructions. Any on-demand code in those modules requires separate SRS diagnosis, with codes retained until all are resolved. A report limited to the RCM cannot establish the complete A6 result."
+        },
+        {
+          "title": "Read the final clearing and prove-out evidence",
+          "body": "When A6 records no on-demand codes, require documented RCM and OCSM continuous-memory clearing and final SRS prove-out. The prove-out record must establish all airbags installed/connected, ignition OFF for 10 seconds before ON, approximately 6 seconds of continuous indicator illumination followed by extinction, and observation through approximately 30 seconds after ON.\n\nFailure to illuminate, continuous illumination or flashing requires separate diagnosis and repair; flashing may be delayed to approximately 30 seconds. An inoperative lamp with an SRS fault can produce five sets of five beeps or an SRS message. A normal light sequence followed by no light, chime or SRS message at 30 seconds is the recorded warning-indication check. If fault-present-at-start repowering applied, its final all-module continuous-memory clearing must also be documented. A normal lamp alone does not replace A6 code evidence. Only a fully operational, fault-free SRS meets the source return-to-service requirement; this record review does not independently certify the vehicle."
+        },
+        {
+          "title": "Record the supported conclusion and remaining gaps",
+          "body": "Summarize the initial codes, qualifying drive and post-drive results, applicable mounting/connector findings, repairs or bulletin, original-code confirmation and final results. Distinguish the initial A2 no-recurrence exit from branches requiring physical service and A6. Label missing, ambiguous or out-of-sequence evidence unresolved and request the existing records or separate qualified service. Do not turn a chart destination into an instruction to perform the missing repair."
         }
       ],
       "watchFor": [
         {
-          "title": "Never move an energized RCM",
-          "body": "Do not handle, move or change its horizontal mounting position while connected with ignition on. Accidental deployment can cause serious injury or death."
+          "title": "Recorded SRS safety states must match the branch",
+          "body": "Require the recorded initial warning-indicator assessment: OFF for 10 seconds, then ON, approximately 6 seconds of illumination followed by extinction and observation through approximately 30 seconds. Failure to light, persistent light, flashing, or the five-sets-of-five chime/SRS-message alternative requires separate diagnosis; missing indication evidence cannot establish the no-fault branch. The no-fault depowering record requires ignition OFF and a one-minute wait, with OFF maintained during service. The fault-present record requires correctly identified RCM/BECMB fuses, the equipment-dependent temporary two-blade 10A GWM fuse only for the three-blade arrangement, nonresponsive RCM/fitted BECMB Network Test, ignition OFF, negative battery isolation and at least one minute before service. These are evidence prerequisites, not fuse or battery instructions."
         },
         {
-          "title": "Confirm replacement compatibility",
-          "body": "If replacement is directed, verify the correct Ford parts-catalog number. A physically similar component from another vehicle may be incompatible."
+          "title": "Restoration evidence remains equipment-dependent",
+          "body": "Where the fault-present branch applied, require recorded removal of the temporary GWM fuse, correct fuse restoration, battery reconnection (negative clamp 44 lb.in/5 Nm and cover restored), and the prescribed upright/rearmost driver position with no objects between the occupant and pyrotechnic devices before powered testing. If these prerequisites are not documented, the associated result remains unresolved."
+        },
+        {
+          "title": "No live RCM or connector work",
+          "body": "The source prohibits handling, moving or changing the RCM horizontal position while connected with ignition ON. This interpretation directs no physical access or connector action. Unresolved mounting, wiring, fuse or component identity requires the complete separate procedure."
+        },
+        {
+          "title": "Code and warning-lamp outcomes are different",
+          "body": "These event codes do not themselves request the airbag lamp. Normal indicator behavior cannot prove that a code cleared, that a mounting inspection passed or that the complete Restraints self-test succeeded."
         }
       ],
       "notes": [
-        "The one-minute wait at final reconnection does not replace the complete SRS depowering procedure.",
-        "Delay SRS prove-out until the final diagnostic stage specifically directs it."
+        "The five code meanings and A1–A6 decision gates come from [G1696391](#/document/G1696391).",
+        "Physical service, test acquisition, OASIS retrieval and return-to-service work remain separate procedures; this guide interprets existing technician evidence only.",
+        "Correct component identity and complete fault resolution remain requirements for any separately directed SRS replacement; visual similarity is not sufficient."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code C0061:68, C0062:68 or C0065:68 is recorded.",
-          "meaning": "These indicate lateral, longitudinal or vertical acceleration data outside the RCM's expected range, respectively.",
-          "next": "Check for other RCM codes first, then use the controlled road test to establish recurrence."
+          "finding": "C0061:68 is recorded.",
+          "meaning": "Lateral acceleration data—side-to-side vehicle acceleration—was outside the RCM's expected range.",
+          "next": "Read the complete recorded A1 code list and A2 eligibility evidence."
         },
         {
-          "finding": "Diagnostic trouble code C0063:68 or C0064:68 is recorded.",
-          "meaning": "C0063:68 concerns yaw-rate data; C0064:68 concerns roll-rate data outside the expected range.",
-          "next": "Follow the same recurrence, mounting and confirmation sequence; a stored event alone does not justify replacing the RCM."
+          "finding": "C0062:68 is recorded.",
+          "meaning": "Longitudinal acceleration data—acceleration or deceleration along the car's length—was outside the expected range.",
+          "next": "Interpret the same recorded code-priority and recurrence evidence; this code alone does not establish failure."
         },
         {
-          "finding": "The original event code does not return during the confirmation self-test.",
-          "meaning": "The fault has become intermittent during diagnosis.",
-          "next": "Follow the depowered connector and harness inspection, then complete the final restraints checks without installing speculative parts."
+          "finding": "C0063:68 is recorded.",
+          "meaning": "Yaw-rate data—the rate at which the car turns about a vertical axis—was outside the expected range.",
+          "next": "Read the recorded qualifying drive and post-drive RCM result."
+        },
+        {
+          "finding": "C0064:68 is recorded.",
+          "meaning": "Roll-rate data—the rate of rotation about the car's front-to-rear axis—was outside the expected range.",
+          "next": "Interpret the existing event-code result; aggressive reproduction is not directed."
+        },
+        {
+          "finding": "C0065:68 is recorded.",
+          "meaning": "Vertical acceleration data—up-and-down acceleration—was outside the expected range.",
+          "next": "Require a recorded smooth-road recurrence result; a rough-road drive does not satisfy A2."
+        },
+        {
+          "finding": "A1 retrieves other RCM codes, with or without the specified event codes.",
+          "meaning": "Another RCM concern takes diagnostic priority.",
+          "next": "Separate required diagnosis: other RCM codes first; do not infer A2 eligibility."
+        },
+        {
+          "finding": "A2 retrieves no RCM codes after the controlled drive.",
+          "meaning": "Rough roads or aggressive driving may have triggered the original stored events.",
+          "next": "The source allows the initial no-recurrence exit and explanation of possible rough-road/aggressive-driving triggers; no physical inspection is directed by this branch."
+        },
+        {
+          "finding": "A2 retrieves codes outside the specified group.",
+          "meaning": "The result requires diagnosis beyond this motion-event-code path.",
+          "next": "Separate required SRS diagnosis for those recorded codes."
+        },
+        {
+          "finding": "A2 retrieves only one or more codes from C0061:68–C0065:68.",
+          "meaning": "The event-code concern returned during the controlled drive.",
+          "next": "Read the documented applicable isolation and A3 mounting findings; missing physical-service records leave the branch unresolved."
+        },
+        {
+          "finding": "A3 finds incorrect mounting, improperly seated hardware, or a damaged, corroded or contaminated mounting surface.",
+          "meaning": "The installation needs correction before further module conclusions.",
+          "next": "Separate required mounting repair or new hardware, then documented A6; this article does not teach repair."
+        },
+        {
+          "finding": "A3 confirms correct mounting and a clean, undamaged mounting surface.",
+          "meaning": "The mounting inspection does not identify the cause.",
+          "next": "Read the recorded A4 inspection, connection, restoration and confirmation sequence."
+        },
+        {
+          "finding": "The original code returns on demand during A4.",
+          "meaning": "The original concern is currently detected during self-test.",
+          "next": "Read the existing OASIS result: applicable TSB ends this chart for that separate procedure; no applicable TSB directs separate RCM replacement then documented A6. Unknown TSB status stops interpretation."
+        },
+        {
+          "finding": "The original code does not return during A4.",
+          "meaning": "The concern has become intermittent during diagnosis.",
+          "next": "No speculative SRS replacement; read the documented A5 isolation and inspection results."
+        },
+        {
+          "finding": "A5 identifies a connector lock, terminal, wire connection or harness concern.",
+          "meaning": "A physical electrical concern requires repair.",
+          "next": "Separate required repair using matching wiring/connector information, followed by documented A6."
+        },
+        {
+          "finding": "A5 identifies no concern.",
+          "meaning": "The fault is absent and cannot be recreated at this stage.",
+          "next": "Read A6 records without inferring a need for new SRS components."
+        },
+        {
+          "finding": "A6 retrieves an on-demand code from the RCM, OCSM or fitted BECMB.",
+          "meaning": "A current restraints-system concern remains unresolved.",
+          "next": "Separate required SRS diagnosis with codes retained until all are resolved."
+        },
+        {
+          "finding": "A6 retrieves no on-demand restraints codes.",
+          "meaning": "The complete Restraints self-test has passed its current-fault check.",
+          "next": "Require recorded RCM/OCSM continuous-memory clearing, final prove-out and any applicable repowering memory clearing before the chart completion conclusion."
         }
       ],
       "verification": [
         {
-          "title": "Confirm system readiness",
-          "body": "Verify that the final Restraints self-test has no on-demand faults, then complete the directed memory clearing and SRS prove-out."
+          "title": "Evidence provenance and sequence",
+          "body": "The report identifies the vehicle, complete preliminary inspection, exact test/result identity and all branch-specific preconditions. Missing records are explicitly unresolved."
         },
         {
-          "title": "Record the result",
-          "body": "Record initial codes, controlled-road-test recurrence, mounting or wiring repairs, confirmation-test results and final prove-out outcome."
+          "title": "Correct exit selected",
+          "body": "The A2 no-code exit is distinguished from post-physical A6 completion; other-code, mounting, original-code/OASIS and intermittent branches remain separate."
+        },
+        {
+          "title": "No service claim inferred",
+          "body": "Repair and bulletin destinations remain separate required procedures. No scan, drive, inspection, fuse, reconnection or repair execution is claimed by this interpretation."
+        },
+        {
+          "title": "Final evidence complete where required",
+          "body": "For A6 branches, verify recorded one-minute reconnection condition, all applicable module results, directed clearing and complete prove-out. A normal lamp alone is insufficient."
         }
       ],
       "procedures": [
         {
           "documentId": "G1696391",
-          "purpose": "Complete motion-event-code diagnosis through road testing, mounting inspection and final SRS verification."
-        },
-        {
-          "documentId": "G1696340",
-          "purpose": "Diagnose other initial or final restraints-system codes."
+          "purpose": "Recorded-evidence context only: Primary A1–A6 diagnostic sequence for C0061:68, C0062:68, C0063:68, C0064:68 and C0065:68."
         },
         {
           "documentId": "G1696297",
-          "purpose": "Required SRS depowering before the directed mounting and connector inspections."
+          "purpose": "Recorded-evidence context only: Warning-indicator assessment and the separate no-fault and fault-present SRS depowering branches."
         },
         {
           "documentId": "G1696298",
-          "purpose": "Required SRS repowering at the specified diagnostic stages."
+          "purpose": "Recorded-evidence context only: Conditional fuse and battery restoration, occupant positioning, final SRS prove-out and applicable continuous-memory clearing."
+        },
+        {
+          "documentId": "G1696290",
+          "purpose": "Recorded-evidence context only: Explain the RCM's restraint function and the significance of correctly seated CPA tabs on deployable-component connectors."
+        },
+        {
+          "documentId": "G1692356",
+          "purpose": "Recorded-evidence context only: Battery-cover access, negative-cable isolation, reverse-order connection and 44 lb.in (5 Nm) terminal tightening."
+        },
+        {
+          "documentId": "G1693181",
+          "purpose": "Recorded-evidence context only: Battery acid, explosive-gas, lead-handling, venting and conditional lithium-ion precautions."
+        },
+        {
+          "documentId": "G1696340",
+          "purpose": "Recorded-evidence context only: Reference-only next diagnostic destination for other or unresolved SRS codes; its internal procedures are not taught here."
         },
         {
           "documentId": "G1696307",
-          "purpose": "RCM installation requirements, mounting hardware checks and replacement if authorized by diagnosis.",
+          "purpose": "Recorded-evidence context only: Reference-only next service destination for RCM access, mounting correction and directed replacement; its internal procedures and fastening specifications are not taught here.",
           "mediaId": "G1696307-m0003"
         }
       ],
@@ -155448,7 +155567,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "2015 Mustang with 2.3L, 3.7L, 5.0L or 5.2L engine and supplemental restraint system. Body-style applicability is not identified. BECMB-related checks and the shared three-blade BECMB/GWM fuse arrangement apply only when that equipment is fitted. Existing technician records only; no live diagnostic or physical-service execution."
       },
       "relatedGuideIds": [
         "job-c399ba4357a5c473",
@@ -155480,14 +155600,55 @@
         {
           "documentId": "G1696290",
           "sourceHash": "4a582037228bb45f2627310f63f4e8cf9003eb65cf18ed97ff805191c258ebd1"
+        },
+        {
+          "documentId": "G1692356",
+          "sourceHash": "f93635bf712e39ee2d452d6e225db4f82a346782d93788b412477ad811e594bc"
+        },
+        {
+          "documentId": "G1693181",
+          "sourceHash": "e04a93bfb1f6bfd781465d4ad46cdbc9d46706ca7d6edbb07114e5a68e0979d6"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "518952e68c41bd7841547e0865d022deea2b6ddf97e29abd1b1972fb38f5dba8"
-      }
+        "fingerprint": "518952e68c41bd7841547e0865d022deea2b6ddf97e29abd1b1972fb38f5dba8",
+        "editorialVersion": 2,
+        "editorialFingerprint": "d5105288634c69508efcb25e06c6f366f1c18b8112ce041795cabd5d635d441a",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "record-eligibility",
+          "title": "Check the initial records",
+          "summary": "Confirm preliminary inspection, code priority and the qualifying recurrence result.",
+          "start": 1,
+          "end": 3
+        },
+        {
+          "id": "mounting-confirmation",
+          "title": "Interpret mounting and original-code confirmation",
+          "summary": "Read documented physical-service prerequisites and distinguish mounting, bulletin and intermittent outcomes.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "intermittent-records",
+          "title": "Interpret the intermittent inspection",
+          "summary": "Separate documented concerns from a complete no-concern result.",
+          "start": 7,
+          "end": 7
+        },
+        {
+          "id": "final-records",
+          "title": "Verify the applicable recorded endpoint",
+          "summary": "Check A6 sequence, complete module results and prove-out before summarizing remaining gaps.",
+          "start": 8,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Interpret recorded U0100:00 results from the OCSM or RCM",

@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C2114",
+  "supportingSourceRefs": [],
+  "sourceHash": "319d20eb3b68332d42e0845ad31ce912d5d0833e93cb4adc1aedf0a6d3aba9c0",
+  "title": "C2114 — Information control module connector",
+  "introduction": "I read this information control module reference like a switchboard directory: the circuit table separates the fuse-or-circuit-breaker connection, the high-speed CAN communication paths and the instrument-panel ground connection. Knowing which connection carries which role helps make sense of the module's wiring; the directory itself cannot tell you whether the conversation is getting through.\n\nStart with CNumber and Description in the identification table. Use the drawing's cavity labels to find the corresponding pin-table rows, then read the service-part sections as separate catalog references. This page teaches identification and interpretation, without access, probing, diagnostic or replacement instructions. The drawing's physical viewing side, the Gauge convention and the meanings of Box, Cols, Size and Used are unspecified; no test limits or wire-selection rules should be inferred from them.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2114-b00002",
+      "text": "Read the connector face · Harness 14401",
+      "why": "The drawing arranges the numbered cavities in a vertical column beside a broad projecting feature on the left and smaller projections on the right. I use those visible shapes to recognize its page orientation, then match each printed cavity label to the table. That layout does not establish the terminal-side versus wire-side viewing direction of a physical connector. Fpn and Harness Id tie the illustration to its listed shell and harness."
+    },
+    {
+      "blockId": "connector-C2114-b00005",
+      "text": "Read the module's cavity-to-circuit map",
+      "why": "Follow each matching Cavity row across Circuit Number, Color, Gauge, Function and Terminal Part Number. Function separates the fuse-or-circuit-breaker connection, the high-speed CAN high and low paths, and the instrument-panel structure ground. High and low are communication-path names here, not measured voltage limits. Keep each terminal entry with its own row rather than assuming every cavity uses the same terminal. A blank Qualifier supplies no additional condition."
+    },
+    {
+      "blockId": "connector-C2114-b00007",
+      "text": "Read the pigtail service-part reference",
+      "why": "A pigtail is a connector supplied with attached wire leads for harness repair. Read Number, Service Part and Engineering Shell together to distinguish the kit reference from the shell identity. Gauge, Material and Cavities describe the catalog entry, and Image names its associated file. These fields do not prescribe a splice method or make the pigtail's wire information a replacement rule for every original circuit."
+    },
+    {
+      "blockId": "connector-C2114-b00009",
+      "text": "Read the European pigtail reference",
+      "why": "The European section provides a Product Id as a separate regional service reference. I retain that distinction: the entry alone does not establish an equivalence to the preceding service part, vehicle applicability or installation method."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:21:11.508Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "b4d7875b906bdd14f79e2029bdc02b16ec9f22f4066e2fa127623943640bac23",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "c7611673caa9b7aab7626ad2b330c3414cd89807102900e048a0501053ca0d13",
+    "reviewedAt": "2026-10-28T02:21:11.508Z"
+  }
+}

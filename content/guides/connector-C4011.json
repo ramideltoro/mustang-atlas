@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4011",
+  "supportingSourceRefs": [],
+  "sourceHash": "a737d476bd4d41a74f3e7a9d4fb994f17541adfd49b940acc07334dbf267435b",
+  "title": "C4011 — Right-hand rear outer parking aid sensor connector",
+  "introduction": "The rear parking sensors have similar jobs, so I begin with the location in Description and the connector identity in CNumber. This reference belongs to the right-hand rear outer sensor. Think of its cavity drawing as a reserved-parking plan: each circuit has an assigned space, and appearance alone is no reason to swap spaces. Match the printed cavity label to the Cavity column, then read across that row.\n\nThis guide explains the connector drawing, circuit labels and listed pigtail entries. Access, connector release, probing, test conditions and replacement methods require a separate procedure. The physical viewing side of the drawing is unspecified. Box, Cols, Size and Used are recorded codes without a supplied key, and Gauge has no stated convention; they are not dimensions or wire-selection instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4011-b00002",
+      "text": "Read the connector face · Harness 13412",
+      "why": "The illustration places the housing feature above the cavity row, with projecting features on either side. I use those shapes to keep the page orientation straight, then use the printed cavity labels to find the matching table rows. This establishes positions within the drawing, without identifying a terminal-side or wire-side physical view. Fpn and Harness Id associate the drawing with its listed shell and harness."
+    },
+    {
+      "blockId": "connector-C4011-b00005",
+      "text": "Read the parking aid circuit map",
+      "why": "Each Cavity row links a position in the drawing to Circuit Number, Color, Gauge, Function and Terminal Part Number. The Function entries distinguish the rear-sensor controller connections marked plus and minus from the connection specifically named for the right outer sensor. Those marks identify the listed roles; they supply no operating voltage or pass/fail result. A blank Qualifier adds no further condition."
+    },
+    {
+      "blockId": "connector-C4011-b00007",
+      "text": "Read the listed pigtail service parts",
+      "why": "A pigtail combines a connector with attached wire leads for harness repair. Keep each row's Number, Service Part and Engineering Shell together when reading the catalog. Gauge, Material and Cavities describe that entry, while Image gives its associated filename. The common shell entry does not establish that every kit is interchangeable or explain which kit a particular repair requires."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:13:22.901Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "cbac7a31467f4c43e6be6f818075049731b29ff171f82c7031e700125971691a",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "d9ac0fe1f6aaa6fa8b0cb3528808c4412f1a4a49953f095b16fa3612f1ea3203",
+    "reviewedAt": "2026-10-28T02:21:11.499Z",
+    "editorialRevision": {
+      "scope": "Neutral feature label after complete32-unit/raw/table/prose/verdict and originalpage2figure review, no physicalrelease inference.",
+      "before": "The illustration places the latch feature above the cavity row, with projecting features on either side. I use those shapes to keep the page orientation straight, then use the printed cavity labels to find the matching table rows. This establishes positions within the drawing, without identifying a terminal-side or wire-side physical view. Fpn and Harness Id associate the drawing with its listed shell and harness.",
+      "after": "The illustration places the housing feature above the cavity row, with projecting features on either side. I use those shapes to keep the page orientation straight, then use the printed cavity labels to find the matching table rows. This establishes positions within the drawing, without identifying a terminal-side or wire-side physical view. Fpn and Harness Id associate the drawing with its listed shell and harness."
+    }
+  }
+}
