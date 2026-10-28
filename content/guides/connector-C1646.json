@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1646",
+  "supportingSourceRefs": [],
+  "sourceHash": "089f62f4f9d6e9adc4a48432fdf8edd82cc417373d96014a1ea4f2b6ebb8103e",
+  "title": "C1646 — Battery monitoring sensor connector",
+  "introduction": "The battery monitoring sensor measures current entering or leaving the battery. It is attached to the negative battery cable, and the body control module uses battery information to manage electrical loads. Think of it as the battery’s bookkeeper: this reference identifies its wiring connections, rather than checking the books for accuracy.\n\nI start with the connector identity, match the drawing’s cavity labels to the assignment rows, then distinguish the circuit information from the pigtail catalogue. The physical viewing side, gauge convention and Size and Used codes are not defined here. This is an identification guide; access, disconnection, probing, diagnosis and replacement require matching service instructions. The pigtail entries do not establish interchangeability or a preferred replacement.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1646-b00002",
+      "text": "Connector-face map · Harness 14B060",
+      "why": "The drawing places the cavity labels in a vertical stack inside a rounded housing, with the latch structure to the left. I use those features to navigate the illustration and match labels to table rows. Their page positions do not establish the physical viewing side or the movement needed to release the connector."
+    },
+    {
+      "blockId": "connector-C1646-b00005",
+      "text": "Read the sensor and monitor assignments",
+      "why": "Each row connects a cavity label with a circuit identifier, color, gauge, function and terminal listing. Keep the sensor polarity labels distinct from the monitor function. A polarity label here is not an instruction to connect directly to a battery post, and the monitor label alone does not identify a communication protocol or expected signal."
+    },
+    {
+      "blockId": "connector-C1646-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I keep the pigtail entries separate and read each catalogue Number together with its own Service Part and Engineering Shell. A shared shell identifier describes a housing relationship; it does not prove the assemblies are interchangeable or that an entry supersedes another. The service-assembly Gauge entries also remain separate from the circuit-row gauges. Replacement selection and installation need applicable service information."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:58:43.194Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "0eebd11cd6e971a96c782587ecc8359d33e9114d3c9ae02322d1443980c148d2",
+  "sourcePdfHash": "f9815e63f0b7707bc89b838737d80ee32ac01e9bf2a718e9376a6692f7859ed3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4b96c4a62af8383729a87cc01a3a319de1293c9c084539e7cb15856c9e269e6b",
+    "reviewedAt": "2026-10-28T01:58:43.194Z"
+  }
+}

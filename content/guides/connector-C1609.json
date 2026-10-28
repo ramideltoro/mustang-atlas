@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1609",
+  "supportingSourceRefs": [],
+  "sourceHash": "d6dbf950ee0d7268eb9a953bf038f6409236ccf5e69afd031b7cd1c0ab25ee27",
+  "title": "C1609 — Brake vacuum switch connector",
+  "introduction": "I use this reference to connect the brake vacuum switch’s identity with its illustrated cavities, circuit descriptions and pigtail catalog entries. The title calls the component a switch, while the circuit functions use sensor terminology. Read those labels together without assuming a particular switching threshold or operating strategy. The connector map is an address book for the wiring, not a vacuum gauge in disguise.\n\nStart with the identification table, match the drawing’s labels to the Cavity column and read each row across. Then use the pigtail table for catalog cross-references. This page does not teach access, probing, vacuum testing or replacement. Physical viewing direction, gauge convention and the Size and Used codes are unspecified; no rule is given for selecting between the pigtails or using their wire gauge for a repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1609-b00002",
+      "text": "Harness 14290 — connector face",
+      "why": "The illustration places the cavity labels in a vertical column inside the rounded housing, with the projecting housing feature at the left. I use those features to keep my place while reading the drawing. Each illustrated position has a circuit assignment in the table. These visual landmarks do not establish whether the physical connector is viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C1609-b00005",
+      "text": "Cavity and sensor-circuit map",
+      "why": "Read across each cavity row to keep its circuit identifier, color notation, gauge, function and terminal entry together. The functions distinguish the brake-vacuum signal from the negative and positive sensor connections. Those polarity labels do not specify a voltage or authorize treating a connection as chassis ground. The map identifies the connections; it does not determine whether the switch or sensor circuit is working."
+    },
+    {
+      "blockId": "connector-C1609-b00007",
+      "text": "Pigtail service cross-references",
+      "why": "A pigtail combines the connector with attached wire leads. Its catalog row keeps the kit identity, lead details, Service Part and Engineering Shell together. I distinguish the pigtail’s Gauge column from the circuit table’s Gauge column because they describe different entries. The shared shell reference links the listings to the housing, but supplies no selection or splicing rule."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:47:41.853Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d5809c0adf0466230b3b2f3ef0e61a05186afa43a162f20dcf11b31b3ee333e1",
+  "sourcePdfHash": "2a7f826fe5fddab559b7616e6d75112b086ba1c77eb6b3afb83be791cbc3445c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "3d6a256549e9c6b207b9f5d3cc4575be5ba81fc8e26573a32a76dffb716f9f1f",
+    "reviewedAt": "2026-10-28T01:47:41.853Z"
+  }
+}

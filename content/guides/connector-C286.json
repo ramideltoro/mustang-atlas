@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C286",
+  "supportingSourceRefs": [],
+  "sourceHash": "3861894a0b66cb96360b492026e5a82a5caf61e882490a1285321cabf53f83c6",
+  "title": "C286 — Sunload sensor connector",
+  "introduction": "The title says sunload sensor, but the Function column also includes autolamp day/night sensing. I read this connector like a small lighting switchboard: the sunload and ambient-light labels describe different jobs sharing a housing. Start with the opening identity table, use the drawing’s cavity labels to find the corresponding rows, then read across to connect each circuit identifier with its function.\n\nThis reference explains that map and its service-parts listing. It does not define a physical viewing side, gauge convention or the Size and Used codes. Access, terminal probing, electrical tests and replacement need the matching service procedure; the labels here provide neither test values nor a verdict on sensor condition.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C286-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "I use the vertical cavity-label stack, broad latch outline on the left and projecting housing features on the right as landmarks within the illustration. Matching a cavity label to its table row establishes the drawing-to-circuit relationship. Those page landmarks do not establish which physical side of the connector the viewer should face."
+    },
+    {
+      "blockId": "connector-C286-b00005",
+      "text": "Read the sensing-circuit assignments",
+      "why": "Read each Cavity entry across through Circuit Number, Color, Gauge, Function and Terminal Part Number. The right and left sunload labels describe sensing roles, not positions in the drawing. Keep the ambient-light polarity labels attached to their respective rows. These distinctions help identify the intended circuit without turning a function label into an assumed voltage or test instruction."
+    },
+    {
+      "blockId": "connector-C286-b00007",
+      "text": "Pigtail parts reference",
+      "why": "A pigtail combines the connector housing with attached wire leads. I cross-reference Engineering Shell with the housing identity, then distinguish the service assembly’s Service Part from its catalogue Number and image filename. Its Gauge entry belongs to the service assembly; it does not replace the circuit-row entries or establish a wire-selection or splicing method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:58:43.181Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "4a8b88803b302dc8a06dc71891f21b29c2342973d86bc0ade40cd19a561fc8b0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ab4c7751b8fb4527798ac6e0735a59078e068407a62ee1f31bbe55356f7aa075",
+    "reviewedAt": "2026-10-28T01:58:43.182Z"
+  }
+}

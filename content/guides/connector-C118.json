@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C118",
+  "supportingSourceRefs": [],
+  "sourceHash": "76fe28f802c34161525285e6da707b141b40e9a36c6340f1e1a5d0aaee46bad6",
+  "title": "C118 — Ignition coil-on-plug 8 connector",
+  "introduction": "The ignition coil produces the high voltage that lets its spark plug fire. I read this connector reference by keeping the coil’s control connection separate from its electrical supply: the command to make a spark and the energy for that job have different roles. A familiar-looking plug is only the cover of the book; its circuit assignments tell the useful story.\n\nBegin with the component identification, match the drawing’s labels to the Cavity column, then read across to the circuit and function entries. The final table supplies pigtail catalog cross-references. This page does not teach physical access, connector probing, diagnosis or replacement. Physical viewing direction, gauge convention and the meanings of the Size and Used codes remain unspecified, and no selection rule distinguishes the listed pigtails.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C118-b00002",
+      "text": "Harness 12C508 — connector face",
+      "why": "The drawing places the cavity labels in a vertical column beside the large rectangular housing feature at the left. I use those landmarks to navigate the illustration. Its shaded middle position corresponds to the row without an assigned circuit or terminal. The drawing does not identify whether the physical connector should be viewed from the mating side or the wire side."
+    },
+    {
+      "blockId": "connector-C118-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Follow a cavity row across rather than treating the circuit, color and function columns as separate lists. The upper assigned position identifies the powertrain control connection for this coil; the lower assigned position identifies the fuse-or-circuit-breaker supply. That distinction explains the map, but it supplies neither an expected measurement nor a verdict on a misfire."
+    },
+    {
+      "blockId": "connector-C118-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "The pigtail table groups each connector-and-lead assembly with its catalog details. I keep the Service Part entry attached to its own row and distinguish it from the Engineering Shell identifier. Matching a shell is useful cross-reference information, but it does not establish interchangeability between the listed pigtails or provide a wiring-repair method."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:25:01.133Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "50085bced024437b3973c37660990d8183872537b1d6cf528c809d905b858fdc",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "4c9c51e12e0be463cd1178924dcff1e1ced6e198bf704311d9cab0ccf57a295e",
+    "reviewedAt": "2026-10-28T01:47:41.836Z",
+    "editorialRevision": {
+      "scope": "Complete distinct31unit/rawtext/table/fullprose/fullindependentverdict read; exactoriginalSVG equality with directly viewed C116 figure verified. Narrow protection-alternative correction only; no other public change.",
+      "before": "Follow a cavity row across rather than treating the circuit, color and function columns as separate lists. The upper assigned position identifies the powertrain control connection for this coil; the lower assigned position identifies the fused supply. That distinction explains the map, but it supplies neither an expected measurement nor a verdict on a misfire.",
+      "after": "Follow a cavity row across rather than treating the circuit, color and function columns as separate lists. The upper assigned position identifies the powertrain control connection for this coil; the lower assigned position identifies the fuse-or-circuit-breaker supply. That distinction explains the map, but it supplies neither an expected measurement nor a verdict on a misfire."
+    }
+  }
+}

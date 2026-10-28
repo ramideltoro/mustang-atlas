@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2998",
+  "supportingSourceRefs": [],
+  "sourceHash": "a34188c7daed59d9d0c3cf784d9af933033c0e3dbb5cf681fee703c637592d05",
+  "title": "C2998 — Steering wheel switch LH upper",
+  "introduction": "This reference identifies the left-hand upper steering-wheel switch connector and links its cavity drawing to the function and pigtail tables. The button lights and button commands are housemates in this plug, with separate jobs. I keep the illumination paths, control channel and left-hand switch return distinct as I read across the rows.\n\nBegin with the connector identity, match the drawing's cavity labels to the assignment table, then use the parts table to trace the listed pigtail record. Asterisks leave circuit identifiers, wire colors and gauges unspecified here; they are no invitation to fill in plausible values. This guide covers reference reading. Physical access, viewing direction, probing, electrical test limits and replacement are outside its scope, and the catalog codes and gauge convention are not explained.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2998-b00002",
+      "text": "Connector-face map · Harness 14K147",
+      "why": "In the printed view, the labeled cavity circles form a vertical stack beside the broad rectangular feature on the left. That shape helps you navigate the image before finding the corresponding table row. The drawing's layout does not establish whether a physical connector should be viewed from its terminal side or wire side."
+    },
+    {
+      "blockId": "connector-C2998-b00005",
+      "text": "Read the cavity functions",
+      "why": "Each illustrated cavity has a function row. The lighting feed and lighting ground describe illumination roles; the control-channel and left-hand switch-return labels describe the switch paths. Keeping these roles separate prevents a lighting label from being mistaken for a button-command label. The asterisked fields and unavailable terminal entries do not identify wire specifications or replacement terminals."
+    },
+    {
+      "blockId": "connector-C2998-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "Kit List connects the identity record to the pigtail entry, and Engineering Shell ties that entry back to the housing identifier. The service-item and image-file fields serve different purposes: one identifies the listed part, while the other names its illustration. The pigtail gauge entry does not fill the unspecified gauges in the cavity table or provide installation instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:53:26.424Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "67b29e973c3d828d7b8d84757fe83b48d31edffe4b4caaa5834c63b33953deb3",
+  "sourcePdfHash": "1bece513bda860a5d819e03db59f4ec95abd5204a00f47d17b714973a867764e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "54723cc308a992c76e823bef05856b03eafb69df64282985c8e3f25a95b117e1",
+    "reviewedAt": "2026-10-28T01:53:26.424Z"
+  }
+}

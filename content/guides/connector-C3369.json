@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3369",
+  "supportingSourceRefs": [],
+  "sourceHash": "17ef3aba7602dbd5a88cf3d2f58d816447abd207dfa48f7c1e3cd9cc3d91fbd9",
+  "title": "C3369 — Scuff plate lamp driver",
+  "introduction": "The scuff plate's lighting has separate color-channel connections and a connection labeled LED negative. I read this table like a tiny stage-lighting desk: the Function column tells you which light channel a circuit serves, while the Color column describes its wire. Those labels answer different questions, so a wire's color is no promise of the color the lamp produces.\n\nStart with the connector identity table, use the drawing to locate cavity labels on the page, then read each matching assignment row in full. Keep the ambient-lighting zone and non-zone wording attached to its own function entry. The final table identifies the listed pigtail service record.\n\nThis reference supports identification and wiring interpretation. Physical viewing direction, gauge convention and the meanings of the Box, Size and Used codes are not defined here; entries under different headings should not be treated as equivalent. Access, probing, expected readings, wire selection and replacement work require a separate applicable procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3369-b00002",
+      "text": "Harness 14A005 · Connector-face layout",
+      "why": "The illustration has a broad rectangular housing outline, stepped features on the left and projections on the right. Its cavity labels occupy a vertical column toward the right and decrease from top to bottom. I use that arrangement to navigate the page without assuming which side of the physical connector is being viewed. The identification row beneath associates the drawing with its shell and harness."
+    },
+    {
+      "blockId": "connector-C3369-b00005",
+      "text": "Read the lamp-channel circuit assignments",
+      "why": "Match each illustrated cavity label to the Cavity column and read across its complete row. Circuit Number identifies the circuit, Color describes the wire, and Function identifies the lighting channel and polarity label. Retain the zone wording exactly where it appears; the color-channel entries and the LED-negative entry carry different zone descriptions. The negative label alone does not establish a direct chassis-ground connection, and the table supplies no test voltage or fault threshold."
+    },
+    {
+      "blockId": "connector-C3369-b00007",
+      "text": "Identify the listed pigtail service record",
+      "why": "A pigtail combines a connector with attached wire leads. Its row keeps the service part associated with the engineering shell, material, cavity information and image filename. The pigtail and circuit tables contain different gauge entries; preserve each in its own context rather than treating the pigtail entry as a correction to the circuit data. This is a parts reference, not a wire-sizing, splice or installation instruction."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:01:12.774Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "1cee49ffab52a43944f4536a11d65fa42746e4e01efa25d18d2b5d6f983e03f2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "55a3630a596431e88535b1c4e5478ac674d084451bd5e52f1fb709808b17ac25",
+    "reviewedAt": "2026-10-28T02:01:12.774Z"
+  }
+}

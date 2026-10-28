@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1588",
+  "supportingSourceRefs": [],
+  "sourceHash": "80a805bc437cd5aaac41f453894c563218e1d674d03769079e3e988deacea2c1",
+  "title": "C1588 — Turbocharger boost pressure (TCBP) sensor connector",
+  "introduction": "I use this reference as the boost-pressure sensor’s address book: the drawing locates each cavity, and the matching table row explains its electrical job. Keeping the pressure-sensing connection, signal return and voltage reference distinct makes the map useful—the connector may put them next door, but that does not make them interchangeable.\n\nStart with the connector identity table, compare the illustrated housing features, then match a drawing label to the Cavity column. Read across that row for the circuit identification, wire information, function and terminal reference. The pigtail table provides separate service-part records.\n\nThis is a connector-reading guide. The physical viewing side, gauge convention and meaning of the Size code are unspecified; keep those entries as printed. Access, probing, test conditions and replacement methods require their own procedures. The map identifies connections; it cannot establish whether the sensor or wiring works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1588-b00002",
+      "text": "Harness 14290 connector face",
+      "why": "I use the vertically arranged cavity labels and the large housing projection on the drawing’s left as landmarks before consulting the table. These describe the illustration’s layout, not the connector’s installed orientation or a direction for releasing its latch. The adjacent identification table ties the face drawing to its harness and shell record."
+    },
+    {
+      "blockId": "connector-C1588-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "The Cavity column is the bridge between the drawing and the electrical labels. Read the entire matching row so a wire-color entry stays paired with its circuit and function. Keep the transmission-qualified signal-return description intact; a return label alone is not permission to treat that connection as chassis ground. These are connection identities, not expected measurements or fault verdicts."
+    },
+    {
+      "blockId": "connector-C1588-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The service-part records distinguish kit numbers, listed gauge, material, cavity count and engineering shell. I keep the circuit-wire entries separate from the pigtail entries: a shared shell listing does not establish that the available kits are interchangeable or explain which to select. The Image column names reference files; it supplies no installation or splicing instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:52:45.338Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2cb28bfcd0d6a2acd182a3c9195942367df503dec57b19d19067a5ce2f326b79",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "75ff922a573bfaffba374037725a678594a3f8239af5c09c04ed1058fa1c136a",
+    "reviewedAt": "2026-10-28T01:52:45.339Z"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C190",
+  "supportingSourceRefs": [],
+  "sourceHash": "19570160ceb83ae611f6938154ad06e7fdbd66379235191a3e39c6d107fcabda",
+  "title": "C190 — Crankcase pressure sensor",
+  "introduction": "I use this reference to connect a cavity label in the drawing with a circuit row in the tables. The crankcase-pressure connection, signal return and reference supply have distinct jobs; sharing a plug does not make them interchangeable. Think of the shell as an apartment building and the cavity labels as addresses—the outline gets you to the building, but the label gets you to the right door.\n\nStart with the connector identity table, use the face drawing to locate a cavity on the page, then read its assignment across the entire row. The final table connects the listed pigtails with their service-part and engineering-shell records.\n\nThis is an identification and wiring-reading guide. The drawing does not establish the physical viewing direction, and the tables do not define the gauge convention or the meanings of the Size and Used codes. Keep those entries as recorded. Physical access, probing, test conditions, expected readings and replacement instructions require a separate applicable procedure.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C190-b00002",
+      "text": "Harness 12C508 · Connector-face map",
+      "why": "I use the rounded cavity area and the large rectangular detail on its left to keep the drawing oriented on the page. The cavity labels increase from top to bottom in a vertical column. These are page landmarks, not proof of which side of the installed connector faces the viewer. The adjacent identification row associates this drawing with its shell and harness."
+    },
+    {
+      "blockId": "connector-C190-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "Match a drawing label to the Cavity column, then stay on that row through Circuit Number, Color, Gauge, Function and Terminal Part Number. The function descriptions distinguish the sensor-related connection, signal return and reference supply. A reference-supply label does not specify a test voltage, and a signal-return label alone is not an instruction to connect that circuit to chassis ground. Preserve the complete function wording and any qualifiers when using the row in a separate wiring or diagnostic procedure."
+    },
+    {
+      "blockId": "connector-C190-b00007",
+      "text": "Read the pigtail service-part records",
+      "why": "A pigtail is a connector with attached wire leads. Read each listed record across to keep its service part, engineering shell, material and cavity information together. The Image column contains an image filename, not an additional inline illustration. These records identify the listed service options; they do not explain how to choose between them or how to splice and install one. The pigtail gauge entry also should not be substituted for the individual circuit entries above."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:58:43.202Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "a550cd3e355d700d9d8845f154ec9b1207696f3f321428ebac590f17986b1532",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bbf4895c5f91f1898b3810da1888eb37e16439c4c56415ba2bbbd4cac60d15bb",
+    "reviewedAt": "2026-10-28T01:58:43.203Z"
+  }
+}

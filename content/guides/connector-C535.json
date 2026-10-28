@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C535",
+  "supportingSourceRefs": [],
+  "sourceHash": "0a5a9f97924182823a4c2a4f9900b23fa26c1b9628bafd0403e7ccebe85ad807",
+  "title": "C535 — Master window control switch",
+  "introduction": "This reference links the master window control switch's identity to its cavity drawing, wiring assignments and pigtail catalog record. I separate the supply-related, communication and return entries before reading the details. The LIN bus is a local data link: think of it as the switch's conversation with nearby electronics. A message path has a different job from a power feed, even when both travel through the same plug.\n\nUse the identity table first, match the pictured cavity labels to their assignment rows, then trace the pigtail entry through its kit and shell fields. This guide explains the reference; access, physical viewing direction, probing, test limits and replacement are outside its scope. The catalog codes and gauge convention are undefined here, and the pin-table and pigtail gauge entries alone do not establish a wire-selection or splice specification.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C535-b00002",
+      "text": "Connector-face map · Harness 14631",
+      "why": "As printed, the labeled circles form a vertical stack beside the broad rectangular feature on the left. A shaded position interrupts the outlined circles and corresponds to the row without assigned circuit details. This helps connect the picture to the table; the shading does not indicate a failed connection."
+    },
+    {
+      "blockId": "connector-C535-b00005",
+      "text": "Read the cavity and circuit map",
+      "why": "Reading across each cavity row keeps the circuit identifier, wire description, function and terminal record together. The protection-related description retains its fuse-or-circuit-breaker alternative rather than selecting an installation. The LIN bus entry identifies communication with the driver or left-hand door module, while the driver-return entry retains its separate role. These labels describe connections, without proving their electrical condition."
+    },
+    {
+      "blockId": "connector-C535-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "Kit List links the connector identity to the pigtail entry, and Engineering Shell connects that entry to the housing identifier. Service Part identifies the listed service item; Image names its illustration file. The catalog record supports identification without turning its gauge or material fields into permission to substitute wiring or replace the connector."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:53:26.439Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "9b6b89f308225eec4cedf03bdacfb4fd208732b7d7ae84fde2c052942c344210",
+  "sourcePdfHash": "cb740030aa1b7c60bbd9eab07c2e93a24d6c892a26a32893da4ede03f0a22c73",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "14e212976d7aa1f0aa065be01add57abf2e2a56a1af01119be10017e9c141360",
+    "reviewedAt": "2026-10-28T01:53:26.440Z"
+  }
+}

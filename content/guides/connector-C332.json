@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C332",
+  "supportingSourceRefs": [],
+  "sourceHash": "d26445463d06b717f8849b2d9241ec18e75473d7953c04d716791d1c05ef02cf",
+  "title": "C332 — Front seat track motor RH connector",
+  "introduction": "I read this reference by separating the housing’s available cavities from the connections actually assigned to passenger-seat travel. Think of it as a seating chart: an empty place can be intentional. The shaded positions agree with rows marked unused, so the drawing’s full cavity layout should not be mistaken for a promise that every position carries a wire.\n\nBegin with the connector identity table, use the housing outline to navigate the drawing, then match each cavity label to its table row. The assigned functions distinguish forward from rearward seat adjustment. Read across the row to keep its circuit identification, wire information and terminal reference together.\n\nThis guide explains the reference, including its pigtail record. It does not establish the physical viewing side, decode Size or the gauge convention, or supply access, electrical-test or replacement instructions. Keep the pigtail gauge entry as printed rather than converting it into a range or a wire-selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C332-b00002",
+      "text": "Harness 14D230 connector face",
+      "why": "The upper housing detail and stepped lower-right outline help orient the illustration on the page. The outlined cavity positions sit on the drawing’s left; the shaded positions sit on its right. I compare those features with the assignment rows rather than interpreting shading as damage or inferring an installed viewing direction."
+    },
+    {
+      "blockId": "connector-C332-b00005",
+      "text": "Seat-travel circuit map",
+      "why": "Match the drawing label to the Cavity column, then read across for the assigned direction of seat travel and its associated circuit details. The shaded positions have no circuit or function assignment and are marked unused in this reference. The forward and rearward labels identify the connections; they do not specify motor polarity, expected voltage or a way to energize the motor."
+    },
+    {
+      "blockId": "connector-C332-b00007",
+      "text": "Pigtail parts reference",
+      "why": "I use the service-part and engineering-shell columns to distinguish the catalogued pigtail record from the terminal references in the circuit table. Its cavity count describes the listed pigtail, not how many circuits this application uses. Its gauge entry is a separate catalog field and does not establish a substitution or splicing method."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:52:45.347Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "61c244f0e98ac9bb119775ff0a1395ccd183a02a8298cf58cba8eaf8445c91f3",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b9b7301da0fefd597d2f71fa8b60614c07fee6f1b0fb5a082eef877ed2119ced",
+    "reviewedAt": "2026-10-28T01:52:45.347Z"
+  }
+}

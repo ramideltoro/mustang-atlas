@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C436",
+  "supportingSourceRefs": [],
+  "sourceHash": "59c0a459d092f68802215b3e16577d06123cd7bab83edaf5279e083de13c34d5",
+  "title": "C436 — Rear fog lamp connector",
+  "introduction": "I start with the cavity map rather than letting the rear-fog-lamp title do all the explaining. The assignment table includes a rear-fog relay connection, a reverse-labelled connection and a ground connection. Those individual labels matter: the title is the sign over the door, while the rows tell you who actually lives inside.\n\nUse the identity table to establish which connector record you are reading. Then match a label in the face drawing to the Cavity column and read across for its circuit, wire information, function and terminal reference. The shaded cavity corresponds to the unused row, so that unassigned position belongs to this documented layout.\n\nThis is a connection and parts reference. It leaves the physical viewing side, gauge convention and Size code undefined and supplies no access, probing, test or replacement procedure. The relay label identifies a circuit function; it does not establish a separate plug-in relay or its location.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C436-b00002",
+      "text": "Harness 13412 connector face",
+      "why": "I navigate the drawing using its vertical cavity arrangement, left-side housing projection and angled tabs near the left ends. Those visible features help keep the illustration aligned with its assignment table. They do not establish how the connector faces in the vehicle or how its retaining features release."
+    },
+    {
+      "blockId": "connector-C436-b00005",
+      "text": "Lamp-connection circuit map",
+      "why": "Read each cavity’s complete row instead of assigning every connection the fog-lamp function from the page title. Keep the reverse connection’s left-or-common qualifier and the ground connection’s location wording attached to their respective entries. The shaded position agrees with the unused row. These labels describe circuit assignments; they neither prove current flow nor identify a failed component."
+    },
+    {
+      "blockId": "connector-C436-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The pigtail record groups its kit, material, cavity count, service part and engineering shell. I distinguish that assembly record from the individual terminal references above. The pigtail Gauge field and circuit Gauge fields describe separate records; their presence does not supply a wire-substitution rule or instructions for installing the pigtail."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:52:45.354Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "2606ca7397330e9959e19a2eb624ff31a65e82d55efd2d431c2d630a5edd4aa1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "93be8369781829e2245a154328b5c92f6c1848e6519842c174893bc843a29e9f",
+    "reviewedAt": "2026-10-28T01:52:45.354Z"
+  }
+}

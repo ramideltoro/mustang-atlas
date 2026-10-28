@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C1698",
+  "supportingSourceRefs": [],
+  "sourceHash": "16e5ddc3b7e4af5a1d175344cb6f2ef5eca4aadcb6ca18ffbdd0fda2e6924905",
+  "title": "C1698 — Camshaft position bank 1 sensor 1 (CMP11)",
+  "introduction": "This reference maps the named camshaft-position sensor’s connector to its reference-supply, signal-return and sensor-signal entries. I keep those roles separate: sharing a little plastic housing does not make the circuits interchangeable. The drawing tells you where the labels sit; the table tells you what each recorded connection belongs to.\n\nStart with the connector identity and housing drawing, follow a cavity label across the pin-assignment table, then consult the pigtail listings for their part references. This is a connector-reading guide, not an access, probing, diagnostic or replacement procedure. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified. The function wording retains its configuration shorthand without providing an engine-by-engine applicability map.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1698-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The cavity circles form a vertical stack to the left of a tall rectangular side structure. I use that asymmetry to keep the drawing oriented on the page, then follow the cavity labels into the table. The adjacent identity row connects the illustration with its harness and shell; the pictured arrangement alone does not establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C1698-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Cavity column links the drawing to each row. Read across for the circuit identifier, color label, gauge, function and terminal part number. The functions separate the reference supply, signal return and camshaft-position signal, helping explain why the connections have different jobs. Preserve the function’s intake/exhaust shorthand as written rather than selecting an engine configuration from it. These labels identify circuit roles, not expected meter readings or proof that the sensor works."
+    },
+    {
+      "blockId": "connector-C1698-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail entry associates its kit and service-part identities with an engineering shell and construction details. I compare that shell entry with the connector identity when reading the reference. The pigtail and circuit tables record different gauges, so neither entry should be treated as permission to substitute wire. The material description records the listed part’s condition; it is not a grease-application or installation instruction."
+    },
+    {
+      "blockId": "connector-C1698-b00009",
+      "text": "European pigtail reference",
+      "why": "This section provides a European product identifier. Keep it as its own lookup reference: there is no accompanying selection rule or installation detail that establishes interchangeability with the service-part entry above."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:48:25.569Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "972cd6bd2ae3abc8b3c945fe7ddf58381aa5729e9705abe39e6175fca68f6748",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fff23fbbe32f822b63e0027b6e4b0e2feb24c9aceed9357a19ebe5389af5a221",
+    "reviewedAt": "2026-10-28T01:48:25.569Z"
+  }
+}

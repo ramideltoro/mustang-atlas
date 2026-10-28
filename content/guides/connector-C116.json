@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C116",
+  "supportingSourceRefs": [],
+  "sourceHash": "f2648ed9fcc15871467b49783711988eddf784a1b6c95984fbf6f0f7fc31d5b2",
+  "title": "C116 — Ignition coil-on-plug 6 connector",
+  "introduction": "A coil-on-plug ignition coil sits at its spark plug and transforms electrical energy into the high voltage needed for a spark. I use this reference to connect the component identity with its connector drawing, circuit assignments and pigtail listings. The housing is the envelope; the circuit map tells us where the electrical mail belongs.\n\nStart with the identification table, then match the drawing’s cavity labels to the Cavity column and read across each row. Finish with the pigtail table if you need its catalog cross-references. This is a reference-reading guide: physical access, viewing direction on the vehicle, electrical tests and replacement methods require separate instructions. The gauge convention and the Size and Used codes are not defined here; the pigtail entries also provide no rule for choosing between them.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C116-b00002",
+      "text": "Harness 12C508 — connector face",
+      "why": "I use the housing outline and the large rectangular feature at the left as landmarks within the drawing. The cavity labels run vertically, with the middle position shaded. That shading agrees with the corresponding table row having no assigned circuit or terminal. These are drawing landmarks, not an established instruction to view the physical connector from either side."
+    },
+    {
+      "blockId": "connector-C116-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Each row connects a drawing label to its circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this ignition coil; the lower assigned position identifies its fuse-or-circuit-breaker supply. Their different jobs matter: a supply connection and a control connection are not interchangeable. These labels identify circuit roles without proving that either circuit or the coil is working."
+    },
+    {
+      "blockId": "connector-C116-b00007",
+      "text": "Pigtail catalog cross-references",
+      "why": "A pigtail is a connector with attached wire leads for a wiring repair. Read each catalog row across to keep its kit identity, service part and engineering shell together. The Service Part and Engineering Shell columns identify different things; a shared shell entry alone does not choose the correct pigtail or establish how to splice it."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:24:13.119Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "617f412353535eb630b881f28ebfa3a26e441a8fa8b92ea87bbb2f15b1ec1b62",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "dc386f329cca62ec87ecf2520aa74b03c29741b270ba4ae21884ac8f99023885",
+    "reviewedAt": "2026-10-28T01:47:41.822Z",
+    "editorialRevision": {
+      "scope": "Narrow supply-alternative wording correction after complete31unit/rawtable/finalprose/independentverdict and originalpage2/figure supervisory review; original table and other publicfields unchanged.",
+      "before": "Each row connects a drawing label to its circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this ignition coil; the lower assigned position identifies its fused supply. Their different jobs matter: a supply connection and a control connection are not interchangeable. These labels identify circuit roles without proving that either circuit or the coil is working.",
+      "after": "Each row connects a drawing label to its circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this ignition coil; the lower assigned position identifies its fuse-or-circuit-breaker supply. Their different jobs matter: a supply connection and a control connection are not interchangeable. These labels identify circuit roles without proving that either circuit or the coil is working."
+    }
+  }
+}

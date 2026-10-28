@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3074",
+  "supportingSourceRefs": [],
+  "sourceHash": "a59c96994b3f2bfdd4c9040f8d7411c95920456899658540354dc52433142f62",
+  "title": "C3074 — Front seat front tilt motor RH",
+  "introduction": "This reference connects the right-hand front-seat front tilt motor's identity with its connector drawing, cavity assignments and pigtail parts record. I read it like a seating plan: find the cavity label in the picture, then read across its matching table row to learn that position's job. The passenger-seat tilt-down and tilt-up functions have separate assignments; keeping those rows straight is the useful first step.\n\nStart with the identity table, use the drawing to navigate the cavity labels, and finish with the parts cross-reference if you need to identify the listed pigtail. This is a connector-reading guide. Access, physical viewing direction, probing setup, electrical test limits and replacement instructions are outside its scope. The gauge convention and catalog codes are not defined here, so these records alone do not establish wire selection or repair compatibility.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3074-b00002",
+      "text": "Connector-face map · Harness 14D230",
+      "why": "As printed, the drawing has outlined cavity circles in the left column and shaded positions in the right column, with a stepped outline at the lower right. Those landmarks help you keep your place while matching labels to rows. The shaded positions correspond to rows without assigned circuit details; shading is not a diagnosis of a damaged terminal."
+    },
+    {
+      "blockId": "connector-C3074-b00005",
+      "text": "Read the cavity assignments",
+      "why": "The Cavity column links the picture to the table. Reading across keeps each circuit identifier, wire description, tilt function and terminal record together. The opposing movement labels distinguish the assignments, but they do not establish a power polarity or authorize applying voltage. Blank circuit fields provide no additional connection to infer."
+    },
+    {
+      "blockId": "connector-C3074-b00007",
+      "text": "Pigtail parts cross-reference",
+      "why": "The identity table's Kit List leads to the pigtail record, while Engineering Shell connects that record to the housing identifier. Service Part identifies the listed service item; the Image field names its illustration file. These fields help identify a catalog entry, without supplying a splice method or proving that its gauge entries can replace the wiring described above."
+    }
+  ],
+  "checkedAt": "2026-10-28T01:53:26.413Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c23d67312c81829707e0f5c8d47774a6872a5c47791c0199d6ae167110e863ba",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "155c2723578fba574b62ebf2e60d9ceb50e37f6ee7d6ad7cd25c1696631ec0e6",
+    "reviewedAt": "2026-10-28T01:53:26.413Z"
+  }
+}

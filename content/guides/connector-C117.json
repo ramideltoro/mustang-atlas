@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C117",
+  "supportingSourceRefs": [],
+  "sourceHash": "570a989a9c93523b28e404fb23398115fa3a55902737f6b33227d0a5b5c048d0",
+  "title": "C117 — Ignition coil-on-plug 7 connector",
+  "introduction": "A coil-on-plug arrangement puts an ignition coil at its spark plug, ready to produce the high voltage needed for ignition. I use this page to trace the connector’s identity through the drawing and into the circuit table. Think of the cavity labels as assigned parking spaces: the housing can have a position even when no circuit is assigned to it.\n\nRead the identification table first, match the illustrated labels to the Cavity column, then follow the relevant row across. The pigtail table provides separate catalog cross-references. This guide stops at understanding the reference; access, physical viewing direction, testing and repair need their own instructions. Gauge convention and the Size and Used codes are undefined here, and the listed pigtails have no supplied selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C117-b00002",
+      "text": "Harness 12C508 — connector face",
+      "why": "I navigate the illustration using the large rectangular feature at the left and the vertical stack of cavity labels. The shaded middle position aligns with the table row that has no circuit or terminal assignment. This makes the distinction between a housing position and an assigned connection visible, without establishing the viewing side of the connector on the vehicle."
+    },
+    {
+      "blockId": "connector-C117-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Cavity column is the bridge from the drawing to each row’s electrical identity. Read across for the circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this coil, while the lower assigned position identifies its fuse-or-circuit-breaker supply. Those are circuit descriptions, not evidence that a connection is healthy or that the coil needs replacement."
+    },
+    {
+      "blockId": "connector-C117-b00007",
+      "text": "Pigtail catalog entries",
+      "why": "Each row describes a pigtail, the connector and attached leads used in a wiring repair. Keep the kit, Service Part and Engineering Shell entries associated with their own row. The shell identifier helps connect the catalog entry to the housing reference; it does not by itself settle which listed assembly to use or how to install it."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:25:01.072Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": "b2d231b3f2185d98de93f9e6359654329fa7bf9898e9bc5ee2fd04367f1846c2",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b05a0a39226af437effb46e2c65d26690ef1cca23b0173f26b09f03ee22072ee",
+    "reviewedAt": "2026-10-28T01:47:41.845Z",
+    "editorialRevision": {
+      "scope": "Complete distinct31unit/rawtext/table/fullprose/fullindependentverdict read; exactoriginalSVG equality with directly viewed C116 figure verified. Narrow protection-alternative correction only; no other public change.",
+      "before": "The Cavity column is the bridge from the drawing to each row’s electrical identity. Read across for the circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this coil, while the lower assigned position identifies its fused supply. Those are circuit descriptions, not evidence that a connection is healthy or that the coil needs replacement.",
+      "after": "The Cavity column is the bridge from the drawing to each row’s electrical identity. Read across for the circuit, color notation, gauge, function and terminal entry. The upper assigned position concerns powertrain control of this coil, while the lower assigned position identifies its fuse-or-circuit-breaker supply. Those are circuit descriptions, not evidence that a connection is healthy or that the coil needs replacement."
+    }
+  }
+}
