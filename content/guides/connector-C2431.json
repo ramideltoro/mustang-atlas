@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2431",
+  "supportingSourceRefs": [],
+  "sourceHash": "e906a60eb3af42a237f55800ce2d2c8803ec4c1706a9aeee54485cfecfaa674e",
+  "title": "C2431 — Gateway module connector reference",
+  "introduction": "The gateway module relays selected information between the car’s communication networks. Think of it as an interchange: messages can move between network routes, while the connector also carries the module’s supply and ground connections. A missing message alone does not identify which connection—or which module—is responsible.\n\nI start with the connector identity table, then match the Harness Id above the drawing to the section below it. Use each printed cavity label to find the corresponding assignment row. Read Circuit Number and Function together, then consult Color, Gauge and Terminal Part Number for that same row. For network entries, keep the full bus description, including UPPER or LOWER where present, and the HIGH or LOW designation. Repeated wire colors make the circuit identity especially useful.\n\nThis page teaches the connector map and its service-part listings. It does not provide physical access, a confirmed physical viewing direction, live probing instructions, electrical test values or a replacement procedure. Gauge conventions and Size-code meanings are not defined here, and the pigtail listings do not establish how to choose between the kits. Use those entries as reference information without inventing a test or parts-selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2431-b00002",
+      "text": "Harness 14401 · Connector face",
+      "why": "I orient the printed drawing by the large projecting housing feature on the left and the tapered projection on the right. The centered end cavities and the intervening columns make simple position-counting unreliable; read the actual labels. The Fpn and Harness Id fields beneath the drawing identify the documented connector section."
+    },
+    {
+      "blockId": "connector-C2431-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The gray-filled positions correspond to rows marked unused, with blank circuit and function fields. Their shading records the documented population pattern, not an electrical test result. For assigned rows, distinguish supply and ground functions from network functions, and pair network HIGH and LOW entries by their complete bus descriptions. The map identifies connections; it cannot establish whether power, ground or communication is working."
+    },
+    {
+      "blockId": "connector-C2431-b00007",
+      "text": "Pigtail service-part references",
+      "why": "Number ties each row to Kit List, while Service Part identifies the listed service item and Engineering Shell identifies its associated shell. The rows share a shell identifier but have different service-part identifiers; that alone does not establish interchangeability or which kit a repair needs. Preserve the Gauge entry exactly as printed without interpreting its spacing as a range. The Image filenames refer to separate kit illustrations, not the connector-face drawing."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:25:33.966Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bbd1f120f3e0cc67344eeeadfcbe4df112257c8f3cff50e713ed3d60fb8b799b",
+  "sourcePdfHash": "0fdad47ffbec3a0654612194537cc50687138882ece5380769fac9701a38e2b6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 53,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "02ce388c3b757d4dc9f97d52c88ffeb2461075d44278695267e29b244d9e4a6f",
+    "reviewedAt": "2026-10-28T04:25:33.966Z"
+  }
+}

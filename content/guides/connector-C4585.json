@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C4585",
+  "supportingSourceRefs": [],
+  "sourceHash": "4a0fd4f067ea91cf77c7f3db55a352776f44db249167f400d9a3e0663e5f824a",
+  "title": "C4585 — Vehicle Dynamic Control Module (VDM) connector",
+  "introduction": "This connector reference brings suspension-position sensing, damper-valve connections, electrical feeds and a network connection into the same lookup. I use it as the VDM’s address book: it tells me which documented circuit belongs at a cavity, rather than whether that circuit is working.\n\nStart with the harness identification beneath the face heading. In the drawing, cavity labels run from right to left within the horizontal rows, with isolated positions at the ends of the upper and lower rows. Use the printed label rather than counting circles across the housing, then find the matching Cavity row and read across its Circuit Number, Color, Gauge, Function, Qualifier, Used and Terminal Part Number. Gray positions match blank circuit entries where corresponding rows are supplied; there is no separate shading legend.\n\nThe function labels distinguish suspension corners, sensor connections and damper polarity. Preserve those distinctions when reading the table. This page does not establish physical viewing direction, access, test conditions or expected readings, and it does not define the gauge convention or Size and Used codes. Use it to identify the documented connection within the matching diagnostic procedure; it cannot establish a failed sensor, damper or module.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4585-b00002",
+      "text": "Connector face and identity · Harness 14A005",
+      "why": "I use the identification table to establish which harness connector the drawing describes, then use the cavity labels and housing outline to navigate it. The visible housing extension on the right is a drawing landmark, not an instruction for releasing the connector or a definition of physical viewing direction."
+    },
+    {
+      "blockId": "connector-C4585-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Read the complete row for the chosen cavity. The Function column separates front and rear position-sensor connections, left and right damper-valve connections, feeds and the network connection. Keep any polarity and positional wording attached to its circuit; a minus label alone is not enough to declare a chassis-ground connection. These assignments identify circuit roles, while operating condition and fault interpretation belong to the matching diagnostic procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:51:46.370Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "44326c8f147f98bc1cc6607ebeb981e75e55fe9aaa603e3ef450e6f1d87e1ba6",
+  "sourcePdfHash": "d4229e0686c0e75689de19696c75ad058c7fb86c704ec5fbf1951b8fba07bcbd",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 67,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "15aa47ce5aeb6806e15a5d5fb057226c00f71cb0a91dbfe26f52c1d75e4a8a52",
+    "reviewedAt": "2026-10-28T04:51:46.371Z"
+  }
+}

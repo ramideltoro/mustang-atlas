@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C215",
+  "supportingSourceRefs": [],
+  "sourceHash": "8dc80429bbf8cbd3dae0714409d63a8e2700a91fdb6dd5f29d9130da79f9b4b6",
+  "title": "C215 — Inline connector reference",
+  "introduction": "This inline connector reference shows the mating male and female faces and gives each its own circuit table. I start with Gender and Harness Id before choosing a drawing. Think of the faces as a handshake seen from each participant’s side: the page positions change, but the cavity labels keep the identities straight.\n\nMatch the printed cavity label to Cavity in the table belonging to that face, then read across for Circuit Number, Color, Gauge, Function and Terminal Part Number. Compare the faces by cavity and circuit identity, not by left-versus-right position. The circuit and function entries match across the faces, while some gauge entries and the terminal part numbers differ; keep each face’s data together.\n\nThe separate pigtail table is a service-parts reference, not a replacement sequence. This page does not establish vehicle access, a physical viewing direction for probing, wire-sizing conventions or electrical test conditions. Leave unexplained Size codes uninterpreted and use a matching workshop procedure before testing or repair.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C215-b00002",
+      "text": "MALE connector face · Harness 14A005",
+      "why": "This heading selects the male drawing and the identification and assignment tables that follow it. As drawn, the housing has a recessed profile on the left and a rounded outer edge on the right. I use those visible features to keep the page orientation straight, then rely on the cavity labels rather than assume the female drawing has the same left-to-right layout."
+    },
+    {
+      "blockId": "connector-C215-b00005",
+      "text": "Male-face cavity assignments",
+      "why": "Read each male-face row as a complete assignment. Circuit Number identifies the circuit; Function names its fuse, circuit-breaker or relay association. Those labels identify circuit roles, not test results, fuse current ratings or proof that a relay is a separate replaceable part. Shaded drawing positions correspond to rows with blank circuit and function entries."
+    },
+    {
+      "blockId": "connector-C215-b00007",
+      "text": "FEMALE connector face · Harness 14290",
+      "why": "The female drawing places the labeled cavity columns opposite their positions in the male drawing and shows projecting housing features on the right. Its own identification table selects the corresponding face and harness. Matching cavity and circuit labels across the faces avoids turning a mirrored drawing into a mistaken connection."
+    },
+    {
+      "blockId": "connector-C215-b00010",
+      "text": "Female-face cavity assignments",
+      "why": "Use the female table for its gauge entries and terminal identification even when the circuit and function match the male face. Differences between the faces remain part of the reference; they are not a reason to copy a value from the other table. A listed assignment identifies the connection but does not establish electrical condition."
+    },
+    {
+      "blockId": "connector-C215-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "I distinguish Service Part, which identifies the listed service item, from Engineering Shell, which identifies the shell entry. Keep the kit’s Gauge, Material and Cavities fields together as catalog information. The Cavities field is not a cavity-by-cavity wiring map, and the kit gauge is not a substitute for the individual circuit entries. This listing alone does not teach terminal removal, splicing or replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:24:07.168Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "fa9e42f0b806d72532aeb3631f838c75ae3477a69cf1c5557770f36ba2d620f5",
+  "sourcePdfHash": "b6dd7ec9900b66b66cf7e0a33809f168da7c25e31675859f40b612154983a62e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 54,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "645a6d7c3a02b67ae3306251606ce3e6231433d02efb7b92192f18de4801a71d",
+    "reviewedAt": "2026-10-28T04:24:07.169Z"
+  }
+}

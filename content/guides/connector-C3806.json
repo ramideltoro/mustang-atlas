@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C3806",
+  "supportingSourceRefs": [],
+  "sourceHash": "c67e5b2bb4d7d13b651607753cf1537cf06d35fda07166df312566a3fbe74f1e",
+  "title": "C3806 — Inline connector reference",
+  "introduction": "I use this reference to follow a circuit across an inline harness connection. Power feeds, a ground path and control signals share the housing: an electrical carpool whose passengers have very different jobs.\n\nStart with the MALE or FEMALE heading and its harness identifier, then use that section's drawing and tables together. The cavity label links a position in the drawing to its circuit row. Read across that row for the circuit identity, wire description, function and terminal listing. In the MALE drawing, labels descend down each column; in the FEMALE drawing, they increase downward. Gray-filled positions correspond to blank circuit assignments in the accompanying tables. Use each drawing's own labels rather than carrying a position across by eye.\n\nThe shell and pigtail tables provide hardware cross-references. This page does not establish the physical viewing direction, access or release method, electrical test conditions, or repair instructions. Gauge conventions and the Size and Used codes are not defined here; retain them as recorded without treating them as replacement-wire specifications. Use the matching service or diagnostic procedure before physical work.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3806-b00002",
+      "text": "MALE connector face · Harness 14A005",
+      "why": "I check the gender and harness identity before reading the drawing. This keeps the face illustration paired with its own shell record and terminal listings."
+    },
+    {
+      "blockId": "connector-C3806-b00005",
+      "text": "Cavity-to-circuit lookup",
+      "why": "The cavity label is the bridge between the drawing and the table. Circuit Number identifies the electrical circuit, while Function describes its role; neither is a test result or proof that the circuit is working."
+    },
+    {
+      "blockId": "connector-C3806-b00007",
+      "text": "FEMALE connector face · Harness 14A411",
+      "why": "This face has its own drawing and hardware record. Matching circuit assignments across the connection does not justify copying terminal listings from the other face."
+    },
+    {
+      "blockId": "connector-C3806-b00010",
+      "text": "Cavity-to-circuit lookup",
+      "why": "Use the cavity label to find the corresponding row on this face, then compare circuit identities across the connection. The different drawn numbering order makes position alone an unreliable shortcut."
+    },
+    {
+      "blockId": "connector-C3806-b00012",
+      "text": "Pigtail and shell cross-reference",
+      "why": "Engineering Shell connects the pigtail listings to the face hardware records, while Service Part identifies the listed service item. Multiple entries share a shell, so a shell match alone does not explain which kit a particular repair requires."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:38:39.091Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "573fc65a284872efe82e5e247c6b9e62b4fcd6085edc330c571576c37c166d4b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 60,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "9d344caf585927fde75cf5678de115dffc119031368f56ef21abaf82b38ef067",
+    "reviewedAt": "2026-10-28T04:38:39.092Z"
+  }
+}

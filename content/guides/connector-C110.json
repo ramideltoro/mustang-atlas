@@ -1,0 +1,70 @@
+{
+  "documentId": "connector-C110",
+  "supportingSourceRefs": [],
+  "sourceHash": "dd1373806723a1a080361f8428bb7d80cce0fb823ccf6d40e02f1ec7495fff5a",
+  "title": "C110 — Inline connector reference",
+  "introduction": "I use this reference like a street map for the harness: the cavity label is the address, and its table row identifies the circuit. Start with the MALE or FEMALE heading and its Harness identifier, then pair that section’s drawing with its own tables.\n\nThe drawings reverse the left/right placement of the cavity groups. Compare the printed labels and housing outline rather than carrying a position straight across from the other view. In the male section, the shaded cavity corresponds to the row with blank circuit details; read its Used and Terminal Part Number entries alongside the drawing.\n\nRead each cavity row across to connect its circuit identifier with the wire color, gauge, function, qualifier and terminal entry. The functions distinguish injector-driver circuits, knock-sensor circuits and engine sensor connections. Keep the printed bank and polarity labels intact: they identify the circuit’s stated role, not an expected meter reading.\n\nThis is a connector-reading reference. Physical viewing direction, gauge convention and the meanings of Size and Used codes are not defined here. Keep those entries as printed; access, electrical testing and replacement work require the applicable service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C110-b00002",
+      "text": "MALE connector face · Harness 12C508",
+      "why": "The gender and harness identifier anchor the drawing to its matching metadata and cavity table. I check both before using the outline to compare cavity positions."
+    },
+    {
+      "blockId": "connector-C110-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The cavity label links the picture to the electrical description. Read the whole row: the function preserves distinctions such as injector polarity and knock-sensor bank, while the terminal entry identifies the listed contact for this side."
+    },
+    {
+      "blockId": "connector-C110-b00007",
+      "text": "FEMALE connector face · Harness 14B485",
+      "why": "The opposing drawing places the cavity groups on different sides of the page. Matching labels keeps the comparison reliable without assuming which physical viewing direction the illustration represents."
+    },
+    {
+      "blockId": "connector-C110-b00010",
+      "text": "Cavity and circuit assignments",
+      "why": "Matching circuit identifiers help relate the opposing faces, but their gauge and terminal entries differ in places. Keep each row with its own connector side rather than treating the tables as interchangeable copies."
+    },
+    {
+      "blockId": "connector-C110-b00012",
+      "text": "Pigtail service-part lookup",
+      "why": "I read each row across, keeping its Number, Service Part and Engineering Shell together. The shell entry is a useful identity check, but a shared shell does not by itself establish that different kits are interchangeable. Gauge, Material and Cavities describe the listed pigtail; they do not replace the individual wire records in the face-pin tables. This is a parts directory, not a splicing recipe."
+    },
+    {
+      "blockId": "connector-C110-b00014",
+      "text": "European pigtail product lookup",
+      "why": "Use the Product Id as the European lookup reference. No cross-reference here establishes which preceding kit it matches, so I keep that relationship unresolved rather than treating neighboring tables as a compatibility promise."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:49:47.585Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 6,
+    "receivedBlocks": 6,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6913e38c4fe95769624f65a73d0efb86d0eb78052c98415e8d44c4ee51e2be9f",
+  "sourcePdfHash": "40f37da2b3d3b0c84ee670eaa74b58d680b308666eeb42f41484a4982274f1c9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 72,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "f286339564b53cbc9f3e82a5a0335dc9b65bce94bba5b00dfb7cb25828f759cd",
+    "reviewedAt": "2026-10-28T04:49:47.586Z"
+  }
+}

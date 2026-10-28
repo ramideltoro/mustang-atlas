@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C408",
+  "supportingSourceRefs": [],
+  "sourceHash": "e1a78aee94ac97a1adb191fc22da57f970e897a68f19647f766f5bc9b16f333b",
+  "title": "C408 — Inline connector reference",
+  "introduction": "This reference maps an inline connection carrying rear-suspension position, rear-differential oil-temperature and signal-return circuits. I treat the cavity labels like seat numbers: their identity matters more than where they happen to sit on the page. The male and female drawings reverse the horizontal arrangement, so reading both with the same left-to-right assumption would scramble the seating plan.\n\nStart with the MALE or FEMALE heading and its harness identification. Match the drawing’s cavity label to Cavity in the table beneath that connector half. Read across to Circuit Number, Color and Function to understand the connection, then keep Gauge and Terminal Part Number attached to that same row. Matching circuit identities across the halves does not make their wire-gauge or terminal entries identical.\n\nThe pigtail table connects kit entries with engineering-shell and service-part identifiers. It supports a parts lookup, but does not establish which listed kit to install. Gauge conventions and the Size and Used codes remain as printed. Physical viewing direction, access, probing, test limits and replacement methods are outside this reference; use the applicable service information before taking those actions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C408-b00002",
+      "text": "MALE connector face · Harness 14B102",
+      "why": "In this drawing, the angled housing keys sit on the left and the small rectangular projection extends from the left edge. These visible features distinguish this illustration from the female view; they do not establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C408-b00005",
+      "text": "Male cavity and circuit map",
+      "why": "The cavity label links a location in the drawing to a complete table row. Circuit Number identifies the circuit, while Function distinguishes the signal return, rear-suspension position connections and rear-differential oil-temperature connection. Keep the left/right and positive/negative distinctions in those descriptions; they describe different circuit roles."
+    },
+    {
+      "blockId": "connector-C408-b00007",
+      "text": "FEMALE connector face · Harness 14A005",
+      "why": "The female drawing has its angled housing keys and prominent loop-shaped feature on the right. Its cavity columns appear in the opposite horizontal order from the male drawing, so the printed labels—not an assumed mirrored location—are the reliable link to its table."
+    },
+    {
+      "blockId": "connector-C408-b00010",
+      "text": "Female cavity and circuit map",
+      "why": "Corresponding cavity labels retain the circuit identities and functions shown for the male half, but several gauge entries and the terminal identifiers differ. Read those details from this female table rather than carrying them across from the male table."
+    },
+    {
+      "blockId": "connector-C408-b00012",
+      "text": "Pigtail kit and service-part reference",
+      "why": "Engineering Shell connects each kit entry to a shell identifier that can be compared with the connector half’s Fpn. Service Part is a separate identifier. Several kits share a shell identifier, so a shell match narrows the lookup without proving interchangeability or selecting a replacement."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:24:38.258Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "bebd68b330408174883935ebb48ed2aecaa98fd38b52ae2e35595e2b685092c7",
+  "sourcePdfHash": "c0c5c3797ed375df00b143792ba85a65c3c30097678fee9d7eea426f601e1b21",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 53,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "7daedac2214250b8221d0a6c5a4eef63282e21d46117472b23a214470c3f24ac",
+    "reviewedAt": "2026-10-28T04:24:38.260Z"
+  }
+}

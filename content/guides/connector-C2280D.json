@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C2280D",
+  "supportingSourceRefs": [],
+  "sourceHash": "e2d87112e0e21ce88a15ed75c444b78c58e8e07659d9ea64a93d746c42246a18",
+  "title": "C2280D — Body control module (BCM) connector reference",
+  "introduction": "The body control module coordinates many body electrical functions and exchanges information with other controllers. This connector reference maps connections associated with keyless entry and rear parking aid. I read it like a seating chart: the cavity label locates the connection, and the matching table row explains its assigned job.\n\nStart with the harness heading and face record. In the drawing, cavity labels increase downward within each vertical column. Find the printed label, then read its row across for circuit identity, color, gauge, function and terminal listing. Gray-filled positions correspond to blank circuit assignments in the table. For populated rows, preserve the driver/passenger, front/center, sensor-position and polarity wording; those distinctions keep similar-looking entries from becoming a guessing game.\n\nThe pigtail table connects the shell record to a listed service item. This is a reference for identifying connections, not a BCM fault verdict. Physical viewing direction, access, connector release, test conditions and repair methods require the matching procedure. Gauge conventions and the Size and Used codes are not defined here, and the catalog entries alone do not establish replacement-wire suitability.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280D-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I pair the harness heading with the face record before consulting the illustration. The shell outline and numbered positions help navigate the drawing without establishing which physical side of the installed connector is being viewed."
+    },
+    {
+      "blockId": "connector-C2280D-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity links the drawing to a row, Circuit Number identifies the circuit, and Function distinguishes its assigned role. Keep polarity marks and positional alternatives exactly as recorded; a negative-marked function alone does not establish a chassis-ground connection."
+    },
+    {
+      "blockId": "connector-C2280D-b00007",
+      "text": "Pigtail and shell cross-reference",
+      "why": "Engineering Shell ties the service-parts listing to the connector hardware record. The pigtail entry and individual circuit rows describe different things, so the pigtail's Gauge entry should not be treated as a universal specification for every circuit wire."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:38:39.103Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "6bb5cc52bcc0b80d227cb5c9a78190c9dd0639f3c120e5b24e2cab0114614398",
+  "sourcePdfHash": "e529df1b5bf926b5716a04e42c05a86b4a0a3924503fe4d4d2131de51f396650",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 60,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "853571af4d15302facef0a45430c06cecfac277f654fceba9b2c8c51138417fd",
+    "reviewedAt": "2026-10-28T04:38:39.104Z"
+  }
+}

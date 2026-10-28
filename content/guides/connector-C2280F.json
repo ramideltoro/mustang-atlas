@@ -1,0 +1,50 @@
+{
+  "documentId": "connector-C2280F",
+  "supportingSourceRefs": [],
+  "sourceHash": "6572471d6ac52d05c9bd8f06764143826745eb95df65b2dba14504f2833fa295",
+  "title": "C2280F — Body control module connector reference",
+  "introduction": "The body control module coordinates many body electrical functions and exchanges information with other controllers. I use this connector reference to find where a named circuit appears at the module. It is a seating chart for the wiring: a cavity label locates the seat, while the circuit identifier tells you who belongs there.\n\nMatch the harness identity before using the drawing. As printed, the cavity labels form vertical columns on either side of the central rectangular features. Follow those labels rather than reading straight across the face as though it were a spreadsheet. Locate the cavity in the assignment table, then read its circuit, color, gauge, function, qualifier and terminal fields together. The gray-filled positions correspond to blank circuit entries in the supplied rows; they are not evidence of a fault.\n\nThe function descriptions distinguish sensor, switch, relay and control connections. A relay label does not by itself identify a separate plug-in relay, and a circuit name does not establish its expected voltage or behavior. This is a connector-reading reference; physical viewing direction, access, test conditions, gauge convention and Size and Used code definitions remain outside its scope. Use the relevant diagnostic or repair procedure before probing, selecting wire or replacing parts.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C2280F-b00002",
+      "text": "Harness 14290 · Connector face",
+      "why": "I match the harness identity before tracing a cavity. The central rectangular features help navigate the drawing as printed, but their appearance does not establish a release movement or a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C2280F-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read each row as a complete identification record. Similar wire colors can appear on different circuits, so color alone cannot choose the right connection. The function describes the listed role; it does not prove that a connected device works or prescribe a test."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:44:47.821Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "0c3898178075cb9e8088f218492554c8734f0eb08c2c03d8646039e6d8cb3c88",
+  "sourcePdfHash": "a21985452f13fe1b0b6954a5767c215891f1b01a02e57e5b2d2ac9dc59b2421c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 61,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "f78501d8c92a389726a4a70528f09351d8828be13c431904879a01e1ec0b02f1",
+    "reviewedAt": "2026-10-28T04:44:47.821Z"
+  }
+}

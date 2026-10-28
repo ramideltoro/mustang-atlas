@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C3050",
+  "supportingSourceRefs": [],
+  "sourceHash": "7a42e561f04816e083501e56bee72b7da7b13f465b0b82c301d8140fcaf36c8a",
+  "title": "C3050 — Inline connector map",
+  "introduction": "This reference connects the seat-comfort circuit names to their positions in the inline connector. I read it like a seating chart: choose the connector face, find the printed cavity label, then read across the matching table row to see which job belongs there. Even the wiring behind a comfortable seat needs assigned places.\n\nStart with the MALE or FEMALE heading and its harness identifier. The numbered columns appear on opposite sides in the drawings, and the housing projections also change sides. Match the outline and cavity label in the selected drawing rather than carrying a left/right position across from the other face. Use Cavity to find the row, Circuit Number to identify the circuit, and Function to understand its listed role. Keep driver/passenger, upper-cell, indicator and polarity distinctions intact. Read Color, Gauge and Terminal Part Number from that face’s own table; the housing identification table describes the connector half separately.\n\nThe drawings and tables provide a reference map, not an electrical health check. Confirm circuit entries in the table rather than interpreting shading as a test result. Physical viewing direction, access, disconnection, probing setup and expected readings are not established here. Gauge convention and the Size/Used codes are also undefined, so I leave those entries as printed rather than using them to prescribe wire selection or repairs.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3050-b00002",
+      "text": "MALE connector face · Harness 14D232",
+      "why": "This heading selects the male half and its harness. I use the housing outline together with the cavity labels to keep the drawing aligned; the gender label alone does not establish a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C3050-b00005",
+      "text": "Male cavity and circuit lookup",
+      "why": "Each row links a cavity to its circuit identity and listed function. The lumbar pump and upper-cell deflate functions are distinct, as are the seat-heater, fan and indicator functions. Blank circuit fields are not missing test results, and a populated row does not prove that its circuit works."
+    },
+    {
+      "blockId": "connector-C3050-b00007",
+      "text": "FEMALE connector face · Harness 14D231",
+      "why": "The female drawing places the numbered columns on opposite sides from the male drawing. Matching the printed cavity label prevents a mirrored-position mistake before consulting the female identification and circuit tables."
+    },
+    {
+      "blockId": "connector-C3050-b00010",
+      "text": "Female cavity and circuit lookup",
+      "why": "I use this face’s row for its wire and terminal details instead of borrowing the male terminal entry. The Function field identifies the circuit’s listed role; any later measurement needs the applicable diagnostic setup and expected result."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:51:46.347Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ccfafed9af32e6e1464f02b7f6c708539f061f4e6d352aecd808719acc39ffa0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 69,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "afd59089afc9415e35e2ea2019d430cd431b89e29896607369e80f787f007efd",
+    "reviewedAt": "2026-10-28T04:51:46.348Z"
+  }
+}

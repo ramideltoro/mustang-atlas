@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C263",
+  "supportingSourceRefs": [],
+  "sourceHash": "a7b902b287e2e8dfbfc7707db3531201f3610eb7b381054db9d1c6cfb47842b2",
+  "title": "C263 — Inline connector map",
+  "introduction": "This inline connector brings together climate-control circuits for the blower, air doors and sensors, along with reference and ground connections. I use the map to keep those jobs distinct: calling everything here “the A/C wire” is like labeling every control on the dashboard “button.” The Function column is what gives each circuit its particular role.\n\nChoose the MALE or FEMALE face by its heading and harness identifier, then match a printed cavity label in that drawing to the Cavity column. The numbered columns and prominent housing projections change sides between the drawings, so copying a left/right position from the other face can send you to the wrong row. Read across for Circuit Number, Color, Gauge, Function, Qualifier, Used and Terminal Part Number. Wire colors, gauge entries and terminal identifiers can differ between the halves even where the cavity and circuit identity match; keep each face’s data attached to that face.\n\nRead door-motor function labels in full, including the coil, movement and polarity condition. Those descriptions identify the listed function; they are not instructions to apply power. This reference does not establish physical viewing direction, access, disconnection, probe setup or expected readings. Gauge convention and Size/Used coding are undefined here. I preserve those entries as printed and use this page for circuit lookup, leaving wire selection, testing and repair to the applicable procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C263-b00002",
+      "text": "MALE connector face · Harness 18B574",
+      "why": "This selects the male half and its harness. I match its housing outline and printed cavity labels before reading the table; the connector’s gender does not by itself tell me the physical viewing direction."
+    },
+    {
+      "blockId": "connector-C263-b00005",
+      "text": "Male cavity and circuit lookup",
+      "why": "The rows distinguish blower control and relay functions, door-motor commands, sensor signals, reference connections and ground. That distinction keeps a sensor signal from being mistaken for a motor command. Preserve the full conditional door-motor descriptions when interpreting a row."
+    },
+    {
+      "blockId": "connector-C263-b00007",
+      "text": "FEMALE connector face · Harness 14401",
+      "why": "The female illustration swaps the numbered columns relative to the male illustration. The cavity label is the lookup key; a remembered position on the other drawing is not a reliable substitute."
+    },
+    {
+      "blockId": "connector-C263-b00010",
+      "text": "Female cavity and circuit lookup",
+      "why": "Read wire and terminal details from this face’s own rows because matching circuit identities do not make every entry identical across the connection. A circuit label identifies the listed role, while a diagnostic procedure supplies the conditions needed to judge its operation."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:51:46.359Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "efb56dfa7c0b74d2b0ffae8e49cc82befbca0af318b723f3ac15727c774c6077",
+  "sourcePdfHash": "55fc0811bd7bfd991b3ba4fdb985b959313bc3cfaef58ce6015c1ca7c1ddbf73",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 67,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "3a73edcf8e099fcbc020d880f2f91469a981c3cd2f33af3e0048c9c77f115260",
+    "reviewedAt": "2026-10-28T04:51:46.360Z"
+  }
+}

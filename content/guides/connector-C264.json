@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C264",
+  "supportingSourceRefs": [],
+  "sourceHash": "759a8cb2ad5417a8a01cd9cf6cb87a65b763f5e1c3facb66ef3ccd4b370ef9ac",
+  "title": "C264 — Inline connector identification",
+  "introduction": "I use this reference as a cavity address book: find a label in the drawing, then look up the circuit recorded at that address. The circuit identifiers help distinguish wires, but the blank Function fields leave their jobs unnamed. An address book can tell you where someone lives without telling you what they do for a living.\n\nStart with the harness heading and check the connector identification table beneath its drawing. Match a printed cavity label to the Cavity column, then read across for circuit identity, wire color, recorded gauge, qualifier, usage entry and terminal identification. A blank Function field does not mean an unused cavity; check the circuit details and usage entry together.\n\nThe drawings arrange the cavity labels in opposite vertical orders while retaining the lower-numbered column on the left. Read each image as presented. Gray-filled positions correspond to unused cavities where matching rows are supplied, and the stepped outlines and side projections help distinguish the views.\n\nThe Gender fields are blank, so I keep the harness labels as the section identifiers. Physical viewing direction, Size codes and gauge convention are not established here. This page supports identification and cross-reference; it does not establish circuit functions, test results, access, release movements or repair instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C264-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "This drawing places the higher cavity labels toward the top. Its broad stepped outline and prominent projections along the left side provide visual landmarks. I use the harness identification and printed labels together, without inferring connector gender or a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C264-b00005",
+      "text": "Cavity and circuit identifiers",
+      "why": "Use each cavity label to find its circuit record, then compare the complete row. Wire color alone is insufficient because a color entry can recur on different circuits. The blank Function fields must remain blank in meaning too: circuit identifiers are useful references, but their prefixes do not establish a component or electrical role."
+    },
+    {
+      "blockId": "connector-C264-b00007",
+      "text": "Harness 14290 connector face",
+      "why": "This view places the lower cavity labels toward the top, reversing the vertical order seen in the companion drawing. The large rectangular projection on the left and long outline on the right help distinguish it. Read its labels directly rather than assuming that a mental rotation establishes the physical connector orientation."
+    },
+    {
+      "blockId": "connector-C264-b00010",
+      "text": "Cavity and circuit identifiers",
+      "why": "Keep this table paired with its own harness drawing and identification record. Matching circuit labels across records can help you locate related entries, but terminal identifiers belong to the face where they are listed. Those identifiers alone do not establish interchangeability, a replacement method or the circuit’s function."
+    }
+  ],
+  "checkedAt": "2026-10-28T04:49:47.597Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "071cf699a6fa7e37daf8cd1b98d4c7e67a32a03be249983c4cebc1bf73b8d1bd",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 70,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "d4f1f29e50d08559b7aaebe0f2e7403543acd1b8c0b90c54c703cde4295c885b",
+    "reviewedAt": "2026-10-28T04:49:47.598Z"
+  }
+}
