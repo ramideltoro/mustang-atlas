@@ -98771,131 +98771,264 @@
       }
     },
     {
-      "title": "Diagnose silent tweeters and right-side speakers with SYNC",
-      "summary": "Use individual speaker signal and circuit tests to distinguish speaker faults from wiring or audio-module faults.",
-      "introduction": "The six-speaker SYNC system's Audio Front Control Module (ACM) supplies electrical audio signals to the speakers. The right front door speaker and A-pillar tweeter share a signal. These checks establish whether a silent speaker receives that signal, then examine its wiring before considering the ACM.",
-      "why": "Silence does not necessarily mean a speaker has failed. A circuit fault can interrupt the signal or make the ACM disable an output. Disconnecting the specified companion speaker prevents that shared branch from confusing wiring measurements.",
+      "title": "Interpret recorded SYNC tweeter and speaker circuit tests",
+      "summary": "Compare existing I–L technician records with the exact signal, isolation and continuity gates before interpreting separate speaker, wiring or ACM repair destinations.",
+      "introduction": "I’ll interpret existing technician records for silent A-pillar tweeters, the right front door speaker and the applicable convertible right rear quarter speaker. Exact connector states matter because front speakers share circuits. A missing signal alone does not identify a failed ACM.\n\nThis article performs no live audio operation, meter setup, connector access, probing, repair or programming. Require actual equipment, terminal identity, state and result provenance; missing or ambiguous records leave the affected conclusion unresolved.",
+      "why": "The chart distinguishes a recorded changing audio signal from unwanted supply voltage, a connection to ground, an open path or two wires shorted together. Output-disable codes and connected companion speakers affect interpretation. The final ACM destination requires actual connector correction, restored operation and the bulletin gate, not merely passing wire readings.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "left A-pillar tweeter has no sound",
-        "right A-pillar tweeter silent",
-        "right front door speaker not working",
-        "convertible right rear speaker silent"
+        "2015 Mustang SYNC silent tweeter",
+        "left A-pillar speaker C9063",
+        "right A-pillar speaker C9065",
+        "right front door speaker C612",
+        "convertible right rear speaker C396",
+        "ACM C240A speaker circuit",
+        "B1A02 speaker fault",
+        "B1A03 speaker fault"
       ],
       "when": {
-        "summary": "When an A-pillar tweeter, right front door speaker or convertible right rear quarter-panel speaker is silent.",
+        "summary": "Use complete existing records for the applicable silent-speaker complaint and selected I, J, K or L route.",
         "notes": [
-          "Choose the test by speaker location and body style."
+          "Tests I, J and K address the front speakers and carry no body-style restriction in their test descriptions.",
+          "Test L addresses the convertible right rear quarter-panel speaker. The linked rear quarter-panel replacement destination covers 2.3L, 3.7L and 5.0L applications.",
+          "A coupe's right rear speaker is on the parcel shelf. Its B1A03 fault-code descriptions are included for orientation, but Test L must not be substituted for a coupe-specific pinpoint test.",
+          "This article addresses individual silent-speaker complaints, rather than every SYNC, display, USB or radio-reception problem."
         ]
       },
       "prepare": [
         {
-          "title": "Prepare the measuring equipment",
-          "detail": "Use a meter capable of alternating-current audio, direct-current voltage and resistance measurements, plus Wiring Diagrams Cell 132 and connector views. A diagnostic scan tool supports fault-code reading and replacement-module configuration."
+          "title": "Require actual equipment and complaint records",
+          "detail": "Require technician provenance and the actual six-speaker SYNC/non-touchscreen equipment. I is left front tweeter C9063; J right front tweeter C9065; K right front door C612; L convertible right rear quarter C396. L is not a coupe parcel-shelf test. Its linked replacement scope is 2.3L/3.7L/5.0L; broad 5.2L coverage does not establish a convertible combination."
         },
         {
-          "title": "Plan component access",
-          "detail": "Use the appropriate speaker and ACM removal procedures. Switch ignition off before the specified disconnections; operate the audio system or switch ignition on only where directed."
+          "title": "Require physical-access and endpoint provenance",
+          "detail": "Require documented applicable access/release/restoration, Cell 132 connector identification and actual cavity orientation for every selected, companion and ACM connector. Pin numbers below identify existing test records, not probing locations. Missing access or identity evidence cannot establish a valid component conclusion."
+        },
+        {
+          "title": "Require exact state, mode and measurements",
+          "detail": "Require ignition OFF before specified disconnections, actual AM/FM operation and an AC-voltage signal observation, then the precise selected-speaker/ACM/companion isolation states. Unwanted-voltage records require ignition ON; resistance records require OFF with isolation retained. Require individual values and actual measurement mode, not a single undocumented pass label. No numerical initial audio-voltage threshold is supplied."
+        },
+        {
+          "title": "Require actual repair and completion provenance",
+          "detail": "Require actual connector findings/corrections, reconnected selected and companion speakers, seated/latched ACM connectors, complete access restoration and original-function observation. A persistent concern needs actual OASIS/TSB results. Repairs and module procedures remain separate; missing records never establish no bulletin or completed repair."
+        },
+        {
+          "title": "Require configuration provenance when applicable",
+          "detail": "For an actually directed ACM replacement, require pre-removal vehicle identification/configuration capture, a communicating replacement and completed PMI or actual tool-directed VIN-specific As-Built/parameter fallback. Require IDS ignition-prompt compliance and clearing programming-generated network communication codes. No live tool operation is supplied here."
         }
       ],
       "steps": [
         {
-          "title": "Select the exact speaker test",
-          "body": "In the [speaker diagnostic procedure](#/document/G1692891), Test I addresses the left front A-pillar tweeter; J addresses the right front A-pillar tweeter; K addresses the right front door speaker; L addresses the convertible's right rear quarter-panel speaker. Each begins by checking the audio signal."
+          "title": "Identify the selected route in the existing record",
+          "body": "Require the actual silent-speaker location and fitted equipment: I left front A-pillar tweeter C9063; J right front A-pillar tweeter C9065; K right front door C612; L applicable convertible right rear quarter C396. Keep that route throughout all comparisons. Coupe parcel-shelf diagnosis is outside I–L. Missing preparation evidence stops the affected interpretation."
         },
         {
-          "title": "Check whether audio reaches the connector",
-          "body": "With ignition off, disconnect the affected speaker, then operate AM/FM radio. Measure fluctuating alternating-current voltage across the harness terminals: I uses C9063 pins 1 and 3; J uses C9065 pins 1 and 3; K uses C612 pins 1 and 4; L uses C396 pins 1 and 4. A fluctuating signal directs replacement of that speaker. No signal leads to wiring tests."
+          "title": "Interpret the initial recorded AM/FM signal",
+          "body": "Require ignition OFF before disconnection of only the affected speaker, followed by actual AM/FM audio operation and AC-voltage measurement at the identified harness connector. Positive/negative pairs are I C9063 1/3, J C9065 1/3, K C612 1/4 and L C396 1/4.\n\nA fluctuating AC voltage present directs separate replacement of that selected speaker through its matching complete procedure. No numerical amplitude threshold is supplied. No fluctuating signal permits the isolated wiring-record assessment; it does not by itself condemn the ACM. A static reading, wrong mode or unknown audio operation cannot establish either branch."
         },
         {
-          "title": "Isolate the circuit correctly",
-          "body": "Switch ignition off and disconnect ACM C240A. For I, also disconnect left front door speaker C523; for J, disconnect right front door speaker C612; for K, disconnect right tweeter C9065. Test L specifies no additional companion-speaker disconnection."
+          "title": "Verify the exact isolation recorded before circuit testing",
+          "body": "After the absent-signal result, require ignition OFF, the affected speaker left disconnected and ACM C240A disconnected. I additionally requires left front door C523 disconnected; J requires right front door C612 disconnected; K requires right front tweeter C9065 disconnected. L adds only C240A and no companion speaker.\n\nThis exact arrangement must remain documented through the voltage and all resistance checks in steps 4–7. Missing companion isolation invalidates the affected circuit conclusion; do not infer it from a reading."
         },
         {
-          "title": "Check unwanted voltage and grounding",
-          "body": "With ignition on, measure each specified speaker wire to ground. Any voltage directs circuit repair. If none is present, switch ignition off and measure resistance from each wire to ground. Both readings must exceed 10,000 ohms; otherwise repair the affected circuit."
+          "title": "Interpret the isolated unwanted-voltage records",
+          "body": "Require the step 3 arrangement and ignition ON. Positive-terminal to negative-ground readings are I C9063 pins 1 and 3 separately; J C9065 pins 1 and 3; K C612 pins 1 and 4; L C396 pins 1 and 4.\n\nAny voltage on either wire directs separate affected-circuit repair. Neither showing voltage permits the OFF-state resistance records. These are the source short-to-voltage results, distinct from the initial AC audio signal."
         },
         {
-          "title": "Check continuity and separation",
-          "body": "Follow the selected test's terminal map to measure each wire back to C240A; each must be below 3 ohms. Then measure between the speaker wires: resistance must exceed 10,000 ohms. Failed continuity identifies an interrupted path; failed separation identifies unwanted contact between the wires. Repair the circuit that fails."
+          "title": "Interpret isolation from ground",
+          "body": "Require ignition OFF and the exact step 3 disconnected arrangement. Both selected terminals separately to ground must exceed 10,000 ohms: I C9063 1/3, J C9065 1/3, K C612 1/4 or L C396 1/4.\n\nEither value at or below 10,000 directs separate affected-circuit repair. Both strictly above permits continuity interpretation. Unknown electrical state or identity leaves the result unresolved, rather than proving a short."
         },
         {
-          "title": "Resolve connectors before replacing the ACM",
-          "body": "If wiring passes, switch ignition off and inspect all ACM connectors. Clean corrosion or replace damaged terminals, including bent or pushed-out pins. Reconnect until seated and latched, then operate the system. If silence persists, check OASIS for applicable Technical Service Bulletins (TSBs); follow one if present. Otherwise, the test directs ACM replacement. Begin a scan-tool session before removal to capture configuration, then follow the SYNC ACM procedure and Programmable Module Installation (PMI) process."
+          "title": "Interpret end-to-end continuity",
+          "body": "Require ignition OFF and the same isolated connectors. The exact positive-to-negative pairs are:\n\nI: C9063 pin 1 to C240A pin 22; C9063 pin 3 to C240A pin 10.\nJ: C9065 pin 1 to C240A pin 23; C9065 pin 3 to C240A pin 11.\nK: C612 pin 1 to C240A pin 23; C612 pin 4 to C240A pin 11.\nL: C396 pin 1 to C240A pin 24; C396 pin 4 to C240A pin 12.\n\nBoth values must be less than 3 ohms. Either at least 3 directs separate affected-circuit repair. Both strictly below permits the short-together assessment. No other route’s terminal map can substitute."
+        },
+        {
+          "title": "Interpret separation between the two wires",
+          "body": "Require ignition OFF and the exact isolated arrangement. Compare the selected pair: I C9063 1/3, J C9065 1/3, K C612 1/4 or L C396 1/4, positive at the first terminal and negative at the second.\n\nGreater than 10,000 ohms permits the ACM connector assessment. At or below directs separate circuit repair. A missing reading cannot be treated as passing."
+        },
+        {
+          "title": "Interpret the actual ACM connector inspection and correction",
+          "body": "Require ignition OFF and actual inspection of all ACM connectors, not only C240A. Records must cover corrosion, damaged/bent pins and pushed-out pins. The source requires corroded module pins cleaned or affected connectors/terminals replaced, damaged/bent terminals or pins replaced, and pushed-out pins replaced as necessary.\n\nThose are separate repair requirements; this article does not teach cleaning or terminal repair. An undocumented reseat cannot stand in for the actual inspection and defect correction."
+        },
+        {
+          "title": "Interpret restored operation",
+          "body": "Require ignition OFF during reconnection, all ACM connectors fully seated and latched, the selected speaker and any disconnected companion reconnected, and applicable access restoration complete before the recorded operating check.\n\nOriginal sound restored means the source considers the system operational at that time, while the underlying connector/pin defect still requires correction. Concern remaining reaches the bulletin gate. Missing reconnection or actual operation records cannot establish either outcome."
+        },
+        {
+          "title": "Interpret the OASIS/TSB endpoint",
+          "body": "Require all preceding gates and an actual OASIS check for the specific concern. An applicable TSB takes over through its separate procedure. If none applies and the concern remains after connector correction and recheck, the source directs separate [SYNC ACM replacement](#/document/G1704002).\n\nPassing wire readings alone is insufficient. Missing bulletin evidence is not evidence that no TSB exists."
+        },
+        {
+          "title": "Interpret the replacement configuration record",
+          "body": "For a directed replacement, require scan-session vehicle identification and original configuration captured before ACM removal, a communicating new module and completed PMI. If original data could not be recovered, require the actual tool-directed VIN-specific As-Built or manual-parameter fallback.\n\nACM address 727 supports PMI/reprogramming, with no separate adaptive learning or programmable customer parameters listed. Integrated DACMC address 7D5 on 2.3L/5.2L likewise supports PMI/reprogramming. This does not extend ANC beyond 2.3L. As-Built generally does not restore changed customer preferences; retain applicable documented parameter restoration without inventing an ACM-specific setting."
+        },
+        {
+          "title": "Interpret final repair and programming completion",
+          "body": "Require completion of the separately selected speaker, circuit, TSB or ACM repair, all access restored and connectors seated/latched, followed by actual operation of the original affected speaker. Retain measured records, repair and outcome separately from a concern not reproduced.\n\nIf programming occurred, require actual IDS ignition-prompt compliance and clearing communication DTCs generated in other modules while normal module communication was unavailable. Standalone reprogramming requires a published TSB recommendation; PMI may include a later calibration. Same-level software is not a hardware repair. Missing completion evidence remains unresolved; this interpretation does not certify vehicle release."
         }
       ],
       "watchFor": [
         {
-          "title": "Disabled output",
-          "body": "A short-circuit code can explain an absent audio signal without proving the speaker or ACM has failed."
+          "title": "Recorded resistance state must be unpowered",
+          "body": "Require OFF after the ON unwanted-voltage check, with exact selected/companion/ACM isolation retained. Missing state provenance cannot establish a valid wire verdict."
         },
         {
-          "title": "Temporary recovery",
-          "body": "Sound returning after connector reconnection still requires correction of the underlying pin or connector problem."
+          "title": "Companion speakers change the test circuit",
+          "body": "I isolates C523, J C612, K C9065, in addition to the selected speaker and C240A. L has no companion disconnection. Preserve these differences."
+        },
+        {
+          "title": "Disabled output is not proof of a failed ACM",
+          "body": "B1A02:11/:12 and B1A03:11/:12 disable the affected output. An absent initial signal alone does not identify the ACM as faulty."
+        },
+        {
+          "title": "Preserve strict limits and actual signal mode",
+          "body": "Isolation must exceed 10,000 ohms and continuity must be below 3 ohms. Equality fails the respective comparison only with valid test provenance. The initial check requires fluctuating AC audio voltage; no numerical threshold is supplied."
+        },
+        {
+          "title": "Repair and programming are separate procedures",
+          "body": "All replacement, wiring correction, bulletin and PMI destinations require their complete methods. This article interprets existing records and teaches no live access or tool operation."
         }
       ],
       "notes": [
-        "B1A02 codes concern the shared right front circuits. B1A03 codes concern the convertible's right rear quarter-panel speaker or the coupe's right parcel-shelf speaker. A coupe parcel-shelf complaint requires its body-specific diagnostic procedure before choosing parts."
+        "The source fault categories are speaker, wiring/terminals/connectors and ACM. A code alone does not identify an individual failed speaker.",
+        "ANC is 2.3L only; ESE is 2.3L/5.2L. Those features do not change the supplied I–L maps.",
+        "Coupe right parcel-shelf B1A03 context does not supply its diagnostic sequence. L remains the applicable convertible branch; [parcel-shelf speaker service](#/document/G1694054) is a separate repair destination."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code B1A02:01 or B1A03:01 is recorded.",
-          "meaning": "The ACM detected a general electrical failure in the corresponding speaker circuit group.",
-          "next": "Use the location-specific signal and wiring tests to identify the cause."
+          "finding": "Recorded result: A fluctuating AC voltage is present at the affected speaker connector during I1, J1, K1 or L1.",
+          "meaning": "The selected pinpoint test identifies the speaker as the replacement endpoint.",
+          "next": "Separate matching speaker replacement; retain actual equipment/body scope."
         },
         {
-          "finding": "Diagnostic trouble code B1A02:11 or B1A03:11 is recorded.",
-          "meaning": "A short to ground was detected and the affected speaker output is disabled.",
-          "next": "Locate and repair the short using the selected circuit test."
+          "finding": "Recorded result: No fluctuating AC voltage is present at the initial speaker signal check.",
+          "meaning": "The signal is absent at that connector; this finding alone does not distinguish wiring trouble from disabled output or an ACM fault.",
+          "next": "Interpret documented selected/ACM/companion isolation and the subsequent ON-state unwanted-voltage records."
         },
         {
-          "finding": "Diagnostic trouble code B1A02:12 or B1A03:12 is recorded.",
-          "meaning": "A short to voltage was detected and the affected speaker output is disabled.",
-          "next": "Follow the isolated-circuit voltage check before selecting a replacement component."
+          "finding": "Recorded result: Either isolated audio wire shows voltage to ground in I2, J2, K2 or L2.",
+          "meaning": "That audio circuit has unwanted voltage.",
+          "next": "Separate affected-circuit repair; do not infer ACM failure."
         },
         {
-          "finding": "Diagnostic trouble code B1A02:13 or B1A03:13 is recorded.",
-          "meaning": "The ACM detected an open in the corresponding speaker circuits.",
-          "next": "Check the mapped wiring and connections; the code alone does not establish speaker failure."
+          "finding": "Recorded result: Either wire measures 10,000 ohms or less to ground in I3, J3, K3 or L3.",
+          "meaning": "The circuit fails the isolation-to-ground requirement.",
+          "next": "Separate affected-circuit repair; both valid values above the limit permit recorded continuity."
+        },
+        {
+          "finding": "Recorded result: Either mapped speaker-to-C240A path measures 3 ohms or more in I4, J4, K4 or L4.",
+          "meaning": "That wire fails the end-to-end continuity requirement.",
+          "next": "Separate affected-circuit repair, not module replacement."
+        },
+        {
+          "finding": "Recorded result: Resistance between the two speaker wires is 10,000 ohms or less in I5, J5, K5 or L5.",
+          "meaning": "The two audio circuits fail the separation check.",
+          "next": "Separate repair of the affected circuits."
+        },
+        {
+          "finding": "Recorded result: All wiring checks pass, but ACM connectors have corrosion, bent or damaged pins, or pushed-out pins.",
+          "meaning": "A connection fault remains a possible cause even though the measured wiring paths passed.",
+          "next": "Require actual source-directed connector correction, full reconnection and recorded operating result."
+        },
+        {
+          "finding": "Recorded result: The original complaint disappears after connector correction and reconnection.",
+          "meaning": "The system operates correctly at this time; module connections may have caused the complaint.",
+          "next": "Require root-cause correction, reassembly and actual final operation records."
+        },
+        {
+          "finding": "Recorded result: The complaint persists after wiring checks and ACM connector correction.",
+          "meaning": "The selected test has reached its bulletin-or-module decision.",
+          "next": "Require actual OASIS/TSB result: applicable bulletin takes priority; none directs separate ACM replacement with pre-removal configuration capture."
+        },
+        {
+          "finding": "Recorded result: B1A02:01 is recorded.",
+          "meaning": "The ACM detected a general electrical failure on the shared right front door or A-pillar tweeter circuits.",
+          "next": "Interpret J or K records for the actual affected speaker; the code does not identify the failed part."
+        },
+        {
+          "finding": "Recorded result: B1A02:11 or B1A02:12 is recorded.",
+          "meaning": "The ACM detected a short to ground (:11) or short to battery/voltage (:12) on the shared right front circuits and disabled the speaker output.",
+          "next": "Interpret the selected J/K records with exact companion isolation; retain output-disabled context."
+        },
+        {
+          "finding": "Recorded result: B1A02:13 is recorded.",
+          "meaning": "The ACM detected an open circuit affecting the right front door or A-pillar tweeter circuits.",
+          "next": "Interpret the selected front-route records and exact continuity map; no speaker selected from code alone."
+        },
+        {
+          "finding": "Recorded result: B1A03:01 is recorded.",
+          "meaning": "The ACM detected a general electrical failure on the convertible right rear quarter-panel speaker circuits or the coupe right parcel-shelf speaker circuits.",
+          "next": "Interpret L only for the applicable convertible; coupe parcel-shelf diagnostic procedure remains separate."
+        },
+        {
+          "finding": "Recorded result: B1A03:11 or B1A03:12 is recorded.",
+          "meaning": "The ACM detected a short to ground (:11) or short to battery/voltage (:12) on the corresponding right rear speaker circuits and disabled the output.",
+          "next": "Interpret actual body-specific records; L is convertible-only."
+        },
+        {
+          "finding": "Recorded result: B1A03:13 is recorded.",
+          "meaning": "The ACM detected an open on the corresponding right rear speaker circuits.",
+          "next": "Interpret L C396-to-C240A records only for the applicable convertible; coupe requires a separate test."
+        },
+        {
+          "finding": "Actual equipment, terminal identity, companion isolation, measurement mode/state, result, repair or completion evidence is absent or ambiguous.",
+          "meaning": "The affected branch cannot establish a valid pass, failed component or completed repair.",
+          "next": "Stop the affected interpretation; do not substitute assumed access, a missing reading or a hypothetical repair."
         }
       ],
       "verification": [
         {
-          "title": "Confirm sound after reconnection",
-          "body": "Operate the audio system with connectors securely latched and determine whether the original speaker complaint remains."
+          "title": "Keep the selected path and all states",
+          "body": "Require actual selected-speaker identity, initial AM/FM fluctuating AC observation, exact companion/C240A isolation, ON unwanted-voltage then OFF resistance evidence and every individual threshold result."
         },
         {
-          "title": "Record the result",
-          "body": "Record the selected test, signal and circuit findings, repair and final operation. If module reprogramming occurred, clear communication codes generated during programming."
+          "title": "Require actual restored operation",
+          "body": "Require corrected connector defects, all selected and companion speakers restored, seated/latched ACM connectors, complete reassembly and the original speaker’s actual operating result."
+        },
+        {
+          "title": "Keep bulletin and configuration completion distinct",
+          "body": "Require actual OASIS result and complete separate repair, pre-removal configuration/fallback and communicating PMI when applicable, IDS state compliance and programming-generated code clearing. Missing evidence remains unresolved."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692891",
-          "purpose": "SYNC Tests I–L and right front/right rear speaker fault-code interpretation."
+          "purpose": "Complete I–L chart and B1A02/B1A03 descriptions for existing-record interpretation only; no physical access or testing."
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "Six-speaker SYNC system identification, display specification and engine-specific audio equipment context."
+        },
+        {
+          "documentId": "G1813073",
+          "purpose": "Required recorded configuration capture/fallback, ACM/DACMC capabilities and programming completion; no scan-tool execution."
         },
         {
           "documentId": "G1694045",
-          "purpose": "SYNC A-pillar tweeter removal and installation."
+          "purpose": "Reference-only destination for A-pillar speaker access, replacement and reassembly; its internal procedure is not taught here."
+        },
+        {
+          "documentId": "G1694049",
+          "purpose": "Reference-only destination for left front door speaker access associated with Test I isolation at C523."
         },
         {
           "documentId": "G1694050",
-          "purpose": "SYNC right front door speaker removal and installation."
+          "purpose": "Reference-only destination for right front door speaker access and replacement, including the C612 component involved in Tests J and K."
         },
         {
           "documentId": "G1694055",
-          "purpose": "Convertible rear quarter-panel speaker removal and installation for 2.3L, 3.7L and 5.0L applications.",
+          "purpose": "Reference-only convertible rear quarter-panel speaker replacement destination for 2.3L, 3.7L and 5.0L applications.",
           "mediaId": "G1694055-m0001"
         },
         {
           "documentId": "G1704002",
-          "purpose": "SYNC ACM removal and installation after diagnosis directs replacement.",
+          "purpose": "Reference-only SYNC ACM access, replacement and reassembly destination after the electrical and bulletin decisions.",
           "mediaId": "G1704002-m0001"
         },
         {
-          "documentId": "G1813073",
-          "purpose": "Configuration capture, PMI and programming precautions."
+          "documentId": "G1694054",
+          "purpose": "Reference-only coupe parcel-shelf speaker repair destination; Test L is not a coupe diagnostic procedure."
         }
       ],
       "hero": null,
@@ -98917,7 +99050,7 @@
         "years": [
           2015
         ],
-        "equipment": "SYNC six-speaker system; coupe or convertible"
+        "equipment": "2015 Mustang with SYNC six-speaker audio and the 4.2-inch (107 mm) non-touchscreen display; coupe or convertible as applicable to the selected speaker. Engine coverage: 2.3L, 3.7L, 5.0L and 5.2L. The 5.2L engine coverage does not establish a convertible application."
       },
       "relatedGuideIds": [
         "job-8d0db8e7b8f25d51",
@@ -98957,14 +99090,231 @@
         {
           "documentId": "G1692884",
           "sourceHash": "54224601ccf734d2ea4edd4c12f1c27fe53e097555ddfc4fff9f510959b36aad"
+        },
+        {
+          "documentId": "G1692965",
+          "sourceHash": "cff90b0c2c849fa0101771bbb732d7f7bb2948be70895d50acaa83f251a3b9e0"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1692895",
+          "sourceHash": "ed2f6d067e94a369fa5f208dacee8d37349e0e75090c8f3702f6cb7294c165f5"
+        },
+        {
+          "documentId": "G1704851",
+          "sourceHash": "fb743ec647f67cf2754413dd1e08fc2a89782cd1e6f79163ab44744af743f771"
+        },
+        {
+          "documentId": "G1695509",
+          "sourceHash": "eb2e69d681bac3c4ce5370cd451b575d20aeca15a189c4fdb311afc550da8b04"
+        },
+        {
+          "documentId": "G1681095",
+          "sourceHash": "cbae19a4bc5095b8d58daefb649eedcfa2e2c693621b5716b74505c3fcec3686"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1692931",
+          "sourceHash": "6cb3e42eb5a5ff32c9656312e8b537e0543a587eb5573a3f3e25f5d1f55235f3"
+        },
+        {
+          "documentId": "G1692933",
+          "sourceHash": "b9912e84f438218d29633b80c3e2a12565729c974ca8e777ccc6745d610201d3"
+        },
+        {
+          "documentId": "G1807235",
+          "sourceHash": "cbdd8e5fa44eac6bd2951bbea48df64ed4279aca4fd469c7b035da61ed2303a2"
+        },
+        {
+          "documentId": "G1694051",
+          "sourceHash": "f5eef22f51710f2ce2d5ae5cd2250ffea2d68ed21c5277ac3f7aeb7446c44fb0"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1813071",
+          "sourceHash": "45f3b53dd28e766d92924e944c68e0a740c843efced2d8bf704c99548fa32e46"
+        },
+        {
+          "documentId": "G1692867",
+          "sourceHash": "a6a1195bb9e831dfe2d8bd6e13141880391ae4474a3a8699114c0c72828fa63c"
+        },
+        {
+          "documentId": "G1813259",
+          "sourceHash": "feada71578e9594a03efbd882ab41bb6387a8c33ff1093fec290cf0063573404"
+        },
+        {
+          "documentId": "G1692885",
+          "sourceHash": "15a7e53f8d98f2b80af7d899bae99c9aaa6673ff85ac6049d292fef1e23837ab"
+        },
+        {
+          "documentId": "G1692120",
+          "sourceHash": "86682574769b7e3306c26913e676f8c5b4c895d288436db1d78d956e19109bf2"
+        },
+        {
+          "documentId": "G1692122",
+          "sourceHash": "8581035e0738df87b2e1713716f6c72597dd163ceacebba274d5d19fe2b990b0"
+        },
+        {
+          "documentId": "G1804021",
+          "sourceHash": "b4e020d5b1546be37d004d263f446c023653ef8f987540819898cbd9b97fad01"
+        },
+        {
+          "documentId": "G1695933",
+          "sourceHash": "e846b58e3c8b6808ef79d461089c9d3d2e9366417727237b979a8aeda9624b57"
+        },
+        {
+          "documentId": "G1693973",
+          "sourceHash": "36c14c44137c4198f71290fc4990b2abccda5e0c0a0be29c27ce96f75f3e2265"
+        },
+        {
+          "documentId": "G1694048",
+          "sourceHash": "c2a0af8fb95cefd997eda6996b786c9fb47125dc4bc7ebb240fc3e33b32b09b9"
+        },
+        {
+          "documentId": "G1694047",
+          "sourceHash": "dac2332cab84d8f26e4f1ff720605c09632499f91e8c93eea6b53eac5e45449a"
+        },
+        {
+          "documentId": "G1694046",
+          "sourceHash": "206609457fbabc35285bc11d60a1000d7e105599a7596960dc387f556302eee8"
+        },
+        {
+          "documentId": "G1694053",
+          "sourceHash": "7861ea0d6a4fec381dd2717aba9bb2f2effc3de43ebbc90114579a58fb9be0b2"
+        },
+        {
+          "documentId": "G1673174",
+          "sourceHash": "d489d22ac7d68944f72a27944a51f1b26910204d8fe0c7ba16278732e142d4f0"
+        },
+        {
+          "documentId": "G1692835",
+          "sourceHash": "9b41e76a365a3e42715074595faba651082555aa60bd50ef14cd04ae90f43400"
+        },
+        {
+          "documentId": "G1692944",
+          "sourceHash": "223d21087ea05c3855269cd5dbdcb2397b0fb431339b8f92d2e54e75dac55e08"
+        },
+        {
+          "documentId": "G1804809",
+          "sourceHash": "fd8bc0d4c68459d1d4949c3df642d0adbcb6141a41535837ac6f9dc2ecaaae91"
+        },
+        {
+          "documentId": "G1694049",
+          "sourceHash": "0e9444bb1b40ffe8772389a10d8f16d6d70995d3545af2c67725d4d41e8d8944"
+        },
+        {
+          "documentId": "G1694054",
+          "sourceHash": "c74e574413caa3b72909faefff0f7ee278e67de9b31129f570d2176158df6daf"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1694052",
+          "sourceHash": "c1f9a151734a90b6a4c98b79a2360eca0031de65e81f829ba6d2b91d7f64b5e2"
+        },
+        {
+          "documentId": "G1704850",
+          "sourceHash": "ca4bb239942c282ce51161a5ed38cf403301bc96d26e044c38ad55f65d97474e"
+        },
+        {
+          "documentId": "G1704004",
+          "sourceHash": "f7b313947445368a988b26692911d6b1adabe1812728cb5de45ff82906c8b897"
+        },
+        {
+          "documentId": "G1694056",
+          "sourceHash": "6bdda01946448e9920c98f78585bd5c24982cb46b1ade2f628ff80f2415edde3"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1693270",
+          "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+        },
+        {
+          "documentId": "G1692957",
+          "sourceHash": "5ea56f10545190c1d93c6c84ed9a24996088b7681f98fd3844f7dc316a380d89"
+        },
+        {
+          "documentId": "G1807237",
+          "sourceHash": "3c999b27a9a7d0d1351d0ceed1b35eec5537fd738bbbc00efd0613e5a854a162"
+        },
+        {
+          "documentId": "G1704140",
+          "sourceHash": "c97830c2877f46ec3bd733c2ceae64db05007d40c45ee590a144fdf7d6eb83dd"
+        },
+        {
+          "documentId": "G1703548",
+          "sourceHash": "846082b18e904056238eec9c3452d3b978a508cc39a8e58e713f2e60bc4d5455"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "6e5b39cd0caf449f41942d7aff7e1f8c961640733d0d94b471d1e8cee54ed0e3"
-      }
+        "fingerprint": "6e5b39cd0caf449f41942d7aff7e1f8c961640733d0d94b471d1e8cee54ed0e3",
+        "editorialVersion": 2,
+        "editorialFingerprint": "9db7fbd336b369693c4b17c4ebf59217fec7745b3b9eaaa81c8d7715dcb9b147",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "signal",
+          "title": "Identify records and signal result",
+          "summary": "Match actual equipment, selected speaker and AM/FM AC evidence.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "circuits",
+          "title": "Interpret isolated circuit records",
+          "summary": "Require each companion state and exact voltage/resistance maps.",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "id": "connections",
+          "title": "Interpret connector correction and operation",
+          "summary": "Require actual defects, repairs and fully restored audio observation.",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "completion",
+          "title": "Interpret bulletin and configuration endpoints",
+          "summary": "Preserve actual OASIS, repair, PMI and final-operation provenance.",
+          "start": 10,
+          "end": 12
+        }
+      ]
     },
     {
       "title": "Interpret recorded rear-speaker and SYNC input test results",
@@ -100708,151 +101058,304 @@
       ]
     },
     {
-      "title": "Diagnose SYNC noise-control microphones and lost module communication",
-      "summary": "Use Tests AC–AF to distinguish active-noise-control microphone faults from missing powertrain or body-module messages.",
-      "introduction": "The SYNC audio system combines audio hardware with information received from other vehicle modules. On the 2.3L, active noise control (ANC) also uses cabin microphones. Its digital audio control module C (DACMC) is integrated into the audio front control module (ACM). These tests separate microphone wiring and component faults from communication faults involving the powertrain control module (PCM) or body control module (BCM).",
-      "why": "A microphone code can originate in wiring, while a communication code can reflect supply voltage or a temporary interruption. Confirming the symptom, testing circuits and identifying which modules report a returning code prevents premature module replacement.",
+      "title": "Interpret recorded SYNC microphone and communication test results",
+      "summary": "Compare existing technician records with AC–AF, preserving microphone identity, timed rechecks and the unresolved ACM/APIM discrepancy at AE4.",
+      "introduction": "I’ll interpret existing technician records for B117A:01, B13F5:01, U0100:00 and U0140:00. The article explains what complete recorded observations mean; it does not teach live scan operation, connector access, probing, repairs, programming or vehicle release. Missing identity, state or result evidence leaves the affected conclusion unresolved.\n\nAE4 remains an explicit stop: its self-test instruction lists ACM, DACMC and GPSM, while its voltage-code question lists APIM, DACMC and GPSM. ACM and APIM are different modules. No clarification or equivalence is established here, and no AE4 pass can be derived from this article. Later AE5/AE6 outcomes are explained solely to preserve the source’s downstream logic; they are not an authorized continuation past that stop.",
+      "why": "Active noise control, or ANC, uses cabin microphones as inputs for controlling unwanted cabin sound. The audio front control module, called the ACM, contains digital audio control module C, or DACMC, on the 2.3L and 5.2L. ANC itself applies only to the 2.3L here. Communication faults follow a different logic: the audio system can record missing messages from the powertrain control module, or PCM, and body control module, or BCM. A stored code identifies the investigation to make; it does not, by itself, condemn the named module.",
       "taskType": "diagnostics",
       "difficulty": "advanced",
       "searchTerms": [
-        "SYNC audio concern",
-        "active noise control microphone fault",
+        "2015 Mustang SYNC non-touchscreen diagnostics",
         "B117A:01",
         "B13F5:01",
         "U0100:00",
         "U0140:00",
-        "U0142:00"
+        "U0142:00",
+        "ANC microphone C240B",
+        "C4828 C9223 C4829",
+        "DACMC ACM communication fault"
       ],
       "when": {
-        "summary": "When the listed microphone codes are recorded, or a SYNC concern accompanies PCM or BCM communication codes.",
+        "summary": "Use complete existing records for the matching code and fitted equipment; no active testing is directed.",
         "notes": [
-          "ANC microphone location depends on body style. The 5.2L also has an integrated DACMC, but ANC is identified for the 2.3L only."
+          "B117A:01 selects Test AC for the left-rear quarter-panel ANC microphone circuit.",
+          "B13F5:01 selects Test AD for the rear-center headliner ANC microphone on a coupe or right-rear quarter-panel ANC microphone on a convertible.",
+          "U0100:00 selects Test AE for missing PCM messages; U0140:00 selects Test AF for missing BCM messages.",
+          "AE and AF begin by checking for an observable concern. An old communication code without a current symptom is not an instruction to replace a module.",
+          "U0142:00 is identified here for routing to BCMB diagnosis; it is not covered by Tests AC–AF."
         ]
       },
       "prepare": [
         {
-          "title": "Electrical diagnostic capability",
-          "detail": "Use a scan tool capable of module self-tests and reading continuous-memory codes, plus voltage/resistance measuring equipment and the applicable connector diagrams. Be able to access microphone and module connectors without damaging terminals."
+          "title": "Require actual vehicle and equipment identity",
+          "detail": "Require technician provenance, the original complaint and the actual vehicle/equipment identity. These charts concern SYNC with six speakers and the 4.2-inch non-touchscreen display. ANC is 2.3L only; the ACM also containing DACMC on 5.2L does not establish ANC. AD distinguishes coupe rear-center headliner C9223 from convertible right-rear quarter C4829. AC requires the actually fitted left-rear quarter microphone C4828; no body-style combination is inferred."
         },
         {
-          "title": "Configuration and guided procedures",
-          "detail": "Before removing a module, establish a scan-tool session and obtain its configuration data. Replacement may require programmable module installation (PMI) and specific learning or calibration. The BCM Guided Routine requires the vehicle identification number (VIN)."
+          "title": "Require complete measurement and restoration records",
+          "detail": "Require actual applicable access and connector-release methods, cavity orientation, electrical isolation and exact terminal/state/value records. Connector names and pin numbers below identify records, not physical probing locations. Require documented restoration and complete assembly before any recorded powered retest. Missing access, state or identity evidence is not supplied by this interpretation."
+        },
+        {
+          "title": "Require complete scan and timing evidence",
+          "detail": "Require original and returning codes by reporting module, complete self-test reports, actual clearing scope and the recorded ignition cycles and waits. AC/AD require at least five seconds; AE/AF require at least ten seconds at their specified rechecks. A missing report is never a no-code result. Preserve strict resistance comparisons: greater than 10,000 ohms and less than 3 ohms."
+        },
+        {
+          "title": "Keep AE4 unresolved",
+          "detail": "The ACM self-test versus APIM decision discrepancy remains a stop. No hypothetical clarification is treated as obtained. AE5/AE6 descriptions cannot establish entry past AE4; an actual authoritative resolution and complete applicable provenance would be needed separately before any affected conclusion."
+        },
+        {
+          "title": "Require repair and configuration provenance",
+          "detail": "Require actual connector findings and corrections, restored-operation observations, applicable OASIS/TSB decisions and completed separate repairs. For module replacement require pre-removal vehicle identification/configuration capture or actual tool-directed VIN-specific fallback, a communicating replacement and completed PMI. As-Built does not restore changed customer preferences; require their separate programmable-parameter restoration. This article does not execute any of those procedures."
         }
       ],
       "steps": [
         {
-          "title": "Select the test by code and equipment",
-          "body": "Record the symptom and reporting modules, then use [Tests AC–AF](#/document/G1692891). AC addresses the left-hand rear quarter-panel ANC microphone; AD selects the rear center headliner microphone on a coupe or right-hand rear quarter-panel microphone on a convertible."
+          "title": "Match the records to one applicable chart",
+          "body": "Use B117A:01 for AC, B13F5:01 for AD, U0100:00 for AE or U0140:00 for AF. Require all applicable preparation evidence before interpreting a result. Missing or ambiguous evidence stops the affected conclusion. U0142:00 is separate BCMB context and has no supplied diagnostic test here.\n\nAC uses C240B pins 2/15 and C4828 pins 1/2. AD uses C240B pins 7/20 and either coupe C9223 pins 1/2 or convertible C4829 pins 1/2. ANC branches remain limited to equipped 2.3L vehicles."
         },
         {
-          "title": "Prove microphone circuit integrity",
-          "body": "For AC or AD, switch ignition off before disconnecting ACM C240B. Follow the sequence: shorts to voltage with ignition on, shorts to ground with ignition off, then opens and shorts between wires with the relevant microphone disconnected. Use the branch-specific pins and limits; repair a failed circuit before continuing."
+          "title": "AC1–AC4: interpret left-rear microphone circuit records",
+          "body": "AC1 requires recorded ignition OFF, ACM C240B disconnection, then ignition ON. Require separate positive C240B pin 2-to-negative-ground and pin 15-to-ground voltage readings. Any voltage directs separate affected-circuit repair; neither permits AC2.\n\nAC2 requires ignition OFF, C240B still disconnected and microphone still connected. Both pin 2-to-ground and pin 15-to-ground must exceed 10,000 ohms; either at or below directs separate circuit repair. Both passing permits AC3.\n\nAC3 requires C4828 disconnected with ignition OFF and C240B still disconnected. Both C240B pin 2 to C4828 pin 1 and C240B pin 15 to C4828 pin 2 must be less than 3 ohms; either at least 3 directs separate circuit repair. Both passing permits AC4.\n\nAC4 requires those disconnected states and C240B pin 2-to-pin 15 resistance greater than 10,000 ohms. At or below directs separate circuit repair; passing permits the recorded AC5 substitution assessment."
         },
         {
-          "title": "Isolate the microphone",
-          "body": "If circuit tests pass, reconnect the ACM and install the specified new ANC microphone. Clear DACMC codes, cycle ignition off and on, wait at least 5 seconds and run its self-test. A cleared target code identifies the microphone fault; a persistent code leads to ACM connector evaluation."
+          "title": "AC5: interpret the actual substitution and timed retest",
+          "body": "Require all preceding circuit passes, documented C240B reconnection and actual new left-rear quarter ANC microphone installation under its separate complete procedure. Then require DACMC DTC clearing, ignition OFF then ON, at least five seconds waiting and DACMC self-test.\n\nB117A:01 absent identifies the old microphone as the cause and the system as operating correctly at that time. Code remaining leads to the recorded AC6 connector assessment in step 6. A replacement alone, or a missing timed self-test, does not establish either result."
         },
         {
-          "title": "Confirm a communication fault is active",
-          "body": "AE and AF first require an observable symptom. If present, clear all continuous-memory diagnostic trouble codes, cycle ignition, wait at least 10 seconds and retrieve them again. No symptom or no returning target code means the system operates correctly at that time; intermittent conditions or network traffic remain possible."
+          "title": "AD1–AD4: interpret the body-style-specific circuit records",
+          "body": "AD1 requires ignition OFF, C240B disconnection, then ignition ON. Require positive C240B pin 7-to-negative-ground and pin 20-to-ground voltage records. Any voltage directs separate affected-circuit repair; neither permits AD2.\n\nAD2 requires ignition OFF, C240B still disconnected and microphone still connected. Both pin 7-to-ground and pin 20-to-ground must exceed 10,000 ohms; either at or below directs separate circuit repair. Both passing permits AD3.\n\nAD3 requires the actual selected microphone disconnected: rear-center headliner C9223 on coupe or right-rear quarter C4829 on convertible. With ignition OFF and C240B disconnected, require pin 7 to selected microphone pin 1 and pin 20 to selected microphone pin 2, both less than 3 ohms. Either at least 3 directs separate circuit repair; both passing permits AD4.\n\nAD4 requires both ends still disconnected and C240B pin 7-to-pin 20 greater than 10,000 ohms. At or below directs separate circuit repair; passing permits recorded AD5."
         },
         {
-          "title": "Resolve supply-voltage codes first",
-          "body": "For AE, PCM codes P0562 or P0563 lead to the charging-system diagnostic route for the fitted engine. For AF, BCM codes U3006:16, U3006:17 or U3006:1C lead to BCM diagnosis. Perform the specified audio/navigation module self-tests; U3003:16 leads to Test AQ and U3003:17 to AR."
+          "title": "AD5: interpret the correct microphone substitution and retest",
+          "body": "Require all preceding circuit passes, C240B reconnection and actual installation of the new coupe rear-center headliner or convertible right-rear quarter ANC microphone through its separate complete procedure. Require DACMC DTC clearing, ignition OFF then ON, at least five seconds and DACMC self-test.\n\nB13F5:01 absent identifies the old microphone as the cause and the system as operating correctly at that time. Code remaining leads to recorded AD6 in step 6. Wrong-location substitution or missing state/timing evidence leaves the conclusion unresolved."
         },
         {
-          "title": "Use the reporting pattern",
-          "body": "After voltage checks, a returning U0100:00 or U0140:00 in multiple modules leads to PCM or BCM connector checks respectively. A single reporting module with a continuing symptom leads to the General Audio System Symptom Chart."
+          "title": "AC6/AD6: interpret restored ACM connections and the bulletin gate",
+          "body": "Require the appropriate failed substitution retest, ignition OFF and actual inspection of all ACM connectors. Records must cover corrosion, damaged/bent and pushed-out pins: corroded module pins cleaned or affected connectors/terminals replaced, damaged/bent terminals or pins replaced, and pushed-out pins replaced as necessary under separate repair procedures. Require connectors fully seated/latched, applicable reassembly complete and an actual original-concern operating check.\n\nIf operation returns, the source regards the system as operating correctly at that time, with the connector/pin root cause still requiring correction. If the concern remains, require the actual OASIS/TSB result. Applicable TSB takes over; no applicable TSB directs separate ACM replacement, with the configuration requirements in step 14. No missing bulletin record can establish the replacement branch."
         },
         {
-          "title": "Repair connections before the final module decision",
-          "body": "With ignition off, inspect the implicated ACM, PCM or BCM connectors. Correct corrosion, damaged or pushed-out pins, reconnect securely and retest. For a continuing concern, follow an applicable Technical Service Bulletin. Without one, AC/AD direct ACM replacement, AE directs engine-appropriate PCM replacement, and AF directs the VIN-specific BCM Guided Routine."
+          "title": "AE1–AE3: interpret symptom, recurrence and PCM voltage records",
+          "body": "U0100:00 means ACM, DACMC or GPSM missed PCM messages for more than five seconds with ignition RUN. AE1 requires ignition ON and an actual observable-symptom report. No symptom ends the source branch as operating correctly at that time; intermittent conditions or network traffic remain possible. Symptom present permits AE2.\n\nAE2 requires ignition ON clearing of all CMDTCs, ignition OFF then ON, at least ten seconds waiting and retrieval of all CMDTCs. U0100:00 absent from ACM/DACMC/GPSM ends the branch at that time; present permits AE3. Preserve each actual reporting module.\n\nAE3 requires PCM self-test results. P0562 or P0563 directs the fitted engine’s charging-system PCM DTC chart: 2.3L, 3.7L, 5.0L or 5.2L. The [3.7L](#/document/G1692957) and [5.2L](#/document/G1807237) links are not substitutes for other engines. Other recorded low/high-voltage faults remain unresolved without their matching destination. Only no low/high-voltage PCM codes reaches AE4, which remains blocked below."
+        },
+        {
+          "title": "AE4: retain the literal discrepancy and stop",
+          "body": "The source commands ACM/DACMC/GPSM self-tests but asks whether voltage codes are recorded in APIM/DACMC/GPSM. Preserve the actual module identities and results. APIM is not ACM, and this article does not decide which list should change or add a test.\n\nThe source’s stated voltage destinations are U3003:16 to AQ and U3003:17 to AR, with a no-voltage-fault route toward AE5. Those destinations describe the chart; the conflicting checkpoint cannot be declared passed here. Stop the affected AE interpretation. No authoritative clarification is supplied or presumed obtained. Steps 9–10 explain downstream source outcomes only and do not authorize entry past this stop."
+        },
+        {
+          "title": "AE5: understand the downstream reporting-module distinction",
+          "body": "This describes source logic only; step 8 does not establish entry. The source compares recorded U0100:00 reporting modules after its preceding gates. More than one reporting module points to AE6. Not more than one with an observable symptom points to the General Audio System Symptom Chart in [Information and Entertainment System](#/document/G1692891). Without an observable symptom, it regards operation as correct at that time, with intermittent conditions or network traffic possible.\n\nDo not apply those downstream conclusions as a completed AE path from this article. The unresolved AE4 identity remains explicit."
+        },
+        {
+          "title": "AE6: understand the downstream PCM endpoint requirements",
+          "body": "This is downstream source explanation, not permission to cross AE4. AE6 requires recorded ignition OFF, actual PCM connector inspection and correction of corrosion, damaged/bent pins and pushed-out pins under separate procedures, followed by full seating/latching, complete restoration and an actual operating recheck.\n\nReturned operation requires addressing the connector/pin root cause. Persistent concern requires the actual OASIS/TSB gate: applicable bulletin takes over; none directs separate engine-matched PCM replacement in Section 303-14 with configuration/learning requirements. Neither a missing connector record nor the unresolved AE4 checkpoint authorizes PCM replacement."
+        },
+        {
+          "title": "AF1–AF2: interpret the BCM-message symptom and timed recheck",
+          "body": "U0140:00 trigger context lists ACM, APIM, DACMC, FCDIM, FCIM and GPSM missing BCM messages for more than five seconds in RUN. AF1 requires ignition ON and an actual observable symptom. None ends the source branch as operating correctly at that time; intermittent conditions or network traffic remain possible. Present permits AF2.\n\nAF2 requires ignition ON clearing of all CMDTCs, ignition OFF then ON, at least ten seconds and retrieval of all CMDTCs. Its actual decision list is ACM/APIM/DACMC/FCIM/GPSM, without FCDIM. No return in that list ends the source branch at that time; return permits AF3. An FCDIM-only result remains unresolved here rather than being silently added to the list or declared repaired."
+        },
+        {
+          "title": "AF3–AF5: interpret voltage gates and reporting-module count",
+          "body": "AF3 requires BCM self-test results. U3006:16, U3006:17 or U3006:1C directs the exact corresponding [BCM diagnostic](#/document/G1692965) entry. Another low/high-voltage code requires its actual matching route; no voltage code permits AF4.\n\nAF4 requires actual ACM/APIM/DACMC/FCIM/GPSM self-test reports. U3003:16 points to AQ; U3003:17 to AR. Other voltage faults cannot be treated as a pass. No applicable voltage faults permits AF5. FCDIM is not added to this list.\n\nAF5 compares the recorded U0140:00 reporting modules. More than one permits AF6. Otherwise an observable symptom points to the General Audio System Symptom Chart; no symptom ends the branch as operating correctly at that time, with intermittent conditions or network traffic possible."
+        },
+        {
+          "title": "AF6: interpret restored BCM connections and the VIN routine gate",
+          "body": "Require ignition OFF and actual inspection of all BCM connectors, including corrosion, damaged/bent and pushed-out pins. Require the source-directed cleaning or replacement corrections through separate procedures, connectors fully seated/latched, complete restoration and an actual original-concern operating check.\n\nReturned operation leaves the connector/pin root cause to be addressed. Persistent concern requires actual OASIS/TSB results: an applicable bulletin takes over; none directs the VIN-accessed BCM Guided Routine. This is not automatic BCM replacement. Missing VIN, routine outcome or required records cannot establish completion."
+        },
+        {
+          "title": "Interpret configuration and completion provenance",
+          "body": "For an actually directed replacement, require vehicle identification and configuration captured before original module removal, a communicating new module and completed PMI. If original data could not be retrieved, require the actual tool-directed VIN-specific As-Built/manual-parameter fallback. As-Built does not retain changed customer preferences; require subsequent programmable-parameter restoration.\n\nACM 727 and integrated DACMC 7D5 support PMI/flashing with no separate learning listed. PCM 7E0 requires Misfire Monitor Neutral Profile Correction. BCM 726 lists ambient-lighting and rear-view-camera calibration; applicable complete replacement requirements determine fitted-vehicle completion. If PCM data could not transfer and the fitted transmission requires it, preserve the recorded 12-digit solenoid-body identification and 13-digit strategy download requirement.\n\nStandalone flashing requires a published TSB recommendation; PMI may incorporate an available update. Require actual IDS ignition-prompt compliance and clearing of communication codes generated during programming, when modules cannot communicate normally. No repeated same-software flash is a demonstrated hardware remedy. All installation, programming and learning remain separate procedures; this article cannot certify vehicle release or resolve AE4."
         }
       ],
       "watchFor": [
         {
-          "title": "Connector faults that temporarily disappear",
-          "body": "If reseating restores operation, address the underlying terminal or connector defect."
+          "title": "AE4 remains an unresolved stop",
+          "body": "ACM in the self-test instruction and APIM in the decision are not interchangeable. Downstream AE5/AE6 descriptions do not establish entry, and no hypothetical clarification is treated as obtained."
         },
         {
-          "title": "Programming is a separate operation",
-          "body": "Follow required PMI and calibration procedures after replacement. Reinstalling the same software does not repair hardware."
+          "title": "Keep exact measurement identity and state",
+          "body": "AC uses C240B 2/15 to C4828 1/2; AD uses C240B 7/20 to C9223 or C4829 1/2. Voltage records require ON after C240B disconnection; resistance records require OFF and the exact branch connector states. Pin labels are not probing instructions."
+        },
+        {
+          "title": "Strict limits and waits remain distinct",
+          "body": "Isolation requires greater than 10,000 ohms; continuity less than 3 ohms. Equality fails those respective comparisons only when the measurement provenance is valid. Microphone retests require at least five seconds; communication rechecks at least ten."
+        },
+        {
+          "title": "FCDIM trigger context is not the AF decision list",
+          "body": "FCDIM appears in U0140:00 trigger context but not AF2 or AF4. An FCDIM-only result needs separate matching direction and remains unresolved here."
+        },
+        {
+          "title": "A repaired connector still needs a recorded outcome",
+          "body": "Require actual defect correction, full seating/latching and restored operation. A temporary return does not erase the root-cause requirement. Repairs and OASIS/VIN-guided routines are separate procedures."
         }
       ],
       "notes": [
-        "Keep AC and AD microphone pin assignments separate throughout testing."
+        "ANC is 2.3L only; integrated DACMC/ESE on 5.2L does not extend microphone applicability. AC does not establish a body-style combination beyond an actually fitted left-rear quarter microphone.",
+        "U0142:00 describes missing BCMB messages for more than five seconds in RUN, recorded by ACM/DACMC. BCMB is distinct from BCM; its separate diagnostic destination is outside AC–AF.",
+        "These tests concern audio microphones and module communication. They do not direct optional speaker, steering-wheel or console disassembly.",
+        "Reference links identify separate diagnostic or repair destinations. Their internal execution is not supplied here."
       ],
       "diagnostics": [
         {
-          "finding": "Diagnostic trouble code B117A:01 is recorded.",
-          "meaning": "Test AC concerns the left-hand rear quarter-panel ANC microphone circuit.",
-          "next": "Test wiring before microphone isolation and ACM evaluation."
+          "finding": "Recorded result: B117A:01 is recorded on a vehicle with the applicable left-rear ANC microphone.",
+          "meaning": "Test AC investigates that microphone's two circuits before isolating the microphone or ACM.",
+          "next": "Interpret recorded AC1–AC4 in step 2, then require actual AC5 substitution/timing evidence."
         },
         {
-          "finding": "Diagnostic trouble code B13F5:01 is recorded.",
-          "meaning": "The backup-microphone electrical fault concerns the rear center headliner ANC microphone on a coupe or right-hand rear quarter-panel microphone on a convertible.",
-          "next": "Follow Test AD for the correct body style."
+          "finding": "Recorded result: B13F5:01 is recorded on a 2.3L ANC-equipped vehicle.",
+          "meaning": "The DACMC detected a general electrical failure in the rear-center headliner microphone circuits on a coupe or right-rear quarter-panel microphone circuits on a convertible.",
+          "next": "Interpret recorded AD1–AD4 in step 4 with the actual body-style connector."
         },
         {
-          "finding": "Diagnostic trouble code U0100:00 is recorded.",
-          "meaning": "An audio/navigation module missed PCM messages for more than 5 seconds with ignition in RUN.",
-          "next": "Use AE to confirm recurrence, check voltage faults and compare reporting modules."
+          "finding": "Recorded result: Any voltage appears during AC1 or AD1.",
+          "meaning": "The selected disconnected microphone circuit fails the short-to-voltage check.",
+          "next": "Separate affected-circuit repair; neither reading showing voltage permits the recorded OFF-state resistance gate."
         },
         {
-          "finding": "Diagnostic trouble code U0140:00 is recorded.",
-          "meaning": "A reporting module missed BCM messages for more than 5 seconds with ignition in RUN.",
-          "next": "Follow AF through voltage checks and the reporting-pattern decision."
+          "finding": "Recorded result: Either wire measures 10,000 ohms or less to ground in AC2 or AD2.",
+          "meaning": "That wire fails the required isolation-from-ground threshold.",
+          "next": "Separate circuit repair; both valid readings above the limit permit the continuity gate."
         },
         {
-          "finding": "Diagnostic trouble code U0142:00 is recorded.",
-          "meaning": "The ACM or DACMC missed Body Control Module B (BCMB) messages for more than 5 seconds with ignition in RUN.",
-          "next": "Continue with the specific BCMB communication diagnosis before deciding on parts."
+          "finding": "Recorded result: Either end-to-end reading is 3 ohms or more in AC3 or AD3.",
+          "meaning": "The wire fails the continuity requirement used to check for an open circuit.",
+          "next": "Separate affected-circuit repair; both valid readings below the limit permit the short-together gate."
+        },
+        {
+          "finding": "Recorded result: Resistance between the two microphone wires is 10,000 ohms or less in AC4 or AD4.",
+          "meaning": "The pair fails the short-together check.",
+          "next": "Separate circuit repair; a valid passing reading permits the recorded substitution gate."
+        },
+        {
+          "finding": "Recorded result: The matching microphone code is absent after replacement, code clearing, the ignition cycle and DACMC self-test.",
+          "meaning": "The test identifies the old ANC microphone as the cause and regards the system as operating correctly at that time.",
+          "next": "Record the source result only with complete circuit passes, actual replacement and timed self-test evidence."
+        },
+        {
+          "finding": "Recorded result: B117A:01 or B13F5:01 remains after the correctly selected microphone is replaced.",
+          "meaning": "The microphone substitution did not resolve the branch.",
+          "next": "Interpret actual AC6/AD6 connector correction and OASIS/TSB records; separate ACM replacement only at the supported endpoint."
+        },
+        {
+          "finding": "Recorded result: U0100:00 is stored without an observable symptom, or does not return during AE2.",
+          "meaning": "The branch regards the system as operating correctly at that time. High network traffic or an intermittent condition may account for the stored code.",
+          "next": "Record the source no-reproduced-concern result, without inferring PCM failure."
+        },
+        {
+          "finding": "Recorded result: U0100:00 returns and the PCM self-test records P0562 or P0563.",
+          "meaning": "A PCM supply-voltage problem requires its own diagnosis before this communication path continues.",
+          "next": "Separate fitted-engine charging-system PCM DTC chart; do not borrow another engine’s destination."
+        },
+        {
+          "finding": "Recorded result: AE4 is reached with ACM in the self-test list and APIM in its voltage-code question.",
+          "meaning": "The intended module for part of the decision is ambiguous.",
+          "next": "Stop affected AE interpretation. No verified AE4 pass, module equivalence or obtained clarification is established here; downstream descriptions do not authorize continuation."
+        },
+        {
+          "finding": "Recorded result: U3003:16 or U3003:17 is found at the applicable audio-module voltage checkpoint.",
+          "meaning": "The diagnostic route diverts to a supply-voltage pinpoint test.",
+          "next": "The source names separate AQ for U3003:16 and AR for U3003:17. At AE4 the identity discrepancy still prevents a completed decision here."
+        },
+        {
+          "finding": "Recorded result: After the voltage checkpoints are satisfied, U0100:00 appears in more than one module.",
+          "meaning": "AE directs attention to the PCM connections.",
+          "next": "Downstream source explanation only: AE6 connector/TSB/PCM endpoint is conditional; this article cannot establish entry past AE4."
+        },
+        {
+          "finding": "Recorded result: U0100:00 is not set in more than one module, but an observable symptom remains.",
+          "meaning": "AE redirects the investigation toward the specific audio symptom.",
+          "next": "Downstream source explanation only: the General Audio System Symptom Chart is named, but AE4 remains unresolved here."
+        },
+        {
+          "finding": "Recorded result: U0140:00 is stored without an observable symptom, or does not return in AF2's listed modules.",
+          "meaning": "The AF branch regards the system as operating correctly at that time, with an intermittent condition or network traffic still possible.",
+          "next": "Record the exact AF listed-module result; FCDIM-only evidence remains unresolved rather than added to AF2."
+        },
+        {
+          "finding": "Recorded result: The BCM self-test records U3006:16, U3006:17 or U3006:1C.",
+          "meaning": "AF diverts to BCM supply-voltage diagnosis.",
+          "next": "Separate exact BCM diagnostic entry for the recorded U3006 code."
+        },
+        {
+          "finding": "Recorded result: After the voltage checkpoints are satisfied, U0140:00 appears in more than one module.",
+          "meaning": "AF directs attention to all BCM connector connections.",
+          "next": "Interpret complete AF6 connector correction/TSB records; no applicable bulletin directs separate VIN-accessed BCM Guided Routine, not automatic replacement."
+        },
+        {
+          "finding": "Recorded result: U0140:00 is not set in more than one module, but an observable symptom remains.",
+          "meaning": "AF redirects the investigation to the specific audio symptom.",
+          "next": "Separate General Audio System Symptom Chart."
+        },
+        {
+          "finding": "Recorded result: Operation returns after ACM, PCM or BCM connector correction.",
+          "meaning": "The connection may have caused the concern; the branch regards the system as operating correctly at that time.",
+          "next": "Require actual root-cause correction and recorded restored operation; any AE6 conclusion remains blocked by unresolved AE4 entry here."
+        },
+        {
+          "finding": "Recorded result: U0142:00 is recorded in the ACM or DACMC.",
+          "meaning": "Messages from Body Control Module B, or BCMB, were missing for more than 5 seconds with the ignition in RUN. BCMB is distinct from the BCM investigated by AF.",
+          "next": "Separate BCMB diagnosis, not AF’s BCM Guided Routine."
+        },
+        {
+          "finding": "Required identity, connector state, measurement, timing, repair or configuration record is missing or ambiguous.",
+          "meaning": "No valid pass, failed component or completed branch is established.",
+          "next": "Stop the affected interpretation. Preserve AE4 as unresolved and do not substitute a hypothetical clarification."
         }
       ],
       "verification": [
         {
-          "title": "Confirm the branch result",
-          "body": "Verify the microphone self-test result or reproduce the original communication-related symptom after repair. Complete any directed module configuration and calibration; clear communication codes generated during programming."
+          "title": "Retain the full applicable path",
+          "body": "Require exact ANC equipment/body-style identity, individual pin-pair values/states, actual microphone substitution and five-second self-test provenance; retain symptom-first communication gates, all-CMDTC clearing and ten-second rechecks."
         },
         {
-          "title": "Record the diagnostic outcome",
-          "body": "Save original and returning codes with their reporting modules, circuit results, connector repairs and final operating condition. Record an absent or unduplicated concern without treating it as proof of component failure."
+          "title": "Leave AE4 unresolved",
+          "body": "Record the literal ACM/APIM discrepancy. No completed AE4 pass or entry into AE5/AE6 is established by this article. Do not turn explanatory downstream outcomes into a PCM replacement decision."
+        },
+        {
+          "title": "Require actual endpoint provenance",
+          "body": "Retain connector corrections, full restoration, operating results and actual OASIS/TSB evidence. Distinguish ACM/PCM replacement destinations from the VIN-accessed BCM Guided Routine; all remain separate procedures."
+        },
+        {
+          "title": "Require configuration and preference completion",
+          "body": "Require pre-removal configuration/fallback, communicating replacement/PMI, applicable learning/calibration, changed preference restoration and programming-related code clearing. Missing records leave completion unresolved."
         }
       ],
       "procedures": [
         {
           "documentId": "G1692891",
-          "purpose": "SYNC Tests AC–AF, voltage-test referrals, audio symptom chart and U0142:00 fault identification."
+          "purpose": "Complete AC–AF source for existing-record interpretation, including unresolved AE4 identity and distinct AF lists; no physical execution."
+        },
+        {
+          "documentId": "G1692884",
+          "purpose": "Reviewed system overview establishing the non-touchscreen audio equipment, integrated DACMC engine coverage and 2.3L-only ANC applicability."
+        },
+        {
+          "documentId": "G1813073",
+          "purpose": "Required recorded configuration capture, fallback, PMI, preferences and applicable learning/completion; no tool execution."
         },
         {
           "documentId": "G1694053",
-          "purpose": "ANC microphone removal and installation for the applicable body-style branch.",
+          "purpose": "Reference-only handoff for the correctly located ANC microphone removal and installation after AC or AD circuit checks pass.",
           "mediaId": "G1694053-m0001"
         },
         {
           "documentId": "G1704002",
-          "purpose": "SYNC ACM removal and installation if AC or AD reaches module replacement.",
+          "purpose": "Reference-only ACM replacement handoff when AC6 or AD6 reaches that decision after connector evaluation and the TSB check.",
           "mediaId": "G1704002-m0001"
         },
         {
-          "documentId": "G1813073",
-          "purpose": "Configuration-data capture, PMI and module-specific learning/calibration requirements."
-        },
-        {
           "documentId": "G1692965",
-          "purpose": "BCM diagnosis for supply-voltage codes identified in Test AF."
+          "purpose": "Reference-only BCM diagnostic handoff for U3006:16, U3006:17 and U3006:1C in AF3."
         },
         {
           "documentId": "G1692957",
-          "purpose": "3.7L charging-system diagnosis for PCM voltage codes identified in Test AE."
+          "purpose": "Reference-only 3.7L charging-system diagnostic handoff for PCM P0562 or P0563 in AE3."
         },
         {
           "documentId": "G1807237",
-          "purpose": "5.2L charging-system diagnosis for PCM voltage codes identified in Test AE."
+          "purpose": "Reference-only 5.2L charging-system diagnostic handoff for PCM P0562 or P0563 in AE3."
         },
         {
           "documentId": "G1704140",
-          "purpose": "BCMB diagnostic reference for the U0142:00 communication-fault handoff."
+          "purpose": "Reference-only BCMB diagnostic destination for the U0142:00 identification handoff; no BCMB diagnostic steps are taught here."
         }
       ],
       "hero": null,
@@ -100874,7 +101377,7 @@
         "years": [
           2015
         ],
-        "equipment": "SYNC with non-touchscreen display; ANC microphone branches apply to 2.3L vehicles"
+        "equipment": "2015 Mustang with SYNC, six speakers and the 4.2-inch (107 mm) non-touchscreen display; engine coverage: 2.3L, 3.7L, 5.0L and 5.2L. DACMC is integrated into the ACM on 2.3L and 5.2L vehicles; ANC microphone tests apply only to 2.3L vehicles. Test AD distinguishes the rear-center headliner microphone on a 2.3L coupe from the right-rear quarter-panel microphone on a 2.3L convertible. Test AC addresses a fitted left-rear quarter-panel ANC microphone without establishing a body-style combination."
       },
       "relatedGuideIds": [
         "job-4ae8df1caeb8b7f0",
@@ -100922,14 +101425,230 @@
         {
           "documentId": "G1692884",
           "sourceHash": "54224601ccf734d2ea4edd4c12f1c27fe53e097555ddfc4fff9f510959b36aad"
+        },
+        {
+          "documentId": "G1693940",
+          "sourceHash": "cc9fe4d04375ac33390c1848154d6b0d0ec0e7213b53cfbc5790e277a5451596"
+        },
+        {
+          "documentId": "G1696340",
+          "sourceHash": "d47cf6d537c179f616d976508b68ffd90f9de7941848866f96c0ea2e90ea62da"
+        },
+        {
+          "documentId": "G1692895",
+          "sourceHash": "ed2f6d067e94a369fa5f208dacee8d37349e0e75090c8f3702f6cb7294c165f5"
+        },
+        {
+          "documentId": "G1704851",
+          "sourceHash": "fb743ec647f67cf2754413dd1e08fc2a89782cd1e6f79163ab44744af743f771"
+        },
+        {
+          "documentId": "G1695509",
+          "sourceHash": "eb2e69d681bac3c4ce5370cd451b575d20aeca15a189c4fdb311afc550da8b04"
+        },
+        {
+          "documentId": "G1681095",
+          "sourceHash": "cbae19a4bc5095b8d58daefb649eedcfa2e2c693621b5716b74505c3fcec3686"
+        },
+        {
+          "documentId": "G1692929",
+          "sourceHash": "6ee5b89d7a00f37dee41149692eaf6645afff133343f46a4ab69ff97d90ad4a4"
+        },
+        {
+          "documentId": "G1692931",
+          "sourceHash": "6cb3e42eb5a5ff32c9656312e8b537e0543a587eb5573a3f3e25f5d1f55235f3"
+        },
+        {
+          "documentId": "G1692933",
+          "sourceHash": "b9912e84f438218d29633b80c3e2a12565729c974ca8e777ccc6745d610201d3"
+        },
+        {
+          "documentId": "G1807235",
+          "sourceHash": "cbdd8e5fa44eac6bd2951bbea48df64ed4279aca4fd469c7b035da61ed2303a2"
+        },
+        {
+          "documentId": "G1694051",
+          "sourceHash": "f5eef22f51710f2ce2d5ae5cd2250ffea2d68ed21c5277ac3f7aeb7446c44fb0"
+        },
+        {
+          "documentId": "G1693269",
+          "sourceHash": "565d578f3f36d4a49561e6e88a9e24cbca84eb49698097d43d4bb30f4c612630"
+        },
+        {
+          "documentId": "G1813071",
+          "sourceHash": "45f3b53dd28e766d92924e944c68e0a740c843efced2d8bf704c99548fa32e46"
+        },
+        {
+          "documentId": "G1692867",
+          "sourceHash": "a6a1195bb9e831dfe2d8bd6e13141880391ae4474a3a8699114c0c72828fa63c"
+        },
+        {
+          "documentId": "G1813259",
+          "sourceHash": "feada71578e9594a03efbd882ab41bb6387a8c33ff1093fec290cf0063573404"
+        },
+        {
+          "documentId": "G1692885",
+          "sourceHash": "15a7e53f8d98f2b80af7d899bae99c9aaa6673ff85ac6049d292fef1e23837ab"
+        },
+        {
+          "documentId": "G1692120",
+          "sourceHash": "86682574769b7e3306c26913e676f8c5b4c895d288436db1d78d956e19109bf2"
+        },
+        {
+          "documentId": "G1692122",
+          "sourceHash": "8581035e0738df87b2e1713716f6c72597dd163ceacebba274d5d19fe2b990b0"
+        },
+        {
+          "documentId": "G1804021",
+          "sourceHash": "b4e020d5b1546be37d004d263f446c023653ef8f987540819898cbd9b97fad01"
+        },
+        {
+          "documentId": "G1695933",
+          "sourceHash": "e846b58e3c8b6808ef79d461089c9d3d2e9366417727237b979a8aeda9624b57"
+        },
+        {
+          "documentId": "G1693973",
+          "sourceHash": "36c14c44137c4198f71290fc4990b2abccda5e0c0a0be29c27ce96f75f3e2265"
+        },
+        {
+          "documentId": "G1694048",
+          "sourceHash": "c2a0af8fb95cefd997eda6996b786c9fb47125dc4bc7ebb240fc3e33b32b09b9"
+        },
+        {
+          "documentId": "G1694047",
+          "sourceHash": "dac2332cab84d8f26e4f1ff720605c09632499f91e8c93eea6b53eac5e45449a"
+        },
+        {
+          "documentId": "G1694046",
+          "sourceHash": "206609457fbabc35285bc11d60a1000d7e105599a7596960dc387f556302eee8"
+        },
+        {
+          "documentId": "G1673174",
+          "sourceHash": "d489d22ac7d68944f72a27944a51f1b26910204d8fe0c7ba16278732e142d4f0"
+        },
+        {
+          "documentId": "G1692835",
+          "sourceHash": "9b41e76a365a3e42715074595faba651082555aa60bd50ef14cd04ae90f43400"
+        },
+        {
+          "documentId": "G1692944",
+          "sourceHash": "223d21087ea05c3855269cd5dbdcb2397b0fb431339b8f92d2e54e75dac55e08"
+        },
+        {
+          "documentId": "G1804809",
+          "sourceHash": "fd8bc0d4c68459d1d4949c3df642d0adbcb6141a41535837ac6f9dc2ecaaae91"
+        },
+        {
+          "documentId": "G1694049",
+          "sourceHash": "0e9444bb1b40ffe8772389a10d8f16d6d70995d3545af2c67725d4d41e8d8944"
+        },
+        {
+          "documentId": "G1694045",
+          "sourceHash": "f18c1d7bc4702e3b62d5766fe2d2259af7021284790ef5a3a2eac4d7b74ed47e"
+        },
+        {
+          "documentId": "G1694050",
+          "sourceHash": "f5ecdb39a7ccecda25ba9d00d72b011ff6f8afdee0aca2e5d1a9e0c7e57898a2"
+        },
+        {
+          "documentId": "G1694055",
+          "sourceHash": "7dca6aa392209b0dad45f1a69e14d2d7b28e90ce7fdfc7b24b45bacfbf9211e5"
+        },
+        {
+          "documentId": "G1694054",
+          "sourceHash": "c74e574413caa3b72909faefff0f7ee278e67de9b31129f570d2176158df6daf"
+        },
+        {
+          "documentId": "G1693262",
+          "sourceHash": "176c593dfbaefced658b6d34ad69ff767d38d15a8c80828142c0832c710debc4"
+        },
+        {
+          "documentId": "G1694052",
+          "sourceHash": "c1f9a151734a90b6a4c98b79a2360eca0031de65e81f829ba6d2b91d7f64b5e2"
+        },
+        {
+          "documentId": "G1704850",
+          "sourceHash": "ca4bb239942c282ce51161a5ed38cf403301bc96d26e044c38ad55f65d97474e"
+        },
+        {
+          "documentId": "G1704004",
+          "sourceHash": "f7b313947445368a988b26692911d6b1adabe1812728cb5de45ff82906c8b897"
+        },
+        {
+          "documentId": "G1694056",
+          "sourceHash": "6bdda01946448e9920c98f78585bd5c24982cb46b1ade2f628ff80f2415edde3"
+        },
+        {
+          "documentId": "G1693273",
+          "sourceHash": "39485114a1b9fc835e4ea4c212aa9301d563731faef301048bc5775d91bcca32"
+        },
+        {
+          "documentId": "G1696301",
+          "sourceHash": "eb5ae550dcc6cf52db0e0ce2866bcaf56da857ccc8dd81d11ba3125e0b86ac7f"
+        },
+        {
+          "documentId": "G1696300",
+          "sourceHash": "d8117f58cf5b030c9e6719fbf9add5b0749c22d4f0d717e8c0c53ada11428408"
+        },
+        {
+          "documentId": "G1693270",
+          "sourceHash": "d5745665ac1e80786a7d7759b25bf44c7e2700b60565d5d04ea66f3f5e082151"
+        },
+        {
+          "documentId": "G1703548",
+          "sourceHash": "846082b18e904056238eec9c3452d3b978a508cc39a8e58e713f2e60bc4d5455"
+        },
+        {
+          "documentId": "G1696307",
+          "sourceHash": "bb48e4484d6de33738a4bc4598440812d013979f0228afd84ddf80178adae000"
         }
       ],
       "authoring": {
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "eb276c190a319720c59b3a82e97ca14527d55326e48998ae4d208cd78ff7da24"
-      }
+        "fingerprint": "eb276c190a319720c59b3a82e97ca14527d55326e48998ae4d208cd78ff7da24",
+        "editorialVersion": 2,
+        "editorialFingerprint": "31b20143e0398a2f9ce6dac898b39ad3b608995d12a2a0e0699343b469872632",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "identity",
+          "title": "Identify applicable records",
+          "summary": "Require actual equipment, complaint and complete evidence.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "microphones",
+          "title": "Interpret ANC circuit and substitution records",
+          "summary": "Keep pin pairs, connector states and timed retests distinct.",
+          "start": 2,
+          "end": 6
+        },
+        {
+          "id": "pcm",
+          "title": "Interpret PCM communication records with the unresolved stop",
+          "summary": "Preserve AE4 ambiguity and explain downstream logic without establishing entry.",
+          "start": 7,
+          "end": 10
+        },
+        {
+          "id": "bcm",
+          "title": "Interpret BCM communication records",
+          "summary": "Retain exact module lists, voltage diversions and VIN-guided endpoint.",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "completion",
+          "title": "Interpret configuration provenance",
+          "summary": "Require actual programming, learning and preference restoration records.",
+          "start": 14,
+          "end": 14
+        }
+      ]
     },
     {
       "title": "Diagnose SYNC communication faults with body, restraints, cluster and parking modules",
