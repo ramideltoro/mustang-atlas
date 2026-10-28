@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C216B",
+  "supportingSourceRefs": [],
+  "sourceHash": "d85f4efadab52cb15739e09a01e68dff05beb8bd45240176f9c0f9180d0a008a",
+  "title": "C216B — Driver airbag connector",
+  "introduction": "I read this airbag reference like a carefully labeled address book: the connector identity tells you which entry you have, and the cavity labels tell you which circuit row belongs to each contact. In the drawing, the cavities sit vertically between a stepped projection on the left and an inward notch on the right. Use those visible features to keep the drawing aligned, then read across the matching Cavity row for the circuit designation and function.\n\nThe signed function labels distinguish the airbag circuit connections; they are not an invitation to treat the connector as an ordinary power-and-ground plug. The tables also connect the housing identity with the listed pigtail. This is an identification guide, with no access, depowering, probing or replacement sequence. Physical viewing direction, gauge convention and the meanings of the Box, Size and Used codes remain unspecified; those codes should not become assumed service instructions.",
+  "requirements": [
+    {
+      "category": "Airbag service boundary",
+      "items": [
+        {
+          "name": "Qualified personnel and restraint-specific instructions",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Any hands-on airbag work requires the applicable depowering, handling, test-equipment and restoration instructions; this connector reference does not teach those operations. Do not substitute a generic jumper or resistance test."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C216B-b00002",
+      "text": "Connector face for harness 14A664",
+      "why": "The vertically arranged cavities, left-side step and right-side notch distinguish the illustrated layout. I use those landmarks to follow the printed cavity labels without assuming a wire-side or mating-side physical view. The drawing alone also cannot verify the connector’s locking or shorting-bar state."
+    },
+    {
+      "blockId": "connector-C216B-b00005",
+      "text": "Read the airbag circuit assignments",
+      "why": "Match each illustrated cavity label to the Cavity column, then keep its Circuit Number, Color, Gauge and signed Function together across the row. The signs distinguish the designated airbag connections; they do not supply test conditions or authorize treating the negative designation as a chassis-ground connection."
+    },
+    {
+      "blockId": "connector-C216B-b00007",
+      "text": "Identify the listed airbag pigtail",
+      "why": "The Engineering Shell entry connects this pigtail record with the housing identifiers above. Number and Service Part are separate catalog fields, while Material describes the listed pigtail. A catalog entry identifies a service item; it does not establish an airbag wiring repair method or replace the required restraint-specific service instructions."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:30:36.051Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "01072377ff19ecf62ebd5a1a7e3c8151c651f2da8a78b460612504b566fb9929",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "91515f7253bea5c1773eff020595b6af2de68256bfb7bf9c14689ba2a7665291",
+    "reviewedAt": "2026-10-28T00:30:36.052Z"
+  }
+}

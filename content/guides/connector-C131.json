@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C131",
+  "supportingSourceRefs": [],
+  "sourceHash": "cca5437c73dcc3de75c26a6e2f758998ce6418a4e5bb76d87ced064cc351eaf4",
+  "title": "C131 — Horn connector reference",
+  "introduction": "I read this page like an address book for the horn wiring: the drawing identifies a cavity, and the corresponding table row tells me which circuit lives there. Start with the identity table, then use the housing outline and printed cavity labels to navigate the pin assignments. Shape is a useful landmark; the cavity label is the actual address.\n\nThe identity table describes the connector housing. In the pin table, Color describes the wire associated with that cavity. Read across the same row to connect the circuit identifier, wire information, function and terminal reference. The pigtail table provides a separate service-parts cross-reference.\n\nThis guide explains the reference, without teaching access, electrical probing, diagnosis or replacement. The physical viewing direction is unspecified. Keep the Size and Used codes and Gauge entries as printed, without assuming code meanings or a gauge convention; the sheet provides no electrical pass/fail values.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C131-b00002",
+      "text": "Connector face for harness 14290",
+      "why": "I use the tall rectangular feature above the rounded housing as a landmark within this drawing, then read the cavity labels directly. The table beneath associates the face illustration with its Fpn and Harness Id. These features help navigate the picture; they do not establish which side of a physical connector to view."
+    },
+    {
+      "blockId": "connector-C131-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Cavity links the drawing to a table row; Circuit Number identifies the electrical circuit, while Function explains its listed role. The horn-relay description refers to an electrically controlled switch, but does not establish a separate plug-in relay. Wire color, gauge and terminal references belong to their individual rows, so a shared connector housing does not make those entries interchangeable."
+    },
+    {
+      "blockId": "connector-C131-b00007",
+      "text": "Pigtail and service-part reference",
+      "why": "A pigtail is a connector with attached wire leads. I connect Kit List in the identity table to Number here, then compare Engineering Shell with Hard Shell. Service Part is the service reference; Image is an illustration filename. Keep this table's Gauge entry separate from the individual circuit entries: this cross-reference alone does not specify wire substitution, splicing or installation."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:25:24.325Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "07b142e16c1247888c885e21f9cc9d27315c6a6401db1fe1455f6827ee2b1447",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bd18012dc53dbff65fc9b688f4791977fada44bcd9fdf0ff82d363e829abafc1",
+    "reviewedAt": "2026-10-28T00:25:24.326Z"
+  }
+}

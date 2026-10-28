@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C4823",
+  "supportingSourceRefs": [],
+  "sourceHash": "b1beabb82d6857b4910a6c944ca519125db20b211b7e4910fc2cd25481bcf35e",
+  "title": "C4823 — Audio antenna",
+  "introduction": "The Function column earns its keep on this audio-antenna reference: the populated entries describe rear-window antenna power. I read that before letting the familiar word “antenna” send me chasing the wrong cable. A connector’s name gets you into the neighborhood; its circuit assignments explain its particular job.\n\nCompare CNumber and Description with the housing drawing, then match its cavity labels to the table. Keep the repeated assignment entries intact rather than choosing a gauge from this page. This is an identification reference, with a cavity-count discrepancy awaiting review. Physical access, viewing-side confirmation, probing, wire selection and replacement need matching service information; the gauge convention and Size and Used codes are unexplained.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4823-b00002",
+      "text": "Connector face for harness 14A005",
+      "why": "The printed housing has stacked circular positions, a rectangular feature on the left and a small projection on the right. I use that combination to recognize the drawing. The upper circular position is shaded, but no legend explains the shading; its electrical assignment must come from the table. The Fpn and Harness Id record accompanies this specific illustration. The physical viewing side is unspecified."
+    },
+    {
+      "blockId": "connector-C4823-b00005",
+      "text": "Read the cavity assignments",
+      "why": "Follow each illustrated label into the Cavity column and read across to the circuit and Function entries. The populated rows share a cavity and circuit but have different Gauge entries and blank Qualifier fields. Repeated rows therefore must not be counted as additional physical cavities, and this reference gives no basis for selecting between their wire descriptions. The remaining cavity has no assigned circuit or function; that blank entry is not a ground designation. Preserve all entries while the separate cavity-count discrepancy is reviewed."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:28:24.971Z",
+  "model": "Signed-in Codex author; independent active-agent Codex review",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "20dfec4c4a679a6000b1baae3cb98f65f4e32b26888e8ec418c8d4805764c41e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 23,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e891acfa5edfdba60c8faa6e63e07d3bba4680af705d976334b51379daca8ebb",
+    "reviewedAt": "2026-10-28T00:27:08.754Z",
+    "coveredUnitIds": [
+      "connector-C4823:u1",
+      "connector-C4823:u2",
+      "connector-C4823:u3",
+      "connector-C4823:u4",
+      "connector-C4823:u5",
+      "connector-C4823:u6",
+      "connector-C4823:u7",
+      "connector-C4823:u8",
+      "connector-C4823:u9",
+      "connector-C4823:u10",
+      "connector-C4823:u11",
+      "connector-C4823:u12",
+      "connector-C4823:u13",
+      "connector-C4823:u14",
+      "connector-C4823:u15",
+      "connector-C4823:u16",
+      "connector-C4823:u17",
+      "connector-C4823:u18",
+      "connector-C4823:u19",
+      "connector-C4823:u20",
+      "connector-C4823:u21",
+      "connector-C4823:u22",
+      "connector-C4823:u23"
+    ],
+    "sourcePages": [
+      {
+        "path": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/documents/connector-C4823/e891acfa5edfdba60c8faa6e63e07d3bba4680af705d976334b51379daca8ebb/0000/complete-source-1.png",
+        "sha256": "262009ad1e3a3643849fa939f01f6bc2ae1c5c3991f57f4cde3bb9820cf3d804"
+      },
+      {
+        "path": "/Users/ramideltoro/Documents/Codex/2026-10-11/i-have-a-service-manual-for/work/mustang-atlas/work/editorial-references/documents/connector-C4823/e891acfa5edfdba60c8faa6e63e07d3bba4680af705d976334b51379daca8ebb/0000/complete-source-2.png",
+        "sha256": "4d64bd889409d24d639bfd2dd979fdff72f186a8a8a44052c1b89abda31628dc"
+      }
+    ],
+    "sourceLimitations": [
+      "The Pin Count metadata exceeds the distinct cavity labels shown in the illustration and assignment table. The supplied evidence does not reconcile that discrepancy.",
+      "The repeated populated assignment has differing Gauge entries without an applicability qualifier. Their relationship remains unresolved; this draft does not select a wire specification."
+    ],
+    "originalAuthorHold": "Needs review: The Pin Count metadata exceeds the distinct cavity labels shown in the illustration and assignment table. The supplied evidence does not reconcile that discrepancy.; Needs review: The repeated populated assignment has differing Gauge entries without an applicability qualifier. Their relationship remains unresolved; this draft does not select a wire specification.",
+    "resolvedHold": {
+      "scope": "Bounded identification/navigation fully reviewed; physical cavity-count and repeated-gauge ambiguities remain explicit and unresolved.",
+      "reviewArtifact": "active-agent-full-review.json",
+      "draftSha256": "c0b632157505568370e8c74adde03cbcd0ecdc3a1615b09f2f6f98daf841fab9"
+    },
+    "editorialRevision": {
+      "kind": "bounded-identification-complete-active-agent-review",
+      "reviewedAt": "2026-10-28T00:27:08.754Z",
+      "scope": "Unchanged author public prose reviewed against all23units and both original pages; not CLI review or physical mapping resolution."
+    }
+  }
+}

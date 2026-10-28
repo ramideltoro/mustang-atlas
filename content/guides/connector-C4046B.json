@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C4046B",
+  "supportingSourceRefs": [],
+  "sourceHash": "fe55e9283267d2c653bceb7d10e235ac296e54d785c9f058b61270bf6e747cdd",
+  "title": "C4046B — Right-hand license plate lamp connector",
+  "introduction": "I start with CNumber and Description to establish that this is the right-hand license-plate lamp reference. Then I match the drawing's printed cavity labels to the Cavity column and read across each corresponding row. The drawing supplies the layout; the table supplies the electrical identity.\n\nKeep the lamp's position separate from the ground destination named under Function. Wiring is a route map, not a promise that every connection lives beside the bulb. The ground entry describes the return path, while the park-lamp relay entry identifies a relay-related circuit. A relay is an electrically controlled switch; its name here does not establish whether it is a separate plug-in component.\n\nUse this page for connector and circuit identification. Access, probing, test conditions and replacement methods require other instructions. The physical viewing side, gauge convention and meanings of Size and Used remain unspecified, so leave those entries uninterpreted. COMPLETE is a reference-record status, not a verdict on the lamp or its wiring.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4046B-b00002",
+      "text": "Harness 13412 · Connector face reference",
+      "why": "The drawing places the cavity labels vertically inside a rounded housing, with a rectangular feature to their right. I use those shapes as landmarks for reading the illustration. They do not establish the installed connector's viewing side or a release movement. The accompanying identification row ties the illustrated face to its shell and harness record."
+    },
+    {
+      "blockId": "connector-C4046B-b00005",
+      "text": "Cavity and circuit map",
+      "why": "Matching a printed cavity label to its table row brings the circuit identifier, wire description, function and terminal reference together. The ground-location wording remains meaningful even though the lamp is on the other side of the car. Neither that wording nor the relay designation establishes a fault, an expected measurement or a repair decision."
+    },
+    {
+      "blockId": "connector-C4046B-b00007",
+      "text": "Pigtail service-item reference",
+      "why": "The pigtail record describes a connector with wire leads and gives its service and shell identifiers. I read its Gauge and Material fields within that record rather than treating them as instructions for modifying the harness. The lookup helps distinguish the listed service item from its shell identification; it does not supply a replacement or splicing method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:35:05.558Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "64049129dc43d4515766bb536a7b9361642659ca3d363922f1c9eb73464faf46",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2966c9034bc0bef9208ce6c74ea7a2a19c61185e90ef8c8e759bd38360adc67d",
+    "reviewedAt": "2026-10-28T00:35:05.559Z"
+  }
+}

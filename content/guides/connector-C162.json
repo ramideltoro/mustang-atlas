@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C162",
+  "supportingSourceRefs": [],
+  "sourceHash": "7dc296f3627265f20a8904fd1466ad4e553aa96bebc188023c4fcbc4a5a3215d",
+  "title": "C162 — RH front fog lamp connector",
+  "introduction": "This reference identifies the right-hand (RH) front fog lamp connector and maps its control-module connection and ground return. I start with the identity table, locate the cavity labels inside the drawing's rounded outline, then match each label to the Cavity column. The lamp may do the shining, but the connector still needs an address for every wire.\n\nRead the circuit rows and service-pigtail row as separate information. Catalog codes and gauge entries remain as printed, without assumed dimensions, units or wire-selection rules. This guide covers identification and reading the map; physical viewing side, access, probing, expected electrical readings and replacement steps require the matching workshop information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C162-b00002",
+      "text": "Connector face and harness 14290",
+      "why": "The drawing shows vertically stacked cavity labels within an elongated, rounded housing outline. I use those labels to navigate to the circuit table. The harness heading and adjacent identity row associate the drawing with its connector; the illustration's page orientation alone does not establish a physical probing view."
+    },
+    {
+      "blockId": "connector-C162-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Follow each Cavity row across Circuit Number, Color, Gauge and Function to distinguish the control-module connection from the ground return. Preserve the control function's right-or-common qualification rather than narrowing it to a dedicated circuit. The ground wording names its assigned location, without showing the route or attachment point. Terminal Part Number identifies a terminal separately from the complete service pigtail."
+    },
+    {
+      "blockId": "connector-C162-b00007",
+      "text": "Service-pigtail parts reference",
+      "why": "I read Number and Service Part alongside Engineering Shell to understand the listed connector-and-wire service assembly. Its Gauge field belongs to that pigtail entry; the circuit table retains its own gauge entries. Their difference is not an instruction to resize the vehicle wiring. Material is a catalog description, and the row supplies no installation or splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:25:54.522Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "53101a47661af243fee0e0f658df606c5118f72a81238b2a80327ac23d73c08c",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "33a8f52a17fc6e86eb1ee447f4c37e916187740955e93a41ba5365a1516d0b6e",
+    "reviewedAt": "2026-10-28T00:25:54.522Z"
+  }
+}

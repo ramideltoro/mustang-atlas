@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C1127",
+  "supportingSourceRefs": [],
+  "sourceHash": "c18574531f461b1cebd3264a0931e7db55e3d005f675b2d4bf1c80777a7068b6",
+  "title": "C1127 — Left-hand front side marker lamp connector",
+  "introduction": "I read this connector sheet from identity to shape to circuit: confirm the lamp description, select the harness drawing, then carry its cavity labels into the pin table. Think of the housing outline as the envelope and the cavity labels as the addresses inside it. Looking familiar is only the start of reading it correctly.\n\nThe lamp description identifies the left-hand component, while the ground function names a front-right location. Keep both descriptions as written; this sheet does not show the intervening wire route. It also leaves physical access, viewing direction, test setup and repairs to separate procedures. Gauge conventions and Box, Size and Used codes remain undefined reference fields.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1127-b00002",
+      "text": "Harness 14290 connector face",
+      "why": "The associated drawing shows a rounded housing, an upper rectangular feature and cavity labels arranged side by side. I use those visible features to keep track of the printed view, then follow the labels into the table. They do not establish how the connector sits on the car, how its lock releases or which side to approach with a probe."
+    },
+    {
+      "blockId": "connector-C1127-b00005",
+      "text": "Cavity-to-circuit guide",
+      "why": "Read each row as a connected set: cavity, circuit identifier, wire-color code, gauge entry, function and terminal reference. The function column separates the ground return from the park-lamp relay circuit. The ground location wording does not relocate the lamp. Likewise, a relay function names an electrically switched circuit without proving that its switch is a separate replaceable relay. No circuit condition is verified by this map."
+    },
+    {
+      "blockId": "connector-C1127-b00007",
+      "text": "Service pigtail reference",
+      "why": "The kit entry connects the connector record to the service-parts row. Within that row, Service Part and Engineering Shell identify different catalog references. The pigtail's gauge entry belongs to the service assembly, while the pin table describes the circuit wiring; this page supplies no rule for substituting between them. The image filename points to the named catalog asset, without adding an installation procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:30:16.002Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "bea600c14456ac4b2239caf8d81ea302d8e246be38136054b9da6954b7e08433",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "be39804eaf3e4cbbbc7bff9f28d366c0ca7616eee0d309162df6278d953496a9",
+    "reviewedAt": "2026-10-28T00:30:16.002Z"
+  }
+}

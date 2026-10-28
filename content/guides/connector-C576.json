@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C576",
+  "supportingSourceRefs": [],
+  "sourceHash": "44b341397427e78bf866c819e4ead72e201194c7ae225f0affdc61bb67474cd9",
+  "title": "C576 — LH mirror BLIS / CTA LED connector",
+  "introduction": "This reference identifies the left-hand (LH) exterior mirror LED for blind spot (BLIS) / cross traffic alert (CTA). I read it like an address book for the little warning light: start with the connector identity table, use the drawing to locate the cavity labels, then match those labels to the Cavity column. Each matching row explains the connection's assigned job; it does not prove that connection works.\n\nThe parts table provides a separate service-pigtail reference. Catalog codes and gauge entries remain as printed, without assumed dimensions, units or wire-selection rules. This guide covers identification and reading the map. Physical viewing side, access, probing, test conditions and replacement instructions require the matching workshop information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C576-b00002",
+      "text": "Connector face and harness PIA",
+      "why": "I use the housing outline and vertically stacked cavity labels to navigate the drawing as displayed. Match each label to the table rather than assigning a function from its position alone. The harness label and adjacent identity row keep the illustration associated with the correct connector."
+    },
+    {
+      "blockId": "connector-C576-b00005",
+      "text": "Cavity-to-function map",
+      "why": "Read across a matching Cavity row to distinguish the alert connection from the ground return. Circuit Number identifies a circuit, Color and Gauge describe its listed wiring, and Terminal Part Number is a separate identification field. Here, the asterisks have no supplied definition: they do not identify a wire or authorize filling in missing details. Blank qualifiers and unavailable terminal entries likewise add no test criteria."
+    },
+    {
+      "blockId": "connector-C576-b00007",
+      "text": "Service-pigtail parts reference",
+      "why": "The pigtail is the connector-and-wire service assembly. I read its Number and Service Part fields alongside Engineering Shell to understand the listed association. Keep these distinct from the individual terminal field above. Material and Gauge describe the catalog entry; they are not instructions to grease terminals, select replacement wire or splice the assembly."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:25:54.498Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "7927ecf221e67f920c20311f203021e675eeaa8bc79d5ed3bbee3a8162412362",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "518ddab8f5912e34c5be8730498d011b0923987fa72a8022a08e1c62d9b196ea",
+    "reviewedAt": "2026-10-28T00:25:54.498Z"
+  }
+}

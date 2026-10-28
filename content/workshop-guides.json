@@ -152990,128 +152990,209 @@
       }
     },
     {
-      "title": "Diagnose U0100:00 recorded by a restraints module",
-      "summary": "Determine whether a missing powertrain-module message is intermittent, shared across modules or isolated to one restraints module.",
-      "introduction": "The occupant classification system module (OCSM) and restraints control module (RCM) both use messages from the powertrain control module (PCM) over the high-speed controller area network (HS-CAN). U0100:00 means the reporting module did not receive an expected PCM message. This test uses communication checks and comparisons between modules to establish the appropriate repair route.",
-      "why": "A missing message does not prove the receiving module has failed. Network traffic, intermittent conditions and other recorded module faults must be considered before the test's replacement decisions are valid.",
+      "title": "Interpret recorded U0100:00 results from the OCSM or RCM",
+      "summary": "Use existing technician records to distinguish a non-returning PCM-message code, priority-code referrals and the chart’s conditional new-module destinations.",
+      "introduction": "I’ll follow the recorded evidence through the separate OCSM and RCM branches of Ford’s U0100:00 chart. This article interprets completed technician inspections, scan results and bulletin checks; it does not teach performing those operations or replacing a restraint component.",
+      "why": "The powertrain control module (PCM) sends information over the high-speed controller area network (HS-CAN), the shared communication network between modules. Both the occupant classification system module (OCSM) and restraints control module (RCM) use those messages. The OCSM belongs to the occupant-classification system; the RCM monitors restraint-system inputs and commands appropriate airbags and other deployable restraints when necessary. Either can record U0100:00 when an expected PCM message fails to arrive. Network traffic, the PCM, the OCSM and the RCM are possible causes, while wiring and connector concerns deserve careful attention before module replacement. The useful question is which modules missed the message, and whether they miss it again.",
       "taskType": "diagnostics",
       "difficulty": "specialist",
       "searchTerms": [
-        "U0100:00 restraints module",
-        "RCM lost communication with PCM",
+        "2015 Mustang U0100:00",
         "OCSM lost communication with PCM",
-        "scan tool cannot establish vehicle session"
+        "RCM lost communication with PCM",
+        "Pinpoint Test AD",
+        "restraints module PCM message",
+        "U3003:16 U3003:17"
       ],
       "when": {
-        "summary": "When U0100:00 is recorded by the RCM or OCSM.",
+        "summary": "Use this interpretation when existing records identify U0100:00 in the OCSM or RCM of the covered 2015 Mustang.",
         "notes": [
-          "Keep track of which module originally reported the code; the later comparison depends on that origin."
+          "Record which module originally stored U0100:00. That origin determines which other modules you compare later.",
+          "If both modules originally recorded the code, retain separate records and interpret each corresponding branch.",
+          "This is interpretation of documented results, not active communication testing or symptom-based parts selection."
         ]
       },
       "prepare": [
         {
-          "title": "Arrange module-level scan access",
-          "detail": "Use a diagnostic scan tool capable of establishing a vehicle session, running individual and all-module self-tests, and clearing the selected module's codes."
+          "title": "Start with completed technician records",
+          "detail": "Require documented thorough wiring/connector inspection and verification before A1, the original reporting module, vehicle-session outcome, each reached self-test result, the origin-specific clear–10-second-wait–retest sequence and the applicable OASIS/TSB result. Missing, ambiguous or incomplete evidence leaves that branch unresolved; obtain completed records through the appropriate separate procedure rather than guessing."
         },
         {
-          "title": "Inspect without disturbing the system",
-          "detail": "Thoroughly inspect wiring and connectors before testing. Disconnect or reconnect supplemental restraint system (SRS) components only when expressly instructed."
+          "title": "Keep this work to interpretation",
+          "detail": "Read existing records only. Do not connect a scan tool, change ignition state, inspect or disturb vehicle wiring, clear codes, run self-tests or retrieve OASIS information as part of this article. All diagnostic and new-module destinations below are separate required procedures, not instructions to perform them here."
         },
         {
-          "title": "Read the restraints precautions",
-          "detail": "Pyrotechnic service is restricted to qualified personnel. Never probe deployable-device connectors or move the connected RCM with ignition on. Have access to OASIS Technical Service Bulletins before making a replacement decision."
+          "title": "Retain the restraints boundary",
+          "detail": "SRS servicing and handling is restricted to appropriately qualified personnel under local requirements. Never probe or back-probe deployable-device connectors or tamper with restraint components. This interpretation authorizes no connector disconnection or RCM movement. See [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191)."
+        },
+        {
+          "title": "Do not mistake a communication decision for collision clearance",
+          "detail": "A crash history requires separate collision-restraint inspection and repair records. Damaged RCM/impact-sensor mounting areas require restoration to original configuration and a new original-location component afterward, regardless of airbag deployment. This chart does not certify collision, belt or deployed-restraint repairs complete."
         }
       ],
       "steps": [
         {
-          "title": "Establish scan-tool communication",
-          "body": "With ignition on, connect the scan tool and attempt to establish a vehicle session. If that fails, follow Communications Network diagnosis for loss of PCM communication. If successful, follow the branch for the module that originally stored U0100:00."
+          "title": "A1 — Read the documented vehicle-session result",
+          "body": "First confirm that the required preliminary wiring/connector inspection and verification are documented. If absent or unresolved, stop interpretation. Read the existing record of the ignition-ON scan-tool vehicle-session attempt; do not repeat it here.\n\nIf no session could be established, the separate required destination is [Communications Network diagnosis](#/document/G1813071) for no communication with the PCM. If established, use Step 2 for an OCSM-origin U0100:00 or Step 3 for an RCM-origin code. Unknown origin or missing session evidence stops this branch."
         },
         {
-          "title": "Check whether the original module repeats the fault",
-          "body": "For an OCSM-origin code, perform the OCSM self-test, clear its codes, wait 10 seconds and repeat its self-test. For an RCM-origin code, perform that same sequence on the RCM. If U0100:00 does not return, the system is operating correctly at that time; high network traffic or an intermittent condition may explain the stored code."
+          "title": "A2 — Interpret the OCSM-origin repeat-test record",
+          "body": "Use this step only when the OCSM originally recorded U0100:00. Require records of its self-test, clearing of its DTCs, a 10-second wait and another self-test in that order. Missing sequence evidence does not establish a non-returning code.\n\nIf the recorded U0100:00 returned, continue to Step 4. If it did not return, the source endpoint is system operating correctly at that time; high network traffic or an intermittent fault may explain the prior code. Record that limited outcome, not a new-module decision. No clearing or retesting is performed here."
         },
         {
-          "title": "Check the PCM before comparing receivers",
-          "body": "If U0100:00 returns, perform the PCM key-on, engine-off self-test. Recorded P0562 or P0563 must be diagnosed through the applicable engine procedure before proceeding down the communication replacement path."
+          "title": "A3 — Interpret the RCM-origin repeat-test record",
+          "body": "Use this step only when the RCM originally recorded U0100:00. Require records of its self-test, clearing of its DTCs, a 10-second wait and another self-test in that order. Missing sequence evidence does not establish a non-returning code.\n\nIf the recorded U0100:00 returned, continue to Step 4. If it did not return, the source endpoint is system operating correctly at that time; high network traffic or an intermittent fault may explain the prior code. Record that limited outcome, not a new-module decision. No clearing or retesting is performed here."
         },
         {
-          "title": "Check the originating restraints module's other codes",
-          "body": "Repeat the self-test for the original reporting module: OCSM in A5 or RCM in A6. If U3003:16 or U3003:17 is recorded, follow Pinpoint Test AJ. Otherwise continue to the all-module comparison."
+          "title": "A4 — Read the PCM KOEO self-test record",
+          "body": "Continue only if U0100:00 returned in the originating restraints module. Read the completed PCM key-on, engine-off (KOEO) self-test record for P0562 or P0563. A result without the required test state is insufficient.\n\nEither code directs separate PCM-DTC diagnosis using the engine-matched Group 303 procedure. If neither is recorded, go to Step 5 for an OCSM origin or Step 6 for an RCM origin. Missing PCM results leave the route unresolved."
         },
         {
-          "title": "Compare an OCSM-origin fault",
-          "body": "Run all-module self-tests. If U0100:00 is also recorded by the anti-lock braking system (ABS) module or RCM, A7 points toward PCM replacement. If neither records it, A7 points toward OCSM replacement. Both outcomes require the bulletin check before replacement."
+          "title": "A5 — Read the OCSM additional-code record",
+          "body": "For the OCSM-origin concern, read its completed self-test record for U3003:16 or U3003:17. Either code directs the separate [Pinpoint Test AJ](#/document/G1696405) procedure; do not continue to a new-module destination through this chart.\n\nIf neither code is recorded, continue to Step 7. Missing or ambiguous results stop this branch; do not infer absence from an incomplete report."
         },
         {
-          "title": "Compare an RCM-origin fault",
-          "body": "For an RCM-origin concern, A8 asks whether the ABS module or OCSM also records U0100:00. A shared code points toward PCM replacement; absence from both points toward RCM replacement. Again, check bulletins before acting."
+          "title": "A6 — Read the RCM additional-code record",
+          "body": "For the RCM-origin concern, read its completed self-test record for U3003:16 or U3003:17. Either code directs the separate [Pinpoint Test AJ](#/document/G1696405) procedure; do not continue to a new-module destination through this chart.\n\nIf neither code is recorded, continue to Step 8. Missing or ambiguous results stop this branch; do not infer absence from an incomplete report."
         },
         {
-          "title": "Apply the bulletin and replacement decision",
-          "body": "Check OASIS for an applicable Technical Service Bulletin for every replacement branch. If one applies, discontinue this test and follow it. Otherwise follow the directed replacement route. OCSM replacement is referred through the Occupant Classification System Sensor procedure; RCM replacement has its own procedure. Complete the applicable installation requirements separately."
+          "title": "A7 — Compare the recorded modules for an OCSM origin",
+          "body": "Read the completed all-module self-test records and check whether the ABS module or RCM also recorded U0100:00. Both comparison results must be known; an unreported module is not a negative result.\n\nIf either recorded the code, the no-applicable-bulletin destination is a separate procedure to install a new PCM. If neither did, that destination is a separate procedure to install a new OCSM. Carry this conditional result to Step 9; no replacement is performed here."
+        },
+        {
+          "title": "A8 — Compare the recorded modules for a RCM origin",
+          "body": "Read the completed all-module self-test records and check whether the ABS module or OCSM also recorded U0100:00. Both comparison results must be known; an unreported module is not a negative result.\n\nIf either recorded the code, the no-applicable-bulletin destination is a separate procedure to install a new PCM. If neither did, that destination is a separate procedure to install a new RCM. Carry this conditional result to Step 9; no replacement is performed here."
+        },
+        {
+          "title": "Read the recorded OASIS decision before assigning a repair destination",
+          "body": "Require the existing OASIS/TSB assessment applicable to this concern for every replacement branch. If an applicable bulletin exists, the chart stops and the separate required destination is that bulletin. Missing or unchecked OASIS evidence does not mean no applicable bulletin.\n\nOnly with a documented no-applicable-bulletin result do the source destinations become:\n\n- OCSM origin, U0100:00 also in ABS or RCM: separate installation of a new PCM.\n- OCSM origin, absent from both: separate installation of a new OCSM through [Occupant Classification System Sensor](#/document/G1696305).\n- RCM origin, U0100:00 also in ABS or OCSM: separate installation of a new PCM.\n- RCM origin, absent from both: separate installation of a new RCM through [RCM removal and installation](#/document/G1696307).\n\nA PCM destination requires the vehicle’s engine-matched replacement procedure. This article neither retrieves bulletin information nor performs these repairs."
+        },
+        {
+          "title": "Document the supported interpretation and unresolved evidence",
+          "body": "Record the original module, documented preliminary inspection, session result, origin-specific repeat-test sequence, PCM priority codes, originating-module additional codes and reached all-module comparison. Record the existing bulletin assessment for any replacement endpoint.\n\nState either the source’s limited operating-correctly-at-that-time outcome, the separate diagnostic/repair destination, or the precise missing evidence that prevents selection. A new-module destination is not proof that the vehicle is repaired or that the SRS is safe for service."
         }
       ],
       "watchFor": [
         {
-          "title": "An intermittent result",
-          "body": "A code that does not return supports the test's operating-correctly-at-present outcome, not proof that every intermittent concern has been eliminated."
+          "title": "Do not disturb SRS connections to see what happens",
+          "body": "No SRS disconnection or reconnection is directed by this record interpretation. The primary permits such actions only when an actual pinpoint step instructs them; none of this chart’s scan stages does."
         },
         {
-          "title": "Replacement compatibility",
-          "body": "Verify the Ford part number. Occupant classification components are calibrated assemblies and must remain in the configuration in which they are supplied."
+          "title": "A connector can make electrical contact without being correctly secured",
+          "body": "Deployable-component connectors use connector position assurance (CPA) tabs. These secure the connector and release internal shorting bars, which otherwise bridge the device’s pins. A partially seated tab can leave electrical contact present while the shorting bars remain applied, producing a below-threshold circuit-resistance fault and an illuminated airbag warning indicator. That is context for careful connector inspection, not proof of the cause of U0100:00 or permission to manipulate a powered SRS connector."
+        },
+        {
+          "title": "Do not repair restraint connector terminals",
+          "body": "The separate repair requirement for damaged restraint terminals is a service connector pigtail, not terminal repair. This record review authorizes neither operation and never permits probing deployable-device connectors."
+        },
+        {
+          "title": "Match new restraint parts correctly",
+          "body": "For a separate repair, the source requires Ford catalog part-number verification; apparent physical similarity is insufficient. OCS parts remain calibrated assemblies in their sold configuration and must be protected from contamination. These are repair boundaries, not component-handling steps here."
+        },
+        {
+          "title": "Treat restraint mounting as safety-critical",
+          "body": "This interpretation requires no loosening or handling of the RCM or impact sensors. Separate installation procedures must establish their required fastening torque."
         }
       ],
       "notes": [
-        "This communication test establishes a diagnostic endpoint; it does not supply the separate module installation procedure."
+        "CMDTC means continuous-memory diagnostic trouble code: a stored fault record. Keep the original record distinct from the result obtained after clearing and retesting.",
+        "The [SRS overview](#/document/G1696290) explains the RCM’s role and CPA connector operation. The complete decision sequence is in [Pinpoint Test AD](#/document/G1696399).",
+        "Airbag handling, physical inspection, scanning, ignition changes, deployment, trim removal and lifting are outside this existing-record interpretation."
       ],
       "diagnostics": [
         {
-          "finding": "The OCSM records U0100:00.",
-          "meaning": "The OCSM missed an expected PCM message.",
-          "next": "Use the OCSM repeat-test branch, then compare the ABS module and RCM if the fault persists."
+          "finding": "A scan-tool vehicle session cannot be established at A1.",
+          "meaning": "The test cannot proceed with the required PCM communication access.",
+          "next": "Separate required destination or record decision: Move to [Communications Network diagnosis](#/document/G1813071); do not infer a failed restraints module."
         },
         {
-          "finding": "The RCM records U0100:00.",
-          "meaning": "The RCM missed an expected PCM message.",
-          "next": "Use the RCM repeat-test branch, then compare the ABS module and OCSM if the fault persists."
+          "finding": "U0100:00 does not return in the original module after its self-test, code clearing, 10-second wait and repeated self-test.",
+          "meaning": "The system is operating correctly at this time. High network traffic or an intermittent condition may account for the stored code.",
+          "next": "Separate required destination or record decision: Record the result and end this branch without a module-replacement decision."
+        },
+        {
+          "finding": "U0100:00 returns, and the PCM KOEO self-test records P0562 or P0563.",
+          "meaning": "The PCM-code diagnostic route takes priority over the remaining communication comparison.",
+          "next": "Separate required destination or record decision: Diagnose the recorded PCM DTCs using the applicable engine procedure in Group 303."
+        },
+        {
+          "finding": "The originating OCSM or RCM self-test records U3003:16 or U3003:17.",
+          "meaning": "The test directs this additional fault to a different diagnostic path.",
+          "next": "Separate required destination or record decision: Use [Pinpoint Test AJ](#/document/G1696405) instead of continuing to the replacement comparison."
+        },
+        {
+          "finding": "The original code came from the OCSM, and U0100:00 also appears in the ABS module or RCM.",
+          "meaning": "With the earlier checks satisfied, A7 directs installation of a new PCM if no applicable TSB addresses the concern.",
+          "next": "Separate required destination or record decision: Read the documented OASIS result; if missing, leave the branch unresolved. Follow an applicable bulletin; otherwise obtain the engine-matched PCM replacement procedure for installation of a new PCM."
+        },
+        {
+          "finding": "The original code came from the OCSM, and neither the ABS module nor RCM records U0100:00.",
+          "meaning": "With the earlier checks satisfied, A7 directs installation of a new OCSM if no applicable TSB addresses the concern.",
+          "next": "Separate required destination or record decision: Read the documented OASIS result; if missing, leave the branch unresolved. Follow an applicable bulletin; otherwise use the [Occupant Classification System Sensor repair destination](#/document/G1696305) for installation of a new OCSM."
+        },
+        {
+          "finding": "The original code came from the RCM, and U0100:00 also appears in the ABS module or OCSM.",
+          "meaning": "With the earlier checks satisfied, A8 directs installation of a new PCM if no applicable TSB addresses the concern.",
+          "next": "Separate required destination or record decision: Read the documented OASIS result; if missing, leave the branch unresolved. Follow an applicable bulletin; otherwise obtain the engine-matched PCM replacement procedure for installation of a new PCM."
+        },
+        {
+          "finding": "The original code came from the RCM, and neither the ABS module nor OCSM records U0100:00.",
+          "meaning": "With the earlier checks satisfied, A8 directs installation of a new RCM if no applicable TSB addresses the concern.",
+          "next": "Separate required destination or record decision: Read the documented OASIS result; if missing, leave the branch unresolved. Follow an applicable bulletin; otherwise use the [RCM repair destination](#/document/G1696307) for installation of a new RCM."
+        },
+        {
+          "finding": "An applicable TSB exists, or the OASIS check remains outstanding.",
+          "meaning": "The pinpoint-test replacement instruction cannot yet be acted upon as a no-bulletin outcome.",
+          "next": "Separate required destination or record decision: Follow the applicable bulletin, or obtain the completed bulletin assessment through the separate procedure before selecting a destination."
         }
       ],
       "verification": [
         {
-          "title": "Record the repeat-test outcome",
-          "body": "Record the originating module, whether U0100:00 returned after the specified clearing and waiting sequence, and the other modules that recorded it."
+          "title": "Confirm the repeat-test sequence was completed exactly",
+          "body": "Confirm existing records document the original module self-test, clearing, 10-second wait and repeated self-test in sequence. Missing evidence remains unresolved; do not perform these operations here."
         },
         {
-          "title": "Preserve the decision evidence",
-          "body": "Record the PCM and originating-module self-test results and the applicable bulletin decision. These establish which branch justifies the next repair."
+          "title": "Confirm that the branch matches the original module",
+          "body": "An OCSM-origin concern compares the ABS module and RCM. An RCM-origin concern compares the ABS module and OCSM. Verify that the recorded results support the destination selected."
+        },
+        {
+          "title": "Distinguish a diagnostic endpoint from a repaired vehicle",
+          "body": "A non-returning U0100:00 supports the operating-correctly-at-this-time outcome, not a guarantee against an intermittent recurrence. A replacement or other diagnostic destination identifies the next job; it does not establish that the vehicle has been repaired or that the entire SRS has passed its completion checks."
+        },
+        {
+          "title": "Preserve the basis for a replacement decision",
+          "body": "Before recording any new PCM/OCSM/RCM destination, require documented preliminary inspection, all reached priority-code/comparison stages and the OASIS result. This verifies an interpretation, not an executed diagnostic test or repair."
         }
       ],
       "procedures": [
         {
           "documentId": "G1696399",
-          "purpose": "Complete U0100:00 diagnosis for OCSM and RCM reporting branches."
+          "purpose": "Interpret the complete recorded U0100:00 A1–A8 decision sequence; no active diagnostic execution."
         },
         {
           "documentId": "G1693191",
-          "purpose": "Required pyrotechnic and restraints service precautions."
+          "purpose": "Restraint safety context and boundary for separately required qualified service; no physical handling here."
+        },
+        {
+          "documentId": "G1696290",
+          "purpose": "Explain RCM operation and the function and fault implications of CPA connector tabs."
         },
         {
           "documentId": "G1813071",
-          "purpose": "Network diagnosis when a vehicle session cannot be established."
+          "purpose": "Next-step reference only: network diagnosis when a scan-tool vehicle session cannot be established."
         },
         {
           "documentId": "G1696405",
-          "purpose": "Diagnosis of recorded U3003:16 or U3003:17."
+          "purpose": "Next-step reference only: diagnosis when the originating restraints module records U3003:16 or U3003:17."
         },
         {
           "documentId": "G1696305",
-          "purpose": "Occupant classification sensor assembly removal and installation for the OCSM replacement branch.",
+          "purpose": "Next-step reference only: Occupant Classification System Sensor removal and installation destination when installation of a new OCSM is directed.",
           "mediaId": "G1696305-m0008"
         },
         {
           "documentId": "G1696307",
-          "purpose": "RCM removal and installation when directed.",
+          "purpose": "Next-step reference only: RCM removal and installation destination when installation of a new RCM is directed.",
           "mediaId": "G1696307-m0003"
         }
       ],
@@ -153133,7 +153214,8 @@
         ],
         "years": [
           2015
-        ]
+        ],
+        "equipment": "Supplemental restraint system (SRS) with an occupant classification system module (OCSM), restraints control module (RCM), powertrain control module (PCM) and high-speed controller area network (HS-CAN). Requires existing technician records of the preliminary inspection and each reached diagnostic stage; no live scan, inspection, clearing, retest or repair execution."
       },
       "relatedGuideIds": [
         "job-36ae21c51a8c7550",
@@ -153179,8 +153261,48 @@
         "method": "Codex CLI",
         "humanReviewed": false,
         "version": 1,
-        "fingerprint": "dab1e17382dc07bcea958fad3fc9c3d9a0a951f90cdea09441ab3ec490de04f3"
-      }
+        "fingerprint": "dab1e17382dc07bcea958fad3fc9c3d9a0a951f90cdea09441ab3ec490de04f3",
+        "editorialVersion": 2,
+        "editorialFingerprint": "a5bf6e2ce00b5c0b531b877f73c7951f8c9336d33905b895ccbcc071bdb3dae8",
+        "independentSourceReview": true
+      },
+      "stepGroups": [
+        {
+          "id": "establish-communication",
+          "title": "Review preliminary and session records",
+          "summary": "Require documented inspection and session outcome before branching.",
+          "start": 1,
+          "end": 1
+        },
+        {
+          "id": "repeat-originating-test",
+          "title": "Interpret originating-module repeat records",
+          "summary": "Preserve each module’s clear/wait/retest evidence and limited outcome.",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "check-priority-codes",
+          "title": "Read the priority-code results",
+          "summary": "Keep PCM and originating restraints-module code diversions distinct.",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "compare-and-route",
+          "title": "Compare recorded results and bulletin status",
+          "summary": "Apply correct comparison identities and all OASIS gates.",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "id": "record-diagnostic-endpoint",
+          "title": "Document the interpretation",
+          "summary": "Record the supported destination or missing-evidence stop.",
+          "start": 10,
+          "end": 10
+        }
+      ]
     },
     {
       "title": "Diagnose lost occupant classification communication: U0154:00",

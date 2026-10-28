@@ -1,0 +1,69 @@
+{
+  "documentId": "connector-C216A",
+  "supportingSourceRefs": [],
+  "sourceHash": "5872c658b85bb35c593bdf11f25e6d57d95521687501c7c788795d283b982ee9",
+  "title": "C216A — Driver airbag connector",
+  "introduction": "I use this reference to connect the driver airbag's connector identity, drawing and circuit labels. Start with the identification table, match the harness heading, then use each cavity label to find its circuit row. The drawing supplies the shape; the table supplies the electrical meaning.\n\nThis is a reading guide. Physical access, the viewing direction on the vehicle, electrical test conditions and repair instructions require the matching restraint procedure. The gauge convention and the Box, Size and Used codes are not defined here. Keep those fields as reference labels rather than turning them into specifications.",
+  "requirements": [
+    {
+      "category": "Restraint-system service boundary",
+      "items": [
+        {
+          "name": "Qualified personnel and prescribed preparation",
+          "detail": "Pyrotechnic-component service is restricted to qualified personnel. Before hands-on work, use the restraint-specific depowering, handling, test-equipment and restoration instructions. Consult [Pyrotechnic Device Health and Safety Precautions](#/document/G1693191) and the [SRS overview](#/document/G1696290); this connector reference does not teach those procedures."
+        },
+        {
+          "name": "Keep testing within the restraint diagnostic method",
+          "detail": "Do not substitute a generic jumper or resistance test. Airbags are deployable devices, and their connector assurance tabs and shorting bars affect the electrical configuration. An apparently attached connector alone does not confirm correct engagement."
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "blockId": "connector-C216A-b00002",
+      "text": "Harness 14A664 connector face",
+      "why": "I use the broad housing outline, central curved profile and side notch to recognize the drawing as printed. The cavity labels are stacked vertically. Match those labels to the table rather than assigning positions from memory; rotating a drawing is an easy way to give the right circuit the wrong address. This view does not establish how to approach the connector on the vehicle."
+    },
+    {
+      "blockId": "connector-C216A-b00005",
+      "text": "Cavity-to-circuit guide",
+      "why": "Read across a cavity row to connect its circuit identifier, wire-color code, gauge entry and function. The positive and negative driver-airbag function labels distinguish the paired circuit roles; they do not supply test instructions or acceptable readings. The terminal-part field remains exactly as recorded, without treating an unavailable entry as a repair decision."
+    },
+    {
+      "blockId": "connector-C216A-b00007",
+      "text": "Service pigtail reference",
+      "why": "The kit entry links the identification table to the service-parts row. Read Service Part and Engineering Shell as separate identifiers, and keep the material, gauge and cavity fields with that row. The image filename identifies a referenced asset; the connector-face drawing above serves a different purpose. This catalog information does not teach pigtail installation or authorize an airbag wiring repair."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:30:15.985Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "1f5519fd0b8febc813dfe2cbd29b8d4efc348415e2fc99843fef4af6b2304dcb",
+  "sourcePdfHash": "830f6a450aeba592a6e78704175d217933f05daf7078d3648c231d347a97057e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "e220a37acc74e3c6fcc58cba2d4ff2b8f769197aa27bde9f32a288612d8552c2",
+    "reviewedAt": "2026-10-28T00:30:15.985Z"
+  }
+}

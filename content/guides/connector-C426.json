@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C426",
+  "supportingSourceRefs": [],
+  "sourceHash": "8b614ab6b27d72c47858a078b05ae34ba21e755cb236ac872b57d6b82a4f3ace",
+  "title": "C426 — Right-hand rear wheel speed sensor connector",
+  "introduction": "I begin with CNumber and Description to keep this reference tied to the right-hand rear wheel. That matters because a connector's outline tells only part of its story: the circuit assignments are its name tag. The wheel speed sensor reports wheel rotation for comparison by ABS and stability control.\n\nUse each printed cavity label in the illustration to find its matching Cavity row, then read across for the circuit identifier, wire description, function and terminal reference. The sensor and control-module descriptions identify assigned roles. They do not, by themselves, establish polarity, supply voltage or a chassis-ground connection. Read the pigtail table separately as the service-item record.\n\nThis page completes a connector-map reading task, not an inspection, electrical test or repair. Access, physical viewing side, test conditions and replacement methods are outside its scope. Gauge convention and the meanings of Size and Used remain unspecified; preserve their entries without decoding them. COMPLETE refers to the reference record, not the condition of the installed sensor.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C426-b00002",
+      "text": "Harness 14A005 · Connector face reference",
+      "why": "The rectangular feature above the cavities and the projections on the drawing's left are useful visual landmarks. I use them to read the illustrated cavity labels consistently, without turning the picture into an assumed vehicle viewing direction or latch-release instruction. The identification row beneath it associates the face with the listed shell and harness."
+    },
+    {
+      "blockId": "connector-C426-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The cavity label selects the row; the circuit identifier and Function then explain the connection's assigned identity and role. CTRL MOD. means control module. Keeping those fields together is more informative than relying on color alone. None is a health check: a wheel-speed fault can also involve wiring or the sensor's signal target."
+    },
+    {
+      "blockId": "connector-C426-b00007",
+      "text": "Pigtail service-item lookup",
+      "why": "The pigtail is the connector-and-leads service item. Its Gauge and Material entries belong to that record, while the pin table describes the harness assignments. I distinguish Service Part from Engineering Shell so the listed service item and its shell identity do not become interchangeable labels. This table supplies identification, not a splicing or replacement sequence."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:35:05.574Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4b3c72be238d58b0bb329c75f3cc63bd81c6e3fc887cb144e7f6e8cf54f00666",
+  "sourcePdfHash": "5e1b4e9de4a58047616a172ade8ed9dcc3099718cbc39697b2fe24fe2f80c5a1",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fd656190d23394c7ee56ebf2a3de048c22c6a34fd7545a3a866325f5d8a83154",
+    "reviewedAt": "2026-10-28T00:35:05.575Z"
+  }
+}

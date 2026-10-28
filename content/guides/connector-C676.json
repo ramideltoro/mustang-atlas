@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C676",
+  "supportingSourceRefs": [],
+  "sourceHash": "d9226557440971bdb28730bd0abea6f5b634951bd2eebf2bab60616bccd33ace",
+  "title": "C676 — RH mirror BLIS / CTA LED connector",
+  "introduction": "This reference identifies the right-hand (RH) exterior mirror LED for blind spot (BLIS) / cross traffic alert (CTA). I start with the connector identity table, then match the drawing's cavity labels to the Cavity column. Think of the map as the warning light's mailing address: it tells you where each connection belongs, without confirming that the message arrives.\n\nRead the service-pigtail table separately from the circuit map. Catalog codes and gauge entries stay as printed, without assumed dimensions, units or wire-selection rules. This is an identification guide; physical viewing side, access, probing, electrical test conditions and replacement steps require the matching workshop information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C676-b00002",
+      "text": "Connector face and harness PIA",
+      "why": "The displayed housing outline surrounds vertically stacked cavity labels. I use those labels to find the corresponding rows below, rather than treating top or bottom as an electrical function. The harness heading and adjacent identity row establish which connector the drawing accompanies."
+    },
+    {
+      "blockId": "connector-C676-b00005",
+      "text": "Cavity-to-function map",
+      "why": "Follow each Cavity row across to its Function to separate the alert connection from the ground return. Mirror side and ground-location wording describe different things; retain each as written rather than changing a location to match the title. The asterisks have no supplied definition, so they cannot establish circuit identity, wire color or gauge. Blank qualifiers and unavailable terminal entries supply no additional test information."
+    },
+    {
+      "blockId": "connector-C676-b00007",
+      "text": "Service-pigtail parts reference",
+      "why": "I use Number, Service Part and Engineering Shell to read the catalog's association between the service pigtail and its shell. A pigtail is the connector-and-wire service assembly, distinct from an individual terminal. Its listed material and gauge are descriptive fields, not a replacement decision, grease instruction or splice procedure."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:25:54.507Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "864bf7b7527eddd83d96f5f49340683ee5f462768ec515e0e81ccfea1b243790",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "f7e317a9a0888b50007d7816841999c12dbf49f5dbd7b0f2a0ba52ba3f92cdde",
+    "reviewedAt": "2026-10-28T00:25:54.507Z"
+  }
+}

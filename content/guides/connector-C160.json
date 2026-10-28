@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C160",
+  "supportingSourceRefs": [],
+  "sourceHash": "49269b89dbd4204597123b0d96eff1ca210fd4783a3a7b9e5ef08e335e5b4f7b",
+  "title": "C160 — Right-hand front wheel speed sensor connector",
+  "introduction": "A wheel speed sensor gives ABS and stability control a report on wheel rotation. I use this reference to connect the right-hand front sensor's identity with its cavity and circuit labels. It is a wiring address book: useful for knowing which connection is which, without pretending the address book can tell whether anyone answers the door.\n\nStart with CNumber and Description, then match the illustration's printed cavity labels to the Cavity column. Read each matching row across so its circuit identifier, wire description, function and terminal reference stay together. The sensor and control-module wording identifies assigned roles, not polarity, expected voltage or a chassis-ground connection. The pigtail table describes the listed service item separately from those harness assignments.\n\nThis guide teaches reference reading. It supplies no access, probing, diagnostic test or replacement sequence. The physical viewing side, gauge convention and meanings of Size and Used are unspecified; keep their entries as recorded. COMPLETE describes the reference record and says nothing about whether the installed sensor or wiring works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C160-b00002",
+      "text": "Harness 14290 · Connector face reference",
+      "why": "I use the rectangular feature above the cavity area and the projections on the drawing's left as landmarks while reading the labels. Their position describes the illustration, not the direction from which to approach the installed connector. The shell and harness row anchors this face drawing to its reference identity without establishing a latch-release method."
+    },
+    {
+      "blockId": "connector-C160-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Matching Cavity to the drawing joins the physical label with the circuit's assigned identity. Function explains its role, and CTRL MOD. denotes the control module. The accompanying wire and terminal fields add identification detail, but they do not prove electrical health. Wiring and the signal target remain possible parts of a wheel-speed fault, alongside the sensor."
+    },
+    {
+      "blockId": "connector-C160-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is a connector supplied with wire leads. I read its service-item fields separately from the harness pin table and keep Service Part distinct from Engineering Shell. The Gauge and Material entries describe the pigtail record; they are not instructions for choosing wire, releasing terminals or making a splice."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:35:05.582Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "4b3c72be238d58b0bb329c75f3cc63bd81c6e3fc887cb144e7f6e8cf54f00666",
+  "sourcePdfHash": "7dcee64ae9b68cecb4a9090409b75e5268f079070607071e47bf0782dbd89f1b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "8f4b920aca6cfd859b6ef695a1417cbd43c7b69721e1bd5499de2d8f6090db9f",
+    "reviewedAt": "2026-10-28T00:35:05.582Z"
+  }
+}

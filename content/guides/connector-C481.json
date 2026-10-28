@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C481",
+  "supportingSourceRefs": [],
+  "sourceHash": "10ec31bd03071169d187ad9cdd9d7a44fa656fd62f67c21919c374bb25dbab50",
+  "title": "C481 — Left-hand rear side marker lamp connector",
+  "introduction": "I use this reference as a street map for the lamp’s electrical connection: the housing drawing gives you landmarks, and the cavity labels lead to the circuit information. Start with the identity table, then compare the drawing’s upper latch shape and side-by-side cavities. Match each printed cavity label to the Cavity column and read across that same row for its circuit, wire details and function.\n\nThe shell identifiers connect the identity, connector-face and pigtail tables. They help you follow the catalog relationship without treating every part number as interchangeable. This page explains those relationships; access, electrical testing and replacement need their own instructions. The physical viewing direction, gauge convention and meanings of the Size and Used codes are unspecified here, so keep those entries as reference labels rather than turning them into workshop assumptions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C481-b00002",
+      "text": "Connector face for harness 13412",
+      "why": "The upper latch outline and side-by-side numbered cavities are the drawing’s useful landmarks. I use them to keep the page orientation consistent while matching the drawing to the table. The illustration does not establish whether a physical connector should be viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C481-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "The Cavity column links the drawing to each row; Circuit Number identifies the circuit, while Color, Gauge and Function describe that row. The ground function identifies a return path, and the park-lamp relay function identifies the other circuit’s role. A relay is an electrically controlled switch, but that label alone does not establish a separate plug-in relay or diagnose a lamp fault."
+    },
+    {
+      "blockId": "connector-C481-b00007",
+      "text": "Identify the listed pigtail parts",
+      "why": "A pigtail is the connector with attached wire leads. I compare Engineering Shell with the housing identifiers elsewhere on the page, then distinguish the kit Number from the Service Part entry. The pigtail’s Gauge and Material describe that catalog row; they are not instructions for choosing replacement wire or making a splice."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:30:36.042Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "85beb1b5f4ec8e3291c82044eab118887bf2ba02db63f472ec61a89f8178b827",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "97f6a1d466c9641ae06d1e6f9eb6f3576a000ce3ac78e25dcde11468868124ce",
+    "reviewedAt": "2026-10-28T00:30:36.042Z"
+  }
+}

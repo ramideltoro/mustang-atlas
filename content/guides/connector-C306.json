@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C306",
+  "supportingSourceRefs": [],
+  "sourceHash": "c9874f4abbb340ba7a724dd8e4a8bf3165b977ef4c9293c29ee9d52e0417c460",
+  "title": "C306 — Parking brake switch connector",
+  "introduction": "This reference maps the parking brake switch connector's electrical connections. I start with the identity table, find the cavity labels in the drawing, then follow each matching Cavity row across the pin table. It's a seating chart for the wires: knowing where each belongs is useful, but it doesn't tell you whether the switch is doing its job.\n\nThe pin table separates the switch circuit from its ground return, while the parts table identifies the listed service pigtail. Box, Size and Used remain recorded fields without assumed meanings, and gauge entries are not converted into wire-selection instructions. This guide teaches identification and table reading; physical viewing side, access, probing, switch-state tests and replacement steps require the matching workshop information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C306-b00002",
+      "text": "Connector face and harness 14A005",
+      "why": "I use the displayed housing outline and vertically stacked cavity labels to locate the table rows. The adjacent identity row associates the face with its harness and shell. Keep Box and Size separate: their different field names do not justify treating them as interchangeable codes or physical measurements."
+    },
+    {
+      "blockId": "connector-C306-b00005",
+      "text": "Cavity-to-circuit map",
+      "why": "Read across each Cavity row to connect the illustrated location with Circuit Number, Color, Gauge and Function. This distinguishes the parking brake switch connection from the ground return. Terminal Part Number identifies the listed terminal, not the whole pigtail. These assignments alone establish neither the switch's open or closed state nor the expected reading with the brake applied or released."
+    },
+    {
+      "blockId": "connector-C306-b00007",
+      "text": "Service-pigtail parts reference",
+      "why": "The pigtail is the connector-and-wire service assembly. I read its catalog number, service part and engineering shell together, keeping that assembly information separate from the circuit rows. The pigtail's Gauge field and each circuit's Gauge field describe different entries; do not use this reference to replace one with the other or derive a splice method."
+    }
+  ],
+  "checkedAt": "2026-10-28T00:25:54.514Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d5809c0adf0466230b3b2f3ef0e61a05186afa43a162f20dcf11b31b3ee333e1",
+  "sourcePdfHash": "a5e49a33c8c309b897a2503a33c6bcaf5a603480653b5e76cf1688f86d600c41",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "325342dac5d8e3a1fef373f6002618d99b678ce3d0abeea925cd5bfb990b84f8",
+    "reviewedAt": "2026-10-28T00:25:54.515Z"
+  }
+}
