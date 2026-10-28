@@ -1,0 +1,54 @@
+{
+  "documentId": "connector-C341B",
+  "supportingSourceRefs": [],
+  "sourceHash": "94c053c0bcc62f89afd0060a7c59eb908eea97108cb673f106d259386bac908c",
+  "title": "C341B — Driver Seat Module (DSM) connector",
+  "introduction": "The seat switch, position sensors and movement-control circuits have different jobs, even when their labels describe the same seat motion. I read this connector map like a powered armchair’s dispatch desk: a request to move, a position report and a movement-control connection are separate entries, not interchangeable wires.\n\nStart with the connector identity table, then match a printed cavity label in the tall face drawing to the assignment table. Read across the entire row for its circuit identifier, color, gauge, function and terminal part number. The gray-filled positions correspond to rows with no assigned circuit or function; leave those gaps in place when following the labels. The table also identifies the battery-logic supply and a ground connection, but their presence on paper does not demonstrate that either works on the car.\n\nThis page explains the connector reference. Access, release, physical viewing direction, probing, test limits and repair methods need applicable service information. Gauge convention and the Size and Used code definitions are not supplied, so these entries remain as printed without added interpretations.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C341B-b00002",
+      "text": "Harness 14D231 connector face",
+      "why": "I use the tall housing outline, upper-left corner detail and housing structure along the drawing’s left edge to keep my place. The cavity groups are staggered, so follow their printed labels rather than treating the face as a regular grid. These are drawing landmarks; they do not establish which physical side of the connector faces the viewer."
+    },
+    {
+      "blockId": "connector-C341B-b00005",
+      "text": "Cavity-to-circuit assignments",
+      "why": "Cavity identifies a location on the face drawing; Circuit Number identifies the electrical circuit. Function distinguishes switch requests, position sensing, movement-control connections, supply and ground. Similar motion descriptions do not make those roles interchangeable. Read Terminal Part Number on the same row rather than assuming every occupied cavity uses the same terminal. A blank assignment is a gap in this reference, not evidence of a fault or an invitation to add a connection."
+    }
+  ],
+  "checkedAt": "2026-10-28T07:24:38.018Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 2,
+    "receivedBlocks": 2,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "7c75d503c0e1556c9317cceab2c60faf43471d37e3f311ecb188b46334d11cdb",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 45,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b2512a882306f838281cc99be9a0be1a76bb1ba89c41fefa79ffc9ea46a055e6",
+    "reviewedAt": "2026-10-28T04:16:15.204Z",
+    "editorialRevision": {
+      "kind": "source-figure-backed-neutral-geometry",
+      "scope": "Sole public change latch structure along to housing structure along in firstwhy. All45 units/raw/tables/context/author/verdict/final prose and originalcompletepage1 solefigure read; original full independent review preserved."
+    }
+  }
+}
