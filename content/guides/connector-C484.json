@@ -1,0 +1,66 @@
+{
+  "documentId": "connector-C484",
+  "supportingSourceRefs": [],
+  "sourceHash": "67dee20c9d291e9097beeff5e2d78ab8cb6c6be12fb0fc74a64987993f073567",
+  "title": "C484 — Left rear speaker connector (LH)",
+  "introduction": "This reference maps the left rear speaker connector to its woofer circuits and associated pigtail listings. I check identity before following the cavity labels into the table: a familiar-looking shell is only the cover of the book, while the circuit assignments tell the useful story.\n\nUse Cavity to link the drawing to each row, then read across for circuit identity, color, gauge, function and terminal information. The shaded middle positions align with rows that carry no assigned circuit or function. The populated rows distinguish the woofer’s positive and negative connections.\n\nThe page supports reading the connector map and parts relationships. It does not establish physical viewing direction, speaker access, electrical test conditions, wire-selection rules or replacement steps. Gauge conventions and undefined catalogue codes remain uninterpreted reference entries.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C484-b00002",
+      "text": "Harness 14A005 connector face",
+      "why": "I navigate the illustration using its vertical cavity labels, shaded middle positions and housing projection on the left. These features describe the displayed drawing, without establishing a mating-side or wire-side view of the physical connector. Comparing Hard Shell and Fpn adds a separate check of the identity shown."
+    },
+    {
+      "blockId": "connector-C484-b00005",
+      "text": "Cavity assignments and speaker polarity",
+      "why": "The Function column identifies the left rear woofer’s positive and negative circuits. Read each complete row so that its polarity stays associated with its own circuit, wire description and terminal entry. The blank middle circuit rows agree with the shaded positions in the drawing. Neither those blanks nor a polarity label establishes a fault or a chassis-ground connection."
+    },
+    {
+      "blockId": "connector-C484-b00007",
+      "text": "Pigtail parts reference",
+      "why": "The Engineering Shell field associates the pigtail listing with the connector shell, while Service Part identifies the listed service item. I keep the pigtail’s Gauge and Material entries attached to that listing; they do not explain how to select replacement wire or install the pigtail."
+    },
+    {
+      "blockId": "connector-C484-b00009",
+      "text": "European pigtail product reference",
+      "why": "The European section provides a Product Id for the parts reference. It adds no installation sequence or further configuration distinction, so the identifier alone cannot settle a replacement decision."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:49:26.047Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "c14e1085cc91d6740da3a498a47a12fe9578466e753c16ddcc015764e9ca0d9f",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9161f4600de408c824a9288e6572ebb7a123d10c64a0f00314de4e04a9fa0ca4",
+    "reviewedAt": "2026-10-28T02:11:32.230Z",
+    "editorialRevision": {
+      "scope": "Narrow source-figure-backed neutral feature label; no release action or physical viewing-side inference. Original full reviews preserved.",
+      "before": "I navigate the illustration using its vertical cavity labels, shaded middle positions and latch outline on the left. These features describe the displayed drawing, without establishing a mating-side or wire-side view of the physical connector. Comparing Hard Shell and Fpn adds a separate check of the identity shown.",
+      "after": "I navigate the illustration using its vertical cavity labels, shaded middle positions and housing projection on the left. These features describe the displayed drawing, without establishing a mating-side or wire-side view of the physical connector. Comparing Hard Shell and Fpn adds a separate check of the identity shown.",
+      "baseSha": "aff9e8e1950335c5e098a1b02622d78f24188f0ac669380a32385dc428da4ae2"
+    }
+  }
+}

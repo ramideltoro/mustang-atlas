@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C505",
+  "supportingSourceRefs": [],
+  "sourceHash": "efd9a7a40280f1dc8e76b4d479246fe977ad26ee1644aaa2e3185d8aad719242",
+  "title": "C505 — Front door lock switch LH connector",
+  "introduction": "The left-hand front door lock switch has separate circuit entries for its protected feed, ground, unlock function and lock function. I use this page as the switch's address book: match the component and harness identity, find a cavity label in the drawing, then read its table row across. The circuit identifier, color code and Function description work together to tell you which connection you are reading.\n\nThe map identifies connections and service-part references. It does not establish switch contact behavior, physical viewing direction, access, probing conditions, test limits or a replacement method. Those need the matching workshop procedure. Gauge conventions and the Size code remain undefined here; Used and Status are reference fields, not proof that the switch works.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C505-b00002",
+      "text": "Connector-face map · Harness 14631",
+      "why": "The illustration shows the cavity labels stacked vertically beside the housing features. I use that arrangement to navigate the drawing and its matching rows. The illustration has no viewing-side label, so its page layout alone cannot establish a physical probing direction."
+    },
+    {
+      "blockId": "connector-C505-b00005",
+      "text": "Read the lock-switch circuit assignments",
+      "why": "The Function descriptions distinguish the feed and ground from the separate lock and unlock connections. The feed wording leaves a fuse-or-circuit-breaker alternative open. These labels describe circuit roles; they do not specify which contacts close when the switch is operated or prove that a labeled ground path is electrically sound."
+    },
+    {
+      "blockId": "connector-C505-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail combines the connector with short wire leads. Read its Service Part and Engineering Shell as distinct references, and keep the circuit table's Terminal Part Number associated with the individual terminal. Different gauge entries in the circuit and pigtail tables are separate catalog data, without a supplied wire-selection or splicing method."
+    },
+    {
+      "blockId": "connector-C505-b00009",
+      "text": "European pigtail product reference",
+      "why": "The regional Product Id belongs to this European pigtail listing. It adds a catalog reference without defining fitting steps or equivalence to other service parts."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:58:00.968Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "2c975fafa1d2e5657825e8a5bf8fc1c1b6227bdf3c1590abc6bcc3c984fd0aa6",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "b5f1872ccd30d1ef3fd690fb4dc9c2483f03672325583998269a721bd3739a40",
+    "reviewedAt": "2026-10-28T02:16:57.234Z",
+    "editorialRevision": {
+      "scope": "Narrow neutral feature-label correction after complete36unit/raw/table/fullprose/verdict and originalpage2figure read; no physicalrelease inference.",
+      "before": "The illustration shows the cavity labels stacked vertically beside the latch features. I use that arrangement to navigate the drawing and its matching rows. The illustration has no viewing-side label, so its page layout alone cannot establish a physical probing direction.",
+      "after": "The illustration shows the cavity labels stacked vertically beside the housing features. I use that arrangement to navigate the drawing and its matching rows. The illustration has no viewing-side label, so its page layout alone cannot establish a physical probing direction."
+    }
+  }
+}

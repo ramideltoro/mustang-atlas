@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4009",
+  "supportingSourceRefs": [],
+  "sourceHash": "71cdd3da2fed214480176d1b131b0b819b37469093eeda352c78bdc996c8819f",
+  "title": "C4009 — Rear outer parking aid sensor LH connector",
+  "introduction": "For the left-hand rear outer parking aid sensor, the component's position matters as much as the connector's shape. I start with the description and harness identity, then match the drawing's cavity labels to the table. Think of the Function column as the address on the parking sensor's mail: it distinguishes the position-specific sensor circuit from the control-module connections.\n\nRead each row across for its circuit identifier, color code, gauge entry and terminal reference. This is an identification map and parts reference. Physical viewing direction, access, probing setup, expected readings and repair methods require the matching workshop procedure. The Gauge convention and Size code are not defined here; reference flags do not establish electrical health.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4009-b00002",
+      "text": "Connector-face map · Harness 13412",
+      "why": "In the displayed drawing, the housing feature sits above the horizontal row of cavity labels. I use the printed labels to connect the illustration to the table rather than assuming numbering runs in reading order. This describes the displayed image; no physical mating-side or wire-side view is specified."
+    },
+    {
+      "blockId": "connector-C4009-b00005",
+      "text": "Read the left-outer sensor circuit assignments",
+      "why": "The position-specific Function description identifies the left outer sensor connection, while the other descriptions retain the control module's positive and negative rear-sensor labels. Those signs do not supply a voltage specification or identify a chassis-ground test point. A matching row establishes the documented connection, not whether the sensor or circuit passes a test."
+    },
+    {
+      "blockId": "connector-C4009-b00007",
+      "text": "Pigtail service-part references",
+      "why": "A pigtail is a connector with short wire leads. The listed entries share an Engineering Shell reference but retain distinct Service Part references. No selection rule or interchangeability statement resolves those alternatives here. Keep the individual terminal reference and circuit gauge entries separate from the pigtail catalog fields; this table does not teach wire selection or installation."
+    }
+  ],
+  "checkedAt": "2026-10-28T03:03:19.472Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "022a30b1dd56d659bf2a1399a198c512a00bffee7d519eea122d603b00c8deb0",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "2e4d36814ad944004bfb1f32f4f374159dc0f87b1bb277e4d816e34dc916b774",
+    "reviewedAt": "2026-10-28T02:16:57.241Z",
+    "editorialRevision": {
+      "scope": "Narrow neutral feature-label correction after complete32unit/raw/table/fullprose/verdict and originalpage2figure read; no physicalrelease inference.",
+      "before": "In the displayed drawing, the latch feature sits above the horizontal row of cavity labels. I use the printed labels to connect the illustration to the table rather than assuming numbering runs in reading order. This describes the displayed image; no physical mating-side or wire-side view is specified.",
+      "after": "In the displayed drawing, the housing feature sits above the horizontal row of cavity labels. I use the printed labels to connect the illustration to the table rather than assuming numbering runs in reading order. This describes the displayed image; no physical mating-side or wire-side view is specified."
+    }
+  }
+}

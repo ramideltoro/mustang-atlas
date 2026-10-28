@@ -1,0 +1,65 @@
+{
+  "documentId": "connector-C3312",
+  "supportingSourceRefs": [],
+  "sourceHash": "fffb426c4fdcf78b857995b2d2c398e229fcc8a9f87f343df783cd97665c1ded",
+  "title": "C3312 — Audio input socket connector",
+  "introduction": "I read this audio-input reference like a stereo seating plan: the drawing locates each cavity, and the matching table row explains its electrical role. Start with the component description and harness identity, then match a drawn cavity label to the Cavity column. Read across to connect the circuit identifier, wire-color code, gauge entry, function and terminal reference. The shaded position corresponds to the row without an assigned circuit; that vacant seat is not evidence of a fault.\n\nThis page supports identification and understanding of the connector map. Physical viewing direction, access, probing conditions, test limits and replacement methods require the matching workshop procedure. The Gauge convention and Size code are not defined here, and catalog entries are not electrical test results.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3312-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "The displayed drawing places the cavity labels in a vertical column, with housing features to the left. I use those features to keep my place on the illustration. Their position on the page does not establish whether a physical connector should be viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C3312-b00005",
+      "text": "Read the cavity-to-circuit assignments",
+      "why": "The Function column separates the right and left audio inputs from the connection described as left or common. Keep that wording intact rather than treating every negative-marked audio connection as chassis ground. The blank circuit fields and shaded position agree; neither calls for inventing an extra wire."
+    },
+    {
+      "blockId": "connector-C3312-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "A pigtail is a connector with short wire leads for a wiring repair. Its Service Part and Engineering Shell fields serve different identification purposes, while Terminal Part Number in the circuit table refers to the individual terminal. The pigtail gauge entry does not replace the circuit-row gauge entry or establish a wire-selection rule."
+    },
+    {
+      "blockId": "connector-C3312-b00009",
+      "text": "European pigtail product reference",
+      "why": "This regional table provides a Product Id. Keep it associated with the European pigtail listing; it supplies no additional fitting instructions or interchangeability criteria."
+    }
+  ],
+  "checkedAt": "2026-10-28T02:53:05.336Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "d90ae1991871a65a92ae5cfbf72848e7870171e38979ad052abde8ec1bd73e13",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "aa035170dbe3a192bac92ba77dba4c28c9fad0e5868c50f674b90f1d2461391b",
+    "reviewedAt": "2026-10-28T02:16:57.227Z",
+    "editorialRevision": {
+      "scope": "Narrow neutral feature-label correction after complete36unit/raw/table/fullprose/verdict and originalpage2figure read; no physical release inference.",
+      "before": "The displayed drawing places the cavity labels in a vertical column, with latch features to the left. I use those features to keep my place on the illustration. Their position on the page does not establish whether a physical connector should be viewed from its mating side or wire side.",
+      "after": "The displayed drawing places the cavity labels in a vertical column, with housing features to the left. I use those features to keep my place on the illustration. Their position on the page does not establish whether a physical connector should be viewed from its mating side or wire side."
+    }
+  }
+}
