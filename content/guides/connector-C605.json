@@ -1,0 +1,114 @@
+{
+  "documentId": "connector-C605",
+  "sourceHash": "321c6d0422749fdaaa0a23fc57017b4e8d4544fe1110f2e5e9c84cfacf357306",
+  "title": "C605 — Front door lock switch RH",
+  "introduction": "I use this reference as the right-hand front door lock switch’s address book. The connector identity table establishes which component the page concerns; the drawing locates its cavity labels; the assignment table connects those labels to circuit descriptions. Even a humble lock button has quite a contacts list.\n\nStart with the connector identity, then find a cavity label in the drawing and follow that label into the assignment table. Read each row across: Circuit Number identifies the circuit, Color records its wire-color code, and Function describes its role. Keep the gauge and terminal information attached to that same row. Repeated cavity labels represent additional entries for an already labeled position; they do not establish additional physical openings or show that every listed circuit applies together.\n\nThis is a reference-reading guide. Viewing direction, gauge convention and the meanings of the Box, Cols, Size and Used codes are unspecified. Blank qualifiers do not resolve the repeated entries. Access, probing, electrical tests and replacement require separate instructions. The overview’s Pin Count also differs from the drawing’s labeled positions and the pigtail Cavities entry; that discrepancy remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C605-b00002",
+      "text": "Harness 14630 connector face",
+      "why": "I use the vertical column of cavity labels and the housing projections to recognize the drawing’s layout. The numbering runs downward on the page, beside the broader housing features at left. These are illustration directions, not an established view from the wire-entry or mating side. The unlabeled projections do not identify a release mechanism."
+    },
+    {
+      "blockId": "connector-C605-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The Function column separates passenger lock, unlock and illumination entries from driver-labeled lock and handle-unlock entries, a ground path, a passenger-window-switch return and a fuse-or-circuit-breaker supply. Those descriptions explain the entries’ stated jobs without proving which repeated rows belong to a particular vehicle configuration. I keep every entry visible and avoid combining circuits merely because their cavity labels match."
+    },
+    {
+      "blockId": "connector-C605-b00007",
+      "text": "Pigtail service identification",
+      "why": "A pigtail is the connector-and-lead assembly used in wiring service. This table provides its catalog identification, lead information, material and engineering-shell association. I distinguish Service Part from Engineering Shell because the table gives them separate roles. These identifiers support a parts lookup; they do not teach terminal removal, splicing or replacement-wire selection."
+    },
+    {
+      "blockId": "connector-C605-b00009",
+      "text": "European pigtail identification",
+      "why": "The Product Id provides the European catalog reference. It is a lookup identifier, without an accompanying installation method or application breakdown."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:55:51.392Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "1f2100c2cb77098addc1935c30c7577b37459724ea80d6ba64ccee0e5caeab41",
+    "reviewedAt": "2026-10-29T01:54:50.843Z",
+    "coveredUnitIds": [
+      "connector-C605:u1",
+      "connector-C605:u2",
+      "connector-C605:u3",
+      "connector-C605:u4",
+      "connector-C605:u5",
+      "connector-C605:u6",
+      "connector-C605:u7",
+      "connector-C605:u8",
+      "connector-C605:u9",
+      "connector-C605:u10",
+      "connector-C605:u11",
+      "connector-C605:u12",
+      "connector-C605:u13",
+      "connector-C605:u14",
+      "connector-C605:u15",
+      "connector-C605:u16",
+      "connector-C605:u17",
+      "connector-C605:u18",
+      "connector-C605:u19",
+      "connector-C605:u20",
+      "connector-C605:u21",
+      "connector-C605:u22",
+      "connector-C605:u23",
+      "connector-C605:u24",
+      "connector-C605:u25",
+      "connector-C605:u26",
+      "connector-C605:u27",
+      "connector-C605:u28",
+      "connector-C605:u29",
+      "connector-C605:u30",
+      "connector-C605:u31",
+      "connector-C605:u32",
+      "connector-C605:u33",
+      "connector-C605:u34",
+      "connector-C605:u35",
+      "connector-C605:u36",
+      "connector-C605:u37",
+      "connector-C605:u38",
+      "connector-C605:u39",
+      "connector-C605:u40"
+    ],
+    "originalAuthorHold": [
+      "The overview Pin Count differs from the labeled positions in the connector drawing and the pigtail Cavities entry. The evidence does not define this discrepancy, so the overview value cannot be presented as a confirmed physical cavity count."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 40 primary units, three complete source pages and sole figure, and 4 edits. Count, driver/passenger labels and ground/window-return relationship ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "1acf022124dc658385814d496b10480c1a1aaff62b0998dfab54b051cd3598ed"
+    }
+  }
+}

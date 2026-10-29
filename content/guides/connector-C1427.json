@@ -1,0 +1,114 @@
+{
+  "documentId": "connector-C1427",
+  "sourceHash": "da6d5f393cad150a0ac54b1651ed53bcf160d304069c2184a482fc8df22729cc",
+  "title": "C1427 — Manifold absolute pressure/intake air temperature 2 (MAP/IAT2) sensor",
+  "introduction": "The sensor’s name is a mouthful; this reference gives its wiring a filing system. I begin with the connector identity table, use the drawing to locate cavity labels, then read the matching assignment rows to understand the stated circuit roles. That connects the component name to its electrical references without guessing how a healthy sensor should measure.\n\nRead Cavity, Circuit Number, Color and Function together, keeping Gauge and Terminal Part Number with their original row. Each labeled cavity has repeated circuit entries that differ in gauge. Their blank qualifiers do not identify the application of either entry, so this guide preserves both without selecting wire or treating the repetition as extra physical positions. Keep the engine qualifiers in the function descriptions exactly as written; they do not establish this page’s engine applicability.\n\nThe sheet leaves viewing direction, gauge convention and the Box, Cols, Size and Used codes undefined. It provides identification rather than access, probing, test limits or replacement instructions. The overview’s Pin Count differs from the drawing’s labeled positions and the pigtail Cavities entry; that discrepancy remains open.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1427-b00002",
+      "text": "Harness 12C508 connector face",
+      "why": "The cavity labels form a vertical stack whose numbering runs upward in the illustration. I use that order and the housing projection at left to keep the page layout straight. Neither the projection’s mechanical function nor a wire-entry-versus-mating-side viewing direction is identified, so this drawing alone cannot establish a physical probing orientation."
+    },
+    {
+      "blockId": "connector-C1427-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "The Function column distinguishes a powertrain signal return, a powertrain voltage reference and sensor entries marked with opposite signs. Those are circuit descriptions, not specified test readings. In particular, the signal-return label does not authorize treating that circuit as a chassis-ground connection. The paired gauge entries retain the same circuit, color, function and terminal identification; their repetition does not establish a connection arrangement."
+    },
+    {
+      "blockId": "connector-C1427-b00007",
+      "text": "Pigtail service identification",
+      "why": "This table identifies the service pigtail, meaning the connector-and-lead assembly, and records its lead information, material and engineering shell. I keep the pigtail’s gauge field separate from the assignment table’s gauge entries: neither field supplies a rule for choosing replacement wire. The material description is catalog information, not an instruction to apply grease."
+    },
+    {
+      "blockId": "connector-C1427-b00009",
+      "text": "European pigtail identification",
+      "why": "The Product Id supplies the European catalog reference. It supports identification without establishing vehicle applicability or a replacement procedure."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:56:10.324Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 40,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "463815f975efeb71e033f97899d10daba86c2ea339718f65459c7ff4d51c5506",
+    "reviewedAt": "2026-10-29T01:55:38.441Z",
+    "coveredUnitIds": [
+      "connector-C1427:u1",
+      "connector-C1427:u2",
+      "connector-C1427:u3",
+      "connector-C1427:u4",
+      "connector-C1427:u5",
+      "connector-C1427:u6",
+      "connector-C1427:u7",
+      "connector-C1427:u8",
+      "connector-C1427:u9",
+      "connector-C1427:u10",
+      "connector-C1427:u11",
+      "connector-C1427:u12",
+      "connector-C1427:u13",
+      "connector-C1427:u14",
+      "connector-C1427:u15",
+      "connector-C1427:u16",
+      "connector-C1427:u17",
+      "connector-C1427:u18",
+      "connector-C1427:u19",
+      "connector-C1427:u20",
+      "connector-C1427:u21",
+      "connector-C1427:u22",
+      "connector-C1427:u23",
+      "connector-C1427:u24",
+      "connector-C1427:u25",
+      "connector-C1427:u26",
+      "connector-C1427:u27",
+      "connector-C1427:u28",
+      "connector-C1427:u29",
+      "connector-C1427:u30",
+      "connector-C1427:u31",
+      "connector-C1427:u32",
+      "connector-C1427:u33",
+      "connector-C1427:u34",
+      "connector-C1427:u35",
+      "connector-C1427:u36",
+      "connector-C1427:u37",
+      "connector-C1427:u38",
+      "connector-C1427:u39",
+      "connector-C1427:u40"
+    ],
+    "originalAuthorHold": [
+      "The overview Pin Count differs from the labeled positions in the connector drawing and the pigtail Cavities entry. The evidence does not explain what the overview count represents; it must not be silently reconciled with the illustrated cavity count."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 40 primary units, three complete source pages and sole figure, and 4 edits. Count and paired-gauge applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "52434136f3e93ccd4125ab2ac718603d05dff2958b3829376ecf0a64b822f5df"
+    }
+  }
+}

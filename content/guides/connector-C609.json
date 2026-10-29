@@ -1,0 +1,116 @@
+{
+  "documentId": "connector-C609",
+  "sourceHash": "e74e1c75e2e04dc163b0d31cb7a26659c5a6a0b95d3b363d10e00c37c2a5cb4b",
+  "title": "C609 — Front door latch release motor RH",
+  "introduction": "I use this sheet to read the right-hand front door latch release motor’s connector: which entries carry lock commands, which describe latch-switch information, and which describe ground. The function descriptions matter as much as the housing shape. A connector outline is the envelope; the circuit map tells you which message belongs inside.\n\nStart with the identification table, find a cavity label in the illustration, and follow the matching Cavity row across the circuit table. Keep the passenger-unlock description’s exclusion of the driver intact when interpreting that function. Shaded positions correspond to blank circuit rows, including the continuation above the pigtail listing. The repeated ground/trim-switch cavity entry and the metadata count conflict remain unresolved.\n\nThis guide supports reading the map and its service listings. Physical viewing direction, gauge convention and catalog-code meanings are unspecified. It provides no access, probing, test, wire-selection or replacement procedure, and the circuit names alone cannot diagnose a fault.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C609-b00002",
+      "text": "Cavity layout · Harness 14630",
+      "why": "The elongated rounded housing contains a vertical run of cavity labels, with projections along its left edge. Shaded positions correspond to blank circuit/function entries; outlined positions correspond to populated entries. These are useful landmarks within the drawing. The projections have no stated release function, and the viewing side is not identified, so neither feature establishes how to release or probe a physical connector."
+    },
+    {
+      "blockId": "connector-C609-b00005",
+      "text": "Read the passenger latch circuit map",
+      "why": "Read Function with Circuit Number to separate passenger-door unlock control, explicitly excluding the driver, from all-lock control, ground, the passenger trim door-lock switch connection, latch unlock and latch ajar. Those names describe different roles rather than interchangeable motor feeds. The repeated cavity label has ground and trim-switch entries without a configuration qualifier, leaving their relationship unresolved. Include the continued blank cavity row before the service-parts section when reading the complete map."
+    },
+    {
+      "blockId": "connector-C609-b00007",
+      "text": "Read the pigtail service listing",
+      "why": "I connect Kit List with Number and Hard Shell with Engineering Shell before reading the service identifier. Image names the associated image file. Keep the pigtail’s Gauge, Material and Cavities fields attached to that service listing; they do not establish replacement wire choices or override individual circuit information. Connector replacement and terminal installation are outside this reference."
+    },
+    {
+      "blockId": "connector-C609-b00009",
+      "text": "European pigtail identification",
+      "why": "Product Id is the identifier in the separate European service listing. Read it in that regional context; the table alone does not establish vehicle applicability, interchangeability with the preceding service identifier or a fitting procedure."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T02:02:07.376Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 41,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "2aaff0198bb6a43705e35f504c5ac872bb38768f14ab472c2d2d5ca861257583",
+    "reviewedAt": "2026-10-29T02:01:40.949Z",
+    "coveredUnitIds": [
+      "connector-C609:u1",
+      "connector-C609:u2",
+      "connector-C609:u3",
+      "connector-C609:u4",
+      "connector-C609:u5",
+      "connector-C609:u6",
+      "connector-C609:u7",
+      "connector-C609:u8",
+      "connector-C609:u9",
+      "connector-C609:u10",
+      "connector-C609:u11",
+      "connector-C609:u12",
+      "connector-C609:u13",
+      "connector-C609:u14",
+      "connector-C609:u15",
+      "connector-C609:u16",
+      "connector-C609:u17",
+      "connector-C609:u18",
+      "connector-C609:u19",
+      "connector-C609:u20",
+      "connector-C609:u21",
+      "connector-C609:u22",
+      "connector-C609:u23",
+      "connector-C609:u24",
+      "connector-C609:u25",
+      "connector-C609:u26",
+      "connector-C609:u27",
+      "connector-C609:u28",
+      "connector-C609:u29",
+      "connector-C609:u30",
+      "connector-C609:u31",
+      "connector-C609:u32",
+      "connector-C609:u33",
+      "connector-C609:u34",
+      "connector-C609:u35",
+      "connector-C609:u36",
+      "connector-C609:u37",
+      "connector-C609:u38",
+      "connector-C609:u39",
+      "connector-C609:u40",
+      "connector-C609:u41"
+    ],
+    "originalAuthorHold": [
+      "The metadata Pin Count conflicts with the cavity count shown by both the illustration and the pigtail Cavities entry. The supplied evidence does not reconcile them.",
+      "A repeated cavity label carries differing ground and passenger trim-switch circuit entries, with blank Qualifier fields. Their configuration applicability and connection relationship remain unresolved."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 41 primary units, three complete source pages and sole figure, and 4 edits. Count and repeated ground/trim-switch relationship ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "d2895437cc9ec44a1bd513c514d571a617f6365ea1bd1966f0ab54f5a33898a0"
+    }
+  }
+}
