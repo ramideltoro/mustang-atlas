@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C3034",
+  "supportingSourceRefs": [],
+  "sourceHash": "86ab13652af2bdb777be84c039e440362fccdf3578509727ae6c44bc12bb74d8",
+  "title": "C3034 — Front seat backrest blower motor LH",
+  "introduction": "This reference identifies the left-hand front-seat backrest blower motor connector. I start with that identity, then read each circuit's own Function label: the table includes driver back-heater and fan pairs, passenger-indicator entries and a driver-side seat-heater switch entry. A shared housing is like a shared apartment building—each circuit still needs its own address and job description.\n\nUse the cavity labels in the drawing to find the corresponding table rows, then read across for the circuit, wire description, function and terminal reference. The shaded drawing position corresponds to the row with blank circuit details and no terminal assignment. I leave that position unassigned rather than filling the gap by analogy with its neighbors. The passenger labels remain as written; the connector title does not explain their relationship to the named motor.\n\nThis is a connector-reading reference. Physical access, viewing direction, release movements, electrical tests and replacement methods require applicable service information. Gauge conventions and the meanings of Size and Used are not defined here, so these records do not establish wire selection or test conditions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3034-b00002",
+      "text": "Connector face for harness 14D232",
+      "why": "I use the asymmetrical housing outline to keep the illustration oriented. The cavity labels increase upward within each column, continuing in the other column rather than across each row. The shaded position provides a useful cross-check against the blank circuit record. Housing projections are visual landmarks only; their locking functions and the physical viewing direction are unspecified."
+    },
+    {
+      "blockId": "connector-C3034-b00005",
+      "text": "Read the cavity and function map",
+      "why": "The driver back-heater pair and driver fan pair have separate positive and negative labels. I keep those pairings distinct from the passenger-indicator high and low entries and the driver-side switch entry. Those labels identify different roles; they do not make every negative entry a chassis ground or establish operating voltages. The terminal-part column belongs to each individual row."
+    },
+    {
+      "blockId": "connector-C3034-b00007",
+      "text": "Pigtail and engineering-shell reference",
+      "why": "A pigtail is the connector with attached wire leads. I use the service-part and engineering-shell fields to distinguish the replacement assembly's recorded identity from its housing identity. Its gauge and cavity entries describe the pigtail record; they do not replace the individual circuit records or supply a splice, terminal-release or installation method."
+    }
+  ],
+  "checkedAt": "2026-10-28T23:57:16.741Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "71fb1d97363181a6d66ec3dc78564155cd7ea4e6d9f70798b98c67eb29c01b22",
+  "sourcePdfHash": "53ad9484685d41f843a608649fd5454c409241c9a787697b2b088d5cefa54e62",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 36,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "bb86a3fb8f6a60d49fa48636ecdc76c4bb12a8aaca6af1fe84164b113fc4248e",
+    "reviewedAt": "2026-10-28T23:57:16.741Z"
+  }
+}

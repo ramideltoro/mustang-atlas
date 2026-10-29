@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C4425",
+  "supportingSourceRefs": [],
+  "sourceHash": "de4f2f34f37059a764ad7eda7e399290d12baa2a7fb6b5c92d14e513b7033bcf",
+  "title": "C4425 — Heated Rear Window Element Connector",
+  "introduction": "I use this reference to connect the heated rear window element's connector identity, drawing and circuit labels. Start with the identification table, match the drawn housing features, then carry each drawing label into the Cavity column of the pin-assignment table. That label is the address that keeps the circuit information attached to the right place.\n\nRead across each assignment for its circuit identifier, color code, recorded gauge, function and terminal part number. The service-parts tables provide catalog cross-references, including a separate European listing. This is a reading guide: access, physical viewing direction, electrical test conditions and replacement instructions are outside its scope. Gauge conventions and the Size and Used codes are not defined here, so keep those entries literal.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4425-b00002",
+      "text": "Connector Face for Harness 14A005",
+      "why": "I use the upper and lower cavity labels as the bridge between this drawing and the assignment table. The housing has projections on the right in the displayed image; their release or locking functions are not identified. The heading identifies the associated harness, but does not establish whether the physical connector is viewed from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C4425-b00005",
+      "text": "Cavity and Circuit Assignments",
+      "why": "Match a drawing label to Cavity, then read horizontally so the circuit identifier, Color, Gauge, Function and Terminal Part Number stay together. Keep the heater-mirror relay wording and the alternative ground-location wording exactly as printed; the rear-window title is not a reason to rename those circuit functions. A relay is an electrically controlled switch, and its label here does not identify a separately replaceable relay or establish a test result."
+    },
+    {
+      "blockId": "connector-C4425-b00007",
+      "text": "Pigtail Service Part Cross-References",
+      "why": "Each row links a listed pigtail to its recorded gauge, material, cavity count, image filename, service part and engineering shell. Shared shell information does not settle which pigtail suits a particular repair. The Image entries name files; this page's connector drawing does not show those pigtail images."
+    },
+    {
+      "blockId": "connector-C4425-b00009",
+      "text": "European Pigtail Product Reference",
+      "why": "The separate Product Id entry is a European catalog reference. It provides no mapping that selects between the preceding pigtail rows or confirms interchangeability."
+    }
+  ],
+  "checkedAt": "2026-10-28T23:42:10.170Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "077102e75bf9001bfed793bc72ae64bdbcf93ac3d16e0c0647a15a8c8d88d700",
+  "sourcePdfHash": "70b7d694c2e09645747b55d61013c17ea9c7b002dba520954b9d5323b2fa61f9",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "6b7dd79bc64600104bf3f64ce49972ad335d922e4c727c7ab07c5b53113de6cc",
+    "reviewedAt": "2026-10-28T23:42:10.170Z"
+  }
+}

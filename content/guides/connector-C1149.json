@@ -1,0 +1,99 @@
+{
+  "documentId": "connector-C1149",
+  "sourceHash": "820ca663372da8e3fad14da31c8f8aec6ebcede6c0280d56777ed9eb985e59e6",
+  "title": "C1149 — Low Oil Level Switch",
+  "introduction": "I read this sheet like a seating chart for the connector: the cavity label tells you which table row belongs in that position. Begin with the connector identity table, match the drawing to the Cavity column, then read across the row for the circuit details. The harness and pigtail tables identify different parts of the connection.\n\nThere is an unresolved naming difference: the component title describes an oil-level switch, while the circuit-function wording describes oil-quality sensing. Keep those descriptions distinct until the intended component application is confirmed.\n\nThis guide explains the reference, rather than teaching access, electrical testing or replacement. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified. The tables therefore cannot establish a probing setup, operating voltage or replacement-wire choice.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1149-b00002",
+      "text": "Connector Face for Harness 12C508",
+      "why": "Use the printed cavity labels to move between the drawing and the assignment table. The drawing shows vertically stacked cavities beneath a projecting housing feature. I use those shapes as visual landmarks only; they do not establish which physical side to view or how the connector releases."
+    },
+    {
+      "blockId": "connector-C1149-b00005",
+      "text": "Read the Pin Assignment Map",
+      "why": "Each row joins a cavity with its Circuit Number, Color, Gauge, Function and Terminal Part Number. The functions distinguish a powertrain-control sensing connection from a signal-return connection. A signal-return label should not be silently converted into a body-ground instruction, and the positive marking alone supplies no test voltage. The oil-level versus oil-quality naming difference remains unresolved."
+    },
+    {
+      "blockId": "connector-C1149-b00007",
+      "text": "Identify the Pigtail Service Parts",
+      "why": "Use the service-parts table to distinguish the pigtail assembly identifier from its engineering shell identifier. Its Gauge entry describes the pigtail leads, while the assignment table describes the harness wires. Keeping those entries separate prevents the parts listing from becoming an accidental wire-selection recipe; no installation or splicing method is taught here."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-28T23:56:10.295Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 30,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "2e68fc418ac55cfb0bc720f7f2b7bd74f98cb109f7c55ff7dba959e2f9e2d1c6",
+    "reviewedAt": "2026-10-28T23:55:55.352Z",
+    "coveredUnitIds": [
+      "connector-C1149:u1",
+      "connector-C1149:u2",
+      "connector-C1149:u3",
+      "connector-C1149:u4",
+      "connector-C1149:u5",
+      "connector-C1149:u6",
+      "connector-C1149:u7",
+      "connector-C1149:u8",
+      "connector-C1149:u9",
+      "connector-C1149:u10",
+      "connector-C1149:u11",
+      "connector-C1149:u12",
+      "connector-C1149:u13",
+      "connector-C1149:u14",
+      "connector-C1149:u15",
+      "connector-C1149:u16",
+      "connector-C1149:u17",
+      "connector-C1149:u18",
+      "connector-C1149:u19",
+      "connector-C1149:u20",
+      "connector-C1149:u21",
+      "connector-C1149:u22",
+      "connector-C1149:u23",
+      "connector-C1149:u24",
+      "connector-C1149:u25",
+      "connector-C1149:u26",
+      "connector-C1149:u27",
+      "connector-C1149:u28",
+      "connector-C1149:u29",
+      "connector-C1149:u30"
+    ],
+    "originalAuthorHold": [
+      "The title and Description field identify a low oil level switch, but the sensing circuit's Function field identifies an engine oil quality sensor connection. The supplied evidence does not establish whether these names describe the same component or a mismatched application; resolve this before publishing the component identification."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all30 primary units, both complete source pages and sole figure, and3 edits. Oil-level component title versus oil-quality Function ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "85911d9a3a7b0858b871cb0634890829751b3343bcec635e1bd785c3519db91e"
+    }
+  }
+}
