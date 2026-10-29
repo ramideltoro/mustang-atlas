@@ -1,0 +1,66 @@
+{
+  "documentId": "connector-C4830",
+  "supportingSourceRefs": [],
+  "sourceHash": "dde2339e5026b2993391223c6bcd399311b0bcfb1a8cb5a3ee915252909a7af9",
+  "title": "C4830 — Convertible top motor 1 connector",
+  "introduction": "This reference brings together latch-solenoid supply and signal labels, a roof-down switch connection, supply, ground and network entries. I read the Function column before drawing conclusions from the motor title. The roof has a supporting cast, and these labels help keep their roles straight.\n\nUse the identity table to establish the reference, then move from a pictured cavity label to its assignment records. Preserve repeated records and their individual details; blank qualifiers give no rule for resolving them. The drawing is the cavity map, while Pin Count remains separate catalog metadata. Physical viewing direction, gauge convention and catalog-code meanings are unspecified. This guide teaches the reference’s structure; access, electrical tests, wire selection and replacement need separate service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4830-b00002",
+      "text": "Harness 14A005 connector-face map",
+      "why": "I use the cavity labels in the printed columns to find the corresponding assignment records. Grey-filled positions match entries without assigned circuits. The outline and projections describe the housing’s appearance without identifying release movements or locking functions. This printed layout does not establish which side of the actual connector to view for electrical work."
+    },
+    {
+      "blockId": "connector-C4830-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read each record across: Cavity locates the pictured position, Circuit Number names the connection, and Color, Gauge, Function and Terminal Part Number belong to that record. The functions distinguish latch-solenoid supply and signal, ground, fuse-or-circuit-breaker supply, roof-down switching and medium-speed CAN lines. Retain both protective-device possibilities. CAN high and low are line names, not different network speeds or diagnostic verdicts. Repeated records have no qualifier explaining their relationship, so they must remain separate. An assigned circuit also has an unspecified terminal-part entry; that is missing parts information, not evidence of an unused cavity, and it cannot support terminal replacement selection."
+    },
+    {
+      "blockId": "connector-C4830-b00007",
+      "text": "Pigtail service identification",
+      "why": "I distinguish the listed service-part identifier from the engineering-shell identifier before reading the remaining catalog fields. Gauge, material and cavity information describe the pigtail entry; they do not establish how to splice wires or replace terminals. The individual circuit records retain their own details, and the housing’s cavity information does not imply that every position is assigned."
+    },
+    {
+      "blockId": "connector-C4830-b00009",
+      "text": "European pigtail identification",
+      "why": "The regional product entry adds a European identification reference. It provides no installation sequence or basis for assuming that different catalog identifiers are interchangeable."
+    }
+  ],
+  "checkedAt": "2026-10-29T00:07:41.455Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "13247e4e9d29dad2177e5ef7d827135b777c63db07ac1eaa3d4b11e98230c60e",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 45,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "ded85e9ab3f86e1c0088df0d553401503c41bb5e20aaf95893bbb4da352e5534",
+    "reviewedAt": "2026-10-29T00:05:42.322Z",
+    "editorialRevision": {
+      "kind": "bounded-reader-scope-clarification",
+      "scope": "Delete unsupported inherited engine enumeration from introduction only; retain exact component identity and every technical edit. Full source/unit/page/prose and independent verdict supervisory read completed.",
+      "originalAcceptedSha": "553ecb19cf86faf290520186a79e077bc9bafc478ce1b8bc202335fba005d01e",
+      "checkedAt": "2026-10-29T00:07:41.455Z"
+    }
+  }
+}

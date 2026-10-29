@@ -1,0 +1,113 @@
+{
+  "documentId": "connector-C352",
+  "sourceHash": "8fff871c57a91c60c5df5475bd138788869d44d39bdbccf3642d98daf982380a",
+  "title": "C352 — Front seat control switch LH",
+  "introduction": "The seat switch is a little switchboard for getting comfortable: its connection brings together movement functions, lumbar functions, power and ground. I start with the harness identification, find a cavity label in the face drawing, then read across the matching assignment row. That turns a crowded connector picture into a useful index of what each recorded connection serves.\n\nThe Function column distinguishes front tilt from rear height, forward from rearward movement, and the lumbar pump from upper-cell deflation. Circuit Number identifies the recorded circuit; Color, Gauge and Terminal Part Number describe that particular row. Some cavities have repeated entries with different gauges and terminals. Keep those entries separate: their blank Qualifier fields do not explain how to choose between them.\n\nThe summary’s Pin Count conflicts with the numbered cavity range in the drawing and the pigtail table’s Cavities entry. The supplied evidence does not reconcile this mismatch, so I retain the original fields without adding imagined positions.\n\nUse this page for identification and understanding the assignment map. It does not establish physical viewing direction, access, release movements, switch continuity, test conditions or replacement steps. Gauge conventions and the Size and Used codes are also unexplained here; they are reference entries, not a wire-selection rule.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C352-b00002",
+      "text": "Connector face for harness 14D231",
+      "why": "Match the harness identification before using this face drawing. As printed, it has a longer cavity column on the left, a shorter column on the right, a broad housing projection on the left and a stepped housing feature at the bottom. These landmarks help read the illustration without establishing how to hold or release the physical connector."
+    },
+    {
+      "blockId": "connector-C352-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "I use the Function column to separate the seat’s movement and lumbar connections from its power and ground connections. The cavity label locates the relevant row; the circuit, color, gauge and terminal fields then stay together. Repeated cavity rows record different gauge and terminal entries, not extra locations in the drawing, and they do not establish the switch’s internal contact behavior."
+    },
+    {
+      "blockId": "connector-C352-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail row links its catalog entry to the recorded gauge field, material, cavity count, image filename, service part and engineering shell. It provides identification information without explaining repair suitability or installation. Its cavity count also exposes the unresolved disagreement with the summary."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:16:03.464Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "ec43c1157c474084d10ccfd45a4feba184ddbb184ff725bbc3be93c1d3d247f3",
+    "reviewedAt": "2026-10-29T00:15:49.154Z",
+    "coveredUnitIds": [
+      "connector-C352:u1",
+      "connector-C352:u2",
+      "connector-C352:u3",
+      "connector-C352:u4",
+      "connector-C352:u5",
+      "connector-C352:u6",
+      "connector-C352:u7",
+      "connector-C352:u8",
+      "connector-C352:u9",
+      "connector-C352:u10",
+      "connector-C352:u11",
+      "connector-C352:u12",
+      "connector-C352:u13",
+      "connector-C352:u14",
+      "connector-C352:u15",
+      "connector-C352:u16",
+      "connector-C352:u17",
+      "connector-C352:u18",
+      "connector-C352:u19",
+      "connector-C352:u20",
+      "connector-C352:u21",
+      "connector-C352:u22",
+      "connector-C352:u23",
+      "connector-C352:u24",
+      "connector-C352:u25",
+      "connector-C352:u26",
+      "connector-C352:u27",
+      "connector-C352:u28",
+      "connector-C352:u29",
+      "connector-C352:u30",
+      "connector-C352:u31",
+      "connector-C352:u32",
+      "connector-C352:u33",
+      "connector-C352:u34",
+      "connector-C352:u35",
+      "connector-C352:u36",
+      "connector-C352:u37",
+      "connector-C352:u38",
+      "connector-C352:u39",
+      "connector-C352:u40",
+      "connector-C352:u41",
+      "connector-C352:u42",
+      "connector-C352:u43",
+      "connector-C352:u44"
+    ],
+    "originalAuthorHold": [
+      "The summary states Pin Count 16, the face drawing labels cavities 1–10, and pigtail 1042 specifies 10 cavities. The supplied evidence does not reconcile these counts; preserve the original fields without inventing an explanation."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all44 primary units, three complete source pages and sole figure, and3 edits. PinCount16 versus pictured1–10/kit10 and repeated gauge/terminal applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "aefcfd5eb365686698b76c1dc629e1adef254c06616717bf0453a720df115679"
+    }
+  }
+}

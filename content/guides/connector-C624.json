@@ -1,0 +1,55 @@
+{
+  "documentId": "connector-C624",
+  "supportingSourceRefs": [],
+  "sourceHash": "81bdcf5d8b94014eb70f5ab180066a8aeaf30726bdb95185b8810ae5685539a6",
+  "title": "C624 — Passenger door window control switch",
+  "introduction": "I use this reference as the passenger window’s electrical address book. The function labels cover commands from the passenger and driver controls, along with supply, return, ground and illumination connections. That little switch has quite a correspondence to keep up with.\n\nStart with the connector identity table, find a cavity label in the drawing, then read the matching assignment row across. Keep repeated cavity entries separate. The drawing provides the cavity map; the separate Pin Count metadata should not be assumed to count the pictured positions. This guide explains the reference, while physical viewing direction, gauge convention and catalog-code meanings remain unspecified. Access, electrical testing, wire selection and replacement require their own service information.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C624-b00002",
+      "text": "Harness 14630 connector-face map",
+      "why": "I use the vertical column of cavity labels to navigate between the drawing and the assignment table. The grey-filled position matches an entry without an assigned circuit. Housing projections help distinguish the printed outline, but their release or locking functions are not identified. The drawing does not establish which physical side to view when approaching the actual connector."
+    },
+    {
+      "blockId": "connector-C624-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read from Cavity through Circuit Number, Color, Gauge and Function, keeping the terminal part entry attached to its own row. A cavity label locates a position; a circuit label identifies the electrical connection described there. The functions distinguish passenger and driver window commands, passenger return, illumination, ground and fuse-or-circuit-breaker supply. Retain that protection alternative rather than assuming a fuse alone. Repeated cavity entries have blank Qualifier cells, so this reference gives no rule for choosing between them or combining them. The labels describe connections; they do not establish expected electrical readings or prove that a connection works."
+    },
+    {
+      "blockId": "connector-C624-b00007",
+      "text": "Pigtail service identification",
+      "why": "I use the service-part and engineering-shell columns as different identification fields. The remaining columns describe the listed pigtail, rather than providing wire-splicing instructions. Its gauge entry should not be substituted for the individual circuit entries, and its cavity information does not mean every position has an assigned circuit."
+    }
+  ],
+  "checkedAt": "2026-10-29T00:05:42.300Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "ad22a1cdb80b94e8e5b5438bdbe522768c690c658715dca455c4f88d0ce7bf2b",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 39,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "68d0b744c9a552e349f2044050e31a3223fb01688b101cf76b11769229a133d5",
+    "reviewedAt": "2026-10-29T00:05:42.301Z"
+  }
+}

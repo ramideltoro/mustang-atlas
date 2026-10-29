@@ -1,0 +1,66 @@
+{
+  "documentId": "connector-C4831",
+  "supportingSourceRefs": [],
+  "sourceHash": "ed7e1c6ea776c3fef7f2b8eef9fd1137c0091691d9afdeb6ea3a965c0d9baf5d",
+  "title": "C4831 — Convertible top motor 2 connector",
+  "introduction": "I read this connector reference by separating supply and ground from the roof-switch and communication entries. Think of it as the roof’s contact directory: knowing who carries power and who carries a message makes the table much easier to follow.\n\nBegin with connector identity, use the drawing’s cavity labels, then read each corresponding assignment record across. Keep repeated records intact; their blank qualifiers provide no selection rule. Use the pictured labels as the cavity map rather than assuming the Pin Count metadata counts those positions. This is a reference-reading guide: physical viewing direction, gauge convention and catalog-code meanings remain unspecified, and it does not teach access, probing, diagnosis, wire selection or replacement.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4831-b00002",
+      "text": "Harness 14A005 connector-face map",
+      "why": "I use the columns of cavity labels to locate records in the assignment table. The grey-filled positions correspond to entries without assigned circuits; that shading describes the reference layout, not connector condition. The surrounding projections are housing features whose release or locking functions are not identified. Their printed position does not establish a physical viewing direction for electrical work."
+    },
+    {
+      "blockId": "connector-C4831-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Cavity identifies the position in the drawing; Circuit Number identifies the named electrical connection. Read Color, Gauge, Function and Terminal Part Number together within each record. The functions separate ground, fuse-or-circuit-breaker supply, the roof-up switch connection and medium-speed CAN communication lines. High and low belong to the CAN line names; they do not describe different network speeds or test results. Repeated communication records differ in their recorded wire and terminal details, but blank Qualifier cells do not explain their relationship or applicability. Keep them separate rather than constructing a wiring choice from this sheet."
+    },
+    {
+      "blockId": "connector-C4831-b00007",
+      "text": "Pigtail service identification",
+      "why": "The service part identifies the listed service item, while the engineering shell identifies its housing reference. I keep those fields distinct when reading the catalog. The pigtail’s gauge, material and cavity information describe that item; they do not replace the circuit-specific records or establish a repair method. A housing position can exist without an assigned circuit."
+    },
+    {
+      "blockId": "connector-C4831-b00009",
+      "text": "European pigtail identification",
+      "why": "This regional product entry provides a separate European parts reference. It does not supply installation instructions or establish interchangeability with another catalog identifier."
+    }
+  ],
+  "checkedAt": "2026-10-29T00:07:01.236Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "4c246295c455601cd0582a6789d0888ce1243ffefe7cdf214ffad947016b2746",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 44,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "9dfb41dd44cb3f88e6cd98afff9091552f58c57a209248230f4257f541f11abc",
+    "reviewedAt": "2026-10-29T00:05:42.312Z",
+    "editorialRevision": {
+      "kind": "bounded-reader-scope-clarification",
+      "scope": "Delete unsupported inherited engine enumeration from introduction only; retain exact component identity and every technical edit. Full source/unit/page/prose and independent verdict supervisory read completed.",
+      "originalAcceptedSha": "9297c757dbb177916e027e41548f684de6221930d04e2341a981f15dc20b4879",
+      "checkedAt": "2026-10-29T00:07:01.236Z"
+    }
+  }
+}

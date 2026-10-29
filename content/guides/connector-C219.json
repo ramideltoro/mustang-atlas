@@ -1,0 +1,125 @@
+{
+  "documentId": "connector-C219",
+  "sourceHash": "18dc636bda9384d1b715a72ce6d42f83eab3808ad6a104d08b821db9b08d478f",
+  "title": "C219 — Reading the inline connector",
+  "introduction": "I read this inline connection like a pair of luggage tags: identify the harness and connector face before following a circuit. Start with the MALE or FEMALE heading, match its harness identification, then use the drawing’s cavity labels to find the corresponding table rows. The housing outlines help distinguish the drawings; their projections are not identified as release mechanisms.\n\nRead across each row to connect Cavity with Circuit Number, Color, Gauge, Function and Terminal Part Number. On the male side, the coupe and convertible qualifiers matter: repeated cavity entries are not permission to combine their circuit assignments. Keep the function’s positive and negative signs attached to its description. The female table has no body-style qualifiers, so I do not silently carry the male qualifiers across.\n\nThere are unresolved conflicts here. The summary’s Pin Count disagrees with the cavity labels in both face drawings and the Cavities entries in both pigtail rows; the supplied evidence does not reconcile them. The coupe entries also repeat the same circuit and positive function at different cavities. Keep these conflicts visible rather than inventing missing positions or correcting a circuit by intuition.\n\nThis reference teaches identification and table reading. Physical viewing direction, access, restraint-system preparation, probing, electrical tests and replacement are outside its scope. Gauge conventions and the Size and Used codes are not explained here, so retain those entries without turning them into wire-selection or repair instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C219-b00002",
+      "text": "MALE connector face · Harness 14D233",
+      "why": "I check the harness heading before using the drawing because the male and female faces have separate identification and circuit tables. In this drawing as printed, the cavity labels descend vertically, and angled housing projections appear at the upper and lower left. These are drawing landmarks, not established release instructions."
+    },
+    {
+      "blockId": "connector-C219-b00005",
+      "text": "Male cavity and circuit map",
+      "why": "The cavity label is the bridge between the illustration and its circuit row. Read the body-style qualifier before interpreting the function, then keep that row’s color, gauge and terminal entry together. The repeated coupe circuit and positive-function entries remain unresolved; neither should be silently changed to create an expected pair."
+    },
+    {
+      "blockId": "connector-C219-b00007",
+      "text": "FEMALE connector face · Harness 14D230",
+      "why": "The female face has its own harness and Fpn identification. Its printed outline includes angled projections at the upper and lower right and a broad projection on the right side. I use those features to recognize this illustration without assuming a physical viewing direction or assigning a locking function."
+    },
+    {
+      "blockId": "connector-C219-b00010",
+      "text": "Female cavity and circuit map",
+      "why": "Read each cavity against this face’s own table. Matching circuit identifiers help compare the recorded assignments across the connection, but the gauge and terminal fields belong to their individual rows. A blank Qualifier field does not supply a body-style selection rule."
+    },
+    {
+      "blockId": "connector-C219-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "This table connects each pigtail entry with its recorded gauge, material, cavity count, image filename, service part and engineering shell. Shared shell information alone does not explain which pigtail suits a particular repair. The cavity counts also participate in the unresolved summary-count conflict."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:20:05.240Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 45,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "7039aa924a100f4150c72edb46c4c5c1f426c349a9e3165af91ff6acae50c82d",
+    "reviewedAt": "2026-10-29T00:19:41.990Z",
+    "coveredUnitIds": [
+      "connector-C219:u1",
+      "connector-C219:u2",
+      "connector-C219:u3",
+      "connector-C219:u4",
+      "connector-C219:u5",
+      "connector-C219:u6",
+      "connector-C219:u7",
+      "connector-C219:u8",
+      "connector-C219:u9",
+      "connector-C219:u10",
+      "connector-C219:u11",
+      "connector-C219:u12",
+      "connector-C219:u13",
+      "connector-C219:u14",
+      "connector-C219:u15",
+      "connector-C219:u16",
+      "connector-C219:u17",
+      "connector-C219:u18",
+      "connector-C219:u19",
+      "connector-C219:u20",
+      "connector-C219:u21",
+      "connector-C219:u22",
+      "connector-C219:u23",
+      "connector-C219:u24",
+      "connector-C219:u25",
+      "connector-C219:u26",
+      "connector-C219:u27",
+      "connector-C219:u28",
+      "connector-C219:u29",
+      "connector-C219:u30",
+      "connector-C219:u31",
+      "connector-C219:u32",
+      "connector-C219:u33",
+      "connector-C219:u34",
+      "connector-C219:u35",
+      "connector-C219:u36",
+      "connector-C219:u37",
+      "connector-C219:u38",
+      "connector-C219:u39",
+      "connector-C219:u40",
+      "connector-C219:u41",
+      "connector-C219:u42",
+      "connector-C219:u43",
+      "connector-C219:u44",
+      "connector-C219:u45"
+    ],
+    "originalAuthorHold": [
+      "The summary states Pin Count 6, both face drawings label only cavities 1–4, and both pigtail rows specify 4 cavities. The supplied evidence does not reconcile these counts; all original fields must remain unchanged pending review.",
+      "The male coupe rows assign LR142, GN-BU and the same positive seat-belt-tension-sensor function to both cavity 1 and cavity 2. The supplied evidence does not explain this repetition or establish a correction."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all45 primary units, three complete source pages and both figures, and5 edits. PinCount6 versus pictured1–4/kit4 and repeated male coupe LR142 positive assignment ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "6cfb5ddf50500705cf31236256342636842669ef57aff568703c1d23732086d9"
+    }
+  }
+}
