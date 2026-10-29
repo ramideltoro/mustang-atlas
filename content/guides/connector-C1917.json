@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C1917",
+  "sourceHash": "8da35b7cc700adfb4d2a54975910151ad836b858a645c0a04309f3317c2896f8",
+  "title": "C1917 — Heated oxygen sensor (HO2S) #12",
+  "introduction": "A heated oxygen sensor's connector carries distinct heater and sensing functions. I read the Function column before treating similar-looking wires as equivalent: the heater does the warming, while the sensing circuits carry a different conversation. The table separates a fuse-or-circuit-breaker supply, heater control, sensor ground and sensor signal.\n\nStart with the identity and harness information, match the drawing's cavity labels to the circuit rows, then consult the pigtail catalog. This reference explains those relationships without teaching access, probing, testing or replacement. Physical viewing direction and the Size and gauge conventions are unspecified. The summary pin count conflicts with the drawing and pigtail cavity count, so it remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1917-b00002",
+      "text": "Connector-face map · Harness 12C508/14B060",
+      "why": "I use the tall housing outline and vertical cavity labels to navigate the drawing. The adjacent table supplies its harness and shell association. The side projections and internal housing feature are visible shape references; their appearance does not establish a latch function, release movement or physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1917-b00005",
+      "text": "Read heater and sensor circuit roles",
+      "why": "Read across each cavity row to connect the circuit identifier with its color, gauge, function and terminal reference. Preserve the fuse-or-circuit-breaker supply alternative and the post-catalyst first-or-unique qualifiers. Heater control, sensor ground and sensor signal remain distinct functions. The sensor-ground cavity appears with different color entries and blank qualifiers; the table does not explain their applicability or show an extra cavity."
+    },
+    {
+      "blockId": "connector-C1917-b00007",
+      "text": "Pigtail catalog reference",
+      "why": "The pigtail table ties its catalog number and lead information to the service part and engineering shell. I use that association to understand the catalog record. It does not establish vehicle fitment, authorize a replacement or provide terminal-removal and splice instructions."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:38:24.658Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "c3853c148f3ef970cdc771e5da13551ef7ea7215dd3a9976646c5577fe27222d",
+    "reviewedAt": "2026-10-29T00:38:07.223Z",
+    "coveredUnitIds": [
+      "connector-C1917:u1",
+      "connector-C1917:u2",
+      "connector-C1917:u3",
+      "connector-C1917:u4",
+      "connector-C1917:u5",
+      "connector-C1917:u6",
+      "connector-C1917:u7",
+      "connector-C1917:u8",
+      "connector-C1917:u9",
+      "connector-C1917:u10",
+      "connector-C1917:u11",
+      "connector-C1917:u12",
+      "connector-C1917:u13",
+      "connector-C1917:u14",
+      "connector-C1917:u15",
+      "connector-C1917:u16",
+      "connector-C1917:u17",
+      "connector-C1917:u18",
+      "connector-C1917:u19",
+      "connector-C1917:u20",
+      "connector-C1917:u21",
+      "connector-C1917:u22",
+      "connector-C1917:u23",
+      "connector-C1917:u24",
+      "connector-C1917:u25",
+      "connector-C1917:u26",
+      "connector-C1917:u27",
+      "connector-C1917:u28",
+      "connector-C1917:u29",
+      "connector-C1917:u30",
+      "connector-C1917:u31",
+      "connector-C1917:u32"
+    ],
+    "originalAuthorHold": [
+      "The identity table gives Pin Count 5, while the drawing labels cavities 1–4 and the pigtail table gives Cavities 4. The assignments repeat cavity 3 with different colors. A fifth physical cavity is not established; the summary count needs review."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 32 primary units, both complete source pages and sole figure, and 3 edits. Pin Count 5 versus pictured 1–4/kit 4 and repeated RE731 WH/BK color applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "4c07c7b3d6c28c520c3f4c6878c912564092ea60563a28baf7e89ce34d3b02d8"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C1120",
+  "sourceHash": "afb999e52e05d3d85eba75bcbaa6ee27044bfdc817fad9a052b0caf49eeaf2b0",
+  "title": "C1120 — Crankshaft position (CKP) sensor",
+  "introduction": "The crankshaft turns piston movement into rotation. This reference maps the crankshaft-position sensor connector’s cavity labels to its circuit descriptions and service-part information. I treat each assignment row like a luggage tag: its circuit, color, gauge and terminal details need to travel together. Mixing details from neighboring rows loses the very distinction the table preserves.\n\nStart with the identity table, find the drawing’s labels in the Cavity column, and read across. The overview’s Pin Count conflicts with the illustrated positions and pigtail cavity entry, so that count remains unresolved. This guide explains the reference; it does not teach physical access, probing, wire selection, diagnosis or replacement. Viewing direction, gauge convention and the Size and Used code definitions are unspecified.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1120-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The vertically arranged labels and right-side housing projection distinguish this drawing’s layout. I use them as page landmarks, without assigning a latch or release function to the projection. The table beneath the illustration connects the drawing to its shell and harness identifiers; it does not establish the side from which to view the physical connector."
+    },
+    {
+      "blockId": "connector-C1120-b00005",
+      "text": "Read the pin assignments",
+      "why": "Match each drawing label to the Cavity column and preserve the plus or minus designation in its Function entry. Repeated rows for a cavity have different gauge and terminal combinations, rather than additional positions in the drawing. Their applicability is not identified, so I keep each combination intact without choosing one. These function labels alone provide no test setup or fault conclusion."
+    },
+    {
+      "blockId": "connector-C1120-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "Kit List connects to Number here, and Engineering Shell can be compared with Hard Shell and the drawing’s Fpn entry. Service Part identifies a separate catalog entry. The pigtail gauge and material describe that assembly; they do not settle which assignment-row variant applies or supply a wire-repair method."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:30:25.924Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "40f664e3f3ab0b45aee89c2779bd43b06e3f0e86d26f0c3d5eba3d7c9c1569d5",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "0a29087e1deb0b53f86c8a35062288e3e20bc88f4b8daf80f98f8b5e3b6c8110",
+    "reviewedAt": "2026-10-29T00:29:32.652Z",
+    "coveredUnitIds": [
+      "connector-C1120:u1",
+      "connector-C1120:u2",
+      "connector-C1120:u3",
+      "connector-C1120:u4",
+      "connector-C1120:u5",
+      "connector-C1120:u6",
+      "connector-C1120:u7",
+      "connector-C1120:u8",
+      "connector-C1120:u9",
+      "connector-C1120:u10",
+      "connector-C1120:u11",
+      "connector-C1120:u12",
+      "connector-C1120:u13",
+      "connector-C1120:u14",
+      "connector-C1120:u15",
+      "connector-C1120:u16",
+      "connector-C1120:u17",
+      "connector-C1120:u18",
+      "connector-C1120:u19",
+      "connector-C1120:u20",
+      "connector-C1120:u21",
+      "connector-C1120:u22",
+      "connector-C1120:u23",
+      "connector-C1120:u24",
+      "connector-C1120:u25",
+      "connector-C1120:u26",
+      "connector-C1120:u27",
+      "connector-C1120:u28",
+      "connector-C1120:u29",
+      "connector-C1120:u30",
+      "connector-C1120:u31",
+      "connector-C1120:u32"
+    ],
+    "originalAuthorHold": [
+      "The overview reports Pin Count 4, but the illustration labels two positions and the pigtail table specifies two cavities. The supplied evidence does not resolve the count discrepancy."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all32 primary units, both complete source pages and sole figure, and3 edits. PinCount4 versus pictured1–2/kit2 and repeated CKP circuit gauge/terminal applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "866aaeddb10b844f98483b93d363133ae8fe35ec4cc5c768b3fbfb63311e3529"
+    }
+  }
+}

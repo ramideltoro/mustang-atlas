@@ -1,0 +1,100 @@
+{
+  "documentId": "connector-C132",
+  "sourceHash": "bcefcc25c006efe82a2707a7c8c0efa0cb781d7bc4242369dcc83799225eef3f",
+  "title": "C132 — Ambient Air Temperature (AAT) Sensor Connector",
+  "introduction": "This reference ties the ambient air temperature sensor's connector drawing to its circuit assignments and pigtail catalog entries. I start with the identification table, then use the cavity labels in the drawing to find the corresponding assignment rows. Read across a row as one connected description; a familiar-looking housing alone cannot tell you what its wires do.\n\nThe assignment table includes repeated entries for a cavity with different color codes, and the identification table's pin count conflicts with the drawing and pigtail cavity counts. Those details remain unresolved below. This guide explains how to read the record; it does not choose a wire-color variant or a replacement part. Physical viewing direction, access, probing methods and test values are outside its scope. Gauge conventions and the Size and Used codes are also undefined here, so their entries remain literal.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C132-b00002",
+      "text": "Connector Face for Harness 14290",
+      "why": "I use the side-by-side cavity labels to navigate the assignment table. The displayed housing has an upper rectangular feature and projections at its sides; the illustration does not identify release or locking functions. Keep the drawing's left and right positions separate from any assumption about viewing the physical connector from its mating side or wire side."
+    },
+    {
+      "blockId": "connector-C132-b00005",
+      "text": "Cavity and Circuit Assignments",
+      "why": "Match the drawing label to Cavity and read across Circuit Number, Color, Gauge, Function and Terminal Part Number. The repeated cavity entries share a circuit identifier but show different colors; their empty Qualifier cells provide no basis for choosing between them or assuming both wires occupy that cavity. Keep the powertrain signal-return function wording literal rather than treating it as permission to substitute a body ground."
+    },
+    {
+      "blockId": "connector-C132-b00007",
+      "text": "Pigtail Service Part Cross-References",
+      "why": "Read each pigtail row as a catalog cross-reference linking its number, gauge, material, cavity count, image filename, service part and engineering shell. The listed common characteristics do not establish which service part applies to a particular vehicle. Image filenames identify catalog illustrations that are not displayed as pigtail pictures here."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:22:40.303Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "0bb7f29ddd60b2831f759c22586cb53f2ec8b6bcc4f0cfa0f7f34581d7346ed9",
+    "reviewedAt": "2026-10-29T00:22:23.669Z",
+    "coveredUnitIds": [
+      "connector-C132:u1",
+      "connector-C132:u2",
+      "connector-C132:u3",
+      "connector-C132:u4",
+      "connector-C132:u5",
+      "connector-C132:u6",
+      "connector-C132:u7",
+      "connector-C132:u8",
+      "connector-C132:u9",
+      "connector-C132:u10",
+      "connector-C132:u11",
+      "connector-C132:u12",
+      "connector-C132:u13",
+      "connector-C132:u14",
+      "connector-C132:u15",
+      "connector-C132:u16",
+      "connector-C132:u17",
+      "connector-C132:u18",
+      "connector-C132:u19",
+      "connector-C132:u20",
+      "connector-C132:u21",
+      "connector-C132:u22",
+      "connector-C132:u23",
+      "connector-C132:u24",
+      "connector-C132:u25",
+      "connector-C132:u26",
+      "connector-C132:u27",
+      "connector-C132:u28",
+      "connector-C132:u29",
+      "connector-C132:u30",
+      "connector-C132:u31"
+    ],
+    "originalAuthorHold": [
+      "The identification table reports Pin Count 3, while the connector drawing labels only cavities 1 and 2 and both pigtail rows specify 2 cavities. The assignment table has 3 rows because cavity 1 is repeated; that does not resolve the physical pin-count conflict. Preserve the data and hold the connector-count claim for review."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all31 primary units, both complete source pages and sole figure, and3 edits. PinCount3 versus pictured1–2/kit2 and repeated VH407 color applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "fd32faaa9a754e09a1bd5a3a026f9b6ebd4f16145ce3b31293af5783be165681"
+    }
+  }
+}

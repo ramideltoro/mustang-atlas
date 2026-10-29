@@ -1,0 +1,60 @@
+{
+  "documentId": "connector-C316",
+  "supportingSourceRefs": [],
+  "sourceHash": "0ff519933c851d2fe1c150fb9cfbdb652f3ef61cceeebac8aa9fff34f5b4fed7",
+  "title": "C316 — Inline connector reference",
+  "introduction": "Passenger-seat comfort has a small backstage crew: a heater, a fan, a speed-control connection and temperature feedback. This inline reference helps distinguish their connections, so a blower command does not get mistaken for a heater connection simply because both serve the same seat.\n\nI start with the face heading and harness identity, locate the cavity label in that drawing, then read across its table row. Circuit Number and Function identify the connection’s role; Color, Gauge and Terminal Part Number describe that face’s entry. Keep the heater and fan polarity labels intact, and distinguish temperature-sensor connections from blower-speed control. The Qualifier column is available for applicability information; blank entries add no configuration detail.\n\nThe drawings reverse the cavity columns between faces. Their gray positions align with blank circuit entries where corresponding rows are supplied, but no shading legend or explicit physical viewing direction is given. Gauge conventions and Size/Used codes remain uninterpreted. This page identifies connections; physical access, connector release, wire selection, probing and electrical diagnosis need separate service instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C316-b00002",
+      "text": "MALE face — Harness 14D233",
+      "why": "In this displayed view, the lower-numbered column is on the left and is entirely gray. The outlined circuit positions are in the right column, interrupted by gray positions. I use that pattern together with the housing outline to recognize the drawing, then rely on the actual cavity labels for the table lookup. The side projections have no stated release function."
+    },
+    {
+      "blockId": "connector-C316-b00005",
+      "text": "Male cavity and circuit reference",
+      "why": "Read each populated row as a complete entry: the function distinguishes blower-speed control, fan polarity, heater polarity and temperature feedback, while the remaining columns identify its wire and terminal details. Blank circuit rows and N/A terminal entries are part of the reference, rather than evidence that a physical terminal has gone missing."
+    },
+    {
+      "blockId": "connector-C316-b00007",
+      "text": "FEMALE face — Harness 14D230",
+      "why": "Here the higher-numbered column is on the left, and the entirely gray lower-numbered column is on the right. The broad housing projection is also on the right of this illustration. These are drawing-navigation cues, not instructions for turning, opening or releasing the physical connector. I match the printed cavity label before consulting the female table."
+    },
+    {
+      "blockId": "connector-C316-b00010",
+      "text": "Female cavity and circuit reference",
+      "why": "Use this face’s own wire and terminal entries even when its circuit function matches the male side. The printed gauge entries differ between faces for some functions; retain them without assuming a gauge convention, correcting them or using them to choose replacement wire. Matching function labels help identify the connection, but they do not establish a normal electrical reading or a fault."
+    }
+  ],
+  "checkedAt": "2026-10-29T00:27:50.514Z",
+  "model": "Codex configured model",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": "27799e456c9052d797d49226c16a266adbe61a0772f2585938ec978c0fb1406d",
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 67,
+    "sourceChunkCount": 2,
+    "reviewedChunkCount": 2,
+    "fingerprint": "5d452e02cf613026496516fa2f292fd1092aec198196ba80bc11b9cdd9815952",
+    "reviewedAt": "2026-10-29T00:27:50.515Z"
+  }
+}

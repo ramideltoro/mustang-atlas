@@ -1,0 +1,100 @@
+{
+  "documentId": "connector-C1029",
+  "sourceHash": "dba384e37de91d2aad4788d4f1a863d5de2ccdfb2afd548b0b56fe7b94c02f27",
+  "title": "C1029 — EVAP purge valve connector",
+  "introduction": "The evaporative emission (EVAP) purge valve meters stored fuel vapor toward the engine intake. I use this reference as its electrical address book: the identity table describes the connector, the drawing locates the labeled cavities, and the assignment table connects those labels to circuit functions. The valve manages vapor flow; this page maps its electrical connections.\n\nRead each assignment row across from Cavity to Terminal Part Number. Repeated cavity entries have different gauge and terminal details; they do not identify extra positions in the drawing. The functions distinguish the powertrain controller’s purge-valve circuit from the fuse-or-circuit-breaker supply. The pigtail table then provides a separate service-parts cross-reference.\n\nThis is an identification guide, not a probing, wire-selection or replacement procedure. Physical viewing direction, gauge convention and the meanings of Size and Used are not established here. The summary’s pin-count entry also conflicts with the drawing and pigtail cavity count; that disagreement remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1029-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the cavity labels and surrounding housing outline together to navigate the drawing. As displayed, the upper cavity maps to the supply and the lower cavity to purge-valve control. The projection on the right is a housing feature; the illustration does not establish its release function or the physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1029-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "The Cavity column links each row to the drawing; Circuit Number identifies the circuit, while Function explains its role. Read the gauge and terminal fields together within each row. The repeated control-circuit entry is not permission to choose either terminal interchangeably, and the supply description retains the fuse-or-circuit-breaker alternative."
+    },
+    {
+      "blockId": "connector-C1029-b00007",
+      "text": "Pigtail service-parts reference",
+      "why": "A pigtail is a connector with attached wire leads. I distinguish its Service Part from the Engineering Shell identifier and keep its gauge and material details separate from the circuit-assignment rows. This is a parts cross-reference; it does not teach splicing or establish a replacement decision."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:27:21.205Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "fb5a4357af31ce29beecbf773b96b32cab3ab413c4dd0f80dd8e0dcb11407fed",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 31,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "27181a1caa2e73a99d5d002f0cbf15b5ff2ce606a7079c75e77409034f7f4d25",
+    "reviewedAt": "2026-10-29T00:27:07.360Z",
+    "coveredUnitIds": [
+      "connector-C1029:u1",
+      "connector-C1029:u2",
+      "connector-C1029:u3",
+      "connector-C1029:u4",
+      "connector-C1029:u5",
+      "connector-C1029:u6",
+      "connector-C1029:u7",
+      "connector-C1029:u8",
+      "connector-C1029:u9",
+      "connector-C1029:u10",
+      "connector-C1029:u11",
+      "connector-C1029:u12",
+      "connector-C1029:u13",
+      "connector-C1029:u14",
+      "connector-C1029:u15",
+      "connector-C1029:u16",
+      "connector-C1029:u17",
+      "connector-C1029:u18",
+      "connector-C1029:u19",
+      "connector-C1029:u20",
+      "connector-C1029:u21",
+      "connector-C1029:u22",
+      "connector-C1029:u23",
+      "connector-C1029:u24",
+      "connector-C1029:u25",
+      "connector-C1029:u26",
+      "connector-C1029:u27",
+      "connector-C1029:u28",
+      "connector-C1029:u29",
+      "connector-C1029:u30",
+      "connector-C1029:u31"
+    ],
+    "originalAuthorHold": [
+      "The identity table states Pin Count 3, but the connector drawing labels only cavities 1 and 2 and the pigtail table states Cavities 2. Preserve all original data and resolve this conflict before treating the summary pin count as authoritative."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all31 primary units, both complete source pages and sole figure, and3 edits. PinCount3 versus pictured1–2/kit2 and repeated CE113 gauge/terminal applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "b1a7c3399c454ad4cd1f933b9b9c691a4d957ac917b68868cf2e635b360ff087"
+    }
+  }
+}

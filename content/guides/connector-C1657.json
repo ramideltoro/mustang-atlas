@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C1657",
+  "sourceHash": "cfa649aa556c637610945320d4dfd09f872f40ecf01e7f7ef65a953f832bbe92",
+  "title": "C1657 — Engine Oil Pressure (EOP) Sensor",
+  "introduction": "I use this sheet as the oil-pressure sensor's address book: the drawing locates cavity labels, and the assignment table connects those labels to circuit identities. Read the connector summary first, then compare the face drawing with the circuit and pigtail tables. The electrical map identifies an oil-pressure connection, a signal return and a voltage-reference connection. It is not an oil-pressure report card; these labels cannot tell you whether the engine has healthy pressure.\n\nThe pin-count and wire-color discrepancies below need review. This reference does not teach access, probing, pressure testing or replacement. Viewing direction, gauge convention and the meanings of Size and Used remain undefined, so the entries should not be converted into working instructions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1657-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The displayed housing has a rounded vertical outline, a rectangular projection on the left and a stepped projection on the right. I use those features to follow the drawing, without assuming that a projection is a release. The summary pin count disagrees with the illustrated cavity labels and the pigtail cavity count; counting assignment rows does not resolve that discrepancy."
+    },
+    {
+      "blockId": "connector-C1657-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Read across from a cavity label to its circuit, color, gauge, function and terminal entry. The repeated voltage-reference cavity has different color codes with no qualifier explaining their applicability. Keep both entries visible rather than choosing a color or inventing another pin. The oil-pressure function is labeled as a switch connection here; that wording supplies neither a pressure threshold nor a diagnostic result."
+    },
+    {
+      "blockId": "connector-C1657-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail row links the connector-and-lead assembly to its service part, engineering shell, material and cavity information. Its gauge entry describes the listed service assembly separately from the pin-table wire entries. Use this as catalog information; it does not establish a wire-size substitution, splice method or installation sequence."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:36:51.484Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "55ee1ed1b86609e9f74afac9892ddb9225441c96f083d47b2b6a895ac5913701",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "7b0049084cd92000eacd753802c0ab45be9ead9373259873a7a19ef4f2719513",
+    "reviewedAt": "2026-10-29T00:35:25.742Z",
+    "coveredUnitIds": [
+      "connector-C1657:u1",
+      "connector-C1657:u2",
+      "connector-C1657:u3",
+      "connector-C1657:u4",
+      "connector-C1657:u5",
+      "connector-C1657:u6",
+      "connector-C1657:u7",
+      "connector-C1657:u8",
+      "connector-C1657:u9",
+      "connector-C1657:u10",
+      "connector-C1657:u11",
+      "connector-C1657:u12",
+      "connector-C1657:u13",
+      "connector-C1657:u14",
+      "connector-C1657:u15",
+      "connector-C1657:u16",
+      "connector-C1657:u17",
+      "connector-C1657:u18",
+      "connector-C1657:u19",
+      "connector-C1657:u20",
+      "connector-C1657:u21",
+      "connector-C1657:u22",
+      "connector-C1657:u23",
+      "connector-C1657:u24",
+      "connector-C1657:u25",
+      "connector-C1657:u26",
+      "connector-C1657:u27",
+      "connector-C1657:u28",
+      "connector-C1657:u29",
+      "connector-C1657:u30",
+      "connector-C1657:u31",
+      "connector-C1657:u32"
+    ],
+    "originalAuthorHold": [
+      "The summary states Pin Count 4, while the face drawing labels only cavities 1, 2 and 3 and the pigtail table states 3 cavities. The supplied evidence does not reconcile the count.",
+      "Cavity 3, circuit LE423, appears with both GN-VT and VT-GN color codes. The function, gauge and terminal entries match, and neither row has a qualifier identifying when its color applies."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 32 primary units, three complete source pages and sole figure, and 3 edits. Pin Count 4 versus pictured 1–3/kit 3 and repeated LE423 color applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "4de3225c6385bfe6889cb7c1412e0451deb9a6c82de62d3f3abe1cebd88779af"
+    }
+  }
+}
