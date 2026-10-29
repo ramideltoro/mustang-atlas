@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C1602",
+  "sourceHash": "e9c81f16246072fea15463d970e6d65c15a1c92662751e10a03115ac18121a90",
+  "title": "C1602 — Ignition coil-on-plug 2",
+  "introduction": "A coil-on-plug unit produces spark voltage at its spark plug. This reference helps you read the connector’s circuit assignments and related catalog entries. I start with the engine qualifier before reading the assignment row: a familiar-looking connector is a book cover, and the qualifier tells us which edition we are reading.\n\nMatch the illustration’s cavity labels to the Cavity column, then keep every entry in the selected row together. The overview’s Pin Count disagrees with the drawing and pigtail cavity entry; that remains unresolved. This page covers reference reading, not access, probing, wire selection, testing or replacement. Physical viewing direction, gauge convention and the definitions of Size and Used are unspecified.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1602-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the vertical label arrangement, shaded middle position and left-side housing projection to navigate this illustration. The middle position corresponds to a row without a circuit assignment. Neither its shading nor the projection establishes how the physical connector is sealed or released, and the drawing does not specify a physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1602-b00005",
+      "text": "Read the pin assignments",
+      "why": "Choose the coil-circuit row whose Qualifier matches the engine, then read its function, gauge and terminal entry as a set. The shared circuit and color entries do not erase those engine-specific differences. The other assigned circuit is a fuse-or-circuit-breaker supply. The blank circuit row adds no function, and repeated cavity labels indicate separate table entries rather than extra housing positions."
+    },
+    {
+      "blockId": "connector-C1602-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I connect Kit List to Number, then compare Engineering Shell with Hard Shell and the Fpn beneath the drawing. These links explain the catalog relationships while keeping Service Part distinct from the shell identifier. The pigtail gauge and material describe the listed assembly; they do not override the engine-qualified circuit rows or teach installation."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:43:59.460Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "0aa9df07abeca692e6d02d7689c3dbd3b95c9e9521f5fe83f2e9b37302175b8d",
+    "reviewedAt": "2026-10-29T00:43:20.759Z",
+    "coveredUnitIds": [
+      "connector-C1602:u1",
+      "connector-C1602:u2",
+      "connector-C1602:u3",
+      "connector-C1602:u4",
+      "connector-C1602:u5",
+      "connector-C1602:u6",
+      "connector-C1602:u7",
+      "connector-C1602:u8",
+      "connector-C1602:u9",
+      "connector-C1602:u10",
+      "connector-C1602:u11",
+      "connector-C1602:u12",
+      "connector-C1602:u13",
+      "connector-C1602:u14",
+      "connector-C1602:u15",
+      "connector-C1602:u16",
+      "connector-C1602:u17",
+      "connector-C1602:u18",
+      "connector-C1602:u19",
+      "connector-C1602:u20",
+      "connector-C1602:u21",
+      "connector-C1602:u22",
+      "connector-C1602:u23",
+      "connector-C1602:u24",
+      "connector-C1602:u25",
+      "connector-C1602:u26",
+      "connector-C1602:u27",
+      "connector-C1602:u28",
+      "connector-C1602:u29",
+      "connector-C1602:u30",
+      "connector-C1602:u31",
+      "connector-C1602:u32"
+    ],
+    "originalAuthorHold": [
+      "The overview reports Pin Count 4, while the illustration labels three positions and the pigtail table specifies three cavities. The supplied evidence does not resolve the count discrepancy."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 32 primary units, both complete source pages and sole figure, and 3 edits. Pin Count 4 versus pictured 1–3/kit 3 ambiguity; distinct CE304 engine-qualified rows remain separate retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "8fea5f9d04270919abe108b78dd93d9c4c65608174899c2db34d96a98ad678d8"
+    }
+  }
+}

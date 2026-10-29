@@ -1,19 +1,57 @@
 {
   "documentId": "reference-6943fbf4e2a0",
+  "supportingSourceRefs": [],
   "sourceHash": "cf989e83ca5c6fa29e7fa58e0b69a8ecd85a46126e3efc3e64cede5574088410",
   "title": "Reversed Straight Torque Adapter with Extension",
-  "introduction": "Torque depends on both the force you apply and the distance from that force to the fastener. This adapter arrangement changes that effective distance, so the number you set on the wrench may differ from the fastener specification.\n\nMatch your setup to the original drawing, take the indicated center-to-center measurements, and enter the specified fastener torque. The calculator then gives the corresponding wrench setting in each supported unit.",
-  "requirements": [],
+  "introduction": "I check which way the adapter points before using this reference. Here it turns back toward the handle, with the fastener center between the wrench drive and the handle. That brings the working point closer to your hand. The direction matters: a lever does not care that the same adapter was simply turned around.\n\nA is the distance from the center of the handle to the center of the wrench drive. B is the center-to-center distance from that drive to the adapter's fastener end. The vertical socket extension is not the B measurement. Enter the measured lengths using a consistent length unit and keep the arrangement matched to the drawing.\n\nUse the calculator below: enter the fastener torque from the applicable Workshop Manual procedure and select its matching torque unit. Enter the measured Wrench length (A) and Adapter length (B), selecting the unit for each field. Select Calculate wrench setting, then read the result in the unit marked on your wrench. If the calculator reports an error, correct the inputs before using a result. The displayed equivalents are rounded separately; this tool does not choose the fastener specification for you.",
+  "requirements": [
+    {
+      "category": "Before using the calculator",
+      "items": [
+        {
+          "name": "Confirm the reversed arrangement",
+          "detail": "The adapter's fastener end must point toward the handle as illustrated. Locate the drive and fastener centers separately before measuring."
+        },
+        {
+          "name": "Obtain the applicable torque and calculation",
+          "detail": "Obtain the fastener torque from the applicable Workshop Manual procedure. Use the calculator below only with the illustrated arrangement and your measured dimensions."
+        }
+      ]
+    }
+  ],
   "edits": [],
-  "checkedAt": "2026-10-11T16:44:12.017Z",
-  "model": "Codex",
+  "checkedAt": "2026-10-29T00:47:01.969Z",
+  "model": "Codex configured model",
   "editorialVersion": 1,
+  "validationVersion": 5,
   "status": "complete",
   "checks": {
     "passed": true,
+    "errors": [],
     "expectedBlocks": 0,
     "receivedBlocks": 0,
     "humanReviewed": false,
-    "notes": "Calculator UI preserves and verifies original mathematical behavior; all source illustrations retained."
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ee4ce9e9f864f194b5a814ecb3a002ae969112e8331e6b565b5e5bccca6c0a7f",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 15,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "fingerprint": "fe631a9429cc1df25912cc4eb5f9abe10c661cff24c8db62884526ca5e4504e8",
+    "reviewedAt": "2026-10-29T00:44:51.849Z",
+    "editorialRevision": {
+      "kind": "bounded-existing-calculator-ui-alignment",
+      "scope": "Only final introduction paragraph and calculator-availability requirement changed to match existing actual UI. Complete primary15unit/source/figure/final prose and original full CLI verdict independently read by supervising agent; no formula or source table mutation. Focused independent UI increment review requested."
+    }
   }
 }

@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C3427",
+  "sourceHash": "dcbd88e6a542f630ff4083584c17ce256b71151c870057f428f8c07db830d4af",
+  "title": "C3427 — Pump connector reference",
+  "introduction": "I start this pump reference with an identity check. The component heading names a differential pump, while the assignment table includes variable-oil pump and transmission auxiliary pump descriptions. Those labels need reconciliation before this page can explain which pump is actually connected. A connector map is an address book; conflicting names deserve checking before anyone follows the address.\n\nYou can still learn how the reference is organized. Match the drawing’s cavity labels to the Cavity column, then read each row across for circuit identity, color, gauge, function and terminal reference. The functions distinguish control, fuse-or-circuit-breaker supply, diagnostic and ground connections. The ground description retains alternative body locations rather than identifying a single attachment point.\n\nThis is a reading guide, not a pump diagnosis, access, probing, wire-selection or replacement procedure. Physical viewing direction, gauge convention and the Size and Used code definitions are unspecified. Component identity remains unresolved; the table data is retained without choosing among the competing descriptions.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3427-b00002",
+      "text": "Connector face for harness 14A411",
+      "why": "The drawing has a tall rounded housing with vertically stacked cavity labels that descend from top to bottom, a large projection on the right and smaller projections on the left. I use those visible features to follow the supplied image. The shaded position corresponds to the row with no assigned circuit or terminal. The projections do not establish a release mechanism, and the physical viewing side is unlabeled."
+    },
+    {
+      "blockId": "connector-C3427-b00005",
+      "text": "Read the pump circuit assignments",
+      "why": "Keep the function attached to its complete row: pump control, supply, diagnostic and ground descriptions are different connection roles. The supply remains a fuse-or-circuit-breaker alternative, and the ground wording leaves alternative body locations. Blank qualifiers do not reconcile the different pump names. These labels identify the stated circuit roles without establishing expected readings, waveform behavior or a fault conclusion."
+    },
+    {
+      "blockId": "connector-C3427-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail listing links the kit with a Service Part and Engineering Shell reference; individual terminal references remain in the assignment table. I use those fields to understand which kind of item each identifier describes. Their association on this page does not resolve the pump identity conflict or establish that a replacement is required."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:56:12.306Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "832f240d23e683fe053ec6c1ff2846def706fe6e1b79cbbb3c48b2057d48b6dc",
+    "reviewedAt": "2026-10-29T00:53:52.570Z",
+    "coveredUnitIds": [
+      "connector-C3427:u1",
+      "connector-C3427:u2",
+      "connector-C3427:u3",
+      "connector-C3427:u4",
+      "connector-C3427:u5",
+      "connector-C3427:u6",
+      "connector-C3427:u7",
+      "connector-C3427:u8",
+      "connector-C3427:u9",
+      "connector-C3427:u10",
+      "connector-C3427:u11",
+      "connector-C3427:u12",
+      "connector-C3427:u13",
+      "connector-C3427:u14",
+      "connector-C3427:u15",
+      "connector-C3427:u16",
+      "connector-C3427:u17",
+      "connector-C3427:u18",
+      "connector-C3427:u19",
+      "connector-C3427:u20",
+      "connector-C3427:u21",
+      "connector-C3427:u22",
+      "connector-C3427:u23",
+      "connector-C3427:u24",
+      "connector-C3427:u25",
+      "connector-C3427:u26",
+      "connector-C3427:u27",
+      "connector-C3427:u28",
+      "connector-C3427:u29",
+      "connector-C3427:u30",
+      "connector-C3427:u31",
+      "connector-C3427:u32",
+      "connector-C3427:u33"
+    ],
+    "originalAuthorHold": [
+      "The component description says DIFFERNTIAL PUMP, while the circuit functions name a variable-oil pump and transmission auxiliary pump control and diagnostic connections. Confirm the intended component and whether those function labels belong to this connector before publishing a component-specific explanation."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Differential versus variable-oil/transmission pump identity ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "8e042a6334dcc8c3a6a6060a8d97e7fa9b55f92415d3a40eccfef14325aa9e25"
+    }
+  }
+}

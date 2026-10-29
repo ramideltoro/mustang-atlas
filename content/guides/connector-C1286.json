@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C1286",
+  "sourceHash": "888fe30c4cbc18b244e4c9695006e34ba69c577b4af338a1fb64f02757979d7f",
+  "title": "C1286 — Intake manifold runner control bank 1 (IMRC1) sensor",
+  "introduction": "I read this connector reference like an address book: the drawing locates a cavity, and the matching table row tells me which circuit lives there. Start with the identity table, then use the connector-face drawing and circuit map together. The functions distinguish the valve-position signal, voltage reference and signal return—different electrical jobs sharing the same housing.\n\nThe parts table connects pigtail catalog information with the engineering shell. This page teaches reference reading; access, probing, electrical tests and replacement are outside its scope. Physical viewing direction and the gauge and Size conventions are unspecified. The summary pin count also disagrees with the illustrated cavities and pigtail cavity count; that discrepancy remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1286-b00002",
+      "text": "Connector-face map · Harness 12C508",
+      "why": "I use the vertical stack of labeled cavities to navigate between the drawing and the Cavity column. The surrounding outlines and projections show housing features; they do not establish a release mechanism or physical viewing direction. The adjacent identification table associates this drawing with its harness and shell."
+    },
+    {
+      "blockId": "connector-C1286-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Read across a row to connect its cavity with the circuit identifier, wire color, gauge, function and terminal part reference. The position signal reports valve position, while voltage reference and signal return have separate roles. The repeated return-circuit cavity has different gauge and terminal entries with blank qualifiers; those rows do not establish an additional cavity or explain which entry applies to a particular vehicle."
+    },
+    {
+      "blockId": "connector-C1286-b00007",
+      "text": "Pigtail catalog reference",
+      "why": "A pigtail is the connector with attached wire leads. This table brings its catalog number, lead information, image filename, service part and engineering shell together. I keep the pigtail gauge separate from the circuit-row gauges: the catalog entry alone cannot establish a wire substitution or teach a splice repair."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:48:41.415Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ad36626a1fa7ccfc5b2e44ed0659367b67cd2c9718f7540b4537716305cab811",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "dcf62f00f616fcbbdeee2eb025ea8a01cb601f0d0137e3bc004c9892241a16b3",
+    "reviewedAt": "2026-10-29T00:48:23.333Z",
+    "coveredUnitIds": [
+      "connector-C1286:u1",
+      "connector-C1286:u2",
+      "connector-C1286:u3",
+      "connector-C1286:u4",
+      "connector-C1286:u5",
+      "connector-C1286:u6",
+      "connector-C1286:u7",
+      "connector-C1286:u8",
+      "connector-C1286:u9",
+      "connector-C1286:u10",
+      "connector-C1286:u11",
+      "connector-C1286:u12",
+      "connector-C1286:u13",
+      "connector-C1286:u14",
+      "connector-C1286:u15",
+      "connector-C1286:u16",
+      "connector-C1286:u17",
+      "connector-C1286:u18",
+      "connector-C1286:u19",
+      "connector-C1286:u20",
+      "connector-C1286:u21",
+      "connector-C1286:u22",
+      "connector-C1286:u23",
+      "connector-C1286:u24",
+      "connector-C1286:u25",
+      "connector-C1286:u26",
+      "connector-C1286:u27",
+      "connector-C1286:u28",
+      "connector-C1286:u29",
+      "connector-C1286:u30",
+      "connector-C1286:u31",
+      "connector-C1286:u32"
+    ],
+    "originalAuthorHold": [
+      "The identity table gives Pin Count 4, but the drawing labels only cavities 1–3 and the pigtail table gives Cavities 3. The pin-assignment table repeats cavity 3. These records do not establish a fourth physical cavity; the summary count needs review."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 32 primary units, both complete source pages and sole figure, and 3 edits. Pin Count 4 versus pictured 1–3/kit 3 and repeated RE454 gauge/terminal applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "f1129b24db0e03302ef97067e54170ac2b8fb7358b9b9ea48fd70df96ef9e186"
+    }
+  }
+}

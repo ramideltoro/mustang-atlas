@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C9065",
+  "sourceHash": "7b8f1cf8ccb1fde4784ab80f8b5076d3253737bf366aa1f10acbdc9d73352819",
+  "title": "C9065 — RH A-pillar tweeter connector",
+  "introduction": "I read this reference like a seating chart for the speaker wiring: the drawing locates each cavity, and the assignment table explains which circuit belongs there. Start with the connector identity, compare the housing outline, then read each cavity’s complete row. The positive and negative audio connections have distinct roles; a negative speaker connection should not automatically be treated as a chassis ground.\n\nThis is a guide to reading the connector record. It does not teach trim access, disconnection, probing, wire selection or pigtail installation. The physical viewing direction and the conventions behind Gauge, Size and Used are not defined here. Keep those entries literal rather than turning them into test instructions or dimensions.\n\nThe identity table gives Pin Count 5, while the drawing labels 1–3 and the pigtail lists 3 cavities. I leave that disagreement visible: repeated assignment rows do not establish extra physical cavities.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9065-b00002",
+      "text": "Connector face for harness 14401",
+      "why": "I use the housing outline and the vertical cavity arrangement to navigate this drawing. The upper and lower cavities have outlined circles; the shaded center corresponds to the assignment row with blank circuit and function fields. The surrounding projections are housing features, with no release or locking function identified. Compare the drawing with the identity table beneath it without assuming which physical side of the connector you are viewing."
+    },
+    {
+      "blockId": "connector-C9065-b00005",
+      "text": "Cavity assignments and audio circuit roles",
+      "why": "Read across from Cavity to Circuit Number, Color and Function, keeping the polarity symbol attached to its speaker description. Repeated cavity labels carry different circuit entries; they do not establish that all those wires are present together. The Qualifier cells do not identify the applicable audio configuration. Also keep the tweeter title distinct from the function descriptions naming other speaker positions: this sheet alone does not explain their relationship. Once you have understood the entries, further testing belongs to the matching audio diagnostic procedure."
+    },
+    {
+      "blockId": "connector-C9065-b00007",
+      "text": "Pigtail and shell reference",
+      "why": "A pigtail is a connector supplied with wire leads. I keep its Service Part entry separate from Engineering Shell and the connector’s Hard Shell entry: those fields describe different parts of the identification record. The table provides a service reference, not an instruction to replace the connector or a recipe for joining its wires."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:40:43.474Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "10c06cc83d2d109ebab158496db89a432643e0d180a05ff6fdcc8815770d8605",
+    "reviewedAt": "2026-10-29T00:40:23.070Z",
+    "coveredUnitIds": [
+      "connector-C9065:u1",
+      "connector-C9065:u2",
+      "connector-C9065:u3",
+      "connector-C9065:u4",
+      "connector-C9065:u5",
+      "connector-C9065:u6",
+      "connector-C9065:u7",
+      "connector-C9065:u8",
+      "connector-C9065:u9",
+      "connector-C9065:u10",
+      "connector-C9065:u11",
+      "connector-C9065:u12",
+      "connector-C9065:u13",
+      "connector-C9065:u14",
+      "connector-C9065:u15",
+      "connector-C9065:u16",
+      "connector-C9065:u17",
+      "connector-C9065:u18",
+      "connector-C9065:u19",
+      "connector-C9065:u20",
+      "connector-C9065:u21",
+      "connector-C9065:u22",
+      "connector-C9065:u23",
+      "connector-C9065:u24",
+      "connector-C9065:u25",
+      "connector-C9065:u26",
+      "connector-C9065:u27",
+      "connector-C9065:u28",
+      "connector-C9065:u29",
+      "connector-C9065:u30",
+      "connector-C9065:u31",
+      "connector-C9065:u32",
+      "connector-C9065:u33"
+    ],
+    "originalAuthorHold": [
+      "The metadata Pin Count conflicts with the cavity count shown in the illustration and the pigtail Cavities entry. The discrepancy requires review; the original data remains unchanged."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Pin Count 5 versus pictured 1–3/kit 3, repeated speaker assignments and tweeter-title versus other-speaker function ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "8e9e034f6237aa429d61df1389a96a49ed22a8ee07767753fe3e0578b4c6706f"
+    }
+  }
+}

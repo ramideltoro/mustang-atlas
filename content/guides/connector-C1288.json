@@ -1,0 +1,101 @@
+{
+  "documentId": "connector-C1288",
+  "sourceHash": "4ad50ca5a2a728ae0a36888d3055156a494f0da39656769bddf5b93e478f78d8",
+  "title": "C1288 — Intake Manifold Runner Control Bank 2 (IMRC2) Sensor",
+  "introduction": "The intake manifold distributes incoming air to the cylinders. This sheet maps the electrical connections for its runner-control sensor. I treat the cavity labels as addresses on that air-distribution system: match a label in the drawing to the table, then read across for the circuit's identity and role. The map distinguishes the sensor connection, voltage reference and signal return without requiring you to memorize a bundle of wire colors.\n\nThe summary pin count conflicts with the drawing and pigtail information, and the repeated signal-return entries have unexplained applicability. This is a reading guide, not an access, probing or replacement procedure. Viewing direction, gauge convention and the meanings of Size and Used are undefined; retain those fields as reference entries.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1288-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I recognize the displayed drawing by its broad rounded housing, rectangular projection on the left and angled projections near the upper and lower left edges. Those shapes help navigate the illustration; they do not identify release movements. Match the visible cavity labels to the table while keeping the summary's conflicting pin count unresolved. The physical viewing side is not specified."
+    },
+    {
+      "blockId": "connector-C1288-b00005",
+      "text": "Read the cavity-to-circuit map",
+      "why": "Each row associates a cavity with its circuit, color, gauge, function and terminal part. The signal-return cavity appears in separate entries with different gauge and terminal details, but no qualifier explains their applicability. Preserve those entries as written rather than combining them or selecting a wire or terminal. The functional labels help distinguish the sensor's connection roles; they do not establish expected readings or prove a fault."
+    },
+    {
+      "blockId": "connector-C1288-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail is the connector-and-wire-lead assembly. Its catalog row connects the kit entry with a service part and engineering shell, alongside its listed construction details. Read its gauge as a separate service-assembly entry rather than a replacement specification for every wire in the circuit table. Selecting or installing a repair requires information beyond this catalog reference."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T00:51:36.246Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "ad36626a1fa7ccfc5b2e44ed0659367b67cd2c9718f7540b4537716305cab811",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 32,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "f9990b3f6e182dce9d1cb0f8689bebe6ec68ced3361e98477f1a5c2880bccae6",
+    "reviewedAt": "2026-10-29T00:51:22.621Z",
+    "coveredUnitIds": [
+      "connector-C1288:u1",
+      "connector-C1288:u2",
+      "connector-C1288:u3",
+      "connector-C1288:u4",
+      "connector-C1288:u5",
+      "connector-C1288:u6",
+      "connector-C1288:u7",
+      "connector-C1288:u8",
+      "connector-C1288:u9",
+      "connector-C1288:u10",
+      "connector-C1288:u11",
+      "connector-C1288:u12",
+      "connector-C1288:u13",
+      "connector-C1288:u14",
+      "connector-C1288:u15",
+      "connector-C1288:u16",
+      "connector-C1288:u17",
+      "connector-C1288:u18",
+      "connector-C1288:u19",
+      "connector-C1288:u20",
+      "connector-C1288:u21",
+      "connector-C1288:u22",
+      "connector-C1288:u23",
+      "connector-C1288:u24",
+      "connector-C1288:u25",
+      "connector-C1288:u26",
+      "connector-C1288:u27",
+      "connector-C1288:u28",
+      "connector-C1288:u29",
+      "connector-C1288:u30",
+      "connector-C1288:u31",
+      "connector-C1288:u32"
+    ],
+    "originalAuthorHold": [
+      "The summary states Pin Count 4, while the face drawing labels only cavities 1, 2 and 3 and the pigtail table states 3 cavities. The repeated cavity 3 assignment does not establish a fourth physical cavity."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 32 primary units, both complete source pages and sole figure, and 3 edits. Pin Count 4 versus pictured 1–3/kit 3 and repeated RE454 gauge/terminal applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "349cdcec60354e1ead1c9b116e0f3dc4892b392fc1eff24a4c24f77bc8fadea7"
+    }
+  }
+}
