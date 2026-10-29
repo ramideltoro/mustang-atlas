@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C1605",
+  "sourceHash": "2ffbd2f53e5d06d1ff8818063166ade4c88f65ba5e3580c39300da082db77182",
+  "title": "C1605 — Ignition coil-on-plug 5 connector",
+  "introduction": "An ignition coil produces the high voltage needed to fire its spark plug. This reference maps the connector’s powertrain-control connection and fuse-or-circuit-breaker supply. I start with the connector identity, use the drawing to find a cavity, then read the corresponding assignment row with its engine qualifier attached. A familiar-looking plug is only the cover of the book; the circuit entries tell the useful story.\n\nUse this page to understand the record, not to choose replacement wire or perform an electrical test. Access, release movements, physical viewing direction, probing conditions and installation steps are outside its scope. Gauge, Size and Used retain their original entries without an assumed convention, and an unqualified row does not establish engine applicability. The summary Pin Count disagrees with the drawing and pigtail cavity listing; that discrepancy remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1605-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The rounded housing surrounds a vertical cavity arrangement, with outlined upper and lower circles and a shaded center. I compare that outline with the connector identity before consulting the assignment table. The shaded center corresponds to the row with blank circuit and function fields. The housing features projecting to the left are not labeled as release or locking mechanisms, and this drawing does not establish the physical viewing direction."
+    },
+    {
+      "blockId": "connector-C1605-b00005",
+      "text": "Cavity assignments and engine qualifiers",
+      "why": "Keep each control-circuit row intact: the engine qualifier travels with its coil designation and Terminal Part Number entry, even where other fields match. The lower cavity’s supply description explicitly allows a fuse or circuit breaker; do not silently choose a protective device. Its repeated rows differ in Gauge but have no qualifier explaining that difference, so this reference does not select wire for the vehicle. Understanding those roles is the endpoint here; electrical testing needs the matching engine diagnostic procedure."
+    },
+    {
+      "blockId": "connector-C1605-b00007",
+      "text": "Pigtail service-part identification",
+      "why": "The pigtail is the connector-and-lead service assembly. I distinguish its Service Part entry from Engineering Shell and read its Gauge as a separate field from the assignment-table wire entries. A catalog listing alone does not establish a replacement decision, wire substitution or splice method."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:28:57.453Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "14b450f549f14075dc5900f8d381e38d084b9afd993045342dd931ea6b289d33",
+    "reviewedAt": "2026-10-29T01:28:39.804Z",
+    "coveredUnitIds": [
+      "connector-C1605:u1",
+      "connector-C1605:u2",
+      "connector-C1605:u3",
+      "connector-C1605:u4",
+      "connector-C1605:u5",
+      "connector-C1605:u6",
+      "connector-C1605:u7",
+      "connector-C1605:u8",
+      "connector-C1605:u9",
+      "connector-C1605:u10",
+      "connector-C1605:u11",
+      "connector-C1605:u12",
+      "connector-C1605:u13",
+      "connector-C1605:u14",
+      "connector-C1605:u15",
+      "connector-C1605:u16",
+      "connector-C1605:u17",
+      "connector-C1605:u18",
+      "connector-C1605:u19",
+      "connector-C1605:u20",
+      "connector-C1605:u21",
+      "connector-C1605:u22",
+      "connector-C1605:u23",
+      "connector-C1605:u24",
+      "connector-C1605:u25",
+      "connector-C1605:u26",
+      "connector-C1605:u27",
+      "connector-C1605:u28",
+      "connector-C1605:u29",
+      "connector-C1605:u30",
+      "connector-C1605:u31",
+      "connector-C1605:u32",
+      "connector-C1605:u33"
+    ],
+    "originalAuthorHold": [
+      "The metadata Pin Count conflicts with the cavity count shown in the illustration and the pigtail Cavities entry. The discrepancy requires review; the original data remains unchanged."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Pin Count and unqualified supply-gauge applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "fdc28d03147544928ad5208cfc80e58efbd23896ceb4847c8a9372fb7f7494d0"
+    }
+  }
+}

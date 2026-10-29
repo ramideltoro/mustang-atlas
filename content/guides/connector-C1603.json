@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C1603",
+  "sourceHash": "3b4bff79a1eb8023522653899daf35d60ac9788e3aa6eff31cfcce134e38d869",
+  "title": "C1603 — Ignition coil-on-plug 3 connector guide",
+  "introduction": "The ignition coil turns electrical energy into the high voltage needed for a spark, with the coil positioned at its spark plug. I use this reference to understand the coil’s connections before drawing conclusions about it. Think of the cavity label as a seat number and the circuit row as its passenger: repeated rows do not create extra seats.\n\nBegin with the connector identity table. Use the drawing’s cavity labels to find the corresponding rows, then read across for circuit identity, color, gauge, function and terminal reference. The control-circuit entries carry engine qualifiers, so check the applicable engine before comparing them. The supply description preserves a fuse-or-circuit-breaker alternative.\n\nThe page is a connector-reading guide, not an access, probing, wire-selection or replacement procedure. It leaves the physical viewing side, gauge convention and Size and Used code definitions unspecified. Its summary Pin Count disagrees with the drawing and pigtail cavity listing; that discrepancy remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1603-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "The supplied drawing has a rounded housing, projections on the left and vertically arranged cavity labels. I use that combination to follow the illustration without inventing a viewing direction or calling a projection a release mechanism. The shaded middle position aligns with the assignment row that has no circuit or terminal identified."
+    },
+    {
+      "blockId": "connector-C1603-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "Keep the engine-qualified control entries intact: their gauge and terminal references belong to their respective rows. The repeated supply entries have different gauge values but no engine qualifiers, so their sequence is not an engine key. Their function remains a fuse-or-circuit-breaker supply. The map identifies connections; it does not establish whether the coil, supply or control circuit is working."
+    },
+    {
+      "blockId": "connector-C1603-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I use Service Part to identify the listed pigtail service item and Engineering Shell to compare its housing reference with the connector information above. Terminal Part Number belongs to the individual circuit entries and serves a different identification purpose. The service-item gauge and material fields are reference data, not instructions for choosing replacement wire or making a splice."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:24:20.867Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "e9da27b7bb03f8beb1b4814694736d4bb58245f2e42c04742b17c9d2394f15ea",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "710896fa78a3779cd69dbe252c8e959ce8cecbbda99e09f7bed0e48effa49fb6",
+    "reviewedAt": "2026-10-29T01:23:55.851Z",
+    "coveredUnitIds": [
+      "connector-C1603:u1",
+      "connector-C1603:u2",
+      "connector-C1603:u3",
+      "connector-C1603:u4",
+      "connector-C1603:u5",
+      "connector-C1603:u6",
+      "connector-C1603:u7",
+      "connector-C1603:u8",
+      "connector-C1603:u9",
+      "connector-C1603:u10",
+      "connector-C1603:u11",
+      "connector-C1603:u12",
+      "connector-C1603:u13",
+      "connector-C1603:u14",
+      "connector-C1603:u15",
+      "connector-C1603:u16",
+      "connector-C1603:u17",
+      "connector-C1603:u18",
+      "connector-C1603:u19",
+      "connector-C1603:u20",
+      "connector-C1603:u21",
+      "connector-C1603:u22",
+      "connector-C1603:u23",
+      "connector-C1603:u24",
+      "connector-C1603:u25",
+      "connector-C1603:u26",
+      "connector-C1603:u27",
+      "connector-C1603:u28",
+      "connector-C1603:u29",
+      "connector-C1603:u30",
+      "connector-C1603:u31",
+      "connector-C1603:u32",
+      "connector-C1603:u33"
+    ],
+    "originalAuthorHold": [
+      "The summary Pin Count disagrees with the physical cavity count indicated by the illustration and pigtail listing. Its intended meaning needs confirmation; repeated assignment rows cannot be assumed to represent extra cavities."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Pin Count and unqualified supply-gauge applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "9d46a1fc3687a0b4cfd125c9fde36e53af90aa599aa8d5312405ce190267c2fd"
+    }
+  }
+}

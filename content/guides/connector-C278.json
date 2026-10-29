@@ -1,0 +1,112 @@
+{
+  "documentId": "connector-C278",
+  "sourceHash": "801645a6b85e5966bbdd676be0b85887ec1db19153e8709a6bf8d74a3ccf5b6d",
+  "title": "C278 — Brake pedal position (BPP) switch connector",
+  "introduction": "The brake pedal has an electrical conversation as well as a mechanical job. I use this reference to keep the switch’s supply, ground and signal connections straight: begin with the identification table, locate the cavity labels in the drawing, then read across their assignment rows. The functions distinguish a fuse-or-circuit-breaker supply, a front-left-fender ground, speed-control deactivation and the brake on/off switch connection.\n\nThis is a connector-reading guide, with separate pigtail and European product references below. Physical viewing direction, the gauge convention and the meanings of Size and Used are unspecified; the page does not teach wire selection, probing, switch testing or replacement. Its Pin Count entry also conflicts with the illustrated and pigtail cavity counts, which remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C278-b00002",
+      "text": "Connector face map · Harness 14290",
+      "why": "The cavity labels run down a vertical column on the page, beside the projecting housing features on the left. I use that printed arrangement to find a label, then match it to the Cavity column below. The projections are visual landmarks, not identified release controls, and the drawing does not specify the physical viewing side. Compare Fpn with Hard Shell to cross-check the housing identity."
+    },
+    {
+      "blockId": "connector-C278-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read each cavity row across to its circuit identity, wire color, gauge, function and terminal part. Keep the supply’s fuse-or-circuit-breaker alternative intact rather than selecting a protective device. The ground and brake on/off entries repeat with different Gauge values; blank Qualifier cells do not explain which applies, so neither row should be discarded or turned into a wire-selection rule. The speed-control deactivation label identifies a function, while NORMAL OPEN describes the brake on/off connection; neither supplies a pedal-state test sequence or an expected measurement."
+    },
+    {
+      "blockId": "connector-C278-b00007",
+      "text": "Pigtail kit and service-part reference",
+      "why": "A pigtail combines the connector housing with wire leads. Number ties this row to Kit List, and Engineering Shell can be compared with the housing identifiers above. I distinguish the complete Service Part from the individual Terminal Part Number entries—the connector assembly and its terminals have different addresses in the parts catalog. The pigtail Gauge entry is not, by itself, permission to replace the circuit wiring with that size."
+    },
+    {
+      "blockId": "connector-C278-b00009",
+      "text": "European pigtail product reference",
+      "why": "This table provides a European Product Id for the pigtail reference. Keep it distinct from the Service Part and Engineering Shell fields above. It adds a catalog identifier without establishing interchangeability, vehicle applicability or installation instructions."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:22:55.903Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "d5809c0adf0466230b3b2f3ef0e61a05186afa43a162f20dcf11b31b3ee333e1",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "082f69f066552c26bf8aecf238a9d1df5ad68f970697ba9e5f664263f991d884",
+    "reviewedAt": "2026-10-29T01:22:42.798Z",
+    "coveredUnitIds": [
+      "connector-C278:u1",
+      "connector-C278:u2",
+      "connector-C278:u3",
+      "connector-C278:u4",
+      "connector-C278:u5",
+      "connector-C278:u6",
+      "connector-C278:u7",
+      "connector-C278:u8",
+      "connector-C278:u9",
+      "connector-C278:u10",
+      "connector-C278:u11",
+      "connector-C278:u12",
+      "connector-C278:u13",
+      "connector-C278:u14",
+      "connector-C278:u15",
+      "connector-C278:u16",
+      "connector-C278:u17",
+      "connector-C278:u18",
+      "connector-C278:u19",
+      "connector-C278:u20",
+      "connector-C278:u21",
+      "connector-C278:u22",
+      "connector-C278:u23",
+      "connector-C278:u24",
+      "connector-C278:u25",
+      "connector-C278:u26",
+      "connector-C278:u27",
+      "connector-C278:u28",
+      "connector-C278:u29",
+      "connector-C278:u30",
+      "connector-C278:u31",
+      "connector-C278:u32",
+      "connector-C278:u33",
+      "connector-C278:u34",
+      "connector-C278:u35",
+      "connector-C278:u36",
+      "connector-C278:u37",
+      "connector-C278:u38"
+    ],
+    "originalAuthorHold": [
+      "The identification table’s Pin Count conflicts with the cavity count in the face drawing and pigtail service-parts table. Clarify what Pin Count represents before presenting those entries as consistent."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 38 primary units, three complete source pages and sole figure, and 4 edits. Count and duplicate-gauge applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "2c01aa521489baaf51d42fa90ad1b91ddcbf3460c1e4e41694e5e7438f7d91d5"
+    }
+  }
+}

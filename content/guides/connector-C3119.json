@@ -1,0 +1,104 @@
+{
+  "documentId": "connector-C3119",
+  "sourceHash": "fc7f71eab23a88953460add6ad2156ce5745fcef50ea97f3e383a1fa52f8a3c6",
+  "title": "C3119 — Right-rear power window motor connector",
+  "introduction": "I read this connector map like a seating chart: the drawing locates a cavity, and the matching table row tells us which electrical job sits there. Start with the identification table, then match the drawing’s cavity labels to the Cavity column. Read across for the circuit, wire color, gauge entry, function and terminal part reference.\n\nThe functions distinguish fuse-or-circuit-breaker supplies, a ground path, switch connections and module connections. That helps separate the electricity that supports window operation from the requests to move the glass—a useful distinction before blaming the motor for every sulky window. The pigtail table provides a separate service-parts cross-reference.\n\nThis guide explains the reference. Physical viewing direction, gauge convention and the meanings of Size and Used are unspecified; those entries cannot establish probe placement, replacement-wire selection or electrical health. Access, testing and replacement require their own procedures. The left/right wording discrepancy described below remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3119-b00002",
+      "text": "Connector face map · Harness 14A411",
+      "why": "I use the drawing’s housing outline to keep the page orientation consistent while finding cavity labels. As drawn, a long vertical group sits on the left and a shorter group on the right, beneath the upper housing projection. These are positions on the illustration; the outline alone does not identify the physical viewing side or establish how any projection releases."
+    },
+    {
+      "blockId": "connector-C3119-b00005",
+      "text": "Read the cavity and circuit assignments",
+      "why": "The cavity label connects the drawing to its table row; Circuit Number identifies the electrical path, while Color and Gauge describe the listed wire. Function distinguishes supply, ground, switch and module connections, and Terminal Part Number identifies the associated terminal reference. Keep the fuse-or-circuit-breaker alternatives intact. A function label describes an assigned role, not a measured result or proof that the motor receives a working command. The switch rows retain their left-side wording despite the right-rear title; that discrepancy needs review."
+    },
+    {
+      "blockId": "connector-C3119-b00007",
+      "text": "Pigtail kit and service-part references",
+      "why": "A pigtail is a connector with attached wire leads. This table links the kit entry to its service part and engineering shell, alongside the listed material, gauge entry and cavity count. I keep this parts lookup separate from the circuit map: its gauge entry does not establish a replacement-wire choice, and a catalog reference does not teach splicing or installation."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:18:10.581Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "ed17b54a6f33240faf1a81998729b41aa90b7a214f7576ccb13a3a4933fb9230",
+    "reviewedAt": "2026-10-29T01:16:47.880Z",
+    "coveredUnitIds": [
+      "connector-C3119:u1",
+      "connector-C3119:u2",
+      "connector-C3119:u3",
+      "connector-C3119:u4",
+      "connector-C3119:u5",
+      "connector-C3119:u6",
+      "connector-C3119:u7",
+      "connector-C3119:u8",
+      "connector-C3119:u9",
+      "connector-C3119:u10",
+      "connector-C3119:u11",
+      "connector-C3119:u12",
+      "connector-C3119:u13",
+      "connector-C3119:u14",
+      "connector-C3119:u15",
+      "connector-C3119:u16",
+      "connector-C3119:u17",
+      "connector-C3119:u18",
+      "connector-C3119:u19",
+      "connector-C3119:u20",
+      "connector-C3119:u21",
+      "connector-C3119:u22",
+      "connector-C3119:u23",
+      "connector-C3119:u24",
+      "connector-C3119:u25",
+      "connector-C3119:u26",
+      "connector-C3119:u27",
+      "connector-C3119:u28",
+      "connector-C3119:u29",
+      "connector-C3119:u30",
+      "connector-C3119:u31",
+      "connector-C3119:u32",
+      "connector-C3119:u33",
+      "connector-C3119:u34",
+      "connector-C3119:u35"
+    ],
+    "originalAuthorHold": [
+      "The title and description identify the right-rear power window motor, but the switch-function rows say LEFT CLOSE and LEFT OPEN. The supplied evidence does not explain whether these are intentional switch-origin descriptions or incorrect side labels. Retain both pending focused review."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 35 primary units, three complete source pages and sole figure, and 3 edits. Right-rear title versus LEFT CLOSE/OPEN function ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "98b1101143b3cb0f442324e046828dc274a3b31b55cfd0bf4fbb495c49114866"
+    }
+  }
+}
