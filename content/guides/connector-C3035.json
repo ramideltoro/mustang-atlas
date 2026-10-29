@@ -1,0 +1,107 @@
+{
+  "documentId": "connector-C3035",
+  "sourceHash": "1c6b118fe180f601c45086b8bdfcb366c90a3f8b67213c54eaf608be15f4a2bb",
+  "title": "C3035 — Front seat cushion blower motor LH",
+  "introduction": "This seat-cushion connector reference brings heater, fan, temperature-sensor and blower-speed-control functions onto the same page. I treat it like a seating chart for the electrical connections: the cavity locates an entry, while the Function column tells you its job. The blower name alone does not describe every circuit listed here.\n\nStart with the harness and face-identification table, then match the drawing’s cavity labels to the assignment rows. This guide teaches reference reading, not access, probing, wire selection or replacement. Physical viewing direction, gauge conventions and a general legend for Size and Used are unspecified. The summary pin count conflicts with the illustrated cavity count and remains unresolved below.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3035-b00002",
+      "text": "Connector face reference · Harness 14D231",
+      "why": "I check Harness Id and Fpn before using the drawing. As printed, the housing has a broad projection on the left and smaller projections on the right; these are visual landmarks, not established release or locking features. Match the printed cavity labels rather than assuming a viewing direction. The shaded cavity corresponds to the table row with blank circuit and function fields, so do not invent an electrical role for that position."
+    },
+    {
+      "blockId": "connector-C3035-b00005",
+      "text": "Cavity functions and circuit labels",
+      "why": "Read across a complete cavity row: Circuit Number identifies the circuit, Color and Gauge describe its listed lead, Function states its role, and Terminal Part Number supplies the terminal reference. The heater and fan entries retain their positive and negative labels; the temperature-related and blower-speed-control entries have separate functions. Those labels distinguish connections but do not supply test values or prove that a negative connection is chassis ground. Repeated heater entries differ in gauge while retaining their circuit identity; blank Qualifier cells give no basis for choosing a gauge configuration. Keep each row intact."
+    },
+    {
+      "blockId": "connector-C3035-b00007",
+      "text": "Pigtail kit reference",
+      "why": "I match Engineering Shell to the face table’s Fpn, then read Number and Service Part from the same catalog row. Gauge, Material and Cavities describe that listed kit; they do not teach splicing or establish replacement-wire requirements. The Image column names a catalog file, rather than showing kit contents in the supplied connector drawing."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:44:26.397Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "71fb1d97363181a6d66ec3dc78564155cd7ea4e6d9f70798b98c67eb29c01b22",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 38,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "2d3f8fc9b016e3d06fd5405743be9d7c526888b580d487c547e6f4c7d322e568",
+    "reviewedAt": "2026-10-29T01:44:02.766Z",
+    "coveredUnitIds": [
+      "connector-C3035:u1",
+      "connector-C3035:u2",
+      "connector-C3035:u3",
+      "connector-C3035:u4",
+      "connector-C3035:u5",
+      "connector-C3035:u6",
+      "connector-C3035:u7",
+      "connector-C3035:u8",
+      "connector-C3035:u9",
+      "connector-C3035:u10",
+      "connector-C3035:u11",
+      "connector-C3035:u12",
+      "connector-C3035:u13",
+      "connector-C3035:u14",
+      "connector-C3035:u15",
+      "connector-C3035:u16",
+      "connector-C3035:u17",
+      "connector-C3035:u18",
+      "connector-C3035:u19",
+      "connector-C3035:u20",
+      "connector-C3035:u21",
+      "connector-C3035:u22",
+      "connector-C3035:u23",
+      "connector-C3035:u24",
+      "connector-C3035:u25",
+      "connector-C3035:u26",
+      "connector-C3035:u27",
+      "connector-C3035:u28",
+      "connector-C3035:u29",
+      "connector-C3035:u30",
+      "connector-C3035:u31",
+      "connector-C3035:u32",
+      "connector-C3035:u33",
+      "connector-C3035:u34",
+      "connector-C3035:u35",
+      "connector-C3035:u36",
+      "connector-C3035:u37",
+      "connector-C3035:u38"
+    ],
+    "originalAuthorHold": [
+      "The summary Pin Count is 10, but the face drawing and assignment table identify cavities 1 through 8, and the pigtail row lists 8 cavities. The supplied evidence does not reconcile these counts; do not present the summary as a verified physical pin count."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 38 primary units, three complete source pages and sole figure, and 3 edits. Count and repeated heater-gauge applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "0080a6b4246f0aa7d1d243ba71459a0f66b9fa12316bc4ebde4fb2b190b229a1"
+    }
+  }
+}

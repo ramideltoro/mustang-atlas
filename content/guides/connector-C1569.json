@@ -1,0 +1,104 @@
+{
+  "documentId": "connector-C1569",
+  "sourceHash": "971448473a6545f9350a33e9fb81726a93296f235fd24d422cdcfcb1314cbc9a",
+  "title": "C1569 — Heated oxygen sensor (HO2S) #22",
+  "introduction": "I read this connector reference as an address book for the heated oxygen sensor's wiring. The cavity label gets me to the right entry; the rest of the row explains the circuit's job. Color helps describe a wire, but it is not the whole address.\n\nBegin with the connector identification table, locate a cavity label in the drawing, and find its matching Cavity entry. Read across for the circuit, color, gauge, function and terminal reference. The functions distinguish a fuse-or-circuit-breaker supply, heater control, sensor-related entries and signal return. Repeated cavity labels remain separate records because blank Qualifier cells do not explain their applicability. The summary's Pin Count conflicts with the face drawing and pigtail cavity listings, so the physical count needs review.\n\nThis page teaches reference reading. It supplies no physical access, release, probing, test or installation sequence. The physical viewing direction, gauge convention and meanings of Size and Used are unspecified; none should be guessed from the drawing or connector gender.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1569-b00002",
+      "text": "Connector face for harness 12C508/14B060",
+      "why": "I use the outline's housing features and projections as landmarks within the illustration. Its cavity labels increase from bottom to top within each column, rather than running across the rows. That pattern helps navigate the printed reference; it does not establish a terminal-side or wire-side physical view. No projection is identified as a latch or release."
+    },
+    {
+      "blockId": "connector-C1569-b00005",
+      "text": "Match cavities to circuit functions",
+      "why": "Reading across a complete row keeps the powertrain heater-control entry distinct from the sensor and cowl signal-return descriptions. I retain the different descriptions under repeated cavity labels without assuming they are simultaneous connections or interchangeable alternatives. The table identifies circuit roles; deciding which repeated entry applies requires information beyond these blank qualifiers."
+    },
+    {
+      "blockId": "connector-C1569-b00007",
+      "text": "Pigtail kit and shell references",
+      "why": "A pigtail combines the connector with attached wire leads. The service-part table connects each kit record with its engineering shell and other recorded attributes. I keep the kit and shell identities separate: sharing a shell does not explain the difference between kits or establish interchangeability. The entries are identification references, not wire-selection or installation instructions."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:39:01.299Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "ce696fcc5c31cf7d0e578a8057bf0b2e07a60840c1fd0758061aefd31a9fc9ce",
+    "reviewedAt": "2026-10-29T01:38:34.944Z",
+    "coveredUnitIds": [
+      "connector-C1569:u1",
+      "connector-C1569:u2",
+      "connector-C1569:u3",
+      "connector-C1569:u4",
+      "connector-C1569:u5",
+      "connector-C1569:u6",
+      "connector-C1569:u7",
+      "connector-C1569:u8",
+      "connector-C1569:u9",
+      "connector-C1569:u10",
+      "connector-C1569:u11",
+      "connector-C1569:u12",
+      "connector-C1569:u13",
+      "connector-C1569:u14",
+      "connector-C1569:u15",
+      "connector-C1569:u16",
+      "connector-C1569:u17",
+      "connector-C1569:u18",
+      "connector-C1569:u19",
+      "connector-C1569:u20",
+      "connector-C1569:u21",
+      "connector-C1569:u22",
+      "connector-C1569:u23",
+      "connector-C1569:u24",
+      "connector-C1569:u25",
+      "connector-C1569:u26",
+      "connector-C1569:u27",
+      "connector-C1569:u28",
+      "connector-C1569:u29",
+      "connector-C1569:u30",
+      "connector-C1569:u31",
+      "connector-C1569:u32",
+      "connector-C1569:u33",
+      "connector-C1569:u34",
+      "connector-C1569:u35"
+    ],
+    "originalAuthorHold": [
+      "The identification table states Pin Count 6, while the drawing has four labeled cavities and both pigtail records specify Cavities 4. Confirm the intended physical cavity count; the repeated assignment rows cannot establish additional cavities."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 35 primary units, three complete source pages and sole figure, and 3 edits. Count and repeated circuit/kit applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "29ede3c07e5f5a594adfcc68db5998d427878520c88fddc957c670e031a6a49a"
+    }
+  }
+}

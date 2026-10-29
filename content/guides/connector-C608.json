@@ -1,0 +1,106 @@
+{
+  "documentId": "connector-C608",
+  "sourceHash": "b779f86d0b326c8a66e26237fb6ccf69511a0efd6653fc0852b6934097a85486",
+  "title": "C608 — Passenger door window regulator motor",
+  "introduction": "The passenger glass travels up and down, but its connector has a busier conversation: the assignment table includes supplies, ground, movement commands, global-down control and a door-ajar entry. I use this page to separate those stated jobs before drawing conclusions about the motor. A stubborn window has more to say than “buy me a motor.”\n\nBegin with the connector identity table, locate a cavity label in the drawing, then read its assignment row across. Circuit Number identifies the circuit, Color records its wire-color code, and Function explains its stated role. Keep Gauge and Terminal Part Number with that same row. Where a cavity label repeats, retain both entries; a blank Qualifier does not establish whether they apply together or to different configurations.\n\nThis guide explains the reference rather than a physical test or repair. Viewing direction, gauge convention and the meanings of Box, Cols, Size and Used remain unspecified; access, probing, replacement and test limits need separate instructions. The overview’s Pin Count differs from the drawing’s labeled positions and the pigtail Cavities entry. That discrepancy remains unresolved rather than becoming an invented connector layout.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C608-b00002",
+      "text": "Harness 14630 connector face",
+      "why": "The illustration places a tall stack of labeled positions at left and separated labeled positions at right, with a prominent housing projection above. I use that uneven arrangement to navigate the picture. These are page directions only; the projection is not labeled as a latch or release, and the drawing does not establish which physical side the reader would be viewing."
+    },
+    {
+      "blockId": "connector-C608-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read the supply functions as fuse-or-circuit-breaker supplies, preserving the protection alternatives. The other descriptions distinguish the right cowl/pillar ground, module-labeled and driver-switch-labeled up/down entries, global-down control and passenger-latch ajar information. This is why I read Function alongside the circuit and color fields: a movement command, a supply and an ajar entry have different stated jobs. Repeated movement-command cavities do not prove that their listed circuits are joined or interchangeable."
+    },
+    {
+      "blockId": "connector-C608-b00007",
+      "text": "Pigtail service identification",
+      "why": "The pigtail table identifies the connector-and-lead service assembly and records its gauge field, material, cavity information, service part and engineering shell. I keep those catalog fields separate from the assignment rows. The combined gauge entry does not say which lead belongs to which cavity, and the material description supplies no terminal-handling or splicing procedure."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:43:07.673Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 37,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "07c0ec7f256217c1618186339fbb6e41651566714a64b38422a94676e379dba9",
+    "reviewedAt": "2026-10-29T01:42:40.378Z",
+    "coveredUnitIds": [
+      "connector-C608:u1",
+      "connector-C608:u2",
+      "connector-C608:u3",
+      "connector-C608:u4",
+      "connector-C608:u5",
+      "connector-C608:u6",
+      "connector-C608:u7",
+      "connector-C608:u8",
+      "connector-C608:u9",
+      "connector-C608:u10",
+      "connector-C608:u11",
+      "connector-C608:u12",
+      "connector-C608:u13",
+      "connector-C608:u14",
+      "connector-C608:u15",
+      "connector-C608:u16",
+      "connector-C608:u17",
+      "connector-C608:u18",
+      "connector-C608:u19",
+      "connector-C608:u20",
+      "connector-C608:u21",
+      "connector-C608:u22",
+      "connector-C608:u23",
+      "connector-C608:u24",
+      "connector-C608:u25",
+      "connector-C608:u26",
+      "connector-C608:u27",
+      "connector-C608:u28",
+      "connector-C608:u29",
+      "connector-C608:u30",
+      "connector-C608:u31",
+      "connector-C608:u32",
+      "connector-C608:u33",
+      "connector-C608:u34",
+      "connector-C608:u35",
+      "connector-C608:u36",
+      "connector-C608:u37"
+    ],
+    "originalAuthorHold": [
+      "The overview Pin Count differs from the labeled positions in the connector drawing and the pigtail Cavities entry. Its meaning is not explained, so neither count should be silently substituted for the other."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 37 primary units, three complete source pages and sole figure, and 3 edits. Count and repeated command-circuit applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "532d9210f265c40f3e53334609c8a078828a74198fd7a005e7749fd6c0c043f7"
+    }
+  }
+}

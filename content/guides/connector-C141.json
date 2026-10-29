@@ -1,0 +1,104 @@
+{
+  "documentId": "connector-C141",
+  "sourceHash": "d16e988fdf543f04cf83d568e428bc0bfe8c58f501cdc9737b094d70aff33d8f",
+  "title": "C141 — Heated oxygen sensor (HO2S) #22 connector",
+  "introduction": "I start with the connector identity, then use the face drawing to find a cavity label and its matching table entries. Read across each entry for the circuit, wire color, gauge, function and terminal reference. The functions distinguish the fuse-or-circuit-breaker supply, heater-control connection, sensor connection and return-related entries. Think of the connector as a small switchboard: the heater’s electrical job and the sensor’s information path deserve their own labels.\n\nRepeated cavity entries remain separate. Their blank Qualifier cells do not explain which configuration uses each entry, so this guide does not choose between them or treat them as simultaneous connections. The pigtail table is a parts cross-reference, with no selection rule between the listed kits.\n\nThe summary pin count conflicts with the drawing and pigtail cavity counts; that needs review. Physical viewing direction, gauge convention and Size and Used meanings are also unspecified. This page supports reading the reference; access, probing, test interpretation, wire selection and replacement need separate procedures.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C141-b00002",
+      "text": "Connector face map · Harness 12C508/14B060",
+      "why": "The drawing places labeled cavities in upper and lower positions within each column. I use the surrounding housing outline and side projections as landmarks for reading that arrangement on the page. Their shapes do not establish release movements or the physical viewing side. The drawing remains useful as a label map while its disagreement with the summary pin count is reviewed."
+    },
+    {
+      "blockId": "connector-C141-b00005",
+      "text": "Read the cavity and circuit entries",
+      "why": "A cavity label is the lookup key, and every matching row deserves attention. The supply rows differ in their gauge entries; the return-related rows differ in circuit, color and function. Those differences must remain visible rather than being collapsed into a single assumed connection. The heater and sensor descriptions retain their post-catalyst, second-sensor qualification. Function describes the assigned electrical role, including the literal fuse-or-circuit-breaker alternative; it supplies neither an expected measurement nor a fault conclusion."
+    },
+    {
+      "blockId": "connector-C141-b00007",
+      "text": "Pigtail kit and service-part references",
+      "why": "The pigtail rows associate each kit with a service part, engineering shell and listed construction details. A pigtail supplies a connector with attached leads; the terminal references in the circuit table identify a different level of component. Matching shell entries do not explain why the service parts differ or establish interchangeability. I use this section to understand the catalog relationships, leaving kit selection and installation to evidence that addresses those tasks."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:37:36.133Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "ba021da4c260acaf3ee850fd39d5b454195b930c8fc1202784bfe2d9e17a1216",
+    "reviewedAt": "2026-10-29T01:37:03.057Z",
+    "coveredUnitIds": [
+      "connector-C141:u1",
+      "connector-C141:u2",
+      "connector-C141:u3",
+      "connector-C141:u4",
+      "connector-C141:u5",
+      "connector-C141:u6",
+      "connector-C141:u7",
+      "connector-C141:u8",
+      "connector-C141:u9",
+      "connector-C141:u10",
+      "connector-C141:u11",
+      "connector-C141:u12",
+      "connector-C141:u13",
+      "connector-C141:u14",
+      "connector-C141:u15",
+      "connector-C141:u16",
+      "connector-C141:u17",
+      "connector-C141:u18",
+      "connector-C141:u19",
+      "connector-C141:u20",
+      "connector-C141:u21",
+      "connector-C141:u22",
+      "connector-C141:u23",
+      "connector-C141:u24",
+      "connector-C141:u25",
+      "connector-C141:u26",
+      "connector-C141:u27",
+      "connector-C141:u28",
+      "connector-C141:u29",
+      "connector-C141:u30",
+      "connector-C141:u31",
+      "connector-C141:u32",
+      "connector-C141:u33",
+      "connector-C141:u34",
+      "connector-C141:u35"
+    ],
+    "originalAuthorHold": [
+      "The identification table states Pin Count 6, while the connector drawing shows cavities 1 through 4 and both pigtail rows specify 4 cavities. The supplied evidence does not reconcile these counts; the physical pin count requires focused review."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 35 primary units, three complete source pages and sole figure, and 3 edits. Count and repeated circuit/kit applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "e93c4899e349132e0d5ec20737cb15cb312840d6549d6cc4f22e56950796fdd3"
+    }
+  }
+}
