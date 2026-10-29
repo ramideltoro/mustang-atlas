@@ -1,0 +1,125 @@
+{
+  "documentId": "connector-C3206",
+  "sourceHash": "116d86b923c18bf82f0a0fce56774b72937917495513c3f5a3f3fe802ad4835f",
+  "title": "C3206 — Driver restraint connector reference",
+  "introduction": "I use this inline connector reference as an electrical address book: the drawing locates a cavity, and the table describes the connection associated with that address. The functions concern the driver's seat-mounted side air bag and outboard seat-belt tension sensor.\n\nStart with the MALE or FEMALE heading and its Harness Id. In that section, match a drawing label to the Cavity column, then read across the complete row. Circuit Number identifies the circuit; Color helps distinguish wiring; Function names its role and preserves the polarity sign. Check Qualifier before treating an entry as applicable. Repeated cavity entries must remain separate, and the male table contains unresolved overlapping assignments.\n\nUse the illustrated cavity labels rather than interpreting the summary Pin Count as additional positions. The drawings show housing features, but do not establish the physical viewing direction or how those features release. Gauge conventions and the Size and Used codes are undefined here. This is a reading and identification guide: access, restraint-system preparation, probing, electrical tests, wire selection and replacement require a separate applicable procedure. The summary Pin Count disagrees with the cavity count shown by each drawing and both pigtail records; that difference remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C3206-b00002",
+      "text": "MALE connector face · Harness 14C687/14D232",
+      "why": "I start with the harness identity so the drawing stays paired with the correct table. As drawn, the cavity labels run vertically down the center; the surrounding projections are housing features, without an established release function."
+    },
+    {
+      "blockId": "connector-C3206-b00005",
+      "text": "Male cavity and circuit reference",
+      "why": "Read each complete row rather than combining entries that share a cavity label. Different restraint functions occupy overlapping entries with blank Qualifier cells, so this table cannot resolve a unique applicable male assignment. Keep each circuit, color, gauge and terminal entry together; NA is not evidence that a cavity is empty."
+    },
+    {
+      "blockId": "connector-C3206-b00007",
+      "text": "FEMALE connector face · Harness 14D231",
+      "why": "The female drawing has a broad loop-shaped housing projection on its right as displayed. That helps distinguish the illustrations. Its own identity and circuit tables govern this section; matching circuit names across the connector does not make the male and female gauge or terminal entries interchangeable."
+    },
+    {
+      "blockId": "connector-C3206-b00010",
+      "text": "Female cavity and circuit reference",
+      "why": "Match a cavity label to its row, then use Circuit Number and Function together to identify the named air-bag connection. Preserve the distinction between the side and outboard descriptions and their polarity signs. Those signs describe the listed circuit roles; they are not instructions to apply power."
+    },
+    {
+      "blockId": "connector-C3206-b00012",
+      "text": "Pigtail service-part reference",
+      "why": "The pigtail table connects each catalogue entry with its listed material, gauge, cavity count, illustration filename, service part and engineering shell. Keep those fields together when reading it. A shared engineering shell does not establish that the listed pigtails are interchangeable or explain how to install either."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T02:12:24.464Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 5,
+    "receivedBlocks": 5,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 46,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "7c2a924ad356cc8c1584c5baef60de1de36b8840224d36a0a403b9205ae5267e",
+    "reviewedAt": "2026-10-29T02:12:08.204Z",
+    "coveredUnitIds": [
+      "connector-C3206:u1",
+      "connector-C3206:u2",
+      "connector-C3206:u3",
+      "connector-C3206:u4",
+      "connector-C3206:u5",
+      "connector-C3206:u6",
+      "connector-C3206:u7",
+      "connector-C3206:u8",
+      "connector-C3206:u9",
+      "connector-C3206:u10",
+      "connector-C3206:u11",
+      "connector-C3206:u12",
+      "connector-C3206:u13",
+      "connector-C3206:u14",
+      "connector-C3206:u15",
+      "connector-C3206:u16",
+      "connector-C3206:u17",
+      "connector-C3206:u18",
+      "connector-C3206:u19",
+      "connector-C3206:u20",
+      "connector-C3206:u21",
+      "connector-C3206:u22",
+      "connector-C3206:u23",
+      "connector-C3206:u24",
+      "connector-C3206:u25",
+      "connector-C3206:u26",
+      "connector-C3206:u27",
+      "connector-C3206:u28",
+      "connector-C3206:u29",
+      "connector-C3206:u30",
+      "connector-C3206:u31",
+      "connector-C3206:u32",
+      "connector-C3206:u33",
+      "connector-C3206:u34",
+      "connector-C3206:u35",
+      "connector-C3206:u36",
+      "connector-C3206:u37",
+      "connector-C3206:u38",
+      "connector-C3206:u39",
+      "connector-C3206:u40",
+      "connector-C3206:u41",
+      "connector-C3206:u42",
+      "connector-C3206:u43",
+      "connector-C3206:u44",
+      "connector-C3206:u45",
+      "connector-C3206:u46"
+    ],
+    "originalAuthorHold": [
+      "The male table assigns different circuits and functions to overlapping cavity entries while leaving their Qualifier cells blank. Applicable configurations are unresolved; review is required before presenting a unique male circuit assignment."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 46 primary units, three complete source pages and both figures, and 5 edits. Summary count and overlapping male-face restraint assignment ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "075221e74a8cdcfc4464bea5f5955281fca3359b2e5e430e7f677be636baf9ba"
+    }
+  }
+}
