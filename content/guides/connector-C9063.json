@@ -1,0 +1,103 @@
+{
+  "documentId": "connector-C9063",
+  "sourceHash": "c2221ac61289c4be1c800f3cde7b70a03a7b0722631d83d1dd562ad1d4891d3a",
+  "title": "C9063 — Tweeter LH A-pillar",
+  "introduction": "I read an audio connector by keeping each positive circuit paired with its matching negative description. Mixing speaker descriptions is like swapping name tags at band practice: the labels still look tidy, but the connections tell the wrong story. Here, the drawing's shaded middle cavity corresponds to the unused row, while the populated positions have repeated circuit entries.\n\nUse the identity table, harness drawing and cavity map together, followed by the pigtail catalog. The tweeter title and the woofer and left-middle function descriptions have an unexplained relationship; equipment applicability remains unresolved. The summary pin count also conflicts with the drawing and pigtail cavity count. This page teaches reference reading, with physical viewing direction, Size and gauge conventions, access, testing and replacement outside its established scope.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C9063-b00002",
+      "text": "Connector-face map · Harness 14401",
+      "why": "The cavity labels run vertically, and the middle position is shaded. I match that position to the unused row before reading the populated entries. The surrounding housing outlines and projections help distinguish the illustrated shape without establishing release functions or physical viewing direction."
+    },
+    {
+      "blockId": "connector-C9063-b00005",
+      "text": "Read speaker pairs and cavity use",
+      "why": "Read across each row to associate the cavity with its circuit identifier, wire color, gauge, speaker function and terminal reference. Keep the left-front-door woofer descriptions together and the left-middle descriptions together, preserving their positive and negative signs. Repeated cavity entries with blank qualifiers do not explain equipment applicability or establish simultaneous connections. The unused row has no assigned circuit."
+    },
+    {
+      "blockId": "connector-C9063-b00007",
+      "text": "Pigtail catalog reference",
+      "why": "The catalog row associates the pigtail's lead information and cavity count with its service part and engineering shell. That makes the catalog relationship traceable, but it cannot resolve the component-description ambiguity or establish a replacement choice. No splice or terminal-service method is taught here."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:01:07.778Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "3686fbc777963744fdbdc94bc416dcd0347b78cf3c56fef3569f239c0feadf41",
+    "reviewedAt": "2026-10-29T01:00:48.205Z",
+    "coveredUnitIds": [
+      "connector-C9063:u1",
+      "connector-C9063:u2",
+      "connector-C9063:u3",
+      "connector-C9063:u4",
+      "connector-C9063:u5",
+      "connector-C9063:u6",
+      "connector-C9063:u7",
+      "connector-C9063:u8",
+      "connector-C9063:u9",
+      "connector-C9063:u10",
+      "connector-C9063:u11",
+      "connector-C9063:u12",
+      "connector-C9063:u13",
+      "connector-C9063:u14",
+      "connector-C9063:u15",
+      "connector-C9063:u16",
+      "connector-C9063:u17",
+      "connector-C9063:u18",
+      "connector-C9063:u19",
+      "connector-C9063:u20",
+      "connector-C9063:u21",
+      "connector-C9063:u22",
+      "connector-C9063:u23",
+      "connector-C9063:u24",
+      "connector-C9063:u25",
+      "connector-C9063:u26",
+      "connector-C9063:u27",
+      "connector-C9063:u28",
+      "connector-C9063:u29",
+      "connector-C9063:u30",
+      "connector-C9063:u31",
+      "connector-C9063:u32",
+      "connector-C9063:u33"
+    ],
+    "originalAuthorHold": [
+      "The identity table gives Pin Count 5, but the drawing labels cavities 1–3 and the pigtail table gives Cavities 3. Repeated assignment rows do not establish additional physical cavities; the summary count needs review.",
+      "The title identifies TWEETER LH A-PILLAR, while populated function rows describe SPEAKER LEFT FRONT DOOR (WOOFER) and SPEAKER LEFT MIDDLE. Their relationship and equipment applicability are unexplained. Retain these descriptions pending focused review; do not silently rename the component or select a circuit set."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Tweeter versus woofer/left-middle identity, repeated assignments and count ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "39b0d00a2dbe3059a9e758b3d8bd582d10174ee8946f2d6fb7b013ed37c588ec"
+    }
+  }
+}

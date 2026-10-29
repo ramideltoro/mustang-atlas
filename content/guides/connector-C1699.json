@@ -1,0 +1,109 @@
+{
+  "documentId": "connector-C1699",
+  "sourceHash": "82d6e3ba4e3ca47ea68c0db08f9adcca3cc8cbd816c46dda7e2b6210671816d1",
+  "title": "C1699 — Camshaft position bank 1 sensor 2 (CMP12)",
+  "introduction": "I read this camshaft-sensor reference like an address book: the drawing supplies the cavity labels, and the assignment table explains what belongs at each address. Start with the connector identity table, then match the drawing’s labels to the Cavity column. Reading across a single row keeps the circuit, wire description, function and terminal information together.\n\nThere is an unresolved bank-description conflict between the title and the signal-function row, so the component identity needs review. This page teaches reference reading, not physical access, probing, wire selection or replacement. Physical viewing direction, gauge convention and the meanings of the Size and Used codes are unspecified; I keep those entries as printed.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C1699-b00002",
+      "text": "Connector face for harness 12C508",
+      "why": "I use the cavity labels and the housing projections on the drawing’s right side as landmarks within this illustration. Those shapes help distinguish its layout, but they do not establish a release mechanism or which side of the physical connector to view. The identification table beneath the drawing ties it to the harness and shell entry."
+    },
+    {
+      "blockId": "connector-C1699-b00005",
+      "text": "Read the pin assignments",
+      "why": "The Cavity column connects the drawing to the electrical descriptions. Read across each row to distinguish the voltage-reference, signal-return and camshaft-signal functions, keeping their circuit and terminal information together. These labels describe assigned roles; they provide no measurement or pass/fail result. The bank wording in the signal row conflicts with the article title and remains unresolved."
+    },
+    {
+      "blockId": "connector-C1699-b00007",
+      "text": "Pigtail service-part reference",
+      "why": "I connect Kit List in the identity table to Number here, then compare Engineering Shell with Hard Shell. This explains how the catalog entries relate without treating the shell identifier as the service-part identifier. Gauge and Material belong to this pigtail entry; they are not instructions to choose wire or add grease."
+    },
+    {
+      "blockId": "connector-C1699-b00009",
+      "text": "European pigtail reference",
+      "why": "This separate table provides a European product identifier. It adds a catalog reference, but no application or interchangeability explanation, so I do not treat it as proof that either catalog entry can replace the other."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:11:04.369Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 4,
+    "receivedBlocks": 4,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 35,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "c7b17f16370f5e04e8f9f71d3090c321eeef7d5141122dbf5d9f7be752b41fb5",
+    "reviewedAt": "2026-10-29T01:10:40.120Z",
+    "coveredUnitIds": [
+      "connector-C1699:u1",
+      "connector-C1699:u2",
+      "connector-C1699:u3",
+      "connector-C1699:u4",
+      "connector-C1699:u5",
+      "connector-C1699:u6",
+      "connector-C1699:u7",
+      "connector-C1699:u8",
+      "connector-C1699:u9",
+      "connector-C1699:u10",
+      "connector-C1699:u11",
+      "connector-C1699:u12",
+      "connector-C1699:u13",
+      "connector-C1699:u14",
+      "connector-C1699:u15",
+      "connector-C1699:u16",
+      "connector-C1699:u17",
+      "connector-C1699:u18",
+      "connector-C1699:u19",
+      "connector-C1699:u20",
+      "connector-C1699:u21",
+      "connector-C1699:u22",
+      "connector-C1699:u23",
+      "connector-C1699:u24",
+      "connector-C1699:u25",
+      "connector-C1699:u26",
+      "connector-C1699:u27",
+      "connector-C1699:u28",
+      "connector-C1699:u29",
+      "connector-C1699:u30",
+      "connector-C1699:u31",
+      "connector-C1699:u32",
+      "connector-C1699:u33",
+      "connector-C1699:u34",
+      "connector-C1699:u35"
+    ],
+    "originalAuthorHold": [
+      "The title and Description identify bank 1 sensor 2, while the cavity 3 Function identifies CAMSHAFT POSITION BANK 2 IN+EX / IN. Both use CMP12. The supplied evidence does not resolve which bank description is correct."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 35 primary units, three complete source pages and sole figure, and 4 edits. Bank1 sensor2 versus bank2 signal function identity ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "5a6b55228a855bbcc9edc0dc30308126f50d1c66a14983ae85aaa5bf743c0370"
+    }
+  }
+}

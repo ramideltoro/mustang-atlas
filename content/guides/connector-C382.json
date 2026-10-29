@@ -1,0 +1,103 @@
+{
+  "documentId": "connector-C382",
+  "sourceHash": "895e1b443a7187591d2692a234496d0e7e764ea8788534a35c51b357f8c9f29d",
+  "title": "C382 — LH front seat front tilt motor connector",
+  "introduction": "I use this reference as a seating chart for the front tilt motor’s wiring: the drawing locates the cavities, and the assignment table tells us which circuit belongs at each address. Start with the identification table, then read the drawing alongside the circuit and service-parts tables.\n\nThis is a guide to reading the reference. Physical viewing direction, the gauge convention and the meanings of Size and Used are unspecified; it does not teach wire selection, probing, access or replacement. The Pin Count entry also disagrees with the cavity count shown by the drawing and pigtail table, so that discrepancy remains unresolved.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C382-b00002",
+      "text": "Connector face map · Harness 14D231",
+      "why": "I use the upper and lower pairs of cavity labels to navigate the drawing as printed. The housing projections above the cavities and the extension at the lower right provide visual landmarks; their release or locking functions are not identified. Match a drawing label to the Cavity column, without assuming this establishes the physical viewing side. The Fpn entry below the drawing provides a cross-check against the Hard Shell entry above."
+    },
+    {
+      "blockId": "connector-C382-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Read across each row from Cavity to Circuit Number, Color, Gauge, Function and Terminal Part Number. The functions distinguish front-height/tilt down and up connections associated with the control module or seat-adjustment switch, plus sensor-related connections. Repeated cavity labels are separate entries to retain, not permission to combine wires: the blank Qualifier cells do not explain their configuration applicability. Keep the recline-sensor description as written rather than silently relabeling it as a front-tilt signal or ground."
+    },
+    {
+      "blockId": "connector-C382-b00007",
+      "text": "Pigtail kit and service-part reference",
+      "why": "A pigtail is a connector with attached wire leads. Read Number alongside Kit List, and compare Engineering Shell with the housing identifiers elsewhere on the page. Service Part identifies the listed service item; Terminal Part Number in the assignment table identifies a different kind of part. The pigtail and circuit Gauge entries belong to their respective tables and do not, by themselves, establish a wire substitution or splice method."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:01:47.339Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "404e63163b8ebebcf0ea6ae05c102995c9262dc5abd0414da766a5ce88f6aeb8",
+    "reviewedAt": "2026-10-29T01:01:24.156Z",
+    "coveredUnitIds": [
+      "connector-C382:u1",
+      "connector-C382:u2",
+      "connector-C382:u3",
+      "connector-C382:u4",
+      "connector-C382:u5",
+      "connector-C382:u6",
+      "connector-C382:u7",
+      "connector-C382:u8",
+      "connector-C382:u9",
+      "connector-C382:u10",
+      "connector-C382:u11",
+      "connector-C382:u12",
+      "connector-C382:u13",
+      "connector-C382:u14",
+      "connector-C382:u15",
+      "connector-C382:u16",
+      "connector-C382:u17",
+      "connector-C382:u18",
+      "connector-C382:u19",
+      "connector-C382:u20",
+      "connector-C382:u21",
+      "connector-C382:u22",
+      "connector-C382:u23",
+      "connector-C382:u24",
+      "connector-C382:u25",
+      "connector-C382:u26",
+      "connector-C382:u27",
+      "connector-C382:u28",
+      "connector-C382:u29",
+      "connector-C382:u30",
+      "connector-C382:u31",
+      "connector-C382:u32",
+      "connector-C382:u33",
+      "connector-C382:u34"
+    ],
+    "originalAuthorHold": [
+      "The identification table’s Pin Count conflicts with the cavity count in the face drawing and pigtail service-parts table. Clarify what Pin Count represents before presenting those entries as consistent."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 34 primary units, both complete source pages and sole figure, and 3 edits. PinCount and repeated circuit applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "b591e58ed0c8add453cf3dc43284f2cc0d2a9a8c8413b50ab9be979a140b0643"
+    }
+  }
+}

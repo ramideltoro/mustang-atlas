@@ -1,0 +1,103 @@
+{
+  "documentId": "connector-C363",
+  "sourceHash": "56c9e018cf2975306565f1598018a13d2b7ea67fc58323833e1e86a984435aec",
+  "title": "C363 — LH front seat height adjustment motor connector",
+  "introduction": "A seat can change its posture in several ways, so “height adjustment” deserves a closer look than a quick glance at the title. Here, the Function column identifies rear/parallel height movement, rear-height switch connections and sensor-related connections. I start with the connector identity, use the drawing to locate cavity labels, then follow those labels into the assignment table.\n\nThis reference explains the map rather than a workshop operation. Physical viewing direction, the gauge convention and the meanings of Size and Used are unspecified, so it does not establish wire selection, probing, access or replacement. The Pin Count entry conflicts with the illustrated and pigtail cavity counts; that discrepancy remains open.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C363-b00002",
+      "text": "Connector face map · Harness 14D231",
+      "why": "On the page, the cavity labels form an upper pair and a lower pair beneath the housing projections, with a housing extension at the lower right. These landmarks help keep the printed map oriented without assigning an unsupported latch or release function. I match each cavity label to the assignment table and compare Fpn with Hard Shell to cross-check the housing identity; the drawing alone does not establish which physical side to view."
+    },
+    {
+      "blockId": "connector-C363-b00005",
+      "text": "Cavity and circuit assignments",
+      "why": "Follow each row across from its cavity label to circuit identity, color, gauge, function and terminal part. The movement entries distinguish down from up and control-module connections from seat-adjustment switch connections; the sensor entries have their own descriptions. Repeated cavity labels must remain separate entries because the blank Qualifier cells do not establish which configuration applies or whether the entries coexist. Preserve the recline-sensor wording rather than treating every sensor entry as the same height signal."
+    },
+    {
+      "blockId": "connector-C363-b00007",
+      "text": "Pigtail kit and service-part reference",
+      "why": "The pigtail is the connector-and-lead service assembly. Number connects this row to Kit List, while Engineering Shell can be compared with the housing identifiers above. I keep Service Part separate from the individual Terminal Part Number entries: the whole connector’s shopping label is not the same as a terminal’s identity. Gauge and Material describe the listed pigtail; they do not establish a replacement-wire choice or installation method."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:05:09.438Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 34,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "0c69fef3e3185322d9c688ff7f86f163c224921eec95f0dc5543075faad2c645",
+    "reviewedAt": "2026-10-29T01:04:51.112Z",
+    "coveredUnitIds": [
+      "connector-C363:u1",
+      "connector-C363:u2",
+      "connector-C363:u3",
+      "connector-C363:u4",
+      "connector-C363:u5",
+      "connector-C363:u6",
+      "connector-C363:u7",
+      "connector-C363:u8",
+      "connector-C363:u9",
+      "connector-C363:u10",
+      "connector-C363:u11",
+      "connector-C363:u12",
+      "connector-C363:u13",
+      "connector-C363:u14",
+      "connector-C363:u15",
+      "connector-C363:u16",
+      "connector-C363:u17",
+      "connector-C363:u18",
+      "connector-C363:u19",
+      "connector-C363:u20",
+      "connector-C363:u21",
+      "connector-C363:u22",
+      "connector-C363:u23",
+      "connector-C363:u24",
+      "connector-C363:u25",
+      "connector-C363:u26",
+      "connector-C363:u27",
+      "connector-C363:u28",
+      "connector-C363:u29",
+      "connector-C363:u30",
+      "connector-C363:u31",
+      "connector-C363:u32",
+      "connector-C363:u33",
+      "connector-C363:u34"
+    ],
+    "originalAuthorHold": [
+      "The identification table’s Pin Count conflicts with the cavity count in the face drawing and pigtail service-parts table. Clarify the intended meaning of Pin Count before treating the entries as consistent."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 34 primary units, both complete source pages and sole figure, and 3 edits. PinCount and repeated circuit applicability ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "c05db31c7243602b30d0d21902bca8b0c4bb5df36cfc2bba9d75e0a8291f2877"
+    }
+  }
+}

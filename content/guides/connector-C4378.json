@@ -1,0 +1,102 @@
+{
+  "documentId": "connector-C4378",
+  "sourceHash": "f3d0931f24871608502ffa25b624b524e384e5e443544976c5edc3862e4ffb6e",
+  "title": "C4378 — Keyless entry rear antenna",
+  "introduction": "I start with the cavity map, because a housing can have more spaces than connected circuits. Here, the drawing's shaded positions correspond to blank circuit rows marked unused. The populated rows carry complementary positive and negative antenna functions. Think of the housing as a parking lot: an available space does not mean a circuit is parked there.\n\nUse the identity table, harness drawing, circuit rows and pigtail catalog together. The title's rear-antenna description and the function rows' interior-center wording leave the location designation unresolved. This is a connector-reading reference; physical viewing direction, access, probing, test values and replacement are outside its scope. Undefined Size codes and gauge conventions remain uninterpreted.",
+  "requirements": [],
+  "edits": [
+    {
+      "blockId": "connector-C4378-b00002",
+      "text": "Connector-face map · Harness 14A005",
+      "why": "The labeled cavities form a vertical stack, with the lower positions shaded. I cross-check those positions against their table rows to distinguish populated circuits from unused positions. The exterior outlines and projections identify housing features without establishing how anything releases."
+    },
+    {
+      "blockId": "connector-C4378-b00005",
+      "text": "Read antenna polarity and cavity use",
+      "why": "Each populated row links a cavity to its circuit identifier, wire color, gauge, antenna function and terminal reference. Keep the positive and negative labels distinct; they describe the antenna circuit pair and do not establish a chassis-ground connection. The shaded positions have blank circuit information and unused markings. The interior-center function wording remains intact despite the different location wording in the article title."
+    },
+    {
+      "blockId": "connector-C4378-b00007",
+      "text": "Compare pigtail catalog entries",
+      "why": "The catalog entries share an engineering shell but have different lead-gauge and service-part information. A shared housing is only part of the match. This table records those distinctions without establishing interchangeability, selecting a kit for a vehicle or teaching connector replacement."
+    }
+  ],
+  "supportingSourceRefs": [],
+  "checkedAt": "2026-10-29T01:12:56.783Z",
+  "model": "Codex active agents",
+  "editorialVersion": 1,
+  "validationVersion": 5,
+  "status": "complete",
+  "checks": {
+    "passed": true,
+    "errors": [],
+    "expectedBlocks": 3,
+    "receivedBlocks": 3,
+    "humanReviewed": false,
+    "editorialVersion": 1,
+    "validationVersion": 5
+  },
+  "sourceContextHash": "2804e1ee859b738d12d33eac783e498f431024b9b84b78b1dbdded3987e8617b",
+  "sourcePdfHash": null,
+  "referenceEditorialVersion": "enthusiast-v2",
+  "referenceReview": {
+    "kind": "independent-codex-technical-review",
+    "humanReviewed": false,
+    "method": "full-independent-active-agent-source-figure-prose-review",
+    "supportingSourceCoverage": "complete-units-and-illustrations",
+    "supportingNavigationDocumentCount": 0,
+    "supportingSourceDocumentCount": 0,
+    "supportingSourceUnitCount": 0,
+    "sourceUnitCount": 33,
+    "sourceChunkCount": 1,
+    "reviewedChunkCount": 1,
+    "originalCliPlanChunkCount": 1,
+    "fingerprint": "40dad8ac0612ceeac3aa7bcdf247935fc604b625a17e6f697ec535d2d52d58f4",
+    "reviewedAt": "2026-10-29T01:12:16.919Z",
+    "coveredUnitIds": [
+      "connector-C4378:u1",
+      "connector-C4378:u2",
+      "connector-C4378:u3",
+      "connector-C4378:u4",
+      "connector-C4378:u5",
+      "connector-C4378:u6",
+      "connector-C4378:u7",
+      "connector-C4378:u8",
+      "connector-C4378:u9",
+      "connector-C4378:u10",
+      "connector-C4378:u11",
+      "connector-C4378:u12",
+      "connector-C4378:u13",
+      "connector-C4378:u14",
+      "connector-C4378:u15",
+      "connector-C4378:u16",
+      "connector-C4378:u17",
+      "connector-C4378:u18",
+      "connector-C4378:u19",
+      "connector-C4378:u20",
+      "connector-C4378:u21",
+      "connector-C4378:u22",
+      "connector-C4378:u23",
+      "connector-C4378:u24",
+      "connector-C4378:u25",
+      "connector-C4378:u26",
+      "connector-C4378:u27",
+      "connector-C4378:u28",
+      "connector-C4378:u29",
+      "connector-C4378:u30",
+      "connector-C4378:u31",
+      "connector-C4378:u32",
+      "connector-C4378:u33"
+    ],
+    "originalAuthorHold": [
+      "The title identifies KEYLESS ENTRY REAR ANTENNA, while the populated circuit functions identify ANTENNA INTERIOR 2 (CENTER). Their relationship is unexplained. Confirm the component/location designation before publishing a resolved location claim."
+    ],
+    "resolvedHold": true,
+    "editorialRevision": {
+      "kind": "complete-active-agent-source-review-recovery",
+      "scope": "Complete independent active-agent review of all 33 primary units, both complete source pages and sole figure, and 3 edits. Rear versus interior-center antenna identity ambiguity retained for bounded identification reading only.",
+      "reviewArtifact": "independent-full-review.json",
+      "draftSha": "e353076de4fbd090de63558a676fb4b140b7cf311958607e0e0e12382fba1053"
+    }
+  }
+}
