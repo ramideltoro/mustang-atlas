@@ -1,5 +1,21 @@
 # Local editorial authoring
 
+## Standalone local-only publication
+
+The subsequently authorized standalone program uses local model drafting and local model review without runtime Codex calls. This is a separate publication path; the earlier Codex pilot and its historical measurements below remain historical. It does not relabel local reviews as independent Codex reviews or weaken legacy overlay validation.
+
+`standalone/publish.mjs` exports `publishApproved({root, items, log})`, where each item has `{id, kind, artifact}`. Artifacts contain `id`, `kind` (`reference`, `workshop`, or `care`), `title`, `articleHtml`, nonempty relative `sourceBindings` (`path`, `sha256`), `review`, and `deterministicChecks`. Review provenance must be `kind: "local-model-review"`, name its model, pass with no unresolved issues, and bind the exact candidate and source list. Candidate SHA256 hashes `JSON.stringify({id,kind,title,articleHtml,sourceBindings})`; source-list SHA256 hashes `JSON.stringify(sourceBindings)`. Publisher validation independently rereads every bound source, rejects path/symlink escapes, active HTML and false human/Codex provenance, and rechecks evidence before committing.
+
+Approved artifacts are stored only in `content/local-articles/<id>.json`. The runtime's `/api/v1/local-articles/:id` must return `artifactSha256` computed from exact on-disk bytes, including the final newline. The legacy content, approval maps and media directories remain separate. Deploy the reader support once before invoking this publisher; article publication does not deploy application code.
+
+The publisher uses a temporary Git index and a commit containing only article files, refusing dirty target files or a divergent GitHub main branch. It uses the fallback Git binary and existing `gh-run.mjs` credential wrapper, without copying credentials into artifacts. It stages a full VPS content snapshot using `backend-root.mjs`, overlays only the article files, retains the prior content, swaps directories, recreates the web container and verifies every live artifact hash. Failed activation/readback restores content and pushes a compensating Git commit. Unrelated local changes are preserved. Failed rollback is recorded as `rollback-failed` and retains the local publication lock for intervention; no subsequent batch should proceed until resolved.
+
+Run `node --test standalone/publish.test.mjs` for source/provenance/HTML rejection, staged-source rechecking, rollback at each phase, concurrent modification, and production shell-generation tests. Passing these tests is not evidence that any article was published.
+
+The one-time runtime bootstrap is separate: `node standalone/bootstrap.mjs build --release <privateReleaseDir> --revision <codeCommit>` archives only Docker/package/build files plus server/shared/src/public/compose sources, uploads them and builds a distinct image tag. Production content is copied into the isolated build context; content, data, media, Caddy and DNS are not replaced. The shared publication lock stays held until activation or an explicitly reconciled failure.
+
+After the exact source revision's tests pass, save private JSON evidence `{ "passed": true, "revision": "<codeCommit>" }` and run `node standalone/bootstrap.mjs activate --release <privateReleaseDir> --tests-evidence <evidence.json>`. Activation refuses changed source bytes or a changed current image, retains the prior image, recreates the existing web service, checks health, an existing guide and the new API's JSON 404, and only then copies the runtime source files into the deployment directory. Failure restores the prior image/container and source backup. Archive SHA256, source hashes, revision, image IDs and live-check results remain in the private release manifest. Neither command invokes runtime Codex or changes legacy article approvals.
+
 ## Status and boundaries
 
 The approved migration moves **draft authoring** to the local AI server `chingadera`. Independent Codex review, complete source and illustration coverage, exact-artifact supervisory approvals, and the existing publication gates remain required. Local output is a candidate, not an accepted or published article. Existing holds remain in force.

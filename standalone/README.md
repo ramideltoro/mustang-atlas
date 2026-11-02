@@ -1,0 +1,15 @@
+# Mustang Atlas local batch studio
+
+Double-click `start.command`, or run `npm run batch` from the repository. Open http://127.0.0.1:4329/. Keep the terminal/computer and AI server running. The launcher prevents idle sleep for the duration of the batch.
+
+This program calls only your private Ollama server for writing, original-diagram interpretation and independent review. It never starts Codex, uses an OpenAI API key, or falls back to a hosted model. The Mac runs the dashboard, durable queue and Git/deployment operations; inference runs on chingadera. Source files, progress, drafts and logs stay in ignored `work/standalone/`. Credentials are read from the existing central credentials file and are never put in prompts or the dashboard.
+
+The fixed inventory contains 3,214 unique entries. Existing published rewrites and three prior detailed guides are preserved; 2,106 entries initially remain. The program prioritizes shorter source packages, then works through the rest. Diagram-heavy and long articles can take much longer on CPU inference. Published, approved, held and failed are separate counts; approval alone does not reduce the live backlog.
+
+Default writing and reviewing use installed Qwen2.5 32B. Original diagrams are inspected using Qwen3.5 9B, downloaded automatically onto the AI server if absent. The dashboard shows download/generation progress, current output, source preparation, review and publishing stages. Pause aborts the current model request but preserves completed source packets. Resume reuses exact matching checkpoints. Model changes invalidate affected draft caches. Retry failures retries operational failures; source/evidence holds remain explicitly visible.
+
+Every source packet must have matching coverage IDs, matching numerical quantities, no unresolved uncertainty and a passing independent local review. At most two correction attempts run. Local model review is automated and fallible; the program never labels it human certification or Codex review. Missing evidence and context limits remain held rather than receiving invented instructions. Original-artwork replacement is not claimed by this program.
+
+Auto-publish defaults to batches of five locally approved articles. Publication validates exact candidate/source hashes, rejects active HTML and false review provenance, commits only article files, pushes GitHub, stages content on the VPS, activates it atomically and verifies exact public article hashes. Failures retain artifacts and trigger rollback. The new reader runtime must be deployed before any batch can publish. Existing accounts, passwords, other AI services and routes are preserved.
+
+The program requires this repository and its private `data/atlas.sqlite`, the existing credentials file, Node.js 24+, installed npm dependencies and SSH access to the AI server and backend VPS. It does not require the Codex app to be open or a Codex login for runtime inference. GitHub authentication uses the existing connected GitHub CLI credentials through the repository helper.

@@ -40,3 +40,8 @@ export async function sudoSsh(command){
  const auth=environment();
  try{return await ssh('sudo -S -p "" /bin/sh -c '+shellQuote(command),{input:auth.secret+'\n'});}finally{auth.cleanup();}
 }
+export function connectTunnel(port=11439){
+ const auth=environment();const child=spawn('/usr/bin/ssh',['-N','-L',`127.0.0.1:${port}:127.0.0.1:11434`,'-o','ExitOnForwardFailure=yes','-o','ServerAliveInterval=20','-o','ServerAliveCountMax=3','-o','StrictHostKeyChecking=yes','-o','ConnectTimeout=15',SERVER],{env:auth.env,stdio:['ignore','ignore','pipe']});
+ let error='';child.stderr.on('data',b=>error=(error+b).slice(-2000));child.on('close',()=>auth.cleanup());
+ return {child,getError:()=>error.split(auth.secret).join('[REDACTED]'),close:()=>child.kill('SIGTERM')};
+}

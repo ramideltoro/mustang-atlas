@@ -1,3 +1,4 @@
+import LocalArticle from './LocalArticle.jsx';
 import {ArticleThumbnail} from './ArticleThumbnail.jsx';
 import React,{useMemo,useState} from 'react';
 import {marked} from 'marked';
@@ -115,13 +116,14 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
   <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="#/library">Library</a><span>/</span><a href={'#/library?system='+encodeURIComponent(data.systemId||'')}>{system?.title||categoryName(data.systemId)}</a>{data.section?.code&&<><span>/</span><a href={'#/library?'+new URLSearchParams({system:data.systemId,section:data.section.code})}>{data.section.title||data.section.code}</a></>}</nav>
   <header className="document-header">
    <div className="document-kicker"><Badge tone="amber">{categoryName(data.kind)}</Badge><span>{engineLabel}</span></div>
-   <h1>{documentTitle(data)}</h1>
+   <h1>{data.localArticle?.title||documentTitle(data)}</h1>
    {data.section?.title&&<p>{data.section.title}</p>}
    <div className="document-toolbar"><span className="article-toolbar-label"><BookOpen size={17}/> Your workshop companion</span><div><button className={'icon-button '+(saved?'active':'')} onClick={()=>onBookmark(data)} aria-label={saved?'Remove saved article':'Save article'} title={saved?'Saved':'Save article'}><Bookmark size={17} fill={saved?'currentColor':'none'}/></button><button className="icon-button" onClick={copy} aria-label="Copy link" title="Copy link">{copied?<Check size={17}/>:<Link size={17}/>}</button><button className="icon-button" onClick={()=>window.print()} aria-label="Print article" title="Print"><Printer size={17}/></button></div></div>
   </header>
   {!mismatch&&data.thumbnail?.generated&&<ArticleThumbnail item={data} className="document-cover"/>}
   {mismatch?<section className="engine-mismatch"><Info size={24}/><h2>This article belongs to a different engine.</h2><p>It covers {data.engines.join(', ')}. Your filter is set to {engine}. Choose All or a matching engine in the top-right selector to read it.</p><a className="text-link" href={'#/library?system='+encodeURIComponent(data.systemId)}>Find articles for your engine <ArrowRight size={16}/></a></section>:<div className="document-layout">
    <article className="article-body" aria-label="Workshop article">
+    {data.localArticle?.articleHtml?<LocalArticle article={data.localArticle}/>:<>
     <ArticleContents entries={outline} onJump={jump}/>
     {showIntroduction&&<section id="article-introduction" className="article-introduction"><div className="section-title"><h2>Get your bearings</h2></div><Markdown body={typeof data.introduction==='string'?data.introduction:data.introduction.body||data.introduction.text}/></section>}
     {showTopicContext&&(data.editorial?.teachingVersion==='enthusiast-v2'?<details className="article-background"><summary>More background on this topic</summary><TopicContext context={learningContext}/></details>:<TopicContext context={learningContext}/>)}
@@ -131,6 +133,7 @@ export function DocumentReader({id,systems,onZoom,bookmarks,onBookmark,engine=''
     {calculatorType&&<TorqueCalculator calculatorType={calculatorType}/>}
     <div className="document-blocks"><BlockList blocks={blocks} media={media} onZoom={onZoom}/></div>
     {remainingMedia.length>0&&<section id="additional-figures" className="additional-figures"><div className="section-title"><span className="eyebrow">A CLOSER LOOK</span><h2>See the details.</h2></div><FigureGrid figures={remainingMedia} onZoom={onZoom}/></section>}
+    </>}
     <PartsPanel data={data.parts}/>
     <MaintenancePanel data={data.maintenance}/>
     <WorkshopGuidePanel items={data.workshopGuides}/>

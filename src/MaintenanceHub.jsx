@@ -1,3 +1,4 @@
+import LocalArticle from './LocalArticle.jsx';
 import React,{useEffect,useRef} from 'react';
 import {ArrowRight,ArrowUpRight,AlertTriangle,BatteryCharging,BookOpen,CalendarClock,CarFront,Check,ChevronLeft,ChevronRight,ClipboardCheck,Droplets,Fan,Gauge,HeartPulse,Info,Search,ShieldCheck,Wind,Wrench,X} from 'lucide-react';
 import {useApi,useMediaQuery,navigate} from './hooks.js';
@@ -72,15 +73,17 @@ function Guide({id,engine,year,onZoom,filters,section}){
  const glossary=useGlossary();
  const state=useApi('/maintenance/'+encodeURIComponent(id)+'?'+new URLSearchParams({engine:engine||'all',year})),guide=state.data?.guide||state.data;
  useEffect(()=>{
-  if(state.loading||!guide||!section||maintenanceMismatch(guide.applicability)||!guideOutline(guide).some(item=>item.id===section))return;
+  if(state.loading||!guide||guide.localArticle?.articleHtml||state.data?.localArticle?.articleHtml||!section||maintenanceMismatch(guide.applicability)||!guideOutline(guide).some(item=>item.id===section))return;
   const frame=requestAnimationFrame(()=>jumpTo(section));return()=>cancelAnimationFrame(frame);
  },[state.loading,guide,section]);
  if(state.loading)return <div className="maintenance-hub"><Breadcrumbs/><Loading label="Opening your guide…"/></div>;
  if(state.error)return <div className="maintenance-hub"><Breadcrumbs/><ErrorState message={state.error} retry={state.retry}/></div>;
  if(!guide)return null;
+ const localArticle=guide.localArticle||state.data?.localArticle;
  const mismatch=maintenanceMismatch(guide.applicability),outline=guideOutline(guide);
- return <GlossaryProvider terms={glossary?.terms||[]} open={glossary?.open} context={{system:guide.systemId,title:guide.title}}><div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={guide.categoryId==='special'?{...filters,category:'special'}:filters}/><header className={'maintenance-article-header'+(mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> {guide.categoryId==='special'?'Special maintenance':'Care & workshop'}</span><h1>{guide.title}</h1><GuideBadges guide={guide}/><Markdown body={guide.summary}/><EngineNote engine={engine} applicability={guide.applicability}/></div>{!mismatch&&(guide.thumbnail?<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>:<ArticleThumbnail item={guide} className="maintenance-card-art"/>)}</header>
-  {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className={"maintenance-article-layout"+(guide.stepGroups?.length?" is-phased":"")}><article className="maintenance-article-body">
+ return <GlossaryProvider terms={glossary?.terms||[]} open={glossary?.open} context={{system:guide.systemId,title:guide.title}}><div className="maintenance-hub page-in"><Breadcrumbs title={guide.title} filters={guide.categoryId==='special'?{...filters,category:'special'}:filters}/><header className={'maintenance-article-header'+(mismatch?' no-art':'')}><div><span className="eyebrow"><HeartPulse size={16} aria-hidden="true"/> {guide.categoryId==='special'?'Special maintenance':'Care & workshop'}</span><h1>{localArticle?.title||guide.title}</h1><GuideBadges guide={guide}/>{!localArticle?.articleHtml&&<Markdown body={guide.summary}/>}<EngineNote engine={engine} applicability={guide.applicability}/></div>{!mismatch&&(guide.thumbnail?<Figure figure={{...guide.thumbnail,caption:guide.thumbnail.caption||guide.title}} onZoom={onZoom}/>:<ArticleThumbnail item={guide} className="maintenance-card-art"/>)}</header>
+  {mismatch?<Mismatch applicability={guide.applicability} title={guide.title}/>:<><div className={"maintenance-article-layout"+(localArticle?.articleHtml?" has-local-article":guide.stepGroups?.length?" is-phased":"")}><article className="maintenance-article-body">
+   {localArticle?.articleHtml?<LocalArticle article={localArticle}/>:<>
    {guide.visualGuide==='v6-37-head-gasket'&&<GuideSection id="gasket-location" title="Where the head gasket lives" icon={BookOpen}><HeadGasketAccess onJump={jumpTo}/></GuideSection>}
    {guide.visualGuide==='v6-37-timing-chain'&&<GuideSection id="timing-drive" title="Meet the timing drive" icon={BookOpen}><TimingChainWorkshop onJump={jumpTo}/></GuideSection>}
    {guide.visualGuide==='wheel-hub-diagnosis'&&<GuideSection id="wheel-check-map" title="Your route through the checks" icon={BookOpen}><WheelHubChecks onJump={jumpTo}/></GuideSection>}
@@ -97,7 +100,8 @@ function Guide({id,engine,year,onZoom,filters,section}){
    {guide.procedures?.length>0&&<GuideSection id="repair-guides" title="Related workshop articles" icon={Wrench} tone="blue"><div className="maintenance-procedure-links">{guide.procedures.map(procedure=>{const href=maintenanceLink(procedure);return href?<a key={procedure.documentId} href={href}>{procedure.thumbnail&&<img src={safeHref(procedure.thumbnail.url)||undefined} width={84} height={66} loading="lazy" alt=""/>}<span><strong>{readableTitle(procedure.title)}</strong>{procedure.engines?.length>0&&<span className="maintenance-procedure-engine">{procedure.engines.map(engineLabel).join(' · ')}</span>}{procedure.applicability?.equipment&&procedure.applicability.equipment!==guide.applicability?.equipment&&<span className="maintenance-procedure-fitment">{procedure.applicability.equipment}</span>}{procedure.purpose&&<small>{procedure.purpose}</small>}</span><ArrowUpRight size={19} aria-hidden="true"/></a>:null;})}</div></GuideSection>}
    {guide.references?.length>0&&<GuideSection id="online-references" title="Online references" icon={BookOpen} tone="blue"><p className="workshop-section-note">Ford’s vehicle-specific procedure controls the repair. Supplier references explain the principles; they do not replace Ford’s sequences or specifications.</p><ul className="workshop-online-references">{guide.references.map(reference=><li key={reference.url}><a href={safeHref(reference.url)} target="_blank" rel="noreferrer">{reference.title}<ArrowUpRight size={17} aria-hidden="true"/></a><p>{reference.description}</p></li>)}</ul></GuideSection>}
    <Sources items={guide.sources||[]} label="Supporting guidance"/>
-  </article><GuideContents items={outline} filters={filters} collapsible={guide.stepGroups?.length>0}/></div>{guide.relatedGuides?.length>0&&<section className="maintenance-related-guides"><h2>Keep exploring.</h2><div className="maintenance-guide-grid">{relatedWorkshopGuides(guide.relatedGuides).map(item=><MaintenanceCard key={item.id} guide={item} filters={filters} heading="h3"/>)}</div></section>}</>}
+  </>}
+  </article>{!localArticle?.articleHtml&&<GuideContents items={outline} filters={filters} collapsible={guide.stepGroups?.length>0}/>}</div>{guide.relatedGuides?.length>0&&<section className="maintenance-related-guides"><h2>Keep exploring.</h2><div className="maintenance-guide-grid">{relatedWorkshopGuides(guide.relatedGuides).map(item=><MaintenanceCard key={item.id} guide={item} filters={filters} heading="h3"/>)}</div></section>}</>}
  </div></GlossaryProvider>;
 }
 function Schedule({engine,year,filters}){
