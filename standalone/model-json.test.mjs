@@ -1,0 +1,2 @@
+import test from'node:test';import assert from'node:assert/strict';import{parseModelJson}from'./model-json.mjs';
+test('local model plain/fenced JSON is parsed without executing or hiding prose',()=>{assert.deepEqual(parseModelJson('{"observations":["Ford logo"]}'),{observations:['Ford logo']});assert.deepEqual(parseModelJson('```json\n{"passed":true}\n```'),{passed:true});assert.throws(()=>parseModelJson('Here is JSON: {"passed":true}'));assert.throws(()=>parseModelJson('```js\nprocess.exit()\n```'));});
